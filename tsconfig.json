@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "./dist/",
+    "rootDir": "./",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es5", "es6", "esnext", "dom"]
+  },
+  "include": ["./components/**/*"]
+}
