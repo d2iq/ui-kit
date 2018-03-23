@@ -1,0 +1,2 @@
+# Component Name
+Component documentation

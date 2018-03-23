@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+components_path=components
+template_path=scripts/templates/component/*
+
+mkdir -p components/$1
+cp -r $template_path ${components_path}/$1
+
+FILES=$(find ${components_path}/$1 -regex '.*Component.*')
+for file in $FILES;
+do
+  mv -v $file "${file/Component/$1}";
+done

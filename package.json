@@ -12,7 +12,8 @@
     "build:storybook": "build-storybook",
     "deploy:storybook": "storybook-to-ghpages",
     "clean": "rm -rf dist",
-    "release": "standard-version"
+    "release": "standard-version",
+    "create:component": "./scripts/create-component"
   },
   "license": "Apache-2.0",
   "main": "dist/ui-kit.js",
