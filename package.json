@@ -5,13 +5,13 @@
   "scripts": {
     "preinstall": "./scripts/pre-install",
     "start": "NODE_ENV=development npm run storybook --root ./ ",
-    "dist": "npm run clean && NODE_ENV=production ./node_modules/.bin/webpack -p --config ./webpack.config.js",
+    "dist": "npm run clean && NODE_ENV=production webpack -p --config ./webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commitlint": "./node_modules/.bin/commitlint -e",
+    "commitlint": "commitlint -e",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "clean": "rm -rf dist",
-    "release": "./node_modules/.bin/standard-version"
+    "release": "standard-version"
   },
   "license": "Apache-2.0",
   "main": "dist/ui-kit.js",
