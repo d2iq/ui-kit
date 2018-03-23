@@ -6,7 +6,7 @@
     "preinstall": "./scripts/pre-install",
     "start": "NODE_ENV=development npm run storybook --root ./ ",
     "dist": "npm run clean && NODE_ENV=production webpack -p --config ./webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"TODO: specify tests\" && exit 0",
     "commitlint": "commitlint -e",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
