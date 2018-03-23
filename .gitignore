@@ -11,4 +11,5 @@ serve
 tmp/
 .vscode/
 .env
+coverage
 

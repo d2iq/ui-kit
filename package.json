@@ -6,7 +6,7 @@
     "preinstall": "./scripts/pre-install",
     "start": "NODE_ENV=development npm run storybook --root ./ ",
     "dist": "npm run clean && NODE_ENV=production webpack -p --config ./webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "commitlint": "commitlint -e",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
@@ -19,6 +19,25 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/dcos-labs/ui-kit"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "text"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
   },
   "dependencies": {
     "emotion": "9.0.2",
@@ -39,6 +58,7 @@
     "@storybook/addons": "3.3.14",
     "@storybook/react": "3.3.14",
     "@storybook/storybook-deployer": "^2.3.0",
+    "@types/jest": "22.2.2",
     "@types/node": "9.4.7",
     "@types/react": "16.0.40",
     "@types/react-dom": "15.5.7",
@@ -50,8 +70,10 @@
     "prettier": "1.11.1",
     "prop-types": "15.6.1",
     "react-docgen-typescript-loader": "2.0.2",
+    "react-test-renderer": "16.2.0",
     "standard-version": "^4.3.0",
     "storybook-readme": "3.2.1",
+    "ts-jest": "22.4.2",
     "ts-loader": "3.5.0",
     "tslib": "1.9.0",
     "tslint": "5.9.1",
