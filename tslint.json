@@ -8,7 +8,7 @@
   ],
   "linterOptions": {
     "exclude": [
-      "./scripts/*"
+      "./scripts/templates/*"
     ]
   },
   "rules": {
