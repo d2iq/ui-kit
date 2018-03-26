@@ -5,7 +5,8 @@
   "scripts": {
     "preinstall": "./scripts/pre-install",
     "start": "NODE_ENV=development npm run storybook --root ./ ",
-    "dist": "npm run clean && NODE_ENV=production webpack -p --config ./webpack.config.js",
+    "dist":
+      "npm run clean && NODE_ENV=production webpack -p --config ./webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "commitlint": "commitlint -e",
     "storybook": "start-storybook -p 6006",
@@ -46,7 +47,9 @@
     "@types/storybook__addon-actions": "3.0.3",
     "@types/storybook__addon-info": "3.2.2",
     "@types/storybook__addon-knobs": "3.2.3",
+    "commander": "2.15.1",
     "file-loader": "1.1.10",
+    "fs-extra": "5.0.0",
     "jest": "22.4.2",
     "prettier": "1.11.1",
     "prop-types": "15.6.1",
