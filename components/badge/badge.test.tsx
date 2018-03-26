@@ -21,7 +21,6 @@ describe("Badge", () => {
     .toJSON()).toMatchSnapshot()
   });
 
-
   it("warning", () => {
     expect(renderer
     .create(<Badge appearance="warning">warning</Badge>)

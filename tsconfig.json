@@ -16,5 +16,8 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es5", "es6", "esnext", "dom"]
   },
-  "include": ["./components/**/*"]
+  "include": [
+    "./components/**/*",
+    "./shared/**/*"
+  ]
 }
