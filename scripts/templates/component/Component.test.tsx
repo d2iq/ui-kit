@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import Component from '.';
+import ${Component} from ".";
 
-describe('Component', () => {
-  it.skip('test something', () => {});
+describe("${Component}", () => {
+  it.skip("test something", () => {});
 });

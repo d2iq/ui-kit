@@ -1,10 +1,10 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import Component from "../Component";
+import ${Component} from "../${Component}";
 
 const ComponentReadme = require("../README.md");
 
-storiesOf("Badge", module)
+storiesOf("${Component}", module)
   .addDecorator(withReadme([ComponentReadme]))
-  .addWithInfo("default", () => <Component>default</Component>)
+  .addWithInfo("default", () => <${Component}>default</${Component}>)

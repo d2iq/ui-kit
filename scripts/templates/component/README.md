@@ -1,2 +1,3 @@
-# Component Name
-Component documentation
+# ${Component} Name
+
+${Component} documentation
