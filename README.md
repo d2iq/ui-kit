@@ -33,7 +33,7 @@ If you use vscode you can change your workspace settings as following
 
 To generate a new component run the command
 ```
-npm run create:component -- ComponentName
+npm run create:component ComponentName
 ```
 
 ## Unit Testing
@@ -69,12 +69,14 @@ For more on this topic, and examples we recommend
 
 ```
 import React from "react";
-import Badge from ".";
+import Badge from '../badge';
+import renderer from 'react-test-renderer';
 
 describe('Badge', () => {
-  it("render button with children", () => {
-    const badge = mount(<Badge>Wow!</Badge>);
-    expect(badge.text()).toContain("Wow!");
+  it("match default badge component", () => {
+    expect(renderer
+    .create(<Badge>default</Badge>)
+    .toJSON()).toMatchSnapshot()
   });
 });
 ```
@@ -107,7 +109,7 @@ Then run the command to automatically update the `package.json`, `changelog.md` 
 npm run release
 ```
 
-Now push the latest commit and the tag created (_run`git tag` to see all tags_).
+Now push the latest commit and the tag created (_run `git tag` to see all tags_).
 ```
 git push origin master && git push origin TAG_VERSION
 ```
