@@ -6,7 +6,7 @@
     "preinstall": "./scripts/pre-install",
     "start": "NODE_ENV=development npm run storybook --root ./ ",
     "dist": "npm run clean && NODE_ENV=production webpack -p --config ./webpack.config.js",
-    "pretest": "tslint -c tslint.json --project tsconfig.json",
+    "lint": "tslint -c tslint.json --project tsconfig.json",
     "test": "jest",
     "test:watch": "jest --watch",
     "commitlint": "commitlint -e",

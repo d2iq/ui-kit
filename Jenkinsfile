@@ -36,6 +36,14 @@ pipeline {
       }
     }
 
+    stage('Lint') {
+      steps {
+        ansiColor('xterm') {
+          sh '''npm run lint'''
+        }
+      }
+    }
+
     stage('Unit Test') {
       steps {
         ansiColor('xterm') {
