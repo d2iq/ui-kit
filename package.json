@@ -14,7 +14,8 @@
     "build:storybook": "build-storybook",
     "deploy:storybook": "storybook-to-ghpages",
     "clean": "rm -rf dist",
-    "release": "standard-version"
+    "release": "standard-version",
+    "create:component": "./scripts/create-component"
   },
   "license": "Apache-2.0",
   "main": "dist/ui-kit.js",
@@ -67,7 +68,9 @@
     "@types/storybook__addon-actions": "3.0.3",
     "@types/storybook__addon-info": "3.2.2",
     "@types/storybook__addon-knobs": "3.2.3",
+    "commander": "2.15.1",
     "file-loader": "1.1.10",
+    "fs-extra": "5.0.0",
     "jest": "22.4.2",
     "prettier": "1.11.1",
     "prop-types": "15.6.1",

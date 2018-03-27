@@ -1,0 +1,63 @@
+#!/usr/bin/env node
+let fs = require("fs-extra");
+let path = require("path");
+let componentName = "Component";
+const templatePath = "templates/component/";
+
+var program = require("commander");
+
+function readDir(dirPath) {
+  const dir = fs.readdirSync(path.resolve(__dirname, dirPath));
+  dir.forEach(location => {
+    if (
+      fs.lstatSync(path.resolve(__dirname, dirPath, location)).isDirectory()
+    ) {
+      return readDir(path.join(dirPath, location));
+    }
+    fs.readFile(path.resolve(__dirname, dirPath, location), "utf-8", function(
+      error,
+      contents
+    ) {
+      if (!error) {
+        const target = path.resolve(
+          __dirname,
+          "../components",
+          componentName.toLowerCase(),
+          path
+            .join(dirPath, location)
+            .replace(templatePath, "")
+            .replace(/Component/g, componentName)
+        );
+
+        fs.outputFile(
+          target,
+          contents.replace(/\$\{Component\}/g, componentName),
+          function(error) {
+            if (!error) {
+              console.log(`File writen ${target}`);
+              return;
+            }
+            throw error;
+          }
+        );
+        return;
+      }
+      throw error;
+    });
+  });
+}
+
+program
+  .version(require("../package").version)
+  .arguments("<componentName>")
+  .action(function(arg) {
+    let [firstLetter, ...rest] = arg;
+
+    componentName = firstLetter.toUpperCase() + rest.join("");
+  })
+  .parse(process.argv);
+
+if (componentName) {
+  readDir(templatePath);
+  console.log(`${componentName} has been generated.`);
+}
