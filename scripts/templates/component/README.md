@@ -1,0 +1,3 @@
+# ${Component} Name
+
+${Component} documentation
