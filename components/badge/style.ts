@@ -8,24 +8,29 @@ const badgeAppearances = {
     color: #1b2029;
   `,
   "success": css`
-    background-color: #14c684;
-    border-color: #14c684;
-    color: #ffffff;
+    background-color: ${getColors().green};
+    border-color: ${getColors().green};
+    color: ${getColors().white};
   `,
-  "information": css`
-    background-color: #157ff2;
-    border-color: #157ff2;
-    color: #ffffff;
+  "primary": css`
+    background-color: ${getColors().purple};
+    border-color: ${getColors().purple};
+    color: ${getColors().white};
   `,
   "warning": css`
-    background-color: #f56753;
-    border-color: #f56753;
-    color: #ffffff;
+    background-color: ${getColors().yellow};
+    border-color: ${getColors().yellow};
+    color: ${getColors().white};
   `,
   "danger": css`
-    background-color: #eb293a;
-    border-color: #eb293a;
-    color: #ffffff;
+    background-color: ${getColors().red};
+    border-color: ${getColors().red};
+    color: ${getColors().white};
+  `,
+  "outline": css`
+    background-color: ${getColors().white};
+    border-color: ${getColors().greyLight};
+    color: ${getColors().greyDark};
   `
 };
 
