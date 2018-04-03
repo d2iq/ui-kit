@@ -11,25 +11,31 @@ describe("Badge", () => {
 
   it("success", () => {
     expect(renderer
-    .create(<Badge appearance="success">success</Badge>)
+    .create(<Badge theme="success">success</Badge>)
     .toJSON()).toMatchSnapshot()
   });
 
-  it("information", () => {
+  it("primary", () => {
     expect(renderer
-    .create(<Badge appearance="information">information</Badge>)
-    .toJSON()).toMatchSnapshot()
-  });
-
-  it("warning", () => {
-    expect(renderer
-    .create(<Badge appearance="warning">warning</Badge>)
+    .create(<Badge theme="primary">primary</Badge>)
     .toJSON()).toMatchSnapshot()
   });
 
   it("danger", () => {
     expect(renderer
-    .create(<Badge appearance="danger">danger</Badge>)
+    .create(<Badge theme="danger">danger</Badge>)
+    .toJSON()).toMatchSnapshot()
+  });
+
+  it("warning", () => {
+    expect(renderer
+    .create(<Badge theme="warning">warning</Badge>)
+    .toJSON()).toMatchSnapshot()
+  });
+
+  it("outline", () => {
+    expect(renderer
+    .create(<Badge theme="outline">outline</Badge>)
     .toJSON()).toMatchSnapshot()
   });
 });

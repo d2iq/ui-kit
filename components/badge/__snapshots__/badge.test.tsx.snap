@@ -2,7 +2,7 @@
 
 exports[`Badge danger 1`] = `
 <span
-  className="css-f00b3g"
+  className="css-1x7fm58"
 >
   danger
 </span>
@@ -10,23 +10,31 @@ exports[`Badge danger 1`] = `
 
 exports[`Badge default 1`] = `
 <span
-  className="css-b4fwwt"
+  className="css-mx4jeh"
 >
   default
 </span>
 `;
 
-exports[`Badge information 1`] = `
+exports[`Badge outline 1`] = `
 <span
-  className="css-19f16re"
+  className="css-12s43p8"
 >
-  information
+  outline
+</span>
+`;
+
+exports[`Badge primary 1`] = `
+<span
+  className="css-25ardn"
+>
+  primary
 </span>
 `;
 
 exports[`Badge success 1`] = `
 <span
-  className="css-1j3h1kw"
+  className="css-1xv1zbc"
 >
   success
 </span>
@@ -34,7 +42,7 @@ exports[`Badge success 1`] = `
 
 exports[`Badge warning 1`] = `
 <span
-  className="css-wz5vwa"
+  className="css-r5izn1"
 >
   warning
 </span>

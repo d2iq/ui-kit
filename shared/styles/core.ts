@@ -1,9 +1,7 @@
-// Shared core styles
-
 /**
  * Return shared colors
  *
- * @returns
+ * @returns color mapping
  */
 export const getColors = () => {
   return {
@@ -21,7 +19,7 @@ export const getColors = () => {
 /**
  * Return shared font families
  *
- * @returns
+ * @returns font mapping
  */
 export const getFonts = () => {
   return {

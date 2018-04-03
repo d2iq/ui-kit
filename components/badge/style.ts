@@ -1,7 +1,7 @@
 import { css } from "emotion";
-import { getColors, getFonts } from "../../shared/style";
+import { getColors, getFonts } from "../../shared/styles/core";
 
-const badgeAppearances = {
+const badgeTheme = {
   "default": css`
     background-color: ${getColors().greyLight};
     border-color: ${getColors().greyLight};
@@ -31,12 +31,18 @@ const badgeAppearances = {
     background-color: ${getColors().white};
     border-color: ${getColors().greyLight};
     color: ${getColors().greyDark};
+  `,
+  "outline-primary": css`
+    background-color: ${getColors().white};
+    border-color: ${getColors().purple};
+    color: ${getColors().greyDark};
   `
 };
 
-export const badge = (appearance) => {
+export const badge = (theme) => {
   return css`
-    ${badgeAppearances[appearance]};
+    ${badgeTheme[theme]};
+    box-sizing: border-box;
     border-width: 1px;
     border-style: solid;
     padding-left: 8px;
