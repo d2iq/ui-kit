@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Badge accept jsx as children 1`] = `
+<span
+  className="css-mx4jeh"
+>
+  <span>
+    string
+  </span>
+</span>
+`;
+
 exports[`Badge danger 1`] = `
 <span
   className="css-1x7fm58"

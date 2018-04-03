@@ -2,6 +2,12 @@ import React from "react";
 import Badge from '../badge';
 import renderer from 'react-test-renderer';
 
+const StringComponent = () : JSX.Element => {
+  return (
+    <span>string</span>
+  )
+};
+
 describe("Badge", () => {
   it("default", () => {
     expect(renderer
@@ -36,6 +42,12 @@ describe("Badge", () => {
   it("outline", () => {
     expect(renderer
     .create(<Badge theme="outline">outline</Badge>)
+    .toJSON()).toMatchSnapshot()
+  });
+
+  it("accept jsx as children", () => {
+    expect(renderer
+    .create(<Badge><StringComponent /></Badge>)
     .toJSON()).toMatchSnapshot()
   });
 });
