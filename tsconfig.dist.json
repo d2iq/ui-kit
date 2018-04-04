@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
-    "allowJs": true,
+    "declaration": true,
     "rootDir": "./",
     "sourceMap": true,
     "noImplicitAny": false,

@@ -8,7 +8,7 @@
     "commitlint": "commitlint -e",
     "create:component": "./scripts/create-component",
     "deploy:storybook": "storybook-to-ghpages",
-    "dist": "tsc",
+    "dist": "tsc -p tsconfig.dist.json",
     "predist": "npm run clean",
     "lint": "tslint -c tslint.json --project tsconfig.json",
     "prerelease": "npm run dist",
