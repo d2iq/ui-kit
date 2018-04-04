@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "DCOS UI Kit",
   "scripts": {
-    "preinstall": "./scripts/pre-install",
+    "setup:git-hooks": "./scripts/pre-install",
     "start": "NODE_ENV=development npm run storybook --root ./ ",
     "dist": "npm run clean && NODE_ENV=production webpack -p --config ./webpack.config.js",
     "lint": "tslint -c tslint.json --project tsconfig.json",
