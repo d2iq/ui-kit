@@ -1,6 +1,6 @@
 # Badges
 
-Badges are a lightweight method of annotating or labeling content. Wrap content in the .badge class to add an inline badge. The font-size and line-height of a badge inherit from that of it’s parent’s properties.
+Badges are a lightweight method of annotating or labeling content. The font-size and line-height of a badge inherit from that of it’s parent’s properties.
 
 ### Badge States
 
@@ -20,4 +20,4 @@ You may wish to display more than the single badge type, either to create separa
 
 |Do|Don't|
 |---	|---	|
-|Use rounded rectangles.|Use fully rounded corners (we no longer use this style).|
+|-|-|

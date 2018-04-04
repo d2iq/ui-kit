@@ -1,41 +1,51 @@
 import { css } from "emotion";
 import { getColors, getFonts } from "../../shared/styles/core";
 
+const {
+  greyDark,
+  greyLight,
+  green,
+  purple,
+  red,
+  white,
+  yellow
+} = getColors();
+
 const badgeTheme = {
   "default": css`
-    background-color: ${getColors().greyLight};
-    border-color: ${getColors().greyLight};
+    background-color: ${greyLight};
+    border-color: ${greyLight};
     color: #1b2029;
   `,
   "success": css`
-    background-color: ${getColors().green};
-    border-color: ${getColors().green};
-    color: ${getColors().white};
+    background-color: ${green};
+    border-color: ${green};
+    color: ${white};
   `,
   "primary": css`
-    background-color: ${getColors().purple};
-    border-color: ${getColors().purple};
-    color: ${getColors().white};
+    background-color: ${purple};
+    border-color: ${purple};
+    color: ${white};
   `,
   "warning": css`
-    background-color: ${getColors().yellow};
-    border-color: ${getColors().yellow};
-    color: ${getColors().white};
+    background-color: ${yellow};
+    border-color: ${yellow};
+    color: ${white};
   `,
   "danger": css`
-    background-color: ${getColors().red};
-    border-color: ${getColors().red};
-    color: ${getColors().white};
+    background-color: ${red};
+    border-color: ${red};
+    color: ${white};
   `,
   "outline": css`
-    background-color: ${getColors().white};
-    border-color: ${getColors().greyLight};
-    color: ${getColors().greyDark};
+    background-color: ${white};
+    border-color: ${greyLight};
+    color: ${greyDark};
   `,
   "outline-primary": css`
-    background-color: ${getColors().white};
-    border-color: ${getColors().purple};
-    color: ${getColors().greyDark};
+    background-color: ${white};
+    border-color: ${purple};
+    color: ${greyDark};
   `
 };
 
