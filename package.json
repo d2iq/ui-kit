@@ -5,7 +5,7 @@
   "scripts": {
     "setup:git-hooks": "./scripts/pre-install",
     "start": "NODE_ENV=development npm run storybook --root ./ ",
-    "dist": "npm run clean && NODE_ENV=production webpack -p --config ./webpack.config.js",
+    "dist": "npm run clean && tsc",
     "lint": "tslint -c tslint.json --project tsconfig.json",
     "test": "jest --config ./jest.config.json",
     "test:watch": "jest --watch",
@@ -13,33 +13,25 @@
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "deploy:storybook": "storybook-to-ghpages",
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist",
     "release": "standard-version",
     "create:component": "./scripts/create-component"
   },
+  "files": ["dist"],
   "license": "Apache-2.0",
-  "main": "dist/ui-kit.js",
+  "main": "dist/components/index",
+  "typings": "dist/components/index",
   "repository": {
     "type": "git",
     "url": "https://github.com/dcos-labs/ui-kit"
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "text"
-    ],
+    "coverageReporters": ["json", "text"],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
   },
   "dependencies": {
