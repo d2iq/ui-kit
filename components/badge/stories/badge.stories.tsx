@@ -14,25 +14,25 @@ storiesOf("Badge", module)
   .addWithInfo(
     "Success",
     "Represents something positive.",
-    () => <Badge theme="success">Success</Badge>
+    () => <Badge appearance="success">Success</Badge>
   )
   .addWithInfo(
     "Primary",
     "Represents something more significant than a default.",
-    () => <Badge theme="primary">Primary</Badge>
+    () => <Badge appearance="primary">Primary</Badge>
   )
   .addWithInfo(
     "Danger",
     "Represents something in a danger or error state.",
-    () => <Badge theme="danger">Danger</Badge>
+    () => <Badge appearance="danger">Danger</Badge>
   )
   .addWithInfo(
     "Warning",
     "Represents something that we want to warn the user about but not quite extreme as a danger state.",
-    () => <Badge theme="warning">Warning</Badge>
+    () => <Badge appearance="warning">Warning</Badge>
   )
   .addWithInfo(
     "Outline",
     "Outline badges for when we want the density of the badge to be lighter e.g. when next to data in a table cell",
-    () => <Badge theme="outline">Outline</Badge>
+    () => <Badge appearance="outline">Outline</Badge>
   )

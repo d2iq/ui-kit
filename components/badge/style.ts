@@ -1,5 +1,6 @@
 import { css } from "emotion";
-import { getColors, getFonts } from "../../shared/styles/core";
+import { coreColors, customColors } from "../../shared/styles/color";
+import { coreFonts } from "../../shared/styles/typography"
 
 const {
   greyDark,
@@ -9,13 +10,20 @@ const {
   red,
   white,
   yellow
-} = getColors();
+} = coreColors();
+const {
+  ebonyClay
+} = customColors();
 
-const badgeTheme = {
+const {
+  fontFamilySansSerif
+} = coreFonts();
+
+const badgeAppearance = {
   "default": css`
     background-color: ${greyLight};
     border-color: ${greyLight};
-    color: #1b2029;
+    color: ${ebonyClay};
   `,
   "success": css`
     background-color: ${green};
@@ -49,9 +57,9 @@ const badgeTheme = {
   `
 };
 
-export const badge = (theme) => {
+export const badge = (appearance) => {
   return css`
-    ${badgeTheme[theme]};
+    ${badgeAppearance[appearance]};
     box-sizing: border-box;
     border-width: 1px;
     border-style: solid;
@@ -59,7 +67,7 @@ export const badge = (theme) => {
     padding-right: 8px;
     font-size: 80%;
     line-height: inherit;
-    font-family: ${getFonts().fontFamilySansSerif};
+    font-family: ${fontFamilySansSerif};
     text-decoration: none;
     text-rendering: optimizeLegibility;
     border-radius: 4px;
