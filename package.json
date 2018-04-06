@@ -1,51 +1,43 @@
 {
-  "name": "dcos-ui-kit",
+  "name": "@dcos/ui-kit",
   "version": "0.1.0",
   "description": "DCOS UI Kit",
   "scripts": {
-    "preinstall": "./scripts/pre-install",
-    "start": "NODE_ENV=development npm run storybook --root ./ ",
-    "dist": "npm run clean && NODE_ENV=production webpack -p --config ./webpack.config.js",
-    "lint": "tslint -c tslint.json --project tsconfig.json",
-    "test": "jest --config ./jest.config.json",
-    "test:watch": "jest --watch",
-    "commitlint": "commitlint -e",
-    "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
+    "clean": "rimraf dist",
+    "commitlint": "commitlint -e",
+    "create:component": "./scripts/create-component",
     "deploy:storybook": "storybook-to-ghpages",
-    "clean": "rm -rf dist",
+    "dist": "tsc -p tsconfig.dist.json",
+    "predist": "npm run clean",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "prerelease": "npm run dist",
     "release": "standard-version",
-    "create:component": "./scripts/create-component"
+    "setup:git-hooks": "./scripts/pre-install",
+    "start": "NODE_ENV=development npm run storybook --root ./ ",
+    "storybook": "start-storybook -p 6006",
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "jest --watch"
   },
+  "files": ["dist"],
   "license": "Apache-2.0",
-  "main": "dist/ui-kit.js",
+  "main": "dist/components/index",
+  "typings": "dist/components/index",
   "repository": {
     "type": "git",
     "url": "https://github.com/dcos-labs/ui-kit"
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "text"
-    ],
+    "coverageReporters": ["json", "text"],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
   },
   "dependencies": {
     "emotion": "9.0.2",
-    "node": "8.9.4",
-    "npm": "5.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-emotion": "9.0.2"
@@ -65,7 +57,7 @@
     "@types/jest": "22.2.2",
     "@types/node": "9.4.7",
     "@types/react": "16.0.40",
-    "@types/react-dom": "15.5.7",
+    "@types/react-dom": "16.0.4",
     "@types/storybook__addon-actions": "3.0.3",
     "@types/storybook__addon-info": "3.2.2",
     "@types/storybook__addon-knobs": "3.2.3",
@@ -74,10 +66,13 @@
     "file-loader": "1.1.10",
     "fs-extra": "5.0.0",
     "jest": "22.4.2",
+    "node": "8.9.4",
+    "npm": "5.6.0",
     "prettier": "1.11.1",
     "prop-types": "15.6.1",
     "react-docgen-typescript-loader": "2.0.2",
     "react-test-renderer": "16.2.0",
+    "rimraf": "2.6.2",
     "standard-version": "4.3.0",
     "storybook-readme": "3.2.1",
     "ts-jest": "22.4.2",

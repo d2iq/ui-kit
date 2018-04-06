@@ -1,5 +1,1 @@
-import Badge from "./badge";
-
-export {
-  Badge
-};
+export { default as Badge } from "./badge";

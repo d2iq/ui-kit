@@ -1,6 +1,6 @@
 // Include core typography, helpers and etc in this file
 
-interface IFonts {
+export interface IFonts {
   fontFamilySansSerif: string;
   fontFamilySerif: string;
   fontFamilyMonospace: string;
