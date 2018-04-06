@@ -14,38 +14,37 @@ const {
 const {
   ebonyClay
 } = customColors();
-
 const {
   fontFamilySansSerif
 } = coreFonts();
 
 const badgeAppearance = {
-  "default": css`
+  default: css`
     background-color: ${greyLight};
     border-color: ${greyLight};
     color: ${ebonyClay};
   `,
-  "success": css`
+  success: css`
     background-color: ${green};
     border-color: ${green};
     color: ${white};
   `,
-  "primary": css`
+  primary: css`
     background-color: ${purple};
     border-color: ${purple};
     color: ${white};
   `,
-  "warning": css`
+  warning: css`
     background-color: ${yellow};
     border-color: ${yellow};
     color: ${white};
   `,
-  "danger": css`
+  danger: css`
     background-color: ${red};
     border-color: ${red};
     color: ${white};
   `,
-  "outline": css`
+  outline: css`
     background-color: ${white};
     border-color: ${greyLight};
     color: ${greyDark};

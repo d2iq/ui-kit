@@ -1,14 +1,7 @@
 // Include core colors, helpers and etc in this file
 
 interface IColors {
-  white: string;
-  black: string;
-  greyDark: string;
-  greyLight: string;
-  purple: string;
-  red: string;
-  yellow: string;
-  green: string;
+  [colorName: string]: string;
 }
 
 /**
@@ -18,23 +11,19 @@ interface IColors {
  */
 export const coreColors = () : IColors => {
   return {
-    "white": "#fff",
-    "black": "#000",
-    "greyDark": "#1c212a",
-    "greyLight": "#dadde2",
-    "purple": "#7d57ff",
-    "red": "#ec2a3b",
-    "yellow": "#f9a328",
-    "green": "#14c683",
+    white: "#fff",
+    black: "#000",
+    greyDark: "#1c212a",
+    greyLight: "#dadde2",
+    purple: "#7d57ff",
+    red: "#ec2a3b",
+    yellow: "#f9a328",
+    green: "#14c683",
   }
 }
 
-interface ICustomColors {
-  ebonyClay: string
-}
-
-export const customColors = () : ICustomColors => {
+export const customColors = () : IColors => {
   return {
-    "ebonyClay": "#1b2029"
+    ebonyClay: "#1b2029"
   }
 }
