@@ -1,6 +1,6 @@
 {
   "name": "@dcos/ui-kit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "DCOS UI Kit",
   "scripts": {
     "build:storybook": "build-storybook",
@@ -19,7 +19,9 @@
     "test": "jest --config ./jest.config.json",
     "test:watch": "jest --watch"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "license": "Apache-2.0",
   "main": "dist/components/index",
   "typings": "dist/components/index",
@@ -29,11 +31,21 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["json", "text"],
+    "coverageReporters": [
+      "json",
+      "text"
+    ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
   },
   "dependencies": {
