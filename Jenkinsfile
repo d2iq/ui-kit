@@ -61,7 +61,7 @@ pipeline {
 
       post {
         always {
-          archiveArtifacts 'dist/*'
+          archiveArtifacts 'dist/**/*'
         }
       }
     }

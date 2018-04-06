@@ -1,6 +1,6 @@
 // Include core colors, helpers and etc in this file
 
-interface IColors {
+export interface IColors {
   [colorName: string]: string;
 }
 
