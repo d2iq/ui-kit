@@ -2,6 +2,12 @@ import React from "react";
 import Badge from '../badge';
 import renderer from 'react-test-renderer';
 
+const StringComponent = () : JSX.Element => {
+  return (
+    <span>string</span>
+  )
+};
+
 describe("Badge", () => {
   it("default", () => {
     expect(renderer
@@ -15,9 +21,15 @@ describe("Badge", () => {
     .toJSON()).toMatchSnapshot()
   });
 
-  it("information", () => {
+  it("primary", () => {
     expect(renderer
-    .create(<Badge appearance="information">information</Badge>)
+    .create(<Badge appearance="primary">primary</Badge>)
+    .toJSON()).toMatchSnapshot()
+  });
+
+  it("danger", () => {
+    expect(renderer
+    .create(<Badge appearance="danger">danger</Badge>)
     .toJSON()).toMatchSnapshot()
   });
 
@@ -27,9 +39,15 @@ describe("Badge", () => {
     .toJSON()).toMatchSnapshot()
   });
 
-  it("danger", () => {
+  it("outline", () => {
     expect(renderer
-    .create(<Badge appearance="danger">danger</Badge>)
+    .create(<Badge appearance="outline">outline</Badge>)
+    .toJSON()).toMatchSnapshot()
+  });
+
+  it("accept jsx as children", () => {
+    expect(renderer
+    .create(<Badge><StringComponent /></Badge>)
     .toJSON()).toMatchSnapshot()
   });
 });

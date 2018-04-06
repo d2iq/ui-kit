@@ -1,29 +1,17 @@
-// Shared core styles
+// Include core typography, helpers and etc in this file
 
-/**
- * Return shared colors
- *
- * @returns
- */
-export const getColors = () => {
-  return {
-    "white": "#fff",
-    "black": "#000",
-    "greyDark": "#1c212a",
-    "greyLight": "#dadde2",
-    "purple": "#7d57ff",
-    "red": "#ec2a3b",
-    "yellow": "#f9a328",
-    "green": "#14c683",
-  }
+interface IFonts {
+  fontFamilySansSerif: string;
+  fontFamilySerif: string;
+  fontFamilyMonospace: string;
 }
 
 /**
  * Return shared font families
  *
- * @returns
+ * @returns font mapping
  */
-export const getFonts = () => {
+export const coreFonts = () : IFonts => {
   return {
     "fontFamilySansSerif": "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
     "fontFamilySerif": "didot, 'Didot LT STD', 'Hoefler Text', garamond, 'Times New Roman', serif",

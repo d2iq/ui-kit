@@ -3,7 +3,7 @@ import { badge } from "./style";
 
 export interface IBadgeProps {
   appearance?: string;
-  children?: React.ReactNode | string;
+  children: JSX.Element | string;
 }
 
 export class Badge extends React.PureComponent<IBadgeProps, {}> {
