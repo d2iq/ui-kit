@@ -1,6 +1,6 @@
 // Include core colors, helpers and etc in this file
 
-interface IColors {
+export interface IColors {
   white: string;
   black: string;
   greyDark: string;
@@ -29,7 +29,7 @@ export const coreColors = () : IColors => {
   }
 }
 
-interface ICustomColors {
+export interface ICustomColors {
   ebonyClay: string
 }
 

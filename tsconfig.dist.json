@@ -1,21 +1,7 @@
 {
+  "extends": "./tsconfig",
   "compilerOptions": {
-    "outDir": "./dist/",
     "declaration": true,
-    "rootDir": "./",
-    "sourceMap": true,
-    "noImplicitAny": false,
-    "target": "es5",
-    "module": "commonjs",
-    "jsx": "react",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "esModuleInterop": true,
-    "strict": true,
-    "moduleResolution": "node",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es6", "dom"]
-  },
-  "include": ["./components/index.ts"],
-  "exclude": ["**/*.test.*", "**/*.stories.*"]
+    "allowJs": false
+  }
 }
