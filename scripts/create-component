@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-let fs = require("fs-extra");
-let path = require("path");
+const fs = require("fs-extra");
+const path = require("path");
 let componentName = "Component";
 const templatePath = "templates/component/";
 
