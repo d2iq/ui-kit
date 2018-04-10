@@ -21,3 +21,22 @@ Generally a component should rather be rigid then flexible. That means that we r
 > -- Random Person on the Internet
 
 So while creating a component think about one single reappearing use-case and create a component to solve that use-case. And do not try to think about a million use-cases which one component could handle. Less features means more simplicity and consistency.
+
+### Introducing 3rd Party Components
+
+There are 3 ways to introduce 3rd party components to the `ui-kit`
+
+* Link  
+  We just add a link to that component to the documentation. This is not a favourable way.
+* Wrap  
+  We are creating our own component but in that component we are utilising a 3rd party component, this solution is the favourable solution for the `ui-kit` as with that solution we are adding consistency to the 3rd party components and there is a single point to change the usage of that component if we decide to update the component or replace the component with our own implementation or an other implementation.
+* Fork  
+   We should only do that if we do not see any other solution.
+
+<!--
+TODO: add step by step guide for forking.
+- Key decisions needed
+    - we forking repositories into the ui-kit or are we creating a new repository within `dcos-labs`.
+-->
+
+Going from link via wrap to fork increases the control over component but also increases the effort need to update the component. Wrap is the sweet spot between consistency and functionality vs control and effort.
