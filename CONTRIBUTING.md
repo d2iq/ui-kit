@@ -40,3 +40,10 @@ TODO: add step by step guide for forking.
 -->
 
 Going from link via wrap to fork increases the control over component but also increases the effort need to update the component. Wrap is the sweet spot between consistency and functionality vs control and effort.
+
+### Moving A Component From `dcos/dcos-ui` To The `ui-kit`
+
+There will be often a chance when you create a component in `DCOS-ui` that it is a good candidate for the ui-kit, but before moving it over to the ui-kit move it to the `candidate` directory in `dcos/dcos-ui` on a regular basis we are going to evaluate usage of components in the `candidate` directory. In that way we have a good overview over candidate components for the ui-kit.
+
+> Rule of Three:  
+> Try a component in three different places before placing it into ui-kit
