@@ -19,7 +19,7 @@ then
     "\nUse the following command to amend changes and edit the commit message."\
     "\n\n> git commit --amend\n"
 
-  exit -1
+  exit 0
 fi
 
 info "Commit message looks good"
