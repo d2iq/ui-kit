@@ -47,3 +47,50 @@ There will be often a chance when you create a component in `DCOS-ui` that it is
 
 > Rule of Three:  
 > Try a component in three different places before placing it into ui-kit
+
+### Creating a Reusable Component
+
+#### Avoid Weak Elements
+
+Weak elements are elements which can’t nest block elements for example a `p` tag is not able to wrap around a div which will reduce the comparability of a component. This is why we try to rather use a strong element like `section` or `div` instead of `p`.
+
+#### Declare Prop Types
+
+Since the `ui-kit` is using typescript please make sure to define proper prop types to your components. This will improve the documentation, which is created dynamically, and will provide better error messages for the users. And also this will provide auto completition in some IDE’s. Describe the props as good as possible, so also define object shapes or array shapes.
+
+#### Never hard code HTML ID’s
+
+This might conflict at some point. If you really need a id on the element expose a prop for that so the user can define it based on the application.
+
+#### Use Logical Defaults
+
+Use prop defaults which make sense this will reduce the efforts needed to adopt this component.
+
+#### A11y Support
+
+A good start on that topic is to read [this website](https://a11yproject.com/)
+While creating your component think about users: - Which only use keyboards - expose tab indexes as props - Use semantic correct HTML - ARIA
+
+#### Configuration Objects
+
+Please consider using configuration objects as they will provide the user a lot of valuable by
+
+* consistency
+* less typing needed
+* less error prone
+
+But please avoid using configuration Objects if you only have 3 or less properties.
+
+#### Single Responsibility Principle
+
+Keep the components simple by applying them to a single responsibility. In that way the component will stay simple in most cases. Try not to introduce too many props. Each prop is a configuration which will automatically increase the complexity. Before adding a property to a existing component ask yourself if this could be a new component.
+
+#### Keep Components Dumb
+
+It is important to keep components as dumb as possible, only add logic to a component if it improves performance or quality of a component. For example, paginating a list if the number of items is exceeding a certain amount or having a show toggle to show more content like a drop out.
+
+#### Directory Structure
+
+<!--
+TODO: Decide on directory structure.
+-->
