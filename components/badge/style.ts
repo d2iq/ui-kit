@@ -1,22 +1,10 @@
 import { css } from "emotion";
 import { coreColors, customColors } from "../../shared/styles/color";
-import { coreFonts } from "../../shared/styles/typography"
+import { coreFonts } from "../../shared/styles/typography";
 
-const {
-  greyDark,
-  greyLight,
-  green,
-  purple,
-  red,
-  white,
-  yellow
-} = coreColors();
-const {
-  ebonyClay
-} = customColors();
-const {
-  fontFamilySansSerif
-} = coreFonts();
+const { greyDark, greyLight, green, purple, red, white, yellow } = coreColors();
+const { ebonyClay } = customColors();
+const { fontFamilySansSerif } = coreFonts();
 
 const badgeAppearance = {
   default: css`
@@ -56,14 +44,13 @@ const badgeAppearance = {
   `
 };
 
-export const badge = (appearance) => {
+export const badge = appearance => {
   return css`
     ${badgeAppearance[appearance]};
     box-sizing: border-box;
     border-width: 1px;
     border-style: solid;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 0 8px 0;
     font-size: 80%;
     line-height: inherit;
     font-family: ${fontFamilySansSerif};
@@ -74,4 +61,4 @@ export const badge = (appearance) => {
     display: inline-flex;
     justify-content: center;
   `;
-}
+};
