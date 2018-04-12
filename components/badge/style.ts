@@ -56,9 +56,11 @@ const badgeAppearance = {
   `
 };
 
-export const badge = (appearance) => {
+export const badge = (opts) => {
+  const cursor = opts.isEvent ? "cursor: pointer" : "cursor: text";
+
   return css`
-    ${badgeAppearance[appearance]};
+    ${badgeAppearance[opts.appearance]};
     box-sizing: border-box;
     border-width: 1px;
     border-style: solid;
@@ -73,5 +75,6 @@ export const badge = (appearance) => {
     align-items: center;
     display: inline-flex;
     justify-content: center;
+    ${cursor}
   `;
 }

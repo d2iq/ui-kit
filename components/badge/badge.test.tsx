@@ -1,6 +1,6 @@
 import React from "react";
-import Badge from '../badge';
 import renderer from 'react-test-renderer';
+import Badge from '../badge';
 
 const StringComponent = () : JSX.Element => {
   return (
@@ -48,6 +48,16 @@ describe("Badge", () => {
   it("accept jsx as children", () => {
     expect(renderer
     .create(<Badge><StringComponent /></Badge>)
+    .toJSON()).toMatchSnapshot()
+  });
+
+  it("can have onClick event", () => {
+    const foo = () => {
+      return true;
+    };
+
+    expect(renderer
+    .create(<Badge onClick={foo}>onClick badge</Badge>)
     .toJSON()).toMatchSnapshot()
   });
 });
