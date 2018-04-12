@@ -1,59 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BadgeButton accept jsx as children 1`] = `
-<span
-  className="css-mx4jeh"
+<button
+  className="css-z07lik"
+  onClick={[Function]}
+  tabIndex={-1}
 >
   <span>
     string
   </span>
-</span>
+</button>
 `;
 
 exports[`BadgeButton danger 1`] = `
-<span
-  className="css-1x7fm58"
+<button
+  className="css-1ajjn9d"
+  onClick={[Function]}
+  tabIndex={-1}
 >
   danger
-</span>
+</button>
 `;
 
 exports[`BadgeButton default 1`] = `
-<span
-  className="css-mx4jeh"
+<button
+  className="css-z07lik"
+  onClick={[Function]}
+  tabIndex={-1}
 >
   default
-</span>
+</button>
 `;
 
 exports[`BadgeButton outline 1`] = `
-<span
-  className="css-12s43p8"
+<button
+  className="css-a25fbm"
+  onClick={[Function]}
+  tabIndex={-1}
 >
   outline
-</span>
+</button>
 `;
 
 exports[`BadgeButton primary 1`] = `
-<span
-  className="css-25ardn"
+<button
+  className="css-aazq2z"
+  onClick={[Function]}
+  tabIndex={-1}
 >
   primary
-</span>
+</button>
 `;
 
 exports[`BadgeButton success 1`] = `
-<span
-  className="css-1xv1zbc"
+<button
+  className="css-9ne0g7"
+  onClick={[Function]}
+  tabIndex={-1}
 >
   success
-</span>
+</button>
 `;
 
 exports[`BadgeButton warning 1`] = `
-<span
-  className="css-r5izn1"
+<button
+  className="css-t67ibq"
+  onClick={[Function]}
+  tabIndex={-1}
 >
   warning
-</span>
+</button>
 `;
