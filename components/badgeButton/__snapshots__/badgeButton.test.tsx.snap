@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BadgeButton accept jsx as children 1`] = `
+<span
+  className="css-mx4jeh"
+>
+  <span>
+    string
+  </span>
+</span>
+`;
+
+exports[`BadgeButton danger 1`] = `
+<span
+  className="css-1x7fm58"
+>
+  danger
+</span>
+`;
+
+exports[`BadgeButton default 1`] = `
+<span
+  className="css-mx4jeh"
+>
+  default
+</span>
+`;
+
+exports[`BadgeButton outline 1`] = `
+<span
+  className="css-12s43p8"
+>
+  outline
+</span>
+`;
+
+exports[`BadgeButton primary 1`] = `
+<span
+  className="css-25ardn"
+>
+  primary
+</span>
+`;
+
+exports[`BadgeButton success 1`] = `
+<span
+  className="css-1xv1zbc"
+>
+  success
+</span>
+`;
+
+exports[`BadgeButton warning 1`] = `
+<span
+  className="css-r5izn1"
+>
+  warning
+</span>
+`;
