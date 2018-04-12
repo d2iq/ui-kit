@@ -2,7 +2,7 @@
 
 exports[`Badge accept jsx as children 1`] = `
 <span
-  className="css-mx4jeh"
+  className="css-h6dpn5"
 >
   <span>
     string
@@ -10,9 +10,18 @@ exports[`Badge accept jsx as children 1`] = `
 </span>
 `;
 
+exports[`Badge can have onClick event 1`] = `
+<span
+  className="css-6jnl7a"
+  onClick={[Function]}
+>
+  onClick badge
+</span>
+`;
+
 exports[`Badge danger 1`] = `
 <span
-  className="css-1x7fm58"
+  className="css-1rtadzi"
 >
   danger
 </span>
@@ -20,7 +29,7 @@ exports[`Badge danger 1`] = `
 
 exports[`Badge default 1`] = `
 <span
-  className="css-mx4jeh"
+  className="css-h6dpn5"
 >
   default
 </span>
@@ -28,7 +37,7 @@ exports[`Badge default 1`] = `
 
 exports[`Badge outline 1`] = `
 <span
-  className="css-12s43p8"
+  className="css-1itz6ao"
 >
   outline
 </span>
@@ -36,7 +45,7 @@ exports[`Badge outline 1`] = `
 
 exports[`Badge primary 1`] = `
 <span
-  className="css-25ardn"
+  className="css-12gdqng"
 >
   primary
 </span>
@@ -44,7 +53,7 @@ exports[`Badge primary 1`] = `
 
 exports[`Badge success 1`] = `
 <span
-  className="css-1xv1zbc"
+  className="css-k4847p"
 >
   success
 </span>
@@ -52,7 +61,7 @@ exports[`Badge success 1`] = `
 
 exports[`Badge warning 1`] = `
 <span
-  className="css-r5izn1"
+  className="css-1ufo5ae"
 >
   warning
 </span>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
+import { action } from '@storybook/addon-actions';
 import { Badge } from "../../index";
 
 const BadgeReadme = require("../README.md");
@@ -35,4 +36,8 @@ storiesOf("Badge", module)
     "Outline",
     "Outline badges for when we want the density of the badge to be lighter e.g. when next to data in a table cell",
     () => <Badge appearance="outline">Outline</Badge>
+  )
+  .addWithInfo(
+    "OnClick event",
+    () => <Badge onClick={action("OnClick event")}>onClick</Badge>
   )
