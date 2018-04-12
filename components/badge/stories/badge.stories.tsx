@@ -1,7 +1,8 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { Badge } from "../../index";
+import { action } from "@storybook/addon-actions";
+import { Badge, BadgeButton } from "../../index";
 
 const BadgeReadme = require("../README.md");
 

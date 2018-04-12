@@ -1,5 +1,5 @@
 import * as React from "react";
-import { badgeButton } from "./style";
+import { badge as badgeButton } from "../badge/style";
 
 export interface IBadgeButtonProps {
   appearance?:
@@ -9,7 +9,7 @@ export interface IBadgeButtonProps {
     | "warning"
     | "danger"
     | "outline";
-  onClick?: (...args: any[]) => void;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   /**
    * Tab index indicates if an element can be focuesed for more information see
    * https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
