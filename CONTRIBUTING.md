@@ -94,3 +94,42 @@ It is important to keep components as dumb as possible, only add logic to a comp
 <!--
 TODO: Decide on directory structure.
 -->
+
+### Atomic Design
+
+Atomic design is the principle we are trying to follow while we create components. More information on the principle can be read at [atomicdesign.bradfrost.com](http://atomicdesign.bradfrost.com/)
+
+#### Atoms
+
+Atoms are the smallest building blocks and the form the foundation of the library. Atoms are usually composed together with other atoms to create a molecule.
+Some best practices here are:
+
+* Honour the native API’s, for example if you define a prop for `tabIndex` call it `tabIndex` instead of `tabindex` or `indexOfTabs`. This will improve consistency.
+* Pass props via spread, if you need to pass props to a component use the spread operator like this `<input type="password" {...this.props} />`
+* Use spread with destruct, use the destruct to remove props which you do not want to pass and then use spread to pass the props to the component.
+  ```JS
+  ({value, ...props}) => (<button {...props}>{value}</button>)
+  ```
+  * Do not scare away to create formatting components like MiB for adding MiB to a number `<MiB>1024</MiB> => 1024 MiB`
+
+Naming a atom we should use plurals instead of a suffix so it should rather be users then userList.
+
+A Example for a Atom could be a `TextInput` component which basically provides a input field.
+
+#### Molecules
+
+> Multiple atoms are composed together creating Simple Functional Reusable Components.
+
+Molecules are the next bigger component type after atoms, they are usually made up by multiple atoms and they should still have only one purpose and do that one very well. By including multiple atoms the molecule does not need to expose all the properties from the atoms, but only the ones necessary to build the molecule. The purpose of this is to increase the consistency of dcos-ui which is the main use case for the ui-kit.
+
+> For instance, water molecules and hydrogen peroxide molecules have their own unique properties and behave quite differently, even though they’re made up of the same atomic elements (hydrogen and oxygen). --- Brad Frost
+
+_An example for a molecule could be a password component which is including the TextInput component and a eye icon which is on click switching in-between a password input or text input._
+
+#### Organisms
+
+Molecules form complex organisms, these are reusable higher level patterns which might be a façade for underlying Molecules or Atoms. Organisms build bigger components like a header with a search and a login molecule or a whole form. They are strongly opinionated, they will lead to a better consistency across a project.
+
+Keep organisms dumb, here is why, a organism is not a app and they are just the building blocks they should not include the business logic, they should only display information. For example if some information is displayed in two places of an app which are different components these informations are only once needed to generate. Also if the logic changes this only needs to change in one place and not multiple.
+
+An Example for a organism is a Registration form which is consisting of a TextInput (Atom) and the Password Component (Molecule)
