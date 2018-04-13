@@ -32,14 +32,60 @@
   },
   "files": ["dist"],
   "jest": {
-    "coverageReporters": ["json", "text"],
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
-    "setupTestFrameworkScriptFile": "<rootDir>/testHelper/setupTests.ts",
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "roots": ["components"]
+    "coverageReporters": [
+      "json",
+      "text"
+    ],
+    "projects": [{
+      "displayName": "Jest",
+      "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "node"
+      ],
+      "setupTestFrameworkScriptFile": "<rootDir>/testHelper/setupTests.ts",
+      "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+      "transform": {
+        "^.+\\.tsx?$": "ts-jest"
+      },
+      "roots": [
+        "components"
+      ]
+    }, {
+      "displayName": "Prettier",
+      "runner": "jest-runner-prettier",
+      "moduleFileExtensions": [
+        "js",
+        "jsx",
+        "json",
+        "ts",
+        "tsx",
+        "css",
+        "less",
+        "scss",
+        "graphql",
+        "md",
+        "markdown"
+      ],
+      "testMatch": [
+        "**/*.js",
+        "**/*.jsx",
+        "tslint.json",
+        "tsconfig.json",
+        "tsconfig.dist.json",
+        "components/**/*.ts",
+        "components/**/*.tsx",
+        "**/*.css",
+        "**/*.less",
+        "**/*.scss",
+        "**/*.graphql",
+        "**/*.md",
+        "**/*.markdown"
+      ]
+    }]
   },
   "typings": "dist/components/index",
   "dependencies": {
@@ -73,7 +119,8 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "file-loader": "1.1.10",
     "fs-extra": "5.0.0",
-    "jest": "22.4.2",
+    "jest": "^22.4.2",
+    "jest-runner-prettier": "^0.2.2",
     "node": "8.9.4",
     "npm": "5.6.0",
     "prettier": "1.11.1",
