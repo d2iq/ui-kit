@@ -17,7 +17,7 @@ module.exports = {
     port: 9000
   },
   module: {
-    rules: webpackBase.getRules(),
+    rules: webpackBase.getRules()
   },
   resolve: {
     extensions: webpackBase.getExtensions()
@@ -25,16 +25,16 @@ module.exports = {
   plugins: webpackBase.getPlugins(),
   externals: {
     react: {
-      root: 'React',
-      commonjs2: 'react',
-      commonjs: 'react',
-      amd: 'react'
+      root: "React",
+      commonjs2: "react",
+      commonjs: "react",
+      amd: "react"
     },
-    'react-dom': {
-      root: 'ReactDOM',
-      commonjs2: 'react-dom',
-      commonjs: 'react-dom',
-      amd: 'react-dom'
+    "react-dom": {
+      root: "ReactDOM",
+      commonjs2: "react-dom",
+      commonjs: "react-dom",
+      amd: "react-dom"
     }
   }
 };

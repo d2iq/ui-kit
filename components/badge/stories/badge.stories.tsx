@@ -7,15 +7,10 @@ const BadgeReadme = require("../README.md");
 
 storiesOf("Badge", module)
   .addDecorator(withReadme([BadgeReadme]))
-  .addWithInfo(
-    "Default",
-    () => <Badge>Default</Badge>
-  )
-  .addWithInfo(
-    "Success",
-    "Represents something positive.",
-    () => <Badge appearance="success">Success</Badge>
-  )
+  .addWithInfo("Default", () => <Badge>Default</Badge>)
+  .addWithInfo("Success", "Represents something positive.", () => (
+    <Badge appearance="success">Success</Badge>
+  ))
   .addWithInfo(
     "Primary",
     "Represents something more significant than a default.",
@@ -35,4 +30,4 @@ storiesOf("Badge", module)
     "Outline",
     "Outline badges for when we want the density of the badge to be lighter e.g. when next to data in a table cell",
     () => <Badge appearance="outline">Outline</Badge>
-  )
+  );

@@ -15,16 +15,16 @@ setOptions({
   showLeftPanel: true,
   showDownPanel: true,
   showSearchBox: false,
-  downPanelInRight: true,
+  downPanelInRight: true
 });
 
 setDefaults({
   header: true,
   inline: true
-})
+});
 
 function loadStories() {
-  req.keys().forEach((filename) => req(filename));
+  req.keys().forEach(filename => req(filename));
 }
 
 configure(loadStories, module);

@@ -30,22 +30,10 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "jest": {
-    "coverageReporters": [
-      "json",
-      "text"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
+    "coverageReporters": ["json", "text"],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
     "setupTestFrameworkScriptFile": "<rootDir>/testHelper/setupTests.ts",
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "transform": {

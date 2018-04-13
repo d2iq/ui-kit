@@ -9,10 +9,13 @@ export interface IFonts {
  *
  * @returns font mapping
  */
-export const coreFonts = () : IFonts => {
+export const coreFonts = (): IFonts => {
   return {
-    fontFamilySansSerif: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
-    fontFamilySerif: "didot, 'Didot LT STD', 'Hoefler Text', garamond, 'Times New Roman', serif",
-    fontFamilyMonospace: "'Menlo', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Monaco', 'Consolas', monospace"
-  }
-}
+    fontFamilySansSerif:
+      "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    fontFamilySerif:
+      "didot, 'Didot LT STD', 'Hoefler Text', garamond, 'Times New Roman', serif",
+    fontFamilyMonospace:
+      "'Menlo', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Monaco', 'Consolas', monospace"
+  };
+};

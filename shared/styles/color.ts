@@ -9,7 +9,7 @@ export interface IColors {
  *
  * @returns color mapping
  */
-export const coreColors = () : IColors => {
+export const coreColors = (): IColors => {
   return {
     white: "#fff",
     black: "#000",
@@ -18,12 +18,12 @@ export const coreColors = () : IColors => {
     purple: "#7d57ff",
     red: "#ec2a3b",
     yellow: "#f9a328",
-    green: "#14c683",
-  }
-}
+    green: "#14c683"
+  };
+};
 
-export const customColors = () : IColors => {
+export const customColors = (): IColors => {
   return {
     ebonyClay: "#1b2029"
-  }
-}
+  };
+};

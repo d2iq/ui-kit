@@ -1,10 +1,6 @@
 {
-  "extends": [
-    "@dcos/tslint-config"
-  ],
+  "extends": ["@dcos/tslint-config"],
   "linterOptions": {
-    "exclude": [
-      "./scripts/templates/*"
-    ]
+    "exclude": ["./scripts/templates/*"]
   }
 }
