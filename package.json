@@ -27,14 +27,13 @@
     "setup:git-hooks": "./scripts/pre-install",
     "start": "NODE_ENV=development npm run storybook --root ./ ",
     "storybook": "start-storybook -p 6006",
-    "test": "jest --config ./jest.config.json",
+    "test": "jest",
     "test:watch": "jest --watch"
   },
   "files": [
     "dist"
   ],
   "jest": {
-    "collectCoverage": true,
     "coverageReporters": [
       "json",
       "text"
@@ -51,7 +50,8 @@
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
-    }
+    },
+    "roots": ["components"]
   },
   "typings": "dist/components/index",
   "dependencies": {
