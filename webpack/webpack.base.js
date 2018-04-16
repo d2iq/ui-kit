@@ -3,7 +3,7 @@ const webpack = require("webpack");
 
 const webpackBase = {
   getDevTool: () => {
-    return process.env.NODE_ENV === "production" ? false : "inline-source-map"
+    return process.env.NODE_ENV === "production" ? false : "inline-source-map";
   },
 
   getRules: () => {
@@ -11,17 +11,12 @@ const webpackBase = {
       {
         test: /\.(js|ts|tsx?)$/,
         exclude: /node_modules/,
-        use: [
-          "ts-loader",
-          "react-docgen-typescript-loader"
-        ]
+        use: ["ts-loader", "react-docgen-typescript-loader"]
       },
       {
         test: /\.(eot|ttf|woff|woff2|svg|png|gif|jpe?g)$/,
         exclude: /(node_modules)/,
-        use: [
-          "file-loader"
-        ],
+        use: ["file-loader"]
       }
     ];
   },
@@ -34,9 +29,9 @@ const webpackBase = {
     ];
 
     if (process.env.NODE_ENV === "production") {
-       plugins.concat([
+      plugins.concat([
         new webpack.optimize.ModuleConcatenationPlugin(),
-        new webpack.optimize.UglifyJsPlugin
+        new webpack.optimize.UglifyJsPlugin()
       ]);
     }
 

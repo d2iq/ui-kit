@@ -47,7 +47,7 @@ pipeline {
     stage('Unit Test') {
       steps {
         ansiColor('xterm') {
-          sh '''npm run test'''
+          sh '''npm run test -- --collectCoverage'''
         }
       }
     }

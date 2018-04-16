@@ -3,8 +3,8 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.2.0"></a>
-# [0.2.0](https://github.com/dcos-labs/ui-kit/compare/v0.1.0...v0.2.0) (2018-04-06)
 
+# [0.2.0](https://github.com/dcos-labs/ui-kit/compare/v0.1.0...v0.2.0) (2018-04-06)
 
 ### Bug Fixes
 
@@ -19,7 +19,6 @@ All notable changes to this project will be documented in this file. See [standa
 * unit test example ([49d942c](https://github.com/dcos-labs/ui-kit/commit/49d942c))
 * update package-lock ([ecc79c7](https://github.com/dcos-labs/ui-kit/commit/ecc79c7))
 
-
 ### Features
 
 * **ci:** setup CI via Jenkinsfile ([841365d](https://github.com/dcos-labs/ui-kit/commit/841365d))
@@ -30,11 +29,9 @@ All notable changes to this project will be documented in this file. See [standa
 * script to generate component ([44785a2](https://github.com/dcos-labs/ui-kit/commit/44785a2))
 * use shared tslint-config ([8cc5760](https://github.com/dcos-labs/ui-kit/commit/8cc5760))
 
-
-
 <a name="0.1.0"></a>
-# 0.1.0 (2018-03-21)
 
+# 0.1.0 (2018-03-21)
 
 ### Features
 
