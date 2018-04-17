@@ -1,0 +1,11 @@
+{
+  "rootDir": ".",
+  "roots": ["packages"],
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  "moduleFileExtensions": ["js", "jsx", "json", "ts", "tsx"],
+  "testPathIgnorePatterns": ["/node_modules/"],
+  "setupTestFrameworkScriptFile": "<rootDir>/testHelper/setupTests.ts"
+}

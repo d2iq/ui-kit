@@ -1,4 +1,4 @@
-const req = require.context("./../components", true, /.stories.tsx$/);
+const req = require.context("./../packages", true, /.stories.tsx$/);
 
 import { configure, setAddon, addDecorator } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs/react";

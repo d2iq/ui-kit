@@ -16,6 +16,6 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es6", "dom"]
   },
-  "include": ["./components/index.ts"],
+  "include": ["./packages/index.ts"],
   "exclude": ["**/*.test.*", "**/*.stories.*"]
 }

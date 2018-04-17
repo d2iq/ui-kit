@@ -1,5 +1,5 @@
 import * as React from "react";
-import { badge as badgeButton } from "../badge/style";
+import { badge as badgeButton } from "../style";
 
 export interface IBadgeButtonProps {
   appearance?:
