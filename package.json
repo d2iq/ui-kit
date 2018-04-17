@@ -125,7 +125,7 @@
     "npm": "5.6.0",
     "prettier": "1.11.1",
     "prop-types": "15.6.1",
-    "react-docgen-typescript-loader": "2.0.2",
+    "react-docgen-typescript-loader": "2.0.3",
     "react-test-renderer": "16.2.0",
     "rimraf": "2.6.2",
     "standard-version": "4.3.0",
