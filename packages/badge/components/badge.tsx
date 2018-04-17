@@ -1,5 +1,5 @@
 import * as React from "react";
-import { badge } from "./style";
+import { badge } from "../style";
 
 export interface IBadgeProps {
   appearance?: "default" | "success" | "primary" | "warning" | "danger" | "outline";

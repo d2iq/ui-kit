@@ -1,4 +1,4 @@
-const req = require.context("./../components", true, /.stories.tsx$/);
+const req = require.context("./../packages", true, /.stories.tsx$/);
 
 import { configure, setAddon, addDecorator } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs/react";
@@ -15,16 +15,16 @@ setOptions({
   showLeftPanel: true,
   showDownPanel: true,
   showSearchBox: false,
-  downPanelInRight: true,
+  downPanelInRight: true
 });
 
 setDefaults({
   header: true,
   inline: true
-})
+});
 
 function loadStories() {
-  req.keys().forEach((filename) => req(filename));
+  req.keys().forEach(filename => req(filename));
 }
 
 configure(loadStories, module);

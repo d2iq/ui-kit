@@ -1,6 +1,6 @@
 {
   "rootDir": ".",
-  "roots": ["components"],
+  "roots": ["packages"],
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
   },

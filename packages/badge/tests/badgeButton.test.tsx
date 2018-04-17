@@ -1,5 +1,5 @@
 import React from "react";
-import BadgeButton from "../badgeButton";
+import { BadgeButton } from "../";
 import renderer from "react-test-renderer";
 import { shallow } from "enzyme";
 
