@@ -92,7 +92,7 @@
     "emotion": "9.0.2",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-emotion": "9.0.2"
+    "react-emotion": "9.1.2"
   },
   "devDependencies": {
     "@commitlint/cli": "6.1.3",
