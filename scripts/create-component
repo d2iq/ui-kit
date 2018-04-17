@@ -21,7 +21,7 @@ function readDir(dirPath) {
       if (!error) {
         const target = path.resolve(
           __dirname,
-          "../components",
+          "../packages",
           componentName.toLowerCase(),
           path
             .join(dirPath, location)

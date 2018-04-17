@@ -1,6 +1,6 @@
 import { css } from "emotion";
-import { coreColors, customColors } from "../../shared/styles/color";
-import { coreFonts } from "../../shared/styles/typography";
+import { coreColors, customColors } from "../shared/styles/color";
+import { coreFonts } from "../shared/styles/typography";
 
 const { greyDark, greyLight, green, purple, red, white, yellow } = coreColors();
 const { ebonyClay } = customColors();
@@ -50,8 +50,7 @@ export const badge = appearance => {
     box-sizing: border-box;
     border-width: 1px;
     border-style: solid;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 0 8px 0;
     font-size: 80%;
     line-height: inherit;
     font-family: ${fontFamilySansSerif};
