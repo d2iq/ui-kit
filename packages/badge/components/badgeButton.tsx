@@ -1,3 +1,4 @@
+import { css } from "emotion";
 import * as React from "react";
 import { badge as badgeButton } from "../style";
 
@@ -27,7 +28,15 @@ export class BadgeButton extends React.PureComponent<IBadgeButtonProps, {}> {
 
   public render() {
     const { appearance, children, onClick, tabIndex } = this.props;
-    const props = { onClick, tabIndex, className: badgeButton(appearance) };
+    const props = {
+      onClick,
+      tabIndex,
+      className: css`
+        outline: none;
+        cursor: pointer;
+        ${badgeButton(appearance)};
+      `
+    };
 
     return <button {...props}>{children}</button>;
   }

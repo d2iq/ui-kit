@@ -2,7 +2,7 @@
 
 exports[`BadgeButton accept jsx as children 1`] = `
 <button
-  className="css-i4ctwy"
+  className="css-y5qucr"
   onClick={[Function]}
   tabIndex={-1}
 >
@@ -14,7 +14,7 @@ exports[`BadgeButton accept jsx as children 1`] = `
 
 exports[`BadgeButton danger 1`] = `
 <button
-  className="css-o307zd"
+  className="css-aqlru0"
   onClick={[Function]}
   tabIndex={-1}
 >
@@ -24,7 +24,7 @@ exports[`BadgeButton danger 1`] = `
 
 exports[`BadgeButton default 1`] = `
 <button
-  className="css-i4ctwy"
+  className="css-y5qucr"
   onClick={[Function]}
   tabIndex={-1}
 >
@@ -34,7 +34,7 @@ exports[`BadgeButton default 1`] = `
 
 exports[`BadgeButton outline 1`] = `
 <button
-  className="css-ml4yrq"
+  className="css-j343ve"
   onClick={[Function]}
   tabIndex={-1}
 >
@@ -44,7 +44,7 @@ exports[`BadgeButton outline 1`] = `
 
 exports[`BadgeButton primary 1`] = `
 <button
-  className="css-361qnz"
+  className="css-q2731u"
   onClick={[Function]}
   tabIndex={-1}
 >
@@ -54,7 +54,7 @@ exports[`BadgeButton primary 1`] = `
 
 exports[`BadgeButton success 1`] = `
 <button
-  className="css-xr9z4s"
+  className="css-10v0ttp"
   onClick={[Function]}
   tabIndex={-1}
 >
@@ -64,7 +64,7 @@ exports[`BadgeButton success 1`] = `
 
 exports[`BadgeButton warning 1`] = `
 <button
-  className="css-19otvs4"
+  className="css-1qzzy6w"
   onClick={[Function]}
   tabIndex={-1}
 >

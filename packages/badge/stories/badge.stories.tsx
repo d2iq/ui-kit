@@ -31,4 +31,11 @@ storiesOf("Badge", module)
     "Outline",
     "Outline badges for when we want the density of the badge to be lighter e.g. when next to data in a table cell",
     () => <Badge appearance="outline">Outline</Badge>
+  )
+  .addWithInfo(
+    "Button",
+    "Button badges for when we want add click event",
+    () => (
+      <BadgeButton onClick={action("badge button")}>badge button</BadgeButton>
+    )
   );
