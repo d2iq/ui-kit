@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/dcos-labs/ui-kit"
   },
-  "main": "dist/components/index",
+  "main": "dist/packages/index",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
