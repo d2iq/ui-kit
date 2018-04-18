@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BadgeButton accept jsx as children 1`] = `
+<button
+  className="css-y5qucr"
+  onClick={[Function]}
+  tabIndex={-1}
+>
+  <span>
+    string
+  </span>
+</button>
+`;
+
+exports[`BadgeButton danger 1`] = `
+<button
+  className="css-aqlru0"
+  onClick={[Function]}
+  tabIndex={-1}
+>
+  danger
+</button>
+`;
+
+exports[`BadgeButton default 1`] = `
+<button
+  className="css-y5qucr"
+  onClick={[Function]}
+  tabIndex={-1}
+>
+  default
+</button>
+`;
+
+exports[`BadgeButton outline 1`] = `
+<button
+  className="css-j343ve"
+  onClick={[Function]}
+  tabIndex={-1}
+>
+  outline
+</button>
+`;
+
+exports[`BadgeButton primary 1`] = `
+<button
+  className="css-q2731u"
+  onClick={[Function]}
+  tabIndex={-1}
+>
+  primary
+</button>
+`;
+
+exports[`BadgeButton success 1`] = `
+<button
+  className="css-10v0ttp"
+  onClick={[Function]}
+  tabIndex={-1}
+>
+  success
+</button>
+`;
+
+exports[`BadgeButton warning 1`] = `
+<button
+  className="css-1qzzy6w"
+  onClick={[Function]}
+  tabIndex={-1}
+>
+  warning
+</button>
+`;
