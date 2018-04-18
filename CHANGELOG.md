@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/dcos-labs/ui-kit/compare/v0.2.0...v1.0.0) (2018-04-18)
+
+
+### Bug Fixes
+
+* badge assets path ([1f15d61](https://github.com/dcos-labs/ui-kit/commit/1f15d61))
+* jest config and merge conflicts ([e492d6c](https://github.com/dcos-labs/ui-kit/commit/e492d6c))
+* package.json main path ([e6ec6c2](https://github.com/dcos-labs/ui-kit/commit/e6ec6c2))
+* **buttonbadge:** change form button to button role ([e846642](https://github.com/dcos-labs/ui-kit/commit/e846642))
+
+
+### Features
+
+* **badgebutton:** add badge button component ([dcbc823](https://github.com/dcos-labs/ui-kit/commit/dcbc823))
+* **badgebutton:** add on click property to badgebutton ([9acdadc](https://github.com/dcos-labs/ui-kit/commit/9acdadc))
+* change directory structure ([a861ec2](https://github.com/dcos-labs/ui-kit/commit/a861ec2))
+* implement badge button component ([b5d06cc](https://github.com/dcos-labs/ui-kit/commit/b5d06cc))
+* specify badge properties ([e5d060a](https://github.com/dcos-labs/ui-kit/commit/e5d060a))
+
+
+### BREAKING CHANGES
+
+* directory structure changed, badge is no more exported as a default.
+
+
+
 <a name="0.2.0"></a>
 
 # [0.2.0](https://github.com/dcos-labs/ui-kit/compare/v0.1.0...v0.2.0) (2018-04-06)
