@@ -1,4 +1,4 @@
-FROM node:8.9.4-alpine@sha256:6bb963d58da845cf66a22bc5a48bb8c686f91d30240f0798feb0d61a2832fc46
+FROM node:8.11.1-alpine@sha256:d0febbb04c15f58a28888618cf5c3f1d475261e25702741622f375d0a82e050d
 
 # For deploying the gh-pages
 RUN apk update && apk upgrade && \
