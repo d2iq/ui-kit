@@ -1,73 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BadgeButton accept jsx as children 1`] = `
-<button
+<span
   className="css-y5qucr"
   onClick={[Function]}
+  role="button"
   tabIndex={-1}
 >
   <span>
     string
   </span>
-</button>
+</span>
 `;
 
 exports[`BadgeButton danger 1`] = `
-<button
+<span
   className="css-aqlru0"
   onClick={[Function]}
+  role="button"
   tabIndex={-1}
 >
   danger
-</button>
+</span>
 `;
 
 exports[`BadgeButton default 1`] = `
-<button
+<span
   className="css-y5qucr"
   onClick={[Function]}
+  role="button"
   tabIndex={-1}
 >
   default
-</button>
+</span>
 `;
 
 exports[`BadgeButton outline 1`] = `
-<button
+<span
   className="css-j343ve"
   onClick={[Function]}
+  role="button"
   tabIndex={-1}
 >
   outline
-</button>
+</span>
 `;
 
 exports[`BadgeButton primary 1`] = `
-<button
+<span
   className="css-q2731u"
   onClick={[Function]}
+  role="button"
   tabIndex={-1}
 >
   primary
-</button>
+</span>
 `;
 
 exports[`BadgeButton success 1`] = `
-<button
+<span
   className="css-10v0ttp"
   onClick={[Function]}
+  role="button"
   tabIndex={-1}
 >
   success
-</button>
+</span>
 `;
 
 exports[`BadgeButton warning 1`] = `
-<button
+<span
   className="css-1qzzy6w"
   onClick={[Function]}
+  role="button"
   tabIndex={-1}
 >
   warning
-</button>
+</span>
 `;

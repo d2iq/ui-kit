@@ -93,7 +93,7 @@ describe("BadgeButton", () => {
         default
       </BadgeButton>
     );
-    const element = wrapper.find("button").props();
+    const element = wrapper.find("span").props();
     expect(element.tabIndex).toBe(10);
   });
 
