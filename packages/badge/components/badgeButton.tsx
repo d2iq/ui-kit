@@ -30,6 +30,7 @@ export class BadgeButton extends React.PureComponent<IBadgeButtonProps, {}> {
     const { appearance, children, onClick, tabIndex } = this.props;
     const props = {
       onClick,
+      role: "button",
       tabIndex,
       className: css`
         outline: none;
@@ -38,7 +39,7 @@ export class BadgeButton extends React.PureComponent<IBadgeButtonProps, {}> {
       `
     };
 
-    return <button {...props}>{children}</button>;
+    return <span {...props}>{children}</span>;
   }
 }
 
