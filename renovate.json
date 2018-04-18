@@ -1,1 +1,24 @@
-{}
+{
+  "packageRules": [
+    {
+      "packagePatterns": ["storybook"],
+      "groupName": "storybook"
+    },
+    {
+      "packageNames": ["webpack"],
+      "allowedVersions": "3.11.0"
+    },
+    {
+      "packageNames": ["webpack-cli"],
+      "allowedVersions": "2.0.9"
+    },
+    {
+      "packageNames": ["webpack-dev-server"],
+      "allowedVersions": "2.11.2"
+    },
+    {
+      "packageNames": ["ts-loader"],
+      "allowedVersions": "3.5.0"
+    }
+  ]
+}
