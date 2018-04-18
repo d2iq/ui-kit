@@ -1,5 +1,5 @@
 import React from "react";
-import Badge from "../badge";
+import { Badge } from "../";
 import renderer from "react-test-renderer";
 
 const StringComponent = (): JSX.Element => {
