@@ -2,12 +2,14 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { action } from "@storybook/addon-actions";
+import { checkA11y } from '@storybook/addon-a11y';
 import { Badge, BadgeButton } from "../../index";
 
 const BadgeReadme = require("../README.md");
 
 storiesOf("Badge", module)
   .addDecorator(withReadme([BadgeReadme]))
+  .addDecorator(checkA11y)
   .addWithInfo("Default", () => <Badge>Default</Badge>)
   .addWithInfo("Success", "Represents something positive.", () => (
     <Badge appearance="success">Success</Badge>
