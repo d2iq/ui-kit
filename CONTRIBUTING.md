@@ -111,9 +111,21 @@ It's important to keep components as simple as possible, add logic to a componen
 
 #### Directory Structure
 
-<!--
-TODO: Decide on directory structure.
--->
+Components get grouped into `packages`. The Strucutre looks like this:
+
+```
+packages
+└── <ComponentGroup>
+    ├── README.md
+    ├── components
+    │   └── <Component>.tsx
+    ├── index.ts
+    ├── stories
+    │   └── <ComponentGroup>.stories.tsx
+    ├── style.ts
+    └── tests
+        └── <Component>.test.tsx
+```
 
 ## Atomic Design
 
