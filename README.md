@@ -72,9 +72,9 @@ A recommended reading is [Better Specs](http://www.betterspecs.org/), we put
 [real effort](https://github.com/dcos/dcos-ui/pull/2524) in making sure we
 follow these guidelines. Some of the most common ones to follow:
 
-* Single Expectation test: Every unit test should verify one behavior (and one behavior only).
-* Keep your descriptions concise (bellow 40 chars ideally): One easy way to achieve this one is avoiding using "should" (e.g. "it does not use should" instead of "it should not be written with should").
-* Create only the data you need: Especially if you have a more complicated scenario, just generate the data that is relevant to that particular case.
+* Single Expectation test: Every unit test should verify one behavior.
+* Keep your descriptions concise (bellow 40 chars ideally): One easy way to achieve this one is avoiding using "should" (e.g. "it does not use should" instead of "it should not contain should").
+* Create the data you need: If you have a more complicated scenario, generate the data that is relevant to that particular case.
 
 For more on this topic, and examples we recommend
 [Better Specs](http://www.betterspecs.org/).
@@ -97,7 +97,7 @@ describe('Badge', () => {
 
 You should follow [conventional commit](https://conventionalcommits.org/) formatting rules, as they provide a framework to write explicit messages that are easy to comprehend when looking through the project history and enable automatic change log generation.
 
-These Guidelines were written based on [AngularJS Git Commit Message Conventions](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-guidelines).
+These Guidelines got written based on [AngularJS Git Commit Message Conventions](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-guidelines).
 
 ```
 <type>[optional scope]: <description>
@@ -109,7 +109,7 @@ These Guidelines were written based on [AngularJS Git Commit Message Conventions
 
 ## Release / Publishing
 
-After your PR is merged to `master` to cut a release is very simple, assuming you are `on master` branch follow the steps below.
+After your PR gets merged to `master` to cut a release, check that you are on `master` branch and follow the steps below.
 
 Fetch all git tags
 
@@ -129,7 +129,7 @@ Now push the latest commit and the tag created (_run `git tag` to see all tags_)
 git push origin master && git push origin TAG_VERSION
 ```
 
-And finally publish to npm.
+And publish to npm.
 
 ```
 npm publish
