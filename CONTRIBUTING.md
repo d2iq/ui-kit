@@ -1,6 +1,8 @@
 # Contributing
 
 - [Contributing](#contributing)
+  - [Prerequisites](#prerequisites)
+  - [Getting started](#getting-started)
   - [Creating a new Component](#creating-a-new-component)
     - [Rigid VS. Flexible](#rigid-vs-flexible)
     - [Introducing 3rd Party Components](#introducing-3rd-party-components)
@@ -19,6 +21,59 @@
     - [Atoms](#atoms)
     - [Molecules](#molecules)
     - [Organisms](#organisms)
+
+## Prerequisites
+
+We expect the user to be able to handle:
+
+* git
+* node
+* npm
+
+We expect a entry level of react knowledge, if you know these terms in a react context you are well prepared:
+
+* Component
+
+Also [here](https://reactjs.org/tutorial/tutorial.html) you can find a thorough introduction to react.
+
+We are using TypeScript which is a superset of JavaScript, you can get introduction [here](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+
+## Getting started
+
+1.  Clone the repository and enter the directory.
+2.  run `npm install` and `npm run setup:git-hooks`
+3.  Start storybook with `npm start` if everything is good you should see:
+
+```bash
+> @dcos/ui-kit@0.2.0 start <ui-kit-local-path>
+> NODE_ENV=development npm run storybook --root ./
+
+
+> @dcos/ui-kit@0.2.0 storybook <ui-kit-local-path>
+> start-storybook -p 6006 "./"
+
+info @storybook/react v<version>
+
+info => Loading custom addons config.
+info => Loading custom webpack config (full-control mode).
+webpack built f3681fb30ce3064a6336 in <number>ms
+info Storybook started on => http://localhost:6006/
+info
+```
+
+After this there is a web server started at the address http://localhost:6006 which is hosting storybook. This is our documentation from the local repository. Anything you change will reflect there directly.
+
+Change what you want to change. After you are happy with the changes you want to run `npm test` and `npm run lint`.
+
+<!--
+TODO: add formating script
+-->
+
+If nothing breaks create a commit by using git commit or using [git cz](http://commitizen.github.io/cz-cli/).
+
+Push and create a pull request.
+
+You did right now your first contribution to the ui-kit, thank you.
 
 ## Creating a new Component
 
