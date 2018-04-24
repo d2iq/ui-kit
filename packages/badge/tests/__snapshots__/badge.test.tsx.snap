@@ -2,7 +2,7 @@
 
 exports[`Badge accept jsx as children 1`] = `
 <span
-  className="css-i4ctwy"
+  className="css-1rtlwt4"
 >
   <span>
     string
@@ -12,7 +12,7 @@ exports[`Badge accept jsx as children 1`] = `
 
 exports[`Badge danger 1`] = `
 <span
-  className="css-o307zd"
+  className="css-1r81zrl"
 >
   danger
 </span>
@@ -20,7 +20,7 @@ exports[`Badge danger 1`] = `
 
 exports[`Badge default 1`] = `
 <span
-  className="css-i4ctwy"
+  className="css-1rtlwt4"
 >
   default
 </span>
@@ -28,7 +28,7 @@ exports[`Badge default 1`] = `
 
 exports[`Badge outline 1`] = `
 <span
-  className="css-ml4yrq"
+  className="css-1s4jj7m"
 >
   outline
 </span>
@@ -36,7 +36,7 @@ exports[`Badge outline 1`] = `
 
 exports[`Badge primary 1`] = `
 <span
-  className="css-361qnz"
+  className="css-1s6ggg6"
 >
   primary
 </span>
@@ -44,7 +44,7 @@ exports[`Badge primary 1`] = `
 
 exports[`Badge success 1`] = `
 <span
-  className="css-xr9z4s"
+  className="css-7otxiv"
 >
   success
 </span>
@@ -52,7 +52,7 @@ exports[`Badge success 1`] = `
 
 exports[`Badge warning 1`] = `
 <span
-  className="css-19otvs4"
+  className="css-jogxwy"
 >
   warning
 </span>

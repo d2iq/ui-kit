@@ -1,16 +1,15 @@
 import { css } from "emotion";
-import { coreColors, customColors } from "../shared/styles/color";
+import { coreColors } from "../shared/styles/color";
 import { coreFonts } from "../shared/styles/typography";
 
 const { greyDark, greyLight, green, purple, red, white, yellow } = coreColors();
-const { ebonyClay } = customColors();
 const { fontFamilySansSerif } = coreFonts();
 
 const badgeAppearance = {
   default: css`
     background-color: ${greyLight};
     border-color: ${greyLight};
-    color: ${ebonyClay};
+    color: ${greyDark};
   `,
   success: css`
     background-color: ${green};
