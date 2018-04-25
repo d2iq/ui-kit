@@ -21,6 +21,7 @@
     - [Atoms](#atoms)
     - [Molecules](#molecules)
     - [Organisms](#organisms)
+  - [Commit types](#commit-types)
 
 ## Prerequisites
 
@@ -220,3 +221,30 @@ Molecules form complex organisms, these are reusable higher level patterns which
 Keep organisms simple, here is why an organism is not an app and they are the building blocks they should not include the business logic, they should display information. For example, if some information is getting displayed in two places of an app which are different components this information is once needed to generate. Also if the logic changes this needs to change in one place.
 
 An Example of an organism is a Registration form which is consisting of a TextInput (Atom) and the Password Component (Molecule)
+
+## Commit types
+
+We are supporting the conventional commit types as follows:
+
+**Features**
+`feat` - A new feature
+**Bug Fixes**
+`fix` - A bug fix
+**Documentation**
+`docs` - Documentation only changes
+**Styles**
+`style` - Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+**Code Refactoring**
+`refactor` - A code change that neither fixes a bug nor adds a feature
+**Performance Improvements**
+`perf` - A code change that improves performance
+**Tests**
+`test` - Adding missing tests or correcting existing tests
+**Builds**
+`build` - Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+**Continuous Integrations**
+`ci` - Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+**Chores**
+`chore` - Other changes that don't modify src or test files
+**Reverts**
+`revert` - Reverts a previous commit
