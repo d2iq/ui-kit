@@ -14,7 +14,7 @@
     "strict": true,
     "moduleResolution": "node",
     "typeRoots": ["node_modules/@types"],
-    "lib": ["es6", "dom"]
+    "lib": ["es6", "dom", "es2017"]
   },
   "include": ["./packages/index.ts"],
   "exclude": ["**/*.test.*", "**/*.stories.*"]
