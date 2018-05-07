@@ -89,7 +89,7 @@ pipeline {
         // we need to do this workaround as jenkins clones without .git/ directory
         sh '''rm -rf ui-kit && git clone https://github.com/dcos-labs/ui-kit.git && cd ui-kit && npm install'''
         withCredentials([
-          string(credentialsId: '1f0a31fe-30eb-11e8-b467-0ed5f89f718b', variable: 'GITHUB_TOKEN')
+          string(credentialsId: 'd146870f-03b0-4f6a-ab70-1d09757a51fc', variable: 'GITHUB_TOKEN')
         ]) {
           sh '''cd ui-kit && npm run deploy:storybook -- --ci --host-token-env-variable=GITHUB_TOKEN'''
         }
