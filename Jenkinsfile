@@ -30,7 +30,8 @@ pipeline {
       steps {
         ansiColor('xterm') {
           retry(2) {
-            sh '''npm install'''
+            // The npm ls ensures that the peer dependecies are met.
+            sh '''npm install && npm ls'''
           }
         }
       }
