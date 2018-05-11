@@ -19,6 +19,14 @@
     {
       "packageNames": ["ts-loader"],
       "allowedVersions": "3.5.0"
+    },
+    {
+      "groupName": "tslint",
+      "packagePatterns": ["tslint"]
+    },
+    {
+      "groupName": "emotion",
+      "packagePatterns": ["emotion"]
     }
   ]
 }
