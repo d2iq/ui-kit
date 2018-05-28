@@ -1,9 +1,16 @@
-import React from "react";
-
 import { shallow } from "enzyme";
+import React from "react";
 import Clickable from "../components/clickable";
 
 describe("Clickable", () => {
+  it("has role attribute", () => {
+    const wrapper = shallow(
+      <Clickable action={jest.fn()}>
+        <span>onClick</span>
+      </Clickable>
+    );
+    expect(wrapper.prop("role")).toBe("button");
+  });
   it("has onClick function", () => {
     const action = jest.fn();
     const wrapper = shallow(
