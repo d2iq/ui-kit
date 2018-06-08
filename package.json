@@ -72,7 +72,7 @@
     "jest-runner-prettier": "0.2.3",
     "node": "10.2.0",
     "npm": "6.1.0",
-    "prettier": "1.12.1",
+    "prettier": "1.13.5",
     "prop-types": "15.6.1",
     "react-docgen-typescript-loader": "2.0.3",
     "react-test-renderer": "16.4.0",
