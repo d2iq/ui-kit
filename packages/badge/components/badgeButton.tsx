@@ -1,6 +1,6 @@
 import { css } from "emotion";
 import * as React from "react";
-import Clickabel from "../../clickable/components/clickable";
+import Clickable from "../../clickable/components/clickable";
 import { badge as badgeButton } from "../style";
 
 export interface IBadgeButtonProps {
@@ -40,9 +40,9 @@ export class BadgeButton extends React.PureComponent<IBadgeButtonProps, {}> {
       ${badgeButton(appearance)};
     `;
     return (
-      <Clickabel {...props}>
+      <Clickable {...props}>
         <span className={className}>{children}</span>
-      </Clickabel>
+      </Clickable>
     );
   }
 }
