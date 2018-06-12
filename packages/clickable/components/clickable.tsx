@@ -1,6 +1,5 @@
-import * as React from "react";
-
 import { cx } from "emotion";
+import * as React from "react";
 import { outline } from "../style";
 
 export interface IClickableProps {
@@ -35,6 +34,7 @@ class Clickable extends React.PureComponent<IClickableProps, {}> {
     return React.cloneElement(React.Children.only(children), {
       onClick: action,
       className: cx(className, outline),
+      role: "button",
       tabIndex,
       onKeyPress: this.handleKeyPress
     });
