@@ -1,7 +1,7 @@
+import { mount } from "enzyme";
 import React from "react";
-import { BadgeButton } from "../";
 import renderer from "react-test-renderer";
-import { shallow } from "enzyme";
+import { BadgeButton } from "../";
 
 const StringComponent = (): JSX.Element => {
   return <span>string</span>;
@@ -88,7 +88,7 @@ describe("BadgeButton", () => {
   });
 
   it("contains the right tabindex", () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <BadgeButton onClick={jest.fn()} tabIndex={10}>
         default
       </BadgeButton>
@@ -99,7 +99,7 @@ describe("BadgeButton", () => {
 
   it("triggers onClick on click", () => {
     const onBadgeButtonClick = jest.fn();
-    const wrapper = shallow(
+    const wrapper = mount(
       <BadgeButton onClick={onBadgeButtonClick}>default</BadgeButton>
     );
     wrapper.simulate("click");
