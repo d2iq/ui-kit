@@ -1,10 +1,40 @@
+---
+name: Badges
+route: /badges
+---
+
+      
+import { Playground, PropsTable } from 'docz'
+import Badge from './components/badge'
+import BadgeButton from './components/badgeButton'
+
+      
 # Badges
+
+- [Badges](#badges)
+  - [Badges Component](#badges-component)
+    - [Badge States](#badge-states)
+    - [Do & Don't](#do--dont)
+    - [Badge Props](#badge-props)
+    - [Badge Examples](#badge-examples)
+      - [Success](#success)
+      - [Primary](#primary)
+      - [Danger](#danger)
+      - [Warning](#warning)
+      - [Outline](#outline)
+  - [BadgeButton Component](#badgebutton-component)
+    - [BadgeButton Props](#badgebutton-props)
+    - [BadgeButton Examples](#badgebutton-examples)
+      - [BadgeButton](#badgebutton)
+
+## Badges Component
 
 Badges are a lightweight method of annotating or labeling content. The font-size and line-height of a badge inherit from that of it’s parent’s properties.
 
 ### Badge States
 
 You may wish to display more than the single badge type, either to create separation in the importance of various actions or to communicate the state of an action or form badge states make this super easy.
+
 
 | State     | Purpose                                                                                                       | Preview                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
@@ -21,3 +51,65 @@ You may wish to display more than the single badge type, either to create separa
 | Do  | Don't |
 | --- | ----- |
 | -   | -     |
+
+### Badge Props
+
+<PropsTable of={Badge} />
+
+### Badge Examples
+
+#### Success
+
+Represents something positive.
+
+<Playground>
+  <Badge appearance="success">Success</Badge>
+</Playground>
+
+#### Primary
+
+Represents something more significant than a default.
+
+<Playground>
+  <Badge appearance="primary">primary</Badge>
+</Playground>
+
+#### Danger 
+
+Represents something in a danger or error state.
+
+<Playground>
+  <Badge appearance="danger">Danger</Badge>
+</Playground>
+
+#### Warning
+
+Represents something that we want to warn the user about but not quite extreme as a danger state.
+
+<Playground>
+  <Badge appearance="warning">Warning</Badge>
+</Playground>
+
+#### Outline
+
+Outline badges for when we want the density of the badge to be lighter e.g. when next to data in a table cell
+
+<Playground>
+  <Badge appearance="outline">Outline</Badge>
+</Playground>
+
+## BadgeButton Component
+
+### BadgeButton Props
+
+<PropsTable of={Badge} />
+
+### BadgeButton Examples
+
+#### BadgeButton
+
+Button badges for when we want add click event
+
+<Playground>
+  <BadgeButton onClick={()=>alert("badge button")}>badge button</BadgeButton>
+</Playground>

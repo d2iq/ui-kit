@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 // TODO: once we have an icon library, use that instead
 export const DownTriangle = () => (

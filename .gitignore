@@ -11,6 +11,7 @@ serve
 tmp/
 .vscode/
 .env
+.docz
 coverage
 storybook-static/
 packages/icons/dist/
