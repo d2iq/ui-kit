@@ -14,6 +14,8 @@ export interface ITableProps {
 
 const ROW_HEIGHT = 35;
 
+const DEFAULT_WIDTH = 1024;
+const DEFAULT_HEIGHT = 768;
 export class Table<T> extends React.PureComponent<ITableProps, {}> {
   public multiGridRef: { recomputeGridSize?: any } = {};
 
@@ -53,7 +55,15 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
   }
 
   public render() {
-    return <AutoSizer onResize={this.updateGridSize}>{this.getGrid}</AutoSizer>;
+    return (
+      <AutoSizer
+        defaultWidth={DEFAULT_WIDTH}
+        defaultHeight={DEFAULT_HEIGHT}
+        onResize={this.updateGridSize}
+      >
+        {this.getGrid}
+      </AutoSizer>
+    );
   }
 
   private getGrid({ width, height }) {
