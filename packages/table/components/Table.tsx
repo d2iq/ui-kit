@@ -6,6 +6,9 @@ import memoizeOne from "memoize-one";
 import { coreColors as Colors } from "../../shared/styles/color";
 
 export interface ITableProps {
+  /**
+   * Contains all data represented in the table.
+   */
   data: any[];
   children:
     | Array<React.ReactElement<IColumnProps>>

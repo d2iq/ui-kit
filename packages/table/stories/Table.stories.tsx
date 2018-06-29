@@ -52,7 +52,7 @@ storiesOf("Table", module)
   .addWithInfo("default", () => (
     <div
       style={{
-        height: "400px",
+        height: "175px",
         width: "100%"
       }}
     >
