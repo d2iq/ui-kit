@@ -36,7 +36,7 @@
   "typings": "dist/components/index",
   "dependencies": {
     "emotion": "9.2.4",
-    "memoize-one": "3.1.1",
+    "memoize-one": "4.0.0",
     "react": "16.4.1",
     "react-dom": "16.4.0",
     "react-emotion": "9.2.4",
