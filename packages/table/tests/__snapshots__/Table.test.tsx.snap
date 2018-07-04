@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders default 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+  height: 35px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 307.2px;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+  height: 35px;
+  left: 307.2px;
+  position: absolute;
+  top: 0;
+  width: 307.2px;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+  height: 35px;
+  left: 614.4px;
+  position: absolute;
+  top: 0;
+  width: 307.2px;
+}
+
+.emotion-4 {
+  border-bottom: 1px solid #DADDE2;
+  box-sizing: border-box;
+  height: 35px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 307.2px;
+}
+
+.emotion-5 {
+  border-bottom: 1px solid #DADDE2;
+  box-sizing: border-box;
+  height: 35px;
+  left: 0;
+  position: absolute;
+  top: 35px;
+  width: 307.2px;
+}
+
+.emotion-7 {
+  border-bottom: 1px solid #DADDE2;
+  box-sizing: border-box;
+  height: 35px;
+  left: 307.2px;
+  position: absolute;
+  top: 0;
+  width: 307.2px;
+}
+
+.emotion-8 {
+  border-bottom: 1px solid #DADDE2;
+  box-sizing: border-box;
+  height: 35px;
+  left: 614.4px;
+  position: absolute;
+  top: 0;
+  width: 307.2px;
+}
+
+.emotion-10 {
+  border-bottom: 1px solid #DADDE2;
+  box-sizing: border-box;
+  height: 35px;
+  left: 307.2px;
+  position: absolute;
+  top: 35px;
+  width: 307.2px;
+}
+
+.emotion-11 {
+  border-bottom: 1px solid #DADDE2;
+  box-sizing: border-box;
+  height: 35px;
+  left: 614.4px;
+  position: absolute;
+  top: 35px;
+  width: 307.2px;
+}
+
+<div
+  style="overflow:visible;height:0;width:0"
+>
+  <div
+    style="height:768px;overflow:visible;width:1024px"
+  >
+    <div
+      style="height:35px;position:relative;width:1024px"
+    >
+      <div
+        aria-label="grid"
+        aria-readonly="true"
+        class="ReactVirtualized__Grid"
+        role="grid"
+        style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:307.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
+      >
+        <div
+          class="ReactVirtualized__Grid__innerScrollContainer"
+          role="rowgroup"
+          style="width:307.2px;height:35px;max-width:307.2px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+        >
+          <div
+            class="emotion-0"
+          >
+            name
+          </div>
+        </div>
+      </div>
+      <div
+        class="TopRightGrid_ScrollWrapper"
+        style="left:307.2px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:716.8px"
+      >
+        <div
+          aria-label="grid"
+          aria-readonly="true"
+          class="ReactVirtualized__Grid"
+          role="grid"
+          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:716.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
+        >
+          <div
+            class="ReactVirtualized__Grid__innerScrollContainer"
+            role="rowgroup"
+            style="width:1021.5999999999999px;height:35px;max-width:1021.5999999999999px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+          >
+            <div
+              class="emotion-0"
+            >
+              role
+            </div>
+            <div
+              class="emotion-2"
+            >
+              state
+            </div>
+            <div
+              class="emotion-3"
+            >
+              zipcode
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="height:733px;overflow:visible;position:relative;width:1024px"
+    >
+      <div
+        class="BottomLeftGrid_ScrollWrapper"
+        style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:307.2px"
+      >
+        <div
+          aria-label="grid"
+          aria-readonly="true"
+          class="ReactVirtualized__Grid"
+          role="grid"
+          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:307.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
+        >
+          <div
+            class="ReactVirtualized__Grid__innerScrollContainer"
+            role="rowgroup"
+            style="width:307.2px;height:70px;max-width:307.2px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+          >
+            <div
+              class="emotion-4"
+            >
+              <strong>
+                Brian Vaughn
+              </strong>
+            </div>
+            <div
+              class="emotion-5"
+            >
+              <strong>
+                Jon Doe
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="grid"
+        aria-readonly="true"
+        class="ReactVirtualized__Grid"
+        role="grid"
+        style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:716.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:307.2px"
+        tabindex="0"
+      >
+        <div
+          class="ReactVirtualized__Grid__innerScrollContainer"
+          role="rowgroup"
+          style="width:1021.5999999999999px;height:70px;max-width:1021.5999999999999px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+        >
+          <div
+            class="emotion-4"
+          >
+            <em>
+              Software Engineer
+            </em>
+          </div>
+          <div
+            class="emotion-7"
+          >
+            <span>
+              CA
+            </span>
+          </div>
+          <div
+            class="emotion-8"
+          >
+            <span>
+              95125
+            </span>
+          </div>
+          <div
+            class="emotion-5"
+          >
+            <em>
+              Product engineer
+            </em>
+          </div>
+          <div
+            class="emotion-10"
+          >
+            <span>
+              CA
+            </span>
+          </div>
+          <div
+            class="emotion-11"
+          >
+            <span>
+              95125
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
