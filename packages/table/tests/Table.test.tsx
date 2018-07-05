@@ -68,7 +68,8 @@ describe("Table", () => {
           <Column header="test" cellRenderer={cell} width={width} />
         </Table>
       );
-      expect(component.instance().getData([1, 2, 3])).toEqual([{}, 1, 2, 3]);
+      const instance = component.instance() as Table<number>;
+      expect(instance.getData([1, 2, 3])).toEqual([{}, 1, 2, 3]);
     });
   });
 });
