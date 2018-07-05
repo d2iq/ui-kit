@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell renders correctly 1`] = `
+.emotion-0 {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 7px;
+}
+
+<div
+  class="emotion-0"
+>
+  This is content
+</div>
+`;
+
+exports[`HeaderCell renders correctly 1`] = `
+.emotion-0 {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 7px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+<div
+  class="emotion-0"
+>
+  This is content
+</div>
+`;
+
+exports[`TextCell renders correctly 1`] = `
+.emotion-0 {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+<div
+  class="emotion-0"
+>
+  This is content
+</div>
+`;
