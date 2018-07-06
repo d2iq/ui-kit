@@ -1,5 +1,5 @@
 import * as React from "react";
-interface IWidthArgs {
+export interface IWidthArgs {
   width: number;
   totalColumns: number;
   remainingWidth: number;
