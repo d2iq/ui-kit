@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/dcos-labs/ui-kit/compare/v1.0.0...v1.1.0) (2018-07-06)
+
+
+### Bug Fixes
+
+* fix Clickabel typo ([f1fc108](https://github.com/dcos-labs/ui-kit/commit/f1fc108))
+* **colors:** fix color prop typings ([b2c75e7](https://github.com/dcos-labs/ui-kit/commit/b2c75e7))
+* **table:** fix table typings ([60f9368](https://github.com/dcos-labs/ui-kit/commit/60f9368))
+
+
+### Features
+
+* add colors section to storybook ([4d6ddf6](https://github.com/dcos-labs/ui-kit/commit/4d6ddf6))
+* **clickable:** add clickable component ([a5ddbf3](https://github.com/dcos-labs/ui-kit/commit/a5ddbf3))
+* **colors:** add color values from UI kit ([d428d2c](https://github.com/dcos-labs/ui-kit/commit/d428d2c))
+* **table:** add column component ([6550051](https://github.com/dcos-labs/ui-kit/commit/6550051))
+* **table:** this introduces the table wrapping component ([3810938](https://github.com/dcos-labs/ui-kit/commit/3810938))
+* **tsconfig:** add es2017 lib to tsconfig ([917321b](https://github.com/dcos-labs/ui-kit/commit/917321b))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/dcos-labs/ui-kit/compare/v0.2.0...v1.0.0) (2018-04-18)
 
