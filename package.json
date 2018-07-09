@@ -1,6 +1,6 @@
 {
   "name": "@dcos/ui-kit",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "DCOS UI Kit",
   "license": "Apache-2.0",
   "repository": {
@@ -33,7 +33,7 @@
   "files": [
     "dist"
   ],
-  "typings": "dist/components/index",
+  "typings": "dist/packages/index",
   "dependencies": {
     "emotion": "9.2.4",
     "memoize-one": "4.0.0",
