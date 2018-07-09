@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/dcos-labs/ui-kit/compare/v1.1.1...v1.2.0) (2018-07-09)
+
+
+### Features
+
+* **table:** add cell component ([2676958](https://github.com/dcos-labs/ui-kit/commit/2676958))
+* **table:** add header cell component ([655e6b8](https://github.com/dcos-labs/ui-kit/commit/655e6b8))
+* **table:** add text cell component ([bb75c36](https://github.com/dcos-labs/ui-kit/commit/bb75c36))
+* **table:** export width args interface ([a42cf0f](https://github.com/dcos-labs/ui-kit/commit/a42cf0f))
+* **utilities:** add compose function ([e992f93](https://github.com/dcos-labs/ui-kit/commit/e992f93))
+* **utilities:** add min helper function ([8758039](https://github.com/dcos-labs/ui-kit/commit/8758039))
+* **utilities:** add percentage helper ([3f133ce](https://github.com/dcos-labs/ui-kit/commit/3f133ce))
+* **utilities:** this adds a max helper function ([016bae6](https://github.com/dcos-labs/ui-kit/commit/016bae6))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/dcos-labs/ui-kit/compare/v1.1.0...v1.1.1) (2018-07-06)
 
