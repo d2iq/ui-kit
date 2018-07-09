@@ -12,4 +12,4 @@ tmp/
 .vscode/
 .env
 coverage
-
+storybook-static/
