@@ -2,6 +2,60 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/dcos-labs/ui-kit/compare/v1.2.0...v1.2.1) (2018-07-09)
+
+
+
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/dcos-labs/ui-kit/compare/v1.1.1...v1.2.0) (2018-07-09)
+
+
+### Features
+
+* **table:** add cell component ([2676958](https://github.com/dcos-labs/ui-kit/commit/2676958))
+* **table:** add header cell component ([655e6b8](https://github.com/dcos-labs/ui-kit/commit/655e6b8))
+* **table:** add text cell component ([bb75c36](https://github.com/dcos-labs/ui-kit/commit/bb75c36))
+* **table:** export width args interface ([a42cf0f](https://github.com/dcos-labs/ui-kit/commit/a42cf0f))
+* **utilities:** add compose function ([e992f93](https://github.com/dcos-labs/ui-kit/commit/e992f93))
+* **utilities:** add min helper function ([8758039](https://github.com/dcos-labs/ui-kit/commit/8758039))
+* **utilities:** add percentage helper ([3f133ce](https://github.com/dcos-labs/ui-kit/commit/3f133ce))
+* **utilities:** this adds a max helper function ([016bae6](https://github.com/dcos-labs/ui-kit/commit/016bae6))
+
+
+
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/dcos-labs/ui-kit/compare/v1.1.0...v1.1.1) (2018-07-06)
+
+
+### Bug Fixes
+
+* fix dist typings in package json file ([deb1f9e](https://github.com/dcos-labs/ui-kit/commit/deb1f9e))
+
+
+
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/dcos-labs/ui-kit/compare/v1.0.0...v1.1.0) (2018-07-06)
+
+
+### Bug Fixes
+
+* fix Clickabel typo ([f1fc108](https://github.com/dcos-labs/ui-kit/commit/f1fc108))
+* **colors:** fix color prop typings ([b2c75e7](https://github.com/dcos-labs/ui-kit/commit/b2c75e7))
+* **table:** fix table typings ([60f9368](https://github.com/dcos-labs/ui-kit/commit/60f9368))
+
+
+### Features
+
+* add colors section to storybook ([4d6ddf6](https://github.com/dcos-labs/ui-kit/commit/4d6ddf6))
+* **clickable:** add clickable component ([a5ddbf3](https://github.com/dcos-labs/ui-kit/commit/a5ddbf3))
+* **colors:** add color values from UI kit ([d428d2c](https://github.com/dcos-labs/ui-kit/commit/d428d2c))
+* **table:** add column component ([6550051](https://github.com/dcos-labs/ui-kit/commit/6550051))
+* **table:** this introduces the table wrapping component ([3810938](https://github.com/dcos-labs/ui-kit/commit/3810938))
+* **tsconfig:** add es2017 lib to tsconfig ([917321b](https://github.com/dcos-labs/ui-kit/commit/917321b))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/dcos-labs/ui-kit/compare/v0.2.0...v1.0.0) (2018-04-18)
 

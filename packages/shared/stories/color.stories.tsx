@@ -18,8 +18,8 @@ const Grid = styled("div")`
 
 const spread = "1";
 
-const Cell = styled<ICellProps, "div">("div")`
-  background-color: ${props =>
+const Cell = styled("div")`
+  background-color: ${(props: ICellProps) =>
     props.background ? props.background : "transparent"};
   color: transparent;
   text-overflow: ellipsis;
