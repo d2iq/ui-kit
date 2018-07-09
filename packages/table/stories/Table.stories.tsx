@@ -1,8 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { Table } from "../../index";
-import { Column } from "../components/Column";
+import { Table, Column, Cell, HeaderCell, TextCell } from "../index";
 
 const readme = require("../README.md");
 
@@ -31,19 +30,40 @@ const items = [
 ];
 
 const nameCellRenderer = ({ name }: { name?: string }) => (
-  <strong>{name}</strong>
+  <Cell>
+    <strong>{name}</strong>
+  </Cell>
 );
 const cityCellRenderer = ({ city }: { city?: string }) => (
-  <strong>{city}</strong>
+  <Cell>
+    <strong>{city}</strong>
+  </Cell>
 );
-const roleCellRenderer = ({ role }: { role?: string }) => <em>{role}</em>;
+const roleCellRenderer = ({ role }: { role?: string }) => (
+  <Cell>
+    <em>{role}</em>
+  </Cell>
+);
 const stateCellRenderer = ({ state }: { state?: string }) => (
-  <span>{state}</span>
+  <Cell>
+    <span>{state}</span>
+  </Cell>
 );
 const zipcodeCellRenderer = ({ zipcode }: { zipcode?: string }) => (
-  <span>{zipcode}</span>
+  <Cell>
+    <span>{zipcode}</span>
+  </Cell>
 );
-const empty = () => "empty";
+const veryLongRenderer = () => (
+  <TextCell>
+    <span>
+      {Array(100)
+        .fill("VeryLongWord")
+        .join("")}
+    </span>
+  </TextCell>
+);
+const empty = () => <Cell>empty</Cell>;
 const width = ({ width: totalWidth }: { width?: number }) =>
   totalWidth ? totalWidth * 0.3 : 100;
 
@@ -53,20 +73,42 @@ storiesOf("Table", module)
     <div
       style={{
         height: "175px",
-        width: "100%"
+        width: "100%",
+        fontSize: "14px"
       }}
     >
       <Table data={items}>
-        <Column header="name" cellRenderer={nameCellRenderer} width={width} />
-        <Column header="role" cellRenderer={roleCellRenderer} width={width} />
-        <Column header="state" cellRenderer={stateCellRenderer} width={width} />
+        <Column
+          header={<HeaderCell>name</HeaderCell>}
+          cellRenderer={nameCellRenderer}
+          width={width}
+        />
+        <Column
+          header={<HeaderCell>role</HeaderCell>}
+          cellRenderer={roleCellRenderer}
+          width={width}
+        />
+        <Column
+          header={<HeaderCell>state</HeaderCell>}
+          cellRenderer={stateCellRenderer}
+          width={width}
+        />
         <Column header="" cellRenderer={empty} width={width} />
         <Column
-          header="zipcode"
+          header={<HeaderCell>Very Long</HeaderCell>}
+          cellRenderer={veryLongRenderer}
+          width={width}
+        />
+        <Column
+          header={<HeaderCell>zipcode</HeaderCell>}
           cellRenderer={zipcodeCellRenderer}
           width={width}
         />
-        <Column header="city" cellRenderer={cityCellRenderer} width={width} />
+        <Column
+          header={<HeaderCell>city</HeaderCell>}
+          cellRenderer={cityCellRenderer}
+          width={width}
+        />
       </Table>
     </div>
   ));
