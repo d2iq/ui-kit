@@ -60,6 +60,7 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
   public render() {
     return (
       <AutoSizer
+        __dataThatTriggersARerenderWhenChanged={this.props.data} // passed to notify react-virtualized about updates
         defaultWidth={DEFAULT_WIDTH}
         defaultHeight={DEFAULT_HEIGHT}
         onResize={this.updateGridSize}
