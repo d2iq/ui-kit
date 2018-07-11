@@ -13,7 +13,12 @@
     "esModuleInterop": true,
     "strict": true,
     "moduleResolution": "node",
-    "typeRoots": ["node_modules/@types"],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/emotion/types",
+      "node_modules/create-emotion-styled/types",
+      "node_modules/create-emotion-styled/types/react"
+    ],
     "lib": ["es6", "dom", "es2017"]
   },
   "include": ["./packages/index.ts"],
