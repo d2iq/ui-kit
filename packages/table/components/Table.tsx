@@ -60,6 +60,7 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
   public render() {
     return (
       <AutoSizer
+        __dataThatTriggersARerenderWhenChanged={this.props.data} // passed to notify react-virtualized about updates
         defaultWidth={DEFAULT_WIDTH}
         defaultHeight={DEFAULT_HEIGHT}
         onResize={this.updateGridSize}
@@ -70,8 +71,6 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
   }
 
   private getGrid({ width, height }) {
-    const mergedData = this.getData(this.props.data);
-
     const columnCount = React.Children.count(this.props.children);
     const columnSizes = this.getColumnSizes(
       React.Children.toArray(this.props.children) as Array<
@@ -96,7 +95,7 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
         enableFixedRowScroll={true}
         height={height}
         rowHeight={ROW_HEIGHT}
-        rowCount={mergedData.length}
+        rowCount={this.props.data.length + 1}
         width={width}
         hideTopRightGridScrollbar={true}
         hideBottomLeftGridScrollbar={true}

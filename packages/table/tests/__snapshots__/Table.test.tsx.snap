@@ -1,5 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Table renders again with new data 1`] = `
+<Table
+  data={
+    Array [
+      1,
+      2,
+      3,
+    ]
+  }
+>
+  <AutoSizer
+    __dataThatTriggersARerenderWhenChanged={
+      Array [
+        1,
+        2,
+        3,
+      ]
+    }
+    defaultHeight={768}
+    defaultWidth={1024}
+    disableHeight={false}
+    disableWidth={false}
+    onResize={[Function]}
+    style={Object {}}
+  >
+    <div
+      style={
+        Object {
+          "height": 0,
+          "overflow": "visible",
+          "width": 0,
+        }
+      }
+    >
+      <MultiGrid
+        cellRenderer={[Function]}
+        classNameBottomLeftGrid=""
+        classNameBottomRightGrid=""
+        classNameTopLeftGrid=""
+        classNameTopRightGrid=""
+        columnCount={1}
+        columnWidth={[Function]}
+        enableFixedColumnScroll={true}
+        enableFixedRowScroll={true}
+        fixedColumnCount={1}
+        fixedRowCount={1}
+        height={0}
+        hideBottomLeftGridScrollbar={true}
+        hideTopRightGridScrollbar={true}
+        rowCount={4}
+        rowHeight={35}
+        scrollToColumn={-1}
+        scrollToRow={-1}
+        style={Object {}}
+        styleBottomLeftGrid={Object {}}
+        styleBottomRightGrid={Object {}}
+        styleTopLeftGrid={Object {}}
+        styleTopRightGrid={Object {}}
+        width={0}
+      />
+    </div>
+  </AutoSizer>
+</Table>
+`;
+
+exports[`Table renders again with new data 2`] = `
+<Table
+  data={
+    Array [
+      4,
+      5,
+      6,
+    ]
+  }
+>
+  <AutoSizer
+    __dataThatTriggersARerenderWhenChanged={
+      Array [
+        4,
+        5,
+        6,
+      ]
+    }
+    defaultHeight={768}
+    defaultWidth={1024}
+    disableHeight={false}
+    disableWidth={false}
+    onResize={[Function]}
+    style={Object {}}
+  >
+    <div
+      style={
+        Object {
+          "height": 0,
+          "overflow": "visible",
+          "width": 0,
+        }
+      }
+    >
+      <MultiGrid
+        cellRenderer={[Function]}
+        classNameBottomLeftGrid=""
+        classNameBottomRightGrid=""
+        classNameTopLeftGrid=""
+        classNameTopRightGrid=""
+        columnCount={1}
+        columnWidth={[Function]}
+        enableFixedColumnScroll={true}
+        enableFixedRowScroll={true}
+        fixedColumnCount={1}
+        fixedRowCount={1}
+        height={0}
+        hideBottomLeftGridScrollbar={true}
+        hideTopRightGridScrollbar={true}
+        rowCount={4}
+        rowHeight={35}
+        scrollToColumn={-1}
+        scrollToRow={-1}
+        style={Object {}}
+        styleBottomLeftGrid={Object {}}
+        styleBottomRightGrid={Object {}}
+        styleTopLeftGrid={Object {}}
+        styleTopRightGrid={Object {}}
+        width={0}
+      />
+    </div>
+  </AutoSizer>
+</Table>
+`;
+
 exports[`Table renders default 1`] = `
 .emotion-0 {
   box-sizing: border-box;
