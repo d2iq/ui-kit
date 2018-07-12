@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.3"></a>
+## [1.2.3](https://github.com/dcos-labs/ui-kit/compare/v1.2.2...v1.2.3) (2018-07-12)
+
+
+### Bug Fixes
+
+* **table:** allow dynamic values to be visible ([2260bb2](https://github.com/dcos-labs/ui-kit/commit/2260bb2))
+* styled types path not found ([108a9fe](https://github.com/dcos-labs/ui-kit/commit/108a9fe))
+
+
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://github.com/dcos-labs/ui-kit/compare/v1.2.1...v1.2.2) (2018-07-10)
 
