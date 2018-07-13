@@ -79,7 +79,7 @@
     "node": "10.5.0",
     "npm": "6.1.0",
     "prettier": "1.13.5",
-    "prop-types": "15.6.1",
+    "prop-types": "15.6.2",
     "react-docgen-typescript-loader": "2.1.1",
     "react-test-renderer": "16.4.0",
     "rimraf": "2.6.2",
