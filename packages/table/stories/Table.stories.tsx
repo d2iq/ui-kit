@@ -41,7 +41,7 @@ const cityCellRenderer = ({ city }: { city?: string }) => (
 );
 const roleCellRenderer = ({ role }: { role?: string }) => (
   <Cell>
-    <em>{role}</em>
+    <span>{role}</span>
   </Cell>
 );
 const stateCellRenderer = ({ state }: { state?: string }) => (
@@ -136,7 +136,7 @@ storiesOf("Table", module)
           width={width}
         />
         <Column
-          header={<HeaderCell>zipcode</HeaderCell>}
+          header={<HeaderCell>zip code</HeaderCell>}
           cellRenderer={zipcodeCellRenderer}
           width={width}
         />
