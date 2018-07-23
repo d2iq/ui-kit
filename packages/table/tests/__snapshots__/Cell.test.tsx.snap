@@ -37,6 +37,7 @@ exports[`TextCell renders correctly 1`] = `
   padding: 7px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 <div
