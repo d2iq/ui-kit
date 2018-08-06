@@ -19,7 +19,7 @@ exports[`HeaderCell renders correctly 1`] = `
   height: 100%;
   box-sizing: border-box;
   padding: 7px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: bold;
 }
 
