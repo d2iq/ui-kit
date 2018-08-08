@@ -1,7 +1,14 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { Table, Column, Cell, HeaderCell, TextCell } from "../index";
+import {
+  Table,
+  Column,
+  Cell,
+  HeaderCell,
+  TextCell,
+  NumberCell
+} from "../index";
 
 const readme = require("../README.md");
 
@@ -50,9 +57,9 @@ const stateCellRenderer = ({ state }: { state?: string }) => (
   </Cell>
 );
 const zipcodeCellRenderer = ({ zipcode }: { zipcode?: string }) => (
-  <Cell>
+  <NumberCell>
     <span>{zipcode}</span>
-  </Cell>
+  </NumberCell>
 );
 const veryLongRenderer = () => (
   <TextCell>
