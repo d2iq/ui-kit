@@ -24,7 +24,7 @@ export interface ITableProps {
 }
 
 export interface ITableState {
-  isScroll: boolean;
+  isScrolling: boolean;
 }
 
 const ROW_HEIGHT = 35;
@@ -67,10 +67,10 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
     this.setRef = this.setRef.bind(this);
     this.updateGridSize = this.updateGridSize.bind(this);
     this.getGrid = this.getGrid.bind(this);
-    this.onScrollbarPresenceChange = this.onScrollbarPresenceChange.bind(this);
+    this.onScroll = this.onScroll.bind(this);
 
     this.state = {
-      isScroll: false
+      isScrolling: false
     };
   }
 
@@ -83,27 +83,27 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
         defaultHeight={DEFAULT_HEIGHT}
         onResize={this.updateGridSize}
       >
-        {this.getGrid}
+        {({ height, width }) =>
+          this.getGrid({ height, width }, this.state.isScrolling)
+        }
       </AutoSizer>
     );
   }
 
-  private onScrollbarPresenceChange({ horizontal }) {
-    if (horizontal) {
-      this.setState({
-        isScroll: true
-      });
+  private onScroll({ scrollLeft }) {
+    const scrollValue = Math.floor(scrollLeft);
 
-      return;
+    if (scrollValue >= 5 && !this.state.isScrolling) {
+      this.setState({ isScrolling: true });
     }
 
-    this.setState({
-      isScroll: false
-    });
+    if (scrollValue < 5 && this.state.isScrolling) {
+      this.setState({ isScrolling: false });
+    }
   }
 
-  private getGrid({ width, height }) {
-    const rightGridStyles = cx({ [rightGrid]: this.state.isScroll });
+  private getGrid({ width, height }, isScrolling) {
+    const rightGridStyles = isScrolling ? rightGrid : "";
     const columnCount = React.Children.count(this.props.children);
     const columnSizes = this.getColumnSizes(
       React.Children.toArray(this.props.children) as Array<
@@ -118,7 +118,7 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
 
     return (
       <MultiGrid
-        onScrollbarPresenceChange={this.onScrollbarPresenceChange}
+        onScroll={this.onScroll}
         ref={this.setRef}
         fixedColumnCount={1}
         fixedRowCount={1}
