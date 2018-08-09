@@ -65,7 +65,7 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
 
     this.state = {
       isScroll: false
-    }
+    };
   }
 
   public render() {
