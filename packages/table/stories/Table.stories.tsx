@@ -1,7 +1,14 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { Table, Column, Cell, HeaderCell, TextCell } from "../index";
+import {
+  Table,
+  Column,
+  Cell,
+  HeaderCell,
+  TextCell,
+  NumberCell
+} from "../index";
 
 const readme = require("../README.md");
 
@@ -41,7 +48,7 @@ const cityCellRenderer = ({ city }: { city?: string }) => (
 );
 const roleCellRenderer = ({ role }: { role?: string }) => (
   <Cell>
-    <em>{role}</em>
+    <span>{role}</span>
   </Cell>
 );
 const stateCellRenderer = ({ state }: { state?: string }) => (
@@ -50,9 +57,9 @@ const stateCellRenderer = ({ state }: { state?: string }) => (
   </Cell>
 );
 const zipcodeCellRenderer = ({ zipcode }: { zipcode?: string }) => (
-  <Cell>
+  <NumberCell>
     <span>{zipcode}</span>
-  </Cell>
+  </NumberCell>
 );
 const veryLongRenderer = () => (
   <TextCell>
@@ -63,9 +70,45 @@ const veryLongRenderer = () => (
     </span>
   </TextCell>
 );
+
 const empty = () => <Cell>empty</Cell>;
 const width = ({ width: totalWidth }: { width?: number }) =>
   totalWidth ? totalWidth * 0.3 : 100;
+
+const itemCellRenderer = item => (
+  <Cell>
+    <span>{item}</span>
+  </Cell>
+);
+
+const randomNumbers = n => new Array(n).fill(0).map(() => Math.random() * 100);
+
+class ChangingTable extends React.Component<{}, { items: number[] }> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: randomNumbers(20)
+    };
+
+    setInterval(() => {
+      this.setState({
+        items: randomNumbers(20)
+      });
+    }, 100);
+  }
+
+  render() {
+    return (
+      <Table data={this.state.items}>
+        <Column
+          header={<HeaderCell>name</HeaderCell>}
+          cellRenderer={itemCellRenderer}
+          width={width}
+        />
+      </Table>
+    );
+  }
+}
 
 storiesOf("Table", module)
   .addDecorator(withReadme([readme]))
@@ -100,7 +143,7 @@ storiesOf("Table", module)
           width={width}
         />
         <Column
-          header={<HeaderCell>zipcode</HeaderCell>}
+          header={<HeaderCell>zip code</HeaderCell>}
           cellRenderer={zipcodeCellRenderer}
           width={width}
         />
@@ -110,5 +153,16 @@ storiesOf("Table", module)
           width={width}
         />
       </Table>
+    </div>
+  ))
+  .addWithInfo("changing values", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <ChangingTable />
     </div>
   ));

@@ -1,8 +1,159 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Table renders again with new data 1`] = `
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  font-weight: normal;
+}
+
+<Table
+  data={
+    Array [
+      1,
+      2,
+      3,
+    ]
+  }
+>
+  <AutoSizer
+    __dataThatTriggersARerenderWhenChanged={
+      Array [
+        1,
+        2,
+        3,
+      ]
+    }
+    className="emotion-0"
+    defaultHeight={768}
+    defaultWidth={1024}
+    disableHeight={false}
+    disableWidth={false}
+    onResize={[Function]}
+    style={Object {}}
+  >
+    <div
+      className="emotion-0"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "visible",
+          "width": 0,
+        }
+      }
+    >
+      <MultiGrid
+        cellRenderer={[Function]}
+        classNameBottomLeftGrid=""
+        classNameBottomRightGrid=""
+        classNameTopLeftGrid=""
+        classNameTopRightGrid=""
+        columnCount={1}
+        columnWidth={[Function]}
+        enableFixedColumnScroll={true}
+        enableFixedRowScroll={true}
+        fixedColumnCount={1}
+        fixedRowCount={1}
+        height={0}
+        hideBottomLeftGridScrollbar={true}
+        hideTopRightGridScrollbar={true}
+        rowCount={4}
+        rowHeight={35}
+        scrollToColumn={-1}
+        scrollToRow={-1}
+        style={Object {}}
+        styleBottomLeftGrid={Object {}}
+        styleBottomRightGrid={Object {}}
+        styleTopLeftGrid={Object {}}
+        styleTopRightGrid={Object {}}
+        width={0}
+      />
+    </div>
+  </AutoSizer>
+</Table>
+`;
+
+exports[`Table renders again with new data 2`] = `
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  font-weight: normal;
+}
+
+<Table
+  data={
+    Array [
+      4,
+      5,
+      6,
+    ]
+  }
+>
+  <AutoSizer
+    __dataThatTriggersARerenderWhenChanged={
+      Array [
+        4,
+        5,
+        6,
+      ]
+    }
+    className="emotion-0"
+    defaultHeight={768}
+    defaultWidth={1024}
+    disableHeight={false}
+    disableWidth={false}
+    onResize={[Function]}
+    style={Object {}}
+  >
+    <div
+      className="emotion-0"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "visible",
+          "width": 0,
+        }
+      }
+    >
+      <MultiGrid
+        cellRenderer={[Function]}
+        classNameBottomLeftGrid=""
+        classNameBottomRightGrid=""
+        classNameTopLeftGrid=""
+        classNameTopRightGrid=""
+        columnCount={1}
+        columnWidth={[Function]}
+        enableFixedColumnScroll={true}
+        enableFixedRowScroll={true}
+        fixedColumnCount={1}
+        fixedRowCount={1}
+        height={0}
+        hideBottomLeftGridScrollbar={true}
+        hideTopRightGridScrollbar={true}
+        rowCount={4}
+        rowHeight={35}
+        scrollToColumn={-1}
+        scrollToRow={-1}
+        style={Object {}}
+        styleBottomLeftGrid={Object {}}
+        styleBottomRightGrid={Object {}}
+        styleTopLeftGrid={Object {}}
+        styleTopRightGrid={Object {}}
+        width={0}
+      />
+    </div>
+  </AutoSizer>
+</Table>
+`;
+
 exports[`Table renders default 1`] = `
+.emotion-12 {
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  font-weight: normal;
+}
+
 .emotion-0 {
   box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   height: 35px;
   left: 0;
@@ -13,6 +164,8 @@ exports[`Table renders default 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   height: 35px;
   left: 307.2px;
@@ -23,6 +176,8 @@ exports[`Table renders default 1`] = `
 
 .emotion-3 {
   box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   height: 35px;
   left: 614.4px;
@@ -32,8 +187,9 @@ exports[`Table renders default 1`] = `
 }
 
 .emotion-4 {
-  border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 0;
   position: absolute;
@@ -42,8 +198,9 @@ exports[`Table renders default 1`] = `
 }
 
 .emotion-5 {
-  border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 0;
   position: absolute;
@@ -52,8 +209,9 @@ exports[`Table renders default 1`] = `
 }
 
 .emotion-7 {
-  border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 307.2px;
   position: absolute;
@@ -62,8 +220,9 @@ exports[`Table renders default 1`] = `
 }
 
 .emotion-8 {
-  border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 614.4px;
   position: absolute;
@@ -72,8 +231,9 @@ exports[`Table renders default 1`] = `
 }
 
 .emotion-10 {
-  border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 307.2px;
   position: absolute;
@@ -82,8 +242,9 @@ exports[`Table renders default 1`] = `
 }
 
 .emotion-11 {
-  border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 614.4px;
   position: absolute;
@@ -92,6 +253,7 @@ exports[`Table renders default 1`] = `
 }
 
 <div
+  class="emotion-12"
   style="overflow:visible;height:0;width:0"
 >
   <div

@@ -1,9 +1,11 @@
 import * as React from "react";
 import { css } from "emotion";
 import { AutoSizer, MultiGrid, GridCellProps } from "react-virtualized";
+
+import { headerCss, cellCss, tableCss } from "../style";
+
 import { IColumnProps, Column } from "./Column";
 import memoizeOne from "memoize-one";
-import { coreColors as Colors } from "../../shared/styles/color";
 
 export interface ITableProps {
   /**
@@ -60,6 +62,8 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
   public render() {
     return (
       <AutoSizer
+        __dataThatTriggersARerenderWhenChanged={this.props.data} // passed to notify react-virtualized about updates
+        className={tableCss}
         defaultWidth={DEFAULT_WIDTH}
         defaultHeight={DEFAULT_HEIGHT}
         onResize={this.updateGridSize}
@@ -70,8 +74,6 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
   }
 
   private getGrid({ width, height }) {
-    const mergedData = this.getData(this.props.data);
-
     const columnCount = React.Children.count(this.props.children);
     const columnSizes = this.getColumnSizes(
       React.Children.toArray(this.props.children) as Array<
@@ -96,7 +98,7 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
         enableFixedRowScroll={true}
         height={height}
         rowHeight={ROW_HEIGHT}
-        rowCount={mergedData.length}
+        rowCount={this.props.data.length + 1}
         width={width}
         hideTopRightGridScrollbar={true}
         hideBottomLeftGridScrollbar={true}
@@ -110,9 +112,7 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
     }
   ) {
     const { key, style, column } = args;
-    const className = css({
-      boxSizing: "border-box",
-      borderBottom: `1px solid ${Colors().black}`,
+    const className = css(headerCss, {
       ...style
     });
     return (
@@ -146,9 +146,7 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
     }
   ) {
     const { style, key, column, data, rowIndex } = args;
-    const className = css({
-      borderBottom: `1px solid ${Colors().greyLight}`,
-      boxSizing: "border-box",
+    const className = css(cellCss, {
       ...style
     });
     return (

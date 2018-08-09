@@ -3,7 +3,7 @@ import React from "react";
 import { Table, Column } from "../";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
-import { render, shallow } from "enzyme";
+import { render, shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
@@ -56,6 +56,21 @@ describe("Table", () => {
         <Column header="city" cellRenderer={cityCellRenderer} width={width} />
       </Table>
     );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it("renders again with new data", () => {
+    const itemRenderer = item => <span>{item}</span>;
+    const component = mount(
+      <Table data={[1, 2, 3]}>
+        <Column header="item" cellRenderer={itemRenderer} width={width} />
+      </Table>
+    );
+    expect(toJson(component)).toMatchSnapshot();
+
+    component.setProps({
+      data: [4, 5, 6]
+    });
     expect(toJson(component)).toMatchSnapshot();
   });
 

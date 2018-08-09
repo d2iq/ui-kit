@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/dcos-labs/ui-kit/compare/v1.2.4...v1.3.0) (2018-07-23)
+
+
+### Bug Fixes
+
+* **table:** fix text cell white space wrap ([04feeb1](https://github.com/dcos-labs/ui-kit/commit/04feeb1))
+
+
+### Features
+
+* table style ([08de0d2](https://github.com/dcos-labs/ui-kit/commit/08de0d2))
+
+
+
+<a name="1.2.4"></a>
+## [1.2.4](https://github.com/dcos-labs/ui-kit/compare/v1.2.3...v1.2.4) (2018-07-13)
+
+
+
+<a name="1.2.3"></a>
+## [1.2.3](https://github.com/dcos-labs/ui-kit/compare/v1.2.2...v1.2.3) (2018-07-12)
+
+
+### Bug Fixes
+
+* **table:** allow dynamic values to be visible ([2260bb2](https://github.com/dcos-labs/ui-kit/commit/2260bb2))
+* styled types path not found ([108a9fe](https://github.com/dcos-labs/ui-kit/commit/108a9fe))
+
+
+
+<a name="1.2.2"></a>
+## [1.2.2](https://github.com/dcos-labs/ui-kit/compare/v1.2.1...v1.2.2) (2018-07-10)
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/dcos-labs/ui-kit/compare/v1.2.0...v1.2.1) (2018-07-09)
 
