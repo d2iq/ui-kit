@@ -22,3 +22,9 @@ export const tableCss = css`
   font-family: ${fontFamilySansSerif};
   font-weight: normal;
 `;
+
+export const rightGridShadow = css`
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background-repeat: no-repeat;
+  background-size: 8px 100%;
+`;

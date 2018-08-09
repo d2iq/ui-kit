@@ -2,7 +2,7 @@ import * as React from "react";
 import { css } from "emotion";
 import { AutoSizer, MultiGrid, GridCellProps } from "react-virtualized";
 
-import { headerCss, cellCss, tableCss } from "../style";
+import { headerCss, cellCss, tableCss, rightGridShadow } from "../style";
 
 import { IColumnProps, Column } from "./Column";
 import memoizeOne from "memoize-one";
@@ -102,6 +102,8 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
         width={width}
         hideTopRightGridScrollbar={true}
         hideBottomLeftGridScrollbar={true}
+        classNameTopRightGrid={rightGridShadow}
+        classNameBottomRightGrid={rightGridShadow}
       />
     );
   }
