@@ -72,9 +72,9 @@ A recommended reading is [Better Specs](http://www.betterspecs.org/), we put
 [real effort](https://github.com/dcos/dcos-ui/pull/2524) in making sure we
 follow these guidelines. Some of the most common ones to follow:
 
-* Single Expectation test: Every unit test should verify one behavior.
-* Keep your descriptions concise (bellow 40 chars ideally): One easy way to achieve this one is avoiding using "should" (e.g. "it does not use should" instead of "it should not contain should").
-* Create the data you need: If you have a more complicated scenario, generate the data that is relevant to that particular case.
+- Single Expectation test: Every unit test should verify one behavior.
+- Keep your descriptions concise (bellow 40 chars ideally): One easy way to achieve this one is avoiding using "should" (e.g. "it does not use should" instead of "it should not contain should").
+- Create the data you need: If you have a more complicated scenario, generate the data that is relevant to that particular case.
 
 For more on this topic, and examples we recommend
 [Better Specs](http://www.betterspecs.org/).
@@ -109,28 +109,4 @@ These Guidelines got written based on [AngularJS Git Commit Message Conventions]
 
 ## Release / Publishing
 
-After your PR gets merged to `master` to cut a release, check that you are on `master` branch and follow the steps below.
-
-Fetch all git tags
-
-```
-git fetch origin --tags
-```
-
-Then run the command to automatically update the `package.json`, `changelog.md` and create a new release commit.
-
-```
-npm run release
-```
-
-Now push the latest commit and the tag created (_run `git tag` to see all tags_).
-
-```
-git push origin master && git push origin TAG_VERSION
-```
-
-And publish to npm.
-
-```
-npm publish
-```
+After your PR gets merged to `master`, `semantic-release` will automatically cut a release.
