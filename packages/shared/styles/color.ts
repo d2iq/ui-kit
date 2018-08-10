@@ -124,3 +124,22 @@ export const coreColors = (): IColors => {
 export const customColors = (): IColors => {
   return {};
 };
+
+export const hexToRgbA = (hex: string, alpha: string | number = 1): string => {
+  let color;
+  if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+    color = hex.substring(1).split("");
+    if (color.length === 3) {
+      color = [color[0], color[0], color[1], color[1], color[2], color[2]];
+    }
+    color = "0x" + color.join("");
+    return (
+      "rgba(" +
+      // tslint:disable
+      [(color >> 16) & 255, (color >> 8) & 255, color & 255].join(",") +
+      // tslint:enable
+      `,${alpha})`
+    );
+  }
+  return "rgba(0,0,0,0)";
+};

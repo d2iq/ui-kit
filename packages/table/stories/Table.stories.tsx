@@ -155,6 +155,33 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
+  .addWithInfo("no scroll", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <Table data={items}>
+        <Column
+          header={<HeaderCell>name</HeaderCell>}
+          cellRenderer={nameCellRenderer}
+          width={width}
+        />
+        <Column
+          header={<HeaderCell>role</HeaderCell>}
+          cellRenderer={roleCellRenderer}
+          width={width}
+        />
+        <Column
+          header={<HeaderCell>state</HeaderCell>}
+          cellRenderer={stateCellRenderer}
+          width={width}
+        />
+      </Table>
+    </div>
+  ))
   .addWithInfo("changing values", () => (
     <div
       style={{
