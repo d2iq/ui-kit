@@ -124,7 +124,7 @@ export const customColors = (): IColors => {
   return {};
 };
 
-export function hexToRgbA(hex: string, alpha: string | number = 1): string {
+export const hexToRgbA = (hex: string, alpha: string | number = 1): string => {
   let color;
   if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
     color = hex.substring(1).split("");

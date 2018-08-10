@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { coreColors } from "../shared/styles/color";
+import { coreColors, hexToRgbA } from "../shared/styles/color";
 import { coreFonts } from "../shared/styles/typography";
 
 const { black, greyLight } = coreColors();
@@ -24,7 +24,11 @@ export const tableCss = css`
 `;
 
 export const rightGrid = css`
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background: linear-gradient(
+    to right,
+    ${hexToRgbA(black, 0.2)},
+    ${hexToRgbA(black, 0)}
+  );
   background-repeat: no-repeat;
   background-size: 8px 100%;
 `;
