@@ -19,6 +19,7 @@ export interface ITableProps {
 
 export interface ITableState {
   isScroll: boolean;
+  isScrolling: boolean;
 }
 
 const ROW_HEIGHT = 35;
@@ -62,9 +63,11 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
     this.updateGridSize = this.updateGridSize.bind(this);
     this.getGrid = this.getGrid.bind(this);
     this.onScrollbarPresenceChange = this.onScrollbarPresenceChange.bind(this);
+    this.onScroll = this.onScroll.bind(this);
 
     this.state = {
-      isScroll: false
+      isScroll: false,
+      isScrolling: false
     };
   }
 
@@ -96,6 +99,18 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
     });
   }
 
+  private onScroll({ scrollLeft }) {
+    const scrollValue = Math.floor(scrollLeft);
+
+    if (scrollValue >= 5 && !this.state.isScrolling) {
+      this.setState({ isScrolling: true });
+    }
+
+    if (scrollValue < 5 && this.state.isScrolling) {
+      this.setState({ isScrolling: false });
+    }
+  }
+
   private getGrid({ width, height }) {
     const rightGridStyles = this.state.isScroll ? rightGrid : "";
     const columnCount = React.Children.count(this.props.children);
@@ -113,6 +128,7 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
     return (
       <MultiGrid
         onScrollbarPresenceChange={this.onScrollbarPresenceChange}
+        onScroll={this.onScroll}
         ref={this.setRef}
         fixedColumnCount={1}
         fixedRowCount={1}
