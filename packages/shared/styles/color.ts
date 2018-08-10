@@ -141,4 +141,4 @@ export const hexToRgbA = (hex: string, alpha: string | number = 1): string => {
     );
   }
   return "rgba(0,0,0,0)";
-}
+};
