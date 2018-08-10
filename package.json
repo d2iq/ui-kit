@@ -33,11 +33,11 @@
   ],
   "typings": "dist/packages/index",
   "dependencies": {
-    "emotion": "9.2.4",
+    "emotion": "9.2.6",
     "memoize-one": "3.1.1",
     "react": "16.4.1",
     "react-dom": "16.4.2",
-    "react-emotion": "9.2.4",
+    "react-emotion": "9.2.6",
     "react-virtualized": "9.19.1",
     "semantic-release": "^15.9.6"
   },
@@ -73,7 +73,7 @@
     "file-loader": "1.1.11",
     "fs-extra": "6.0.1",
     "jest": "23.4.2",
-    "jest-emotion": "9.2.4",
+    "jest-emotion": "9.2.7",
     "jest-runner-prettier": "0.2.6",
     "node": "10.5.0",
     "npm": "6.1.0",
