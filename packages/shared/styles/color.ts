@@ -13,6 +13,7 @@ export const coreColors = (): IColors => {
   return {
     white: "#fff",
     black: "#000",
+    cyan: "#20D5FF",
 
     // Purple
     purple: "#7D58FF",
