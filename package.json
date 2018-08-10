@@ -38,7 +38,7 @@
     "react": "16.4.1",
     "react-dom": "16.4.2",
     "react-emotion": "9.2.4",
-    "react-virtualized": "9.19.1",
+    "react-virtualized": "9.20.1",
     "semantic-release": "^15.9.6"
   },
   "devDependencies": {
@@ -61,7 +61,7 @@
     "@types/react": "16.4.1",
     "@types/react-dom": "16.0.7",
     "@types/react-test-renderer": "16.0.1",
-    "@types/react-virtualized": "9.18.3",
+    "@types/react-virtualized": "9.18.6",
     "@types/storybook__addon-actions": "3.4.1",
     "@types/storybook__addon-info": "3.4.1",
     "@types/storybook__addon-knobs": "3.4.1",
