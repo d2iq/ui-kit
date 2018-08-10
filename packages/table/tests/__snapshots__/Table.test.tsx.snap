@@ -56,7 +56,7 @@ exports[`Table renders again with new data 1`] = `
         height={0}
         hideBottomLeftGridScrollbar={true}
         hideTopRightGridScrollbar={true}
-        rowCount={4}
+        rowCount={5}
         rowHeight={35}
         scrollToColumn={-1}
         scrollToRow={-1}
@@ -128,7 +128,7 @@ exports[`Table renders again with new data 2`] = `
         height={0}
         hideBottomLeftGridScrollbar={true}
         hideTopRightGridScrollbar={true}
-        rowCount={4}
+        rowCount={5}
         rowHeight={35}
         scrollToColumn={-1}
         scrollToRow={-1}
@@ -333,7 +333,7 @@ exports[`Table renders default 1`] = `
           <div
             class="ReactVirtualized__Grid__innerScrollContainer"
             role="rowgroup"
-            style="width:307.2px;height:70px;max-width:307.2px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+            style="width:307.2px;height:105px;max-width:307.2px;max-height:105px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
               class="emotion-4"
@@ -349,6 +349,11 @@ exports[`Table renders default 1`] = `
                 Jon Doe
               </strong>
             </div>
+            <div
+              style="height:35px;left:0;position:absolute;top:70px;width:307.2px"
+            >
+               
+            </div>
           </div>
         </div>
       </div>
@@ -363,7 +368,7 @@ exports[`Table renders default 1`] = `
         <div
           class="ReactVirtualized__Grid__innerScrollContainer"
           role="rowgroup"
-          style="width:1021.5999999999999px;height:70px;max-width:1021.5999999999999px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+          style="width:1021.5999999999999px;height:105px;max-width:1021.5999999999999px;max-height:105px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
             class="emotion-4"
@@ -406,6 +411,21 @@ exports[`Table renders default 1`] = `
             <span>
               95125
             </span>
+          </div>
+          <div
+            style="height:35px;left:0;position:absolute;top:70px;width:307.2px"
+          >
+             
+          </div>
+          <div
+            style="height:35px;left:307.2px;position:absolute;top:70px;width:307.2px"
+          >
+             
+          </div>
+          <div
+            style="height:35px;left:614.4px;position:absolute;top:70px;width:307.2px"
+          >
+             
           </div>
         </div>
       </div>

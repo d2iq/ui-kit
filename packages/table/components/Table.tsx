@@ -26,7 +26,7 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
 
   public getData = memoizeOne(
     (data: T[]): Array<{}> | T[] => {
-      return [{}, ...data];
+      return [{}, ...data, {}];
     }
   );
 
@@ -98,7 +98,8 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
         enableFixedRowScroll={true}
         height={height}
         rowHeight={ROW_HEIGHT}
-        rowCount={this.props.data.length + 1}
+        // The addition of 2 adds a `Footer` and a `Header` row.
+        rowCount={this.props.data.length + 2}
         width={width}
         hideTopRightGridScrollbar={true}
         hideBottomLeftGridScrollbar={true}
@@ -132,6 +133,14 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
 
     if (!column || column.type !== Column) {
       return null;
+    }
+
+    if (rowIndex === this.props.data.length + 1) {
+      return (
+        <div key={args.key} style={args.style}>
+          &nbsp;
+        </div>
+      );
     }
 
     return rowIndex === 0
