@@ -79,7 +79,7 @@
     "npm": "6.1.0",
     "prettier": "1.13.5",
     "prop-types": "15.6.1",
-    "react-docgen-typescript-loader": "2.1.1",
+    "react-docgen-typescript-loader": "2.2.0",
     "react-test-renderer": "16.4.0",
     "rimraf": "2.6.2",
     "storybook-readme": "3.3.0",
