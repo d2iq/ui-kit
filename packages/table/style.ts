@@ -32,3 +32,11 @@ export const rightGrid = css`
   background-repeat: no-repeat;
   background-size: 8px 100%;
 `;
+
+export const hideScrollbarCss = css`
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`;

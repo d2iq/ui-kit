@@ -43,10 +43,10 @@ exports[`Table renders again with new data 1`] = `
     >
       <MultiGrid
         cellRenderer={[Function]}
-        classNameBottomLeftGrid=""
+        classNameBottomLeftGrid="css-1oay0jc"
         classNameBottomRightGrid=""
         classNameTopLeftGrid=""
-        classNameTopRightGrid=""
+        classNameTopRightGrid="css-1oay0jc"
         columnCount={1}
         columnWidth={[Function]}
         enableFixedColumnScroll={true}
@@ -116,10 +116,10 @@ exports[`Table renders again with new data 2`] = `
     >
       <MultiGrid
         cellRenderer={[Function]}
-        classNameBottomLeftGrid=""
+        classNameBottomLeftGrid="css-1oay0jc"
         classNameBottomRightGrid=""
         classNameTopLeftGrid=""
-        classNameTopRightGrid=""
+        classNameTopRightGrid="css-1oay0jc"
         columnCount={1}
         columnWidth={[Function]}
         enableFixedColumnScroll={true}
@@ -147,9 +147,17 @@ exports[`Table renders again with new data 2`] = `
 `;
 
 exports[`Table renders default 1`] = `
-.emotion-12 {
+.emotion-14 {
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   font-weight: normal;
+}
+
+.emotion-4 {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-4::-webkit-scrollbar {
+  display: none;
 }
 
 .emotion-0 {
@@ -188,7 +196,7 @@ exports[`Table renders default 1`] = `
   width: 307.2px;
 }
 
-.emotion-4 {
+.emotion-5 {
   box-sizing: border-box;
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-bottom: 1px solid #DADDE2;
@@ -199,7 +207,7 @@ exports[`Table renders default 1`] = `
   width: 307.2px;
 }
 
-.emotion-5 {
+.emotion-6 {
   box-sizing: border-box;
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-bottom: 1px solid #DADDE2;
@@ -210,23 +218,12 @@ exports[`Table renders default 1`] = `
   width: 307.2px;
 }
 
-.emotion-7 {
+.emotion-9 {
   box-sizing: border-box;
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 307.2px;
-  position: absolute;
-  top: 0;
-  width: 307.2px;
-}
-
-.emotion-8 {
-  box-sizing: border-box;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
-  border-bottom: 1px solid #DADDE2;
-  height: 35px;
-  left: 614.4px;
   position: absolute;
   top: 0;
   width: 307.2px;
@@ -237,13 +234,24 @@ exports[`Table renders default 1`] = `
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-bottom: 1px solid #DADDE2;
   height: 35px;
+  left: 614.4px;
+  position: absolute;
+  top: 0;
+  width: 307.2px;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  border-bottom: 1px solid #DADDE2;
+  height: 35px;
   left: 307.2px;
   position: absolute;
   top: 35px;
   width: 307.2px;
 }
 
-.emotion-11 {
+.emotion-13 {
   box-sizing: border-box;
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-bottom: 1px solid #DADDE2;
@@ -255,7 +263,7 @@ exports[`Table renders default 1`] = `
 }
 
 <div
-  class="emotion-12"
+  class="emotion-14"
   style="overflow:visible;height:0;width:0"
 >
   <div
@@ -290,7 +298,7 @@ exports[`Table renders default 1`] = `
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid"
+          class="ReactVirtualized__Grid emotion-4"
           role="grid"
           style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:716.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
         >
@@ -328,7 +336,7 @@ exports[`Table renders default 1`] = `
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid"
+          class="ReactVirtualized__Grid emotion-4"
           role="grid"
           style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:307.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
         >
@@ -338,14 +346,14 @@ exports[`Table renders default 1`] = `
             style="width:307.2px;height:70px;max-width:307.2px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-4"
+              class="emotion-5"
             >
               <strong>
                 Brian Vaughn
               </strong>
             </div>
             <div
-              class="emotion-5"
+              class="emotion-6"
             >
               <strong>
                 Jon Doe
@@ -368,42 +376,42 @@ exports[`Table renders default 1`] = `
           style="width:1021.5999999999999px;height:70px;max-width:1021.5999999999999px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
-            class="emotion-4"
+            class="emotion-5"
           >
             <em>
               Software Engineer
             </em>
           </div>
           <div
-            class="emotion-7"
+            class="emotion-9"
           >
             <span>
               CA
             </span>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-10"
           >
             <span>
               95125
             </span>
           </div>
           <div
-            class="emotion-5"
+            class="emotion-6"
           >
             <em>
               Product engineer
             </em>
           </div>
           <div
-            class="emotion-10"
+            class="emotion-12"
           >
             <span>
               CA
             </span>
           </div>
           <div
-            class="emotion-11"
+            class="emotion-13"
           >
             <span>
               95125

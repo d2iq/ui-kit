@@ -1,8 +1,14 @@
 import * as React from "react";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { AutoSizer, MultiGrid, GridCellProps } from "react-virtualized";
 
-import { headerCss, cellCss, tableCss, rightGrid } from "../style";
+import {
+  headerCss,
+  cellCss,
+  tableCss,
+  rightGrid,
+  hideScrollbarCss
+} from "../style";
 
 import { IColumnProps, Column } from "./Column";
 import memoizeOne from "memoize-one";
@@ -97,7 +103,7 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
   }
 
   private getGrid({ width, height }) {
-    const rightGridStyles = this.state.isScroll ? rightGrid : "";
+    const rightGridStyles = cx({ [rightGrid]: this.state.isScroll });
     const columnCount = React.Children.count(this.props.children);
     const columnSizes = this.getColumnSizes(
       React.Children.toArray(this.props.children) as Array<
@@ -127,8 +133,9 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
         width={width}
         hideTopRightGridScrollbar={true}
         hideBottomLeftGridScrollbar={true}
-        classNameTopRightGrid={rightGridStyles}
+        classNameTopRightGrid={cx(rightGridStyles, hideScrollbarCss)}
         classNameBottomRightGrid={rightGridStyles}
+        classNameBottomLeftGrid={hideScrollbarCss}
       />
     );
   }
