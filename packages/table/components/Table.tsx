@@ -1,8 +1,14 @@
 import * as React from "react";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { AutoSizer, MultiGrid, GridCellProps } from "react-virtualized";
 
-import { headerCss, cellCss, tableCss } from "../style";
+import {
+  headerCss,
+  cellCss,
+  tableCss,
+  rightGrid,
+  hideScrollbarCss
+} from "../style";
 
 import { IColumnProps, Column } from "./Column";
 import memoizeOne from "memoize-one";
@@ -17,11 +23,15 @@ export interface ITableProps {
     | React.ReactElement<IColumnProps>;
 }
 
+export interface ITableState {
+  isScroll: boolean;
+}
+
 const ROW_HEIGHT = 35;
 
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 768;
-export class Table<T> extends React.PureComponent<ITableProps, {}> {
+export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
   public multiGridRef: { recomputeGridSize?: any } = {};
 
   public getData = memoizeOne(
@@ -57,6 +67,11 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
     this.setRef = this.setRef.bind(this);
     this.updateGridSize = this.updateGridSize.bind(this);
     this.getGrid = this.getGrid.bind(this);
+    this.onScrollbarPresenceChange = this.onScrollbarPresenceChange.bind(this);
+
+    this.state = {
+      isScroll: false
+    };
   }
 
   public render() {
@@ -73,7 +88,22 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
     );
   }
 
+  private onScrollbarPresenceChange({ horizontal }) {
+    if (horizontal) {
+      this.setState({
+        isScroll: true
+      });
+
+      return;
+    }
+
+    this.setState({
+      isScroll: false
+    });
+  }
+
   private getGrid({ width, height }) {
+    const rightGridStyles = cx({ [rightGrid]: this.state.isScroll });
     const columnCount = React.Children.count(this.props.children);
     const columnSizes = this.getColumnSizes(
       React.Children.toArray(this.props.children) as Array<
@@ -88,6 +118,7 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
 
     return (
       <MultiGrid
+        onScrollbarPresenceChange={this.onScrollbarPresenceChange}
         ref={this.setRef}
         fixedColumnCount={1}
         fixedRowCount={1}
@@ -102,6 +133,9 @@ export class Table<T> extends React.PureComponent<ITableProps, {}> {
         width={width}
         hideTopRightGridScrollbar={true}
         hideBottomLeftGridScrollbar={true}
+        classNameTopRightGrid={cx(rightGridStyles, hideScrollbarCss)}
+        classNameBottomRightGrid={rightGridStyles}
+        classNameBottomLeftGrid={hideScrollbarCss}
       />
     );
   }
