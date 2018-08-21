@@ -7,7 +7,8 @@ import {
   cellCss,
   tableCss,
   rightGrid,
-  hideScrollbarCss
+  hideScrollbarCss,
+  rowHoverCss
 } from "../style";
 
 import { IColumnProps, Column } from "./Column";
@@ -25,6 +26,7 @@ export interface ITableProps {
 
 export interface ITableState {
   isScrolling: boolean;
+  hoveredRowIndex: number;
 }
 
 const ROW_HEIGHT = 35;
@@ -70,7 +72,8 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
     this.onScroll = this.onScroll.bind(this);
 
     this.state = {
-      isScrolling: false
+      isScrolling: false,
+      hoveredRowIndex: -1
     };
   }
 
@@ -183,8 +186,18 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
     const className = css(cellCss, {
       ...style
     });
+    const updateHoveredRowIndex = () => {
+      this.setState({ hoveredRowIndex: rowIndex });
+    };
+
     return (
-      <div className={className} key={key}>
+      <div
+        className={cx(className, {
+          [rowHoverCss]: rowIndex === this.state.hoveredRowIndex
+        })}
+        key={key}
+        onMouseOver={updateHoveredRowIndex}
+      >
         {column.props.cellRenderer(data[rowIndex])}
       </div>
     );

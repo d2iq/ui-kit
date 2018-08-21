@@ -2,7 +2,7 @@ import { css } from "emotion";
 import { coreColors, hexToRgbA } from "../shared/styles/color";
 import { coreFonts } from "../shared/styles/typography";
 
-const { black, greyLight } = coreColors();
+const { black, greyLight, greyLightLighten5 } = coreColors();
 const { fontFamilySansSerif } = coreFonts();
 
 export const headerCss = css`
@@ -39,4 +39,10 @@ export const hideScrollbarCss = css`
   ::-webkit-scrollbar {
     display: none;
   }
+`;
+
+export const rowHoverCss = css`
+  background-color: ${greyLightLighten5};
+  mix-blend-mode: multiply;
+  will-change: left;
 `;
