@@ -21,6 +21,16 @@ export const cellCss = css`
 export const tableCss = css`
   font-family: ${fontFamilySansSerif};
   font-weight: normal;
+
+  &::after {
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    width: 100%;
+  }
 `;
 
 export const rightGrid = css`
