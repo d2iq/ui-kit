@@ -17,7 +17,7 @@ export interface IClickableProps {
   tabIndex?: number | string;
 }
 
-class Clickable extends React.PureComponent<IClickableProps, {}> {
+export class Clickable extends React.PureComponent<IClickableProps, {}> {
   public static defaultProps: Partial<IClickableProps> = {
     tabIndex: -1
   };

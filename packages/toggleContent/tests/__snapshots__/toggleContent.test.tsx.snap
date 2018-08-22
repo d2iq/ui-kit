@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleContent renders a div wrapping the content passed as props 1`] = `
+.emotion-0 {
+  cursor: pointer;
+}
+
+.emotion-0:focus {
+  outline: 0;
+}
+
+<div
+  class="emotion-0"
+  role="button"
+  tabindex="0"
+>
+  Hello
+</div>
+`;
