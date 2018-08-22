@@ -1,1 +1,1 @@
-export { default as Clickable } from "./clickable";
+export { default as Clickable } from "./components/clickable";
