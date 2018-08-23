@@ -1,5 +1,5 @@
 import * as React from "react";
-import { style } from "./style";
+import { style } from "../style";
 
 export interface I${Component}Props {
   children?: React.ReactNode | string;
