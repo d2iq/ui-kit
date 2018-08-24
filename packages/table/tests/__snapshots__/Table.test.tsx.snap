@@ -6,6 +6,16 @@ exports[`Table renders again with new data 1`] = `
   font-weight: normal;
 }
 
+.emotion-0::after {
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  width: 100%;
+}
+
 <Table
   data={
     Array [
@@ -79,6 +89,16 @@ exports[`Table renders again with new data 2`] = `
   font-weight: normal;
 }
 
+.emotion-0::after {
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  width: 100%;
+}
+
 <Table
   data={
     Array [
@@ -150,6 +170,16 @@ exports[`Table renders default 1`] = `
 .emotion-14 {
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   font-weight: normal;
+}
+
+.emotion-14::after {
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  width: 100%;
 }
 
 .emotion-4 {
