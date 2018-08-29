@@ -12,6 +12,14 @@ const primary = () => <div>primary</div>;
 const secondary = () => <div>secondary</div>;
 
 describe("ToggleContent", () => {
+  beforeEach(() => {
+    const mock = jest.fn();
+    mock.mockReturnValue({
+      toString: jest.fn()
+    });
+    window.getSelection = mock;
+  });
+
   it("renders a div wrapping the content passed as props", () => {
     expect(
       toJson(

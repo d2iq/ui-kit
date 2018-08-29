@@ -30,9 +30,11 @@ export class ToggleContent extends React.PureComponent<
   }
 
   public handleClick(): void {
-    this.setState({
-      isOn: !this.state.isOn
-    });
+    if (!window.getSelection().toString()) {
+      this.setState({
+        isOn: !this.state.isOn
+      });
+    }
   }
 
   public render() {
@@ -45,7 +47,7 @@ export class ToggleContent extends React.PureComponent<
 
     return (
       <Clickable tabIndex={tabIndex} action={this.handleClick}>
-        <div className={style}>{content}</div>
+        <span className={style}>{content}</span>
       </Clickable>
     );
   }
