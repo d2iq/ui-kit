@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortableHeaderCell renders default 1`] = `
+.emotion-0:after {
+  border-style: solid;
+  border-color: transparent;
+  content: "";
+  display: inline-block;
+  height: 0;
+  line-height: 0;
+  margin-left: 4px;
+  margin-top: -2px;
+  vertical-align: middle;
+  width: 0;
+}
+
+.emotion-0:after {
+  border-color: currentColor transparent transparent transparent;
+  border-bottom-width: 0;
+  border-left-width: 4px;
+  border-right-width: 4px;
+  border-top-width: 5px;
+}
+
+<Clickable
+  action={[MockFunction]}
+  tabIndex={0}
+>
+  <Styled(div)
+    aria-label="sort by column content in ascending order"
+    aria-sort="descending"
+    className="emotion-0"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    role="columnheader"
+  >
+    <span>
+      column content
+    </span>
+  </Styled(div)>
+</Clickable>
+`;

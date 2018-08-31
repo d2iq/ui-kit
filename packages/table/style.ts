@@ -5,6 +5,9 @@ import { coreFonts } from "../shared/styles/typography";
 const { black, greyLight, greyLightLighten5 } = coreColors();
 const { fontFamilySansSerif } = coreFonts();
 
+const pointerSize = 4;
+const pointerSpace = 4;
+
 export const headerCss = css`
   box-sizing: border-box;
   font-family: ${fontFamilySansSerif};
@@ -56,3 +59,49 @@ export const rowHoverCss = css`
   mix-blend-mode: multiply;
   will-change: left;
 `;
+
+export const sortableHeaderIconBaseCSS = css`
+  &:after {
+    border-style: solid;
+    border-color: transparent;
+    content: "";
+    display: inline-block;
+    height: 0;
+    line-height: 0;
+    margin-left: ${pointerSpace}px;
+    margin-top: -${pointerSize / 2}px;
+    vertical-align: middle;
+    width: 0;
+  }
+`;
+
+export const styleArrowDirection = displaySortDirection => {
+  switch (displaySortDirection) {
+    case "DESC":
+      return css`
+        &:after {
+          border-color: currentColor transparent transparent transparent;
+          border-bottom-width: 0;
+          border-left-width: ${pointerSize}px;
+          border-right-width: ${pointerSize}px;
+          border-top-width: ${pointerSize + 1}px;
+        }
+      `;
+    case "ASC":
+      return css`
+        &:after {
+          border-color: transparent transparent currentColor transparent;
+          border-bottom-width: ${pointerSize + 1}px;
+          border-left-width: ${pointerSize}px;
+          border-right-width: ${pointerSize}px;
+          border-top-width: 0;
+        }
+      `;
+    default:
+      return css`
+        &:after {
+          visibility: hidden;
+        }
+      `;
+  }
+};
