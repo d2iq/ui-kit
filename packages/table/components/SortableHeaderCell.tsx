@@ -3,12 +3,14 @@ import { cx } from "emotion";
 import { default as HeaderCell } from "./HeaderCell";
 import Clickable from "../../clickable/components/clickable";
 import { sortableHeaderIconBaseCSS, styleArrowDirection } from "../style";
+import { TextAlign } from "./Cell";
 
 type SortDirection = "ASC" | "DESC" | null;
 interface IProps {
   sortHandler: () => void;
   sortDirection: SortDirection;
   columnContent: string | React.ReactNode;
+  textAlign?: TextAlign;
 }
 interface IState {
   hovered: boolean;
@@ -34,7 +36,7 @@ export class SortableHeaderCell extends React.Component<IProps, IState> {
   }
 
   render() {
-    const { sortHandler, sortDirection, columnContent } = this.props;
+    const { sortHandler, sortDirection, columnContent, textAlign } = this.props;
 
     const displaySortDirection =
       sortDirection === null && this.state.hovered ? "DESC" : sortDirection;
@@ -59,6 +61,7 @@ export class SortableHeaderCell extends React.Component<IProps, IState> {
           aria-label={`sort by ${columnContent} in ${
             ariaSortString === "descending" ? "ascending" : "descending"
           } order`}
+          textAlign={textAlign}
         >
           <span>{columnContent}</span>
         </HeaderCell>

@@ -78,7 +78,7 @@ storiesOf("Table", module)
           width={width}
         />
         <Column
-          header={<HeaderCell>zip code</HeaderCell>}
+          header={<HeaderCell textAlign="right">zip code</HeaderCell>}
           cellRenderer={zipcodeCellRenderer}
           width={width}
         />

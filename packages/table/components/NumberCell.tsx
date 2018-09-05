@@ -1,9 +1,10 @@
-import { default as Cell } from "./Cell";
+import * as React from "react";
+import { default as Cell, ICellProps } from "./Cell";
 import styled from "react-emotion";
+import { textTruncate } from "../../shared/styles/styleUtils";
 
-export default styled(Cell)`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-align: right;
+const NumberCell = (props: ICellProps) => <Cell textAlign="right" {...props} />;
+
+export default styled(NumberCell)`
+  ${textTruncate};
 `;
