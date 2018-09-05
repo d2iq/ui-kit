@@ -1,40 +1,12 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import {
-  Table,
-  Column,
-  Cell,
-  HeaderCell,
-  TextCell,
-  NumberCell
-} from "../index";
+import { Table, Column, Cell, HeaderCell, TextCell, NumberCell } from "..";
+import ChangingTable from "./helpers/ChangingTable";
+import SortableTable from "./helpers/SortableTable";
+import { items, width } from "./helpers/mocks";
 
 const readme = require("../README.md");
-
-const items = [
-  {
-    name: "Brian Vaughn",
-    role: "Software Engineer",
-    city: "San Jose",
-    state: "CA",
-    zipcode: 95125
-  },
-  {
-    name: "Jon Doe",
-    role: "Product engineer",
-    city: "Mountain View",
-    state: "CA",
-    zipcode: 95125
-  },
-  {
-    name: "Jane Doe",
-    role: "UX Designer",
-    city: "San Francisco",
-    state: "CA",
-    zipcode: 95125
-  }
-];
 
 const nameCellRenderer = ({ name }: { name?: string }) => (
   <Cell>
@@ -72,43 +44,6 @@ const veryLongRenderer = () => (
 );
 
 const empty = () => <Cell>empty</Cell>;
-const width = ({ width: totalWidth }: { width?: number }) =>
-  totalWidth ? totalWidth * 0.3 : 100;
-
-const itemCellRenderer = item => (
-  <Cell>
-    <span>{item}</span>
-  </Cell>
-);
-
-const randomNumbers = n => new Array(n).fill(0).map(() => Math.random() * 100);
-
-class ChangingTable extends React.Component<{}, { items: number[] }> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: randomNumbers(20)
-    };
-
-    setInterval(() => {
-      this.setState({
-        items: randomNumbers(20)
-      });
-    }, 100);
-  }
-
-  render() {
-    return (
-      <Table data={this.state.items}>
-        <Column
-          header={<HeaderCell>name</HeaderCell>}
-          cellRenderer={itemCellRenderer}
-          width={width}
-        />
-      </Table>
-    );
-  }
-}
 
 storiesOf("Table", module)
   .addDecorator(withReadme([readme]))
@@ -153,6 +88,17 @@ storiesOf("Table", module)
           width={width}
         />
       </Table>
+    </div>
+  ))
+  .addWithInfo("with sortable column", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <SortableTable />
     </div>
   ))
   .addWithInfo("no scroll", () => (
