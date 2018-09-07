@@ -5,6 +5,7 @@ exports[`Cell renders correctly 1`] = `
   height: 100%;
   box-sizing: border-box;
   padding: 7px;
+  text-align: left;
 }
 
 <div
@@ -19,6 +20,7 @@ exports[`HeaderCell renders correctly 1`] = `
   height: 100%;
   box-sizing: border-box;
   padding: 7px;
+  text-align: left;
   text-transform: capitalize;
   font-weight: bold;
 }
@@ -35,6 +37,7 @@ exports[`TextCell renders correctly 1`] = `
   height: 100%;
   box-sizing: border-box;
   padding: 7px;
+  text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

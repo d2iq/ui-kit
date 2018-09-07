@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Table, Column, SortableHeaderCell, Cell } from "../..";
+import { Table, Column, SortableHeaderCell, Cell, NumberCell } from "../..";
 import { items, width } from "./mocks";
 
 type SortDirection = "ASC" | "DESC" | null;
@@ -11,8 +11,8 @@ interface ISortableTableDemoState {
 
 const getSortedList = (items, sortColumn) => {
   return items.sort((a, b) => {
-    const textA = a[sortColumn].toLowerCase();
-    const textB = b[sortColumn].toLowerCase();
+    const textA = a[sortColumn].toString().toLowerCase();
+    const textB = b[sortColumn].toString().toLowerCase();
 
     return textA < textB ? -1 : textA > textB ? 1 : 0;
   });
@@ -28,6 +28,12 @@ const roleCellRenderer = ({ role }: { role?: string }) => (
   <Cell>
     <span>{role}</span>
   </Cell>
+);
+
+const zipcodeCellRenderer = ({ zipcode }: { zipcode?: string }) => (
+  <NumberCell>
+    <span>{zipcode}</span>
+  </NumberCell>
 );
 
 class SortableTable extends React.Component<{}, ISortableTableDemoState> {
@@ -115,6 +121,18 @@ class SortableTable extends React.Component<{}, ISortableTableDemoState> {
             />
           }
           cellRenderer={roleCellRenderer}
+          width={width}
+        />
+        <Column
+          header={
+            <SortableHeaderCell
+              sortHandler={this.handleSortClick.bind(null, "zipcode")}
+              sortDirection={sortColumn === "zipcode" ? sortDirection : null}
+              columnContent="zip code"
+              textAlign="right"
+            />
+          }
+          cellRenderer={zipcodeCellRenderer}
           width={width}
         />
       </Table>

@@ -1,7 +1,18 @@
-import styled from "react-emotion";
+import styled, { css } from "react-emotion";
+import { innerCellCss, cellAlignmentCss } from "../style";
+
+export type TextAlign = "left" | "right" | "center";
+export interface ICellProps {
+  textAlign?: TextAlign;
+  children: React.ReactElement<HTMLElement> | string;
+  className?: string;
+}
+
+const alignmentStyle = (props: ICellProps) => css`
+  ${cellAlignmentCss(props.textAlign || "left")};
+`;
 
 export default styled("div")`
-  height: 100%;
-  box-sizing: border-box;
-  padding: 7px;
+  ${innerCellCss};
+  ${alignmentStyle};
 `;
