@@ -7,6 +7,7 @@ const { fontFamilySansSerif } = coreFonts();
 
 const pointerSize = 4;
 const pointerSpace = 4;
+const cellPadding = 7;
 
 export const headerCss = css`
   box-sizing: border-box;
@@ -15,10 +16,28 @@ export const headerCss = css`
   border-bottom: 1px solid ${black};
 `;
 
+export const headerCellCss = css`
+  text-transform: capitalize;
+  font-weight: bold;
+`;
+
 export const cellCss = css`
   box-sizing: border-box;
   font-family: ${fontFamilySansSerif};
   border-bottom: 1px solid ${greyLight};
+`;
+
+export const innerCellCss = css`
+  height: 100%;
+  box-sizing: border-box;
+  padding: ${cellPadding}px;
+`;
+
+export const cellAlignmentCss = (textAlign: string) => css`
+  text-align: ${textAlign};
+  margin-right: ${textAlign === "right"
+    ? `${pointerSize + pointerSpace + cellPadding}px`
+    : null};
 `;
 
 export const tableCss = css`
@@ -61,6 +80,7 @@ export const rowHoverCss = css`
 `;
 
 export const sortableHeaderIconBaseCSS = css`
+  position: relative;
   &:after {
     border-style: solid;
     border-color: transparent;
@@ -72,6 +92,9 @@ export const sortableHeaderIconBaseCSS = css`
     margin-top: -${pointerSize / 2}px;
     vertical-align: middle;
     width: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 `;
 
