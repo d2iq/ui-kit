@@ -1,6 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
+import { IWidthArgs } from "../components/Column";
 import { Table, Column, Cell, HeaderCell, TextCell, NumberCell } from "..";
 import ChangingTable from "./helpers/ChangingTable";
 import SortableTable from "./helpers/SortableTable";
@@ -90,6 +91,52 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
+  .addWithInfo("width-aware render", () => {
+    const stateWidth = (args: IWidthArgs): number =>
+      Math.min(100, Math.max(200, args.width / args.totalColumns));
+    const fillRemainingWidth = (args: IWidthArgs): number =>
+      args.remainingWidth;
+    const nameCellRendererWithWidth = (
+      { name }: { name: string },
+      width: number
+    ) => {
+      return (
+        <Cell>
+          <strong>
+            {width > 200 ? name : `${name.charAt(0)}. ${name.split(" ")[1]}`}
+          </strong>
+        </Cell>
+      );
+    };
+
+    return (
+      <div
+        style={{
+          height: "175px",
+          width: "100%",
+          fontSize: "14px"
+        }}
+      >
+        <Table data={items}>
+          <Column
+            header={<HeaderCell>name</HeaderCell>}
+            cellRenderer={nameCellRendererWithWidth}
+            width={width}
+          />
+          <Column
+            header={<HeaderCell>state</HeaderCell>}
+            cellRenderer={stateCellRenderer}
+            width={stateWidth}
+          />
+          <Column
+            header={<HeaderCell>Very Long</HeaderCell>}
+            cellRenderer={veryLongRenderer}
+            width={fillRemainingWidth}
+          />
+        </Table>
+      </div>
+    );
+  })
   .addWithInfo("with sortable column", () => (
     <div
       style={{

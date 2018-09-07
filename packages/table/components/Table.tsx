@@ -198,7 +198,7 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
         key={key}
         onMouseOver={updateHoveredRowIndex}
       >
-        {column.props.cellRenderer(data[rowIndex])}
+        {column.props.cellRenderer(data[rowIndex], style.width as number)}
       </div>
     );
   }

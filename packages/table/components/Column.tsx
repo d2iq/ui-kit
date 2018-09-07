@@ -5,6 +5,7 @@ export interface IWidthArgs {
   remainingWidth: number;
   currentIndex: number;
 }
+
 export interface IColumnProps {
   /**
    * header is providing the contents for the header cell for the column.
@@ -13,7 +14,7 @@ export interface IColumnProps {
   /**
    * cellRenderer is the function which is creating the cell contents for this column.
    */
-  cellRenderer: (data: any) => React.ReactNode;
+  cellRenderer: (data: any, width: number) => React.ReactNode;
   width: (args: IWidthArgs) => number;
 }
 
