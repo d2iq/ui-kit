@@ -1,6 +1,6 @@
 // Include core typography, helpers and etc in this file
 
-export interface IFonts {
+export interface Fonts {
   [fontName: string]: string;
 }
 
@@ -9,7 +9,7 @@ export interface IFonts {
  *
  * @returns font mapping
  */
-export const coreFonts = (): IFonts => {
+export const coreFonts = (): Fonts => {
   return {
     fontFamilySansSerif:
       "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
