@@ -2,7 +2,7 @@ import { cx } from "emotion";
 import * as React from "react";
 import { outline } from "../style";
 
-export interface IClickableProps {
+export interface ClickableProps {
   /**
    * Children should be a HTML element.
    */
@@ -17,12 +17,12 @@ export interface IClickableProps {
   tabIndex?: number | string;
 }
 
-export class Clickable extends React.PureComponent<IClickableProps, {}> {
-  public static defaultProps: Partial<IClickableProps> = {
+export class Clickable extends React.PureComponent<ClickableProps, {}> {
+  public static defaultProps: Partial<ClickableProps> = {
     tabIndex: -1
   };
 
-  constructor(props: IClickableProps) {
+  constructor(props: ClickableProps) {
     super(props);
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }

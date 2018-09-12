@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { IWidthArgs } from "../components/Column";
+import { WidthArgs } from "../components/Column";
 import { Table, Column, Cell, HeaderCell, TextCell, NumberCell } from "..";
 import ChangingTable from "./helpers/ChangingTable";
 import SortableTable from "./helpers/SortableTable";
@@ -92,10 +92,9 @@ storiesOf("Table", module)
     </div>
   ))
   .addWithInfo("width-aware render", () => {
-    const stateWidth = (args: IWidthArgs): number =>
+    const stateWidth = (args: WidthArgs): number =>
       Math.min(100, Math.max(200, args.width / args.totalColumns));
-    const fillRemainingWidth = (args: IWidthArgs): number =>
-      args.remainingWidth;
+    const fillRemainingWidth = (args: WidthArgs): number => args.remainingWidth;
     const nameCellRendererWithWidth = (
       { name }: { name: string },
       width: number

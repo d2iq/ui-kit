@@ -2,13 +2,13 @@ import styled, { css } from "react-emotion";
 import { innerCellCss, cellAlignmentCss } from "../style";
 
 export type TextAlign = "left" | "right" | "center";
-export interface ICellProps {
+export interface CellProps {
   textAlign?: TextAlign;
   children: React.ReactElement<HTMLElement> | string;
   className?: string;
 }
 
-const alignmentStyle = (props: ICellProps) => css`
+const alignmentStyle = (props: CellProps) => css`
   ${cellAlignmentCss(props.textAlign || "left")};
 `;
 
