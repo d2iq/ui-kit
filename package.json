@@ -44,7 +44,7 @@
   "devDependencies": {
     "@commitlint/cli": "7.1.2",
     "@commitlint/config-conventional": "7.1.2",
-    "@dcos/tslint-config": "0.1.0",
+    "@dcos/tslint-config": "0.1.1",
     "@storybook/addon-a11y": "3.4.10",
     "@storybook/addon-actions": "3.4.10",
     "@storybook/addon-info": "3.4.10",

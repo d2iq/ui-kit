@@ -3,7 +3,7 @@ import * as React from "react";
 import Clickable from "../../clickable/components/clickable";
 import { badge as badgeButton } from "../style";
 
-export interface IBadgeButtonProps {
+export interface BadgeButtonProps {
   appearance?:
     | "default"
     | "success"
@@ -21,8 +21,8 @@ export interface IBadgeButtonProps {
   children: JSX.Element | string;
 }
 
-export class BadgeButton extends React.PureComponent<IBadgeButtonProps, {}> {
-  public static defaultProps: Partial<IBadgeButtonProps> = {
+export class BadgeButton extends React.PureComponent<BadgeButtonProps, {}> {
+  public static defaultProps: Partial<BadgeButtonProps> = {
     appearance: "default",
     tabIndex: -1
   };

@@ -1,6 +1,6 @@
 // Include core colors, helpers and etc in this file
 
-export interface IColors {
+export interface Colors {
   [colorName: string]: string;
 }
 
@@ -9,7 +9,7 @@ export interface IColors {
  *
  * @returns color mapping
  */
-export const coreColors = (): IColors => {
+export const coreColors = (): Colors => {
   return {
     white: "#fff",
     black: "#000",
@@ -121,7 +121,7 @@ export const coreColors = (): IColors => {
   };
 };
 
-export const customColors = (): IColors => {
+export const customColors = (): Colors => {
   return {};
 };
 
