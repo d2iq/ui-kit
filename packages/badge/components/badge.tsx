@@ -1,7 +1,7 @@
 import * as React from "react";
 import { badge } from "../style";
 
-export interface IBadgeProps {
+export interface BadgeProps {
   appearance?:
     | "default"
     | "success"
@@ -12,8 +12,8 @@ export interface IBadgeProps {
   children: JSX.Element | string;
 }
 
-export class Badge extends React.PureComponent<IBadgeProps, {}> {
-  public static defaultProps: Partial<IBadgeProps> = {
+export class Badge extends React.PureComponent<BadgeProps, {}> {
+  public static defaultProps: Partial<BadgeProps> = {
     appearance: "default"
   };
 

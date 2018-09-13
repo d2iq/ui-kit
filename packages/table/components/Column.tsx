@@ -1,12 +1,12 @@
 import * as React from "react";
-export interface IWidthArgs {
+export interface WidthArgs {
   width: number;
   totalColumns: number;
   remainingWidth: number;
   currentIndex: number;
 }
 
-export interface IColumnProps {
+export interface ColumnProps {
   /**
    * header is providing the contents for the header cell for the column.
    */
@@ -15,9 +15,9 @@ export interface IColumnProps {
    * cellRenderer is the function which is creating the cell contents for this column.
    */
   cellRenderer: (data: any, width: number) => React.ReactNode;
-  width: (args: IWidthArgs) => number;
+  width: (args: WidthArgs) => number;
 }
 
-export class Column extends React.PureComponent<IColumnProps, {}> {}
+export class Column extends React.PureComponent<ColumnProps, {}> {}
 
 export default Column;

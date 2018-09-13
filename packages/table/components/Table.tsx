@@ -11,20 +11,20 @@ import {
   rowHoverCss
 } from "../style";
 
-import { IColumnProps, Column } from "./Column";
+import { ColumnProps, Column } from "./Column";
 import memoizeOne from "memoize-one";
 
-export interface ITableProps {
+export interface TableProps {
   /**
    * Contains all data represented in the table.
    */
   data: any[];
   children:
-    | Array<React.ReactElement<IColumnProps>>
-    | React.ReactElement<IColumnProps>;
+    | Array<React.ReactElement<ColumnProps>>
+    | React.ReactElement<ColumnProps>;
 }
 
-export interface ITableState {
+export interface TableState {
   isScrolling: boolean;
   hoveredRowIndex: number;
 }
@@ -33,7 +33,7 @@ const ROW_HEIGHT = 35;
 
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 768;
-export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
+export class Table<T> extends React.PureComponent<TableProps, TableState> {
   public multiGridRef: { recomputeGridSize?: any } = {};
 
   public getData = memoizeOne(
@@ -44,7 +44,7 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
 
   public getColumnSizes = memoizeOne(
     (
-      children: Array<React.ReactElement<IColumnProps>>,
+      children: Array<React.ReactElement<ColumnProps>>,
       width: number
     ): number[] => {
       const totalColumns: number = children.length;
@@ -110,7 +110,7 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
     const columnCount = React.Children.count(this.props.children);
     const columnSizes = this.getColumnSizes(
       React.Children.toArray(this.props.children) as Array<
-        React.ReactElement<IColumnProps>
+        React.ReactElement<ColumnProps>
       >,
       width
     );
@@ -145,7 +145,7 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
 
   private getHeaderCell(
     args: GridCellProps & {
-      column: React.ReactElement<IColumnProps>;
+      column: React.ReactElement<ColumnProps>;
     }
   ) {
     const { key, style, column } = args;
@@ -165,7 +165,7 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
 
     const column = React.Children.toArray(this.props.children)[
       columnIndex
-    ] as React.ReactElement<IColumnProps>;
+    ] as React.ReactElement<ColumnProps>;
 
     if (!column || column.type !== Column) {
       return null;
@@ -178,7 +178,7 @@ export class Table<T> extends React.PureComponent<ITableProps, ITableState> {
 
   private getContentCell(
     args: GridCellProps & {
-      column: React.ReactElement<IColumnProps>;
+      column: React.ReactElement<ColumnProps>;
       data: any[];
     }
   ) {

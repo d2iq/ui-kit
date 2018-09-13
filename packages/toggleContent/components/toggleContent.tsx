@@ -2,19 +2,19 @@ import * as React from "react";
 import Clickable from "../../clickable/components/clickable";
 import { style } from "../style";
 
-export interface IToggleContentState {
+export interface ToggleContentState {
   isOn: boolean;
 }
 
-export interface IToggleContentProps {
+export interface ToggleContentProps {
   contentOn: JSX.Element | string;
   contentOff: JSX.Element | string;
   tabIndex?: string | number;
 }
 
 export class ToggleContent extends React.PureComponent<
-  IToggleContentProps,
-  IToggleContentState
+  ToggleContentProps,
+  ToggleContentState
 > {
   static defaultProps = {
     tabIndex: -1
