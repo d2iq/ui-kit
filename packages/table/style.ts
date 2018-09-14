@@ -17,6 +17,7 @@ export const headerCss = css`
 `;
 
 export const headerCellCss = css`
+  color: green;
   text-transform: capitalize;
   font-weight: bold;
 `;
