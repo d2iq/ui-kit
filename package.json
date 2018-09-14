@@ -7,8 +7,8 @@
     "type": "git",
     "url": "https://github.com/dcos-labs/ui-kit"
   },
-  "main": "dist/packages/index.js",
-  "module": "dist/packages/index.js",
+  "main": "dist/packages/index",
+  "module": "packages/index.ts",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
