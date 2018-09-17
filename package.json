@@ -8,6 +8,7 @@
     "url": "https://github.com/dcos-labs/ui-kit"
   },
   "main": "dist/packages/index",
+  "module": "packages/index.ts",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -29,7 +30,8 @@
     "test:watch": "jest --watch"
   },
   "files": [
-    "dist"
+    "dist",
+    "packages"
   ],
   "typings": "dist/packages/index",
   "dependencies": {
