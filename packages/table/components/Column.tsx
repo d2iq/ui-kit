@@ -15,6 +15,9 @@ export interface ColumnProps {
    * cellRenderer is the function which is creating the cell contents for this column.
    */
   cellRenderer: (data: any, width: number) => React.ReactNode;
+  /**
+   * width should return a column width in pixels.
+   */
   width: (args: WidthArgs) => number;
 }
 
