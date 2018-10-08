@@ -6,7 +6,6 @@ import { createSerializer } from "jest-emotion";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 import HeaderCell from "../components/HeaderCell";
-import Clickable from "../../clickable/components/clickable";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
