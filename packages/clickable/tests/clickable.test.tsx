@@ -73,10 +73,8 @@ describe("Clickable", () => {
           <span>default tabIndex</span>
         </Clickable>
       );
-      const { tabIndex } = wrapper.find("span").props();
-      if (tabIndex) {
-        expect(tabIndex.toString()).toEqual("-1");
-      }
+      const tabIndex = wrapper.find("span").props().tabIndex || "";
+      expect(tabIndex.toString()).toEqual("-1");
     });
 
     it("takes 10 as a value", () => {
@@ -86,10 +84,7 @@ describe("Clickable", () => {
           <span>default tabIndex</span>
         </Clickable>
       );
-      const { tabIndex } = wrapper.find("span").props();
-      if (tabIndex) {
-        expect(tabIndex.toString()).toEqual("10");
-      }
+      expect(wrapper.find("span").props().tabIndex || null).toEqual("10");
     });
   });
 });
