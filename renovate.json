@@ -1,4 +1,7 @@
 {
+  "devDependencies": {
+    "automerge": true
+  },
   "packageRules": [
     {
       "packagePatterns": ["*"],
