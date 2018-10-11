@@ -19,3 +19,8 @@ export const coreFonts = (): Fonts => {
       "'Menlo', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Monaco', 'Consolas', monospace"
   };
 };
+
+export const typeSizes = {
+  small: "14px",
+  default: "16px"
+};

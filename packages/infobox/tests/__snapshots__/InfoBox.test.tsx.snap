@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+}
+
+<InfoBox
+  appearance="default"
+  className="emotion-0"
+  message="message"
+  onDismiss={[MockFunction]}
+/>
+`;
+
+exports[`InfoBox InfoBoxBanner renders default 1`] = `
+.emotion-0 {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+<InfoBox
+  appearance="default"
+  className="emotion-0"
+  message="message"
+  onDismiss={[MockFunction]}
+/>
+`;
+
+exports[`InfoBox renders default 1`] = `
+.emotion-0 {
+  background-color: #DADDE2;
+  color: #1B2029;
+  grid-gap: 16px;
+  grid-template-columns: 1fr auto;
+  padding: 16px !important;
+  font-size: 14px;
+  display: grid !important;
+}
+
+<div
+  aria-live="polite"
+  className="emotion-0"
+  role="log"
+>
+  <div>
+    message
+  </div>
+  <Clickable
+    action={[Function]}
+    tabIndex={0}
+  >
+    <span>
+      <CloseIcon />
+    </span>
+  </Clickable>
+</div>
+`;
+
+exports[`InfoBox renders with JSX message 1`] = `
+.emotion-0 {
+  background-color: #DADDE2;
+  color: #1B2029;
+  grid-gap: 16px;
+  grid-template-columns: 1fr auto;
+  padding: 16px !important;
+  font-size: 14px;
+  display: grid !important;
+}
+
+<div
+  aria-live="polite"
+  className="emotion-0"
+  role="log"
+>
+  <div>
+    <MessageComponent />
+  </div>
+  <Clickable
+    action={[Function]}
+    tabIndex={0}
+  >
+    <span>
+      <CloseIcon />
+    </span>
+  </Clickable>
+</div>
+`;
+
+exports[`InfoBox renders with actions 1`] = `
+.emotion-0 {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.emotion-3 {
+  background-color: #DADDE2;
+  color: #1B2029;
+  grid-gap: 16px;
+  grid-template-columns: 1fr auto;
+  padding: 16px !important;
+  font-size: 14px;
+  display: grid !important;
+}
+
+@media (min-width:600px) {
+  .emotion-3 {
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+.emotion-2 {
+  grid-row-start: 2;
+  grid-column: span 2;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  display: -webkit-inline-box !important;
+  display: -webkit-inline-flex !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+}
+
+@media (min-width:600px) {
+  .emotion-2 {
+    grid-row-start: auto;
+    grid-column: auto;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+.emotion-1 {
+  padding-right: 16px !important;
+}
+
+<div
+  aria-live="polite"
+  className="emotion-3"
+  role="log"
+>
+  <div>
+    message
+  </div>
+  <div
+    className="emotion-2"
+  >
+    <span
+      className="emotion-0"
+    >
+      <Component />
+    </span>
+    <span
+      className="emotion-1"
+    >
+      <Component />
+    </span>
+  </div>
+  <Clickable
+    action={[Function]}
+    tabIndex={0}
+  >
+    <span>
+      <CloseIcon />
+    </span>
+  </Clickable>
+</div>
+`;
+
+exports[`InfoBox renders without dismiss button 1`] = `
+.emotion-0 {
+  background-color: #DADDE2;
+  color: #1B2029;
+  grid-gap: 16px;
+  grid-template-columns: 1fr auto;
+  padding: 16px !important;
+  font-size: 14px;
+  display: grid !important;
+}
+
+<div
+  aria-live="polite"
+  className="emotion-0"
+  role="log"
+>
+  <div>
+    message
+  </div>
+</div>
+`;
