@@ -2,7 +2,7 @@ import { css } from "emotion";
 import { atMediaUp } from "../shared/styles/breakpoints";
 
 import { coreColors } from "../shared/styles/color";
-import { spacingDefault } from "../shared/styles/spacing";
+import { spacingM } from "../shared/styles/spacing";
 const { greyDark, greyLight } = coreColors();
 
 const layoutBreakpoint = "small";
@@ -29,7 +29,7 @@ export const infoBoxActions = css`
 export const infoBox = (appearance, hasActions) =>
   css`
     ${infoBoxAppearances[appearance]};
-    grid-gap: ${spacingDefault};
+    grid-gap: ${spacingM};
     grid-template-columns: 1fr auto;
     ${hasActions &&
       atMediaUp[layoutBreakpoint](css`
