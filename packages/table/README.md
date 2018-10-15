@@ -29,9 +29,7 @@ Organize columns and rows based on the needs of the users. For collection tables
 
 4. Empty values: Empty values should be expressed in the table as “N/A”. 
 
-5. Maximum column width: To handle columns that tend to have long text, the maximum column width allowed is 250 pixels.
-
-6. Row hover state: On mouse over of a row on the table, the row should be highlighted to help the user focus in on the row details and match data they are seeing within that row. 
+5. Row hover state: On mouse over of a row on the table, the row should be highlighted to help the user focus in on the row details and match data they are seeing within that row. 
 
 ## Column Alignment
 
@@ -45,7 +43,6 @@ By default one column is sorted in each table in ascending or descending order. 
 
 * Upward chevron is for ascending the items in the column. Ascending means smallest to largest, increasing in size.
 * Downward chevron is for descending the items in the column. Descending means largest to smallest, decreasing in size.
-* Chevron should always be placed 6px to the right of the column header and centered with the column header.
 * If the user selects another column to be sorted, the new column will by default sort in ascending direction. Once the new column is selected, the user can then change the sort type to descending. 
 
 ## Horizontal Scroll
