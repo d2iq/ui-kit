@@ -82,7 +82,7 @@
     "react-docgen-typescript-loader": "3.0.0",
     "react-test-renderer": "16.5.2",
     "rimraf": "2.6.2",
-    "storybook-readme": "3.3.0",
+    "storybook-readme": "4.0.0",
     "ts-jest": "23.10.1",
     "ts-loader": "3.5.0",
     "tslib": "1.9.3",
