@@ -48,7 +48,7 @@ const empty = () => <Cell>empty</Cell>;
 
 storiesOf("Table", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("default", () => (
+  .addWithInfo("collection table", () => (
     <div
       style={{
         height: "175px",
