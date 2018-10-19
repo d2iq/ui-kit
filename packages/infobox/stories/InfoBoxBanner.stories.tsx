@@ -18,11 +18,6 @@ storiesOf("InfoBox/Banner", module)
       />
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("non-dismissable", () => (
-    <InfoBoxStoryContainer>
-      <InfoBoxBanner message="This is message is an example of how we might inform the user in DCOS" />
-    </InfoBoxStoryContainer>
-  ))
   .addWithInfo("message as custom markup", () => (
     <InfoBoxStoryContainer>
       <InfoBoxBanner
