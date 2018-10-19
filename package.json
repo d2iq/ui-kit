@@ -38,6 +38,7 @@
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-emotion": "9.2.12",
+    "react-pose": "3.3.6",
     "react-virtualized": "9.20.1",
     "semantic-release": "^15.9.6"
   },
@@ -82,7 +83,7 @@
     "react-docgen-typescript-loader": "3.0.0",
     "react-test-renderer": "16.5.2",
     "rimraf": "2.6.2",
-    "storybook-readme": "3.3.0",
+    "storybook-readme": "4.0.2",
     "ts-jest": "23.10.4",
     "ts-loader": "3.5.0",
     "tslib": "1.9.3",
