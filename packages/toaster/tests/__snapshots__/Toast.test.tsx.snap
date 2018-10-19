@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast renders default 1`] = `
+.emotion-0 {
+  max-width: 100%;
+  margin: 16px !important;
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    max-width: 20em;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    margin: 24px !important;
+  }
+}
+
+<div
+  className="emotion-0"
+>
+  <ol
+    aria-live="assertive"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <PoseGroup
+      flipMove={true}
+      preEnterPose="preEnter"
+    >
+      <Component
+        key="toastWrapper-0"
+      >
+        <Toast
+          appearance="default"
+          autodismiss={false}
+          dismissToast={[Function]}
+          id={0}
+          key="0"
+          title="I Am Toast"
+        />
+      </Component>
+    </PoseGroup>
+  </ol>
+</div>
+`;
+
+exports[`Toast renders with actions 1`] = `
+.emotion-0 {
+  max-width: 100%;
+  margin: 16px !important;
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    max-width: 20em;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    margin: 24px !important;
+  }
+}
+
+<div
+  className="emotion-0"
+>
+  <ol
+    aria-live="assertive"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <PoseGroup
+      flipMove={true}
+      preEnterPose="preEnter"
+    >
+      <Component
+        key="toastWrapper-0"
+      >
+        <Toast
+          appearance="default"
+          autodismiss={false}
+          dismissToast={[Function]}
+          id={0}
+          key="0"
+          primaryAction={
+            <button>
+              primaryAction
+            </button>
+          }
+          secondaryAction={
+            <button>
+              secondaryAction
+            </button>
+          }
+          title="I Am Toast"
+        />
+      </Component>
+    </PoseGroup>
+  </ol>
+</div>
+`;
+
+exports[`Toast renders with description 1`] = `
+.emotion-0 {
+  max-width: 100%;
+  margin: 16px !important;
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    max-width: 20em;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    margin: 24px !important;
+  }
+}
+
+<div
+  className="emotion-0"
+>
+  <ol
+    aria-live="assertive"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <PoseGroup
+      flipMove={true}
+      preEnterPose="preEnter"
+    >
+      <Component
+        key="toastWrapper-0"
+      >
+        <Toast
+          appearance="default"
+          autodismiss={false}
+          description="Description"
+          dismissToast={[Function]}
+          id={0}
+          key="0"
+          title="I Am Toast"
+        />
+      </Component>
+    </PoseGroup>
+  </ol>
+</div>
+`;

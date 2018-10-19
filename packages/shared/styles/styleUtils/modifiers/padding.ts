@@ -1,8 +1,8 @@
 import { css } from "react-emotion";
-import { boxSpacing, BoxSides } from "./modifierUtils";
+import { boxSpacing, BoxSides, SpaceSizes } from "./modifierUtils";
 
-export const padding = (side: BoxSides) => {
+export const padding = (side: BoxSides, spaceSize?: SpaceSizes) => {
   return css`
-    ${boxSpacing("padding", side)};
+    ${boxSpacing("padding", side, spaceSize)};
   `;
 };

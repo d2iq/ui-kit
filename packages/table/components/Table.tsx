@@ -19,6 +19,9 @@ export interface TableProps {
    * Contains all data represented in the table.
    */
   data: any[];
+  /**
+   * Has to be either an Array of Columns or one Column.
+   */
   children:
     | Array<React.ReactElement<ColumnProps>>
     | React.ReactElement<ColumnProps>;
