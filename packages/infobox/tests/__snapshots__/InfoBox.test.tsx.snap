@@ -15,7 +15,8 @@ exports[` 1`] = `
 
 exports[`InfoBox InfoBoxBanner renders default 1`] = `
 .emotion-0 {
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 
 <InfoBox
@@ -28,7 +29,17 @@ exports[`InfoBox InfoBoxBanner renders default 1`] = `
 
 exports[`InfoBox renders default 1`] = `
 .emotion-0 {
+  opacity: 0.5;
+}
+
+.emotion-0,
+.emotion-0 svg {
+  fill: #1B2029;
+}
+
+.emotion-1 {
   background-color: #DADDE2;
+  border-bottom-color: #828487;
   color: #1B2029;
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
@@ -39,7 +50,7 @@ exports[`InfoBox renders default 1`] = `
 
 <div
   aria-live="polite"
-  className="emotion-0"
+  className="emotion-1"
   role="log"
 >
   <div>
@@ -49,7 +60,9 @@ exports[`InfoBox renders default 1`] = `
     action={[Function]}
     tabIndex={0}
   >
-    <span>
+    <span
+      className="emotion-0"
+    >
       <CloseIcon />
     </span>
   </Clickable>
@@ -58,7 +71,17 @@ exports[`InfoBox renders default 1`] = `
 
 exports[`InfoBox renders with JSX message 1`] = `
 .emotion-0 {
+  opacity: 0.5;
+}
+
+.emotion-0,
+.emotion-0 svg {
+  fill: #1B2029;
+}
+
+.emotion-1 {
   background-color: #DADDE2;
+  border-bottom-color: #828487;
   color: #1B2029;
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
@@ -69,7 +92,7 @@ exports[`InfoBox renders with JSX message 1`] = `
 
 <div
   aria-live="polite"
-  className="emotion-0"
+  className="emotion-1"
   role="log"
 >
   <div>
@@ -79,7 +102,9 @@ exports[`InfoBox renders with JSX message 1`] = `
     action={[Function]}
     tabIndex={0}
   >
-    <span>
+    <span
+      className="emotion-0"
+    >
       <CloseIcon />
     </span>
   </Clickable>
@@ -94,7 +119,17 @@ exports[`InfoBox renders with actions 1`] = `
 }
 
 .emotion-3 {
+  opacity: 0.5;
+}
+
+.emotion-3,
+.emotion-3 svg {
+  fill: #1B2029;
+}
+
+.emotion-4 {
   background-color: #DADDE2;
+  border-bottom-color: #828487;
   color: #1B2029;
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
@@ -104,12 +139,13 @@ exports[`InfoBox renders with actions 1`] = `
 }
 
 @media (min-width:600px) {
-  .emotion-3 {
+  .emotion-4 {
     grid-template-columns: auto 1fr auto;
   }
 }
 
 .emotion-2 {
+  font-weight: 500;
   grid-row-start: 2;
   grid-column: span 2;
   -webkit-box-pack: end;
@@ -139,7 +175,7 @@ exports[`InfoBox renders with actions 1`] = `
 
 <div
   aria-live="polite"
-  className="emotion-3"
+  className="emotion-4"
   role="log"
 >
   <div>
@@ -163,7 +199,9 @@ exports[`InfoBox renders with actions 1`] = `
     action={[Function]}
     tabIndex={0}
   >
-    <span>
+    <span
+      className="emotion-3"
+    >
       <CloseIcon />
     </span>
   </Clickable>
@@ -173,6 +211,7 @@ exports[`InfoBox renders with actions 1`] = `
 exports[`InfoBox renders without dismiss button 1`] = `
 .emotion-0 {
   background-color: #DADDE2;
+  border-bottom-color: #828487;
   color: #1B2029;
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
