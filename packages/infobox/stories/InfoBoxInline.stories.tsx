@@ -1,6 +1,5 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
 import { withReadme } from "storybook-readme";
 import { InfoBoxInline } from "../index";
 import { PrimaryAction, SecondaryAction } from "./helpers/actions";
@@ -80,7 +79,6 @@ storiesOf("InfoBox/Inline", module)
               </p>
             </div>
           }
-          onDismiss={action("onDismiss called")}
         />
       </div>
     </InfoBoxStoryContainer>
@@ -91,7 +89,6 @@ storiesOf("InfoBox/Inline", module)
         <InfoBoxInline
           message="This is message is an example of how we might inform the user in DCOS"
           primaryAction={<PrimaryAction />}
-          onDismiss={action("onDismiss called")}
         />
       </div>
     </InfoBoxStoryContainer>
@@ -103,7 +100,6 @@ storiesOf("InfoBox/Inline", module)
           message="This is message is an example of how we might inform the user in DCOS"
           primaryAction={<PrimaryAction />}
           secondaryAction={<SecondaryAction />}
-          onDismiss={action("onDismiss called")}
         />
       </div>
     </InfoBoxStoryContainer>
