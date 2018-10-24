@@ -1,6 +1,5 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
 import { withReadme } from "storybook-readme";
 import { InfoBoxInline } from "../index";
 import { PrimaryAction, SecondaryAction } from "./helpers/actions";
@@ -13,17 +12,47 @@ storiesOf("InfoBox/Inline", module)
   .addWithInfo("default", () => (
     <InfoBoxStoryContainer>
       <div style={{ padding: "1rem 1rem 0 1rem" }}>
+        <InfoBoxInline message="This is message is an example of how we might inform the user in DCOS" />
+      </div>
+    </InfoBoxStoryContainer>
+  ))
+  .addWithInfo("info", () => (
+    <InfoBoxStoryContainer>
+      <div style={{ padding: "1rem 1rem 0 1rem" }}>
         <InfoBoxInline
+          appearance="info"
           message="This is message is an example of how we might inform the user in DCOS"
-          onDismiss={action("onDismiss called")}
         />
       </div>
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("non-dismissable", () => (
+  .addWithInfo("success", () => (
     <InfoBoxStoryContainer>
       <div style={{ padding: "1rem 1rem 0 1rem" }}>
-        <InfoBoxInline message="This is message is an example of how we might inform the user in DCOS" />
+        <InfoBoxInline
+          appearance="success"
+          message="This is message is an example of how we might inform the user in DCOS"
+        />
+      </div>
+    </InfoBoxStoryContainer>
+  ))
+  .addWithInfo("warning", () => (
+    <InfoBoxStoryContainer>
+      <div style={{ padding: "1rem 1rem 0 1rem" }}>
+        <InfoBoxInline
+          appearance="warning"
+          message="This is message is an example of how we might inform the user in DCOS"
+        />
+      </div>
+    </InfoBoxStoryContainer>
+  ))
+  .addWithInfo("danger", () => (
+    <InfoBoxStoryContainer>
+      <div style={{ padding: "1rem 1rem 0 1rem" }}>
+        <InfoBoxInline
+          appearance="danger"
+          message="This is message is an example of how we might inform the user in DCOS"
+        />
       </div>
     </InfoBoxStoryContainer>
   ))
@@ -50,7 +79,6 @@ storiesOf("InfoBox/Inline", module)
               </p>
             </div>
           }
-          onDismiss={action("onDismiss called")}
         />
       </div>
     </InfoBoxStoryContainer>
@@ -61,7 +89,6 @@ storiesOf("InfoBox/Inline", module)
         <InfoBoxInline
           message="This is message is an example of how we might inform the user in DCOS"
           primaryAction={<PrimaryAction />}
-          onDismiss={action("onDismiss called")}
         />
       </div>
     </InfoBoxStoryContainer>
@@ -73,7 +100,6 @@ storiesOf("InfoBox/Inline", module)
           message="This is message is an example of how we might inform the user in DCOS"
           primaryAction={<PrimaryAction />}
           secondaryAction={<SecondaryAction />}
-          onDismiss={action("onDismiss called")}
         />
       </div>
     </InfoBoxStoryContainer>
