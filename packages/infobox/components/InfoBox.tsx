@@ -1,6 +1,11 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { infoBox, primaryActionStyle, infoBoxActions } from "../style";
+import {
+  infoBox,
+  primaryActionStyle,
+  infoBoxActions,
+  dismissBtn
+} from "../style";
 import Clickable from "../../clickable/components/clickable";
 import { padding, textSize, display } from "../../shared/styles/styleUtils";
 
@@ -93,7 +98,7 @@ export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
 
         {onDismiss && (
           <Clickable action={this.handleDismiss} tabIndex={0}>
-            <span>
+            <span className={dismissBtn}>
               <CloseIcon />
             </span>
           </Clickable>
