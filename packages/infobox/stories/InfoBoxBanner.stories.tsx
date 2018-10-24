@@ -18,6 +18,42 @@ storiesOf("InfoBox/Banner", module)
       />
     </InfoBoxStoryContainer>
   ))
+  .addWithInfo("info", () => (
+    <InfoBoxStoryContainer>
+      <InfoBoxBanner
+        appearance="info"
+        message="This is message is an example of how we might inform the user in DCOS"
+        onDismiss={action("dismissed")}
+      />
+    </InfoBoxStoryContainer>
+  ))
+  .addWithInfo("success", () => (
+    <InfoBoxStoryContainer>
+      <InfoBoxBanner
+        appearance="success"
+        message="This is message is an example of how we might inform the user in DCOS"
+        onDismiss={action("dismissed")}
+      />
+    </InfoBoxStoryContainer>
+  ))
+  .addWithInfo("warning", () => (
+    <InfoBoxStoryContainer>
+      <InfoBoxBanner
+        appearance="warning"
+        message="This is message is an example of how we might inform the user in DCOS"
+        onDismiss={action("dismissed")}
+      />
+    </InfoBoxStoryContainer>
+  ))
+  .addWithInfo("danger", () => (
+    <InfoBoxStoryContainer>
+      <InfoBoxBanner
+        appearance="danger"
+        message="This is message is an example of how we might inform the user in DCOS"
+        onDismiss={action("dismissed")}
+      />
+    </InfoBoxStoryContainer>
+  ))
   .addWithInfo("message as custom markup", () => (
     <InfoBoxStoryContainer>
       <InfoBoxBanner
