@@ -3,13 +3,6 @@
 //
 import { css } from "emotion";
 
-// interface Breakpoints {
-//   small: string;
-//   medium: string;
-//   large: string;
-//   jumbo: string;
-// }
-
 export const breakpoints = {
   small: "600px",
   medium: "900px",
