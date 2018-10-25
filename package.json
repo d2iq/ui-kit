@@ -38,7 +38,7 @@
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-emotion": "9.2.12",
-    "react-pose": "3.3.6",
+    "react-transition-group": "2.5.0",
     "react-virtualized": "9.20.1",
     "semantic-release": "^15.9.6"
   },
