@@ -1,0 +1,28 @@
+{
+	"layout": {
+		"space": {
+
+			"xxs": {
+				"value": "4px"
+			},
+			"xs": {
+				"value": "8px"
+			},
+			"s": {
+				"value": "12px"
+			},
+			"m": {
+				"value": "16px"
+			},
+			"l": {
+				"value": "24px"
+			},
+			"xl": {
+				"value": "32px"
+			},
+			"xxl": {
+				"value": "48px"
+			}
+		}
+	}
+}

@@ -2,11 +2,11 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import styled from "react-emotion";
-import { coreColors } from "../styles/color";
+import { coreColors } from "../../../dist/packages/design-tokens/js/colorsForStyleguide";
 
-const { white, black, ...colors } = coreColors();
+const { white, black, cyan, ...colors } = coreColors();
 
-interface ICellProps {
+interface CellProps {
   background?: string;
 }
 
@@ -19,7 +19,7 @@ const Grid = styled("div")`
 const spread = "1";
 
 const Cell = styled("div")`
-  background-color: ${(props: ICellProps) =>
+  background-color: ${(props: CellProps) =>
     props.background ? props.background : "transparent"};
   color: transparent;
   text-overflow: ellipsis;
@@ -39,6 +39,7 @@ const ColorTable = () => (
       <Cell background={color}>{name}</Cell>
     ))}
 
+    <Cell background={cyan}>cyan</Cell>
     <Cell background={white}>white</Cell>
     <Cell background={black}>black</Cell>
   </Grid>

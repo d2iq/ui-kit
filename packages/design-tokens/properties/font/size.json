@@ -1,0 +1,18 @@
+{
+	"font": {
+		"size": {
+			"s": {
+				"value": "12px"
+            },
+			"m": {
+				"value": "14px"
+            },
+			"l": {
+				"value": "18px"
+            },
+			"xl": {
+				"value": "24px"
+            }
+		}
+	}
+}

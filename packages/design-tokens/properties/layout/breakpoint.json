@@ -1,0 +1,20 @@
+{
+	"layout": {
+		"breakpoint": {
+
+			"small": {
+				"value": "600px"
+			},
+			"medium": {
+				"value": "900px"
+			},
+			"large": {
+				"value": "1200px"
+			},
+			"jumbo": {
+				"value": "1800px"
+            }
+
+		}
+	}
+}
