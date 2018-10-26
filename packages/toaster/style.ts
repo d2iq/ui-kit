@@ -10,6 +10,24 @@ export const toaster = css`
   `)};
 `;
 
+export const preTransitionStyle = duration => css`
+  transition: opacity ${duration}ms ease-in-out,
+    transform ${duration}ms ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+`;
+
+export const transitionStyles = {
+  entered: css`
+    opacity: 1;
+    transform: translateY(0);
+  `,
+  exiting: css`
+    opacity: 0;
+    transform: translateY(0);
+  `
+};
+
 // TODO: use a design token for border-radius when it exists
 export const toast = css`
   background-color: ${greyDark};

@@ -1,8 +1,8 @@
 import * as React from "react";
 import { cx } from "emotion";
-import posed, { PoseGroup } from "react-pose";
+import { TransitionGroup, Transition } from "react-transition-group";
 import { ToastProps, ToastId } from "./Toast";
-import { toaster } from "../style";
+import { toaster, preTransitionStyle, transitionStyles } from "../style";
 import { margin, marginAt } from "../../shared/styles/styleUtils";
 
 export interface ToasterProps {
@@ -16,20 +16,7 @@ export interface ToasterState {
 export const DELAY_TIME = 3000;
 const MARGINAL_DELAY = 1000;
 
-const ToastWrapper = posed.li({
-  preEnter: {
-    y: 20
-  },
-  enter: {
-    opacity: 1,
-    y: 0,
-    transition: { easing: "easeInOut" }
-  },
-  exit: {
-    opacity: 0,
-    transition: { easing: "easeInOut" }
-  }
-});
+const animationDuration = 300;
 
 class Toaster extends React.PureComponent<ToasterProps, ToasterState> {
   // TODO: write better type for timeouts
@@ -97,11 +84,27 @@ class Toaster extends React.PureComponent<ToasterProps, ToasterState> {
           onMouseLeave={this.restartTimeouts}
           aria-live="assertive"
         >
-          <PoseGroup preEnterPose="preEnter">
+          <TransitionGroup>
             {toastsToRender.map((toast, i) => (
-              <ToastWrapper key={`toastWrapper-${i}`}>{toast}</ToastWrapper>
+              <Transition
+                key={`toastWrapper-${i}`}
+                timeout={{ enter: 0, exit: animationDuration }}
+              >
+                {state => {
+                  return (
+                    <li
+                      className={cx(
+                        preTransitionStyle(animationDuration),
+                        transitionStyles[state]
+                      )}
+                    >
+                      {toast}
+                    </li>
+                  );
+                }}
+              </Transition>
             ))}
-          </PoseGroup>
+          </TransitionGroup>
         </ol>
       </div>
     );
