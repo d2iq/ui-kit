@@ -4,6 +4,7 @@ import { configure, setAddon, addDecorator } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs/react";
 import { setOptions } from "@storybook/addon-options";
 import infoAddon, { setDefaults } from "@storybook/addon-info";
+require("../packages/shared/styles/global").injectStorybookResetCss();
 
 addDecorator(withKnobs);
 setAddon(infoAddon);
