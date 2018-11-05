@@ -2,27 +2,34 @@
 
 exports[`Toast renders default 1`] = `
 .emotion-0 {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.emotion-1 {
   max-width: 100%;
   margin: 16px !important;
 }
 
 @media (min-width:900px) {
-  .emotion-0 {
+  .emotion-1 {
     max-width: 20em;
   }
 }
 
 @media (min-width:900px) {
-  .emotion-0 {
+  .emotion-1 {
     margin: 24px !important;
   }
 }
 
 <div
-  className="emotion-0"
+  className="emotion-1"
 >
   <ol
     aria-live="assertive"
+    className="emotion-0"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
@@ -60,27 +67,34 @@ exports[`Toast renders default 1`] = `
 
 exports[`Toast renders with actions 1`] = `
 .emotion-0 {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.emotion-1 {
   max-width: 100%;
   margin: 16px !important;
 }
 
 @media (min-width:900px) {
-  .emotion-0 {
+  .emotion-1 {
     max-width: 20em;
   }
 }
 
 @media (min-width:900px) {
-  .emotion-0 {
+  .emotion-1 {
     margin: 24px !important;
   }
 }
 
 <div
-  className="emotion-0"
+  className="emotion-1"
 >
   <ol
     aria-live="assertive"
+    className="emotion-0"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
@@ -118,27 +132,34 @@ exports[`Toast renders with actions 1`] = `
 
 exports[`Toast renders with description 1`] = `
 .emotion-0 {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.emotion-1 {
   max-width: 100%;
   margin: 16px !important;
 }
 
 @media (min-width:900px) {
-  .emotion-0 {
+  .emotion-1 {
     max-width: 20em;
   }
 }
 
 @media (min-width:900px) {
-  .emotion-0 {
+  .emotion-1 {
     margin: 24px !important;
   }
 }
 
 <div
-  className="emotion-0"
+  className="emotion-1"
 >
   <ol
     aria-live="assertive"
+    className="emotion-0"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
