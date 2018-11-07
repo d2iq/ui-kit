@@ -21,7 +21,7 @@ const getPropNamePatterns = (prop, opts) => {
       isCamelCase
     )}${delimiter}${transformStringCase(item, isCamelCase)}${
       subitem ? delimiter : ""
-    }${transformStringCase(subitem)}`
+    }${transformStringCase(subitem, isCamelCase)}`
   };
 };
 
