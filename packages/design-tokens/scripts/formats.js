@@ -22,4 +22,12 @@ const colorsForStyleguide = {
     );`
 };
 
-module.exports = [colorsForStyleguide];
+const commonJS = {
+  name: "javascript/commonJS",
+  formatter: dictionary =>
+    `${dateHeader()}\n${dictionary.allProperties
+      .map(prop => `exports.${prop.name} = '${prop.value}';`)
+      .join("\n")}`
+};
+
+module.exports = [colorsForStyleguide, commonJS];
