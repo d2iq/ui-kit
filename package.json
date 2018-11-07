@@ -84,6 +84,7 @@
     "prop-types": "15.6.2",
     "react-docgen-typescript-loader": "3.0.0",
     "react-test-renderer": "16.5.2",
+    "react-toggled": "1.2.7",
     "rimraf": "2.6.2",
     "storybook-readme": "4.0.2",
     "style-dictionary": "^2.4.0",
