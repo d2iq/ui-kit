@@ -2,13 +2,8 @@ import * as React from "react";
 import { cx } from "emotion";
 import { TransitionGroup, Transition } from "react-transition-group";
 import { ToastProps, ToastId } from "./Toast";
-import {
-  toaster,
-  toasterList,
-  preTransitionStyle,
-  transitionStyles
-} from "../style";
-import { margin, marginAt } from "../../shared/styles/styleUtils";
+import { toaster, preTransitionStyle, transitionStyles } from "../style";
+import { margin, marginAt, listReset } from "../../shared/styles/styleUtils";
 
 export interface ToasterProps {
   children?: Array<React.ReactElement<ToastProps>>;
@@ -88,7 +83,7 @@ class Toaster extends React.PureComponent<ToasterProps, ToasterState> {
           onMouseEnter={this.clearTimeouts}
           onMouseLeave={this.restartTimeouts}
           aria-live="assertive"
-          className={toasterList}
+          className={listReset}
         >
           <TransitionGroup>
             {toastsToRender.map((toast, i) => (

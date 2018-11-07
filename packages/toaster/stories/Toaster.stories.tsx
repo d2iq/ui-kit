@@ -4,7 +4,7 @@ import { withReadme } from "storybook-readme";
 import { action } from "@storybook/addon-actions";
 import { Toaster, Toast } from "..";
 import { ToastProps } from "../components/Toast";
-import { typeSizes } from "../../shared/styles/typography";
+import { fontSizes } from "../../shared/styles/typography";
 import { coreColors } from "../../shared/styles/color";
 const { purple } = coreColors();
 
@@ -19,7 +19,7 @@ const fakeButtonStyles = {
   border: "none",
   color: purple,
   cursor: "pointer",
-  fontSize: typeSizes.small,
+  fontSize: fontSizes.small,
   padding: 0
 };
 

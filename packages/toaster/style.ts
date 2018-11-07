@@ -10,12 +10,6 @@ export const toaster = css`
   `)};
 `;
 
-export const toasterList = css`
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-`;
-
 export const preTransitionStyle = duration => css`
   transition: opacity ${duration}ms ease-in-out,
     transform ${duration}ms ease-in-out;

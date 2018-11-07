@@ -1,6 +1,6 @@
 import { injectGlobal } from "emotion";
-import { coreFonts } from "./typography";
-const { fontFamilySansSerif } = coreFonts();
+import { textSize } from "./styleUtils";
+import { fontFamilySansSerif } from "../../../dist/packages/design-tokens/js/designTokens";
 
 export const injectGlobalCss = () => {
   return injectGlobal`
@@ -14,6 +14,7 @@ export const injectStorybookResetCss = () => {
   return injectGlobal`
     body {
         font-family: ${fontFamilySansSerif};
+        ${textSize("default")};
     }
   `;
 };

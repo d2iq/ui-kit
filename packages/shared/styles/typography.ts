@@ -1,4 +1,10 @@
 // Include core typography, helpers and etc in this file
+import {
+  fontSizeS,
+  fontSizeM,
+  fontWeightNormal,
+  fontWeightMedium
+} from "../../../dist/packages/design-tokens/js/designTokens";
 
 export interface Fonts {
   [fontName: string]: string;
@@ -20,7 +26,12 @@ export const coreFonts = (): Fonts => {
   };
 };
 
-export const typeSizes = {
-  small: "14px",
-  default: "16px"
+export const fontSizes = {
+  small: fontSizeS,
+  default: fontSizeM
+};
+
+export const fontWeights = {
+  normal: fontWeightNormal,
+  medium: fontWeightMedium
 };

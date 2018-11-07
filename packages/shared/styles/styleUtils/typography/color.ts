@@ -1,6 +1,5 @@
 import { css } from "emotion";
-import { coreColors } from "../../color";
-const { white } = coreColors();
+import { textColorPrimaryInverted } from "../../../../../dist/packages/design-tokens/js/designTokens";
 
 // TODO: when we do the design tokens lib,
 // generate a type for _only_ our colors
@@ -17,6 +16,6 @@ export const tintSVG = (color: string) => css`
 `;
 
 export const darkMode = css`
-  ${tintText(white)};
-  ${tintSVG(white)};
+  ${tintText(textColorPrimaryInverted)};
+  ${tintSVG(textColorPrimaryInverted)};
 `;

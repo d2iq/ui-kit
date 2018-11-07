@@ -9,7 +9,7 @@ import {
 } from "../../spacing";
 
 export type BoxSides = "all" | "top" | "right" | "bottom" | "left";
-export type SpaceSizes = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl";
+export type SpaceSizes = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "none";
 
 const spaceSizes = {
   xxs: spacingXXS,
@@ -18,9 +18,12 @@ const spaceSizes = {
   m: spacingM,
   l: spacingL,
   xl: spacingXL,
-  xxl: spacingXXL
+  xxl: spacingXXL,
+  none: 0
 };
 
+// TODO: add ability to use "horizontal" and "vertical"
+// to do left/right or top/bottom padding
 export const boxSpacing = (
   property: "margin" | "padding",
   side: BoxSides,
