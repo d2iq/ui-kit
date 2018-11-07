@@ -1,5 +1,9 @@
 import { css } from "emotion";
-import { textColorPrimaryInverted } from "../../../../../dist/packages/design-tokens/js/designTokens";
+import {
+  textColorPrimaryInverted,
+  textColorSecondary,
+  textColorSecondaryInverted
+} from "../../design-tokens-dist/js/designTokens";
 
 // TODO: when we do the design tokens lib,
 // generate a type for _only_ our colors
@@ -18,4 +22,14 @@ export const tintSVG = (color: string) => css`
 export const darkMode = css`
   ${tintText(textColorPrimaryInverted)};
   ${tintSVG(textColorPrimaryInverted)};
+`;
+
+export const tintContentSecondary = css`
+  ${tintText(textColorSecondary)};
+  ${tintSVG(textColorSecondary)};
+
+  .${darkMode} & {
+    ${tintText(textColorSecondaryInverted)};
+    ${tintSVG(textColorSecondaryInverted)};
+  }
 `;

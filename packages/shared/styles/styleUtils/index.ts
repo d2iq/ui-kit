@@ -1,7 +1,12 @@
 export { flex, flexItem } from "./layout/flexbox";
 export { flush } from "./modifiers/flush";
 export { textTruncate } from "./typography/textTruncate";
-export { darkMode, tintSVG, tintText } from "./typography/color";
+export {
+  darkMode,
+  tintSVG,
+  tintText,
+  tintContentSecondary
+} from "./typography/color";
 export { display } from "./modifiers/display";
 export { listReset } from "./resets/listReset";
 export { buttonReset } from "./resets/buttonReset";

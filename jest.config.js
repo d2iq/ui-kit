@@ -26,7 +26,8 @@ module.exports = {
       "setupTestFrameworkScriptFile": "<rootDir>/testHelper/setupTests.ts",
       "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
       "transform": {
-        "^.+\\.tsx?$": "ts-jest"
+        "^.+\\.tsx?$": "ts-jest",
+        "^.+\\.js?$": "ts-jest"
       }
     },
     {
