@@ -1,6 +1,6 @@
 import { injectGlobal } from "emotion";
 import { textSize } from "./styleUtils";
-import { fontFamilySansSerif } from "../../../dist/packages/design-tokens/js/designTokens";
+import { fontFamilySansSerif } from "../styles/design-tokens-dist/js/designTokens";
 
 export const injectGlobalCss = () => {
   return injectGlobal`

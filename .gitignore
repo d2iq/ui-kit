@@ -13,3 +13,4 @@ tmp/
 .env
 coverage
 storybook-static/
+packages/shared/styles/design-tokens-dist/

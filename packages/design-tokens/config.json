@@ -3,7 +3,7 @@
   "platforms": {
     "less": {
       "transforms": ["attribute/cti", "name/cti/lessVar"],
-      "buildPath": "dist/packages/design-tokens/less/",
+      "buildPath": "packages/shared/styles/design-tokens-dist/less/",
       "files": [
         {
           "destination": "_designTokens.less",
@@ -17,7 +17,7 @@
         "name/cti/jsConstant",
         "value/fontNameJS"
       ],
-      "buildPath": "dist/packages/design-tokens/js/",
+      "buildPath": "packages/shared/styles/design-tokens-dist/js/",
       "files": [
         {
           "format": "javascript/commonJS",
@@ -27,7 +27,7 @@
     },
     "colorsForStyleguide": {
       "transforms": ["attribute/cti", "name/cti/jsConstant"],
-      "buildPath": "dist/packages/design-tokens/js/",
+      "buildPath": "packages/shared/styles/design-tokens-dist/js/",
       "files": [
         {
           "format": "javascript/colorsForStyleguide",

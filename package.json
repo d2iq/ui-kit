@@ -17,7 +17,7 @@
     "build:storybook": "build-storybook",
     "build:design-tokens": "npm run clean:design-tokens && node ./packages/design-tokens/scripts/build.js",
     "clean": "rimraf dist",
-    "clean:design-tokens": "rm -rf ./dist/packages/design-tokens",
+    "clean:design-tokens": "rm -rf ./packages/shared/styles/design-tokens-dist",
     "commitlint": "commitlint -e",
     "create:component": "./scripts/create-component",
     "deploy:storybook": "storybook-to-ghpages",
