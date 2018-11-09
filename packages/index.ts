@@ -1,4 +1,14 @@
 import { injectGlobalCss } from "./shared/styles/global";
+export {
+  AppChrome,
+  HeaderBar,
+  Sidebar,
+  SidebarSection,
+  SidebarItem,
+  SidebarItemLabel,
+  SidebarSubMenu,
+  SidebarSubMenuItem
+} from "./appChrome";
 export { Badge, BadgeButton } from "./badge";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
 export {

@@ -44,7 +44,7 @@ exports[`InfoBox renders default 1`] = `
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
   padding: 16px !important;
-  font-size: 14px;
+  font-size: 12px;
   display: grid !important;
 }
 
@@ -86,7 +86,7 @@ exports[`InfoBox renders with JSX message 1`] = `
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
   padding: 16px !important;
-  font-size: 14px;
+  font-size: 12px;
   display: grid !important;
 }
 
@@ -134,7 +134,7 @@ exports[`InfoBox renders with actions 1`] = `
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
   padding: 16px !important;
-  font-size: 14px;
+  font-size: 12px;
   display: grid !important;
 }
 
@@ -216,7 +216,7 @@ exports[`InfoBox renders without dismiss button 1`] = `
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
   padding: 16px !important;
-  font-size: 14px;
+  font-size: 12px;
   display: grid !important;
 }
 

@@ -21,7 +21,7 @@ const getPropNamePatterns = (prop, opts) => {
       isCamelCase
     )}${delimiter}${transformStringCase(item, isCamelCase)}${
       subitem ? delimiter : ""
-    }${transformStringCase(subitem)}`
+    }${transformStringCase(subitem, isCamelCase)}`
   };
 };
 
@@ -46,6 +46,15 @@ const getFormattedName = (prop, namePatterns) => {
   return name;
 };
 
+const fontNameJS = {
+  name: "value/fontNameJS",
+  type: "value",
+  matcher: prop => prop.attributes.category === "font",
+  transformer: (prop, options) => {
+    return prop.original.value.replace(/'/g, '"');
+  }
+};
+
 const jsConstant = {
   name: "name/cti/jsConstant",
   type: "name",
@@ -67,4 +76,4 @@ const lessVar = {
     )
 };
 
-module.exports = [jsConstant, lessVar];
+module.exports = [jsConstant, lessVar, fontNameJS];

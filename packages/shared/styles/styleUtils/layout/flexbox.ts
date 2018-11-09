@@ -2,8 +2,8 @@ import { css } from "react-emotion";
 import { spacingM } from "../../spacing";
 
 interface FlexboxProperties {
-  align?: "flex" | "center" | "flex-start" | "flex-end";
-  justify?: "flex" | "center" | "flex-start" | "flex-end";
+  align?: "flex" | "center" | "flex-start" | "flex-end" | "space-between";
+  justify?: "flex" | "center" | "flex-start" | "flex-end" | "space-between";
   direction?: "row" | "column" | "row-reverse" | "column-reverse";
   wrap?: "wrap" | "nowrap";
 }

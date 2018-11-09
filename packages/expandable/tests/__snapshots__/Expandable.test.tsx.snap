@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar renders 1`] = `
+.emotion-0 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-0::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-0:after {
+  border-style: solid;
+  border-color: transparent;
+  content: "";
+  display: inline-block;
+  height: 0;
+  line-height: 0;
+  width: 0;
+  border-top-color: inherit;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-bottom-width: 0;
+  border-top-width: 6px;
+}
+
+.emotion-0:focus {
+  outline: 0;
+}
+
+<Expandable
+  isOpen={true}
+  label="Label"
+>
+  <Toggle
+    defaultOn={true}
+    onToggle={[Function]}
+  >
+    <div>
+      <button
+        aria-expanded={true}
+        className="emotion-0"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        Label
+      </button>
+      <div
+        className=""
+      >
+        Content
+      </div>
+    </div>
+  </Toggle>
+</Expandable>
+`;
