@@ -9,7 +9,8 @@ import { cx } from "emotion";
 import {
   textSize,
   flex,
-  tintContentSecondary
+  tintContentSecondary,
+  tintContentPrimary
 } from "../../shared/styles/styleUtils";
 import Clickable from "../../clickable/components/clickable";
 
@@ -31,7 +32,10 @@ class SidebarSubMenuItem extends React.PureComponent<
       tintContentSecondary,
       sidebarNavItem(isActive),
       textSize("small"),
-      flex({ align: "center" })
+      flex({ align: "center" }),
+      {
+        [tintContentPrimary]: isActive
+      }
     );
 
     return (

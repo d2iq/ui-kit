@@ -46,19 +46,19 @@ storiesOf("AppChrome", module)
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarItem onClick={action("clicked a nav item")}>
-          Lorem Ipsum
+          <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
         </SidebarItem>
         <SidebarItem onClick={action("clicked a nav item")}>
-          Dolor Sit
+          <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
         </SidebarItem>
         <SidebarItem onClick={action("clicked a nav item")}>
-          Amet Consecutor
+          <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
         </SidebarItem>
         <SidebarItem onClick={action("clicked a nav item")}>
-          Adipiscing Edit
+          <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
         </SidebarItem>
         <SidebarItem onClick={action("clicked a nav item")}>
-          Praesent Massa
+          <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
         </SidebarItem>
       </SidebarSection>
     </Sidebar>
@@ -67,19 +67,19 @@ storiesOf("AppChrome", module)
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarItem onClick={action("clicked a nav item")} isActive={true}>
-          Lorem Ipsum
+          <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
         </SidebarItem>
         <SidebarItem onClick={action("clicked a nav item")}>
-          Dolor Sit
+          <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
         </SidebarItem>
         <SidebarItem onClick={action("clicked a nav item")}>
-          Amet Consecutor
+          <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
         </SidebarItem>
         <SidebarItem onClick={action("clicked a nav item")}>
-          Adipiscing Edit
+          <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
         </SidebarItem>
         <SidebarItem onClick={action("clicked a nav item")}>
-          Praesent Massa
+          <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
         </SidebarItem>
       </SidebarSection>
     </Sidebar>
@@ -87,35 +87,42 @@ storiesOf("AppChrome", module)
   .addWithInfo("Sidebar w/ items (w/ icons)", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
-        <SidebarItem
-          icon={<PlaceholderIcon />}
-          onClick={action("clicked a nav item")}
-        >
-          Lorem Ipsum
+        <SidebarItem onClick={action("clicked a nav item")}>
+          <SidebarItemLabel icon={<PlaceholderIcon />}>
+            Lorem Ipsum
+          </SidebarItemLabel>
         </SidebarItem>
         <SidebarItem
           icon={<PlaceholderIcon />}
           onClick={action("clicked a nav item")}
         >
-          Dolor Sit
+          <SidebarItemLabel icon={<PlaceholderIcon />}>
+            Dolor Sit
+          </SidebarItemLabel>
         </SidebarItem>
         <SidebarItem
           icon={<PlaceholderIcon />}
           onClick={action("clicked a nav item")}
         >
-          Amet Consecutor
+          <SidebarItemLabel icon={<PlaceholderIcon />}>
+            Amet Consecutor
+          </SidebarItemLabel>
         </SidebarItem>
         <SidebarItem
           icon={<PlaceholderIcon />}
           onClick={action("clicked a nav item")}
         >
-          Adipiscing Edit
+          <SidebarItemLabel icon={<PlaceholderIcon />}>
+            Adipiscing Edit
+          </SidebarItemLabel>
         </SidebarItem>
         <SidebarItem
           icon={<PlaceholderIcon />}
           onClick={action("clicked a nav item")}
         >
-          Praesent Massa
+          <SidebarItemLabel icon={<PlaceholderIcon />}>
+            Praesent Massa
+          </SidebarItemLabel>
         </SidebarItem>
       </SidebarSection>
     </Sidebar>
@@ -241,6 +248,7 @@ storiesOf("AppChrome", module)
               Lorem ipsum
             </SidebarItemLabel>
           }
+          menuHasIcon={true}
         >
           <SidebarSubMenuItem onClick={action("clicked a nav item")}>
             Lorem Ipsum
@@ -255,6 +263,7 @@ storiesOf("AppChrome", module)
               Dolor Sit
             </SidebarItemLabel>
           }
+          menuHasIcon={true}
         >
           <SidebarSubMenuItem onClick={action("clicked a nav item")}>
             Lorem Ipsum
@@ -269,6 +278,7 @@ storiesOf("AppChrome", module)
               Amet Consecutor
             </SidebarItemLabel>
           }
+          menuHasIcon={true}
         >
           <SidebarSubMenuItem onClick={action("clicked a nav item")}>
             Lorem Ipsum
@@ -283,6 +293,7 @@ storiesOf("AppChrome", module)
               Adipiscing Edit
             </SidebarItemLabel>
           }
+          menuHasIcon={true}
         >
           <SidebarSubMenuItem onClick={action("clicked a nav item")}>
             Lorem Ipsum
@@ -297,6 +308,7 @@ storiesOf("AppChrome", module)
               Praesent Massa
             </SidebarItemLabel>
           }
+          menuHasIcon={true}
         >
           <SidebarSubMenuItem onClick={action("clicked a nav item")}>
             Lorem Ipsum

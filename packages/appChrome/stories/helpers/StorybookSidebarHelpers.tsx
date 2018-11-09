@@ -39,31 +39,48 @@ export const PlaceholderIcon = () => (
   </svg>
 );
 
+const alignToLogoStyles = {
+  outer: { marginLeft: "-7px", marginRight: "-7px" },
+  inner: { marginLeft: "-4px" }
+};
+
 export const SidebarContent = ({ sidebarData }) =>
   sidebarData.map(section => (
-    <SidebarSection label={section.sectionLabel ? section.sectionLabel : ""}>
+    <SidebarSection
+      label={
+        section.sectionLabel ? (
+          <div style={alignToLogoStyles.outer}>{section.sectionLabel}</div>
+        ) : (
+          ""
+        )
+      }
+    >
       {section.items.map(
         item =>
           item.subItems ? (
             <SidebarSubMenu
               label={
-                <SidebarItemLabel icon={<PlaceholderIcon />}>
-                  {item.label}
-                </SidebarItemLabel>
+                <div style={alignToLogoStyles.outer}>
+                  <SidebarItemLabel icon={<PlaceholderIcon />}>
+                    <div>{item.label}</div>
+                  </SidebarItemLabel>
+                </div>
               }
+              menuHasIcon={true}
             >
               {item.subItems.map(subItem => (
                 <SidebarSubMenuItem onClick={action(`go to ${subItem.label}`)}>
-                  {subItem.label}
+                  <div style={alignToLogoStyles.outer}>{subItem.label}</div>
                 </SidebarSubMenuItem>
               ))}
             </SidebarSubMenu>
           ) : (
-            <SidebarItem
-              icon={<PlaceholderIcon />}
-              onClick={action(`go to ${item.label}`)}
-            >
-              {item.label}
+            <SidebarItem onClick={action(`go to ${item.label}`)}>
+              <div style={alignToLogoStyles.outer}>
+                <SidebarItemLabel icon={<PlaceholderIcon />}>
+                  <div>{item.label}</div>
+                </SidebarItemLabel>
+              </div>
             </SidebarItem>
           )
       )}

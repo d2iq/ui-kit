@@ -1,5 +1,6 @@
 import { css } from "emotion";
 import {
+  textColorPrimary,
   textColorPrimaryInverted,
   textColorSecondary,
   textColorSecondaryInverted
@@ -24,11 +25,23 @@ export const darkMode = css`
   ${tintSVG(textColorPrimaryInverted)};
 `;
 
+export const tintContentPrimary = css`
+  ${tintText(textColorPrimary)};
+  ${tintSVG(textColorPrimary)};
+
+  ${darkMode} &,
+  &${darkMode} {
+    ${tintText(textColorPrimaryInverted)};
+    ${tintSVG(textColorPrimaryInverted)};
+  }
+`;
+
 export const tintContentSecondary = css`
   ${tintText(textColorSecondary)};
   ${tintSVG(textColorSecondary)};
 
-  .${darkMode} & {
+  ${darkMode} &,
+  &${darkMode} {
     ${tintText(textColorSecondaryInverted)};
     ${tintSVG(textColorSecondaryInverted)};
   }

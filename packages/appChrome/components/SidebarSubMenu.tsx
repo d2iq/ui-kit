@@ -1,17 +1,17 @@
 import * as React from "react";
 import { cx } from "emotion";
 import { Expandable } from "../../expandable";
-import SidebarItemLabel, { SidebarItemLabelProps } from "./SidebarItemLabel";
+import { SidebarItemLabelProps } from "./SidebarItemLabel";
 import { SidebarSubMenuItemProps } from "./SidebarSubMenuItem";
 import { sidebarNavItem, appChromeInsetContent } from "../style";
 import { listReset } from "../../shared/styles/styleUtils";
-
 export interface SidebarSubMenuProps {
   children: Array<React.ReactElement<SidebarSubMenuItemProps>>;
   isOpen?: boolean;
   onOpen?: () => void;
   onClose?: () => void;
   label: React.ReactElement<SidebarItemLabelProps>;
+  menuHasIcon?: boolean;
 }
 
 class SidebarSubMenu extends React.PureComponent<SidebarSubMenuProps, {}> {
@@ -24,9 +24,7 @@ class SidebarSubMenu extends React.PureComponent<SidebarSubMenuProps, {}> {
   public getSubItemList(
     items: Array<React.ReactElement<SidebarSubMenuItemProps>>
   ) {
-    const { label } = this.props;
-    const menuHasIcon =
-      label.type === SidebarItemLabel && Boolean(label.props.icon);
+    const { menuHasIcon } = this.props;
 
     return (
       <ul className={listReset}>

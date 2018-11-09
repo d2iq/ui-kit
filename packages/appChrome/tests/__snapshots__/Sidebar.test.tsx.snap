@@ -28,11 +28,7 @@ exports[`Sidebar SidebarItem renders 1`] = `
   <li
     className="emotion-0"
   >
-    <SidebarItemLabel
-      icon={<Unknown />}
-    >
-      Item label
-    </SidebarItemLabel>
+    Item label
   </li>
 </Clickable>
 `;
@@ -188,7 +184,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
     className="emotion-0"
   >
     <li
-      className="menuHasIcon"
+      className=""
       key="0"
     >
       <SidebarSubMenuItem
@@ -199,7 +195,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
       </SidebarSubMenuItem>
     </li>
     <li
-      className="menuHasIcon"
+      className=""
       key="1"
     >
       <SidebarSubMenuItem

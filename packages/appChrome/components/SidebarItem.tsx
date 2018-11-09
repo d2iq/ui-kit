@@ -1,8 +1,8 @@
 import * as React from "react";
 import { cx } from "emotion";
-import SidebarItemLabel from "./SidebarItemLabel";
 import { appChromeInsetContent, sidebarNavItem } from "../style";
 import Clickable from "../../clickable/components/clickable";
+import { tintContentPrimary } from "../../shared/styles/styleUtils";
 
 export interface SidebarItemProps {
   children?: React.ReactElement<HTMLElement> | string;
@@ -13,16 +13,14 @@ export interface SidebarItemProps {
 
 class SidebarItem extends React.PureComponent<SidebarItemProps, {}> {
   public render() {
-    const { children, icon, isActive, onClick } = this.props;
-    const classNames = cx(appChromeInsetContent, sidebarNavItem(isActive));
+    const { children, isActive, onClick } = this.props;
+    const classNames = cx(appChromeInsetContent, sidebarNavItem(isActive), {
+      [tintContentPrimary]: isActive
+    });
 
     return (
       <Clickable action={onClick} tabIndex={0}>
-        <li className={classNames}>
-          <SidebarItemLabel icon={icon ? icon : ""}>
-            {children}
-          </SidebarItemLabel>
-        </li>
+        <li className={classNames}>{children}</li>
       </Clickable>
     );
   }
