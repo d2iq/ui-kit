@@ -29,12 +29,8 @@ exports[`InfoBox InfoBoxBanner renders default 1`] = `
 
 exports[`InfoBox renders default 1`] = `
 .emotion-0 {
-  opacity: 0.5;
-}
-
-.emotion-0,
-.emotion-0 svg {
   fill: #1B2029;
+  opacity: 0.5;
 }
 
 .emotion-1 {
@@ -71,12 +67,8 @@ exports[`InfoBox renders default 1`] = `
 
 exports[`InfoBox renders with JSX message 1`] = `
 .emotion-0 {
-  opacity: 0.5;
-}
-
-.emotion-0,
-.emotion-0 svg {
   fill: #1B2029;
+  opacity: 0.5;
 }
 
 .emotion-1 {
@@ -119,12 +111,8 @@ exports[`InfoBox renders with actions 1`] = `
 }
 
 .emotion-3 {
-  opacity: 0.5;
-}
-
-.emotion-3,
-.emotion-3 svg {
   fill: #1B2029;
+  opacity: 0.5;
 }
 
 .emotion-4 {
