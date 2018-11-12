@@ -81,6 +81,21 @@ storiesOf("Toaster", module)
   .addWithInfo("default", () => (
     <Toaster>{[<Toast title={toastTitle} key={0} id="default" />]}</Toaster>
   ))
+  .addWithInfo("danger", () => (
+    <Toaster>
+      {[<Toast title={toastTitle} key={0} id="danger" appearance="danger" />]}
+    </Toaster>
+  ))
+  .addWithInfo("success", () => (
+    <Toaster>
+      {[<Toast title={toastTitle} key={0} id="success" appearance="success" />]}
+    </Toaster>
+  ))
+  .addWithInfo("warning", () => (
+    <Toaster>
+      {[<Toast title={toastTitle} key={0} id="warning" appearance="warning" />]}
+    </Toaster>
+  ))
   .addWithInfo("description", () => (
     <Toaster>
       {[

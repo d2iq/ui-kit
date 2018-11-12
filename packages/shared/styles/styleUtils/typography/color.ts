@@ -14,10 +14,7 @@ export const tintText = (color: string) => css`
 `;
 
 export const tintSVG = (color: string) => css`
-  &,
-  svg {
-    fill: ${color};
-  }
+  fill: ${color};
 `;
 
 export const darkMode = css`
