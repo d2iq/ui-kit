@@ -289,17 +289,13 @@ exports[`Sidebar renders 1`] = `
   background-color: #1B2029;
   width: 240px;
   color: #DADDE2;
+  fill: #DADDE2;
 }
 
 @media (min-width:1200px) {
   .emotion-0 {
     width: 280px;
   }
-}
-
-.emotion-0,
-.emotion-0 svg {
-  fill: #DADDE2;
 }
 
 .emotion-1 {

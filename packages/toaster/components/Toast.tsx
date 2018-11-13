@@ -13,9 +13,15 @@ import {
   flex,
   flexItem,
   margin,
-  padding
+  padding,
+  tintSVG
 } from "../../shared/styles/styleUtils";
 import Clickable from "../../clickable/components/clickable";
+import {
+  green,
+  red,
+  yellow
+} from "../../shared/styles/design-tokens-dist/js/designTokens";
 
 export type ToastId = React.ReactText | undefined;
 
@@ -41,6 +47,51 @@ const CloseIcon = () => (
   </svg>
 );
 
+const SuccessIcon = props => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM6.5 9.263L4.619 7.38 3.38 8.62 6.5 11.737l6.119-6.118L11.38 4.38 6.5 9.263z"
+      fill-rule="evenodd"
+    />
+  </svg>
+);
+
+const DangerIcon = props => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zm-2.5-4.5L8 9l2.5 2.5 1-1L9 8l2.5-2.5-1-1L8 7 5.5 4.5l-1 1L7 8l-2.5 2.5 1 1z"
+      fill-rule="evenodd"
+    />
+  </svg>
+);
+
+const WarningIcon = props => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M6.44 2.048c.782-1.398 2.339-1.396 3.12 0l5.133 9.17c.781 1.396.003 2.782-1.56 2.782H2.867c-1.566 0-2.34-1.388-1.56-2.783l5.133-9.17zM8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-.53-3.238A.282.282 0 0 0 7.752 9h.496c.139 0 .266-.115.282-.238l.346-2.773C8.945 5.443 8.556 5 8 5a.86.86 0 0 0-.876.989l.346 2.773z"
+      fill-rule="nonzero"
+    />
+  </svg>
+);
+
 class Toast extends React.PureComponent<ToastProps, {}> {
   public static defaultProps: Partial<ToastProps> = {
     appearance: "default",
@@ -62,6 +113,19 @@ class Toast extends React.PureComponent<ToastProps, {}> {
       secondaryAction
     } = this.props;
     const isUrgentMessage = appearance === "danger" || appearance === "warning";
+    const getStatusIcon = status => {
+      switch (status) {
+        case "danger":
+          return <DangerIcon className={tintSVG(red)} />;
+          break;
+        case "success":
+          return <SuccessIcon className={tintSVG(green)} />;
+          break;
+        case "warning":
+          return <WarningIcon className={tintSVG(yellow)} />;
+          break;
+      }
+    };
 
     return (
       <div
@@ -85,11 +149,9 @@ class Toast extends React.PureComponent<ToastProps, {}> {
             padding("bottom", "xs")
           )}
         >
-          {/* TODO: when we do the variants, an icon will always appear
-              based on appearance prop, and "default" isn't one of them */}
           {appearance !== "default" && (
-            <div className={flexItem("shrink")}>
-              <span>☃</span>
+            <div className={cx(flexItem("shrink"), display("contents"))}>
+              {getStatusIcon(appearance)}
             </div>
           )}
           <div className={flexItem("grow")}>{title}</div>
