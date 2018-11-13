@@ -1,5 +1,4 @@
 // Include core colors, helpers and etc in this file
-
 export interface Colors {
   [colorName: string]: string;
 }

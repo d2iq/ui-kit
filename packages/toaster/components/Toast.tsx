@@ -17,11 +17,7 @@ import {
   tintSVG
 } from "../../shared/styles/styleUtils";
 import Clickable from "../../clickable/components/clickable";
-import {
-  green,
-  red,
-  yellow
-} from "../../shared/styles/design-tokens-dist/js/designTokens";
+import { green, red, yellow } from "../../design-tokens/build/js/designTokens";
 
 export type ToastId = React.ReactText | undefined;
 
