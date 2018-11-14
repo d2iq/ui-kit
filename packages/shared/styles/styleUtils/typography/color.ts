@@ -4,7 +4,7 @@ import {
   textColorPrimaryInverted,
   textColorSecondary,
   textColorSecondaryInverted
-} from "../../design-tokens-dist/js/designTokens";
+} from "../../../../design-tokens/build/js/designTokens";
 
 // TODO: when we do the design tokens lib,
 // generate a type for _only_ our colors

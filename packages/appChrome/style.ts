@@ -8,7 +8,7 @@ import {
   spaceM,
   spaceL,
   spaceXl
-} from "../shared/styles/design-tokens-dist/js/designTokens";
+} from "../design-tokens/build/js/designTokens";
 import { padding } from "../shared/styles/styleUtils";
 
 const iconSize = "24px";
