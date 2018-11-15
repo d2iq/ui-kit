@@ -15,7 +15,9 @@
   },
   "scripts": {
     "build:storybook": "build-storybook",
-    "build:design-tokens": "npm run clean:design-tokens && node ./packages/design-tokens/scripts/build.js",
+    "prebuild:storybook": "npm run build:design-tokens",
+    "prebuild:design-tokens": "npm run clean:design-tokens",
+    "build:design-tokens": "node ./packages/design-tokens/scripts/build.js",
     "clean": "rimraf dist",
     "clean:design-tokens": "rm -rf ./dist/design-tokens",
     "commitlint": "commitlint -e",
