@@ -1,7 +1,12 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { appChrome } from "../style";
-import { flex, flexItem, textSize } from "../../shared/styles/styleUtils";
+import { appChrome, appWrapper } from "../style";
+import {
+  flex,
+  flexItem,
+  textSize,
+  flush
+} from "../../shared/styles/styleUtils";
 
 export interface AppChromeProps {
   sidebar: React.ReactNode;
@@ -16,9 +21,11 @@ class AppChrome extends React.PureComponent<AppChromeProps, {}> {
     return (
       <div className={cx(appChrome, textSize("default"))}>
         <div className="headerBar">{headerBar}</div>
-        <div className={flex()}>
+        <div className={cx(flex(), appWrapper)}>
           <div className={flexItem("shrink")}>{sidebar}</div>
-          <main className={flexItem("grow")}>{mainContent}</main>
+          <main className={cx(flexItem("grow"), flush("left"))}>
+            {mainContent}
+          </main>
         </div>
       </div>
     );
