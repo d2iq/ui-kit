@@ -19,6 +19,7 @@ const sidebarWidths = {
 const layoutBreakpoint = "large";
 
 export const appChrome = css`
+  height: 100%;
   overflow: hidden;
 `;
 
@@ -32,8 +33,13 @@ export const appChromeInsetContent = css`
   `)};
 `;
 
+export const appWrapper = css`
+  height: 100%;
+`;
+
 export const sidebar = css`
   background-color: ${greyDark};
+  height: 100%;
   width: ${sidebarWidths.default};
 
   ${atMediaUp[layoutBreakpoint](css`
@@ -44,6 +50,7 @@ export const sidebar = css`
 // TODO: replace animation duration/easing with design tokens
 // once design has agreed on animation
 export const sidebarAnimator = (isOpen: boolean) => css`
+  height: 100%;
   overflow: hidden;
   transition: width 150ms ease-in-out;
   width: ${isOpen ? sidebarWidths.default : 0};

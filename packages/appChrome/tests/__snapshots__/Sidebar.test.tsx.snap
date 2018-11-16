@@ -287,6 +287,7 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
 exports[`Sidebar renders 1`] = `
 .emotion-0 {
   background-color: #1B2029;
+  height: 100%;
   width: 240px;
   color: #DADDE2;
   fill: #DADDE2;
@@ -299,6 +300,7 @@ exports[`Sidebar renders 1`] = `
 }
 
 .emotion-1 {
+  height: 100%;
   overflow: hidden;
   -webkit-transition: width 150ms ease-in-out;
   transition: width 150ms ease-in-out;

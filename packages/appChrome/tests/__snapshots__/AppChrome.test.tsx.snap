@@ -2,6 +2,7 @@
 
 exports[`AppChrome renders with the app chrome regions 1`] = `
 .emotion-3 {
+  height: 100%;
   overflow: hidden;
   font-size: 14px;
 }
@@ -26,6 +27,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  height: 100%;
 }
 
 .emotion-0 {
@@ -60,6 +62,8 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 .emotion-1:first-child {
