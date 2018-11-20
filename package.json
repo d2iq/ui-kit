@@ -23,6 +23,7 @@
     "commitlint": "commitlint -e",
     "create:component": "./scripts/create-component",
     "deploy:storybook": "storybook-to-ghpages",
+    "predeploy:storybook": "npm run prebuild:storybook",
     "prestart": "npm run build:design-tokens",
     "pretest": "npm run build:design-tokens",
     "predist": "npm run clean && npm run build:design-tokens",
