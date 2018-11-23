@@ -62,8 +62,8 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .emotion-1:first-child {

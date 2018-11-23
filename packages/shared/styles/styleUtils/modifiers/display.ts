@@ -16,6 +16,6 @@ export const display = (
     | "table-cell"
 ) => {
   return css`
-    display: ${displayType} !important;
+    display: ${displayType};
   `;
 };

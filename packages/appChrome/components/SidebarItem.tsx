@@ -1,8 +1,10 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { appChromeInsetContent, sidebarNavItem } from "../style";
+import styled from "react-emotion";
+import { sidebarNavItem } from "../style";
 import Clickable from "../../clickable/components/clickable";
 import { tintContentPrimary } from "../../shared/styles/styleUtils";
+import { spaceSizes } from "../../../packages/shared/styles/styleUtils/modifiers/modifierUtils";
 
 export interface SidebarItemProps {
   children?: React.ReactElement<HTMLElement> | string;
@@ -14,13 +16,25 @@ export interface SidebarItemProps {
 class SidebarItem extends React.PureComponent<SidebarItemProps, {}> {
   public render() {
     const { children, isActive, onClick } = this.props;
-    const classNames = cx(appChromeInsetContent, sidebarNavItem(isActive), {
+    /* tslint:disable:no-string-literal */
+    const Item = styled("li")`
+      padding-left: ${props =>
+        spaceSizes[props.theme.paddingHor] || spaceSizes["l"]};
+      padding-right: ${props =>
+        spaceSizes[props.theme.paddingHor] || spaceSizes["l"]};
+      padding-bottom: ${props =>
+        spaceSizes[props.theme.paddingVert] || spaceSizes["none"]};
+      padding-top: ${props =>
+        spaceSizes[props.theme.paddingVert] || spaceSizes["none"]};
+    `;
+    /* tslint:enable:no-string-literal */
+    const classNames = cx(sidebarNavItem(isActive), {
       [tintContentPrimary]: isActive
     });
 
     return (
       <Clickable action={onClick} tabIndex={0}>
-        <li className={classNames}>{children}</li>
+        <Item className={classNames}>{children}</Item>
       </Clickable>
     );
   }

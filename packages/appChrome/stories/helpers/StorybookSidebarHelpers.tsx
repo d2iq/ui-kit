@@ -9,10 +9,10 @@ import {
 } from "../../index";
 import { padding } from "../../../shared/styles/styleUtils";
 
-export const PlaceholderIcon = () => (
+export const PlaceholderIcon = props => (
   <svg
-    width="24"
-    height="24"
+    width={props.width || "24"}
+    height={props.width || "24"}
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >

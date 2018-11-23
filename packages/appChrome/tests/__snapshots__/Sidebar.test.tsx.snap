@@ -2,18 +2,9 @@
 
 exports[`Sidebar SidebarItem renders 1`] = `
 .emotion-0 {
-  padding-left: 24px;
-  padding-right: 24px;
   background-color: transparent;
   cursor: pointer;
   text-transform: capitalize;
-}
-
-@media (min-width:1200px) {
-  .emotion-0 {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
 }
 
 .emotion-0:hover,
@@ -25,11 +16,11 @@ exports[`Sidebar SidebarItem renders 1`] = `
   action={[MockFunction]}
   tabIndex={0}
 >
-  <li
+  <Styled(li)
     className="emotion-0"
   >
     Item label
-  </li>
+  </Styled(li)>
 </Clickable>
 `;
 
@@ -44,8 +35,8 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 12px !important;
-  padding-bottom: 12px !important;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .emotion-0 {
@@ -113,8 +104,8 @@ exports[`Sidebar SidebarSection renders 1`] = `
   padding-left: 24px;
   padding-right: 24px;
   text-transform: capitalize;
-  padding-top: 12px !important;
-  padding-bottom: 12px !important;
+  padding-top: 12px;
+  padding-bottom: 12px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -127,8 +118,8 @@ exports[`Sidebar SidebarSection renders 1`] = `
   color: #828487;
   font-size: 14px;
   font-weight: 500;
-  margin-bottom: 0 !important;
-  margin-top: 0 !important;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 @media (min-width:1200px) {
@@ -220,8 +211,8 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 12px !important;
-  padding-bottom: 12px !important;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .emotion-0 {
@@ -285,8 +276,14 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
 `;
 
 exports[`Sidebar renders 1`] = `
+.emotion-1 {
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+}
+
 .emotion-0 {
-  background-color: #1B2029;
   height: 100%;
   width: 240px;
   color: #DADDE2;
@@ -299,27 +296,13 @@ exports[`Sidebar renders 1`] = `
   }
 }
 
-.emotion-1 {
-  height: 100%;
-  overflow: hidden;
-  -webkit-transition: width 150ms ease-in-out;
-  transition: width 150ms ease-in-out;
-  width: 240px;
-}
-
-@media (min-width:1200px) {
-  .emotion-1 {
-    width: 280px;
-  }
-}
-
-<div
+<Styled(div)
   className="emotion-1"
 >
-  <nav
+  <Styled(nav)
     className="emotion-0"
   >
     Sidebar content
-  </nav>
-</div>
+  </Styled(nav)>
+</Styled(div)>
 `;

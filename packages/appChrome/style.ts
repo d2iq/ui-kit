@@ -1,10 +1,8 @@
 import { css } from "emotion";
 import { atMediaUp } from "../shared/styles/breakpoints";
 import {
-  greyDark,
   greyDarkLighten2,
   purple,
-  purpleDarken4,
   spaceM,
   spaceL,
   spaceXl
@@ -12,10 +10,6 @@ import {
 import { padding } from "../shared/styles/styleUtils";
 
 const iconSize = "24px";
-const sidebarWidths = {
-  default: "240px",
-  large: "280px"
-};
 const layoutBreakpoint = "large";
 
 export const appChrome = css`
@@ -38,26 +32,15 @@ export const appWrapper = css`
 `;
 
 export const sidebar = css`
-  background-color: ${greyDark};
   height: 100%;
-  width: ${sidebarWidths.default};
-
-  ${atMediaUp[layoutBreakpoint](css`
-    width: ${sidebarWidths[layoutBreakpoint]};
-  `)};
 `;
 
 // TODO: replace animation duration/easing with design tokens
 // once design has agreed on animation
-export const sidebarAnimator = (isOpen: boolean) => css`
+export const sidebarAnimator = css`
   height: 100%;
   overflow: hidden;
   transition: width 150ms ease-in-out;
-  width: ${isOpen ? sidebarWidths.default : 0};
-
-  ${atMediaUp[layoutBreakpoint](css`
-    width: ${isOpen ? sidebarWidths[layoutBreakpoint] : 0};
-  `)};
 `;
 
 export const sidebarItemHeight = css`
@@ -105,9 +88,4 @@ export const subMenuItemText = css`
   .menuHasIcon & {
     padding-left: ${parseInt(iconSize, 10) + parseInt(spaceM, 10)}px;
   }
-`;
-
-export const headerBar = css`
-  background-color: ${purpleDarken4};
-  height: 32px;
 `;
