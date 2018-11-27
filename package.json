@@ -1,5 +1,5 @@
 {
-  "name": "@dcos/ui-kit",
+  "name": "@dcos/ui-kit-mono-repo",
   "version": "0.0.0-dev+semantically-released",
   "description": "DCOS UI Kit",
   "license": "Apache-2.0",
@@ -13,6 +13,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "private": true,
   "scripts": {
     "build:storybook": "build-storybook",
     "prebuild:storybook": "npm run build:design-tokens",
@@ -85,6 +86,7 @@
     "jest": "23.6.0",
     "jest-emotion": "9.2.11",
     "jest-runner-prettier": "0.2.6",
+    "lerna": "3.4.3",
     "node": "10.11.0",
     "npm": "6.4.1",
     "prettier": "1.14.3",
