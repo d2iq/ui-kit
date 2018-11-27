@@ -1,0 +1,26 @@
+{
+  "name": "ui-kit-utils",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Poltergeist <philipph@mesosphere.io>",
+  "homepage": "https://github.com/dcos-labs/ui-kit#readme",
+  "license": "ISC",
+  "main": "lib/ui-kit-utils.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcos-labs/ui-kit.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/dcos-labs/ui-kit/issues"
+  }
+}
