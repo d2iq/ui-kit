@@ -1,6 +1,7 @@
 import { css } from "emotion";
 import { atMediaUp } from "../shared/styles/breakpoints";
 import { coreColors } from "../shared/styles/color";
+import { borderRadiusDefault } from "../design-tokens/build/js/designTokens";
 const { greyDark } = coreColors();
 
 export const toaster = css`
@@ -28,11 +29,10 @@ export const transitionStyles = {
   `
 };
 
-// TODO: use a design token for border-radius when it exists
 export const toast = css`
   background-color: ${greyDark};
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: ${borderRadiusDefault};
   grid-template-columns: 1fr auto;
   grid-template-areas:
     "title dismiss"

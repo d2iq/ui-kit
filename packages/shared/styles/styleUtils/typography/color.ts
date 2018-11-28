@@ -17,29 +17,32 @@ export const tintSVG = (color: string) => css`
   fill: ${color};
 `;
 
+export const tintContent = (color: string) => css`
+  ${tintText(color)};
+  &,
+  svg {
+    ${tintSVG(color)};
+  }
+`;
+
 export const darkMode = css`
-  ${tintText(textColorPrimaryInverted)};
-  ${tintSVG(textColorPrimaryInverted)};
+  ${tintContent(textColorPrimaryInverted)};
 `;
 
 export const tintContentPrimary = css`
-  ${tintText(textColorPrimary)};
-  ${tintSVG(textColorPrimary)};
+  ${tintContent(textColorPrimary)};
 
   ${darkMode} &,
   &${darkMode} {
-    ${tintText(textColorPrimaryInverted)};
-    ${tintSVG(textColorPrimaryInverted)};
+    ${tintContent(textColorPrimaryInverted)};
   }
 `;
 
 export const tintContentSecondary = css`
-  ${tintText(textColorSecondary)};
-  ${tintSVG(textColorSecondary)};
+  ${tintContent(textColorSecondary)};
 
   ${darkMode} &,
   &${darkMode} {
-    ${tintText(textColorSecondaryInverted)};
-    ${tintSVG(textColorSecondaryInverted)};
+    ${tintContent(textColorSecondaryInverted)};
   }
 `;

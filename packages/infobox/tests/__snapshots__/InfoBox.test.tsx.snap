@@ -39,9 +39,9 @@ exports[`InfoBox renders default 1`] = `
   color: #1B2029;
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
-  padding: 16px !important;
+  padding: 16px;
   font-size: 12px;
-  display: grid !important;
+  display: grid;
 }
 
 <div
@@ -59,7 +59,7 @@ exports[`InfoBox renders default 1`] = `
     <span
       className="emotion-0"
     >
-      <CloseIcon />
+      <Component />
     </span>
   </Clickable>
 </div>
@@ -77,9 +77,9 @@ exports[`InfoBox renders with JSX message 1`] = `
   color: #1B2029;
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
-  padding: 16px !important;
+  padding: 16px;
   font-size: 12px;
-  display: grid !important;
+  display: grid;
 }
 
 <div
@@ -97,7 +97,7 @@ exports[`InfoBox renders with JSX message 1`] = `
     <span
       className="emotion-0"
     >
-      <CloseIcon />
+      <Component />
     </span>
   </Clickable>
 </div>
@@ -121,9 +121,9 @@ exports[`InfoBox renders with actions 1`] = `
   color: #1B2029;
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
-  padding: 16px !important;
+  padding: 16px;
   font-size: 12px;
-  display: grid !important;
+  display: grid;
 }
 
 @media (min-width:600px) {
@@ -140,10 +140,10 @@ exports[`InfoBox renders with actions 1`] = `
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  display: -webkit-inline-box !important;
-  display: -webkit-inline-flex !important;
-  display: -ms-inline-flexbox !important;
-  display: inline-flex !important;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 @media (min-width:600px) {
@@ -158,7 +158,7 @@ exports[`InfoBox renders with actions 1`] = `
 }
 
 .emotion-1 {
-  padding-right: 16px !important;
+  padding-right: 16px;
 }
 
 <div
@@ -190,7 +190,7 @@ exports[`InfoBox renders with actions 1`] = `
     <span
       className="emotion-3"
     >
-      <CloseIcon />
+      <Component />
     </span>
   </Clickable>
 </div>
@@ -203,9 +203,9 @@ exports[`InfoBox renders without dismiss button 1`] = `
   color: #1B2029;
   grid-gap: 16px;
   grid-template-columns: 1fr auto;
-  padding: 16px !important;
+  padding: 16px;
   font-size: 12px;
-  display: grid !important;
+  display: grid;
 }
 
 <div

@@ -1,0 +1,12 @@
+{
+  "layout": {
+    "borderRadius": {
+      "small": {
+        "value": "4px"
+      },
+      "default": {
+        "value": "6px"
+      }
+    }
+  }
+}

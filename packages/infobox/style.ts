@@ -4,6 +4,7 @@ import { tintSVG } from "../shared/styles/styleUtils";
 
 import { coreColors } from "../shared/styles/color";
 import { spacingM } from "../shared/styles/spacing";
+import { borderRadiusDefault } from "../design-tokens/build/js/designTokens";
 const {
   blueDarken4,
   blueLighten3,
@@ -79,7 +80,7 @@ export const infoBox = (appearance, hasActions) =>
 
 // TODO: change border radius to a design token
 export const infoBoxInline = css`
-  border-radius: 6px;
+  border-radius: ${borderRadiusDefault};
 `;
 
 export const infoBoxBanner = css`

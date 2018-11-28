@@ -1,6 +1,7 @@
 import { css } from "emotion";
 import { coreColors } from "../shared/styles/color";
 import { coreFonts } from "../shared/styles/typography";
+import { borderRadiusSmall } from "../design-tokens/build/js/designTokens";
 
 const { greyDark, greyLight, green, purple, red, white, yellow } = coreColors();
 const { fontFamilySansSerif } = coreFonts();
@@ -55,7 +56,7 @@ export const badge = appearance => {
     font-family: ${fontFamilySansSerif};
     text-decoration: none;
     text-rendering: optimizeLegibility;
-    border-radius: 4px;
+    border-radius: ${borderRadiusSmall};
     align-items: center;
     display: inline-flex;
     justify-content: center;

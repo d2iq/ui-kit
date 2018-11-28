@@ -7,6 +7,7 @@ export const display = (
     | "flex"
     | "grid"
     | "inline"
+    | "inherit"
     | "inline-block"
     | "inline-flex"
     | "inline-grid"
@@ -16,6 +17,6 @@ export const display = (
     | "table-cell"
 ) => {
   return css`
-    display: ${displayType} !important;
+    display: ${displayType};
   `;
 };
