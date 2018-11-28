@@ -51,6 +51,7 @@
     "semantic-release": "^15.9.6"
   },
   "devDependencies": {
+    "@babel/core": "7.1.6",
     "@commitlint/cli": "7.2.0",
     "@commitlint/config-conventional": "7.1.2",
     "@dcos/tslint-config": "0.1.1",
@@ -74,6 +75,7 @@
     "@types/storybook__addon-actions": "3.4.1",
     "@types/storybook__addon-info": "3.4.2",
     "@types/storybook__addon-knobs": "3.4.1",
+    "babel-loader": "^8.0.0-beta.6",
     "commander": "2.19.0",
     "cz-conventional-changelog": "2.1.0",
     "enzyme": "3.7.0",
