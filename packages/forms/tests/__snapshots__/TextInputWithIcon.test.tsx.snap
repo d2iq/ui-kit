@@ -1,0 +1,1381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  background-color: #fff;
+  border-color: #DADDE2;
+}
+
+.emotion-3 svg {
+  fill: #1B2029;
+}
+
+.emotion-3:focus,
+.emotion-3:focus-within {
+  background-color: #F8F6FF;
+  border-color: #7D58FF;
+}
+
+.emotion-3:focus svg,
+.emotion-3:focus-within svg {
+  fill: #7D58FF;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding: 0 !important;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:first-child {
+  padding-left: 0;
+}
+
+.emotion-2 {
+  padding-left: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.emotion-2:first-child {
+  padding-left: 0;
+}
+
+<div>
+  <label
+    className="emotion-0"
+    htmlFor="test.icon_end_input.standard"
+  >
+    standard
+  </label>
+  <div
+    className="emotion-3"
+  >
+    <input
+      className="emotion-1"
+      iconEnd={<Unknown />}
+      id="test.icon_end_input.standard"
+      type="text"
+    />
+    <span
+      className="emotion-2"
+    >
+      <Component />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding: 0 !important;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:first-child {
+  padding-left: 0;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  background-color: #fff;
+  border-color: #EB293A;
+}
+
+.emotion-3 svg {
+  fill: #EB293A;
+}
+
+.emotion-3:focus,
+.emotion-3:focus-within {
+  background-color: #FDF4F4;
+}
+
+.emotion-2 {
+  padding-left: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.emotion-2:first-child {
+  padding-left: 0;
+}
+
+<div>
+  <label
+    className="emotion-0"
+    htmlFor="test.icon_end_input.error"
+  >
+    error
+  </label>
+  <div
+    className="emotion-3"
+  >
+    <input
+      className="emotion-1"
+      iconEnd={<Unknown />}
+      id="test.icon_end_input.error"
+      type="text"
+    />
+    <span
+      className="emotion-2"
+    >
+      <Component />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding: 0 !important;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:first-child {
+  padding-left: 0;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  background-color: #fff;
+  border-color: #14C684;
+}
+
+.emotion-3 svg {
+  fill: #14C684;
+}
+
+.emotion-3:focus,
+.emotion-3:focus-within {
+  background-color: #F3FCF8;
+}
+
+.emotion-2 {
+  padding-left: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.emotion-2:first-child {
+  padding-left: 0;
+}
+
+<div>
+  <label
+    className="emotion-0"
+    htmlFor="test.icon_end_input.success"
+  >
+    success
+  </label>
+  <div
+    className="emotion-3"
+  >
+    <input
+      className="emotion-1"
+      iconEnd={<Unknown />}
+      id="test.icon_end_input.success"
+      type="text"
+    />
+    <span
+      className="emotion-2"
+    >
+      <Component />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  background-color: #fff;
+  border-color: #DADDE2;
+}
+
+.emotion-3 svg {
+  fill: #1B2029;
+}
+
+.emotion-3:focus,
+.emotion-3:focus-within {
+  background-color: #F8F6FF;
+  border-color: #7D58FF;
+}
+
+.emotion-3:focus svg,
+.emotion-3:focus-within svg {
+  fill: #7D58FF;
+}
+
+.emotion-1 {
+  padding-right: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+}
+
+.emotion-1:first-child {
+  padding-left: 0;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding: 0 !important;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-2:first-child {
+  padding-left: 0;
+}
+
+<div>
+  <label
+    className="emotion-0"
+    htmlFor="test.icon_start_input.standard"
+  >
+    standard
+  </label>
+  <div
+    className="emotion-3"
+  >
+    <span
+      className="emotion-1"
+    >
+      <Component />
+    </span>
+    <input
+      className="emotion-2"
+      iconStart={<Unknown />}
+      id="test.icon_start_input.standard"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+}
+
+.emotion-1 {
+  padding-right: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+}
+
+.emotion-1:first-child {
+  padding-left: 0;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding: 0 !important;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-2:first-child {
+  padding-left: 0;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  background-color: #fff;
+  border-color: #EB293A;
+}
+
+.emotion-3 svg {
+  fill: #EB293A;
+}
+
+.emotion-3:focus,
+.emotion-3:focus-within {
+  background-color: #FDF4F4;
+}
+
+<div>
+  <label
+    className="emotion-0"
+    htmlFor="test.icon_start_input.error"
+  >
+    error
+  </label>
+  <div
+    className="emotion-3"
+  >
+    <span
+      className="emotion-1"
+    >
+      <Component />
+    </span>
+    <input
+      className="emotion-2"
+      iconStart={<Unknown />}
+      id="test.icon_start_input.error"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+}
+
+.emotion-1 {
+  padding-right: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+}
+
+.emotion-1:first-child {
+  padding-left: 0;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding: 0 !important;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-2:first-child {
+  padding-left: 0;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  background-color: #fff;
+  border-color: #14C684;
+}
+
+.emotion-3 svg {
+  fill: #14C684;
+}
+
+.emotion-3:focus,
+.emotion-3:focus-within {
+  background-color: #F3FCF8;
+}
+
+<div>
+  <label
+    className="emotion-0"
+    htmlFor="test.icon_start_input.success"
+  >
+    success
+  </label>
+  <div
+    className="emotion-3"
+  >
+    <span
+      className="emotion-1"
+    >
+      <Component />
+    </span>
+    <input
+      className="emotion-2"
+      iconStart={<Unknown />}
+      id="test.icon_start_input.success"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+}
+
+.emotion-4 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  background-color: #fff;
+  border-color: #DADDE2;
+}
+
+.emotion-4 svg {
+  fill: #1B2029;
+}
+
+.emotion-4:focus,
+.emotion-4:focus-within {
+  background-color: #F8F6FF;
+  border-color: #7D58FF;
+}
+
+.emotion-4:focus svg,
+.emotion-4:focus-within svg {
+  fill: #7D58FF;
+}
+
+.emotion-1 {
+  padding-right: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+}
+
+.emotion-1:first-child {
+  padding-left: 0;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding: 0 !important;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-2:first-child {
+  padding-left: 0;
+}
+
+.emotion-3 {
+  padding-left: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.emotion-3:first-child {
+  padding-left: 0;
+}
+
+<div>
+  <label
+    className="emotion-0"
+    htmlFor="test.two_icon_input.standard"
+  >
+    standard
+  </label>
+  <div
+    className="emotion-4"
+  >
+    <span
+      className="emotion-1"
+    >
+      <Component />
+    </span>
+    <input
+      className="emotion-2"
+      iconEnd={<Unknown />}
+      iconStart={<Unknown />}
+      id="test.two_icon_input.standard"
+      type="text"
+    />
+    <span
+      className="emotion-3"
+    >
+      <Component />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+}
+
+.emotion-1 {
+  padding-right: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+}
+
+.emotion-1:first-child {
+  padding-left: 0;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding: 0 !important;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-2:first-child {
+  padding-left: 0;
+}
+
+.emotion-4 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  background-color: #fff;
+  border-color: #EB293A;
+}
+
+.emotion-4 svg {
+  fill: #EB293A;
+}
+
+.emotion-4:focus,
+.emotion-4:focus-within {
+  background-color: #FDF4F4;
+}
+
+.emotion-3 {
+  padding-left: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.emotion-3:first-child {
+  padding-left: 0;
+}
+
+<div>
+  <label
+    className="emotion-0"
+    htmlFor="test.two_icon_input.error"
+  >
+    error
+  </label>
+  <div
+    className="emotion-4"
+  >
+    <span
+      className="emotion-1"
+    >
+      <Component />
+    </span>
+    <input
+      className="emotion-2"
+      iconEnd={<Unknown />}
+      iconStart={<Unknown />}
+      id="test.two_icon_input.error"
+      type="text"
+    />
+    <span
+      className="emotion-3"
+    >
+      <Component />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+}
+
+.emotion-1 {
+  padding-right: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+}
+
+.emotion-1:first-child {
+  padding-left: 0;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding: 0 !important;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-2:first-child {
+  padding-left: 0;
+}
+
+.emotion-4 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  background-color: #fff;
+  border-color: #14C684;
+}
+
+.emotion-4 svg {
+  fill: #14C684;
+}
+
+.emotion-4:focus,
+.emotion-4:focus-within {
+  background-color: #F3FCF8;
+}
+
+.emotion-3 {
+  padding-left: 8px !important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.emotion-3:first-child {
+  padding-left: 0;
+}
+
+<div>
+  <label
+    className="emotion-0"
+    htmlFor="test.two_icon_input.success"
+  >
+    success
+  </label>
+  <div
+    className="emotion-4"
+  >
+    <span
+      className="emotion-1"
+    >
+      <Component />
+    </span>
+    <input
+      className="emotion-2"
+      iconEnd={<Unknown />}
+      iconStart={<Unknown />}
+      id="test.two_icon_input.success"
+      type="text"
+    />
+    <span
+      className="emotion-3"
+    >
+      <Component />
+    </span>
+  </div>
+</div>
+`;
