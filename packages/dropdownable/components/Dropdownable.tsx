@@ -3,6 +3,7 @@ import styled, { css } from "react-emotion";
 
 import Overlay from "../../shared/components/Overlay";
 import DropdownContents from "./DropdownContents";
+import resizeEventManager from "../../utilities/resizeEventManager";
 
 export enum Direction {
   BottomLeft = "bottom-left",
@@ -74,12 +75,12 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.setPositionFromCurrentProps);
-    this.setPosition();
+    resizeEventManager.add(this.setPositionFromCurrentProps);
+    this.setPositionFromCurrentProps();
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.setPositionFromCurrentProps);
+    resizeEventManager.remove(this.setPositionFromCurrentProps);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -130,10 +131,10 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
   }
 
   setPositionFromCurrentProps() {
-    this.setPosition();
+    this.setPosition(this.props);
   }
 
-  setPosition(props: DropdownableProps = this.props) {
+  setPosition(props: DropdownableProps) {
     const dropdownDimensions = this.dropdownDimensions();
     const windowDimensions = this.windowDimensions();
     const childBounds = this.childBounds();
