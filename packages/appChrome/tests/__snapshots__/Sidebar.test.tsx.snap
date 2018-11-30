@@ -54,7 +54,6 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
   box-sizing: border-box;
   padding-left: 16px;
   line-height: 0;
-  width: 24px;
 }
 
 .emotion-0:first-child {
@@ -101,11 +100,7 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
 
 exports[`Sidebar SidebarSection renders 1`] = `
 .emotion-0 {
-  padding-left: 24px;
-  padding-right: 24px;
   text-transform: capitalize;
-  padding-top: 12px;
-  padding-bottom: 12px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -122,13 +117,6 @@ exports[`Sidebar SidebarSection renders 1`] = `
   margin-top: 0;
 }
 
-@media (min-width:1200px) {
-  .emotion-0 {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
 .emotion-1 {
   margin: 0;
   list-style: none;
@@ -137,11 +125,11 @@ exports[`Sidebar SidebarSection renders 1`] = `
 }
 
 <div>
-  <h3
+  <Styled(h3)
     className="emotion-0"
   >
     Label
-  </h3>
+  </Styled(h3)>
   <ul
     className="emotion-1"
   >
@@ -230,7 +218,6 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
   box-sizing: border-box;
   padding-left: 16px;
   line-height: 0;
-  width: 24px;
 }
 
 .emotion-0:first-child {
@@ -286,8 +273,6 @@ exports[`Sidebar renders 1`] = `
 .emotion-0 {
   height: 100%;
   width: 240px;
-  color: #DADDE2;
-  fill: #DADDE2;
 }
 
 @media (min-width:1200px) {

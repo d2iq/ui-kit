@@ -3,7 +3,7 @@ import { cx } from "emotion";
 import { Expandable } from "../../expandable";
 import { SidebarItemLabelProps } from "./SidebarItemLabel";
 import { SidebarSubMenuItemProps } from "./SidebarSubMenuItem";
-import { sidebarNavItem, appChromeInsetContent } from "../style";
+import { sidebarNavItem, appChromeInsetContent, spaceMenuIcon } from "../style";
 import { listReset } from "../../shared/styles/styleUtils";
 export interface SidebarSubMenuProps {
   children: Array<React.ReactElement<SidebarSubMenuItemProps>>;
@@ -12,6 +12,7 @@ export interface SidebarSubMenuProps {
   onClose?: () => void;
   label: React.ReactElement<SidebarItemLabelProps>;
   menuHasIcon?: boolean;
+  iconWidth?: string;
 }
 
 class SidebarSubMenu extends React.PureComponent<SidebarSubMenuProps, {}> {
@@ -24,12 +25,16 @@ class SidebarSubMenu extends React.PureComponent<SidebarSubMenuProps, {}> {
   public getSubItemList(
     items: Array<React.ReactElement<SidebarSubMenuItemProps>>
   ) {
-    const { menuHasIcon } = this.props;
-
+    const iconWidth = this.props.iconWidth ? this.props.iconWidth : 0;
     return (
       <ul className={listReset}>
         {items.map((item, i) => (
-          <li className={cx({ menuHasIcon })} key={i}>
+          <li
+            className={cx({
+              [spaceMenuIcon(`${iconWidth}px`)]: Boolean(iconWidth)
+            })}
+            key={i}
+          >
             {item}
           </li>
         ))}

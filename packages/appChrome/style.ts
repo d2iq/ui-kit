@@ -69,7 +69,6 @@ export const sidebarNavItem = (isActive?: boolean) => css`
 
 export const sidebarNavItemIconWrap = css`
   line-height: 0;
-  width: ${iconSize};
 
   svg {
     width: 100%;
@@ -81,11 +80,16 @@ export const subMenuItem = css`
   ${padding("bottom", "xs")};
 `;
 
-// TODO: ask Lily if we always want sidebar labels to be capitalized
 export const subMenuItemText = css`
   text-transform: capitalize;
 
   .menuHasIcon & {
     padding-left: ${parseInt(iconSize, 10) + parseInt(spaceM, 10)}px;
+  }
+`;
+
+export const spaceMenuIcon = (iconWidth: string) => css`
+  .${subMenuItemText} {
+    padding-left: ${parseInt(iconWidth, 10) + parseInt(spaceM, 10)}px;
   }
 `;

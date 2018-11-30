@@ -41,7 +41,7 @@
   "typings": "dist/packages/index",
   "dependencies": {
     "emotion": "9.2.12",
-    "emotion-theming": "^9.2.9",
+    "emotion-theming": "9.2.9",
     "memoize-one": "4.0.2",
     "react": "16.5.2",
     "react-dom": "16.5.2",
@@ -58,7 +58,7 @@
     "@storybook/addon-a11y": "3.4.11",
     "@storybook/addon-actions": "3.4.11",
     "@storybook/addon-info": "3.4.11",
-    "@storybook/addon-knobs": "^3.4.11",
+    "@storybook/addon-knobs": "3.4.11",
     "@storybook/addon-links": "3.4.11",
     "@storybook/addon-options": "3.4.11",
     "@storybook/addons": "3.4.11",

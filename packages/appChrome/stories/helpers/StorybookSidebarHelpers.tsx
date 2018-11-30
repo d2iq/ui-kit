@@ -59,6 +59,7 @@ export const SidebarContent = ({ sidebarData }) =>
         item =>
           item.subItems ? (
             <SidebarSubMenu
+              iconWidth="24px"
               label={
                 <div style={alignToLogoStyles.outer}>
                   <SidebarItemLabel icon={<PlaceholderIcon />}>

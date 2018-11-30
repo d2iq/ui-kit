@@ -5,6 +5,7 @@ import { darkMode } from "../../shared/styles/styleUtils";
 import { sidebar, sidebarAnimator } from "../style";
 import { greyDark } from "../../design-tokens/build/js/designTokens";
 import { atMediaUp } from "../../shared/styles/breakpoints";
+import { isHexDark } from "../../shared/styles/color";
 
 export interface SidebarProps {
   children: React.ReactElement<HTMLElement> | string;
@@ -48,20 +49,29 @@ class Sidebar extends React.PureComponent<SidebarProps, {}> {
 
   public render() {
     const { children, isOpen } = this.props;
-    const navClassNames = cx(sidebar, sidebarWidth, darkMode);
+    const navClassNames = cx(sidebar, sidebarWidth);
     const divClassNames = cx(sidebarAnimator);
 
     const Sidebar = styled("div")`
-      background-color: ${props => props.theme.backgroundColor || greyDark};
+      background-color: ${props =>
+        props.theme.sidebarBackgroundColor || greyDark};
       ${props =>
-        props.theme.width
-          ? "width: " + props.theme.width
+        props.theme.sidebarWidth
+          ? "width: " + props.theme.sidebarWidth
           : sidebarAnimatorWidth(isOpen)};
     `;
 
     const Nav = styled("nav")`
       ${props =>
-        props.theme.width ? "width: " + props.theme.width : sidebarWidth};
+        props.theme.sidebarWidth
+          ? "width: " + props.theme.sidebarWidth
+          : sidebarWidth};
+      ${props =>
+        !props.theme.sidebarBackgroundColor ||
+        (props.theme.sidebarBackgroundColor &&
+          isHexDark(props.theme.sidebarBackgroundColor))
+          ? darkMode
+          : null};
     `;
 
     return (

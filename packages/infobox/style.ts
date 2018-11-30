@@ -71,6 +71,7 @@ export const infoBox = (appearance, hasActions) =>
     ${infoBoxAppearances[appearance]};
     grid-gap: ${spacingM};
     grid-template-columns: 1fr auto;
+    align-items: center;
     ${hasActions &&
       atMediaUp[layoutBreakpoint](css`
         grid-template-columns: auto 1fr auto;
@@ -93,5 +94,7 @@ export const primaryActionStyle = css`
 
 export const dismissBtn = css`
   ${tintSVG(greyDark)};
+  cursor: pointer;
+  line-height: 0;
   opacity: 0.5;
 `;

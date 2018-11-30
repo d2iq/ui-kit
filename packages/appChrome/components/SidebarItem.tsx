@@ -19,13 +19,13 @@ class SidebarItem extends React.PureComponent<SidebarItemProps, {}> {
     /* tslint:disable:no-string-literal */
     const Item = styled("li")`
       padding-left: ${props =>
-        spaceSizes[props.theme.paddingHor] || spaceSizes["l"]};
+        spaceSizes[props.theme.sidebarItemPaddingHor] || spaceSizes["l"]};
       padding-right: ${props =>
-        spaceSizes[props.theme.paddingHor] || spaceSizes["l"]};
+        spaceSizes[props.theme.sidebarItemPaddingHor] || spaceSizes["l"]};
       padding-bottom: ${props =>
-        spaceSizes[props.theme.paddingVert] || spaceSizes["none"]};
+        spaceSizes[props.theme.sidebarItemPaddingVert] || spaceSizes["none"]};
       padding-top: ${props =>
-        spaceSizes[props.theme.paddingVert] || spaceSizes["none"]};
+        spaceSizes[props.theme.sidebarItemPaddingVert] || spaceSizes["none"]};
     `;
     /* tslint:enable:no-string-literal */
     const classNames = cx(sidebarNavItem(isActive), {
