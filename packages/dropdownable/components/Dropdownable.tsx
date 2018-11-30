@@ -92,7 +92,6 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     const Container = styled("div")`
       position: relative;
       display: inline-block;
-      box-sizing: border-box;
     `;
 
     return (
