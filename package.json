@@ -44,13 +44,13 @@
     "emotion-theming": "9.2.9",
     "memoize-one": "4.0.2",
     "react": "16.5.2",
-    "react-click-outside": "^3.0.1",
+    "react-click-outside": "3.0.1",
     "react-dom": "16.5.2",
     "react-emotion": "9.2.12",
     "react-toggled": "1.2.7",
     "react-transition-group": "2.5.0",
     "react-virtualized": "9.20.1",
-    "semantic-release": "^15.9.6"
+    "semantic-release": "15.9.6"
   },
   "devDependencies": {
     "@commitlint/cli": "7.2.0",
