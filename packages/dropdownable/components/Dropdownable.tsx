@@ -34,7 +34,6 @@ interface PositionCoord {
 interface State {
   direction: Direction;
   position: PositionCoord;
-  dropdownWidth?: number;
 }
 
 const METHODS_TO_BIND = [
@@ -84,7 +83,6 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.open !== nextProps.open) {
-      this.setState({ dropdownWidth: this.childBounds().width });
       this.setPosition(nextProps);
     }
   }
@@ -145,7 +143,6 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     this.setState({
       direction,
       position: this.positionForDirection(direction, childBounds),
-      dropdownWidth: childBounds.width
     });
   }
 
@@ -178,8 +175,9 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
   }
 
   dropdownStyles() {
-    if (this.props.matchWidth && this.state.dropdownWidth) {
-      return { width: `${this.state.dropdownWidth}px` };
+    const clientBounds = this.childBounds();
+    if (this.props.matchWidth && clientBounds.width > 0) {
+      return { width: `${clientBounds.width}px` };
     }
     return {};
   }
