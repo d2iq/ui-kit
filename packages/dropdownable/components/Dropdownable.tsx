@@ -39,6 +39,7 @@ interface State {
 const METHODS_TO_BIND = [
   "getDropdown",
   "setPosition",
+  "setPositionFromCurrentProps",
   "calculateBestDirection",
   "dropdownStyles",
   "positionForDirection",
@@ -73,12 +74,12 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
   }
 
   componentDidMount() {
-    window.addEventListener("resize", () => this.setPosition());
+    window.addEventListener("resize", this.setPositionFromCurrentProps);
     this.setPosition();
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", () => this.setPosition());
+    window.removeEventListener("resize", this.setPositionFromCurrentProps);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -129,6 +130,10 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     );
   }
 
+  setPositionFromCurrentProps() {
+    this.setPosition();
+  }
+
   setPosition(props: DropdownableProps = this.props) {
     const dropdownDimensions = this.dropdownDimensions();
     const windowDimensions = this.windowDimensions();
@@ -142,7 +147,7 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
 
     this.setState({
       direction,
-      position: this.positionForDirection(direction, childBounds),
+      position: this.positionForDirection(direction, childBounds)
     });
   }
 
