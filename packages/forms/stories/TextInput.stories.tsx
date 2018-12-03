@@ -42,6 +42,16 @@ storiesOf("Forms/TextInput", module)
       />
     </div>
   ))
+  .addWithInfo("Error with Message", () => (
+    <TextInput
+      className={cx(defaultDisplayItem)}
+      inputLabel="Require Field"
+      appearance={TextInputAppearance.Error}
+      placeholder="Placeholder"
+      validationContent="Please enter a value."
+      required={true}
+    />
+  ))
   .addWithInfo("Hidden Label", () => (
     <TextInput
       className={cx(defaultDisplayItem)}

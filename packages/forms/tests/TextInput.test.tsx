@@ -110,4 +110,28 @@ describe("TextInput", () => {
     );
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it("should display validation message if set & appearance == Error", () => {
+    const component = shallow(
+      <TextInput
+        id="input.error.with.message"
+        inputLabel="Error Message Test"
+        appearance={TextInputAppearance.Error}
+        validationContent="This is an error message"
+      />
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it("should not display validation message if set & appearance == Success", () => {
+    const component = shallow(
+      <TextInput
+        id="input.success.without.message"
+        inputLabel="No Error Message Test"
+        appearance={TextInputAppearance.Success}
+        validationContent="This is an error message"
+      />
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });

@@ -71,3 +71,7 @@ export const inputContainer = css`
 export const iconEnd = css`
   order: 2;
 `;
+
+export const inputValidation = css`
+  color: ${red};
+`;

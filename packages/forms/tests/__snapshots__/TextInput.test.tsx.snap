@@ -1,5 +1,112 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TextInput should display validation message if set & appearance == Error 1`] = `
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+}
+
+.emotion-2 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  background-color: #fff;
+  border-color: #EB293A;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:first-child {
+  padding-left: 0;
+}
+
+.emotion-1 svg {
+  fill: #EB293A;
+}
+
+.emotion-1:focus,
+.emotion-1:focus-within {
+  background-color: #FDF4F4;
+}
+
+.emotion-3 {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  margin-top: 4px !important;
+  color: #EB293A;
+}
+
+<div>
+  <label
+    className="emotion-0"
+    htmlFor="input.error.with.message"
+  >
+    Error Message Test
+  </label>
+  <span
+    className="emotion-2"
+  >
+    <input
+      className="emotion-1"
+      id="input.error.with.message"
+      type="text"
+    />
+  </span>
+  <span
+    className="emotion-3"
+  >
+    This is an error message
+  </span>
+</div>
+`;
+
 exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
 .emotion-2 {
   -webkit-align-items: flex;
@@ -93,6 +200,101 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   >
     <input
       className="emotion-1"
+      type="text"
+    />
+  </span>
+</div>
+`;
+
+exports[`TextInput should not display validation message if set & appearance == Success 1`] = `
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+}
+
+.emotion-2 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 0;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  background-color: #fff;
+  border-color: #14C684;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:first-child {
+  padding-left: 0;
+}
+
+.emotion-1 svg {
+  fill: #14C684;
+}
+
+.emotion-1:focus,
+.emotion-1:focus-within {
+  background-color: #F3FCF8;
+}
+
+<div>
+  <label
+    className="emotion-0"
+    htmlFor="input.success.without.message"
+  >
+    No Error Message Test
+  </label>
+  <span
+    className="emotion-2"
+  >
+    <input
+      className="emotion-1"
+      id="input.success.without.message"
       type="text"
     />
   </span>

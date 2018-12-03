@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { inputAppearances, inputContainer } from "../style";
+import { inputAppearances, inputContainer, inputValidation } from "../style";
 import {
   display,
   flex,
@@ -24,6 +24,7 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   appearance: TextInputAppearance;
   inputLabel: string | React.ReactNode;
   showInputLabel: boolean;
+  validationContent?: string | React.ReactNode;
 }
 
 export class TextInput<T extends TextInputProps> extends React.PureComponent<
@@ -46,6 +47,7 @@ export class TextInput<T extends TextInputProps> extends React.PureComponent<
       <div {...containerProps}>
         {labelContent}
         {this.getInputContent()}
+        {this.getValidationContent()}
       </div>
     );
   }
@@ -86,11 +88,12 @@ export class TextInput<T extends TextInputProps> extends React.PureComponent<
     // omit props for container and that we override, otherwise pass through
     // TextInput props to input element
     const {
-      type,
       appearance,
+      className,
       inputLabel,
       showInputLabel,
-      className,
+      type,
+      validationContent,
       ...inputElementProps
     } = this.props as TextInputProps;
     return (
@@ -99,6 +102,22 @@ export class TextInput<T extends TextInputProps> extends React.PureComponent<
         type={this.props.type}
         {...inputElementProps}
       />
+    );
+  }
+
+  protected getValidationContent() {
+    if (
+      this.props.appearance !== TextInputAppearance.Error ||
+      !this.props.validationContent
+    ) {
+      return null;
+    }
+    return (
+      <span
+        className={cx(flush("bottom"), margin("top", "xxs"), inputValidation)}
+      >
+        {this.props.validationContent}
+      </span>
     );
   }
 }
