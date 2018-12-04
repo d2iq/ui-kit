@@ -41,6 +41,14 @@ storiesOf("Forms/TextInput", module)
         className={cx(defaultDisplayItem)}
         inputLabel="Disabled"
         disabled={true}
+        placeholder="Placeholder"
+      />
+      <br />
+      <TextInput
+        id="disabled.value.input"
+        className={cx(defaultDisplayItem)}
+        inputLabel="Disabled w/ Value"
+        disabled={true}
         value="This is Disabled"
         placeholder="Placeholder"
       />

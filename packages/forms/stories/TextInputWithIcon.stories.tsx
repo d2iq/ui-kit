@@ -44,6 +44,16 @@ storiesOf("Forms/TextInputWithIcon", module)
         iconStart={<DownTriangle />}
         inputLabel="Single icon - Disabled"
         disabled={true}
+        placeholder="Placeholder"
+      />
+      <br />
+      <TextInputWithIcon
+        id="disabled.value.input"
+        className={cx(defaultDisplayItem)}
+        iconStart={<DownTriangle />}
+        inputLabel="Single icon - Disabled w/ Value"
+        disabled={true}
+        value="Text Value"
       />
     </div>
   ))

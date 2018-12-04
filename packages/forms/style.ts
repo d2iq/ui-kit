@@ -35,8 +35,18 @@ export const inputAppearances = {
   disabled: css`
     background-color: ${greyLightLighten3};
     border-color: ${greyLightLighten3};
+    color: ${greyDarkLighten3};
     svg {
       fill: ${greyDarkLighten3};
+    }
+    &::placeholder {
+      color: ${greyDarkLighten3};
+    }
+    input {
+      color: ${greyDarkLighten3};
+      ::placeholder {
+        color: ${greyDarkLighten3};
+      }
     }
   `,
   error: css`
