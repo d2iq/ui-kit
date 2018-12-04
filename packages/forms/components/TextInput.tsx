@@ -1,6 +1,11 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { inputAppearances, inputContainer, inputValidation } from "../style";
+import {
+  errorColor,
+  inputAppearances,
+  inputContainer,
+  inputValidation
+} from "../style";
 import {
   display,
   flex,
@@ -9,7 +14,10 @@ import {
   inputReset,
   margin,
   padding,
-  textWeight
+  textSize,
+  textWeight,
+  tintText,
+  visuallyHidden
 } from "../../shared/styles/styleUtils";
 
 export enum TextInputAppearance {
@@ -19,11 +27,29 @@ export enum TextInputAppearance {
 }
 
 export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
+  /**
+   * Unique identifier used for the form input component
+   */
   id: string;
+  /**
+   * The HTML input type for this component.
+   */
   type: "text" | "number" | "search" | "email" | "password" | "tel" | "url";
+  /**
+   * Sets the current appearance of the input component. This defaults to TextInputAppearance.Standard, but supports `TextInputAppearance.Error` & `TextInputAppearance.Success` appearances as well.
+   */
   appearance: TextInputAppearance;
+  /**
+   * Sets the contents of the input label. This can be a `string` or any `ReactNode`.
+   */
   inputLabel: string | React.ReactNode;
+  /**
+   * Defaults to `true`, but can be set to `false` to visibly hide the `TextInput`'s label. The `inputLabel` should still be set even when hidden for accessibility support.
+   */
   showInputLabel: boolean;
+  /**
+   * Sets the contents for a validation error, this can be a `string` or any `ReactNode`. This will be displayed below the input element. validationContent is only visible when the `TextInput` appearance is also set to `TextInputAppearance.Error`.
+   */
   validationContent?: string | React.ReactNode;
 }
 
@@ -57,16 +83,20 @@ export class TextInput<
   }
 
   protected getLabelContent() {
-    return (
-      <label
-        className={cx(
+    const labelClassName = this.props.showInputLabel
+      ? cx(
           flush("top"),
           margin("bottom", "xxs"),
           textWeight("medium"),
-          display(this.props.showInputLabel ? "block" : "none")
-        )}
-        htmlFor={this.props.id}
-      >
+          display("block"),
+          {
+            [tintText(errorColor)]:
+              this.props.appearance === TextInputAppearance.Error
+          }
+        )
+      : cx(visuallyHidden);
+    return (
+      <label className={labelClassName} htmlFor={this.props.id}>
         {this.props.inputLabel}
       </label>
     );
@@ -96,6 +126,12 @@ export class TextInput<
       validationContent,
       ...inputElementProps
     } = this.props as TextInputProps;
+    if (appearance === TextInputAppearance.Error) {
+      inputElementProps["aria-invalid"] = true;
+      if (validationContent) {
+        inputElementProps["aria-describedby"] = "errorMsg";
+      }
+    }
     return inputElementProps;
   }
 
@@ -120,7 +156,13 @@ export class TextInput<
     }
     return (
       <span
-        className={cx(flush("bottom"), margin("top", "xxs"), inputValidation)}
+        id="errorMsg"
+        className={cx(
+          flush("bottom"),
+          padding("top", "xxs"),
+          textSize("small"),
+          inputValidation
+        )}
       >
         {this.props.validationContent}
       </span>

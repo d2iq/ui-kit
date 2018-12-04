@@ -15,5 +15,6 @@ export { buttonReset } from "./resets/buttonReset";
 export { inputReset } from "./resets/inputReset";
 export { margin, marginAt } from "./modifiers/margin";
 export { padding } from "./modifiers/padding";
+export { visuallyHidden } from "./modifiers/visuallyHidden";
 export { textSize } from "./typography/textSize";
 export { textWeight } from "./typography/weight";

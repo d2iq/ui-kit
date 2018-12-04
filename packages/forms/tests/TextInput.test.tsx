@@ -27,7 +27,10 @@ describe("TextInput", () => {
   it("should render all appearances focus", () => {
     Object.keys(TextInputAppearance).forEach(appearance => {
       const component = shallow(
-        <TextInput appearance={TextInputAppearance[appearance]} />
+        <TextInput
+          id="test.input"
+          appearance={TextInputAppearance[appearance]}
+        />
       );
       component.find("input").simulate("focus");
       expect(toJson(component)).toMatchSnapshot();
@@ -35,13 +38,15 @@ describe("TextInput", () => {
   });
 
   it("should render string inputLabel", () => {
-    const component = shallow(<TextInput inputLabel="Test Input" />);
+    const component = shallow(
+      <TextInput id="test.input" inputLabel="Test Input" />
+    );
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it("should render node as inputLabel", () => {
     const component = shallow(
-      <TextInput inputLabel={<span>My Test Node</span>} />
+      <TextInput id="test.input" inputLabel={<span>My Test Node</span>} />
     );
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -61,13 +66,13 @@ describe("TextInput", () => {
   });
 
   it("should set tabIndex on input element", () => {
-    const component = shallow(<TextInput tabIndex={2} />);
+    const component = shallow(<TextInput id="test.input" tabIndex={2} />);
     expect(component.find("input").prop("tabIndex")).toEqual(2);
   });
 
   it("should call onFocus when input gains focus", () => {
     const focusFn = jest.fn();
-    const component = shallow(<TextInput onFocus={focusFn} />);
+    const component = shallow(<TextInput id="test.input" onFocus={focusFn} />);
     expect(focusFn).not.toHaveBeenCalled();
     component.find("input").simulate("focus");
     expect(focusFn).toHaveBeenCalled();
@@ -75,7 +80,7 @@ describe("TextInput", () => {
 
   it("should call onBlur when input loses focus", () => {
     const blurFn = jest.fn();
-    const component = shallow(<TextInput onBlur={blurFn} />);
+    const component = shallow(<TextInput id="test.input" onBlur={blurFn} />);
     expect(blurFn).not.toHaveBeenCalled();
     component.find("input").simulate("focus");
     expect(blurFn).not.toHaveBeenCalled();
@@ -85,7 +90,9 @@ describe("TextInput", () => {
 
   it("should call onChange when input changes", () => {
     const changeFn = jest.fn();
-    const component = shallow(<TextInput onChange={changeFn} />);
+    const component = shallow(
+      <TextInput id="test.input" onChange={changeFn} />
+    );
     expect(changeFn).not.toHaveBeenCalled();
     component.find("input").simulate("change");
     expect(changeFn).toHaveBeenCalled();

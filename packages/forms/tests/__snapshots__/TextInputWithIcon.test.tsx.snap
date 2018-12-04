@@ -34,8 +34,13 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #DADDE2;
+}
+
+.emotion-3 input {
+  font-size: inherit;
 }
 
 .emotion-3 svg {
@@ -146,14 +151,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
 `;
 
 exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
-.emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
-  font-weight: 500;
-  display: block !important;
-}
-
 .emotion-1 {
   background: none;
   border: 0;
@@ -184,6 +181,15 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   padding-left: 0;
 }
 
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+  color: #EB293A;
+}
+
 .emotion-3 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -209,8 +215,13 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #EB293A;
+}
+
+.emotion-3 input {
+  font-size: inherit;
 }
 
 .emotion-3 svg {
@@ -269,6 +280,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
     className="emotion-3"
   >
     <input
+      aria-invalid={true}
       className="emotion-1"
       iconEnd={<Unknown />}
       id="test.icon_end_input.error"
@@ -349,8 +361,13 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #14C684;
+}
+
+.emotion-3 input {
+  font-size: inherit;
 }
 
 .emotion-3 svg {
@@ -459,8 +476,13 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #DADDE2;
+}
+
+.emotion-3 input {
+  font-size: inherit;
 }
 
 .emotion-3 svg {
@@ -568,14 +590,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
 `;
 
 exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
-.emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
-  font-weight: 500;
-  display: block !important;
-}
-
 .emotion-1 {
   padding-right: 8px !important;
   -webkit-align-items: center;
@@ -640,6 +654,15 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   padding-left: 0;
 }
 
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+  color: #EB293A;
+}
+
 .emotion-3 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -665,8 +688,13 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #EB293A;
+}
+
+.emotion-3 input {
+  font-size: inherit;
 }
 
 .emotion-3 svg {
@@ -693,6 +721,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
       <Component />
     </span>
     <input
+      aria-invalid={true}
       className="emotion-2"
       iconStart={<Unknown />}
       id="test.icon_start_input.error"
@@ -802,8 +831,13 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #14C684;
+}
+
+.emotion-3 input {
+  font-size: inherit;
 }
 
 .emotion-3 svg {
@@ -875,8 +909,13 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #DADDE2;
+}
+
+.emotion-4 input {
+  font-size: inherit;
 }
 
 .emotion-4 svg {
@@ -1027,14 +1066,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
 `;
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
-.emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
-  font-weight: 500;
-  display: block !important;
-}
-
 .emotion-1 {
   padding-right: 8px !important;
   -webkit-align-items: center;
@@ -1099,6 +1130,15 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   padding-left: 0;
 }
 
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+  color: #EB293A;
+}
+
 .emotion-4 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -1124,8 +1164,13 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #EB293A;
+}
+
+.emotion-4 input {
+  font-size: inherit;
 }
 
 .emotion-4 svg {
@@ -1189,6 +1234,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
       <Component />
     </span>
     <input
+      aria-invalid={true}
       className="emotion-2"
       iconEnd={<Unknown />}
       iconStart={<Unknown />}
@@ -1304,8 +1350,13 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #14C684;
+}
+
+.emotion-4 input {
+  font-size: inherit;
 }
 
 .emotion-4 svg {

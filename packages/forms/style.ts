@@ -15,6 +15,8 @@ const {
   white
 } = coreColors();
 
+export const errorColor = red;
+
 export const inputAppearances = {
   standard: css`
     background-color: ${white};
@@ -39,9 +41,9 @@ export const inputAppearances = {
   `,
   error: css`
     background-color: ${white};
-    border-color: ${red};
+    border-color: ${errorColor};
     svg {
-      fill: ${red};
+      fill: ${errorColor};
     }
     &:focus {
       background-color: ${redLighten5};
@@ -66,9 +68,9 @@ export const inputAppearances = {
   `,
   "error-focus": css`
     background-color: ${redLighten5};
-    border-color: ${red};
+    border-color: ${errorColor};
     svg {
-      fill: ${red};
+      fill: ${errorColor};
     }
   `,
   "success-focus": css`
@@ -84,6 +86,10 @@ export const inputContainer = css`
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
+  input {
+    font-size: inherit;
+  }
 `;
 
 export const iconEnd = css`

@@ -16,12 +16,14 @@ storiesOf("Forms/TextInputWithIcon", module)
   .addWithInfo("iconStart", () => (
     <div>
       <TextInputWithIcon
+        id="standard.input"
         className={cx(defaultDisplayItem)}
         iconStart={<DownTriangle />}
         inputLabel="Single icon - Standard"
       />
       <br />
       <TextInputWithIcon
+        id="error.input"
         className={cx(defaultDisplayItem)}
         iconStart={<DownTriangle />}
         inputLabel="Single icon - Error"
@@ -29,6 +31,7 @@ storiesOf("Forms/TextInputWithIcon", module)
       />
       <br />
       <TextInputWithIcon
+        id="success.input"
         className={cx(defaultDisplayItem)}
         iconStart={<DownTriangle />}
         inputLabel="Single icon - Success"
@@ -36,6 +39,7 @@ storiesOf("Forms/TextInputWithIcon", module)
       />
       <br />
       <TextInputWithIcon
+        id="disabled.input"
         className={cx(defaultDisplayItem)}
         iconStart={<DownTriangle />}
         inputLabel="Single icon - Disabled"
@@ -45,6 +49,7 @@ storiesOf("Forms/TextInputWithIcon", module)
   ))
   .addWithInfo("iconEnd", () => (
     <TextInputWithIcon
+      id="story.input"
       className={cx(defaultDisplayItem)}
       iconEnd={<CloseIcon />}
       inputLabel={<span>Ending Icon</span>}
@@ -52,6 +57,7 @@ storiesOf("Forms/TextInputWithIcon", module)
   ))
   .addWithInfo("iconStart & End", () => (
     <TextInputWithIcon
+      id="story.input"
       className={cx(defaultDisplayItem)}
       iconStart={<DownTriangle />}
       iconEnd={<CloseIcon />}
@@ -60,6 +66,7 @@ storiesOf("Forms/TextInputWithIcon", module)
   ))
   .addWithInfo("hidden label", () => (
     <TextInputWithIcon
+      id="story.input"
       className={cx(defaultDisplayItem)}
       iconEnd={<CloseIcon />}
       inputLabel="I'm not displayed"

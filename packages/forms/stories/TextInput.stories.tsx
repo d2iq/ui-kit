@@ -14,12 +14,14 @@ storiesOf("Forms/TextInput", module)
   .addWithInfo("default", () => (
     <div>
       <TextInput
+        id="standard.input"
         className={cx(defaultDisplayItem)}
         inputLabel="Standard"
         placeholder="Placeholder"
       />
       <br />
       <TextInput
+        id="error.input"
         className={cx(defaultDisplayItem)}
         inputLabel="Error"
         appearance={TextInputAppearance.Error}
@@ -27,6 +29,7 @@ storiesOf("Forms/TextInput", module)
       />
       <br />
       <TextInput
+        id="success.input"
         className={cx(defaultDisplayItem)}
         inputLabel="Success"
         appearance={TextInputAppearance.Success}
@@ -34,6 +37,7 @@ storiesOf("Forms/TextInput", module)
       />
       <br />
       <TextInput
+        id="disabled.input"
         className={cx(defaultDisplayItem)}
         inputLabel="Disabled"
         disabled={true}
@@ -44,6 +48,7 @@ storiesOf("Forms/TextInput", module)
   ))
   .addWithInfo("Error with Message", () => (
     <TextInput
+      id="error.input.with.message"
       className={cx(defaultDisplayItem)}
       inputLabel="Require Field"
       appearance={TextInputAppearance.Error}
@@ -54,19 +59,28 @@ storiesOf("Forms/TextInput", module)
   ))
   .addWithInfo("Hidden Label", () => (
     <TextInput
+      id="hidden.label.input"
       className={cx(defaultDisplayItem)}
       inputLabel="Hidden"
       placeholder="hidden label"
       showInputLabel={false}
     />
   ))
-  .addWithInfo("Number", () => <TextInput type="number" inputLabel="Number" />)
-  .addWithInfo("Search", () => <TextInput type="search" inputLabel="Search" />)
-  .addWithInfo("Email", () => <TextInput type="email" inputLabel="Email" />)
+  .addWithInfo("Number", () => (
+    <TextInput id="number.input" type="number" inputLabel="Number" />
+  ))
+  .addWithInfo("Search", () => (
+    <TextInput id="search.input" type="search" inputLabel="Search" />
+  ))
+  .addWithInfo("Email", () => (
+    <TextInput id="email.input" type="email" inputLabel="Email" />
+  ))
   .addWithInfo("Password", () => (
-    <TextInput type="password" inputLabel="Password" />
+    <TextInput id="password.input" type="password" inputLabel="Password" />
   ))
   .addWithInfo("Telephone", () => (
-    <TextInput type="tel" inputLabel="Telephone" />
+    <TextInput id="telephone.input" type="tel" inputLabel="Telephone" />
   ))
-  .addWithInfo("URL", () => <TextInput type="url" inputLabel="URL" />);
+  .addWithInfo("URL", () => (
+    <TextInput id="url.input" type="url" inputLabel="URL" />
+  ));

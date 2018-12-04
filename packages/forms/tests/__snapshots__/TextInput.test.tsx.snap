@@ -1,14 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInput should display validation message if set & appearance == Error 1`] = `
-.emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
-  font-weight: 500;
-  display: block !important;
-}
-
 .emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -29,6 +21,15 @@ exports[`TextInput should display validation message if set & appearance == Erro
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+  color: #EB293A;
 }
 
 .emotion-1 {
@@ -55,6 +56,7 @@ exports[`TextInput should display validation message if set & appearance == Erro
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #EB293A;
 }
@@ -65,6 +67,10 @@ exports[`TextInput should display validation message if set & appearance == Erro
 
 .emotion-1:first-child {
   padding-left: 0;
+}
+
+.emotion-1 input {
+  font-size: inherit;
 }
 
 .emotion-1 svg {
@@ -78,7 +84,8 @@ exports[`TextInput should display validation message if set & appearance == Erro
 .emotion-3 {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
-  margin-top: 4px !important;
+  padding-top: 4px !important;
+  font-size: 12px;
   color: #EB293A;
 }
 
@@ -93,6 +100,8 @@ exports[`TextInput should display validation message if set & appearance == Erro
     className="emotion-2"
   >
     <input
+      aria-describedby="errorMsg"
+      aria-invalid={true}
       className="emotion-1"
       id="input.error.with.message"
       type="text"
@@ -100,6 +109,7 @@ exports[`TextInput should display validation message if set & appearance == Erro
   </span>
   <span
     className="emotion-3"
+    id="errorMsg"
   >
     This is an error message
   </span>
@@ -107,6 +117,18 @@ exports[`TextInput should display validation message if set & appearance == Erro
 `;
 
 exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
 .emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -153,6 +175,7 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #DADDE2;
 }
@@ -163,6 +186,10 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
 
 .emotion-1:first-child {
   padding-left: 0;
+}
+
+.emotion-1 input {
+  font-size: inherit;
 }
 
 .emotion-1 svg {
@@ -176,14 +203,6 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
 
 .emotion-1:focus svg {
   fill: #7D58FF;
-}
-
-.emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
-  font-weight: 500;
-  display: none !important;
 }
 
 <div>
@@ -258,6 +277,7 @@ exports[`TextInput should not display validation message if set & appearance == 
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #14C684;
 }
@@ -268,6 +288,10 @@ exports[`TextInput should not display validation message if set & appearance == 
 
 .emotion-1:first-child {
   padding-left: 0;
+}
+
+.emotion-1 input {
+  font-size: inherit;
 }
 
 .emotion-1 svg {
@@ -352,6 +376,7 @@ exports[`TextInput should render all appearances focus 1`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #DADDE2;
 }
@@ -362,6 +387,10 @@ exports[`TextInput should render all appearances focus 1`] = `
 
 .emotion-1:first-child {
   padding-left: 0;
+}
+
+.emotion-1 input {
+  font-size: inherit;
 }
 
 .emotion-1 svg {
@@ -380,12 +409,14 @@ exports[`TextInput should render all appearances focus 1`] = `
 <div>
   <label
     className="emotion-0"
+    htmlFor="test.input"
   />
   <span
     className="emotion-2"
   >
     <input
       className="emotion-1"
+      id="test.input"
       type="text"
     />
   </span>
@@ -393,14 +424,6 @@ exports[`TextInput should render all appearances focus 1`] = `
 `;
 
 exports[`TextInput should render all appearances focus 2`] = `
-.emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
-  font-weight: 500;
-  display: block !important;
-}
-
 .emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -421,6 +444,15 @@ exports[`TextInput should render all appearances focus 2`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+  color: #EB293A;
 }
 
 .emotion-1 {
@@ -447,6 +479,7 @@ exports[`TextInput should render all appearances focus 2`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #EB293A;
 }
@@ -457,6 +490,10 @@ exports[`TextInput should render all appearances focus 2`] = `
 
 .emotion-1:first-child {
   padding-left: 0;
+}
+
+.emotion-1 input {
+  font-size: inherit;
 }
 
 .emotion-1 svg {
@@ -470,12 +507,15 @@ exports[`TextInput should render all appearances focus 2`] = `
 <div>
   <label
     className="emotion-0"
+    htmlFor="test.input"
   />
   <span
     className="emotion-2"
   >
     <input
+      aria-invalid={true}
       className="emotion-1"
+      id="test.input"
       type="text"
     />
   </span>
@@ -537,6 +577,7 @@ exports[`TextInput should render all appearances focus 3`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #14C684;
 }
@@ -547,6 +588,10 @@ exports[`TextInput should render all appearances focus 3`] = `
 
 .emotion-1:first-child {
   padding-left: 0;
+}
+
+.emotion-1 input {
+  font-size: inherit;
 }
 
 .emotion-1 svg {
@@ -560,12 +605,14 @@ exports[`TextInput should render all appearances focus 3`] = `
 <div>
   <label
     className="emotion-0"
+    htmlFor="test.input"
   />
   <span
     className="emotion-2"
   >
     <input
       className="emotion-1"
+      id="test.input"
       type="text"
     />
   </span>
@@ -627,6 +674,7 @@ exports[`TextInput should render all appearances with props 1`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #DADDE2;
 }
@@ -637,6 +685,10 @@ exports[`TextInput should render all appearances with props 1`] = `
 
 .emotion-1:first-child {
   padding-left: 0;
+}
+
+.emotion-1 input {
+  font-size: inherit;
 }
 
 .emotion-1 svg {
@@ -672,14 +724,6 @@ exports[`TextInput should render all appearances with props 1`] = `
 `;
 
 exports[`TextInput should render all appearances with props 2`] = `
-.emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
-  font-weight: 500;
-  display: block !important;
-}
-
 .emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -700,6 +744,15 @@ exports[`TextInput should render all appearances with props 2`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+  font-weight: 500;
+  display: block !important;
+  color: #EB293A;
 }
 
 .emotion-1 {
@@ -726,6 +779,7 @@ exports[`TextInput should render all appearances with props 2`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #EB293A;
 }
@@ -736,6 +790,10 @@ exports[`TextInput should render all appearances with props 2`] = `
 
 .emotion-1:first-child {
   padding-left: 0;
+}
+
+.emotion-1 input {
+  font-size: inherit;
 }
 
 .emotion-1 svg {
@@ -757,6 +815,7 @@ exports[`TextInput should render all appearances with props 2`] = `
     className="emotion-2"
   >
     <input
+      aria-invalid={true}
       className="emotion-1"
       id="test.input.error"
       type="text"
@@ -820,6 +879,7 @@ exports[`TextInput should render all appearances with props 3`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #14C684;
 }
@@ -830,6 +890,10 @@ exports[`TextInput should render all appearances with props 3`] = `
 
 .emotion-1:first-child {
   padding-left: 0;
+}
+
+.emotion-1 input {
+  font-size: inherit;
 }
 
 .emotion-1 svg {
@@ -914,6 +978,7 @@ exports[`TextInput should render node as inputLabel 1`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #DADDE2;
 }
@@ -924,6 +989,10 @@ exports[`TextInput should render node as inputLabel 1`] = `
 
 .emotion-1:first-child {
   padding-left: 0;
+}
+
+.emotion-1 input {
+  font-size: inherit;
 }
 
 .emotion-1 svg {
@@ -942,6 +1011,7 @@ exports[`TextInput should render node as inputLabel 1`] = `
 <div>
   <label
     className="emotion-0"
+    htmlFor="test.input"
   >
     <span>
       My Test Node
@@ -952,6 +1022,7 @@ exports[`TextInput should render node as inputLabel 1`] = `
   >
     <input
       className="emotion-1"
+      id="test.input"
       type="text"
     />
   </span>
@@ -1013,6 +1084,7 @@ exports[`TextInput should render string inputLabel 1`] = `
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
+  font-size: inherit;
   background-color: #fff;
   border-color: #DADDE2;
 }
@@ -1023,6 +1095,10 @@ exports[`TextInput should render string inputLabel 1`] = `
 
 .emotion-1:first-child {
   padding-left: 0;
+}
+
+.emotion-1 input {
+  font-size: inherit;
 }
 
 .emotion-1 svg {
@@ -1041,6 +1117,7 @@ exports[`TextInput should render string inputLabel 1`] = `
 <div>
   <label
     className="emotion-0"
+    htmlFor="test.input"
   >
     Test Input
   </label>
@@ -1049,6 +1126,7 @@ exports[`TextInput should render string inputLabel 1`] = `
   >
     <input
       className="emotion-1"
+      id="test.input"
       type="text"
     />
   </span>

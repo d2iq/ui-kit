@@ -53,4 +53,36 @@ describe("TextInputWithIcon", () => {
       expect(toJson(component)).toMatchSnapshot();
     });
   });
+
+  it("should call onFocus when input gains focus", () => {
+    const focusFn = jest.fn();
+    const component = shallow(
+      <TextInputWithIcon
+        id="test.input"
+        inputLabel="Test Focus"
+        onFocus={focusFn}
+        iconStart={<DownTriangle />}
+      />
+    );
+    expect(focusFn).not.toHaveBeenCalled();
+    component.find("input").simulate("focus");
+    expect(focusFn).toHaveBeenCalled();
+  });
+
+  it("should call onBlur when input loses focus", () => {
+    const blurFn = jest.fn();
+    const component = shallow(
+      <TextInputWithIcon
+        id="test.input"
+        inputLabel="Test Blur"
+        onBlur={blurFn}
+        iconStart={<DownTriangle />}
+      />
+    );
+    expect(blurFn).not.toHaveBeenCalled();
+    component.find("input").simulate("focus");
+    expect(blurFn).not.toHaveBeenCalled();
+    component.find("input").simulate("blur");
+    expect(blurFn).toHaveBeenCalled();
+  });
 });

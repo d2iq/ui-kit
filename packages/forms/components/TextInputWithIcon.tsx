@@ -7,7 +7,13 @@ import { inputAppearances, inputContainer, iconEnd } from "../style";
 import { flex, flexItem, padding } from "../../shared/styles/styleUtils";
 
 export interface TextInputWithIconProps extends TextInputProps {
+  /**
+   * icon to display at the start of this TextInput.
+   */
   iconStart?: React.ReactNode;
+  /**
+   * icon to display at the end of this TextInput.
+   */
   iconEnd?: React.ReactNode;
 }
 
