@@ -11,7 +11,14 @@ export interface TextInputWithIconProps extends TextInputProps {
   iconEnd?: React.ReactNode;
 }
 
-export class TextInputWithIcon extends TextInput<TextInputWithIconProps> {
+export interface TextInputWithIconState {
+  hasFocus: boolean;
+}
+
+export class TextInputWithIcon extends TextInput<
+  TextInputWithIconProps,
+  TextInputWithIconState
+> {
   public static defaultProps: Partial<TextInputWithIconProps> = {
     type: "text",
     appearance: TextInputAppearance.Standard,
@@ -19,6 +26,30 @@ export class TextInputWithIcon extends TextInput<TextInputWithIconProps> {
   };
   constructor(props) {
     super(props);
+
+    this.inputOnFocus = this.inputOnFocus.bind(this);
+    this.inputOnBlur = this.inputOnBlur.bind(this);
+
+    this.state = {
+      hasFocus: false
+    };
+  }
+
+  protected getInputAppearance(): string {
+    if (this.props.disabled) {
+      return "disabled";
+    }
+    if (this.state.hasFocus) {
+      return `${this.props.appearance}-focus`;
+    }
+    return this.props.appearance;
+  }
+
+  protected getInputElementProps() {
+    let inputProps = super.getInputElementProps();
+    inputProps.onFocus = this.inputOnFocus;
+    inputProps.onBlur = this.inputOnBlur;
+    return inputProps;
   }
 
   protected getIconStartContent() {
@@ -73,6 +104,22 @@ export class TextInputWithIcon extends TextInput<TextInputWithIconProps> {
         {this.getIconEndContent()}
       </div>
     );
+  }
+
+  protected inputOnFocus(e) {
+    this.setState({ hasFocus: true });
+
+    if (this.props.onFocus) {
+      this.props.onFocus(e);
+    }
+  }
+
+  protected inputOnBlur(e) {
+    this.setState({ hasFocus: false });
+
+    if (this.props.onBlur) {
+      this.props.onBlur(e);
+    }
   }
 }
 

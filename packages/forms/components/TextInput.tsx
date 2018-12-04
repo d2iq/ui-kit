@@ -27,10 +27,10 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   validationContent?: string | React.ReactNode;
 }
 
-export class TextInput<T extends TextInputProps> extends React.PureComponent<
-  T,
-  {}
-> {
+export class TextInput<
+  P extends TextInputProps,
+  S extends {}
+> extends React.PureComponent<P, S> {
   public static defaultProps: Partial<TextInputProps> = {
     type: "text",
     appearance: TextInputAppearance.Standard,
@@ -52,7 +52,7 @@ export class TextInput<T extends TextInputProps> extends React.PureComponent<
     );
   }
 
-  protected getInputAppearance() {
+  protected getInputAppearance(): string {
     return this.props.disabled ? "disabled" : this.props.appearance;
   }
 
@@ -84,7 +84,7 @@ export class TextInput<T extends TextInputProps> extends React.PureComponent<
       </span>
     );
   }
-  protected getInputElement(additionalClasses: string[] = []) {
+  protected getInputElementProps() {
     // omit props for container and that we override, otherwise pass through
     // TextInput props to input element
     const {
@@ -96,6 +96,12 @@ export class TextInput<T extends TextInputProps> extends React.PureComponent<
       validationContent,
       ...inputElementProps
     } = this.props as TextInputProps;
+    return inputElementProps;
+  }
+
+  protected getInputElement(additionalClasses: string[] = []) {
+    const inputElementProps = this.getInputElementProps();
+
     return (
       <input
         className={cx(inputReset, flexItem("grow"), ...additionalClasses)}

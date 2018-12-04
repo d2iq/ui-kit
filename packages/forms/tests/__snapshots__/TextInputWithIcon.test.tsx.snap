@@ -42,14 +42,12 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   fill: #1B2029;
 }
 
-.emotion-3:focus,
-.emotion-3:focus-within {
+.emotion-3:focus {
   background-color: #F8F6FF;
   border-color: #7D58FF;
 }
 
-.emotion-3:focus svg,
-.emotion-3:focus-within svg {
+.emotion-3:focus svg {
   fill: #7D58FF;
 }
 
@@ -134,6 +132,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
       className="emotion-1"
       iconEnd={<Unknown />}
       id="test.icon_end_input.standard"
+      onBlur={[Function]}
+      onFocus={[Function]}
       type="text"
     />
     <span
@@ -217,8 +217,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   fill: #EB293A;
 }
 
-.emotion-3:focus,
-.emotion-3:focus-within {
+.emotion-3:focus {
   background-color: #FDF4F4;
 }
 
@@ -273,6 +272,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
       className="emotion-1"
       iconEnd={<Unknown />}
       id="test.icon_end_input.error"
+      onBlur={[Function]}
+      onFocus={[Function]}
       type="text"
     />
     <span
@@ -356,8 +357,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   fill: #14C684;
 }
 
-.emotion-3:focus,
-.emotion-3:focus-within {
+.emotion-3:focus {
   background-color: #F3FCF8;
 }
 
@@ -412,6 +412,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
       className="emotion-1"
       iconEnd={<Unknown />}
       id="test.icon_end_input.success"
+      onBlur={[Function]}
+      onFocus={[Function]}
       type="text"
     />
     <span
@@ -465,14 +467,12 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   fill: #1B2029;
 }
 
-.emotion-3:focus,
-.emotion-3:focus-within {
+.emotion-3:focus {
   background-color: #F8F6FF;
   border-color: #7D58FF;
 }
 
-.emotion-3:focus svg,
-.emotion-3:focus-within svg {
+.emotion-3:focus svg {
   fill: #7D58FF;
 }
 
@@ -559,6 +559,8 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
       className="emotion-2"
       iconStart={<Unknown />}
       id="test.icon_start_input.standard"
+      onBlur={[Function]}
+      onFocus={[Function]}
       type="text"
     />
   </div>
@@ -671,8 +673,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   fill: #EB293A;
 }
 
-.emotion-3:focus,
-.emotion-3:focus-within {
+.emotion-3:focus {
   background-color: #FDF4F4;
 }
 
@@ -695,6 +696,8 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
       className="emotion-2"
       iconStart={<Unknown />}
       id="test.icon_start_input.error"
+      onBlur={[Function]}
+      onFocus={[Function]}
       type="text"
     />
   </div>
@@ -807,8 +810,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   fill: #14C684;
 }
 
-.emotion-3:focus,
-.emotion-3:focus-within {
+.emotion-3:focus {
   background-color: #F3FCF8;
 }
 
@@ -831,6 +833,8 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
       className="emotion-2"
       iconStart={<Unknown />}
       id="test.icon_start_input.success"
+      onBlur={[Function]}
+      onFocus={[Function]}
       type="text"
     />
   </div>
@@ -879,14 +883,12 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   fill: #1B2029;
 }
 
-.emotion-4:focus,
-.emotion-4:focus-within {
+.emotion-4:focus {
   background-color: #F8F6FF;
   border-color: #7D58FF;
 }
 
-.emotion-4:focus svg,
-.emotion-4:focus-within svg {
+.emotion-4:focus svg {
   fill: #7D58FF;
 }
 
@@ -1011,6 +1013,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
       iconEnd={<Unknown />}
       iconStart={<Unknown />}
       id="test.two_icon_input.standard"
+      onBlur={[Function]}
+      onFocus={[Function]}
       type="text"
     />
     <span
@@ -1128,8 +1132,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   fill: #EB293A;
 }
 
-.emotion-4:focus,
-.emotion-4:focus-within {
+.emotion-4:focus {
   background-color: #FDF4F4;
 }
 
@@ -1190,6 +1193,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
       iconEnd={<Unknown />}
       iconStart={<Unknown />}
       id="test.two_icon_input.error"
+      onBlur={[Function]}
+      onFocus={[Function]}
       type="text"
     />
     <span
@@ -1307,8 +1312,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   fill: #14C684;
 }
 
-.emotion-4:focus,
-.emotion-4:focus-within {
+.emotion-4:focus {
   background-color: #F3FCF8;
 }
 
@@ -1369,6 +1373,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
       iconEnd={<Unknown />}
       iconStart={<Unknown />}
       id="test.two_icon_input.success"
+      onBlur={[Function]}
+      onFocus={[Function]}
       type="text"
     />
     <span

@@ -22,8 +22,7 @@ export const inputAppearances = {
     svg {
       fill: ${greyDark};
     }
-    &:focus,
-    &:focus-within {
+    &:focus {
       background-color: ${purpleLighten5};
       border-color: ${purple};
       svg {
@@ -44,8 +43,7 @@ export const inputAppearances = {
     svg {
       fill: ${red};
     }
-    &:focus,
-    &:focus-within {
+    &:focus {
       background-color: ${redLighten5};
     }
   `,
@@ -55,9 +53,29 @@ export const inputAppearances = {
     svg {
       fill: ${green};
     }
-    &:focus,
-    &:focus-within {
+    &:focus {
       background-color: ${greenLighten5};
+    }
+  `,
+  "standard-focus": css`
+    background-color: ${purpleLighten5};
+    border-color: ${purple};
+    svg {
+      fill: ${purple};
+    }
+  `,
+  "error-focus": css`
+    background-color: ${redLighten5};
+    border-color: ${red};
+    svg {
+      fill: ${red};
+    }
+  `,
+  "success-focus": css`
+    background-color: ${greenLighten5};
+    border-color: ${green};
+    svg {
+      fill: ${green};
     }
   `
 };

@@ -71,8 +71,7 @@ exports[`TextInput should display validation message if set & appearance == Erro
   fill: #EB293A;
 }
 
-.emotion-1:focus,
-.emotion-1:focus-within {
+.emotion-1:focus {
   background-color: #FDF4F4;
 }
 
@@ -170,14 +169,12 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   fill: #1B2029;
 }
 
-.emotion-1:focus,
-.emotion-1:focus-within {
+.emotion-1:focus {
   background-color: #F8F6FF;
   border-color: #7D58FF;
 }
 
-.emotion-1:focus svg,
-.emotion-1:focus-within svg {
+.emotion-1:focus svg {
   fill: #7D58FF;
 }
 
@@ -277,8 +274,7 @@ exports[`TextInput should not display validation message if set & appearance == 
   fill: #14C684;
 }
 
-.emotion-1:focus,
-.emotion-1:focus-within {
+.emotion-1:focus {
   background-color: #F3FCF8;
 }
 
@@ -372,14 +368,12 @@ exports[`TextInput should render all appearances focus 1`] = `
   fill: #1B2029;
 }
 
-.emotion-1:focus,
-.emotion-1:focus-within {
+.emotion-1:focus {
   background-color: #F8F6FF;
   border-color: #7D58FF;
 }
 
-.emotion-1:focus svg,
-.emotion-1:focus-within svg {
+.emotion-1:focus svg {
   fill: #7D58FF;
 }
 
@@ -469,8 +463,7 @@ exports[`TextInput should render all appearances focus 2`] = `
   fill: #EB293A;
 }
 
-.emotion-1:focus,
-.emotion-1:focus-within {
+.emotion-1:focus {
   background-color: #FDF4F4;
 }
 
@@ -560,8 +553,7 @@ exports[`TextInput should render all appearances focus 3`] = `
   fill: #14C684;
 }
 
-.emotion-1:focus,
-.emotion-1:focus-within {
+.emotion-1:focus {
   background-color: #F3FCF8;
 }
 
@@ -651,14 +643,12 @@ exports[`TextInput should render all appearances with props 1`] = `
   fill: #1B2029;
 }
 
-.emotion-1:focus,
-.emotion-1:focus-within {
+.emotion-1:focus {
   background-color: #F8F6FF;
   border-color: #7D58FF;
 }
 
-.emotion-1:focus svg,
-.emotion-1:focus-within svg {
+.emotion-1:focus svg {
   fill: #7D58FF;
 }
 
@@ -752,8 +742,7 @@ exports[`TextInput should render all appearances with props 2`] = `
   fill: #EB293A;
 }
 
-.emotion-1:focus,
-.emotion-1:focus-within {
+.emotion-1:focus {
   background-color: #FDF4F4;
 }
 
@@ -847,8 +836,7 @@ exports[`TextInput should render all appearances with props 3`] = `
   fill: #14C684;
 }
 
-.emotion-1:focus,
-.emotion-1:focus-within {
+.emotion-1:focus {
   background-color: #F3FCF8;
 }
 
@@ -942,14 +930,12 @@ exports[`TextInput should render node as inputLabel 1`] = `
   fill: #1B2029;
 }
 
-.emotion-1:focus,
-.emotion-1:focus-within {
+.emotion-1:focus {
   background-color: #F8F6FF;
   border-color: #7D58FF;
 }
 
-.emotion-1:focus svg,
-.emotion-1:focus-within svg {
+.emotion-1:focus svg {
   fill: #7D58FF;
 }
 
@@ -1043,14 +1029,12 @@ exports[`TextInput should render string inputLabel 1`] = `
   fill: #1B2029;
 }
 
-.emotion-1:focus,
-.emotion-1:focus-within {
+.emotion-1:focus {
   background-color: #F8F6FF;
   border-color: #7D58FF;
 }
 
-.emotion-1:focus svg,
-.emotion-1:focus-within svg {
+.emotion-1:focus svg {
   fill: #7D58FF;
 }
 
