@@ -65,7 +65,7 @@ exports[`InfoBox renders default 1`] = `
     <span
       className="emotion-0"
     >
-      <CloseIcon />
+      <Component />
     </span>
   </Clickable>
 </div>
@@ -109,7 +109,7 @@ exports[`InfoBox renders with JSX message 1`] = `
     <span
       className="emotion-0"
     >
-      <CloseIcon />
+      <Component />
     </span>
   </Clickable>
 </div>
@@ -208,7 +208,7 @@ exports[`InfoBox renders with actions 1`] = `
     <span
       className="emotion-3"
     >
-      <CloseIcon />
+      <Component />
     </span>
   </Clickable>
 </div>

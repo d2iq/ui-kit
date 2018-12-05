@@ -5,6 +5,7 @@ export {
   darkMode,
   tintSVG,
   tintText,
+  tintContent,
   tintContentPrimary,
   tintContentSecondary
 } from "./typography/color";

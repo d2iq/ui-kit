@@ -8,7 +8,14 @@ import {
   spacingXXL
 } from "../../spacing";
 
-export type BoxSides = "all" | "top" | "right" | "bottom" | "left";
+export type BoxSides =
+  | "all"
+  | "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "horiz"
+  | "vert";
 export type SpaceSizes = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "none";
 
 export const spaceSizes = {
@@ -22,8 +29,6 @@ export const spaceSizes = {
   none: 0
 };
 
-// TODO: add ability to use "horizontal" and "vertical"
-// to do left/right or top/bottom padding
 export const boxSpacing = (
   property: "margin" | "padding",
   side: BoxSides,
@@ -31,9 +36,23 @@ export const boxSpacing = (
 ) => {
   const size = spaceSize || "m";
 
-  if (side === "all") {
-    return `${property}: ${spaceSizes[size]}`;
-  } else {
-    return `${property}-${side}: ${spaceSizes[size]}`;
+  switch (side) {
+    case "all":
+      return `${property}: ${spaceSizes[size]};`;
+      break;
+    case "horiz":
+      return `
+        ${property}-left: ${spaceSizes[size]};
+        ${property}-right: ${spaceSizes[size]};
+      `;
+      break;
+    case "vert":
+      return `
+        ${property}-bottom: ${spaceSizes[size]};
+        ${property}-top: ${spaceSizes[size]};
+      `;
+      break;
+    default:
+      return `${property}-${side}: ${spaceSizes[size]};`;
   }
 };

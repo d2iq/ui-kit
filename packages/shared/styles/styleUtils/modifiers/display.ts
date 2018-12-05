@@ -7,6 +7,7 @@ export const display = (
     | "flex"
     | "grid"
     | "inline"
+    | "inherit"
     | "inline-block"
     | "inline-flex"
     | "inline-grid"
