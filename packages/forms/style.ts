@@ -1,5 +1,6 @@
 import { css } from "emotion";
 import { coreColors } from "../shared/styles/color";
+import { borderRadiusSmall } from "../design-tokens/build/js/designTokens";
 
 const {
   green,
@@ -15,6 +16,7 @@ const {
   white
 } = coreColors();
 
+export const dangerColor = red;
 export const errorColor = red;
 
 export const inputAppearances = {
@@ -94,18 +96,10 @@ export const inputAppearances = {
 
 export const inputContainer = css`
   border: 1px solid;
-  border-radius: 4px;
+  border-radius: ${borderRadiusSmall};
   height: 36px;
   font-size: inherit;
   input {
     font-size: inherit;
   }
-`;
-
-export const iconEnd = css`
-  order: 2;
-`;
-
-export const inputValidation = css`
-  color: ${red};
 `;

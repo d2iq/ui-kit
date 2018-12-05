@@ -3,8 +3,8 @@ import * as React from "react";
 
 import { TextInput, TextInputAppearance, TextInputProps } from "./TextInput";
 
-import { inputAppearances, inputContainer, iconEnd } from "../style";
-import { flex, flexItem, padding } from "../../shared/styles/styleUtils";
+import { inputAppearances, inputContainer } from "../style";
+import { flex, flexItem, flush, padding } from "../../shared/styles/styleUtils";
 
 export interface TextInputWithIconProps extends TextInputProps {
   /**
@@ -52,7 +52,12 @@ export class TextInputWithIcon extends TextInput<
   }
 
   protected getInputElementProps() {
-    let inputProps = super.getInputElementProps();
+    let baseProps = super.getInputElementProps();
+    const {
+      iconStart,
+      iconEnd,
+      ...inputProps
+    } = baseProps as TextInputWithIconProps;
     inputProps.onFocus = this.inputOnFocus;
     inputProps.onBlur = this.inputOnBlur;
     return inputProps;
@@ -82,10 +87,9 @@ export class TextInputWithIcon extends TextInput<
     return (
       <span
         className={cx(
-          padding("left", "xs"),
           flex({ align: "center", justify: "center" }),
           flexItem("shrink"),
-          iconEnd
+          flush("left")
         )}
       >
         {this.props.iconEnd}

@@ -60,9 +60,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -87,7 +84,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
 }
 
 .emotion-2 {
-  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -114,9 +110,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   width: initial;
   box-sizing: border-box;
   padding-left: 16px;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .emotion-2:first-child {
@@ -135,7 +130,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   >
     <input
       className="emotion-1"
-      iconEnd={<Unknown />}
       id="test.icon_end_input.standard"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -155,9 +149,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -233,7 +224,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
 }
 
 .emotion-2 {
-  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -260,9 +250,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   width: initial;
   box-sizing: border-box;
   padding-left: 16px;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .emotion-2:first-child {
@@ -282,7 +271,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
     <input
       aria-invalid={true}
       className="emotion-1"
-      iconEnd={<Unknown />}
       id="test.icon_end_input.error"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -310,9 +298,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -379,7 +364,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
 }
 
 .emotion-2 {
-  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -406,9 +390,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   width: initial;
   box-sizing: border-box;
   padding-left: 16px;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .emotion-2:first-child {
@@ -427,7 +410,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   >
     <input
       className="emotion-1"
-      iconEnd={<Unknown />}
       id="test.icon_end_input.success"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -536,9 +518,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -579,7 +558,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
     </span>
     <input
       className="emotion-2"
-      iconStart={<Unknown />}
       id="test.icon_start_input.standard"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -628,9 +606,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -723,7 +698,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
     <input
       aria-invalid={true}
       className="emotion-2"
-      iconStart={<Unknown />}
       id="test.icon_start_input.error"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -780,9 +754,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -865,7 +836,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
     </span>
     <input
       className="emotion-2"
-      iconStart={<Unknown />}
       id="test.icon_start_input.success"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -969,9 +939,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -996,7 +963,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
 }
 
 .emotion-3 {
-  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1023,9 +989,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   width: initial;
   box-sizing: border-box;
   padding-left: 16px;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .emotion-3:first-child {
@@ -1049,8 +1014,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
     </span>
     <input
       className="emotion-2"
-      iconEnd={<Unknown />}
-      iconStart={<Unknown />}
       id="test.two_icon_input.standard"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -1104,9 +1067,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -1182,7 +1142,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
 }
 
 .emotion-3 {
-  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1209,9 +1168,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   width: initial;
   box-sizing: border-box;
   padding-left: 16px;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .emotion-3:first-child {
@@ -1236,8 +1194,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
     <input
       aria-invalid={true}
       className="emotion-2"
-      iconEnd={<Unknown />}
-      iconStart={<Unknown />}
       id="test.two_icon_input.error"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -1299,9 +1255,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -1368,7 +1321,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
 }
 
 .emotion-3 {
-  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1395,9 +1347,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   width: initial;
   box-sizing: border-box;
   padding-left: 16px;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .emotion-3:first-child {
@@ -1421,8 +1372,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
     </span>
     <input
       className="emotion-2"
-      iconEnd={<Unknown />}
-      iconStart={<Unknown />}
       id="test.two_icon_input.success"
       onBlur={[Function]}
       onFocus={[Function]}

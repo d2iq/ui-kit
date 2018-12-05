@@ -124,7 +124,7 @@ describe("TextInput", () => {
         id="input.error.with.message"
         inputLabel="Error Message Test"
         appearance={TextInputAppearance.Error}
-        validationContent="This is an error message"
+        errors={["This is an error message", "this is a second error message"]}
       />
     );
     expect(toJson(component)).toMatchSnapshot();
@@ -136,7 +136,7 @@ describe("TextInput", () => {
         id="input.success.without.message"
         inputLabel="No Error Message Test"
         appearance={TextInputAppearance.Success}
-        validationContent="This is an error message"
+        errors={["This is an error message"]}
       />
     );
     expect(toJson(component)).toMatchSnapshot();

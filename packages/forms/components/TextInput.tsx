@@ -1,15 +1,16 @@
 import * as React from "react";
 import { cx } from "emotion";
 import {
+  dangerColor,
   errorColor,
   inputAppearances,
-  inputContainer,
-  inputValidation
+  inputContainer
 } from "../style";
 import {
   display,
   flush,
   inputReset,
+  liReset,
   margin,
   padding,
   textSize,
@@ -46,9 +47,9 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
    */
   showInputLabel: boolean;
   /**
-   * Sets the contents for a validation error, this can be a `string` or any `ReactNode`. This will be displayed below the input element. validationContent is only visible when the `TextInput` appearance is also set to `TextInputAppearance.Error`.
+   * Sets the contents for validation errors. This will be displayed below the input element. Errors are only visible when the `TextInput` appearance is also set to `TextInputAppearance.Error`.
    */
-  validationContent?: string | React.ReactNode;
+  errors?: string[];
 }
 
 export class TextInput<
@@ -71,7 +72,7 @@ export class TextInput<
       <div {...containerProps}>
         {labelContent}
         {this.getInputContent()}
-        {this.getValidationContent()}
+        {this.getValidationErrors()}
       </div>
     );
   }
@@ -81,6 +82,9 @@ export class TextInput<
   }
 
   protected getLabelContent() {
+    const requiredContent = this.props.required ? (
+      <span className={cx(tintText(dangerColor))}> *</span>
+    ) : null;
     const labelClassName = this.props.showInputLabel
       ? cx(
           flush("top"),
@@ -96,6 +100,7 @@ export class TextInput<
     return (
       <label className={labelClassName} htmlFor={this.props.id}>
         {this.props.inputLabel}
+        {requiredContent}
       </label>
     );
   }
@@ -121,13 +126,15 @@ export class TextInput<
       inputLabel,
       showInputLabel,
       type,
-      validationContent,
+      errors,
       ...inputElementProps
     } = this.props as TextInputProps;
     if (appearance === TextInputAppearance.Error) {
       inputElementProps["aria-invalid"] = true;
-      if (validationContent) {
-        inputElementProps["aria-describedby"] = "errorMsg";
+      if (errors && errors.length > 0) {
+        inputElementProps["aria-describedby"] = errors
+          .map((_, index) => `errorMsg${index}`)
+          .join(" ");
       }
     }
     return inputElementProps;
@@ -145,25 +152,26 @@ export class TextInput<
     );
   }
 
-  protected getValidationContent() {
+  protected getValidationErrors() {
     if (
       this.props.appearance !== TextInputAppearance.Error ||
-      !this.props.validationContent
+      !this.props.errors ||
+      (this.props.errors && this.props.errors.length === 0)
     ) {
       return null;
     }
     return (
-      <span
-        id="errorMsg"
-        className={cx(
-          flush("bottom"),
-          padding("top", "xxs"),
-          textSize("small"),
-          inputValidation
-        )}
-      >
-        {this.props.validationContent}
-      </span>
+      <ul className={cx(flush("all"), textSize("small"), tintText(errorColor))}>
+        {this.props.errors.map((error, index) => (
+          <li
+            key={index}
+            id={`errorMsg${index}`}
+            className={cx(liReset, padding("top", "xxs"))}
+          >
+            {error}
+          </li>
+        ))}
+      </ul>
     );
   }
 }

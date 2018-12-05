@@ -61,7 +61,18 @@ storiesOf("Forms/TextInput", module)
       inputLabel="Require Field"
       appearance={TextInputAppearance.Error}
       placeholder="Placeholder"
-      validationContent="Please enter a value."
+      errors={["Please enter a value."]}
+      required={true}
+    />
+  ))
+  .addWithInfo("Error with Messages", () => (
+    <TextInput
+      id="error.input.with.message"
+      className={cx(defaultDisplayItem)}
+      inputLabel="Require Field"
+      appearance={TextInputAppearance.Error}
+      placeholder="Placeholder"
+      errors={["Please enter a value.", "Value must not be empty."]}
       required={true}
     />
   ))

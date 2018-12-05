@@ -14,9 +14,6 @@ exports[`TextInput should display validation message if set & appearance == Erro
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   padding-left: 16px;
   padding-right: 16px;
@@ -44,12 +41,17 @@ exports[`TextInput should display validation message if set & appearance == Erro
   background-color: #FDF4F4;
 }
 
-.emotion-2 {
-  padding-bottom: 0;
-  margin-bottom: 0;
-  padding-top: 4px;
+.emotion-4 {
+  padding: 0;
+  margin: 0;
   font-size: 12px;
   color: #EB293A;
+}
+
+.emotion-2 {
+  text-indent: 0;
+  list-style-type: none;
+  padding-top: 4px;
 }
 
 <div>
@@ -61,19 +63,31 @@ exports[`TextInput should display validation message if set & appearance == Erro
   </label>
   <span>
     <input
-      aria-describedby="errorMsg"
+      aria-describedby="errorMsg0 errorMsg1"
       aria-invalid={true}
       className="emotion-1"
       id="input.error.with.message"
       type="text"
     />
   </span>
-  <span
-    className="emotion-2"
-    id="errorMsg"
+  <ul
+    className="emotion-4"
   >
-    This is an error message
-  </span>
+    <li
+      className="emotion-2"
+      id="errorMsg0"
+      key="0"
+    >
+      This is an error message
+    </li>
+    <li
+      className="emotion-2"
+      id="errorMsg1"
+      key="1"
+    >
+      this is a second error message
+    </li>
+  </ul>
 </div>
 `;
 
@@ -94,9 +108,6 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   padding-left: 16px;
   padding-right: 16px;
@@ -157,9 +168,6 @@ exports[`TextInput should not display validation message if set & appearance == 
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   padding-left: 16px;
   padding-right: 16px;
@@ -217,9 +225,6 @@ exports[`TextInput should render all appearances focus 1`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   padding-left: 16px;
   padding-right: 16px;
@@ -281,9 +286,6 @@ exports[`TextInput should render all appearances focus 2`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   padding-left: 16px;
   padding-right: 16px;
@@ -340,9 +342,6 @@ exports[`TextInput should render all appearances focus 3`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   padding-left: 16px;
   padding-right: 16px;
@@ -398,9 +397,6 @@ exports[`TextInput should render all appearances with props 1`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   padding-left: 16px;
   padding-right: 16px;
@@ -464,9 +460,6 @@ exports[`TextInput should render all appearances with props 2`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   padding-left: 16px;
   padding-right: 16px;
@@ -525,9 +518,6 @@ exports[`TextInput should render all appearances with props 3`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   padding-left: 16px;
   padding-right: 16px;
@@ -585,9 +575,6 @@ exports[`TextInput should render node as inputLabel 1`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   padding-left: 16px;
   padding-right: 16px;
@@ -652,9 +639,6 @@ exports[`TextInput should render string inputLabel 1`] = `
   background: none;
   border: 0;
   box-shadow: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   padding: 0;
   padding-left: 16px;
   padding-right: 16px;
