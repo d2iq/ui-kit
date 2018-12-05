@@ -2,14 +2,17 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { withInfo } from "@storybook/addon-info";
+import { selectV2 } from "@storybook/addon-knobs";
+import { css } from "react-emotion";
 
 const readme = require("../README.md");
 
+import { PrimaryButton } from "../../button";
 import Dropdownable, { Direction } from "../components/Dropdownable";
 import DropdownStuffContainer from "./helpers/DropdownStuffContainer";
 
 class DropdownStory extends React.PureComponent<
-  { preferredDirections: Direction[]; dropdownWidth: string },
+  { preferredDirection: Direction },
   { open: boolean }
 > {
   constructor(props) {
@@ -34,23 +37,32 @@ class DropdownStory extends React.PureComponent<
   }
 
   render() {
-    const { preferredDirections, dropdownWidth } = this.props;
+    const { preferredDirection } = this.props;
+
+    const containerStyle = css`
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+    `;
 
     return (
-      <div style={{ minHeight: "200px" }}>
+      <div className={containerStyle}>
         <Dropdownable
           open={this.state.open}
           onClose={this.handleClose}
-          preferredDirections={preferredDirections}
+          preferredDirections={[preferredDirection]}
           dropdown={
-            <DropdownStuffContainer width={dropdownWidth}>
-              <p>I'm positioned relative to my children</p>
+            <DropdownStuffContainer>
+              <p>Positioned relative to children</p>
               <p>Click outside to dismiss</p>
               <p>Also try resizing</p>
             </DropdownStuffContainer>
           }
         >
-          <button onClick={this.handleOpen}>I prefer top-right</button>
+          <PrimaryButton onClick={this.handleOpen}>
+            Change dropdown orientation using knobs
+          </PrimaryButton>
         </Dropdownable>
       </div>
     );
@@ -60,38 +72,30 @@ class DropdownStory extends React.PureComponent<
 storiesOf("Dropdownable", module)
   .addDecorator(withReadme([readme]))
   .add(
-    "enough space positioning",
-    withInfo({ propTables: [Dropdownable] })(() => (
-      <DropdownStory
-        dropdownWidth={`${document.body.clientWidth - 140}px`}
-        preferredDirections={[Direction.TopRight, Direction.BottomLeft]}
-      />
-    ))
-  )
-  .add(
-    "not enough space positioning",
-    withInfo({ propTables: [Dropdownable] })(() => (
-      <DropdownStory
-        dropdownWidth={`${document.body.clientWidth - 20}px`}
-        preferredDirections={[Direction.TopRight, Direction.BottomLeft]}
-      />
-    ))
-  )
-  .add(
-    "match width to children",
-    withInfo({ propTables: [Dropdownable] })(() => (
-      <Dropdownable
-        open={true}
-        matchWidth={true}
-        dropdown={
-          <DropdownStuffContainer>
-            <p>I'm positioned relative to my children</p>
-            <p>You can't dismiss me because I'm always open</p>
-            <p>Also try resizing</p>
-          </DropdownStuffContainer>
-        }
-      >
-        <button>Dropdown will match the width of me if you ask of it</button>
-      </Dropdownable>
-    ))
+    "with custom direction",
+    withInfo({
+      propTables: [Dropdownable]
+    })(() => {
+      const options = {
+        BottomLeft: "bottom-left",
+        BottomRight: "bottom-right",
+        TopLeft: "top-left",
+        TopRight: "top-right"
+      };
+
+      const knobDirection = selectV2("Direction", options, "BottomLeft");
+
+      function getKeyByValue(value): string {
+        return (
+          Object.keys(options).find(key => options[key] === value) ||
+          "BottomLeft"
+        );
+      }
+
+      return (
+        <DropdownStory
+          preferredDirection={Direction[getKeyByValue(knobDirection)]}
+        />
+      );
+    })
   );

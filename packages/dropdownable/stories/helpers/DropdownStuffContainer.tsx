@@ -1,15 +1,15 @@
 import React from "react";
 
 class DropdownStuffContainer extends React.Component<
-  { width?: string; children: React.ReactNode | string },
+  { children: React.ReactNode | string },
   {}
 > {
   render() {
     const style = {
-      width: this.props.width || "inherit",
-      height: "180px",
+      minWidth: "250px",
       border: "1px solid #ccc",
-      backgroundColor: "#fff"
+      backgroundColor: "#fff",
+      padding: "5px"
     };
 
     return <div style={style}>{this.props.children}</div>;
