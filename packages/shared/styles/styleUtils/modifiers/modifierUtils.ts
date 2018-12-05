@@ -11,7 +11,7 @@ import {
 export type BoxSides = "all" | "top" | "right" | "bottom" | "left";
 export type SpaceSizes = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "none";
 
-const spaceSizes = {
+export const spaceSizes = {
   xxs: spacingXXS,
   xs: spacingXS,
   s: spacingS,
@@ -32,8 +32,8 @@ export const boxSpacing = (
   const size = spaceSize || "m";
 
   if (side === "all") {
-    return `${property}: ${spaceSizes[size]} !important;`;
+    return `${property}: ${spaceSizes[size]}`;
   } else {
-    return `${property}-${side}: ${spaceSizes[size]} !important;`;
+    return `${property}-${side}: ${spaceSizes[size]}`;
   }
 };

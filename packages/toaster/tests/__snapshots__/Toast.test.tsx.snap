@@ -9,7 +9,7 @@ exports[`Toast renders default 1`] = `
 
 .emotion-1 {
   max-width: 100%;
-  margin: 16px !important;
+  margin: 16px;
 }
 
 @media (min-width:900px) {
@@ -20,7 +20,7 @@ exports[`Toast renders default 1`] = `
 
 @media (min-width:900px) {
   .emotion-1 {
-    margin: 24px !important;
+    margin: 24px;
   }
 }
 
@@ -74,7 +74,7 @@ exports[`Toast renders with actions 1`] = `
 
 .emotion-1 {
   max-width: 100%;
-  margin: 16px !important;
+  margin: 16px;
 }
 
 @media (min-width:900px) {
@@ -85,7 +85,7 @@ exports[`Toast renders with actions 1`] = `
 
 @media (min-width:900px) {
   .emotion-1 {
-    margin: 24px !important;
+    margin: 24px;
   }
 }
 
@@ -139,7 +139,7 @@ exports[`Toast renders with description 1`] = `
 
 .emotion-1 {
   max-width: 100%;
-  margin: 16px !important;
+  margin: 16px;
 }
 
 @media (min-width:900px) {
@@ -150,7 +150,7 @@ exports[`Toast renders with description 1`] = `
 
 @media (min-width:900px) {
   .emotion-1 {
-    margin: 24px !important;
+    margin: 24px;
   }
 }
 
