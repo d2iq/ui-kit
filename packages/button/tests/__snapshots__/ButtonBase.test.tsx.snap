@@ -17,7 +17,6 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   cursor: pointer;
   outline: none;
   font-weight: 500;
-  display: block;
   text-align: center;
   width: 100%;
   color: #AEB0B4;
@@ -255,7 +254,6 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   cursor: pointer;
   outline: none;
   font-weight: 500;
-  display: block;
   text-align: center;
   width: 100%;
   color: #AEB0B4;
@@ -430,7 +428,6 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   cursor: pointer;
   outline: none;
   font-weight: 500;
-  display: block;
   text-align: center;
   width: 100%;
   color: #AEB0B4;
@@ -602,7 +599,6 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   cursor: pointer;
   outline: none;
   font-weight: 500;
-  display: block;
   text-align: center;
   width: 100%;
   color: #AEB0B4;
@@ -774,7 +770,6 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   cursor: pointer;
   outline: none;
   font-weight: 500;
-  display: block;
   text-align: center;
   width: 100%;
   color: #AEB0B4;

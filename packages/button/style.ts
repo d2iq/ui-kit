@@ -24,6 +24,11 @@ import { isHexDark, hexToRgbA } from "../shared/styles/color";
 import { ButtonAppearances } from "./components/ButtonBase";
 import { tintContent } from "../shared/styles/styleUtils";
 
+export const buttonPadding = {
+  vert: "10px",
+  horiz: "18px"
+};
+
 const filledButton = (
   baseColor: string,
   hoverColor: string,

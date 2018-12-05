@@ -32,7 +32,6 @@ exports[`Dropdownable is visible after opening 1`] = `
   cursor: pointer;
   outline: none;
   font-weight: 500;
-  display: block;
 }
 
 .emotion-0::-moz-focus-inner {
@@ -185,7 +184,6 @@ exports[`Dropdownable is visible after opening 2`] = `
   cursor: pointer;
   outline: none;
   font-weight: 500;
-  display: block;
 }
 
 .emotion-0::-moz-focus-inner {

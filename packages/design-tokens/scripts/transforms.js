@@ -31,7 +31,7 @@ const getFormattedName = (prop, namePatterns) => {
   let name;
   switch (category) {
     case "color":
-      name = type === "text" ? namePatterns.t_c_i_si : namePatterns.i_si_s;
+      name = type !== "base" ? namePatterns.t_c_i_si : namePatterns.i_si_s;
       break;
     case "layout":
       name = namePatterns.t_i;
