@@ -23,7 +23,6 @@ export interface DropdownableProps {
   open: boolean;
   dropdown: React.ReactNode;
   preferredDirections?: Direction[];
-  matchWidth?: boolean;
   onClose?: () => void;
 }
 
@@ -42,7 +41,6 @@ const METHODS_TO_BIND = [
   "setPosition",
   "setPositionFromCurrentProps",
   "calculateBestDirection",
-  "dropdownStyles",
   "positionForDirection",
   "childBounds",
   "windowDimensions",
@@ -51,8 +49,7 @@ const METHODS_TO_BIND = [
 
 class Dropdownable extends React.Component<DropdownableProps, State> {
   public static defaultProps: Partial<DropdownableProps> = {
-    preferredDirections: DEFAULT_DIRECTION_PREFERENCES,
-    matchWidth: false
+    preferredDirections: DEFAULT_DIRECTION_PREFERENCES
   };
 
   private child = React.createRef<HTMLDivElement>();
@@ -84,7 +81,7 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.open !== nextProps.open) {
+    if (nextProps.open) {
       this.setPosition(nextProps);
     }
   }
@@ -122,7 +119,7 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     const { open, dropdown, onClose } = this.props;
 
     return (
-      <div ref={this.dropdown} style={this.dropdownStyles()}>
+      <div ref={this.dropdown}>
         <DropdownContents open={open} onClose={onClose}>
           {dropdown}
         </DropdownContents>
@@ -147,7 +144,11 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
 
     this.setState({
       direction,
-      position: this.positionForDirection(direction, childBounds)
+      position: this.positionForDirection(
+        direction,
+        childBounds,
+        dropdownDimensions
+      )
     });
   }
 
@@ -179,17 +180,24 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     return preferredDirection || preferredDirections[0];
   }
 
-  dropdownStyles() {
-    const clientBounds = this.childBounds();
-    if (this.props.matchWidth && clientBounds.width > 0) {
-      return { width: `${clientBounds.width}px` };
-    }
-    return {};
-  }
+  positionForDirection(
+    direction: Direction,
+    childBounds,
+    dropdownDimensions
+  ): PositionCoord {
+    const isTop =
+      direction === Direction.TopLeft || direction === Direction.TopRight;
+    const isLeft =
+      direction === Direction.TopLeft || direction === Direction.BottomLeft;
 
-  positionForDirection(direction, childBounds): PositionCoord {
-    const [topOrBottom, leftOrRight] = direction.split("-", 2);
-    return { top: childBounds[topOrBottom], left: childBounds[leftOrRight] };
+    return {
+      top: isTop
+        ? childBounds.top - dropdownDimensions.height
+        : childBounds.top + childBounds.height,
+      left: isLeft
+        ? childBounds.left
+        : childBounds.left - dropdownDimensions.width + childBounds.width
+    };
   }
 
   childBounds() {
