@@ -106,7 +106,7 @@ export class TextInputWithIcon extends TextInput<
         )}
       >
         {this.getIconStartContent()}
-        {this.getInputElement([padding("all", "none")])}
+        {this.getInputElement([flexItem("grow"), padding("all", "none")])}
         {this.getIconEndContent()}
       </div>
     );

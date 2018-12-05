@@ -1,28 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInput should display validation message if set & appearance == Error 1`] = `
-.emotion-2 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
@@ -40,17 +18,6 @@ exports[`TextInput should display validation message if set & appearance == Erro
   -ms-flex-order: 1;
   order: 1;
   padding: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid;
@@ -65,10 +32,6 @@ exports[`TextInput should display validation message if set & appearance == Erro
   outline: 0;
 }
 
-.emotion-1:first-child {
-  padding-left: 0;
-}
-
 .emotion-1 input {
   font-size: inherit;
 }
@@ -81,7 +44,7 @@ exports[`TextInput should display validation message if set & appearance == Erro
   background-color: #FDF4F4;
 }
 
-.emotion-3 {
+.emotion-2 {
   padding-bottom: 0;
   margin-bottom: 0;
   padding-top: 4px;
@@ -96,9 +59,7 @@ exports[`TextInput should display validation message if set & appearance == Erro
   >
     Error Message Test
   </label>
-  <span
-    className="emotion-2"
-  >
+  <span>
     <input
       aria-describedby="errorMsg"
       aria-invalid={true}
@@ -108,7 +69,7 @@ exports[`TextInput should display validation message if set & appearance == Erro
     />
   </span>
   <span
-    className="emotion-3"
+    className="emotion-2"
     id="errorMsg"
   >
     This is an error message
@@ -129,28 +90,6 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   height: 1px;
 }
 
-.emotion-2 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .emotion-1 {
   background: none;
   border: 0;
@@ -159,17 +98,6 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   -ms-flex-order: 1;
   order: 1;
   padding: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid;
@@ -182,10 +110,6 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-1 input {
@@ -211,9 +135,7 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   >
     I'm not displayed
   </label>
-  <span
-    className="emotion-2"
-  >
+  <span>
     <input
       className="emotion-1"
       type="text"
@@ -231,28 +153,6 @@ exports[`TextInput should not display validation message if set & appearance == 
   display: block;
 }
 
-.emotion-2 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .emotion-1 {
   background: none;
   border: 0;
@@ -261,17 +161,6 @@ exports[`TextInput should not display validation message if set & appearance == 
   -ms-flex-order: 1;
   order: 1;
   padding: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid;
@@ -284,10 +173,6 @@ exports[`TextInput should not display validation message if set & appearance == 
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-1 input {
@@ -309,9 +194,7 @@ exports[`TextInput should not display validation message if set & appearance == 
   >
     No Error Message Test
   </label>
-  <span
-    className="emotion-2"
-  >
+  <span>
     <input
       className="emotion-1"
       id="input.success.without.message"
@@ -330,28 +213,6 @@ exports[`TextInput should render all appearances focus 1`] = `
   display: block;
 }
 
-.emotion-2 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .emotion-1 {
   background: none;
   border: 0;
@@ -360,17 +221,6 @@ exports[`TextInput should render all appearances focus 1`] = `
   -ms-flex-order: 1;
   order: 1;
   padding: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid;
@@ -383,10 +233,6 @@ exports[`TextInput should render all appearances focus 1`] = `
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-1 input {
@@ -411,9 +257,7 @@ exports[`TextInput should render all appearances focus 1`] = `
     className="emotion-0"
     htmlFor="test.input"
   />
-  <span
-    className="emotion-2"
-  >
+  <span>
     <input
       className="emotion-1"
       id="test.input"
@@ -424,28 +268,6 @@ exports[`TextInput should render all appearances focus 1`] = `
 `;
 
 exports[`TextInput should render all appearances focus 2`] = `
-.emotion-2 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
@@ -463,17 +285,6 @@ exports[`TextInput should render all appearances focus 2`] = `
   -ms-flex-order: 1;
   order: 1;
   padding: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid;
@@ -486,10 +297,6 @@ exports[`TextInput should render all appearances focus 2`] = `
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-1 input {
@@ -509,9 +316,7 @@ exports[`TextInput should render all appearances focus 2`] = `
     className="emotion-0"
     htmlFor="test.input"
   />
-  <span
-    className="emotion-2"
-  >
+  <span>
     <input
       aria-invalid={true}
       className="emotion-1"
@@ -531,28 +336,6 @@ exports[`TextInput should render all appearances focus 3`] = `
   display: block;
 }
 
-.emotion-2 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .emotion-1 {
   background: none;
   border: 0;
@@ -561,17 +344,6 @@ exports[`TextInput should render all appearances focus 3`] = `
   -ms-flex-order: 1;
   order: 1;
   padding: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid;
@@ -584,10 +356,6 @@ exports[`TextInput should render all appearances focus 3`] = `
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-1 input {
@@ -607,9 +375,7 @@ exports[`TextInput should render all appearances focus 3`] = `
     className="emotion-0"
     htmlFor="test.input"
   />
-  <span
-    className="emotion-2"
-  >
+  <span>
     <input
       className="emotion-1"
       id="test.input"
@@ -628,28 +394,6 @@ exports[`TextInput should render all appearances with props 1`] = `
   display: block;
 }
 
-.emotion-2 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .emotion-1 {
   background: none;
   border: 0;
@@ -658,17 +402,6 @@ exports[`TextInput should render all appearances with props 1`] = `
   -ms-flex-order: 1;
   order: 1;
   padding: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid;
@@ -681,10 +414,6 @@ exports[`TextInput should render all appearances with props 1`] = `
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-1 input {
@@ -711,9 +440,7 @@ exports[`TextInput should render all appearances with props 1`] = `
   >
     standard
   </label>
-  <span
-    className="emotion-2"
-  >
+  <span>
     <input
       className="emotion-1"
       id="test.input.standard"
@@ -724,28 +451,6 @@ exports[`TextInput should render all appearances with props 1`] = `
 `;
 
 exports[`TextInput should render all appearances with props 2`] = `
-.emotion-2 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
@@ -763,17 +468,6 @@ exports[`TextInput should render all appearances with props 2`] = `
   -ms-flex-order: 1;
   order: 1;
   padding: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid;
@@ -786,10 +480,6 @@ exports[`TextInput should render all appearances with props 2`] = `
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-1 input {
@@ -811,9 +501,7 @@ exports[`TextInput should render all appearances with props 2`] = `
   >
     error
   </label>
-  <span
-    className="emotion-2"
-  >
+  <span>
     <input
       aria-invalid={true}
       className="emotion-1"
@@ -833,28 +521,6 @@ exports[`TextInput should render all appearances with props 3`] = `
   display: block;
 }
 
-.emotion-2 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .emotion-1 {
   background: none;
   border: 0;
@@ -863,17 +529,6 @@ exports[`TextInput should render all appearances with props 3`] = `
   -ms-flex-order: 1;
   order: 1;
   padding: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid;
@@ -886,10 +541,6 @@ exports[`TextInput should render all appearances with props 3`] = `
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-1 input {
@@ -911,9 +562,7 @@ exports[`TextInput should render all appearances with props 3`] = `
   >
     success
   </label>
-  <span
-    className="emotion-2"
-  >
+  <span>
     <input
       className="emotion-1"
       id="test.input.success"
@@ -932,28 +581,6 @@ exports[`TextInput should render node as inputLabel 1`] = `
   display: block;
 }
 
-.emotion-2 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .emotion-1 {
   background: none;
   border: 0;
@@ -962,17 +589,6 @@ exports[`TextInput should render node as inputLabel 1`] = `
   -ms-flex-order: 1;
   order: 1;
   padding: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid;
@@ -985,10 +601,6 @@ exports[`TextInput should render node as inputLabel 1`] = `
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-1 input {
@@ -1017,9 +629,7 @@ exports[`TextInput should render node as inputLabel 1`] = `
       My Test Node
     </span>
   </label>
-  <span
-    className="emotion-2"
-  >
+  <span>
     <input
       className="emotion-1"
       id="test.input"
@@ -1038,28 +648,6 @@ exports[`TextInput should render string inputLabel 1`] = `
   display: block;
 }
 
-.emotion-2 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .emotion-1 {
   background: none;
   border: 0;
@@ -1068,17 +656,6 @@ exports[`TextInput should render string inputLabel 1`] = `
   -ms-flex-order: 1;
   order: 1;
   padding: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid;
@@ -1091,10 +668,6 @@ exports[`TextInput should render string inputLabel 1`] = `
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-1 input {
@@ -1121,9 +694,7 @@ exports[`TextInput should render string inputLabel 1`] = `
   >
     Test Input
   </label>
-  <span
-    className="emotion-2"
-  >
+  <span>
     <input
       className="emotion-1"
       id="test.input"

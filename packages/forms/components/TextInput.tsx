@@ -8,8 +8,6 @@ import {
 } from "../style";
 import {
   display,
-  flex,
-  flexItem,
   flush,
   inputReset,
   margin,
@@ -104,7 +102,7 @@ export class TextInput<
 
   protected getInputContent(): React.ReactNode {
     return (
-      <span className={cx(flex())}>
+      <span>
         {this.getInputElement([
           padding("left", "m"),
           padding("right", "m"),
@@ -140,7 +138,7 @@ export class TextInput<
 
     return (
       <input
-        className={cx(inputReset, flexItem("grow"), ...additionalClasses)}
+        className={cx(inputReset, ...additionalClasses)}
         type={this.props.type}
         {...inputElementProps}
       />
