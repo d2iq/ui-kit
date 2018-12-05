@@ -24,11 +24,11 @@ exports[`TextInput should display validation message if set & appearance == Erro
 }
 
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
   color: #EB293A;
 }
 
@@ -51,8 +51,8 @@ exports[`TextInput should display validation message if set & appearance == Erro
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+  padding-left: 16px;
+  padding-right: 16px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -82,9 +82,9 @@ exports[`TextInput should display validation message if set & appearance == Erro
 }
 
 .emotion-3 {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-  padding-top: 4px !important;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
   font-size: 12px;
   color: #EB293A;
 }
@@ -170,8 +170,8 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+  padding-left: 16px;
+  padding-right: 16px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -224,11 +224,11 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
 
 exports[`TextInput should not display validation message if set & appearance == Success 1`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-2 {
@@ -272,8 +272,8 @@ exports[`TextInput should not display validation message if set & appearance == 
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+  padding-left: 16px;
+  padding-right: 16px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -323,11 +323,11 @@ exports[`TextInput should not display validation message if set & appearance == 
 
 exports[`TextInput should render all appearances focus 1`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-2 {
@@ -371,8 +371,8 @@ exports[`TextInput should render all appearances focus 1`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+  padding-left: 16px;
+  padding-right: 16px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -447,11 +447,11 @@ exports[`TextInput should render all appearances focus 2`] = `
 }
 
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
   color: #EB293A;
 }
 
@@ -474,8 +474,8 @@ exports[`TextInput should render all appearances focus 2`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+  padding-left: 16px;
+  padding-right: 16px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -524,11 +524,11 @@ exports[`TextInput should render all appearances focus 2`] = `
 
 exports[`TextInput should render all appearances focus 3`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-2 {
@@ -572,8 +572,8 @@ exports[`TextInput should render all appearances focus 3`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+  padding-left: 16px;
+  padding-right: 16px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -621,11 +621,11 @@ exports[`TextInput should render all appearances focus 3`] = `
 
 exports[`TextInput should render all appearances with props 1`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-2 {
@@ -669,8 +669,8 @@ exports[`TextInput should render all appearances with props 1`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+  padding-left: 16px;
+  padding-right: 16px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -747,11 +747,11 @@ exports[`TextInput should render all appearances with props 2`] = `
 }
 
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
   color: #EB293A;
 }
 
@@ -774,8 +774,8 @@ exports[`TextInput should render all appearances with props 2`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+  padding-left: 16px;
+  padding-right: 16px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -826,11 +826,11 @@ exports[`TextInput should render all appearances with props 2`] = `
 
 exports[`TextInput should render all appearances with props 3`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-2 {
@@ -874,8 +874,8 @@ exports[`TextInput should render all appearances with props 3`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+  padding-left: 16px;
+  padding-right: 16px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -925,11 +925,11 @@ exports[`TextInput should render all appearances with props 3`] = `
 
 exports[`TextInput should render node as inputLabel 1`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-2 {
@@ -973,8 +973,8 @@ exports[`TextInput should render node as inputLabel 1`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+  padding-left: 16px;
+  padding-right: 16px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -1031,11 +1031,11 @@ exports[`TextInput should render node as inputLabel 1`] = `
 
 exports[`TextInput should render string inputLabel 1`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-2 {
@@ -1079,8 +1079,8 @@ exports[`TextInput should render string inputLabel 1`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
+  padding-left: 16px;
+  padding-right: 16px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;

@@ -2,11 +2,11 @@
 
 exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-3 {
@@ -29,8 +29,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+  padding-left: 12px;
+  padding-right: 12px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -75,7 +75,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .emotion-1:focus {
@@ -87,7 +87,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
 }
 
 .emotion-2 {
-  padding-left: 8px !important;
+  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -170,7 +170,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .emotion-1:focus {
@@ -182,11 +182,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
 }
 
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
   color: #EB293A;
 }
 
@@ -210,8 +210,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+  padding-left: 12px;
+  padding-right: 12px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -233,7 +233,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
 }
 
 .emotion-2 {
-  padding-left: 8px !important;
+  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -299,11 +299,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
 
 exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-1 {
@@ -325,7 +325,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .emotion-1:focus {
@@ -356,8 +356,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+  padding-left: 12px;
+  padding-right: 12px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -379,7 +379,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
 }
 
 .emotion-2 {
-  padding-left: 8px !important;
+  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -444,11 +444,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
 
 exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-3 {
@@ -471,8 +471,8 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+  padding-left: 12px;
+  padding-right: 12px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -499,7 +499,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
 }
 
 .emotion-1 {
-  padding-right: 8px !important;
+  padding-right: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -551,7 +551,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .emotion-2:focus {
@@ -591,7 +591,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
 
 exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
 .emotion-1 {
-  padding-right: 8px !important;
+  padding-right: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -643,7 +643,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .emotion-2:focus {
@@ -655,11 +655,11 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
 }
 
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
   color: #EB293A;
 }
 
@@ -683,8 +683,8 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+  padding-left: 12px;
+  padding-right: 12px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -735,15 +735,15 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
 
 exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-1 {
-  padding-right: 8px !important;
+  padding-right: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -795,7 +795,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .emotion-2:focus {
@@ -826,8 +826,8 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+  padding-left: 12px;
+  padding-right: 12px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -877,11 +877,11 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-4 {
@@ -904,8 +904,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+  padding-left: 12px;
+  padding-right: 12px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -932,7 +932,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
 }
 
 .emotion-1 {
-  padding-right: 8px !important;
+  padding-right: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -984,7 +984,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .emotion-2:focus {
@@ -996,7 +996,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
 }
 
 .emotion-3 {
-  padding-left: 8px !important;
+  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1067,7 +1067,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
 .emotion-1 {
-  padding-right: 8px !important;
+  padding-right: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1119,7 +1119,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .emotion-2:focus {
@@ -1131,11 +1131,11 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
 }
 
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
   color: #EB293A;
 }
 
@@ -1159,8 +1159,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+  padding-left: 12px;
+  padding-right: 12px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -1182,7 +1182,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
 }
 
 .emotion-3 {
-  padding-left: 8px !important;
+  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1254,15 +1254,15 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
 .emotion-0 {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 4px !important;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  display: block !important;
+  display: block;
 }
 
 .emotion-1 {
-  padding-right: 8px !important;
+  padding-right: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1314,7 +1314,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   width: auto;
   box-sizing: border-box;
   padding-left: 16px;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .emotion-2:focus {
@@ -1345,8 +1345,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+  padding-left: 12px;
+  padding-right: 12px;
   border: 1px solid;
   border-radius: 4px;
   height: 36px;
@@ -1368,7 +1368,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
 }
 
 .emotion-3 {
-  padding-left: 8px !important;
+  padding-left: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
