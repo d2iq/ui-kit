@@ -18,7 +18,7 @@ export type BoxSides =
   | "vert";
 export type SpaceSizes = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "none";
 
-const spaceSizes = {
+export const spaceSizes = {
   xxs: spacingXXS,
   xs: spacingXS,
   s: spacingS,

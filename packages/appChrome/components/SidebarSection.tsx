@@ -1,11 +1,7 @@
 import * as React from "react";
-import { cx } from "react-emotion";
-import {
-  appChromeInsetContent,
-  sidebarItemHeight,
-  sidebarSectionHeader,
-  sidebarSectionList
-} from "../style";
+import { cx } from "emotion";
+import styled from "react-emotion";
+import { sidebarSectionHeader, sidebarSectionList } from "../style";
 import {
   tintText,
   textSize,
@@ -15,6 +11,7 @@ import {
   flex
 } from "../../shared/styles/styleUtils";
 import { greyLightDarken3 } from "../../design-tokens/build/js/designTokens";
+import { spaceSizes } from "../../../packages/shared/styles/styleUtils/modifiers/modifierUtils";
 
 export interface SidebarSectionProps {
   children:
@@ -27,14 +24,25 @@ class SidebarSection extends React.PureComponent<SidebarSectionProps, {}> {
   public render() {
     const { label, children } = this.props;
 
+    /* tslint:disable:no-string-literal */
+    const H3 = styled("h3")`
+      padding-left: ${props =>
+        spaceSizes[props.theme.sidebarHeaderPaddingHor] || spaceSizes["l"]};
+      padding-right: ${props =>
+        spaceSizes[props.theme.sidebarHeaderPaddingHor] || spaceSizes["l"]};
+      padding-bottom: ${props =>
+        spaceSizes[props.theme.sidebarHeaderPaddingVert] || spaceSizes["s"]};
+      padding-top: ${props =>
+        spaceSizes[props.theme.sidebarHeaderPaddingVert] || spaceSizes["s"]};
+    `;
+    /* tslint:enable:no-string-literal */
+
     return (
       <div>
         {label && (
-          <h3
+          <H3
             className={cx(
-              appChromeInsetContent,
               sidebarSectionHeader,
-              sidebarItemHeight,
               flex({ align: "center" }),
               tintText(greyLightDarken3),
               textSize("default"),
@@ -44,7 +52,7 @@ class SidebarSection extends React.PureComponent<SidebarSectionProps, {}> {
             )}
           >
             {label}
-          </h3>
+          </H3>
         )}
         <ul className={cx(sidebarSectionList, listReset)}>{children}</ul>
       </div>
