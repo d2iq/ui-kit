@@ -181,6 +181,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   color: #EB293A;
 }
 
+.emotion-0,
+.emotion-0 svg {
+  fill: #EB293A;
+}
+
 .emotion-3 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -636,6 +641,11 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   font-weight: 500;
   display: block;
   color: #EB293A;
+}
+
+.emotion-0,
+.emotion-0 svg {
+  fill: #EB293A;
 }
 
 .emotion-3 {
@@ -1097,6 +1107,11 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   font-weight: 500;
   display: block;
   color: #EB293A;
+}
+
+.emotion-0,
+.emotion-0 svg {
+  fill: #EB293A;
 }
 
 .emotion-4 {

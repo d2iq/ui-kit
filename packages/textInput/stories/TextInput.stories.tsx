@@ -54,6 +54,37 @@ storiesOf("Forms/TextInput", module)
       />
     </div>
   ))
+  .addWithInfo("hint text", () => (
+    <div>
+      <TextInput
+        id="hint.input"
+        className={cx(
+          css`
+            width: 300px;
+          `
+        )}
+        inputLabel="Require Field"
+        placeholder="Placeholder"
+        hintContent="Enter a correct value here. e.g. not empty"
+        required={true}
+      />
+      <br />
+      <TextInput
+        id="hint.input.with.errors"
+        className={cx(
+          css`
+            width: 300px;
+          `
+        )}
+        inputLabel="Require Field"
+        appearance={TextInputAppearance.Error}
+        placeholder="Placeholder"
+        hintContent="Enter a correct value here. e.g. not empty"
+        errors={["Please enter a value.", "Another error message"]}
+        required={true}
+      />
+    </div>
+  ))
   .addWithInfo("Error with Message", () => (
     <TextInput
       id="error.input.with.message"

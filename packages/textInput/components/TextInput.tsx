@@ -4,10 +4,12 @@ import {
   dangerColor,
   errorColor,
   inputAppearances,
-  inputContainer
+  inputContainer,
+  inputElement
 } from "../style";
 import {
   display,
+  flex,
   flush,
   inputReset,
   liReset,
@@ -15,6 +17,8 @@ import {
   padding,
   textSize,
   textWeight,
+  tintContentSecondary,
+  tintContent,
   tintText,
   visuallyHidden
 } from "../../shared/styles/styleUtils";
@@ -47,6 +51,10 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
    */
   showInputLabel: boolean;
   /**
+   * hintContent is text or a ReactNode that is displayed directly under the input with additional information about the expected input.
+   */
+  hintContent?: string | React.ReactNode;
+  /**
    * Sets the contents for validation errors. This will be displayed below the input element. Errors are only visible when the `TextInput` appearance is also set to `TextInputAppearance.Error`.
    */
   errors?: string[];
@@ -72,7 +80,7 @@ export class TextInput<
       <div {...containerProps}>
         {labelContent}
         {this.getInputContent()}
-        {this.getValidationErrors()}
+        {this.getHintAndValidationContent()}
       </div>
     );
   }
@@ -92,7 +100,7 @@ export class TextInput<
           textWeight("medium"),
           display("block"),
           {
-            [tintText(errorColor)]:
+            [tintContent(errorColor)]:
               this.props.appearance === TextInputAppearance.Error
           }
         )
@@ -107,14 +115,14 @@ export class TextInput<
 
   protected getInputContent(): React.ReactNode {
     return (
-      <span>
+      <div className={cx(flex())}>
         {this.getInputElement([
-          padding("left", "m"),
-          padding("right", "m"),
+          padding("horiz", "m"),
           inputContainer,
-          inputAppearances[this.getInputAppearance()]
+          inputAppearances[this.getInputAppearance()],
+          inputElement
         ])}
-      </span>
+      </div>
     );
   }
   protected getInputElementProps() {
@@ -123,6 +131,7 @@ export class TextInput<
     const {
       appearance,
       className,
+      hintContent,
       inputLabel,
       showInputLabel,
       type,
@@ -152,6 +161,34 @@ export class TextInput<
     );
   }
 
+  protected getHintAndValidationContent() {
+    const hasHint = !!this.props.hintContent;
+    const hasErrorContent =
+      this.props.errors &&
+      this.props.errors.length &&
+      this.props.appearance === TextInputAppearance.Error;
+    if (!hasHint && !hasErrorContent) {
+      return null;
+    }
+    const tintColorForErrors =
+      this.props.appearance === TextInputAppearance.Error;
+    return (
+      <div
+        className={cx(textSize("small"), margin("top", "xxs"), {
+          [tintContentSecondary]: !tintColorForErrors,
+          [tintContent(errorColor)]: tintColorForErrors
+        })}
+      >
+        {this.getHintContent()}
+        {this.getValidationErrors()}
+      </div>
+    );
+  }
+
+  protected getHintContent() {
+    return this.props.hintContent ? this.props.hintContent : null;
+  }
+
   protected getValidationErrors() {
     if (
       this.props.appearance !== TextInputAppearance.Error ||
@@ -161,7 +198,7 @@ export class TextInput<
       return null;
     }
     return (
-      <ul className={cx(flush("all"), textSize("small"), tintText(errorColor))}>
+      <ul className={cx(flush("all"))}>
         {this.props.errors.map((error, index) => (
           <li
             key={index}

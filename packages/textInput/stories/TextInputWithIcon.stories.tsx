@@ -82,4 +82,25 @@ storiesOf("Forms/TextInputWithIcon", module)
       inputLabel="I'm not displayed"
       showInputLabel={false}
     />
+  ))
+  .addWithInfo("hint text", () => (
+    <div>
+      <TextInputWithIcon
+        id="story.input"
+        className={cx(defaultDisplayItem)}
+        iconEnd={<CloseIcon />}
+        inputLabel="Some field"
+        hintContent="I should have the right data."
+      />
+      <br />
+      <TextInputWithIcon
+        id="story.input"
+        className={cx(defaultDisplayItem)}
+        iconEnd={<CloseIcon />}
+        inputLabel="Some field"
+        hintContent="I should have the right data."
+        appearance={TextInputAppearance.Error}
+        errors={["I'm an error message!"]}
+      />
+    </div>
   ));
