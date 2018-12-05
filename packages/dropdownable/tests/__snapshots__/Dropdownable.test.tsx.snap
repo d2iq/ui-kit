@@ -1,0 +1,327 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdownable is visible after opening 1`] = `
+.emotion-1 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+.emotion-3 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: #FFF;
+  background-color: #7D58FF;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 18px;
+  font-weight: 500;
+  display: block;
+}
+
+.emotion-0::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-0,
+.emotion-0 svg {
+  fill: #FFF;
+}
+
+.emotion-0:hover {
+  background-color: #704FE5;
+}
+
+.emotion-0:active {
+  background-color: #6446CC;
+}
+
+<Dropdownable
+  dropdown={
+    <p>
+      I'm a touchdown
+    </p>
+  }
+  open={false}
+  preferredDirections={
+    Array [
+      "bottom-left",
+      "bottom-right",
+      "top-right",
+      "top-left",
+    ]
+  }
+>
+  <Styled(div)>
+    <div
+      className="emotion-3"
+    >
+      <div>
+        <PrimaryButton>
+          <ButtonBase
+            appearance="primary"
+          >
+            <FocusStyleManager
+              focusEnabledClass="css-1dqlfdd"
+            >
+              <button
+                className="emotion-0"
+                onClick={[Function]}
+                tabIndex={0}
+              >
+                <span
+                  className=""
+                >
+                  Click me
+                </span>
+              </button>
+            </FocusStyleManager>
+          </ButtonBase>
+        </PrimaryButton>
+      </div>
+      <Overlay
+        className="emotion-1"
+        overlayRoot={
+          .emotion-0 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+<body>
+            <div>
+              <div
+                class="emotion-0"
+              >
+                <div>
+                  <p>
+                    I'm a touchdown
+                  </p>
+                </div>
+              </div>
+            </div>
+          </body>
+        }
+      >
+        <Portal
+          containerInfo={
+            <div>
+              <div
+                class="emotion-1"
+              >
+                <div>
+                  <p>
+                    I'm a touchdown
+                  </p>
+                </div>
+              </div>
+            </div>
+          }
+        >
+          <div
+            className="emotion-1"
+          >
+            <div>
+              <clickOutside(DropdownContents)
+                open={false}
+              >
+                <DropdownContents
+                  open={false}
+                >
+                  <p>
+                    I'm a touchdown
+                  </p>
+                </DropdownContents>
+              </clickOutside(DropdownContents)>
+            </div>
+          </div>
+        </Portal>
+      </Overlay>
+    </div>
+  </Styled(div)>
+</Dropdownable>
+`;
+
+exports[`Dropdownable is visible after opening 2`] = `
+.emotion-3 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: #FFF;
+  background-color: #7D58FF;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 18px;
+  font-weight: 500;
+  display: block;
+}
+
+.emotion-0::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-0,
+.emotion-0 svg {
+  fill: #FFF;
+}
+
+.emotion-0:hover {
+  background-color: #704FE5;
+}
+
+.emotion-0:active {
+  background-color: #6446CC;
+}
+
+.emotion-1 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+<Dropdownable
+  dropdown={
+    <p>
+      I'm a touchdown
+    </p>
+  }
+  open={true}
+  preferredDirections={
+    Array [
+      "bottom-left",
+      "bottom-right",
+      "top-right",
+      "top-left",
+    ]
+  }
+>
+  <Styled(div)>
+    <div
+      className="emotion-3"
+    >
+      <div>
+        <PrimaryButton>
+          <ButtonBase
+            appearance="primary"
+          >
+            <FocusStyleManager
+              focusEnabledClass="css-1dqlfdd"
+            >
+              <button
+                className="emotion-0"
+                onClick={[Function]}
+                tabIndex={0}
+              >
+                <span
+                  className=""
+                >
+                  Click me
+                </span>
+              </button>
+            </FocusStyleManager>
+          </ButtonBase>
+        </PrimaryButton>
+      </div>
+      <Overlay
+        className="emotion-1"
+        overlayRoot={
+          <body>
+            .emotion-0 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+<div>
+              <div
+                class="emotion-0"
+              >
+                <div>
+                  <p>
+                    I'm a touchdown
+                  </p>
+                </div>
+              </div>
+            </div>
+          </body>
+        }
+      >
+        <Portal
+          containerInfo={
+            <div>
+              <div
+                class="emotion-1"
+              >
+                <div>
+                  <p>
+                    I'm a touchdown
+                  </p>
+                </div>
+              </div>
+            </div>
+          }
+        >
+          <div
+            className="emotion-1"
+          >
+            <div>
+              <clickOutside(DropdownContents)
+                open={true}
+              >
+                <DropdownContents
+                  open={true}
+                >
+                  <p>
+                    I'm a touchdown
+                  </p>
+                </DropdownContents>
+              </clickOutside(DropdownContents)>
+            </div>
+          </div>
+        </Portal>
+      </Overlay>
+    </div>
+  </Styled(div)>
+</Dropdownable>
+`;
