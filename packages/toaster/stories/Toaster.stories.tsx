@@ -5,8 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { Toaster, Toast } from "..";
 import { ToastProps } from "../components/Toast";
 import { fontSizes } from "../../shared/styles/typography";
-import { coreColors } from "../../shared/styles/color";
-const { purple } = coreColors();
+import { purple } from "../../design-tokens/build/js/designTokens";
 
 const readme = require("../README.md");
 

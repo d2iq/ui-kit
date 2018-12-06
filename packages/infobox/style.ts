@@ -1,14 +1,11 @@
 import { css } from "emotion";
 import { atMediaUp } from "../shared/styles/breakpoints";
 import { tintSVG } from "../shared/styles/styleUtils";
-
-import { coreColors } from "../shared/styles/color";
-import { spacingM } from "../shared/styles/spacing";
-import { borderRadiusDefault } from "../design-tokens/build/js/designTokens";
-const {
+import {
   blueDarken4,
   blueLighten3,
   blueLighten4,
+  borderRadiusDefault,
   greenDarken4,
   greenLighten3,
   greenLighten4,
@@ -18,10 +15,11 @@ const {
   redDarken4,
   redLighten3,
   redLighten4,
+  spaceM,
   yellowDarken4,
   yellowLighten3,
   yellowLighten4
-} = coreColors();
+} from "../design-tokens/build/js/designTokens";
 
 const layoutBreakpoint = "small";
 
@@ -53,9 +51,7 @@ const infoBoxAppearances = {
   `
 };
 
-// TODO: change font weight to a design token
 export const infoBoxActions = css`
-  font-weight: 500;
   grid-row-start: 2;
   grid-column: span 2;
   justify-content: flex-end;
@@ -70,7 +66,7 @@ export const infoBoxActions = css`
 export const infoBox = (appearance, hasActions) =>
   css`
     ${infoBoxAppearances[appearance]};
-    grid-gap: ${spacingM};
+    grid-gap: ${spaceM};
     grid-template-columns: 1fr auto;
     align-items: center;
     ${hasActions &&
@@ -79,7 +75,6 @@ export const infoBox = (appearance, hasActions) =>
       `)};
   `;
 
-// TODO: change border radius to a design token
 export const infoBoxInline = css`
   border-radius: ${borderRadiusDefault};
 `;

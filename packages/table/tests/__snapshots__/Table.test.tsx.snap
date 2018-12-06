@@ -2,7 +2,6 @@
 
 exports[`Table renders again with new data 1`] = `
 .emotion-0 {
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   font-weight: normal;
 }
 
@@ -85,7 +84,6 @@ exports[`Table renders again with new data 1`] = `
 
 exports[`Table renders again with new data 2`] = `
 .emotion-0 {
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   font-weight: normal;
 }
 
@@ -168,7 +166,6 @@ exports[`Table renders again with new data 2`] = `
 
 exports[`Table renders default 1`] = `
 .emotion-14 {
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   font-weight: normal;
 }
 
@@ -192,7 +189,6 @@ exports[`Table renders default 1`] = `
 
 .emotion-0 {
   box-sizing: border-box;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   height: 35px;
@@ -204,7 +200,6 @@ exports[`Table renders default 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   height: 35px;
@@ -216,7 +211,6 @@ exports[`Table renders default 1`] = `
 
 .emotion-3 {
   box-sizing: border-box;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   height: 35px;
@@ -228,7 +222,6 @@ exports[`Table renders default 1`] = `
 
 .emotion-5 {
   box-sizing: border-box;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 0;
@@ -239,7 +232,6 @@ exports[`Table renders default 1`] = `
 
 .emotion-6 {
   box-sizing: border-box;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 0;
@@ -250,7 +242,6 @@ exports[`Table renders default 1`] = `
 
 .emotion-9 {
   box-sizing: border-box;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 307.2px;
@@ -261,7 +252,6 @@ exports[`Table renders default 1`] = `
 
 .emotion-10 {
   box-sizing: border-box;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 614.4px;
@@ -272,7 +262,6 @@ exports[`Table renders default 1`] = `
 
 .emotion-12 {
   box-sizing: border-box;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 307.2px;
@@ -283,7 +272,6 @@ exports[`Table renders default 1`] = `
 
 .emotion-13 {
   box-sizing: border-box;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   border-bottom: 1px solid #DADDE2;
   height: 35px;
   left: 614.4px;
