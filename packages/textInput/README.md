@@ -3,13 +3,6 @@
 ## TextInput
 `TextInput` is a component used to enter text for forms.
 
-### Required Props
-
- - `id`: String unique identifier used for the form input element.
- - `type`: defaults to `text`, sets the `type` for the input element.
- - `appearance`: defaults to `TextInputAppearance.Standard`, see `TextInput Appearance & States`
- - `inputLabel`: Sets the contents for the `input` `label` element. see `TextInput inputLabel`
- 
 ### TextInput Appearance & States
 
 **Appearance**
