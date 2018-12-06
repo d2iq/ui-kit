@@ -11,6 +11,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   padding: 0;
   text-align: inherit;
   color: #FFF;
+  fill: #FFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -20,6 +21,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   text-align: center;
   width: 100%;
   color: #AEB0B4;
+  fill: #AEB0B4;
   cursor: default;
   background-color: #F0F1F3;
 }
@@ -27,11 +29,6 @@ exports[`ButtonBase renders all appearances with props 1`] = `
 .emotion-4::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-.emotion-4,
-.emotion-4 svg {
-  fill: #FFF;
 }
 
 .emotion-4:hover {
@@ -42,23 +39,10 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   background-color: #6446CC;
 }
 
-.emotion-4,
-.emotion-4 svg {
-  fill: #AEB0B4;
-}
-
 .emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
   color: #AEB0B4;
-}
-
-.emotion-4:hover,
-.emotion-4:focus,
-.emotion-4:active,
-.emotion-4:hover svg,
-.emotion-4:focus svg,
-.emotion-4:active svg {
   fill: #AEB0B4;
 }
 
@@ -251,12 +235,14 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   padding: 0;
   text-align: inherit;
   color: #7D58FF;
+  fill: #7D58FF;
   cursor: pointer;
   outline: none;
   font-weight: 500;
   text-align: center;
   width: 100%;
   color: #AEB0B4;
+  fill: #AEB0B4;
   cursor: default;
 }
 
@@ -265,46 +251,20 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   padding: 0;
 }
 
-.emotion-4,
-.emotion-4 svg {
-  fill: #7D58FF;
-}
-
 .emotion-4:hover {
   color: #704FE5;
-}
-
-.emotion-4:hover,
-.emotion-4:hover svg {
   fill: #704FE5;
 }
 
 .emotion-4:active {
   color: #6446CC;
-}
-
-.emotion-4:active,
-.emotion-4:active svg {
   fill: #6446CC;
-}
-
-.emotion-4,
-.emotion-4 svg {
-  fill: #AEB0B4;
 }
 
 .emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
   color: #AEB0B4;
-}
-
-.emotion-4:hover,
-.emotion-4:focus,
-.emotion-4:active,
-.emotion-4:hover svg,
-.emotion-4:focus svg,
-.emotion-4:active svg {
   fill: #AEB0B4;
 }
 
@@ -422,6 +382,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   padding: 0;
   text-align: inherit;
   color: #1B2029;
+  fill: #1B2029;
   background-color: #DADDE2;
   border-radius: 4px;
   padding: 10px 18px;
@@ -431,6 +392,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   text-align: center;
   width: 100%;
   color: #AEB0B4;
+  fill: #AEB0B4;
   cursor: default;
   background-color: #F0F1F3;
 }
@@ -438,11 +400,6 @@ exports[`ButtonBase renders all appearances with props 3`] = `
 .emotion-4::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-.emotion-4,
-.emotion-4 svg {
-  fill: #1B2029;
 }
 
 .emotion-4:hover {
@@ -453,23 +410,10 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   background-color: #AEB0B4;
 }
 
-.emotion-4,
-.emotion-4 svg {
-  fill: #AEB0B4;
-}
-
 .emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
   color: #AEB0B4;
-}
-
-.emotion-4:hover,
-.emotion-4:focus,
-.emotion-4:active,
-.emotion-4:hover svg,
-.emotion-4:focus svg,
-.emotion-4:active svg {
   fill: #AEB0B4;
 }
 
@@ -593,6 +537,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   padding: 0;
   text-align: inherit;
   color: #FFF;
+  fill: #FFF;
   background-color: #EB293A;
   border-radius: 4px;
   padding: 10px 18px;
@@ -602,6 +547,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   text-align: center;
   width: 100%;
   color: #AEB0B4;
+  fill: #AEB0B4;
   cursor: default;
   background-color: #F0F1F3;
 }
@@ -609,11 +555,6 @@ exports[`ButtonBase renders all appearances with props 4`] = `
 .emotion-4::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-.emotion-4,
-.emotion-4 svg {
-  fill: #FFF;
 }
 
 .emotion-4:hover {
@@ -624,23 +565,10 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   background-color: #BC202E;
 }
 
-.emotion-4,
-.emotion-4 svg {
-  fill: #AEB0B4;
-}
-
 .emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
   color: #AEB0B4;
-}
-
-.emotion-4:hover,
-.emotion-4:focus,
-.emotion-4:active,
-.emotion-4:hover svg,
-.emotion-4:focus svg,
-.emotion-4:active svg {
   fill: #AEB0B4;
 }
 
@@ -764,6 +692,7 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   padding: 0;
   text-align: inherit;
   color: #FFF;
+  fill: #FFF;
   background-color: #14C684;
   border-radius: 4px;
   padding: 10px 18px;
@@ -773,6 +702,7 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   text-align: center;
   width: 100%;
   color: #AEB0B4;
+  fill: #AEB0B4;
   cursor: default;
   background-color: #F0F1F3;
 }
@@ -780,11 +710,6 @@ exports[`ButtonBase renders all appearances with props 5`] = `
 .emotion-4::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-.emotion-4,
-.emotion-4 svg {
-  fill: #FFF;
 }
 
 .emotion-4:hover {
@@ -795,23 +720,10 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   background-color: #109E69;
 }
 
-.emotion-4,
-.emotion-4 svg {
-  fill: #AEB0B4;
-}
-
 .emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
   color: #AEB0B4;
-}
-
-.emotion-4:hover,
-.emotion-4:focus,
-.emotion-4:active,
-.emotion-4:hover svg,
-.emotion-4:focus svg,
-.emotion-4:active svg {
   fill: #AEB0B4;
 }
 

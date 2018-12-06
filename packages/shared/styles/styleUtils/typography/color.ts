@@ -19,10 +19,7 @@ export const tintSVG = (color: string) => css`
 
 export const tintContent = (color: string) => css`
   ${tintText(color)};
-  &,
-  svg {
-    ${tintSVG(color)};
-  }
+  ${tintSVG(color)};
 `;
 
 export const darkMode = css`
