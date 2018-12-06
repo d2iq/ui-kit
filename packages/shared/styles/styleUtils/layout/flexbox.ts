@@ -1,5 +1,4 @@
 import { css } from "react-emotion";
-import { spacingM } from "../../spacing";
 
 interface FlexboxProperties {
   align?: "flex" | "center" | "flex-start" | "flex-end" | "space-between";
@@ -43,11 +42,6 @@ export const flex = (
 
 export const flexItem = (flexStrategy: "grow" | "shrink") =>
   css`
-    ${flexStrategies[flexStrategy]};
     box-sizing: border-box;
-    padding-left: ${spacingM};
-
-    &:first-child {
-      padding-left: 0;
-    }
+    ${flexStrategies[flexStrategy]};
   `;

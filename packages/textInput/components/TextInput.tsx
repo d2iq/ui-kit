@@ -4,12 +4,12 @@ import {
   dangerColor,
   errorColor,
   inputAppearances,
-  inputContainer,
-  inputElement
+  inputContainer
 } from "../style";
 import {
   display,
   flex,
+  flexItem,
   flush,
   inputReset,
   liReset,
@@ -118,9 +118,9 @@ export class TextInput<
       <div className={cx(flex())}>
         {this.getInputElement([
           padding("horiz", "m"),
+          flexItem("grow"),
           inputContainer,
-          inputAppearances[this.getInputAppearance()],
-          inputElement
+          inputAppearances[this.getInputAppearance()]
         ])}
       </div>
     );
