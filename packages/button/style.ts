@@ -146,13 +146,16 @@ export const focusStyles = (
   }
 `;
 
-export const focusStyleByAppearance = (appearance, isInverse) => {
+export const focusStyleByAppearance = (
+  appearance: ButtonAppearances,
+  isInverse?: boolean
+) => {
   switch (appearance) {
-    case "primary":
+    case ButtonAppearances.Primary:
       return isInverse
         ? focusStyles(getHoverColor(getCSSVarValue(themeBrandPrimaryInverted)))
         : focusStyles(getHoverColor(getCSSVarValue(themeBrandPrimary)));
-    case "secondary":
+    case ButtonAppearances.Secondary:
       return css`
         ${isInverse
           ? focusStyles(
@@ -172,15 +175,15 @@ export const focusStyleByAppearance = (appearance, isInverse) => {
           }
         }
       `;
-    case "standard":
+    case ButtonAppearances.Standard:
       return isInverse
         ? focusStyles(getHoverColor(getCSSVarValue(themeBgNeutralInverted)))
         : focusStyles(getHoverColor(getCSSVarValue(themeBgNeutral)));
-    case "success":
+    case ButtonAppearances.Success:
       return isInverse
         ? focusStyles(getHoverColor(getCSSVarValue(themeSuccessInverted)))
         : focusStyles(getHoverColor(getCSSVarValue(themeSuccess)));
-    case "danger":
+    case ButtonAppearances.Danger:
       return isInverse
         ? focusStyles(getHoverColor(getCSSVarValue(themeErrorInverted)))
         : focusStyles(getHoverColor(getCSSVarValue(themeError)));
@@ -234,15 +237,17 @@ export const button = appearance => {
   }
 };
 
-export const buttonInverse = appearance => {
+export const getButtonInverseStyles = (appearance: ButtonAppearances) => {
   switch (appearance) {
-    case "primary":
-      return filledButton(
-        getCSSVarValue(themeBrandPrimaryInverted),
-        getHoverColor(getCSSVarValue(themeBrandPrimaryInverted)),
-        getActiveColor(getCSSVarValue(themeBrandPrimaryInverted))
-      );
-    case "secondary":
+    case ButtonAppearances.Primary:
+      return css`
+        ${filledButton(
+          getCSSVarValue(themeBrandPrimaryInverted),
+          getHoverColor(getCSSVarValue(themeBrandPrimaryInverted)),
+          getActiveColor(getCSSVarValue(themeBrandPrimaryInverted))
+        )};
+      `;
+    case ButtonAppearances.Secondary:
       return css`
         ${tintContent(themeTextColorInteractiveInverted)};
         &:hover {
@@ -256,31 +261,37 @@ export const buttonInverse = appearance => {
           )};
         }
       `;
-    case "standard":
-      return filledButton(
-        getCSSVarValue(themeBgNeutralInverted),
-        getHoverColor(getCSSVarValue(themeBgNeutralInverted)),
-        getActiveColor(getCSSVarValue(themeBgNeutralInverted))
-      );
-    case "success":
-      return filledButton(
-        getCSSVarValue(themeSuccessInverted),
-        getHoverColor(getCSSVarValue(themeSuccessInverted)),
-        getActiveColor(getCSSVarValue(themeSuccessInverted))
-      );
-    case "danger":
-      return filledButton(
-        getCSSVarValue(themeErrorInverted),
-        getHoverColor(getCSSVarValue(themeErrorInverted)),
-        getActiveColor(getCSSVarValue(themeErrorInverted))
-      );
+    case ButtonAppearances.Standard:
+      return css`
+        ${filledButton(
+          getCSSVarValue(themeBgNeutralInverted),
+          getHoverColor(getCSSVarValue(themeBgNeutralInverted)),
+          getActiveColor(getCSSVarValue(themeBgNeutralInverted))
+        )};
+      `;
+    case ButtonAppearances.Success:
+      return css`
+        ${filledButton(
+          getCSSVarValue(themeSuccessInverted),
+          getHoverColor(getCSSVarValue(themeSuccessInverted)),
+          getActiveColor(getCSSVarValue(themeSuccessInverted))
+        )};
+      `;
+    case ButtonAppearances.Danger:
+      return css`
+        ${filledButton(
+          getCSSVarValue(themeErrorInverted),
+          getHoverColor(getCSSVarValue(themeErrorInverted)),
+          getActiveColor(getCSSVarValue(themeErrorInverted))
+        )};
+      `;
     default:
       return "";
   }
 };
 
 export const getMutedButtonStyles = (appearance: ButtonAppearances) => {
-  return appearance !== "secondary"
+  return appearance !== ButtonAppearances.Secondary
     ? css`
         ${mutedButton};
         ${mutedFilledButton};
@@ -289,7 +300,7 @@ export const getMutedButtonStyles = (appearance: ButtonAppearances) => {
 };
 
 export const getInverseMutedButtonStyles = (appearance: ButtonAppearances) => {
-  return appearance !== "secondary"
+  return appearance !== ButtonAppearances.Secondary
     ? css`
         ${inverseMutedButton};
         ${inverseMutedFilledButton};

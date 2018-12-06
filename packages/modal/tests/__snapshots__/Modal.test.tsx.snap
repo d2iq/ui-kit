@@ -1129,55 +1129,70 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                               <SecondaryButton
                                 onClick={[MockFunction]}
                               >
-                                <ButtonBase
+                                <ForwardRef(forwardButtonRef)
                                   appearance="secondary"
                                   data-cy="secondaryButton"
                                   onClick={[MockFunction]}
                                 >
-                                  <FocusStyleManager
-                                    focusEnabledClass="css-1h85cd2"
+                                  <ButtonBase
+                                    appearance="secondary"
+                                    data-cy="secondaryButton"
+                                    forwardedref={null}
+                                    onClick={[MockFunction]}
                                   >
-                                    <button
-                                      className="emotion-8"
-                                      data-cy="secondaryButton"
-                                      onClick={[Function]}
-                                      tabIndex={0}
+                                    <FocusStyleManager
+                                      focusEnabledClass="css-1h85cd2"
                                     >
-                                      <span
-                                        className=""
+                                      <button
+                                        className="emotion-8"
+                                        data-cy="secondaryButton"
+                                        forwardedref={null}
+                                        onClick={[Function]}
+                                        tabIndex={0}
                                       >
-                                        Close
-                                      </span>
-                                    </button>
-                                  </FocusStyleManager>
-                                </ButtonBase>
+                                        <span
+                                          className=""
+                                        >
+                                          Close
+                                        </span>
+                                      </button>
+                                    </FocusStyleManager>
+                                  </ButtonBase>
+                                </ForwardRef(forwardButtonRef)>
                               </SecondaryButton>
                             </div>
                             <div
                               className="emotion-9"
                             >
                               <PrimaryButton>
-                                <ButtonBase
+                                <ForwardRef(forwardButtonRef)
                                   appearance="primary"
                                   data-cy="primaryButton"
                                 >
-                                  <FocusStyleManager
-                                    focusEnabledClass="css-xcotv6"
+                                  <ButtonBase
+                                    appearance="primary"
+                                    data-cy="primaryButton"
+                                    forwardedref={null}
                                   >
-                                    <button
-                                      className="emotion-10"
-                                      data-cy="primaryButton"
-                                      onClick={[Function]}
-                                      tabIndex={0}
+                                    <FocusStyleManager
+                                      focusEnabledClass="css-xcotv6"
                                     >
-                                      <span
-                                        className=""
+                                      <button
+                                        className="emotion-10"
+                                        data-cy="primaryButton"
+                                        forwardedref={null}
+                                        onClick={[Function]}
+                                        tabIndex={0}
                                       >
-                                        CTA
-                                      </span>
-                                    </button>
-                                  </FocusStyleManager>
-                                </ButtonBase>
+                                        <span
+                                          className=""
+                                        >
+                                          CTA
+                                        </span>
+                                      </button>
+                                    </FocusStyleManager>
+                                  </ButtonBase>
+                                </ForwardRef(forwardButtonRef)>
                               </PrimaryButton>
                             </div>
                           </div>
@@ -2581,28 +2596,36 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                   <SecondaryButton
                                     onClick={[MockFunction]}
                                   >
-                                    <ButtonBase
+                                    <ForwardRef(forwardButtonRef)
                                       appearance="secondary"
                                       data-cy="secondaryButton"
                                       onClick={[MockFunction]}
                                     >
-                                      <FocusStyleManager
-                                        focusEnabledClass="css-1h85cd2"
+                                      <ButtonBase
+                                        appearance="secondary"
+                                        data-cy="secondaryButton"
+                                        forwardedref={null}
+                                        onClick={[MockFunction]}
                                       >
-                                        <button
-                                          className="emotion-1"
-                                          data-cy="secondaryButton"
-                                          onClick={[Function]}
-                                          tabIndex={0}
+                                        <FocusStyleManager
+                                          focusEnabledClass="css-1h85cd2"
                                         >
-                                          <span
-                                            className=""
+                                          <button
+                                            className="emotion-1"
+                                            data-cy="secondaryButton"
+                                            forwardedref={null}
+                                            onClick={[Function]}
+                                            tabIndex={0}
                                           >
-                                            Close
-                                          </span>
-                                        </button>
-                                      </FocusStyleManager>
-                                    </ButtonBase>
+                                            <span
+                                              className=""
+                                            >
+                                              Close
+                                            </span>
+                                          </button>
+                                        </FocusStyleManager>
+                                      </ButtonBase>
+                                    </ForwardRef(forwardButtonRef)>
                                   </SecondaryButton>
                                 </div>
                                 <div
@@ -2621,27 +2644,34 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                   className="emotion-7"
                                 >
                                   <PrimaryButton>
-                                    <ButtonBase
+                                    <ForwardRef(forwardButtonRef)
                                       appearance="primary"
                                       data-cy="primaryButton"
                                     >
-                                      <FocusStyleManager
-                                        focusEnabledClass="css-xcotv6"
+                                      <ButtonBase
+                                        appearance="primary"
+                                        data-cy="primaryButton"
+                                        forwardedref={null}
                                       >
-                                        <button
-                                          className="emotion-6"
-                                          data-cy="primaryButton"
-                                          onClick={[Function]}
-                                          tabIndex={0}
+                                        <FocusStyleManager
+                                          focusEnabledClass="css-xcotv6"
                                         >
-                                          <span
-                                            className=""
+                                          <button
+                                            className="emotion-6"
+                                            data-cy="primaryButton"
+                                            forwardedref={null}
+                                            onClick={[Function]}
+                                            tabIndex={0}
                                           >
-                                            CTA
-                                          </span>
-                                        </button>
-                                      </FocusStyleManager>
-                                    </ButtonBase>
+                                            <span
+                                              className=""
+                                            >
+                                              CTA
+                                            </span>
+                                          </button>
+                                        </FocusStyleManager>
+                                      </ButtonBase>
+                                    </ForwardRef(forwardButtonRef)>
                                   </PrimaryButton>
                                 </div>
                               </div>

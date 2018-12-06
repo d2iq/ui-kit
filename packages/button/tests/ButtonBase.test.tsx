@@ -17,7 +17,7 @@ describe("ButtonBase", () => {
           appearance={ButtonAppearances[appearance]}
           isFullWidth={true}
           type="submit"
-          ariaHaspopup={true}
+          aria-haspopup={true}
           disabled={true}
           isProcessing={true}
           iconStart={SystemIcons.Check}
@@ -42,7 +42,7 @@ describe("ButtonBase", () => {
   });
   it("does not call onClick prop when disabled", () => {
     const anotherFn = jest.fn();
-    const component = shallow(
+    const component = mount(
       <ButtonBase
         appearance={ButtonAppearances.Standard}
         disabled={true}

@@ -70,27 +70,34 @@ exports[`Dropdownable is visible after opening 1`] = `
     >
       <div>
         <PrimaryButton>
-          <ButtonBase
+          <ForwardRef(forwardButtonRef)
             appearance="primary"
             data-cy="primaryButton"
           >
-            <FocusStyleManager
-              focusEnabledClass="css-xcotv6"
+            <ButtonBase
+              appearance="primary"
+              data-cy="primaryButton"
+              forwardedref={null}
             >
-              <button
-                className="emotion-0"
-                data-cy="primaryButton"
-                onClick={[Function]}
-                tabIndex={0}
+              <FocusStyleManager
+                focusEnabledClass="css-xcotv6"
               >
-                <span
-                  className=""
+                <button
+                  className="emotion-0"
+                  data-cy="primaryButton"
+                  forwardedref={null}
+                  onClick={[Function]}
+                  tabIndex={0}
                 >
-                  Click me
-                </span>
-              </button>
-            </FocusStyleManager>
-          </ButtonBase>
+                  <span
+                    className=""
+                  >
+                    Click me
+                  </span>
+                </button>
+              </FocusStyleManager>
+            </ButtonBase>
+          </ForwardRef(forwardButtonRef)>
         </PrimaryButton>
       </div>
       <Overlay
@@ -237,27 +244,34 @@ exports[`Dropdownable is visible after opening 2`] = `
     >
       <div>
         <PrimaryButton>
-          <ButtonBase
+          <ForwardRef(forwardButtonRef)
             appearance="primary"
             data-cy="primaryButton"
           >
-            <FocusStyleManager
-              focusEnabledClass="css-xcotv6"
+            <ButtonBase
+              appearance="primary"
+              data-cy="primaryButton"
+              forwardedref={null}
             >
-              <button
-                className="emotion-0"
-                data-cy="primaryButton"
-                onClick={[Function]}
-                tabIndex={0}
+              <FocusStyleManager
+                focusEnabledClass="css-xcotv6"
               >
-                <span
-                  className=""
+                <button
+                  className="emotion-0"
+                  data-cy="primaryButton"
+                  forwardedref={null}
+                  onClick={[Function]}
+                  tabIndex={0}
                 >
-                  Click me
-                </span>
-              </button>
-            </FocusStyleManager>
-          </ButtonBase>
+                  <span
+                    className=""
+                  >
+                    Click me
+                  </span>
+                </button>
+              </FocusStyleManager>
+            </ButtonBase>
+          </ForwardRef(forwardButtonRef)>
         </PrimaryButton>
       </div>
       <Overlay

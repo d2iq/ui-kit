@@ -16,7 +16,7 @@ import {
 import {
   button,
   buttonBase,
-  buttonInverse,
+  getButtonInverseStyles,
   fullWidthButton,
   focusStyleByAppearance,
   getInverseMutedButtonStyles,
@@ -32,11 +32,7 @@ export enum ButtonAppearances {
   Success = "success"
 }
 
-export interface ButtonProps {
-  /**
-   * if the button triggers new content to appear (e.g.: modals and dropdowns)
-   */
-  ariaHaspopup?: boolean;
+export interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   children?: React.ReactNode | string;
   /**
    * whether or not the button is enabled
@@ -114,7 +110,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
             className,
             {
               [fullWidthButton]: isFullWidth,
-              [buttonInverse(appearance)]: isInverse,
+              [getButtonInverseStyles(appearance)]: isInverse,
               [getMutedButtonStyles(appearance)]: disabled || isProcessing,
               [getInverseMutedButtonStyles(appearance)]:
                 (disabled || isProcessing) && isInverse
@@ -187,4 +183,10 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
   }
 }
 
-export default ButtonBase;
+function forwardButtonRef(props, ref) {
+  return <ButtonBase {...props} forwardedref={ref} />;
+}
+
+export default React.forwardRef<HTMLButtonElement, ButtonBaseProps>(
+  forwardButtonRef
+);

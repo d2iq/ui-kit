@@ -3,7 +3,7 @@ import * as React from "react";
 import { InteractionModeEngine } from "../../utilities/components/interactionMode";
 
 class FocusStyleManager extends React.PureComponent<
-  { focusEnabledClass: string; children: string | React.ReactNode },
+  { focusEnabledClass?: string; children: string | React.ReactNode },
   {}
 > {
   public focusWrapperRef = {};
