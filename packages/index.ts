@@ -32,6 +32,7 @@ export {
   SortableHeaderCell,
   NumberCell
 } from "./table";
+export { TextInput, TextInputWithIcon } from "./textInput";
 export { Toaster, Toast } from "./toaster";
 export { ToggleContent } from "./toggleContent";
 
