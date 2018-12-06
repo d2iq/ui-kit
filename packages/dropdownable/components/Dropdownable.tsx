@@ -36,6 +36,11 @@ interface State {
   position: PositionCoord;
 }
 
+interface Dimension {
+  width: number;
+  height: number;
+}
+
 const METHODS_TO_BIND = [
   "getDropdown",
   "setPosition",
@@ -132,10 +137,10 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
   }
 
   setPosition(props: DropdownableProps) {
-    const dropdownDimensions = this.dropdownDimensions();
-    const windowDimensions = this.windowDimensions();
-    const childBounds = this.childBounds();
-    const direction = this.calculateBestDirection(
+    const dropdownDimensions: Dimension = this.dropdownDimensions();
+    const windowDimensions: Dimension = this.windowDimensions();
+    const childBounds: ClientRect = this.childBounds();
+    const direction: Direction = this.calculateBestDirection(
       props.preferredDirections,
       childBounds,
       dropdownDimensions,
@@ -185,9 +190,9 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     childBounds,
     dropdownDimensions
   ): PositionCoord {
-    const isTop =
+    const isTop: boolean =
       direction === Direction.TopLeft || direction === Direction.TopRight;
-    const isLeft =
+    const isLeft: boolean =
       direction === Direction.TopLeft || direction === Direction.BottomLeft;
 
     return {
@@ -200,7 +205,7 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     };
   }
 
-  childBounds() {
+  childBounds(): ClientRect {
     const child = this.child.current;
 
     if (child) {
@@ -219,12 +224,12 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     };
   }
 
-  windowDimensions() {
+  windowDimensions(): Dimension {
     const body = document.body;
     return { width: body.clientWidth, height: body.clientHeight };
   }
 
-  dropdownDimensions() {
+  dropdownDimensions(): Dimension {
     const dropdown = this.dropdown.current!;
 
     if (dropdown) {
