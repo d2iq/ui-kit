@@ -69,10 +69,6 @@ export const sidebarNavItem = (isActive?: boolean) => css`
 
 export const sidebarNavItemIconWrap = css`
   line-height: 0;
-
-  svg {
-    width: 100%;
-  }
 `;
 
 export const subMenuItem = css`

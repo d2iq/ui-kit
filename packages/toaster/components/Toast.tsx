@@ -137,7 +137,13 @@ class Toast extends React.PureComponent<ToastProps, {}> {
           )}
         >
           {appearance !== "default" && (
-            <div className={cx(flexItem("shrink"), display("contents"))}>
+            <div
+              className={cx(
+                display("inherit"),
+                flexItem("shrink"),
+                padding("right", "s")
+              )}
+            >
               {getStatusIcon(appearance)}
             </div>
           )}

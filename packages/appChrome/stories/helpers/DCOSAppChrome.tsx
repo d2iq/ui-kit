@@ -1,5 +1,5 @@
 import * as React from "react";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { AppChrome, HeaderBar, Sidebar } from "../../index";
 import Clickable from "../../../clickable/components/clickable";
 import { SidebarContent } from "./StorybookSidebarHelpers";
@@ -100,9 +100,15 @@ class DCOSAppChrome extends React.Component<
               <Clickable action={this.toggleSidebar} tabIndex={0}>
                 <div className={flexItem("shrink")}>☰</div>
               </Clickable>
-              <div className={flexItem("grow")}>Mesosphere logo</div>
-              <div className={flexItem("shrink")}>User menu</div>
-              <div className={flexItem("shrink")}>Cluster menu</div>
+              <div className={cx(flexItem("grow"), padding("left", "m"))}>
+                Mesosphere logo
+              </div>
+              <div className={cx(flexItem("shrink"), padding("left", "m"))}>
+                User menu
+              </div>
+              <div className={cx(flexItem("shrink"), padding("left", "m"))}>
+                Cluster menu
+              </div>
             </div>
           </HeaderBar>
         }

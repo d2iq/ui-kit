@@ -103,14 +103,3 @@ export const inputContainer = css`
     font-size: inherit;
   }
 `;
-
-// Manually styling input element to flex grow to avoid overriding desired padding
-// If / when flexItem is updated to remove padding values we can use it instead
-// of this custom class.
-export const inputElement = css`
-  flex-basis: 0;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  box-sizing: border-box;
-`;

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { flex, flexItem } from "../../shared/styles/styleUtils";
+import { flex, flexItem, padding } from "../../shared/styles/styleUtils";
 import { sidebarItemHeight, sidebarNavItemIconWrap } from "../style";
 
 export interface SidebarItemLabelProps {
@@ -16,7 +16,13 @@ class SidebarItemLabel extends React.PureComponent<SidebarItemLabelProps, {}> {
     return (
       <div className={cx(flex({ align: "center" }), sidebarItemHeight)}>
         {icon && (
-          <div className={cx(flexItem("shrink"), sidebarNavItemIconWrap)}>
+          <div
+            className={cx(
+              flexItem("shrink"),
+              padding("right", "m"),
+              sidebarNavItemIconWrap
+            )}
+          >
             {icon}
           </div>
         )}

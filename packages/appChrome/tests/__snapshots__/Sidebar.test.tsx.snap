@@ -40,6 +40,7 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
 }
 
 .emotion-0 {
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -51,20 +52,12 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
+  padding-right: 16px;
   line-height: 0;
 }
 
-.emotion-0:first-child {
-  padding-left: 0;
-}
-
-.emotion-0 svg {
-  width: 100%;
-}
-
 .emotion-1 {
+  box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -74,12 +67,6 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 <div
@@ -204,6 +191,7 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
 }
 
 .emotion-0 {
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -215,20 +203,12 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
+  padding-right: 16px;
   line-height: 0;
 }
 
-.emotion-0:first-child {
-  padding-left: 0;
-}
-
-.emotion-0 svg {
-  width: 100%;
-}
-
 .emotion-1 {
+  box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -238,12 +218,6 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 <div

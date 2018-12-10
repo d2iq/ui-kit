@@ -61,6 +61,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   border: 0;
   box-shadow: none;
   padding: 0;
+  box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -70,17 +71,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding: 0;
 }
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-2 {
@@ -97,6 +92,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -108,14 +104,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 0;
   margin-left: 0;
-}
-
-.emotion-2:first-child {
-  padding-left: 0;
 }
 
 <div>
@@ -150,6 +140,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   border: 0;
   box-shadow: none;
   padding: 0;
+  box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -159,17 +150,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding: 0;
 }
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-0 {
@@ -242,6 +227,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -253,14 +239,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 0;
   margin-left: 0;
-}
-
-.emotion-2:first-child {
-  padding-left: 0;
 }
 
 <div>
@@ -304,6 +284,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   border: 0;
   box-shadow: none;
   padding: 0;
+  box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -313,17 +294,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding: 0;
 }
 
 .emotion-1:focus {
   outline: 0;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-3 {
@@ -382,6 +357,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -393,14 +369,8 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 0;
   margin-left: 0;
-}
-
-.emotion-2:first-child {
-  padding-left: 0;
 }
 
 <div>
@@ -500,6 +470,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -511,12 +482,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-2 {
@@ -524,6 +489,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   border: 0;
   box-shadow: none;
   padding: 0;
+  box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -533,17 +499,11 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding: 0;
 }
 
 .emotion-2:focus {
   outline: 0;
-}
-
-.emotion-2:first-child {
-  padding-left: 0;
 }
 
 <div>
@@ -588,6 +548,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -599,12 +560,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-2 {
@@ -612,6 +567,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   border: 0;
   box-shadow: none;
   padding: 0;
+  box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -621,17 +577,11 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding: 0;
 }
 
 .emotion-2:focus {
   outline: 0;
-}
-
-.emotion-2:first-child {
-  padding-left: 0;
 }
 
 .emotion-0 {
@@ -741,6 +691,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -752,12 +703,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-2 {
@@ -765,6 +710,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   border: 0;
   box-shadow: none;
   padding: 0;
+  box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -774,17 +720,11 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding: 0;
 }
 
 .emotion-2:focus {
   outline: 0;
-}
-
-.emotion-2:first-child {
-  padding-left: 0;
 }
 
 .emotion-3 {
@@ -926,6 +866,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -937,12 +878,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-2 {
@@ -950,6 +885,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   border: 0;
   box-shadow: none;
   padding: 0;
+  box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -959,17 +895,11 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding: 0;
 }
 
 .emotion-2:focus {
   outline: 0;
-}
-
-.emotion-2:first-child {
-  padding-left: 0;
 }
 
 .emotion-3 {
@@ -986,6 +916,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -997,14 +928,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 0;
   margin-left: 0;
-}
-
-.emotion-3:first-child {
-  padding-left: 0;
 }
 
 <div>
@@ -1054,6 +979,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -1065,12 +991,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-2 {
@@ -1078,6 +998,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   border: 0;
   box-shadow: none;
   padding: 0;
+  box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -1087,17 +1008,11 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding: 0;
 }
 
 .emotion-2:focus {
   outline: 0;
-}
-
-.emotion-2:first-child {
-  padding-left: 0;
 }
 
 .emotion-0 {
@@ -1170,6 +1085,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -1181,14 +1097,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 0;
   margin-left: 0;
-}
-
-.emotion-3:first-child {
-  padding-left: 0;
 }
 
 <div>
@@ -1247,6 +1157,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -1258,12 +1169,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
-}
-
-.emotion-1:first-child {
-  padding-left: 0;
 }
 
 .emotion-2 {
@@ -1271,6 +1176,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   border: 0;
   box-shadow: none;
   padding: 0;
+  box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -1280,17 +1186,11 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding: 0;
 }
 
 .emotion-2:focus {
   outline: 0;
-}
-
-.emotion-2:first-child {
-  padding-left: 0;
 }
 
 .emotion-4 {
@@ -1349,6 +1249,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
@@ -1360,14 +1261,8 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  box-sizing: border-box;
-  padding-left: 16px;
   padding-left: 0;
   margin-left: 0;
-}
-
-.emotion-3:first-child {
-  padding-left: 0;
 }
 
 <div>
