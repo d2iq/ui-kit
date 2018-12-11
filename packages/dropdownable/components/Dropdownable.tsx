@@ -23,7 +23,7 @@ export interface DropdownableProps {
   open: boolean;
   dropdown: React.ReactNode;
   preferredDirections?: Direction[];
-  onClose?: () => void;
+  onClose: () => void;
 }
 
 interface PositionCoord {
