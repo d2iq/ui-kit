@@ -36,6 +36,8 @@ const filledButton = (
   return css`
     ${tintContent(contentColor)};
     background-color: ${baseColor};
+    border-radius: ${borderRadiusSmall};
+    padding: 10px 18px;
 
     &:hover {
       background-color: ${hoverColor};
@@ -94,10 +96,8 @@ export const processingTextStyle = css`
 `;
 
 export const buttonBase = css`
-  border-radius: ${borderRadiusSmall};
   cursor: pointer;
   outline: none;
-  padding: 10px 18px;
 `;
 
 export const buttonContent = css`
@@ -138,7 +138,17 @@ export const focusStyleByAppearance = (appearance, isInverse) => {
       return focusStyles(purpleDarken1);
       break;
     case "secondary":
-      return focusStyles("transparent", purpleDarken1);
+      return css`
+        ${focusStyles("transparent", purpleDarken1)};
+        &:focus {
+          &:after {
+            border-radius: 0;
+            border-left-width: 0;
+            border-right-width: 0;
+            border-top-width: 0;
+          }
+        }
+      `;
       break;
     case "standard":
       return isInverse
