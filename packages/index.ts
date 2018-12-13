@@ -22,6 +22,7 @@ export {
   SuccessDropdownButton,
   DangerDropdownButton
 } from "./button";
+export { Dropdownable } from "./dropdownable";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
 export {
   Column,
