@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "emotion";
-import FocusStyleManager from "../../shared/components/FocusStyleManager";
+import FocusStyleManager from "@dcos/ui-kit-shared/dist/components/FocusStyleManager";
 import {
   buttonReset,
   textWeight,
@@ -8,7 +8,7 @@ import {
   flexItem,
   display,
   padding
-} from "../../shared/styles/styleUtils";
+} from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 import {
   button,
   buttonBase,

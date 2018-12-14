@@ -8,9 +8,9 @@ import {
   StandardButton,
   SuccessButton,
   DangerButton
-} from "../../index";
+} from "ui-kit-core/index";
 import ButtonAppearanceSample from "./helpers/ButtonAppearanceSample";
-import { CloseIcon } from "../../shared/icons";
+import { CloseIcon } from "@dcos/ui-kit-shared/dist/icons";
 import { action } from "@storybook/addon-actions";
 
 const readme = require("../README.md");

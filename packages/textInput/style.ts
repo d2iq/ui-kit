@@ -1,6 +1,6 @@
 import { css } from "emotion";
-import { coreColors } from "../shared/styles/color";
-import { borderRadiusSmall } from "../design-tokens/build/js/designTokens";
+import { coreColors } from "@dcos/ui-kit-shared/dist/styles/color";
+import { borderRadiusSmall } from "@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
 
 const {
   green,

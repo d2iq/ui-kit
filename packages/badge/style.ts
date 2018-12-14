@@ -1,7 +1,7 @@
 import { css } from "emotion";
-import { coreColors } from "../shared/styles/color";
-import { coreFonts } from "../shared/styles/typography";
-import { borderRadiusSmall } from "../design-tokens/build/js/designTokens";
+import { coreColors } from "@dcos/ui-kit-shared/styles/color";
+import { coreFonts } from "@dcos/ui-kit-shared/styles/typography";
+import { borderRadiusSmall } from "@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
 
 const { greyDark, greyLight, green, purple, red, white, yellow } = coreColors();
 const { fontFamilySansSerif } = coreFonts();

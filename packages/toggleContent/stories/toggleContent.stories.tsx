@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { ToggleContent } from "../../index";
+import { ToggleContent } from "ui-kit-core/index";
 
 const readme = require("../README.md");
 

@@ -4,8 +4,8 @@ import { withReadme } from "storybook-readme";
 import { action } from "@storybook/addon-actions";
 import { Toaster, Toast } from "..";
 import { ToastProps } from "../components/Toast";
-import { fontSizes } from "../../shared/styles/typography";
-import { coreColors } from "../../shared/styles/color";
+import { fontSizes } from "@dcos/ui-kit-shared/dist/styles/typography";
+import { coreColors } from "@dcos/ui-kit-shared/dist/styles/color";
 const { purple } = coreColors();
 
 const readme = require("../README.md");

@@ -2,9 +2,9 @@ import * as React from "react";
 import { cx } from "emotion";
 import styled from "react-emotion";
 import { sidebarNavItem } from "../style";
-import Clickable from "../../clickable/components/clickable";
-import { tintContentPrimary } from "../../shared/styles/styleUtils";
-import { spaceSizes } from "../../../packages/shared/styles/styleUtils/modifiers/modifierUtils";
+import Clickable from "@dcos/ui-kit-clickable/dist/components/clickable";
+import { tintContentPrimary } from "@dcos/ui-kit-shared/dist/styles/styleUtils";
+import { spaceSizes } from "@dcos/ui-kit-shared/dist/styles/styleUtils/modifiers/modifierUtils";
 
 export interface SidebarItemProps {
   children?: React.ReactElement<HTMLElement> | string;

@@ -6,9 +6,13 @@ import {
   infoBoxActions,
   dismissBtn
 } from "../style";
-import Clickable from "../../clickable/components/clickable";
-import { padding, textSize, display } from "../../shared/styles/styleUtils";
-import { CloseIcon } from "../../shared/icons";
+import Clickable from "@dcos/ui-kit-clickable/dist/components/clickable";
+import {
+  padding,
+  textSize,
+  display
+} from "@dcos/ui-kit-shared/dist/styles/styleUtils";
+import { CloseIcon } from "@dcos/ui-kit-shared/dist/icons";
 
 export interface InfoBoxProps {
   /**

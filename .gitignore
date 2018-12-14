@@ -13,3 +13,5 @@ tmp/
 .env
 coverage
 storybook-static/
+packages/**/dist
+*.log

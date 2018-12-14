@@ -1,6 +1,6 @@
 import { css } from "emotion";
-import { coreColors, hexToRgbA } from "../shared/styles/color";
-import { coreFonts } from "../shared/styles/typography";
+import { coreColors, hexToRgbA } from "@dcos/ui-kit-shared/dist/styles/color";
+import { coreFonts } from "@dcos/ui-kit-shared/dist/styles/typography";
 
 const { black, greyLight, greyLightLighten5 } = coreColors();
 const { fontFamilySansSerif } = coreFonts();

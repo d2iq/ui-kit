@@ -17,7 +17,7 @@ import SidebarItemLabel from "../components/SidebarItemLabel";
 import SidebarSubMenu from "../components/SidebarSubMenu";
 import SidebarSubMenuItem from "../components/SidebarSubMenuItem";
 import HeaderBar from "../components/HeaderBar";
-import { padding } from "../../shared/styles/styleUtils";
+import { padding } from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 import {
   white,
   black,
@@ -30,7 +30,7 @@ import {
   blue,
   pink,
   purple
-} from "../../design-tokens/build/js/designTokens";
+} from "@dcos/ui-kit-shared/dist/build/js/designTokens";
 
 const readme = require("../README.md");
 

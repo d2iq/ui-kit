@@ -6,8 +6,8 @@ import {
   textSize,
   flush,
   padding
-} from "../../../shared/styles/styleUtils";
-import { greyDarkDarken3 } from "../../../design-tokens/build/js/designTokens";
+} from "../@dcos/ui-kit-shared/dist/styles/styleUtils";
+import { greyDarkDarken3 } from "../@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
 
 const sampleWrapper = css`
   display: grid;

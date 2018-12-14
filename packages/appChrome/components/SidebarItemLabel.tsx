@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { flex, flexItem, padding } from "../../shared/styles/styleUtils";
+import { flex, flexItem, padding } from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 import { sidebarItemHeight, sidebarNavItemIconWrap } from "../style";
 
 export interface SidebarItemLabelProps {

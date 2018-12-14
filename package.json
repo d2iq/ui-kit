@@ -17,8 +17,7 @@
   "scripts": {
     "build:storybook": "build-storybook",
     "prebuild:storybook": "npm run build:design-tokens",
-    "prebuild:design-tokens": "npm run clean:design-tokens",
-    "build:design-tokens": "node ./packages/design-tokens/scripts/build.js",
+    "build:design-tokens": "lerna run dist --scope=@dcos/ui-kit-design-tokens",
     "clean": "rimraf dist",
     "clean:design-tokens": "rm -rf ./dist/design-tokens",
     "commitlint": "commitlint -e",
@@ -28,6 +27,7 @@
     "prestart": "npm run build:design-tokens",
     "pretest": "npm run build:design-tokens",
     "predist": "npm run clean && npm run build:design-tokens",
+    "publish:all": "lerna exec --concurrency 1 -- npx --no-install semantic-release -e semantic-release-monorepo",
     "dist": "tsc -p tsconfig.dist.json",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "setup:git-hooks": "./scripts/pre-install",
@@ -49,8 +49,7 @@
     "react-emotion": "9.2.12",
     "react-toggled": "1.2.7",
     "react-transition-group": "2.5.0",
-    "react-virtualized": "9.20.1",
-    "semantic-release": "^15.9.6"
+    "react-virtualized": "9.20.1"
   },
   "devDependencies": {
     "@commitlint/cli": "7.2.0",
@@ -89,11 +88,14 @@
     "lerna": "3.4.3",
     "node": "10.11.0",
     "npm": "6.4.1",
+    "npm-run-all": "4.1.5",
     "prettier": "1.14.3",
     "prop-types": "15.6.2",
     "react-docgen-typescript-loader": "3.0.0",
     "react-test-renderer": "16.5.2",
     "rimraf": "2.6.2",
+    "semantic-release": "15.9.17",
+    "semantic-release-monorepo": "6.1.1",
     "storybook-readme": "4.0.2",
     "style-dictionary": "^2.4.0",
     "ts-jest": "23.10.4",

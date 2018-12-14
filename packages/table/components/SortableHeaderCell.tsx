@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cx } from "emotion";
 import { default as HeaderCell } from "./HeaderCell";
-import Clickable from "../../clickable/components/clickable";
+import Clickable from "@dcos/ui-kit-clickable/dist/components/clickable";
 import { sortableHeaderIconBaseCSS, styleArrowDirection } from "../style";
 import { TextAlign } from "./Cell";
 

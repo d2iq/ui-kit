@@ -1,0 +1,36 @@
+{
+  "version": "0.0.0-dev+semantically-released",
+  "description": "",
+  "keywords": [
+    "react",
+    "components"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index",
+  "homepage": "https://github.com/dcos-labs/ui-kit#readme",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcos-labs/ui-kit.git"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "predist": "rimraf dist",
+    "dist": "npm run build",
+    "build": "tsc -p tsconfig.json",
+    "watch:build": "npm run build -- --watch",
+    "start": "npm run watch:build"
+  },
+  "bugs": {
+    "url": "https://github.com/dcos-labs/ui-kit/issues"
+  },
+  "devDependencies": {
+    "fs-extra": "7.0.1",
+    "rimraf": "2.6.2"
+  },
+  "name": "@dcos/ui-kit-utilities"
+}

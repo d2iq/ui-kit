@@ -1,6 +1,6 @@
 import { css } from "react-emotion";
 
-interface FlexboxProperties {
+export interface FlexboxProperties {
   align?: "flex" | "center" | "flex-start" | "flex-end" | "space-between";
   justify?: "flex" | "center" | "flex-start" | "flex-end" | "space-between";
   direction?: "row" | "column" | "row-reverse" | "column-reverse";

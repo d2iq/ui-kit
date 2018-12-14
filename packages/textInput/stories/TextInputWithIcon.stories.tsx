@@ -3,7 +3,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { TextInputAppearance, TextInputWithIcon } from "../index";
-import { CloseIcon, DownTriangle } from "../../shared/icons";
+import { CloseIcon, DownTriangle } from "@dcos/ui-kit-shared/dist/icons";
 
 const readme = require("../README.md");
 

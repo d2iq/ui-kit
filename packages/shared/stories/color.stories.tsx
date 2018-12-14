@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import styled from "react-emotion";
-import { coreColors } from "../../design-tokens/build/js/colorsForStyleguide";
+import { coreColors } from "@dcos/ui-kit-design-tokens/build/js/colorsForStyleguide";
 
 const { white, black, cyan, ...colors } = coreColors();
 

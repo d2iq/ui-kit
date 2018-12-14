@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "allowJs": false,
+    "rootDir": "./",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react",
+    "declaration": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/emotion/types",
+      "node_modules/create-emotion-styled/types",
+      "node_modules/create-emotion-styled/types/react"
+    ],
+    "lib": ["es6", "dom", "es2017"]
+  },
+  "include": ["./index.ts"],
+  "exclude": ["**/*.test.*", "**/*.stories.*", "node_modules"]
+}

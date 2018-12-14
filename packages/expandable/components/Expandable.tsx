@@ -1,7 +1,11 @@
 import * as React from "react";
 import { cx } from "emotion";
 import Toggle from "react-toggled";
-import { buttonReset, display, flex } from "../../shared/styles/styleUtils";
+import {
+  buttonReset,
+  display,
+  flex
+} from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 import { toggler } from "../style";
 
 export interface ExpandableProps {

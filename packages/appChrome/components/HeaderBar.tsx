@@ -1,10 +1,10 @@
 import * as React from "react";
 import { cx } from "emotion";
 import styled from "react-emotion";
-import { darkMode, flex } from "../../shared/styles/styleUtils";
-import { spaceSizes } from "../../../packages/shared/styles/styleUtils/modifiers/modifierUtils";
-import { purpleDarken4 } from "../../design-tokens/build/js/designTokens";
-import { isHexDark } from "../../shared/styles/color";
+import { darkMode, flex } from "@dcos/ui-kit-shared/dist/styles/styleUtils";
+import { spaceSizes } from "@dcos/ui-kit-shared/dist/styles/styleUtils/modifiers/modifierUtils";
+import { purpleDarken4 } from "@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
+import { isHexDark } from "@dcos/ui-kit-shared/dist/styles/color";
 
 export interface HeaderProps {
   children: React.ReactElement<HTMLElement> | string;

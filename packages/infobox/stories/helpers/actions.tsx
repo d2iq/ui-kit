@@ -2,7 +2,7 @@ import * as React from "react";
 import { Clickable } from "../../../clickable";
 import { action } from "@storybook/addon-actions";
 
-import { coreColors } from "../../../shared/styles/color";
+import { coreColors } from "@dcos/ui-kit-shared/dist/styles/color";
 const { purple } = coreColors();
 
 const fakeButtonStyles = {

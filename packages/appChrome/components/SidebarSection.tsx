@@ -9,9 +9,9 @@ import {
   listReset,
   margin,
   flex
-} from "../../shared/styles/styleUtils";
-import { greyLightDarken3 } from "../../design-tokens/build/js/designTokens";
-import { spaceSizes } from "../../../packages/shared/styles/styleUtils/modifiers/modifierUtils";
+} from "@dcos/ui-kit-shared/dist/styles/styleUtils";
+import { greyLightDarken3 } from "@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
+import { spaceSizes } from "@dcos/ui-kit-shared/dist/styles/styleUtils/modifiers/modifierUtils";
 
 export interface SidebarSectionProps {
   children:

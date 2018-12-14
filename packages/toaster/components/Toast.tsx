@@ -15,10 +15,14 @@ import {
   margin,
   padding,
   tintSVG
-} from "../../shared/styles/styleUtils";
-import Clickable from "../../clickable/components/clickable";
-import { green, red, yellow } from "../../design-tokens/build/js/designTokens";
-import { CloseIcon } from "../../shared/icons";
+} from "@dcos/ui-kit-shared/dist/styles/styleUtils";
+import Clickable from "@dcos/ui-kit-clickable/dist/components/clickable";
+import {
+  green,
+  red,
+  yellow
+} from "@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
+import { CloseIcon } from "@dcos/ui-kit-shared/dist/icons";
 
 export type ToastId = React.ReactText | undefined;
 
@@ -104,13 +108,10 @@ class Toast extends React.PureComponent<ToastProps, {}> {
       switch (status) {
         case "danger":
           return <DangerIcon className={tintSVG(red)} />;
-          break;
         case "success":
           return <SuccessIcon className={tintSVG(green)} />;
-          break;
         case "warning":
           return <WarningIcon className={tintSVG(yellow)} />;
-          break;
       }
     };
 

@@ -1,10 +1,10 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { Expandable } from "../../expandable";
+import { Expandable } from "@dcos/ui-kit-expandable/dist";
 import { SidebarItemLabelProps } from "./SidebarItemLabel";
 import { SidebarSubMenuItemProps } from "./SidebarSubMenuItem";
 import { sidebarNavItem, appChromeInsetContent, spaceMenuIcon } from "../style";
-import { listReset } from "../../shared/styles/styleUtils";
+import { listReset } from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 export interface SidebarSubMenuProps {
   children: Array<React.ReactElement<SidebarSubMenuItemProps>>;
   isOpen?: boolean;

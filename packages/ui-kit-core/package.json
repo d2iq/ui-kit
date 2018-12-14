@@ -1,29 +1,45 @@
 {
-  "name": "ui-kit-core",
-  "version": "5.0.0",
-  "description": "This is the core package of ui-kit",
+  "version": "0.0.0-dev+semantically-released",
+  "description": "",
   "keywords": [
     "react",
     "components"
   ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index",
   "homepage": "https://github.com/dcos-labs/ui-kit#readme",
   "license": "Apache-2.0",
-  "main": "lib/ui-kit-core.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dcos-labs/ui-kit.git"
   },
+  "dependencies": {
+    "@dcos/ui-kit-appChrome": "^0.0.0-dev+semantically-released",
+    "@dcos/ui-kit-badge": "^0.0.0-dev+semantically-released",
+    "@dcos/ui-kit-button": "^0.0.0-dev+semantically-released",
+    "@dcos/ui-kit-infobox": "^0.0.0-dev+semantically-released",
+    "@dcos/ui-kit-shared": "^0.0.0-dev+semantically-released",
+    "@dcos/ui-kit-table": "^0.0.0-dev+semantically-released",
+    "@dcos/ui-kit-textInput": "^0.0.0-dev+semantically-released",
+    "@dcos/ui-kit-toaster": "^0.0.0-dev+semantically-released",
+    "@dcos/ui-kit-toggleContent": "^0.0.0-dev+semantically-released"
+  },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "predist": "rimraf dist",
+    "dist": "npm run build",
+    "build": "tsc -p tsconfig.json",
+    "watch:build": "npm run build -- --watch",
+    "start": "npm run watch:build"
   },
   "bugs": {
     "url": "https://github.com/dcos-labs/ui-kit/issues"
-  }
+  },
+  "devDependencies": {
+    "fs-extra": "7.0.1",
+    "rimraf": "2.6.2"
+  },
+  "name": "@dcos/ui-kit-core"
 }

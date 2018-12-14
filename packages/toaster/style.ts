@@ -1,7 +1,7 @@
 import { css } from "emotion";
-import { atMediaUp } from "../shared/styles/breakpoints";
-import { coreColors } from "../shared/styles/color";
-import { borderRadiusDefault } from "../design-tokens/build/js/designTokens";
+import { atMediaUp } from "@dcos/ui-kit-shared/dist/styles/breakpoints";
+import { coreColors } from "@dcos/ui-kit-shared/dist/styles/color";
+import { borderRadiusDefault } from "@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
 const { greyDark } = coreColors();
 
 export const toaster = css`

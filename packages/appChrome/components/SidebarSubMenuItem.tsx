@@ -11,8 +11,8 @@ import {
   flex,
   tintContentSecondary,
   tintContentPrimary
-} from "../../shared/styles/styleUtils";
-import Clickable from "../../clickable/components/clickable";
+} from "@dcos/ui-kit-shared/dist/styles/styleUtils";
+import Clickable from "@dcos/ui-kit-clickable/dist/components/clickable";
 
 export interface SidebarSubMenuItemProps {
   children?: React.ReactElement<HTMLElement> | string;

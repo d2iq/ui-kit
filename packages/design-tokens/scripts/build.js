@@ -5,8 +5,8 @@ const formats = require("./formats");
 // This script is a hack to build two versions: one that will be published inside ui-kit,
 // and one that ui-kit can import in its own build.
 
-const CONFIG = "./packages/design-tokens/config.release.json";
-const DEV_CONFIG = "./packages/design-tokens/config.dev.json";
+const CONFIG = "./config.release.json";
+const DEV_CONFIG = "./config.dev.json";
 
 [CONFIG, DEV_CONFIG].forEach(path => {
   const StyleDictionary = require("style-dictionary").extend(path);

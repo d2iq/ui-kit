@@ -1,7 +1,7 @@
 import React from "react";
 
 import ButtonBase, { ButtonAppearances } from "../components/ButtonBase";
-import { DownTriangle } from "../../shared/icons";
+import { DownTriangle } from "@dcos/ui-kit-shared/dist/icons";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
 import { shallow, mount } from "enzyme";

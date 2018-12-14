@@ -8,9 +8,9 @@ import {
   StandardDropdownButton,
   SuccessDropdownButton,
   DangerDropdownButton
-} from "../../index";
+} from "ui-kit-core/index";
 import ButtonAppearanceSample from "./helpers/ButtonAppearanceSample";
-import { CloseIcon } from "../../shared/icons";
+import { CloseIcon } from "@dcos/ui-kit-shared/dist/icons";
 
 const readme = require("../README.md");
 

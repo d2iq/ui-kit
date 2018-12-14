@@ -1,13 +1,13 @@
 import { css } from "emotion";
-import { atMediaUp } from "../shared/styles/breakpoints";
+import { atMediaUp } from "@dcos/ui-kit-shared/dist/styles/breakpoints";
 import {
   greyDarkLighten2,
   purple,
   spaceM,
   spaceL,
   spaceXl
-} from "../design-tokens/build/js/designTokens";
-import { padding } from "../shared/styles/styleUtils";
+} from "@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
+import { padding } from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 
 const iconSize = "24px";
 const layoutBreakpoint = "large";

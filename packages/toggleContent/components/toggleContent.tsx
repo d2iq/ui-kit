@@ -1,5 +1,5 @@
 import * as React from "react";
-import Clickable from "../../clickable/components/clickable";
+import { Clickable } from "@dcos/ui-kit-clickable";
 import { style } from "../style";
 
 export interface ToggleContentState {

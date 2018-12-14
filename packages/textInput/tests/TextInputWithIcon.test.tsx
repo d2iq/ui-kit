@@ -6,7 +6,7 @@ import toJson from "enzyme-to-json";
 
 import TextInputWithIcon from "../components/TextInputWithIcon";
 import { TextInputAppearance } from "../components/TextInput";
-import { CloseIcon, DownTriangle } from "../../shared/icons";
+import { CloseIcon, DownTriangle } from "@dcos/ui-kit-shared/dist/icons";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 

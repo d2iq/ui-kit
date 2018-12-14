@@ -1,11 +1,11 @@
 import * as React from "react";
 import { cx, css } from "emotion";
 import styled from "react-emotion";
-import { darkMode } from "../../shared/styles/styleUtils";
+import { darkMode } from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 import { sidebar, sidebarAnimator } from "../style";
-import { greyDark } from "../../design-tokens/build/js/designTokens";
-import { atMediaUp } from "../../shared/styles/breakpoints";
-import { isHexDark } from "../../shared/styles/color";
+import { greyDark } from "@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
+import { atMediaUp } from "@dcos/ui-kit-shared/dist/styles/breakpoints";
+import { isHexDark } from "@dcos/ui-kit-shared/dist/styles/color";
 
 export interface SidebarProps {
   children: React.ReactElement<HTMLElement> | string;

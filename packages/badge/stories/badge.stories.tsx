@@ -2,7 +2,7 @@ import * as React from "react";
 import uiKitStory from "../../../uiKitStory";
 import { action } from "@storybook/addon-actions";
 
-import { Badge, BadgeButton } from "../../index";
+import { Badge, BadgeButton } from "@dcos/ui-kit-core/index";
 
 const BadgeReadme = require("../README.md");
 

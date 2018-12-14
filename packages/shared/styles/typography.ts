@@ -4,7 +4,7 @@ import {
   fontSizeM,
   fontWeightNormal,
   fontWeightMedium
-} from "../../design-tokens/build/js/designTokens";
+} from "@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
 
 export interface Fonts {
   [fontName: string]: string;

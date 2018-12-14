@@ -1,10 +1,10 @@
 import { css } from "emotion";
-import { atMediaUp } from "../shared/styles/breakpoints";
-import { tintSVG } from "../shared/styles/styleUtils";
+import { atMediaUp } from "@dcos/ui-kit-shared/dist/styles/breakpoints";
+import { tintSVG } from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 
-import { coreColors } from "../shared/styles/color";
-import { spacingM } from "../shared/styles/spacing";
-import { borderRadiusDefault } from "../design-tokens/build/js/designTokens";
+import { coreColors } from "@dcos/ui-kit-shared/dist/styles/color";
+import { spacingM } from "@dcos/ui-kit-shared/dist/styles/spacing";
+import { borderRadiusDefault } from "@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
 const {
   blueDarken4,
   blueLighten3,

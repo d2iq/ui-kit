@@ -6,7 +6,7 @@ import {
   flexItem,
   textSize,
   flush
-} from "../../shared/styles/styleUtils";
+} from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 
 export interface AppChromeProps {
   sidebar: React.ReactNode;

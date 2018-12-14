@@ -3,7 +3,11 @@ import { cx } from "emotion";
 import { TransitionGroup, Transition } from "react-transition-group";
 import { ToastProps, ToastId } from "./Toast";
 import { toaster, preTransitionStyle, transitionStyles } from "../style";
-import { margin, marginAt, listReset } from "../../shared/styles/styleUtils";
+import {
+  margin,
+  marginAt,
+  listReset
+} from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 
 export interface ToasterProps {
   children?: Array<React.ReactElement<ToastProps>>;
@@ -32,6 +36,8 @@ class Toaster extends React.PureComponent<ToasterProps, ToasterState> {
     this.setTimer = this.setTimer.bind(this);
 
     const toastChildren =
+      //remove these lines
+      //@ts-ignore
       this.props.children && this.props.children.map(this.cloneToast);
 
     this.state = {

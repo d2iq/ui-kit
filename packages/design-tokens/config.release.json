@@ -1,9 +1,9 @@
 {
-  "source": ["./packages/design-tokens/properties/**/*.json"],
+  "source": ["./properties/**/*.json"],
   "platforms": {
     "less": {
       "transforms": ["attribute/cti", "name/cti/lessVar"],
-      "buildPath": "dist/packages/design-tokens/build/less/",
+      "buildPath": "dist/build/less/",
       "files": [
         {
           "destination": "_designTokens.less",
@@ -17,7 +17,7 @@
         "name/cti/jsConstant",
         "value/fontNameJS"
       ],
-      "buildPath": "dist/packages/design-tokens/build/js/",
+      "buildPath": "dist/build/js/",
       "files": [
         {
           "format": "javascript/commonJS",
@@ -27,7 +27,7 @@
     },
     "colorsForStyleguide": {
       "transforms": ["attribute/cti", "name/cti/jsConstant"],
-      "buildPath": "dist/packages/design-tokens/build/js/",
+      "buildPath": "dist/build/js/",
       "files": [
         {
           "format": "javascript/colorsForStyleguide",

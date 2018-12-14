@@ -1,10 +1,22 @@
 import { cx } from "emotion";
 import * as React from "react";
+// TODO remove these lines
+//@ts-ignore
+import {
+  ArrayInterpolation as _A,
+  CSSObject as _C,
+  ClassInterpolation as _CL
+} from "create-emotion/types";
 
 import { TextInput, TextInputAppearance, TextInputProps } from "./TextInput";
 
 import { inputAppearances, inputContainer } from "../style";
-import { flex, flexItem, flush, padding } from "../../shared/styles/styleUtils";
+import {
+  flex,
+  flexItem,
+  flush,
+  padding
+} from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 
 export interface TextInputWithIconProps extends TextInputProps {
   /**

@@ -1,0 +1,35 @@
+{
+  "version": "0.0.0-dev+semantically-released",
+  "description": "",
+  "keywords": [
+    "react",
+    "components"
+  ],
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/dcos-labs/ui-kit#readme",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcos-labs/ui-kit.git"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "predist": "rimraf dist",
+    "dist": "node ./scripts/build.js",
+    "build": "npm run dist",
+    "watch:build": "nodemon -x 'node ./scripts/build.js' -w './properties' -w './scripts'",
+    "start": "npm run watch:build"
+  },
+  "bugs": {
+    "url": "https://github.com/dcos-labs/ui-kit/issues"
+  },
+  "devDependencies": {
+    "fs-extra": "7.0.1",
+    "nodemon": "^1.18.8",
+    "rimraf": "2.6.2"
+  },
+  "name": "@dcos/ui-kit-design-tokens"
+}

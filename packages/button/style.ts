@@ -19,10 +19,10 @@ import {
   redDarken2,
   textColorPrimary,
   white
-} from "../design-tokens/build/js/designTokens";
-import { isHexDark, hexToRgbA } from "../shared/styles/color";
+} from "@dcos/ui-kit-design-tokens/dist/build/js/designTokens";
+import { isHexDark, hexToRgbA } from "@dcos/ui-kit-shared/dist/styles/color";
 import { ButtonAppearances } from "./components/ButtonBase";
-import { tintContent } from "../shared/styles/styleUtils";
+import { tintContent } from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 
 const filledButton = (
   baseColor: string,
@@ -136,21 +136,16 @@ export const focusStyleByAppearance = (appearance, isInverse) => {
   switch (appearance) {
     case "primary":
       return focusStyles(purpleDarken1);
-      break;
     case "secondary":
       return focusStyles("transparent", purpleDarken1);
-      break;
     case "standard":
       return isInverse
         ? focusStyles(hexToRgbA(white, 0.4))
         : focusStyles(greyLightDarken1);
-      break;
     case "success":
       return focusStyles(greenDarken1);
-      break;
     case "danger":
       return focusStyles(redDarken1);
-      break;
     default:
       return "";
   }

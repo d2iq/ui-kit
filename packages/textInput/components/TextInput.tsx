@@ -1,5 +1,12 @@
 import * as React from "react";
 import { cx } from "emotion";
+// TODO remove these lines
+//@ts-ignore
+import {
+  ArrayInterpolation as _A,
+  CSSObject as _C,
+  ClassInterpolation as _CL
+} from "create-emotion/types";
 import {
   dangerColor,
   errorColor,
@@ -21,7 +28,7 @@ import {
   tintContent,
   tintText,
   visuallyHidden
-} from "../../shared/styles/styleUtils";
+} from "@dcos/ui-kit-shared/dist/styles/styleUtils";
 
 export enum TextInputAppearance {
   Standard = "standard",
