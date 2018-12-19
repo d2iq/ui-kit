@@ -104,6 +104,8 @@ export const fullscreenModalHeader = css`
 `;
 
 export const modalCloseWrapper = css`
+  cursor: pointer;
+
   &:focus-within {
     outline: -webkit-focus-ring-color auto 5px;
   }
