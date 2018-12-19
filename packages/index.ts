@@ -25,6 +25,15 @@ export {
 export { Dropdownable } from "./dropdownable";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
 export {
+  DialogModal,
+  SmallDialogModal,
+  LargeDialogModal,
+  DialogModalWithFooter,
+  SmallDialogModalWithFooter,
+  LargeDialogModalWithFooter,
+  FullscreenModal
+} from "./modal";
+export {
   Column,
   Table,
   Cell,

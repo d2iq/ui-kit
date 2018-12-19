@@ -105,7 +105,6 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
             button[appearance],
             buttonBase,
             textWeight("medium"),
-            display("block"),
             className,
             {
               [fullWidthButton]: isFullWidth,

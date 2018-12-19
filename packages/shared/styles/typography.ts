@@ -3,7 +3,9 @@ import {
   fontSizeS,
   fontSizeM,
   fontWeightNormal,
-  fontWeightMedium
+  fontWeightMedium,
+  fontSizeL,
+  fontSizeXl
 } from "../../design-tokens/build/js/designTokens";
 
 export interface Fonts {
@@ -26,9 +28,12 @@ export const coreFonts = (): Fonts => {
   };
 };
 
+// TODO: change keys to t-shirt sizing
 export const fontSizes = {
   small: fontSizeS,
-  default: fontSizeM
+  default: fontSizeM,
+  large: fontSizeL,
+  xLarge: fontSizeXl
 };
 
 export const fontWeights = {

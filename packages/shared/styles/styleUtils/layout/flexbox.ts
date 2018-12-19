@@ -22,6 +22,9 @@ const flexStrategies = {
   `
 };
 
+// Note: the `min-height: 0` rule handles an issue with
+// flex containers that have `overflow: {auto|hidden|scroll}`
+// in Firefox and IE11
 export const flex = (
   flexProps: FlexboxProperties = {
     align: "flex",
@@ -37,6 +40,7 @@ export const flex = (
     justify-content: ${flexProps.justify};
     flex-direction: ${flexProps.direction};
     flex-wrap: ${flexProps.wrap};
+    min-height: ${flexProps.direction === "column" ? 0 : null};
   `;
 };
 
