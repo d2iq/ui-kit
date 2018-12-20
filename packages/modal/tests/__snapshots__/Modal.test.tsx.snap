@@ -155,6 +155,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   font-size: 18px;
 }
 
+.emotion-2 {
+  display: inherit;
+}
+
 .emotion-3 {
   cursor: pointer;
   display: inherit;
@@ -170,14 +174,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-}
-
-.emotion-3:focus-within {
-  outline: -webkit-focus-ring-color auto 5px;
-}
-
-.emotion-3 [role="button"]:-moz-focusring {
-  outline: 1px dotted black;
 }
 
 .emotion-6 {
@@ -199,14 +195,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   flex-shrink: 0;
   width: initial;
   padding: 24px;
-}
-
-.emotion-2 {
-  display: inherit;
-}
-
-.emotion-2:focus {
-  outline: 0;
 }
 
 .emotion-7 {
@@ -616,6 +604,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   font-size: 18px;
 }
 
+.emotion-2 {
+  display: inherit;
+}
+
 .emotion-3 {
   cursor: pointer;
   display: inherit;
@@ -631,14 +623,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-}
-
-.emotion-3:focus-within {
-  outline: -webkit-focus-ring-color auto 5px;
-}
-
-.emotion-3 [role="button"]:-moz-focusring {
-  outline: 1px dotted black;
 }
 
 .emotion-6 {
@@ -660,14 +644,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   flex-shrink: 0;
   width: initial;
   padding: 24px;
-}
-
-.emotion-2 {
-  display: inherit;
-}
-
-.emotion-2:focus {
-  outline: 0;
 }
 
 .emotion-8 {
@@ -1030,6 +1006,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                             >
                               <Clickable
                                 action={[MockFunction]}
+                                disableFocusOutline={false}
                                 role="button"
                                 tabIndex={0}
                               >
@@ -1471,10 +1448,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           Title
                         </div>
                         <div
-                          class="css-6nx4bk"
+                          class="css-tqlthn"
                         >
                           <span
-                            class="css-ms94x0"
+                            class="css-1gjm5sx"
                             role="button"
                             tabindex="0"
                           >
@@ -1695,6 +1672,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-size: 18px;
 }
 
+.emotion-2 {
+  display: inherit;
+}
+
 .emotion-3 {
   cursor: pointer;
   display: inherit;
@@ -1710,14 +1691,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-}
-
-.emotion-3:focus-within {
-  outline: -webkit-focus-ring-color auto 5px;
-}
-
-.emotion-3 [role="button"]:-moz-focusring {
-  outline: 1px dotted black;
 }
 
 .emotion-6 {
@@ -1739,14 +1712,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   flex-shrink: 0;
   width: initial;
   padding: 24px;
-}
-
-.emotion-2 {
-  display: inherit;
-}
-
-.emotion-2:focus {
-  outline: 0;
 }
 
 .emotion-8 {

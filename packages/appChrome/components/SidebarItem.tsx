@@ -33,7 +33,12 @@ class SidebarItem extends React.PureComponent<SidebarItemProps, {}> {
     });
 
     return (
-      <Clickable action={onClick} tabIndex={0} role="link">
+      <Clickable
+        action={onClick}
+        tabIndex={0}
+        role="link"
+        disableFocusOutline={true}
+      >
         <Item className={classNames}>{children}</Item>
       </Clickable>
     );
