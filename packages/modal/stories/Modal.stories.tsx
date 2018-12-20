@@ -220,8 +220,8 @@ storiesOf("Modal", module)
             <SecondaryButton onClick={onClose}>{closeText}</SecondaryButton>
           </div>
           <div className={cx(fullscreenModalTitle, flexItem("grow"))}>
-            <div className={textSize("large")}>{title}</div>
-            <div className={cx(tintContentSecondary, textSize("small"))}>
+            <div className={textSize("l")}>{title}</div>
+            <div className={cx(tintContentSecondary, textSize("s"))}>
               Some subheader
             </div>
           </div>
