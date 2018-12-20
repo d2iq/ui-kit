@@ -1,5 +1,5 @@
 {
-  "extends": ["@dcos/tslint-config"],
+  "extends": ["@dcos/tslint-config", "./tslint-a11y.js"],
   "linterOptions": {
     "exclude": ["./scripts/templates/*"]
   }
