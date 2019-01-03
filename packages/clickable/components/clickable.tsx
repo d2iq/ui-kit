@@ -15,11 +15,13 @@ export interface ClickableProps {
    * The tabIndex is passed down and is the same as the native tabIndex
    */
   tabIndex?: number | string;
+  role?: string;
 }
 
 export class Clickable extends React.PureComponent<ClickableProps, {}> {
   public static defaultProps: Partial<ClickableProps> = {
-    tabIndex: -1
+    tabIndex: -1,
+    role: "button"
   };
 
   constructor(props: ClickableProps) {
@@ -28,13 +30,13 @@ export class Clickable extends React.PureComponent<ClickableProps, {}> {
   }
 
   public render() {
-    const { children, action, tabIndex } = this.props;
+    const { children, action, tabIndex, role } = this.props;
     const { className = "" } = children.props;
 
     return React.cloneElement(React.Children.only(children), {
       onClick: action,
       className: cx(className, outline),
-      role: "button",
+      role,
       tabIndex,
       onKeyPress: this.handleKeyPress
     });

@@ -33,6 +33,7 @@ exports[`SortableHeaderCell renders default 1`] = `
 
 <Clickable
   action={[MockFunction]}
+  role="button"
   tabIndex={0}
 >
   <Styled(div)

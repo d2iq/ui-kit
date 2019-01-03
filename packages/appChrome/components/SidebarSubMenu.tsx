@@ -46,13 +46,15 @@ class SidebarSubMenu extends React.PureComponent<SidebarSubMenuProps, {}> {
     const { children, label, isOpen } = this.props;
 
     return (
-      <Expandable
-        labelClassName={cx(appChromeInsetContent, sidebarNavItem(false))}
-        isOpen={isOpen}
-        label={<div>{label}</div>}
-      >
-        {this.getSubItemList(children)}
-      </Expandable>
+      <li>
+        <Expandable
+          labelClassName={cx(appChromeInsetContent, sidebarNavItem(false))}
+          isOpen={isOpen}
+          label={<div>{label}</div>}
+        >
+          {this.getSubItemList(children)}
+        </Expandable>
+      </li>
     );
   }
 }

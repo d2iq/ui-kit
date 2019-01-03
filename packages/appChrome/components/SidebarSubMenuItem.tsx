@@ -39,7 +39,7 @@ class SidebarSubMenuItem extends React.PureComponent<
     );
 
     return (
-      <Clickable action={onClick} tabIndex={0}>
+      <Clickable action={onClick} tabIndex={0} role="link">
         <div className={classNames}>
           <span className={subMenuItemText}>{children}</span>
         </div>

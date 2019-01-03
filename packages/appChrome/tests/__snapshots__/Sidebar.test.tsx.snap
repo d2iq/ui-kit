@@ -14,6 +14,7 @@ exports[`Sidebar SidebarItem renders 1`] = `
 
 <Clickable
   action={[MockFunction]}
+  role="link"
   tabIndex={0}
 >
   <Styled(li)
@@ -134,45 +135,47 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
   padding-left: 0;
 }
 
-<Expandable
-  label={
-    <div>
-      <SidebarItemLabel
-        icon={<Unknown />}
-      >
-        Item label
-      </SidebarItemLabel>
-    </div>
-  }
-  labelClassName="css-wjyl8f"
->
-  <ul
-    className="emotion-0"
+<li>
+  <Expandable
+    label={
+      <div>
+        <SidebarItemLabel
+          icon={<Unknown />}
+        >
+          Item label
+        </SidebarItemLabel>
+      </div>
+    }
+    labelClassName="css-wjyl8f"
   >
-    <li
-      className=""
-      key="0"
+    <ul
+      className="emotion-0"
     >
-      <SidebarSubMenuItem
+      <li
+        className=""
         key="0"
-        onClick={[MockFunction]}
       >
-        Item label
-      </SidebarSubMenuItem>
-    </li>
-    <li
-      className=""
-      key="1"
-    >
-      <SidebarSubMenuItem
+        <SidebarSubMenuItem
+          key="0"
+          onClick={[MockFunction]}
+        >
+          Item label
+        </SidebarSubMenuItem>
+      </li>
+      <li
+        className=""
         key="1"
-        onClick={[MockFunction]}
       >
-        Item label
-      </SidebarSubMenuItem>
-    </li>
-  </ul>
-</Expandable>
+        <SidebarSubMenuItem
+          key="1"
+          onClick={[MockFunction]}
+        >
+          Item label
+        </SidebarSubMenuItem>
+      </li>
+    </ul>
+  </Expandable>
+</li>
 `;
 
 exports[`Sidebar SidebarSubMenuItem renders 1`] = `
