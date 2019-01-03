@@ -156,6 +156,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-3 {
+  cursor: pointer;
   display: inherit;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -632,6 +633,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-3 {
+  cursor: pointer;
   display: inherit;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -1520,7 +1522,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           Title
                         </div>
                         <div
-                          class="css-1x3nq8p"
+                          class="css-6nx4bk"
                         >
                           <span
                             class="css-ms94x0"
@@ -1745,6 +1747,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-3 {
+  cursor: pointer;
   display: inherit;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
