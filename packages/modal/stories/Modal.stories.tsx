@@ -19,6 +19,7 @@ import PrimaryButton from "../../button/components/PrimaryButton";
 import {
   flex,
   flexItem,
+  padding,
   textSize,
   tintContentSecondary
 } from "../../shared/styles/styleUtils";
@@ -111,7 +112,10 @@ storiesOf("Modal", module)
             onClose={onClose}
             title="I am modal"
             ctaButton={
-              <PrimaryButton onClick={action("handling CTA")}>
+              <PrimaryButton
+                onClick={action("handling CTA")}
+                aria-haspopup={true}
+              >
                 Continue
               </PrimaryButton>
             }
@@ -135,7 +139,10 @@ storiesOf("Modal", module)
             onClose={onClose}
             title="I am modal"
             ctaButton={
-              <PrimaryButton onClick={action("handling CTA")}>
+              <PrimaryButton
+                onClick={action("handling CTA")}
+                aria-haspopup={true}
+              >
                 Continue
               </PrimaryButton>
             }
@@ -159,7 +166,10 @@ storiesOf("Modal", module)
             onClose={onClose}
             title="I am modal"
             ctaButton={
-              <PrimaryButton onClick={action("handling CTA")}>
+              <PrimaryButton
+                onClick={action("handling CTA")}
+                aria-haspopup={true}
+              >
                 Continue
               </PrimaryButton>
             }
@@ -185,7 +195,10 @@ storiesOf("Modal", module)
             subtitle="Optional subtitle"
             closeText="Dismiss"
             ctaButton={
-              <PrimaryButton onClick={action("handling CTA")}>
+              <PrimaryButton
+                onClick={action("handling CTA")}
+                aria-haspopup={true}
+              >
                 Continue
               </PrimaryButton>
             }
@@ -218,7 +231,9 @@ storiesOf("Modal", module)
                 <input type="checkbox" id="fauxToggle" />
                 <label htmlFor="fauxToggle">Faux toggle</label>
               </div>
-              <div className={flexItem("shrink")}>{ctaButton}</div>
+              <div className={cx(flexItem("shrink"), padding("left", "s"))}>
+                {ctaButton}
+              </div>
             </div>
           </div>
         </div>
@@ -232,7 +247,10 @@ storiesOf("Modal", module)
               title="I am modal"
               closeText="Dismiss"
               ctaButton={
-                <PrimaryButton onClick={action("handling CTA")}>
+                <PrimaryButton
+                  onClick={action("handling CTA")}
+                  aria-haspopup={true}
+                >
                   Continue
                 </PrimaryButton>
               }
@@ -259,7 +277,10 @@ storiesOf("Modal", module)
             closeText="Dismiss"
             isContentFlush={true}
             ctaButton={
-              <PrimaryButton onClick={action("handling CTA")}>
+              <PrimaryButton
+                onClick={action("handling CTA")}
+                aria-haspopup={true}
+              >
                 Continue
               </PrimaryButton>
             }
@@ -281,11 +302,13 @@ storiesOf("Modal", module)
             isOpen={isOpen}
             onClose={onClose}
             title="I am modal"
-            initialFocus="#test-input"
+            initialFocus="#focus-input"
           >
             <div>
               <ModalContent />
-              <TextInput inputLabel="I get focus" id="focus-input" />
+              <div className={padding("top", "m")}>
+                <TextInput inputLabel="I get focus" id="focus-input" />
+              </div>
             </div>
           </DialogModal>
         )}
