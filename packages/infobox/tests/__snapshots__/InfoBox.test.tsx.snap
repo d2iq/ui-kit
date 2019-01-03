@@ -60,6 +60,7 @@ exports[`InfoBox renders default 1`] = `
   </div>
   <Clickable
     action={[Function]}
+    role="button"
     tabIndex={0}
   >
     <span
@@ -104,6 +105,7 @@ exports[`InfoBox renders with JSX message 1`] = `
   </div>
   <Clickable
     action={[Function]}
+    role="button"
     tabIndex={0}
   >
     <span
@@ -203,6 +205,7 @@ exports[`InfoBox renders with actions 1`] = `
   </div>
   <Clickable
     action={[Function]}
+    role="button"
     tabIndex={0}
   >
     <span
