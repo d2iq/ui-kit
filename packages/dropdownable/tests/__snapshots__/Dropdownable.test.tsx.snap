@@ -26,6 +26,7 @@ exports[`Dropdownable is visible after opening 1`] = `
   padding: 0;
   text-align: inherit;
   color: #FFF;
+  fill: #FFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -37,11 +38,6 @@ exports[`Dropdownable is visible after opening 1`] = `
 .emotion-0::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-.emotion-0,
-.emotion-0 svg {
-  fill: #FFF;
 }
 
 .emotion-0:hover {
@@ -178,6 +174,7 @@ exports[`Dropdownable is visible after opening 2`] = `
   padding: 0;
   text-align: inherit;
   color: #FFF;
+  fill: #FFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -189,11 +186,6 @@ exports[`Dropdownable is visible after opening 2`] = `
 .emotion-0::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-.emotion-0,
-.emotion-0 svg {
-  fill: #FFF;
 }
 
 .emotion-0:hover {
