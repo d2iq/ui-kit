@@ -2,11 +2,13 @@ const req = require.context("./../packages", true, /.stories.tsx$/);
 
 import { configure, setAddon, addDecorator } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs/react";
+import { checkA11y } from "@storybook/addon-a11y";
 import { setOptions } from "@storybook/addon-options";
 import infoAddon, { setDefaults } from "@storybook/addon-info";
 require("../packages/shared/styles/global").injectStorybookResetCss();
 
 addDecorator(withKnobs);
+addDecorator(checkA11y);
 setAddon(infoAddon);
 
 setOptions({

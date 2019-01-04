@@ -194,6 +194,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     };
 
     return (
+      /* tslint:disable:react-a11y-event-has-role */
       <div
         className={cx(className, {
           [rowHoverCss]: rowIndex === this.state.hoveredRowIndex
@@ -203,6 +204,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       >
         {column.props.cellRenderer(data[rowIndex], style.width as number)}
       </div>
+      /* tslint:enable:react-a11y-event-has-role */
     );
   }
 
