@@ -30,10 +30,6 @@ exports[`TextInput should display validation message if set & appearance == Erro
   font-weight: 500;
   display: block;
   color: #EB293A;
-}
-
-.emotion-0,
-.emotion-0 svg {
   fill: #EB293A;
 }
 
@@ -82,10 +78,6 @@ exports[`TextInput should display validation message if set & appearance == Erro
   font-size: 12px;
   margin-top: 4px;
   color: #EB293A;
-}
-
-.emotion-6,
-.emotion-6 svg {
   fill: #EB293A;
 }
 
@@ -456,10 +448,6 @@ exports[`TextInput should render all appearances focus 2`] = `
   font-weight: 500;
   display: block;
   color: #EB293A;
-}
-
-.emotion-0,
-.emotion-0 svg {
   fill: #EB293A;
 }
 
@@ -737,10 +725,6 @@ exports[`TextInput should render all appearances with props 2`] = `
   font-weight: 500;
   display: block;
   color: #EB293A;
-}
-
-.emotion-0,
-.emotion-0 svg {
   fill: #EB293A;
 }
 
