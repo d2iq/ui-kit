@@ -1,9 +1,11 @@
 import { css } from "emotion";
-import { coreColors, hexToRgbA } from "../shared/styles/color";
-import { coreFonts } from "../shared/styles/typography";
+import { hexToRgbA } from "../shared/styles/color";
 
-const { black, greyLight, greyLightLighten5 } = coreColors();
-const { fontFamilySansSerif } = coreFonts();
+import {
+  black,
+  greyLight,
+  greyLightLighten5
+} from "../design-tokens/build/js/designTokens";
 
 const pointerSize = 4;
 const pointerSpace = 4;
@@ -11,7 +13,6 @@ const cellPadding = 7;
 
 export const headerCss = css`
   box-sizing: border-box;
-  font-family: ${fontFamilySansSerif};
   border-top: 1px solid ${black};
   border-bottom: 1px solid ${black};
 `;
@@ -23,7 +24,6 @@ export const headerCellCss = css`
 
 export const cellCss = css`
   box-sizing: border-box;
-  font-family: ${fontFamilySansSerif};
   border-bottom: 1px solid ${greyLight};
 `;
 
@@ -41,7 +41,6 @@ export const cellAlignmentCss = (textAlign: string) => css`
 `;
 
 export const tableCss = css`
-  font-family: ${fontFamilySansSerif};
   font-weight: normal;
 
   &::after {

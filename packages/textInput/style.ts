@@ -1,8 +1,6 @@
 import { css } from "emotion";
-import { coreColors } from "../shared/styles/color";
-import { borderRadiusSmall } from "../design-tokens/build/js/designTokens";
-
-const {
+import {
+  borderRadiusSmall,
   green,
   greenLighten5,
   greyDark,
@@ -14,7 +12,7 @@ const {
   red,
   redLighten5,
   white
-} = coreColors();
+} from "../design-tokens/build/js/designTokens";
 
 export const dangerColor = red;
 export const errorColor = red;

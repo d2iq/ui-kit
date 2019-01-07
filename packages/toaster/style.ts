@@ -1,8 +1,9 @@
 import { css } from "emotion";
 import { atMediaUp } from "../shared/styles/breakpoints";
-import { coreColors } from "../shared/styles/color";
-import { borderRadiusDefault } from "../design-tokens/build/js/designTokens";
-const { greyDark } = coreColors();
+import {
+  borderRadiusDefault,
+  greyDark
+} from "../design-tokens/build/js/designTokens";
 
 export const toaster = css`
   max-width: 100%;

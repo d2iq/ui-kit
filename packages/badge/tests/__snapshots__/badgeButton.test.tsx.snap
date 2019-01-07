@@ -2,7 +2,7 @@
 
 exports[`BadgeButton accept jsx as children 1`] = `
 <span
-  className="css-1mfjuh7"
+  className="css-2po998"
   onClick={[Function]}
   onKeyPress={[Function]}
   role="button"
@@ -16,7 +16,7 @@ exports[`BadgeButton accept jsx as children 1`] = `
 
 exports[`BadgeButton danger 1`] = `
 <span
-  className="css-5yz412"
+  className="css-1izowno"
   onClick={[Function]}
   onKeyPress={[Function]}
   role="button"
@@ -28,7 +28,7 @@ exports[`BadgeButton danger 1`] = `
 
 exports[`BadgeButton default 1`] = `
 <span
-  className="css-1mfjuh7"
+  className="css-2po998"
   onClick={[Function]}
   onKeyPress={[Function]}
   role="button"
@@ -40,7 +40,7 @@ exports[`BadgeButton default 1`] = `
 
 exports[`BadgeButton outline 1`] = `
 <span
-  className="css-1nvs8l1"
+  className="css-1eco6ms"
   onClick={[Function]}
   onKeyPress={[Function]}
   role="button"
@@ -52,7 +52,7 @@ exports[`BadgeButton outline 1`] = `
 
 exports[`BadgeButton primary 1`] = `
 <span
-  className="css-1e4v5oe"
+  className="css-8ersh7"
   onClick={[Function]}
   onKeyPress={[Function]}
   role="button"
@@ -64,7 +64,7 @@ exports[`BadgeButton primary 1`] = `
 
 exports[`BadgeButton success 1`] = `
 <span
-  className="css-stidvd"
+  className="css-15jpcnq"
   onClick={[Function]}
   onKeyPress={[Function]}
   role="button"
@@ -76,7 +76,7 @@ exports[`BadgeButton success 1`] = `
 
 exports[`BadgeButton warning 1`] = `
 <span
-  className="css-ddfcfh"
+  className="css-1u4qx1d"
   onClick={[Function]}
   onKeyPress={[Function]}
   role="button"

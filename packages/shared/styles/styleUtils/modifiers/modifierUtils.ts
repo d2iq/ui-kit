@@ -1,12 +1,12 @@
 import {
-  spacingXXS,
-  spacingXS,
-  spacingS,
-  spacingM,
-  spacingL,
-  spacingXL,
-  spacingXXL
-} from "../../spacing";
+  spaceXxs,
+  spaceXs,
+  spaceS,
+  spaceM,
+  spaceL,
+  spaceXl,
+  spaceXxl
+} from "../../../../design-tokens/build/js/designTokens";
 
 export type BoxSides =
   | "all"
@@ -19,13 +19,13 @@ export type BoxSides =
 export type SpaceSizes = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "none";
 
 export const spaceSizes = {
-  xxs: spacingXXS,
-  xs: spacingXS,
-  s: spacingS,
-  m: spacingM,
-  l: spacingL,
-  xl: spacingXL,
-  xxl: spacingXXL,
+  xxs: spaceXxs,
+  xs: spaceXs,
+  s: spaceS,
+  m: spaceM,
+  l: spaceL,
+  xl: spaceXl,
+  xxl: spaceXxl,
   none: 0
 };
 

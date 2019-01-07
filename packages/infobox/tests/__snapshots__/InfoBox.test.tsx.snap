@@ -48,6 +48,7 @@ exports[`InfoBox renders default 1`] = `
   padding: 16px;
   font-size: 12px;
   display: grid;
+  font-weight: 500;
 }
 
 <div
@@ -92,6 +93,7 @@ exports[`InfoBox renders with JSX message 1`] = `
   padding: 16px;
   font-size: 12px;
   display: grid;
+  font-weight: 500;
 }
 
 <div
@@ -142,6 +144,7 @@ exports[`InfoBox renders with actions 1`] = `
   padding: 16px;
   font-size: 12px;
   display: grid;
+  font-weight: 500;
 }
 
 @media (min-width:600px) {
@@ -151,7 +154,6 @@ exports[`InfoBox renders with actions 1`] = `
 }
 
 .emotion-2 {
-  font-weight: 500;
   grid-row-start: 2;
   grid-column: span 2;
   -webkit-box-pack: end;
@@ -228,6 +230,7 @@ exports[`InfoBox renders without dismiss button 1`] = `
   padding: 16px;
   font-size: 12px;
   display: grid;
+  font-weight: 500;
 }
 
 <div

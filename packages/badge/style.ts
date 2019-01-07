@@ -1,10 +1,14 @@
 import { css } from "emotion";
-import { coreColors } from "../shared/styles/color";
-import { coreFonts } from "../shared/styles/typography";
-import { borderRadiusSmall } from "../design-tokens/build/js/designTokens";
-
-const { greyDark, greyLight, green, purple, red, white, yellow } = coreColors();
-const { fontFamilySansSerif } = coreFonts();
+import {
+  borderRadiusSmall,
+  green,
+  greyDark,
+  greyLight,
+  purple,
+  red,
+  white,
+  yellow
+} from "../design-tokens/build/js/designTokens";
 
 const badgeAppearance = {
   default: css`
@@ -53,7 +57,6 @@ export const badge = appearance => {
     padding: 0 8px 0;
     font-size: 80%;
     line-height: inherit;
-    font-family: ${fontFamilySansSerif};
     text-decoration: none;
     text-rendering: optimizeLegibility;
     border-radius: ${borderRadiusSmall};
