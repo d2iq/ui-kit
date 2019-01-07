@@ -18,7 +18,15 @@ export interface ColumnProps {
   /**
    * width should return a column width in pixels.
    */
-  width: (args: WidthArgs) => number;
+  width?: (args: WidthArgs) => number;
+  /**
+   * the minimum width a column should be
+   */
+  minWidth?: number;
+  /**
+   * the maximum width a column can be
+   */
+  maxWidth?: number;
 }
 
 export class Column extends React.PureComponent<ColumnProps, {}> {}
