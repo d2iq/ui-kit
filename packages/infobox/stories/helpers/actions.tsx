@@ -2,8 +2,7 @@ import * as React from "react";
 import { Clickable } from "../../../clickable";
 import { action } from "@storybook/addon-actions";
 
-import { coreColors } from "../../../shared/styles/color";
-const { purple } = coreColors();
+import { purple } from "../../../design-tokens/build/js/designTokens";
 
 const fakeButtonStyles = {
   cursor: "pointer",

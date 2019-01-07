@@ -30,10 +30,6 @@ exports[`TextInput should display validation message if set & appearance == Erro
   font-weight: 500;
   display: block;
   color: #EB293A;
-}
-
-.emotion-0,
-.emotion-0 svg {
   fill: #EB293A;
 }
 
@@ -58,7 +54,7 @@ exports[`TextInput should display validation message if set & appearance == Erro
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #EB293A;
 }
 
@@ -82,10 +78,6 @@ exports[`TextInput should display validation message if set & appearance == Erro
   font-size: 12px;
   margin-top: 4px;
   color: #EB293A;
-}
-
-.emotion-6,
-.emotion-6 svg {
   fill: #EB293A;
 }
 
@@ -199,7 +191,7 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #DADDE2;
 }
 
@@ -293,7 +285,7 @@ exports[`TextInput should not display validation message if set & appearance == 
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #14C684;
 }
 
@@ -384,7 +376,7 @@ exports[`TextInput should render all appearances focus 1`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #DADDE2;
 }
 
@@ -456,10 +448,6 @@ exports[`TextInput should render all appearances focus 2`] = `
   font-weight: 500;
   display: block;
   color: #EB293A;
-}
-
-.emotion-0,
-.emotion-0 svg {
   fill: #EB293A;
 }
 
@@ -484,7 +472,7 @@ exports[`TextInput should render all appearances focus 2`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #EB293A;
 }
 
@@ -574,7 +562,7 @@ exports[`TextInput should render all appearances focus 3`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #14C684;
 }
 
@@ -663,7 +651,7 @@ exports[`TextInput should render all appearances with props 1`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #DADDE2;
 }
 
@@ -737,10 +725,6 @@ exports[`TextInput should render all appearances with props 2`] = `
   font-weight: 500;
   display: block;
   color: #EB293A;
-}
-
-.emotion-0,
-.emotion-0 svg {
   fill: #EB293A;
 }
 
@@ -765,7 +749,7 @@ exports[`TextInput should render all appearances with props 2`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #EB293A;
 }
 
@@ -857,7 +841,7 @@ exports[`TextInput should render all appearances with props 3`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #14C684;
 }
 
@@ -948,7 +932,7 @@ exports[`TextInput should render node as inputLabel 1`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #DADDE2;
 }
 
@@ -1046,7 +1030,7 @@ exports[`TextInput should render string inputLabel 1`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #DADDE2;
 }
 

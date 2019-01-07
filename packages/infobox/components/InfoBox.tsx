@@ -7,7 +7,12 @@ import {
   dismissBtn
 } from "../style";
 import Clickable from "../../clickable/components/clickable";
-import { padding, textSize, display } from "../../shared/styles/styleUtils";
+import {
+  padding,
+  textSize,
+  display,
+  textWeight
+} from "../../shared/styles/styleUtils";
 import { CloseIcon } from "../../shared/icons";
 
 export interface InfoBoxProps {
@@ -69,6 +74,7 @@ export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
           padding("all"),
           textSize("small"),
           display("grid"),
+          textWeight("medium"),
           className
         )}
         role={isUrgentMessage ? "alert" : "log"}

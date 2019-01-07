@@ -219,6 +219,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   padding: 0;
   text-align: inherit;
   color: #7D58FF;
+  fill: #7D58FF;
   cursor: pointer;
   outline: none;
   font-weight: 500;
@@ -229,26 +230,13 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   padding: 0;
 }
 
-.emotion-7,
-.emotion-7 svg {
-  fill: #7D58FF;
-}
-
 .emotion-7:hover {
   color: #704FE5;
-}
-
-.emotion-7:hover,
-.emotion-7:hover svg {
   fill: #704FE5;
 }
 
 .emotion-7:active {
   color: #6446CC;
-}
-
-.emotion-7:active,
-.emotion-7:active svg {
   fill: #6446CC;
 }
 
@@ -262,6 +250,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   padding: 0;
   text-align: inherit;
   color: #FFF;
+  fill: #FFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -273,11 +262,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 .emotion-9::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-.emotion-9,
-.emotion-9 svg {
-  fill: #FFF;
 }
 
 .emotion-9:hover {
@@ -723,6 +707,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   padding: 0;
   text-align: inherit;
   color: #7D58FF;
+  fill: #7D58FF;
   cursor: pointer;
   outline: none;
   font-weight: 500;
@@ -733,26 +718,13 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   padding: 0;
 }
 
-.emotion-7,
-.emotion-7 svg {
-  fill: #7D58FF;
-}
-
 .emotion-7:hover {
   color: #704FE5;
-}
-
-.emotion-7:hover,
-.emotion-7:hover svg {
   fill: #704FE5;
 }
 
 .emotion-7:active {
   color: #6446CC;
-}
-
-.emotion-7:active,
-.emotion-7:active svg {
   fill: #6446CC;
 }
 
@@ -786,6 +758,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   padding: 0;
   text-align: inherit;
   color: #FFF;
+  fill: #FFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -797,11 +770,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 .emotion-10::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-.emotion-10,
-.emotion-10 svg {
-  fill: #FFF;
 }
 
 .emotion-10:hover {
@@ -1232,6 +1200,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 0;
   text-align: inherit;
   color: #7D58FF;
+  fill: #7D58FF;
   cursor: pointer;
   outline: none;
   font-weight: 500;
@@ -1242,26 +1211,13 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 0;
 }
 
-.emotion-1,
-.emotion-1 svg {
-  fill: #7D58FF;
-}
-
 .emotion-1:hover {
   color: #704FE5;
-}
-
-.emotion-1:hover,
-.emotion-1:hover svg {
   fill: #704FE5;
 }
 
 .emotion-1:active {
   color: #6446CC;
-}
-
-.emotion-1:active,
-.emotion-1:active svg {
   fill: #6446CC;
 }
 
@@ -1275,6 +1231,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 0;
   text-align: inherit;
   color: #FFF;
+  fill: #FFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -1286,11 +1243,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-6::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-.emotion-6,
-.emotion-6 svg {
-  fill: #FFF;
 }
 
 .emotion-6:hover {
@@ -1393,10 +1345,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-size: 12px;
   font-weight: 400;
   color: #76797E;
-}
-
-.emotion-4,
-.emotion-4 svg {
   fill: #76797E;
 }
 
@@ -1838,6 +1786,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 0;
   text-align: inherit;
   color: #7D58FF;
+  fill: #7D58FF;
   cursor: pointer;
   outline: none;
   font-weight: 500;
@@ -1848,26 +1797,13 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 0;
 }
 
-.emotion-7,
-.emotion-7 svg {
-  fill: #7D58FF;
-}
-
 .emotion-7:hover {
   color: #704FE5;
-}
-
-.emotion-7:hover,
-.emotion-7:hover svg {
   fill: #704FE5;
 }
 
 .emotion-7:active {
   color: #6446CC;
-}
-
-.emotion-7:active,
-.emotion-7:active svg {
   fill: #6446CC;
 }
 
@@ -1901,6 +1837,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 0;
   text-align: inherit;
   color: #FFF;
+  fill: #FFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -1912,11 +1849,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-10::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-.emotion-10,
-.emotion-10 svg {
-  fill: #FFF;
 }
 
 .emotion-10:hover {
@@ -2107,6 +2039,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 0;
   text-align: inherit;
   color: #7D58FF;
+  fill: #7D58FF;
   cursor: pointer;
   outline: none;
   font-weight: 500;
@@ -2117,26 +2050,13 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 0;
 }
 
-.emotion-1,
-.emotion-1 svg {
-  fill: #7D58FF;
-}
-
 .emotion-1:hover {
   color: #704FE5;
-}
-
-.emotion-1:hover,
-.emotion-1:hover svg {
   fill: #704FE5;
 }
 
 .emotion-1:active {
   color: #6446CC;
-}
-
-.emotion-1:active,
-.emotion-1:active svg {
   fill: #6446CC;
 }
 
@@ -2170,6 +2090,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 0;
   text-align: inherit;
   color: #FFF;
+  fill: #FFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -2181,11 +2102,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-7::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-.emotion-7,
-.emotion-7 svg {
-  fill: #FFF;
 }
 
 .emotion-7:hover {
@@ -2288,10 +2204,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-size: 12px;
   font-weight: 400;
   color: #76797E;
-}
-
-.emotion-5,
-.emotion-5 svg {
   fill: #76797E;
 }
 

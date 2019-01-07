@@ -35,7 +35,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #DADDE2;
 }
 
@@ -164,10 +164,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   font-weight: 500;
   display: block;
   color: #EB293A;
-}
-
-.emotion-0,
-.emotion-0 svg {
   fill: #EB293A;
 }
 
@@ -197,7 +193,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #EB293A;
 }
 
@@ -327,7 +323,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #14C684;
 }
 
@@ -434,7 +430,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #DADDE2;
 }
 
@@ -591,10 +587,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   font-weight: 500;
   display: block;
   color: #EB293A;
-}
-
-.emotion-0,
-.emotion-0 svg {
   fill: #EB293A;
 }
 
@@ -624,7 +616,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #EB293A;
 }
 
@@ -753,7 +745,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #14C684;
 }
 
@@ -830,7 +822,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #DADDE2;
 }
 
@@ -1022,10 +1014,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   font-weight: 500;
   display: block;
   color: #EB293A;
-}
-
-.emotion-0,
-.emotion-0 svg {
   fill: #EB293A;
 }
 
@@ -1055,7 +1043,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #EB293A;
 }
 
@@ -1219,7 +1207,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   border-radius: 4px;
   height: 36px;
   font-size: inherit;
-  background-color: #fff;
+  background-color: #FFF;
   border-color: #14C684;
 }
 
