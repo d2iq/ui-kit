@@ -25,6 +25,7 @@ export const headerCellCss = css`
 export const cellCss = css`
   box-sizing: border-box;
   border-bottom: 1px solid ${greyLight};
+  white-space: nowrap;
 `;
 
 export const innerCellCss = css`

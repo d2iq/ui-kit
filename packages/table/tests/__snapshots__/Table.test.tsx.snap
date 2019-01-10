@@ -165,6 +165,18 @@ exports[`Table renders again with new data 2`] = `
 `;
 
 exports[`Table renders default 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  white-space: nowrap;
+}
+
 .emotion-14 {
   font-weight: normal;
 }
@@ -185,99 +197,6 @@ exports[`Table renders default 1`] = `
 
 .emotion-4::-webkit-scrollbar {
   display: none;
-}
-
-.emotion-0 {
-  box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  height: 35px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 307.2px;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  height: 35px;
-  left: 307.2px;
-  position: absolute;
-  top: 0;
-  width: 307.2px;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  height: 35px;
-  left: 614.4px;
-  position: absolute;
-  top: 0;
-  width: 307.2px;
-}
-
-.emotion-5 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  height: 35px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 307.2px;
-}
-
-.emotion-6 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  height: 35px;
-  left: 0;
-  position: absolute;
-  top: 35px;
-  width: 307.2px;
-}
-
-.emotion-9 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  height: 35px;
-  left: 307.2px;
-  position: absolute;
-  top: 0;
-  width: 307.2px;
-}
-
-.emotion-10 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  height: 35px;
-  left: 614.4px;
-  position: absolute;
-  top: 0;
-  width: 307.2px;
-}
-
-.emotion-12 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  height: 35px;
-  left: 307.2px;
-  position: absolute;
-  top: 35px;
-  width: 307.2px;
-}
-
-.emotion-13 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  height: 35px;
-  left: 614.4px;
-  position: absolute;
-  top: 35px;
-  width: 307.2px;
 }
 
 <div
@@ -304,6 +223,7 @@ exports[`Table renders default 1`] = `
         >
           <div
             class="emotion-0"
+            style="height:35px;left:0;position:absolute;top:0;width:307.2px"
           >
             name
           </div>
@@ -327,16 +247,19 @@ exports[`Table renders default 1`] = `
           >
             <div
               class="emotion-0"
+              style="height:35px;left:0;position:absolute;top:0;width:307.2px"
             >
               role
             </div>
             <div
-              class="emotion-2"
+              class="emotion-0"
+              style="height:35px;left:307.2px;position:absolute;top:0;width:307.2px"
             >
               state
             </div>
             <div
-              class="emotion-3"
+              class="emotion-0"
+              style="height:35px;left:614.4px;position:absolute;top:0;width:307.2px"
             >
               zipcode
             </div>
@@ -365,13 +288,15 @@ exports[`Table renders default 1`] = `
           >
             <div
               class="emotion-5"
+              style="height:35px;left:0;position:absolute;top:0;width:307.2px"
             >
               <strong>
                 Brian Vaughn
               </strong>
             </div>
             <div
-              class="emotion-6"
+              class="emotion-5"
+              style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
             >
               <strong>
                 Jon Doe
@@ -395,41 +320,47 @@ exports[`Table renders default 1`] = `
         >
           <div
             class="emotion-5"
+            style="height:35px;left:0;position:absolute;top:0;width:307.2px"
           >
             <em>
               Software Engineer
             </em>
           </div>
           <div
-            class="emotion-9"
+            class="emotion-5"
+            style="height:35px;left:307.2px;position:absolute;top:0;width:307.2px"
           >
             <span>
               CA
             </span>
           </div>
           <div
-            class="emotion-10"
+            class="emotion-5"
+            style="height:35px;left:614.4px;position:absolute;top:0;width:307.2px"
           >
             <span>
               95125
             </span>
           </div>
           <div
-            class="emotion-6"
+            class="emotion-5"
+            style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
           >
             <em>
               Product engineer
             </em>
           </div>
           <div
-            class="emotion-12"
+            class="emotion-5"
+            style="height:35px;left:307.2px;position:absolute;top:35px;width:307.2px"
           >
             <span>
               CA
             </span>
           </div>
           <div
-            class="emotion-13"
+            class="emotion-5"
+            style="height:35px;left:614.4px;position:absolute;top:35px;width:307.2px"
           >
             <span>
               95125

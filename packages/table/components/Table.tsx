@@ -1,6 +1,12 @@
 import * as React from "react";
-import { css, cx } from "emotion";
-import { AutoSizer, MultiGrid, GridCellProps } from "react-virtualized";
+import { cx } from "emotion";
+import {
+  AutoSizer,
+  MultiGrid,
+  GridCellProps,
+  CellMeasurer,
+  CellMeasurerCache
+} from "react-virtualized";
 
 import {
   headerCss,
@@ -53,17 +59,31 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       const totalColumns: number = children.length;
       let remainingWidth: number = width;
       return children.map((child, currentIndex) => {
-        const calculatedWidth = child.props.width({
-          width,
-          totalColumns,
-          currentIndex,
-          remainingWidth
-        });
-        remainingWidth -= calculatedWidth;
-        return calculatedWidth;
+        const calculatedWidth = child.props.width
+          ? child.props.width({
+              width,
+              totalColumns,
+              currentIndex,
+              remainingWidth
+            })
+          : this.cellMeasureCache.columnWidth({ index: currentIndex }) + 1;
+        // Adding 1 pixel to the calculated columnWidth for when we use `text-overflow: ellipsis`.
+        // In rare cases, the browser will try and truncate the text too soon
+        const clampedWidth = Math.min(
+          Math.max(calculatedWidth, child.props.minWidth || 0),
+          child.props.maxWidth || width
+        );
+        remainingWidth -= clampedWidth;
+        return clampedWidth;
       });
     }
   );
+
+  private cellMeasureCache = new CellMeasurerCache({
+    defaultHeight: ROW_HEIGHT,
+    defaultWidth: 150,
+    fixedHeight: true
+  });
 
   constructor(props) {
     super(props);
@@ -73,6 +93,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     this.updateGridSize = this.updateGridSize.bind(this);
     this.getGrid = this.getGrid.bind(this);
     this.onScroll = this.onScroll.bind(this);
+    this.cellRenderer = this.cellRenderer.bind(this);
 
     this.state = {
       isScrolling: false,
@@ -128,7 +149,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         ref={this.setRef}
         fixedColumnCount={1}
         fixedRowCount={1}
-        cellRenderer={this.getCell}
+        cellRenderer={this.cellRenderer}
         columnWidth={getColumnSize}
         columnCount={columnCount}
         enableFixedColumnScroll={true}
@@ -152,13 +173,26 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     }
   ) {
     const { key, style, column } = args;
-    const className = css(headerCss, {
-      ...style
-    });
     return (
-      <div className={className} key={key}>
+      <div className={headerCss} style={style} key={key}>
         {column.props.header}
       </div>
+    );
+  }
+
+  private cellRenderer(args: GridCellProps) {
+    const { columnIndex, rowIndex, key, parent } = args;
+
+    return (
+      <CellMeasurer
+        cache={this.cellMeasureCache}
+        columnIndex={columnIndex}
+        key={key}
+        parent={parent}
+        rowIndex={rowIndex}
+      >
+        {this.getCell(args)}
+      </CellMeasurer>
     );
   }
 
@@ -186,9 +220,6 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     }
   ) {
     const { style, key, column, data, rowIndex } = args;
-    const className = css(cellCss, {
-      ...style
-    });
     const updateHoveredRowIndex = () => {
       this.setState({ hoveredRowIndex: rowIndex });
     };
@@ -196,9 +227,10 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     return (
       /* tslint:disable:react-a11y-event-has-role */
       <div
-        className={cx(className, {
+        className={cx(cellCss, {
           [rowHoverCss]: rowIndex === this.state.hoveredRowIndex
         })}
+        style={style}
         key={key}
         onMouseOver={updateHoveredRowIndex}
       >
