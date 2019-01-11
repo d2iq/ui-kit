@@ -49,8 +49,7 @@
     "react-emotion": "9.2.12",
     "react-toggled": "1.2.7",
     "react-transition-group": "2.5.0",
-    "react-virtualized": "9.20.1",
-    "semantic-release": "15.9.6"
+    "react-virtualized": "9.20.1"
   },
   "peerDependencies": {
     "react": ">=15.4.1 <=16.7.0 || 16.7.0-alpha.0",
@@ -99,6 +98,8 @@
     "react-dom": "16.5.2",
     "react-test-renderer": "16.5.2",
     "rimraf": "2.6.2",
+    "semantic-release": "15.13.3",
+    "semantic-release-jira": "1.2.3",
     "storybook-readme": "4.0.2",
     "style-dictionary": "^2.4.0",
     "ts-jest": "23.10.4",
