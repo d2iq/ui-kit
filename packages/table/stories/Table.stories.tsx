@@ -10,24 +10,24 @@ import { items, width } from "./helpers/mocks";
 const readme = require("../README.md");
 
 const nameCellRenderer = ({ name }: { name?: string }) => (
-  <Cell>
+  <TextCell>
     <strong>{name}</strong>
-  </Cell>
+  </TextCell>
 );
 const cityCellRenderer = ({ city }: { city?: string }) => (
-  <Cell>
+  <TextCell>
     <strong>{city}</strong>
-  </Cell>
+  </TextCell>
 );
 const roleCellRenderer = ({ role }: { role?: string }) => (
-  <Cell>
+  <TextCell>
     <span>{role}</span>
-  </Cell>
+  </TextCell>
 );
 const stateCellRenderer = ({ state }: { state?: string }) => (
-  <Cell>
+  <TextCell>
     <span>{state}</span>
-  </Cell>
+  </TextCell>
 );
 const zipcodeCellRenderer = ({ zipcode }: { zipcode?: string }) => (
   <NumberCell>
@@ -87,6 +87,44 @@ storiesOf("Table", module)
           header={<HeaderCell>city</HeaderCell>}
           cellRenderer={cityCellRenderer}
           width={width}
+        />
+      </Table>
+    </div>
+  ))
+  .addWithInfo("column width match content", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <Table data={items}>
+        <Column
+          header={<HeaderCell>name</HeaderCell>}
+          cellRenderer={nameCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>role</HeaderCell>}
+          cellRenderer={roleCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>state</HeaderCell>}
+          cellRenderer={stateCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>Very Long</HeaderCell>}
+          cellRenderer={veryLongRenderer}
+          maxWidth={300}
+        />
+        <Column
+          header={<HeaderCell textAlign="right">zip code</HeaderCell>}
+          cellRenderer={zipcodeCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>city</HeaderCell>}
+          cellRenderer={cityCellRenderer}
+          maxWidth={200}
         />
       </Table>
     </div>
