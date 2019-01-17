@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon renders 1`] = `
+.emotion-0 {
+  fill: blue;
+}
+
+.emotion-0 use {
+  pointer-events: none;
+}
+
+<svg
+  aria-label="test icon"
+  className="emotion-0"
+  height={48}
+  preserveAspectRatio="xMinYMin meet"
+  role="img"
+  viewBox="0 0 48 48"
+  width={48}
+>
+  <use
+    xlinkHref="#system-arrow-down"
+  />
+</svg>
+`;
+
+exports[`Icon renders with defaults 1`] = `
+.emotion-0 {
+  fill: #1B2029;
+}
+
+.emotion-0 use {
+  pointer-events: none;
+}
+
+<svg
+  aria-label="system-arrow-down icon"
+  className="emotion-0"
+  height={24}
+  preserveAspectRatio="xMinYMin meet"
+  role="img"
+  viewBox="0 0 24 24"
+  width={24}
+>
+  <use
+    xlinkHref="#system-arrow-down"
+  />
+</svg>
+`;
