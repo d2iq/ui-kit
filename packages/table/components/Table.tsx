@@ -101,6 +101,11 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     };
   }
 
+  public componentDidUpdate() {
+    this.cellMeasureCache.clearAll();
+    this.updateGridSize();
+  }
+
   public render() {
     return (
       <AutoSizer
