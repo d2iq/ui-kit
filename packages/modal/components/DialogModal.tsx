@@ -10,7 +10,9 @@ import {
   textSize
 } from "../../shared/styles/styleUtils";
 import Clickable from "../../clickable/components/clickable";
-import { CloseIcon } from "../../shared/icons";
+import Icon from "../../icon/components/Icon";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
+import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 
 export interface DialogModalProps extends ModalBaseProps {
   /** Content that gets anchored to the button of the footer. Currently, this is just primary and secondary actions. ⚠️Do not use this directly⚠️ */
@@ -45,7 +47,7 @@ class DialogModal extends React.PureComponent<DialogModalProps, {}> {
             >
               <Clickable tabIndex={0} action={this.props.onClose}>
                 <span className={display("inherit")}>
-                  <CloseIcon />
+                  <Icon shape={SystemIcons.Close} size={iconSizeXs} />
                 </span>
               </Clickable>
             </div>

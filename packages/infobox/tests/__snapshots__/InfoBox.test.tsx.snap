@@ -29,7 +29,6 @@ exports[`InfoBox InfoBoxBanner renders default 1`] = `
 
 exports[`InfoBox renders default 1`] = `
 .emotion-0 {
-  fill: #1B2029;
   cursor: pointer;
   line-height: 0;
   opacity: 0.5;
@@ -68,7 +67,11 @@ exports[`InfoBox renders default 1`] = `
     <span
       className="emotion-0"
     >
-      <Component />
+      <Icon
+        color="#1B2029"
+        shape="system-close"
+        size="16px"
+      />
     </span>
   </Clickable>
 </div>
@@ -76,7 +79,6 @@ exports[`InfoBox renders default 1`] = `
 
 exports[`InfoBox renders with JSX message 1`] = `
 .emotion-0 {
-  fill: #1B2029;
   cursor: pointer;
   line-height: 0;
   opacity: 0.5;
@@ -115,7 +117,11 @@ exports[`InfoBox renders with JSX message 1`] = `
     <span
       className="emotion-0"
     >
-      <Component />
+      <Icon
+        color="#1B2029"
+        shape="system-close"
+        size="16px"
+      />
     </span>
   </Clickable>
 </div>
@@ -129,7 +135,6 @@ exports[`InfoBox renders with actions 1`] = `
 }
 
 .emotion-3 {
-  fill: #1B2029;
   cursor: pointer;
   line-height: 0;
   opacity: 0.5;
@@ -216,7 +221,11 @@ exports[`InfoBox renders with actions 1`] = `
     <span
       className="emotion-3"
     >
-      <Component />
+      <Icon
+        color="#1B2029"
+        shape="system-close"
+        size="16px"
+      />
     </span>
   </Clickable>
 </div>

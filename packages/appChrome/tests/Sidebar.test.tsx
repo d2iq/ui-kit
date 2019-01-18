@@ -12,7 +12,7 @@ import {
   SidebarSubMenu,
   SidebarSubMenuItem
 } from "../";
-import { PlaceholderIcon } from "../stories/helpers/StorybookSidebarHelpers";
+import { ProductIcons } from "../../icons/dist/product-icons-enum";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
@@ -59,7 +59,7 @@ describe("Sidebar", () => {
     it("renders", () => {
       const onClickFn = jest.fn();
       const component = shallow(
-        <SidebarItem icon={<PlaceholderIcon />} onClick={onClickFn}>
+        <SidebarItem icon={ProductIcons.ComponentsInverse} onClick={onClickFn}>
           Item label
         </SidebarItem>
       );
@@ -70,7 +70,7 @@ describe("Sidebar", () => {
   describe("SidebarItemLabel", () => {
     it("renders", () => {
       const component = shallow(
-        <SidebarItemLabel icon={<PlaceholderIcon />}>
+        <SidebarItemLabel icon={ProductIcons.ComponentsInverse}>
           Item label
         </SidebarItemLabel>
       );
@@ -93,7 +93,7 @@ describe("Sidebar", () => {
     const component = shallow(
       <SidebarSubMenu
         label={
-          <SidebarItemLabel icon={<PlaceholderIcon />}>
+          <SidebarItemLabel icon={ProductIcons.ComponentsInverse}>
             Item label
           </SidebarItemLabel>
         }
@@ -114,7 +114,7 @@ describe("Sidebar", () => {
   describe("SidebarSubMenuItem", () => {
     it("renders", () => {
       const component = shallow(
-        <SidebarItemLabel icon={<PlaceholderIcon />}>
+        <SidebarItemLabel icon={ProductIcons.ComponentsInverse}>
           Item label
         </SidebarItemLabel>
       );

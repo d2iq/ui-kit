@@ -77,7 +77,11 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
   <div
     className="emotion-0"
   >
-    <Component />
+    <IconPropAdapter
+      color="inherit"
+      icon="product-components-inverse"
+      size="24px"
+    />
   </div>
   <div
     className="emotion-1"
@@ -145,7 +149,8 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
     label={
       <div>
         <SidebarItemLabel
-          icon={<Unknown />}
+          icon="product-components-inverse"
+          iconWidth="24px"
         >
           Item label
         </SidebarItemLabel>
@@ -234,7 +239,11 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
   <div
     className="emotion-0"
   >
-    <Component />
+    <IconPropAdapter
+      color="inherit"
+      icon="product-components-inverse"
+      size="24px"
+    />
   </div>
   <div
     className="emotion-1"

@@ -5,6 +5,7 @@ import { SidebarItemLabelProps } from "./SidebarItemLabel";
 import { SidebarSubMenuItemProps } from "./SidebarSubMenuItem";
 import { sidebarNavItem, appChromeInsetContent, spaceMenuIcon } from "../style";
 import { listReset } from "../../shared/styles/styleUtils";
+import { iconSizeS } from "../../design-tokens/build/js/designTokens";
 export interface SidebarSubMenuProps {
   children: Array<React.ReactElement<SidebarSubMenuItemProps>>;
   isOpen?: boolean;
@@ -25,13 +26,13 @@ class SidebarSubMenu extends React.PureComponent<SidebarSubMenuProps, {}> {
   public getSubItemList(
     items: Array<React.ReactElement<SidebarSubMenuItemProps>>
   ) {
-    const iconWidth = this.props.iconWidth ? this.props.iconWidth : 0;
+    const iconWidth = this.props.iconWidth ? this.props.iconWidth : iconSizeS;
     return (
       <ul className={listReset}>
         {items.map((item, i) => (
           <li
             className={cx({
-              [spaceMenuIcon(`${iconWidth}px`)]: Boolean(iconWidth)
+              [spaceMenuIcon(`${iconWidth}px`)]: this.props.menuHasIcon
             })}
             key={i}
           >
