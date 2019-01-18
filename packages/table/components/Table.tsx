@@ -42,6 +42,47 @@ const ROW_HEIGHT = 35;
 
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 768;
+
+export const clampWidth = (
+  baseWidth: number,
+  minWidth: number,
+  maxWidth: number
+): number => Math.min(Math.max(baseWidth, minWidth), maxWidth);
+
+export const fillColumns = (
+  columns: Array<React.ReactElement<ColumnProps>>,
+  colWidths: number[],
+  width: number
+): number[] => {
+  let copiedColWidths = [...colWidths];
+  const widthToFill =
+    width - copiedColWidths.reduce((acc, curr) => acc + curr, 0);
+  const fillWidthColsIdxArr: number[] = columns
+    .filter(child => child.props.growToFill)
+    .map(col => columns.indexOf(col));
+
+  fillWidthColsIdxArr.forEach(colIdx => {
+    const oldWidth = copiedColWidths[colIdx];
+    const newWidth = widthToFill / fillWidthColsIdxArr.length + oldWidth;
+
+    if (newWidth <= oldWidth) {
+      return;
+    }
+
+    copiedColWidths[colIdx] = clampWidth(
+      newWidth,
+      columns[colIdx].props.minWidth || 0,
+      columns[colIdx].props.maxWidth || width
+    );
+  });
+
+  if (copiedColWidths.reduce((acc, curr) => acc + curr, 0) < width) {
+    return fillColumns(columns, copiedColWidths, width);
+  } else {
+    return copiedColWidths;
+  }
+};
+
 export class Table<T> extends React.PureComponent<TableProps, TableState> {
   public multiGridRef: { recomputeGridSize?: any } = {};
 
@@ -56,9 +97,10 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       children: Array<React.ReactElement<ColumnProps>>,
       width: number
     ): number[] => {
-      const totalColumns: number = children.length;
       let remainingWidth: number = width;
-      return children.map((child, currentIndex) => {
+
+      const totalColumns: number = children.length;
+      const colWidths = children.map((child, currentIndex) => {
         const calculatedWidth = child.props.width
           ? child.props.width({
               width,
@@ -69,13 +111,21 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
           : this.cellMeasureCache.columnWidth({ index: currentIndex }) + 1;
         // Adding 1 pixel to the calculated columnWidth for when we use `text-overflow: ellipsis`.
         // In rare cases, the browser will try and truncate the text too soon
-        const clampedWidth = Math.min(
-          Math.max(calculatedWidth, child.props.minWidth || 0),
+
+        const clampedWidth = clampWidth(
+          calculatedWidth,
+          child.props.minWidth || 0,
           child.props.maxWidth || width
         );
         remainingWidth -= clampedWidth;
         return clampedWidth;
       });
+
+      if (children.filter(child => child.props.growToFill).length) {
+        return fillColumns(children, colWidths, width) || [];
+      }
+
+      return colWidths;
     }
   );
 
