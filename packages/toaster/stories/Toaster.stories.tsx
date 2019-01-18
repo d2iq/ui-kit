@@ -18,7 +18,7 @@ const fakeButtonStyles = {
   border: "none",
   color: purple,
   cursor: "pointer",
-  fontSize: fontSizes.small,
+  fontSize: fontSizes.s,
   padding: 0
 };
 

@@ -35,9 +35,7 @@ class DialogModal extends React.PureComponent<DialogModalProps, {}> {
       <ModalBase {...other}>
         <div className={cx(modalHeader, flexItem("shrink"))}>
           <div className={cx(flex({ align: "center" }), padding("all", "l"))}>
-            <div className={cx(flexItem("grow"), textSize("large"))}>
-              {title}
-            </div>
+            <div className={cx(flexItem("grow"), textSize("l"))}>{title}</div>
             <div
               className={cx(
                 modalCloseWrapper,
