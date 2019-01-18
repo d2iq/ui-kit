@@ -1,0 +1,24 @@
+{
+	"layout": {
+		"iconSize": {
+			"xs": {
+				"value": "16px"
+			},
+			"s": {
+				"value": "24px"
+			},
+			"m": {
+				"value": "32px"
+			},
+			"l": {
+				"value": "48px"
+			},
+			"xl": {
+				"value": "64px"
+			},
+			"xxl": {
+				"value": "96"
+			}
+		}
+	}
+}

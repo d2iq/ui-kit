@@ -13,3 +13,4 @@ tmp/
 .env
 coverage
 storybook-static/
+packages/icons/dist/
