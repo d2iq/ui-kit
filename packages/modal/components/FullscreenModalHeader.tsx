@@ -30,7 +30,7 @@ const FullscreenModalHeader = ({
           fullscreenModalTitle,
           margin("vert", "none"),
           padding("bottom", "xs"),
-          textSize("large"),
+          textSize("l"),
           textWeight("normal")
         )}
       >
@@ -40,7 +40,7 @@ const FullscreenModalHeader = ({
         className={cx(
           fullscreenModalTitle,
           margin("vert", "none"),
-          textSize("small"),
+          textSize("s"),
           textWeight("normal"),
           tintContent(textColorSecondary)
         )}

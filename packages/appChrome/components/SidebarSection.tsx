@@ -45,7 +45,7 @@ class SidebarSection extends React.PureComponent<SidebarSectionProps, {}> {
               sidebarSectionHeader,
               flex({ align: "center" }),
               tintText(greyLightDarken3),
-              textSize("default"),
+              textSize("m"),
               textWeight("medium"),
               margin("bottom", "none"),
               margin("top", "none")
