@@ -19,7 +19,7 @@ class AppChrome extends React.PureComponent<AppChromeProps, {}> {
     const { sidebar, headerBar, mainContent } = this.props;
 
     return (
-      <div className={cx(appChrome, textSize("default"))}>
+      <div className={cx(appChrome, textSize("m"))}>
         <div className="headerBar">{headerBar}</div>
         <div className={cx(flex(), appWrapper)}>
           <div className={flexItem("shrink")}>{sidebar}</div>

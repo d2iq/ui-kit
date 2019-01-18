@@ -174,7 +174,7 @@ export class TextInput<
       this.props.appearance === TextInputAppearance.Error;
     return (
       <div
-        className={cx(textSize("small"), margin("top", "xxs"), {
+        className={cx(textSize("s"), margin("top", "xxs"), {
           [tintContentSecondary]: !tintColorForErrors,
           [tintContent(errorColor)]: tintColorForErrors
         })}

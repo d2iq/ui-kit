@@ -9,10 +9,10 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 
 export const fontSizes = {
-  small: fontSizeS,
-  default: fontSizeM,
-  large: fontSizeL,
-  xLarge: fontSizeXl
+  s: fontSizeS,
+  m: fontSizeM,
+  l: fontSizeL,
+  xl: fontSizeXl
 };
 
 export const fontWeights = {

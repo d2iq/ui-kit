@@ -14,7 +14,7 @@ export const injectStorybookResetCss = () => {
   return injectGlobal`
     body {
         font-family: ${fontFamilySansSerif};
-        ${textSize("default")};
+        ${textSize("m")};
     }
   `;
 };

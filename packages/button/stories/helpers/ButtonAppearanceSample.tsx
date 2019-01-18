@@ -23,7 +23,7 @@ const darkModeWrapper = css`
 const ButtonAppearanceSample = ({ buttonComponent }) => {
   const labelClassNames = cx(
     tintContentSecondary,
-    textSize("small"),
+    textSize("s"),
     flush("vert"),
     padding("bottom", "xxs")
   );
