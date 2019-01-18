@@ -8,7 +8,7 @@ export interface DialogModalWithFooterProps extends DialogModalProps {
   /** The primary button */
   ctaButton: React.ReactElement<ButtonProps>;
   /** The text for the button that secondary button, which closes the modal */
-  closeText: string;
+  closeText: React.ReactNode;
 }
 
 class DialogModalWithFooter extends React.PureComponent<
