@@ -15,13 +15,21 @@ export interface ClickableProps {
    * The tabIndex is passed down and is the same as the native tabIndex
    */
   tabIndex?: number | string;
+  /**
+   * ARIA role of the clickable element
+   */
   role?: string;
+  /**
+   * Whether or not to reset the :focus outline style
+   */
+  disableFocusOutline?: boolean;
 }
 
 export class Clickable extends React.PureComponent<ClickableProps, {}> {
   public static defaultProps: Partial<ClickableProps> = {
     tabIndex: -1,
-    role: "button"
+    role: "button",
+    disableFocusOutline: false
   };
 
   constructor(props: ClickableProps) {
@@ -30,12 +38,18 @@ export class Clickable extends React.PureComponent<ClickableProps, {}> {
   }
 
   public render() {
-    const { children, action, tabIndex, role } = this.props;
+    const {
+      children,
+      action,
+      tabIndex,
+      role,
+      disableFocusOutline
+    } = this.props;
     const { className = "" } = children.props;
 
     return React.cloneElement(React.Children.only(children), {
       onClick: action,
-      className: cx(className, outline),
+      className: cx(className, { [outline]: disableFocusOutline }),
       role,
       tabIndex,
       onKeyPress: this.handleKeyPress

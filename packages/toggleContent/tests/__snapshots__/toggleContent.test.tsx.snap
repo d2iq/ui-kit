@@ -7,10 +7,6 @@ exports[`ToggleContent renders a div wrapping the content passed as props 1`] = 
   padding-bottom: 1px;
 }
 
-.emotion-0:focus {
-  outline: 0;
-}
-
 <span
   class="emotion-0"
   role="button"
