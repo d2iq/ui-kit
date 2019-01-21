@@ -18,7 +18,7 @@ export interface DialogModalProps extends ModalBaseProps {
   /** Whether we automatically add padding to the body of the modal. */
   isContentFlush?: boolean;
   /** The text displayed in the header of the modal. */
-  title: string;
+  title: React.ReactNode;
 }
 
 class DialogModal extends React.PureComponent<DialogModalProps, {}> {

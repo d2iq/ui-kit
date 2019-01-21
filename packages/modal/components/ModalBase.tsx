@@ -24,7 +24,7 @@ export enum ModalSizes {
 }
 
 export interface ModalBaseProps {
-  children?: React.ReactNode | string;
+  children?: React.ReactNode;
   /** Controls whether the modal animates in and out. ⚠️Do not use this directly⚠️ */
   isAnimated?: boolean;
   /** Whether the modal is open */
