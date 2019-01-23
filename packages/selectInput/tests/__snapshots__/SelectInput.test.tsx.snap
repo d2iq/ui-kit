@@ -1,0 +1,1554 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectInput renders all appearances 1`] = `
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-4 {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #FFF;
+  border-color: #DADDE2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 input {
+  font-size: inherit;
+}
+
+.emotion-4 svg {
+  fill: #1B2029;
+}
+
+.emotion-4:focus {
+  background-color: #F8F6FF;
+  border-color: #7D58FF;
+}
+
+.emotion-4:focus svg {
+  fill: #7D58FF;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  padding-right: 32px;
+  width: 100%;
+  display: block;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #1B2029;
+}
+
+.emotion-1::-ms-expand {
+  display: none;
+}
+
+.emotion-3 {
+  font-size: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-2 {
+  fill: inherit;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+<SelectInput
+  appearance="standard"
+  id="layers"
+  inputLabel="Atmosphere layer"
+  options={
+    Array [
+      Object {
+        "label": "Exosphere",
+        "value": "exosphere",
+      },
+      Object {
+        "label": "Thermosphere",
+        "value": "thermosphere",
+      },
+      Object {
+        "label": "Mesosphere",
+        "value": "mesosphere",
+      },
+      Object {
+        "label": "Stratosphere",
+        "value": "stratosphere",
+      },
+      Object {
+        "label": "Troposphere",
+        "value": "troposphere",
+      },
+      Object {
+        "disabled": true,
+        "label": "Can't touch this",
+        "value": "disabled",
+      },
+    ]
+  }
+  showInputLabel={true}
+>
+  <FormFieldWrapper
+    id="layers"
+  >
+    <div>
+      <label
+        className="emotion-0"
+        htmlFor="layers"
+      >
+        Atmosphere layer
+      </label>
+      <span
+        className="emotion-4"
+      >
+        <select
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-1"
+          id="layers"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <option
+            key="0"
+            value="exosphere"
+          >
+            Exosphere
+          </option>
+          <option
+            key="1"
+            value="thermosphere"
+          >
+            Thermosphere
+          </option>
+          <option
+            key="2"
+            value="mesosphere"
+          >
+            Mesosphere
+          </option>
+          <option
+            key="3"
+            value="stratosphere"
+          >
+            Stratosphere
+          </option>
+          <option
+            key="4"
+            value="troposphere"
+          >
+            Troposphere
+          </option>
+          <option
+            disabled={true}
+            key="5"
+            value="disabled"
+          >
+            Can't touch this
+          </option>
+        </select>
+        <span
+          className="emotion-3"
+        >
+          <Icon
+            color="inherit"
+            shape="system-triangle-down"
+            size="16px"
+          >
+            <svg
+              aria-label="system-triangle-down icon"
+              className="emotion-2"
+              height={16}
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width={16}
+            >
+              <use
+                xlinkHref="#system-triangle-down"
+              />
+            </svg>
+          </Icon>
+        </span>
+      </span>
+    </div>
+  </FormFieldWrapper>
+</SelectInput>
+`;
+
+exports[`SelectInput renders all appearances 2`] = `
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  padding-right: 32px;
+  width: 100%;
+  display: block;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #1B2029;
+}
+
+.emotion-1::-ms-expand {
+  display: none;
+}
+
+.emotion-3 {
+  font-size: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-2 {
+  fill: inherit;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #EB293A;
+  fill: #EB293A;
+}
+
+.emotion-4 {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #FFF;
+  border-color: #EB293A;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 input {
+  font-size: inherit;
+}
+
+.emotion-4 svg {
+  fill: #EB293A;
+}
+
+.emotion-4:focus {
+  background-color: #FDF4F4;
+}
+
+<SelectInput
+  appearance="error"
+  id="layers"
+  inputLabel="Atmosphere layer"
+  options={
+    Array [
+      Object {
+        "label": "Exosphere",
+        "value": "exosphere",
+      },
+      Object {
+        "label": "Thermosphere",
+        "value": "thermosphere",
+      },
+      Object {
+        "label": "Mesosphere",
+        "value": "mesosphere",
+      },
+      Object {
+        "label": "Stratosphere",
+        "value": "stratosphere",
+      },
+      Object {
+        "label": "Troposphere",
+        "value": "troposphere",
+      },
+      Object {
+        "disabled": true,
+        "label": "Can't touch this",
+        "value": "disabled",
+      },
+    ]
+  }
+  showInputLabel={true}
+>
+  <FormFieldWrapper
+    id="layers"
+  >
+    <div>
+      <label
+        className="emotion-0"
+        htmlFor="layers"
+      >
+        Atmosphere layer
+      </label>
+      <span
+        className="emotion-4"
+      >
+        <select
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-1"
+          id="layers"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <option
+            key="0"
+            value="exosphere"
+          >
+            Exosphere
+          </option>
+          <option
+            key="1"
+            value="thermosphere"
+          >
+            Thermosphere
+          </option>
+          <option
+            key="2"
+            value="mesosphere"
+          >
+            Mesosphere
+          </option>
+          <option
+            key="3"
+            value="stratosphere"
+          >
+            Stratosphere
+          </option>
+          <option
+            key="4"
+            value="troposphere"
+          >
+            Troposphere
+          </option>
+          <option
+            disabled={true}
+            key="5"
+            value="disabled"
+          >
+            Can't touch this
+          </option>
+        </select>
+        <span
+          className="emotion-3"
+        >
+          <Icon
+            color="inherit"
+            shape="system-triangle-down"
+            size="16px"
+          >
+            <svg
+              aria-label="system-triangle-down icon"
+              className="emotion-2"
+              height={16}
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width={16}
+            >
+              <use
+                xlinkHref="#system-triangle-down"
+              />
+            </svg>
+          </Icon>
+        </span>
+      </span>
+    </div>
+  </FormFieldWrapper>
+</SelectInput>
+`;
+
+exports[`SelectInput renders all appearances 3`] = `
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  padding-right: 32px;
+  width: 100%;
+  display: block;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #1B2029;
+}
+
+.emotion-1::-ms-expand {
+  display: none;
+}
+
+.emotion-3 {
+  font-size: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-2 {
+  fill: inherit;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-4 {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #FFF;
+  border-color: #14C684;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 input {
+  font-size: inherit;
+}
+
+.emotion-4 svg {
+  fill: #14C684;
+}
+
+.emotion-4:focus {
+  background-color: #F3FCF8;
+}
+
+<SelectInput
+  appearance="success"
+  id="layers"
+  inputLabel="Atmosphere layer"
+  options={
+    Array [
+      Object {
+        "label": "Exosphere",
+        "value": "exosphere",
+      },
+      Object {
+        "label": "Thermosphere",
+        "value": "thermosphere",
+      },
+      Object {
+        "label": "Mesosphere",
+        "value": "mesosphere",
+      },
+      Object {
+        "label": "Stratosphere",
+        "value": "stratosphere",
+      },
+      Object {
+        "label": "Troposphere",
+        "value": "troposphere",
+      },
+      Object {
+        "disabled": true,
+        "label": "Can't touch this",
+        "value": "disabled",
+      },
+    ]
+  }
+  showInputLabel={true}
+>
+  <FormFieldWrapper
+    id="layers"
+  >
+    <div>
+      <label
+        className="emotion-0"
+        htmlFor="layers"
+      >
+        Atmosphere layer
+      </label>
+      <span
+        className="emotion-4"
+      >
+        <select
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-1"
+          id="layers"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <option
+            key="0"
+            value="exosphere"
+          >
+            Exosphere
+          </option>
+          <option
+            key="1"
+            value="thermosphere"
+          >
+            Thermosphere
+          </option>
+          <option
+            key="2"
+            value="mesosphere"
+          >
+            Mesosphere
+          </option>
+          <option
+            key="3"
+            value="stratosphere"
+          >
+            Stratosphere
+          </option>
+          <option
+            key="4"
+            value="troposphere"
+          >
+            Troposphere
+          </option>
+          <option
+            disabled={true}
+            key="5"
+            value="disabled"
+          >
+            Can't touch this
+          </option>
+        </select>
+        <span
+          className="emotion-3"
+        >
+          <Icon
+            color="inherit"
+            shape="system-triangle-down"
+            size="16px"
+          >
+            <svg
+              aria-label="system-triangle-down icon"
+              className="emotion-2"
+              height={16}
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width={16}
+            >
+              <use
+                xlinkHref="#system-triangle-down"
+              />
+            </svg>
+          </Icon>
+        </span>
+      </span>
+    </div>
+  </FormFieldWrapper>
+</SelectInput>
+`;
+
+exports[`SelectInput renders disabled 1`] = `
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  padding-right: 32px;
+  width: 100%;
+  display: block;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #1B2029;
+}
+
+.emotion-1::-ms-expand {
+  display: none;
+}
+
+.emotion-3 {
+  font-size: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-2 {
+  fill: inherit;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-4 {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #E8EAED;
+  border-color: #E8EAED;
+  color: #484C53;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 input {
+  font-size: inherit;
+}
+
+.emotion-4 svg {
+  fill: #484C53;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: #484C53;
+}
+
+.emotion-4::-moz-placeholder {
+  color: #484C53;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: #484C53;
+}
+
+.emotion-4::placeholder {
+  color: #484C53;
+}
+
+.emotion-4 input {
+  color: #484C53;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  color: #484C53;
+}
+
+.emotion-4 input::-moz-placeholder {
+  color: #484C53;
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  color: #484C53;
+}
+
+.emotion-4 input::placeholder {
+  color: #484C53;
+}
+
+<SelectInput
+  appearance="standard"
+  disabled={true}
+  id="layers"
+  inputLabel="Atmosphere layer"
+  options={
+    Array [
+      Object {
+        "label": "Exosphere",
+        "value": "exosphere",
+      },
+      Object {
+        "label": "Thermosphere",
+        "value": "thermosphere",
+      },
+      Object {
+        "label": "Mesosphere",
+        "value": "mesosphere",
+      },
+      Object {
+        "label": "Stratosphere",
+        "value": "stratosphere",
+      },
+      Object {
+        "label": "Troposphere",
+        "value": "troposphere",
+      },
+      Object {
+        "disabled": true,
+        "label": "Can't touch this",
+        "value": "disabled",
+      },
+    ]
+  }
+  showInputLabel={true}
+>
+  <FormFieldWrapper
+    id="layers"
+  >
+    <div>
+      <label
+        className="emotion-0"
+        htmlFor="layers"
+      >
+        Atmosphere layer
+      </label>
+      <span
+        className="emotion-4"
+      >
+        <select
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-1"
+          disabled={true}
+          id="layers"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <option
+            key="0"
+            value="exosphere"
+          >
+            Exosphere
+          </option>
+          <option
+            key="1"
+            value="thermosphere"
+          >
+            Thermosphere
+          </option>
+          <option
+            key="2"
+            value="mesosphere"
+          >
+            Mesosphere
+          </option>
+          <option
+            key="3"
+            value="stratosphere"
+          >
+            Stratosphere
+          </option>
+          <option
+            key="4"
+            value="troposphere"
+          >
+            Troposphere
+          </option>
+          <option
+            disabled={true}
+            key="5"
+            value="disabled"
+          >
+            Can't touch this
+          </option>
+        </select>
+        <span
+          className="emotion-3"
+        >
+          <Icon
+            color="inherit"
+            shape="system-triangle-down"
+            size="16px"
+          >
+            <svg
+              aria-label="system-triangle-down icon"
+              className="emotion-2"
+              height={16}
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width={16}
+            >
+              <use
+                xlinkHref="#system-triangle-down"
+              />
+            </svg>
+          </Icon>
+        </span>
+      </span>
+    </div>
+  </FormFieldWrapper>
+</SelectInput>
+`;
+
+exports[`SelectInput renders with errors 1`] = `
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  padding-right: 32px;
+  width: 100%;
+  display: block;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #1B2029;
+}
+
+.emotion-1::-ms-expand {
+  display: none;
+}
+
+.emotion-3 {
+  font-size: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-2 {
+  fill: inherit;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #EB293A;
+  fill: #EB293A;
+}
+
+.emotion-4 {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #FFF;
+  border-color: #EB293A;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 input {
+  font-size: inherit;
+}
+
+.emotion-4 svg {
+  fill: #EB293A;
+}
+
+.emotion-4:focus {
+  background-color: #FDF4F4;
+}
+
+.emotion-7 {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #EB293A;
+  fill: #EB293A;
+}
+
+.emotion-5 {
+  text-indent: 0;
+  list-style-type: none;
+  padding-top: 4px;
+}
+
+<SelectInput
+  appearance="error"
+  errors={
+    Array [
+      "error1",
+      "error2",
+    ]
+  }
+  id="layers"
+  inputLabel="Atmosphere layer"
+  options={
+    Array [
+      Object {
+        "label": "Exosphere",
+        "value": "exosphere",
+      },
+      Object {
+        "label": "Thermosphere",
+        "value": "thermosphere",
+      },
+      Object {
+        "label": "Mesosphere",
+        "value": "mesosphere",
+      },
+      Object {
+        "label": "Stratosphere",
+        "value": "stratosphere",
+      },
+      Object {
+        "label": "Troposphere",
+        "value": "troposphere",
+      },
+      Object {
+        "disabled": true,
+        "label": "Can't touch this",
+        "value": "disabled",
+      },
+    ]
+  }
+  showInputLabel={true}
+>
+  <FormFieldWrapper
+    errors={
+      Array [
+        "error1",
+        "error2",
+      ]
+    }
+    id="layers"
+  >
+    <div>
+      <label
+        className="emotion-0"
+        htmlFor="layers"
+      >
+        Atmosphere layer
+      </label>
+      <span
+        className="emotion-4"
+      >
+        <select
+          aria-describedby="layers-errorMsg0 layers-errorMsg1"
+          aria-invalid={true}
+          className="emotion-1"
+          id="layers"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <option
+            key="0"
+            value="exosphere"
+          >
+            Exosphere
+          </option>
+          <option
+            key="1"
+            value="thermosphere"
+          >
+            Thermosphere
+          </option>
+          <option
+            key="2"
+            value="mesosphere"
+          >
+            Mesosphere
+          </option>
+          <option
+            key="3"
+            value="stratosphere"
+          >
+            Stratosphere
+          </option>
+          <option
+            key="4"
+            value="troposphere"
+          >
+            Troposphere
+          </option>
+          <option
+            disabled={true}
+            key="5"
+            value="disabled"
+          >
+            Can't touch this
+          </option>
+        </select>
+        <span
+          className="emotion-3"
+        >
+          <Icon
+            color="inherit"
+            shape="system-triangle-down"
+            size="16px"
+          >
+            <svg
+              aria-label="system-triangle-down icon"
+              className="emotion-2"
+              height={16}
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width={16}
+            >
+              <use
+                xlinkHref="#system-triangle-down"
+              />
+            </svg>
+          </Icon>
+        </span>
+      </span>
+      <ul
+        className="emotion-7"
+      >
+        <li
+          className="emotion-5"
+          id="layers-errorMsg0"
+          key="0"
+        >
+          error1
+        </li>
+        <li
+          className="emotion-5"
+          id="layers-errorMsg1"
+          key="1"
+        >
+          error2
+        </li>
+      </ul>
+    </div>
+  </FormFieldWrapper>
+</SelectInput>
+`;
+
+exports[`SelectInput renders with hidden label 1`] = `
+.emotion-4 {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #FFF;
+  border-color: #DADDE2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 input {
+  font-size: inherit;
+}
+
+.emotion-4 svg {
+  fill: #1B2029;
+}
+
+.emotion-4:focus {
+  background-color: #F8F6FF;
+  border-color: #7D58FF;
+}
+
+.emotion-4:focus svg {
+  fill: #7D58FF;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  padding-right: 32px;
+  width: 100%;
+  display: block;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #1B2029;
+}
+
+.emotion-1::-ms-expand {
+  display: none;
+}
+
+.emotion-3 {
+  font-size: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-2 {
+  fill: inherit;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+<SelectInput
+  appearance="standard"
+  id="layers"
+  inputLabel="Atmosphere layer"
+  options={
+    Array [
+      Object {
+        "label": "Exosphere",
+        "value": "exosphere",
+      },
+      Object {
+        "label": "Thermosphere",
+        "value": "thermosphere",
+      },
+      Object {
+        "label": "Mesosphere",
+        "value": "mesosphere",
+      },
+      Object {
+        "label": "Stratosphere",
+        "value": "stratosphere",
+      },
+      Object {
+        "label": "Troposphere",
+        "value": "troposphere",
+      },
+      Object {
+        "disabled": true,
+        "label": "Can't touch this",
+        "value": "disabled",
+      },
+    ]
+  }
+  showInputLabel={false}
+>
+  <FormFieldWrapper
+    id="layers"
+  >
+    <div>
+      <label
+        className="emotion-0"
+        htmlFor="layers"
+      >
+        Atmosphere layer
+      </label>
+      <span
+        className="emotion-4"
+      >
+        <select
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-1"
+          id="layers"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <option
+            key="0"
+            value="exosphere"
+          >
+            Exosphere
+          </option>
+          <option
+            key="1"
+            value="thermosphere"
+          >
+            Thermosphere
+          </option>
+          <option
+            key="2"
+            value="mesosphere"
+          >
+            Mesosphere
+          </option>
+          <option
+            key="3"
+            value="stratosphere"
+          >
+            Stratosphere
+          </option>
+          <option
+            key="4"
+            value="troposphere"
+          >
+            Troposphere
+          </option>
+          <option
+            disabled={true}
+            key="5"
+            value="disabled"
+          >
+            Can't touch this
+          </option>
+        </select>
+        <span
+          className="emotion-3"
+        >
+          <Icon
+            color="inherit"
+            shape="system-triangle-down"
+            size="16px"
+          >
+            <svg
+              aria-label="system-triangle-down icon"
+              className="emotion-2"
+              height={16}
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width={16}
+            >
+              <use
+                xlinkHref="#system-triangle-down"
+              />
+            </svg>
+          </Icon>
+        </span>
+      </span>
+    </div>
+  </FormFieldWrapper>
+</SelectInput>
+`;
+
+exports[`SelectInput should render all appearances focus 1`] = `
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  padding-right: 32px;
+  width: 100%;
+  display: block;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #1B2029;
+}
+
+.emotion-1::-ms-expand {
+  display: none;
+}
+
+.emotion-3 {
+  font-size: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-2 {
+  fill: inherit;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-4 {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 input {
+  font-size: inherit;
+}
+
+<SelectInput
+  appearance={
+    Object {
+      "appearance": "standard",
+      "showInputLabel": true,
+    }
+  }
+  id="layers"
+  inputLabel="Atmosphere layer"
+  options={
+    Array [
+      Object {
+        "label": "Exosphere",
+        "value": "exosphere",
+      },
+      Object {
+        "label": "Thermosphere",
+        "value": "thermosphere",
+      },
+      Object {
+        "label": "Mesosphere",
+        "value": "mesosphere",
+      },
+      Object {
+        "label": "Stratosphere",
+        "value": "stratosphere",
+      },
+      Object {
+        "label": "Troposphere",
+        "value": "troposphere",
+      },
+      Object {
+        "disabled": true,
+        "label": "Can't touch this",
+        "value": "disabled",
+      },
+    ]
+  }
+  showInputLabel={true}
+>
+  <FormFieldWrapper
+    id="layers"
+  >
+    <div>
+      <label
+        className="emotion-0"
+        htmlFor="layers"
+      >
+        Atmosphere layer
+      </label>
+      <span
+        className="emotion-4"
+      >
+        <select
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-1"
+          id="layers"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <option
+            key="0"
+            value="exosphere"
+          >
+            Exosphere
+          </option>
+          <option
+            key="1"
+            value="thermosphere"
+          >
+            Thermosphere
+          </option>
+          <option
+            key="2"
+            value="mesosphere"
+          >
+            Mesosphere
+          </option>
+          <option
+            key="3"
+            value="stratosphere"
+          >
+            Stratosphere
+          </option>
+          <option
+            key="4"
+            value="troposphere"
+          >
+            Troposphere
+          </option>
+          <option
+            disabled={true}
+            key="5"
+            value="disabled"
+          >
+            Can't touch this
+          </option>
+        </select>
+        <span
+          className="emotion-3"
+        >
+          <Icon
+            color="inherit"
+            shape="system-triangle-down"
+            size="16px"
+          >
+            <svg
+              aria-label="system-triangle-down icon"
+              className="emotion-2"
+              height={16}
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width={16}
+            >
+              <use
+                xlinkHref="#system-triangle-down"
+              />
+            </svg>
+          </Icon>
+        </span>
+      </span>
+    </div>
+  </FormFieldWrapper>
+</SelectInput>
+`;
