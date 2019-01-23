@@ -33,6 +33,7 @@ export {
   LargeDialogModalWithFooter,
   FullscreenModal
 } from "./modal";
+export { SelectInput } from "./selectInput";
 export {
   Column,
   Table,
