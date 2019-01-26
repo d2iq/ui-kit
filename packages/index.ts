@@ -22,6 +22,7 @@ export {
   SuccessDropdownButton,
   DangerDropdownButton
 } from "./button";
+export { CheckboxInput } from "./checkboxInput";
 export { Dropdownable } from "./dropdownable";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
 export {
@@ -45,5 +46,7 @@ export {
 export { TextInput, TextInputWithIcon } from "./textInput";
 export { Toaster, Toast } from "./toaster";
 export { ToggleContent } from "./toggleContent";
+export { ToggleInput } from "./toggleInput";
+export { ToggleInputList } from "./toggleInputList";
 
 injectGlobalCss();

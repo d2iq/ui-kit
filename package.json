@@ -20,7 +20,7 @@
     "build:design-tokens": "node ./packages/design-tokens/scripts/build.js",
     "build:svg": "node ./packages/icons/scripts/build.js",
     "clean": "rimraf dist",
-    "clean:design-tokens": "rm -rf ./dist/design-tokens",
+    "clean:design-tokens": "rm -rf ./dist/design-tokens && rm -rf ./packages/design-tokens/dist/",
     "commitlint": "commitlint -e",
     "create:component": "./scripts/create-component",
     "deploy:storybook": "storybook-to-ghpages",

@@ -1,0 +1,1343 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleInputList renders default 1`] = `
+.emotion-19 {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.emotion-20 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-1 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-0 {
+  padding: 0;
+  font-weight: 500;
+}
+
+.emotion-6 {
+  padding-top: 8px;
+}
+
+.emotion-2 {
+  border-color: #DADDE2;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  display: inherit;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding-left: 12px;
+}
+
+<ToggleInputList
+  id="checkbox"
+  items={
+    Array [
+      Object {
+        "id": "id.1",
+        "inputLabel": "Sample label",
+        "value": "value.1",
+      },
+      Object {
+        "id": "id.2",
+        "inputLabel": "Sample label",
+        "value": "value.2",
+      },
+      Object {
+        "id": "id.3",
+        "inputLabel": "Sample label",
+        "value": "value.3",
+      },
+    ]
+  }
+  listLabel="Sample legend"
+  selectedItems={Array []}
+  showListLabel={true}
+  vertAlign="center"
+>
+  <FormFieldWrapper
+    id="checkbox"
+  >
+    <fieldset
+      aria-describedby=""
+      aria-invalid={false}
+      className="emotion-20"
+    >
+      <legend
+        className="emotion-0"
+      >
+        Sample legend
+      </legend>
+      <ul
+        className="emotion-19"
+      >
+        <li
+          className="emotion-6"
+          key="id.1"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.1"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.1"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.1"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-5"
+                  htmlFor="id.1"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        checked={false}
+                        className="emotion-1"
+                        id="id.1"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.1"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-6"
+          key="id.2"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.2"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.2"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.2"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-5"
+                  htmlFor="id.2"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        checked={false}
+                        className="emotion-1"
+                        id="id.2"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.2"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-6"
+          key="id.3"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.3"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.3"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.3"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-5"
+                  htmlFor="id.3"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        checked={false}
+                        className="emotion-1"
+                        id="id.3"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.3"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+      </ul>
+    </fieldset>
+  </FormFieldWrapper>
+</ToggleInputList>
+`;
+
+exports[`ToggleInputList renders with errors 1`] = `
+.emotion-19 {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.emotion-23 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-1 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-0 {
+  padding: 0;
+  font-weight: 500;
+}
+
+.emotion-6 {
+  padding-top: 8px;
+}
+
+.emotion-2 {
+  border-color: #DADDE2;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  display: inherit;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding-left: 12px;
+}
+
+.emotion-22 {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #EB293A;
+  fill: #EB293A;
+}
+
+.emotion-20 {
+  text-indent: 0;
+  list-style-type: none;
+  padding-top: 4px;
+}
+
+<ToggleInputList
+  errors={
+    Array [
+      "error.1",
+      "error.2",
+    ]
+  }
+  id="checkbox"
+  items={
+    Array [
+      Object {
+        "id": "id.1",
+        "inputLabel": "Sample label",
+        "value": "value.1",
+      },
+      Object {
+        "id": "id.2",
+        "inputLabel": "Sample label",
+        "value": "value.2",
+      },
+      Object {
+        "id": "id.3",
+        "inputLabel": "Sample label",
+        "value": "value.3",
+      },
+    ]
+  }
+  listLabel="Sample legend"
+  selectedItems={Array []}
+  showListLabel={true}
+  vertAlign="center"
+>
+  <FormFieldWrapper
+    errors={
+      Array [
+        "error.1",
+        "error.2",
+      ]
+    }
+    id="checkbox"
+  >
+    <fieldset
+      aria-describedby="checkbox-errorMsg0 checkbox-errorMsg1"
+      aria-invalid={true}
+      className="emotion-23"
+    >
+      <legend
+        className="emotion-0"
+      >
+        Sample legend
+      </legend>
+      <ul
+        className="emotion-19"
+      >
+        <li
+          className="emotion-6"
+          key="id.1"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.1"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.1"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.1"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-5"
+                  htmlFor="id.1"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        checked={false}
+                        className="emotion-1"
+                        id="id.1"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.1"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-6"
+          key="id.2"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.2"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.2"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.2"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-5"
+                  htmlFor="id.2"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        checked={false}
+                        className="emotion-1"
+                        id="id.2"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.2"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-6"
+          key="id.3"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.3"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.3"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.3"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-5"
+                  htmlFor="id.3"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        checked={false}
+                        className="emotion-1"
+                        id="id.3"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.3"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+      </ul>
+      <ul
+        className="emotion-22"
+      >
+        <li
+          className="emotion-20"
+          id="checkbox-errorMsg0"
+          key="0"
+        >
+          error.1
+        </li>
+        <li
+          className="emotion-20"
+          id="checkbox-errorMsg1"
+          key="1"
+        >
+          error.2
+        </li>
+      </ul>
+    </fieldset>
+  </FormFieldWrapper>
+</ToggleInputList>
+`;
+
+exports[`ToggleInputList renders with hidden label 1`] = `
+.emotion-19 {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.emotion-20 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-1 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-6 {
+  padding-top: 8px;
+}
+
+.emotion-2 {
+  border-color: #DADDE2;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  display: inherit;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding-left: 12px;
+}
+
+.emotion-0 {
+  padding: 0;
+  font-weight: 500;
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+<ToggleInputList
+  id="checkbox"
+  items={
+    Array [
+      Object {
+        "id": "id.1",
+        "inputLabel": "Sample label",
+        "value": "value.1",
+      },
+      Object {
+        "id": "id.2",
+        "inputLabel": "Sample label",
+        "value": "value.2",
+      },
+      Object {
+        "id": "id.3",
+        "inputLabel": "Sample label",
+        "value": "value.3",
+      },
+    ]
+  }
+  listLabel="Sample legend"
+  selectedItems={Array []}
+  showListLabel={false}
+  vertAlign="center"
+>
+  <FormFieldWrapper
+    id="checkbox"
+  >
+    <fieldset
+      aria-describedby=""
+      aria-invalid={false}
+      className="emotion-20"
+    >
+      <legend
+        className="emotion-0"
+      >
+        Sample legend
+      </legend>
+      <ul
+        className="emotion-19"
+      >
+        <li
+          className="emotion-6"
+          key="id.1"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.1"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.1"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.1"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-5"
+                  htmlFor="id.1"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        checked={false}
+                        className="emotion-1"
+                        id="id.1"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.1"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-6"
+          key="id.2"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.2"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.2"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.2"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-5"
+                  htmlFor="id.2"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        checked={false}
+                        className="emotion-1"
+                        id="id.2"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.2"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-6"
+          key="id.3"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.3"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.3"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.3"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-5"
+                  htmlFor="id.3"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        checked={false}
+                        className="emotion-1"
+                        id="id.3"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.3"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+      </ul>
+    </fieldset>
+  </FormFieldWrapper>
+</ToggleInputList>
+`;
+
+exports[`ToggleInputList renders with selected items 1`] = `
+.emotion-23 {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.emotion-24 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-1 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-0 {
+  padding: 0;
+  font-weight: 500;
+}
+
+.emotion-8 {
+  padding-top: 8px;
+}
+
+.emotion-18 {
+  border-color: #DADDE2;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  display: inherit;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding-left: 12px;
+}
+
+.emotion-4 {
+  border-color: #DADDE2;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  position: relative;
+  background-color: #7D58FF;
+  border-color: #7D58FF;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 2px;
+  position: absolute;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-3 svg {
+  height: 100%;
+  width: 100%;
+}
+
+.emotion-2 {
+  fill: #FFF;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+<ToggleInputList
+  id="checkbox"
+  items={
+    Array [
+      Object {
+        "id": "id.1",
+        "inputLabel": "Sample label",
+        "value": "value.1",
+      },
+      Object {
+        "id": "id.2",
+        "inputLabel": "Sample label",
+        "value": "value.2",
+      },
+      Object {
+        "id": "id.3",
+        "inputLabel": "Sample label",
+        "value": "value.3",
+      },
+    ]
+  }
+  listLabel="Sample legend"
+  selectedItems={
+    Array [
+      "value.1",
+      "value.2",
+    ]
+  }
+  showListLabel={true}
+  vertAlign="center"
+>
+  <FormFieldWrapper
+    id="checkbox"
+  >
+    <fieldset
+      aria-describedby=""
+      aria-invalid={false}
+      className="emotion-24"
+    >
+      <legend
+        className="emotion-0"
+      >
+        Sample legend
+      </legend>
+      <ul
+        className="emotion-23"
+      >
+        <li
+          className="emotion-8"
+          key="id.1"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={true}
+            id="id.1"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.1"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.1"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-7"
+                  htmlFor="id.1"
+                >
+                  <div
+                    className="emotion-5"
+                  >
+                    <div
+                      className="emotion-4"
+                    >
+                      <input
+                        checked={true}
+                        className="emotion-1"
+                        id="id.1"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.1"
+                      />
+                      <span
+                        className="emotion-3"
+                      >
+                        <Icon
+                          color="#FFF"
+                          shape="system-check"
+                          size="16px"
+                        >
+                          <svg
+                            aria-label="system-check icon"
+                            className="emotion-2"
+                            height={16}
+                            preserveAspectRatio="xMinYMin meet"
+                            role="img"
+                            viewBox="0 0 16 16"
+                            width={16}
+                          >
+                            <use
+                              xlinkHref="#system-check"
+                            />
+                          </svg>
+                        </Icon>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-6"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-8"
+          key="id.2"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={true}
+            id="id.2"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.2"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.2"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-7"
+                  htmlFor="id.2"
+                >
+                  <div
+                    className="emotion-5"
+                  >
+                    <div
+                      className="emotion-4"
+                    >
+                      <input
+                        checked={true}
+                        className="emotion-1"
+                        id="id.2"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.2"
+                      />
+                      <span
+                        className="emotion-3"
+                      >
+                        <Icon
+                          color="#FFF"
+                          shape="system-check"
+                          size="16px"
+                        >
+                          <svg
+                            aria-label="system-check icon"
+                            className="emotion-2"
+                            height={16}
+                            preserveAspectRatio="xMinYMin meet"
+                            role="img"
+                            viewBox="0 0 16 16"
+                            width={16}
+                          >
+                            <use
+                              xlinkHref="#system-check"
+                            />
+                          </svg>
+                        </Icon>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-6"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-8"
+          key="id.3"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.3"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.3"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              id="id.3"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div>
+                <label
+                  className="emotion-7"
+                  htmlFor="id.3"
+                >
+                  <div
+                    className="emotion-5"
+                  >
+                    <div
+                      className="emotion-18"
+                    >
+                      <input
+                        checked={false}
+                        className="emotion-1"
+                        id="id.3"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.3"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-6"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+      </ul>
+    </fieldset>
+  </FormFieldWrapper>
+</ToggleInputList>
+`;
