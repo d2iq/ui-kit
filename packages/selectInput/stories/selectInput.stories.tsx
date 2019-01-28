@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withReadme } from "storybook-readme";
 import { SelectInput } from "../../index";
-import { SelectInputAppearance } from "../components/SelectInput";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 const readme = require("../README.md");
 const defaultOptions = [
@@ -37,7 +37,7 @@ storiesOf("Forms/SelectInput", module)
       <div style={{ marginBottom: "1.5em" }}>
         <SelectInput
           options={defaultOptions}
-          appearance={SelectInputAppearance.Error}
+          appearance={InputAppearance.Error}
           id="layers"
           inputLabel="Error"
         />
@@ -45,7 +45,7 @@ storiesOf("Forms/SelectInput", module)
       <div style={{ marginBottom: "1.5em" }}>
         <SelectInput
           options={defaultOptions}
-          appearance={SelectInputAppearance.Success}
+          appearance={InputAppearance.Success}
           id="layers"
           inputLabel="Success"
         />
@@ -73,7 +73,7 @@ storiesOf("Forms/SelectInput", module)
   .addWithInfo("error with message", () => (
     <InputStoryWrapper>
       <SelectInput
-        appearance={SelectInputAppearance.Error}
+        appearance={InputAppearance.Error}
         options={defaultOptions}
         id="layers"
         inputLabel="Atmosphere layer"
@@ -84,7 +84,7 @@ storiesOf("Forms/SelectInput", module)
   .addWithInfo("error with messages", () => (
     <InputStoryWrapper>
       <SelectInput
-        appearance={SelectInputAppearance.Error}
+        appearance={InputAppearance.Error}
         options={defaultOptions}
         id="layers"
         inputLabel="Atmosphere layer"

@@ -24,6 +24,7 @@ export {
 } from "./button";
 export { Dropdownable } from "./dropdownable";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
+export { InputAppearance } from "./shared/types/inputAppearance";
 export {
   DialogModal,
   SmallDialogModal,

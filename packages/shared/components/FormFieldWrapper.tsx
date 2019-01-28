@@ -9,13 +9,12 @@ import {
   tintContent,
   display
 } from "../styles/styleUtils";
-import { errorColor } from "../../shared/styles/formStyles";
+import { error } from "../../design-tokens/build/js/designTokens";
 
 interface RenderProps {
   getValidationErrors: React.ReactNode;
   getHintContent: React.ReactNode;
-  errorIds: string;
-  hintContentId: string;
+  describedByIds: string;
   isValid: boolean;
 }
 
@@ -32,8 +31,10 @@ class FormFieldWrapper extends React.PureComponent<FormFieldWrapperProps, {}> {
     return children({
       getValidationErrors: this.getValidationErrors(errors, id),
       getHintContent: this.getHintContent(hintContent),
-      errorIds: this.getErrorIds(),
-      hintContentId: this.getHintContentId(),
+      describedByIds: this.getDescribedBy(
+        this.getHintContentId(),
+        this.getErrorIds()
+      ),
       isValid: !errors || (errors && errors.length === 0)
     });
   }
@@ -79,7 +80,7 @@ class FormFieldWrapper extends React.PureComponent<FormFieldWrapperProps, {}> {
     }
 
     return (
-      <ul className={cx(flush("all"), textSize("s"), tintContent(errorColor))}>
+      <ul className={cx(flush("all"), textSize("s"), tintContent(error))}>
         {errors.map((error, index) => (
           <li
             key={index}
@@ -91,6 +92,14 @@ class FormFieldWrapper extends React.PureComponent<FormFieldWrapperProps, {}> {
         ))}
       </ul>
     );
+  }
+
+  private getDescribedBy(hintContent, errors) {
+    if (hintContent && errors) {
+      return `${hintContent} ${errors}`;
+    } else {
+      return errors || hintContent;
+    }
   }
 }
 

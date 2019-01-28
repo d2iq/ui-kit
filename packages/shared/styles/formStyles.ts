@@ -1,6 +1,7 @@
 import { css } from "emotion";
 import {
   borderRadiusSmall,
+  error,
   green,
   greenLighten5,
   greyDark,
@@ -9,7 +10,6 @@ import {
   greyLightLighten3,
   purple,
   purpleLighten5,
-  red,
   redLighten5,
   white
 } from "../../design-tokens/build/js/designTokens";
@@ -21,9 +21,6 @@ import {
   display,
   tintContent
 } from "./styleUtils";
-
-export const dangerColor = red;
-export const errorColor = red;
 
 export const inputAppearances = {
   standard: css`
@@ -59,9 +56,9 @@ export const inputAppearances = {
   `,
   error: css`
     background-color: ${white};
-    border-color: ${errorColor};
+    border-color: ${error};
     svg {
-      fill: ${errorColor};
+      fill: ${error};
     }
     &:focus {
       background-color: ${redLighten5};
@@ -86,9 +83,9 @@ export const inputAppearances = {
   `,
   "error-focus": css`
     background-color: ${redLighten5};
-    border-color: ${errorColor};
+    border-color: ${error};
     svg {
-      fill: ${errorColor};
+      fill: ${error};
     }
   `,
   "success-focus": css`
@@ -116,5 +113,5 @@ export const getLabelStyle = (hasError?: boolean) => css`
   ${flush("top")};
   ${margin("bottom", "xxs")};
   ${textWeight("medium")};
-  ${hasError ? tintContent(errorColor) : null};
+  ${hasError ? tintContent(error) : null};
 `;
