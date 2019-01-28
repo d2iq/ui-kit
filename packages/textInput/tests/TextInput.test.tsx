@@ -1,23 +1,24 @@
 import React from "react";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 // tslint:disable:no-duplicate-imports
 import { css, cx } from "emotion";
 
-import TextInput, { TextInputAppearance } from "../components/TextInput";
+import TextInput from "../components/TextInput";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe("TextInput", () => {
   it("should render all appearances with props", () => {
-    Object.keys(TextInputAppearance).forEach(appearance => {
+    Object.keys(InputAppearance).forEach(appearance => {
       const component = shallow(
         <TextInput
-          id={`test.input.${TextInputAppearance[appearance]}`}
-          inputLabel={TextInputAppearance[appearance]}
-          appearance={TextInputAppearance[appearance]}
+          id={`test.input.${InputAppearance[appearance]}`}
+          inputLabel={InputAppearance[appearance]}
+          appearance={InputAppearance[appearance]}
         />
       );
       expect(toJson(component)).toMatchSnapshot();
@@ -25,12 +26,9 @@ describe("TextInput", () => {
   });
 
   it("should render all appearances focus", () => {
-    Object.keys(TextInputAppearance).forEach(appearance => {
-      const component = shallow(
-        <TextInput
-          id="test.input"
-          appearance={TextInputAppearance[appearance]}
-        />
+    Object.keys(InputAppearance).forEach(appearance => {
+      const component = mount(
+        <TextInput id="test.input" appearance={InputAppearance[appearance]} />
       );
       component.find("input").simulate("focus");
       expect(toJson(component)).toMatchSnapshot();
@@ -53,7 +51,7 @@ describe("TextInput", () => {
 
   it("should id attribute to input element", () => {
     const inputId = "test.input.0";
-    const component = shallow(<TextInput id={inputId} />);
+    const component = mount(<TextInput id={inputId} />);
     expect(component.find("input").prop("id")).toEqual(inputId);
   });
 
@@ -66,13 +64,13 @@ describe("TextInput", () => {
   });
 
   it("should set tabIndex on input element", () => {
-    const component = shallow(<TextInput id="test.input" tabIndex={2} />);
+    const component = mount(<TextInput id="test.input" tabIndex={2} />);
     expect(component.find("input").prop("tabIndex")).toEqual(2);
   });
 
   it("should call onFocus when input gains focus", () => {
     const focusFn = jest.fn();
-    const component = shallow(<TextInput id="test.input" onFocus={focusFn} />);
+    const component = mount(<TextInput id="test.input" onFocus={focusFn} />);
     expect(focusFn).not.toHaveBeenCalled();
     component.find("input").simulate("focus");
     expect(focusFn).toHaveBeenCalled();
@@ -80,7 +78,7 @@ describe("TextInput", () => {
 
   it("should call onBlur when input loses focus", () => {
     const blurFn = jest.fn();
-    const component = shallow(<TextInput id="test.input" onBlur={blurFn} />);
+    const component = mount(<TextInput id="test.input" onBlur={blurFn} />);
     expect(blurFn).not.toHaveBeenCalled();
     component.find("input").simulate("focus");
     expect(blurFn).not.toHaveBeenCalled();
@@ -90,9 +88,7 @@ describe("TextInput", () => {
 
   it("should call onChange when input changes", () => {
     const changeFn = jest.fn();
-    const component = shallow(
-      <TextInput id="test.input" onChange={changeFn} />
-    );
+    const component = mount(<TextInput id="test.input" onChange={changeFn} />);
     expect(changeFn).not.toHaveBeenCalled();
     component.find("input").simulate("change");
     expect(changeFn).toHaveBeenCalled();
@@ -123,7 +119,7 @@ describe("TextInput", () => {
       <TextInput
         id="input.error.with.message"
         inputLabel="Error Message Test"
-        appearance={TextInputAppearance.Error}
+        appearance={InputAppearance.Error}
         errors={["This is an error message", "this is a second error message"]}
       />
     );
@@ -135,7 +131,7 @@ describe("TextInput", () => {
       <TextInput
         id="input.success.without.message"
         inputLabel="No Error Message Test"
-        appearance={TextInputAppearance.Success}
+        appearance={InputAppearance.Success}
         errors={["This is an error message"]}
       />
     );

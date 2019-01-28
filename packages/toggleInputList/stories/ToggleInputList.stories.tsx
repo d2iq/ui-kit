@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import ToggleInputListStoryHelper from "./helpers/ToggleInputListStoryHelper";
-import { ToggleInputAppearance } from "../../toggleInput/components/ToggleInput";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 const readme = require("../README.md");
 const options = [
@@ -37,7 +37,7 @@ storiesOf("Forms/ToggleInputList", module)
           inputLabel: "Thermosphere",
           id: "id.2",
           value: "thermosphere",
-          appearance: ToggleInputAppearance.Error
+          appearance: InputAppearance.Error
         },
         { inputLabel: "Stratosphere", id: "id.3", value: "stratosphere" }
       ]}

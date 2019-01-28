@@ -9,105 +9,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   display: block;
 }
 
-.emotion-3 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 12px;
-  padding-right: 12px;
-  border: 1px solid;
-  border-radius: 4px;
-  height: 36px;
-  font-size: inherit;
-  background-color: #FFF;
-  border-color: #DADDE2;
-}
-
-.emotion-3 input {
-  font-size: inherit;
-}
-
-.emotion-3 svg {
-  fill: #1B2029;
-}
-
-.emotion-3:focus {
-  background-color: #F8F6FF;
-  border-color: #7D58FF;
-}
-
-.emotion-3:focus svg {
-  fill: #7D58FF;
-}
-
-.emotion-1 {
-  background: none;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding: 0;
-}
-
-.emotion-1:focus {
-  outline: 0;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  padding-left: 0;
-  margin-left: 0;
-}
-
 <div>
   <label
     className="emotion-0"
@@ -115,48 +16,15 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   >
     standard
   </label>
-  <div
-    className="emotion-3"
+  <FormFieldWrapper
+    id="test.icon_end_input.standard"
   >
-    <input
-      className="emotion-1"
-      id="test.icon_end_input.standard"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-    />
-    <span
-      className="emotion-2"
-    >
-      <Component />
-    </span>
-  </div>
+    <Component />
+  </FormFieldWrapper>
 </div>
 `;
 
 exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
-.emotion-1 {
-  background: none;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding: 0;
-}
-
-.emotion-1:focus {
-  outline: 0;
-}
-
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
@@ -167,78 +35,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   fill: #EB293A;
 }
 
-.emotion-3 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 12px;
-  padding-right: 12px;
-  border: 1px solid;
-  border-radius: 4px;
-  height: 36px;
-  font-size: inherit;
-  background-color: #FFF;
-  border-color: #EB293A;
-}
-
-.emotion-3 input {
-  font-size: inherit;
-}
-
-.emotion-3 svg {
-  fill: #EB293A;
-}
-
-.emotion-3:focus {
-  background-color: #FDF4F4;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  padding-left: 0;
-  margin-left: 0;
-}
-
 <div>
   <label
     className="emotion-0"
@@ -246,23 +42,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   >
     error
   </label>
-  <div
-    className="emotion-3"
+  <FormFieldWrapper
+    id="test.icon_end_input.error"
   >
-    <input
-      aria-invalid={true}
-      className="emotion-1"
-      id="test.icon_end_input.error"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-    />
-    <span
-      className="emotion-2"
-    >
-      <Component />
-    </span>
-  </div>
+    <Component />
+  </FormFieldWrapper>
 </div>
 `;
 
@@ -275,100 +59,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   display: block;
 }
 
-.emotion-1 {
-  background: none;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding: 0;
-}
-
-.emotion-1:focus {
-  outline: 0;
-}
-
-.emotion-3 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 12px;
-  padding-right: 12px;
-  border: 1px solid;
-  border-radius: 4px;
-  height: 36px;
-  font-size: inherit;
-  background-color: #FFF;
-  border-color: #14C684;
-}
-
-.emotion-3 input {
-  font-size: inherit;
-}
-
-.emotion-3 svg {
-  fill: #14C684;
-}
-
-.emotion-3:focus {
-  background-color: #F3FCF8;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  padding-left: 0;
-  margin-left: 0;
-}
-
 <div>
   <label
     className="emotion-0"
@@ -376,22 +66,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   >
     success
   </label>
-  <div
-    className="emotion-3"
+  <FormFieldWrapper
+    id="test.icon_end_input.success"
   >
-    <input
-      className="emotion-1"
-      id="test.icon_end_input.success"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-    />
-    <span
-      className="emotion-2"
-    >
-      <Component />
-    </span>
-  </div>
+    <Component />
+  </FormFieldWrapper>
 </div>
 `;
 
@@ -404,104 +83,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   display: block;
 }
 
-.emotion-3 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 12px;
-  padding-right: 12px;
-  border: 1px solid;
-  border-radius: 4px;
-  height: 36px;
-  font-size: inherit;
-  background-color: #FFF;
-  border-color: #DADDE2;
-}
-
-.emotion-3 input {
-  font-size: inherit;
-}
-
-.emotion-3 svg {
-  fill: #1B2029;
-}
-
-.emotion-3:focus {
-  background-color: #F8F6FF;
-  border-color: #7D58FF;
-}
-
-.emotion-3:focus svg {
-  fill: #7D58FF;
-}
-
-.emotion-1 {
-  padding-right: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-}
-
-.emotion-2 {
-  background: none;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding: 0;
-}
-
-.emotion-2:focus {
-  outline: 0;
-}
-
 <div>
   <label
     className="emotion-0"
@@ -509,77 +90,15 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   >
     standard
   </label>
-  <div
-    className="emotion-3"
+  <FormFieldWrapper
+    id="test.icon_start_input.standard"
   >
-    <span
-      className="emotion-1"
-    >
-      <Component />
-    </span>
-    <input
-      className="emotion-2"
-      id="test.icon_start_input.standard"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-    />
-  </div>
+    <Component />
+  </FormFieldWrapper>
 </div>
 `;
 
 exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
-.emotion-1 {
-  padding-right: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-}
-
-.emotion-2 {
-  background: none;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding: 0;
-}
-
-.emotion-2:focus {
-  outline: 0;
-}
-
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
@@ -590,48 +109,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   fill: #EB293A;
 }
 
-.emotion-3 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 12px;
-  padding-right: 12px;
-  border: 1px solid;
-  border-radius: 4px;
-  height: 36px;
-  font-size: inherit;
-  background-color: #FFF;
-  border-color: #EB293A;
-}
-
-.emotion-3 input {
-  font-size: inherit;
-}
-
-.emotion-3 svg {
-  fill: #EB293A;
-}
-
-.emotion-3:focus {
-  background-color: #FDF4F4;
-}
-
 <div>
   <label
     className="emotion-0"
@@ -639,23 +116,11 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   >
     error
   </label>
-  <div
-    className="emotion-3"
+  <FormFieldWrapper
+    id="test.icon_start_input.error"
   >
-    <span
-      className="emotion-1"
-    >
-      <Component />
-    </span>
-    <input
-      aria-invalid={true}
-      className="emotion-2"
-      id="test.icon_start_input.error"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-    />
-  </div>
+    <Component />
+  </FormFieldWrapper>
 </div>
 `;
 
@@ -668,99 +133,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   display: block;
 }
 
-.emotion-1 {
-  padding-right: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-}
-
-.emotion-2 {
-  background: none;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding: 0;
-}
-
-.emotion-2:focus {
-  outline: 0;
-}
-
-.emotion-3 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 12px;
-  padding-right: 12px;
-  border: 1px solid;
-  border-radius: 4px;
-  height: 36px;
-  font-size: inherit;
-  background-color: #FFF;
-  border-color: #14C684;
-}
-
-.emotion-3 input {
-  font-size: inherit;
-}
-
-.emotion-3 svg {
-  fill: #14C684;
-}
-
-.emotion-3:focus {
-  background-color: #F3FCF8;
-}
-
 <div>
   <label
     className="emotion-0"
@@ -768,22 +140,11 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   >
     success
   </label>
-  <div
-    className="emotion-3"
+  <FormFieldWrapper
+    id="test.icon_start_input.success"
   >
-    <span
-      className="emotion-1"
-    >
-      <Component />
-    </span>
-    <input
-      className="emotion-2"
-      id="test.icon_start_input.success"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-    />
-  </div>
+    <Component />
+  </FormFieldWrapper>
 </div>
 `;
 
@@ -796,134 +157,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   display: block;
 }
 
-.emotion-4 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 12px;
-  padding-right: 12px;
-  border: 1px solid;
-  border-radius: 4px;
-  height: 36px;
-  font-size: inherit;
-  background-color: #FFF;
-  border-color: #DADDE2;
-}
-
-.emotion-4 input {
-  font-size: inherit;
-}
-
-.emotion-4 svg {
-  fill: #1B2029;
-}
-
-.emotion-4:focus {
-  background-color: #F8F6FF;
-  border-color: #7D58FF;
-}
-
-.emotion-4:focus svg {
-  fill: #7D58FF;
-}
-
-.emotion-1 {
-  padding-right: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-}
-
-.emotion-2 {
-  background: none;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding: 0;
-}
-
-.emotion-2:focus {
-  outline: 0;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  padding-left: 0;
-  margin-left: 0;
-}
-
 <div>
   <label
     className="emotion-0"
@@ -931,82 +164,15 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   >
     standard
   </label>
-  <div
-    className="emotion-4"
+  <FormFieldWrapper
+    id="test.two_icon_input.standard"
   >
-    <span
-      className="emotion-1"
-    >
-      <Component />
-    </span>
-    <input
-      className="emotion-2"
-      id="test.two_icon_input.standard"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-    />
-    <span
-      className="emotion-3"
-    >
-      <Component />
-    </span>
-  </div>
+    <Component />
+  </FormFieldWrapper>
 </div>
 `;
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
-.emotion-1 {
-  padding-right: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-}
-
-.emotion-2 {
-  background: none;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding: 0;
-}
-
-.emotion-2:focus {
-  outline: 0;
-}
-
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
@@ -1017,78 +183,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   fill: #EB293A;
 }
 
-.emotion-4 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 12px;
-  padding-right: 12px;
-  border: 1px solid;
-  border-radius: 4px;
-  height: 36px;
-  font-size: inherit;
-  background-color: #FFF;
-  border-color: #EB293A;
-}
-
-.emotion-4 input {
-  font-size: inherit;
-}
-
-.emotion-4 svg {
-  fill: #EB293A;
-}
-
-.emotion-4:focus {
-  background-color: #FDF4F4;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  padding-left: 0;
-  margin-left: 0;
-}
-
 <div>
   <label
     className="emotion-0"
@@ -1096,28 +190,11 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   >
     error
   </label>
-  <div
-    className="emotion-4"
+  <FormFieldWrapper
+    id="test.two_icon_input.error"
   >
-    <span
-      className="emotion-1"
-    >
-      <Component />
-    </span>
-    <input
-      aria-invalid={true}
-      className="emotion-2"
-      id="test.two_icon_input.error"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-    />
-    <span
-      className="emotion-3"
-    >
-      <Component />
-    </span>
-  </div>
+    <Component />
+  </FormFieldWrapper>
 </div>
 `;
 
@@ -1130,129 +207,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   display: block;
 }
 
-.emotion-1 {
-  padding-right: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-}
-
-.emotion-2 {
-  background: none;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding: 0;
-}
-
-.emotion-2:focus {
-  outline: 0;
-}
-
-.emotion-4 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-left: 12px;
-  padding-right: 12px;
-  border: 1px solid;
-  border-radius: 4px;
-  height: 36px;
-  font-size: inherit;
-  background-color: #FFF;
-  border-color: #14C684;
-}
-
-.emotion-4 input {
-  font-size: inherit;
-}
-
-.emotion-4 svg {
-  fill: #14C684;
-}
-
-.emotion-4:focus {
-  background-color: #F3FCF8;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  padding-left: 0;
-  margin-left: 0;
-}
-
 <div>
   <label
     className="emotion-0"
@@ -1260,26 +214,10 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   >
     success
   </label>
-  <div
-    className="emotion-4"
+  <FormFieldWrapper
+    id="test.two_icon_input.success"
   >
-    <span
-      className="emotion-1"
-    >
-      <Component />
-    </span>
-    <input
-      className="emotion-2"
-      id="test.two_icon_input.success"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      type="text"
-    />
-    <span
-      className="emotion-3"
-    >
-      <Component />
-    </span>
-  </div>
+    <Component />
+  </FormFieldWrapper>
 </div>
 `;

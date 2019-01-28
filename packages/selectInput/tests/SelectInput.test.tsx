@@ -1,10 +1,10 @@
 import React from "react";
-import { mount } from "enzyme";
+import { shallow, mount } from "enzyme";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { SelectInput } from "../";
-import { SelectInputAppearance } from "../components/SelectInput";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
@@ -19,10 +19,10 @@ const defaultOptions = [
 
 describe("SelectInput", () => {
   it("renders all appearances", () => {
-    Object.keys(SelectInputAppearance).forEach(appearance => {
-      const component = mount(
+    Object.keys(InputAppearance).forEach(appearance => {
+      const component = shallow(
         <SelectInput
-          appearance={SelectInputAppearance[appearance]}
+          appearance={InputAppearance[appearance]}
           options={defaultOptions}
           id="layers"
           inputLabel="Atmosphere layer"
@@ -48,12 +48,12 @@ describe("SelectInput", () => {
   });
 
   it("renders with errors", () => {
-    const component = mount(
+    const component = shallow(
       <SelectInput
         options={defaultOptions}
         id="layers"
         inputLabel="Atmosphere layer"
-        appearance={SelectInputAppearance.Error}
+        appearance={InputAppearance.Error}
         errors={["error1", "error2"]}
       />
     );
@@ -61,7 +61,7 @@ describe("SelectInput", () => {
   });
 
   it("renders disabled", () => {
-    const component = mount(
+    const component = shallow(
       <SelectInput
         options={defaultOptions}
         id="layers"
@@ -73,7 +73,7 @@ describe("SelectInput", () => {
   });
 
   it("renders with hidden label", () => {
-    const component = mount(
+    const component = shallow(
       <SelectInput
         options={defaultOptions}
         id="layers"
@@ -123,7 +123,7 @@ describe("SelectInput", () => {
         options={defaultOptions}
         id="layers"
         inputLabel="Atmosphere layer"
-        appearance={SelectInputAppearance.Error}
+        appearance={InputAppearance.Error}
         errors={errorList}
       />
     );
@@ -136,7 +136,7 @@ describe("SelectInput", () => {
         options={defaultOptions}
         id="layers"
         inputLabel="Atmosphere layer"
-        appearance={SelectInputAppearance.Success}
+        appearance={InputAppearance.Success}
         errors={["error1", "error2"]}
       />
     );

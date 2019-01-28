@@ -10,18 +10,14 @@ import {
   inputReset,
   padding,
   visuallyHidden,
-  display
+  display,
+  tintText
 } from "../../shared/styles/styleUtils";
 import Icon from "../../icon/components/Icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
+import { iconSizeXs, error } from "../../design-tokens/build/js/designTokens";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
-
-export enum SelectInputAppearance {
-  Standard = "standard",
-  Error = "error",
-  Success = "success"
-}
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 export interface SelectOption {
   disabled?: boolean;
@@ -30,12 +26,33 @@ export interface SelectOption {
 }
 
 export interface SelectInputProps extends React.HTMLProps<HTMLSelectElement> {
-  appearance: SelectInputAppearance;
+  /**
+   * Sets the current appearance of the select component. This defaults to InputAppearance.Standard, but supports `InputAppearance.Error` & `InputAppearance.Success` appearances as well.
+   */
+  appearance: InputAppearance;
+  /**
+   * Sets the contents for validation errors. This will be displayed below the input element. Errors are only visible when the `SelectInput` appearance is also set to `InputAppearance.Error`.
+   */
   errors?: React.ReactNode[];
+  /**
+   * hintContent is text or a ReactNode that is displayed directly under the input with additional information about the expected input.
+   */
   hintContent?: React.ReactNode;
+  /**
+   * Unique identifier used for the form input component
+   */
   id: string;
+  /**
+   * Sets the contents of the input label. This can be a `string` or any `ReactNode`.
+   */
   inputLabel: React.ReactNode;
+  /**
+   * An array of objects that describes the options the select input contains
+   */
   options: SelectOption[];
+  /**
+   * Defaults to `true`, but can be set to `false` to visibly hide the `TextInput`'s label. The `inputLabel` should still be set even when hidden for accessibility support.
+   */
   showInputLabel?: boolean;
 }
 
@@ -48,7 +65,7 @@ class SelectInput extends React.PureComponent<
   SelectInputState
 > {
   public static defaultProps: Partial<SelectInputProps> = {
-    appearance: SelectInputAppearance.Standard,
+    appearance: InputAppearance.Standard,
     showInputLabel: true
   };
 
@@ -72,22 +89,17 @@ class SelectInput extends React.PureComponent<
       inputLabel,
       options,
       showInputLabel,
+      required,
       ...other
     } = this.props;
     delete other.onFocus;
     delete other.onBlur;
 
-    const hasError = this.props.appearance === SelectInputAppearance.Error;
+    const hasError = appearance === InputAppearance.Error;
 
     return (
       <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
-        {({
-          getValidationErrors,
-          isValid,
-          errorIds,
-          hintContentId,
-          getHintContent
-        }) => (
+        {({ getValidationErrors, isValid, getHintContent, describedByIds }) => (
           <div>
             <label
               className={cx(getLabelStyle(hasError), {
@@ -96,6 +108,9 @@ class SelectInput extends React.PureComponent<
               htmlFor={id}
             >
               {inputLabel}
+              {required ? (
+                <span className={cx(tintText(error))}> *</span>
+              ) : null}
             </label>
             <span
               className={cx(
@@ -108,7 +123,7 @@ class SelectInput extends React.PureComponent<
               <select
                 className={cx(inputReset, select, display("block"))}
                 aria-invalid={!isValid}
-                aria-describedby={this.getDescribedBy(hintContentId, errorIds)}
+                aria-describedby={describedByIds}
                 id={id}
                 onFocus={this.handleFocus}
                 onBlur={this.handleBlur}
@@ -136,7 +151,7 @@ class SelectInput extends React.PureComponent<
               </span>
             </span>
             {getHintContent}
-            {appearance === SelectInputAppearance.Error && getValidationErrors}
+            {appearance === InputAppearance.Error && getValidationErrors}
           </div>
         )}
       </FormFieldWrapper>
@@ -167,14 +182,6 @@ class SelectInput extends React.PureComponent<
       return `${this.props.appearance}-focus`;
     }
     return this.props.appearance;
-  }
-
-  private getDescribedBy(hintContent, errors) {
-    if (hintContent && errors) {
-      return `${hintContent} ${errors}`;
-    } else {
-      return errors || hintContent;
-    }
   }
 }
 
