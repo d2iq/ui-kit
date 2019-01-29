@@ -61,6 +61,7 @@ exports[`InfoBox renders default 1`] = `
   </div>
   <Clickable
     action={[Function]}
+    disableFocusOutline={false}
     role="button"
     tabIndex={0}
   >
@@ -107,6 +108,7 @@ exports[`InfoBox renders with JSX message 1`] = `
   </div>
   <Clickable
     action={[Function]}
+    disableFocusOutline={false}
     role="button"
     tabIndex={0}
   >
@@ -207,6 +209,7 @@ exports[`InfoBox renders with actions 1`] = `
   </div>
   <Clickable
     action={[Function]}
+    disableFocusOutline={false}
     role="button"
     tabIndex={0}
   >

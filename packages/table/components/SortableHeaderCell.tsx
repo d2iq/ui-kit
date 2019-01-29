@@ -9,7 +9,7 @@ type SortDirection = "ASC" | "DESC" | null;
 interface Props {
   sortHandler: () => void;
   sortDirection: SortDirection;
-  columnContent: string | React.ReactNode;
+  columnContent: React.ReactNode;
   textAlign?: TextAlign;
 }
 interface State {

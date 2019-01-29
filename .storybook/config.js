@@ -5,8 +5,10 @@ import { withKnobs } from "@storybook/addon-knobs/react";
 import { checkA11y } from "@storybook/addon-a11y";
 import { setOptions } from "@storybook/addon-options";
 import infoAddon, { setDefaults } from "@storybook/addon-info";
+import { iconDecorator } from "../decorators/iconDecorator";
 require("../packages/shared/styles/global").injectStorybookResetCss();
 
+addDecorator(iconDecorator);
 addDecorator(withKnobs);
 addDecorator(checkA11y);
 setAddon(infoAddon);

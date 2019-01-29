@@ -33,6 +33,7 @@ exports[`SortableHeaderCell renders default 1`] = `
 
 <Clickable
   action={[MockFunction]}
+  disableFocusOutline={false}
   role="button"
   tabIndex={0}
 >

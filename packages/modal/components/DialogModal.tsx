@@ -18,7 +18,7 @@ export interface DialogModalProps extends ModalBaseProps {
   /** Whether we automatically add padding to the body of the modal. */
   isContentFlush?: boolean;
   /** The text displayed in the header of the modal. */
-  title: string;
+  title: React.ReactNode;
 }
 
 class DialogModal extends React.PureComponent<DialogModalProps, {}> {
@@ -35,9 +35,7 @@ class DialogModal extends React.PureComponent<DialogModalProps, {}> {
       <ModalBase {...other}>
         <div className={cx(modalHeader, flexItem("shrink"))}>
           <div className={cx(flex({ align: "center" }), padding("all", "l"))}>
-            <div className={cx(flexItem("grow"), textSize("large"))}>
-              {title}
-            </div>
+            <div className={cx(flexItem("grow"), textSize("l"))}>{title}</div>
             <div
               className={cx(
                 modalCloseWrapper,

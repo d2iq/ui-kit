@@ -45,7 +45,7 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
    * Sets the contents of the input label. This can be a `string` or any `ReactNode`.
    */
-  inputLabel: string | React.ReactNode;
+  inputLabel: React.ReactNode;
   /**
    * Defaults to `true`, but can be set to `false` to visibly hide the `TextInput`'s label. The `inputLabel` should still be set even when hidden for accessibility support.
    */
@@ -53,11 +53,11 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
    * hintContent is text or a ReactNode that is displayed directly under the input with additional information about the expected input.
    */
-  hintContent?: string | React.ReactNode;
+  hintContent?: React.ReactNode;
   /**
    * Sets the contents for validation errors. This will be displayed below the input element. Errors are only visible when the `TextInput` appearance is also set to `TextInputAppearance.Error`.
    */
-  errors?: string[];
+  errors?: React.ReactNode[];
 }
 
 export class TextInput<
@@ -174,7 +174,7 @@ export class TextInput<
       this.props.appearance === TextInputAppearance.Error;
     return (
       <div
-        className={cx(textSize("small"), margin("top", "xxs"), {
+        className={cx(textSize("s"), margin("top", "xxs"), {
           [tintContentSecondary]: !tintColorForErrors,
           [tintContent(errorColor)]: tintColorForErrors
         })}

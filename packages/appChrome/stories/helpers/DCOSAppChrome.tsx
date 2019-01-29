@@ -97,7 +97,11 @@ class DCOSAppChrome extends React.Component<
               className={flex({ align: "center" })}
               style={{ width: "100%" }}
             >
-              <Clickable action={this.toggleSidebar} tabIndex={0}>
+              <Clickable
+                action={this.toggleSidebar}
+                tabIndex={0}
+                disableFocusOutline={true}
+              >
                 <div className={flexItem("shrink")}>☰</div>
               </Clickable>
               <div className={cx(flexItem("grow"), padding("left", "m"))}>

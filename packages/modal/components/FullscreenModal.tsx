@@ -12,11 +12,11 @@ interface FullscreenModalProps extends ModalBaseProps {
   /** The primary button */
   ctaButton?: React.ReactElement<ButtonProps>;
   /** The text for the button that secondary button, which closes the modal */
-  closeText: string;
+  closeText: React.ReactNode;
   /** The title that appears in the header */
-  title: string;
+  title: React.ReactNode;
   /** The subtitle that appears in the header */
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   /** Whether we automatically add padding to the body of the modal. */
   isContentFlush?: boolean;
   /** Custom header content component. ⚠️Use rarely and with caution⚠️ */

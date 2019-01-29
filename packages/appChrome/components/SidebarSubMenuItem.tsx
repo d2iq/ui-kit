@@ -31,7 +31,7 @@ class SidebarSubMenuItem extends React.PureComponent<
       appChromeInsetContent,
       tintContentSecondary,
       sidebarNavItem(isActive),
-      textSize("small"),
+      textSize("s"),
       flex({ align: "center" }),
       {
         [tintContentPrimary]: isActive

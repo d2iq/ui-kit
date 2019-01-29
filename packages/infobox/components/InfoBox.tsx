@@ -72,7 +72,7 @@ export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
         className={cx(
           infoBox(appearance, hasActions),
           padding("all"),
-          textSize("small"),
+          textSize("s"),
           display("grid"),
           textWeight("medium"),
           className
