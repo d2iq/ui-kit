@@ -21,7 +21,9 @@
     - [Atoms](#atoms)
     - [Molecules](#molecules)
     - [Organisms](#organisms)
-  - [Commit types](#commit-types)
+  - [Conventional Commits](#contenvtional-commits)
+    - [Commit types](#commit-types)
+    - [JIRA Integration](#jira-integration)
 
 ## Prerequisites
 
@@ -222,29 +224,52 @@ Keep organisms simple, here is why an organism is not an app and they are the bu
 
 An Example of an organism is a Registration form which is consisting of a TextInput (Atom) and the Password Component (Molecule)
 
-## Commit types
+## Conventional Commits
+
+We use conventional commits with angular preset.
+
+### Commit types
 
 We are supporting the conventional commit types as follows:
 
-**Features**
-`feat` - A new feature
-**Bug Fixes**
-`fix` - A bug fix
-**Documentation**
-`docs` - Documentation only changes
-**Styles**
-`style` - Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-**Code Refactoring**
-`refactor` - A code change that neither fixes a bug nor adds a feature
-**Performance Improvements**
-`perf` - A code change that improves performance
-**Tests**
-`test` - Adding missing tests or correcting existing tests
-**Builds**
-`build` - Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-**Continuous Integrations**
-`ci` - Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-**Chores**
-`chore` - Other changes that don't modify src or test files
-**Reverts**
-`revert` - Reverts a previous commit
+- **Features**
+  `feat` - A new feature
+- **Bug Fixes**
+  `fix` - A bug fix
+- **Documentation**
+  `docs` - Documentation only changes
+- **Styles**
+  `style` - Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **Code Refactoring**
+  `refactor` - A code change that neither fixes a bug nor adds a feature
+- **Performance Improvements**
+  `perf` - A code change that improves performance
+- **Tests**
+  `test` - Adding missing tests or correcting existing tests
+- **Builds**
+  `build` - Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+- **Continuous Integrations**
+  `ci` - Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+- **Chores**
+  `chore` - Other changes that don't modify src or test files
+- **Reverts**
+  `revert` - Reverts a previous commit
+
+### JIRA Integration
+
+`semantic-release-jira` plugin automaticallly can update your Mesosphere JIRA issues labels with UI-Kit release version, if you add it as footer to your commit message.
+
+You can use `Updates`, `Closes` or `Resolves` statements (they all have the same effect tho) and add multiple JIRAs by seprarating them by comma.
+
+Examples Commit message:
+
+```
+fix(Table): fix lorem so that it enables foo
+
+this commit body message describes the commit
+
+BREAKING CHANGE
+Before this fix foo wasnt enabled at all, behavior changes from <old> to <new>
+
+Closes DCOS_OSS-12345, Closes DCOS-23456
+```
