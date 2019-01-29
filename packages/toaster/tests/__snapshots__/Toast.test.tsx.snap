@@ -4,6 +4,8 @@ exports[`Toast renders default 1`] = `
 .emotion-0 {
   list-style: none;
   margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 }
 
@@ -69,6 +71,8 @@ exports[`Toast renders with actions 1`] = `
 .emotion-0 {
   list-style: none;
   margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 }
 
@@ -134,6 +138,8 @@ exports[`Toast renders with description 1`] = `
 .emotion-0 {
   list-style: none;
   margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 }
 
