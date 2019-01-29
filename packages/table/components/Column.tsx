@@ -10,7 +10,7 @@ export interface ColumnProps {
   /**
    * header is providing the contents for the header cell for the column.
    */
-  header: string | React.ReactNode;
+  header: React.ReactNode;
   /**
    * cellRenderer is the function which is creating the cell contents for this column.
    */
