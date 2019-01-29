@@ -27,6 +27,10 @@ export interface ColumnProps {
    * the maximum width a column can be
    */
   maxWidth?: number;
+  /**
+   * whether the column should grow to fill remaining space
+   */
+  growToFill?: boolean;
 }
 
 export class Column extends React.PureComponent<ColumnProps, {}> {}

@@ -129,6 +129,45 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
+  .addWithInfo("column width fill remaining", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <Table data={items}>
+        <Column
+          header={<HeaderCell>name</HeaderCell>}
+          cellRenderer={nameCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>role</HeaderCell>}
+          cellRenderer={roleCellRenderer}
+          growToFill={true}
+        />
+        <Column
+          header={<HeaderCell>state</HeaderCell>}
+          cellRenderer={stateCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>Very Long</HeaderCell>}
+          cellRenderer={veryLongRenderer}
+          maxWidth={300}
+        />
+        <Column
+          header={<HeaderCell textAlign="right">zip code</HeaderCell>}
+          cellRenderer={zipcodeCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>city</HeaderCell>}
+          cellRenderer={cityCellRenderer}
+          growToFill={true}
+        />
+      </Table>
+    </div>
+  ))
   .addWithInfo("width-aware render", () => {
     const stateWidth = (args: WidthArgs): number =>
       Math.min(100, Math.max(200, args.width / args.totalColumns));
