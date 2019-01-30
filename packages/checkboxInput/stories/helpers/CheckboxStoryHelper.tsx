@@ -1,9 +1,7 @@
 import * as React from "react";
 import CheckboxInput from "../../components/CheckboxInput";
-import {
-  ToggleInputAppearance,
-  ToggleInputProps
-} from "../../../toggleInput/components/ToggleInput";
+import { ToggleInputProps } from "../../../toggleInput/components/ToggleInput";
+import { InputAppearance } from "../../../shared/types/inputAppearance";
 
 export interface CheckboxInputState {
   isChecked: boolean;
@@ -14,7 +12,7 @@ class CheckboxStoryHelper extends React.PureComponent<
   CheckboxInputState
 > {
   public static defaultProps: Partial<ToggleInputProps> = {
-    appearance: ToggleInputAppearance.Standard
+    appearance: InputAppearance.Standard
   };
 
   constructor(props) {

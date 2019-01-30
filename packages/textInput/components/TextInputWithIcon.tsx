@@ -1,10 +1,15 @@
 import { cx } from "emotion";
 import * as React from "react";
 
-import { TextInput, TextInputAppearance, TextInputProps } from "./TextInput";
+import { TextInput, TextInputProps } from "./TextInput";
 
-import { inputAppearances, inputContainer } from "../style";
+import {
+  inputAppearances,
+  inputContainer
+} from "../../shared/styles/formStyles";
 import { flex, flexItem, flush, padding } from "../../shared/styles/styleUtils";
+import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 export interface TextInputWithIconProps extends TextInputProps {
   /**
@@ -27,7 +32,7 @@ export class TextInputWithIcon extends TextInput<
 > {
   public static defaultProps: Partial<TextInputWithIconProps> = {
     type: "text",
-    appearance: TextInputAppearance.Standard,
+    appearance: InputAppearance.Standard,
     showInputLabel: true
   };
   constructor(props) {
@@ -100,19 +105,35 @@ export class TextInputWithIcon extends TextInput<
   protected getInputContent() {
     const inputAppearance = this.getInputAppearance();
     return (
-      <div
-        className={cx(
-          flex(),
-          padding("left", "s"),
-          padding("right", "s"),
-          inputContainer,
-          inputAppearances[inputAppearance]
-        )}
+      <FormFieldWrapper
+        id={this.props.id}
+        errors={this.props.errors}
+        hintContent={this.props.hintContent}
       >
-        {this.getIconStartContent()}
-        {this.getInputElement([flexItem("grow"), padding("all", "none")])}
-        {this.getIconEndContent()}
-      </div>
+        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
+          <div>
+            <div
+              className={cx(
+                flex(),
+                padding("left", "s"),
+                padding("right", "s"),
+                inputContainer,
+                inputAppearances[inputAppearance]
+              )}
+            >
+              {this.getIconStartContent()}
+              {this.getInputElement(
+                [flexItem("grow"), padding("all", "none")],
+                isValid,
+                describedByIds
+              )}
+              {this.getIconEndContent()}
+            </div>
+            {getHintContent}
+            {getValidationErrors}
+          </div>
+        )}
+      </FormFieldWrapper>
     );
   }
 

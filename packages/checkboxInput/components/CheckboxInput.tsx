@@ -10,10 +10,8 @@ import { Icon } from "../../icon";
 import { visuallyHidden, display } from "../../shared/styles/styleUtils";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { iconSizeXs, white } from "../../design-tokens/build/js/designTokens";
-import {
-  ToggleInputAppearance,
-  ToggleInputProps
-} from "../../toggleInput/components/ToggleInput";
+import { ToggleInputProps } from "../../toggleInput/components/ToggleInput";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 export interface CheckboxInputState {
   hasFocus: boolean;
@@ -28,7 +26,7 @@ class CheckboxInput extends React.PureComponent<
   CheckboxInputState
 > {
   public static defaultProps: Partial<CheckboxInputProps> = {
-    appearance: ToggleInputAppearance.Standard
+    appearance: InputAppearance.Standard
   };
 
   constructor(props) {

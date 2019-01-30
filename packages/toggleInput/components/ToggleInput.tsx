@@ -12,18 +12,13 @@ import {
 } from "../../shared/styles/styleUtils";
 import { error, success } from "../../design-tokens/build/js/designTokens";
 import { CheckboxInputProps } from "../../checkboxInput/components/CheckboxInput";
-
-export enum ToggleInputAppearance {
-  Standard = "standard",
-  Error = "error",
-  Success = "success"
-}
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 export interface ToggleInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
-   * Sets the current appearance of the input component. This defaults to ToggleInputAppearance.Standard, but supports `ToggleInputAppearance.Error` & `InputAppearance.Success` appearances as well.
+   * Sets the current appearance of the input component. This defaults to InputAppearance.Standard, but supports `InputAppearance.Error` & `InputAppearance.Success` appearances as well.
    */
-  appearance: ToggleInputAppearance;
+  appearance: InputAppearance;
   /**
    * Whether or not the input is checked
    */
@@ -88,9 +83,8 @@ class ToggleInput extends React.PureComponent<LocalToggleInputProps, {}> {
           <div
             className={cx(flexItem("grow"), padding("left", "s"), {
               [visuallyHidden]: !showInputLabel,
-              [tintContent(error)]: appearance === ToggleInputAppearance.Error,
-              [tintContent(success)]:
-                appearance === ToggleInputAppearance.Success,
+              [tintContent(error)]: appearance === InputAppearance.Error,
+              [tintContent(success)]: appearance === InputAppearance.Success,
               [tintContentSecondary]: disabled
             })}
           >

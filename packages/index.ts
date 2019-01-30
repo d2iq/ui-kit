@@ -25,6 +25,7 @@ export {
 export { CheckboxInput } from "./checkboxInput";
 export { Dropdownable } from "./dropdownable";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
+export { InputAppearance } from "./shared/types/inputAppearance";
 export {
   DialogModal,
   SmallDialogModal,
@@ -34,6 +35,7 @@ export {
   LargeDialogModalWithFooter,
   FullscreenModal
 } from "./modal";
+export { SelectInput } from "./selectInput";
 export {
   Column,
   Table,

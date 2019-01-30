@@ -4,19 +4,19 @@ import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { ToggleInput } from "../";
-import { ToggleInputAppearance } from "../../toggleInput/components/ToggleInput";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe("ToggleInput", () => {
   it("renders all appearances", () => {
-    Object.keys(ToggleInputAppearance).forEach(appearance => {
+    Object.keys(InputAppearance).forEach(appearance => {
       const component = mount(
         <ToggleInput
           id="defaultId"
           inputLabel="Sample label"
           value="default"
-          appearance={ToggleInputAppearance[appearance]}
+          appearance={InputAppearance[appearance]}
         />
       );
       expect(toJson(component)).toMatchSnapshot();

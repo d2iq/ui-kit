@@ -2,8 +2,9 @@ import { css, cx } from "emotion";
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { TextInputAppearance, TextInputWithIcon } from "../index";
+import { TextInputWithIcon } from "../index";
 import { CloseIcon, DownTriangle } from "../../shared/icons";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 const readme = require("../README.md");
 
@@ -27,7 +28,7 @@ storiesOf("Forms/TextInputWithIcon", module)
         className={cx(defaultDisplayItem)}
         iconStart={<DownTriangle />}
         inputLabel="Single icon - Error"
-        appearance={TextInputAppearance.Error}
+        appearance={InputAppearance.Error}
       />
       <br />
       <TextInputWithIcon
@@ -35,7 +36,7 @@ storiesOf("Forms/TextInputWithIcon", module)
         className={cx(defaultDisplayItem)}
         iconStart={<DownTriangle />}
         inputLabel="Single icon - Success"
-        appearance={TextInputAppearance.Success}
+        appearance={InputAppearance.Success}
       />
       <br />
       <TextInputWithIcon
@@ -99,7 +100,7 @@ storiesOf("Forms/TextInputWithIcon", module)
         iconEnd={<CloseIcon />}
         inputLabel="Some field"
         hintContent="I should have the right data."
-        appearance={TextInputAppearance.Error}
+        appearance={InputAppearance.Error}
         errors={["I'm an error message!"]}
       />
     </div>
