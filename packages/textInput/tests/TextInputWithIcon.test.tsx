@@ -1,23 +1,23 @@
 import React from "react";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
 import TextInputWithIcon from "../components/TextInputWithIcon";
-import { TextInputAppearance } from "../components/TextInput";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 import { CloseIcon, DownTriangle } from "../../shared/icons";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe("TextInputWithIcon", () => {
   it("should render all appearances with iconStart", () => {
-    Object.keys(TextInputAppearance).forEach(appearance => {
+    Object.keys(InputAppearance).forEach(appearance => {
       const component = shallow(
         <TextInputWithIcon
-          id={`test.icon_start_input.${TextInputAppearance[appearance]}`}
-          inputLabel={TextInputAppearance[appearance]}
-          appearance={TextInputAppearance[appearance]}
+          id={`test.icon_start_input.${InputAppearance[appearance]}`}
+          inputLabel={InputAppearance[appearance]}
+          appearance={InputAppearance[appearance]}
           iconStart={<DownTriangle />}
         />
       );
@@ -26,12 +26,12 @@ describe("TextInputWithIcon", () => {
   });
 
   it("should render all appearances with iconEnd", () => {
-    Object.keys(TextInputAppearance).forEach(appearance => {
+    Object.keys(InputAppearance).forEach(appearance => {
       const component = shallow(
         <TextInputWithIcon
-          id={`test.icon_end_input.${TextInputAppearance[appearance]}`}
-          inputLabel={TextInputAppearance[appearance]}
-          appearance={TextInputAppearance[appearance]}
+          id={`test.icon_end_input.${InputAppearance[appearance]}`}
+          inputLabel={InputAppearance[appearance]}
+          appearance={InputAppearance[appearance]}
           iconEnd={<CloseIcon />}
         />
       );
@@ -40,12 +40,12 @@ describe("TextInputWithIcon", () => {
   });
 
   it("should render all appearances with twoIcons", () => {
-    Object.keys(TextInputAppearance).forEach(appearance => {
+    Object.keys(InputAppearance).forEach(appearance => {
       const component = shallow(
         <TextInputWithIcon
-          id={`test.two_icon_input.${TextInputAppearance[appearance]}`}
-          inputLabel={TextInputAppearance[appearance]}
-          appearance={TextInputAppearance[appearance]}
+          id={`test.two_icon_input.${InputAppearance[appearance]}`}
+          inputLabel={InputAppearance[appearance]}
+          appearance={InputAppearance[appearance]}
           iconStart={<DownTriangle />}
           iconEnd={<CloseIcon />}
         />
@@ -56,7 +56,7 @@ describe("TextInputWithIcon", () => {
 
   it("should call onFocus when input gains focus", () => {
     const focusFn = jest.fn();
-    const component = shallow(
+    const component = mount(
       <TextInputWithIcon
         id="test.input"
         inputLabel="Test Focus"
@@ -71,7 +71,7 @@ describe("TextInputWithIcon", () => {
 
   it("should call onBlur when input loses focus", () => {
     const blurFn = jest.fn();
-    const component = shallow(
+    const component = mount(
       <TextInputWithIcon
         id="test.input"
         inputLabel="Test Blur"

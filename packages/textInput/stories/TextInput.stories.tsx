@@ -2,7 +2,8 @@ import { css, cx } from "emotion";
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { TextInput, TextInputAppearance } from "../index";
+import { TextInput } from "../index";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 const readme = require("../README.md");
 
 const defaultDisplayItem = css`
@@ -24,7 +25,7 @@ storiesOf("Forms/TextInput", module)
         id="error.input"
         className={cx(defaultDisplayItem)}
         inputLabel="Error"
-        appearance={TextInputAppearance.Error}
+        appearance={InputAppearance.Error}
         placeholder="Placeholder"
       />
       <br />
@@ -32,7 +33,7 @@ storiesOf("Forms/TextInput", module)
         id="success.input"
         className={cx(defaultDisplayItem)}
         inputLabel="Success"
-        appearance={TextInputAppearance.Success}
+        appearance={InputAppearance.Success}
         placeholder="Placeholder"
       />
       <br />
@@ -77,7 +78,7 @@ storiesOf("Forms/TextInput", module)
           `
         )}
         inputLabel="Require Field"
-        appearance={TextInputAppearance.Error}
+        appearance={InputAppearance.Error}
         placeholder="Placeholder"
         hintContent="Enter a correct value here. e.g. not empty"
         errors={["Please enter a value.", "Another error message"]}
@@ -90,7 +91,7 @@ storiesOf("Forms/TextInput", module)
       id="error.input.with.message"
       className={cx(defaultDisplayItem)}
       inputLabel="Require Field"
-      appearance={TextInputAppearance.Error}
+      appearance={InputAppearance.Error}
       placeholder="Placeholder"
       errors={["Please enter a value."]}
       required={true}
@@ -101,7 +102,7 @@ storiesOf("Forms/TextInput", module)
       id="error.input.with.message"
       className={cx(defaultDisplayItem)}
       inputLabel="Require Field"
-      appearance={TextInputAppearance.Error}
+      appearance={InputAppearance.Error}
       placeholder="Placeholder"
       errors={["Please enter a value.", "Value must not be empty."]}
       required={true}

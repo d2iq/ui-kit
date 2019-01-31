@@ -2,8 +2,8 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import CheckboxStoryHelper from "./helpers/CheckboxStoryHelper";
-import { ToggleInputAppearance } from "../../toggleInput/components/ToggleInput";
 import { css } from "emotion";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 const readme = require("../README.md");
 
@@ -29,13 +29,13 @@ storiesOf("Forms/CheckboxInput", module)
       <CheckboxStoryHelper
         id="errorId"
         inputLabel="Error"
-        appearance={ToggleInputAppearance.Error}
+        appearance={InputAppearance.Error}
         value="error"
       />
       <CheckboxStoryHelper
         id="successId"
         inputLabel="Success"
-        appearance={ToggleInputAppearance.Success}
+        appearance={InputAppearance.Success}
         value="success"
       />
       <CheckboxStoryHelper
@@ -53,14 +53,14 @@ storiesOf("Forms/CheckboxInput", module)
       <CheckboxStoryHelper
         id="errorId.checked"
         inputLabel="Error checked"
-        appearance={ToggleInputAppearance.Error}
+        appearance={InputAppearance.Error}
         checked={true}
         value="checked.error"
       />
       <CheckboxStoryHelper
         id="successId.checked"
         inputLabel="Success checked"
-        appearance={ToggleInputAppearance.Success}
+        appearance={InputAppearance.Success}
         checked={true}
         value="checked.success"
       />

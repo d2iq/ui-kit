@@ -2,7 +2,6 @@ import * as React from "react";
 import { cx } from "emotion";
 import CheckboxInput from "../../checkboxInput/components/CheckboxInput";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
-import { ToggleInputAppearance } from "../../toggleInput/components/ToggleInput";
 import {
   listReset,
   fieldsetReset,
@@ -11,9 +10,10 @@ import {
   textWeight,
   visuallyHidden
 } from "../../shared/styles/styleUtils";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 export interface ToggleInputProperties {
-  appearance?: ToggleInputAppearance;
+  appearance?: InputAppearance;
   inputLabel: string;
   id: string;
   value: string;
@@ -77,17 +77,11 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
 
     return (
       <FormFieldWrapper errors={errors} hintContent={hintContent} id={id}>
-        {({
-          getValidationErrors,
-          isValid,
-          errorIds,
-          hintContentId,
-          getHintContent
-        }) => (
+        {({ describedByIds, getValidationErrors, isValid, getHintContent }) => (
           <fieldset
             className={fieldsetReset}
             aria-invalid={!isValid}
-            aria-describedby={this.getDescribedBy(hintContentId, errorIds)}
+            aria-describedby={describedByIds}
           >
             <legend
               className={cx(legendReset, textWeight("medium"), {
@@ -146,14 +140,6 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
     }
 
     return selectedItems.filter(selectedItem => selectedItem !== value);
-  }
-
-  private getDescribedBy(hintContent, errors) {
-    if (hintContent && errors) {
-      return `${hintContent} ${errors}`;
-    } else {
-      return errors || hintContent;
-    }
   }
 }
 
