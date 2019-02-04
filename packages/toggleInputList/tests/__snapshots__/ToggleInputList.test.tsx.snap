@@ -167,6 +167,7 @@ exports[`ToggleInputList renders default 1`] = `
                       className="emotion-2"
                     >
                       <input
+                        aria-checked={false}
                         checked={false}
                         className="emotion-1"
                         id="id.1"
@@ -220,6 +221,7 @@ exports[`ToggleInputList renders default 1`] = `
                       className="emotion-2"
                     >
                       <input
+                        aria-checked={false}
                         checked={false}
                         className="emotion-1"
                         id="id.2"
@@ -273,6 +275,7 @@ exports[`ToggleInputList renders default 1`] = `
                       className="emotion-2"
                     >
                       <input
+                        aria-checked={false}
                         checked={false}
                         className="emotion-1"
                         id="id.3"
@@ -493,6 +496,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                       className="emotion-2"
                     >
                       <input
+                        aria-checked={false}
                         checked={false}
                         className="emotion-1"
                         id="id.1"
@@ -546,6 +550,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                       className="emotion-2"
                     >
                       <input
+                        aria-checked={false}
                         checked={false}
                         className="emotion-1"
                         id="id.2"
@@ -599,6 +604,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                       className="emotion-2"
                     >
                       <input
+                        aria-checked={false}
                         checked={false}
                         className="emotion-1"
                         id="id.3"
@@ -820,6 +826,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                       className="emotion-2"
                     >
                       <input
+                        aria-checked={false}
                         checked={false}
                         className="emotion-1"
                         id="id.1"
@@ -873,6 +880,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                       className="emotion-2"
                     >
                       <input
+                        aria-checked={false}
                         checked={false}
                         className="emotion-1"
                         id="id.2"
@@ -926,6 +934,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                       className="emotion-2"
                     >
                       <input
+                        aria-checked={false}
                         checked={false}
                         className="emotion-1"
                         id="id.3"
@@ -1163,6 +1172,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                       className="emotion-4"
                     >
                       <input
+                        aria-checked={true}
                         checked={true}
                         className="emotion-1"
                         id="id.1"
@@ -1239,6 +1249,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                       className="emotion-4"
                     >
                       <input
+                        aria-checked={true}
                         checked={true}
                         className="emotion-1"
                         id="id.2"
@@ -1315,6 +1326,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                       className="emotion-18"
                     >
                       <input
+                        aria-checked={false}
                         checked={false}
                         className="emotion-1"
                         id="id.3"

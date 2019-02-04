@@ -1,0 +1,943 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxTable renders default 1`] = `
+.emotion-6 {
+  box-sizing: border-box;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  white-space: nowrap;
+}
+
+.emotion-38 {
+  font-weight: normal;
+}
+
+.emotion-38::after {
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  width: 100%;
+}
+
+.emotion-12 {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-12::-webkit-scrollbar {
+  display: none;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-5 {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 7px;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.emotion-1 {
+  border-color: #DADDE2;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  display: inherit;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding-left: 12px;
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-18 {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 7px;
+  text-align: left;
+}
+
+<div
+  class="emotion-38"
+  style="overflow:visible;height:0;width:0"
+>
+  <div
+    style="height:768px;overflow:visible;width:1024px"
+  >
+    <div
+      style="height:35px;position:relative;width:1024px"
+    >
+      <div
+        aria-label="grid"
+        aria-readonly="true"
+        class="ReactVirtualized__Grid"
+        role="grid"
+        style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:302px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
+      >
+        <div
+          class="ReactVirtualized__Grid__innerScrollContainer"
+          role="rowgroup"
+          style="width:302px;height:35px;max-width:302px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+        >
+          <div
+            class="emotion-6"
+            style="height:35px;left:0;position:absolute;top:0;width:151px"
+          >
+            <div
+              class="emotion-5"
+            >
+              <div>
+                <label
+                  class="emotion-4"
+                  for="headerCheckbox"
+                >
+                  <div
+                    class="emotion-2"
+                  >
+                    <div
+                      class="emotion-1"
+                    >
+                      <input
+                        aria-checked="false"
+                        class="emotion-0"
+                        id="headerCheckbox"
+                        type="checkbox"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="emotion-3"
+                  >
+                    Toggle all rows
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            class="emotion-6"
+            style="height:35px;left:151px;position:absolute;top:0;width:151px"
+          >
+            name
+          </div>
+        </div>
+      </div>
+      <div
+        class="TopRightGrid_ScrollWrapper"
+        style="left:302px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:722px"
+      >
+        <div
+          aria-label="grid"
+          aria-readonly="true"
+          class="ReactVirtualized__Grid emotion-12"
+          role="grid"
+          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:722px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
+        >
+          <div
+            class="ReactVirtualized__Grid__innerScrollContainer"
+            role="rowgroup"
+            style="width:604px;height:35px;max-width:604px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+          >
+            <div
+              class="emotion-6"
+              style="height:35px;left:0;position:absolute;top:0;width:151px"
+            >
+              role
+            </div>
+            <div
+              class="emotion-6"
+              style="height:35px;left:151px;position:absolute;top:0;width:151px"
+            >
+              state
+            </div>
+            <div
+              class="emotion-6"
+              style="height:35px;left:302px;position:absolute;top:0;width:151px"
+            >
+              zipcode
+            </div>
+            <div
+              class="emotion-6"
+              style="height:35px;left:453px;position:absolute;top:0;width:151px"
+            >
+              city
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="height:733px;overflow:visible;position:relative;width:1024px"
+    >
+      <div
+        class="BottomLeftGrid_ScrollWrapper"
+        style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:302px"
+      >
+        <div
+          aria-label="grid"
+          aria-readonly="true"
+          class="ReactVirtualized__Grid emotion-12"
+          role="grid"
+          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:302px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
+        >
+          <div
+            class="ReactVirtualized__Grid__innerScrollContainer"
+            role="rowgroup"
+            style="width:302px;height:70px;max-width:302px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+          >
+            <div
+              class="emotion-19"
+              style="height:35px;left:0;position:absolute;top:0;width:151px"
+            >
+              <div
+                class="emotion-18"
+              >
+                <div>
+                  <label
+                    class="emotion-4"
+                    for="0"
+                  >
+                    <div
+                      class="emotion-2"
+                    >
+                      <div
+                        class="emotion-1"
+                      >
+                        <input
+                          aria-checked="false"
+                          class="emotion-0"
+                          id="0"
+                          type="checkbox"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-3"
+                    >
+                      Toggle row 0
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-19"
+              style="height:35px;left:151px;position:absolute;top:0;width:151px"
+            >
+              <strong>
+                Brian Vaughn
+              </strong>
+            </div>
+            <div
+              class="emotion-19"
+              style="height:35px;left:0;position:absolute;top:35px;width:151px"
+            >
+              <div
+                class="emotion-18"
+              >
+                <div>
+                  <label
+                    class="emotion-4"
+                    for="1"
+                  >
+                    <div
+                      class="emotion-2"
+                    >
+                      <div
+                        class="emotion-1"
+                      >
+                        <input
+                          aria-checked="false"
+                          class="emotion-0"
+                          id="1"
+                          type="checkbox"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-3"
+                    >
+                      Toggle row 1
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-19"
+              style="height:35px;left:151px;position:absolute;top:35px;width:151px"
+            >
+              <strong>
+                Jon Doe
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="grid"
+        aria-readonly="true"
+        class="ReactVirtualized__Grid"
+        role="grid"
+        style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:722px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:302px"
+        tabindex="0"
+      >
+        <div
+          class="ReactVirtualized__Grid__innerScrollContainer"
+          role="rowgroup"
+          style="width:604px;height:70px;max-width:604px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+        >
+          <div
+            class="emotion-19"
+            style="height:35px;left:0;position:absolute;top:0;width:151px"
+          >
+            <em>
+              Software Engineer
+            </em>
+          </div>
+          <div
+            class="emotion-19"
+            style="height:35px;left:151px;position:absolute;top:0;width:151px"
+          >
+            <span>
+              CA
+            </span>
+          </div>
+          <div
+            class="emotion-19"
+            style="height:35px;left:302px;position:absolute;top:0;width:151px"
+          >
+            <span>
+              95125
+            </span>
+          </div>
+          <div
+            class="emotion-19"
+            style="height:35px;left:453px;position:absolute;top:0;width:151px"
+          >
+            <strong>
+              San Jose
+            </strong>
+          </div>
+          <div
+            class="emotion-19"
+            style="height:35px;left:0;position:absolute;top:35px;width:151px"
+          >
+            <em>
+              Product engineer
+            </em>
+          </div>
+          <div
+            class="emotion-19"
+            style="height:35px;left:151px;position:absolute;top:35px;width:151px"
+          >
+            <span>
+              CA
+            </span>
+          </div>
+          <div
+            class="emotion-19"
+            style="height:35px;left:302px;position:absolute;top:35px;width:151px"
+          >
+            <span>
+              95125
+            </span>
+          </div>
+          <div
+            class="emotion-19"
+            style="height:35px;left:453px;position:absolute;top:35px;width:151px"
+          >
+            <strong>
+              Mountain View
+            </strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CheckboxTable renders with checked row 1`] = `
+.emotion-8 {
+  box-sizing: border-box;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.emotion-31 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  white-space: nowrap;
+}
+
+.emotion-42 {
+  font-weight: normal;
+}
+
+.emotion-42::after {
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  width: 100%;
+}
+
+.emotion-14 {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-14::-webkit-scrollbar {
+  display: none;
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-7 {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 7px;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.emotion-26 {
+  border-color: #DADDE2;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  display: inherit;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding-left: 12px;
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-22 {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 7px;
+  text-align: left;
+}
+
+.emotion-3 {
+  border-color: #DADDE2;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  position: relative;
+  background-color: #7D58FF;
+  border-color: #7D58FF;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 2px;
+  position: absolute;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-2 svg {
+  height: 100%;
+  width: 100%;
+}
+
+.emotion-1 {
+  fill: #FFF;
+}
+
+.emotion-1 use {
+  pointer-events: none;
+}
+
+.emotion-23 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  white-space: nowrap;
+  background-color: #F7F8F9;
+  mix-blend-mode: multiply;
+  will-change: left;
+}
+
+<div
+  class="emotion-42"
+  style="overflow:visible;height:0;width:0"
+>
+  <div
+    style="height:768px;overflow:visible;width:1024px"
+  >
+    <div
+      style="height:35px;position:relative;width:1024px"
+    >
+      <div
+        aria-label="grid"
+        aria-readonly="true"
+        class="ReactVirtualized__Grid"
+        role="grid"
+        style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:302px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
+      >
+        <div
+          class="ReactVirtualized__Grid__innerScrollContainer"
+          role="rowgroup"
+          style="width:302px;height:35px;max-width:302px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+        >
+          <div
+            class="emotion-8"
+            style="height:35px;left:0;position:absolute;top:0;width:151px"
+          >
+            <div
+              class="emotion-7"
+            >
+              <div>
+                <label
+                  class="emotion-6"
+                  for="headerCheckbox"
+                >
+                  <div
+                    class="emotion-4"
+                  >
+                    <div
+                      class="emotion-3"
+                    >
+                      <input
+                        aria-checked="mixed"
+                        class="emotion-0"
+                        id="headerCheckbox"
+                        type="checkbox"
+                      />
+                      <span
+                        class="emotion-2"
+                      >
+                        <svg
+                          aria-label="system-minus icon"
+                          class="emotion-1"
+                          height="16"
+                          preserveAspectRatio="xMinYMin meet"
+                          role="img"
+                          viewBox="0 0 16 16"
+                          width="16"
+                        >
+                          <use
+                            href="#system-minus"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="emotion-5"
+                  >
+                    Toggle all rows
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            class="emotion-8"
+            style="height:35px;left:151px;position:absolute;top:0;width:151px"
+          >
+            name
+          </div>
+        </div>
+      </div>
+      <div
+        class="TopRightGrid_ScrollWrapper"
+        style="left:302px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:722px"
+      >
+        <div
+          aria-label="grid"
+          aria-readonly="true"
+          class="ReactVirtualized__Grid emotion-14"
+          role="grid"
+          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:722px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
+        >
+          <div
+            class="ReactVirtualized__Grid__innerScrollContainer"
+            role="rowgroup"
+            style="width:604px;height:35px;max-width:604px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+          >
+            <div
+              class="emotion-8"
+              style="height:35px;left:0;position:absolute;top:0;width:151px"
+            >
+              role
+            </div>
+            <div
+              class="emotion-8"
+              style="height:35px;left:151px;position:absolute;top:0;width:151px"
+            >
+              state
+            </div>
+            <div
+              class="emotion-8"
+              style="height:35px;left:302px;position:absolute;top:0;width:151px"
+            >
+              zipcode
+            </div>
+            <div
+              class="emotion-8"
+              style="height:35px;left:453px;position:absolute;top:0;width:151px"
+            >
+              city
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="height:733px;overflow:visible;position:relative;width:1024px"
+    >
+      <div
+        class="BottomLeftGrid_ScrollWrapper"
+        style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:302px"
+      >
+        <div
+          aria-label="grid"
+          aria-readonly="true"
+          class="ReactVirtualized__Grid emotion-14"
+          role="grid"
+          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:302px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
+        >
+          <div
+            class="ReactVirtualized__Grid__innerScrollContainer"
+            role="rowgroup"
+            style="width:302px;height:70px;max-width:302px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+          >
+            <div
+              class="emotion-23"
+              style="height:35px;left:0;position:absolute;top:0;width:151px"
+            >
+              <div
+                class="emotion-22"
+              >
+                <div>
+                  <label
+                    class="emotion-6"
+                    for="0"
+                  >
+                    <div
+                      class="emotion-4"
+                    >
+                      <div
+                        class="emotion-3"
+                      >
+                        <input
+                          aria-checked="true"
+                          checked=""
+                          class="emotion-0"
+                          id="0"
+                          type="checkbox"
+                        />
+                        <span
+                          class="emotion-2"
+                        >
+                          <svg
+                            aria-label="system-check icon"
+                            class="emotion-1"
+                            height="16"
+                            preserveAspectRatio="xMinYMin meet"
+                            role="img"
+                            viewBox="0 0 16 16"
+                            width="16"
+                          >
+                            <use
+                              href="#system-check"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-5"
+                    >
+                      Toggle row 0
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-23"
+              style="height:35px;left:151px;position:absolute;top:0;width:151px"
+            >
+              <strong>
+                Brian Vaughn
+              </strong>
+            </div>
+            <div
+              class="emotion-31"
+              style="height:35px;left:0;position:absolute;top:35px;width:151px"
+            >
+              <div
+                class="emotion-22"
+              >
+                <div>
+                  <label
+                    class="emotion-6"
+                    for="1"
+                  >
+                    <div
+                      class="emotion-4"
+                    >
+                      <div
+                        class="emotion-26"
+                      >
+                        <input
+                          aria-checked="false"
+                          class="emotion-0"
+                          id="1"
+                          type="checkbox"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-5"
+                    >
+                      Toggle row 1
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-31"
+              style="height:35px;left:151px;position:absolute;top:35px;width:151px"
+            >
+              <strong>
+                Jon Doe
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="grid"
+        aria-readonly="true"
+        class="ReactVirtualized__Grid"
+        role="grid"
+        style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:722px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:302px"
+        tabindex="0"
+      >
+        <div
+          class="ReactVirtualized__Grid__innerScrollContainer"
+          role="rowgroup"
+          style="width:604px;height:70px;max-width:604px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+        >
+          <div
+            class="emotion-23"
+            style="height:35px;left:0;position:absolute;top:0;width:151px"
+          >
+            <em>
+              Software Engineer
+            </em>
+          </div>
+          <div
+            class="emotion-23"
+            style="height:35px;left:151px;position:absolute;top:0;width:151px"
+          >
+            <span>
+              CA
+            </span>
+          </div>
+          <div
+            class="emotion-23"
+            style="height:35px;left:302px;position:absolute;top:0;width:151px"
+          >
+            <span>
+              95125
+            </span>
+          </div>
+          <div
+            class="emotion-23"
+            style="height:35px;left:453px;position:absolute;top:0;width:151px"
+          >
+            <strong>
+              San Jose
+            </strong>
+          </div>
+          <div
+            class="emotion-31"
+            style="height:35px;left:0;position:absolute;top:35px;width:151px"
+          >
+            <em>
+              Product engineer
+            </em>
+          </div>
+          <div
+            class="emotion-31"
+            style="height:35px;left:151px;position:absolute;top:35px;width:151px"
+          >
+            <span>
+              CA
+            </span>
+          </div>
+          <div
+            class="emotion-31"
+            style="height:35px;left:302px;position:absolute;top:35px;width:151px"
+          >
+            <span>
+              95125
+            </span>
+          </div>
+          <div
+            class="emotion-31"
+            style="height:35px;left:453px;position:absolute;top:35px;width:151px"
+          >
+            <strong>
+              Mountain View
+            </strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

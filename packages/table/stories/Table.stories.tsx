@@ -6,6 +6,7 @@ import { Table, Column, Cell, HeaderCell, TextCell, NumberCell } from "..";
 import ChangingTable from "./helpers/ChangingTable";
 import SortableTable from "./helpers/SortableTable";
 import { items, width } from "./helpers/mocks";
+import { StandardButton } from "../../button";
 
 const readme = require("../README.md");
 
@@ -260,5 +261,52 @@ storiesOf("Table", module)
       }}
     >
       <ChangingTable />
+    </div>
+  ))
+  .addWithInfo("with global action", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <div
+        style={{
+          paddingBottom: "1em",
+          textAlign: "right"
+        }}
+      >
+        <StandardButton>Global action</StandardButton>
+      </div>
+      <Table data={items}>
+        <Column
+          header={<HeaderCell>name</HeaderCell>}
+          cellRenderer={nameCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>role</HeaderCell>}
+          cellRenderer={roleCellRenderer}
+          growToFill={true}
+        />
+        <Column
+          header={<HeaderCell>state</HeaderCell>}
+          cellRenderer={stateCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>Very Long</HeaderCell>}
+          cellRenderer={veryLongRenderer}
+          maxWidth={300}
+        />
+        <Column
+          header={<HeaderCell textAlign="right">zip code</HeaderCell>}
+          cellRenderer={zipcodeCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>city</HeaderCell>}
+          cellRenderer={cityCellRenderer}
+          growToFill={true}
+        />
+      </Table>
     </div>
   ));
