@@ -21,6 +21,7 @@ const svgo = new SVGO({
   ]
 });
 const buildDirPath = path.join(__dirname, "../", "dist");
+const distDirPath = path.join(__dirname, "../../../", "dist", "packages", "icons", "dist");
 
 const getFilePaths = dir =>
   readdirSync(dir).map(file => `${dir}/${file}`);
@@ -77,20 +78,22 @@ const writeEnum = (srcDir, iconSetName, idPrefix) => {
   );
 }
 
-if (!existsSync(buildDirPath)) {
-  mkdirSync(buildDirPath);
-}
+[buildDirPath, distDirPath].forEach(buildPath => {
+  !existsSync(buildPath) && mkdirSync(buildPath, { recursive: true });
+})
 
 Object.keys(iconSpriteConfig).forEach(iconSet => {
   console.info(`🔧 "${iconSet}" icons`);
-  writeSprite(
-    iconSpriteConfig[iconSet].inDir,
-    path.join(buildDirPath, iconSpriteConfig[iconSet].filename),
-    iconSpriteConfig[iconSet].idPrefix
-  );
-  optimizeWithSVGO(
-    path.join(buildDirPath, iconSpriteConfig[iconSet].filename)
-  );
+  [buildDirPath, distDirPath].forEach(buildPath => {
+    writeSprite(
+      iconSpriteConfig[iconSet].inDir,
+      path.join(buildPath, iconSpriteConfig[iconSet].filename),
+      iconSpriteConfig[iconSet].idPrefix
+    );
+    optimizeWithSVGO(
+      path.join(buildPath, iconSpriteConfig[iconSet].filename)
+    );
+  })
   writeEnum(
     iconSpriteConfig[iconSet].inDir,
     iconSet,
