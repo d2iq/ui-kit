@@ -1,6 +1,7 @@
 import * as React from "react";
-import CheckboxInput from "../../components/CheckboxInput";
-import { ToggleInputProps } from "../../../toggleInput/components/ToggleInput";
+import CheckboxInput, {
+  CheckboxInputProps
+} from "../../components/CheckboxInput";
 import { InputAppearance } from "../../../shared/types/inputAppearance";
 
 export interface CheckboxInputState {
@@ -8,10 +9,10 @@ export interface CheckboxInputState {
 }
 
 class CheckboxStoryHelper extends React.PureComponent<
-  ToggleInputProps,
+  CheckboxInputProps,
   CheckboxInputState
 > {
-  public static defaultProps: Partial<ToggleInputProps> = {
+  public static defaultProps: Partial<CheckboxInputProps> = {
     appearance: InputAppearance.Standard
   };
 
@@ -29,6 +30,7 @@ class CheckboxStoryHelper extends React.PureComponent<
     const {
       appearance,
       disabled,
+      indeterminate,
       id,
       inputLabel,
       showInputLabel,
@@ -47,12 +49,16 @@ class CheckboxStoryHelper extends React.PureComponent<
         showInputLabel={showInputLabel}
         value={value}
         vertAlign={vertAlign}
+        indeterminate={indeterminate}
       />
     );
   }
 
   private handleChange(e) {
     this.setState({ isChecked: e.target.checked });
+    if (this.props.onChange) {
+      this.props.onChange(e);
+    }
   }
 }
 

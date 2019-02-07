@@ -39,6 +39,7 @@ export { SelectInput } from "./selectInput";
 export {
   Column,
   Table,
+  CheckboxTable,
   Cell,
   TextCell,
   HeaderCell,
