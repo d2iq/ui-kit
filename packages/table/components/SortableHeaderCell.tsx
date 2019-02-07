@@ -48,10 +48,12 @@ export class SortableHeaderCell extends React.Component<Props, State> {
         : "ascending";
 
     return (
-      <Clickable tabIndex={0} action={sortHandler}>
+      <Clickable tabIndex={0} action={sortHandler} disableFocusOutline={true}>
         <HeaderCell
           onMouseEnter={this.hoverStart}
           onMouseLeave={this.hoverEnd}
+          onFocus={this.hoverStart}
+          onBlur={this.hoverEnd}
           className={cx(
             sortableHeaderIconBaseCSS,
             styleArrowDirection(displaySortDirection)

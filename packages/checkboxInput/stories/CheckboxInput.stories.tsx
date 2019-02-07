@@ -99,6 +99,14 @@ storiesOf("Forms/CheckboxInput", module)
       value="bigLabel"
     />
   ))
+  .addWithInfo("indeterminate", () => (
+    <CheckboxStoryHelper
+      id="hiddenLabel"
+      inputLabel="I'm neither true or false"
+      value="indeterminate"
+      indeterminate={true}
+    />
+  ))
   .addWithInfo("hidden label", () => (
     <CheckboxStoryHelper
       id="hiddenLabel"

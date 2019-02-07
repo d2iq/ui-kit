@@ -33,7 +33,7 @@ exports[`SortableHeaderCell renders default 1`] = `
 
 <Clickable
   action={[MockFunction]}
-  disableFocusOutline={false}
+  disableFocusOutline={true}
   role="button"
   tabIndex={0}
 >
@@ -41,6 +41,8 @@ exports[`SortableHeaderCell renders default 1`] = `
     aria-label="sort by column content in ascending order"
     aria-sort="descending"
     className="emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     role="columnheader"
