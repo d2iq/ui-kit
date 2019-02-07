@@ -26,10 +26,22 @@ describe("CheckboxInput", () => {
   it("renders with a hidden label", () => {
     const component = mount(
       <CheckboxInput
-        id="defaultId"
-        inputLabel="Sample label"
-        showInputLabel={false}
+        id="hiddenLabel"
+        inputLabel="Sample Label"
         value="default"
+        showInputLabel={false}
+      />
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it("renders indeterminate", () => {
+    const component = mount(
+      <CheckboxInput
+        id="indeterminateId"
+        inputLabel="Sample Label"
+        value="indeterminate"
+        indeterminate={true}
       />
     );
     expect(toJson(component)).toMatchSnapshot();

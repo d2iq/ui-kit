@@ -31,6 +31,14 @@ export interface TableProps {
   children:
     | Array<React.ReactElement<ColumnProps>>
     | React.ReactElement<ColumnProps>;
+  /**
+   * How many columns do not scroll
+   */
+  fixedColumnCount?: number;
+  /**
+   * Selected row data
+   */
+  selectedRows?: object[];
 }
 
 export interface TableState {
@@ -55,15 +63,18 @@ export const fillColumns = (
   width: number
 ): number[] => {
   let copiedColWidths = [...colWidths];
-  const widthToFill =
-    width - copiedColWidths.reduce((acc, curr) => acc + curr, 0);
+  const filledArea = columns
+    .filter(child => !child.props.growToFill)
+    .map(col => copiedColWidths[columns.indexOf(col)])
+    .reduce((acc, curr) => acc + curr, 0);
+  const widthToFill = width - filledArea;
   const fillWidthColsIdxArr: number[] = columns
     .filter(child => child.props.growToFill)
     .map(col => columns.indexOf(col));
 
   fillWidthColsIdxArr.forEach(colIdx => {
     const oldWidth = copiedColWidths[colIdx];
-    const newWidth = widthToFill / fillWidthColsIdxArr.length + oldWidth;
+    const newWidth = widthToFill / fillWidthColsIdxArr.length;
 
     if (newWidth <= oldWidth) {
       return;
@@ -77,7 +88,21 @@ export const fillColumns = (
   });
 
   if (copiedColWidths.reduce((acc, curr) => acc + curr, 0) < width) {
-    return fillColumns(columns, copiedColWidths, width);
+    const widthToRedistribute =
+      width - copiedColWidths.reduce((acc, curr) => acc + curr, 0);
+    const colsToRedistributeTo = columns.filter(
+      col => col.props.growToFill && !col.props.maxWidth
+    );
+
+    return columns.map((col, i) => {
+      if (col.props.growToFill && !col.props.maxWidth) {
+        return (
+          widthToRedistribute / colsToRedistributeTo.length + copiedColWidths[i]
+        );
+      } else {
+        return copiedColWidths[i];
+      }
+    });
   } else {
     return copiedColWidths;
   }
@@ -152,7 +177,10 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
   }
 
   public componentDidUpdate(prevProps: TableProps) {
-    if (this.props !== prevProps) {
+    if (
+      this.props.children !== prevProps.children ||
+      this.props.data !== prevProps.data
+    ) {
       this.cellMeasureCache.clearAll();
       this.updateGridSize();
     }
@@ -204,7 +232,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       <MultiGrid
         onScroll={this.onScroll}
         ref={this.setRef}
-        fixedColumnCount={1}
+        fixedColumnCount={this.props.fixedColumnCount || 1}
         fixedRowCount={1}
         cellRenderer={this.cellRenderer}
         columnWidth={getColumnSize}
@@ -280,12 +308,15 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     const updateHoveredRowIndex = () => {
       this.setState({ hoveredRowIndex: rowIndex });
     };
+    const selectedRows = this.props.selectedRows || [];
 
     return (
       /* tslint:disable:react-a11y-event-has-role */
       <div
         className={cx(cellCss, {
-          [rowHoverCss]: rowIndex === this.state.hoveredRowIndex
+          [rowHoverCss]:
+            rowIndex === this.state.hoveredRowIndex ||
+            selectedRows.includes(data[rowIndex])
         })}
         style={style}
         key={key}

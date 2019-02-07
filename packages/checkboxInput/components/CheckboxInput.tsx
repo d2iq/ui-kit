@@ -18,7 +18,14 @@ export interface CheckboxInputState {
 }
 
 export interface CheckboxInputProps extends ToggleInputProps {
+  /**
+   * The value being toggled
+   */
   value: string;
+  /**
+   * Whether the checkbox is neither checked or unchecked
+   */
+  indeterminate: boolean;
 }
 
 class CheckboxInput extends React.PureComponent<
@@ -45,6 +52,7 @@ class CheckboxInput extends React.PureComponent<
       appearance,
       checked,
       id,
+      indeterminate,
       inputLabel,
       showInputLabel,
       vertAlign,
@@ -54,6 +62,7 @@ class CheckboxInput extends React.PureComponent<
     } = this.props;
     delete other.onFocus;
     delete other.onBlur;
+    const isIndeterminate = indeterminate && !checked;
 
     return (
       <ToggleInput
@@ -68,7 +77,8 @@ class CheckboxInput extends React.PureComponent<
           className={cx(toggleInput, checkbox, {
             [toggleInputApperances[`${this.props.appearance}-focus`]]: this
               .state.hasFocus,
-            [toggleInputApperances[`${this.props.appearance}-active`]]: checked,
+            [toggleInputApperances[`${this.props.appearance}-active`]]:
+              checked || isIndeterminate,
             [toggleInputApperances["focus-active"]]:
               checked && this.state.hasFocus,
             [toggleInputApperances.disabled]: disabled,
@@ -85,13 +95,18 @@ class CheckboxInput extends React.PureComponent<
             value={value}
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
+            aria-checked={isIndeterminate ? "mixed" : checked}
             {...other}
           />
           {/* tslint:enable */}
 
-          {checked && (
+          {(checked || isIndeterminate) && (
             <span className={cx(checkboxIconContainer, display("inline-flex"))}>
-              <Icon shape={SystemIcons.Check} size={iconSizeXs} color={white} />
+              <Icon
+                shape={indeterminate ? SystemIcons.Minus : SystemIcons.Check}
+                size={iconSizeXs}
+                color={white}
+              />
             </span>
           )}
         </div>
