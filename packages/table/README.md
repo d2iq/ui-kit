@@ -31,6 +31,8 @@ Organize columns and rows based on the needs of the users. For collection tables
 
 5. Row hover state: On mouse over of a row on the table, the row should be highlighted to help the user focus in on the row details and match data they are seeing within that row.
 
+6. We have a default row height that can be changed to accomodate for taller content, but this should only be used a last resort. Before making a row taller than the default height, try adjusting your design to fit on one line/fit within the default height.
+
 ## Column Alignment
 
 For Collection tables, content should be left aligned except when using a different alignment helps with comprehension. For example,numeric data is easier to read when it’s right aligned. Column headers should match the content alignment.

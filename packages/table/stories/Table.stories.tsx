@@ -309,4 +309,43 @@ storiesOf("Table", module)
         />
       </Table>
     </div>
+  ))
+  .addWithInfo("with custom row height", () => (
+    <div
+      style={{
+        height: "300px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <Table data={items} rowHeight={60}>
+        <Column
+          header={<HeaderCell>name</HeaderCell>}
+          cellRenderer={nameCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>role</HeaderCell>}
+          cellRenderer={roleCellRenderer}
+          growToFill={true}
+        />
+        <Column
+          header={<HeaderCell>state</HeaderCell>}
+          cellRenderer={stateCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>Very Long</HeaderCell>}
+          cellRenderer={veryLongRenderer}
+          maxWidth={300}
+        />
+        <Column
+          header={<HeaderCell textAlign="right">zip code</HeaderCell>}
+          cellRenderer={zipcodeCellRenderer}
+        />
+        <Column
+          header={<HeaderCell>city</HeaderCell>}
+          cellRenderer={cityCellRenderer}
+          growToFill={true}
+        />
+      </Table>
+    </div>
   ));

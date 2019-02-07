@@ -2,7 +2,8 @@
 
 exports[`Cell renders correctly 1`] = `
 .emotion-0 {
-  height: 100%;
+  display: inline-block;
+  height: auto;
   box-sizing: border-box;
   padding: 7px;
   text-align: left;
@@ -17,7 +18,8 @@ exports[`Cell renders correctly 1`] = `
 
 exports[`HeaderCell renders correctly 1`] = `
 .emotion-0 {
-  height: 100%;
+  display: inline-block;
+  height: auto;
   box-sizing: border-box;
   padding: 7px;
   text-align: left;
@@ -34,7 +36,8 @@ exports[`HeaderCell renders correctly 1`] = `
 
 exports[`TextCell renders correctly 1`] = `
 .emotion-0 {
-  height: 100%;
+  display: inline-block;
+  height: auto;
   box-sizing: border-box;
   padding: 7px;
   text-align: left;
