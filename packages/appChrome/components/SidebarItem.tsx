@@ -7,7 +7,6 @@ import { tintContentPrimary } from "../../shared/styles/styleUtils";
 import { spaceSizes } from "../../../packages/shared/styles/styleUtils/modifiers/modifierUtils";
 
 export interface SidebarItemProps {
-  children?: React.ReactElement<HTMLElement> | string;
   icon?: React.ReactElement<HTMLElement> | string;
   isActive?: boolean;
   onClick: (event?: React.SyntheticEvent<HTMLElement>) => void;

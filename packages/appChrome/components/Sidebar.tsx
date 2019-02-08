@@ -8,7 +8,6 @@ import { atMediaUp } from "../../shared/styles/breakpoints";
 import { isHexDark } from "../../shared/styles/color";
 
 export interface SidebarProps {
-  children: React.ReactElement<HTMLElement> | string;
   isOpen: boolean;
   onOpen?: () => void;
   onClose?: () => void;
