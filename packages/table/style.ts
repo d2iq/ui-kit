@@ -74,7 +74,7 @@ export const hideScrollbarCss = css`
   }
 `;
 
-export const rowHoverCss = css`
+export const rowHoverStyles = `
   background-color: ${greyLightLighten5};
   mix-blend-mode: multiply;
   will-change: left;

@@ -46,7 +46,7 @@ const veryLongRenderer = () => (
 storiesOf("Table/CheckboxTable", module)
   .addDecorator(withReadme([readme]))
   .addWithInfo("default", () => (
-    <CheckboxTableHelper data={items}>
+    <CheckboxTableHelper data={items} uniqueKey="name">
       <Column
         header={<HeaderCell>name</HeaderCell>}
         cellRenderer={nameCellRenderer}
@@ -80,11 +80,7 @@ storiesOf("Table/CheckboxTable", module)
     </CheckboxTableHelper>
   ))
   .addWithInfo("w/ global action + group action", () => (
-    <CheckboxTableHelper
-      data={items}
-      selectedRows={[items[0]]}
-      showGlobalAction={true}
-    >
+    <CheckboxTableHelper data={items} showGlobalAction={true} uniqueKey="name">
       <Column
         header={<HeaderCell>name</HeaderCell>}
         cellRenderer={nameCellRenderer}
@@ -118,7 +114,11 @@ storiesOf("Table/CheckboxTable", module)
     </CheckboxTableHelper>
   ))
   .addWithInfo("w/ checked row", () => (
-    <CheckboxTableHelper data={items} selectedRows={[items[0]]}>
+    <CheckboxTableHelper
+      data={items}
+      selectedRows={{ [items[0].name]: true }}
+      uniqueKey="name"
+    >
       <Column
         header={<HeaderCell>name</HeaderCell>}
         cellRenderer={nameCellRenderer}

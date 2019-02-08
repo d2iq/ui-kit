@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ThemeProvider } from "emotion-theming";
 import { Table, Column, Cell, HeaderCell } from "..";
 import { TableProps } from "./Table";
 import CheckboxInput from "../../checkboxInput/components/CheckboxInput";
@@ -7,12 +8,44 @@ export interface CheckboxTableProps extends TableProps {
   /**
    * Callback for when a user makes a selection. Passes selected row data as a parameter
    */
-  onChange?: (selectedRows: object[]) => void;
+  onChange?: (selectedRows: {}) => void;
+  /**
+   * Selected row data
+   */
+  selectedRows?: {};
+  /**
+   * The unique key in each row's data object.
+   *
+   * Ideally, the value of this key in your table's data
+   * should be a number or string
+   */
+  uniqueKey: string;
 }
 
-class CheckboxTable extends React.PureComponent<CheckboxTableProps> {
+export interface CheckboxTableState {
+  headerChecked: boolean;
+}
+
+class CheckboxTable extends React.PureComponent<
+  CheckboxTableProps,
+  CheckboxTableState
+> {
+  static getDerivedStateFromProps(props: CheckboxTableProps) {
+    const selectedLength = props.selectedRows
+      ? Object.keys(props.selectedRows).length
+      : 0;
+
+    return {
+      headerChecked: selectedLength === props.data.length
+    };
+  }
+
   constructor(props) {
     super(props);
+
+    this.state = {
+      headerChecked: false
+    };
 
     this.getSelectedRows = this.getSelectedRows.bind(this);
     this.checkboxCellRenderer = this.checkboxCellRenderer.bind(this);
@@ -20,30 +53,31 @@ class CheckboxTable extends React.PureComponent<CheckboxTableProps> {
   }
 
   render() {
+    const { selectedRows = {}, uniqueKey, data } = this.props;
+    const theme = {
+      coloredRows: data.map(item => selectedRows[item[uniqueKey]])
+    };
+
     return (
-      <Table
-        data={this.props.data}
-        selectedRows={this.props.selectedRows}
-        rowHeight={this.props.rowHeight}
-        fixedColumnCount={2}
-      >
-        <Column
-          header={<HeaderCell>{this.getHeaderCheckbox()}</HeaderCell>}
-          cellRenderer={this.checkboxCellRenderer}
-        />
-        {this.props.children as any}
-      </Table>
+      <ThemeProvider theme={theme}>
+        <Table data={this.props.data} fixedColumnCount={2}>
+          <Column
+            header={<HeaderCell>{this.getHeaderCheckbox()}</HeaderCell>}
+            cellRenderer={this.checkboxCellRenderer}
+          />
+          {this.props.children as any}
+        </Table>
+      </ThemeProvider>
     );
   }
 
   private checkboxCellRenderer(rowData) {
-    const { data, onChange } = this.props;
-    const selectedRows = this.props.selectedRows || [];
+    const { data, onChange, uniqueKey, selectedRows = {} } = this.props;
+    const rowId = rowData[uniqueKey];
     const rowIndex = data.indexOf(rowData);
-
     const handleOnChange = e => {
       if (onChange) {
-        onChange(this.getSelectedRows(rowData, e.target.checked));
+        onChange(this.getSelectedRows(rowId, e.target.checked));
       }
     };
 
@@ -53,7 +87,7 @@ class CheckboxTable extends React.PureComponent<CheckboxTableProps> {
           id={rowIndex.toString()}
           inputLabel={`Toggle row ${rowIndex}`}
           showInputLabel={false}
-          checked={selectedRows.includes(rowData)}
+          checked={Boolean(selectedRows[rowId])}
           onChange={handleOnChange}
         />
       </Cell>
@@ -61,14 +95,18 @@ class CheckboxTable extends React.PureComponent<CheckboxTableProps> {
   }
 
   private getHeaderCheckbox() {
-    const selectedRows = this.props.selectedRows || [];
-    let isSelected = false;
+    const { data, uniqueKey, onChange, selectedRows = {} } = this.props;
+    const selectedLength = Object.keys(selectedRows).length;
+    const allSelected = data.reduce((acc, curr) => {
+      acc[curr[uniqueKey]] = true;
+      return acc;
+    }, {});
 
     const handleChange = e => {
-      isSelected = e.target.checked;
-      if (this.props.onChange) {
-        this.props.onChange(isSelected ? this.props.data : []);
+      if (onChange) {
+        onChange(e.target.checked ? allSelected : {});
       }
+      this.setState({ headerChecked: e.target.checked });
     };
 
     return (
@@ -77,13 +115,12 @@ class CheckboxTable extends React.PureComponent<CheckboxTableProps> {
         inputLabel="Toggle all rows"
         showInputLabel={false}
         checked={
-          (selectedRows.length &&
-            selectedRows.length === this.props.data.length) ||
-          isSelected
+          (Boolean(selectedLength) &&
+            selectedLength === this.props.data.length) ||
+          this.state.headerChecked
         }
         indeterminate={
-          Boolean(selectedRows.length) &&
-          selectedRows.length < this.props.data.length
+          Boolean(selectedLength) && selectedLength < this.props.data.length
         }
         disabled={!Boolean(this.props.data.length)}
         onChange={handleChange}
@@ -91,14 +128,15 @@ class CheckboxTable extends React.PureComponent<CheckboxTableProps> {
     );
   }
 
-  private getSelectedRows(rowData, checked) {
-    const selectedRows = this.props.selectedRows || [];
+  private getSelectedRows(rowId, checked) {
+    const selectedRows = this.props.selectedRows || {};
 
     if (checked) {
-      return [...selectedRows, rowData];
+      return { ...selectedRows, ...{ [rowId]: true } };
     }
 
-    return selectedRows.filter(selectedRow => selectedRow !== rowData);
+    const { [rowId]: _omit, ...newSelected } = selectedRows;
+    return newSelected;
   }
 }
 
