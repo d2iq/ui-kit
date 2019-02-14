@@ -39,19 +39,16 @@ export const boxSpacing = (
   switch (side) {
     case "all":
       return `${property}: ${spaceSizes[size]};`;
-      break;
     case "horiz":
       return `
         ${property}-left: ${spaceSizes[size]};
         ${property}-right: ${spaceSizes[size]};
       `;
-      break;
     case "vert":
       return `
         ${property}-bottom: ${spaceSizes[size]};
         ${property}-top: ${spaceSizes[size]};
       `;
-      break;
     default:
       return `${property}-${side}: ${spaceSizes[size]};`;
   }
