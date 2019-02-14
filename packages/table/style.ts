@@ -29,7 +29,8 @@ export const cellCss = css`
 `;
 
 export const innerCellCss = css`
-  height: 100%;
+  display: inline-block;
+  height: auto;
   box-sizing: border-box;
   padding: ${cellPadding}px;
 `;

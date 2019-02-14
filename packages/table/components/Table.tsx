@@ -19,6 +19,7 @@ import {
 
 import { ColumnProps, Column } from "./Column";
 import memoizeOne from "memoize-one";
+import { vAlignChildren } from "../../shared/styles/styleUtils";
 
 export interface TableProps {
   /**
@@ -39,6 +40,10 @@ export interface TableProps {
    * Selected row data
    */
   selectedRows?: object[];
+  /**
+   * Set the row height
+   */
+  rowHeight?: number;
 }
 
 export interface TableState {
@@ -155,7 +160,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
   );
 
   private cellMeasureCache = new CellMeasurerCache({
-    defaultHeight: ROW_HEIGHT,
+    defaultHeight: this.props.rowHeight || ROW_HEIGHT,
     defaultWidth: 150,
     fixedHeight: true
   });
@@ -240,7 +245,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         enableFixedColumnScroll={true}
         enableFixedRowScroll={true}
         height={height}
-        rowHeight={ROW_HEIGHT}
+        rowHeight={this.props.rowHeight || ROW_HEIGHT}
         rowCount={this.props.data.length + 1}
         width={width}
         hideTopRightGridScrollbar={true}
@@ -259,7 +264,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
   ) {
     const { key, style, column } = args;
     return (
-      <div className={headerCss} style={style} key={key}>
+      <div className={cx(headerCss, vAlignChildren)} style={style} key={key}>
         {column.props.header}
       </div>
     );
@@ -313,7 +318,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     return (
       /* tslint:disable:react-a11y-event-has-role */
       <div
-        className={cx(cellCss, {
+        className={cx(cellCss, vAlignChildren, {
           [rowHoverCss]:
             rowIndex === this.state.hoveredRowIndex ||
             selectedRows.includes(data[rowIndex])

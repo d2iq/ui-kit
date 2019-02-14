@@ -165,18 +165,6 @@ exports[`Table renders again with new data 2`] = `
 `;
 
 exports[`Table renders default 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-
-.emotion-5 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  white-space: nowrap;
-}
-
 .emotion-14 {
   font-weight: normal;
 }
@@ -197,6 +185,40 @@ exports[`Table renders default 1`] = `
 
 .emotion-4::-webkit-scrollbar {
   display: none;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 <div
@@ -374,18 +396,6 @@ exports[`Table renders default 1`] = `
 `;
 
 exports[`Table renders with growToFill cols 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-
-.emotion-6 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  white-space: nowrap;
-}
-
 .emotion-17 {
   font-weight: normal;
 }
@@ -406,6 +416,40 @@ exports[`Table renders with growToFill cols 1`] = `
 
 .emotion-5::-webkit-scrollbar {
   display: none;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 <div

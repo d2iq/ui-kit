@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CheckboxTable renders default 1`] = `
-.emotion-6 {
-  box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-
-.emotion-19 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  white-space: nowrap;
-}
-
 .emotion-38 {
   font-weight: normal;
 }
@@ -47,8 +35,26 @@ exports[`CheckboxTable renders default 1`] = `
   height: 1px;
 }
 
+.emotion-6 {
+  box-sizing: border-box;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .emotion-5 {
-  height: 100%;
+  display: inline-block;
+  height: auto;
   box-sizing: border-box;
   padding: 7px;
   text-align: left;
@@ -122,8 +128,26 @@ exports[`CheckboxTable renders default 1`] = `
   height: 1px;
 }
 
+.emotion-19 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .emotion-18 {
-  height: 100%;
+  display: inline-block;
+  height: auto;
   box-sizing: border-box;
   padding: 7px;
   text-align: left;
@@ -431,18 +455,6 @@ exports[`CheckboxTable renders default 1`] = `
 `;
 
 exports[`CheckboxTable renders with checked row 1`] = `
-.emotion-8 {
-  box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-
-.emotion-31 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  white-space: nowrap;
-}
-
 .emotion-42 {
   font-weight: normal;
 }
@@ -477,8 +489,26 @@ exports[`CheckboxTable renders with checked row 1`] = `
   height: 1px;
 }
 
+.emotion-8 {
+  box-sizing: border-box;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .emotion-7 {
-  height: 100%;
+  display: inline-block;
+  height: auto;
   box-sizing: border-box;
   padding: 7px;
   text-align: left;
@@ -552,8 +582,26 @@ exports[`CheckboxTable renders with checked row 1`] = `
   height: 1px;
 }
 
+.emotion-31 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .emotion-22 {
-  height: 100%;
+  display: inline-block;
+  height: auto;
   box-sizing: border-box;
   padding: 7px;
   text-align: left;
@@ -601,6 +649,17 @@ exports[`CheckboxTable renders with checked row 1`] = `
   box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
   white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #F7F8F9;
   mix-blend-mode: multiply;
   will-change: left;

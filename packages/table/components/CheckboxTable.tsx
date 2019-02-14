@@ -24,6 +24,7 @@ class CheckboxTable extends React.PureComponent<CheckboxTableProps> {
       <Table
         data={this.props.data}
         selectedRows={this.props.selectedRows}
+        rowHeight={this.props.rowHeight}
         fixedColumnCount={2}
       >
         <Column
