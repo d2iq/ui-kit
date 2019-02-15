@@ -28,22 +28,16 @@ const getPropNamePatterns = (prop, opts) => {
 const getFormattedName = (prop, namePatterns) => {
   const { category, type } = prop.attributes;
 
-  let name;
   switch (category) {
     case "color":
-      name = type !== "base" ? namePatterns.t_c_i_si : namePatterns.i_si_s;
-      break;
+      return type !== "base" ? namePatterns.t_c_i_si : namePatterns.i_si_s;
     case "layout":
-      name = namePatterns.t_i;
-      break;
+      return namePatterns.t_i;
     case "font":
-      name = namePatterns.c_t_i;
-      break;
+      return namePatterns.c_t_i;
     default:
-      name = namePatterns.c_t_i;
+      return namePatterns.c_t_i;
   }
-
-  return name;
 };
 
 const fontNameJS = {
