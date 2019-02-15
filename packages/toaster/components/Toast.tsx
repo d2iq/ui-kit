@@ -104,13 +104,10 @@ class Toast extends React.PureComponent<ToastProps, {}> {
       switch (status) {
         case "danger":
           return <DangerIcon className={tintSVG(red)} />;
-          break;
         case "success":
           return <SuccessIcon className={tintSVG(green)} />;
-          break;
         case "warning":
           return <WarningIcon className={tintSVG(yellow)} />;
-          break;
       }
     };
 
