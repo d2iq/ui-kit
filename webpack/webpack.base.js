@@ -11,7 +11,7 @@ const webpackBase = {
       {
         test: /\.(js|ts|tsx?)$/,
         exclude: /node_modules/,
-        use: ["ts-loader", "react-docgen-typescript-loader"]
+        use: ["cache-loader", "ts-loader", "react-docgen-typescript-loader"]
       },
       {
         test: /\.(eot|ttf|woff|woff2|svg|png|gif|jpe?g)$/,
