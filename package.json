@@ -89,6 +89,7 @@
     "enzyme-adapter-react-16": "1.6.0",
     "enzyme-to-json": "3.3.4",
     "file-loader": "2.0.0",
+    "fork-ts-checker-webpack-plugin": "0.5.2",
     "fs-extra": "7.0.0",
     "jest": "23.6.0",
     "jest-emotion": "9.2.11",
