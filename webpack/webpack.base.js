@@ -4,7 +4,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 const webpackBase = {
   getDevTool: () => {
-    return process.env.NODE_ENV === "production" ? false : "inline-source-map";
+    return process.env.NODE_ENV === "production" ? false : "eval";
   },
 
   getRules: () => {
