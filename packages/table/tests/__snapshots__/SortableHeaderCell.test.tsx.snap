@@ -6,16 +6,12 @@ exports[`SortableHeaderCell renders default 1`] = `
 }
 
 .emotion-0:after {
-  border-style: solid;
-  border-color: transparent;
   content: "";
   display: inline-block;
-  height: 0;
   line-height: 0;
   margin-left: 4px;
   margin-top: -2px;
   vertical-align: middle;
-  width: 0;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -24,11 +20,13 @@ exports[`SortableHeaderCell renders default 1`] = `
 }
 
 .emotion-0:after {
-  border-color: currentColor transparent transparent transparent;
-  border-bottom-width: 0;
-  border-left-width: 4px;
-  border-right-width: 4px;
-  border-top-width: 5px;
+  content: "";
+  height: 0;
+  width: 0;
+  border-bottom: 4px solid currentColor;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: none;
 }
 
 <Clickable
