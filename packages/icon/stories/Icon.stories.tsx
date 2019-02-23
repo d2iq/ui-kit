@@ -14,6 +14,7 @@ import {
   textColorPrimary,
   textColorSecondary,
   yellow,
+  iconSizeXxs,
   iconSizeXs,
   iconSizeS,
   iconSizeM,
@@ -38,6 +39,7 @@ storiesOf("Icon", module)
       [purple]: "purple"
     };
     const sizes = {
+      [iconSizeXxs]: "iconSizeXxs",
       [iconSizeXs]: "iconSizeXs",
       [iconSizeS]: "iconSizeS",
       [iconSizeM]: "iconSizeM",

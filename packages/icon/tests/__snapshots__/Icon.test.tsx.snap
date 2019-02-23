@@ -2,6 +2,7 @@
 
 exports[`Icon renders 1`] = `
 .emotion-0 {
+  vertical-align: middle;
   fill: blue;
 }
 
@@ -26,7 +27,8 @@ exports[`Icon renders 1`] = `
 
 exports[`Icon renders with defaults 1`] = `
 .emotion-0 {
-  fill: #1B2029;
+  vertical-align: middle;
+  fill: currentColor;
 }
 
 .emotion-0 use {

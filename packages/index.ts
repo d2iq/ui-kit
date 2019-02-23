@@ -24,6 +24,7 @@ export {
 } from "./button";
 export { CheckboxInput } from "./checkboxInput";
 export { Dropdownable } from "./dropdownable";
+export { Icon } from "./icon";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
 export { InputAppearance } from "./shared/types/inputAppearance";
 export {

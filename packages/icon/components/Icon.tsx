@@ -2,7 +2,7 @@ import * as React from "react";
 import { cx } from "emotion";
 import { tintSVG } from "../../shared/styles/styleUtils";
 import {
-  textColorPrimary,
+  iconSizeXxs,
   iconSizeXs,
   iconSizeS,
   iconSizeM,
@@ -15,6 +15,7 @@ import { ProductIcons } from "../../icons/dist/product-icons-enum";
 import { icon } from "../style";
 
 type IconSizes =
+  | typeof iconSizeXxs
   | typeof iconSizeXs
   | typeof iconSizeS
   | typeof iconSizeM
@@ -35,7 +36,7 @@ export interface IconProps {
 
 const Icon = (props: IconProps) => {
   const { color, size, shape, ariaLabel } = props;
-  const svgColor = color || textColorPrimary;
+  const svgColor = color || "currentColor";
   const iconSize = size || iconSizeS;
 
   return (

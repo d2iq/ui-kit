@@ -122,6 +122,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
 }
 
 .emotion-2 {
+  vertical-align: middle;
   fill: inherit;
 }
 
