@@ -10,7 +10,7 @@ export const DownTriangle = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>triangle-down</title>
-    <g id="triangle-down" stroke="none" stroke-width="1" fill-rule="evenodd">
+    <g id="triangle-down" stroke="none" strokeWidth="1" fillRule="evenodd">
       <polygon id="triangle" points="8 12 3 5 13 5" />
     </g>
   </svg>
