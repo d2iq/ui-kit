@@ -17,6 +17,7 @@ export { inputReset } from "./resets/inputReset";
 export { liReset } from "./resets/liReset";
 export { margin, marginAt } from "./modifiers/margin";
 export { padding } from "./modifiers/padding";
+export { pseudoElTriangle } from "./modifiers/pseudoElTriangle";
 export { vAlignChildren } from "./modifiers/vAlignChildren";
 export { visuallyHidden } from "./modifiers/visuallyHidden";
 export { textSize } from "./typography/textSize";

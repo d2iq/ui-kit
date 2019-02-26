@@ -51,5 +51,6 @@ export { Toaster, Toast } from "./toaster";
 export { ToggleContent } from "./toggleContent";
 export { ToggleInput } from "./toggleInput";
 export { ToggleInputList } from "./toggleInputList";
+export { Tooltip } from "./tooltip";
 
 injectGlobalCss();
