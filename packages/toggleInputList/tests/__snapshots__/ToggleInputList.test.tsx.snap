@@ -1086,6 +1086,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
 }
 
 .emotion-2 {
+  vertical-align: middle;
   fill: #FFF;
 }
 
