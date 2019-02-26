@@ -8,8 +8,10 @@ import resizeEventManager from "../../utilities/resizeEventManager";
 export enum Direction {
   BottomLeft = "bottom-left",
   BottomRight = "bottom-right",
+  BottomCenter = "bottom-center",
   TopLeft = "top-left",
-  TopRight = "top-right"
+  TopRight = "top-right",
+  TopCenter = "top-center"
 }
 
 const DEFAULT_DIRECTION_PREFERENCES = [
@@ -21,7 +23,7 @@ const DEFAULT_DIRECTION_PREFERENCES = [
 
 export interface DropdownableProps {
   open: boolean;
-  dropdown: React.ReactNode;
+  dropdown: React.ReactElement<any>;
   preferredDirections?: Direction[];
   onClose: () => void;
 }
@@ -126,7 +128,9 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     return (
       <div ref={this.dropdown}>
         <DropdownContents open={open} onClose={onClose}>
-          {dropdown}
+          {React.cloneElement(dropdown, {
+            direction: this.state.direction
+          })}
         </DropdownContents>
       </div>
     );
@@ -188,20 +192,39 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     dropdownDimensions
   ): PositionCoord {
     const isTop: boolean =
-      direction === Direction.TopLeft || direction === Direction.TopRight;
+      direction === Direction.TopLeft ||
+      direction === Direction.TopRight ||
+      direction === Direction.TopCenter;
     const isLeft: boolean =
       direction === Direction.TopLeft || direction === Direction.BottomLeft;
+    const isCenter: boolean =
+      direction === Direction.TopCenter || direction === Direction.BottomCenter;
+
+    const getHorizAlignment = () => {
+      if (isCenter) {
+        return (
+          childBounds.x +
+          childBounds.width / 2 -
+          dropdownDimensions.width / 2 +
+          window.scrollX
+        );
+      } else if (isLeft) {
+        return childBounds.left + window.scrollX;
+      } else {
+        return (
+          childBounds.left -
+          dropdownDimensions.width +
+          childBounds.width +
+          window.scrollX
+        );
+      }
+    };
 
     return {
       top: isTop
         ? childBounds.top - dropdownDimensions.height + window.scrollY
         : childBounds.top + childBounds.height + window.scrollY,
-      left: isLeft
-        ? childBounds.left + window.scrollX
-        : childBounds.left -
-          dropdownDimensions.width +
-          childBounds.width +
-          window.scrollX
+      left: getHorizAlignment()
     };
   }
 

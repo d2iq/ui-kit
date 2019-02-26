@@ -110,7 +110,9 @@ exports[`Dropdownable is visible after opening 1`] = `
                 class="emotion-0"
               >
                 <div>
-                  <p>
+                  <p
+                    direction="bottom-left"
+                  >
                     I'm a touchdown
                   </p>
                 </div>
@@ -126,7 +128,9 @@ exports[`Dropdownable is visible after opening 1`] = `
                 class="emotion-1"
               >
                 <div>
-                  <p>
+                  <p
+                    direction="bottom-left"
+                  >
                     I'm a touchdown
                   </p>
                 </div>
@@ -144,7 +148,9 @@ exports[`Dropdownable is visible after opening 1`] = `
                 <DropdownContents
                   open={false}
                 >
-                  <p>
+                  <p
+                    direction="bottom-left"
+                  >
                     I'm a touchdown
                   </p>
                 </DropdownContents>
@@ -268,7 +274,9 @@ exports[`Dropdownable is visible after opening 2`] = `
                 class="emotion-0"
               >
                 <div>
-                  <p>
+                  <p
+                    direction="bottom-left"
+                  >
                     I'm a touchdown
                   </p>
                 </div>
@@ -284,7 +292,9 @@ exports[`Dropdownable is visible after opening 2`] = `
                 class="emotion-1"
               >
                 <div>
-                  <p>
+                  <p
+                    direction="bottom-left"
+                  >
                     I'm a touchdown
                   </p>
                 </div>
@@ -302,7 +312,9 @@ exports[`Dropdownable is visible after opening 2`] = `
                 <DropdownContents
                   open={true}
                 >
-                  <p>
+                  <p
+                    direction="bottom-left"
+                  >
                     I'm a touchdown
                   </p>
                 </DropdownContents>
