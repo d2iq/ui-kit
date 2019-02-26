@@ -1,0 +1,623 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip renders 1`] = `
+.emotion-5 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-2 {
+  background-color: #32363E;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 12px;
+  position: relative;
+  color: #DADDE2;
+  fill: #DADDE2;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-2:after {
+  position: absolute;
+}
+
+.emotion-3 {
+  top: 0px;
+  left: NaNpx;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+<Tooltip
+  id="renders"
+  trigger="trigger"
+>
+  <span
+    aria-describedby="renders"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <Dropdownable
+      dropdown={
+        <TooltipContent
+          id="renders"
+          open={false}
+        >
+          content
+        </TooltipContent>
+      }
+      open={false}
+      preferredDirections={
+        Array [
+          "top-center",
+          "bottom-center",
+        ]
+      }
+    >
+      <Styled(div)>
+        <div
+          className="emotion-5"
+        >
+          <div>
+            trigger
+          </div>
+          <Overlay
+            className="emotion-3"
+            overlayRoot={
+              .emotion-2 {
+  background-color: #32363E;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 12px;
+  position: relative;
+  color: #DADDE2;
+  fill: #DADDE2;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-2:after {
+  position: absolute;
+}
+
+.emotion-3 {
+  top: 0px;
+  left: NaNpx;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+<body>
+                <div>
+                  <div
+                    class="emotion-3"
+                  >
+                    <div>
+                      <div
+                        aria-hidden="true"
+                        class="
+    emotion-0    emotion-1   emotion-2"
+                        id="renders"
+                        role="tooltip"
+                      >
+                        content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </body>
+            }
+          >
+            <Portal
+              containerInfo={
+                <div>
+                  <div
+                    class="emotion-3"
+                  >
+                    <div>
+                      <div
+                        aria-hidden="true"
+                        class="
+    emotion-0    emotion-1   emotion-2"
+                        id="renders"
+                        role="tooltip"
+                      >
+                        content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+            >
+              <div
+                className="emotion-3"
+              >
+                <div>
+                  <clickOutside(DropdownContents)
+                    open={false}
+                  >
+                    <DropdownContents
+                      open={false}
+                    >
+                      <TooltipContent
+                        direction="top-center"
+                        id="renders"
+                        open={false}
+                      >
+                        <div
+                          aria-hidden={true}
+                          className="
+    emotion-0    emotion-1   emotion-2"
+                          id="renders"
+                          role="tooltip"
+                          style={
+                            Object {
+                              "maxWidth": undefined,
+                              "minWidth": undefined,
+                            }
+                          }
+                        >
+                          content
+                        </div>
+                      </TooltipContent>
+                    </DropdownContents>
+                  </clickOutside(DropdownContents)>
+                </div>
+              </div>
+            </Portal>
+          </Overlay>
+        </div>
+      </Styled(div)>
+    </Dropdownable>
+  </span>
+</Tooltip>
+`;
+
+exports[`Tooltip renders open tooltip 1`] = `
+.emotion-5 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-2 {
+  background-color: #32363E;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 12px;
+  position: relative;
+  color: #DADDE2;
+  fill: #DADDE2;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-2:after {
+  position: absolute;
+}
+
+.emotion-3 {
+  top: 0px;
+  left: NaNpx;
+  position: absolute;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+<Tooltip
+  id="opened"
+  open={true}
+  trigger="trigger"
+>
+  <span
+    aria-describedby="opened"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <Dropdownable
+      dropdown={
+        <TooltipContent
+          id="opened"
+          open={true}
+        >
+          content
+        </TooltipContent>
+      }
+      open={true}
+      preferredDirections={
+        Array [
+          "top-center",
+          "bottom-center",
+        ]
+      }
+    >
+      <Styled(div)>
+        <div
+          className="emotion-5"
+        >
+          <div>
+            trigger
+          </div>
+          <Overlay
+            className="emotion-3"
+            overlayRoot={
+              <body>
+                <div>
+                  <div
+                    class="css-3z8s0s"
+                  >
+                    <div>
+                      <div
+                        aria-hidden="true"
+                        class="
+    emotion-0    emotion-1   emotion-2"
+                        id="renders"
+                        role="tooltip"
+                      >
+                        content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                .emotion-2 {
+  background-color: #32363E;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 12px;
+  position: relative;
+  color: #DADDE2;
+  fill: #DADDE2;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-2:after {
+  position: absolute;
+}
+
+.emotion-3 {
+  top: 0px;
+  left: NaNpx;
+  position: absolute;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+<div>
+                  <div
+                    class="emotion-3"
+                  >
+                    <div>
+                      <div
+                        aria-hidden="false"
+                        class="
+    emotion-0    emotion-1   emotion-2"
+                        id="opened"
+                        role="tooltip"
+                      >
+                        content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </body>
+            }
+          >
+            <Portal
+              containerInfo={
+                <div>
+                  <div
+                    class="emotion-3"
+                  >
+                    <div>
+                      <div
+                        aria-hidden="false"
+                        class="
+    emotion-0    emotion-1   emotion-2"
+                        id="opened"
+                        role="tooltip"
+                      >
+                        content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+            >
+              <div
+                className="emotion-3"
+              >
+                <div>
+                  <clickOutside(DropdownContents)
+                    open={true}
+                  >
+                    <DropdownContents
+                      open={true}
+                    >
+                      <TooltipContent
+                        direction="top-center"
+                        id="opened"
+                        open={true}
+                      >
+                        <div
+                          aria-hidden={false}
+                          className="
+    emotion-0    emotion-1   emotion-2"
+                          id="opened"
+                          role="tooltip"
+                          style={
+                            Object {
+                              "maxWidth": undefined,
+                              "minWidth": undefined,
+                            }
+                          }
+                        >
+                          content
+                        </div>
+                      </TooltipContent>
+                    </DropdownContents>
+                  </clickOutside(DropdownContents)>
+                </div>
+              </div>
+            </Portal>
+          </Overlay>
+        </div>
+      </Styled(div)>
+    </Dropdownable>
+  </span>
+</Tooltip>
+`;
+
+exports[`Tooltip renders with preferred directions 1`] = `
+.emotion-5 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-2 {
+  background-color: #32363E;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 12px;
+  position: relative;
+  color: #DADDE2;
+  fill: #DADDE2;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-2:after {
+  position: absolute;
+}
+
+.emotion-3 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+<Tooltip
+  id="customDir"
+  open={true}
+  preferredDirections={
+    Array [
+      "bottom-left",
+    ]
+  }
+  trigger="trigger"
+>
+  <span
+    aria-describedby="customDir"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    <Dropdownable
+      dropdown={
+        <TooltipContent
+          id="customDir"
+          open={true}
+        >
+          content
+        </TooltipContent>
+      }
+      open={true}
+      preferredDirections={
+        Array [
+          "bottom-left",
+        ]
+      }
+    >
+      <Styled(div)>
+        <div
+          className="emotion-5"
+        >
+          <div>
+            trigger
+          </div>
+          <Overlay
+            className="emotion-3"
+            overlayRoot={
+              <body>
+                <div>
+                  <div
+                    class="css-3z8s0s"
+                  >
+                    <div>
+                      <div
+                        aria-hidden="true"
+                        class="
+    css-eyjuh9
+    css-miht3n
+   emotion-2"
+                        id="renders"
+                        role="tooltip"
+                      >
+                        content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="css-u4jebi"
+                  >
+                    <div>
+                      <div
+                        aria-hidden="false"
+                        class="
+    css-eyjuh9
+    css-miht3n
+   emotion-2"
+                        id="opened"
+                        role="tooltip"
+                      >
+                        content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                .emotion-2 {
+  background-color: #32363E;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 12px;
+  position: relative;
+  color: #DADDE2;
+  fill: #DADDE2;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-2:after {
+  position: absolute;
+}
+
+.emotion-3 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+<div>
+                  <div
+                    class="emotion-3"
+                  >
+                    <div>
+                      <div
+                        aria-hidden="false"
+                        class="
+    emotion-0    emotion-1   emotion-2"
+                        id="customDir"
+                        role="tooltip"
+                      >
+                        content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </body>
+            }
+          >
+            <Portal
+              containerInfo={
+                <div>
+                  <div
+                    class="emotion-3"
+                  >
+                    <div>
+                      <div
+                        aria-hidden="false"
+                        class="
+    emotion-0    emotion-1   emotion-2"
+                        id="customDir"
+                        role="tooltip"
+                      >
+                        content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+            >
+              <div
+                className="emotion-3"
+              >
+                <div>
+                  <clickOutside(DropdownContents)
+                    open={true}
+                  >
+                    <DropdownContents
+                      open={true}
+                    >
+                      <TooltipContent
+                        direction="bottom-left"
+                        id="customDir"
+                        open={true}
+                      >
+                        <div
+                          aria-hidden={false}
+                          className="
+    emotion-0    emotion-1   emotion-2"
+                          id="customDir"
+                          role="tooltip"
+                          style={
+                            Object {
+                              "maxWidth": undefined,
+                              "minWidth": undefined,
+                            }
+                          }
+                        >
+                          content
+                        </div>
+                      </TooltipContent>
+                    </DropdownContents>
+                  </clickOutside(DropdownContents)>
+                </div>
+              </div>
+            </Portal>
+          </Overlay>
+        </div>
+      </Styled(div)>
+    </Dropdownable>
+  </span>
+</Tooltip>
+`;
