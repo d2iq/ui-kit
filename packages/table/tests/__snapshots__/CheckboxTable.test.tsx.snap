@@ -638,6 +638,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
 }
 
 .emotion-1 {
+  vertical-align: middle;
   fill: #FFF;
 }
 
