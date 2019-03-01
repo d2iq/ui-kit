@@ -582,7 +582,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
   height: 1px;
 }
 
-.emotion-31 {
+.emotion-23 {
   box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
   white-space: nowrap;
@@ -644,26 +644,6 @@ exports[`CheckboxTable renders with checked row 1`] = `
 
 .emotion-1 use {
   pointer-events: none;
-}
-
-.emotion-23 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  white-space: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: #F7F8F9;
-  mix-blend-mode: multiply;
-  will-change: left;
 }
 
 <div
@@ -873,7 +853,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
               </strong>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-23"
               style="height:35px;left:0;position:absolute;top:35px;width:151px"
             >
               <div
@@ -908,7 +888,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
               </div>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-23"
               style="height:35px;left:151px;position:absolute;top:35px;width:151px"
             >
               <strong>
@@ -964,7 +944,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
             </strong>
           </div>
           <div
-            class="emotion-31"
+            class="emotion-23"
             style="height:35px;left:0;position:absolute;top:35px;width:151px"
           >
             <em>
@@ -972,7 +952,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
             </em>
           </div>
           <div
-            class="emotion-31"
+            class="emotion-23"
             style="height:35px;left:151px;position:absolute;top:35px;width:151px"
           >
             <span>
@@ -980,7 +960,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
             </span>
           </div>
           <div
-            class="emotion-31"
+            class="emotion-23"
             style="height:35px;left:302px;position:absolute;top:35px;width:151px"
           >
             <span>
@@ -988,7 +968,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
             </span>
           </div>
           <div
-            class="emotion-31"
+            class="emotion-23"
             style="height:35px;left:453px;position:absolute;top:35px;width:151px"
           >
             <strong>
