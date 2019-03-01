@@ -1,31 +1,33 @@
 ---
 name: Clickable
+menu: Components
 route: /clickable
 ---
-      
-import { Playground, PropsTable } from 'docz'
-import {default as Clickable} from './components/clickable'
+
+import { Playground, PropsTable } from "docz";
+import { default as Clickable } from "./components/clickable";
 
 # Clickable
+
 - [Clickable](#clickable)
   - [Clickable Component](#clickable-component)
   - [Props](#props)
   - [Example](#example)
- 
+
 ## Clickable Component
+
 The Clickable is a higher order presentational component, children get the necessary a11y attributes added.
 
 Use this whenever you want to bind an action on click onto a HTML element. The component will add the appropiate role attribute, add a tabIndex, add a focus state and bind the action to `onClick` and `onKeyPress`. The `onKeyPress` has a wrapping function which filters out eveerything except the space key and enter key events. This prevents that the function gets triggered by accident.
 
 ## Props
 
-<PropsTable of={Clickable}/>
-
+<PropsTable of={Clickable} />
 
 ## Example
 
 <Playground>
-  <Clickable action={()=>alert("action trigger")} tabIndex="0">
+  <Clickable action={() => alert("action trigger")} tabIndex="0">
     <span>Click me!</span>
   </Clickable>
 </Playground>

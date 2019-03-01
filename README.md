@@ -4,7 +4,7 @@ Mesosphere DCOS resusable UI Kit components
 
 ## Getting started
 
-Install dependencies (Node v8+, NPM 5+)
+Install dependencies (Node v8+, NPM 6+)
 
 ```bash
 npm i
@@ -26,7 +26,8 @@ Run the following npm script
 npm run setup:git-hooks
 ```
 
-**Linting** <br>
+**Linting**
+
 For linting, use your favorite code editor to enable tslint.
 If you use vscode you can change your workspace settings as following
 
@@ -67,7 +68,8 @@ for instance, want to run a single spec, for example, `badge`:
 npm run test -- --watch badge
 ```
 
-**Writing unit tests** <br>
+**Writing unit tests**
+
 A recommended reading is [Better Specs](http://www.betterspecs.org/), we put
 [real effort](https://github.com/dcos/dcos-ui/pull/2524) in making sure we
 follow these guidelines. Some of the most common ones to follow:
