@@ -6,7 +6,7 @@ import { DangerButton, StandardButton } from "../../../button";
 
 interface CheckboxTableHelperState {
   items: any[];
-  selectedRows: object[];
+  selectedRows: {};
 }
 
 interface CheckboxTableHelperProps extends CheckboxTableProps {
@@ -50,7 +50,7 @@ class CheckboxTableHelper extends React.PureComponent<
               <StandardButton>Global action</StandardButton>
             </span>
           )}
-          {Boolean(this.state.selectedRows.length) && (
+          {Boolean(Object.keys(this.state.selectedRows).length) && (
             <DangerButton onClick={this.handleDelete}>
               Delete selected
             </DangerButton>
@@ -60,6 +60,7 @@ class CheckboxTableHelper extends React.PureComponent<
           data={this.state.items}
           onChange={this.handleChange}
           selectedRows={this.state.selectedRows}
+          uniqueKey={this.props.uniqueKey}
         >
           {this.props.children}
         </CheckboxTable>
@@ -73,9 +74,10 @@ class CheckboxTableHelper extends React.PureComponent<
 
   private handleDelete() {
     const newState = this.state.items.filter(
-      row => !this.state.selectedRows.includes(row)
+      row => !this.state.selectedRows[row[this.props.uniqueKey]]
     );
-    this.setState({ items: newState, selectedRows: [] });
+
+    this.setState({ items: newState, selectedRows: {} });
   }
 }
 

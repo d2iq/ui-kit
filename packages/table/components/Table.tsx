@@ -1,5 +1,6 @@
 import * as React from "react";
-import { cx } from "emotion";
+import { cx, css } from "emotion";
+import styled from "react-emotion";
 import {
   AutoSizer,
   MultiGrid,
@@ -14,7 +15,7 @@ import {
   tableCss,
   rightGrid,
   hideScrollbarCss,
-  rowHoverCss
+  rowHoverStyles
 } from "../style";
 
 import { ColumnProps, Column } from "./Column";
@@ -36,10 +37,6 @@ export interface TableProps {
    * How many columns do not scroll
    */
   fixedColumnCount?: number;
-  /**
-   * Selected row data
-   */
-  selectedRows?: object[];
   /**
    * Set the row height
    */
@@ -313,22 +310,28 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     const updateHoveredRowIndex = () => {
       this.setState({ hoveredRowIndex: rowIndex });
     };
-    const selectedRows = this.props.selectedRows || [];
+    const ContentCell = styled("div")`
+      ${props => {
+        return props.theme.coloredIndex && props.theme.coloredRows[rowIndex - 1]
+          ? rowHoverStyles
+          : null;
+      }};
+    `;
 
     return (
       /* tslint:disable:react-a11y-event-has-role */
-      <div
+      <ContentCell
         className={cx(cellCss, vAlignChildren, {
-          [rowHoverCss]:
-            rowIndex === this.state.hoveredRowIndex ||
-            selectedRows.includes(data[rowIndex])
+          [css`
+            ${rowHoverStyles};
+          `]: rowIndex === this.state.hoveredRowIndex
         })}
         style={style}
         key={key}
         onMouseOver={updateHoveredRowIndex}
       >
         {column.props.cellRenderer(data[rowIndex], style.width as number)}
-      </div>
+      </ContentCell>
       /* tslint:enable:react-a11y-event-has-role */
     );
   }

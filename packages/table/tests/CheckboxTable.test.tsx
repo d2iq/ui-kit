@@ -42,7 +42,7 @@ describe("CheckboxTable", () => {
 
   it("renders default", () => {
     const component = render(
-      <CheckboxTable data={items}>
+      <CheckboxTable data={items} uniqueKey="name">
         <Column header="name" cellRenderer={nameCellRenderer} />
         <Column header="role" cellRenderer={roleCellRenderer} />
         <Column header="state" cellRenderer={stateCellRenderer} />
@@ -55,7 +55,11 @@ describe("CheckboxTable", () => {
 
   it("renders with checked row", () => {
     const component = render(
-      <CheckboxTable data={items} selectedRows={[items[0]]}>
+      <CheckboxTable
+        data={items}
+        selectedRows={{ [items[0].name]: true }}
+        uniqueKey="name"
+      >
         <Column header="name" cellRenderer={nameCellRenderer} />
         <Column header="role" cellRenderer={roleCellRenderer} />
         <Column header="state" cellRenderer={stateCellRenderer} />
@@ -68,7 +72,11 @@ describe("CheckboxTable", () => {
 
   it("checks header checkbox when all rows are selected", () => {
     const component = render(
-      <CheckboxTable data={items} selectedRows={items}>
+      <CheckboxTable
+        data={items}
+        selectedRows={items.map(item => ({ [item.name]: true }))}
+        uniqueKey="name"
+      >
         <Column header="name" cellRenderer={nameCellRenderer} />
         <Column header="role" cellRenderer={roleCellRenderer} />
         <Column header="state" cellRenderer={stateCellRenderer} />
@@ -82,7 +90,11 @@ describe("CheckboxTable", () => {
 
   it("does not check header checkbox when all rows are not selected", () => {
     const component = render(
-      <CheckboxTable data={items} selectedRows={[items[0]]}>
+      <CheckboxTable
+        data={items}
+        selectedRows={{ [items[0].name]: true }}
+        uniqueKey="name"
+      >
         <Column header="name" cellRenderer={nameCellRenderer} />
         <Column header="role" cellRenderer={roleCellRenderer} />
         <Column header="state" cellRenderer={stateCellRenderer} />
@@ -96,7 +108,7 @@ describe("CheckboxTable", () => {
   it("calls onChange prop with the selected rows data", () => {
     const onChangeFn = jest.fn();
     const component = shallow(
-      <CheckboxTable data={items} onChange={onChangeFn}>
+      <CheckboxTable data={items} onChange={onChangeFn} uniqueKey="name">
         <Column header="name" cellRenderer={nameCellRenderer} />
         <Column header="role" cellRenderer={roleCellRenderer} />
         <Column header="state" cellRenderer={stateCellRenderer} />
@@ -114,15 +126,15 @@ describe("CheckboxTable", () => {
 
     expect(onChangeFn).not.toHaveBeenCalled();
     checkbox.simulate("change", { target: { checked: true } });
-    expect(onChangeFn).toHaveBeenCalledWith([items[0]]);
+    expect(onChangeFn).toHaveBeenCalledWith({ [items[0].name]: true });
     checkbox.simulate("change", { target: { checked: false } });
-    expect(onChangeFn).toHaveBeenCalledWith([]);
+    expect(onChangeFn).toHaveBeenCalledWith({});
   });
 
   it("toggles all rows with header checkbox", () => {
     const onChangeFn = jest.fn();
     const component = shallow(
-      <CheckboxTable data={items} onChange={onChangeFn}>
+      <CheckboxTable data={items} onChange={onChangeFn} uniqueKey="name">
         <Column header="name" cellRenderer={nameCellRenderer} />
         <Column header="role" cellRenderer={roleCellRenderer} />
         <Column header="state" cellRenderer={stateCellRenderer} />
@@ -141,10 +153,15 @@ describe("CheckboxTable", () => {
       .find("input")
       .simulate("change", { target: { checked: true } });
 
-    expect(onChangeFn).toHaveBeenCalledWith(items);
+    expect(onChangeFn).toHaveBeenCalledWith(
+      items.reduce((acc, curr) => {
+        acc[curr.name] = true;
+        return acc;
+      }, {})
+    );
     checkboxComponent
       .find("input")
       .simulate("change", { target: { checked: false } });
-    expect(onChangeFn).toHaveBeenCalledWith([]);
+    expect(onChangeFn).toHaveBeenCalledWith({});
   });
 });

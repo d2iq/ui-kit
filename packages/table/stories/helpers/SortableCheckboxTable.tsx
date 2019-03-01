@@ -9,7 +9,7 @@ interface SortableCheckboxTableDemoState {
   items: any[];
   sortDirection: SortDirection;
   sortColumn: string;
-  selectedRows: object[];
+  selectedRows: {};
 }
 
 const getSortedList = (items, sortColumn) => {
@@ -50,70 +50,12 @@ class SortableCheckboxTable extends React.Component<
       items,
       sortDirection: "DESC",
       sortColumn: "name",
-      selectedRows: props.selectedRows || []
+      selectedRows: props.selectedRows || {}
     };
 
     this.handleSortClick = this.handleSortClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
-  }
-
-  updateData(
-    items: any[],
-    sortColumn: string,
-    sortDirection: SortDirection,
-    currentSortDirection?: SortDirection,
-    currentSortColumn?: string
-  ) {
-    const copiedData = items.slice();
-
-    if (
-      sortDirection === currentSortDirection &&
-      sortColumn === currentSortColumn
-    ) {
-      return { items: copiedData, sortDirection, sortColumn };
-    }
-
-    if (
-      sortDirection !== currentSortDirection &&
-      sortColumn === currentSortColumn
-    ) {
-      return { items: copiedData.reverse(), sortDirection, sortColumn };
-    }
-
-    return {
-      items: getSortedList(copiedData, sortColumn),
-      sortDirection,
-      sortColumn
-    };
-  }
-
-  handleSortClick(columnName: string): void {
-    const toggledDirection =
-      this.state.sortDirection === "ASC" || this.state.sortColumn !== columnName
-        ? "DESC"
-        : "ASC";
-
-    this.setState(
-      this.updateData(
-        this.state.items,
-        columnName,
-        toggledDirection,
-        this.state.sortDirection,
-        this.state.sortColumn
-      )
-    );
-  }
-
-  handleChange(value) {
-    this.setState({ selectedRows: value });
-  }
-
-  handleDelete() {
-    const newState = this.state.items.filter(
-      row => !this.state.selectedRows.includes(row)
-    );
-    this.setState({ items: newState, selectedRows: [] });
   }
 
   render() {
@@ -134,7 +76,7 @@ class SortableCheckboxTable extends React.Component<
             textAlign: "right"
           }}
         >
-          {Boolean(this.state.selectedRows.length) && (
+          {Boolean(Object.keys(this.state.selectedRows).length) && (
             <DangerButton onClick={this.handleDelete}>
               Delete selected
             </DangerButton>
@@ -144,6 +86,7 @@ class SortableCheckboxTable extends React.Component<
           data={items.slice()}
           onChange={this.handleChange}
           selectedRows={this.state.selectedRows}
+          uniqueKey="name"
         >
           <Column
             header={
@@ -182,6 +125,65 @@ class SortableCheckboxTable extends React.Component<
         </CheckboxTable>
       </div>
     );
+  }
+
+  private updateData(
+    items: any[],
+    sortColumn: string,
+    sortDirection: SortDirection,
+    currentSortDirection?: SortDirection,
+    currentSortColumn?: string
+  ) {
+    const copiedData = items.slice();
+
+    if (
+      sortDirection === currentSortDirection &&
+      sortColumn === currentSortColumn
+    ) {
+      return { items: copiedData, sortDirection, sortColumn };
+    }
+
+    if (
+      sortDirection !== currentSortDirection &&
+      sortColumn === currentSortColumn
+    ) {
+      return { items: copiedData.reverse(), sortDirection, sortColumn };
+    }
+
+    return {
+      items: getSortedList(copiedData, sortColumn),
+      sortDirection,
+      sortColumn
+    };
+  }
+
+  private handleSortClick(columnName: string): void {
+    const toggledDirection =
+      this.state.sortDirection === "ASC" || this.state.sortColumn !== columnName
+        ? "DESC"
+        : "ASC";
+
+    this.setState(
+      this.updateData(
+        this.state.items,
+        columnName,
+        toggledDirection,
+        this.state.sortDirection,
+        this.state.sortColumn
+      )
+    );
+  }
+
+  private handleChange(value) {
+    this.setState({ selectedRows: value });
+  }
+
+  private handleDelete() {
+    const newState = this.state.items.filter(
+      row => !this.state.selectedRows[row.name]
+    );
+
+    this.setState({ items: newState, selectedRows: {} });
   }
 }
 
