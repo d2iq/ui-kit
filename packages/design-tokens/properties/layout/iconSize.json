@@ -1,6 +1,9 @@
 {
 	"layout": {
 		"iconSize": {
+			"xxs": {
+				"value": "12px"
+			},
 			"xs": {
 				"value": "16px"
 			},
@@ -17,7 +20,7 @@
 				"value": "64px"
 			},
 			"xxl": {
-				"value": "96"
+				"value": "96px"
 			}
 		}
 	}
