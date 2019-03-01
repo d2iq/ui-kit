@@ -1,9 +1,12 @@
+import { action } from "@storybook/addon-actions";
+import { storiesOf } from "@storybook/react";
 import { css, cx } from "emotion";
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { TextInput } from "../index";
+
+import { TextInput } from "..";
 import { InputAppearance } from "../../shared/types/inputAppearance";
+
 const readme = require("../README.md");
 
 const defaultDisplayItem = css`
@@ -134,4 +137,15 @@ storiesOf("Forms/TextInput", module)
   ))
   .addWithInfo("URL", () => (
     <TextInput id="url.input" type="url" inputLabel="URL" />
+  ))
+  .addWithInfo("Delegates onChange handler", () => (
+    <form onChange={action("onChange")}>
+      <TextInput id="text.id" inputLabel="Id" value="/" />
+      <TextInput
+        id="text.container"
+        inputLabel="Container"
+        placeholder="nginx, alpine, etc."
+        value=""
+      />
+    </form>
   ));

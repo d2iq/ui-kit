@@ -1,5 +1,8 @@
-import * as React from "react";
 import { cx } from "emotion";
+import * as React from "react";
+
+import { error } from "../../design-tokens/build/js/designTokens";
+import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import {
   inputAppearances,
   inputContainer
@@ -17,9 +20,7 @@ import {
   tintText,
   visuallyHidden
 } from "../../shared/styles/styleUtils";
-import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
-import { error } from "../../design-tokens/build/js/designTokens";
 
 export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
@@ -158,7 +159,13 @@ export class TextInput<
     isValid,
     describedBy
   ) {
-    const inputElementProps = this.getInputElementProps();
+    const { value, ...inputElementProps } = this.getInputElementProps();
+    let { onChange } = inputElementProps;
+    if (onChange == null && value != null) {
+      onChange = Function.prototype as (
+        event: React.FormEvent<HTMLInputElement>
+      ) => void;
+    }
 
     return (
       <input
@@ -166,7 +173,7 @@ export class TextInput<
         type={this.props.type}
         aria-invalid={!isValid}
         aria-describedby={describedBy}
-        {...inputElementProps}
+        {...{ ...inputElementProps, onChange, value }}
       />
     );
   }
