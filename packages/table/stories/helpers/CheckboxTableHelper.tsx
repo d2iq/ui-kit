@@ -6,6 +6,8 @@ import { DangerButton, StandardButton } from "../../../button";
 
 interface CheckboxTableHelperState {
   items: any[];
+  mutedRows?: {};
+  disabledRows?: {};
   selectedRows: {};
 }
 
@@ -61,6 +63,8 @@ class CheckboxTableHelper extends React.PureComponent<
           onChange={this.handleChange}
           selectedRows={this.state.selectedRows}
           uniqueKey={this.props.uniqueKey}
+          disabledRows={this.props.disabledRows}
+          mutedRows={this.props.mutedRows}
         >
           {this.props.children}
         </CheckboxTable>

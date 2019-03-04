@@ -21,6 +21,7 @@ import {
 import { ColumnProps, Column } from "./Column";
 import memoizeOne from "memoize-one";
 import { vAlignChildren } from "../../shared/styles/styleUtils";
+import { textColorSecondary } from "../../design-tokens/build/js/designTokens";
 
 export interface TableProps {
   /**
@@ -310,11 +311,19 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     const updateHoveredRowIndex = () => {
       this.setState({ hoveredRowIndex: rowIndex });
     };
+
     const ContentCell = styled("div")`
       ${props => {
-        return props.theme.coloredIndex && props.theme.coloredRows[rowIndex - 1]
-          ? rowHoverStyles
-          : null;
+        return `${
+          props.theme.coloredRows && props.theme.coloredRows[rowIndex - 1]
+            ? rowHoverStyles
+            : ""
+        }
+        ${
+          props.theme.mutedRows && props.theme.mutedRows[rowIndex - 1]
+            ? `color: ${textColorSecondary};`
+            : ""
+        }`;
       }};
     `;
 

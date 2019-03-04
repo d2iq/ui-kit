@@ -151,4 +151,43 @@ storiesOf("Table/CheckboxTable", module)
       />
     </CheckboxTableHelper>
   ))
+  .addWithInfo("w/ disabled row", () => (
+    <CheckboxTableHelper
+      data={items}
+      disabledRows={{ [items[0].name]: true }}
+      mutedRows={{ [items[0].name]: true }}
+      uniqueKey="name"
+    >
+      <Column
+        header={<HeaderCell>name</HeaderCell>}
+        cellRenderer={nameCellRenderer}
+        growToFill={true}
+      />
+      <Column
+        header={<HeaderCell>role</HeaderCell>}
+        cellRenderer={roleCellRenderer}
+        growToFill={true}
+      />
+      <Column
+        header={<HeaderCell>state</HeaderCell>}
+        cellRenderer={stateCellRenderer}
+        growToFill={true}
+      />
+      <Column
+        header={<HeaderCell>Very Long</HeaderCell>}
+        cellRenderer={veryLongRenderer}
+        maxWidth={300}
+      />
+      <Column
+        header={<HeaderCell textAlign="right">zip code</HeaderCell>}
+        cellRenderer={zipcodeCellRenderer}
+        growToFill={true}
+      />
+      <Column
+        header={<HeaderCell>city</HeaderCell>}
+        cellRenderer={cityCellRenderer}
+        growToFill={true}
+      />
+    </CheckboxTableHelper>
+  ))
   .addWithInfo("sortable", () => <SortableCheckboxTable />);
