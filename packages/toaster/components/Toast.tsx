@@ -178,8 +178,7 @@ class Toast extends React.PureComponent<ToastProps, {}> {
     const { dismissToast, onDismiss, id } = this.props;
     if (dismissToast) {
       dismissToast(id);
-    }
-    if (onDismiss) {
+    } else if (onDismiss) {
       onDismiss(e);
     }
   }
