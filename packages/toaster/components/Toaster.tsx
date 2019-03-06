@@ -50,18 +50,18 @@ class Toaster extends React.PureComponent<ToasterProps, ToasterState> {
   public componentWillReceiveProps(nextProps: ToasterProps) {
     const currentToasts = this.state.toasts || [];
     const childIds =
-      nextProps.children && nextProps.children.map(toast => toast.props.id);
+      (nextProps.children && nextProps.children.map(toast => toast.props.id)) ||
+      [];
     const currentIds = currentToasts.map(toast => toast.props.id);
 
     if (
       (childIds && !currentIds.every(e => childIds.includes(e))) ||
-      !currentIds.length
+      !currentIds.length ||
+      childIds.length !== currentIds.length
     ) {
       this.setState(
         () => ({
-          toasts:
-            currentToasts &&
-            currentToasts.concat(nextProps.children || []).map(this.cloneToast)
+          toasts: (nextProps.children || []).map(this.cloneToast)
         }),
         () => {
           if (this.state.toasts) {
@@ -86,9 +86,9 @@ class Toaster extends React.PureComponent<ToasterProps, ToasterState> {
           className={listReset}
         >
           <TransitionGroup>
-            {toastsToRender.map((toast, i) => (
+            {toastsToRender.map(toast => (
               <Transition
-                key={`toastWrapper-${i}`}
+                key={`toastWrapper-${toast.props.id}`}
                 timeout={{ enter: 0, exit: animationDuration }}
               >
                 {state => {
@@ -113,6 +113,12 @@ class Toaster extends React.PureComponent<ToasterProps, ToasterState> {
 
   public dismissToast(dismissedToastId: ToastId = "") {
     const currentToasts = this.state.toasts || [];
+    const toast = currentToasts.find(
+      toast => toast.props.id === dismissedToastId
+    );
+    if (toast && toast.props.onDismiss) {
+      toast.props.onDismiss();
+    }
     this.setState({
       toasts: currentToasts.filter(toast => dismissedToastId !== toast.props.id)
     });

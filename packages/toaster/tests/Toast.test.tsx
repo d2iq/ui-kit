@@ -64,21 +64,14 @@ describe("Toast", () => {
     expect(action).toHaveBeenCalled();
   });
 
-  it("calls dismissToast and the onDismiss callback when the dismiss button is clicked", () => {
+  it("calls dismissToast when the dismiss button is clicked", () => {
     const dismissToastSpy = spyOn(Toaster.prototype, "dismissToast");
-    const onDismiss = jest.fn();
     const component = mount(
-      <Toaster
-        children={[
-          <Toast onDismiss={onDismiss} title="I Am Toast" key={0} id={0} />
-        ]}
-      />
+      <Toaster children={[<Toast title="I Am Toast" key={0} id={0} />]} />
     );
     const dismissBtn = component.find('span[role="button"]');
-    expect(onDismiss).not.toHaveBeenCalled();
     expect(dismissToastSpy).not.toHaveBeenCalled();
     dismissBtn.simulate("click");
-    expect(onDismiss).toHaveBeenCalled();
     expect(dismissToastSpy).toHaveBeenCalled();
   });
 
