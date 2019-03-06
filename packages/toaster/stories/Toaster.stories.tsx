@@ -42,27 +42,43 @@ class ToasterContainer extends React.PureComponent<
     };
 
     this.addToast = this.addToast.bind(this);
+    this.removeToast = this.removeToast.bind(this);
   }
 
   addToast(toast: Array<React.ReactElement<ToastProps>>) {
     this.setState({
-      toasts: toast
+      toasts: this.state.toasts.concat(toast)
+    });
+  }
+
+  removeToast(toastId: string) {
+    const newToasts = this.state.toasts.filter(
+      toast => toast.props.id !== toastId
+    );
+    this.setState({
+      toasts: newToasts
     });
   }
 
   render() {
     const handleToastAdd = () => {
       const newToastId = addedToastId++;
+      const toastId = `toast-${newToastId + 1}`;
+      const dismissToast = dismissedToastId => {
+        this.removeToast(dismissedToastId);
+      };
       const newToast = [
         // tslint:disable:jsx-wrap-multiline
         <Toast
           autodismiss={true}
-          id={`toast-${newToastId + 1}`}
+          id={toastId}
           key={newToastId + 1}
           title={`New message ${newToastId + 1}`}
+          onDismiss={dismissToast.bind(this, toastId)}
         />
         // tslint:enable
       ];
+
       this.addToast(newToast);
     };
 
@@ -107,18 +123,7 @@ storiesOf("Toaster", module)
       ]}
     </Toaster>
   ))
-  .addWithInfo("autodismiss", () => (
-    <ToasterContainer>
-      {[
-        <Toast
-          title="Hover me or I'll disappear"
-          autodismiss={true}
-          key={0}
-          id="autodismiss"
-        />
-      ]}
-    </ToasterContainer>
-  ))
+  .addWithInfo("autodismiss", () => <ToasterContainer>{[]}</ToasterContainer>)
   .addWithInfo("with dismiss callback", () => (
     <Toaster>
       {[
