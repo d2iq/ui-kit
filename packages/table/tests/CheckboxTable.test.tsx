@@ -70,11 +70,30 @@ describe("CheckboxTable", () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it("checks header checkbox when all rows are selected", () => {
+  it("renders with disabled and muted row", () => {
     const component = render(
       <CheckboxTable
         data={items}
-        selectedRows={items.map(item => ({ [item.name]: true }))}
+        disabledRows={{ [items[0].name]: true }}
+        mutedRows={{ [items[0].name]: true }}
+        uniqueKey="name"
+      >
+        <Column header="name" cellRenderer={nameCellRenderer} />
+        <Column header="role" cellRenderer={roleCellRenderer} />
+        <Column header="state" cellRenderer={stateCellRenderer} />
+        <Column header="zipcode" cellRenderer={zipcodeCellRenderer} />
+        <Column header="city" cellRenderer={cityCellRenderer} />
+      </CheckboxTable>
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it("checks header checkbox when all selectable rows are selected", () => {
+    const component = render(
+      <CheckboxTable
+        data={items}
+        disabledRows={{ [items[0].name]: true }}
+        selectedRows={items.slice(1).map(item => ({ [item.name]: true }))}
         uniqueKey="name"
       >
         <Column header="name" cellRenderer={nameCellRenderer} />
@@ -85,6 +104,9 @@ describe("CheckboxTable", () => {
       </CheckboxTable>
     );
 
+    expect(component.find("#headerCheckbox").prop("aria-checked")).not.toBe(
+      "mixed"
+    );
     expect(component.find("#headerCheckbox").prop("checked")).toBe(true);
   });
 
@@ -131,10 +153,15 @@ describe("CheckboxTable", () => {
     expect(onChangeFn).toHaveBeenCalledWith({});
   });
 
-  it("toggles all rows with header checkbox", () => {
+  it("toggles all selectable rows with header checkbox", () => {
     const onChangeFn = jest.fn();
     const component = shallow(
-      <CheckboxTable data={items} onChange={onChangeFn} uniqueKey="name">
+      <CheckboxTable
+        data={items}
+        disabledRows={{ [items[0].name]: true }}
+        onChange={onChangeFn}
+        uniqueKey="name"
+      >
         <Column header="name" cellRenderer={nameCellRenderer} />
         <Column header="role" cellRenderer={roleCellRenderer} />
         <Column header="state" cellRenderer={stateCellRenderer} />
@@ -154,7 +181,7 @@ describe("CheckboxTable", () => {
       .simulate("change", { target: { checked: true } });
 
     expect(onChangeFn).toHaveBeenCalledWith(
-      items.reduce((acc, curr) => {
+      items.slice(1).reduce((acc, curr) => {
         acc[curr.name] = true;
         return acc;
       }, {})

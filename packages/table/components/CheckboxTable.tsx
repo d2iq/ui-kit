@@ -14,6 +14,14 @@ export interface CheckboxTableProps extends TableProps {
    */
   selectedRows?: {};
   /**
+   * Rows that cannot be selected
+   */
+  disabledRows?: {};
+  /**
+   * Rows that are in some incomplete state. Typically used with disabledRows
+   */
+  mutedRows?: {};
+  /**
    * The unique key in each row's data object.
    *
    * Ideally, the value of this key in your table's data
@@ -31,12 +39,13 @@ class CheckboxTable extends React.PureComponent<
   CheckboxTableState
 > {
   static getDerivedStateFromProps(props: CheckboxTableProps) {
-    const selectedLength = props.selectedRows
-      ? Object.keys(props.selectedRows).length
-      : 0;
+    const { data, selectedRows = {}, disabledRows = {} } = props;
 
     return {
-      headerChecked: selectedLength === props.data.length
+      headerChecked:
+        Object.keys(selectedRows).length &&
+        Object.keys(selectedRows).length ===
+          data.length - Object.keys(disabledRows).length
     };
   }
 
@@ -53,9 +62,10 @@ class CheckboxTable extends React.PureComponent<
   }
 
   render() {
-    const { selectedRows = {}, uniqueKey, data } = this.props;
+    const { selectedRows = {}, mutedRows = {}, uniqueKey, data } = this.props;
     const theme = {
-      coloredRows: data.map(item => selectedRows[item[uniqueKey]])
+      coloredRows: data.map(item => selectedRows[item[uniqueKey]]),
+      mutedRows: data.map(item => mutedRows[item[uniqueKey]])
     };
 
     return (
@@ -72,7 +82,13 @@ class CheckboxTable extends React.PureComponent<
   }
 
   private checkboxCellRenderer(rowData) {
-    const { data, onChange, uniqueKey, selectedRows = {} } = this.props;
+    const {
+      data,
+      onChange,
+      uniqueKey,
+      selectedRows = {},
+      disabledRows = {}
+    } = this.props;
     const rowId = rowData[uniqueKey];
     const rowIndex = data.indexOf(rowData);
     const handleOnChange = e => {
@@ -80,6 +96,10 @@ class CheckboxTable extends React.PureComponent<
         onChange(this.getSelectedRows(rowId, e.target.checked));
       }
     };
+
+    if (disabledRows[rowId]) {
+      return null;
+    }
 
     return (
       <Cell>
@@ -95,12 +115,22 @@ class CheckboxTable extends React.PureComponent<
   }
 
   private getHeaderCheckbox() {
-    const { data, uniqueKey, onChange, selectedRows = {} } = this.props;
+    const {
+      data,
+      uniqueKey,
+      onChange,
+      selectedRows = {},
+      disabledRows = {}
+    } = this.props;
     const selectedLength = Object.keys(selectedRows).length;
-    const allSelected = data.reduce((acc, curr) => {
+    const selectableRows = data.filter(
+      datum => !disabledRows[datum[uniqueKey]]
+    );
+    const allSelected = selectableRows.reduce((acc, curr) => {
       acc[curr[uniqueKey]] = true;
       return acc;
     }, {});
+    const maxSelectedLength = data.length - Object.keys(disabledRows).length;
 
     const handleChange = e => {
       if (onChange) {
@@ -115,14 +145,13 @@ class CheckboxTable extends React.PureComponent<
         inputLabel="Toggle all rows"
         showInputLabel={false}
         checked={
-          (Boolean(selectedLength) &&
-            selectedLength === this.props.data.length) ||
+          (Boolean(selectedLength) && selectedLength === maxSelectedLength) ||
           this.state.headerChecked
         }
         indeterminate={
-          Boolean(selectedLength) && selectedLength < this.props.data.length
+          Boolean(selectedLength) && selectedLength < maxSelectedLength
         }
-        disabled={!Boolean(this.props.data.length)}
+        disabled={!Boolean(maxSelectedLength)}
         onChange={handleChange}
       />
     );
