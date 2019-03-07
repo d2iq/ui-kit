@@ -41,14 +41,14 @@ describe("Tooltip", () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it("toggles state.open to true on mouseEnter", () => {
+  it("toggles state.open to true on mouseOver", () => {
     const component = mount(
       <Tooltip id="hoverOpen" trigger="trigger">
         content
       </Tooltip>
     );
     expect(component.state("open")).toBe(false);
-    component.simulate("mouseEnter");
+    component.simulate("mouseOver");
     expect(component.state("open")).toBe(true);
   });
 

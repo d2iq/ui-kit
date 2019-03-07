@@ -46,10 +46,12 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     } = this.props;
 
     return (
+      /* tslint:disable:react-a11y-event-has-role */
+      /* disabled because there is no appropriate role */
       <span
         aria-label={ariaLabel}
         aria-describedby={id}
-        onMouseEnter={this.handleOpen}
+        onMouseOver={this.handleOpen}
         onMouseLeave={this.handleClose}
         onFocus={this.handleOpen}
         onBlur={this.handleClose}
@@ -74,6 +76,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
           {trigger}
         </Dropdownable>
       </span>
+      /* tslint:enable:react-a11y-event-has-role */
     );
   }
 
