@@ -42,8 +42,8 @@ exports[`Tooltip renders 1`] = `
     aria-describedby="renders"
     onBlur={[Function]}
     onFocus={[Function]}
-    onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    onMouseOver={[Function]}
     tabIndex={0}
   >
     <Dropdownable
@@ -233,8 +233,8 @@ exports[`Tooltip renders open tooltip 1`] = `
     aria-describedby="opened"
     onBlur={[Function]}
     onFocus={[Function]}
-    onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    onMouseOver={[Function]}
     tabIndex={0}
   >
     <Dropdownable
@@ -446,8 +446,8 @@ exports[`Tooltip renders with preferred directions 1`] = `
     aria-describedby="customDir"
     onBlur={[Function]}
     onFocus={[Function]}
-    onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    onMouseOver={[Function]}
     tabIndex={0}
   >
     <Dropdownable
