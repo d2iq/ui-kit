@@ -283,6 +283,7 @@ exports[`CheckboxTable renders default 1`] = `
           >
             <div
               class="emotion-19"
+              data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:151px"
             >
               <div
@@ -318,6 +319,7 @@ exports[`CheckboxTable renders default 1`] = `
             </div>
             <div
               class="emotion-19"
+              data-rowindex="1"
               style="height:35px;left:151px;position:absolute;top:0;width:151px"
             >
               <strong>
@@ -326,6 +328,7 @@ exports[`CheckboxTable renders default 1`] = `
             </div>
             <div
               class="emotion-19"
+              data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:151px"
             >
               <div
@@ -361,6 +364,7 @@ exports[`CheckboxTable renders default 1`] = `
             </div>
             <div
               class="emotion-19"
+              data-rowindex="2"
               style="height:35px;left:151px;position:absolute;top:35px;width:151px"
             >
               <strong>
@@ -385,6 +389,7 @@ exports[`CheckboxTable renders default 1`] = `
         >
           <div
             class="emotion-19"
+            data-rowindex="1"
             style="height:35px;left:0;position:absolute;top:0;width:151px"
           >
             <em>
@@ -393,6 +398,7 @@ exports[`CheckboxTable renders default 1`] = `
           </div>
           <div
             class="emotion-19"
+            data-rowindex="1"
             style="height:35px;left:151px;position:absolute;top:0;width:151px"
           >
             <span>
@@ -401,6 +407,7 @@ exports[`CheckboxTable renders default 1`] = `
           </div>
           <div
             class="emotion-19"
+            data-rowindex="1"
             style="height:35px;left:302px;position:absolute;top:0;width:151px"
           >
             <span>
@@ -409,6 +416,7 @@ exports[`CheckboxTable renders default 1`] = `
           </div>
           <div
             class="emotion-19"
+            data-rowindex="1"
             style="height:35px;left:453px;position:absolute;top:0;width:151px"
           >
             <strong>
@@ -417,6 +425,7 @@ exports[`CheckboxTable renders default 1`] = `
           </div>
           <div
             class="emotion-19"
+            data-rowindex="2"
             style="height:35px;left:0;position:absolute;top:35px;width:151px"
           >
             <em>
@@ -425,6 +434,7 @@ exports[`CheckboxTable renders default 1`] = `
           </div>
           <div
             class="emotion-19"
+            data-rowindex="2"
             style="height:35px;left:151px;position:absolute;top:35px;width:151px"
           >
             <span>
@@ -433,6 +443,7 @@ exports[`CheckboxTable renders default 1`] = `
           </div>
           <div
             class="emotion-19"
+            data-rowindex="2"
             style="height:35px;left:302px;position:absolute;top:35px;width:151px"
           >
             <span>
@@ -441,6 +452,7 @@ exports[`CheckboxTable renders default 1`] = `
           </div>
           <div
             class="emotion-19"
+            data-rowindex="2"
             style="height:35px;left:453px;position:absolute;top:35px;width:151px"
           >
             <strong>
@@ -813,6 +825,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
           >
             <div
               class="emotion-23"
+              data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:151px"
             >
               <div
@@ -866,6 +879,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
             </div>
             <div
               class="emotion-23"
+              data-rowindex="1"
               style="height:35px;left:151px;position:absolute;top:0;width:151px"
             >
               <strong>
@@ -874,6 +888,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
             </div>
             <div
               class="emotion-31"
+              data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:151px"
             >
               <div
@@ -909,6 +924,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
             </div>
             <div
               class="emotion-31"
+              data-rowindex="2"
               style="height:35px;left:151px;position:absolute;top:35px;width:151px"
             >
               <strong>
@@ -933,6 +949,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
         >
           <div
             class="emotion-23"
+            data-rowindex="1"
             style="height:35px;left:0;position:absolute;top:0;width:151px"
           >
             <em>
@@ -941,6 +958,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
           </div>
           <div
             class="emotion-23"
+            data-rowindex="1"
             style="height:35px;left:151px;position:absolute;top:0;width:151px"
           >
             <span>
@@ -949,6 +967,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
           </div>
           <div
             class="emotion-23"
+            data-rowindex="1"
             style="height:35px;left:302px;position:absolute;top:0;width:151px"
           >
             <span>
@@ -957,6 +976,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
           </div>
           <div
             class="emotion-23"
+            data-rowindex="1"
             style="height:35px;left:453px;position:absolute;top:0;width:151px"
           >
             <strong>
@@ -965,6 +985,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
           </div>
           <div
             class="emotion-31"
+            data-rowindex="2"
             style="height:35px;left:0;position:absolute;top:35px;width:151px"
           >
             <em>
@@ -973,6 +994,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
           </div>
           <div
             class="emotion-31"
+            data-rowindex="2"
             style="height:35px;left:151px;position:absolute;top:35px;width:151px"
           >
             <span>
@@ -981,6 +1003,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
           </div>
           <div
             class="emotion-31"
+            data-rowindex="2"
             style="height:35px;left:302px;position:absolute;top:35px;width:151px"
           >
             <span>
@@ -989,6 +1012,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
           </div>
           <div
             class="emotion-31"
+            data-rowindex="2"
             style="height:35px;left:453px;position:absolute;top:35px;width:151px"
           >
             <strong>
@@ -1303,10 +1327,12 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
           >
             <div
               class="emotion-13"
+              data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:151px"
             />
             <div
               class="emotion-13"
+              data-rowindex="1"
               style="height:35px;left:151px;position:absolute;top:0;width:151px"
             >
               <strong>
@@ -1315,6 +1341,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
             </div>
             <div
               class="emotion-21"
+              data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:151px"
             >
               <div
@@ -1350,6 +1377,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
             </div>
             <div
               class="emotion-21"
+              data-rowindex="2"
               style="height:35px;left:151px;position:absolute;top:35px;width:151px"
             >
               <strong>
@@ -1374,6 +1402,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
         >
           <div
             class="emotion-13"
+            data-rowindex="1"
             style="height:35px;left:0;position:absolute;top:0;width:151px"
           >
             <em>
@@ -1382,6 +1411,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
           </div>
           <div
             class="emotion-13"
+            data-rowindex="1"
             style="height:35px;left:151px;position:absolute;top:0;width:151px"
           >
             <span>
@@ -1390,6 +1420,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
           </div>
           <div
             class="emotion-13"
+            data-rowindex="1"
             style="height:35px;left:302px;position:absolute;top:0;width:151px"
           >
             <span>
@@ -1398,6 +1429,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
           </div>
           <div
             class="emotion-13"
+            data-rowindex="1"
             style="height:35px;left:453px;position:absolute;top:0;width:151px"
           >
             <strong>
@@ -1406,6 +1438,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
           </div>
           <div
             class="emotion-21"
+            data-rowindex="2"
             style="height:35px;left:0;position:absolute;top:35px;width:151px"
           >
             <em>
@@ -1414,6 +1447,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
           </div>
           <div
             class="emotion-21"
+            data-rowindex="2"
             style="height:35px;left:151px;position:absolute;top:35px;width:151px"
           >
             <span>
@@ -1422,6 +1456,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
           </div>
           <div
             class="emotion-21"
+            data-rowindex="2"
             style="height:35px;left:302px;position:absolute;top:35px;width:151px"
           >
             <span>
@@ -1430,6 +1465,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
           </div>
           <div
             class="emotion-21"
+            data-rowindex="2"
             style="height:35px;left:453px;position:absolute;top:35px;width:151px"
           >
             <strong>

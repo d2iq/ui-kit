@@ -111,6 +111,22 @@ export const fillColumns = (
   }
 };
 
+const ContentCell = styled("div")`
+  ${props => {
+    return `${
+      props.theme.coloredRows &&
+      props.theme.coloredRows[props["data-rowindex"] - 1]
+        ? rowHoverStyles
+        : ""
+    }
+  ${
+    props.theme.mutedRows && props.theme.mutedRows[props["data-rowindex"] - 1]
+      ? `color: ${textColorSecondary};`
+      : ""
+  }`;
+  }};
+`;
+
 export class Table<T> extends React.PureComponent<TableProps, TableState> {
   public multiGridRef: { recomputeGridSize?: any } = {};
 
@@ -312,21 +328,6 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       this.setState({ hoveredRowIndex: rowIndex });
     };
 
-    const ContentCell = styled("div")`
-      ${props => {
-        return `${
-          props.theme.coloredRows && props.theme.coloredRows[rowIndex - 1]
-            ? rowHoverStyles
-            : ""
-        }
-        ${
-          props.theme.mutedRows && props.theme.mutedRows[rowIndex - 1]
-            ? `color: ${textColorSecondary};`
-            : ""
-        }`;
-      }};
-    `;
-
     return (
       /* tslint:disable:react-a11y-event-has-role */
       <ContentCell
@@ -338,6 +339,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         style={style}
         key={key}
         onMouseOver={updateHoveredRowIndex}
+        data-rowindex={rowIndex}
       >
         {column.props.cellRenderer(data[rowIndex], style.width as number)}
       </ContentCell>
