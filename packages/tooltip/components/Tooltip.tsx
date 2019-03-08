@@ -32,6 +32,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
 
     this.handleClose = this.handleClose.bind(this);
     this.handleOpen = this.handleOpen.bind(this);
+    this.handleDropdownableClose = this.handleDropdownableClose.bind(this);
   }
 
   public render() {
@@ -59,6 +60,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
       >
         <Dropdownable
           open={this.state.open}
+          onClose={this.handleDropdownableClose}
           dropdown={
             <TooltipContent
               id={id}
@@ -78,6 +80,11 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
       </span>
       /* tslint:enable:react-a11y-event-has-role */
     );
+  }
+
+  private handleDropdownableClose() {
+    // No need for inner component to close using "on click outside" since
+    // the parent is handling onMouseLeave already
   }
 
   private handleOpen() {
