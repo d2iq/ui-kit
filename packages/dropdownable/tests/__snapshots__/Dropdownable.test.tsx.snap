@@ -259,19 +259,9 @@ exports[`Dropdownable is visible after opening 2`] = `
         className="emotion-1"
         overlayRoot={
           <body>
-            .emotion-0 {
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  opacity: 1;
-}
-
-<div>
+            <div>
               <div
-                class="emotion-0"
+                class="emotion-1"
               >
                 <div>
                   <p

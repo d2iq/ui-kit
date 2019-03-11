@@ -21,6 +21,11 @@ const DEFAULT_DIRECTION_PREFERENCES = [
   Direction.TopLeft
 ];
 
+const Container = styled("div")`
+  position: relative;
+  display: inline-block;
+`;
+
 export interface DropdownableProps {
   open: boolean;
   dropdown: React.ReactElement<any>;
@@ -94,11 +99,6 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
   }
 
   render() {
-    const Container = styled("div")`
-      position: relative;
-      display: inline-block;
-    `;
-
     return (
       <Container>
         <div ref={this.child}>{this.props.children}</div>
