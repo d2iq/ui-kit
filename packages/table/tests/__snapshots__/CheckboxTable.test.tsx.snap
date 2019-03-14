@@ -13,11 +13,11 @@ exports[`CheckboxTable renders default 1`] = `
   height: 1px;
 }
 
-.emotion-38 {
+.emotion-39 {
   font-weight: normal;
 }
 
-.emotion-38::after {
+.emotion-39::after {
   content: "";
   height: 100%;
   left: 0;
@@ -27,15 +27,19 @@ exports[`CheckboxTable renders default 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-13 {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.emotion-12::-webkit-scrollbar {
+.emotion-13::-webkit-scrollbar {
   display: none;
 }
 
-.emotion-6 {
+.emotion-5 {
+  display: inline-block;
+}
+
+.emotion-7 {
   box-sizing: border-box;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -52,7 +56,7 @@ exports[`CheckboxTable renders default 1`] = `
   justify-content: center;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: inline-block;
   height: auto;
   box-sizing: border-box;
@@ -128,7 +132,7 @@ exports[`CheckboxTable renders default 1`] = `
   height: 1px;
 }
 
-.emotion-19 {
+.emotion-20 {
   box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
   white-space: nowrap;
@@ -145,7 +149,7 @@ exports[`CheckboxTable renders default 1`] = `
   justify-content: center;
 }
 
-.emotion-18 {
+.emotion-19 {
   display: inline-block;
   height: auto;
   box-sizing: border-box;
@@ -154,7 +158,7 @@ exports[`CheckboxTable renders default 1`] = `
 }
 
 <div
-  class="emotion-38"
+  class="emotion-39"
   style="overflow:visible;height:0;width:0"
 >
   <div
@@ -168,51 +172,55 @@ exports[`CheckboxTable renders default 1`] = `
         aria-readonly="true"
         class="ReactVirtualized__Grid"
         role="grid"
-        style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:302px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
+        style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:194.66666666666666px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
       >
         <div
           class="ReactVirtualized__Grid__innerScrollContainer"
           role="rowgroup"
-          style="width:302px;height:35px;max-width:302px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+          style="width:194.66666666666666px;height:35px;max-width:194.66666666666666px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
-            class="emotion-6"
-            style="height:35px;left:0;position:absolute;top:0;width:151px"
+            class="emotion-7"
+            style="height:35px;left:0;position:absolute;top:0;width:24px"
           >
             <div
-              class="emotion-5"
+              class="emotion-6"
             >
-              <div>
-                <label
-                  class="emotion-4"
-                  for="headerCheckbox"
-                >
-                  <div
-                    class="emotion-2"
+              <div
+                class="emotion-5"
+              >
+                <div>
+                  <label
+                    class="emotion-4"
+                    for="headerCheckbox"
                   >
                     <div
-                      class="emotion-1"
+                      class="emotion-2"
                     >
-                      <input
-                        aria-checked="0"
-                        class="emotion-0"
-                        id="headerCheckbox"
-                        type="checkbox"
-                      />
+                      <div
+                        class="emotion-1"
+                      >
+                        <input
+                          aria-checked="0"
+                          class="emotion-0"
+                          id="headerCheckbox"
+                          type="checkbox"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="emotion-3"
-                  >
-                    Toggle all rows
-                  </div>
-                </label>
+                    <div
+                      class="emotion-3"
+                    >
+                      Toggle all rows
+                    </div>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
           <div
-            class="emotion-6"
-            style="height:35px;left:151px;position:absolute;top:0;width:151px"
+            class="emotion-7"
+            style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
           >
             name
           </div>
@@ -220,41 +228,41 @@ exports[`CheckboxTable renders default 1`] = `
       </div>
       <div
         class="TopRightGrid_ScrollWrapper"
-        style="left:302px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:722px"
+        style="left:194.66666666666666px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:829.3333333333334px"
       >
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-12"
+          class="ReactVirtualized__Grid emotion-13"
           role="grid"
-          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:722px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
+          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:829.3333333333334px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
         >
           <div
             class="ReactVirtualized__Grid__innerScrollContainer"
             role="rowgroup"
-            style="width:604px;height:35px;max-width:604px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+            style="width:682.6666666666666px;height:35px;max-width:682.6666666666666px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-6"
-              style="height:35px;left:0;position:absolute;top:0;width:151px"
+              class="emotion-7"
+              style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
             >
               role
             </div>
             <div
-              class="emotion-6"
-              style="height:35px;left:151px;position:absolute;top:0;width:151px"
+              class="emotion-7"
+              style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
             >
               state
             </div>
             <div
-              class="emotion-6"
-              style="height:35px;left:302px;position:absolute;top:0;width:151px"
+              class="emotion-7"
+              style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
             >
               zipcode
             </div>
             <div
-              class="emotion-6"
-              style="height:35px;left:453px;position:absolute;top:0;width:151px"
+              class="emotion-7"
+              style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
             >
               city
             </div>
@@ -267,27 +275,27 @@ exports[`CheckboxTable renders default 1`] = `
     >
       <div
         class="BottomLeftGrid_ScrollWrapper"
-        style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:302px"
+        style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:194.66666666666666px"
       >
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-12"
+          class="ReactVirtualized__Grid emotion-13"
           role="grid"
-          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:302px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
+          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:194.66666666666666px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
         >
           <div
             class="ReactVirtualized__Grid__innerScrollContainer"
             role="rowgroup"
-            style="width:302px;height:70px;max-width:302px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+            style="width:194.66666666666666px;height:70px;max-width:194.66666666666666px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-19"
+              class="emotion-20"
               data-rowindex="1"
-              style="height:35px;left:0;position:absolute;top:0;width:151px"
+              style="height:35px;left:0;position:absolute;top:0;width:24px"
             >
               <div
-                class="emotion-18"
+                class="emotion-19"
               >
                 <div>
                   <label
@@ -318,21 +326,21 @@ exports[`CheckboxTable renders default 1`] = `
               </div>
             </div>
             <div
-              class="emotion-19"
+              class="emotion-20"
               data-rowindex="1"
-              style="height:35px;left:151px;position:absolute;top:0;width:151px"
+              style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
             >
               <strong>
                 Brian Vaughn
               </strong>
             </div>
             <div
-              class="emotion-19"
+              class="emotion-20"
               data-rowindex="2"
-              style="height:35px;left:0;position:absolute;top:35px;width:151px"
+              style="height:35px;left:0;position:absolute;top:35px;width:24px"
             >
               <div
-                class="emotion-18"
+                class="emotion-19"
               >
                 <div>
                   <label
@@ -363,9 +371,9 @@ exports[`CheckboxTable renders default 1`] = `
               </div>
             </div>
             <div
-              class="emotion-19"
+              class="emotion-20"
               data-rowindex="2"
-              style="height:35px;left:151px;position:absolute;top:35px;width:151px"
+              style="height:35px;left:24px;position:absolute;top:35px;width:170.66666666666666px"
             >
               <strong>
                 Jon Doe
@@ -379,81 +387,81 @@ exports[`CheckboxTable renders default 1`] = `
         aria-readonly="true"
         class="ReactVirtualized__Grid"
         role="grid"
-        style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:722px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:302px"
+        style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:829.3333333333334px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:194.66666666666666px"
         tabindex="0"
       >
         <div
           class="ReactVirtualized__Grid__innerScrollContainer"
           role="rowgroup"
-          style="width:604px;height:70px;max-width:604px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+          style="width:682.6666666666666px;height:70px;max-width:682.6666666666666px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
-            class="emotion-19"
+            class="emotion-20"
             data-rowindex="1"
-            style="height:35px;left:0;position:absolute;top:0;width:151px"
+            style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
           >
             <em>
               Software Engineer
             </em>
           </div>
           <div
-            class="emotion-19"
+            class="emotion-20"
             data-rowindex="1"
-            style="height:35px;left:151px;position:absolute;top:0;width:151px"
+            style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
           >
             <span>
               CA
             </span>
           </div>
           <div
-            class="emotion-19"
+            class="emotion-20"
             data-rowindex="1"
-            style="height:35px;left:302px;position:absolute;top:0;width:151px"
+            style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
           >
             <span>
               95125
             </span>
           </div>
           <div
-            class="emotion-19"
+            class="emotion-20"
             data-rowindex="1"
-            style="height:35px;left:453px;position:absolute;top:0;width:151px"
+            style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
           >
             <strong>
               San Jose
             </strong>
           </div>
           <div
-            class="emotion-19"
+            class="emotion-20"
             data-rowindex="2"
-            style="height:35px;left:0;position:absolute;top:35px;width:151px"
+            style="height:35px;left:0;position:absolute;top:35px;width:170.66666666666666px"
           >
             <em>
               Product engineer
             </em>
           </div>
           <div
-            class="emotion-19"
+            class="emotion-20"
             data-rowindex="2"
-            style="height:35px;left:151px;position:absolute;top:35px;width:151px"
+            style="height:35px;left:170.66666666666666px;position:absolute;top:35px;width:170.66666666666666px"
           >
             <span>
               CA
             </span>
           </div>
           <div
-            class="emotion-19"
+            class="emotion-20"
             data-rowindex="2"
-            style="height:35px;left:302px;position:absolute;top:35px;width:151px"
+            style="height:35px;left:341.3333333333333px;position:absolute;top:35px;width:170.66666666666666px"
           >
             <span>
               95125
             </span>
           </div>
           <div
-            class="emotion-19"
+            class="emotion-20"
             data-rowindex="2"
-            style="height:35px;left:453px;position:absolute;top:35px;width:151px"
+            style="height:35px;left:512px;position:absolute;top:35px;width:170.66666666666666px"
           >
             <strong>
               Mountain View
@@ -479,11 +487,11 @@ exports[`CheckboxTable renders with checked row 1`] = `
   height: 1px;
 }
 
-.emotion-42 {
+.emotion-43 {
   font-weight: normal;
 }
 
-.emotion-42::after {
+.emotion-43::after {
   content: "";
   height: 100%;
   left: 0;
@@ -493,15 +501,19 @@ exports[`CheckboxTable renders with checked row 1`] = `
   width: 100%;
 }
 
-.emotion-14 {
+.emotion-15 {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.emotion-14::-webkit-scrollbar {
+.emotion-15::-webkit-scrollbar {
   display: none;
 }
 
-.emotion-8 {
+.emotion-7 {
+  display: inline-block;
+}
+
+.emotion-9 {
   box-sizing: border-box;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -518,7 +530,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
   justify-content: center;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: inline-block;
   height: auto;
   box-sizing: border-box;
@@ -528,7 +540,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
   font-weight: bold;
 }
 
-.emotion-26 {
+.emotion-27 {
   border-color: #DADDE2;
   background-color: #FFF;
   border-style: solid;
@@ -594,7 +606,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
   height: 1px;
 }
 
-.emotion-31 {
+.emotion-32 {
   box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
   white-space: nowrap;
@@ -611,7 +623,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
   justify-content: center;
 }
 
-.emotion-22 {
+.emotion-23 {
   display: inline-block;
   height: auto;
   box-sizing: border-box;
@@ -658,7 +670,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
   pointer-events: none;
 }
 
-.emotion-23 {
+.emotion-24 {
   background-color: #F7F8F9;
   mix-blend-mode: multiply;
   will-change: left;
@@ -679,7 +691,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
 }
 
 <div
-  class="emotion-42"
+  class="emotion-43"
   style="overflow:visible;height:0;width:0"
 >
   <div
@@ -693,68 +705,72 @@ exports[`CheckboxTable renders with checked row 1`] = `
         aria-readonly="true"
         class="ReactVirtualized__Grid"
         role="grid"
-        style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:302px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
+        style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:194.66666666666666px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
       >
         <div
           class="ReactVirtualized__Grid__innerScrollContainer"
           role="rowgroup"
-          style="width:302px;height:35px;max-width:302px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+          style="width:194.66666666666666px;height:35px;max-width:194.66666666666666px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
-            class="emotion-8"
-            style="height:35px;left:0;position:absolute;top:0;width:151px"
+            class="emotion-9"
+            style="height:35px;left:0;position:absolute;top:0;width:24px"
           >
             <div
-              class="emotion-7"
+              class="emotion-8"
             >
-              <div>
-                <label
-                  class="emotion-6"
-                  for="headerCheckbox"
-                >
-                  <div
-                    class="emotion-4"
+              <div
+                class="emotion-7"
+              >
+                <div>
+                  <label
+                    class="emotion-6"
+                    for="headerCheckbox"
                   >
                     <div
-                      class="emotion-3"
+                      class="emotion-4"
                     >
-                      <input
-                        aria-checked="mixed"
-                        class="emotion-0"
-                        id="headerCheckbox"
-                        type="checkbox"
-                      />
-                      <span
-                        class="emotion-2"
+                      <div
+                        class="emotion-3"
                       >
-                        <svg
-                          aria-label="system-minus icon"
-                          class="emotion-1"
-                          height="16"
-                          preserveAspectRatio="xMinYMin meet"
-                          role="img"
-                          viewBox="0 0 16 16"
-                          width="16"
+                        <input
+                          aria-checked="mixed"
+                          class="emotion-0"
+                          id="headerCheckbox"
+                          type="checkbox"
+                        />
+                        <span
+                          class="emotion-2"
                         >
-                          <use
-                            href="#system-minus"
-                          />
-                        </svg>
-                      </span>
+                          <svg
+                            aria-label="system-minus icon"
+                            class="emotion-1"
+                            height="16"
+                            preserveAspectRatio="xMinYMin meet"
+                            role="img"
+                            viewBox="0 0 16 16"
+                            width="16"
+                          >
+                            <use
+                              href="#system-minus"
+                            />
+                          </svg>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="emotion-5"
-                  >
-                    Toggle all rows
-                  </div>
-                </label>
+                    <div
+                      class="emotion-5"
+                    >
+                      Toggle all rows
+                    </div>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
           <div
-            class="emotion-8"
-            style="height:35px;left:151px;position:absolute;top:0;width:151px"
+            class="emotion-9"
+            style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
           >
             name
           </div>
@@ -762,41 +778,41 @@ exports[`CheckboxTable renders with checked row 1`] = `
       </div>
       <div
         class="TopRightGrid_ScrollWrapper"
-        style="left:302px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:722px"
+        style="left:194.66666666666666px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:829.3333333333334px"
       >
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-14"
+          class="ReactVirtualized__Grid emotion-15"
           role="grid"
-          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:722px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
+          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:829.3333333333334px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
         >
           <div
             class="ReactVirtualized__Grid__innerScrollContainer"
             role="rowgroup"
-            style="width:604px;height:35px;max-width:604px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+            style="width:682.6666666666666px;height:35px;max-width:682.6666666666666px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-8"
-              style="height:35px;left:0;position:absolute;top:0;width:151px"
+              class="emotion-9"
+              style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
             >
               role
             </div>
             <div
-              class="emotion-8"
-              style="height:35px;left:151px;position:absolute;top:0;width:151px"
+              class="emotion-9"
+              style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
             >
               state
             </div>
             <div
-              class="emotion-8"
-              style="height:35px;left:302px;position:absolute;top:0;width:151px"
+              class="emotion-9"
+              style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
             >
               zipcode
             </div>
             <div
-              class="emotion-8"
-              style="height:35px;left:453px;position:absolute;top:0;width:151px"
+              class="emotion-9"
+              style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
             >
               city
             </div>
@@ -809,27 +825,27 @@ exports[`CheckboxTable renders with checked row 1`] = `
     >
       <div
         class="BottomLeftGrid_ScrollWrapper"
-        style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:302px"
+        style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:194.66666666666666px"
       >
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-14"
+          class="ReactVirtualized__Grid emotion-15"
           role="grid"
-          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:302px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
+          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:194.66666666666666px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
         >
           <div
             class="ReactVirtualized__Grid__innerScrollContainer"
             role="rowgroup"
-            style="width:302px;height:70px;max-width:302px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+            style="width:194.66666666666666px;height:70px;max-width:194.66666666666666px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-23"
+              class="emotion-24"
               data-rowindex="1"
-              style="height:35px;left:0;position:absolute;top:0;width:151px"
+              style="height:35px;left:0;position:absolute;top:0;width:24px"
             >
               <div
-                class="emotion-22"
+                class="emotion-23"
               >
                 <div>
                   <label
@@ -878,21 +894,21 @@ exports[`CheckboxTable renders with checked row 1`] = `
               </div>
             </div>
             <div
-              class="emotion-23"
+              class="emotion-24"
               data-rowindex="1"
-              style="height:35px;left:151px;position:absolute;top:0;width:151px"
+              style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
             >
               <strong>
                 Brian Vaughn
               </strong>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-32"
               data-rowindex="2"
-              style="height:35px;left:0;position:absolute;top:35px;width:151px"
+              style="height:35px;left:0;position:absolute;top:35px;width:24px"
             >
               <div
-                class="emotion-22"
+                class="emotion-23"
               >
                 <div>
                   <label
@@ -903,7 +919,7 @@ exports[`CheckboxTable renders with checked row 1`] = `
                       class="emotion-4"
                     >
                       <div
-                        class="emotion-26"
+                        class="emotion-27"
                       >
                         <input
                           aria-checked="false"
@@ -923,9 +939,9 @@ exports[`CheckboxTable renders with checked row 1`] = `
               </div>
             </div>
             <div
-              class="emotion-31"
+              class="emotion-32"
               data-rowindex="2"
-              style="height:35px;left:151px;position:absolute;top:35px;width:151px"
+              style="height:35px;left:24px;position:absolute;top:35px;width:170.66666666666666px"
             >
               <strong>
                 Jon Doe
@@ -939,81 +955,81 @@ exports[`CheckboxTable renders with checked row 1`] = `
         aria-readonly="true"
         class="ReactVirtualized__Grid"
         role="grid"
-        style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:722px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:302px"
+        style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:829.3333333333334px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:194.66666666666666px"
         tabindex="0"
       >
         <div
           class="ReactVirtualized__Grid__innerScrollContainer"
           role="rowgroup"
-          style="width:604px;height:70px;max-width:604px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+          style="width:682.6666666666666px;height:70px;max-width:682.6666666666666px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
-            class="emotion-23"
+            class="emotion-24"
             data-rowindex="1"
-            style="height:35px;left:0;position:absolute;top:0;width:151px"
+            style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
           >
             <em>
               Software Engineer
             </em>
           </div>
           <div
-            class="emotion-23"
+            class="emotion-24"
             data-rowindex="1"
-            style="height:35px;left:151px;position:absolute;top:0;width:151px"
+            style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
           >
             <span>
               CA
             </span>
           </div>
           <div
-            class="emotion-23"
+            class="emotion-24"
             data-rowindex="1"
-            style="height:35px;left:302px;position:absolute;top:0;width:151px"
+            style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
           >
             <span>
               95125
             </span>
           </div>
           <div
-            class="emotion-23"
+            class="emotion-24"
             data-rowindex="1"
-            style="height:35px;left:453px;position:absolute;top:0;width:151px"
+            style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
           >
             <strong>
               San Jose
             </strong>
           </div>
           <div
-            class="emotion-31"
+            class="emotion-32"
             data-rowindex="2"
-            style="height:35px;left:0;position:absolute;top:35px;width:151px"
+            style="height:35px;left:0;position:absolute;top:35px;width:170.66666666666666px"
           >
             <em>
               Product engineer
             </em>
           </div>
           <div
-            class="emotion-31"
+            class="emotion-32"
             data-rowindex="2"
-            style="height:35px;left:151px;position:absolute;top:35px;width:151px"
+            style="height:35px;left:170.66666666666666px;position:absolute;top:35px;width:170.66666666666666px"
           >
             <span>
               CA
             </span>
           </div>
           <div
-            class="emotion-31"
+            class="emotion-32"
             data-rowindex="2"
-            style="height:35px;left:302px;position:absolute;top:35px;width:151px"
+            style="height:35px;left:341.3333333333333px;position:absolute;top:35px;width:170.66666666666666px"
           >
             <span>
               95125
             </span>
           </div>
           <div
-            class="emotion-31"
+            class="emotion-32"
             data-rowindex="2"
-            style="height:35px;left:453px;position:absolute;top:35px;width:151px"
+            style="height:35px;left:512px;position:absolute;top:35px;width:170.66666666666666px"
           >
             <strong>
               Mountain View
@@ -1039,11 +1055,11 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
   height: 1px;
 }
 
-.emotion-32 {
+.emotion-33 {
   font-weight: normal;
 }
 
-.emotion-32::after {
+.emotion-33::after {
   content: "";
   height: 100%;
   left: 0;
@@ -1053,15 +1069,19 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-13 {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.emotion-12::-webkit-scrollbar {
+.emotion-13::-webkit-scrollbar {
   display: none;
 }
 
-.emotion-6 {
+.emotion-5 {
+  display: inline-block;
+}
+
+.emotion-7 {
   box-sizing: border-box;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -1078,7 +1098,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
   justify-content: center;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: inline-block;
   height: auto;
   box-sizing: border-box;
@@ -1154,7 +1174,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
   height: 1px;
 }
 
-.emotion-21 {
+.emotion-22 {
   box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
   white-space: nowrap;
@@ -1171,7 +1191,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
   justify-content: center;
 }
 
-.emotion-20 {
+.emotion-21 {
   display: inline-block;
   height: auto;
   box-sizing: border-box;
@@ -1179,7 +1199,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
   text-align: left;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #76797E;
   box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
@@ -1198,7 +1218,7 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
 }
 
 <div
-  class="emotion-32"
+  class="emotion-33"
   style="overflow:visible;height:0;width:0"
 >
   <div
@@ -1212,51 +1232,55 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
         aria-readonly="true"
         class="ReactVirtualized__Grid"
         role="grid"
-        style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:302px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
+        style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:194.66666666666666px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
       >
         <div
           class="ReactVirtualized__Grid__innerScrollContainer"
           role="rowgroup"
-          style="width:302px;height:35px;max-width:302px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+          style="width:194.66666666666666px;height:35px;max-width:194.66666666666666px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
-            class="emotion-6"
-            style="height:35px;left:0;position:absolute;top:0;width:151px"
+            class="emotion-7"
+            style="height:35px;left:0;position:absolute;top:0;width:24px"
           >
             <div
-              class="emotion-5"
+              class="emotion-6"
             >
-              <div>
-                <label
-                  class="emotion-4"
-                  for="headerCheckbox"
-                >
-                  <div
-                    class="emotion-2"
+              <div
+                class="emotion-5"
+              >
+                <div>
+                  <label
+                    class="emotion-4"
+                    for="headerCheckbox"
                   >
                     <div
-                      class="emotion-1"
+                      class="emotion-2"
                     >
-                      <input
-                        aria-checked="0"
-                        class="emotion-0"
-                        id="headerCheckbox"
-                        type="checkbox"
-                      />
+                      <div
+                        class="emotion-1"
+                      >
+                        <input
+                          aria-checked="0"
+                          class="emotion-0"
+                          id="headerCheckbox"
+                          type="checkbox"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    class="emotion-3"
-                  >
-                    Toggle all rows
-                  </div>
-                </label>
+                    <div
+                      class="emotion-3"
+                    >
+                      Toggle all rows
+                    </div>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
           <div
-            class="emotion-6"
-            style="height:35px;left:151px;position:absolute;top:0;width:151px"
+            class="emotion-7"
+            style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
           >
             name
           </div>
@@ -1264,41 +1288,41 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
       </div>
       <div
         class="TopRightGrid_ScrollWrapper"
-        style="left:302px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:722px"
+        style="left:194.66666666666666px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:829.3333333333334px"
       >
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-12"
+          class="ReactVirtualized__Grid emotion-13"
           role="grid"
-          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:722px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
+          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:829.3333333333334px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
         >
           <div
             class="ReactVirtualized__Grid__innerScrollContainer"
             role="rowgroup"
-            style="width:604px;height:35px;max-width:604px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+            style="width:682.6666666666666px;height:35px;max-width:682.6666666666666px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-6"
-              style="height:35px;left:0;position:absolute;top:0;width:151px"
+              class="emotion-7"
+              style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
             >
               role
             </div>
             <div
-              class="emotion-6"
-              style="height:35px;left:151px;position:absolute;top:0;width:151px"
+              class="emotion-7"
+              style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
             >
               state
             </div>
             <div
-              class="emotion-6"
-              style="height:35px;left:302px;position:absolute;top:0;width:151px"
+              class="emotion-7"
+              style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
             >
               zipcode
             </div>
             <div
-              class="emotion-6"
-              style="height:35px;left:453px;position:absolute;top:0;width:151px"
+              class="emotion-7"
+              style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
             >
               city
             </div>
@@ -1311,41 +1335,41 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
     >
       <div
         class="BottomLeftGrid_ScrollWrapper"
-        style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:302px"
+        style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:194.66666666666666px"
       >
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-12"
+          class="ReactVirtualized__Grid emotion-13"
           role="grid"
-          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:302px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
+          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:194.66666666666666px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
         >
           <div
             class="ReactVirtualized__Grid__innerScrollContainer"
             role="rowgroup"
-            style="width:302px;height:70px;max-width:302px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+            style="width:194.66666666666666px;height:70px;max-width:194.66666666666666px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-13"
+              class="emotion-14"
               data-rowindex="1"
-              style="height:35px;left:0;position:absolute;top:0;width:151px"
+              style="height:35px;left:0;position:absolute;top:0;width:24px"
             />
             <div
-              class="emotion-13"
+              class="emotion-14"
               data-rowindex="1"
-              style="height:35px;left:151px;position:absolute;top:0;width:151px"
+              style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
             >
               <strong>
                 Brian Vaughn
               </strong>
             </div>
             <div
-              class="emotion-21"
+              class="emotion-22"
               data-rowindex="2"
-              style="height:35px;left:0;position:absolute;top:35px;width:151px"
+              style="height:35px;left:0;position:absolute;top:35px;width:24px"
             >
               <div
-                class="emotion-20"
+                class="emotion-21"
               >
                 <div>
                   <label
@@ -1376,9 +1400,9 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
               </div>
             </div>
             <div
-              class="emotion-21"
+              class="emotion-22"
               data-rowindex="2"
-              style="height:35px;left:151px;position:absolute;top:35px;width:151px"
+              style="height:35px;left:24px;position:absolute;top:35px;width:170.66666666666666px"
             >
               <strong>
                 Jon Doe
@@ -1392,81 +1416,81 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
         aria-readonly="true"
         class="ReactVirtualized__Grid"
         role="grid"
-        style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:722px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:302px"
+        style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:829.3333333333334px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:194.66666666666666px"
         tabindex="0"
       >
         <div
           class="ReactVirtualized__Grid__innerScrollContainer"
           role="rowgroup"
-          style="width:604px;height:70px;max-width:604px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+          style="width:682.6666666666666px;height:70px;max-width:682.6666666666666px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
-            class="emotion-13"
+            class="emotion-14"
             data-rowindex="1"
-            style="height:35px;left:0;position:absolute;top:0;width:151px"
+            style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
           >
             <em>
               Software Engineer
             </em>
           </div>
           <div
-            class="emotion-13"
+            class="emotion-14"
             data-rowindex="1"
-            style="height:35px;left:151px;position:absolute;top:0;width:151px"
+            style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
           >
             <span>
               CA
             </span>
           </div>
           <div
-            class="emotion-13"
+            class="emotion-14"
             data-rowindex="1"
-            style="height:35px;left:302px;position:absolute;top:0;width:151px"
+            style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
           >
             <span>
               95125
             </span>
           </div>
           <div
-            class="emotion-13"
+            class="emotion-14"
             data-rowindex="1"
-            style="height:35px;left:453px;position:absolute;top:0;width:151px"
+            style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
           >
             <strong>
               San Jose
             </strong>
           </div>
           <div
-            class="emotion-21"
+            class="emotion-22"
             data-rowindex="2"
-            style="height:35px;left:0;position:absolute;top:35px;width:151px"
+            style="height:35px;left:0;position:absolute;top:35px;width:170.66666666666666px"
           >
             <em>
               Product engineer
             </em>
           </div>
           <div
-            class="emotion-21"
+            class="emotion-22"
             data-rowindex="2"
-            style="height:35px;left:151px;position:absolute;top:35px;width:151px"
+            style="height:35px;left:170.66666666666666px;position:absolute;top:35px;width:170.66666666666666px"
           >
             <span>
               CA
             </span>
           </div>
           <div
-            class="emotion-21"
+            class="emotion-22"
             data-rowindex="2"
-            style="height:35px;left:302px;position:absolute;top:35px;width:151px"
+            style="height:35px;left:341.3333333333333px;position:absolute;top:35px;width:170.66666666666666px"
           >
             <span>
               95125
             </span>
           </div>
           <div
-            class="emotion-21"
+            class="emotion-22"
             data-rowindex="2"
-            style="height:35px;left:453px;position:absolute;top:35px;width:151px"
+            style="height:35px;left:512px;position:absolute;top:35px;width:170.66666666666666px"
           >
             <strong>
               Mountain View

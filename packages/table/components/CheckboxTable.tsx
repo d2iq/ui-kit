@@ -3,6 +3,9 @@ import { ThemeProvider } from "emotion-theming";
 import { Table, Column, Cell, HeaderCell } from "..";
 import { TableProps } from "./Table";
 import CheckboxInput from "../../checkboxInput/components/CheckboxInput";
+import { WidthArgs } from "./Column";
+import { display } from "../../shared/styles/styleUtils";
+import { spaceM } from "../../design-tokens/build/js/designTokens";
 
 export interface CheckboxTableProps extends TableProps {
   /**
@@ -48,6 +51,7 @@ class CheckboxTable extends React.PureComponent<
           data.length - Object.keys(disabledRows).length
     };
   }
+  private checkboxRef = React.createRef<HTMLDivElement>();
 
   constructor(props) {
     super(props);
@@ -59,6 +63,7 @@ class CheckboxTable extends React.PureComponent<
     this.getSelectedRows = this.getSelectedRows.bind(this);
     this.checkboxCellRenderer = this.checkboxCellRenderer.bind(this);
     this.getHeaderCheckbox = this.getHeaderCheckbox.bind(this);
+    this.getCheckboxColWidth = this.getCheckboxColWidth.bind(this);
   }
 
   render() {
@@ -74,11 +79,20 @@ class CheckboxTable extends React.PureComponent<
           <Column
             header={<HeaderCell>{this.getHeaderCheckbox()}</HeaderCell>}
             cellRenderer={this.checkboxCellRenderer}
+            width={this.getCheckboxColWidth}
           />
           {this.props.children as any}
         </Table>
       </ThemeProvider>
     );
+  }
+
+  private getCheckboxColWidth(_args: WidthArgs) {
+    const checkbox = this.checkboxRef.current;
+
+    return checkbox
+      ? checkbox.getBoundingClientRect().width + parseInt(spaceM, 10)
+      : 24;
   }
 
   private checkboxCellRenderer(rowData) {
@@ -140,20 +154,22 @@ class CheckboxTable extends React.PureComponent<
     };
 
     return (
-      <CheckboxInput
-        id="headerCheckbox"
-        inputLabel="Toggle all rows"
-        showInputLabel={false}
-        checked={
-          (Boolean(selectedLength) && selectedLength === maxSelectedLength) ||
-          this.state.headerChecked
-        }
-        indeterminate={
-          Boolean(selectedLength) && selectedLength < maxSelectedLength
-        }
-        disabled={!Boolean(maxSelectedLength)}
-        onChange={handleChange}
-      />
+      <div ref={this.checkboxRef} className={display("inline-block")}>
+        <CheckboxInput
+          id="headerCheckbox"
+          inputLabel="Toggle all rows"
+          showInputLabel={false}
+          checked={
+            (Boolean(selectedLength) && selectedLength === maxSelectedLength) ||
+            this.state.headerChecked
+          }
+          indeterminate={
+            Boolean(selectedLength) && selectedLength < maxSelectedLength
+          }
+          disabled={!Boolean(maxSelectedLength)}
+          onChange={handleChange}
+        />
+      </div>
     );
   }
 

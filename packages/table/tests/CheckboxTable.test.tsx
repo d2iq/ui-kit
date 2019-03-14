@@ -177,7 +177,7 @@ describe("CheckboxTable", () => {
 
     expect(onChangeFn).not.toHaveBeenCalled();
     checkboxComponent
-      .find("input")
+      .find("#headerCheckbox")
       .simulate("change", { target: { checked: true } });
 
     expect(onChangeFn).toHaveBeenCalledWith(
@@ -187,7 +187,7 @@ describe("CheckboxTable", () => {
       }, {})
     );
     checkboxComponent
-      .find("input")
+      .find("#headerCheckbox")
       .simulate("change", { target: { checked: false } });
     expect(onChangeFn).toHaveBeenCalledWith({});
   });
