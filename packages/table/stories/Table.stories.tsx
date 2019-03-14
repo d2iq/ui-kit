@@ -92,7 +92,7 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
-  .addWithInfo("column width match content", () => (
+  .addWithInfo("default column widths", () => (
     <div
       style={{
         height: "175px",
@@ -104,28 +104,33 @@ storiesOf("Table", module)
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
+          growToFill={true}
+          minWidth={100}
+          maxWidth={150}
         />
         <Column
           header={<HeaderCell>role</HeaderCell>}
           cellRenderer={roleCellRenderer}
+          growToFill={true}
         />
         <Column
           header={<HeaderCell>state</HeaderCell>}
           cellRenderer={stateCellRenderer}
+          growToFill={true}
+          minWidth={100}
+          maxWidth={150}
         />
         <Column
           header={<HeaderCell>Very Long</HeaderCell>}
           cellRenderer={veryLongRenderer}
-          maxWidth={300}
+          growToFill={true}
         />
         <Column
           header={<HeaderCell textAlign="right">zip code</HeaderCell>}
           cellRenderer={zipcodeCellRenderer}
-        />
-        <Column
-          header={<HeaderCell>city</HeaderCell>}
-          cellRenderer={cityCellRenderer}
-          maxWidth={200}
+          growToFill={true}
+          minWidth={100}
+          maxWidth={150}
         />
       </Table>
     </div>
@@ -142,6 +147,9 @@ storiesOf("Table", module)
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
+          growToFill={true}
+          minWidth={100}
+          maxWidth={150}
         />
         <Column
           header={<HeaderCell>role</HeaderCell>}
@@ -151,20 +159,21 @@ storiesOf("Table", module)
         <Column
           header={<HeaderCell>state</HeaderCell>}
           cellRenderer={stateCellRenderer}
+          growToFill={true}
+          minWidth={100}
+          maxWidth={150}
         />
         <Column
           header={<HeaderCell>Very Long</HeaderCell>}
           cellRenderer={veryLongRenderer}
-          maxWidth={300}
+          growToFill={true}
         />
         <Column
           header={<HeaderCell textAlign="right">zip code</HeaderCell>}
           cellRenderer={zipcodeCellRenderer}
-        />
-        <Column
-          header={<HeaderCell>city</HeaderCell>}
-          cellRenderer={cityCellRenderer}
           growToFill={true}
+          minWidth={100}
+          maxWidth={150}
         />
       </Table>
     </div>

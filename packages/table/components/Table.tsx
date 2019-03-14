@@ -1,13 +1,7 @@
 import * as React from "react";
 import { cx, css } from "emotion";
 import styled from "react-emotion";
-import {
-  AutoSizer,
-  MultiGrid,
-  GridCellProps,
-  CellMeasurer,
-  CellMeasurerCache
-} from "react-virtualized";
+import { AutoSizer, MultiGrid, GridCellProps } from "react-virtualized";
 
 import {
   headerCss,
@@ -152,9 +146,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
               currentIndex,
               remainingWidth
             })
-          : this.cellMeasureCache.columnWidth({ index: currentIndex }) + 1;
-        // Adding 1 pixel to the calculated columnWidth for when we use `text-overflow: ellipsis`.
-        // In rare cases, the browser will try and truncate the text too soon
+          : width / totalColumns;
 
         const clampedWidth = clampWidth(
           calculatedWidth,
@@ -173,12 +165,6 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     }
   );
 
-  private cellMeasureCache = new CellMeasurerCache({
-    defaultHeight: this.props.rowHeight || ROW_HEIGHT,
-    defaultWidth: 150,
-    fixedHeight: true
-  });
-
   constructor(props) {
     super(props);
 
@@ -193,16 +179,6 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       isScrolling: false,
       hoveredRowIndex: -1
     };
-  }
-
-  public componentDidUpdate(prevProps: TableProps) {
-    if (
-      this.props.children !== prevProps.children ||
-      this.props.data !== prevProps.data
-    ) {
-      this.cellMeasureCache.clearAll();
-      this.updateGridSize();
-    }
   }
 
   public render() {
@@ -285,19 +261,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
   }
 
   private cellRenderer(args: GridCellProps) {
-    const { columnIndex, rowIndex, key, parent } = args;
-
-    return (
-      <CellMeasurer
-        cache={this.cellMeasureCache}
-        columnIndex={columnIndex}
-        key={key}
-        parent={parent}
-        rowIndex={rowIndex}
-      >
-        {this.getCell(args)}
-      </CellMeasurer>
-    );
+    return this.getCell(args);
   }
 
   private getCell(args: GridCellProps) {

@@ -17,6 +17,8 @@ export interface ColumnProps {
   cellRenderer: (data: any, width: number) => React.ReactNode;
   /**
    * width should return a column width in pixels.
+   * If no function is provided, columns will distribute
+   * their width evenly
    */
   width?: (args: WidthArgs) => number;
   /**

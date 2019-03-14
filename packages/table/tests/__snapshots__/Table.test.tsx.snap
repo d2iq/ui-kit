@@ -475,16 +475,16 @@ exports[`Table renders with growToFill cols 1`] = `
         aria-readonly="true"
         class="ReactVirtualized__Grid"
         role="grid"
-        style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:151px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
+        style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:204.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
       >
         <div
           class="ReactVirtualized__Grid__innerScrollContainer"
           role="rowgroup"
-          style="width:151px;height:35px;max-width:151px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+          style="width:204.8px;height:35px;max-width:204.8px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
             class="emotion-0"
-            style="height:35px;left:0;position:absolute;top:0;width:151px"
+            style="height:35px;left:0;position:absolute;top:0;width:204.8px"
           >
             name
           </div>
@@ -492,41 +492,41 @@ exports[`Table renders with growToFill cols 1`] = `
       </div>
       <div
         class="TopRightGrid_ScrollWrapper"
-        style="left:151px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:873px"
+        style="left:204.8px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:819.2px"
       >
         <div
           aria-label="grid"
           aria-readonly="true"
           class="ReactVirtualized__Grid emotion-5"
           role="grid"
-          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:873px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
+          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:819.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
         >
           <div
             class="ReactVirtualized__Grid__innerScrollContainer"
             role="rowgroup"
-            style="width:916.4000000000001px;height:35px;max-width:916.4000000000001px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+            style="width:1024px;height:35px;max-width:1024px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
               class="emotion-0"
-              style="height:35px;left:0;position:absolute;top:0;width:151px"
+              style="height:35px;left:0;position:absolute;top:0;width:204.8px"
             >
               role
             </div>
             <div
               class="emotion-0"
-              style="height:35px;left:151px;position:absolute;top:0;width:151px"
+              style="height:35px;left:204.8px;position:absolute;top:0;width:204.8px"
             >
               state
             </div>
             <div
               class="emotion-0"
-              style="height:35px;left:302px;position:absolute;top:0;width:307.2px"
+              style="height:35px;left:409.6px;position:absolute;top:0;width:307.2px"
             >
               zipcode
             </div>
             <div
               class="emotion-0"
-              style="height:35px;left:609.2px;position:absolute;top:0;width:307.2px"
+              style="height:35px;left:716.8px;position:absolute;top:0;width:307.2px"
             >
               city
             </div>
@@ -539,24 +539,24 @@ exports[`Table renders with growToFill cols 1`] = `
     >
       <div
         class="BottomLeftGrid_ScrollWrapper"
-        style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:151px"
+        style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:204.8px"
       >
         <div
           aria-label="grid"
           aria-readonly="true"
           class="ReactVirtualized__Grid emotion-5"
           role="grid"
-          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:151px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
+          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:204.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
         >
           <div
             class="ReactVirtualized__Grid__innerScrollContainer"
             role="rowgroup"
-            style="width:151px;height:70px;max-width:151px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+            style="width:204.8px;height:70px;max-width:204.8px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
               class="emotion-6"
               data-rowindex="1"
-              style="height:35px;left:0;position:absolute;top:0;width:151px"
+              style="height:35px;left:0;position:absolute;top:0;width:204.8px"
             >
               <strong>
                 Brian Vaughn
@@ -565,7 +565,7 @@ exports[`Table renders with growToFill cols 1`] = `
             <div
               class="emotion-6"
               data-rowindex="2"
-              style="height:35px;left:0;position:absolute;top:35px;width:151px"
+              style="height:35px;left:0;position:absolute;top:35px;width:204.8px"
             >
               <strong>
                 Jon Doe
@@ -579,18 +579,18 @@ exports[`Table renders with growToFill cols 1`] = `
         aria-readonly="true"
         class="ReactVirtualized__Grid"
         role="grid"
-        style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:873px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:151px"
+        style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:819.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:204.8px"
         tabindex="0"
       >
         <div
           class="ReactVirtualized__Grid__innerScrollContainer"
           role="rowgroup"
-          style="width:916.4000000000001px;height:70px;max-width:916.4000000000001px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+          style="width:1024px;height:70px;max-width:1024px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
             class="emotion-6"
             data-rowindex="1"
-            style="height:35px;left:0;position:absolute;top:0;width:151px"
+            style="height:35px;left:0;position:absolute;top:0;width:204.8px"
           >
             <em>
               Software Engineer
@@ -599,7 +599,7 @@ exports[`Table renders with growToFill cols 1`] = `
           <div
             class="emotion-6"
             data-rowindex="1"
-            style="height:35px;left:151px;position:absolute;top:0;width:151px"
+            style="height:35px;left:204.8px;position:absolute;top:0;width:204.8px"
           >
             <span>
               CA
@@ -608,7 +608,7 @@ exports[`Table renders with growToFill cols 1`] = `
           <div
             class="emotion-6"
             data-rowindex="1"
-            style="height:35px;left:302px;position:absolute;top:0;width:307.2px"
+            style="height:35px;left:409.6px;position:absolute;top:0;width:307.2px"
           >
             <span>
               95125
@@ -617,7 +617,7 @@ exports[`Table renders with growToFill cols 1`] = `
           <div
             class="emotion-6"
             data-rowindex="1"
-            style="height:35px;left:609.2px;position:absolute;top:0;width:307.2px"
+            style="height:35px;left:716.8px;position:absolute;top:0;width:307.2px"
           >
             <strong>
               San Jose
@@ -626,7 +626,7 @@ exports[`Table renders with growToFill cols 1`] = `
           <div
             class="emotion-6"
             data-rowindex="2"
-            style="height:35px;left:0;position:absolute;top:35px;width:151px"
+            style="height:35px;left:0;position:absolute;top:35px;width:204.8px"
           >
             <em>
               Product engineer
@@ -635,7 +635,7 @@ exports[`Table renders with growToFill cols 1`] = `
           <div
             class="emotion-6"
             data-rowindex="2"
-            style="height:35px;left:151px;position:absolute;top:35px;width:151px"
+            style="height:35px;left:204.8px;position:absolute;top:35px;width:204.8px"
           >
             <span>
               CA
@@ -644,7 +644,7 @@ exports[`Table renders with growToFill cols 1`] = `
           <div
             class="emotion-6"
             data-rowindex="2"
-            style="height:35px;left:302px;position:absolute;top:35px;width:307.2px"
+            style="height:35px;left:409.6px;position:absolute;top:35px;width:307.2px"
           >
             <span>
               95125
@@ -653,7 +653,7 @@ exports[`Table renders with growToFill cols 1`] = `
           <div
             class="emotion-6"
             data-rowindex="2"
-            style="height:35px;left:609.2px;position:absolute;top:35px;width:307.2px"
+            style="height:35px;left:716.8px;position:absolute;top:35px;width:307.2px"
           >
             <strong>
               Mountain View
