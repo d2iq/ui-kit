@@ -16,6 +16,7 @@ export interface TooltipProps extends BaseTooltipProps {
   open?: boolean;
   suppress?: boolean;
   trigger: React.ReactNode;
+  onClose?: () => void;
 }
 
 export interface TooltipState {
@@ -99,7 +100,11 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
       return;
     }
 
-    this.setState({ open: false });
+    this.setState({ open: false }, () => {
+      if (this.props.onClose) {
+        this.props.onClose();
+      }
+    });
   }
 }
 

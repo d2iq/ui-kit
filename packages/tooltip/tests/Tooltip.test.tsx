@@ -73,4 +73,18 @@ describe("Tooltip", () => {
     component.simulate("mouseEnter");
     expect(component.state("open")).toBe(false);
   });
+
+  it("calls onClose prop when closed", () => {
+    const handleClose = jest.fn();
+
+    const component = mount(
+      <Tooltip id="hoverOpen" trigger="trigger" onClose={handleClose}>
+        content
+      </Tooltip>
+    );
+
+    component.simulate("mouseEnter");
+    component.simulate("mouseLeave");
+    expect(handleClose).toHaveBeenCalledTimes(1);
+  });
 });
