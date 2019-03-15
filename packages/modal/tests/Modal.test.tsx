@@ -1,7 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import ModalBase from "../components/ModalBase";
 import FocusTrap from "focus-trap-react";
@@ -10,7 +9,7 @@ import FullscreenModal from "../components/FullscreenModal";
 import { ModalContentsUnwrapped } from "../components/ModalContents";
 import { PrimaryButton } from "../../button";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("Modal", () => {
   describe("ModalBase", () => {

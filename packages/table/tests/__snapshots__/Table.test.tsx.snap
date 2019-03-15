@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table renders a table with resizable columns 1`] = `
-.emotion-42 {
+.emotion-50 {
   height: 100%;
 }
 
-.emotion-40 {
+.emotion-48 {
   font-weight: normal;
 }
 
-.emotion-40::after {
+.emotion-48::after {
   content: "";
   height: 100%;
   left: 0;
@@ -19,19 +19,19 @@ exports[`Table renders a table with resizable columns 1`] = `
   width: 100%;
 }
 
-.emotion-39 .ReactVirtualized__Grid__innerScrollContainer {
+.emotion-47 .ReactVirtualized__Grid__innerScrollContainer {
   overflow: unset !important;
 }
 
-.emotion-32 {
+.emotion-34 {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.emotion-32::-webkit-scrollbar {
+.emotion-34::-webkit-scrollbar {
   display: none;
 }
 
-.emotion-41 {
+.emotion-49 {
   height: 100px;
   overflow: scroll;
   msoverflowstyle: scrollbar;
@@ -194,10 +194,10 @@ exports[`Table renders a table with resizable columns 1`] = `
 }
 
 <div
-  class="emotion-42"
+  class="emotion-50"
 >
   <div
-    class="emotion-40"
+    class="emotion-48"
     style="overflow:visible;height:0;width:0"
   >
     <div
@@ -410,7 +410,7 @@ exports[`Table renders a table with resizable columns 1`] = `
           <div
             aria-label="grid"
             aria-readonly="true"
-            class="ReactVirtualized__Grid emotion-32"
+            class="ReactVirtualized__Grid emotion-34"
             role="grid"
             style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:307.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
           >
@@ -420,7 +420,7 @@ exports[`Table renders a table with resizable columns 1`] = `
               style="width:307.2px;height:70px;max-width:307.2px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
             >
               <div
-                class="emotion-30"
+                class="emotion-30 emotion-31"
                 data-rowindex="1"
                 style="height:35px;left:0;position:absolute;top:0;width:307.2px"
               >
@@ -429,7 +429,7 @@ exports[`Table renders a table with resizable columns 1`] = `
                 </strong>
               </div>
               <div
-                class="emotion-30"
+                class="emotion-30 emotion-31"
                 data-rowindex="2"
                 style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
               >
@@ -443,7 +443,7 @@ exports[`Table renders a table with resizable columns 1`] = `
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-39"
+          class="ReactVirtualized__Grid emotion-47"
           role="grid"
           style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:716.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:307.2px"
           tabindex="0"
@@ -454,7 +454,7 @@ exports[`Table renders a table with resizable columns 1`] = `
             style="width:1021.5999999999999px;height:70px;max-width:1021.5999999999999px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:307.2px"
             >
@@ -463,7 +463,7 @@ exports[`Table renders a table with resizable columns 1`] = `
               </em>
             </div>
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-rowindex="1"
               style="height:35px;left:307.2px;position:absolute;top:0;width:307.2px"
             >
@@ -472,7 +472,7 @@ exports[`Table renders a table with resizable columns 1`] = `
               </span>
             </div>
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-rowindex="1"
               style="height:35px;left:614.4px;position:absolute;top:0;width:307.2px"
             >
@@ -481,7 +481,7 @@ exports[`Table renders a table with resizable columns 1`] = `
               </span>
             </div>
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
             >
@@ -490,7 +490,7 @@ exports[`Table renders a table with resizable columns 1`] = `
               </em>
             </div>
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-rowindex="2"
               style="height:35px;left:307.2px;position:absolute;top:35px;width:307.2px"
             >
@@ -499,7 +499,7 @@ exports[`Table renders a table with resizable columns 1`] = `
               </span>
             </div>
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-rowindex="2"
               style="height:35px;left:614.4px;position:absolute;top:35px;width:307.2px"
             >
@@ -513,7 +513,7 @@ exports[`Table renders a table with resizable columns 1`] = `
     </div>
   </div>
   <div
-    class="emotion-41"
+    class="emotion-49"
   />
 </div>
 `;
@@ -729,15 +729,15 @@ exports[`Table renders again with new data 2`] = `
 `;
 
 exports[`Table renders default 1`] = `
-.emotion-30 {
+.emotion-38 {
   height: 100%;
 }
 
-.emotion-28 {
+.emotion-36 {
   font-weight: normal;
 }
 
-.emotion-28::after {
+.emotion-36::after {
   content: "";
   height: 100%;
   left: 0;
@@ -747,19 +747,19 @@ exports[`Table renders default 1`] = `
   width: 100%;
 }
 
-.emotion-27 .ReactVirtualized__Grid__innerScrollContainer {
+.emotion-35 .ReactVirtualized__Grid__innerScrollContainer {
   overflow: unset !important;
 }
 
-.emotion-20 {
+.emotion-22 {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.emotion-20::-webkit-scrollbar {
+.emotion-22::-webkit-scrollbar {
   display: none;
 }
 
-.emotion-29 {
+.emotion-37 {
   height: 100px;
   overflow: scroll;
   msoverflowstyle: scrollbar;
@@ -883,10 +883,10 @@ exports[`Table renders default 1`] = `
 }
 
 <div
-  class="emotion-30"
+  class="emotion-38"
 >
   <div
-    class="emotion-28"
+    class="emotion-36"
     style="overflow:visible;height:0;width:0"
   >
     <div
@@ -1007,7 +1007,7 @@ exports[`Table renders default 1`] = `
           <div
             aria-label="grid"
             aria-readonly="true"
-            class="ReactVirtualized__Grid emotion-20"
+            class="ReactVirtualized__Grid emotion-22"
             role="grid"
             style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:307.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
           >
@@ -1017,7 +1017,7 @@ exports[`Table renders default 1`] = `
               style="width:307.2px;height:70px;max-width:307.2px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
             >
               <div
-                class="emotion-18"
+                class="emotion-18 emotion-19"
                 data-rowindex="1"
                 style="height:35px;left:0;position:absolute;top:0;width:307.2px"
               >
@@ -1026,7 +1026,7 @@ exports[`Table renders default 1`] = `
                 </strong>
               </div>
               <div
-                class="emotion-18"
+                class="emotion-18 emotion-19"
                 data-rowindex="2"
                 style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
               >
@@ -1040,7 +1040,7 @@ exports[`Table renders default 1`] = `
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-27"
+          class="ReactVirtualized__Grid emotion-35"
           role="grid"
           style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:716.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:307.2px"
           tabindex="0"
@@ -1051,7 +1051,7 @@ exports[`Table renders default 1`] = `
             style="width:1021.5999999999999px;height:70px;max-width:1021.5999999999999px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:307.2px"
             >
@@ -1060,7 +1060,7 @@ exports[`Table renders default 1`] = `
               </em>
             </div>
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-rowindex="1"
               style="height:35px;left:307.2px;position:absolute;top:0;width:307.2px"
             >
@@ -1069,7 +1069,7 @@ exports[`Table renders default 1`] = `
               </span>
             </div>
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-rowindex="1"
               style="height:35px;left:614.4px;position:absolute;top:0;width:307.2px"
             >
@@ -1078,7 +1078,7 @@ exports[`Table renders default 1`] = `
               </span>
             </div>
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
             >
@@ -1087,7 +1087,7 @@ exports[`Table renders default 1`] = `
               </em>
             </div>
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-rowindex="2"
               style="height:35px;left:307.2px;position:absolute;top:35px;width:307.2px"
             >
@@ -1096,7 +1096,7 @@ exports[`Table renders default 1`] = `
               </span>
             </div>
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-rowindex="2"
               style="height:35px;left:614.4px;position:absolute;top:35px;width:307.2px"
             >
@@ -1110,21 +1110,21 @@ exports[`Table renders default 1`] = `
     </div>
   </div>
   <div
-    class="emotion-29"
+    class="emotion-37"
   />
 </div>
 `;
 
 exports[`Table renders with growToFill cols 1`] = `
-.emotion-36 {
+.emotion-46 {
   height: 100%;
 }
 
-.emotion-34 {
+.emotion-44 {
   font-weight: normal;
 }
 
-.emotion-34::after {
+.emotion-44::after {
   content: "";
   height: 100%;
   left: 0;
@@ -1134,19 +1134,19 @@ exports[`Table renders with growToFill cols 1`] = `
   width: 100%;
 }
 
-.emotion-33 .ReactVirtualized__Grid__innerScrollContainer {
+.emotion-43 .ReactVirtualized__Grid__innerScrollContainer {
   overflow: unset !important;
 }
 
-.emotion-24 {
+.emotion-26 {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.emotion-24::-webkit-scrollbar {
+.emotion-26::-webkit-scrollbar {
   display: none;
 }
 
-.emotion-35 {
+.emotion-45 {
   height: 100px;
   overflow: scroll;
   msoverflowstyle: scrollbar;
@@ -1270,10 +1270,10 @@ exports[`Table renders with growToFill cols 1`] = `
 }
 
 <div
-  class="emotion-36"
+  class="emotion-46"
 >
   <div
-    class="emotion-34"
+    class="emotion-44"
     style="overflow:visible;height:0;width:0"
   >
     <div
@@ -1411,7 +1411,7 @@ exports[`Table renders with growToFill cols 1`] = `
           <div
             aria-label="grid"
             aria-readonly="true"
-            class="ReactVirtualized__Grid emotion-24"
+            class="ReactVirtualized__Grid emotion-26"
             role="grid"
             style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:204.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
           >
@@ -1421,7 +1421,7 @@ exports[`Table renders with growToFill cols 1`] = `
               style="width:204.8px;height:70px;max-width:204.8px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
             >
               <div
-                class="emotion-22"
+                class="emotion-22 emotion-23"
                 data-rowindex="1"
                 style="height:35px;left:0;position:absolute;top:0;width:204.8px"
               >
@@ -1430,7 +1430,7 @@ exports[`Table renders with growToFill cols 1`] = `
                 </strong>
               </div>
               <div
-                class="emotion-22"
+                class="emotion-22 emotion-23"
                 data-rowindex="2"
                 style="height:35px;left:0;position:absolute;top:35px;width:204.8px"
               >
@@ -1444,7 +1444,7 @@ exports[`Table renders with growToFill cols 1`] = `
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-33"
+          class="ReactVirtualized__Grid emotion-43"
           role="grid"
           style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:819.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:204.8px"
           tabindex="0"
@@ -1455,7 +1455,7 @@ exports[`Table renders with growToFill cols 1`] = `
             style="width:1024px;height:70px;max-width:1024px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:204.8px"
             >
@@ -1464,7 +1464,7 @@ exports[`Table renders with growToFill cols 1`] = `
               </em>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-rowindex="1"
               style="height:35px;left:204.8px;position:absolute;top:0;width:204.8px"
             >
@@ -1473,7 +1473,7 @@ exports[`Table renders with growToFill cols 1`] = `
               </span>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-rowindex="1"
               style="height:35px;left:409.6px;position:absolute;top:0;width:307.2px"
             >
@@ -1482,7 +1482,7 @@ exports[`Table renders with growToFill cols 1`] = `
               </span>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-rowindex="1"
               style="height:35px;left:716.8px;position:absolute;top:0;width:307.2px"
             >
@@ -1491,7 +1491,7 @@ exports[`Table renders with growToFill cols 1`] = `
               </strong>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:204.8px"
             >
@@ -1500,7 +1500,7 @@ exports[`Table renders with growToFill cols 1`] = `
               </em>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-rowindex="2"
               style="height:35px;left:204.8px;position:absolute;top:35px;width:204.8px"
             >
@@ -1509,7 +1509,7 @@ exports[`Table renders with growToFill cols 1`] = `
               </span>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-rowindex="2"
               style="height:35px;left:409.6px;position:absolute;top:35px;width:307.2px"
             >
@@ -1518,7 +1518,7 @@ exports[`Table renders with growToFill cols 1`] = `
               </span>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-rowindex="2"
               style="height:35px;left:716.8px;position:absolute;top:35px;width:307.2px"
             >
@@ -1532,7 +1532,7 @@ exports[`Table renders with growToFill cols 1`] = `
     </div>
   </div>
   <div
-    class="emotion-35"
+    class="emotion-45"
   />
 </div>
 `;

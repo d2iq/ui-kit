@@ -16,7 +16,7 @@ import Clickable from "../../clickable/components/clickable";
 
 export interface SidebarSubMenuItemProps {
   children?: React.ReactElement<HTMLElement> | string;
-  isActive?: boolean;
+  isActive: boolean;
   onClick: (event?: React.SyntheticEvent<HTMLElement>) => void;
 }
 
@@ -24,6 +24,9 @@ class SidebarSubMenuItem extends React.PureComponent<
   SidebarSubMenuItemProps,
   {}
 > {
+  static defaultProps = {
+    isActive: false
+  };
   public render() {
     const { children, isActive, onClick } = this.props;
     const classNames = cx(

@@ -2,12 +2,11 @@ import React from "react";
 
 import ButtonBase, { ButtonAppearances } from "../components/ButtonBase";
 import { DownTriangle } from "../../shared/icons";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import { shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("ButtonBase", () => {
   it("renders all appearances with props", () => {

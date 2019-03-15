@@ -161,6 +161,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         key="0"
       >
         <SidebarSubMenuItem
+          isActive={false}
           key="0"
           onClick={[MockFunction]}
         >
@@ -172,6 +173,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         key="1"
       >
         <SidebarSubMenuItem
+          isActive={false}
           key="1"
           onClick={[MockFunction]}
         >
@@ -255,6 +257,15 @@ exports[`Sidebar renders 1`] = `
 .emotion-0 {
   height: 100%;
   width: 240px;
+  width: 240px;
+  color: #DADDE2;
+  fill: #DADDE2;
+}
+
+@media (min-width:1200px) {
+  .emotion-0 {
+    width: 280px;
+  }
 }
 
 @media (min-width:1200px) {

@@ -2,12 +2,11 @@ import React from "react";
 
 import { Table, Column } from "../";
 import { fillColumns, clampWidth } from "../components/Table";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import { render, shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("Table", () => {
   const items = [

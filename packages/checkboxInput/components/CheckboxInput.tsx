@@ -77,12 +77,16 @@ class CheckboxInput extends React.PureComponent<
           className={cx(toggleInput, checkbox, {
             [toggleInputApperances[`${this.props.appearance}-focus`]]: this
               .state.hasFocus,
-            [toggleInputApperances[`${this.props.appearance}-active`]]:
-              checked || isIndeterminate,
-            [toggleInputApperances["focus-active"]]:
-              checked && this.state.hasFocus,
-            [toggleInputApperances.disabled]: disabled,
-            [toggleInputApperances["disabled-active"]]: disabled && checked
+            [toggleInputApperances[`${this.props.appearance}-active`]]: Boolean(
+              checked || isIndeterminate
+            ),
+            [toggleInputApperances["focus-active"]]: Boolean(
+              checked && this.state.hasFocus
+            ),
+            [toggleInputApperances.disabled]: Boolean(disabled),
+            [toggleInputApperances["disabled-active"]]: Boolean(
+              disabled && checked
+            )
           })}
         >
           {/* tslint:disable react-a11y-role-has-required-aria-props */}

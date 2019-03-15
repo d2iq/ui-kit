@@ -1,12 +1,11 @@
 import React from "react";
 
 import { CheckboxTable, Column } from "../";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import { shallow, render } from "enzyme";
 import toJson from "enzyme-to-json";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("CheckboxTable", () => {
   const items = [

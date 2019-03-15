@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx, css } from "emotion";
-import styled from "react-emotion";
+import styled from "@emotion/styled";
 import { darkMode } from "../../shared/styles/styleUtils";
 import { sidebar, sidebarAnimator } from "../style";
 import { greyDark } from "../../design-tokens/build/js/designTokens";
@@ -11,6 +11,10 @@ export interface SidebarProps {
   isOpen: boolean;
   onOpen?: () => void;
   onClose?: () => void;
+  theme: {
+    sidebarBackgroundColor?: string;
+    sidebarWidth?: string;
+  };
 }
 
 const sidebarWidths = {
@@ -36,6 +40,9 @@ const sidebarAnimatorWidth = (isOpen: boolean) => css`
 `;
 
 class Sidebar extends React.PureComponent<SidebarProps, {}> {
+  static defaultProps = {
+    theme: {}
+  };
   public componentWillReceiveProps(nextProps: SidebarProps) {
     const { onOpen, onClose } = this.props;
 
@@ -48,8 +55,7 @@ class Sidebar extends React.PureComponent<SidebarProps, {}> {
 
   public render() {
     const { children, isOpen } = this.props;
-    const navClassNames = cx(sidebar, sidebarWidth);
-    const divClassNames = cx(sidebarAnimator);
+    const divClassNames = sidebarAnimator;
 
     const Sidebar = styled("div")`
       background-color: ${props =>
@@ -62,17 +68,19 @@ class Sidebar extends React.PureComponent<SidebarProps, {}> {
 
     const Nav = styled("nav")`
       ${props =>
-        props.theme.sidebarWidth
-          ? "width: " + props.theme.sidebarWidth
-          : sidebarWidth};
-      ${props =>
-        !props.theme.sidebarBackgroundColor ||
-        (props.theme.sidebarBackgroundColor &&
-          isHexDark(props.theme.sidebarBackgroundColor))
-          ? darkMode
-          : null};
+        props.theme.sidebarWidth ? "width: " + props.theme.sidebarWidth : ""};
     `;
 
+    const navClassNames = cx(sidebar, sidebarWidth, {
+      [sidebarWidth]: Boolean(
+        !(this.props.theme && this.props.theme.sidebarWidth)
+      ),
+      [darkMode]: Boolean(
+        !(this.props.theme && this.props.theme.sidebarBackgroundColor) ||
+          (this.props.theme.sidebarBackgroundColor &&
+            isHexDark(this.props.theme.sidebarBackgroundColor))
+      )
+    });
     return (
       <Sidebar className={divClassNames}>
         <Nav className={navClassNames}>{children}</Nav>

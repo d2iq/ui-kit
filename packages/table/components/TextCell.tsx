@@ -1,7 +1,7 @@
+import React from "react";
 import { default as Cell } from "./Cell";
-import styled from "react-emotion";
 import { textTruncate } from "../../shared/styles/styleUtils";
 
-export default styled(Cell)`
-  ${textTruncate};
-`;
+export default function(props) {
+  return <Cell {...props} className={textTruncate} />;
+}

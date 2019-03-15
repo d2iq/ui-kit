@@ -3,7 +3,8 @@ import Immutable from "immutable";
 import Draggable from "react-draggable";
 import { cx, css } from "emotion";
 import memoizeOne from "memoize-one";
-import styled from "react-emotion";
+import styled from "@emotion/styled";
+
 import {
   AutoSizer,
   MultiGrid,

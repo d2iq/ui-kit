@@ -10,7 +10,7 @@ exports[`Cell renders correctly 1`] = `
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-1"
 >
   This is content
 </div>
@@ -18,21 +18,21 @@ exports[`Cell renders correctly 1`] = `
 
 exports[`HeaderCell renders correctly 1`] = `
 .emotion-0 {
-  height: auto;
-  box-sizing: border-box;
-  padding: 7px;
-  z-index: 1;
-  text-align: left;
   text-transform: capitalize;
   font-weight: bold;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
   white-space: nowrap;
+  height: auto;
+  box-sizing: border-box;
+  padding: 7px;
+  z-index: 1;
+  text-align: left;
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-1"
 >
   This is content
 </div>
@@ -40,19 +40,19 @@ exports[`HeaderCell renders correctly 1`] = `
 
 exports[`TextCell renders correctly 1`] = `
 .emotion-0 {
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   height: auto;
   box-sizing: border-box;
   padding: 7px;
   z-index: 1;
   text-align: left;
-  overflow: hidden;
-  overflow: -moz-hidden-unscrollable;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 <div
-  class="emotion-0"
+  class="emotion-0 emotion-1"
 >
   This is content
 </div>

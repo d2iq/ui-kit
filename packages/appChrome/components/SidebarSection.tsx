@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "emotion";
-import styled from "react-emotion";
+import styled from "@emotion/styled";
 import { sidebarSectionHeader, sidebarSectionList } from "../style";
 import {
   tintText,

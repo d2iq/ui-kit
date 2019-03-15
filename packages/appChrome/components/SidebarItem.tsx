@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "emotion";
-import styled from "react-emotion";
+import styled from "@emotion/styled";
 import { sidebarNavItem } from "../style";
 import Clickable from "../../clickable/components/clickable";
 import { tintContentPrimary } from "../../shared/styles/styleUtils";
@@ -8,11 +8,14 @@ import { spaceSizes } from "../../../packages/shared/styles/styleUtils/modifiers
 
 export interface SidebarItemProps {
   icon?: React.ReactElement<HTMLElement> | string;
-  isActive?: boolean;
+  isActive: boolean;
   onClick: (event?: React.SyntheticEvent<HTMLElement>) => void;
 }
 
 class SidebarItem extends React.PureComponent<SidebarItemProps, {}> {
+  static defaultProps = {
+    isActive: false
+  };
   public render() {
     const { children, isActive, onClick } = this.props;
     /* tslint:disable:no-string-literal */

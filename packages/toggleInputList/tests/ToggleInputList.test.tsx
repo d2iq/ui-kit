@@ -1,7 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { ToggleInputList } from "../";
 
@@ -11,7 +10,7 @@ const options = [
   { inputLabel: "Sample label", id: "id.3", value: "value.3" }
 ];
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("ToggleInputList", () => {
   it("renders default", () => {

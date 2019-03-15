@@ -1,6 +1,5 @@
 import React from "react";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import { shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
@@ -8,7 +7,7 @@ import TextInputWithIcon from "../components/TextInputWithIcon";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import { CloseIcon, DownTriangle } from "../../shared/icons";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("TextInputWithIcon", () => {
   it("should render all appearances with iconStart", () => {

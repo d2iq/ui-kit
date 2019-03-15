@@ -59,7 +59,7 @@ class ToggleInput extends React.PureComponent<LocalToggleInputProps, {}> {
     const {
       appearance,
       children,
-      disabled,
+      disabled = false,
       id,
       inputLabel,
       showInputLabel,

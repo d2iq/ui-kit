@@ -1,9 +1,9 @@
+import React from "react";
+import { cx } from "emotion";
 import { default as Cell } from "./Cell";
-import styled from "react-emotion";
 import { headerCellCss } from "../style";
 import { textTruncate } from "../../shared/styles/styleUtils";
 
-export default styled(Cell)`
-  ${headerCellCss};
-  ${textTruncate};
-`;
+export default function(props) {
+  return <Cell {...props} className={cx(headerCellCss, textTruncate)} />;
+}
