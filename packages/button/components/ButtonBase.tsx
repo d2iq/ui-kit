@@ -74,6 +74,11 @@ export interface ButtonBaseProps extends ButtonProps {
 }
 
 class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
+  static defaultProps = {
+    isProcessing: false,
+    isFullWidth: false,
+    isInverse: false
+  };
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
@@ -88,9 +93,9 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
       disabled,
       iconStart,
       iconEnd,
-      isInverse,
-      isProcessing,
-      isFullWidth,
+      isInverse = false,
+      isProcessing = false,
+      isFullWidth = false,
       onClick,
       ...other
     } = this.props;
@@ -164,7 +169,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
   }
 
   private buttonContentWithIcons() {
-    const { iconStart, iconEnd, isProcessing, children } = this.props;
+    const { iconStart, iconEnd, isProcessing = false, children } = this.props;
     return (
       <span className={flex({ align: "center", justify: "center" })}>
         {this.getIconStart(iconStart)}

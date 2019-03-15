@@ -325,30 +325,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
       >
         <Overlay
           overlayRoot={
-            <body>
-              <div>
-                <div>
-                  <div
-                    class="emotion-0"
-                  />
-                  <div
-                    class="emotion-14"
-                    role="dialog"
-                    tabindex="-1"
-                  >
-                    <div
-                      class="emotion-13"
-                    >
-                      <div
-                        tabindex="0"
-                      >
-                        I am modal content
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              .emotion-0 {
+            .emotion-0 {
   background-color: rgba(0,0,0,0.2);
   bottom: 0;
   left: 0;
@@ -428,7 +405,234 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   min-height: 0;
 }
 
-<div>
+.emotion-19 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-11 {
+  border-bottom: 1px solid #DADDE2;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 24px;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  font-size: 18px;
+}
+
+.emotion-8 {
+  display: inherit;
+}
+
+.emotion-9 {
+  cursor: pointer;
+  display: inherit;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-12 {
+  overflow: auto;
+  padding: 24px;
+}
+
+.emotion-20 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding: 24px;
+}
+
+.emotion-14 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-14:focus {
+  background-color: transparent;
+}
+
+.emotion-14:focus:after {
+  border: 2px solid #704FE5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-14:focus:after {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+}
+
+.emotion-13 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: #7D58FF;
+  fill: #7D58FF;
+  cursor: pointer;
+  outline: none;
+  font-weight: 500;
+}
+
+.emotion-13::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-13:hover {
+  color: #704FE5;
+  fill: #704FE5;
+}
+
+.emotion-13:active {
+  color: #6446CC;
+  fill: #6446CC;
+}
+
+.emotion-17 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-17:focus {
+  background-color: #704FE5;
+}
+
+.emotion-17:focus:after {
+  border: 2px solid #704FE5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-16 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: #FFF;
+  fill: #FFF;
+  background-color: #7D58FF;
+  border-radius: 4px;
+  padding: 10px 18px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 500;
+}
+
+.emotion-16::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-16:hover {
+  background-color: #704FE5;
+}
+
+.emotion-16:active {
+  background-color: #6446CC;
+}
+
+<body>
+              <div>
                 <div>
                   <div
                     class="emotion-0"
@@ -450,6 +654,128 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                   </div>
                 </div>
               </div>
+              <div>
+                <div>
+                  <div
+                    class="emotion-0"
+                  />
+                  <div
+                    class="emotion-2"
+                    role="dialog"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="emotion-1"
+                    >
+                      <div
+                        tabindex="0"
+                      >
+                        I am modal content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div
+                    class="emotion-0"
+                  />
+                  <div
+                    class="emotion-2"
+                    role="dialog"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="emotion-1"
+                    >
+                      <div
+                        class="emotion-11"
+                      >
+                        <div
+                          class="emotion-10"
+                        >
+                          <div
+                            class="emotion-7"
+                          >
+                            Title
+                          </div>
+                          <div
+                            class="emotion-9"
+                          >
+                            <span
+                              class="emotion-8"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <svg
+                                height="16"
+                                viewBox="0 0 16 16"
+                                width="16"
+                              >
+                                <path
+                                  d="M8 9.237L4.119 13.12 2.88 11.88 6.763 8 2.88 4.119 4.12 2.88 8 6.763l3.881-3.882L13.12 4.12 9.237 8l3.882 3.881-1.238 1.238L8 9.237z"
+                                  fill-rule="nonzero"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="emotion-12"
+                      >
+                        <div
+                          tabindex="0"
+                        >
+                          I am modal content
+                        </div>
+                      </div>
+                      <div
+                        class="emotion-20"
+                      >
+                        <div
+                          class="emotion-19"
+                        >
+                          <div
+                            class="emotion-15"
+                          >
+                            <button
+                              class="emotion-13 emotion-14"
+                              tabindex="0"
+                            >
+                              <span
+                                class=""
+                              >
+                                Close
+                              </span>
+                            </button>
+                          </div>
+                          <div
+                            class="emotion-15"
+                          >
+                            <button
+                              class="emotion-16 emotion-17"
+                              tabindex="0"
+                            >
+                              <span
+                                class=""
+                              >
+                                CTA
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </body>
+          }
+        >
+          <Portal
+            containerInfo={
               .emotion-0 {
   background-color: rgba(0,0,0,0.2);
   bottom: 0;
@@ -851,106 +1177,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                   </div>
                 </div>
               </div>
-            </body>
-          }
-        >
-          <Portal
-            containerInfo={
-              <div>
-                <div>
-                  <div
-                    class="emotion-0"
-                  />
-                  <div
-                    class="emotion-14"
-                    role="dialog"
-                    tabindex="-1"
-                  >
-                    <div
-                      class="emotion-13"
-                    >
-                      <div
-                        class="emotion-5"
-                      >
-                        <div
-                          class="emotion-4"
-                        >
-                          <div
-                            class="emotion-1"
-                          >
-                            Title
-                          </div>
-                          <div
-                            class="emotion-3"
-                          >
-                            <span
-                              class="emotion-2"
-                              role="button"
-                              tabindex="0"
-                            >
-                              <svg
-                                height="16"
-                                viewBox="0 0 16 16"
-                                width="16"
-                              >
-                                <path
-                                  d="M8 9.237L4.119 13.12 2.88 11.88 6.763 8 2.88 4.119 4.12 2.88 8 6.763l3.881-3.882L13.12 4.12 9.237 8l3.882 3.881-1.238 1.238L8 9.237z"
-                                  fill-rule="nonzero"
-                                />
-                              </svg>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-6"
-                      >
-                        <div
-                          tabindex="0"
-                        >
-                          I am modal content
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-12"
-                      >
-                        <div
-                          class="emotion-11"
-                        >
-                          <div
-                            class="emotion-8"
-                          >
-                            <button
-                              class="emotion-7 css-14x8wbg"
-                              tabindex="0"
-                            >
-                              <span
-                                class=""
-                              >
-                                Close
-                              </span>
-                            </button>
-                          </div>
-                          <div
-                            class="emotion-8"
-                          >
-                            <button
-                              class="emotion-9 css-1dqlfdd"
-                              tabindex="0"
-                            >
-                              <span
-                                class=""
-                              >
-                                CTA
-                              </span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             }
           >
             <div>
@@ -1057,6 +1283,9 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                               >
                                 <ButtonBase
                                   appearance="secondary"
+                                  isFullWidth={false}
+                                  isInverse={false}
+                                  isProcessing={false}
                                   onClick={[MockFunction]}
                                 >
                                   <FocusStyleManager
@@ -1064,6 +1293,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                   >
                                     <button
                                       className="emotion-7"
+                                      disabled={false}
                                       onClick={[Function]}
                                       tabIndex={0}
                                     >
@@ -1083,12 +1313,16 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                               <PrimaryButton>
                                 <ButtonBase
                                   appearance="primary"
+                                  isFullWidth={false}
+                                  isInverse={false}
+                                  isProcessing={false}
                                 >
                                   <FocusStyleManager
                                     focusEnabledClass="css-1dqlfdd"
                                   >
                                     <button
                                       className="emotion-9"
+                                      disabled={false}
                                       onClick={[Function]}
                                       tabIndex={0}
                                     >
@@ -1378,147 +1612,17 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
     >
       <Overlay
         overlayRoot={
-          <body>
-            <div>
-              <div>
-                <div
-                  class="css-1ryjkt3"
-                />
-                <div
-                  class="css-1w93b6n"
-                  role="dialog"
-                  tabindex="-1"
-                >
-                  <div
-                    class="emotion-12"
-                  >
-                    <div
-                      tabindex="0"
-                    >
-                      I am modal content
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <div
-                  class="css-1ryjkt3"
-                />
-                <div
-                  class="css-1w93b6n"
-                  role="dialog"
-                  tabindex="-1"
-                >
-                  <div
-                    class="emotion-12"
-                  >
-                    <div
-                      tabindex="0"
-                    >
-                      I am modal content
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <div
-                  class="css-1ryjkt3"
-                />
-                <div
-                  class="css-1w93b6n"
-                  role="dialog"
-                  tabindex="-1"
-                >
-                  <div
-                    class="emotion-12"
-                  >
-                    <div
-                      class="css-1n2j8fb"
-                    >
-                      <div
-                        class="css-15b9cs"
-                      >
-                        <div
-                          class="css-95z8m4"
-                        >
-                          Title
-                        </div>
-                        <div
-                          class="css-tqlthn"
-                        >
-                          <span
-                            class="css-1gjm5sx"
-                            role="button"
-                            tabindex="0"
-                          >
-                            <svg
-                              height="16"
-                              viewBox="0 0 16 16"
-                              width="16"
-                            >
-                              <path
-                                d="M8 9.237L4.119 13.12 2.88 11.88 6.763 8 2.88 4.119 4.12 2.88 8 6.763l3.881-3.882L13.12 4.12 9.237 8l3.882 3.881-1.238 1.238L8 9.237z"
-                                fill-rule="nonzero"
-                              />
-                            </svg>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="css-1e3fso6"
-                    >
-                      <div
-                        tabindex="0"
-                      >
-                        I am modal content
-                      </div>
-                    </div>
-                    <div
-                      class="css-92qutk"
-                    >
-                      <div
-                        class="css-ysk5k7"
-                      >
-                        <div
-                          class="css-48ylac"
-                        >
-                          <button
-                            class="emotion-1 css-14x8wbg"
-                            tabindex="0"
-                          >
-                            <span
-                              class=""
-                            >
-                              Close
-                            </span>
-                          </button>
-                        </div>
-                        <div
-                          class="css-48ylac"
-                        >
-                          <button
-                            class="emotion-6 css-1dqlfdd"
-                            tabindex="0"
-                          >
-                            <span
-                              class=""
-                            >
-                              CTA
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            .emotion-0 {
+          .emotion-40 {
+  background-color: rgba(0,0,0,0.2);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.emotion-0 {
   background-color: rgba(0,0,0,0.2);
   bottom: 0;
   left: 0;
@@ -1532,7 +1636,19 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   opacity: 1;
 }
 
-.emotion-16 {
+.emotion-53 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.emotion-2 {
   border-radius: 6px;
   background-color: #FFF;
   left: 50%;
@@ -1568,24 +1684,24 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 @media (min-width:600px) {
-  .emotion-16 {
+  .emotion-2 {
     width: 450px;
   }
 }
 
 @media (min-width:900px) {
-  .emotion-16 {
+  .emotion-2 {
     width: 500px;
   }
 }
 
 @media (min-width:1200px) {
-  .emotion-16 {
+  .emotion-2 {
     width: 550px;
   }
 }
 
-.emotion-15 {
+.emotion-1 {
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -1598,7 +1714,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   min-height: 0;
 }
 
-.emotion-13 {
+.emotion-19 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1614,7 +1730,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   justify-content: space-between;
 }
 
-.emotion-9 {
+.emotion-15 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -1629,7 +1745,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   width: initial;
 }
 
-.emotion-5 {
+.emotion-11 {
   border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -1645,7 +1761,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   width: initial;
 }
 
-.emotion-4 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1658,7 +1774,20 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 24px;
 }
 
-.emotion-1 {
+.emotion-46 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-7 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -1672,11 +1801,11 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-size: 18px;
 }
 
-.emotion-2 {
+.emotion-8 {
   display: inherit;
 }
 
-.emotion-3 {
+.emotion-9 {
   cursor: pointer;
   display: inherit;
   box-sizing: border-box;
@@ -1693,12 +1822,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   width: initial;
 }
 
-.emotion-6 {
+.emotion-12 {
   overflow: auto;
   padding: 24px;
 }
 
-.emotion-14 {
+.emotion-20 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -1714,16 +1843,16 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 24px;
 }
 
-.emotion-8 {
+.emotion-14 {
   outline: none;
   position: relative;
 }
 
-.emotion-8:focus {
+.emotion-14:focus {
   background-color: transparent;
 }
 
-.emotion-8:focus:after {
+.emotion-14:focus:after {
   border: 2px solid #704FE5;
   border-radius: 6px;
   bottom: -3px;
@@ -1734,14 +1863,14 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   top: -3px;
 }
 
-.emotion-8:focus:after {
+.emotion-14:focus:after {
   border-radius: 0;
   border-left-width: 0;
   border-right-width: 0;
   border-top-width: 0;
 }
 
-.emotion-7 {
+.emotion-13 {
   background: none;
   border: 0;
   color: inherit;
@@ -1757,31 +1886,31 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-weight: 500;
 }
 
-.emotion-7::-moz-focus-inner {
+.emotion-13::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-7:hover {
+.emotion-13:hover {
   color: #704FE5;
   fill: #704FE5;
 }
 
-.emotion-7:active {
+.emotion-13:active {
   color: #6446CC;
   fill: #6446CC;
 }
 
-.emotion-11 {
+.emotion-17 {
   outline: none;
   position: relative;
 }
 
-.emotion-11:focus {
+.emotion-17:focus {
   background-color: #704FE5;
 }
 
-.emotion-11:focus:after {
+.emotion-17:focus:after {
   border: 2px solid #704FE5;
   border-radius: 6px;
   bottom: -3px;
@@ -1792,7 +1921,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   top: -3px;
 }
 
-.emotion-10 {
+.emotion-16 {
   background: none;
   border: 0;
   color: inherit;
@@ -1811,48 +1940,202 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-weight: 500;
 }
 
-.emotion-10::-moz-focus-inner {
+.emotion-16::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-10:hover {
+.emotion-16:hover {
   background-color: #704FE5;
 }
 
-.emotion-10:active {
+.emotion-16:active {
   background-color: #6446CC;
 }
 
-<div>
+.emotion-51 {
+  border-bottom: 1px solid #DADDE2;
+  background-color: #F7F8F9;
+  padding: 32px;
+}
+
+.emotion-52 {
+  overflow: auto;
+  padding: 32px;
+}
+
+.emotion-55 {
+  border-radius: 6px;
+  background-color: #FFF;
+  left: 50%;
+  max-height: calc(100vh - 48px);
+  outline: none;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  border-radius: 0;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.emotion-50 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-43 {
+  text-align: left;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-44 {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 8px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.emotion-45 {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #76797E;
+  fill: #76797E;
+}
+
+.emotion-49 {
+  text-align: right;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+<body>
+            <div>
               <div>
                 <div
                   class="emotion-0"
                 />
                 <div
-                  class="emotion-16"
+                  class="emotion-2"
                   role="dialog"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-15"
+                    class="emotion-1"
                   >
                     <div
-                      class="emotion-5"
+                      tabindex="0"
+                    >
+                      I am modal content
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div
+                  class="emotion-0"
+                />
+                <div
+                  class="emotion-2"
+                  role="dialog"
+                  tabindex="-1"
+                >
+                  <div
+                    class="emotion-1"
+                  >
+                    <div
+                      tabindex="0"
+                    >
+                      I am modal content
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div
+                  class="emotion-0"
+                />
+                <div
+                  class="emotion-2"
+                  role="dialog"
+                  tabindex="-1"
+                >
+                  <div
+                    class="emotion-1"
+                  >
+                    <div
+                      class="emotion-11"
                     >
                       <div
-                        class="emotion-4"
+                        class="emotion-10"
                       >
                         <div
-                          class="emotion-1"
+                          class="emotion-7"
                         >
                           Title
                         </div>
                         <div
-                          class="emotion-3"
+                          class="emotion-9"
                         >
                           <span
-                            class="emotion-2"
+                            class="emotion-8"
                             role="button"
                             tabindex="0"
                           >
@@ -1871,7 +2154,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="emotion-6"
+                      class="emotion-12"
                     >
                       <div
                         tabindex="0"
@@ -1880,16 +2163,16 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="emotion-14"
+                      class="emotion-20"
                     >
                       <div
-                        class="emotion-13"
+                        class="emotion-19"
                       >
                         <div
-                          class="emotion-9"
+                          class="emotion-15"
                         >
                           <button
-                            class="emotion-7 emotion-8"
+                            class="emotion-13 emotion-14"
                             tabindex="0"
                           >
                             <span
@@ -1900,10 +2183,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           </button>
                         </div>
                         <div
-                          class="emotion-9"
+                          class="emotion-15"
                         >
                           <button
-                            class="emotion-10 emotion-11"
+                            class="emotion-16 emotion-17"
                             tabindex="0"
                           >
                             <span
@@ -1919,6 +2202,184 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                 </div>
               </div>
             </div>
+            <div>
+              <div>
+                <div
+                  class="emotion-0"
+                />
+                <div
+                  class="emotion-2"
+                  role="dialog"
+                  tabindex="-1"
+                >
+                  <div
+                    class="emotion-1"
+                  >
+                    <div
+                      class="emotion-11"
+                    >
+                      <div
+                        class="emotion-10"
+                      >
+                        <div
+                          class="emotion-7"
+                        >
+                          Title
+                        </div>
+                        <div
+                          class="emotion-9"
+                        >
+                          <span
+                            class="emotion-8"
+                            role="button"
+                            tabindex="0"
+                          >
+                            <svg
+                              height="16"
+                              viewBox="0 0 16 16"
+                              width="16"
+                            >
+                              <path
+                                d="M8 9.237L4.119 13.12 2.88 11.88 6.763 8 2.88 4.119 4.12 2.88 8 6.763l3.881-3.882L13.12 4.12 9.237 8l3.882 3.881-1.238 1.238L8 9.237z"
+                                fill-rule="nonzero"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-12"
+                    >
+                      <div
+                        tabindex="0"
+                      >
+                        I am modal content
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-20"
+                    >
+                      <div
+                        class="emotion-19"
+                      >
+                        <div
+                          class="emotion-15"
+                        >
+                          <button
+                            class="emotion-13 emotion-14"
+                            tabindex="0"
+                          >
+                            <span
+                              class=""
+                            >
+                              Close
+                            </span>
+                          </button>
+                        </div>
+                        <div
+                          class="emotion-15"
+                        >
+                          <button
+                            class="emotion-16 emotion-17"
+                            tabindex="0"
+                          >
+                            <span
+                              class=""
+                            >
+                              CTA
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div
+                  class="emotion-40"
+                />
+                <div
+                  class="emotion-55"
+                  role="dialog"
+                  tabindex="-1"
+                >
+                  <div
+                    class="emotion-1"
+                  >
+                    <div
+                      class="emotion-53"
+                    >
+                      <div
+                        class="emotion-51"
+                      >
+                        <div
+                          class="emotion-50"
+                        >
+                          <div
+                            class="emotion-43"
+                          >
+                            <button
+                              class="emotion-13 emotion-14"
+                              tabindex="0"
+                            >
+                              <span
+                                class=""
+                              >
+                                Close
+                              </span>
+                            </button>
+                          </div>
+                          <div
+                            class="emotion-46"
+                          >
+                            <h2
+                              class="emotion-44"
+                            >
+                              Title
+                            </h2>
+                            <h3
+                              class="emotion-45"
+                            />
+                          </div>
+                          <div
+                            class="emotion-49"
+                          >
+                            <button
+                              class="emotion-16 emotion-17"
+                              tabindex="0"
+                            >
+                              <span
+                                class=""
+                              >
+                                CTA
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="emotion-52"
+                      >
+                        <div
+                          tabindex="0"
+                        >
+                          I am modal content
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </body>
+        }
+      >
+        <Portal
+          containerInfo={
             .emotion-0 {
   background-color: rgba(0,0,0,0.2);
   bottom: 0;
@@ -2264,89 +2725,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                 </div>
               </div>
             </div>
-          </body>
-        }
-      >
-        <Portal
-          containerInfo={
-            <div>
-              <div>
-                <div
-                  class="emotion-0"
-                />
-                <div
-                  class="emotion-13"
-                  role="dialog"
-                  tabindex="-1"
-                >
-                  <div
-                    class="emotion-12"
-                  >
-                    <div
-                      class="emotion-11"
-                    >
-                      <div
-                        class="emotion-9"
-                      >
-                        <div
-                          class="emotion-8"
-                        >
-                          <div
-                            class="emotion-2"
-                          >
-                            <button
-                              class="emotion-1 css-14x8wbg"
-                              tabindex="0"
-                            >
-                              <span
-                                class=""
-                              >
-                                Close
-                              </span>
-                            </button>
-                          </div>
-                          <div
-                            class="emotion-5"
-                          >
-                            <h2
-                              class="emotion-3"
-                            >
-                              Title
-                            </h2>
-                            <h3
-                              class="emotion-4"
-                            />
-                          </div>
-                          <div
-                            class="emotion-7"
-                          >
-                            <button
-                              class="emotion-6 css-1dqlfdd"
-                              tabindex="0"
-                            >
-                              <span
-                                class=""
-                              >
-                                CTA
-                              </span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-10"
-                      >
-                        <div
-                          tabindex="0"
-                        >
-                          I am modal content
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           }
         >
           <div>
@@ -2428,6 +2806,9 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                   >
                                     <ButtonBase
                                       appearance="secondary"
+                                      isFullWidth={false}
+                                      isInverse={false}
+                                      isProcessing={false}
                                       onClick={[MockFunction]}
                                     >
                                       <FocusStyleManager
@@ -2435,6 +2816,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                       >
                                         <button
                                           className="emotion-1"
+                                          disabled={false}
                                           onClick={[Function]}
                                           tabIndex={0}
                                         >
@@ -2466,12 +2848,16 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                   <PrimaryButton>
                                     <ButtonBase
                                       appearance="primary"
+                                      isFullWidth={false}
+                                      isInverse={false}
+                                      isProcessing={false}
                                     >
                                       <FocusStyleManager
                                         focusEnabledClass="css-1dqlfdd"
                                       >
                                         <button
                                           className="emotion-6"
+                                          disabled={false}
                                           onClick={[Function]}
                                           tabIndex={0}
                                         >
@@ -2728,7 +3114,87 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
     >
       <Portal
         containerInfo={
-          <div>
+          .emotion-0 {
+  background-color: rgba(0,0,0,0.2);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  opacity: 0;
+  opacity: 1;
+}
+
+.emotion-2 {
+  border-radius: 6px;
+  background-color: #FFF;
+  left: 50%;
+  max-height: calc(100vh - 48px);
+  outline: none;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  width: 350px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+  -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  opacity: 0;
+  -webkit-transform: translate(-50%,calc(-50% - 50px));
+  -ms-transform: translate(-50%,calc(-50% - 50px));
+  transform: translate(-50%,calc(-50% - 50px));
+  opacity: 1;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+@media (min-width:600px) {
+  .emotion-2 {
+    width: 450px;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-2 {
+    width: 500px;
+  }
+}
+
+@media (min-width:1200px) {
+  .emotion-2 {
+    width: 550px;
+  }
+}
+
+.emotion-1 {
+  height: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+}
+
+<div>
             <div>
               <div
                 class="emotion-0"

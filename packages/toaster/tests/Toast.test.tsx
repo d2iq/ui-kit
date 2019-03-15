@@ -1,11 +1,10 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
 import { Toaster, Toast } from "../";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("Toast", () => {
   it("renders default", () => {

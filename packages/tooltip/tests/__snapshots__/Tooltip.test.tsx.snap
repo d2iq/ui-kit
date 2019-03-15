@@ -1,11 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tooltip renders 1`] = `
-.emotion-5 {
-  position: relative;
-  display: inline-block;
-}
-
 .emotion-2 {
   background-color: #32363E;
   border-radius: 2px;
@@ -32,6 +27,11 @@ exports[`Tooltip renders 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0;
+}
+
+.emotion-5 {
+  position: relative;
+  display: inline-block;
 }
 
 <Tooltip
@@ -125,7 +125,35 @@ exports[`Tooltip renders 1`] = `
           >
             <Portal
               containerInfo={
-                <div>
+                .emotion-2 {
+  background-color: #32363E;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 12px;
+  position: relative;
+  color: #DADDE2;
+  fill: #DADDE2;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-2:after {
+  position: absolute;
+}
+
+.emotion-3 {
+  top: 0px;
+  left: NaNpx;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+<div>
                   <div
                     class="emotion-3"
                   >
@@ -191,11 +219,6 @@ exports[`Tooltip renders 1`] = `
 `;
 
 exports[`Tooltip renders open tooltip 1`] = `
-.emotion-5 {
-  position: relative;
-  display: inline-block;
-}
-
 .emotion-2 {
   background-color: #32363E;
   border-radius: 2px;
@@ -222,6 +245,11 @@ exports[`Tooltip renders open tooltip 1`] = `
   -ms-transform: scale(1);
   transform: scale(1);
   opacity: 1;
+}
+
+.emotion-5 {
+  position: relative;
+  display: inline-block;
 }
 
 <Tooltip
@@ -265,10 +293,48 @@ exports[`Tooltip renders open tooltip 1`] = `
           <Overlay
             className="emotion-3"
             overlayRoot={
-              <body>
+              .emotion-2 {
+  background-color: #32363E;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 12px;
+  position: relative;
+  color: #DADDE2;
+  fill: #DADDE2;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-2:after {
+  position: absolute;
+}
+
+.emotion-3 {
+  top: 0px;
+  left: NaNpx;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+.emotion-7 {
+  top: 0px;
+  left: NaNpx;
+  position: absolute;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+<body>
                 <div>
                   <div
-                    class="css-3z8s0s"
+                    class="emotion-3"
                   >
                     <div>
                       <div
@@ -283,6 +349,28 @@ exports[`Tooltip renders open tooltip 1`] = `
                     </div>
                   </div>
                 </div>
+                <div>
+                  <div
+                    class="emotion-7"
+                  >
+                    <div>
+                      <div
+                        aria-hidden="false"
+                        class="
+    emotion-0    emotion-1   emotion-2"
+                        id="opened"
+                        role="tooltip"
+                      >
+                        content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </body>
+            }
+          >
+            <Portal
+              containerInfo={
                 .emotion-2 {
   background-color: #32363E;
   border-radius: 2px;
@@ -312,28 +400,6 @@ exports[`Tooltip renders open tooltip 1`] = `
 }
 
 <div>
-                  <div
-                    class="emotion-3"
-                  >
-                    <div>
-                      <div
-                        aria-hidden="false"
-                        class="
-    emotion-0    emotion-1   emotion-2"
-                        id="opened"
-                        role="tooltip"
-                      >
-                        content
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </body>
-            }
-          >
-            <Portal
-              containerInfo={
-                <div>
                   <div
                     class="emotion-3"
                   >
@@ -399,11 +465,6 @@ exports[`Tooltip renders open tooltip 1`] = `
 `;
 
 exports[`Tooltip renders with preferred directions 1`] = `
-.emotion-5 {
-  position: relative;
-  display: inline-block;
-}
-
 .emotion-2 {
   background-color: #32363E;
   border-radius: 2px;
@@ -430,6 +491,11 @@ exports[`Tooltip renders with preferred directions 1`] = `
   -ms-transform: scale(1);
   transform: scale(1);
   opacity: 1;
+}
+
+.emotion-5 {
+  position: relative;
+  display: inline-block;
 }
 
 <Tooltip
@@ -477,18 +543,64 @@ exports[`Tooltip renders with preferred directions 1`] = `
           <Overlay
             className="emotion-3"
             overlayRoot={
-              <body>
+              .emotion-2 {
+  background-color: #32363E;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 12px;
+  position: relative;
+  color: #DADDE2;
+  fill: #DADDE2;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-2:after {
+  position: absolute;
+}
+
+.emotion-3 {
+  top: 0px;
+  left: NaNpx;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+.emotion-11 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.emotion-7 {
+  top: 0px;
+  left: NaNpx;
+  position: absolute;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+<body>
                 <div>
                   <div
-                    class="css-3z8s0s"
+                    class="emotion-3"
                   >
                     <div>
                       <div
                         aria-hidden="true"
                         class="
-    css-eyjuh9
-    css-miht3n
-   emotion-2"
+    emotion-0    emotion-1   emotion-2"
                         id="renders"
                         role="tooltip"
                       >
@@ -499,15 +611,13 @@ exports[`Tooltip renders with preferred directions 1`] = `
                 </div>
                 <div>
                   <div
-                    class="css-u4jebi"
+                    class="emotion-7"
                   >
                     <div>
                       <div
                         aria-hidden="false"
                         class="
-    css-eyjuh9
-    css-miht3n
-   emotion-2"
+    emotion-0    emotion-1   emotion-2"
                         id="opened"
                         role="tooltip"
                       >
@@ -516,6 +626,28 @@ exports[`Tooltip renders with preferred directions 1`] = `
                     </div>
                   </div>
                 </div>
+                <div>
+                  <div
+                    class="emotion-11"
+                  >
+                    <div>
+                      <div
+                        aria-hidden="false"
+                        class="
+    emotion-8    emotion-9   emotion-2"
+                        id="customDir"
+                        role="tooltip"
+                      >
+                        content
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </body>
+            }
+          >
+            <Portal
+              containerInfo={
                 .emotion-2 {
   background-color: #32363E;
   border-radius: 2px;
@@ -545,28 +677,6 @@ exports[`Tooltip renders with preferred directions 1`] = `
 }
 
 <div>
-                  <div
-                    class="emotion-3"
-                  >
-                    <div>
-                      <div
-                        aria-hidden="false"
-                        class="
-    emotion-0    emotion-1   emotion-2"
-                        id="customDir"
-                        role="tooltip"
-                      >
-                        content
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </body>
-            }
-          >
-            <Portal
-              containerInfo={
-                <div>
                   <div
                     class="emotion-3"
                   >

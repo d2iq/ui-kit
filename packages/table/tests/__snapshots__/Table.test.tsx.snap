@@ -165,11 +165,11 @@ exports[`Table renders again with new data 2`] = `
 `;
 
 exports[`Table renders default 1`] = `
-.emotion-14 {
+.emotion-22 {
   font-weight: normal;
 }
 
-.emotion-14::after {
+.emotion-22::after {
   content: "";
   height: 100%;
   left: 0;
@@ -222,7 +222,7 @@ exports[`Table renders default 1`] = `
 }
 
 <div
-  class="emotion-14"
+  class="emotion-22"
   style="overflow:visible;height:0;width:0"
 >
   <div
@@ -309,7 +309,7 @@ exports[`Table renders default 1`] = `
             style="width:307.2px;height:70px;max-width:307.2px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-5"
+              class="emotion-5 emotion-6"
               data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:307.2px"
             >
@@ -318,7 +318,7 @@ exports[`Table renders default 1`] = `
               </strong>
             </div>
             <div
-              class="emotion-5"
+              class="emotion-5 emotion-6"
               data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
             >
@@ -343,7 +343,7 @@ exports[`Table renders default 1`] = `
           style="width:1021.5999999999999px;height:70px;max-width:1021.5999999999999px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
-            class="emotion-5"
+            class="emotion-5 emotion-6"
             data-rowindex="1"
             style="height:35px;left:0;position:absolute;top:0;width:307.2px"
           >
@@ -352,7 +352,7 @@ exports[`Table renders default 1`] = `
             </em>
           </div>
           <div
-            class="emotion-5"
+            class="emotion-5 emotion-6"
             data-rowindex="1"
             style="height:35px;left:307.2px;position:absolute;top:0;width:307.2px"
           >
@@ -361,7 +361,7 @@ exports[`Table renders default 1`] = `
             </span>
           </div>
           <div
-            class="emotion-5"
+            class="emotion-5 emotion-6"
             data-rowindex="1"
             style="height:35px;left:614.4px;position:absolute;top:0;width:307.2px"
           >
@@ -370,7 +370,7 @@ exports[`Table renders default 1`] = `
             </span>
           </div>
           <div
-            class="emotion-5"
+            class="emotion-5 emotion-6"
             data-rowindex="2"
             style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
           >
@@ -379,7 +379,7 @@ exports[`Table renders default 1`] = `
             </em>
           </div>
           <div
-            class="emotion-5"
+            class="emotion-5 emotion-6"
             data-rowindex="2"
             style="height:35px;left:307.2px;position:absolute;top:35px;width:307.2px"
           >
@@ -388,7 +388,7 @@ exports[`Table renders default 1`] = `
             </span>
           </div>
           <div
-            class="emotion-5"
+            class="emotion-5 emotion-6"
             data-rowindex="2"
             style="height:35px;left:614.4px;position:absolute;top:35px;width:307.2px"
           >
@@ -404,11 +404,11 @@ exports[`Table renders default 1`] = `
 `;
 
 exports[`Table renders with growToFill cols 1`] = `
-.emotion-17 {
+.emotion-27 {
   font-weight: normal;
 }
 
-.emotion-17::after {
+.emotion-27::after {
   content: "";
   height: 100%;
   left: 0;
@@ -461,7 +461,7 @@ exports[`Table renders with growToFill cols 1`] = `
 }
 
 <div
-  class="emotion-17"
+  class="emotion-27"
   style="overflow:visible;height:0;width:0"
 >
   <div
@@ -554,7 +554,7 @@ exports[`Table renders with growToFill cols 1`] = `
             style="width:151px;height:70px;max-width:151px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-6"
+              class="emotion-6 emotion-7"
               data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:151px"
             >
@@ -563,7 +563,7 @@ exports[`Table renders with growToFill cols 1`] = `
               </strong>
             </div>
             <div
-              class="emotion-6"
+              class="emotion-6 emotion-7"
               data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:151px"
             >
@@ -588,7 +588,7 @@ exports[`Table renders with growToFill cols 1`] = `
           style="width:916.4000000000001px;height:70px;max-width:916.4000000000001px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
         >
           <div
-            class="emotion-6"
+            class="emotion-6 emotion-7"
             data-rowindex="1"
             style="height:35px;left:0;position:absolute;top:0;width:151px"
           >
@@ -597,7 +597,7 @@ exports[`Table renders with growToFill cols 1`] = `
             </em>
           </div>
           <div
-            class="emotion-6"
+            class="emotion-6 emotion-7"
             data-rowindex="1"
             style="height:35px;left:151px;position:absolute;top:0;width:151px"
           >
@@ -606,7 +606,7 @@ exports[`Table renders with growToFill cols 1`] = `
             </span>
           </div>
           <div
-            class="emotion-6"
+            class="emotion-6 emotion-7"
             data-rowindex="1"
             style="height:35px;left:302px;position:absolute;top:0;width:307.2px"
           >
@@ -615,7 +615,7 @@ exports[`Table renders with growToFill cols 1`] = `
             </span>
           </div>
           <div
-            class="emotion-6"
+            class="emotion-6 emotion-7"
             data-rowindex="1"
             style="height:35px;left:609.2px;position:absolute;top:0;width:307.2px"
           >
@@ -624,7 +624,7 @@ exports[`Table renders with growToFill cols 1`] = `
             </strong>
           </div>
           <div
-            class="emotion-6"
+            class="emotion-6 emotion-7"
             data-rowindex="2"
             style="height:35px;left:0;position:absolute;top:35px;width:151px"
           >
@@ -633,7 +633,7 @@ exports[`Table renders with growToFill cols 1`] = `
             </em>
           </div>
           <div
-            class="emotion-6"
+            class="emotion-6 emotion-7"
             data-rowindex="2"
             style="height:35px;left:151px;position:absolute;top:35px;width:151px"
           >
@@ -642,7 +642,7 @@ exports[`Table renders with growToFill cols 1`] = `
             </span>
           </div>
           <div
-            class="emotion-6"
+            class="emotion-6 emotion-7"
             data-rowindex="2"
             style="height:35px;left:302px;position:absolute;top:35px;width:307.2px"
           >
@@ -651,7 +651,7 @@ exports[`Table renders with growToFill cols 1`] = `
             </span>
           </div>
           <div
-            class="emotion-6"
+            class="emotion-6 emotion-7"
             data-rowindex="2"
             style="height:35px;left:609.2px;position:absolute;top:35px;width:307.2px"
           >

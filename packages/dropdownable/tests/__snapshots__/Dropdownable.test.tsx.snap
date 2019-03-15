@@ -11,11 +11,6 @@ exports[`Dropdownable is visible after opening 1`] = `
   opacity: 0;
 }
 
-.emotion-3 {
-  position: relative;
-  display: inline-block;
-}
-
 .emotion-0 {
   background: none;
   border: 0;
@@ -48,6 +43,11 @@ exports[`Dropdownable is visible after opening 1`] = `
   background-color: #6446CC;
 }
 
+.emotion-3 {
+  position: relative;
+  display: inline-block;
+}
+
 <Dropdownable
   dropdown={
     <p>
@@ -72,12 +72,16 @@ exports[`Dropdownable is visible after opening 1`] = `
         <PrimaryButton>
           <ButtonBase
             appearance="primary"
+            isFullWidth={false}
+            isInverse={false}
+            isProcessing={false}
           >
             <FocusStyleManager
               focusEnabledClass="css-1dqlfdd"
             >
               <button
                 className="emotion-0"
+                disabled={false}
                 onClick={[Function]}
                 tabIndex={0}
               >
@@ -123,9 +127,19 @@ exports[`Dropdownable is visible after opening 1`] = `
       >
         <Portal
           containerInfo={
-            <div>
+            .emotion-0 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+<div>
               <div
-                class="emotion-1"
+                class="emotion-0"
               >
                 <div>
                   <p
@@ -165,11 +179,6 @@ exports[`Dropdownable is visible after opening 1`] = `
 `;
 
 exports[`Dropdownable is visible after opening 2`] = `
-.emotion-3 {
-  position: relative;
-  display: inline-block;
-}
-
 .emotion-0 {
   background: none;
   border: 0;
@@ -212,6 +221,11 @@ exports[`Dropdownable is visible after opening 2`] = `
   opacity: 1;
 }
 
+.emotion-3 {
+  position: relative;
+  display: inline-block;
+}
+
 <Dropdownable
   dropdown={
     <p>
@@ -236,12 +250,16 @@ exports[`Dropdownable is visible after opening 2`] = `
         <PrimaryButton>
           <ButtonBase
             appearance="primary"
+            isFullWidth={false}
+            isInverse={false}
+            isProcessing={false}
           >
             <FocusStyleManager
               focusEnabledClass="css-1dqlfdd"
             >
               <button
                 className="emotion-0"
+                disabled={false}
                 onClick={[Function]}
                 tabIndex={0}
               >
@@ -258,10 +276,20 @@ exports[`Dropdownable is visible after opening 2`] = `
       <Overlay
         className="emotion-1"
         overlayRoot={
-          <body>
+          .emotion-0 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+<body>
             <div>
               <div
-                class="emotion-1"
+                class="emotion-0"
               >
                 <div>
                   <p
@@ -277,9 +305,19 @@ exports[`Dropdownable is visible after opening 2`] = `
       >
         <Portal
           containerInfo={
-            <div>
+            .emotion-0 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+<div>
               <div
-                class="emotion-1"
+                class="emotion-0"
               >
                 <div>
                   <p

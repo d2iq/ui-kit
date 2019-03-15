@@ -1,12 +1,11 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { Tooltip } from "../";
 import { Direction } from "../../dropdownable/components/Dropdownable";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("Tooltip", () => {
   it("renders", () => {

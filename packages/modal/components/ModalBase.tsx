@@ -57,7 +57,13 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
   }
 
   public render() {
-    const { children, isAnimated, size, initialFocus, isOpen } = this.props;
+    const {
+      children,
+      isAnimated = false,
+      size,
+      initialFocus,
+      isOpen
+    } = this.props;
     const modalSize = size || ModalSizes.M;
 
     return (

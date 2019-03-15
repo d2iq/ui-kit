@@ -22,7 +22,7 @@ export interface ClickableProps {
   /**
    * Whether or not to reset the :focus outline style
    */
-  disableFocusOutline?: boolean;
+  disableFocusOutline: boolean;
 }
 
 export class Clickable extends React.PureComponent<ClickableProps, {}> {

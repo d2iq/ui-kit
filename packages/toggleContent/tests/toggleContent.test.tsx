@@ -1,12 +1,11 @@
 import React from "react";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import { mount, render } from "enzyme";
 import toJson from "enzyme-to-json";
 
 import { ToggleContent } from "../";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 const primary = () => <div>primary</div>;
 const secondary = () => <div>secondary</div>;
