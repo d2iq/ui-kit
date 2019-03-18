@@ -1,0 +1,15 @@
+{
+	"layout": {
+        "zIndex": {
+            "content": {
+                "value": "0"
+            },
+            "modal": {
+                "value": "1"
+            },
+            "dropdownable": {
+                "value": "2"
+            }
+        }
+    }
+}

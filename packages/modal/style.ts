@@ -2,7 +2,10 @@ import { css } from "emotion";
 import {
   white,
   borderColorDefault,
-  greyLightLighten5
+  greyLightLighten5,
+  zIndexContent,
+  zIndexModal,
+  borderRadiusDefault
 } from "../design-tokens/build/js/designTokens";
 import { atMediaUp } from "../shared/styles/breakpoints";
 
@@ -33,12 +36,11 @@ export const scrim = css`
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 0;
+  z-index: ${zIndexContent};
 `;
 
-// TODO: use border-radius design token when it's available
 export const modal = css`
-  border-radius: 6px;
+  border-radius: ${borderRadiusDefault};
   background-color: ${white};
   left: 50%;
   max-height: calc(100vh - ${modalInset * 2}px);
@@ -46,7 +48,7 @@ export const modal = css`
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: ${zIndexModal};
 `;
 
 export const modalWidth = {
