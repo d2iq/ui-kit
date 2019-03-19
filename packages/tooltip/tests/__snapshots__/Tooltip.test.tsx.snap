@@ -32,6 +32,7 @@ exports[`Tooltip renders 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0;
+  z-index: 2;
 }
 
 <Tooltip
@@ -100,6 +101,7 @@ exports[`Tooltip renders 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
   opacity: 0;
+  z-index: 2;
 }
 
 <body>
@@ -222,6 +224,7 @@ exports[`Tooltip renders open tooltip 1`] = `
   -ms-transform: scale(1);
   transform: scale(1);
   opacity: 1;
+  z-index: 2;
 }
 
 <Tooltip
@@ -268,7 +271,7 @@ exports[`Tooltip renders open tooltip 1`] = `
               <body>
                 <div>
                   <div
-                    class="css-3z8s0s"
+                    class="css-xeraz5"
                   >
                     <div>
                       <div
@@ -309,6 +312,7 @@ exports[`Tooltip renders open tooltip 1`] = `
   -ms-transform: scale(1);
   transform: scale(1);
   opacity: 1;
+  z-index: 2;
 }
 
 <div>
@@ -430,6 +434,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
   -ms-transform: scale(1);
   transform: scale(1);
   opacity: 1;
+  z-index: 2;
 }
 
 <Tooltip
@@ -480,7 +485,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
               <body>
                 <div>
                   <div
-                    class="css-3z8s0s"
+                    class="css-xeraz5"
                   >
                     <div>
                       <div
@@ -499,7 +504,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                 </div>
                 <div>
                   <div
-                    class="css-u4jebi"
+                    class="css-asbxzi"
                   >
                     <div>
                       <div
@@ -542,6 +547,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
   -ms-transform: scale(1);
   transform: scale(1);
   opacity: 1;
+  z-index: 2;
 }
 
 <div>

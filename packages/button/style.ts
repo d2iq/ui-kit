@@ -18,7 +18,8 @@ import {
   redDarken1,
   redDarken2,
   textColorPrimary,
-  white
+  white,
+  borderRadiusDefault
 } from "../design-tokens/build/js/designTokens";
 import { isHexDark, hexToRgbA } from "../shared/styles/color";
 import { ButtonAppearances } from "./components/ButtonBase";
@@ -126,7 +127,7 @@ export const focusStyles = (
 
     &:after {
       border: 2px solid ${borderColor};
-      border-radius: 6px;
+      border-radius: ${borderRadiusDefault};
       bottom: -3px;
       content: "";
       left: -3px;

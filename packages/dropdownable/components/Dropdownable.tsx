@@ -4,6 +4,7 @@ import styled, { css } from "react-emotion";
 import Overlay from "../../shared/components/Overlay";
 import DropdownContents from "./DropdownContents";
 import resizeEventManager from "../../utilities/resizeEventManager";
+import { zIndexDropdownable } from "../../design-tokens/build/js/designTokens";
 
 export enum Direction {
   BottomLeft = "bottom-left",
@@ -116,9 +117,9 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
       left: `${position.left}px`,
       position: "absolute",
       transform: `scale(${open ? 1 : 0})`,
-      opacity: open ? 1 : 0
+      opacity: open ? 1 : 0,
+      "z-index": zIndexDropdownable
     });
-
     return <Overlay className={overlayStyle}>{this.getDropdown()}</Overlay>;
   }
 
