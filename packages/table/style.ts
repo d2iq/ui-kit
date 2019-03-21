@@ -43,6 +43,10 @@ export const cellAlignmentCss = (textAlign: string) => css`
     : null};
 `;
 
+export const tableWrapper = css`
+  height: 100%;
+`;
+
 export const tableCss = css`
   font-weight: normal;
 
@@ -118,3 +122,14 @@ export const styleArrowDirection = displaySortDirection => {
       `;
   }
 };
+
+export const scrollbarMeas = css`
+  height: 100px;
+  overflow: scroll;
+  msoverflowstyle: scrollbar;
+  opacity: 0;
+  position: absolute;
+  top: -100000px;
+  visibility: hidden;
+  width: 100px;
+`;

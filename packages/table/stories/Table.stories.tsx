@@ -104,33 +104,22 @@ storiesOf("Table", module)
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
-          growToFill={true}
-          minWidth={100}
-          maxWidth={150}
         />
         <Column
           header={<HeaderCell>role</HeaderCell>}
           cellRenderer={roleCellRenderer}
-          growToFill={true}
         />
         <Column
           header={<HeaderCell>state</HeaderCell>}
           cellRenderer={stateCellRenderer}
-          growToFill={true}
-          minWidth={100}
-          maxWidth={150}
         />
         <Column
           header={<HeaderCell>Very Long</HeaderCell>}
           cellRenderer={veryLongRenderer}
-          growToFill={true}
         />
         <Column
           header={<HeaderCell textAlign="right">zip code</HeaderCell>}
           cellRenderer={zipcodeCellRenderer}
-          growToFill={true}
-          minWidth={100}
-          maxWidth={150}
         />
       </Table>
     </div>

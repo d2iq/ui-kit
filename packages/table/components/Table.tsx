@@ -9,7 +9,9 @@ import {
   tableCss,
   rightGrid,
   hideScrollbarCss,
-  rowHoverStyles
+  rowHoverStyles,
+  tableWrapper,
+  scrollbarMeas
 } from "../style";
 
 import { ColumnProps, Column } from "./Column";
@@ -123,6 +125,7 @@ const ContentCell = styled("div")`
 
 export class Table<T> extends React.PureComponent<TableProps, TableState> {
   public multiGridRef: { recomputeGridSize?: any } = {};
+  public scrollMeasRef = React.createRef<HTMLDivElement>();
 
   public getData = memoizeOne(
     (data: T[]): Array<{}> | T[] => {
@@ -136,6 +139,13 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       width: number
     ): number[] => {
       let remainingWidth: number = width;
+      let scrollbarWidth: number = 0;
+      const scrollbarMeasEl = this.scrollMeasRef.current;
+      if (scrollbarMeasEl) {
+        scrollbarWidth =
+          scrollbarMeasEl.offsetWidth - scrollbarMeasEl.clientWidth;
+      }
+      const scrollbarAdjustedWidth = width - scrollbarWidth;
 
       const totalColumns: number = children.length;
       const colWidths = children.map((child, currentIndex) => {
@@ -146,7 +156,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
               currentIndex,
               remainingWidth
             })
-          : width / totalColumns;
+          : scrollbarAdjustedWidth / totalColumns;
 
         const clampedWidth = clampWidth(
           calculatedWidth,
@@ -158,7 +168,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       });
 
       if (children.filter(child => child.props.growToFill).length) {
-        return fillColumns(children, colWidths, width) || [];
+        return fillColumns(children, colWidths, scrollbarAdjustedWidth) || [];
       }
 
       return colWidths;
@@ -183,17 +193,24 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
 
   public render() {
     return (
-      <AutoSizer
-        __dataThatTriggersARerenderWhenChanged={this.props.data} // passed to notify react-virtualized about updates
-        className={tableCss}
-        defaultWidth={DEFAULT_WIDTH}
-        defaultHeight={DEFAULT_HEIGHT}
-        onResize={this.updateGridSize}
-      >
-        {({ height, width }) =>
-          this.getGrid({ height, width }, this.state.isScrolling)
-        }
-      </AutoSizer>
+      <div className={tableWrapper}>
+        <AutoSizer
+          __dataThatTriggersARerenderWhenChanged={this.props.data} // passed to notify react-virtualized about updates
+          className={tableCss}
+          defaultWidth={DEFAULT_WIDTH}
+          defaultHeight={DEFAULT_HEIGHT}
+          onResize={this.updateGridSize}
+        >
+          {({ height, width }) =>
+            this.getGrid({ height, width }, this.state.isScrolling)
+          }
+        </AutoSizer>
+        {/*
+          Used to get scrollbar width to
+          accurately calculate column widths
+        */}
+        <div className={scrollbarMeas} ref={this.scrollMeasRef} />
+      </div>
     );
   }
 
