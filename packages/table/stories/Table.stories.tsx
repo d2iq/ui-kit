@@ -10,9 +10,12 @@ import { StandardButton } from "../../button";
 
 const readme = require("../README.md");
 
-const nameCellRenderer = ({ name }: { name?: string }) => (
+const nameCellRenderer = ({ name }, _, { lastname = "" }) => (
   <TextCell>
-    <strong>{name}</strong>
+    <strong>
+      {name}
+      {" " + lastname}
+    </strong>
   </TextCell>
 );
 const cityCellRenderer = ({ city }: { city?: string }) => (
@@ -343,6 +346,23 @@ storiesOf("Table", module)
           header={<HeaderCell>city</HeaderCell>}
           cellRenderer={cityCellRenderer}
           growToFill={true}
+        />
+      </Table>
+    </div>
+  ))
+  .addWithInfo("can get global information passed", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <Table data={items}>
+        <Column
+          header={<HeaderCell>name</HeaderCell>}
+          cellRenderer={nameCellRenderer}
+          lastname="Parker"
         />
       </Table>
     </div>

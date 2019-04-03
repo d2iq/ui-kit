@@ -104,6 +104,25 @@ describe("Table", () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it("allows overload of column", () => {
+    const nameAndLastnameRenderer = ({ name }, _, { lastname = "" }) => (
+      <span>
+        {name} {lastname}
+      </span>
+    );
+    const component = render(
+      <Table data={items}>
+        <Column
+          header="name"
+          cellRenderer={nameAndLastnameRenderer}
+          width={width}
+          lastname="Parker"
+        />
+      </Table>
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   describe("getData", () => {
     it("will return the right array", () => {
       const width = () => 10;

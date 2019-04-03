@@ -309,6 +309,17 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       this.setState({ hoveredRowIndex: rowIndex });
     };
 
+    // get additional props passed
+    const {
+      cellRenderer,
+      header,
+      width,
+      minWidth,
+      maxWidth,
+      growToFill,
+      ...otherProps
+    } = column.props;
+
     return (
       /* tslint:disable:react-a11y-event-has-role */
       <ContentCell
@@ -322,7 +333,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         onMouseOver={updateHoveredRowIndex}
         data-rowindex={rowIndex}
       >
-        {column.props.cellRenderer(data[rowIndex], style.width as number)}
+        {cellRenderer(data[rowIndex], style.width as number, otherProps)}
       </ContentCell>
       /* tslint:enable:react-a11y-event-has-role */
     );

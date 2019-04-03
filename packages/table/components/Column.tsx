@@ -6,6 +6,10 @@ export interface WidthArgs {
   currentIndex: number;
 }
 
+interface OverloadedProps {
+  [key: string]: unknown;
+}
+
 export interface ColumnProps {
   /**
    * header is providing the contents for the header cell for the column.
@@ -14,7 +18,11 @@ export interface ColumnProps {
   /**
    * cellRenderer is the function which is creating the cell contents for this column.
    */
-  cellRenderer: (data: any, width: number) => React.ReactNode;
+  cellRenderer: (
+    data: any,
+    width: number,
+    additionalProps: OverloadedProps
+  ) => React.ReactNode;
   /**
    * width should return a column width in pixels.
    * If no function is provided, columns will distribute
@@ -33,6 +41,8 @@ export interface ColumnProps {
    * whether the column should grow to fill remaining space
    */
   growToFill?: boolean;
+
+  [key: string]: unknown;
 }
 
 export class Column extends React.PureComponent<ColumnProps, {}> {}

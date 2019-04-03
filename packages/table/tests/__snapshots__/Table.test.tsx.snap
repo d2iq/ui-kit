@@ -1,5 +1,180 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Table allows overload of column 1`] = `
+.emotion-7 {
+  height: 100%;
+}
+
+.emotion-5 {
+  font-weight: normal;
+}
+
+.emotion-5::after {
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  width: 100%;
+}
+
+.emotion-1 {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-1::-webkit-scrollbar {
+  display: none;
+}
+
+.emotion-6 {
+  height: 100px;
+  overflow: scroll;
+  msoverflowstyle: scrollbar;
+  opacity: 0;
+  position: absolute;
+  top: -100000px;
+  visibility: hidden;
+  width: 100px;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  class="emotion-7"
+>
+  <div
+    class="emotion-5"
+    style="overflow:visible;height:0;width:0"
+  >
+    <div
+      style="height:768px;overflow:visible;width:1024px"
+    >
+      <div
+        style="height:35px;position:relative;width:1024px"
+      >
+        <div
+          aria-label="grid"
+          aria-readonly="true"
+          class="ReactVirtualized__Grid"
+          role="grid"
+          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:307.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
+        >
+          <div
+            class="ReactVirtualized__Grid__innerScrollContainer"
+            role="rowgroup"
+            style="width:307.2px;height:35px;max-width:307.2px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+          >
+            <div
+              class="emotion-0"
+              style="height:35px;left:0;position:absolute;top:0;width:307.2px"
+            >
+              name
+            </div>
+          </div>
+        </div>
+        <div
+          class="TopRightGrid_ScrollWrapper"
+          style="left:307.2px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:716.8px"
+        >
+          <div
+            aria-label="grid"
+            aria-readonly="true"
+            class="ReactVirtualized__Grid emotion-1"
+            role="grid"
+            style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:716.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
+          />
+        </div>
+      </div>
+      <div
+        style="height:733px;overflow:visible;position:relative;width:1024px"
+      >
+        <div
+          class="BottomLeftGrid_ScrollWrapper"
+          style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:307.2px"
+        >
+          <div
+            aria-label="grid"
+            aria-readonly="true"
+            class="ReactVirtualized__Grid emotion-1"
+            role="grid"
+            style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:307.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
+          >
+            <div
+              class="ReactVirtualized__Grid__innerScrollContainer"
+              role="rowgroup"
+              style="width:307.2px;height:70px;max-width:307.2px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+            >
+              <div
+                class="emotion-2"
+                data-rowindex="1"
+                style="height:35px;left:0;position:absolute;top:0;width:307.2px"
+              >
+                <span>
+                  Brian Vaughn Parker
+                </span>
+              </div>
+              <div
+                class="emotion-2"
+                data-rowindex="2"
+                style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
+              >
+                <span>
+                  Jon Doe Parker
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-label="grid"
+          aria-readonly="true"
+          class="ReactVirtualized__Grid"
+          role="grid"
+          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:716.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:307.2px"
+          tabindex="0"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="emotion-6"
+  />
+</div>
+`;
+
 exports[`Table renders again with new data 1`] = `
 .emotion-3 {
   height: 100%;
