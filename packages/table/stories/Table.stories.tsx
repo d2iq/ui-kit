@@ -5,6 +5,7 @@ import { WidthArgs } from "../components/Column";
 import { Table, Column, Cell, HeaderCell, TextCell, NumberCell } from "..";
 import ChangingTable from "./helpers/ChangingTable";
 import SortableTable from "./helpers/SortableTable";
+import ResizableTableOnResizeDemo from "./helpers/ResizableTableOnResizeDemo";
 import { items, width } from "./helpers/mocks";
 import { StandardButton } from "../../button";
 
@@ -346,4 +347,92 @@ storiesOf("Table", module)
         />
       </Table>
     </div>
+  ))
+  .addWithInfo("resizeable + default column widths", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <Table data={items}>
+        <Column
+          header={<HeaderCell>name</HeaderCell>}
+          cellRenderer={nameCellRenderer}
+          resizable={true}
+        />
+        <Column
+          header={<HeaderCell>role</HeaderCell>}
+          cellRenderer={roleCellRenderer}
+          resizable={true}
+        />
+        <Column
+          header={<HeaderCell>state</HeaderCell>}
+          cellRenderer={stateCellRenderer}
+          resizable={true}
+        />
+        <Column
+          header={<HeaderCell>Very Long</HeaderCell>}
+          cellRenderer={veryLongRenderer}
+          resizable={true}
+        />
+        <Column
+          header={<HeaderCell textAlign="right">zip code</HeaderCell>}
+          cellRenderer={zipcodeCellRenderer}
+          resizable={true}
+        />
+      </Table>
+    </div>
+  ))
+  .addWithInfo("resizable + column width fill remaining", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <Table data={items}>
+        <Column
+          header={<HeaderCell>name</HeaderCell>}
+          cellRenderer={nameCellRenderer}
+          growToFill={true}
+          resizable={true}
+          minWidth={100}
+          maxWidth={150}
+        />
+        <Column
+          header={<HeaderCell>role</HeaderCell>}
+          cellRenderer={roleCellRenderer}
+          growToFill={true}
+          resizable={true}
+        />
+        <Column
+          header={<HeaderCell>state</HeaderCell>}
+          cellRenderer={stateCellRenderer}
+          growToFill={true}
+          resizable={true}
+          minWidth={100}
+          maxWidth={150}
+        />
+        <Column
+          header={<HeaderCell>Very Long</HeaderCell>}
+          cellRenderer={veryLongRenderer}
+          growToFill={true}
+          resizable={true}
+        />
+        <Column
+          header={<HeaderCell textAlign="right">zip code</HeaderCell>}
+          cellRenderer={zipcodeCellRenderer}
+          growToFill={true}
+          resizable={true}
+          minWidth={100}
+          maxWidth={150}
+        />
+      </Table>
+    </div>
+  ))
+  .addWithInfo("resizeable onResize demo", () => (
+    <ResizableTableOnResizeDemo />
   ));

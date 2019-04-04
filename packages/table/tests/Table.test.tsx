@@ -220,4 +220,127 @@ describe("Table", () => {
       ).toEqual(availableWidth);
     });
   });
+  it("renders a table with resizable columns", () => {
+    const component = render(
+      <Table data={items}>
+        <Column
+          resizable={true}
+          header="name"
+          cellRenderer={nameCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header="role"
+          cellRenderer={roleCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header="state"
+          cellRenderer={stateCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header="zipcode"
+          cellRenderer={zipcodeCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header="city"
+          cellRenderer={cityCellRenderer}
+          width={width}
+        />
+      </Table>
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+  it("calls onResize prop with resized column value when that column is resized", () => {
+    const onResizeCallback = jest.fn();
+    const component = shallow(
+      <Table data={items}>
+        <Column
+          resizable={true}
+          header="name"
+          cellRenderer={nameCellRenderer}
+          width={width}
+          onResize={onResizeCallback}
+        />
+        <Column
+          resizable={true}
+          header="role"
+          cellRenderer={roleCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header="state"
+          cellRenderer={stateCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header="zipcode"
+          cellRenderer={zipcodeCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header="city"
+          cellRenderer={cityCellRenderer}
+          width={width}
+        />
+      </Table>
+    );
+    const instance = component.instance() as Table<number>;
+    expect(onResizeCallback).not.toHaveBeenCalled();
+    instance.resizeColumn({ dragDelta: 50, index: "0" });
+    expect(onResizeCallback).toHaveBeenCalledWith(
+      instance.state.resizedColWidths.get("0")
+    );
+  });
+  it("sets state with resized values", () => {
+    const component = shallow(
+      <Table data={items}>
+        <Column
+          resizable={true}
+          header="name"
+          cellRenderer={nameCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header="role"
+          cellRenderer={roleCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header="state"
+          cellRenderer={stateCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header="zipcode"
+          cellRenderer={zipcodeCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header="city"
+          cellRenderer={cityCellRenderer}
+          width={width}
+        />
+      </Table>
+    );
+    const instance = component.instance() as Table<number>;
+    expect(instance.state.resizedColWidths.get("1")).toBe(undefined);
+    instance.resizeColumn({ dragDelta: 50, index: "1" });
+    expect(instance.state.resizedColWidths.get("1")).toEqual(
+      instance.getColumnWidth("1", 1000)
+    );
+  });
 });
