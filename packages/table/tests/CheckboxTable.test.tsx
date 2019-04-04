@@ -141,7 +141,9 @@ describe("CheckboxTable", () => {
     const cellRendererResult = component
       .find(Column)
       .first()
-      .prop("cellRenderer")(items[0], 100) as React.ReactElement<{
+      .prop("cellRenderer")(items[0], 100, {
+      additional: "prop"
+    }) as React.ReactElement<{
       children: any;
     }>;
     const checkbox = shallow(cellRendererResult.props.children).find("input");
