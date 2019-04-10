@@ -6,18 +6,21 @@ import { sortableHeaderIconBaseCSS, styleArrowDirection } from "../style";
 import { TextAlign } from "./Cell";
 
 type SortDirection = "ASC" | "DESC" | null;
-interface Props {
+export interface SortableHeaderCellProps {
   sortHandler: () => void;
   sortDirection: SortDirection;
   columnContent: React.ReactNode;
   textAlign?: TextAlign;
 }
-interface State {
+interface SortableHeaderCellState {
   hovered: boolean;
 }
 
-export class SortableHeaderCell extends React.Component<Props, State> {
-  constructor(props: Props) {
+export class SortableHeaderCell extends React.Component<
+  SortableHeaderCellProps,
+  SortableHeaderCellState
+> {
+  constructor(props: SortableHeaderCellProps) {
     super(props);
 
     this.hoverStart = this.hoverStart.bind(this);

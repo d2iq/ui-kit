@@ -27,7 +27,9 @@ import {
   dragHandle,
   unsetContainerOverflow,
   dragHandleWrapper,
-  headerHover
+  headerHover,
+  draggableContainer,
+  preventSortOverlap
 } from "../style";
 
 import { ColumnProps, Column } from "./Column";
@@ -43,6 +45,10 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
+import SortableHeaderCell, {
+  SortableHeaderCellProps
+} from "./SortableHeaderCell";
+import { CellProps } from "./Cell";
 
 export interface TableProps {
   /**
@@ -77,6 +83,7 @@ const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 768;
 const COL_RESIZE_MIN_WIDTH = 80;
 const COL_RESIZE_MAX_WIDTH = 0.8; // max proportion of table container width
+const RESIZE_ICON_SIZE = iconSizeXxs;
 
 let colSizeCache: number[] = [];
 
@@ -379,12 +386,31 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     );
   }
 
+  private cellNeedsPreventIconOverlap(header, column) {
+    const sortableHeaderCell = SortableHeaderCell as React.ComponentClass<
+      SortableHeaderCellProps
+    >;
+    if (header && header.props && column.props) {
+      return (
+        header.props.textAlign === "right" &&
+        column.props.resizable &&
+        header.type === sortableHeaderCell
+      );
+    } else {
+      return false;
+    }
+  }
+
   private getHeaderCell(
     args: GridCellProps & {
       column: React.ReactElement<ColumnProps>;
     }
   ) {
     const { key, style, column, columnIndex } = args;
+    const header = column.props.header as React.ReactElement<
+      CellProps | SortableHeaderCellProps
+    >;
+
     const onStopCallback = (_, data) => {
       this.resizeColumn({
         dragDelta: data.x,
@@ -408,8 +434,16 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         key={key}
       >
         <div className={flex()}>
-          <div className={flexItem("grow")}>{column.props.header}</div>
-          <div className={flexItem("shrink")}>
+          <div
+            className={cx(flexItem("grow"), {
+              [preventSortOverlap(
+                RESIZE_ICON_SIZE
+              )]: this.cellNeedsPreventIconOverlap(header, column)
+            })}
+          >
+            {column.props.header}
+          </div>
+          <div className={cx(flexItem("shrink"), draggableContainer)}>
             {column.props.resizable && (
               <Draggable
                 axis="x"
@@ -441,7 +475,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
                   >
                     <Icon
                       shape={SystemIcons.ResizeHorizontal}
-                      size={iconSizeXxs}
+                      size={RESIZE_ICON_SIZE}
                       color={textColorSecondary}
                     />
                   </div>
@@ -533,6 +567,9 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     const updateHoveredRowIndex = () => {
       this.setState({ hoveredRowIndex: rowIndex });
     };
+    const header = column.props.header as React.ReactElement<
+      CellProps | SortableHeaderCellProps
+    >;
 
     return (
       /* tslint:disable:react-a11y-event-has-role */
@@ -540,7 +577,10 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         className={cx(cellCss, vAlignChildren, {
           [css`
             ${rowHoverStyles};
-          `]: rowIndex === this.state.hoveredRowIndex
+          `]: rowIndex === this.state.hoveredRowIndex,
+          [preventSortOverlap(
+            RESIZE_ICON_SIZE
+          )]: this.cellNeedsPreventIconOverlap(header, column)
         })}
         style={style}
         key={key}

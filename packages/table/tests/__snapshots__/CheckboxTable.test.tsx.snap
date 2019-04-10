@@ -148,6 +148,9 @@ exports[`CheckboxTable renders default 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
+  mix-blend-mode: multiply;
+  position: relative;
+  z-index: 1;
 }
 
 .emotion-6 {
@@ -793,6 +796,9 @@ exports[`CheckboxTable renders with checked row 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
+  mix-blend-mode: multiply;
+  position: relative;
+  z-index: 1;
 }
 
 .emotion-8 {
@@ -1532,6 +1538,9 @@ exports[`CheckboxTable renders with disabled and muted row 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
+  mix-blend-mode: multiply;
+  position: relative;
+  z-index: 1;
 }
 
 .emotion-6 {

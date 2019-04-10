@@ -52,9 +52,15 @@ export const innerCellCss = css`
 
 export const cellAlignmentCss = (textAlign: string) => css`
   text-align: ${textAlign};
-  margin-right: ${textAlign === "right"
+  padding-right: ${textAlign === "right"
     ? `${pointerSize + pointerSpace + cellPadding}px`
     : null};
+`;
+
+export const preventSortOverlap = (iconSize: string) => css`
+  & > div {
+    margin-right: ${iconSize};
+  }
 `;
 
 export const tableWrapper = css`
@@ -162,6 +168,12 @@ export const scrollbarMeas = css`
   width: 100px;
 `;
 
+export const draggableContainer = css`
+  mix-blend-mode: multiply;
+  position: relative;
+  z-index: 1;
+`;
+
 export const dragHandleWrapper = css`
   background-clip: content-box;
   height: 100%;
@@ -172,13 +184,9 @@ export const dragHandleWrapper = css`
 export const dragHandle = css`
   cursor: col-resize;
   height: 100%;
-  position: relative;
   visibility: hidden;
-
   &:hover,
   &:active {
-    mix-blend-mode: multiply;
-
     .staticClass_dragHandleWrapper {
       background-color: ${greyLightLighten5};
     }
