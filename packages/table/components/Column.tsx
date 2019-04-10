@@ -1,4 +1,5 @@
 import * as React from "react";
+import Immutable from "immutable";
 export interface WidthArgs {
   width: number;
   totalColumns: number;
@@ -33,6 +34,14 @@ export interface ColumnProps {
    * whether the column should grow to fill remaining space
    */
   growToFill?: boolean;
+  /**
+   * whether the column can be manually resized
+   */
+  resizable?: boolean;
+  /**
+   * Callback after a column has been resized
+   */
+  onResize?: (resizedColWidths: Immutable.Map<string, number>) => void;
 }
 
 export class Column extends React.PureComponent<ColumnProps, {}> {}

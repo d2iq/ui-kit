@@ -1,23 +1,48 @@
 import * as React from "react";
+import Immutable from "immutable";
+import Draggable from "react-draggable";
 import { cx, css } from "emotion";
+import memoizeOne from "memoize-one";
 import styled from "react-emotion";
-import { AutoSizer, MultiGrid, GridCellProps } from "react-virtualized";
+import {
+  AutoSizer,
+  MultiGrid,
+  GridCellProps,
+  GridCellRangeProps,
+  GridProps,
+  defaultCellRangeRenderer
+} from "react-virtualized";
 
 import {
   headerCss,
+  resizingHeader,
   cellCss,
   tableCss,
   rightGrid,
+  topLeftGrid,
   hideScrollbarCss,
   rowHoverStyles,
   tableWrapper,
-  scrollbarMeas
+  scrollbarMeas,
+  dragHandle,
+  unsetContainerOverflow,
+  dragHandleWrapper,
+  headerHover
 } from "../style";
 
 import { ColumnProps, Column } from "./Column";
-import memoizeOne from "memoize-one";
-import { vAlignChildren } from "../../shared/styles/styleUtils";
-import { textColorSecondary } from "../../design-tokens/build/js/designTokens";
+import {
+  vAlignChildren,
+  flex,
+  flexItem,
+  padding
+} from "../../shared/styles/styleUtils";
+import {
+  textColorSecondary,
+  iconSizeXxs
+} from "../../design-tokens/build/js/designTokens";
+import { Icon } from "../../icon";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 export interface TableProps {
   /**
@@ -43,12 +68,17 @@ export interface TableProps {
 export interface TableState {
   isScrolling: boolean;
   hoveredRowIndex: number;
+  resizedColWidths: Immutable.Map<string, number>;
+  resizeIndex: number;
 }
 
 const ROW_HEIGHT = 35;
-
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 768;
+const COL_RESIZE_MIN_WIDTH = 80;
+const COL_RESIZE_MAX_WIDTH = 0.8; // max proportion of table container width
+
+let colSizeCache: number[] = [];
 
 export const clampWidth = (
   baseWidth: number,
@@ -124,7 +154,12 @@ const ContentCell = styled("div")`
 `;
 
 export class Table<T> extends React.PureComponent<TableProps, TableState> {
-  public multiGridRef: { recomputeGridSize?: any } = {};
+  public multiGridRef: {
+    recomputeGridSize?: any;
+    props?: { width: number };
+    _bottomRightGrid?: React.ReactElement<GridProps>;
+    _topRightGrid?: React.ReactElement<GridProps>;
+  } = {};
   public scrollMeasRef = React.createRef<HTMLDivElement>();
 
   public getData = memoizeOne(
@@ -146,6 +181,9 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
           scrollbarMeasEl.offsetWidth - scrollbarMeasEl.clientWidth;
       }
       const scrollbarAdjustedWidth = width - scrollbarWidth;
+      const hasFillingColumns = children.filter(child => child.props.growToFill)
+        .length;
+      const { resizedColWidths } = this.state;
 
       const totalColumns: number = children.length;
       const colWidths = children.map((child, currentIndex) => {
@@ -164,14 +202,30 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
           child.props.maxWidth || width
         );
         remainingWidth -= clampedWidth;
-        return clampedWidth;
+        return resizedColWidths.get(currentIndex.toString(), clampedWidth);
       });
 
-      if (children.filter(child => child.props.growToFill).length) {
+      const colSizeCacheVals = colSizeCache.map((colSize, i) => {
+        const colWidth = resizedColWidths.get(i.toString(), colSize);
+        return colWidth;
+      });
+
+      const valsToSet =
+        hasFillingColumns && colSizeCache.length ? colSizeCacheVals : colWidths;
+
+      if (hasFillingColumns && !resizedColWidths.size) {
+        colSizeCache =
+          fillColumns(children, colWidths, scrollbarAdjustedWidth) || [];
         return fillColumns(children, colWidths, scrollbarAdjustedWidth) || [];
       }
 
-      return colWidths;
+      colSizeCache = valsToSet;
+
+      return valsToSet.map((val, i) => {
+        return resizedColWidths.get(i.toString())
+          ? Math.min(val, this.getContainerWidth() * COL_RESIZE_MAX_WIDTH)
+          : val;
+      });
     }
   );
 
@@ -184,11 +238,25 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     this.getGrid = this.getGrid.bind(this);
     this.onScroll = this.onScroll.bind(this);
     this.cellRenderer = this.cellRenderer.bind(this);
+    this.cellRangeRenderer = this.cellRangeRenderer.bind(this);
+    this.getContainerWidth = this.getContainerWidth.bind(this);
+    this.getColumnWidth = this.getColumnWidth.bind(this);
+    this.resizeColumn = this.resizeColumn.bind(this);
 
     this.state = {
       isScrolling: false,
-      hoveredRowIndex: -1
+      hoveredRowIndex: -1,
+      resizedColWidths: Immutable.Map(),
+      resizeIndex: -1
     };
+  }
+
+  componentDidUpdate(_, nextState) {
+    const { resizedColWidths } = this.state;
+
+    if (resizedColWidths !== nextState.resizedColWidths) {
+      this.updateGridSize();
+    }
   }
 
   public render() {
@@ -211,6 +279,47 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         */}
         <div className={scrollbarMeas} ref={this.scrollMeasRef} />
       </div>
+    );
+  }
+
+  public getContainerWidth() {
+    return this.multiGridRef.props
+      ? this.multiGridRef.props.width
+      : DEFAULT_WIDTH;
+  }
+
+  public getColumnWidth(index: string, width: number) {
+    const { resizedColWidths } = this.state;
+
+    const columnSizes = this.getColumnSizes(
+      React.Children.toArray(this.props.children) as Array<
+        React.ReactElement<ColumnProps>
+      >,
+      width
+    );
+
+    return resizedColWidths.get(index.toString(), columnSizes[index]);
+  }
+
+  public resizeColumn(args: { dragDelta: number; index: string }) {
+    const { resizedColWidths } = this.state;
+    const { dragDelta, index } = args;
+    const columns = React.Children.toArray(this.props.children) as Array<
+      React.ReactElement<ColumnProps>
+    >;
+
+    let columnWidth = this.getColumnWidth(index, this.getContainerWidth());
+    columnWidth = columnWidth + dragDelta;
+
+    this.setState(
+      {
+        resizedColWidths: resizedColWidths.set(index, columnWidth)
+      },
+      () => {
+        if (columns[index].props.onResize) {
+          columns[index].props.onResize(this.state.resizedColWidths.get(index));
+        }
+      }
     );
   }
 
@@ -246,6 +355,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         ref={this.setRef}
         fixedColumnCount={this.props.fixedColumnCount || 1}
         fixedRowCount={1}
+        cellRangeRenderer={this.cellRangeRenderer}
         cellRenderer={this.cellRenderer}
         columnWidth={getColumnSize}
         columnCount={columnCount}
@@ -257,8 +367,13 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         width={width}
         hideTopRightGridScrollbar={true}
         hideBottomLeftGridScrollbar={true}
-        classNameTopRightGrid={cx(rightGridStyles, hideScrollbarCss)}
-        classNameBottomRightGrid={rightGridStyles}
+        classNameTopRightGrid={cx(
+          rightGridStyles,
+          hideScrollbarCss,
+          unsetContainerOverflow
+        )}
+        classNameTopLeftGrid={cx(topLeftGrid, unsetContainerOverflow)}
+        classNameBottomRightGrid={cx(rightGridStyles, unsetContainerOverflow)}
         classNameBottomLeftGrid={hideScrollbarCss}
       />
     );
@@ -269,12 +384,122 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       column: React.ReactElement<ColumnProps>;
     }
   ) {
-    const { key, style, column } = args;
+    const { key, style, column, columnIndex } = args;
+    const onStopCallback = (_, data) => {
+      this.resizeColumn({
+        dragDelta: data.x,
+        index: columnIndex.toString()
+      });
+      this.setState({ resizeIndex: -1 });
+    };
+    const onStartCallback = () => {
+      this.setState({ resizeIndex: columnIndex });
+    };
+
     return (
-      <div className={cx(headerCss, vAlignChildren)} style={style} key={key}>
-        {column.props.header}
+      <div
+        className={cx(headerCss, vAlignChildren, {
+          [resizingHeader]: this.state.resizeIndex >= 0,
+          [headerHover]:
+            this.state.resizeIndex === -1 ||
+            this.state.resizeIndex === columnIndex
+        })}
+        style={style}
+        key={key}
+      >
+        <div className={flex()}>
+          <div className={flexItem("grow")}>{column.props.header}</div>
+          <div className={flexItem("shrink")}>
+            {column.props.resizable && (
+              <Draggable
+                axis="x"
+                defaultClassName={cx(dragHandle)}
+                onStop={onStopCallback}
+                position={{
+                  x: 0,
+                  y: 0
+                }}
+                onStart={onStartCallback}
+                bounds={{
+                  top: 0,
+                  left: colSizeCache[columnIndex] * -1 + COL_RESIZE_MIN_WIDTH,
+                  right:
+                    this.getContainerWidth() -
+                    colSizeCache[columnIndex] -
+                    this.getContainerWidth() * (1 - COL_RESIZE_MAX_WIDTH),
+                  bottom: 0
+                }}
+              >
+                <div>
+                  <div
+                    className={cx(
+                      dragHandleWrapper,
+                      vAlignChildren,
+                      padding("left", "l"),
+                      "staticClass_dragHandleWrapper"
+                    )}
+                  >
+                    <Icon
+                      shape={SystemIcons.ResizeHorizontal}
+                      size={iconSizeXxs}
+                      color={textColorSecondary}
+                    />
+                  </div>
+                </div>
+              </Draggable>
+            )}
+          </div>
+        </div>
       </div>
     );
+  }
+
+  private cellRangeRenderer(args: GridCellRangeProps) {
+    const children = defaultCellRangeRenderer(args);
+    const {
+      rowStartIndex,
+      rowStopIndex,
+      rowSizeAndPositionManager,
+      parent
+    } = args;
+
+    const takenWidth = colSizeCache.reduce((acc, curr) => acc + curr, 0);
+    const fillerColSize = this.getContainerWidth() - takenWidth;
+
+    for (let rowIndex = rowStartIndex; rowIndex <= rowStopIndex; rowIndex++) {
+      const rowDatum = rowSizeAndPositionManager.getSizeAndPositionOfCell(
+        rowIndex
+      );
+
+      if (
+        takenWidth < this.getContainerWidth() &&
+        (parent === this.multiGridRef._bottomRightGrid ||
+          parent === this.multiGridRef._topRightGrid)
+      ) {
+        children.push(
+          <div
+            style={{
+              height: rowDatum.size,
+              position: "absolute",
+              right: fillerColSize * -1,
+              top: rowDatum.offset,
+              width: fillerColSize
+            }}
+            key={`filler-${rowIndex}`}
+            className={cx(cellCss, vAlignChildren, {
+              [css`
+                ${rowHoverStyles};
+              `]:
+                rowIndex === this.state.hoveredRowIndex - 1 &&
+                parent !== this.multiGridRef._topRightGrid,
+              [headerCss]: parent === this.multiGridRef._topRightGrid
+            })}
+          />
+        );
+      }
+    }
+
+    return children;
   }
 
   private cellRenderer(args: GridCellProps) {

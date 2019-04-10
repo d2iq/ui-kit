@@ -18,9 +18,23 @@ export const headerCss = css`
   border-bottom: 1px solid ${black};
 `;
 
+export const headerHover = css`
+  &:hover,
+  &:active {
+    .staticClass_dragHandleWrapper {
+      visibility: visible;
+    }
+  }
+`;
+
 export const headerCellCss = css`
   text-transform: capitalize;
   font-weight: bold;
+`;
+
+export const resizingHeader = css`
+  cursor: col-resize;
+  user-select: none;
 `;
 
 export const cellCss = css`
@@ -30,10 +44,10 @@ export const cellCss = css`
 `;
 
 export const innerCellCss = css`
-  display: inline-block;
   height: auto;
   box-sizing: border-box;
   padding: ${cellPadding}px;
+  z-index: 1;
 `;
 
 export const cellAlignmentCss = (textAlign: string) => css`
@@ -69,6 +83,20 @@ export const rightGrid = css`
   );
   background-repeat: no-repeat;
   background-size: 8px 100%;
+`;
+
+//
+// !important is needed to beat the inline style
+// coming from react-virtualized :(
+//
+export const topLeftGrid = css`
+  overflow: unset !important;
+`;
+
+export const unsetContainerOverflow = css`
+  .ReactVirtualized__Grid__innerScrollContainer {
+    overflow: unset !important;
+  }
 `;
 
 export const hideScrollbarCss = css`
@@ -132,4 +160,27 @@ export const scrollbarMeas = css`
   top: -100000px;
   visibility: hidden;
   width: 100px;
+`;
+
+export const dragHandleWrapper = css`
+  background-clip: content-box;
+  height: 100%;
+  position: absolute;
+  right: 0;
+`;
+
+export const dragHandle = css`
+  cursor: col-resize;
+  height: 100%;
+  position: relative;
+  visibility: hidden;
+
+  &:hover,
+  &:active {
+    mix-blend-mode: multiply;
+
+    .staticClass_dragHandleWrapper {
+      background-color: ${greyLightLighten5};
+    }
+  }
 `;
