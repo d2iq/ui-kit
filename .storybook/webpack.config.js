@@ -1,13 +1,14 @@
 const webpack = require("webpack");
 const webpackBase = require("./../webpack/webpack.base");
 
-module.exports = (baseConfig, env, defaultConfig) => {
-  defaultConfig.devtool = webpackBase.getDevTool();
-  defaultConfig.module.rules = defaultConfig.module.rules.concat(webpackBase.getRules());
-  defaultConfig.plugins = defaultConfig.plugins.concat(webpackBase.getPlugins());
-  defaultConfig.resolve.extensions = defaultConfig.resolve.extensions.concat(
+module.exports = ({ config, mode }) => {
+  config.devtool = webpackBase.getDevTool();
+  config.module.rules = config.module.rules.concat(webpackBase.getRules());
+  config.plugins = config.plugins.concat(webpackBase.getPlugins());
+  config.resolve.extensions = config.resolve.extensions.concat(
     webpackBase.getExtensions()
   );
+  config.module.rules[0].use[0].options.sourceType = "unambiguous";
 
-  return defaultConfig;
+  return config;
 };
