@@ -10,9 +10,7 @@ const secondary = () => <div>secondary component</div>;
 
 storiesOf("Toggle", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("string", () => (
-    <ToggleContent contentOn="Hello" contentOff="Bye" />
-  ))
-  .addWithInfo("component", () => (
+  .add("string", () => <ToggleContent contentOn="Hello" contentOff="Bye" />)
+  .add("component", () => (
     <ToggleContent contentOn={primary()} contentOff={secondary()} />
   ));

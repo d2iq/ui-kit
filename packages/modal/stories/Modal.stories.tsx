@@ -3,7 +3,6 @@ import { cx } from "emotion";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { action } from "@storybook/addon-actions";
-import { withInfo } from "@storybook/addon-info";
 import {
   DialogModal,
   SmallDialogModal,
@@ -31,11 +30,14 @@ const readme = require("../README.md");
 
 storiesOf("Modal", module)
   .addDecorator(withReadme([readme]))
+  .addParameters({
+    info: {
+      propTablesExclude: [ModalStoryContainer]
+    }
+  })
   .add(
     "DialogModal",
-    withInfo({
-      propTables: [DialogModal as any]
-    })(() => (
+    () => (
       <ModalStoryContainer>
         {({ isOpen, onClose }) => (
           <DialogModal isOpen={isOpen} onClose={onClose} title="I am modal">
@@ -43,13 +45,16 @@ storiesOf("Modal", module)
           </DialogModal>
         )}
       </ModalStoryContainer>
-    ))
+    ),
+    {
+      info: {
+        propTables: [DialogModal]
+      }
+    }
   )
   .add(
     "SmallDialogModal",
-    withInfo({
-      propTables: [SmallDialogModal as any]
-    })(() => (
+    () => (
       <ModalStoryContainer>
         {({ isOpen, onClose }) => (
           <SmallDialogModal
@@ -61,13 +66,16 @@ storiesOf("Modal", module)
           </SmallDialogModal>
         )}
       </ModalStoryContainer>
-    ))
+    ),
+    {
+      info: {
+        propTables: [SmallDialogModal]
+      }
+    }
   )
   .add(
     "LargeDialogModal",
-    withInfo({
-      propTables: [LargeDialogModal as any]
-    })(() => (
+    () => (
       <ModalStoryContainer>
         {({ isOpen, onClose }) => (
           <LargeDialogModal
@@ -79,13 +87,16 @@ storiesOf("Modal", module)
           </LargeDialogModal>
         )}
       </ModalStoryContainer>
-    ))
+    ),
+    {
+      info: {
+        propTables: [LargeDialogModal]
+      }
+    }
   )
   .add(
     "DialogModal w/ flushed content",
-    withInfo({
-      propTables: [LargeDialogModal as any]
-    })(() => (
+    () => (
       <ModalStoryContainer>
         {({ isOpen, onClose }) => (
           <DialogModal
@@ -98,13 +109,16 @@ storiesOf("Modal", module)
           </DialogModal>
         )}
       </ModalStoryContainer>
-    ))
+    ),
+    {
+      info: {
+        propTables: [LargeDialogModal]
+      }
+    }
   )
   .add(
     "DialogModalWithFooter",
-    withInfo({
-      propTables: [DialogModalWithFooter as any]
-    })(() => (
+    () => (
       <ModalStoryContainer>
         {({ isOpen, onClose }) => (
           <DialogModalWithFooter
@@ -125,13 +139,16 @@ storiesOf("Modal", module)
           </DialogModalWithFooter>
         )}
       </ModalStoryContainer>
-    ))
+    ),
+    {
+      info: {
+        propTables: [DialogModalWithFooter]
+      }
+    }
   )
   .add(
     "SmallDialogModalWithFooter",
-    withInfo({
-      propTables: [SmallDialogModalWithFooter as any]
-    })(() => (
+    () => (
       <ModalStoryContainer>
         {({ isOpen, onClose }) => (
           <SmallDialogModalWithFooter
@@ -152,13 +169,16 @@ storiesOf("Modal", module)
           </SmallDialogModalWithFooter>
         )}
       </ModalStoryContainer>
-    ))
+    ),
+    {
+      info: {
+        propTables: [SmallDialogModalWithFooter]
+      }
+    }
   )
   .add(
     "LargeDialogModalWithFooter",
-    withInfo({
-      propTables: [LargeDialogModalWithFooter as any]
-    })(() => (
+    () => (
       <ModalStoryContainer>
         {({ isOpen, onClose }) => (
           <LargeDialogModalWithFooter
@@ -179,13 +199,16 @@ storiesOf("Modal", module)
           </LargeDialogModalWithFooter>
         )}
       </ModalStoryContainer>
-    ))
+    ),
+    {
+      info: {
+        propTables: [LargeDialogModalWithFooter]
+      }
+    }
   )
   .add(
     "FullscreenModal",
-    withInfo({
-      propTables: [FullscreenModal as any]
-    })(() => (
+    () => (
       <ModalStoryContainer>
         {({ isOpen, onClose }) => (
           <FullscreenModal
@@ -207,13 +230,16 @@ storiesOf("Modal", module)
           </FullscreenModal>
         )}
       </ModalStoryContainer>
-    ))
+    ),
+    {
+      info: {
+        propTables: [FullscreenModal]
+      }
+    }
   )
   .add(
     "FullscreenModal with additional header content",
-    withInfo({
-      propTables: [FullscreenModal as any]
-    })(() => {
+    () => {
       const HeaderContent = ({ ctaButton, closeText, title, onClose }) => (
         <div className={cx(flex({ align: "center" }), flexItem("shrink"))}>
           <div className={flexItem("grow")}>
@@ -261,13 +287,16 @@ storiesOf("Modal", module)
           )}
         </ModalStoryContainer>
       );
-    })
+    },
+    {
+      info: {
+        propTables: [FullscreenModal]
+      }
+    }
   )
   .add(
     "FullscreenModal w/ flushed content",
-    withInfo({
-      propTables: [FullscreenModal as any]
-    })(() => (
+    () => (
       <ModalStoryContainer>
         {({ isOpen, onClose }) => (
           <FullscreenModal
@@ -289,13 +318,16 @@ storiesOf("Modal", module)
           </FullscreenModal>
         )}
       </ModalStoryContainer>
-    ))
+    ),
+    {
+      info: {
+        propTables: [FullscreenModal]
+      }
+    }
   )
   .add(
     "custom focused element",
-    withInfo({
-      propTables: [DialogModal as any]
-    })(() => (
+    () => (
       <ModalStoryContainer>
         {({ isOpen, onClose }) => (
           <DialogModal
@@ -313,5 +345,10 @@ storiesOf("Modal", module)
           </DialogModal>
         )}
       </ModalStoryContainer>
-    ))
+    ),
+    {
+      info: {
+        propTables: [DialogModal]
+      }
+    }
   );

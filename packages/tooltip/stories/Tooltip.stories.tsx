@@ -1,8 +1,8 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { withInfo } from "@storybook/addon-info";
-import { selectV2 } from "@storybook/addon-knobs";
+import { select } from "@storybook/addon-knobs";
+
 import { Tooltip } from "../../index";
 import { Direction } from "../../dropdownable/components/Dropdownable";
 
@@ -10,50 +10,44 @@ const readme = require("../README.md");
 
 storiesOf("Tooltip", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("default", () => (
+  .add("default", () => (
     <div style={{ textAlign: "center" }}>
       <Tooltip trigger="hover me" id="default">
         content
       </Tooltip>
     </div>
   ))
-  .add(
-    "with custom direction",
-    withInfo({
-      propTables: [Tooltip]
-    })(() => {
-      const options = {
-        BottomLeft: "bottom-left",
-        BottomRight: "bottom-right",
-        BottomCenter: "bottom-center",
-        TopLeft: "top-left",
-        TopRight: "top-right",
-        TopCenter: "top-center"
-      };
+  .add("with custom direction", () => {
+    const options = {
+      BottomLeft: "bottom-left",
+      BottomRight: "bottom-right",
+      BottomCenter: "bottom-center",
+      TopLeft: "top-left",
+      TopRight: "top-right",
+      TopCenter: "top-center"
+    };
 
-      const knobDirection = selectV2("Direction", options, "BottomLeft");
+    const knobDirection = select("Direction", options, "BottomLeft");
 
-      function getKeyByValue(value): string {
-        return (
-          Object.keys(options).find(key => options[key] === value) ||
-          "BottomLeft"
-        );
-      }
-
+    function getKeyByValue(value): string {
       return (
-        <div style={{ textAlign: "center" }}>
-          <Tooltip
-            trigger="hover me"
-            id="customDir"
-            preferredDirections={[Direction[getKeyByValue(knobDirection)]]}
-          >
-            Use the knobs to change tooltip alignment
-          </Tooltip>
-        </div>
+        Object.keys(options).find(key => options[key] === value) || "BottomLeft"
       );
-    })
-  )
-  .addWithInfo("min or max width", () => (
+    }
+
+    return (
+      <div style={{ textAlign: "center" }}>
+        <Tooltip
+          trigger="hover me"
+          id="customDir"
+          preferredDirections={[Direction[getKeyByValue(knobDirection)]]}
+        >
+          Use the knobs to change tooltip alignment
+        </Tooltip>
+      </div>
+    );
+  })
+  .add("min or max width", () => (
     <div>
       <div style={{ textAlign: "center", marginBottom: "1em" }}>
         <Tooltip trigger="maxWidth 100px" id="maxWidth" maxWidth={100}>
@@ -72,7 +66,7 @@ storiesOf("Tooltip", module)
       </div>
     </div>
   ))
-  .addWithInfo("suppress toggle", () => (
+  .add("suppress toggle", () => (
     <div style={{ textAlign: "center" }}>
       <Tooltip trigger="hover me" id="suppress" open={true} suppress={true}>
         I won't toggle open and closed

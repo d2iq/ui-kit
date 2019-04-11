@@ -27,7 +27,7 @@ const stateCellRenderer = ({ state }: { state?: string }) => (
   </TextCell>
 );
 
-class SortableTable extends React.Component<{}, ResizableTableDemoState> {
+class ResizableTableDemo extends React.Component<{}, ResizableTableDemoState> {
   constructor(props) {
     super(props);
 
@@ -89,4 +89,4 @@ class SortableTable extends React.Component<{}, ResizableTableDemoState> {
   }
 }
 
-export default SortableTable;
+export default ResizableTableDemo;

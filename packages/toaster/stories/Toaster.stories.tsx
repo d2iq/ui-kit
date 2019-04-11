@@ -93,25 +93,30 @@ class ToasterContainer extends React.PureComponent<
 
 storiesOf("Toaster", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("default", () => (
+  .addParameters({
+    info: {
+      propTablesExclude: [Toaster]
+    }
+  })
+  .add("default", () => (
     <Toaster>{[<Toast title={toastTitle} key={0} id="default" />]}</Toaster>
   ))
-  .addWithInfo("danger", () => (
+  .add("danger", () => (
     <Toaster>
       {[<Toast title={toastTitle} key={0} id="danger" appearance="danger" />]}
     </Toaster>
   ))
-  .addWithInfo("success", () => (
+  .add("success", () => (
     <Toaster>
       {[<Toast title={toastTitle} key={0} id="success" appearance="success" />]}
     </Toaster>
   ))
-  .addWithInfo("warning", () => (
+  .add("warning", () => (
     <Toaster>
       {[<Toast title={toastTitle} key={0} id="warning" appearance="warning" />]}
     </Toaster>
   ))
-  .addWithInfo("description", () => (
+  .add("description", () => (
     <Toaster>
       {[
         <Toast
@@ -123,8 +128,8 @@ storiesOf("Toaster", module)
       ]}
     </Toaster>
   ))
-  .addWithInfo("autodismiss", () => <ToasterContainer>{[]}</ToasterContainer>)
-  .addWithInfo("with dismiss callback", () => (
+  .add("autodismiss", () => <ToasterContainer>{[]}</ToasterContainer>)
+  .add("with dismiss callback", () => (
     <Toaster>
       {[
         <Toast
@@ -136,7 +141,7 @@ storiesOf("Toaster", module)
       ]}
     </Toaster>
   ))
-  .addWithInfo("with 1 action", () => (
+  .add("with 1 action", () => (
     <Toaster>
       {[
         <Toast
@@ -155,7 +160,7 @@ storiesOf("Toaster", module)
       ]}
     </Toaster>
   ))
-  .addWithInfo("with 2 actions", () => (
+  .add("with 2 actions", () => (
     <Toaster>
       {[
         <Toast

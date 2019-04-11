@@ -1,8 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { withInfo } from "@storybook/addon-info";
-import { selectV2 } from "@storybook/addon-knobs";
+import { select } from "@storybook/addon-knobs";
 
 const readme = require("../README.md");
 
@@ -12,11 +11,14 @@ import DropdownStoryFit from "./helpers/DropdownStoryFit";
 
 storiesOf("Dropdownable", module)
   .addDecorator(withReadme([readme]))
+  .addParameters({
+    info: {
+      propTablesExclude: [DropdownStory, DropdownStoryFit]
+    }
+  })
   .add(
     "with custom direction",
-    withInfo({
-      propTables: [Dropdownable]
-    })(() => {
+    () => {
       const options = {
         BottomLeft: "bottom-left",
         BottomRight: "bottom-right",
@@ -24,7 +26,7 @@ storiesOf("Dropdownable", module)
         TopRight: "top-right"
       };
 
-      const knobDirection = selectV2("Direction", options, "BottomLeft");
+      const knobDirection = select("Direction", options, "BottomLeft");
 
       function getKeyByValue(value): string {
         return (
@@ -40,17 +42,25 @@ storiesOf("Dropdownable", module)
           Change dropdown orientation using knobs
         </DropdownStory>
       );
-    })
+    },
+    {
+      info: {
+        propTables: [Dropdownable]
+      }
+    }
   )
   .add(
     "with multiple direction preferences",
-    withInfo({
-      propTables: [Dropdownable]
-    })(() => {
+    () => {
       return (
         <DropdownStoryFit>
           Open the dropdown before and after expanding the height
         </DropdownStoryFit>
       );
-    })
+    },
+    {
+      info: {
+        propTables: [Dropdownable]
+      }
+    }
   );

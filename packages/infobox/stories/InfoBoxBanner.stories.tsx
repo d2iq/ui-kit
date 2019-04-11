@@ -10,7 +10,12 @@ const readme = require("../README.md");
 
 storiesOf("InfoBox/Banner", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("default", () => (
+  .addParameters({
+    info: {
+      propTablesExclude: [InfoBoxStoryContainer]
+    }
+  })
+  .add("default", () => (
     <InfoBoxStoryContainer>
       <InfoBoxBanner
         message="This is message is an example of how we might inform the user in DCOS"
@@ -18,7 +23,7 @@ storiesOf("InfoBox/Banner", module)
       />
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("info", () => (
+  .add("info", () => (
     <InfoBoxStoryContainer>
       <InfoBoxBanner
         appearance="info"
@@ -27,7 +32,7 @@ storiesOf("InfoBox/Banner", module)
       />
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("success", () => (
+  .add("success", () => (
     <InfoBoxStoryContainer>
       <InfoBoxBanner
         appearance="success"
@@ -36,7 +41,7 @@ storiesOf("InfoBox/Banner", module)
       />
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("warning", () => (
+  .add("warning", () => (
     <InfoBoxStoryContainer>
       <InfoBoxBanner
         appearance="warning"
@@ -45,7 +50,7 @@ storiesOf("InfoBox/Banner", module)
       />
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("danger", () => (
+  .add("danger", () => (
     <InfoBoxStoryContainer>
       <InfoBoxBanner
         appearance="danger"
@@ -54,7 +59,7 @@ storiesOf("InfoBox/Banner", module)
       />
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("message as custom markup", () => (
+  .add("message as custom markup", () => (
     <InfoBoxStoryContainer>
       <InfoBoxBanner
         message={
@@ -80,7 +85,7 @@ storiesOf("InfoBox/Banner", module)
       />
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("1 action", () => (
+  .add("1 action", () => (
     <InfoBoxStoryContainer>
       <InfoBoxBanner
         message="This is message is an example of how we might inform the user in DCOS"
@@ -89,7 +94,7 @@ storiesOf("InfoBox/Banner", module)
       />
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("2 actions", () => (
+  .add("2 actions", () => (
     <InfoBoxStoryContainer>
       <InfoBoxBanner
         message="This is message is an example of how we might inform the user in DCOS"

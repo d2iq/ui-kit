@@ -50,7 +50,7 @@ const empty = () => <Cell>empty</Cell>;
 
 storiesOf("Table", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("collection table", () => (
+  .add("collection table", () => (
     <div
       style={{
         height: "175px",
@@ -93,7 +93,7 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
-  .addWithInfo("default column widths", () => (
+  .add("default column widths", () => (
     <div
       style={{
         height: "175px",
@@ -125,7 +125,7 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
-  .addWithInfo("column width fill remaining", () => (
+  .add("column width fill remaining", () => (
     <div
       style={{
         height: "175px",
@@ -168,7 +168,7 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
-  .addWithInfo("width-aware render", () => {
+  .add("width-aware render", () => {
     const stateWidth = (args: WidthArgs): number =>
       Math.min(100, Math.max(200, args.width / args.totalColumns));
     const fillRemainingWidth = (args: WidthArgs): number => args.remainingWidth;
@@ -213,18 +213,27 @@ storiesOf("Table", module)
       </div>
     );
   })
-  .addWithInfo("with sortable column", () => (
-    <div
-      style={{
-        height: "175px",
-        width: "100%",
-        fontSize: "14px"
-      }}
-    >
-      <SortableTable />
-    </div>
-  ))
-  .addWithInfo("no scroll", () => (
+  .add(
+    "with sortable column",
+    () => (
+      <div
+        style={{
+          height: "175px",
+          width: "100%",
+          fontSize: "14px"
+        }}
+      >
+        <SortableTable />
+      </div>
+    ),
+    {
+      info: {
+        propTables: [Table, Column],
+        propTablesExclude: [SortableTable]
+      }
+    }
+  )
+  .add("no scroll", () => (
     <div
       style={{
         height: "175px",
@@ -251,18 +260,27 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
-  .addWithInfo("changing values", () => (
-    <div
-      style={{
-        height: "175px",
-        width: "100%",
-        fontSize: "14px"
-      }}
-    >
-      <ChangingTable />
-    </div>
-  ))
-  .addWithInfo("with global action", () => (
+  .add(
+    "changing values",
+    () => (
+      <div
+        style={{
+          height: "175px",
+          width: "100%",
+          fontSize: "14px"
+        }}
+      >
+        <ChangingTable />
+      </div>
+    ),
+    {
+      info: {
+        propTables: [Table, Column],
+        propTablesExclude: [ChangingTable]
+      }
+    }
+  )
+  .add("with global action", () => (
     <div
       style={{
         height: "175px",
@@ -309,7 +327,7 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
-  .addWithInfo("with custom row height", () => (
+  .add("with custom row height", () => (
     <div
       style={{
         height: "300px",
@@ -348,7 +366,7 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
-  .addWithInfo("resizeable + default column widths", () => (
+  .add("resizeable + default column widths", () => (
     <div
       style={{
         height: "175px",
@@ -385,7 +403,7 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
-  .addWithInfo("resizable + column width fill remaining", () => (
+  .add("resizable + column width fill remaining", () => (
     <div
       style={{
         height: "175px",
@@ -433,6 +451,9 @@ storiesOf("Table", module)
       </Table>
     </div>
   ))
-  .addWithInfo("resizeable onResize demo", () => (
-    <ResizableTableOnResizeDemo />
-  ));
+  .add("resizeable onResize demo", () => <ResizableTableOnResizeDemo />, {
+    info: {
+      propTables: [Table, Column],
+      propTablesExclude: [ResizableTableOnResizeDemo]
+    }
+  });

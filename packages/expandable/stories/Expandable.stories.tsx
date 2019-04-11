@@ -8,17 +8,17 @@ const readme = require("../README.md");
 
 storiesOf("Expandable", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("default", () => (
+  .add("default", () => (
     <Expandable label="Expand for content">
       <div>Check out this exciting content</div>
     </Expandable>
   ))
-  .addWithInfo("opened", () => (
+  .add("opened", () => (
     <Expandable label="Expand for content" isOpen={true}>
       <div>Check out this exciting content</div>
     </Expandable>
   ))
-  .addWithInfo("with custom label classname", () => (
+  .add("with custom label classname", () => (
     <Expandable
       label="Expand for blue content"
       labelClassName={tintText("blue")}

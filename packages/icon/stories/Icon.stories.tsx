@@ -28,33 +28,33 @@ const readme = require("../README.md");
 storiesOf("Icon", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
-  .addWithInfo("default", () => {
+  .add("default", () => {
     const colors = {
-      [textColorPrimary]: "textColorPrimary",
-      [textColorSecondary]: "textColorSecondary",
-      [red]: "red",
-      [yellow]: "yellow",
-      [green]: "green",
-      [blue]: "blue",
-      [purple]: "purple"
+      textColorPrimary,
+      textColorSecondary,
+      red,
+      yellow,
+      green,
+      blue,
+      purple
     };
     const sizes = {
-      [iconSizeXxs]: "iconSizeXxs",
-      [iconSizeXs]: "iconSizeXs",
-      [iconSizeS]: "iconSizeS",
-      [iconSizeM]: "iconSizeM",
-      [iconSizeL]: "iconSizeL",
-      [iconSizeXl]: "iconSizeXl",
-      [iconSizeXxl]: "iconSizeXxl"
+      iconSizeXxs,
+      iconSizeXs,
+      iconSizeS,
+      iconSizeM,
+      iconSizeL,
+      iconSizeXl,
+      iconSizeXxl
     };
     const shapes = {
-      [SystemIcons.ArrowRight]: "SystemIcons.ArrowRight",
-      [SystemIcons.Check]: "SystemIcons.Check",
-      [SystemIcons.Close]: "SystemIcons.Close",
-      [SystemIcons.Folder]: "SystemIcons.Folder",
-      [SystemIcons.Gear]: "SystemIcons.Gear",
-      [SystemIcons.Services]: "SystemIcons.Services",
-      [SystemIcons.Users]: "SystemIcons.Users"
+      ["SystemIcons.ArrowRight"]: SystemIcons.ArrowRight,
+      ["SystemIcons.Check"]: SystemIcons.Check,
+      ["SystemIcons.Close"]: SystemIcons.Close,
+      ["SystemIcons.Folder"]: SystemIcons.Folder,
+      ["SystemIcons.Gear"]: SystemIcons.Gear,
+      ["SystemIcons.Services"]: SystemIcons.Services,
+      ["SystemIcons.Users"]: SystemIcons.Users
     };
 
     const color = select("Color", colors, textColorPrimary);
@@ -65,10 +65,10 @@ storiesOf("Icon", module)
       <Icon shape={shape} color={color} size={size} ariaLabel="Sample icon" />
     );
   })
-  .addWithInfo("system icons preview", () => (
+  .add("system icons preview", () => (
     <IconGrid iconEnum={SystemIcons} iconEnumTitle="SystemIcons" />
   ))
-  .addWithInfo("product icons preview", () => (
+  .add("product icons preview", () => (
     <IconGrid
       iconEnum={ProductIcons}
       iconEnumTitle="ProductIcons"

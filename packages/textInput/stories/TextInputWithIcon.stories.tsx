@@ -14,7 +14,7 @@ const defaultDisplayItem = css`
 
 storiesOf("Forms/TextInputWithIcon", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("iconStart", () => (
+  .add("iconStart", () => (
     <div>
       <TextInputWithIcon
         id="standard.input"
@@ -58,7 +58,7 @@ storiesOf("Forms/TextInputWithIcon", module)
       />
     </div>
   ))
-  .addWithInfo("iconEnd", () => (
+  .add("iconEnd", () => (
     <TextInputWithIcon
       id="story.input"
       className={cx(defaultDisplayItem)}
@@ -66,7 +66,7 @@ storiesOf("Forms/TextInputWithIcon", module)
       inputLabel={<span>Ending Icon</span>}
     />
   ))
-  .addWithInfo("iconStart & End", () => (
+  .add("iconStart & End", () => (
     <TextInputWithIcon
       id="story.input"
       className={cx(defaultDisplayItem)}
@@ -75,7 +75,7 @@ storiesOf("Forms/TextInputWithIcon", module)
       inputLabel="Two Icons"
     />
   ))
-  .addWithInfo("hidden label", () => (
+  .add("hidden label", () => (
     <TextInputWithIcon
       id="story.input"
       className={cx(defaultDisplayItem)}
@@ -84,7 +84,7 @@ storiesOf("Forms/TextInputWithIcon", module)
       showInputLabel={false}
     />
   ))
-  .addWithInfo("hint text", () => (
+  .add("hint text", () => (
     <div>
       <TextInputWithIcon
         id="story.input"
