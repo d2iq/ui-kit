@@ -30,7 +30,7 @@ class SidebarItem extends React.PureComponent<SidebarItemProps, {}> {
         spaceSizes[props.theme.sidebarItemPaddingVert] || spaceSizes["none"]};
     `;
     /* tslint:enable:no-string-literal */
-    const classNames = cx(sidebarNavItem(isActive), {
+    const classNames = cx("testerClassz", sidebarNavItem(isActive), {
       [tintContentPrimary]: isActive
     });
 

@@ -1,9 +1,16 @@
 import * as React from "react";
 import { cx } from "emotion";
 import styled from "@emotion/styled";
-import { darkMode, flex } from "../../shared/styles/styleUtils";
+import {
+  flex,
+  tintContentPrimary,
+  tintContentSecondary
+} from "../../shared/styles/styleUtils";
 import { spaceSizes } from "../../../packages/shared/styles/styleUtils/modifiers/modifierUtils";
-import { purpleDarken4 } from "../../design-tokens/build/js/designTokens";
+import {
+  purpleDarken4,
+  textColorPrimaryInverted
+} from "../../design-tokens/build/js/designTokens";
 import { isHexDark } from "../../shared/styles/color";
 
 export interface HeaderProps {
@@ -25,6 +32,22 @@ const HeaderBar = styled("div")`
     spaceSizes[props.theme.headerPaddingVert] || spaceSizes["xs"]};
   padding-top: ${props =>
     spaceSizes[props.theme.headerPaddingVert] || spaceSizes["xs"]};
+  ${props =>
+    props.theme.sidebarBackgroundColor &&
+    isHexDark(props.theme.sidebarBackgroundColor)
+      ? `
+        &,
+        .${tintContentPrimary} {
+          color: ${textColorPrimaryInverted};
+          fill: ${textColorPrimaryInverted};
+        }
+
+        .${tintContentSecondary} {
+          color: ${textColorPrimaryInverted};
+          fill: ${textColorPrimaryInverted};
+        }
+      `
+      : null};
 `;
 /* tslint:enable:no-string-literal */
 
@@ -33,15 +56,7 @@ class Header extends React.PureComponent<HeaderProps, {}> {
     const { children } = this.props;
 
     return (
-      <HeaderBar
-        className={cx(flex({ align: "center" }), {
-          [darkMode]: Boolean(
-            !(this.props.theme && this.props.theme.headerBackgroundColor) ||
-              (this.props.theme.headerBackgroundColor &&
-                isHexDark(this.props.theme.headerBackgroundColor))
-          )
-        })}
-      >
+      <HeaderBar className={cx("darkMode", flex({ align: "center" }))}>
         {children}
       </HeaderBar>
     );

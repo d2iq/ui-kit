@@ -1,9 +1,15 @@
 import * as React from "react";
 import { cx, css } from "emotion";
 import styled from "@emotion/styled";
-import { darkMode } from "../../shared/styles/styleUtils";
+import {
+  tintContentPrimary,
+  tintContentSecondary
+} from "../../shared/styles/styleUtils";
 import { sidebar, sidebarAnimator } from "../style";
-import { greyDark } from "../../design-tokens/build/js/designTokens";
+import {
+  greyDark,
+  textColorPrimaryInverted
+} from "../../design-tokens/build/js/designTokens";
 import { atMediaUp } from "../../shared/styles/breakpoints";
 import { isHexDark } from "../../shared/styles/color";
 
@@ -39,6 +45,35 @@ const sidebarAnimatorWidth = (isOpen: boolean) => css`
   `)};
 `;
 
+const Nav = styled("nav")`
+  ${props =>
+    props.theme.sidebarWidth ? "width: " + props.theme.sidebarWidth : ""};
+  ${props =>
+    props.theme.sidebarBackgroundColor &&
+    isHexDark(props.theme.sidebarBackgroundColor)
+      ? `
+        &,
+        .${tintContentPrimary} {
+          color: ${textColorPrimaryInverted};
+          fill: ${textColorPrimaryInverted};
+        }
+
+        .${tintContentSecondary} {
+          color: ${textColorPrimaryInverted};
+          fill: ${textColorPrimaryInverted};
+        }
+      `
+      : null};
+`;
+
+const InnerSidebar = styled("div")`
+  background-color: ${props => props.theme.sidebarBackgroundColor || greyDark};
+  ${props =>
+    props.theme.sidebarWidth
+      ? "width: " + props.theme.sidebarWidth
+      : sidebarAnimatorWidth(props["data-isOpen"])};
+`;
+
 class Sidebar extends React.PureComponent<SidebarProps, {}> {
   static defaultProps = {
     theme: {}
@@ -57,34 +92,11 @@ class Sidebar extends React.PureComponent<SidebarProps, {}> {
     const { children, isOpen } = this.props;
     const divClassNames = sidebarAnimator;
 
-    const Sidebar = styled("div")`
-      background-color: ${props =>
-        props.theme.sidebarBackgroundColor || greyDark};
-      ${props =>
-        props.theme.sidebarWidth
-          ? "width: " + props.theme.sidebarWidth
-          : sidebarAnimatorWidth(isOpen)};
-    `;
-
-    const Nav = styled("nav")`
-      ${props =>
-        props.theme.sidebarWidth ? "width: " + props.theme.sidebarWidth : ""};
-    `;
-
-    const navClassNames = cx(sidebar, sidebarWidth, {
-      [sidebarWidth]: Boolean(
-        !(this.props.theme && this.props.theme.sidebarWidth)
-      ),
-      [darkMode]: Boolean(
-        !(this.props.theme && this.props.theme.sidebarBackgroundColor) ||
-          (this.props.theme.sidebarBackgroundColor &&
-            isHexDark(this.props.theme.sidebarBackgroundColor))
-      )
-    });
+    const navClassNames = cx(sidebar, sidebarWidth);
     return (
-      <Sidebar className={divClassNames}>
+      <InnerSidebar className={divClassNames} data-isOpen={isOpen}>
         <Nav className={navClassNames}>{children}</Nav>
-      </Sidebar>
+      </InnerSidebar>
     );
   }
 }

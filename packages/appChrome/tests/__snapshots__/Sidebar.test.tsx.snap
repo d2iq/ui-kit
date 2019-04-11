@@ -19,7 +19,7 @@ exports[`Sidebar SidebarItem renders 1`] = `
   tabIndex={0}
 >
   <Styled(li)
-    className="emotion-0"
+    className="testerClassz emotion-0"
   >
     Item label
   </Styled(li)>
@@ -257,15 +257,6 @@ exports[`Sidebar renders 1`] = `
 .emotion-0 {
   height: 100%;
   width: 240px;
-  width: 240px;
-  color: #DADDE2;
-  fill: #DADDE2;
-}
-
-@media (min-width:1200px) {
-  .emotion-0 {
-    width: 280px;
-  }
 }
 
 @media (min-width:1200px) {
@@ -276,6 +267,7 @@ exports[`Sidebar renders 1`] = `
 
 <Styled(div)
   className="emotion-1"
+  data-isOpen={true}
 >
   <Styled(nav)
     className="emotion-0"
