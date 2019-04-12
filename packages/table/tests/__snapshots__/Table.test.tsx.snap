@@ -1,11 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table renders a table with resizable columns 1`] = `
-.emotion-42 {
-  height: 100%;
-}
-
-.emotion-40 {
+Array [
+  .emotion-40 {
   font-weight: normal;
 }
 
@@ -29,17 +26,6 @@ exports[`Table renders a table with resizable columns 1`] = `
 
 .emotion-32::-webkit-scrollbar {
   display: none;
-}
-
-.emotion-41 {
-  height: 100px;
-  overflow: scroll;
-  msoverflowstyle: scrollbar;
-  opacity: 0;
-  position: absolute;
-  top: -100000px;
-  visibility: hidden;
-  width: 100px;
 }
 
 .emotion-3 {
@@ -194,9 +180,6 @@ exports[`Table renders a table with resizable columns 1`] = `
 }
 
 <div
-  class="emotion-42"
->
-  <div
     class="emotion-40"
     style="overflow:visible;height:0;width:0"
   >
@@ -511,18 +494,25 @@ exports[`Table renders a table with resizable columns 1`] = `
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="emotion-41"
-  />
-</div>
+  </div>,
+  .emotion-0 {
+  height: 100px;
+  overflow: scroll;
+  msoverflowstyle: scrollbar;
+  opacity: 0;
+  position: absolute;
+  top: -100000px;
+  visibility: hidden;
+  width: 100px;
+}
+
+<div
+    class="emotion-0"
+  />,
+]
 `;
 
 exports[`Table renders again with new data 1`] = `
-.emotion-3 {
-  height: 100%;
-}
-
 .emotion-0 {
   font-weight: normal;
 }
@@ -557,77 +547,69 @@ exports[`Table renders again with new data 1`] = `
     ]
   }
 >
-  <div
-    className="emotion-3"
+  <AutoSizer
+    __dataThatTriggersARerenderWhenChanged={
+      Array [
+        1,
+        2,
+        3,
+      ]
+    }
+    className="emotion-0"
+    defaultHeight={768}
+    defaultWidth={1024}
+    disableHeight={false}
+    disableWidth={false}
+    onResize={[Function]}
+    style={Object {}}
   >
-    <AutoSizer
-      __dataThatTriggersARerenderWhenChanged={
-        Array [
-          1,
-          2,
-          3,
-        ]
-      }
-      className="emotion-0"
-      defaultHeight={768}
-      defaultWidth={1024}
-      disableHeight={false}
-      disableWidth={false}
-      onResize={[Function]}
-      style={Object {}}
-    >
-      <div
-        className="emotion-0"
-        style={
-          Object {
-            "height": 0,
-            "overflow": "visible",
-            "width": 0,
-          }
-        }
-      >
-        <MultiGrid
-          cellRangeRenderer={[Function]}
-          cellRenderer={[Function]}
-          classNameBottomLeftGrid="css-1oay0jc"
-          classNameBottomRightGrid="css-1abf74x"
-          classNameTopLeftGrid="css-4bzelf"
-          classNameTopRightGrid="css-1n6cz8p"
-          columnCount={1}
-          columnWidth={[Function]}
-          enableFixedColumnScroll={true}
-          enableFixedRowScroll={true}
-          fixedColumnCount={1}
-          fixedRowCount={1}
-          height={0}
-          hideBottomLeftGridScrollbar={true}
-          hideTopRightGridScrollbar={true}
-          onScroll={[Function]}
-          rowCount={4}
-          rowHeight={35}
-          scrollToColumn={-1}
-          scrollToRow={-1}
-          style={Object {}}
-          styleBottomLeftGrid={Object {}}
-          styleBottomRightGrid={Object {}}
-          styleTopLeftGrid={Object {}}
-          styleTopRightGrid={Object {}}
-          width={0}
-        />
-      </div>
-    </AutoSizer>
     <div
-      className="emotion-2"
-    />
-  </div>
+      className="emotion-0"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "visible",
+          "width": 0,
+        }
+      }
+    >
+      <MultiGrid
+        cellRangeRenderer={[Function]}
+        cellRenderer={[Function]}
+        classNameBottomLeftGrid="css-1oay0jc"
+        classNameBottomRightGrid="css-1abf74x"
+        classNameTopLeftGrid="css-4bzelf"
+        classNameTopRightGrid="css-1n6cz8p"
+        columnCount={1}
+        columnWidth={[Function]}
+        enableFixedColumnScroll={true}
+        enableFixedRowScroll={true}
+        fixedColumnCount={1}
+        fixedRowCount={1}
+        height={0}
+        hideBottomLeftGridScrollbar={true}
+        hideTopRightGridScrollbar={true}
+        onScroll={[Function]}
+        rowCount={4}
+        rowHeight={35}
+        scrollToColumn={-1}
+        scrollToRow={-1}
+        style={Object {}}
+        styleBottomLeftGrid={Object {}}
+        styleBottomRightGrid={Object {}}
+        styleTopLeftGrid={Object {}}
+        styleTopRightGrid={Object {}}
+        width={0}
+      />
+    </div>
+  </AutoSizer>
+  <div
+    className="emotion-2"
+  />
 </Table>
 `;
 
 exports[`Table renders again with new data 2`] = `
-.emotion-3 {
-  height: 100%;
-}
-
 .emotion-0 {
   font-weight: normal;
 }
@@ -662,78 +644,71 @@ exports[`Table renders again with new data 2`] = `
     ]
   }
 >
-  <div
-    className="emotion-3"
+  <AutoSizer
+    __dataThatTriggersARerenderWhenChanged={
+      Array [
+        4,
+        5,
+        6,
+      ]
+    }
+    className="emotion-0"
+    defaultHeight={768}
+    defaultWidth={1024}
+    disableHeight={false}
+    disableWidth={false}
+    onResize={[Function]}
+    style={Object {}}
   >
-    <AutoSizer
-      __dataThatTriggersARerenderWhenChanged={
-        Array [
-          4,
-          5,
-          6,
-        ]
-      }
-      className="emotion-0"
-      defaultHeight={768}
-      defaultWidth={1024}
-      disableHeight={false}
-      disableWidth={false}
-      onResize={[Function]}
-      style={Object {}}
-    >
-      <div
-        className="emotion-0"
-        style={
-          Object {
-            "height": 0,
-            "overflow": "visible",
-            "width": 0,
-          }
-        }
-      >
-        <MultiGrid
-          cellRangeRenderer={[Function]}
-          cellRenderer={[Function]}
-          classNameBottomLeftGrid="css-1oay0jc"
-          classNameBottomRightGrid="css-1abf74x"
-          classNameTopLeftGrid="css-4bzelf"
-          classNameTopRightGrid="css-1n6cz8p"
-          columnCount={1}
-          columnWidth={[Function]}
-          enableFixedColumnScroll={true}
-          enableFixedRowScroll={true}
-          fixedColumnCount={1}
-          fixedRowCount={1}
-          height={0}
-          hideBottomLeftGridScrollbar={true}
-          hideTopRightGridScrollbar={true}
-          onScroll={[Function]}
-          rowCount={4}
-          rowHeight={35}
-          scrollToColumn={-1}
-          scrollToRow={-1}
-          style={Object {}}
-          styleBottomLeftGrid={Object {}}
-          styleBottomRightGrid={Object {}}
-          styleTopLeftGrid={Object {}}
-          styleTopRightGrid={Object {}}
-          width={0}
-        />
-      </div>
-    </AutoSizer>
     <div
-      className="emotion-2"
-    />
-  </div>
+      className="emotion-0"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "visible",
+          "width": 0,
+        }
+      }
+    >
+      <MultiGrid
+        cellRangeRenderer={[Function]}
+        cellRenderer={[Function]}
+        classNameBottomLeftGrid="css-1oay0jc"
+        classNameBottomRightGrid="css-1abf74x"
+        classNameTopLeftGrid="css-4bzelf"
+        classNameTopRightGrid="css-1n6cz8p"
+        columnCount={1}
+        columnWidth={[Function]}
+        enableFixedColumnScroll={true}
+        enableFixedRowScroll={true}
+        fixedColumnCount={1}
+        fixedRowCount={1}
+        height={0}
+        hideBottomLeftGridScrollbar={true}
+        hideTopRightGridScrollbar={true}
+        onScroll={[Function]}
+        rowCount={4}
+        rowHeight={35}
+        scrollToColumn={-1}
+        scrollToRow={-1}
+        style={Object {}}
+        styleBottomLeftGrid={Object {}}
+        styleBottomRightGrid={Object {}}
+        styleTopLeftGrid={Object {}}
+        styleTopRightGrid={Object {}}
+        width={0}
+      />
+    </div>
+  </AutoSizer>
+  <div
+    className="emotion-2"
+  />
 </Table>
 `;
 
 exports[`Table renders default 1`] = `
-.emotion-30 {
-  height: 100%;
-}
-
-.emotion-28 {
+Array [
+  .emotion-28 {
   font-weight: normal;
 }
 
@@ -757,17 +732,6 @@ exports[`Table renders default 1`] = `
 
 .emotion-20::-webkit-scrollbar {
   display: none;
-}
-
-.emotion-29 {
-  height: 100px;
-  overflow: scroll;
-  msoverflowstyle: scrollbar;
-  opacity: 0;
-  position: absolute;
-  top: -100000px;
-  visibility: hidden;
-  width: 100px;
 }
 
 .emotion-17 {
@@ -883,9 +847,6 @@ exports[`Table renders default 1`] = `
 }
 
 <div
-  class="emotion-30"
->
-  <div
     class="emotion-28"
     style="overflow:visible;height:0;width:0"
   >
@@ -1108,19 +1069,27 @@ exports[`Table renders default 1`] = `
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="emotion-29"
-  />
-</div>
+  </div>,
+  .emotion-0 {
+  height: 100px;
+  overflow: scroll;
+  msoverflowstyle: scrollbar;
+  opacity: 0;
+  position: absolute;
+  top: -100000px;
+  visibility: hidden;
+  width: 100px;
+}
+
+<div
+    class="emotion-0"
+  />,
+]
 `;
 
 exports[`Table renders with growToFill cols 1`] = `
-.emotion-36 {
-  height: 100%;
-}
-
-.emotion-34 {
+Array [
+  .emotion-34 {
   font-weight: normal;
 }
 
@@ -1144,17 +1113,6 @@ exports[`Table renders with growToFill cols 1`] = `
 
 .emotion-24::-webkit-scrollbar {
   display: none;
-}
-
-.emotion-35 {
-  height: 100px;
-  overflow: scroll;
-  msoverflowstyle: scrollbar;
-  opacity: 0;
-  position: absolute;
-  top: -100000px;
-  visibility: hidden;
-  width: 100px;
 }
 
 .emotion-21 {
@@ -1270,9 +1228,6 @@ exports[`Table renders with growToFill cols 1`] = `
 }
 
 <div
-  class="emotion-36"
->
-  <div
     class="emotion-34"
     style="overflow:visible;height:0;width:0"
   >
@@ -1530,9 +1485,20 @@ exports[`Table renders with growToFill cols 1`] = `
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="emotion-35"
-  />
-</div>
+  </div>,
+  .emotion-0 {
+  height: 100px;
+  overflow: scroll;
+  msoverflowstyle: scrollbar;
+  opacity: 0;
+  position: absolute;
+  top: -100000px;
+  visibility: hidden;
+  width: 100px;
+}
+
+<div
+    class="emotion-0"
+  />,
+]
 `;
