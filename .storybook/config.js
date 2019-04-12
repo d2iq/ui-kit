@@ -1,19 +1,22 @@
 const req = require.context("./../packages", true, /.stories.tsx$/);
 
-import { configure, setAddon, addDecorator } from "@storybook/react";
+import { configure, addDecorator } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs/react";
-import { checkA11y } from "@storybook/addon-a11y";
-import { setOptions } from "@storybook/addon-options";
-import infoAddon, { setDefaults } from "@storybook/addon-info";
+import { withA11y } from "@storybook/addon-a11y";
+import { withOptions } from "@storybook/addon-options";
+import { withInfo } from "@storybook/addon-info";
 import { iconDecorator } from "../decorators/iconDecorator";
 require("../packages/shared/styles/global").injectStorybookResetCss();
 
 addDecorator(iconDecorator);
 addDecorator(withKnobs);
-addDecorator(checkA11y);
-setAddon(infoAddon);
-
-setOptions({
+addDecorator(withA11y);
+addDecorator(
+  withInfo({
+    inline: true
+  })
+);
+withOptions({
   name: "Mesosphere UI Kit",
   url: "#",
   goFullScreen: false,
@@ -21,11 +24,6 @@ setOptions({
   showDownPanel: true,
   showSearchBox: false,
   downPanelInRight: true
-});
-
-setDefaults({
-  header: true,
-  inline: true
 });
 
 function loadStories() {

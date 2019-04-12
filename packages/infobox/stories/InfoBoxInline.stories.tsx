@@ -9,14 +9,19 @@ const readme = require("../README.md");
 
 storiesOf("InfoBox/Inline", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("default", () => (
+  .addParameters({
+    info: {
+      propTablesExclude: [InfoBoxStoryContainer]
+    }
+  })
+  .add("default", () => (
     <InfoBoxStoryContainer>
       <div style={{ padding: "1rem 1rem 0 1rem" }}>
         <InfoBoxInline message="This is message is an example of how we might inform the user in DCOS" />
       </div>
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("info", () => (
+  .add("info", () => (
     <InfoBoxStoryContainer>
       <div style={{ padding: "1rem 1rem 0 1rem" }}>
         <InfoBoxInline
@@ -26,7 +31,7 @@ storiesOf("InfoBox/Inline", module)
       </div>
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("success", () => (
+  .add("success", () => (
     <InfoBoxStoryContainer>
       <div style={{ padding: "1rem 1rem 0 1rem" }}>
         <InfoBoxInline
@@ -36,7 +41,7 @@ storiesOf("InfoBox/Inline", module)
       </div>
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("warning", () => (
+  .add("warning", () => (
     <InfoBoxStoryContainer>
       <div style={{ padding: "1rem 1rem 0 1rem" }}>
         <InfoBoxInline
@@ -46,7 +51,7 @@ storiesOf("InfoBox/Inline", module)
       </div>
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("danger", () => (
+  .add("danger", () => (
     <InfoBoxStoryContainer>
       <div style={{ padding: "1rem 1rem 0 1rem" }}>
         <InfoBoxInline
@@ -56,7 +61,7 @@ storiesOf("InfoBox/Inline", module)
       </div>
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("message as custom markup", () => (
+  .add("message as custom markup", () => (
     <InfoBoxStoryContainer>
       <div style={{ padding: "1rem 1rem 0 1rem" }}>
         <InfoBoxInline
@@ -83,7 +88,7 @@ storiesOf("InfoBox/Inline", module)
       </div>
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("1 action", () => (
+  .add("1 action", () => (
     <InfoBoxStoryContainer>
       <div style={{ padding: "1rem 1rem 0 1rem" }}>
         <InfoBoxInline
@@ -93,7 +98,7 @@ storiesOf("InfoBox/Inline", module)
       </div>
     </InfoBoxStoryContainer>
   ))
-  .addWithInfo("2 actions", () => (
+  .add("2 actions", () => (
     <InfoBoxStoryContainer>
       <div style={{ padding: "1rem 1rem 0 1rem" }}>
         <InfoBoxInline

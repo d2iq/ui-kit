@@ -36,10 +36,19 @@ const readme = require("../README.md");
 
 storiesOf("AppChrome", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("AppChrome DCOS clone", () => (
-    <DCOSAppChrome sidebarIsOpen={true} />
-  ))
-  .addWithInfo("AppChrome bare", () => (
+  .addDecorator(withKnobs)
+  .addParameters({
+    info: {
+      propTablesExclude: [ThemeProvider]
+    }
+  })
+  .add("AppChrome DCOS clone", () => <DCOSAppChrome sidebarIsOpen={true} />, {
+    info: {
+      propTables: [AppChrome],
+      propTablesExclude: [DCOSAppChrome]
+    }
+  })
+  .add("AppChrome bare", () => (
     <AppChrome
       sidebar={
         <Sidebar isOpen={true}>
@@ -52,12 +61,12 @@ storiesOf("AppChrome", module)
       }
     />
   ))
-  .addWithInfo("Sidebar bare", () => (
+  .add("Sidebar bare", () => (
     <Sidebar isOpen={true}>
       <SidebarBareContent />
     </Sidebar>
   ))
-  .addWithInfo("Sidebar w/ items", () => (
+  .add("Sidebar w/ items", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarItem onClick={action("clicked a nav item")}>
@@ -78,7 +87,7 @@ storiesOf("AppChrome", module)
       </SidebarSection>
     </Sidebar>
   ))
-  .addWithInfo("Sidebar w/ items (1 active)", () => (
+  .add("Sidebar w/ items (1 active)", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarItem onClick={action("clicked a nav item")} isActive={true}>
@@ -99,7 +108,7 @@ storiesOf("AppChrome", module)
       </SidebarSection>
     </Sidebar>
   ))
-  .addWithInfo("Sidebar w/ items (w/ icons)", () => (
+  .add("Sidebar w/ items (w/ icons)", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarItem onClick={action("clicked a nav item")}>
@@ -142,7 +151,7 @@ storiesOf("AppChrome", module)
       </SidebarSection>
     </Sidebar>
   ))
-  .addWithInfo("Sidebar w/ submenus", () => (
+  .add("Sidebar w/ submenus", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarSubMenu
@@ -203,7 +212,7 @@ storiesOf("AppChrome", module)
       </SidebarSection>
     </Sidebar>
   ))
-  .addWithInfo("Sidebar w/ submenus (1 active)", () => (
+  .add("Sidebar w/ submenus (1 active)", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarSubMenu
@@ -261,7 +270,7 @@ storiesOf("AppChrome", module)
       </SidebarSection>
     </Sidebar>
   ))
-  .addWithInfo("Sidebar w/ submenus (w/ icons)", () => (
+  .add("Sidebar w/ submenus (w/ icons)", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarSubMenu
@@ -342,210 +351,207 @@ storiesOf("AppChrome", module)
       </SidebarSection>
     </Sidebar>
   ))
-  .addWithInfo("HeaderBar bare", () => (
+  .add("HeaderBar bare", () => (
     <HeaderBar>HeaderBar content goes here</HeaderBar>
-  ));
+  ))
+  .add("HeaderBar Customizable w/ Knobs", () => {
+    const content = text("Content", "HeaderBar content goes here");
+    const colors = {
+      black,
+      white,
+      cyan,
+      greyLight,
+      greyDark,
+      red,
+      yellow,
+      green,
+      blue,
+      pink,
+      purple
+    };
+    const color = select("Color", colors, black);
 
-const stories = storiesOf("AppChrome", module);
-stories.addDecorator(withKnobs);
-stories.add("HeaderBar Customizable w/ Knobs", () => {
-  const content = text("Content", "HeaderBar content goes here");
-  const colors = {
-    [black]: black,
-    [white]: white,
-    [cyan]: cyan,
-    [greyLight]: greyLight,
-    [greyDark]: greyDark,
-    [red]: red,
-    [yellow]: yellow,
-    [green]: green,
-    [blue]: blue,
-    [pink]: pink,
-    [purple]: purple
-  };
-  const color = select("Color", colors, black);
+    const paddingSizes = {
+      xs: "xs",
+      s: "s",
+      m: "m",
+      l: "l",
+      xl: "xl",
+      xxl: "xxl"
+    };
 
-  const paddingSizes = {
-    xs: "xs",
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl",
-    xxl: "xxl"
-  };
+    const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
+    const paddingVertSize = select("Vertical Padding", paddingSizes, "xs");
 
-  const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
-  const paddingVertSize = select("Vertical Padding", paddingSizes, "xs");
+    const CustomTheme = {
+      headerBackgroundColor: color,
+      headerPaddingHor: paddingHorSize,
+      headerPaddingVert: paddingVertSize
+    };
 
-  const CustomTheme = {
-    headerBackgroundColor: color,
-    headerPaddingHor: paddingHorSize,
-    headerPaddingVert: paddingVertSize
-  };
+    return (
+      <ThemeProvider theme={CustomTheme}>
+        <HeaderBar>{content}</HeaderBar>
+      </ThemeProvider>
+    );
+  })
 
-  return (
-    <ThemeProvider theme={CustomTheme}>
-      <HeaderBar>{content}</HeaderBar>
-    </ThemeProvider>
-  );
-});
+  .add("Sidebar Customizable w/ Knobs", () => {
+    const sectionHeader = text("Section Header", "Section Header");
 
-stories.add("Sidebar Customizable w/ Knobs", () => {
-  const sectionHeader = text("Section Header", "Section Header");
+    const colors = {
+      black,
+      white,
+      cyan,
+      greyLight,
+      greyDark,
+      red,
+      yellow,
+      green,
+      blue,
+      pink,
+      purple
+    };
+    const color = select("Color", colors, black);
 
-  const colors = {
-    [black]: black,
-    [white]: white,
-    [cyan]: cyan,
-    [greyLight]: greyLight,
-    [greyDark]: greyDark,
-    [red]: red,
-    [yellow]: yellow,
-    [green]: green,
-    [blue]: blue,
-    [pink]: pink,
-    [purple]: purple
-  };
-  const color = select("Color", colors, black);
+    const paddingSizes = {
+      xs: "xs",
+      s: "s",
+      m: "m",
+      l: "l",
+      xl: "xl",
+      xxl: "xxl"
+    };
 
-  const paddingSizes = {
-    xs: "xs",
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl",
-    xxl: "xxl"
-  };
+    const paddingHorSize = select(
+      "Sidebar Header Horizontal Padding",
+      paddingSizes,
+      "l"
+    );
+    const paddingVertSize = select(
+      "Sidebar Header Vertical Padding",
+      paddingSizes,
+      "xs"
+    );
 
-  const paddingHorSize = select(
-    "Sidebar Header Horizontal Padding",
-    paddingSizes,
-    "l"
-  );
-  const paddingVertSize = select(
-    "Sidebar Header Vertical Padding",
-    paddingSizes,
-    "xs"
-  );
+    const sidebarWidth = number("Width (Min: 200px, Max: 800px)", 240, {
+      range: true,
+      min: 200,
+      max: 800,
+      step: 1
+    });
 
-  const sidebarWidth = number("Width (Min: 200px, Max: 800px)", 240, {
-    range: true,
-    min: 200,
-    max: 800,
-    step: 1
-  });
+    const CustomTheme = {
+      sidebarBackgroundColor: color,
+      sidebarHeaderPaddingHor: paddingHorSize,
+      sidebarHeaderPaddingVert: paddingVertSize,
+      sidebarWidth: sidebarWidth + "px"
+    };
 
-  const CustomTheme = {
-    sidebarBackgroundColor: color,
-    sidebarHeaderPaddingHor: paddingHorSize,
-    sidebarHeaderPaddingVert: paddingVertSize,
-    sidebarWidth: sidebarWidth + "px"
-  };
+    return (
+      <ThemeProvider theme={CustomTheme}>
+        <Sidebar isOpen={true}>
+          <SidebarSection label={sectionHeader}>
+            <SidebarItem onClick={action("clicked a nav item")}>
+              <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")}>
+              <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")}>
+              <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")}>
+              <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")}>
+              <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
+            </SidebarItem>
+          </SidebarSection>
+        </Sidebar>
+      </ThemeProvider>
+    );
+  })
 
-  return (
-    <ThemeProvider theme={CustomTheme}>
+  .add("SidebarItem Customizable w/ Knobs", () => {
+    const sectionHeader = text("Section Header", "Section Header");
+    const content = text("Text", "Lorem Ipsum");
+
+    const paddingSizes = {
+      xs: "xs",
+      s: "s",
+      m: "m",
+      l: "l",
+      xl: "xl",
+      xxl: "xxl"
+    };
+
+    const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
+    const paddingVertSize = select("Vertical Padding", paddingSizes, "xs");
+
+    const iconWidth = number("Icon Width (Min: 10px, Max: 100px)", 24, {
+      range: true,
+      min: 10,
+      max: 100,
+      step: 1
+    });
+
+    const CustomTheme = {
+      sidebarItemPaddingHor: paddingHorSize,
+      sidebarItemPaddingVert: paddingVertSize,
+      iconWidth
+    };
+
+    return (
       <Sidebar isOpen={true}>
         <SidebarSection label={sectionHeader}>
-          <SidebarItem onClick={action("clicked a nav item")}>
-            <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem onClick={action("clicked a nav item")}>
-            <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem onClick={action("clicked a nav item")}>
-            <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem onClick={action("clicked a nav item")}>
-            <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem onClick={action("clicked a nav item")}>
-            <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
-          </SidebarItem>
+          <ThemeProvider theme={CustomTheme}>
+            <SidebarItem onClick={action("clicked a nav item")}>
+              <SidebarItemLabel icon={<PlaceholderIcon width={iconWidth} />}>
+                {content}
+              </SidebarItemLabel>
+            </SidebarItem>
+          </ThemeProvider>
         </SidebarSection>
       </Sidebar>
-    </ThemeProvider>
-  );
-});
+    );
+  })
 
-stories.add("SidebarItem Customizable w/ Knobs", () => {
-  const sectionHeader = text("Section Header", "Section Header");
-  const content = text("Text", "Lorem Ipsum");
+  .add("SidebarSubMenu Customizable w/ Knobs", () => {
+    const sectionHeader = text("Section Header", "Section Header");
+    const iconWidth = number("Icon Width (Min: 10px, Max: 100px)", 24, {
+      range: true,
+      min: 10,
+      max: 100,
+      step: 1
+    });
 
-  const paddingSizes = {
-    xs: "xs",
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl",
-    xxl: "xxl"
-  };
+    const CustomTheme = {
+      iconWidth
+    };
 
-  const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
-  const paddingVertSize = select("Vertical Padding", paddingSizes, "xs");
-
-  const iconWidth = number("Icon Width (Min: 10px, Max: 100px)", 24, {
-    range: true,
-    min: 10,
-    max: 100,
-    step: 1
+    return (
+      <Sidebar isOpen={true}>
+        <SidebarSection label={sectionHeader}>
+          <ThemeProvider theme={CustomTheme}>
+            <SidebarSubMenu
+              label={
+                <SidebarItemLabel icon={<PlaceholderIcon width={iconWidth} />}>
+                  Praesent Massa
+                </SidebarItemLabel>
+              }
+              iconWidth={iconWidth + "px"}
+              isOpen={true}
+            >
+              <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+                Lorem Ipsum
+              </SidebarSubMenuItem>
+              <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+                Dolor Sit
+              </SidebarSubMenuItem>
+            </SidebarSubMenu>
+          </ThemeProvider>
+        </SidebarSection>
+      </Sidebar>
+    );
   });
-
-  const CustomTheme = {
-    sidebarItemPaddingHor: paddingHorSize,
-    sidebarItemPaddingVert: paddingVertSize,
-    iconWidth
-  };
-
-  return (
-    <Sidebar isOpen={true}>
-      <SidebarSection label={sectionHeader}>
-        <ThemeProvider theme={CustomTheme}>
-          <SidebarItem onClick={action("clicked a nav item")}>
-            <SidebarItemLabel icon={<PlaceholderIcon width={iconWidth} />}>
-              {content}
-            </SidebarItemLabel>
-          </SidebarItem>
-        </ThemeProvider>
-      </SidebarSection>
-    </Sidebar>
-  );
-});
-
-stories.add("SidebarSubMenu Customizable w/ Knobs", () => {
-  const sectionHeader = text("Section Header", "Section Header");
-  const iconWidth = number("Icon Width (Min: 10px, Max: 100px)", 24, {
-    range: true,
-    min: 10,
-    max: 100,
-    step: 1
-  });
-
-  const CustomTheme = {
-    iconWidth
-  };
-
-  return (
-    <Sidebar isOpen={true}>
-      <SidebarSection label={sectionHeader}>
-        <ThemeProvider theme={CustomTheme}>
-          <SidebarSubMenu
-            label={
-              <SidebarItemLabel icon={<PlaceholderIcon width={iconWidth} />}>
-                Praesent Massa
-              </SidebarItemLabel>
-            }
-            iconWidth={iconWidth + "px"}
-            isOpen={true}
-          >
-            <SidebarSubMenuItem onClick={action("clicked a nav item")}>
-              Lorem Ipsum
-            </SidebarSubMenuItem>
-            <SidebarSubMenuItem onClick={action("clicked a nav item")}>
-              Dolor Sit
-            </SidebarSubMenuItem>
-          </SidebarSubMenu>
-        </ThemeProvider>
-      </SidebarSection>
-    </Sidebar>
-  );
-});

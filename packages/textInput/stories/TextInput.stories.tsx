@@ -15,7 +15,7 @@ const defaultDisplayItem = css`
 
 storiesOf("Forms/TextInput", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("default", () => (
+  .add("default", () => (
     <div>
       <TextInput
         id="standard.input"
@@ -58,7 +58,7 @@ storiesOf("Forms/TextInput", module)
       />
     </div>
   ))
-  .addWithInfo("hint text", () => (
+  .add("hint text", () => (
     <div>
       <TextInput
         id="hint.input"
@@ -89,7 +89,7 @@ storiesOf("Forms/TextInput", module)
       />
     </div>
   ))
-  .addWithInfo("Error with Message", () => (
+  .add("Error with Message", () => (
     <TextInput
       id="error.input.with.message"
       className={cx(defaultDisplayItem)}
@@ -100,7 +100,7 @@ storiesOf("Forms/TextInput", module)
       required={true}
     />
   ))
-  .addWithInfo("Error with Messages", () => (
+  .add("Error with Messages", () => (
     <TextInput
       id="error.input.with.message"
       className={cx(defaultDisplayItem)}
@@ -111,7 +111,7 @@ storiesOf("Forms/TextInput", module)
       required={true}
     />
   ))
-  .addWithInfo("Hidden Label", () => (
+  .add("Hidden Label", () => (
     <TextInput
       id="hidden.label.input"
       className={cx(defaultDisplayItem)}
@@ -120,25 +120,23 @@ storiesOf("Forms/TextInput", module)
       showInputLabel={false}
     />
   ))
-  .addWithInfo("Number", () => (
+  .add("Number", () => (
     <TextInput id="number.input" type="number" inputLabel="Number" />
   ))
-  .addWithInfo("Search", () => (
+  .add("Search", () => (
     <TextInput id="search.input" type="search" inputLabel="Search" />
   ))
-  .addWithInfo("Email", () => (
+  .add("Email", () => (
     <TextInput id="email.input" type="email" inputLabel="Email" />
   ))
-  .addWithInfo("Password", () => (
+  .add("Password", () => (
     <TextInput id="password.input" type="password" inputLabel="Password" />
   ))
-  .addWithInfo("Telephone", () => (
+  .add("Telephone", () => (
     <TextInput id="telephone.input" type="tel" inputLabel="Telephone" />
   ))
-  .addWithInfo("URL", () => (
-    <TextInput id="url.input" type="url" inputLabel="URL" />
-  ))
-  .addWithInfo("Delegates onChange handler", () => (
+  .add("URL", () => <TextInput id="url.input" type="url" inputLabel="URL" />)
+  .add("Delegates onChange handler", () => (
     <form onChange={action("onChange")}>
       <TextInput id="text.id" inputLabel="Id" value="/" />
       <TextInput

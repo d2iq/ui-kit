@@ -8,7 +8,7 @@ const readme = require("../README.md");
 
 storiesOf("Clickable", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("default", () => (
+  .add("default", () => (
     <Clickable action={action("action trigger")} tabIndex="0">
       <span>Click me!</span>
     </Clickable>

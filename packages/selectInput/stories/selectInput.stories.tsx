@@ -25,7 +25,7 @@ const InputStoryWrapper = styled("div")`
 
 storiesOf("Forms/SelectInput", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("default", () => (
+  .add("default", () => (
     <InputStoryWrapper>
       <div style={{ marginBottom: "1.5em" }}>
         <SelectInput
@@ -60,7 +60,7 @@ storiesOf("Forms/SelectInput", module)
       </div>
     </InputStoryWrapper>
   ))
-  .addWithInfo("with hint", () => (
+  .add("with hint", () => (
     <InputStoryWrapper>
       <SelectInput
         options={defaultOptions}
@@ -70,7 +70,7 @@ storiesOf("Forms/SelectInput", module)
       />
     </InputStoryWrapper>
   ))
-  .addWithInfo("error with message", () => (
+  .add("error with message", () => (
     <InputStoryWrapper>
       <SelectInput
         appearance={InputAppearance.Error}
@@ -81,7 +81,7 @@ storiesOf("Forms/SelectInput", module)
       />
     </InputStoryWrapper>
   ))
-  .addWithInfo("error with messages", () => (
+  .add("error with messages", () => (
     <InputStoryWrapper>
       <SelectInput
         appearance={InputAppearance.Error}
@@ -92,7 +92,7 @@ storiesOf("Forms/SelectInput", module)
       />
     </InputStoryWrapper>
   ))
-  .addWithInfo("hidden label", () => (
+  .add("hidden label", () => (
     <InputStoryWrapper>
       <SelectInput
         options={defaultOptions}
@@ -102,7 +102,7 @@ storiesOf("Forms/SelectInput", module)
       />
     </InputStoryWrapper>
   ))
-  .addWithInfo("with value", () => (
+  .add("with value", () => (
     <InputStoryWrapper>
       <SelectInput
         options={defaultOptions}
@@ -112,7 +112,7 @@ storiesOf("Forms/SelectInput", module)
       />
     </InputStoryWrapper>
   ))
-  .addWithInfo("with onChange", () => (
+  .add("with onChange", () => (
     <InputStoryWrapper>
       <SelectInput
         options={defaultOptions}

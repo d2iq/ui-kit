@@ -1,7 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { withInfo } from "@storybook/addon-info";
 import {
   PrimaryDropdownButton,
   SecondaryDropdownButton,
@@ -16,74 +15,101 @@ const readme = require("../README.md");
 
 storiesOf("Buttons/Dropdown", module)
   .addDecorator(withReadme([readme]))
-
+  .addParameters({
+    info: {
+      propTablesExclude: [ButtonAppearanceSample]
+    }
+  })
   .add(
     "PrimaryDropdownButton",
-    withInfo({
-      propTables: [PrimaryDropdownButton]
-    })(() => <ButtonAppearanceSample buttonComponent={PrimaryDropdownButton} />)
+    () => <ButtonAppearanceSample buttonComponent={PrimaryDropdownButton} />,
+    {
+      info: {
+        propTables: [PrimaryDropdownButton]
+      }
+    }
   )
   .add(
     "SecondaryDropdownButton",
-    withInfo({
-      propTables: [SecondaryDropdownButton]
-    })(() => (
-      <ButtonAppearanceSample buttonComponent={SecondaryDropdownButton} />
-    ))
+    () => <ButtonAppearanceSample buttonComponent={SecondaryDropdownButton} />,
+    {
+      info: {
+        propTables: [SecondaryDropdownButton]
+      }
+    }
   )
   .add(
     "StandardDropdownButton",
-    withInfo({
-      propTables: [StandardDropdownButton]
-    })(() => (
-      <ButtonAppearanceSample buttonComponent={StandardDropdownButton} />
-    ))
+    () => <ButtonAppearanceSample buttonComponent={StandardDropdownButton} />,
+    {
+      info: {
+        propTables: [StandardDropdownButton]
+      }
+    }
   )
   .add(
     "SuccessDropdownButton",
-    withInfo({
-      propTables: [SuccessDropdownButton]
-    })(() => <ButtonAppearanceSample buttonComponent={SuccessDropdownButton} />)
+    () => <ButtonAppearanceSample buttonComponent={SuccessDropdownButton} />,
+    {
+      info: {
+        propTables: [SuccessDropdownButton]
+      }
+    }
   )
   .add(
     "DangerDropdownButton",
-    withInfo({
-      propTables: [DangerDropdownButton]
-    })(() => <ButtonAppearanceSample buttonComponent={DangerDropdownButton} />)
+    () => <ButtonAppearanceSample buttonComponent={DangerDropdownButton} />,
+    {
+      info: {
+        propTables: [DangerDropdownButton]
+      }
+    }
   )
   .add(
     "full-width dropdown",
-    withInfo({
-      propTables: [StandardDropdownButton]
-    })(() => (
+    () => (
       <StandardDropdownButton isFullWidth={true}>
         Full-width
       </StandardDropdownButton>
-    ))
+    ),
+    {
+      info: {
+        propTables: [StandardDropdownButton]
+      }
+    }
   )
   .add(
     "full-width dropdown with icon",
-    withInfo({
-      propTables: [StandardDropdownButton]
-    })(() => (
+    () => (
       <StandardDropdownButton iconStart={<CloseIcon />} isFullWidth={true}>
         Full-width
       </StandardDropdownButton>
-    ))
+    ),
+    {
+      info: {
+        propTables: [StandardDropdownButton]
+      }
+    }
   )
   .add(
     "dropdown with icon",
-    withInfo({
-      propTables: [StandardDropdownButton]
-    })(() => (
+    () => (
       <StandardDropdownButton iconStart={<CloseIcon />}>
         Icon dropdown
       </StandardDropdownButton>
-    ))
+    ),
+    {
+      info: {
+        propTables: [StandardDropdownButton]
+      }
+    }
   )
   .add(
     "dropdown with only an icon",
-    withInfo({
-      propTables: [StandardDropdownButton]
-    })(() => <StandardDropdownButton iconStart={<CloseIcon />} />)
+    () => <StandardDropdownButton iconStart={<CloseIcon />} />,
+    {
+      info: {
+        propTables: [StandardDropdownButton]
+      }
+    }
   );

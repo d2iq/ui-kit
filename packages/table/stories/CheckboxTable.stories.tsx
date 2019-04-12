@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { Column, HeaderCell, TextCell, NumberCell } from "..";
+import { Column, HeaderCell, TextCell, NumberCell, CheckboxTable } from "..";
 import SortableCheckboxTable from "./helpers/SortableCheckboxTable";
 import { items } from "./helpers/mocks";
 import CheckboxTableHelper from "./helpers/CheckboxTableHelper";
@@ -45,7 +45,13 @@ const veryLongRenderer = () => (
 
 storiesOf("Table/CheckboxTable", module)
   .addDecorator(withReadme([readme]))
-  .addWithInfo("default", () => (
+  .addParameters({
+    info: {
+      propTablesExclude: [CheckboxTableHelper],
+      propTables: [CheckboxTable, Column]
+    }
+  })
+  .add("default", () => (
     <CheckboxTableHelper data={items} uniqueKey="name">
       <Column
         header={<HeaderCell>name</HeaderCell>}
@@ -79,7 +85,7 @@ storiesOf("Table/CheckboxTable", module)
       />
     </CheckboxTableHelper>
   ))
-  .addWithInfo("w/ global action + group action", () => (
+  .add("w/ global action + group action", () => (
     <CheckboxTableHelper data={items} showGlobalAction={true} uniqueKey="name">
       <Column
         header={<HeaderCell>name</HeaderCell>}
@@ -113,7 +119,7 @@ storiesOf("Table/CheckboxTable", module)
       />
     </CheckboxTableHelper>
   ))
-  .addWithInfo("w/ checked row", () => (
+  .add("w/ checked row", () => (
     <CheckboxTableHelper
       data={items}
       selectedRows={{ [items[0].name]: true }}
@@ -151,7 +157,7 @@ storiesOf("Table/CheckboxTable", module)
       />
     </CheckboxTableHelper>
   ))
-  .addWithInfo("w/ disabled row", () => (
+  .add("w/ disabled row", () => (
     <CheckboxTableHelper
       data={items}
       disabledRows={{ [items[0].name]: true }}
@@ -190,4 +196,8 @@ storiesOf("Table/CheckboxTable", module)
       />
     </CheckboxTableHelper>
   ))
-  .addWithInfo("sortable", () => <SortableCheckboxTable />);
+  .add("sortable", () => <SortableCheckboxTable />, {
+    info: {
+      propTablesExclude: [SortableCheckboxTable]
+    }
+  });

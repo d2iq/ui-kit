@@ -1,7 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { withInfo } from "@storybook/addon-info";
 import {
   PrimaryButton,
   SecondaryButton,
@@ -17,67 +16,104 @@ const readme = require("../README.md");
 
 storiesOf("Buttons/Default", module)
   .addDecorator(withReadme([readme]))
+  .addParameters({
+    info: {
+      propTablesExclude: [ButtonAppearanceSample]
+    }
+  })
   .add(
     "PrimaryButton",
-    withInfo({
-      propTables: [PrimaryButton]
-    })(() => <ButtonAppearanceSample buttonComponent={PrimaryButton} />)
+    () => <ButtonAppearanceSample buttonComponent={PrimaryButton} />,
+    {
+      info: {
+        propTables: [PrimaryButton]
+      }
+    }
   )
   .add(
     "SecondaryButton",
-    withInfo({ propTables: [SecondaryButton] })(() => (
-      <ButtonAppearanceSample buttonComponent={SecondaryButton} />
-    ))
+    () => <ButtonAppearanceSample buttonComponent={SecondaryButton} />,
+    {
+      info: {
+        propTables: [SecondaryButton]
+      }
+    }
   )
   .add(
     "StandardButton",
-    withInfo({ propTables: [StandardButton] })(() => (
-      <ButtonAppearanceSample buttonComponent={StandardButton} />
-    ))
+    () => <ButtonAppearanceSample buttonComponent={StandardButton} />,
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
   )
   .add(
     "SuccessButton",
-    withInfo({ propTables: [SuccessButton] })(() => (
-      <ButtonAppearanceSample buttonComponent={SuccessButton} />
-    ))
+    () => <ButtonAppearanceSample buttonComponent={SuccessButton} />,
+    {
+      info: {
+        propTables: [SuccessButton]
+      }
+    }
   )
   .add(
     "DangerButton",
-    withInfo({ propTables: [DangerButton] })(() => (
-      <ButtonAppearanceSample buttonComponent={DangerButton} />
-    ))
+    () => <ButtonAppearanceSample buttonComponent={DangerButton} />,
+    {
+      info: {
+        propTables: [DangerButton]
+      }
+    }
   )
   .add(
     "with icon",
-    withInfo({ propTables: [StandardButton] })(() => (
+    () => (
       <StandardButton iconStart={<CloseIcon />}>Icon button</StandardButton>
-    ))
+    ),
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
   )
-  .add(
-    "only an icon",
-    withInfo({ propTables: [StandardButton] })(() => (
-      <StandardButton iconStart={<CloseIcon />} />
-    ))
-  )
+  .add("only an icon", () => <StandardButton iconStart={<CloseIcon />} />, {
+    info: {
+      propTables: [StandardButton]
+    }
+  })
   .add(
     "full-width",
-    withInfo({ propTables: [StandardButton] })(() => (
-      <StandardButton isFullWidth={true}>Full-width</StandardButton>
-    ))
+    () => <StandardButton isFullWidth={true}>Full-width</StandardButton>,
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
   )
   .add(
     "full-width with icon",
-    withInfo({ propTables: [StandardButton] })(() => (
+    () => (
       <StandardButton isFullWidth={true} iconStart={<CloseIcon />}>
         Full-width
       </StandardButton>
-    ))
+    ),
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
   )
   .add(
     "with onClick",
-    withInfo({ propTables: [StandardButton] })(() => (
+    () => (
       <StandardButton onClick={action("Button pressed")}>
         Click me
       </StandardButton>
-    ))
+    ),
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
   );
