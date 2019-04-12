@@ -75,7 +75,7 @@ pipeline {
 
       post {
         always {
-          archiveArtifacts 'storybook-static/**/*'
+          archiveArtifacts 'storybook_static/**/*'
         }
       }
     }
@@ -103,7 +103,7 @@ pipeline {
         withCredentials([
           string(credentialsId: 'd146870f-03b0-4f6a-ab70-1d09757a51fc', variable: 'GITHUB_TOKEN')
         ]) {
-          sh '''cd ui-kit && npm run deploy:storybook -- --ci --host-token-env-variable=GITHUB_TOKEN'''
+          sh '''cd ui-kit && npm run deploy:storybook -- --ci --host-token-env-variable=GITHUB_TOKEN --out=storybook_static --existing-output-dir=storybook_static'''
         }
       }
     }
