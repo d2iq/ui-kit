@@ -55,8 +55,8 @@
     "react-virtualized": "9.20.1"
   },
   "peerDependencies": {
-    "react": ">=15.4.1 <16.9.0 || 16.7.0-alpha.0",
-    "react-dom": ">=15.4.1 <16.9.0 || 16.7.0-alpha.0"
+    "react": ">=16.2.0 <16.9.0 || 16.7.0-alpha.0",
+    "react-dom": ">=16.2.0 <16.9.0 || 16.7.0-alpha.0"
   },
   "devDependencies": {
     "acorn": "^6.0.5",

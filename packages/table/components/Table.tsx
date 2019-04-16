@@ -22,7 +22,6 @@ import {
   topLeftGrid,
   hideScrollbarCss,
   rowHoverStyles,
-  tableWrapper,
   scrollbarMeas,
   dragHandle,
   unsetContainerOverflow,
@@ -268,7 +267,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
 
   public render() {
     return (
-      <div className={tableWrapper}>
+      <React.Fragment>
         <AutoSizer
           __dataThatTriggersARerenderWhenChanged={this.props.data} // passed to notify react-virtualized about updates
           className={tableCss}
@@ -285,7 +284,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
           accurately calculate column widths
         */}
         <div className={scrollbarMeas} ref={this.scrollMeasRef} />
-      </div>
+      </React.Fragment>
     );
   }
 
