@@ -12,7 +12,7 @@ tmp/
 .vscode/
 .env
 coverage
-storybook-static/
+storybook_static/
 packages/icons/dist/
 .cache-loader/
 .cache/

@@ -14,7 +14,7 @@
     }
   },
   "scripts": {
-    "build:storybook": "build-storybook",
+    "build:storybook": "build-storybook -c .storybook -o storybook_static",
     "prebuild:storybook": "npm run build:design-tokens && npm run build:svg",
     "prebuild:design-tokens": "npm run clean:design-tokens",
     "build:design-tokens": "node ./packages/design-tokens/scripts/build.js",
@@ -23,8 +23,7 @@
     "clean:design-tokens": "rm -rf ./dist/packages/design-tokens && rm -rf ./packages/design-tokens/dist/",
     "commitlint": "commitlint -e",
     "create:component": "./scripts/create-component",
-    "deploy:storybook": "storybook-to-ghpages",
-    "predeploy:storybook": "npm run prebuild:storybook",
+    "deploy:storybook": "storybook-to-ghpages --out=storybook_static --existing-output-dir=storybook_static",
     "prestart": "npm run build:design-tokens && npm run build:svg",
     "pretest": "npm run build:design-tokens && npm run build:svg",
     "predist": "npm run clean && npm run build:design-tokens && npm run build:svg",
