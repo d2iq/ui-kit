@@ -23,7 +23,7 @@
     "clean:design-tokens": "rm -rf ./dist/packages/design-tokens && rm -rf ./packages/design-tokens/dist/",
     "commitlint": "commitlint -e",
     "create:component": "./scripts/create-component",
-    "deploy:storybook": "storybook-to-ghpages --out=storybook_static --existing-output-dir=storybook_static",
+    "deploy:storybook": "storybook-to-ghpages",
     "prestart": "npm run build:design-tokens && npm run build:svg",
     "pretest": "npm run build:design-tokens && npm run build:svg",
     "predist": "npm run clean && npm run build:design-tokens && npm run build:svg",

@@ -35,10 +35,7 @@ const webpackBase = {
     ];
 
     if (process.env.NODE_ENV === "production") {
-      plugins.concat([
-        new webpack.optimize.ModuleConcatenationPlugin(),
-        new webpack.optimize.UglifyJsPlugin()
-      ]);
+      plugins.concat([new webpack.optimize.ModuleConcatenationPlugin()]);
     }
 
     return plugins;
