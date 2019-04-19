@@ -63,10 +63,6 @@ export const preventSortOverlap = (iconSize: string) => css`
   }
 `;
 
-export const tableWrapper = css`
-  height: 100%;
-`;
-
 export const tableCss = css`
   font-weight: normal;
 
