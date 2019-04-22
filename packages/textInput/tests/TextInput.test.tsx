@@ -137,4 +137,15 @@ describe("TextInput", () => {
     );
     expect(toJson(component)).toMatchSnapshot();
   });
+
+  it("should display icon with tooltip if tooltipText is set", () => {
+    const component = shallow(
+      <TextInput
+        id="input.with.tooltip"
+        inputLabel="Tooltip Message Test"
+        tooltipContent="Example Tooltip"
+      />
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });

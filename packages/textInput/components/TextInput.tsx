@@ -1,14 +1,17 @@
 import { cx } from "emotion";
 import * as React from "react";
 
-import { error } from "../../design-tokens/build/js/designTokens";
+import {
+  error,
+  greyLightDarken2,
+  iconSizeXs
+} from "../../design-tokens/build/js/designTokens";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import {
   inputAppearances,
   inputContainer
 } from "../../shared/styles/formStyles";
 import {
-  display,
   flex,
   flexItem,
   flush,
@@ -21,6 +24,9 @@ import {
   visuallyHidden
 } from "../../shared/styles/styleUtils";
 import { InputAppearance } from "../../shared/types/inputAppearance";
+import Icon from "../../icon/components/Icon";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
+import Tooltip from "../../tooltip/components/Tooltip";
 
 export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
@@ -51,6 +57,10 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
    * Sets the contents for validation errors. This will be displayed below the input element. Errors are only visible when the `TextInput` appearance is also set to `InputAppearance.Error`.
    */
   errors?: React.ReactNode[];
+  /**
+   * Sets the text content for the tooltip that can be displayed above the input.
+   */
+  tooltipContent?: React.ReactNode;
 }
 
 export class TextInput<
@@ -65,13 +75,17 @@ export class TextInput<
 
   public render() {
     const labelContent = this.getLabelContent();
+    const tooltipContent = this.getTooltipContent();
     const containerProps: { className?: string } = {};
     if (this.props.className) {
       containerProps.className = this.props.className;
     }
     return (
       <div {...containerProps}>
-        {labelContent}
+        <div className={cx(margin("bottom", "xxs"), flex({ align: "center" }))}>
+          {labelContent}
+          {tooltipContent}
+        </div>
         {this.getInputContent()}
       </div>
     );
@@ -86,16 +100,9 @@ export class TextInput<
       <span className={cx(tintText(error))}> *</span>
     ) : null;
     const labelClassName = this.props.showInputLabel
-      ? cx(
-          flush("top"),
-          margin("bottom", "xxs"),
-          textWeight("medium"),
-          display("block"),
-          {
-            [tintContent(error)]:
-              this.props.appearance === InputAppearance.Error
-          }
-        )
+      ? cx(flush("top"), textWeight("medium"), {
+          [tintContent(error)]: this.props.appearance === InputAppearance.Error
+        })
       : cx(visuallyHidden);
     return (
       <label className={labelClassName} htmlFor={this.props.id}>
@@ -175,6 +182,30 @@ export class TextInput<
         aria-describedby={describedBy}
         {...{ ...inputElementProps, onChange, value }}
       />
+    );
+  }
+
+  protected getTooltipContent(): React.ReactNode {
+    if (!this.props.tooltipContent) {
+      return null;
+    }
+
+    return (
+      <span className={margin("left", "xs")}>
+        <Tooltip
+          trigger={
+            <Icon
+              color={greyLightDarken2}
+              shape={SystemIcons.CircleQuestion}
+              size={iconSizeXs}
+            />
+          }
+          id={`labelTooltip-${this.props.id}`}
+          maxWidth={200}
+        >
+          {this.props.tooltipContent}
+        </Tooltip>
+      </span>
     );
   }
 }

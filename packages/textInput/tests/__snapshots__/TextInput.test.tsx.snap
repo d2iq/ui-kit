@@ -1,23 +1,98 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextInput should display validation message if set & appearance == Error 1`] = `
+exports[`TextInput should display icon with tooltip if tooltipText is set 1`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-2 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  margin-left: 8px;
+}
+
+<div>
+  <div
+    className="emotion-2"
+  >
+    <label
+      className="emotion-0"
+      htmlFor="input.with.tooltip"
+    >
+      Tooltip Message Test
+    </label>
+    <span
+      className="emotion-1"
+    >
+      <Tooltip
+        id="labelTooltip-input.with.tooltip"
+        maxWidth={200}
+        trigger={
+          <Icon
+            color="#AEB0B4"
+            shape="system-circle-question"
+            size="16px"
+          />
+        }
+      >
+        Example Tooltip
+      </Tooltip>
+    </span>
+  </div>
+  <FormFieldWrapper
+    id="input.with.tooltip"
+  >
+    <Component />
+  </FormFieldWrapper>
+</div>
+`;
+
+exports[`TextInput should display validation message if set & appearance == Error 1`] = `
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 {
+  padding-top: 0;
+  margin-top: 0;
+  font-weight: 500;
   color: #EB293A;
   fill: #EB293A;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="input.error.with.message"
+  <div
+    className="emotion-1"
   >
-    Error Message Test
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="input.error.with.message"
+    >
+      Error Message Test
+    </label>
+  </div>
   <FormFieldWrapper
     errors={
       Array [
@@ -45,12 +120,29 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   height: 1px;
 }
 
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div>
-  <label
-    className="emotion-0"
+  <div
+    className="emotion-1"
   >
-    I'm not displayed
-  </label>
+    <label
+      className="emotion-0"
+    >
+      I'm not displayed
+    </label>
+  </div>
   <FormFieldWrapper>
     <Component />
   </FormFieldWrapper>
@@ -61,18 +153,33 @@ exports[`TextInput should not display validation message if set & appearance == 
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="input.success.without.message"
+  <div
+    className="emotion-1"
   >
-    No Error Message Test
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="input.success.without.message"
+    >
+      No Error Message Test
+    </label>
+  </div>
   <FormFieldWrapper
     errors={
       Array [
@@ -90,12 +197,23 @@ exports[`TextInput should render all appearances focus 1`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
 }
 
-.emotion-2 {
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
@@ -117,7 +235,7 @@ exports[`TextInput should render all appearances focus 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-1 {
+.emotion-2 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -144,24 +262,24 @@ exports[`TextInput should render all appearances focus 1`] = `
   border-color: #DADDE2;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   outline: 0;
 }
 
-.emotion-1 input {
+.emotion-2 input {
   font-size: inherit;
 }
 
-.emotion-1 svg {
+.emotion-2 svg {
   fill: #1B2029;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   background-color: #F8F6FF;
   border-color: #7D58FF;
 }
 
-.emotion-1:focus svg {
+.emotion-2:focus svg {
   fill: #7D58FF;
 }
 
@@ -172,21 +290,25 @@ exports[`TextInput should render all appearances focus 1`] = `
   type="text"
 >
   <div>
-    <label
-      className="emotion-0"
-      htmlFor="test.input"
-    />
+    <div
+      className="emotion-1"
+    >
+      <label
+        className="emotion-0"
+        htmlFor="test.input"
+      />
+    </div>
     <FormFieldWrapper
       id="test.input"
     >
       <div>
         <div
-          className="emotion-2"
+          className="emotion-3"
         >
           <input
             aria-describedby=""
             aria-invalid={false}
-            className="emotion-1"
+            className="emotion-2"
             id="test.input"
             type="text"
           />
@@ -199,17 +321,28 @@ exports[`TextInput should render all appearances focus 1`] = `
 `;
 
 exports[`TextInput should render all appearances focus 2`] = `
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
   color: #EB293A;
   fill: #EB293A;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
@@ -231,7 +364,7 @@ exports[`TextInput should render all appearances focus 2`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-1 {
+.emotion-2 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -258,19 +391,19 @@ exports[`TextInput should render all appearances focus 2`] = `
   border-color: #EB293A;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   outline: 0;
 }
 
-.emotion-1 input {
+.emotion-2 input {
   font-size: inherit;
 }
 
-.emotion-1 svg {
+.emotion-2 svg {
   fill: #EB293A;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   background-color: #FDF4F4;
 }
 
@@ -281,21 +414,25 @@ exports[`TextInput should render all appearances focus 2`] = `
   type="text"
 >
   <div>
-    <label
-      className="emotion-0"
-      htmlFor="test.input"
-    />
+    <div
+      className="emotion-1"
+    >
+      <label
+        className="emotion-0"
+        htmlFor="test.input"
+      />
+    </div>
     <FormFieldWrapper
       id="test.input"
     >
       <div>
         <div
-          className="emotion-2"
+          className="emotion-3"
         >
           <input
             aria-describedby=""
             aria-invalid={false}
-            className="emotion-1"
+            className="emotion-2"
             id="test.input"
             type="text"
           />
@@ -311,12 +448,23 @@ exports[`TextInput should render all appearances focus 3`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
 }
 
-.emotion-2 {
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
@@ -338,7 +486,7 @@ exports[`TextInput should render all appearances focus 3`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-1 {
+.emotion-2 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -365,19 +513,19 @@ exports[`TextInput should render all appearances focus 3`] = `
   border-color: #14C684;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   outline: 0;
 }
 
-.emotion-1 input {
+.emotion-2 input {
   font-size: inherit;
 }
 
-.emotion-1 svg {
+.emotion-2 svg {
   fill: #14C684;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   background-color: #F3FCF8;
 }
 
@@ -388,21 +536,25 @@ exports[`TextInput should render all appearances focus 3`] = `
   type="text"
 >
   <div>
-    <label
-      className="emotion-0"
-      htmlFor="test.input"
-    />
+    <div
+      className="emotion-1"
+    >
+      <label
+        className="emotion-0"
+        htmlFor="test.input"
+      />
+    </div>
     <FormFieldWrapper
       id="test.input"
     >
       <div>
         <div
-          className="emotion-2"
+          className="emotion-3"
         >
           <input
             aria-describedby=""
             aria-invalid={false}
-            className="emotion-1"
+            className="emotion-2"
             id="test.input"
             type="text"
           />
@@ -418,18 +570,33 @@ exports[`TextInput should render all appearances with props 1`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.input.standard"
+  <div
+    className="emotion-1"
   >
-    standard
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.input.standard"
+    >
+      standard
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.input.standard"
   >
@@ -439,23 +606,38 @@ exports[`TextInput should render all appearances with props 1`] = `
 `;
 
 exports[`TextInput should render all appearances with props 2`] = `
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
   color: #EB293A;
   fill: #EB293A;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.input.error"
+  <div
+    className="emotion-1"
   >
-    error
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.input.error"
+    >
+      error
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.input.error"
   >
@@ -468,18 +650,33 @@ exports[`TextInput should render all appearances with props 3`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.input.success"
+  <div
+    className="emotion-1"
   >
-    success
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.input.success"
+    >
+      success
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.input.success"
   >
@@ -492,20 +689,35 @@ exports[`TextInput should render node as inputLabel 1`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.input"
+  <div
+    className="emotion-1"
   >
-    <span>
-      My Test Node
-    </span>
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.input"
+    >
+      <span>
+        My Test Node
+      </span>
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.input"
   >
@@ -518,18 +730,33 @@ exports[`TextInput should render string inputLabel 1`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.input"
+  <div
+    className="emotion-1"
   >
-    Test Input
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.input"
+    >
+      Test Input
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.input"
   >
