@@ -13,7 +13,12 @@ import {
   display,
   textWeight
 } from "../../shared/styles/styleUtils";
-import { CloseIcon } from "../../shared/icons";
+import {
+  iconSizeXs,
+  greyDark
+} from "../../design-tokens/build/js/designTokens";
+import Icon from "../../icon/components/Icon";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 export interface InfoBoxProps {
   /**
@@ -96,7 +101,11 @@ export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
         {onDismiss && (
           <Clickable action={this.handleDismiss} tabIndex={0}>
             <span className={dismissBtn}>
-              <CloseIcon />
+              <Icon
+                shape={SystemIcons.Close}
+                size={iconSizeXs}
+                color={greyDark}
+              />
             </span>
           </Clickable>
         )}

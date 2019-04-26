@@ -1,10 +1,10 @@
 import * as React from "react";
 import SecondaryButton from "./SecondaryButton";
 import { ButtonProps } from "./ButtonBase";
-import { DownTriangle } from "../../shared/icons";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const SecondaryDropdownButton = (props: ButtonProps) => (
-  <SecondaryButton iconEnd={<DownTriangle />} {...props} />
+  <SecondaryButton iconEnd={SystemIcons.TriangleDown} {...props} />
 );
 
 export default SecondaryDropdownButton;
