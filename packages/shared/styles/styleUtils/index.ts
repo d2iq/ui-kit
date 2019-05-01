@@ -9,6 +9,7 @@ export {
   tintContentPrimary,
   tintContentSecondary
 } from "./typography/color";
+export { border } from "./modifiers/border";
 export { display } from "./modifiers/display";
 export { listReset } from "./resets/listReset";
 export { buttonReset } from "./resets/buttonReset";

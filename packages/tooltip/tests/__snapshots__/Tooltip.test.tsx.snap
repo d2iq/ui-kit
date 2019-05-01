@@ -3,7 +3,6 @@
 exports[`Tooltip renders 1`] = `
 .emotion-5 {
   position: relative;
-  display: inline-block;
 }
 
 .emotion-2 {
@@ -195,7 +194,6 @@ exports[`Tooltip renders 1`] = `
 exports[`Tooltip renders open tooltip 1`] = `
 .emotion-5 {
   position: relative;
-  display: inline-block;
 }
 
 .emotion-2 {
@@ -405,7 +403,6 @@ exports[`Tooltip renders open tooltip 1`] = `
 exports[`Tooltip renders with preferred directions 1`] = `
 .emotion-5 {
   position: relative;
-  display: inline-block;
 }
 
 .emotion-2 {
