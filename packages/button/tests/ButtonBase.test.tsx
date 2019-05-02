@@ -1,7 +1,7 @@
 import React from "react";
 
 import ButtonBase, { ButtonAppearances } from "../components/ButtonBase";
-import { DownTriangle } from "../../shared/icons";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
 import { shallow, mount } from "enzyme";
@@ -20,8 +20,8 @@ describe("ButtonBase", () => {
           ariaHaspopup={true}
           disabled={true}
           isProcessing={true}
-          iconStart={<DownTriangle />}
-          iconEnd={<DownTriangle />}
+          iconStart={SystemIcons.Check}
+          iconEnd={SystemIcons.Check}
         >
           Button
         </ButtonBase>

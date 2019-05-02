@@ -1,6 +1,10 @@
 import * as React from "react";
 import { cx } from "emotion";
 import FocusStyleManager from "../../shared/components/FocusStyleManager";
+import { IconShapes } from "../../icon/components/Icon";
+import IconPropAdapter from "../../icon/components/IconPropAdapter";
+import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
+
 import {
   buttonReset,
   textWeight,
@@ -41,11 +45,13 @@ export interface ButtonProps {
   /**
    * the icon that appears before the button text
    */
-  iconStart?: React.ReactElement<HTMLElement>;
+  // TODO: only accept IconShapes when we make a big breaking change
+  iconStart?: IconShapes | React.ReactElement<HTMLElement>;
   /**
    * the icon that appears after the button text
    */
-  iconEnd?: React.ReactElement<HTMLElement>;
+  // TODO: only accept IconShapes when we make a big breaking change
+  iconEnd?: IconShapes | React.ReactElement<HTMLElement>;
   /**
    * whether the action the button was meant to do has completed
    */
@@ -137,17 +143,15 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
     }
   }
 
-  private getIconStart(icon?: React.ReactElement<HTMLElement>) {
+  private getIconStart(icon) {
     return (
-      Boolean(icon) && (
-        <span className={cx(flexItem("shrink"), display("inherit"))}>
-          {icon}
-        </span>
-      )
+      <span className={cx(flexItem("shrink"), display("inherit"))}>
+        <IconPropAdapter icon={icon} size={iconSizeXs} color="inherit" />
+      </span>
     );
   }
 
-  private getIconEnd(icon?: React.ReactElement<HTMLElement>) {
+  private getIconEnd(icon) {
     return (
       Boolean(icon) && (
         <span
@@ -157,7 +161,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
             padding("left", "xxs")
           )}
         >
-          {icon}
+          <IconPropAdapter icon={icon} size={iconSizeXs} color="inherit" />
         </span>
       )
     );
@@ -167,7 +171,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
     const { iconStart, iconEnd, isProcessing, children } = this.props;
     return (
       <span className={flex({ align: "center", justify: "center" })}>
-        {this.getIconStart(iconStart)}
+        {iconStart && this.getIconStart(iconStart)}
         {Boolean(children) && (
           <span
             className={cx(flexItem("shrink"), padding("left", "xs"), {
@@ -177,7 +181,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
             {children}
           </span>
         )}
-        {this.getIconEnd(iconEnd)}
+        {iconEnd && this.getIconEnd(iconEnd)}
       </span>
     );
   }

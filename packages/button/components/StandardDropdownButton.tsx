@@ -1,10 +1,10 @@
 import * as React from "react";
 import StandardButton from "./StandardButton";
 import { ButtonProps } from "./ButtonBase";
-import { DownTriangle } from "../../shared/icons";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const StandardDropdownButton = (props: ButtonProps) => (
-  <StandardButton iconEnd={<DownTriangle />} {...props} />
+  <StandardButton iconEnd={SystemIcons.TriangleDown} {...props} />
 );
 
 export default StandardDropdownButton;

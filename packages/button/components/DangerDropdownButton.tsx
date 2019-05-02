@@ -1,10 +1,10 @@
 import * as React from "react";
 import DangerButton from "./DangerButton";
 import { ButtonProps } from "./ButtonBase";
-import { DownTriangle } from "../../shared/icons";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const DangerDropdownButton = (props: ButtonProps) => (
-  <DangerButton iconEnd={<DownTriangle />} {...props} />
+  <DangerButton iconEnd={SystemIcons.TriangleDown} {...props} />
 );
 
 export default DangerDropdownButton;

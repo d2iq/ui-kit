@@ -14,7 +14,7 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { ProductIcons } from "../../icons/dist/product-icons-enum";
 import { icon } from "../style";
 
-type IconSizes =
+export type IconSizes =
   | typeof iconSizeXxs
   | typeof iconSizeXs
   | typeof iconSizeS
@@ -23,6 +23,7 @@ type IconSizes =
   | typeof iconSizeXl
   | typeof iconSizeXxl;
 
+export type IconShapes = SystemIcons | ProductIcons;
 export interface IconProps {
   /** Can be used to give a better description of the icon than just it's name */
   ariaLabel?: string;
