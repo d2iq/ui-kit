@@ -138,7 +138,11 @@ exports[`ButtonBase renders all appearances with props 1`] = `
       <span
         className="emotion-0"
       >
-        <Component />
+        <IconPropAdapter
+          color="inherit"
+          icon="system-check"
+          size="16px"
+        />
       </span>
       <span
         className="emotion-1"
@@ -148,7 +152,11 @@ exports[`ButtonBase renders all appearances with props 1`] = `
       <span
         className="emotion-2"
       >
-        <Component />
+        <IconPropAdapter
+          color="inherit"
+          icon="system-check"
+          size="16px"
+        />
       </span>
     </span>
   </button>
@@ -285,7 +293,11 @@ exports[`ButtonBase renders all appearances with props 2`] = `
       <span
         className="emotion-0"
       >
-        <Component />
+        <IconPropAdapter
+          color="inherit"
+          icon="system-check"
+          size="16px"
+        />
       </span>
       <span
         className="emotion-1"
@@ -295,7 +307,11 @@ exports[`ButtonBase renders all appearances with props 2`] = `
       <span
         className="emotion-2"
       >
-        <Component />
+        <IconPropAdapter
+          color="inherit"
+          icon="system-check"
+          size="16px"
+        />
       </span>
     </span>
   </button>
@@ -440,7 +456,11 @@ exports[`ButtonBase renders all appearances with props 3`] = `
       <span
         className="emotion-0"
       >
-        <Component />
+        <IconPropAdapter
+          color="inherit"
+          icon="system-check"
+          size="16px"
+        />
       </span>
       <span
         className="emotion-1"
@@ -450,7 +470,11 @@ exports[`ButtonBase renders all appearances with props 3`] = `
       <span
         className="emotion-2"
       >
-        <Component />
+        <IconPropAdapter
+          color="inherit"
+          icon="system-check"
+          size="16px"
+        />
       </span>
     </span>
   </button>
@@ -595,7 +619,11 @@ exports[`ButtonBase renders all appearances with props 4`] = `
       <span
         className="emotion-0"
       >
-        <Component />
+        <IconPropAdapter
+          color="inherit"
+          icon="system-check"
+          size="16px"
+        />
       </span>
       <span
         className="emotion-1"
@@ -605,7 +633,11 @@ exports[`ButtonBase renders all appearances with props 4`] = `
       <span
         className="emotion-2"
       >
-        <Component />
+        <IconPropAdapter
+          color="inherit"
+          icon="system-check"
+          size="16px"
+        />
       </span>
     </span>
   </button>
@@ -750,7 +782,11 @@ exports[`ButtonBase renders all appearances with props 5`] = `
       <span
         className="emotion-0"
       >
-        <Component />
+        <IconPropAdapter
+          color="inherit"
+          icon="system-check"
+          size="16px"
+        />
       </span>
       <span
         className="emotion-1"
@@ -760,7 +796,11 @@ exports[`ButtonBase renders all appearances with props 5`] = `
       <span
         className="emotion-2"
       >
-        <Component />
+        <IconPropAdapter
+          color="inherit"
+          icon="system-check"
+          size="16px"
+        />
       </span>
     </span>
   </button>

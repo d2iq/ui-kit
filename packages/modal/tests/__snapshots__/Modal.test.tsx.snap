@@ -15,7 +15,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   opacity: 1;
 }
 
-.emotion-14 {
+.emotion-15 {
   border-radius: 6px;
   background-color: #FFF;
   left: 50%;
@@ -51,24 +51,24 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 @media (min-width:600px) {
-  .emotion-14 {
+  .emotion-15 {
     width: 450px;
   }
 }
 
 @media (min-width:900px) {
-  .emotion-14 {
+  .emotion-15 {
     width: 500px;
   }
 }
 
 @media (min-width:1200px) {
-  .emotion-14 {
+  .emotion-15 {
     width: 550px;
   }
 }
 
-.emotion-13 {
+.emotion-14 {
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -81,7 +81,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   min-height: 0;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -97,7 +97,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   justify-content: space-between;
 }
 
-.emotion-8 {
+.emotion-9 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -112,7 +112,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   width: initial;
 }
 
-.emotion-5 {
+.emotion-6 {
   border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -128,7 +128,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   width: initial;
 }
 
-.emotion-4 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -155,11 +155,11 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   font-size: 18px;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: inherit;
 }
 
-.emotion-3 {
+.emotion-4 {
   cursor: pointer;
   display: inherit;
   box-sizing: border-box;
@@ -176,12 +176,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   width: initial;
 }
 
-.emotion-6 {
+.emotion-7 {
   overflow: auto;
   padding: 24px;
 }
 
-.emotion-12 {
+.emotion-13 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -197,7 +197,16 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   padding: 24px;
 }
 
-.emotion-7 {
+.emotion-2 {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-8 {
   background: none;
   border: 0;
   color: inherit;
@@ -213,22 +222,22 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   font-weight: 500;
 }
 
-.emotion-7::-moz-focus-inner {
+.emotion-8::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-7:hover {
+.emotion-8:hover {
   color: #704FE5;
   fill: #704FE5;
 }
 
-.emotion-7:active {
+.emotion-8:active {
   color: #6446CC;
   fill: #6446CC;
 }
 
-.emotion-9 {
+.emotion-10 {
   background: none;
   border: 0;
   color: inherit;
@@ -247,16 +256,16 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   font-weight: 500;
 }
 
-.emotion-9::-moz-focus-inner {
+.emotion-10::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   background-color: #704FE5;
 }
 
-.emotion-9:active {
+.emotion-10:active {
   background-color: #6446CC;
 }
 
@@ -274,10 +283,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   <DialogModal
     footerContent={
       <div
-        className="emotion-11"
+        className="emotion-12"
       >
         <div
-          className="emotion-8"
+          className="emotion-9"
         >
           <SecondaryButton
             onClick={[MockFunction]}
@@ -286,7 +295,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
           </SecondaryButton>
         </div>
         <div
-          className="emotion-8"
+          className="emotion-9"
         >
           <PrimaryButton>
             CTA
@@ -332,12 +341,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                     class="emotion-0"
                   />
                   <div
-                    class="emotion-14"
+                    class="emotion-15"
                     role="dialog"
                     tabindex="-1"
                   >
                     <div
-                      class="emotion-13"
+                      class="emotion-14"
                     >
                       <div
                         tabindex="0"
@@ -464,7 +473,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   opacity: 1;
 }
 
-.emotion-16 {
+.emotion-17 {
   border-radius: 6px;
   background-color: #FFF;
   left: 50%;
@@ -500,24 +509,24 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 @media (min-width:600px) {
-  .emotion-16 {
+  .emotion-17 {
     width: 450px;
   }
 }
 
 @media (min-width:900px) {
-  .emotion-16 {
+  .emotion-17 {
     width: 500px;
   }
 }
 
 @media (min-width:1200px) {
-  .emotion-16 {
+  .emotion-17 {
     width: 550px;
   }
 }
 
-.emotion-15 {
+.emotion-16 {
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -530,7 +539,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   min-height: 0;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -546,7 +555,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   justify-content: space-between;
 }
 
-.emotion-9 {
+.emotion-10 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -561,7 +570,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   width: initial;
 }
 
-.emotion-5 {
+.emotion-6 {
   border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -577,7 +586,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   width: initial;
 }
 
-.emotion-4 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -604,11 +613,11 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   font-size: 18px;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: inherit;
 }
 
-.emotion-3 {
+.emotion-4 {
   cursor: pointer;
   display: inherit;
   box-sizing: border-box;
@@ -625,12 +634,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   width: initial;
 }
 
-.emotion-6 {
+.emotion-7 {
   overflow: auto;
   padding: 24px;
 }
 
-.emotion-14 {
+.emotion-15 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -646,16 +655,25 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   padding: 24px;
 }
 
-.emotion-8 {
+.emotion-2 {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-9 {
   outline: none;
   position: relative;
 }
 
-.emotion-8:focus {
+.emotion-9:focus {
   background-color: transparent;
 }
 
-.emotion-8:focus:after {
+.emotion-9:focus:after {
   border: 2px solid #704FE5;
   border-radius: 6px;
   bottom: -3px;
@@ -666,14 +684,14 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   top: -3px;
 }
 
-.emotion-8:focus:after {
+.emotion-9:focus:after {
   border-radius: 0;
   border-left-width: 0;
   border-right-width: 0;
   border-top-width: 0;
 }
 
-.emotion-7 {
+.emotion-8 {
   background: none;
   border: 0;
   color: inherit;
@@ -689,31 +707,31 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   font-weight: 500;
 }
 
-.emotion-7::-moz-focus-inner {
+.emotion-8::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-7:hover {
+.emotion-8:hover {
   color: #704FE5;
   fill: #704FE5;
 }
 
-.emotion-7:active {
+.emotion-8:active {
   color: #6446CC;
   fill: #6446CC;
 }
 
-.emotion-11 {
+.emotion-12 {
   outline: none;
   position: relative;
 }
 
-.emotion-11:focus {
+.emotion-12:focus {
   background-color: #704FE5;
 }
 
-.emotion-11:focus:after {
+.emotion-12:focus:after {
   border: 2px solid #704FE5;
   border-radius: 6px;
   bottom: -3px;
@@ -724,7 +742,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   top: -3px;
 }
 
-.emotion-10 {
+.emotion-11 {
   background: none;
   border: 0;
   color: inherit;
@@ -743,16 +761,16 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   font-weight: 500;
 }
 
-.emotion-10::-moz-focus-inner {
+.emotion-11::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-10:hover {
+.emotion-11:hover {
   background-color: #704FE5;
 }
 
-.emotion-10:active {
+.emotion-11:active {
   background-color: #6446CC;
 }
 
@@ -762,18 +780,18 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                     class="emotion-0"
                   />
                   <div
-                    class="emotion-16"
+                    class="emotion-17"
                     role="dialog"
                     tabindex="-1"
                   >
                     <div
-                      class="emotion-15"
+                      class="emotion-16"
                     >
                       <div
-                        class="emotion-5"
+                        class="emotion-6"
                       >
                         <div
-                          class="emotion-4"
+                          class="emotion-5"
                         >
                           <div
                             class="emotion-1"
@@ -781,21 +799,24 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                             Title
                           </div>
                           <div
-                            class="emotion-3"
+                            class="emotion-4"
                           >
                             <span
-                              class="emotion-2"
+                              class="emotion-3"
                               role="button"
                               tabindex="0"
                             >
                               <svg
+                                aria-label="system-close icon"
+                                class="emotion-2"
                                 height="16"
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
                                 viewBox="0 0 16 16"
                                 width="16"
                               >
-                                <path
-                                  d="M8 9.237L4.119 13.12 2.88 11.88 6.763 8 2.88 4.119 4.12 2.88 8 6.763l3.881-3.882L13.12 4.12 9.237 8l3.882 3.881-1.238 1.238L8 9.237z"
-                                  fill-rule="nonzero"
+                                <use
+                                  xlink:href="#system-close"
                                 />
                               </svg>
                             </span>
@@ -803,7 +824,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                         </div>
                       </div>
                       <div
-                        class="emotion-6"
+                        class="emotion-7"
                       >
                         <div
                           tabindex="0"
@@ -812,16 +833,16 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                         </div>
                       </div>
                       <div
-                        class="emotion-14"
+                        class="emotion-15"
                       >
                         <div
-                          class="emotion-13"
+                          class="emotion-14"
                         >
                           <div
-                            class="emotion-9"
+                            class="emotion-10"
                           >
                             <button
-                              class="emotion-7 emotion-8"
+                              class="emotion-8 emotion-9"
                               tabindex="0"
                             >
                               <span
@@ -832,10 +853,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                             </button>
                           </div>
                           <div
-                            class="emotion-9"
+                            class="emotion-10"
                           >
                             <button
-                              class="emotion-10 emotion-11"
+                              class="emotion-11 emotion-12"
                               tabindex="0"
                             >
                               <span
@@ -862,18 +883,18 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                     class="emotion-0"
                   />
                   <div
-                    class="emotion-14"
+                    class="emotion-15"
                     role="dialog"
                     tabindex="-1"
                   >
                     <div
-                      class="emotion-13"
+                      class="emotion-14"
                     >
                       <div
-                        class="emotion-5"
+                        class="emotion-6"
                       >
                         <div
-                          class="emotion-4"
+                          class="emotion-5"
                         >
                           <div
                             class="emotion-1"
@@ -881,21 +902,24 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                             Title
                           </div>
                           <div
-                            class="emotion-3"
+                            class="emotion-4"
                           >
                             <span
-                              class="emotion-2"
+                              class="emotion-3"
                               role="button"
                               tabindex="0"
                             >
                               <svg
+                                aria-label="system-close icon"
+                                class="emotion-2"
                                 height="16"
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
                                 viewBox="0 0 16 16"
                                 width="16"
                               >
-                                <path
-                                  d="M8 9.237L4.119 13.12 2.88 11.88 6.763 8 2.88 4.119 4.12 2.88 8 6.763l3.881-3.882L13.12 4.12 9.237 8l3.882 3.881-1.238 1.238L8 9.237z"
-                                  fill-rule="nonzero"
+                                <use
+                                  xlink:href="#system-close"
                                 />
                               </svg>
                             </span>
@@ -903,7 +927,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                         </div>
                       </div>
                       <div
-                        class="emotion-6"
+                        class="emotion-7"
                       >
                         <div
                           tabindex="0"
@@ -912,16 +936,16 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                         </div>
                       </div>
                       <div
-                        class="emotion-12"
+                        class="emotion-13"
                       >
                         <div
-                          class="emotion-11"
+                          class="emotion-12"
                         >
                           <div
-                            class="emotion-8"
+                            class="emotion-9"
                           >
                             <button
-                              class="emotion-7 css-14x8wbg"
+                              class="emotion-8 css-14x8wbg"
                               tabindex="0"
                             >
                               <span
@@ -932,10 +956,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                             </button>
                           </div>
                           <div
-                            class="emotion-8"
+                            class="emotion-9"
                           >
                             <button
-                              class="emotion-9 css-1dqlfdd"
+                              class="emotion-10 css-1dqlfdd"
                               tabindex="0"
                             >
                               <span
@@ -960,7 +984,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
               <FocusTrap
                 _createFocusTrap={[Function]}
                 active={true}
-                className="emotion-14"
+                className="emotion-15"
                 focusTrapOptions={
                   Object {
                     "escapeDeactivates": false,
@@ -974,7 +998,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                 tag="div"
               >
                 <div
-                  className="emotion-14"
+                  className="emotion-15"
                   onKeyDown={[Function]}
                   role="dialog"
                   tabIndex={-1}
@@ -988,13 +1012,13 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       onClose={[MockFunction]}
                     >
                       <div
-                        className="emotion-13"
+                        className="emotion-14"
                       >
                         <div
-                          className="emotion-5"
+                          className="emotion-6"
                         >
                           <div
-                            className="emotion-4"
+                            className="emotion-5"
                           >
                             <div
                               className="emotion-1"
@@ -1002,7 +1026,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                               Title
                             </div>
                             <div
-                              className="emotion-3"
+                              className="emotion-4"
                             >
                               <Clickable
                                 action={[MockFunction]}
@@ -1011,31 +1035,37 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                 tabIndex={0}
                               >
                                 <span
-                                  className="emotion-2"
+                                  className="emotion-3"
                                   onClick={[MockFunction]}
                                   onKeyPress={[Function]}
                                   role="button"
                                   tabIndex={0}
                                 >
-                                  <Component>
+                                  <Icon
+                                    shape="system-close"
+                                    size="16px"
+                                  >
                                     <svg
-                                      height="16"
+                                      aria-label="system-close icon"
+                                      className="emotion-2"
+                                      height={16}
+                                      preserveAspectRatio="xMinYMin meet"
+                                      role="img"
                                       viewBox="0 0 16 16"
-                                      width="16"
+                                      width={16}
                                     >
-                                      <path
-                                        d="M8 9.237L4.119 13.12 2.88 11.88 6.763 8 2.88 4.119 4.12 2.88 8 6.763l3.881-3.882L13.12 4.12 9.237 8l3.882 3.881-1.238 1.238L8 9.237z"
-                                        fillRule="nonzero"
+                                      <use
+                                        xlinkHref="#system-close"
                                       />
                                     </svg>
-                                  </Component>
+                                  </Icon>
                                 </span>
                               </Clickable>
                             </div>
                           </div>
                         </div>
                         <div
-                          className="emotion-6"
+                          className="emotion-7"
                         >
                           <div
                             tabIndex={0}
@@ -1044,13 +1074,13 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                           </div>
                         </div>
                         <div
-                          className="emotion-12"
+                          className="emotion-13"
                         >
                           <div
-                            className="emotion-11"
+                            className="emotion-12"
                           >
                             <div
-                              className="emotion-8"
+                              className="emotion-9"
                             >
                               <SecondaryButton
                                 onClick={[MockFunction]}
@@ -1063,7 +1093,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                     focusEnabledClass="css-14x8wbg"
                                   >
                                     <button
-                                      className="emotion-7"
+                                      className="emotion-8"
                                       onClick={[Function]}
                                       tabIndex={0}
                                     >
@@ -1078,7 +1108,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                               </SecondaryButton>
                             </div>
                             <div
-                              className="emotion-8"
+                              className="emotion-9"
                             >
                               <PrimaryButton>
                                 <ButtonBase
@@ -1088,7 +1118,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                     focusEnabledClass="css-1dqlfdd"
                                   >
                                     <button
-                                      className="emotion-9"
+                                      className="emotion-10"
                                       onClick={[Function]}
                                       tabIndex={0}
                                     >
@@ -1456,13 +1486,16 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                             tabindex="0"
                           >
                             <svg
+                              aria-label="system-close icon"
+                              class="css-zgvqkl"
                               height="16"
+                              preserveAspectRatio="xMinYMin meet"
+                              role="img"
                               viewBox="0 0 16 16"
                               width="16"
                             >
-                              <path
-                                d="M8 9.237L4.119 13.12 2.88 11.88 6.763 8 2.88 4.119 4.12 2.88 8 6.763l3.881-3.882L13.12 4.12 9.237 8l3.882 3.881-1.238 1.238L8 9.237z"
-                                fill-rule="nonzero"
+                              <use
+                                xlink:href="#system-close"
                               />
                             </svg>
                           </span>
@@ -1532,7 +1565,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   opacity: 1;
 }
 
-.emotion-16 {
+.emotion-17 {
   border-radius: 6px;
   background-color: #FFF;
   left: 50%;
@@ -1568,24 +1601,24 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 @media (min-width:600px) {
-  .emotion-16 {
+  .emotion-17 {
     width: 450px;
   }
 }
 
 @media (min-width:900px) {
-  .emotion-16 {
+  .emotion-17 {
     width: 500px;
   }
 }
 
 @media (min-width:1200px) {
-  .emotion-16 {
+  .emotion-17 {
     width: 550px;
   }
 }
 
-.emotion-15 {
+.emotion-16 {
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -1598,7 +1631,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   min-height: 0;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1614,7 +1647,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   justify-content: space-between;
 }
 
-.emotion-9 {
+.emotion-10 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -1629,7 +1662,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   width: initial;
 }
 
-.emotion-5 {
+.emotion-6 {
   border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -1645,7 +1678,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   width: initial;
 }
 
-.emotion-4 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1672,11 +1705,11 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-size: 18px;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: inherit;
 }
 
-.emotion-3 {
+.emotion-4 {
   cursor: pointer;
   display: inherit;
   box-sizing: border-box;
@@ -1693,12 +1726,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   width: initial;
 }
 
-.emotion-6 {
+.emotion-7 {
   overflow: auto;
   padding: 24px;
 }
 
-.emotion-14 {
+.emotion-15 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -1714,16 +1747,25 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 24px;
 }
 
-.emotion-8 {
+.emotion-2 {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-9 {
   outline: none;
   position: relative;
 }
 
-.emotion-8:focus {
+.emotion-9:focus {
   background-color: transparent;
 }
 
-.emotion-8:focus:after {
+.emotion-9:focus:after {
   border: 2px solid #704FE5;
   border-radius: 6px;
   bottom: -3px;
@@ -1734,14 +1776,14 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   top: -3px;
 }
 
-.emotion-8:focus:after {
+.emotion-9:focus:after {
   border-radius: 0;
   border-left-width: 0;
   border-right-width: 0;
   border-top-width: 0;
 }
 
-.emotion-7 {
+.emotion-8 {
   background: none;
   border: 0;
   color: inherit;
@@ -1757,31 +1799,31 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-weight: 500;
 }
 
-.emotion-7::-moz-focus-inner {
+.emotion-8::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-7:hover {
+.emotion-8:hover {
   color: #704FE5;
   fill: #704FE5;
 }
 
-.emotion-7:active {
+.emotion-8:active {
   color: #6446CC;
   fill: #6446CC;
 }
 
-.emotion-11 {
+.emotion-12 {
   outline: none;
   position: relative;
 }
 
-.emotion-11:focus {
+.emotion-12:focus {
   background-color: #704FE5;
 }
 
-.emotion-11:focus:after {
+.emotion-12:focus:after {
   border: 2px solid #704FE5;
   border-radius: 6px;
   bottom: -3px;
@@ -1792,7 +1834,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   top: -3px;
 }
 
-.emotion-10 {
+.emotion-11 {
   background: none;
   border: 0;
   color: inherit;
@@ -1811,16 +1853,16 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-weight: 500;
 }
 
-.emotion-10::-moz-focus-inner {
+.emotion-11::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-10:hover {
+.emotion-11:hover {
   background-color: #704FE5;
 }
 
-.emotion-10:active {
+.emotion-11:active {
   background-color: #6446CC;
 }
 
@@ -1830,18 +1872,18 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                   class="emotion-0"
                 />
                 <div
-                  class="emotion-16"
+                  class="emotion-17"
                   role="dialog"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-15"
+                    class="emotion-16"
                   >
                     <div
-                      class="emotion-5"
+                      class="emotion-6"
                     >
                       <div
-                        class="emotion-4"
+                        class="emotion-5"
                       >
                         <div
                           class="emotion-1"
@@ -1849,21 +1891,24 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           Title
                         </div>
                         <div
-                          class="emotion-3"
+                          class="emotion-4"
                         >
                           <span
-                            class="emotion-2"
+                            class="emotion-3"
                             role="button"
                             tabindex="0"
                           >
                             <svg
+                              aria-label="system-close icon"
+                              class="emotion-2"
                               height="16"
+                              preserveAspectRatio="xMinYMin meet"
+                              role="img"
                               viewBox="0 0 16 16"
                               width="16"
                             >
-                              <path
-                                d="M8 9.237L4.119 13.12 2.88 11.88 6.763 8 2.88 4.119 4.12 2.88 8 6.763l3.881-3.882L13.12 4.12 9.237 8l3.882 3.881-1.238 1.238L8 9.237z"
-                                fill-rule="nonzero"
+                              <use
+                                xlink:href="#system-close"
                               />
                             </svg>
                           </span>
@@ -1871,7 +1916,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="emotion-6"
+                      class="emotion-7"
                     >
                       <div
                         tabindex="0"
@@ -1880,16 +1925,16 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="emotion-14"
+                      class="emotion-15"
                     >
                       <div
-                        class="emotion-13"
+                        class="emotion-14"
                       >
                         <div
-                          class="emotion-9"
+                          class="emotion-10"
                         >
                           <button
-                            class="emotion-7 emotion-8"
+                            class="emotion-8 emotion-9"
                             tabindex="0"
                           >
                             <span
@@ -1900,10 +1945,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           </button>
                         </div>
                         <div
-                          class="emotion-9"
+                          class="emotion-10"
                         >
                           <button
-                            class="emotion-10 emotion-11"
+                            class="emotion-11 emotion-12"
                             tabindex="0"
                           >
                             <span

@@ -1,6 +1,5 @@
 import { css } from "emotion";
 import { atMediaUp } from "../shared/styles/breakpoints";
-import { tintSVG } from "../shared/styles/styleUtils";
 import {
   blueDarken4,
   blueLighten3,
@@ -89,7 +88,6 @@ export const primaryActionStyle = css`
 `;
 
 export const dismissBtn = css`
-  ${tintSVG(greyDark)};
   cursor: pointer;
   line-height: 0;
   opacity: 0.5;
