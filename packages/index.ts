@@ -53,5 +53,6 @@ export { ToggleContent } from "./toggleContent";
 export { ToggleInput } from "./toggleInput";
 export { ToggleInputList } from "./toggleInputList";
 export { Tooltip } from "./tooltip";
+export { Typeahead } from "./typeahead";
 
 injectGlobalCss();

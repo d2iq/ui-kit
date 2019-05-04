@@ -1,0 +1,1287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typeahead renders 1`] = `
+.emotion-11 {
+  position: relative;
+}
+
+.emotion-8 {
+  margin-top: 4px;
+}
+
+.emotion-9 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  z-index: 2;
+}
+
+.emotion-0 {
+  padding-top: 0;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #FFF;
+  border-color: #DADDE2;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-2 input {
+  font-size: inherit;
+}
+
+.emotion-2 svg {
+  fill: #1B2029;
+}
+
+.emotion-2:focus {
+  background-color: #F8F6FF;
+  border-color: #7D58FF;
+}
+
+.emotion-2:focus svg {
+  fill: #7D58FF;
+}
+
+.emotion-7 {
+  background-color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow-y: scroll;
+  border-width: 1px;
+  border-color: #DADDE2;
+  border-style: solid;
+}
+
+.emotion-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.emotion-5 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-6 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-bottom: 8px;
+}
+
+<Typeahead
+  items={
+    Array [
+      Object {
+        "label": "Exosphere",
+        "value": "Exosphere",
+      },
+      Object {
+        "label": "Thermosphere",
+        "value": "Thermosphere",
+      },
+      Object {
+        "label": "Stratosphere",
+        "value": "Stratosphere",
+      },
+    ]
+  }
+  menuMaxHeight={300}
+  textField={
+    <TextInput
+      appearance="standard"
+      id="standard.input"
+      inputLabel="Standard"
+      placeholder="Placeholder"
+      showInputLabel={true}
+      type="text"
+    />
+  }
+>
+  <div>
+    <Downshift
+      defaultHighlightedIndex={null}
+      defaultIsOpen={false}
+      environment={[Window]}
+      getA11yStatusMessage={[Function]}
+      itemToString={[Function]}
+      onChange={[Function]}
+      onInputValueChange={[Function]}
+      onOuterClick={[Function]}
+      onSelect={[Function]}
+      onStateChange={[Function]}
+      onUserAction={[Function]}
+      scrollIntoView={[Function]}
+      selectedItemChanged={[Function]}
+      stateReducer={[Function]}
+      suppressRefError={false}
+    >
+      <div
+        aria-expanded={false}
+        aria-haspopup="listbox"
+        aria-labelledby="downshift-0-label"
+        aria-owns={null}
+        role="combobox"
+      >
+        <Dropdownable
+          dropdown={
+            <div>
+              <div
+                className="emotion-8"
+              >
+                <DropdownMenu
+                  aria-labelledby="downshift-0-label"
+                  id="downshift-0-menu"
+                  maxHeight={300}
+                  menuRef={[Function]}
+                  role="listbox"
+                  width={0}
+                >
+                  <DropdownMenuItem
+                    aria-selected={false}
+                    id="downshift-0-item-0"
+                    index={0}
+                    isActive={false}
+                    isSelected={null}
+                    listLength={3}
+                    onClick={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseMove={[Function]}
+                    role="option"
+                  >
+                    Exosphere
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    aria-selected={false}
+                    id="downshift-0-item-1"
+                    index={1}
+                    isActive={false}
+                    isSelected={null}
+                    listLength={3}
+                    onClick={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseMove={[Function]}
+                    role="option"
+                  >
+                    Thermosphere
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    aria-selected={false}
+                    id="downshift-0-item-2"
+                    index={2}
+                    isActive={false}
+                    isSelected={null}
+                    listLength={3}
+                    onClick={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseMove={[Function]}
+                    role="option"
+                  >
+                    Stratosphere
+                  </DropdownMenuItem>
+                </DropdownMenu>
+              </div>
+            </div>
+          }
+          open={false}
+          preferredDirections={
+            Array [
+              "bottom-left",
+              "bottom-right",
+              "top-right",
+              "top-left",
+            ]
+          }
+        >
+          <Styled(div)>
+            <div
+              className="emotion-11"
+            >
+              <div>
+                <TextInput
+                  appearance="standard"
+                  aria-activedescendant={null}
+                  aria-autocomplete="list"
+                  aria-controls={null}
+                  aria-labelledby="downshift-0-label"
+                  autoComplete="off"
+                  id="standard.input"
+                  inputLabel="Standard"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Placeholder"
+                  showInputLabel={true}
+                  type="text"
+                  value=""
+                >
+                  <div>
+                    <div
+                      className="emotion-1"
+                    >
+                      <label
+                        className="emotion-0"
+                        htmlFor="standard.input"
+                      >
+                        Standard
+                      </label>
+                    </div>
+                    <FormFieldWrapper
+                      id="standard.input"
+                    >
+                      <div>
+                        <div
+                          className="emotion-3"
+                        >
+                          <input
+                            aria-activedescendant={null}
+                            aria-autocomplete="list"
+                            aria-controls={null}
+                            aria-describedby=""
+                            aria-invalid={false}
+                            aria-labelledby="downshift-0-label"
+                            autoComplete="off"
+                            className="emotion-2"
+                            id="standard.input"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Placeholder"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                        <div />
+                      </div>
+                    </FormFieldWrapper>
+                  </div>
+                </TextInput>
+              </div>
+              <Overlay
+                className="emotion-9"
+                overlayRoot={
+                  .emotion-4 {
+  margin-top: 4px;
+}
+
+.emotion-5 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  z-index: 2;
+}
+
+.emotion-3 {
+  background-color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow-y: scroll;
+  border-width: 1px;
+  border-color: #DADDE2;
+  border-style: solid;
+}
+
+.emotion-0 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.emotion-1 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-2 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-bottom: 8px;
+}
+
+<body>
+                    <div>
+                      <div
+                        class="emotion-5"
+                      >
+                        <div>
+                          <div
+                            direction="bottom-left"
+                          >
+                            <div
+                              class="emotion-4"
+                            >
+                              <div
+                                aria-labelledby="downshift-0-label"
+                                class="emotion-3"
+                                id="downshift-0-menu"
+                                role="listbox"
+                                style="max-height: 300px; width: 0px;"
+                              >
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-0"
+                                  id="downshift-0-item-0"
+                                  role="option"
+                                >
+                                  Exosphere
+                                </div>
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-1"
+                                  id="downshift-0-item-1"
+                                  role="option"
+                                >
+                                  Thermosphere
+                                </div>
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-2"
+                                  id="downshift-0-item-2"
+                                  role="option"
+                                >
+                                  Stratosphere
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </body>
+                }
+              >
+                <Portal
+                  containerInfo={
+                    <div>
+                      <div
+                        class="emotion-9"
+                      >
+                        <div>
+                          <div
+                            direction="bottom-left"
+                          >
+                            <div
+                              class="emotion-8"
+                            >
+                              <div
+                                aria-labelledby="downshift-0-label"
+                                class="emotion-7"
+                                id="downshift-0-menu"
+                                role="listbox"
+                                style="max-height: 300px; width: 0px;"
+                              >
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-4"
+                                  id="downshift-0-item-0"
+                                  role="option"
+                                >
+                                  Exosphere
+                                </div>
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-5"
+                                  id="downshift-0-item-1"
+                                  role="option"
+                                >
+                                  Thermosphere
+                                </div>
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-6"
+                                  id="downshift-0-item-2"
+                                  role="option"
+                                >
+                                  Stratosphere
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                >
+                  <div
+                    className="emotion-9"
+                  >
+                    <div>
+                      <clickOutside(DropdownContents)
+                        open={false}
+                      >
+                        <DropdownContents
+                          open={false}
+                        >
+                          <div
+                            direction="bottom-left"
+                          >
+                            <div
+                              className="emotion-8"
+                            >
+                              <DropdownMenu
+                                aria-labelledby="downshift-0-label"
+                                id="downshift-0-menu"
+                                maxHeight={300}
+                                menuRef={[Function]}
+                                role="listbox"
+                                width={0}
+                              >
+                                <div
+                                  aria-labelledby="downshift-0-label"
+                                  className="emotion-7"
+                                  id="downshift-0-menu"
+                                  role="listbox"
+                                  style={
+                                    Object {
+                                      "maxHeight": 300,
+                                      "width": 0,
+                                    }
+                                  }
+                                >
+                                  <DropdownMenuItem
+                                    aria-selected={false}
+                                    id="downshift-0-item-0"
+                                    index={0}
+                                    isActive={false}
+                                    isSelected={null}
+                                    key="Exosphere"
+                                    listLength={3}
+                                    onClick={[Function]}
+                                    onMouseDown={[Function]}
+                                    onMouseMove={[Function]}
+                                    role="option"
+                                  >
+                                    <div
+                                      aria-selected={false}
+                                      className="emotion-4"
+                                      id="downshift-0-item-0"
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      onMouseMove={[Function]}
+                                      role="option"
+                                    >
+                                      Exosphere
+                                    </div>
+                                  </DropdownMenuItem>
+                                  <DropdownMenuItem
+                                    aria-selected={false}
+                                    id="downshift-0-item-1"
+                                    index={1}
+                                    isActive={false}
+                                    isSelected={null}
+                                    key="Thermosphere"
+                                    listLength={3}
+                                    onClick={[Function]}
+                                    onMouseDown={[Function]}
+                                    onMouseMove={[Function]}
+                                    role="option"
+                                  >
+                                    <div
+                                      aria-selected={false}
+                                      className="emotion-5"
+                                      id="downshift-0-item-1"
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      onMouseMove={[Function]}
+                                      role="option"
+                                    >
+                                      Thermosphere
+                                    </div>
+                                  </DropdownMenuItem>
+                                  <DropdownMenuItem
+                                    aria-selected={false}
+                                    id="downshift-0-item-2"
+                                    index={2}
+                                    isActive={false}
+                                    isSelected={null}
+                                    key="Stratosphere"
+                                    listLength={3}
+                                    onClick={[Function]}
+                                    onMouseDown={[Function]}
+                                    onMouseMove={[Function]}
+                                    role="option"
+                                  >
+                                    <div
+                                      aria-selected={false}
+                                      className="emotion-6"
+                                      id="downshift-0-item-2"
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      onMouseMove={[Function]}
+                                      role="option"
+                                    >
+                                      Stratosphere
+                                    </div>
+                                  </DropdownMenuItem>
+                                </div>
+                              </DropdownMenu>
+                            </div>
+                          </div>
+                        </DropdownContents>
+                      </clickOutside(DropdownContents)>
+                    </div>
+                  </div>
+                </Portal>
+              </Overlay>
+            </div>
+          </Styled(div)>
+        </Dropdownable>
+      </div>
+    </Downshift>
+  </div>
+</Typeahead>
+`;
+
+exports[`Typeahead renders a menu with a max height 1`] = `
+.emotion-11 {
+  position: relative;
+}
+
+.emotion-8 {
+  margin-top: 4px;
+}
+
+.emotion-9 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  z-index: 2;
+}
+
+.emotion-0 {
+  padding-top: 0;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #FFF;
+  border-color: #DADDE2;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-2 input {
+  font-size: inherit;
+}
+
+.emotion-2 svg {
+  fill: #1B2029;
+}
+
+.emotion-2:focus {
+  background-color: #F8F6FF;
+  border-color: #7D58FF;
+}
+
+.emotion-2:focus svg {
+  fill: #7D58FF;
+}
+
+.emotion-7 {
+  background-color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow-y: scroll;
+  border-width: 1px;
+  border-color: #DADDE2;
+  border-style: solid;
+}
+
+.emotion-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.emotion-5 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-6 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-bottom: 8px;
+}
+
+<Typeahead
+  items={
+    Array [
+      Object {
+        "label": "Exosphere",
+        "value": "Exosphere",
+      },
+      Object {
+        "label": "Thermosphere",
+        "value": "Thermosphere",
+      },
+      Object {
+        "label": "Stratosphere",
+        "value": "Stratosphere",
+      },
+    ]
+  }
+  menuMaxHeight={100}
+  textField={
+    <TextInput
+      appearance="standard"
+      id="standard.input"
+      inputLabel="Standard"
+      placeholder="Placeholder"
+      showInputLabel={true}
+      type="text"
+    />
+  }
+>
+  <div>
+    <Downshift
+      defaultHighlightedIndex={null}
+      defaultIsOpen={false}
+      environment={[Window]}
+      getA11yStatusMessage={[Function]}
+      itemToString={[Function]}
+      onChange={[Function]}
+      onInputValueChange={[Function]}
+      onOuterClick={[Function]}
+      onSelect={[Function]}
+      onStateChange={[Function]}
+      onUserAction={[Function]}
+      scrollIntoView={[Function]}
+      selectedItemChanged={[Function]}
+      stateReducer={[Function]}
+      suppressRefError={false}
+    >
+      <div
+        aria-expanded={false}
+        aria-haspopup="listbox"
+        aria-labelledby="downshift-1-label"
+        aria-owns={null}
+        role="combobox"
+      >
+        <Dropdownable
+          dropdown={
+            <div>
+              <div
+                className="emotion-8"
+              >
+                <DropdownMenu
+                  aria-labelledby="downshift-1-label"
+                  id="downshift-1-menu"
+                  maxHeight={100}
+                  menuRef={[Function]}
+                  role="listbox"
+                  width={0}
+                >
+                  <DropdownMenuItem
+                    aria-selected={false}
+                    id="downshift-1-item-0"
+                    index={0}
+                    isActive={false}
+                    isSelected={null}
+                    listLength={3}
+                    onClick={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseMove={[Function]}
+                    role="option"
+                  >
+                    Exosphere
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    aria-selected={false}
+                    id="downshift-1-item-1"
+                    index={1}
+                    isActive={false}
+                    isSelected={null}
+                    listLength={3}
+                    onClick={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseMove={[Function]}
+                    role="option"
+                  >
+                    Thermosphere
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    aria-selected={false}
+                    id="downshift-1-item-2"
+                    index={2}
+                    isActive={false}
+                    isSelected={null}
+                    listLength={3}
+                    onClick={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseMove={[Function]}
+                    role="option"
+                  >
+                    Stratosphere
+                  </DropdownMenuItem>
+                </DropdownMenu>
+              </div>
+            </div>
+          }
+          open={false}
+          preferredDirections={
+            Array [
+              "bottom-left",
+              "bottom-right",
+              "top-right",
+              "top-left",
+            ]
+          }
+        >
+          <Styled(div)>
+            <div
+              className="emotion-11"
+            >
+              <div>
+                <TextInput
+                  appearance="standard"
+                  aria-activedescendant={null}
+                  aria-autocomplete="list"
+                  aria-controls={null}
+                  aria-labelledby="downshift-1-label"
+                  autoComplete="off"
+                  id="standard.input"
+                  inputLabel="Standard"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Placeholder"
+                  showInputLabel={true}
+                  type="text"
+                  value=""
+                >
+                  <div>
+                    <div
+                      className="emotion-1"
+                    >
+                      <label
+                        className="emotion-0"
+                        htmlFor="standard.input"
+                      >
+                        Standard
+                      </label>
+                    </div>
+                    <FormFieldWrapper
+                      id="standard.input"
+                    >
+                      <div>
+                        <div
+                          className="emotion-3"
+                        >
+                          <input
+                            aria-activedescendant={null}
+                            aria-autocomplete="list"
+                            aria-controls={null}
+                            aria-describedby=""
+                            aria-invalid={false}
+                            aria-labelledby="downshift-1-label"
+                            autoComplete="off"
+                            className="emotion-2"
+                            id="standard.input"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Placeholder"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                        <div />
+                      </div>
+                    </FormFieldWrapper>
+                  </div>
+                </TextInput>
+              </div>
+              <Overlay
+                className="emotion-9"
+                overlayRoot={
+                  <body>
+                    <div>
+                      <div
+                        class="emotion-9"
+                      >
+                        <div>
+                          <div
+                            direction="bottom-left"
+                          >
+                            <div
+                              class="emotion-8"
+                            >
+                              <div
+                                aria-labelledby="downshift-0-label"
+                                class="emotion-7"
+                                id="downshift-0-menu"
+                                role="listbox"
+                                style="max-height: 300px; width: 0px;"
+                              >
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-4"
+                                  id="downshift-0-item-0"
+                                  role="option"
+                                >
+                                  Exosphere
+                                </div>
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-5"
+                                  id="downshift-0-item-1"
+                                  role="option"
+                                >
+                                  Thermosphere
+                                </div>
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-6"
+                                  id="downshift-0-item-2"
+                                  role="option"
+                                >
+                                  Stratosphere
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    .emotion-4 {
+  margin-top: 4px;
+}
+
+.emotion-5 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  z-index: 2;
+}
+
+.emotion-3 {
+  background-color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow-y: scroll;
+  border-width: 1px;
+  border-color: #DADDE2;
+  border-style: solid;
+}
+
+.emotion-0 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.emotion-1 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.emotion-2 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-bottom: 8px;
+}
+
+<div>
+                      <div
+                        class="emotion-5"
+                      >
+                        <div>
+                          <div
+                            direction="bottom-left"
+                          >
+                            <div
+                              class="emotion-4"
+                            >
+                              <div
+                                aria-labelledby="downshift-1-label"
+                                class="emotion-3"
+                                id="downshift-1-menu"
+                                role="listbox"
+                                style="max-height: 100px; width: 0px;"
+                              >
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-0"
+                                  id="downshift-1-item-0"
+                                  role="option"
+                                >
+                                  Exosphere
+                                </div>
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-1"
+                                  id="downshift-1-item-1"
+                                  role="option"
+                                >
+                                  Thermosphere
+                                </div>
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-2"
+                                  id="downshift-1-item-2"
+                                  role="option"
+                                >
+                                  Stratosphere
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </body>
+                }
+              >
+                <Portal
+                  containerInfo={
+                    <div>
+                      <div
+                        class="emotion-9"
+                      >
+                        <div>
+                          <div
+                            direction="bottom-left"
+                          >
+                            <div
+                              class="emotion-8"
+                            >
+                              <div
+                                aria-labelledby="downshift-1-label"
+                                class="emotion-7"
+                                id="downshift-1-menu"
+                                role="listbox"
+                                style="max-height: 100px; width: 0px;"
+                              >
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-4"
+                                  id="downshift-1-item-0"
+                                  role="option"
+                                >
+                                  Exosphere
+                                </div>
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-5"
+                                  id="downshift-1-item-1"
+                                  role="option"
+                                >
+                                  Thermosphere
+                                </div>
+                                <div
+                                  aria-selected="false"
+                                  class="emotion-6"
+                                  id="downshift-1-item-2"
+                                  role="option"
+                                >
+                                  Stratosphere
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                >
+                  <div
+                    className="emotion-9"
+                  >
+                    <div>
+                      <clickOutside(DropdownContents)
+                        open={false}
+                      >
+                        <DropdownContents
+                          open={false}
+                        >
+                          <div
+                            direction="bottom-left"
+                          >
+                            <div
+                              className="emotion-8"
+                            >
+                              <DropdownMenu
+                                aria-labelledby="downshift-1-label"
+                                id="downshift-1-menu"
+                                maxHeight={100}
+                                menuRef={[Function]}
+                                role="listbox"
+                                width={0}
+                              >
+                                <div
+                                  aria-labelledby="downshift-1-label"
+                                  className="emotion-7"
+                                  id="downshift-1-menu"
+                                  role="listbox"
+                                  style={
+                                    Object {
+                                      "maxHeight": 100,
+                                      "width": 0,
+                                    }
+                                  }
+                                >
+                                  <DropdownMenuItem
+                                    aria-selected={false}
+                                    id="downshift-1-item-0"
+                                    index={0}
+                                    isActive={false}
+                                    isSelected={null}
+                                    key="Exosphere"
+                                    listLength={3}
+                                    onClick={[Function]}
+                                    onMouseDown={[Function]}
+                                    onMouseMove={[Function]}
+                                    role="option"
+                                  >
+                                    <div
+                                      aria-selected={false}
+                                      className="emotion-4"
+                                      id="downshift-1-item-0"
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      onMouseMove={[Function]}
+                                      role="option"
+                                    >
+                                      Exosphere
+                                    </div>
+                                  </DropdownMenuItem>
+                                  <DropdownMenuItem
+                                    aria-selected={false}
+                                    id="downshift-1-item-1"
+                                    index={1}
+                                    isActive={false}
+                                    isSelected={null}
+                                    key="Thermosphere"
+                                    listLength={3}
+                                    onClick={[Function]}
+                                    onMouseDown={[Function]}
+                                    onMouseMove={[Function]}
+                                    role="option"
+                                  >
+                                    <div
+                                      aria-selected={false}
+                                      className="emotion-5"
+                                      id="downshift-1-item-1"
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      onMouseMove={[Function]}
+                                      role="option"
+                                    >
+                                      Thermosphere
+                                    </div>
+                                  </DropdownMenuItem>
+                                  <DropdownMenuItem
+                                    aria-selected={false}
+                                    id="downshift-1-item-2"
+                                    index={2}
+                                    isActive={false}
+                                    isSelected={null}
+                                    key="Stratosphere"
+                                    listLength={3}
+                                    onClick={[Function]}
+                                    onMouseDown={[Function]}
+                                    onMouseMove={[Function]}
+                                    role="option"
+                                  >
+                                    <div
+                                      aria-selected={false}
+                                      className="emotion-6"
+                                      id="downshift-1-item-2"
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      onMouseMove={[Function]}
+                                      role="option"
+                                    >
+                                      Stratosphere
+                                    </div>
+                                  </DropdownMenuItem>
+                                </div>
+                              </DropdownMenu>
+                            </div>
+                          </div>
+                        </DropdownContents>
+                      </clickOutside(DropdownContents)>
+                    </div>
+                  </div>
+                </Portal>
+              </Overlay>
+            </div>
+          </Styled(div)>
+        </Dropdownable>
+      </div>
+    </Downshift>
+  </div>
+</Typeahead>
+`;

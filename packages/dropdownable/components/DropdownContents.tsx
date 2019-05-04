@@ -17,7 +17,7 @@ class DropdownContents extends React.Component<DropdownContentsProps, {}> {
   }
 
   handleClickOutside() {
-    if (this.props.open) {
+    if (this.props.open && this.props.onClose) {
       this.props.onClose();
     }
   }
