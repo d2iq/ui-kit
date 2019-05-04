@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownMenuItem renders 1`] = `
+.emotion-0 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+<div
+  className="emotion-0"
+>
+  item content content
+</div>
+`;
+
+exports[`DropdownMenuItem renders active 1`] = `
+.emotion-0 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  background-color: #F7F8F9;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+<div
+  className="emotion-0"
+>
+  item content content
+</div>
+`;
+
+exports[`DropdownMenuItem renders active and selected 1`] = `
+.emotion-0 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  background-color: #F7F8F9;
+  background-color: #7D58FF;
+  color: #FFF;
+  background-color: #704FE5;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+<div
+  className="emotion-0"
+>
+  item content content
+</div>
+`;
+
+exports[`DropdownMenuItem renders disabled 1`] = `
+.emotion-0 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+<div
+  className="emotion-0"
+>
+  item content content
+</div>
+`;
+
+exports[`DropdownMenuItem renders selected 1`] = `
+.emotion-0 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  background-color: #7D58FF;
+  color: #FFF;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+<div
+  className="emotion-0"
+>
+  item content content
+</div>
+`;

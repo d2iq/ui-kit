@@ -14,7 +14,6 @@ exports[`Dropdownable is visible after opening 1`] = `
 
 .emotion-3 {
   position: relative;
-  display: inline-block;
 }
 
 .emotion-0 {
@@ -169,7 +168,6 @@ exports[`Dropdownable is visible after opening 1`] = `
 exports[`Dropdownable is visible after opening 2`] = `
 .emotion-3 {
   position: relative;
-  display: inline-block;
 }
 
 .emotion-0 {

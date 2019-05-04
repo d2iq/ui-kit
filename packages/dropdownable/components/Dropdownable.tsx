@@ -24,14 +24,14 @@ const DEFAULT_DIRECTION_PREFERENCES = [
 
 const Container = styled("div")`
   position: relative;
-  display: inline-block;
 `;
 
 export interface DropdownableProps {
   open: boolean;
   dropdown: React.ReactElement<any>;
   preferredDirections?: Direction[];
-  onClose: () => void;
+  onClose?: () => void;
+  overlayRoot?: HTMLElement;
 }
 
 interface PositionCoord {
@@ -110,7 +110,7 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
 
   getOverlay() {
     const { position } = this.state;
-    const { open } = this.props;
+    const { open, overlayRoot } = this.props;
 
     const overlayStyle = css({
       top: `${position.top}px`,
@@ -120,7 +120,11 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
       opacity: open ? 1 : 0,
       "z-index": zIndexDropdownable
     });
-    return <Overlay className={overlayStyle}>{this.getDropdown()}</Overlay>;
+    return (
+      <Overlay overlayRoot={overlayRoot} className={overlayStyle}>
+        {this.getDropdown()}
+      </Overlay>
+    );
   }
 
   getDropdown() {
