@@ -21,5 +21,11 @@ The `inputLabel` prop can be given either a `string` or `ReactNode` to render as
 
 The `showInputLabel` prop can be set to `false` to hide the input's label. This prop defaults to `true`. 
 
+### TextInput `tooltipContent`
+
+The `tooltipContent` prop is a non-required property that can be a `ReactNode`.
+
+If the `tooltipContent` prop is set, an icon tooltip with the given text will be shown next to the label and above the input.
+
 ## TextInputWithIcon
 `TextInputWithIcon` extends the `TextInput` component but adds two additional props, `iconStart` & `iconEnd`. These props can be provided a `ReactNode` to be rendered either at the start or end of the `TextInput` or both.

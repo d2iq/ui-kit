@@ -4,18 +4,33 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.icon_end_input.standard"
+  <div
+    className="emotion-1"
   >
-    standard
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.icon_end_input.standard"
+    >
+      standard
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.icon_end_input.standard"
   >
@@ -25,23 +40,38 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
 `;
 
 exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
   color: #EB293A;
   fill: #EB293A;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.icon_end_input.error"
+  <div
+    className="emotion-1"
   >
-    error
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.icon_end_input.error"
+    >
+      error
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.icon_end_input.error"
   >
@@ -54,18 +84,33 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.icon_end_input.success"
+  <div
+    className="emotion-1"
   >
-    success
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.icon_end_input.success"
+    >
+      success
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.icon_end_input.success"
   >
@@ -78,18 +123,33 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.icon_start_input.standard"
+  <div
+    className="emotion-1"
   >
-    standard
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.icon_start_input.standard"
+    >
+      standard
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.icon_start_input.standard"
   >
@@ -99,23 +159,38 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
 `;
 
 exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
   color: #EB293A;
   fill: #EB293A;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.icon_start_input.error"
+  <div
+    className="emotion-1"
   >
-    error
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.icon_start_input.error"
+    >
+      error
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.icon_start_input.error"
   >
@@ -128,18 +203,33 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.icon_start_input.success"
+  <div
+    className="emotion-1"
   >
-    success
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.icon_start_input.success"
+    >
+      success
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.icon_start_input.success"
   >
@@ -152,18 +242,33 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.two_icon_input.standard"
+  <div
+    className="emotion-1"
   >
-    standard
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.two_icon_input.standard"
+    >
+      standard
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.two_icon_input.standard"
   >
@@ -173,23 +278,38 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
 `;
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
   color: #EB293A;
   fill: #EB293A;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.two_icon_input.error"
+  <div
+    className="emotion-1"
   >
-    error
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.two_icon_input.error"
+    >
+      error
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.two_icon_input.error"
   >
@@ -202,18 +322,33 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
 .emotion-0 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 4px;
   font-weight: 500;
-  display: block;
+}
+
+.emotion-1 {
+  margin-bottom: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div>
-  <label
-    className="emotion-0"
-    htmlFor="test.two_icon_input.success"
+  <div
+    className="emotion-1"
   >
-    success
-  </label>
+    <label
+      className="emotion-0"
+      htmlFor="test.two_icon_input.success"
+    >
+      success
+    </label>
+  </div>
   <FormFieldWrapper
     id="test.two_icon_input.success"
   >

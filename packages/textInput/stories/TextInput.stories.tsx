@@ -146,4 +146,55 @@ storiesOf("Forms/TextInput", module)
         value=""
       />
     </form>
+  ))
+  .add("with default icon string tooltip", () => (
+    <div>
+      <TextInput
+        id="string.tooltip.input"
+        className={cx(
+          css`
+            width: 300px;
+          `
+        )}
+        inputLabel="Require Field"
+        placeholder="Placeholder"
+        hintContent="Enter a correct value here. e.g. not empty"
+        required={true}
+        tooltipContent="This is a simple string tooltip"
+      />
+    </div>
+  ))
+  .add("with default icon long string tooltip", () => (
+    <div>
+      <TextInput
+        id="long.string.tooltip.input"
+        className={cx(
+          css`
+            width: 300px;
+          `
+        )}
+        inputLabel="Require Field"
+        placeholder="Placeholder"
+        hintContent="Enter a correct value here. e.g. not empty"
+        required={true}
+        tooltipContent="This is a very long string tooltip, created in order to test the maximum width"
+      />
+    </div>
+  ))
+  .add("with default icon html element tooltip", () => (
+    <div>
+      <TextInput
+        id="element.tooltip.input"
+        className={cx(
+          css`
+            width: 300px;
+          `
+        )}
+        inputLabel="Require Field"
+        placeholder="Placeholder"
+        hintContent="Enter a correct value here. e.g. not empty"
+        required={true}
+        tooltipContent={<div>Tooltip containing HTML element</div>}
+      />
+    </div>
   ));
