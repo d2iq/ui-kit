@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalContents renders 1`] = `
+<ModalContents
+  backdropClass="modal-backdrop"
+  bodyClass="modal-body-wrapper"
+  closeButtonClass="modal-close"
+  closeByBackdropClick={true}
+  footerClass="modal-footer"
+  headerClass="modal-header"
+  modalClass="modal modal-large"
+  onClose={[MockFunction]}
+  open={true}
+  scrollContainerClass="modal-body"
+  transitionAppear={true}
+  transitionAppearTimeoutModal={300}
+  transitionEnter={true}
+  transitionEnterTimeoutModal={300}
+  transitionExit={true}
+  transitionExitTimeoutModal={300}
+  transitionNameModal="modal"
+  useGemini={true}
+>
+  <CSSTransition
+    appear={true}
+    classNames="modal"
+    enter={true}
+    exit={true}
+    in={true}
+    timeout={
+      Object {
+        "appear": 300,
+        "enter": undefined,
+        "exit": undefined,
+      }
+    }
+  >
+    <Transition
+      appear={true}
+      enter={true}
+      exit={true}
+      in={true}
+      mountOnEnter={false}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      timeout={
+        Object {
+          "appear": 300,
+          "enter": undefined,
+          "exit": undefined,
+        }
+      }
+      unmountOnExit={false}
+    >
+      <div>
+        <div
+          className="modal-wrapper"
+        >
+          <div
+            className="modal-backdrop"
+            onClick={[Function]}
+          />
+          <div
+            className="modal modal-large"
+          >
+            <div
+              className="modal-body-wrapper"
+              style={Object {}}
+            >
+              <div
+                className="modal-body"
+              >
+                content
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Transition>
+  </CSSTransition>
+</ModalContents>
+`;
+
+exports[`ModalContents renders with a close button 1`] = `
+<ModalContents
+  backdropClass="modal-backdrop"
+  bodyClass="modal-body-wrapper"
+  closeButton={
+    <button>
+      Close
+    </button>
+  }
+  closeButtonClass="modal-close"
+  closeByBackdropClick={true}
+  footerClass="modal-footer"
+  headerClass="modal-header"
+  modalClass="modal modal-large"
+  onClose={[MockFunction]}
+  open={true}
+  scrollContainerClass="modal-body"
+  transitionAppear={true}
+  transitionAppearTimeoutModal={300}
+  transitionEnter={true}
+  transitionEnterTimeoutModal={300}
+  transitionExit={true}
+  transitionExitTimeoutModal={300}
+  transitionNameModal="modal"
+  useGemini={true}
+>
+  <CSSTransition
+    appear={true}
+    classNames="modal"
+    enter={true}
+    exit={true}
+    in={true}
+    timeout={
+      Object {
+        "appear": 300,
+        "enter": undefined,
+        "exit": undefined,
+      }
+    }
+  >
+    <Transition
+      appear={true}
+      enter={true}
+      exit={true}
+      in={true}
+      mountOnEnter={false}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      timeout={
+        Object {
+          "appear": 300,
+          "enter": undefined,
+          "exit": undefined,
+        }
+      }
+      unmountOnExit={false}
+    >
+      <div>
+        <div
+          className="modal-wrapper"
+        >
+          <div
+            className="modal-backdrop"
+            onClick={[Function]}
+          />
+          <div
+            className="modal modal-large"
+          >
+            <button>
+              Close
+            </button>
+            <div
+              className="modal-body-wrapper"
+              style={Object {}}
+            >
+              <div
+                className="modal-body"
+              >
+                content
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Transition>
+  </CSSTransition>
+</ModalContents>
+`;
+
+exports[`ModalContents renders with a footer 1`] = `
+<ModalContents
+  backdropClass="modal-backdrop"
+  bodyClass="modal-body-wrapper"
+  closeButtonClass="modal-close"
+  closeByBackdropClick={true}
+  footerClass="modal-footer"
+  headerClass="modal-header"
+  modalClass="modal modal-large"
+  onClose={[MockFunction]}
+  open={true}
+  scrollContainerClass="modal-body"
+  showFooter={true}
+  transitionAppear={true}
+  transitionAppearTimeoutModal={300}
+  transitionEnter={true}
+  transitionEnterTimeoutModal={300}
+  transitionExit={true}
+  transitionExitTimeoutModal={300}
+  transitionNameModal="modal"
+  useGemini={true}
+>
+  <CSSTransition
+    appear={true}
+    classNames="modal"
+    enter={true}
+    exit={true}
+    in={true}
+    timeout={
+      Object {
+        "appear": 300,
+        "enter": undefined,
+        "exit": undefined,
+      }
+    }
+  >
+    <Transition
+      appear={true}
+      enter={true}
+      exit={true}
+      in={true}
+      mountOnEnter={false}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      timeout={
+        Object {
+          "appear": 300,
+          "enter": undefined,
+          "exit": undefined,
+        }
+      }
+      unmountOnExit={false}
+    >
+      <div>
+        <div
+          className="modal-wrapper"
+        >
+          <div
+            className="modal-backdrop"
+            onClick={[Function]}
+          />
+          <div
+            className="modal modal-large"
+          >
+            <div
+              className="modal-body-wrapper"
+              style={Object {}}
+            >
+              <div
+                className="modal-body"
+              >
+                content
+              </div>
+            </div>
+            <div
+              className="modal-footer"
+            />
+          </div>
+        </div>
+      </div>
+    </Transition>
+  </CSSTransition>
+</ModalContents>
+`;
