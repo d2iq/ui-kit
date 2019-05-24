@@ -1,3 +1,4 @@
 import { Tooltip } from "./src/Tooltip/Tooltip";
+import { Modal } from "./src/Modal/Modal";
 
-export { Tooltip };
+export { Modal, Tooltip };

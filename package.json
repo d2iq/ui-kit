@@ -61,7 +61,8 @@
   },
   "peerDependencies": {
     "react": ">=16.2.0 <16.9.0 || 16.7.0-alpha.0",
-    "react-dom": ">=16.2.0 <16.9.0 || 16.7.0-alpha.0"
+    "react-dom": ">=16.2.0 <16.9.0 || 16.7.0-alpha.0",
+    "react-gemini-scrollbar": "^2.1.5 || ^2.3.0"
   },
   "devDependencies": {
     "acorn": "^6.0.5",
@@ -101,6 +102,7 @@
     "file-loader": "2.0.0",
     "fork-ts-checker-webpack-plugin": "0.5.2",
     "fs-extra": "7.0.0",
+    "react-gemini-scrollbar": "2.3.x",
     "jest": "23.6.0",
     "jest-emotion": "9.2.11",
     "jest-runner-prettier": "0.2.6",
