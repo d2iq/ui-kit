@@ -155,10 +155,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   font-size: 18px;
 }
 
-.emotion-3 {
-  display: inherit;
-}
-
 .emotion-4 {
   cursor: pointer;
   display: inherit;
@@ -195,6 +191,11 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   flex-shrink: 0;
   width: initial;
   padding: 24px;
+}
+
+.emotion-3 {
+  display: inherit;
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -613,10 +614,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   font-size: 18px;
 }
 
-.emotion-3 {
-  display: inherit;
-}
-
 .emotion-4 {
   cursor: pointer;
   display: inherit;
@@ -653,6 +650,11 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   flex-shrink: 0;
   width: initial;
   padding: 24px;
+}
+
+.emotion-3 {
+  display: inherit;
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -1481,7 +1483,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           class="css-tqlthn"
                         >
                           <span
-                            class="css-1gjm5sx"
+                            class="css-6wyq6k"
                             role="button"
                             tabindex="0"
                           >
@@ -1705,10 +1707,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-size: 18px;
 }
 
-.emotion-3 {
-  display: inherit;
-}
-
 .emotion-4 {
   cursor: pointer;
   display: inherit;
@@ -1745,6 +1743,11 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   flex-shrink: 0;
   width: initial;
   padding: 24px;
+}
+
+.emotion-3 {
+  display: inherit;
+  cursor: pointer;
 }
 
 .emotion-2 {
