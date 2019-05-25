@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders 1`] = `
+<div>
+  <table
+    className="table flush-bottom"
+  >
+    <thead>
+      <tr>
+        <th
+          className="name"
+          key="0"
+        >
+          Name
+        </th>
+        <th
+          className="age"
+          key="1"
+        >
+          Age
+        </th>
+        <th
+          className="location"
+          key="2"
+        >
+          Location
+        </th>
+        <th
+          className="gender"
+          key="3"
+        >
+          Gender
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        key="-1"
+      >
+        <td
+          className="name"
+          key="0"
+        >
+          Zach
+        </td>
+        <td
+          className="age"
+          key="1"
+        >
+          11
+        </td>
+        <td
+          className="location"
+          key="2"
+        >
+          San Francisco, CA
+        </td>
+        <td
+          className="gender"
+          key="3"
+        >
+          Male
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Table renders with an empty message 1`] = `
+<div>
+  <table
+    className="table flush-bottom"
+  >
+    <thead>
+      <tr>
+        <th
+          className="name"
+          key="0"
+        >
+          Name
+        </th>
+        <th
+          className="age"
+          key="1"
+        >
+          Age
+        </th>
+        <th
+          className="location"
+          key="2"
+        >
+          Location
+        </th>
+        <th
+          className="gender"
+          key="3"
+        >
+          Gender
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        key="-1"
+      >
+        <td
+          className="name"
+          key="0"
+        >
+          Zach
+        </td>
+        <td
+          className="age"
+          key="1"
+        >
+          11
+        </td>
+        <td
+          className="location"
+          key="2"
+        >
+          San Francisco, CA
+        </td>
+        <td
+          className="gender"
+          key="3"
+        >
+          Male
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
