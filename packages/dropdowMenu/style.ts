@@ -14,6 +14,10 @@ export const menuList = css`
   overflow-y: scroll;
 `;
 
+export const menuListItem = css`
+  min-width: 100%;
+`;
+
 export const menuListItemActive = css`
   background-color: ${greyLightLighten5};
 `;
