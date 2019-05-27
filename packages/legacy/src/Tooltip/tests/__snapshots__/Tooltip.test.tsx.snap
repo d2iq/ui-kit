@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip renders 1`] = `
+.emotion-0 {
+  display: inline-block;
+  position: relative;
+}
+
+<Tooltip
+  anchor="start"
+  className="foo"
+  content="I'm a tooltip!"
+  contentClassName="tooltip-content"
+  elementTag="div"
+  position="bottom"
+  wrapperClassName="emotion-0 tooltip-wrapper text-align-center"
+>
+  <div
+    className="emotion-0 tooltip-wrapper text-align-center"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <span>
+      Tooltip Trigger
+    </span>
+    <Overlay
+      overlayRoot={
+        <body>
+          <div>
+            <div>
+              <div
+                class="foo anchor-start position-bottom no-wrap"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="tooltip-content"
+                >
+                  I'm a tooltip!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div
+                class="foo anchor-start position-bottom no-wrap"
+              >
+                <div
+                  class="tooltip-content"
+                >
+                  I'm a tooltip!
+                </div>
+              </div>
+            </div>
+          </div>
+        </body>
+      }
+    >
+      <Portal
+        containerInfo={
+          <div>
+            <div>
+              <div
+                class="foo anchor-start position-bottom no-wrap"
+              >
+                <div
+                  class="tooltip-content"
+                >
+                  I'm a tooltip!
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <div>
+          <div
+            className="foo anchor-start position-bottom no-wrap"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="tooltip-content"
+            >
+              I'm a tooltip!
+            </div>
+          </div>
+        </div>
+      </Portal>
+    </Overlay>
+  </div>
+</Tooltip>
+`;
