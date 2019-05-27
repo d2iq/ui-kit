@@ -2,10 +2,12 @@
 
 exports[`DropdownMenuItem renders 1`] = `
 .emotion-0 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -19,10 +21,12 @@ exports[`DropdownMenuItem renders 1`] = `
 
 exports[`DropdownMenuItem renders active 1`] = `
 .emotion-0 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   background-color: #F7F8F9;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -37,10 +41,12 @@ exports[`DropdownMenuItem renders active 1`] = `
 
 exports[`DropdownMenuItem renders active and selected 1`] = `
 .emotion-0 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   background-color: #F7F8F9;
   background-color: #7D58FF;
   color: #FFF;
@@ -58,10 +64,12 @@ exports[`DropdownMenuItem renders active and selected 1`] = `
 
 exports[`DropdownMenuItem renders disabled 1`] = `
 .emotion-0 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -75,10 +83,12 @@ exports[`DropdownMenuItem renders disabled 1`] = `
 
 exports[`DropdownMenuItem renders selected 1`] = `
 .emotion-0 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   background-color: #7D58FF;
   color: #FFF;
   margin-top: 8px;

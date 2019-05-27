@@ -120,25 +120,31 @@ exports[`Typeahead renders 1`] = `
 }
 
 .emotion-4 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   margin-top: 8px;
 }
 
 .emotion-5 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
 }
 
 .emotion-6 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   margin-bottom: 8px;
 }
 
@@ -363,25 +369,31 @@ exports[`Typeahead renders 1`] = `
 }
 
 .emotion-0 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   margin-top: 8px;
 }
 
 .emotion-1 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
 }
 
 .emotion-2 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   margin-bottom: 8px;
 }
 
@@ -739,25 +751,31 @@ exports[`Typeahead renders a menu with a max height 1`] = `
 }
 
 .emotion-4 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   margin-top: 8px;
 }
 
 .emotion-5 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
 }
 
 .emotion-6 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   margin-bottom: 8px;
 }
 
@@ -1031,25 +1049,31 @@ exports[`Typeahead renders a menu with a max height 1`] = `
 }
 
 .emotion-0 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   margin-top: 8px;
 }
 
 .emotion-1 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
 }
 
 .emotion-2 {
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
+  display: inline-block;
   margin-bottom: 8px;
 }
 
