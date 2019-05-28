@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card default 1`] = `
+<div
+  class="css-1cgb059"
+>
+  Example Content
+</div>
+`;
