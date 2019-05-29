@@ -5,3 +5,7 @@ export const outline = css`
     outline: 0;
   }
 `;
+
+export const pointer = css`
+  cursor: pointer;
+`;

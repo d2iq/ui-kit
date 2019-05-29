@@ -1,6 +1,6 @@
 import { cx } from "emotion";
 import * as React from "react";
-import { outline } from "../style";
+import { outline, pointer } from "../style";
 
 export interface ClickableProps {
   /**
@@ -49,7 +49,7 @@ export class Clickable extends React.PureComponent<ClickableProps, {}> {
 
     return React.cloneElement(React.Children.only(children), {
       onClick: action,
-      className: cx(className, { [outline]: disableFocusOutline }),
+      className: cx(className, pointer, { [outline]: disableFocusOutline }),
       role,
       tabIndex,
       onKeyPress: this.handleKeyPress
