@@ -1,4 +1,6 @@
 import { injectGlobalCss } from "./shared/styles/global";
+import * as Legacy from "./legacy";
+
 export {
   AppChrome,
   HeaderBar,
@@ -54,5 +56,6 @@ export { ToggleInput } from "./toggleInput";
 export { ToggleInputList } from "./toggleInputList";
 export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
+export { Legacy };
 
 injectGlobalCss();
