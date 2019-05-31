@@ -1,13 +1,16 @@
 import { css } from "emotion";
 import { atMediaUp } from "../shared/styles/breakpoints";
 import {
-  greyDarkLighten2,
-  purple,
   spaceM,
   spaceL,
-  spaceXl
+  spaceXl,
+  themeBgSelected,
+  themeBgHover,
+  themeBgHoverInverted
 } from "../design-tokens/build/js/designTokens";
 import { padding } from "../shared/styles/styleUtils";
+import { pickHoverBg } from "../shared/styles/color";
+import getCSSVarValue from "../utilities/components/getCSSVarValue";
 
 const iconSize = "24px";
 const layoutBreakpoint = "large";
@@ -56,16 +59,24 @@ export const sidebarSectionList = css`
   margin: 0;
 `;
 
-export const sidebarNavItem = (isActive?: boolean) => css`
-  background-color: ${isActive ? purple : "transparent"};
-  cursor: pointer;
-  text-transform: capitalize;
+export const sidebarNavItem = (isActive: boolean, sidebarBgColor: string) => {
+  return css`
+    background-color: ${isActive ? themeBgSelected : "transparent"};
+    cursor: pointer;
+    text-transform: capitalize;
 
-  &:hover,
-  &:focus {
-    background-color: ${isActive ? purple : greyDarkLighten2};
-  }
-`;
+    &:hover,
+    &:focus {
+      background-color: ${isActive
+        ? themeBgSelected
+        : pickHoverBg(
+            sidebarBgColor,
+            getCSSVarValue(themeBgHover),
+            getCSSVarValue(themeBgHoverInverted)
+          )};
+    }
+  `;
+};
 
 export const sidebarNavItemIconWrap = css`
   line-height: 0;

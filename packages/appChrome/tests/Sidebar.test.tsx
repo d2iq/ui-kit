@@ -9,9 +9,9 @@ import {
   SidebarItem,
   SidebarItemLabel,
   SidebarSection,
-  SidebarSubMenu,
   SidebarSubMenuItem
 } from "../";
+import { SidebarSubMenuComponent } from "../components/SidebarSubMenu";
 import { ProductIcons } from "../../icons/dist/product-icons-enum";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
@@ -91,7 +91,7 @@ describe("Sidebar", () => {
     ];
     // tslint:enable
     const component = shallow(
-      <SidebarSubMenu
+      <SidebarSubMenuComponent
         label={
           <SidebarItemLabel icon={ProductIcons.ComponentsInverse}>
             Item label
@@ -99,13 +99,13 @@ describe("Sidebar", () => {
         }
       >
         {subMenuItems}
-      </SidebarSubMenu>
+      </SidebarSubMenuComponent>
     );
     it("renders", () => {
       expect(toJson(component)).toMatchSnapshot();
     });
     it("makes a list of submenu items", () => {
-      const instance = component.instance() as SidebarSubMenu;
+      const instance = component.instance() as SidebarSubMenuComponent;
       const subItemResult = instance.getSubItemList(subMenuItems);
       expect(subItemResult.props.children.length).toBe(2);
     });

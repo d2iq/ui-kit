@@ -1,9 +1,8 @@
 import * as React from "react";
-import { cx } from "emotion";
+import { css } from "emotion";
 import styled from "react-emotion";
 import { sidebarNavItem } from "../style";
 import Clickable from "../../clickable/components/clickable";
-import { tintContentPrimary } from "../../shared/styles/styleUtils";
 import { spaceSizes } from "../../../packages/shared/styles/styleUtils/modifiers/modifierUtils";
 
 export interface SidebarItemProps {
@@ -12,7 +11,7 @@ export interface SidebarItemProps {
   onClick: (event?: React.SyntheticEvent<HTMLElement>) => void;
 }
 
-class SidebarItem extends React.PureComponent<SidebarItemProps, {}> {
+class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
   public render() {
     const { children, isActive, onClick } = this.props;
     /* tslint:disable:no-string-literal */
@@ -25,11 +24,16 @@ class SidebarItem extends React.PureComponent<SidebarItemProps, {}> {
         spaceSizes[props.theme.sidebarItemPaddingVert] || spaceSizes["none"]};
       padding-top: ${props =>
         spaceSizes[props.theme.sidebarItemPaddingVert] || spaceSizes["none"]};
+      ${props => {
+        return css`
+          ${sidebarNavItem(
+            Boolean(isActive),
+            props.theme.sidebarBackgroundColor
+          )};
+        `;
+      }};
     `;
     /* tslint:enable:no-string-literal */
-    const classNames = cx(sidebarNavItem(isActive), {
-      [tintContentPrimary]: isActive
-    });
 
     return (
       <Clickable
@@ -38,10 +42,10 @@ class SidebarItem extends React.PureComponent<SidebarItemProps, {}> {
         role="link"
         disableFocusOutline={true}
       >
-        <Item className={classNames}>{children}</Item>
+        <Item>{children}</Item>
       </Clickable>
     );
   }
 }
 
-export default SidebarItem;
+export default SidebarItemComponent;
