@@ -1,18 +1,14 @@
 import { css } from "emotion";
 import {
-  accent,
   borderRadiusSmall,
-  error,
-  greenLighten5,
-  greyDark,
-  greyDarkLighten3,
-  greyLight,
-  greyLightDarken2,
-  greyLightLighten3,
-  purpleLighten5,
-  redLighten5,
-  success,
-  white
+  themeTextColorDisabled,
+  themeSuccess,
+  themeBorder,
+  themeBgPrimary,
+  themeTextColorPrimary,
+  themeBrandPrimary,
+  themeError,
+  themeBgDisabled
 } from "../../design-tokens/build/js/designTokens";
 
 import {
@@ -23,13 +19,16 @@ import {
   display,
   tintContent
 } from "./styleUtils";
+import getCSSVarValue from "../../utilities/components/getCSSVarValue";
+import { hexToRgbA } from "./color";
+const getFocusFieldBg = color => hexToRgbA(color, 0.05);
 
 const toggleInputHeight = 16;
 const toggleInputBorderWidth = 1;
 
 export const toggleInput = css`
-  border-color: ${greyLight};
-  background-color: ${white};
+  border-color: ${themeBorder};
+  background-color: ${themeBgPrimary};
   border-style: solid;
   border-width: ${toggleInputBorderWidth}px;
   height: ${toggleInputHeight - toggleInputBorderWidth}px;
@@ -38,122 +37,145 @@ export const toggleInput = css`
 
 export const toggleInputApperances = {
   disabled: css`
-    background-color: ${greyLightLighten3};
-    border-color: ${greyLightLighten3};
+    background-color: ${themeBgDisabled};
+    border-color: ${themeBgDisabled};
   `,
   "standard-focus": css`
-    border-color: ${accent};
+    border-color: ${themeBrandPrimary};
   `,
   "error-focus": css`
-    border-color: ${error};
+    border-color: ${themeError};
   `,
   "success-focus": css`
-    border-color: ${success};
+    border-color: ${themeSuccess};
   `,
   "standard-active": css`
-    background-color: ${accent};
-    border-color: ${accent};
+    background-color: ${themeBrandPrimary};
+    border-color: ${themeBrandPrimary};
   `,
   "error-active": css`
-    background-color: ${error};
-    border-color: ${error};
+    background-color: ${themeError};
+    border-color: ${themeError};
   `,
   "success-active": css`
-    background-color: ${success};
-    border-color: ${success};
+    background-color: ${themeSuccess};
+    border-color: ${themeSuccess};
   `,
   "disabled-active": css`
-    background-color: ${greyLightDarken2};
-    border-color: ${greyLightDarken2};
+    background-color: ${themeTextColorDisabled};
+    border-color: ${themeTextColorDisabled};
   `,
   "focus-active": css`
-    box-shadow: inset 0px 0px 0px 1px ${white};
+    box-shadow: inset 0px 0px 0px 1px ${themeBgPrimary};
   `
 };
 
-export const inputAppearances = {
-  standard: css`
-    background-color: ${white};
-    border-color: ${greyLight};
-    svg {
-      fill: ${greyDark};
-    }
-    &:focus {
-      background-color: ${purpleLighten5};
-      border-color: ${accent};
-      svg {
-        fill: ${accent};
-      }
-    }
-  `,
-  disabled: css`
-    background-color: ${greyLightLighten3};
-    border-color: ${greyLightLighten3};
-    color: ${greyDarkLighten3};
-    svg {
-      fill: ${greyDarkLighten3};
-    }
-    &::placeholder {
-      color: ${greyDarkLighten3};
-    }
-    input {
-      color: ${greyDarkLighten3};
-      ::placeholder {
-        color: ${greyDarkLighten3};
-      }
-    }
-  `,
-  error: css`
-    background-color: ${white};
-    border-color: ${error};
-    svg {
-      fill: ${error};
-    }
-    &:focus {
-      background-color: ${redLighten5};
-    }
-  `,
-  success: css`
-    background-color: ${white};
-    border-color: ${success};
-    svg {
-      fill: ${success};
-    }
-    &:focus {
-      background-color: ${greenLighten5};
-    }
-  `,
-  "standard-focus": css`
-    background-color: ${purpleLighten5};
-    border-color: ${accent};
-    svg {
-      fill: ${accent};
-    }
-  `,
-  "error-focus": css`
-    background-color: ${redLighten5};
-    border-color: ${error};
-    svg {
-      fill: ${error};
-    }
-  `,
-  "success-focus": css`
-    background-color: ${greenLighten5};
-    border-color: ${success};
-    svg {
-      fill: ${success};
-    }
-  `
+export const getInputAppearanceStyle = appearance => {
+  switch (appearance) {
+    case "standard":
+      return css`
+        background-color: ${themeBgPrimary};
+        border-color: ${themeBorder};
+        svg {
+          fill: ${themeTextColorPrimary};
+        }
+        &:focus {
+          background-color: ${getFocusFieldBg(
+            getCSSVarValue(themeBrandPrimary)
+          )};
+          border-color: ${themeBrandPrimary};
+          svg {
+            fill: ${themeBrandPrimary};
+          }
+        }
+      `;
+    case "disabled":
+      return css`
+        background-color: ${themeBgDisabled};
+        border-color: ${themeBgDisabled};
+        color: ${themeTextColorDisabled};
+        svg {
+          fill: ${themeTextColorDisabled};
+        }
+        &::placeholder {
+          color: ${themeTextColorDisabled};
+        }
+        input {
+          color: ${themeTextColorDisabled};
+          ::placeholder {
+            color: ${themeTextColorDisabled};
+          }
+        }
+      `;
+    case "error":
+      return css`
+        background-color: ${themeBgPrimary};
+        border-color: ${themeError};
+        svg {
+          fill: ${themeError};
+        }
+        &:focus {
+          background-color: ${getFocusFieldBg(getCSSVarValue(themeError))};
+        }
+      `;
+    case "success":
+      return css`
+        background-color: ${themeBgPrimary};
+        border-color: ${themeSuccess};
+        svg {
+          fill: ${themeSuccess};
+        }
+        &:focus {
+          background-color: ${getFocusFieldBg(getCSSVarValue(themeSuccess))};
+        }
+      `;
+    case "standard-focus":
+      return css`
+        background-color: ${getFocusFieldBg(getCSSVarValue(themeBrandPrimary))};
+        border-color: ${themeBrandPrimary};
+        svg {
+          fill: ${themeBrandPrimary};
+        }
+      `;
+    case "error-focus":
+      return css`
+        background-color: ${getFocusFieldBg(getCSSVarValue(themeError))};
+        border-color: ${themeError};
+        svg {
+          fill: ${themeError};
+        }
+      `;
+    case "success-focus":
+      return css`
+        background-color: ${getFocusFieldBg(getCSSVarValue(themeSuccess))};
+        border-color: ${themeSuccess};
+        svg {
+          fill: ${themeSuccess};
+        }
+      `;
+    default:
+      return "";
+  }
 };
 
 export const inputContainer = css`
   border: 1px solid;
   border-radius: ${borderRadiusSmall};
+  color: inherit;
   height: 36px;
   font-size: inherit;
   ${padding("horiz", "m")};
+  &::placeholder {
+    color: ${themeTextColorPrimary};
+    opacity: 0.4;
+  }
   input {
     font-size: inherit;
+    color: inherit;
+    &::placeholder {
+      color: ${themeTextColorPrimary};
+      opacity: 0.4;
+    }
   }
 `;
 
@@ -162,5 +184,5 @@ export const getLabelStyle = (hasError?: boolean) => css`
   ${flush("top")};
   ${margin("bottom", "xxs")};
   ${textWeight("medium")};
-  ${hasError ? tintContent(error) : null};
+  ${hasError ? tintContent(themeError) : null};
 `;

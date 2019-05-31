@@ -10,7 +10,10 @@ import {
   tintContent,
   tintContentSecondary
 } from "../../shared/styles/styleUtils";
-import { error, success } from "../../design-tokens/build/js/designTokens";
+import {
+  themeError,
+  themeSuccess
+} from "../../design-tokens/build/js/designTokens";
 import { CheckboxInputProps } from "../../checkboxInput/components/CheckboxInput";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
@@ -83,8 +86,9 @@ class ToggleInput extends React.PureComponent<LocalToggleInputProps, {}> {
           <div
             className={cx(flexItem("grow"), padding("left", "s"), {
               [visuallyHidden]: !showInputLabel,
-              [tintContent(error)]: appearance === InputAppearance.Error,
-              [tintContent(success)]: appearance === InputAppearance.Success,
+              [tintContent(themeError)]: appearance === InputAppearance.Error,
+              [tintContent(themeSuccess)]:
+                appearance === InputAppearance.Success,
               [tintContentSecondary]: disabled
             })}
           >

@@ -2,7 +2,7 @@ import { css } from "emotion";
 import {
   iconSizeXs,
   spaceM,
-  textColorPrimary
+  themeTextColorPrimary
 } from "../design-tokens/build/js/designTokens";
 
 export const selectContainer = css`
@@ -11,13 +11,19 @@ export const selectContainer = css`
 
 export const select = css`
   appearance: none;
+  color: inherit;
   font-size: inherit;
   padding-right: ${parseInt(iconSizeXs, 10) + parseInt(spaceM, 10)}px;
   width: 100%;
 
+  /*
+   * Firefox hack to hide the
+   * focus ring, but still
+   * show the text
+   */
   &:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 ${textColorPrimary};
+    text-shadow: 0 0 0 ${themeTextColorPrimary};
   }
 
   &::-ms-expand {

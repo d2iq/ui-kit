@@ -7,7 +7,7 @@ import {
   flush,
   padding
 } from "../../../shared/styles/styleUtils";
-import { greyDarkDarken3 } from "../../../design-tokens/build/js/designTokens";
+import { themeBgPrimaryInverted } from "../../../design-tokens/build/js/designTokens";
 
 const sampleWrapper = css`
   display: grid;
@@ -17,7 +17,7 @@ const sampleWrapper = css`
 `;
 
 const inverseColorModeWrapper = css`
-  background-color: ${greyDarkDarken3};
+  background-color: ${themeBgPrimaryInverted};
 `;
 
 const ButtonAppearanceSample = ({ buttonComponent }) => {

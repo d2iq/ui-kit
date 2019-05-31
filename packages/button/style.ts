@@ -1,49 +1,56 @@
 import { css } from "emotion";
 import {
   borderRadiusSmall,
-  green,
-  greenDarken1,
-  greenDarken2,
-  greyLight,
-  greyLightDarken1,
-  greyLightDarken2,
-  greyLightLighten4,
-  purple,
-  purpleDarken1,
-  purpleDarken2,
-  purpleLighten1,
-  purpleLighten2,
-  purpleLighten3,
-  red,
-  redDarken1,
-  redDarken2,
-  textColorPrimary,
-  white,
-  borderRadiusDefault
+  borderRadiusDefault,
+  themeBrandPrimary,
+  themeSuccess,
+  themeError,
+  themeTextColorInteractive,
+  themeTextColorInteractiveInverted,
+  themeTextColorPrimary,
+  themeTextColorPrimaryInverted,
+  themeBgDisabled,
+  themeBgDisabledInverted,
+  themeTextColorDisabled,
+  themeBgNeutral,
+  themeBgNeutralInverted,
+  themeBrandPrimaryInverted,
+  themeSuccessInverted,
+  themeErrorInverted,
+  themeTextColorDisabledInverted
 } from "../design-tokens/build/js/designTokens";
-import { isHexDark, hexToRgbA } from "../shared/styles/color";
+import { darken, pickReadableTextColor } from "../shared/styles/color";
 import { ButtonAppearances } from "./components/ButtonBase";
 import { tintContent } from "../shared/styles/styleUtils";
+import getCSSVarValue from "../utilities/components/getCSSVarValue";
 
-export const buttonPadding = {
+const buttonPadding = {
   vert: "10px",
   horiz: "18px"
 };
 
-const filledButton = (
+const getHoverColor = color => darken(color, 1);
+const getActiveColor = color => darken(color, 2);
+
+export const filledButton = (
   baseColor: string,
   hoverColor: string,
   activeColor: string,
   isInverse?: boolean
 ) => {
-  const contentColor =
-    isHexDark(baseColor) || isInverse ? white : textColorPrimary;
+  const contentColor = isInverse
+    ? themeTextColorPrimaryInverted
+    : pickReadableTextColor(
+        baseColor,
+        themeTextColorPrimary,
+        themeTextColorPrimaryInverted
+      );
 
   return css`
     ${tintContent(contentColor)};
     background-color: ${baseColor};
     border-radius: ${borderRadiusSmall};
-    padding: 10px 18px;
+    padding: ${buttonPadding.vert} ${buttonPadding.horiz};
 
     &:hover {
       background-color: ${hoverColor};
@@ -56,42 +63,42 @@ const filledButton = (
 };
 
 const mutedButton = css`
-  ${tintContent(greyLightDarken2)};
+  ${tintContent(themeTextColorDisabled)};
   cursor: default;
 
   &:hover,
   &:focus,
   &:active {
-    ${tintContent(greyLightDarken2)};
+    ${tintContent(themeTextColorDisabled)};
   }
 `;
 
 const inverseMutedButton = css`
-  ${tintContent(hexToRgbA(white, 0.35))};
+  ${tintContent(themeTextColorDisabledInverted)};
   cursor: default;
 
   &:hover,
   &:focus,
   &:active {
-    ${tintContent(hexToRgbA(white, 0.35))};
+    ${tintContent(themeTextColorDisabledInverted)};
   }
 `;
 
 const mutedFilledButton = css`
-  background-color: ${greyLightLighten4};
+  background-color: ${themeBgDisabled};
   &:hover,
   &:focus,
   &:active {
-    background-color: ${greyLightLighten4};
+    background-color: ${themeBgDisabled};
   }
 `;
 
 const inverseMutedFilledButton = css`
-  background-color: ${hexToRgbA(white, 0.15)};
+  background-color: ${themeBgDisabledInverted};
   &:hover,
   &:focus,
   &:active {
-    background-color: ${hexToRgbA(white, 0.15)};
+    background-color: ${themeBgDisabledInverted};
   }
 `;
 
@@ -141,11 +148,20 @@ export const focusStyles = (
 export const focusStyleByAppearance = (appearance, isInverse) => {
   switch (appearance) {
     case "primary":
-      return focusStyles(purpleDarken1);
-      break;
+      return isInverse
+        ? focusStyles(getHoverColor(getCSSVarValue(themeBrandPrimaryInverted)))
+        : focusStyles(getHoverColor(getCSSVarValue(themeBrandPrimary)));
     case "secondary":
       return css`
-        ${focusStyles("transparent", purpleDarken1)};
+        ${isInverse
+          ? focusStyles(
+              "transparent",
+              getHoverColor(getCSSVarValue(themeTextColorInteractiveInverted))
+            )
+          : focusStyles(
+              "transparent",
+              getHoverColor(getCSSVarValue(themeTextColorInteractive))
+            )};
         &:focus {
           &:after {
             border-radius: 0;
@@ -155,54 +171,111 @@ export const focusStyleByAppearance = (appearance, isInverse) => {
           }
         }
       `;
-      break;
     case "standard":
       return isInverse
-        ? focusStyles(hexToRgbA(white, 0.4))
-        : focusStyles(greyLightDarken1);
-      break;
+        ? focusStyles(getHoverColor(getCSSVarValue(themeBgNeutralInverted)))
+        : focusStyles(getHoverColor(getCSSVarValue(themeBgNeutral)));
     case "success":
-      return focusStyles(greenDarken1);
-      break;
+      return isInverse
+        ? focusStyles(getHoverColor(getCSSVarValue(themeSuccessInverted)))
+        : focusStyles(getHoverColor(getCSSVarValue(themeSuccess)));
     case "danger":
-      return focusStyles(redDarken1);
-      break;
+      return isInverse
+        ? focusStyles(getHoverColor(getCSSVarValue(themeErrorInverted)))
+        : focusStyles(getHoverColor(getCSSVarValue(themeError)));
     default:
       return "";
   }
 };
 
-export const button = {
-  primary: filledButton(purple, purpleDarken1, purpleDarken2),
-  secondary: css`
-    ${tintContent(purple)};
-    &:hover {
-      ${tintContent(purpleDarken1)};
-    }
-    &:active {
-      ${tintContent(purpleDarken2)};
-    }
-  `,
-  standard: filledButton(greyLight, greyLightDarken1, greyLightDarken2),
-  success: filledButton(green, greenDarken1, greenDarken2),
-  danger: filledButton(red, redDarken1, redDarken2)
+export const button = appearance => {
+  switch (appearance) {
+    case "primary":
+      return filledButton(
+        getCSSVarValue(themeBrandPrimary),
+        getHoverColor(getCSSVarValue(themeBrandPrimary)),
+        getActiveColor(getCSSVarValue(themeBrandPrimary))
+      );
+    case "secondary":
+      return css`
+        ${tintContent(themeTextColorInteractive)};
+        &:hover {
+          ${tintContent(
+            getHoverColor(getCSSVarValue(themeTextColorInteractive))
+          )};
+        }
+        &:active {
+          ${tintContent(
+            getActiveColor(getCSSVarValue(themeTextColorInteractive))
+          )};
+        }
+      `;
+    case "standard":
+      return filledButton(
+        getCSSVarValue(themeBgNeutral),
+        getHoverColor(getCSSVarValue(themeBgNeutral)),
+        getActiveColor(getCSSVarValue(themeBgNeutral))
+      );
+    case "success":
+      return filledButton(
+        getCSSVarValue(themeSuccess),
+        getHoverColor(getCSSVarValue(themeSuccess)),
+        getActiveColor(getCSSVarValue(themeSuccess))
+      );
+    case "danger":
+      return filledButton(
+        getCSSVarValue(themeError),
+        getHoverColor(getCSSVarValue(themeError)),
+        getActiveColor(getCSSVarValue(themeError))
+      );
+    default:
+      return "";
+  }
 };
 
-export const buttonInverse = {
-  secondary: css`
-    ${tintContent(purpleLighten3)};
-    &:hover {
-      ${tintContent(purpleLighten2)};
-    }
-    &:active {
-      ${tintContent(purpleLighten1)};
-    }
-  `,
-  standard: filledButton(
-    hexToRgbA(white, 0.3),
-    hexToRgbA(white, 0.4),
-    hexToRgbA(white, 0.45)
-  )
+export const buttonInverse = appearance => {
+  switch (appearance) {
+    case "primary":
+      return filledButton(
+        getCSSVarValue(themeBrandPrimaryInverted),
+        getHoverColor(getCSSVarValue(themeBrandPrimaryInverted)),
+        getActiveColor(getCSSVarValue(themeBrandPrimaryInverted))
+      );
+    case "secondary":
+      return css`
+        ${tintContent(themeTextColorInteractiveInverted)};
+        &:hover {
+          ${tintContent(
+            getHoverColor(getCSSVarValue(themeTextColorInteractiveInverted))
+          )};
+        }
+        &:active {
+          ${tintContent(
+            getActiveColor(getCSSVarValue(themeTextColorInteractiveInverted))
+          )};
+        }
+      `;
+    case "standard":
+      return filledButton(
+        getCSSVarValue(themeBgNeutralInverted),
+        getHoverColor(getCSSVarValue(themeBgNeutralInverted)),
+        getActiveColor(getCSSVarValue(themeBgNeutralInverted))
+      );
+    case "success":
+      return filledButton(
+        getCSSVarValue(themeSuccessInverted),
+        getHoverColor(getCSSVarValue(themeSuccessInverted)),
+        getActiveColor(getCSSVarValue(themeSuccessInverted))
+      );
+    case "danger":
+      return filledButton(
+        getCSSVarValue(themeErrorInverted),
+        getHoverColor(getCSSVarValue(themeErrorInverted)),
+        getActiveColor(getCSSVarValue(themeErrorInverted))
+      );
+    default:
+      return "";
+  }
 };
 
 export const getMutedButtonStyles = (appearance: ButtonAppearances) => {

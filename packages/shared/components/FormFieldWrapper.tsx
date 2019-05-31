@@ -10,7 +10,7 @@ import {
   display
 } from "../styles/styleUtils";
 
-import { error } from "../../design-tokens/build/js/designTokens";
+import { themeError } from "../../design-tokens/build/js/designTokens";
 
 interface RenderProps {
   getValidationErrors: React.ReactNode;
@@ -82,7 +82,7 @@ class FormFieldWrapper extends React.PureComponent<FormFieldWrapperProps, {}> {
     }
 
     return (
-      <ul className={cx(flush("all"), textSize("s"), tintContent(error))}>
+      <ul className={cx(flush("all"), textSize("s"), tintContent(themeError))}>
         {errors.map((error, index) => (
           <li
             key={index}
