@@ -15,7 +15,8 @@
       "transforms": [
         "attribute/cti",
         "name/cti/jsConstant",
-        "value/fontNameJS"
+        "value/fontNameJS",
+        "value/cssVarJS"
       ],
       "buildPath": "dist/packages/design-tokens/build/js/",
       "files": [
