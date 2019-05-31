@@ -40,7 +40,8 @@ import {
 } from "../../shared/styles/styleUtils";
 import {
   textColorSecondary,
-  iconSizeXxs
+  iconSizeXxs,
+  themeTextColorSecondary
 } from "../../design-tokens/build/js/designTokens";
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
@@ -153,7 +154,7 @@ const ContentCell = styled("div")`
     }
   ${
     props.theme.mutedRows && props.theme.mutedRows[props["data-rowindex"] - 1]
-      ? `color: ${textColorSecondary};`
+      ? `color: ${themeTextColorSecondary};`
       : ""
   }`;
   }};
@@ -446,7 +447,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
             {column.props.resizable && (
               <Draggable
                 axis="x"
-                defaultClassName={cx(dragHandle)}
+                defaultClassName={dragHandle}
                 onStop={onStopCallback}
                 position={{
                   x: 0,
