@@ -17,6 +17,18 @@ const hexToRgbArr = (hex: string): number[] => {
   return [0, 0, 0];
 };
 
+const rgbToHex = (rgbArr: number[]): string => {
+  return rgbArr.reduce((acc, curr) => {
+    let pair = Math.round(curr).toString(16);
+    if (pair.length < 2) {
+      pair = `0${pair}`;
+    }
+    acc += pair;
+
+    return acc;
+  }, "#");
+};
+
 export const hexToRgbA = (hex: string, alpha: string | number = 1): string => {
   if (isValidHex(hex)) {
     return `rgba(${hexToRgbArr(hex).join(",")},${alpha})`;
@@ -25,7 +37,7 @@ export const hexToRgbA = (hex: string, alpha: string | number = 1): string => {
 };
 
 // TODO: when/if we start using rgb/rgba colors in
-// design-tokens, write color functions that can get
+// design-tokens, write getBrightness function that can get
 // rgb/rgba brightness as well
 export const getHexBrightness = (hex: string) => {
   const rgbArr = hexToRgbArr(hex);
@@ -33,3 +45,73 @@ export const getHexBrightness = (hex: string) => {
 };
 
 export const isHexDark = (hex: string): boolean => getHexBrightness(hex) < 140;
+
+// Normally this function would compare the contrast
+// between the baseTextOption and invertedTextOption,
+// but that forces text to be black on our success buttons.
+//
+// Checking with brightness still returns us the most readable
+// option on the background color, but will let the success
+// button have white text.
+//
+// The design team should try a different success color
+// to improve legibility and accessibility.
+export const pickReadableTextColor = (
+  bgColor,
+  baseTextOption,
+  invertedTextOption
+) => {
+  const baseTextBrightness = getHexBrightness(baseTextOption);
+  const invertedTextBrightness = getHexBrightness(invertedTextOption);
+
+  if (!isHexDark(bgColor)) {
+    return baseTextBrightness < invertedTextBrightness
+      ? baseTextOption
+      : invertedTextOption;
+  } else {
+    return baseTextBrightness > invertedTextBrightness
+      ? baseTextOption
+      : invertedTextOption;
+  }
+};
+
+//TODO:THEMING: refactor to measure contrast and return lowest contrast
+//
+// Assumes we always want our defaukt hover colors to be lower
+// contrast between it's background color
+export const pickHoverBg = (bgColor, baseHoverBg, invertedHoverBg) => {
+  const baseHoverDiff = Math.abs(
+    getHexBrightness(bgColor) - getHexBrightness(baseHoverBg)
+  );
+  const invertedHoverDiff = Math.abs(
+    getHexBrightness(bgColor) - getHexBrightness(invertedHoverBg)
+  );
+
+  return baseHoverDiff > invertedHoverDiff ? invertedHoverBg : baseHoverBg;
+};
+
+export const mix = (color1, color2, percent) => {
+  const color1rgb = hexToRgbArr(color1);
+  const color2rgb = hexToRgbArr(color2);
+  const blendedRgbArr = color1rgb.map((_, i) =>
+    Math.floor(color2rgb[i] + (color1rgb[i] - color2rgb[i]) * (percent / 100))
+  );
+
+  return rgbToHex(blendedRgbArr);
+};
+
+// We lighten and darken our colors by tinting and shading, not
+// by increasing brightness.
+//
+// Instead of requiring a full lighten/darken scale for each color
+// when defining a theme, we can use these functions to extrapolate
+// a lighten/darken scale from any color
+export const lighten = (color: string, step: 1 | 2 | 3 | 4 | 5) => {
+  const scale = [10, 20, 40, 80, 95];
+  return mix("#FFFFFF", color, scale[step - 1]);
+};
+
+export const darken = (color: string, step: 1 | 2 | 3 | 4 | 5) => {
+  const scale = [10, 20, 40, 60, 80];
+  return mix("#000000", color, scale[step - 1]);
+};

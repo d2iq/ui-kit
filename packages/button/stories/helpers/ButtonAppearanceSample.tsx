@@ -1,7 +1,7 @@
 import * as React from "react";
 import { css, cx } from "emotion";
 import {
-  darkMode,
+  inverseColorMode,
   tintContentSecondary,
   textSize,
   flush,
@@ -16,7 +16,7 @@ const sampleWrapper = css`
   text-align: center;
 `;
 
-const darkModeWrapper = css`
+const inverseColorModeWrapper = css`
   background-color: ${greyDarkDarken3};
 `;
 
@@ -48,8 +48,8 @@ const ButtonAppearanceSample = ({ buttonComponent }) => {
         className={cx(
           sampleWrapper,
           padding("vert", "s"),
-          darkModeWrapper,
-          darkMode
+          inverseColorModeWrapper,
+          inverseColorMode
         )}
       >
         <div className="sample">

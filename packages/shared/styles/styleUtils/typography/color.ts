@@ -1,9 +1,9 @@
 import { css } from "emotion";
 import {
-  textColorPrimary,
-  textColorPrimaryInverted,
-  textColorSecondary,
-  textColorSecondaryInverted
+  themeTextColorPrimary,
+  themeTextColorPrimaryInverted,
+  themeTextColorSecondary,
+  themeTextColorSecondaryInverted
 } from "../../../../design-tokens/build/js/designTokens";
 
 // TODO: when we do the design tokens lib,
@@ -22,24 +22,24 @@ export const tintContent = (color: string) => css`
   ${tintSVG(color)};
 `;
 
-export const darkMode = css`
-  ${tintContent(textColorPrimaryInverted)};
-`;
+// .inverseColorMode styles are set globally
+// in global.ts
+export const inverseColorMode = "inverseColorMode";
 
 export const tintContentPrimary = css`
-  ${tintContent(textColorPrimary)};
+  ${tintContent(themeTextColorPrimary)};
 
-  ${darkMode} &,
-  &${darkMode} {
-    ${tintContent(textColorPrimaryInverted)};
+  .${inverseColorMode} &,
+  &.${inverseColorMode} {
+    ${tintContent(themeTextColorPrimaryInverted)};
   }
 `;
 
 export const tintContentSecondary = css`
-  ${tintContent(textColorSecondary)};
+  ${tintContent(themeTextColorSecondary)};
 
-  ${darkMode} &,
-  &${darkMode} {
-    ${tintContent(textColorSecondaryInverted)};
+  .${inverseColorMode} &,
+  &.${inverseColorMode} {
+    ${tintContent(themeTextColorSecondaryInverted)};
   }
 `;
