@@ -42,8 +42,8 @@ export const filledButton = (
     ? themeTextColorPrimaryInverted
     : pickReadableTextColor(
         baseColor,
-        themeTextColorPrimary,
-        themeTextColorPrimaryInverted
+        getCSSVarValue(themeTextColorPrimary),
+        getCSSVarValue(themeTextColorPrimaryInverted)
       );
 
   return css`

@@ -1,6 +1,9 @@
-const isValidHex = (color: string) => /^#([A-Fa-f0-9]{3}){1,2}$/.test(color);
+import relativeLuminance from "relative-luminance";
 
-const hexToRgbArr = (hex: string): number[] => {
+export const isValidHex = (color: string) =>
+  /^#([A-Fa-f0-9]{3}){1,2}$/.test(color);
+
+export const hexToRgbArr = (hex: string): number[] => {
   let color;
   if (isValidHex(hex)) {
     color = hex.substring(1).split("");
@@ -17,16 +20,23 @@ const hexToRgbArr = (hex: string): number[] => {
   return [0, 0, 0];
 };
 
-const rgbToHex = (rgbArr: number[]): string => {
-  return rgbArr.reduce((acc, curr) => {
-    let pair = Math.round(curr).toString(16);
-    if (pair.length < 2) {
-      pair = `0${pair}`;
-    }
-    acc += pair;
+export const rgbToHex = (rgbArr: number[]): string => {
+  const isValidRgbArr =
+    rgbArr.length === 3 &&
+    rgbArr.some(channel => channel > -1 && channel < 256);
+  if (isValidRgbArr) {
+    return rgbArr.reduce((acc, curr) => {
+      let pair = Math.round(curr).toString(16);
+      if (pair.length < 2) {
+        pair = `0${pair}`;
+      }
+      acc += pair;
 
-    return acc;
-  }, "#");
+      return acc;
+    }, "#");
+  } else {
+    return "#000000";
+  }
 };
 
 export const hexToRgbA = (hex: string, alpha: string | number = 1): string => {
@@ -36,10 +46,27 @@ export const hexToRgbA = (hex: string, alpha: string | number = 1): string => {
   return "rgba(0,0,0,0)";
 };
 
+const getLuminance = (luminanceVal1: number, luminanceVal2: number) => {
+  const l1 = Math.max(luminanceVal1, luminanceVal2);
+  const l2 = Math.min(luminanceVal1, luminanceVal2);
+
+  // https://www.w3.org/TR/WCAG20/#contrast-ratiodef
+  return (l1 + 0.05) / (l2 + 0.05);
+};
+
+// TODO: when/if we start using rgb/rgba colors in
+// design-tokens, write getHexContrast function that can get
+// rgb/rgba contrast as well
+export const getHexContrast = (color1: string, color2: string) =>
+  getLuminance(
+    relativeLuminance(hexToRgbArr(color1)),
+    relativeLuminance(hexToRgbArr(color2))
+  );
+
 // TODO: when/if we start using rgb/rgba colors in
 // design-tokens, write getBrightness function that can get
 // rgb/rgba brightness as well
-export const getHexBrightness = (hex: string) => {
+const getHexBrightness = (hex: string) => {
   const rgbArr = hexToRgbArr(hex);
   return (rgbArr[0] * 299 + rgbArr[1] * 587 + rgbArr[2] * 114) / 1000;
 };
@@ -75,29 +102,34 @@ export const pickReadableTextColor = (
   }
 };
 
-//TODO:THEMING: refactor to measure contrast and return lowest contrast
-//
-// Assumes we always want our defaukt hover colors to be lower
+// Assumes we always want our default hover colors to be lower
 // contrast between it's background color
 export const pickHoverBg = (bgColor, baseHoverBg, invertedHoverBg) => {
-  const baseHoverDiff = Math.abs(
-    getHexBrightness(bgColor) - getHexBrightness(baseHoverBg)
-  );
-  const invertedHoverDiff = Math.abs(
-    getHexBrightness(bgColor) - getHexBrightness(invertedHoverBg)
-  );
+  const baseHoverContrast = getHexContrast(bgColor, baseHoverBg);
+  const invertedHoverContrast = getHexContrast(bgColor, invertedHoverBg);
 
-  return baseHoverDiff > invertedHoverDiff ? invertedHoverBg : baseHoverBg;
+  return baseHoverContrast > invertedHoverContrast
+    ? invertedHoverBg
+    : baseHoverBg;
 };
 
-export const mix = (color1, color2, percent) => {
+export const mixHex = (color1, color2, percent) => {
   const color1rgb = hexToRgbArr(color1);
   const color2rgb = hexToRgbArr(color2);
-  const blendedRgbArr = color1rgb.map((_, i) =>
-    Math.floor(color2rgb[i] + (color1rgb[i] - color2rgb[i]) * (percent / 100))
-  );
 
-  return rgbToHex(blendedRgbArr);
+  if (isValidHex(color1) && isValidHex(color2)) {
+    const blendedRgbArr = color1rgb.map((_, i) =>
+      Math.floor(color2rgb[i] + (color1rgb[i] - color2rgb[i]) * (percent / 100))
+    );
+
+    return rgbToHex(blendedRgbArr);
+  } else {
+    return isValidHex(color1)
+      ? color1
+      : isValidHex(color2)
+        ? color2
+        : "#000000";
+  }
 };
 
 // We lighten and darken our colors by tinting and shading, not
@@ -108,10 +140,10 @@ export const mix = (color1, color2, percent) => {
 // a lighten/darken scale from any color
 export const lighten = (color: string, step: 1 | 2 | 3 | 4 | 5) => {
   const scale = [10, 20, 40, 80, 95];
-  return mix("#FFFFFF", color, scale[step - 1]);
+  return mixHex("#FFFFFF", color, scale[step - 1]);
 };
 
 export const darken = (color: string, step: 1 | 2 | 3 | 4 | 5) => {
   const scale = [10, 20, 40, 60, 80];
-  return mix("#000000", color, scale[step - 1]);
+  return mixHex("#000000", color, scale[step - 1]);
 };
