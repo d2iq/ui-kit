@@ -13,6 +13,7 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 import { withTheme } from "emotion-theming";
 import { pickReadableTextColor } from "../../shared/styles/color";
+import { AppChromeTheme } from "../types/appChromeTheme";
 import getCSSVarValue from "../../utilities/components/getCSSVarValue";
 
 export interface SidebarSubMenuProps {
@@ -23,7 +24,7 @@ export interface SidebarSubMenuProps {
   label: React.ReactElement<SidebarItemLabelProps>;
   menuHasIcon?: boolean;
   iconWidth?: string;
-  theme?: any;
+  theme?: AppChromeTheme;
 }
 
 export class SidebarSubMenuComponent extends React.PureComponent<

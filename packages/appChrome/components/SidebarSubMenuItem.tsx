@@ -18,12 +18,13 @@ import {
   themeBgPrimaryInverted
 } from "../../design-tokens/build/js/designTokens";
 import { pickReadableTextColor } from "../../shared/styles/color";
+import { AppChromeTheme } from "../types/appChromeTheme";
 
 export interface SidebarSubMenuItemProps {
   children?: React.ReactElement<HTMLElement> | string;
   isActive?: boolean;
   onClick: (event?: React.SyntheticEvent<HTMLElement>) => void;
-  theme?: any;
+  theme?: AppChromeTheme;
 }
 
 class SidebarSubMenuItem extends React.PureComponent<
