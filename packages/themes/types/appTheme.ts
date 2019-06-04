@@ -24,7 +24,6 @@ export interface Theme {
     bgHover?: Color;
     bgHoverInverted?: Color;
     bgScrim?: Color;
-    bgScrimInverted?: Color;
     bgSelected?: Color;
     bgSelectedInverted?: Color;
     bgAppHeader?: Color;
@@ -43,5 +42,6 @@ export interface Theme {
     borderHeavy?: Color;
     borderHeavyInverted?: Color;
     shadow?: Color;
+    shadowInverted?: Color;
   };
 }
