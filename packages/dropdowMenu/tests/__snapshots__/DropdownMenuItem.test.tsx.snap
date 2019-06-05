@@ -27,7 +27,7 @@ exports[`DropdownMenuItem renders active 1`] = `
   padding-bottom: 8px;
   padding-top: 8px;
   display: inline-block;
-  background-color: #F7F8F9;
+  background-color: var(--themeBgHover,#F7F8F9);
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -47,10 +47,10 @@ exports[`DropdownMenuItem renders active and selected 1`] = `
   padding-bottom: 8px;
   padding-top: 8px;
   display: inline-block;
-  background-color: #F7F8F9;
-  background-color: #7D58FF;
-  color: #FFF;
-  background-color: #704FE5;
+  background-color: var(--themeBgHover,#F7F8F9);
+  background-color: var(--themeBgSelected,#7D58FF);
+  color: #FFFFFF;
+  background-color: #704fe5;
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -89,8 +89,8 @@ exports[`DropdownMenuItem renders selected 1`] = `
   padding-bottom: 8px;
   padding-top: 8px;
   display: inline-block;
-  background-color: #7D58FF;
-  color: #FFF;
+  background-color: var(--themeBgSelected,#7D58FF);
+  color: #FFFFFF;
   margin-top: 8px;
   margin-bottom: 8px;
 }

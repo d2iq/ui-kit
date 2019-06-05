@@ -14,8 +14,8 @@ exports[`CheckboxInput renders all appearances 1`] = `
 }
 
 .emotion-1 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
@@ -129,8 +129,8 @@ exports[`CheckboxInput renders all appearances 2`] = `
 }
 
 .emotion-1 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
@@ -183,8 +183,8 @@ exports[`CheckboxInput renders all appearances 2`] = `
   min-width: 0;
   width: auto;
   padding-left: 12px;
-  color: #EB293A;
-  fill: #EB293A;
+  color: var(--themeError,#EB293A);
+  fill: var(--themeError,#EB293A);
 }
 
 <CheckboxInput
@@ -246,8 +246,8 @@ exports[`CheckboxInput renders all appearances 3`] = `
 }
 
 .emotion-1 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
@@ -300,8 +300,8 @@ exports[`CheckboxInput renders all appearances 3`] = `
   min-width: 0;
   width: auto;
   padding-left: 12px;
-  color: #14C684;
-  fill: #14C684;
+  color: var(--themeSuccess,#14C684);
+  fill: var(--themeSuccess,#14C684);
 }
 
 <CheckboxInput
@@ -409,16 +409,16 @@ exports[`CheckboxInput renders indeterminate 1`] = `
 }
 
 .emotion-3 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
   width: 15px;
   border-radius: 4px;
   position: relative;
-  background-color: #7D58FF;
-  border-color: #7D58FF;
+  background-color: var(--themeBrandPrimary,#7D58FF);
+  border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
 .emotion-2 {
@@ -531,8 +531,8 @@ exports[`CheckboxInput renders with a hidden label 1`] = `
 }
 
 .emotion-1 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
