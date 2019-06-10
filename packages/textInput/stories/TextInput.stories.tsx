@@ -3,96 +3,97 @@ import { storiesOf } from "@storybook/react";
 import { css, cx } from "emotion";
 import * as React from "react";
 import { withReadme } from "storybook-readme";
+import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 
 import { TextInput } from "..";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
 const readme = require("../README.md");
 
-const defaultDisplayItem = css`
-  width: 160px;
-`;
-
 storiesOf("Forms/TextInput", module)
   .addDecorator(withReadme([readme]))
+  .addDecorator(inputStoryWrapper)
   .add("default", () => (
-    <div>
+    <React.Fragment>
       <TextInput
         id="standard.input"
-        className={cx(defaultDisplayItem)}
         inputLabel="Standard"
         placeholder="Placeholder"
       />
-      <br />
       <TextInput
         id="error.input"
-        className={cx(defaultDisplayItem)}
         inputLabel="Error"
         appearance={InputAppearance.Error}
         placeholder="Placeholder"
       />
-      <br />
       <TextInput
         id="success.input"
-        className={cx(defaultDisplayItem)}
         inputLabel="Success"
         appearance={InputAppearance.Success}
         placeholder="Placeholder"
       />
-      <br />
       <TextInput
         id="disabled.input"
-        className={cx(defaultDisplayItem)}
         inputLabel="Disabled"
         disabled={true}
         placeholder="Placeholder"
       />
-      <br />
       <TextInput
         id="disabled.value.input"
-        className={cx(defaultDisplayItem)}
         inputLabel="Disabled w/ Value"
         disabled={true}
         value="This is Disabled"
         placeholder="Placeholder"
       />
-    </div>
+    </React.Fragment>
   ))
   .add("hint text", () => (
-    <div>
+    <React.Fragment>
       <TextInput
         id="hint.input"
-        className={cx(
-          css`
-            width: 300px;
-          `
-        )}
-        inputLabel="Require Field"
+        inputLabel="Hint"
         placeholder="Placeholder"
-        hintContent="Enter a correct value here. e.g. not empty"
-        required={true}
+        hintContent="Enter a body of text here"
       />
-      <br />
       <TextInput
         id="hint.input.with.errors"
-        className={cx(
-          css`
-            width: 300px;
-          `
-        )}
-        inputLabel="Require Field"
+        inputLabel="Hint and Error"
         appearance={InputAppearance.Error}
         placeholder="Placeholder"
-        hintContent="Enter a correct value here. e.g. not empty"
-        errors={["Please enter a value.", "Another error message"]}
+        hintContent="Enter a body of text here"
+        errors={["This is an error"]}
+      />
+    </React.Fragment>
+  ))
+  .add("hidden label", () => (
+    <TextInput
+      id="hidden.label.input"
+      inputLabel="Hidden"
+      placeholder="Placeholder"
+      showInputLabel={false}
+    />
+  ))
+  .add("required", () => (
+    <React.Fragment>
+      <TextInput
+        id="required"
+        inputLabel="Required Field"
+        placeholder="Placeholder"
         required={true}
       />
-    </div>
+      <TextInput
+        id="required.input.with.errors"
+        inputLabel="Required Field"
+        appearance={InputAppearance.Error}
+        placeholder="Placeholder"
+        errors={["Please enter a value."]}
+        required={true}
+      />
+    </React.Fragment>
   ))
-  .add("Error with Message", () => (
+  .add("error with message", () => (
     <TextInput
       id="error.input.with.message"
-      className={cx(defaultDisplayItem)}
       inputLabel="Require Field"
       appearance={InputAppearance.Error}
       placeholder="Placeholder"
@@ -100,10 +101,9 @@ storiesOf("Forms/TextInput", module)
       required={true}
     />
   ))
-  .add("Error with Messages", () => (
+  .add("error with messages", () => (
     <TextInput
       id="error.input.with.message"
-      className={cx(defaultDisplayItem)}
       inputLabel="Require Field"
       appearance={InputAppearance.Error}
       placeholder="Placeholder"
@@ -111,32 +111,7 @@ storiesOf("Forms/TextInput", module)
       required={true}
     />
   ))
-  .add("Hidden Label", () => (
-    <TextInput
-      id="hidden.label.input"
-      className={cx(defaultDisplayItem)}
-      inputLabel="Hidden"
-      placeholder="hidden label"
-      showInputLabel={false}
-    />
-  ))
-  .add("Number", () => (
-    <TextInput id="number.input" type="number" inputLabel="Number" />
-  ))
-  .add("Search", () => (
-    <TextInput id="search.input" type="search" inputLabel="Search" />
-  ))
-  .add("Email", () => (
-    <TextInput id="email.input" type="email" inputLabel="Email" />
-  ))
-  .add("Password", () => (
-    <TextInput id="password.input" type="password" inputLabel="Password" />
-  ))
-  .add("Telephone", () => (
-    <TextInput id="telephone.input" type="tel" inputLabel="Telephone" />
-  ))
-  .add("URL", () => <TextInput id="url.input" type="url" inputLabel="URL" />)
-  .add("Delegates onChange handler", () => (
+  .add("delegates onChange handler", () => (
     <form onChange={action("onChange")}>
       <TextInput id="text.id" inputLabel="Id" value="/" />
       <TextInput
@@ -147,54 +122,51 @@ storiesOf("Forms/TextInput", module)
       />
     </form>
   ))
+  .add('[type="number"]', () => (
+    <TextInput id="number.input" type="number" inputLabel="Number" />
+  ))
+  .add('[type="search"]', () => (
+    <TextInput id="search.input" type="search" inputLabel="Search" />
+  ))
+  .add('[type="email"]', () => (
+    <TextInput id="email.input" type="email" inputLabel="Email" />
+  ))
+  .add('[type="password"]', () => (
+    <TextInput id="password.input" type="password" inputLabel="Password" />
+  ))
+  .add('[type="tel"]', () => (
+    <TextInput id="telephone.input" type="tel" inputLabel="Telephone" />
+  ))
+  .add('[type="url"]', () => (
+    <TextInput id="url.input" type="url" inputLabel="URL" />
+  ))
   .add("with default icon string tooltip", () => (
-    <div>
-      <TextInput
-        id="string.tooltip.input"
-        className={cx(
-          css`
-            width: 300px;
-          `
-        )}
-        inputLabel="Require Field"
-        placeholder="Placeholder"
-        hintContent="Enter a correct value here. e.g. not empty"
-        required={true}
-        tooltipContent="This is a simple string tooltip"
-      />
-    </div>
+    <TextInput
+      id="string.tooltip.input"
+      inputLabel="Require Field"
+      placeholder="Placeholder"
+      hintContent="Enter a correct value here. e.g. not empty"
+      required={true}
+      tooltipContent="This is a simple string tooltip"
+    />
   ))
   .add("with default icon long string tooltip", () => (
-    <div>
-      <TextInput
-        id="long.string.tooltip.input"
-        className={cx(
-          css`
-            width: 300px;
-          `
-        )}
-        inputLabel="Require Field"
-        placeholder="Placeholder"
-        hintContent="Enter a correct value here. e.g. not empty"
-        required={true}
-        tooltipContent="This is a very long string tooltip, created in order to test the maximum width"
-      />
-    </div>
+    <TextInput
+      id="long.string.tooltip.input"
+      inputLabel="Require Field"
+      placeholder="Placeholder"
+      hintContent="Enter a correct value here. e.g. not empty"
+      required={true}
+      tooltipContent="This is a very long string tooltip, created in order to test the maximum width"
+    />
   ))
   .add("with default icon html element tooltip", () => (
-    <div>
-      <TextInput
-        id="element.tooltip.input"
-        className={cx(
-          css`
-            width: 300px;
-          `
-        )}
-        inputLabel="Require Field"
-        placeholder="Placeholder"
-        hintContent="Enter a correct value here. e.g. not empty"
-        required={true}
-        tooltipContent={<div>Tooltip containing HTML element</div>}
-      />
-    </div>
+    <TextInput
+      id="element.tooltip.input"
+      inputLabel="Require Field"
+      placeholder="Placeholder"
+      hintContent="Enter a correct value here. e.g. not empty"
+      required={true}
+      tooltipContent={<div>Tooltip containing HTML element</div>}
+    />
   ));

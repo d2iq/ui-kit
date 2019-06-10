@@ -14,7 +14,7 @@ const storyWrapper = css`
   width: 300px;
 `;
 
-storiesOf("Typeahead", module)
+storiesOf("Forms/Typeahead", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <div className={storyWrapper}>
@@ -82,20 +82,35 @@ storiesOf("Typeahead", module)
       </div>
     );
   })
-  .add("multiselect", () => (
-    <div className={storyWrapper}>
-      <MultiselectTypeahead
-        items={items}
-        textField={
-          <TextInput
-            id="multiselect"
-            inputLabel="Multiselectable"
-            placeholder="Placeholder"
-          />
-        }
-      />
-    </div>
-  ))
+  .add(
+    "multiselect",
+    () => (
+      <div className={storyWrapper}>
+        <MultiselectTypeahead>
+          {({ items, selectHandler, selectedItems }) => (
+            <Typeahead
+              items={items}
+              selectedItems={selectedItems}
+              multiSelect={true}
+              textField={
+                <TextInput
+                  id="multiselect"
+                  inputLabel="Multiselectable"
+                  placeholder="Placeholder"
+                />
+              }
+              onSelect={selectHandler}
+            />
+          )}
+        </MultiselectTypeahead>
+      </div>
+    ),
+    {
+      info: {
+        text: "Story source:"
+      }
+    }
+  )
   .add("complex list items", () => (
     <div className={storyWrapper}>
       <Typeahead
