@@ -1,11 +1,11 @@
 import { css } from "react-emotion";
 import { BoxSides } from "./modifierUtils";
-import { borderColorDefault } from "../../../../design-tokens/build/js/designTokens";
+import { themeBorder } from "../../../../design-tokens/build/js/designTokens";
 
 export const border = (side: BoxSides) => {
   const borderBaseStyles = `
         border-width: 1px;
-        border-color: ${borderColorDefault};
+        border-color: ${themeBorder};
     `;
 
   const borderModifierStyles = () => {

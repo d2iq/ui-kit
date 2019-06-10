@@ -4,7 +4,7 @@ import * as React from "react";
 import { TextInput, TextInputProps } from "./TextInput";
 
 import {
-  inputAppearances,
+  getInputAppearanceStyle,
   inputContainer
 } from "../../shared/styles/formStyles";
 import { flex, flexItem, flush, padding } from "../../shared/styles/styleUtils";
@@ -118,7 +118,7 @@ export class TextInputWithIcon extends TextInput<
                 padding("left", "s"),
                 padding("right", "s"),
                 inputContainer,
-                inputAppearances[inputAppearance]
+                getInputAppearanceStyle(inputAppearance)
               )}
             >
               {this.getIconStartContent()}

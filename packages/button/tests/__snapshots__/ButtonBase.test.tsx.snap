@@ -10,8 +10,8 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #FFF;
-  fill: #FFF;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -20,10 +20,10 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   font-weight: 500;
   text-align: center;
   width: 100%;
-  color: #AEB0B4;
-  fill: #AEB0B4;
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
-  background-color: #F0F1F3;
+  background-color: var(--themeBgDisabled,#E8EAED);
 }
 
 .emotion-4::-moz-focus-inner {
@@ -32,24 +32,24 @@ exports[`ButtonBase renders all appearances with props 1`] = `
 }
 
 .emotion-4:hover {
-  background-color: #704FE5;
+  background-color: #704fe5;
 }
 
 .emotion-4:active {
-  background-color: #6446CC;
-}
-
-.emotion-4:hover,
-.emotion-4:focus,
-.emotion-4:active {
-  color: #AEB0B4;
-  fill: #AEB0B4;
+  background-color: #6446cc;
 }
 
 .emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
-  background-color: #F0F1F3;
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  fill: var(--themeTextColorDisabled,#AEB0B4);
+}
+
+.emotion-4:hover,
+.emotion-4:focus,
+.emotion-4:active {
+  background-color: var(--themeBgDisabled,#E8EAED);
 }
 
 .emotion-3 {
@@ -122,7 +122,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
 }
 
 <FocusStyleManager
-  focusEnabledClass="css-1dqlfdd"
+  focusEnabledClass="css-xcotv6"
 >
   <button
     ariaHaspopup={true}
@@ -242,15 +242,15 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #7D58FF;
-  fill: #7D58FF;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
   cursor: pointer;
   outline: none;
   font-weight: 500;
   text-align: center;
   width: 100%;
-  color: #AEB0B4;
-  fill: #AEB0B4;
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
 }
 
@@ -260,24 +260,24 @@ exports[`ButtonBase renders all appearances with props 2`] = `
 }
 
 .emotion-4:hover {
-  color: #704FE5;
-  fill: #704FE5;
+  color: #704fe5;
+  fill: #704fe5;
 }
 
 .emotion-4:active {
-  color: #6446CC;
-  fill: #6446CC;
+  color: #6446cc;
+  fill: #6446cc;
 }
 
 .emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
-  color: #AEB0B4;
-  fill: #AEB0B4;
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  fill: var(--themeTextColorDisabled,#AEB0B4);
 }
 
 <FocusStyleManager
-  focusEnabledClass="css-14x8wbg"
+  focusEnabledClass="css-1h85cd2"
 >
   <button
     ariaHaspopup={true}
@@ -407,10 +407,10 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   font-weight: 500;
   text-align: center;
   width: 100%;
-  color: #AEB0B4;
-  fill: #AEB0B4;
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
-  background-color: #F0F1F3;
+  background-color: var(--themeBgDisabled,#E8EAED);
 }
 
 .emotion-4::-moz-focus-inner {
@@ -419,28 +419,28 @@ exports[`ButtonBase renders all appearances with props 3`] = `
 }
 
 .emotion-4:hover {
-  background-color: #C3C6CA;
+  background-color: #c4c6cb;
 }
 
 .emotion-4:active {
-  background-color: #AEB0B4;
-}
-
-.emotion-4:hover,
-.emotion-4:focus,
-.emotion-4:active {
-  color: #AEB0B4;
-  fill: #AEB0B4;
+  background-color: #aeb0b4;
 }
 
 .emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
-  background-color: #F0F1F3;
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  fill: var(--themeTextColorDisabled,#AEB0B4);
+}
+
+.emotion-4:hover,
+.emotion-4:focus,
+.emotion-4:active {
+  background-color: var(--themeBgDisabled,#E8EAED);
 }
 
 <FocusStyleManager
-  focusEnabledClass="css-1mdlayb"
+  focusEnabledClass="css-bwvukd"
 >
   <button
     ariaHaspopup={true}
@@ -560,8 +560,8 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #FFF;
-  fill: #FFF;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   background-color: #EB293A;
   border-radius: 4px;
   padding: 10px 18px;
@@ -570,10 +570,10 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   font-weight: 500;
   text-align: center;
   width: 100%;
-  color: #AEB0B4;
-  fill: #AEB0B4;
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
-  background-color: #F0F1F3;
+  background-color: var(--themeBgDisabled,#E8EAED);
 }
 
 .emotion-4::-moz-focus-inner {
@@ -582,28 +582,28 @@ exports[`ButtonBase renders all appearances with props 4`] = `
 }
 
 .emotion-4:hover {
-  background-color: #D32434;
+  background-color: #d32434;
 }
 
 .emotion-4:active {
-  background-color: #BC202E;
-}
-
-.emotion-4:hover,
-.emotion-4:focus,
-.emotion-4:active {
-  color: #AEB0B4;
-  fill: #AEB0B4;
+  background-color: #bc202e;
 }
 
 .emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
-  background-color: #F0F1F3;
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  fill: var(--themeTextColorDisabled,#AEB0B4);
+}
+
+.emotion-4:hover,
+.emotion-4:focus,
+.emotion-4:active {
+  background-color: var(--themeBgDisabled,#E8EAED);
 }
 
 <FocusStyleManager
-  focusEnabledClass="css-1wcx5v7"
+  focusEnabledClass="css-txv5vz"
 >
   <button
     ariaHaspopup={true}
@@ -723,8 +723,8 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #FFF;
-  fill: #FFF;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   background-color: #14C684;
   border-radius: 4px;
   padding: 10px 18px;
@@ -733,10 +733,10 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   font-weight: 500;
   text-align: center;
   width: 100%;
-  color: #AEB0B4;
-  fill: #AEB0B4;
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
-  background-color: #F0F1F3;
+  background-color: var(--themeBgDisabled,#E8EAED);
 }
 
 .emotion-4::-moz-focus-inner {
@@ -745,28 +745,28 @@ exports[`ButtonBase renders all appearances with props 5`] = `
 }
 
 .emotion-4:hover {
-  background-color: #11B176;
+  background-color: #12b276;
 }
 
 .emotion-4:active {
-  background-color: #109E69;
-}
-
-.emotion-4:hover,
-.emotion-4:focus,
-.emotion-4:active {
-  color: #AEB0B4;
-  fill: #AEB0B4;
+  background-color: #109e69;
 }
 
 .emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
-  background-color: #F0F1F3;
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  fill: var(--themeTextColorDisabled,#AEB0B4);
+}
+
+.emotion-4:hover,
+.emotion-4:focus,
+.emotion-4:active {
+  background-color: var(--themeBgDisabled,#E8EAED);
 }
 
 <FocusStyleManager
-  focusEnabledClass="css-1wuquou"
+  focusEnabledClass="css-u3f3k6"
 >
   <button
     ariaHaspopup={true}

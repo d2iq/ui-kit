@@ -1,56 +1,54 @@
 import { css } from "emotion";
 import {
   borderRadiusSmall,
-  green,
-  greyDark,
   greyLight,
-  purple,
-  red,
-  white,
-  yellow
+  themeSuccess,
+  themeWarning,
+  themeError,
+  themeBrandPrimary,
+  themeBgPrimary,
+  themeTextColorPrimary,
+  themeTextColorPrimaryInverted,
+  themeBorder
 } from "../design-tokens/build/js/designTokens";
+import { pickReadableTextColor } from "../shared/styles/color";
+import getCSSVarValue from "../utilities/components/getCSSVarValue";
 
-const badgeAppearance = {
-  default: css`
-    background-color: ${greyLight};
-    border-color: ${greyLight};
-    color: ${greyDark};
-  `,
-  success: css`
-    background-color: ${green};
-    border-color: ${green};
-    color: ${white};
-  `,
-  primary: css`
-    background-color: ${purple};
-    border-color: ${purple};
-    color: ${white};
-  `,
-  warning: css`
-    background-color: ${yellow};
-    border-color: ${yellow};
-    color: ${white};
-  `,
-  danger: css`
-    background-color: ${red};
-    border-color: ${red};
-    color: ${white};
-  `,
-  outline: css`
-    background-color: ${white};
-    border-color: ${greyLight};
-    color: ${greyDark};
-  `,
-  "outline-primary": css`
-    background-color: ${white};
-    border-color: ${purple};
-    color: ${greyDark};
-  `
+const badgeAppearanceStyle = (color, isOutlined?: boolean) => {
+  const bgColor = isOutlined ? getCSSVarValue(themeBgPrimary) : color;
+  return css`
+    background-color: ${bgColor};
+    border-color: ${color};
+    color: ${pickReadableTextColor(
+      bgColor,
+      getCSSVarValue(themeTextColorPrimary),
+      getCSSVarValue(themeTextColorPrimaryInverted)
+    )};
+  `;
+};
+
+const badgeAppearance = appearance => {
+  switch (appearance) {
+    case "default":
+      return badgeAppearanceStyle(greyLight);
+    case "success":
+      return badgeAppearanceStyle(getCSSVarValue(themeSuccess));
+    case "primary":
+      return badgeAppearanceStyle(getCSSVarValue(themeBrandPrimary));
+    case "warning":
+      return badgeAppearanceStyle(getCSSVarValue(themeWarning));
+    case "danger":
+      return badgeAppearanceStyle(getCSSVarValue(themeError));
+    case "outline":
+      return badgeAppearanceStyle(getCSSVarValue(themeBorder), true);
+    case "outline-primary":
+      return badgeAppearanceStyle(getCSSVarValue(themeBrandPrimary), true);
+  }
 };
 
 export const badge = appearance => {
   return css`
-    ${badgeAppearance[appearance]};
+    ${badgeAppearance(appearance)};
     box-sizing: border-box;
     border-width: 1px;
     border-style: solid;

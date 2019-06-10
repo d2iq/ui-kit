@@ -1,11 +1,17 @@
 import * as React from "react";
 import { cx, css } from "emotion";
 import styled from "react-emotion";
-import { darkMode } from "../../shared/styles/styleUtils";
 import { sidebar, sidebarAnimator } from "../style";
-import { greyDark } from "../../design-tokens/build/js/designTokens";
 import { atMediaUp } from "../../shared/styles/breakpoints";
-import { isHexDark } from "../../shared/styles/color";
+import {
+  themeTextColorPrimary,
+  themeTextColorPrimaryInverted,
+  themeBgPrimaryInverted
+} from "../../design-tokens/build/js/designTokens";
+import getCSSVarValue from "../../utilities/components/getCSSVarValue";
+import { pickReadableTextColor } from "../../shared/styles/color";
+import { tintContent } from "../../shared/styles/styleUtils";
+import { ThemeProvider } from "emotion-theming";
 
 export interface SidebarProps {
   isOpen: boolean;
@@ -52,8 +58,20 @@ class Sidebar extends React.PureComponent<SidebarProps, {}> {
     const divClassNames = cx(sidebarAnimator);
 
     const Sidebar = styled("div")`
-      background-color: ${props =>
-        props.theme.sidebarBackgroundColor || greyDark};
+      ${props => {
+        const bgColor =
+          props.theme.sidebarBackgroundColor ||
+          getCSSVarValue(themeBgPrimaryInverted);
+        const textColor = pickReadableTextColor(
+          bgColor,
+          getCSSVarValue(themeTextColorPrimary),
+          getCSSVarValue(themeTextColorPrimaryInverted)
+        );
+        return css`
+          background-color: ${bgColor};
+          ${tintContent(textColor)};
+        `;
+      }};
       ${props =>
         props.theme.sidebarWidth
           ? "width: " + props.theme.sidebarWidth
@@ -65,18 +83,21 @@ class Sidebar extends React.PureComponent<SidebarProps, {}> {
         props.theme.sidebarWidth
           ? "width: " + props.theme.sidebarWidth
           : sidebarWidth};
-      ${props =>
-        !props.theme.sidebarBackgroundColor ||
-        (props.theme.sidebarBackgroundColor &&
-          isHexDark(props.theme.sidebarBackgroundColor))
-          ? darkMode
-          : null};
     `;
 
+    const adjustedTheme = ancestorTheme => {
+      return {
+        sidebarBackgroundColor: getCSSVarValue(themeBgPrimaryInverted),
+        ...ancestorTheme
+      };
+    };
+
     return (
-      <Sidebar className={divClassNames}>
-        <Nav className={navClassNames}>{children}</Nav>
-      </Sidebar>
+      <ThemeProvider theme={adjustedTheme}>
+        <Sidebar className={divClassNames}>
+          <Nav className={navClassNames}>{children}</Nav>
+        </Sidebar>
+      </ThemeProvider>
     );
   }
 }

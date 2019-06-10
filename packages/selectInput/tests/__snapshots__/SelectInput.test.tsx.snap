@@ -67,6 +67,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
   position: relative;
   border: 1px solid;
   border-radius: 4px;
+  color: inherit;
   height: 36px;
   font-size: inherit;
   padding-left: 16px;
@@ -77,8 +78,49 @@ exports[`SelectInput should render all appearances focus 1`] = `
   display: flex;
 }
 
+.emotion-4::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-4::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-4::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
 .emotion-4 input {
   font-size: inherit;
+  color: inherit;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-4 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-4 input::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
 }
 
 .emotion-1 {
@@ -89,6 +131,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  color: inherit;
   font-size: inherit;
   padding-right: 32px;
   width: 100%;
@@ -101,7 +144,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
 
 .emotion-1:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #1B2029;
+  text-shadow: 0 0 0 var(--themeTextColorPrimary,#1B2029);
 }
 
 .emotion-1::-ms-expand {

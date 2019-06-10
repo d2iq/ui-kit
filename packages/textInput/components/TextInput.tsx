@@ -2,24 +2,22 @@ import { cx } from "emotion";
 import * as React from "react";
 
 import {
-  error,
   greyLightDarken2,
-  iconSizeXs
+  iconSizeXs,
+  themeError
 } from "../../design-tokens/build/js/designTokens";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import {
-  inputAppearances,
-  inputContainer
+  getInputAppearanceStyle,
+  inputContainer,
+  getLabelStyle
 } from "../../shared/styles/formStyles";
 import {
   flex,
   flexItem,
-  flush,
   inputReset,
   margin,
   padding,
-  textWeight,
-  tintContent,
   tintText,
   visuallyHidden
 } from "../../shared/styles/styleUtils";
@@ -82,7 +80,7 @@ export class TextInput<
     }
     return (
       <div {...containerProps}>
-        <div className={cx(margin("bottom", "xxs"), flex({ align: "center" }))}>
+        <div className={flex({ align: "center" })}>
           {labelContent}
           {tooltipContent}
         </div>
@@ -97,12 +95,11 @@ export class TextInput<
 
   protected getLabelContent() {
     const requiredContent = this.props.required ? (
-      <span className={cx(tintText(error))}> *</span>
+      <span className={cx(tintText(themeError))}> *</span>
     ) : null;
+    const hasError = this.props.appearance === InputAppearance.Error;
     const labelClassName = this.props.showInputLabel
-      ? cx(flush("top"), textWeight("medium"), {
-          [tintContent(error)]: this.props.appearance === InputAppearance.Error
-        })
+      ? getLabelStyle(hasError)
       : cx(visuallyHidden);
     return (
       <label className={labelClassName} htmlFor={this.props.id}>
@@ -129,7 +126,7 @@ export class TextInput<
                   padding("horiz", "m"),
                   flexItem("grow"),
                   inputContainer,
-                  inputAppearances[this.getInputAppearance()]
+                  getInputAppearanceStyle(this.getInputAppearance())
                 ],
                 isValid,
                 describedByIds
@@ -191,7 +188,7 @@ export class TextInput<
     }
 
     return (
-      <span className={margin("left", "xs")}>
+      <span className={cx(margin("left", "xs"), margin("bottom", "xxs"))}>
         <Tooltip
           trigger={
             <Icon

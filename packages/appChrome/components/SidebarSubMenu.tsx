@@ -4,8 +4,18 @@ import { Expandable } from "../../expandable";
 import { SidebarItemLabelProps } from "./SidebarItemLabel";
 import { SidebarSubMenuItemProps } from "./SidebarSubMenuItem";
 import { sidebarNavItem, appChromeInsetContent, spaceMenuIcon } from "../style";
-import { listReset } from "../../shared/styles/styleUtils";
-import { iconSizeS } from "../../design-tokens/build/js/designTokens";
+import { listReset, tintContent } from "../../shared/styles/styleUtils";
+import {
+  iconSizeS,
+  themeTextColorPrimary,
+  themeTextColorPrimaryInverted,
+  themeBgPrimaryInverted
+} from "../../design-tokens/build/js/designTokens";
+import { withTheme } from "emotion-theming";
+import { pickReadableTextColor } from "../../shared/styles/color";
+import { AppChromeTheme } from "../types/appChromeTheme";
+import getCSSVarValue from "../../utilities/components/getCSSVarValue";
+
 export interface SidebarSubMenuProps {
   children: Array<React.ReactElement<SidebarSubMenuItemProps>>;
   isOpen?: boolean;
@@ -14,9 +24,13 @@ export interface SidebarSubMenuProps {
   label: React.ReactElement<SidebarItemLabelProps>;
   menuHasIcon?: boolean;
   iconWidth?: string;
+  theme?: AppChromeTheme;
 }
 
-class SidebarSubMenu extends React.PureComponent<SidebarSubMenuProps, {}> {
+export class SidebarSubMenuComponent extends React.PureComponent<
+  SidebarSubMenuProps,
+  {}
+> {
   constructor(props) {
     super(props);
 
@@ -44,12 +58,26 @@ class SidebarSubMenu extends React.PureComponent<SidebarSubMenuProps, {}> {
   }
 
   public render() {
-    const { children, label, isOpen } = this.props;
+    const { children, label, isOpen, theme } = this.props;
+    const sidebarBgColor =
+      theme && theme.sidebarBackgroundColor
+        ? theme.sidebarBackgroundColor
+        : getCSSVarValue(themeBgPrimaryInverted);
 
     return (
       <li>
         <Expandable
-          labelClassName={cx(appChromeInsetContent, sidebarNavItem(false))}
+          labelClassName={cx(
+            appChromeInsetContent,
+            sidebarNavItem(false, sidebarBgColor),
+            tintContent(
+              pickReadableTextColor(
+                sidebarBgColor,
+                themeTextColorPrimary,
+                themeTextColorPrimaryInverted
+              )
+            )
+          )}
           isOpen={isOpen}
           label={<div>{label}</div>}
         >
@@ -60,4 +88,4 @@ class SidebarSubMenu extends React.PureComponent<SidebarSubMenuProps, {}> {
   }
 }
 
-export default SidebarSubMenu;
+export default withTheme(SidebarSubMenuComponent);

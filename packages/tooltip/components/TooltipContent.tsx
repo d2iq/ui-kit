@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cx } from "emotion";
 import { tooltip, getTooltipArrow } from "../style";
-import { darkMode, padding } from "../../shared/styles/styleUtils";
+import { inverseColorMode, padding } from "../../shared/styles/styleUtils";
 import { BaseTooltipProps } from "./Tooltip";
 import { Direction } from "../../dropdownable/components/Dropdownable";
 
@@ -28,7 +28,7 @@ class TooltipContent extends React.PureComponent<TooltipContentProps, {}> {
         className={cx(
           tooltip,
           getTooltipArrow(direction),
-          darkMode,
+          inverseColorMode,
           padding("horiz", "s"),
           padding("vert", "xs")
         )}

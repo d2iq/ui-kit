@@ -1,11 +1,12 @@
 import { css } from "emotion";
 import {
-  white,
   borderColorDefault,
-  greyLightLighten5,
   zIndexContent,
   zIndexModal,
-  borderRadiusDefault
+  borderRadiusDefault,
+  themeBgScrim,
+  themeBgPrimary,
+  themeBgSecondary
 } from "../design-tokens/build/js/designTokens";
 import { atMediaUp } from "../shared/styles/breakpoints";
 
@@ -30,7 +31,7 @@ const modalSizes = {
 };
 
 export const scrim = css`
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: ${themeBgScrim};
   bottom: 0;
   left: 0;
   position: fixed;
@@ -41,7 +42,7 @@ export const scrim = css`
 
 export const modal = css`
   border-radius: ${borderRadiusDefault};
-  background-color: ${white};
+  background-color: ${themeBgPrimary};
   left: 50%;
   max-height: calc(100vh - ${modalInset * 2}px);
   outline: none;
@@ -102,7 +103,7 @@ export const modalHeader = css`
 `;
 
 export const fullscreenModalHeader = css`
-  background-color: ${greyLightLighten5};
+  background-color: ${themeBgSecondary};
 `;
 
 export const modalCloseWrapper = css`

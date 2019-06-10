@@ -3,8 +3,9 @@ import { hexToRgbA } from "../shared/styles/color";
 
 import {
   black,
-  greyLight,
-  greyLightLighten5
+  themeBgHover,
+  themeBorderHeavy,
+  themeBorder
 } from "../design-tokens/build/js/designTokens";
 import { pseudoElTriangle } from "../shared/styles/styleUtils";
 
@@ -14,8 +15,8 @@ const cellPadding = 7;
 
 export const headerCss = css`
   box-sizing: border-box;
-  border-top: 1px solid ${black};
-  border-bottom: 1px solid ${black};
+  border-top: 1px solid ${themeBorderHeavy};
+  border-bottom: 1px solid ${themeBorderHeavy};
 `;
 
 export const headerHover = css`
@@ -39,7 +40,7 @@ export const resizingHeader = css`
 
 export const cellCss = css`
   box-sizing: border-box;
-  border-bottom: 1px solid ${greyLight};
+  border-bottom: 1px solid ${themeBorder};
   white-space: nowrap;
 `;
 
@@ -110,7 +111,7 @@ export const hideScrollbarCss = css`
 `;
 
 export const rowHoverStyles = `
-  background-color: ${greyLightLighten5};
+  background-color: ${themeBgHover};
   mix-blend-mode: multiply;
   will-change: left;
 `;
@@ -184,7 +185,7 @@ export const dragHandle = css`
   &:hover,
   &:active {
     .staticClass_dragHandleWrapper {
-      background-color: ${greyLightLighten5};
+      background-color: ${themeBgHover};
     }
   }
 `;

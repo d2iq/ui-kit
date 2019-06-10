@@ -1,0 +1,84 @@
+{
+    "theme": {
+        "colors": {
+            "brandPrimary": {
+                "base": {"value": "#7D58FF"},
+                "inverted": {"value": "#7D58FF"}
+            },
+            "brandSecondary": {
+                "base": {"value": "#FF00D7"},
+                "inverted": {"value": "#FF00D7"}
+            },
+            "success": {
+                "base": {"value": "#14C684"},
+                "inverted": {"value": "#14C684"}
+            },
+            "warning": {
+                "base": {"value": "#F9A328"},
+                "inverted": {"value": "#F9A328"}
+            },
+            "error": {
+                "base": {"value": "#EB293A"},
+                "inverted": {"value": "#EB293A"}
+            },
+            "bgPrimary": {
+                "base": {"value": "#FFFFFF"},
+                "inverted": {"value": "#1B2029"}
+            },
+            "bgSecondary": {
+                "base": {"value": "#F7F8F9"},
+                "inverted": {"value": "#1B2029"}
+            },
+            "bgNeutral": {
+                "base": {"value": "#DADDE2"},
+                "inverted": {"value": "#57585A"}
+            },
+            "bgDisabled": {
+                "base": {"value": "#E8EAED"},
+                "inverted": {"value": "#484C53"}
+            },
+            "bgHover": {
+                "base": {"value": "#F7F8F9"},
+                "inverted": {"value": "#32363E"}
+            },
+            "bgScrim": {
+                "base": {"value": "rgba(0, 0, 0, 0.2)"}
+            },
+            "bgSelected": {
+                "base": {"value": "#7D58FF"},
+                "inverted": {"value": "#7D58FF"}
+            },
+            "bgAppHeader": {
+                "base": {"value": "#322366"}
+            },
+            "textColorPrimary": {
+                "base": {"value": "#1B2029"},
+                "inverted": {"value": "#FFFFFF"}
+            },
+            "textColorSecondary": {
+                "base": {"value": "#76797E"},
+                "inverted": {"value": "#AEB0B4"}
+            },
+            "textColorDisabled": {
+                "base": {"value": "#AEB0B4"},
+                "inverted": {"value": "#DDE0E4"}
+            },
+            "textColorInteractive": {
+                "base": {"value": "#7D58FF"},
+                "inverted": {"value": "#9779FF"}
+            },
+            "border": {
+                "base": {"value": "#DADDE2"},
+                "inverted": {"value": "#32363E"}
+            },
+            "borderHeavy": {
+                "base": {"value": "#1B2029"},
+                "inverted": {"value": "#FFFFFF"}
+            },
+            "shadow": {
+                "base": {"value": "rgba(0, 0, 0, 0.1)"},
+                "inverted": {"value": "rgba(0, 0, 0, 0.1)"}
+            }
+        }
+    }
+}

@@ -66,8 +66,8 @@ Array [
 
 .emotion-10 {
   box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid var(--themeBorderHeavy,#1B2029);
+  border-bottom: 1px solid var(--themeBorderHeavy,#1B2029);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -154,8 +154,8 @@ Array [
 }
 
 .emotion-1 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
@@ -221,7 +221,7 @@ Array [
 
 .emotion-39 {
   box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
+  border-bottom: 1px solid var(--themeBorder,#DADDE2);
   white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;
@@ -708,8 +708,8 @@ Array [
 
 .emotion-12 {
   box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid var(--themeBorderHeavy,#1B2029);
+  border-bottom: 1px solid var(--themeBorderHeavy,#1B2029);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -796,8 +796,8 @@ Array [
 }
 
 .emotion-46 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
@@ -863,7 +863,7 @@ Array [
 
 .emotion-51 {
   box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
+  border-bottom: 1px solid var(--themeBorder,#DADDE2);
   white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;
@@ -887,16 +887,16 @@ Array [
 }
 
 .emotion-3 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
   width: 15px;
   border-radius: 4px;
   position: relative;
-  background-color: #7D58FF;
-  border-color: #7D58FF;
+  background-color: var(--themeBrandPrimary,#7D58FF);
+  border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
 .emotion-2 {
@@ -926,11 +926,11 @@ Array [
 }
 
 .emotion-43 {
-  background-color: #F7F8F9;
+  background-color: var(--themeBgHover,#F7F8F9);
   mix-blend-mode: multiply;
   will-change: left;
   box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
+  border-bottom: 1px solid var(--themeBorder,#DADDE2);
   white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1444,8 +1444,8 @@ Array [
 
 .emotion-10 {
   box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid var(--themeBorderHeavy,#1B2029);
+  border-bottom: 1px solid var(--themeBorderHeavy,#1B2029);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1532,8 +1532,8 @@ Array [
 }
 
 .emotion-1 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
@@ -1599,7 +1599,7 @@ Array [
 
 .emotion-41 {
   box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
+  border-bottom: 1px solid var(--themeBorder,#DADDE2);
   white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1623,9 +1623,9 @@ Array [
 }
 
 .emotion-33 {
-  color: #76797E;
+  color: var(--themeTextColorSecondary,#76797E);
   box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
+  border-bottom: 1px solid var(--themeBorder,#DADDE2);
   white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;

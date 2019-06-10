@@ -2,7 +2,7 @@
 
 exports[`Modal DialogModal renders DialogModal 1`] = `
 .emotion-0 {
-  background-color: rgba(0,0,0,0.2);
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
   position: fixed;
@@ -17,7 +17,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 
 .emotion-15 {
   border-radius: 6px;
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
@@ -216,8 +216,8 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #7D58FF;
-  fill: #7D58FF;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
   cursor: pointer;
   outline: none;
   font-weight: 500;
@@ -229,13 +229,13 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-8:hover {
-  color: #704FE5;
-  fill: #704FE5;
+  color: #704fe5;
+  fill: #704fe5;
 }
 
 .emotion-8:active {
-  color: #6446CC;
-  fill: #6446CC;
+  color: #6446cc;
+  fill: #6446cc;
 }
 
 .emotion-10 {
@@ -247,8 +247,8 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #FFF;
-  fill: #FFF;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -263,11 +263,11 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-10:hover {
-  background-color: #704FE5;
+  background-color: #704fe5;
 }
 
 .emotion-10:active {
-  background-color: #6446CC;
+  background-color: #6446cc;
 }
 
 <DialogModalWithFooter
@@ -359,7 +359,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                 </div>
               </div>
               .emotion-0 {
-  background-color: rgba(0,0,0,0.2);
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
   position: fixed;
@@ -374,7 +374,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 
 .emotion-2 {
   border-radius: 6px;
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
@@ -461,7 +461,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                 </div>
               </div>
               .emotion-0 {
-  background-color: rgba(0,0,0,0.2);
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
   position: fixed;
@@ -476,7 +476,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 
 .emotion-17 {
   border-radius: 6px;
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
@@ -676,7 +676,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-9:focus:after {
-  border: 2px solid #704FE5;
+  border: 2px solid #704fe5;
   border-radius: 6px;
   bottom: -3px;
   content: "";
@@ -702,8 +702,8 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #7D58FF;
-  fill: #7D58FF;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
   cursor: pointer;
   outline: none;
   font-weight: 500;
@@ -715,13 +715,13 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-8:hover {
-  color: #704FE5;
-  fill: #704FE5;
+  color: #704fe5;
+  fill: #704fe5;
 }
 
 .emotion-8:active {
-  color: #6446CC;
-  fill: #6446CC;
+  color: #6446cc;
+  fill: #6446cc;
 }
 
 .emotion-12 {
@@ -730,11 +730,11 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-12:focus {
-  background-color: #704FE5;
+  background-color: #704fe5;
 }
 
 .emotion-12:focus:after {
-  border: 2px solid #704FE5;
+  border: 2px solid #704fe5;
   border-radius: 6px;
   bottom: -3px;
   content: "";
@@ -753,8 +753,8 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #FFF;
-  fill: #FFF;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -769,11 +769,11 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-11:hover {
-  background-color: #704FE5;
+  background-color: #704fe5;
 }
 
 .emotion-11:active {
-  background-color: #6446CC;
+  background-color: #6446cc;
 }
 
 <div>
@@ -947,7 +947,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                             class="emotion-9"
                           >
                             <button
-                              class="emotion-8 css-14x8wbg"
+                              class="emotion-8 css-1h85cd2"
                               tabindex="0"
                             >
                               <span
@@ -961,7 +961,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                             class="emotion-9"
                           >
                             <button
-                              class="emotion-10 css-1dqlfdd"
+                              class="emotion-10 css-xcotv6"
                               tabindex="0"
                             >
                               <span
@@ -1092,7 +1092,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                   onClick={[MockFunction]}
                                 >
                                   <FocusStyleManager
-                                    focusEnabledClass="css-14x8wbg"
+                                    focusEnabledClass="css-1h85cd2"
                                   >
                                     <button
                                       className="emotion-8"
@@ -1117,7 +1117,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                   appearance="primary"
                                 >
                                   <FocusStyleManager
-                                    focusEnabledClass="css-1dqlfdd"
+                                    focusEnabledClass="css-xcotv6"
                                   >
                                     <button
                                       className="emotion-10"
@@ -1152,7 +1152,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 
 exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-0 {
-  background-color: rgba(0,0,0,0.2);
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
   position: fixed;
@@ -1208,8 +1208,8 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #7D58FF;
-  fill: #7D58FF;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
   cursor: pointer;
   outline: none;
   font-weight: 500;
@@ -1221,13 +1221,13 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-1:hover {
-  color: #704FE5;
-  fill: #704FE5;
+  color: #704fe5;
+  fill: #704fe5;
 }
 
 .emotion-1:active {
-  color: #6446CC;
-  fill: #6446CC;
+  color: #6446cc;
+  fill: #6446cc;
 }
 
 .emotion-6 {
@@ -1239,8 +1239,8 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #FFF;
-  fill: #FFF;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -1255,16 +1255,16 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-6:hover {
-  background-color: #704FE5;
+  background-color: #704fe5;
 }
 
 .emotion-6:active {
-  background-color: #6446CC;
+  background-color: #6446cc;
 }
 
 .emotion-9 {
   border-bottom: 1px solid #DADDE2;
-  background-color: #F7F8F9;
+  background-color: var(--themeBgSecondary,#F7F8F9);
   padding: 32px;
 }
 
@@ -1275,7 +1275,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 
 .emotion-13 {
   border-radius: 6px;
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
@@ -1414,10 +1414,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
             <div>
               <div>
                 <div
-                  class="css-1ryjkt3"
+                  class="css-9hdker"
                 />
                 <div
-                  class="css-1w93b6n"
+                  class="css-1w58k6h"
                   role="dialog"
                   tabindex="-1"
                 >
@@ -1436,10 +1436,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
             <div>
               <div>
                 <div
-                  class="css-1ryjkt3"
+                  class="css-9hdker"
                 />
                 <div
-                  class="css-1w93b6n"
+                  class="css-1w58k6h"
                   role="dialog"
                   tabindex="-1"
                 >
@@ -1458,10 +1458,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
             <div>
               <div>
                 <div
-                  class="css-1ryjkt3"
+                  class="css-9hdker"
                 />
                 <div
-                  class="css-1w93b6n"
+                  class="css-1w58k6h"
                   role="dialog"
                   tabindex="-1"
                 >
@@ -1523,7 +1523,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           class="css-48ylac"
                         >
                           <button
-                            class="emotion-1 css-14x8wbg"
+                            class="emotion-1 css-1h85cd2"
                             tabindex="0"
                           >
                             <span
@@ -1537,7 +1537,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           class="css-48ylac"
                         >
                           <button
-                            class="emotion-6 css-1dqlfdd"
+                            class="emotion-6 css-xcotv6"
                             tabindex="0"
                           >
                             <span
@@ -1554,7 +1554,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
               </div>
             </div>
             .emotion-0 {
-  background-color: rgba(0,0,0,0.2);
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
   position: fixed;
@@ -1569,7 +1569,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 
 .emotion-17 {
   border-radius: 6px;
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
@@ -1769,7 +1769,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-9:focus:after {
-  border: 2px solid #704FE5;
+  border: 2px solid #704fe5;
   border-radius: 6px;
   bottom: -3px;
   content: "";
@@ -1795,8 +1795,8 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #7D58FF;
-  fill: #7D58FF;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
   cursor: pointer;
   outline: none;
   font-weight: 500;
@@ -1808,13 +1808,13 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-8:hover {
-  color: #704FE5;
-  fill: #704FE5;
+  color: #704fe5;
+  fill: #704fe5;
 }
 
 .emotion-8:active {
-  color: #6446CC;
-  fill: #6446CC;
+  color: #6446cc;
+  fill: #6446cc;
 }
 
 .emotion-12 {
@@ -1823,11 +1823,11 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-12:focus {
-  background-color: #704FE5;
+  background-color: #704fe5;
 }
 
 .emotion-12:focus:after {
-  border: 2px solid #704FE5;
+  border: 2px solid #704fe5;
   border-radius: 6px;
   bottom: -3px;
   content: "";
@@ -1846,8 +1846,8 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #FFF;
-  fill: #FFF;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -1862,11 +1862,11 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-11:hover {
-  background-color: #704FE5;
+  background-color: #704fe5;
 }
 
 .emotion-11:active {
-  background-color: #6446CC;
+  background-color: #6446cc;
 }
 
 <div>
@@ -1968,7 +1968,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
               </div>
             </div>
             .emotion-0 {
-  background-color: rgba(0,0,0,0.2);
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
   position: fixed;
@@ -2025,7 +2025,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-2:focus:after {
-  border: 2px solid #704FE5;
+  border: 2px solid #704fe5;
   border-radius: 6px;
   bottom: -3px;
   content: "";
@@ -2051,8 +2051,8 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #7D58FF;
-  fill: #7D58FF;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
   cursor: pointer;
   outline: none;
   font-weight: 500;
@@ -2064,13 +2064,13 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-1:hover {
-  color: #704FE5;
-  fill: #704FE5;
+  color: #704fe5;
+  fill: #704fe5;
 }
 
 .emotion-1:active {
-  color: #6446CC;
-  fill: #6446CC;
+  color: #6446cc;
+  fill: #6446cc;
 }
 
 .emotion-8 {
@@ -2079,11 +2079,11 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-8:focus {
-  background-color: #704FE5;
+  background-color: #704fe5;
 }
 
 .emotion-8:focus:after {
-  border: 2px solid #704FE5;
+  border: 2px solid #704fe5;
   border-radius: 6px;
   bottom: -3px;
   content: "";
@@ -2102,8 +2102,8 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #FFF;
-  fill: #FFF;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -2118,16 +2118,16 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-7:hover {
-  background-color: #704FE5;
+  background-color: #704fe5;
 }
 
 .emotion-7:active {
-  background-color: #6446CC;
+  background-color: #6446cc;
 }
 
 .emotion-11 {
   border-bottom: 1px solid #DADDE2;
-  background-color: #F7F8F9;
+  background-color: var(--themeBgSecondary,#F7F8F9);
   padding: 32px;
 }
 
@@ -2138,7 +2138,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 
 .emotion-15 {
   border-radius: 6px;
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
@@ -2343,7 +2343,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                             class="emotion-2"
                           >
                             <button
-                              class="emotion-1 css-14x8wbg"
+                              class="emotion-1 css-1h85cd2"
                               tabindex="0"
                             >
                               <span
@@ -2369,7 +2369,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                             class="emotion-7"
                           >
                             <button
-                              class="emotion-6 css-1dqlfdd"
+                              class="emotion-6 css-xcotv6"
                               tabindex="0"
                             >
                               <span
@@ -2479,7 +2479,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                       onClick={[MockFunction]}
                                     >
                                       <FocusStyleManager
-                                        focusEnabledClass="css-14x8wbg"
+                                        focusEnabledClass="css-1h85cd2"
                                       >
                                         <button
                                           className="emotion-1"
@@ -2516,7 +2516,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                       appearance="primary"
                                     >
                                       <FocusStyleManager
-                                        focusEnabledClass="css-1dqlfdd"
+                                        focusEnabledClass="css-xcotv6"
                                       >
                                         <button
                                           className="emotion-6"
@@ -2562,7 +2562,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 
 exports[`Modal ModalBase renders ModalBase 1`] = `
 .emotion-0 {
-  background-color: rgba(0,0,0,0.2);
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
   position: fixed;
@@ -2577,7 +2577,7 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
 
 .emotion-2 {
   border-radius: 6px;
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
@@ -2669,7 +2669,7 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
     <Overlay
       overlayRoot={
         .emotion-0 {
-  background-color: rgba(0,0,0,0.2);
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
   position: fixed;
@@ -2684,7 +2684,7 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
 
 .emotion-2 {
   border-radius: 6px;
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;

@@ -7,6 +7,9 @@ import {
   textSize,
   flush
 } from "../../shared/styles/styleUtils";
+import { ThemeProvider } from "emotion-theming";
+import getCSSVarValue from "../../utilities/components/getCSSVarValue";
+import { themeBgPrimaryInverted } from "../../design-tokens/build/js/designTokens";
 
 export interface AppChromeProps {
   sidebar: React.ReactNode;
@@ -19,17 +22,27 @@ class AppChrome extends React.PureComponent<AppChromeProps, {}> {
     const { sidebar, headerBar, mainContent } = this.props;
 
     return (
-      <div
-        className={cx(appChrome, textSize("m"), flex({ direction: "column" }))}
+      <ThemeProvider
+        theme={{
+          sidebarBackgroundColor: getCSSVarValue(themeBgPrimaryInverted)
+        }}
       >
-        <div className="headerBar">{headerBar}</div>
-        <div className={cx(flex(), appWrapper)}>
-          <div className={flexItem("shrink")}>{sidebar}</div>
-          <main className={cx(flexItem("grow"), flush("left"))}>
-            {mainContent}
-          </main>
+        <div
+          className={cx(
+            appChrome,
+            textSize("m"),
+            flex({ direction: "column" })
+          )}
+        >
+          <div className="headerBar">{headerBar}</div>
+          <div className={cx(flex(), appWrapper)}>
+            <div className={flexItem("shrink")}>{sidebar}</div>
+            <main className={cx(flexItem("grow"), flush("left"))}>
+              {mainContent}
+            </main>
+          </div>
         </div>
-      </div>
+      </ThemeProvider>
     );
   }
 }

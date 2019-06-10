@@ -108,13 +108,13 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
         <button
           className={cx(
             buttonReset,
-            button[appearance],
+            button(appearance),
             buttonBase,
             textWeight("medium"),
             className,
             {
               [fullWidthButton]: isFullWidth,
-              [buttonInverse[appearance]]: isInverse,
+              [buttonInverse(appearance)]: isInverse,
               [getMutedButtonStyles(appearance)]: disabled || isProcessing,
               [getInverseMutedButtonStyles(appearance)]:
                 (disabled || isProcessing) && isInverse

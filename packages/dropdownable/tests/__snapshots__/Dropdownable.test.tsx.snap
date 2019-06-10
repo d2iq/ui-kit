@@ -25,8 +25,8 @@ exports[`Dropdownable is visible after opening 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #FFF;
-  fill: #FFF;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -41,11 +41,11 @@ exports[`Dropdownable is visible after opening 1`] = `
 }
 
 .emotion-0:hover {
-  background-color: #704FE5;
+  background-color: #704fe5;
 }
 
 .emotion-0:active {
-  background-color: #6446CC;
+  background-color: #6446cc;
 }
 
 <Dropdownable
@@ -74,7 +74,7 @@ exports[`Dropdownable is visible after opening 1`] = `
             appearance="primary"
           >
             <FocusStyleManager
-              focusEnabledClass="css-1dqlfdd"
+              focusEnabledClass="css-xcotv6"
             >
               <button
                 className="emotion-0"
@@ -179,8 +179,8 @@ exports[`Dropdownable is visible after opening 2`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #FFF;
-  fill: #FFF;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   background-color: #7D58FF;
   border-radius: 4px;
   padding: 10px 18px;
@@ -195,11 +195,11 @@ exports[`Dropdownable is visible after opening 2`] = `
 }
 
 .emotion-0:hover {
-  background-color: #704FE5;
+  background-color: #704fe5;
 }
 
 .emotion-0:active {
-  background-color: #6446CC;
+  background-color: #6446cc;
 }
 
 .emotion-1 {
@@ -239,7 +239,7 @@ exports[`Dropdownable is visible after opening 2`] = `
             appearance="primary"
           >
             <FocusStyleManager
-              focusEnabledClass="css-1dqlfdd"
+              focusEnabledClass="css-xcotv6"
             >
               <button
                 className="emotion-0"

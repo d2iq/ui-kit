@@ -2,12 +2,12 @@
 
 exports[`DropdownMenu renders 1`] = `
 .emotion-0 {
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow-y: scroll;
   border-width: 1px;
-  border-color: #DADDE2;
+  border-color: var(--themeBorder,#DADDE2);
   border-style: solid;
 }
 
