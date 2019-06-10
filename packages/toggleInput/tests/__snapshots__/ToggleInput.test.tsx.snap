@@ -118,8 +118,8 @@ exports[`ToggleInput renders all appearances 2`] = `
   min-width: 0;
   width: auto;
   padding-left: 12px;
-  color: #EB293A;
-  fill: #EB293A;
+  color: var(--themeError,#EB293A);
+  fill: var(--themeError,#EB293A);
 }
 
 <ToggleInput
@@ -193,8 +193,8 @@ exports[`ToggleInput renders all appearances 3`] = `
   min-width: 0;
   width: auto;
   padding-left: 12px;
-  color: #14C684;
-  fill: #14C684;
+  color: var(--themeSuccess,#14C684);
+  fill: var(--themeSuccess,#14C684);
 }
 
 <ToggleInput

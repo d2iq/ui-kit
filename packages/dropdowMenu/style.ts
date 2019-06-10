@@ -1,14 +1,12 @@
 import { css } from "emotion";
 import {
   borderRadiusDefault,
-  white,
-  greyLightLighten5,
-  purple,
-  purpleDarken1
+  themeBgPrimary,
+  themeBgHover
 } from "../design-tokens/build/js/designTokens";
 
 export const menuList = css`
-  background-color: ${white};
+  background-color: ${themeBgPrimary};
   border-radius: ${borderRadiusDefault};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow-y: scroll;
@@ -19,14 +17,5 @@ export const menuListItem = css`
 `;
 
 export const menuListItemActive = css`
-  background-color: ${greyLightLighten5};
-`;
-
-export const menuListItemSelected = css`
-  background-color: ${purple};
-  color: ${white};
-`;
-
-export const menuListItemSelectedActive = css`
-  background-color: ${purpleDarken1};
+  background-color: ${themeBgHover};
 `;

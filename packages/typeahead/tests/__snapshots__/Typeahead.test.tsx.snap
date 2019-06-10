@@ -21,13 +21,14 @@ exports[`Typeahead renders 1`] = `
 }
 
 .emotion-0 {
+  display: block;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
 }
 
 .emotion-1 {
-  margin-bottom: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -80,42 +81,84 @@ exports[`Typeahead renders 1`] = `
   width: auto;
   border: 1px solid;
   border-radius: 4px;
+  color: inherit;
   height: 36px;
   font-size: inherit;
   padding-left: 16px;
   padding-right: 16px;
-  background-color: #FFF;
-  border-color: #DADDE2;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-color: var(--themeBorder,#DADDE2);
 }
 
 .emotion-2:focus {
   outline: 0;
 }
 
+.emotion-2::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
 .emotion-2 input {
   font-size: inherit;
+  color: inherit;
+}
+
+.emotion-2 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2 input::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
 }
 
 .emotion-2 svg {
-  fill: #1B2029;
+  fill: var(--themeTextColorPrimary,#1B2029);
 }
 
 .emotion-2:focus {
-  background-color: #F8F6FF;
-  border-color: #7D58FF;
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
 .emotion-2:focus svg {
-  fill: #7D58FF;
+  fill: var(--themeBrandPrimary,#7D58FF);
 }
 
 .emotion-7 {
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow-y: scroll;
   border-width: 1px;
-  border-color: #DADDE2;
+  border-color: var(--themeBorder,#DADDE2);
   border-style: solid;
 }
 
@@ -359,12 +402,12 @@ exports[`Typeahead renders 1`] = `
 }
 
 .emotion-3 {
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow-y: scroll;
   border-width: 1px;
-  border-color: #DADDE2;
+  border-color: var(--themeBorder,#DADDE2);
   border-style: solid;
 }
 
@@ -652,13 +695,14 @@ exports[`Typeahead renders a menu with a max height 1`] = `
 }
 
 .emotion-0 {
+  display: block;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
 }
 
 .emotion-1 {
-  margin-bottom: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -711,42 +755,84 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   width: auto;
   border: 1px solid;
   border-radius: 4px;
+  color: inherit;
   height: 36px;
   font-size: inherit;
   padding-left: 16px;
   padding-right: 16px;
-  background-color: #FFF;
-  border-color: #DADDE2;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-color: var(--themeBorder,#DADDE2);
 }
 
 .emotion-2:focus {
   outline: 0;
 }
 
+.emotion-2::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
 .emotion-2 input {
   font-size: inherit;
+  color: inherit;
+}
+
+.emotion-2 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2 input::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
 }
 
 .emotion-2 svg {
-  fill: #1B2029;
+  fill: var(--themeTextColorPrimary,#1B2029);
 }
 
 .emotion-2:focus {
-  background-color: #F8F6FF;
-  border-color: #7D58FF;
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
 .emotion-2:focus svg {
-  fill: #7D58FF;
+  fill: var(--themeBrandPrimary,#7D58FF);
 }
 
 .emotion-7 {
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow-y: scroll;
   border-width: 1px;
-  border-color: #DADDE2;
+  border-color: var(--themeBorder,#DADDE2);
   border-style: solid;
 }
 
@@ -1039,12 +1125,12 @@ exports[`Typeahead renders a menu with a max height 1`] = `
 }
 
 .emotion-3 {
-  background-color: #FFF;
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow-y: scroll;
   border-width: 1px;
-  border-color: #DADDE2;
+  border-color: var(--themeBorder,#DADDE2);
   border-style: solid;
 }
 

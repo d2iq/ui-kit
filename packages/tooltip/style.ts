@@ -1,9 +1,9 @@
 import { css } from "emotion";
 import {
   fontSizeS,
-  greyDarkLighten2,
   spaceS,
-  spaceXxs
+  spaceXxs,
+  themeBgPrimaryInverted
 } from "../design-tokens/build/js/designTokens";
 import { Direction } from "../dropdownable/components/Dropdownable";
 import { pseudoElTriangle } from "../shared/styles/styleUtils";
@@ -12,7 +12,7 @@ const triangleSize = 5;
 const tooltipBoundarySpacing = triangleSize + parseInt(spaceXxs, 10);
 
 export const tooltip = css`
-  background-color: ${greyDarkLighten2};
+  background-color: ${themeBgPrimaryInverted};
   border-radius: 2px;
   box-sizing: border-box;
   font-size: ${fontSizeS};
@@ -31,7 +31,7 @@ const getArrowAlignmentStyles = (
       ${vert === "top" ? tooltipBoundarySpacing * -1 : tooltipBoundarySpacing}px
     );
     &:after {
-      ${pseudoElTriangle(vert, triangleSize, greyDarkLighten2)};
+      ${pseudoElTriangle(vert, triangleSize, themeBgPrimaryInverted)};
       ${vert === "top" ? "bottom" : "top"}: -${triangleSize}px;
     }
   `;

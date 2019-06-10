@@ -2,7 +2,7 @@ import { css } from "emotion";
 import { atMediaUp } from "../shared/styles/breakpoints";
 import {
   borderRadiusDefault,
-  greyDark
+  themeBgPrimaryInverted
 } from "../design-tokens/build/js/designTokens";
 
 export const toaster = css`
@@ -31,7 +31,7 @@ export const transitionStyles = {
 };
 
 export const toast = css`
-  background-color: ${greyDark};
+  background-color: ${themeBgPrimaryInverted};
   box-sizing: border-box;
   border-radius: ${borderRadiusDefault};
   grid-template-columns: 1fr auto;

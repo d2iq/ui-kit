@@ -37,8 +37,8 @@ exports[`ToggleInputList renders default 1`] = `
 }
 
 .emotion-2 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
@@ -340,8 +340,8 @@ exports[`ToggleInputList renders with errors 1`] = `
 }
 
 .emotion-2 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
@@ -400,8 +400,8 @@ exports[`ToggleInputList renders with errors 1`] = `
   padding: 0;
   margin: 0;
   font-size: 12px;
-  color: #EB293A;
-  fill: #EB293A;
+  color: var(--themeError,#EB293A);
+  fill: var(--themeError,#EB293A);
 }
 
 .emotion-20 {
@@ -682,8 +682,8 @@ exports[`ToggleInputList renders with hidden label 1`] = `
 }
 
 .emotion-2 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
@@ -999,8 +999,8 @@ exports[`ToggleInputList renders with selected items 1`] = `
 }
 
 .emotion-18 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
@@ -1056,16 +1056,16 @@ exports[`ToggleInputList renders with selected items 1`] = `
 }
 
 .emotion-4 {
-  border-color: #DADDE2;
-  background-color: #FFF;
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
   height: 15px;
   width: 15px;
   border-radius: 4px;
   position: relative;
-  background-color: #7D58FF;
-  border-color: #7D58FF;
+  background-color: var(--themeBrandPrimary,#7D58FF);
+  border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
 .emotion-3 {

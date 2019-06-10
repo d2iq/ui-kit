@@ -69,33 +69,41 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   margin-left: 0;
 }
 
-<div
-  className="emotion-3"
+<ThemeProvider
+  theme={
+    Object {
+      "sidebarBackgroundColor": "#1B2029",
+    }
+  }
 >
   <div
-    className="headerBar"
-  >
-    <div>
-      HeaderBar content goes here
-    </div>
-  </div>
-  <div
-    className="emotion-2"
+    className="emotion-3"
   >
     <div
-      className="emotion-0"
+      className="headerBar"
     >
       <div>
-        Sidebar content
+        HeaderBar content goes here
       </div>
     </div>
-    <main
-      className="emotion-1"
+    <div
+      className="emotion-2"
     >
-      <div>
-        Main app content goes here
+      <div
+        className="emotion-0"
+      >
+        <div>
+          Sidebar content
+        </div>
       </div>
-    </main>
+      <main
+        className="emotion-1"
+      >
+        <div>
+          Main app content goes here
+        </div>
+      </main>
+    </div>
   </div>
-</div>
+</ThemeProvider>
 `;

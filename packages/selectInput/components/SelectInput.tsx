@@ -3,7 +3,7 @@ import { cx } from "emotion";
 import { select, selectIcon, selectContainer } from "../style";
 import {
   inputContainer,
-  inputAppearances,
+  getInputAppearanceStyle,
   getLabelStyle
 } from "../../shared/styles/formStyles";
 import {
@@ -15,7 +15,10 @@ import {
 } from "../../shared/styles/styleUtils";
 import Icon from "../../icon/components/Icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { iconSizeXs, error } from "../../design-tokens/build/js/designTokens";
+import {
+  iconSizeXs,
+  themeError
+} from "../../design-tokens/build/js/designTokens";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
@@ -109,14 +112,14 @@ class SelectInput extends React.PureComponent<
             >
               {inputLabel}
               {required ? (
-                <span className={cx(tintText(error))}> *</span>
+                <span className={cx(tintText(themeError))}> *</span>
               ) : null}
             </label>
             <span
               className={cx(
                 selectContainer,
                 inputContainer,
-                inputAppearances[this.getInputAppearance()],
+                getInputAppearanceStyle(this.getInputAppearance()),
                 display("flex")
               )}
             >

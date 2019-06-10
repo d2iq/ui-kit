@@ -1,13 +1,13 @@
 import * as React from "react";
 import { css, cx } from "emotion";
 import {
-  darkMode,
+  inverseColorMode,
   tintContentSecondary,
   textSize,
   flush,
   padding
 } from "../../../shared/styles/styleUtils";
-import { greyDarkDarken3 } from "../../../design-tokens/build/js/designTokens";
+import { themeBgPrimaryInverted } from "../../../design-tokens/build/js/designTokens";
 
 const sampleWrapper = css`
   display: grid;
@@ -16,8 +16,8 @@ const sampleWrapper = css`
   text-align: center;
 `;
 
-const darkModeWrapper = css`
-  background-color: ${greyDarkDarken3};
+const inverseColorModeWrapper = css`
+  background-color: ${themeBgPrimaryInverted};
 `;
 
 const ButtonAppearanceSample = ({ buttonComponent }) => {
@@ -48,8 +48,8 @@ const ButtonAppearanceSample = ({ buttonComponent }) => {
         className={cx(
           sampleWrapper,
           padding("vert", "s"),
-          darkModeWrapper,
-          darkMode
+          inverseColorModeWrapper,
+          inverseColorMode
         )}
       >
         <div className="sample">

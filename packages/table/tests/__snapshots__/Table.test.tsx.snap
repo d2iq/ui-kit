@@ -36,7 +36,7 @@ Array [
 
 .emotion-3:hover .staticClass_dragHandleWrapper,
 .emotion-3:active .staticClass_dragHandleWrapper {
-  background-color: #F7F8F9;
+  background-color: var(--themeBgHover,#F7F8F9);
 }
 
 .emotion-29 {
@@ -61,8 +61,8 @@ Array [
 
 .emotion-6 {
   box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid var(--themeBorderHeavy,#1B2029);
+  border-bottom: 1px solid var(--themeBorderHeavy,#1B2029);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,7 +136,7 @@ Array [
 
 .emotion-30 {
   box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
+  border-bottom: 1px solid var(--themeBorder,#DADDE2);
   white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;
@@ -756,8 +756,8 @@ Array [
 
 .emotion-3 {
   box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid var(--themeBorderHeavy,#1B2029);
+  border-bottom: 1px solid var(--themeBorderHeavy,#1B2029);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -831,7 +831,7 @@ Array [
 
 .emotion-18 {
   box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
+  border-bottom: 1px solid var(--themeBorder,#DADDE2);
   white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1137,8 +1137,8 @@ Array [
 
 .emotion-3 {
   box-sizing: border-box;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid var(--themeBorderHeavy,#1B2029);
+  border-bottom: 1px solid var(--themeBorderHeavy,#1B2029);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1212,7 +1212,7 @@ Array [
 
 .emotion-22 {
   box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
+  border-bottom: 1px solid var(--themeBorder,#DADDE2);
   white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;

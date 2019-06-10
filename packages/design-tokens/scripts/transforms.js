@@ -21,6 +21,9 @@ const getPropNamePatterns = (prop, opts) => {
       isCamelCase
     )}${delimiter}${transformStringCase(item, isCamelCase)}${
       subitem ? delimiter : ""
+    }${transformStringCase(subitem, isCamelCase)}`,
+    c_i_si: `${category}${delimiter}${transformStringCase(item, isCamelCase)}${
+      subitem ? delimiter : ""
     }${transformStringCase(subitem, isCamelCase)}`
   };
 };
@@ -35,6 +38,8 @@ const getFormattedName = (prop, namePatterns) => {
       return namePatterns.t_i;
     case "font":
       return namePatterns.c_t_i;
+    case "theme":
+      return namePatterns.c_i_si;
     default:
       return namePatterns.c_t_i;
   }
@@ -46,6 +51,20 @@ const fontNameJS = {
   matcher: prop => prop.attributes.category === "font",
   transformer: (prop, options) => {
     return prop.original.value.replace(/'/g, '"');
+  }
+};
+
+const cssVarJS = {
+  name: "value/cssVarJS",
+  type: "value",
+  matcher: prop => prop.attributes.category === "theme",
+  transformer: prop => {
+    const formattedName = getFormattedName(
+      prop,
+      getPropNamePatterns(prop, { isCamelCase: true, delimiter: "" })
+    );
+
+    return `var(--${formattedName}, ${prop.value})`;
   }
 };
 
@@ -70,4 +89,4 @@ const lessVar = {
     )
 };
 
-module.exports = [jsConstant, lessVar, fontNameJS];
+module.exports = [jsConstant, lessVar, fontNameJS, cssVarJS];

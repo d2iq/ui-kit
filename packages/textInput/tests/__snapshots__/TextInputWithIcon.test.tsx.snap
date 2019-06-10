@@ -2,13 +2,14 @@
 
 exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
 .emotion-0 {
+  display: block;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
 }
 
 .emotion-1 {
-  margin-bottom: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -41,7 +42,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
 
 exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
 .emotion-1 {
-  margin-bottom: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -54,11 +54,13 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
 }
 
 .emotion-0 {
+  display: block;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  color: #EB293A;
-  fill: #EB293A;
+  color: var(--themeError,#EB293A);
+  fill: var(--themeError,#EB293A);
 }
 
 <div>
@@ -82,13 +84,14 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
 
 exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
 .emotion-0 {
+  display: block;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
 }
 
 .emotion-1 {
-  margin-bottom: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -121,13 +124,14 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
 
 exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
 .emotion-0 {
+  display: block;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
 }
 
 .emotion-1 {
-  margin-bottom: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -160,7 +164,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
 
 exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
 .emotion-1 {
-  margin-bottom: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -173,11 +176,13 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
 }
 
 .emotion-0 {
+  display: block;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  color: #EB293A;
-  fill: #EB293A;
+  color: var(--themeError,#EB293A);
+  fill: var(--themeError,#EB293A);
 }
 
 <div>
@@ -201,13 +206,14 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
 
 exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
 .emotion-0 {
+  display: block;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
 }
 
 .emotion-1 {
-  margin-bottom: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -240,13 +246,14 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
 .emotion-0 {
+  display: block;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
 }
 
 .emotion-1 {
-  margin-bottom: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -279,7 +286,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
 .emotion-1 {
-  margin-bottom: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -292,11 +298,13 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
 }
 
 .emotion-0 {
+  display: block;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
-  color: #EB293A;
-  fill: #EB293A;
+  color: var(--themeError,#EB293A);
+  fill: var(--themeError,#EB293A);
 }
 
 <div>
@@ -320,13 +328,14 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
 .emotion-0 {
+  display: block;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 500;
 }
 
 .emotion-1 {
-  margin-bottom: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;

@@ -5,49 +5,54 @@ import {
   blueLighten3,
   blueLighten4,
   borderRadiusDefault,
-  greenDarken4,
-  greenLighten3,
-  greenLighten4,
   greyDark,
   greyLightDarken3,
   greyLight,
-  redDarken4,
-  redLighten3,
-  redLighten4,
   spaceM,
-  yellowDarken4,
-  yellowLighten3,
-  yellowLighten4
+  themeError,
+  themeSuccess,
+  themeWarning
 } from "../design-tokens/build/js/designTokens";
+import { lighten, darken } from "../shared/styles/color";
+import getCSSVarValue from "../utilities/components/getCSSVarValue";
 
 const layoutBreakpoint = "small";
 
-const infoBoxAppearances = {
-  default: css`
-    background-color: ${greyLight};
-    border-bottom-color: ${greyLightDarken3};
-    color: ${greyDark};
-  `,
-  danger: css`
-    background-color: ${redLighten4};
-    border-bottom-color: ${redLighten3};
-    color: ${redDarken4};
-  `,
-  info: css`
-    background-color: ${blueLighten4};
-    border-bottom-color: ${blueLighten3};
-    color: ${blueDarken4};
-  `,
-  success: css`
-    background-color: ${greenLighten4};
-    border-bottom-color: ${greenLighten3};
-    color: ${greenDarken4};
-  `,
-  warning: css`
-    background-color: ${yellowLighten4};
-    border-bottom-color: ${yellowLighten3};
-    color: ${yellowDarken4};
-  `
+const infoBoxAppearances = appearance => {
+  switch (appearance) {
+    case "default":
+      return css`
+        background-color: ${greyLight};
+        border-bottom-color: ${greyLightDarken3};
+        color: ${greyDark};
+      `;
+    case "danger":
+      return css`
+        background-color: ${lighten(getCSSVarValue(themeError), 4)};
+        border-bottom-color: ${lighten(getCSSVarValue(themeError), 3)};
+        color: ${darken(getCSSVarValue(themeError), 4)};
+      `;
+    case "info":
+      return css`
+        background-color: ${blueLighten4};
+        border-bottom-color: ${blueLighten3};
+        color: ${blueDarken4};
+      `;
+    case "success":
+      return css`
+        background-color: ${lighten(getCSSVarValue(themeSuccess), 4)};
+        border-bottom-color: ${lighten(getCSSVarValue(themeSuccess), 3)};
+        color: ${darken(getCSSVarValue(themeSuccess), 4)};
+      `;
+    case "warning":
+      return css`
+        background-color: ${lighten(getCSSVarValue(themeWarning), 4)};
+        border-bottom-color: ${lighten(getCSSVarValue(themeWarning), 3)};
+        color: ${darken(getCSSVarValue(themeWarning), 4)};
+      `;
+    default:
+      return "";
+  }
 };
 
 export const infoBoxActions = css`
@@ -64,7 +69,7 @@ export const infoBoxActions = css`
 
 export const infoBox = (appearance, hasActions) =>
   css`
-    ${infoBoxAppearances[appearance]};
+    ${infoBoxAppearances(appearance)};
     grid-gap: ${spaceM};
     grid-template-columns: 1fr auto;
     align-items: center;

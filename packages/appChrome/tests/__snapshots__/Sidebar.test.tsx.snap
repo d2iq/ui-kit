@@ -1,26 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar SidebarItem renders 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  cursor: pointer;
-  text-transform: capitalize;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  background-color: #32363E;
-}
-
 <Clickable
   action={[MockFunction]}
   disableFocusOutline={true}
   role="link"
   tabIndex={0}
 >
-  <Styled(li)
-    className="emotion-0"
-  >
+  <Styled(li)>
     Item label
   </Styled(li)>
 </Clickable>
@@ -156,7 +143,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         </SidebarItemLabel>
       </div>
     }
-    labelClassName="css-wjyl8f"
+    labelClassName="css-1beii4s"
   >
     <ul
       className="emotion-0"
@@ -165,23 +152,23 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         className=""
         key="0"
       >
-        <SidebarSubMenuItem
+        <WithTheme(SidebarSubMenuItem)
           key="0"
           onClick={[MockFunction]}
         >
           Item label
-        </SidebarSubMenuItem>
+        </WithTheme(SidebarSubMenuItem)>
       </li>
       <li
         className=""
         key="1"
       >
-        <SidebarSubMenuItem
+        <WithTheme(SidebarSubMenuItem)
           key="1"
           onClick={[MockFunction]}
         >
           Item label
-        </SidebarSubMenuItem>
+        </WithTheme(SidebarSubMenuItem)>
       </li>
     </ul>
   </Expandable>
@@ -272,13 +259,17 @@ exports[`Sidebar renders 1`] = `
   }
 }
 
-<Styled(div)
-  className="emotion-1"
+<ThemeProvider
+  theme={[Function]}
 >
-  <Styled(nav)
-    className="emotion-0"
+  <Styled(div)
+    className="emotion-1"
   >
-    Sidebar content
-  </Styled(nav)>
-</Styled(div)>
+    <Styled(nav)
+      className="emotion-0"
+    >
+      Sidebar content
+    </Styled(nav)>
+  </Styled(div)>
+</ThemeProvider>
 `;

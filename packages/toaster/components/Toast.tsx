@@ -8,7 +8,7 @@ import {
   toastDismiss
 } from "../style";
 import {
-  darkMode,
+  inverseColorMode,
   display,
   flex,
   flexItem,
@@ -115,7 +115,7 @@ class Toast extends React.PureComponent<ToastProps, {}> {
       <div
         className={cx(
           toast,
-          darkMode,
+          inverseColorMode,
           margin("bottom", "xxs"),
           padding("top", "xs"),
           padding("right", "xs"),

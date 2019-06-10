@@ -6,13 +6,11 @@ exports[`Tooltip renders 1`] = `
 }
 
 .emotion-2 {
-  background-color: #32363E;
+  background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
   font-size: 12px;
   position: relative;
-  color: #DADDE2;
-  fill: #DADDE2;
   padding-left: 12px;
   padding-right: 12px;
   padding-bottom: 8px;
@@ -75,13 +73,11 @@ exports[`Tooltip renders 1`] = `
             className="emotion-3"
             overlayRoot={
               .emotion-2 {
-  background-color: #32363E;
+  background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
   font-size: 12px;
   position: relative;
-  color: #DADDE2;
-  fill: #DADDE2;
   padding-left: 12px;
   padding-right: 12px;
   padding-bottom: 8px;
@@ -112,7 +108,7 @@ exports[`Tooltip renders 1`] = `
                       <div
                         aria-hidden="true"
                         class="
-    emotion-0    emotion-1   emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                         id="renders"
                         role="tooltip"
                       >
@@ -134,7 +130,7 @@ exports[`Tooltip renders 1`] = `
                       <div
                         aria-hidden="true"
                         class="
-    emotion-0    emotion-1   emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                         id="renders"
                         role="tooltip"
                       >
@@ -165,7 +161,7 @@ exports[`Tooltip renders 1`] = `
                         <div
                           aria-hidden={true}
                           className="
-    emotion-0    emotion-1   emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                           id="renders"
                           role="tooltip"
                           style={
@@ -197,13 +193,11 @@ exports[`Tooltip renders open tooltip 1`] = `
 }
 
 .emotion-2 {
-  background-color: #32363E;
+  background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
   font-size: 12px;
   position: relative;
-  color: #DADDE2;
-  fill: #DADDE2;
   padding-left: 12px;
   padding-right: 12px;
   padding-bottom: 8px;
@@ -275,7 +269,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                       <div
                         aria-hidden="true"
                         class="
-    emotion-0    emotion-1   emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                         id="renders"
                         role="tooltip"
                       >
@@ -285,13 +279,11 @@ exports[`Tooltip renders open tooltip 1`] = `
                   </div>
                 </div>
                 .emotion-2 {
-  background-color: #32363E;
+  background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
   font-size: 12px;
   position: relative;
-  color: #DADDE2;
-  fill: #DADDE2;
   padding-left: 12px;
   padding-right: 12px;
   padding-bottom: 8px;
@@ -321,7 +313,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                       <div
                         aria-hidden="false"
                         class="
-    emotion-0    emotion-1   emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                         id="opened"
                         role="tooltip"
                       >
@@ -343,7 +335,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                       <div
                         aria-hidden="false"
                         class="
-    emotion-0    emotion-1   emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                         id="opened"
                         role="tooltip"
                       >
@@ -374,7 +366,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                         <div
                           aria-hidden={false}
                           className="
-    emotion-0    emotion-1   emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                           id="opened"
                           role="tooltip"
                           style={
@@ -406,13 +398,11 @@ exports[`Tooltip renders with preferred directions 1`] = `
 }
 
 .emotion-2 {
-  background-color: #32363E;
+  background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
   font-size: 12px;
   position: relative;
-  color: #DADDE2;
-  fill: #DADDE2;
   padding-left: 12px;
   padding-right: 12px;
   padding-bottom: 8px;
@@ -488,9 +478,9 @@ exports[`Tooltip renders with preferred directions 1`] = `
                       <div
                         aria-hidden="true"
                         class="
-    css-eyjuh9
+    css-10cr3um
     css-miht3n
-   emotion-2"
+   inverseColorMode emotion-2"
                         id="renders"
                         role="tooltip"
                       >
@@ -507,9 +497,9 @@ exports[`Tooltip renders with preferred directions 1`] = `
                       <div
                         aria-hidden="false"
                         class="
-    css-eyjuh9
+    css-10cr3um
     css-miht3n
-   emotion-2"
+   inverseColorMode emotion-2"
                         id="opened"
                         role="tooltip"
                       >
@@ -519,13 +509,11 @@ exports[`Tooltip renders with preferred directions 1`] = `
                   </div>
                 </div>
                 .emotion-2 {
-  background-color: #32363E;
+  background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
   font-size: 12px;
   position: relative;
-  color: #DADDE2;
-  fill: #DADDE2;
   padding-left: 12px;
   padding-right: 12px;
   padding-bottom: 8px;
@@ -555,7 +543,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                       <div
                         aria-hidden="false"
                         class="
-    emotion-0    emotion-1   emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                         id="customDir"
                         role="tooltip"
                       >
@@ -577,7 +565,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                       <div
                         aria-hidden="false"
                         class="
-    emotion-0    emotion-1   emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                         id="customDir"
                         role="tooltip"
                       >
@@ -608,7 +596,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                         <div
                           aria-hidden={false}
                           className="
-    emotion-0    emotion-1   emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                           id="customDir"
                           role="tooltip"
                           style={

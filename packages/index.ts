@@ -56,6 +56,7 @@ export { ToggleInput } from "./toggleInput";
 export { ToggleInputList } from "./toggleInputList";
 export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
+export { UIKitThemeProvider } from "./themes";
 export { Legacy };
 
 injectGlobalCss();
