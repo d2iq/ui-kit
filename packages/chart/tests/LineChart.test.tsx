@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LineChart } from "../";
+import { LineChart } from "..";
 import { render } from "enzyme";
 import toJSON from "enzyme-to-json";
 

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DonutChart renders default 1`] = `
+<svg
+  viewBox="0 0 33.83098861837907 33.83098861837907"
+>
+  <circle
+    cx={16.915494309189533}
+    cy={16.915494309189533}
+    fill="transparent"
+    r={15.915494309189533}
+    stroke-width={2}
+    style={
+      Object {
+        "stroke": "var(--themeBorder, #DADDE2)",
+      }
+    }
+  />
+  <circle
+    cx={16.915494309189533}
+    cy={16.915494309189533}
+    fill="none"
+    key="0"
+    r={15.915494309189533}
+    stroke-dasharray="10 90"
+    stroke-dashoffset={125}
+    stroke-width={2}
+    style={
+      Object {
+        "stroke": "#F00",
+      }
+    }
+  />
+  <text
+    style={
+      Object {
+        "textAnchor": "middle",
+      }
+    }
+    x={16.915494309189533}
+    y={16.915494309189533}
+  >
+    <tspan
+      dominantBaseline="central"
+      fontSize={6}
+    />
+  </text>
+</svg>
+`;
+
+exports[`DonutChart renders with text and label 1`] = `
+.emotion-0 {
+  color: var(--themeTextColorSecondary,#76797E);
+  fill: var(--themeTextColorSecondary,#76797E);
+}
+
+.inverseColorMode .emotion-0,
+.emotion-0.inverseColorMode {
+  color: var(--themeTextColorSecondaryInverted,#AEB0B4);
+  fill: var(--themeTextColorSecondaryInverted,#AEB0B4);
+}
+
+<svg
+  viewBox="0 0 33.83098861837907 33.83098861837907"
+>
+  <circle
+    cx={16.915494309189533}
+    cy={16.915494309189533}
+    fill="transparent"
+    r={15.915494309189533}
+    stroke-width={2}
+    style={
+      Object {
+        "stroke": "var(--themeBorder, #DADDE2)",
+      }
+    }
+  />
+  <circle
+    cx={16.915494309189533}
+    cy={16.915494309189533}
+    fill="none"
+    key="0"
+    r={15.915494309189533}
+    stroke-dasharray="10 90"
+    stroke-dashoffset={125}
+    stroke-width={2}
+    style={
+      Object {
+        "stroke": "#F00",
+      }
+    }
+  />
+  <text
+    style={
+      Object {
+        "textAnchor": "middle",
+      }
+    }
+    x={16.915494309189533}
+    y={16.915494309189533}
+  >
+    <tspan
+      dominantBaseline="unset"
+      fontSize={6}
+    >
+      10%
+    </tspan>
+    <tspan
+      className="emotion-0"
+      fontSize={3}
+      x={16.915494309189533}
+      y={21.115494309189533}
+    >
+      1 of 10
+    </tspan>
+  </text>
+</svg>
+`;
