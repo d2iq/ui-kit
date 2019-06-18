@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeader default 1`] = `
+<div
+  class="css-jiaax5"
+>
+  <div
+    class="css-ewxxaj"
+  >
+    <span>
+      One
+    </span>
+    <span>
+      Two
+    </span>
+  </div>
+  <ul
+    class="css-10pfh7o"
+  >
+    <li>
+      <div
+        class="css-1h5x3dy"
+        role="button"
+        tabindex="-1"
+      >
+        Action 1
+      </div>
+    </li>
+  </ul>
+</div>
+`;

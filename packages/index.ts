@@ -51,6 +51,7 @@ export {
   NumberCell
 } from "./table";
 export { TextInput, TextInputWithIcon } from "./textInput";
+export { Textarea } from "./textarea";
 export { Toaster, Toast } from "./toaster";
 export { ToggleContent } from "./toggleContent";
 export { ToggleInput } from "./toggleInput";
