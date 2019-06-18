@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea should render all appearances 1`] = `
+<FormFieldWrapper
+  id="standard"
+>
+  <Component />
+</FormFieldWrapper>
+`;
+
+exports[`Textarea should render all appearances 2`] = `
+<FormFieldWrapper
+  id="error"
+>
+  <Component />
+</FormFieldWrapper>
+`;
+
+exports[`Textarea should render all appearances 3`] = `
+<FormFieldWrapper
+  id="success"
+>
+  <Component />
+</FormFieldWrapper>
+`;
+
+exports[`Textarea should render error messages if appearance set to InputAppearance.Error 1`] = `
+<FormFieldWrapper
+  errors={
+    Array [
+      "This is an error message",
+      "this is a second error message",
+    ]
+  }
+  id="textarea"
+>
+  <Component />
+</FormFieldWrapper>
+`;
+
+exports[`Textarea should render no error messages if appearance set to InputAppearance.Success 1`] = `
+<FormFieldWrapper
+  errors={
+    Array [
+      "I'm not displayed",
+    ]
+  }
+  id="textarea"
+>
+  <Component />
+</FormFieldWrapper>
+`;
+
+exports[`Textarea should render node as inputLabel 1`] = `
+<FormFieldWrapper
+  id="textarea"
+>
+  <Component />
+</FormFieldWrapper>
+`;
+
+exports[`Textarea should render string inputLabel 1`] = `
+<FormFieldWrapper
+  id="textarea"
+>
+  <Component />
+</FormFieldWrapper>
+`;
+
+exports[`Textarea should render with hidden label if \`showInputLabel\` is set to false 1`] = `
+<FormFieldWrapper
+  id="textarea"
+>
+  <Component />
+</FormFieldWrapper>
+`;
