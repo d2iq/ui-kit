@@ -6,9 +6,9 @@ import { LineChart } from "../index";
 
 const readme = require("../README.md");
 
-storiesOf("Chart", module)
+storiesOf("Charts/LineChart", module)
   .addDecorator(withReadme([readme]))
-  .add("LineChart", () => (
+  .add("default", () => (
     <LineChart
       data={{
         2006: 1,
