@@ -60,5 +60,6 @@ export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { Legacy };
+export { TabItem, TabTitle, Tabs } from "./tabs";
 
 injectGlobalCss();
