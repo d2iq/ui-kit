@@ -1,6 +1,8 @@
 import { injectGlobalCss } from "./shared/styles/global";
 import * as Legacy from "./legacy";
+import * as designTokens from "./design-tokens/build/js/designTokens";
 
+// Components
 export {
   AppChrome,
   HeaderBar,
@@ -61,5 +63,8 @@ export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { Legacy };
 export { TabItem, TabTitle, Tabs } from "./tabs";
+
+// Design Tokens
+export { designTokens };
 
 injectGlobalCss();

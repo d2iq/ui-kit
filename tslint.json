@@ -1,6 +1,6 @@
 {
   "extends": ["@dcos/tslint-config", "./tslint-a11y.js"],
   "linterOptions": {
-    "exclude": ["./scripts/templates/*"]
+    "exclude": ["./scripts/templates/*", "./packages/design-tokens/build/**/*"]
   }
 }

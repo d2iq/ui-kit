@@ -1,34 +1,23 @@
 {
   "source": ["./packages/design-tokens/properties/**/*.json"],
   "platforms": {
-    "less": {
-      "transforms": ["attribute/cti", "name/cti/lessVar"],
-      "buildPath": "dist/packages/design-tokens/build/less/",
-      "files": [
-        {
-          "destination": "_designTokens.less",
-          "format": "less/variables"
-        }
-      ]
-    },
     "js": {
       "transforms": [
         "attribute/cti",
         "name/cti/jsConstant",
-        "value/fontNameJS",
         "value/cssVarJS"
       ],
-      "buildPath": "dist/packages/design-tokens/build/js/",
+      "buildPath": "packages/design-tokens/build/js/",
       "files": [
         {
-          "format": "javascript/commonJS",
-          "destination": "designTokens.js"
+          "format": "typescript/es6",
+          "destination": "designTokens.ts"
         }
       ]
     },
     "colorsForStyleguide": {
       "transforms": ["attribute/cti", "name/cti/jsConstant"],
-      "buildPath": "dist/packages/design-tokens/build/js/",
+      "buildPath": "packages/design-tokens/build/js/",
       "files": [
         {
           "format": "javascript/colorsForStyleguide",
