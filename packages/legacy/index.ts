@@ -1,3 +1,4 @@
 import { Tooltip } from "./src/Tooltip/Tooltip";
+import { Dropdown } from "./src/Dropdown/Dropdown";
 
-export { Tooltip };
+export { Dropdown, Tooltip };

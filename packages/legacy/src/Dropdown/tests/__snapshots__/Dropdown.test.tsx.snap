@@ -1,0 +1,1299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown renders an open menu 1`] = `
+<Dropdown
+  buttonClassName="button dropdown-toggle"
+  dropdownMenuClassName="dropdown-menu"
+  dropdownMenuListClassName="dropdown-menu-list"
+  initialID="bar"
+  items={
+    Array [
+      Object {
+        "className": "dropdown-menu-header",
+        "html": "Foo",
+        "id": "foo",
+        "selectable": false,
+        "selectedHtml": "Foo",
+      },
+      Object {
+        "html": "Bar",
+        "id": "bar",
+        "selectedHtml": "Bar",
+      },
+      Object {
+        "html": "Baz",
+        "id": "baz",
+        "selectedHtml": "Baz",
+      },
+      Object {
+        "html": "Quz",
+        "id": "quz",
+        "selectedHtml": "Quz",
+      },
+      Object {
+        "className": "dropdown-menu-divider",
+        "id": "divider-a",
+        "selectable": false,
+      },
+      Object {
+        "className": "dropdown-menu-header",
+        "html": "Corge",
+        "id": "corge",
+        "selectable": false,
+      },
+      Object {
+        "html": "Grault",
+        "id": "grault",
+        "selectedHtml": "Grault",
+      },
+    ]
+  }
+  onItemSelection={[Function]}
+  scrollContainer={[Window]}
+  transition={false}
+  transitionEnterTimeout={250}
+  transitionExitTimeout={250}
+  transitionName="dropdown-menu"
+  trigger={<DropdownListTrigger />}
+  useGemini={true}
+  wrapperClassName="dropdown"
+>
+  <span
+    className="down dropdown open"
+    onBlur={[Function]}
+    tabIndex={0}
+  >
+    <DropdownListTrigger
+      className="button dropdown-toggle"
+      onTrigger={[Function]}
+      selectedItem={
+        Object {
+          "html": "Bar",
+          "id": "bar",
+          "selectedHtml": "Bar",
+        }
+      }
+    >
+      <button
+        className="button dropdown-toggle"
+        onClick={[Function]}
+        type="button"
+      >
+        Bar
+      </button>
+    </DropdownListTrigger>
+    <Overlay
+      overlayRoot={
+        <body>
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div />
+            </div>
+          </div>
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+        </body>
+      }
+    >
+      <Portal
+        containerInfo={
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+        }
+      >
+        <div>
+          <span
+            className="down dropdown-menu"
+            key="dropdown-menu-key"
+            role="menu"
+            style={
+              Object {
+                "bottom": "auto",
+                "left": 0,
+                "right": "auto",
+                "top": 0,
+              }
+            }
+          >
+            <div
+              className="dropdown-menu-list"
+            >
+              <ul
+                className="dropdown-menu-items"
+              >
+                <li
+                  className="dropdown-menu-header"
+                  key="foo"
+                  onClick={null}
+                  role="button"
+                >
+                  Foo
+                </li>
+                <li
+                  className="is-selectable is-selected"
+                  key="bar"
+                  onClick={[Function]}
+                  role="button"
+                >
+                  Bar
+                </li>
+                <li
+                  className="is-selectable"
+                  key="baz"
+                  onClick={[Function]}
+                  role="button"
+                >
+                  Baz
+                </li>
+                <li
+                  className="is-selectable"
+                  key="quz"
+                  onClick={[Function]}
+                  role="button"
+                >
+                  Quz
+                </li>
+                <li
+                  className="dropdown-menu-divider"
+                  key="divider-a"
+                  onClick={null}
+                  role="button"
+                />
+                <li
+                  className="dropdown-menu-header"
+                  key="corge"
+                  onClick={null}
+                  role="button"
+                >
+                  Corge
+                </li>
+                <li
+                  className="is-selectable"
+                  key="grault"
+                  onClick={[Function]}
+                  role="button"
+                >
+                  Grault
+                </li>
+              </ul>
+            </div>
+          </span>
+        </div>
+      </Portal>
+    </Overlay>
+  </span>
+</Dropdown>
+`;
+
+exports[`Dropdown renders disabled 1`] = `
+<Dropdown
+  buttonClassName="button dropdown-toggle"
+  disabled={true}
+  dropdownMenuClassName="dropdown-menu"
+  dropdownMenuListClassName="dropdown-menu-list"
+  initialID="bar"
+  items={
+    Array [
+      Object {
+        "className": "dropdown-menu-header",
+        "html": "Foo",
+        "id": "foo",
+        "selectable": false,
+        "selectedHtml": "Foo",
+      },
+      Object {
+        "html": "Bar",
+        "id": "bar",
+        "selectedHtml": "Bar",
+      },
+      Object {
+        "html": "Baz",
+        "id": "baz",
+        "selectedHtml": "Baz",
+      },
+      Object {
+        "html": "Quz",
+        "id": "quz",
+        "selectedHtml": "Quz",
+      },
+      Object {
+        "className": "dropdown-menu-divider",
+        "id": "divider-a",
+        "selectable": false,
+      },
+      Object {
+        "className": "dropdown-menu-header",
+        "html": "Corge",
+        "id": "corge",
+        "selectable": false,
+      },
+      Object {
+        "html": "Grault",
+        "id": "grault",
+        "selectedHtml": "Grault",
+      },
+    ]
+  }
+  onItemSelection={[Function]}
+  scrollContainer={[Window]}
+  transition={false}
+  transitionEnterTimeout={250}
+  transitionExitTimeout={250}
+  transitionName="dropdown-menu"
+  trigger={<DropdownListTrigger />}
+  useGemini={true}
+  wrapperClassName="dropdown"
+>
+  <span
+    className="down dropdown"
+    onBlur={[Function]}
+    tabIndex={0}
+  >
+    <DropdownListTrigger
+      className="button dropdown-toggle"
+      disabled={true}
+      onTrigger={[Function]}
+      selectedItem={
+        Object {
+          "html": "Bar",
+          "id": "bar",
+          "selectedHtml": "Bar",
+        }
+      }
+    >
+      <button
+        className="button dropdown-toggle"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        Bar
+      </button>
+    </DropdownListTrigger>
+    <Overlay
+      overlayRoot={
+        <body>
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div />
+            </div>
+          </div>
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div />
+            </div>
+          </div>
+          <div>
+            <div>
+              <div />
+            </div>
+          </div>
+        </body>
+      }
+    >
+      <Portal
+        containerInfo={
+          <div>
+            <div>
+              <div />
+            </div>
+          </div>
+        }
+      >
+        <div>
+          <div
+            key="placeholder-element"
+          />
+        </div>
+      </Portal>
+    </Overlay>
+  </span>
+</Dropdown>
+`;
+
+exports[`Dropdown renders trigger button with a persistentId 1`] = `
+<Dropdown
+  buttonClassName="button dropdown-toggle"
+  dropdownMenuClassName="dropdown-menu"
+  dropdownMenuListClassName="dropdown-menu-list"
+  initialID="bar"
+  items={
+    Array [
+      Object {
+        "className": "dropdown-menu-header",
+        "html": "Foo",
+        "id": "foo",
+        "selectable": false,
+        "selectedHtml": "Foo",
+      },
+      Object {
+        "html": "Bar",
+        "id": "bar",
+        "selectedHtml": "Bar",
+      },
+      Object {
+        "html": "Baz",
+        "id": "baz",
+        "selectedHtml": "Baz",
+      },
+      Object {
+        "html": "Quz",
+        "id": "quz",
+        "selectedHtml": "Quz",
+      },
+      Object {
+        "className": "dropdown-menu-divider",
+        "id": "divider-a",
+        "selectable": false,
+      },
+      Object {
+        "className": "dropdown-menu-header",
+        "html": "Corge",
+        "id": "corge",
+        "selectable": false,
+      },
+      Object {
+        "html": "Grault",
+        "id": "grault",
+        "selectedHtml": "Grault",
+      },
+    ]
+  }
+  onItemSelection={[Function]}
+  persistentID="quz"
+  scrollContainer={[Window]}
+  transition={false}
+  transitionEnterTimeout={250}
+  transitionExitTimeout={250}
+  transitionName="dropdown-menu"
+  trigger={<DropdownListTrigger />}
+  useGemini={true}
+  wrapperClassName="dropdown"
+>
+  <span
+    className="down dropdown"
+    onBlur={[Function]}
+    tabIndex={0}
+  >
+    <DropdownListTrigger
+      className="button dropdown-toggle"
+      onTrigger={[Function]}
+      selectedItem={
+        Object {
+          "html": "Quz",
+          "id": "quz",
+          "selectedHtml": "Quz",
+        }
+      }
+    >
+      <button
+        className="button dropdown-toggle"
+        onClick={[Function]}
+        type="button"
+      >
+        Quz
+      </button>
+    </DropdownListTrigger>
+    <Overlay
+      overlayRoot={
+        <body>
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div />
+            </div>
+          </div>
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div />
+            </div>
+          </div>
+        </body>
+      }
+    >
+      <Portal
+        containerInfo={
+          <div>
+            <div>
+              <div />
+            </div>
+          </div>
+        }
+      >
+        <div>
+          <div
+            key="placeholder-element"
+          />
+        </div>
+      </Portal>
+    </Overlay>
+  </span>
+</Dropdown>
+`;
+
+exports[`Dropdown should display a dropdown menu when the button is clicked 1`] = `
+<Dropdown
+  buttonClassName="button dropdown-toggle"
+  dropdownMenuClassName="dropdown-menu"
+  dropdownMenuListClassName="dropdown-menu-list"
+  initialID="bar"
+  items={
+    Array [
+      Object {
+        "className": "dropdown-menu-header",
+        "html": "Foo",
+        "id": "foo",
+        "selectable": false,
+        "selectedHtml": "Foo",
+      },
+      Object {
+        "html": "Bar",
+        "id": "bar",
+        "selectedHtml": "Bar",
+      },
+      Object {
+        "html": "Baz",
+        "id": "baz",
+        "selectedHtml": "Baz",
+      },
+      Object {
+        "html": "Quz",
+        "id": "quz",
+        "selectedHtml": "Quz",
+      },
+      Object {
+        "className": "dropdown-menu-divider",
+        "id": "divider-a",
+        "selectable": false,
+      },
+      Object {
+        "className": "dropdown-menu-header",
+        "html": "Corge",
+        "id": "corge",
+        "selectable": false,
+      },
+      Object {
+        "html": "Grault",
+        "id": "grault",
+        "selectedHtml": "Grault",
+      },
+    ]
+  }
+  onItemSelection={[Function]}
+  scrollContainer={[Window]}
+  transition={false}
+  transitionEnterTimeout={250}
+  transitionExitTimeout={250}
+  transitionName="dropdown-menu"
+  trigger={<DropdownListTrigger />}
+  useGemini={true}
+  wrapperClassName="dropdown"
+>
+  <span
+    className="down dropdown open"
+    onBlur={[Function]}
+    tabIndex={0}
+  >
+    <DropdownListTrigger
+      className="button dropdown-toggle"
+      onTrigger={[Function]}
+      selectedItem={
+        Object {
+          "html": "Bar",
+          "id": "bar",
+          "selectedHtml": "Bar",
+        }
+      }
+    >
+      <button
+        className="button dropdown-toggle"
+        onClick={[Function]}
+        type="button"
+      >
+        Bar
+      </button>
+    </DropdownListTrigger>
+    <Overlay
+      overlayRoot={
+        <body>
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+        </body>
+      }
+    >
+      <Portal
+        containerInfo={
+          <div>
+            <div>
+              <span
+                class="down dropdown-menu"
+                role="menu"
+                style="top: 0px; left: 0px;"
+              >
+                <div
+                  class="dropdown-menu-list"
+                >
+                  <ul
+                    class="dropdown-menu-items"
+                  >
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Foo
+                    </li>
+                    <li
+                      class="is-selectable is-selected"
+                      role="button"
+                    >
+                      Bar
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Baz
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Quz
+                    </li>
+                    <li
+                      class="dropdown-menu-divider"
+                      role="button"
+                    />
+                    <li
+                      class="dropdown-menu-header"
+                      role="button"
+                    >
+                      Corge
+                    </li>
+                    <li
+                      class="is-selectable"
+                      role="button"
+                    >
+                      Grault
+                    </li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+        }
+      >
+        <div>
+          <span
+            className="down dropdown-menu"
+            key="dropdown-menu-key"
+            role="menu"
+            style={
+              Object {
+                "bottom": "auto",
+                "left": 0,
+                "right": "auto",
+                "top": 0,
+              }
+            }
+          >
+            <div
+              className="dropdown-menu-list"
+            >
+              <ul
+                className="dropdown-menu-items"
+              >
+                <li
+                  className="dropdown-menu-header"
+                  key="foo"
+                  onClick={null}
+                  role="button"
+                >
+                  Foo
+                </li>
+                <li
+                  className="is-selectable is-selected"
+                  key="bar"
+                  onClick={[Function]}
+                  role="button"
+                >
+                  Bar
+                </li>
+                <li
+                  className="is-selectable"
+                  key="baz"
+                  onClick={[Function]}
+                  role="button"
+                >
+                  Baz
+                </li>
+                <li
+                  className="is-selectable"
+                  key="quz"
+                  onClick={[Function]}
+                  role="button"
+                >
+                  Quz
+                </li>
+                <li
+                  className="dropdown-menu-divider"
+                  key="divider-a"
+                  onClick={null}
+                  role="button"
+                />
+                <li
+                  className="dropdown-menu-header"
+                  key="corge"
+                  onClick={null}
+                  role="button"
+                >
+                  Corge
+                </li>
+                <li
+                  className="is-selectable"
+                  key="grault"
+                  onClick={[Function]}
+                  role="button"
+                >
+                  Grault
+                </li>
+              </ul>
+            </div>
+          </span>
+        </div>
+      </Portal>
+    </Overlay>
+  </span>
+</Dropdown>
+`;

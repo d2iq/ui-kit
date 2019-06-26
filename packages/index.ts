@@ -25,6 +25,7 @@ export {
   DangerDropdownButton
 } from "./button";
 export { CheckboxInput } from "./checkboxInput";
+export { ConfigurationMap } from "./configurationmap";
 export { DonutChart } from "./donutChart";
 export { Dropdownable } from "./dropdownable";
 export { Icon } from "./icon";
