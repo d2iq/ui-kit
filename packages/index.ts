@@ -11,6 +11,7 @@ export {
   SidebarSubMenu,
   SidebarSubMenuItem
 } from "./appChrome";
+export { Avatar } from "./avatar";
 export { Badge, BadgeButton } from "./badge";
 export {
   PrimaryButton,
