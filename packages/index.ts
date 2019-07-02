@@ -62,5 +62,6 @@ export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { Legacy };
 export { TabItem, TabTitle, Tabs } from "./tabs";
+export { Card } from "./card";
 
 injectGlobalCss();
