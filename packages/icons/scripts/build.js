@@ -7,6 +7,8 @@ const {
   readFileSync,
   writeFileSync
 } = require("fs");
+const t = require("@babel/types");
+const generate = require("@babel/generator").default;
 const SVGO = require("svgo");
 const svgstore = require("svgstore");
 const iconSpriteConfig = require("../iconSpriteConfig.js");
@@ -53,6 +55,7 @@ const optimizeWithSVGO = spritePath => {
 
 const writeEnum = (srcDir, iconSetName, idPrefix) => {
   console.info("\tcreating icon name enum\n");
+
   const svgNamesObj =
     getFilePaths(srcDir)
       .map(file => path.basename(file, ".svg"))
@@ -62,19 +65,19 @@ const writeEnum = (srcDir, iconSetName, idPrefix) => {
         prev[nameToPascal] = curr;
         return prev;
       }, {});
-
-  const enumString = Object.keys(svgNamesObj).reduce((prev, curr) =>
-    prev += `${curr} = "${idPrefix}-${svgNamesObj[curr]}",`,
-  "")
-    .split(",")
-    .filter(entry => entry != "")
-    .join(",\n  ");
-
-  const enumName = `${iconSetName.replace(/^\w/, c => c.toUpperCase())}Icons`
+  const ast = t.tSEnumDeclaration(
+    t.identifier(`${iconSetName.replace(/^\w/, c => c.toUpperCase())}Icons`),
+    Object.keys(svgNamesObj).map(svgName =>
+      t.tSEnumMember(t.identifier(svgName), t.stringLiteral(`${idPrefix}-${svgNamesObj[svgName]}`))
+    )
+  );
+  const { code } = generate(ast);
 
   writeFileSync(
     path.join(buildDirPath, `${iconSetName}-icons-enum.ts`),
-    `export enum ${enumName} {\n  ${enumString}\n}\n`
+    // when generate parses the AST, it adds a trailing comma that needs
+    // to be removed in order for Prettier to pass
+    `export ${code.replace(/,(?=[^,]*$)/, '')}\n`
   );
 }
 
@@ -93,7 +96,7 @@ Object.keys(iconSpriteConfig).forEach(iconSet => {
     optimizeWithSVGO(
       path.join(buildPath, iconSpriteConfig[iconSet].filename)
     );
-  })
+  });
   writeEnum(
     iconSpriteConfig[iconSet].inDir,
     iconSet,

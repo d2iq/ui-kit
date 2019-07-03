@@ -3,23 +3,55 @@ import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 
 import { PageHeader } from "../index";
-import { Clickable } from "../../clickable";
+import { PrimaryButton, SecondaryButton } from "../../button";
+import PageHeaderOverflowMenu from "./helpers/PageHeaderOverflowMenu";
 
 const readme = require("../README.md");
-const action = () => alert("Action 1 triggered");
+const action = () => alert("Action triggered");
 
 storiesOf("PageHeader", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <PageHeader
       breadcrumbElements={[
-        <span key="ElementOne">One</span>,
-        <span key="ElementTwo">Two</span>
+        <div key="Universe">Universe</div>,
+        <div key="MilkyWay">Milky Way</div>,
+        <div key="Earth">Earth</div>
       ]}
       actions={[
-        <Clickable key="Action1" action={action}>
-          <div>Action 1</div>
-        </Clickable>
+        <SecondaryButton onClick={action} key="Action2">
+          Secondary
+        </SecondaryButton>,
+        <PrimaryButton onClick={action} key="Action1">
+          Primary
+        </PrimaryButton>
+      ]}
+    />
+  ))
+  .add("with overflow menu", () => (
+    <PageHeader
+      breadcrumbElements={[
+        <div key="Universe">Universe</div>,
+        <div key="MilkyWay">Milky Way</div>,
+        <div key="Earth">Earth</div>
+      ]}
+      actions={[
+        <SecondaryButton onClick={action} key="Action2">
+          Secondary
+        </SecondaryButton>,
+        <PrimaryButton onClick={action} key="Action1">
+          Primary
+        </PrimaryButton>,
+        <PageHeaderOverflowMenu key="OverflowMenu" />
+      ]}
+    />
+  ))
+  .add("without actions", () => (
+    <PageHeader
+      breadcrumbElements={[
+        <div key="Universe">Universe</div>,
+        <div key="MilkyWay">Milky Way</div>,
+        <div key="Earth">Earth</div>
       ]}
     />
   ));
