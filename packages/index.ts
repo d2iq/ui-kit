@@ -41,6 +41,7 @@ export {
   LargeDialogModalWithFooter,
   FullscreenModal
 } from "./modal";
+export { PageHeader } from "./pageheader";
 export { SelectInput } from "./selectInput";
 export {
   Column,

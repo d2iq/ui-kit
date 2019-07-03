@@ -1,14 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Breadcrumb default 1`] = `
-<div
-  class="css-ewxxaj"
+<nav
+  class="css-gowgo4"
 >
-  <span>
-    One
-  </span>
-  <span>
-    Two
-  </span>
-</div>
+  <div
+    class="css-1fx6w60"
+  >
+    <span>
+      One
+    </span>
+  </div>
+  <div
+    class="css-1fx6w60"
+  >
+    <svg
+      aria-label="system-caret-right icon"
+      class="css-zgvqkl"
+      height="16"
+      preserveAspectRatio="xMinYMin meet"
+      role="img"
+      viewBox="0 0 16 16"
+      width="16"
+    >
+      <use
+        href="#system-caret-right"
+      />
+    </svg>
+  </div>
+  <div
+    class="css-n2rkn1"
+  >
+    <span>
+      Two
+    </span>
+  </div>
+</nav>
 `;
