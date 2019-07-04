@@ -13,8 +13,8 @@ exports[`Tooltip renders 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {
@@ -80,8 +80,8 @@ exports[`Tooltip renders 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {
@@ -200,8 +200,8 @@ exports[`Tooltip renders open tooltip 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {
@@ -286,8 +286,8 @@ exports[`Tooltip renders open tooltip 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {
@@ -405,8 +405,8 @@ exports[`Tooltip renders with preferred directions 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {
@@ -516,8 +516,8 @@ exports[`Tooltip renders with preferred directions 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {

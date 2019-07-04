@@ -1,0 +1,15 @@
+{
+	"font": {
+		"lineHeight": {
+			"default": {
+				"value": "1.4"
+            },
+			"s": {
+				"value": "1.25"
+            },
+			"m": {
+				"value": "1.33"
+            }
+		}
+	}
+}

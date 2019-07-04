@@ -1340,8 +1340,8 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 
 .emotion-3 {
   text-align: center;
-  margin-bottom: 0;
   margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 8px;
   font-size: 18px;
   font-weight: 400;
@@ -1349,8 +1349,8 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 
 .emotion-4 {
   text-align: center;
-  margin-bottom: 0;
   margin-top: 0;
+  margin-bottom: 0;
   font-size: 12px;
   font-weight: 400;
   color: #76797E;
@@ -1472,7 +1472,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       class="css-1n2j8fb"
                     >
                       <div
-                        class="css-15b9cs"
+                        class="css-1im4gy8"
                       >
                         <div
                           class="css-95z8m4"
@@ -1505,7 +1505,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="css-1e3fso6"
+                      class="css-un5g9q"
                     >
                       <div
                         tabindex="0"
@@ -1514,7 +1514,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="css-92qutk"
+                      class="css-1oke5ex"
                     >
                       <div
                         class="css-ysk5k7"
@@ -2203,8 +2203,8 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 
 .emotion-4 {
   text-align: center;
-  margin-bottom: 0;
   margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 8px;
   font-size: 18px;
   font-weight: 400;
@@ -2212,8 +2212,8 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 
 .emotion-5 {
   text-align: center;
-  margin-bottom: 0;
   margin-top: 0;
+  margin-bottom: 0;
   font-size: 12px;
   font-weight: 400;
   color: #76797E;

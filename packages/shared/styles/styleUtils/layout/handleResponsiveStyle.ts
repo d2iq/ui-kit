@@ -1,0 +1,76 @@
+import * as CSS from "csstype";
+import { css, cx } from "emotion";
+import { atMediaUp } from "../../breakpoints";
+import { spaceSizes, SpaceSize } from "../modifiers/modifierUtils";
+
+interface ResponsiveStyles {
+  default?: string | number;
+  small?: string | number;
+  medium?: string | number;
+  large?: string | number;
+  jumbo?: string | number;
+}
+type ResponsiveValues = number | string | ResponsiveStyles;
+type CSSPropertyKeys = keyof CSS.PropertiesHyphen;
+
+const parseResponsiveStyle = (
+  property: CSSPropertyKeys,
+  value?: ResponsiveValues
+) => {
+  if (value === undefined || value === "" || value === null) {
+    return;
+  }
+
+  if (typeof value === "object") {
+    return cx(
+      Object.keys(value).reduce((acc, breakpoint) => {
+        acc.push(
+          css`
+            ${atMediaUp[breakpoint](css`
+              ${property}: ${value[breakpoint]};
+            `)};
+          `
+        );
+        return acc;
+      }, Array())
+    );
+  } else {
+    return css`
+      ${property}: ${value};
+    `;
+  }
+};
+
+export const getResponsiveStyleData = (
+  key: CSSPropertyKeys,
+  value: ResponsiveValues = "",
+  map?: object
+) => {
+  let val = value;
+  if (map) {
+    if (typeof value !== "object" && map) {
+      val = map[value];
+    } else {
+      val = Object.keys(value).reduce((acc, breakpoint) => {
+        acc[breakpoint] = map ? map[value[breakpoint]] : value[breakpoint];
+        return acc;
+      }, {});
+    }
+  }
+
+  return { key, val };
+};
+
+export const getResponsiveStyle = (
+  property: CSSPropertyKeys,
+  value: ResponsiveValues = "",
+  map?: object
+) => {
+  const { key, val } = getResponsiveStyleData(property, value, map);
+  return parseResponsiveStyle(key, val);
+};
+
+export const getResponsiveSpacingStyle = (
+  property: CSSPropertyKeys,
+  spaceSize: SpaceSize = "none"
+) => getResponsiveStyle(property, spaceSize, spaceSizes);

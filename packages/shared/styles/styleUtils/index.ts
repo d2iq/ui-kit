@@ -9,11 +9,15 @@ export {
   tintContentPrimary,
   tintContentSecondary
 } from "./typography/color";
-export { border } from "./modifiers/border";
+export { border, borderRadius } from "./modifiers/border";
 export { display } from "./modifiers/display";
 export { listReset } from "./resets/listReset";
 export { buttonReset } from "./resets/buttonReset";
 export { fieldsetReset, legendReset } from "./resets/fieldsetReset";
+export {
+  getResponsiveStyle,
+  getResponsiveSpacingStyle
+} from "./layout/handleResponsiveStyle";
 export { inputReset } from "./resets/inputReset";
 export { liReset } from "./resets/liReset";
 export { margin, marginAt } from "./modifiers/margin";

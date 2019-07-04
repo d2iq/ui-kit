@@ -1,0 +1,20 @@
+{
+	"layout": {
+		"containerWidth": {
+
+			"default": {
+				"value": "550px"
+			},
+			"atMedium": {
+				"value": "800px"
+			},
+			"atLarge": {
+				"value": "900px"
+            },
+            "atJumbo": {
+                "value": "1100px"
+            }
+
+		}
+	}
+}
