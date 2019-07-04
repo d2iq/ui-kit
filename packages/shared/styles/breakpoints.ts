@@ -14,6 +14,16 @@ export const breakpoints = {
   jumbo: breakpointJumbo
 };
 
+export interface BreakpointsFor<A> {
+  default?: A;
+  small?: A;
+  medium?: A;
+  large?: A;
+  jumbo?: A;
+}
+
+export type BreakpointConfig<A> = A | BreakpointsFor<A>;
+
 export const atMediaUp = Object.keys(breakpoints).reduce(
   (acc: any, curr: any) => {
     acc[curr] = cls => {

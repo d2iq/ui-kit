@@ -10,14 +10,7 @@ import {
   spaceXxl
 } from "../../../../design-tokens/build/js/designTokens";
 import { getResponsiveSpacingStyle } from "../layout/handleResponsiveStyle";
-
-export interface ResponsiveSpacingSize {
-  default?: SpaceSizes;
-  small?: SpaceSizes;
-  medium?: SpaceSizes;
-  large?: SpaceSizes;
-  jumbo?: SpaceSizes;
-}
+import { BreakpointConfig } from "../../breakpoints";
 
 type CSSPropertyKeys = keyof CSS.PropertiesHyphen;
 export type BoxSides =
@@ -30,7 +23,7 @@ export type BoxSides =
   | "vert"
   | undefined;
 export type SpaceSizes = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "none";
-export type SpaceSize = SpaceSizes | ResponsiveSpacingSize;
+export type SpaceSize = BreakpointConfig<SpaceSizes>;
 
 export const spaceSizes = {
   xxs: spaceXxs,

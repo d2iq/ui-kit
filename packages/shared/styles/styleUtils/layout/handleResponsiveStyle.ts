@@ -1,16 +1,9 @@
 import * as CSS from "csstype";
 import { css, cx } from "emotion";
-import { atMediaUp } from "../../breakpoints";
+import { atMediaUp, BreakpointConfig } from "../../breakpoints";
 import { spaceSizes, SpaceSize } from "../modifiers/modifierUtils";
 
-interface ResponsiveStyles {
-  default?: string | number;
-  small?: string | number;
-  medium?: string | number;
-  large?: string | number;
-  jumbo?: string | number;
-}
-type ResponsiveValues = number | string | ResponsiveStyles;
+type ResponsiveValues = BreakpointConfig<number | string | undefined>;
 type CSSPropertyKeys = keyof CSS.PropertiesHyphen;
 
 const parseResponsiveStyle = (
