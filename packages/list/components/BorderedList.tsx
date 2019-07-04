@@ -1,0 +1,22 @@
+import * as React from "react";
+import { borderedListStyle } from "../style";
+import { cx } from "emotion";
+import { SharedListProps } from "./List";
+import { listReset } from "../../shared/styles/styleUtils";
+
+const BorderedList: React.SFC<SharedListProps> = props => {
+  const { tag, children } = props;
+  const BorderedListEl = tag;
+
+  return (
+    <BorderedListEl className={cx(listReset, borderedListStyle)}>
+      {children}
+    </BorderedListEl>
+  );
+};
+
+BorderedList.defaultProps = {
+  tag: "ul"
+};
+
+export default BorderedList;
