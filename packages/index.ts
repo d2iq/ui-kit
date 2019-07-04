@@ -68,4 +68,7 @@ export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { Legacy };
 
+// Style Utility components
+export { Container, Flex, FlexItem, GridList } from "./styleUtils/layout";
+
 injectGlobalCss();
