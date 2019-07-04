@@ -166,8 +166,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-top: 8px;
 }
@@ -176,8 +176,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
 }
 
@@ -185,8 +185,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-bottom: 8px;
 }
@@ -415,8 +415,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-top: 8px;
 }
@@ -425,8 +425,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
 }
 
@@ -434,8 +434,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-bottom: 8px;
 }
@@ -840,8 +840,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-top: 8px;
 }
@@ -850,8 +850,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
 }
 
@@ -859,8 +859,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-bottom: 8px;
 }
@@ -1138,8 +1138,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-top: 8px;
 }
@@ -1148,8 +1148,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
 }
 
@@ -1157,8 +1157,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-bottom: 8px;
 }

@@ -2,7 +2,7 @@
 
 exports[`PageHeader default 1`] = `
 <div
-  class="css-5juzgf"
+  class="css-ol6izy"
 >
   <div
     class="css-qi8t7c"
@@ -11,14 +11,14 @@ exports[`PageHeader default 1`] = `
       class="css-gowgo4"
     >
       <div
-        class="css-1fx6w60"
+        class="css-3phh5d"
       >
         <span>
           One
         </span>
       </div>
       <div
-        class="css-1fx6w60"
+        class="css-3phh5d"
       >
         <svg
           aria-label="system-caret-right icon"
@@ -50,7 +50,7 @@ exports[`PageHeader default 1`] = `
       class="css-rrx0fi"
     >
       <li
-        class="css-kbi25z"
+        class="css-1skqmzz"
       >
         <div
           class="css-1h5x3dy"
