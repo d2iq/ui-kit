@@ -15,4 +15,9 @@ storiesOf("Breadcrumb", module)
         T<em>wo</em>
       </span>
     </Breadcrumb>
+  ))
+  .add("at top-level", () => (
+    <Breadcrumb>
+      <span>One</span>
+    </Breadcrumb>
   ));

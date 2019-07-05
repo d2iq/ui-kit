@@ -11,6 +11,7 @@ export {
   SidebarSubMenu,
   SidebarSubMenuItem
 } from "./appChrome";
+export { Avatar } from "./avatar";
 export { Badge, BadgeButton } from "./badge";
 export {
   PrimaryButton,
@@ -25,6 +26,7 @@ export {
   DangerDropdownButton
 } from "./button";
 export { CheckboxInput } from "./checkboxInput";
+export { ConfigurationMap } from "./configurationmap";
 export { DonutChart } from "./donutChart";
 export { Dropdownable } from "./dropdownable";
 export { Icon } from "./icon";
@@ -39,6 +41,7 @@ export {
   LargeDialogModalWithFooter,
   FullscreenModal
 } from "./modal";
+export { PageHeader } from "./pageheader";
 export { SelectInput } from "./selectInput";
 export {
   Column,
@@ -61,5 +64,6 @@ export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { Legacy };
 export { TabItem, TabTitle, Tabs } from "./tabs";
+export { Card } from "./card";
 
 injectGlobalCss();

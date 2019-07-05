@@ -1,0 +1,40 @@
+export const MockDropdownList = [
+  {
+    className: "dropdown-menu-header",
+    html: "Foo",
+    id: "foo",
+    selectable: false,
+    selectedHtml: "Foo"
+  },
+  {
+    html: "Bar",
+    id: "bar",
+    selectedHtml: "Bar"
+  },
+  {
+    html: "Baz",
+    id: "baz",
+    selectedHtml: "Baz"
+  },
+  {
+    html: "Quz",
+    id: "quz",
+    selectedHtml: "Quz"
+  },
+  {
+    className: "dropdown-menu-divider",
+    id: "divider-a",
+    selectable: false
+  },
+  {
+    className: "dropdown-menu-header",
+    html: "Corge",
+    id: "corge",
+    selectable: false
+  },
+  {
+    html: "Grault",
+    id: "grault",
+    selectedHtml: "Grault"
+  }
+];
