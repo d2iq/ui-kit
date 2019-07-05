@@ -13,6 +13,7 @@ export {
 } from "./appChrome";
 export { Avatar } from "./avatar";
 export { Badge, BadgeButton } from "./badge";
+export { Breadcrumb } from "./breadcrumb";
 export {
   PrimaryButton,
   SecondaryButton,
@@ -25,6 +26,8 @@ export {
   SuccessDropdownButton,
   DangerDropdownButton
 } from "./button";
+export { Card } from "./card";
+export { LineChart } from "./chart";
 export { CheckboxInput } from "./checkboxInput";
 export { ConfigurationMap } from "./configurationmap";
 export { DonutChart } from "./donutChart";
@@ -53,6 +56,7 @@ export {
   SortableHeaderCell,
   NumberCell
 } from "./table";
+export { TabItem, TabTitle, Tabs } from "./tabs";
 export { TextInput, TextInputWithIcon } from "./textInput";
 export { Textarea } from "./textarea";
 export { Toaster, Toast } from "./toaster";
@@ -63,7 +67,5 @@ export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { Legacy };
-export { TabItem, TabTitle, Tabs } from "./tabs";
-export { Card } from "./card";
 
 injectGlobalCss();
