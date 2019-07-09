@@ -71,4 +71,7 @@ export { Legacy };
 // Style Utility components
 export { Container, Flex, FlexItem, GridList } from "./styleUtils/layout";
 
+// Style Utility components
+export { Box, BorderedBox, SpacingBox } from "./styleUtils/modifiers";
+
 injectGlobalCss();
