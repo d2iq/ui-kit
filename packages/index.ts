@@ -68,10 +68,21 @@ export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { Legacy };
 
-// Style Utility components
+// Style utility components
 export { Container, Flex, FlexItem, GridList } from "./styleUtils/layout";
-
-// Style Utility components
 export { Box, BorderedBox, SpacingBox } from "./styleUtils/modifiers";
+export {
+  Text,
+  CaptionText,
+  DangerText,
+  HeadingText1,
+  HeadingText2,
+  HeadingText3,
+  InteractiveText,
+  MonospaceText,
+  SmallText,
+  SuccessText,
+  WarningText
+} from "./styleUtils/typography";
 
 injectGlobalCss();
