@@ -17,33 +17,37 @@ export interface BreadcrumbProps {
 
 class Breadcrumb extends React.PureComponent<BreadcrumbProps, {}> {
   public render() {
-    const { children } = this.props;
+    const crumbsArr = React.Children.toArray(this.props.children);
     const breadcrumbSeparator = (
       <Icon shape={SystemIcons.CaretRight} size={iconSizeXs} />
-    );
-    const crumbsArr = React.Children.toArray(children).reduce(
-      (acc, crumb, i) => {
-        acc.push(crumb);
-        if (i !== React.Children.toArray(children).length - 1) {
-          acc.push(breadcrumbSeparator);
-        }
-        return acc;
-      },
-      Array()
     );
 
     return (
       <nav className={cx(flex({ align: "center", wrap: "wrap" }))}>
-        {crumbsArr.map((crumb, i) => (
-          <div
-            className={cx(textWeight("medium"), textSize("l"), {
-              [padding("right", "xs")]: i !== crumbsArr.length - 1
-            })}
-            key={`breadcrumb-wrapper-${i}`}
-          >
-            {crumb}
-          </div>
-        ))}
+        {crumbsArr.reduce(
+          (acc, crumb, index) =>
+            acc.concat([
+              <div
+                className={cx(textWeight("medium"), textSize("l"), {
+                  [padding("right", "xs")]: index !== crumbsArr.length - 1
+                })}
+                key={`breadcrumb-wrapper-${index}`}
+              >
+                {crumb}
+              </div>,
+              index === crumbsArr.length - 1 ? null : (
+                <div
+                  className={cx(textWeight("medium"), textSize("l"), {
+                    [padding("right", "xs")]: index !== crumbsArr.length - 1
+                  })}
+                  key={`breadcrumb-seperator-${index}`}
+                >
+                  {breadcrumbSeparator}
+                </div>
+              )
+            ]),
+          Array()
+        )}
       </nav>
     );
   }
