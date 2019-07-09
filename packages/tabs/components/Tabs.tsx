@@ -4,8 +4,17 @@ import { injectGlobal } from "emotion";
 
 import { TabItemProps } from "./TabItem";
 import { TabTitle } from "..";
+import {
+  themeBorder,
+  fontWeightMedium,
+  themeTextColorPrimary,
+  themeBrandPrimary,
+  themeBgHover
+} from "../../design-tokens/build/js/designTokens";
+import { padding, margin } from "../../shared/styles/styleUtils";
 
 // Copy & paste from node_modules/react-tabs/style/react-tabs.css
+// Also changed to better fit the ui kit styles.
 // This is needed to give the tabs a style
 /* tslint:disable */
 injectGlobal`
@@ -14,27 +23,43 @@ injectGlobal`
 }
 
 .react-tabs__tab-list {
-  border-bottom: 1px solid #aaa;
-  margin: 0 0 10px;
-  padding: 0;
+  border-bottom: 1px solid ${themeBorder};
+  ${margin("bottom", "s")}
+  ${padding("vert", "none")}
+  ${padding("horiz", "l")}
 }
 
 .react-tabs__tab {
   display: inline-block;
-  border: 1px solid transparent;
-  border-bottom: none;
-  bottom: -1px;
   position: relative;
   list-style: none;
-  padding: 6px 12px;
+  ${padding("vert", "s")}
+  ${margin("right", "s")}
   cursor: pointer;
+  font-weight: ${fontWeightMedium};
+  color: ${themeTextColorPrimary};
+  &:after{
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: ${themeBrandPrimary};
+    display:none;
+  }
+}
+
+.react-tabs__tab:focus {
+  outline: none;
+  background: ${themeBgHover}
 }
 
 .react-tabs__tab--selected {
-  background: #fff;
-  border-color: #aaa;
-  color: black;
-  border-radius: 5px 5px 0 0;
+  &:after{
+    display: block;
+  }
+  color: ${themeBrandPrimary};
 }
 
 .react-tabs__tab--disabled {
@@ -42,24 +67,10 @@ injectGlobal`
   cursor: default;
 }
 
-.react-tabs__tab:focus {
-  box-shadow: 0 0 5px hsl(208, 99%, 50%);
-  border-color: hsl(208, 99%, 50%);
-  outline: none;
-}
-
-.react-tabs__tab:focus:after {
-  content: "";
-  position: absolute;
-  height: 5px;
-  left: -4px;
-  right: -4px;
-  bottom: -5px;
-  background: #fff;
-}
-
 .react-tabs__tab-panel {
   display: none;
+  ${margin("horiz", "l")}
+  ${margin("vert", "xl")}
 }
 
 .react-tabs__tab-panel--selected {
