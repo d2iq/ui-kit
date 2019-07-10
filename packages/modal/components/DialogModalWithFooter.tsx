@@ -1,14 +1,15 @@
 import * as React from "react";
-import DialogModal, { DialogModalProps } from "./DialogModal";
-import SecondaryButton from "../../button/components/SecondaryButton";
+
 import { ButtonProps } from "../../button/components/ButtonBase";
+import SecondaryButton from "../../button/components/SecondaryButton";
 import { flex, flexItem } from "../../shared/styles/styleUtils";
+import DialogModal, { DialogModalProps } from "./DialogModal";
 
 export interface DialogModalWithFooterProps extends DialogModalProps {
   /** The primary button */
   ctaButton: React.ReactElement<ButtonProps>;
   /** The text for the button that secondary button, which closes the modal */
-  closeText: React.ReactNode;
+  closeText?: React.ReactNode;
 }
 
 class DialogModalWithFooter extends React.PureComponent<
@@ -22,9 +23,11 @@ class DialogModalWithFooter extends React.PureComponent<
       <DialogModal
         footerContent={
           <div className={flex({ align: "center", justify: "space-between" })}>
-            <div className={flexItem("shrink")}>
-              <SecondaryButton onClick={onClose}>{closeText}</SecondaryButton>
-            </div>
+            {closeText !== "" || closeText != null ? (
+              <div className={flexItem("shrink")}>
+                <SecondaryButton onClick={onClose}>{closeText}</SecondaryButton>
+              </div>
+            ) : null}
             <div className={flexItem("shrink")}>{ctaButton}</div>
           </div>
         }
