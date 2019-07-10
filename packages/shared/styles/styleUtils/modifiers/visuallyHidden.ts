@@ -10,3 +10,12 @@ export const visuallyHidden = css`
   width: 1px;
   height: 1px;
 `;
+
+export const undoVisuallyHidden = css`
+  clip: initial;
+  position: static;
+  overflow: visible;
+  margin: 0;
+  width: auto;
+  height: auto;
+`;
