@@ -1,0 +1,374 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography CaptionText renders all props 1`] = `
+<SmallText
+  align="center"
+  color="var(--themeTextColorSecondary, #76797E)"
+  tag="span"
+  weight="normal"
+  wrap="nowrap"
+>
+  content
+</SmallText>
+`;
+
+exports[`Typography DangerText renders all props 1`] = `
+<Text
+  align="center"
+  color="var(--themeError, #EB293A)"
+  size="l"
+  tag="span"
+  weight="medium"
+  wrap="nowrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography HeadingText renders all props all HeadingText variants 1`] = `
+<Text
+  align="center"
+  color="black"
+  size="xl"
+  tag="h1"
+  weight="medium"
+  wrap="nowrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography HeadingText renders all props all HeadingText variants 2`] = `
+.emotion-0 {
+  line-height: 1.33;
+}
+
+<Text
+  align="center"
+  className="emotion-0"
+  color="black"
+  size="l"
+  tag="h1"
+  weight="medium"
+  wrap="nowrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography HeadingText renders all props all HeadingText variants 3`] = `
+<Text
+  align="center"
+  color="black"
+  size="m"
+  tag="h1"
+  weight="medium"
+  wrap="nowrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography InteractiveText renders all props 1`] = `
+.emotion-0 {
+  cursor: pointer;
+}
+
+<Text
+  align="center"
+  className="emotion-0"
+  color="var(--themeTextColorInteractive, #7D58FF)"
+  size="l"
+  tag="span"
+  weight="medium"
+  wrap="nowrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography MonospaceText renders all props 1`] = `
+.emotion-0 {
+  font-family: monospace;
+}
+
+<Text
+  align="center"
+  className="emotion-0"
+  color="black"
+  size="l"
+  tag="span"
+  weight="medium"
+  wrap="nowrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography SmallText renders all props 1`] = `
+<Text
+  align="center"
+  color="black"
+  size="s"
+  tag="span"
+  weight="medium"
+  wrap="nowrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography SuccessText renders all props 1`] = `
+<Text
+  align="center"
+  color="var(--themeSuccess, #14C684)"
+  size="l"
+  tag="span"
+  weight="medium"
+  wrap="nowrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography Text renders all props 1`] = `
+.emotion-0 {
+  font-weight: 500;
+  font-size: 12px;
+  color: black;
+  fill: black;
+  text-align: center;
+  white-space: nowrap;
+}
+
+<span
+  className="test emotion-0"
+>
+  content
+</span>
+`;
+
+exports[`Typography Text renders all wrap variants 1`] = `
+.emotion-0 {
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  fill: black;
+  text-align: left;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+<p
+  className="emotion-0"
+>
+  content
+</p>
+`;
+
+exports[`Typography Text renders all wrap variants 2`] = `
+.emotion-0 {
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  fill: black;
+  text-align: left;
+  white-space: nowrap;
+}
+
+<p
+  className="emotion-0"
+>
+  content
+</p>
+`;
+
+exports[`Typography Text renders all wrap variants 3`] = `
+.emotion-0 {
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  fill: black;
+  text-align: left;
+}
+
+<p
+  className="emotion-0"
+>
+  content
+</p>
+`;
+
+exports[`Typography WarningText renders all props 1`] = `
+<Text
+  align="center"
+  color="var(--themeWarning, #F9A328)"
+  size="l"
+  tag="span"
+  weight="medium"
+  wrap="nowrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography renders all default 1`] = `
+.emotion-0 {
+  font-size: 14px;
+  color: var(--themeTextColorPrimary,#1B2029);
+  fill: var(--themeTextColorPrimary,#1B2029);
+  text-align: left;
+}
+
+<p
+  className="emotion-0"
+>
+  content
+</p>
+`;
+
+exports[`Typography renders all default 2`] = `
+<SmallText
+  align="left"
+  color="var(--themeTextColorSecondary, #76797E)"
+  tag="p"
+  weight="normal"
+  wrap="wrap"
+>
+  content
+</SmallText>
+`;
+
+exports[`Typography renders all default 3`] = `
+<Text
+  align="left"
+  color="var(--themeError, #EB293A)"
+  size="m"
+  tag="p"
+  weight="normal"
+  wrap="wrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography renders all default 4`] = `
+<Text
+  align="left"
+  color="var(--themeTextColorPrimary, #1B2029)"
+  size="xl"
+  tag="p"
+  weight="medium"
+  wrap="wrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography renders all default 5`] = `
+.emotion-0 {
+  line-height: 1.33;
+}
+
+<Text
+  align="left"
+  className="emotion-0"
+  color="var(--themeTextColorPrimary, #1B2029)"
+  size="l"
+  tag="p"
+  weight="medium"
+  wrap="wrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography renders all default 6`] = `
+<Text
+  align="left"
+  color="var(--themeTextColorPrimary, #1B2029)"
+  size="m"
+  tag="p"
+  weight="medium"
+  wrap="wrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography renders all default 7`] = `
+.emotion-0 {
+  cursor: pointer;
+}
+
+<Text
+  align="left"
+  className="emotion-0"
+  color="var(--themeTextColorInteractive, #7D58FF)"
+  size="m"
+  tag="p"
+  weight="normal"
+  wrap="wrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography renders all default 8`] = `
+.emotion-0 {
+  font-family: monospace;
+}
+
+<Text
+  align="left"
+  className="emotion-0"
+  color="var(--themeTextColorPrimary, #1B2029)"
+  size="m"
+  tag="p"
+  weight="medium"
+  wrap="wrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography renders all default 9`] = `
+<Text
+  align="left"
+  color="var(--themeTextColorPrimary, #1B2029)"
+  size="s"
+  tag="p"
+  weight="normal"
+  wrap="wrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography renders all default 10`] = `
+<Text
+  align="left"
+  color="var(--themeSuccess, #14C684)"
+  size="m"
+  tag="p"
+  weight="normal"
+  wrap="wrap"
+>
+  content
+</Text>
+`;
+
+exports[`Typography renders all default 11`] = `
+<Text
+  align="left"
+  color="var(--themeWarning, #F9A328)"
+  size="m"
+  tag="p"
+  weight="normal"
+  wrap="wrap"
+>
+  content
+</Text>
+`;

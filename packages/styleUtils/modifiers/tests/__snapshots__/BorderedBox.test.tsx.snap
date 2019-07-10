@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BorderedBox renders default 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-color: var(--themeBorder,#DADDE2);
+  border-style: solid;
+  border-radius: 0;
+}
+
+<Box
+  bgImageOptions={
+    Object {
+      "position": undefined,
+      "repeat": undefined,
+      "size": undefined,
+    }
+  }
+  className="emotion-0"
+  tag="div"
+>
+  Content
+</Box>
+`;
+
+exports[`BorderedBox renders with all props 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-color: var(--themeBorderHeavy,#1B2029);
+  border-top-style: solid;
+  border-radius: 4px;
+}
+
+<Box
+  bgImageOptions={
+    Object {
+      "position": undefined,
+      "repeat": undefined,
+      "size": undefined,
+    }
+  }
+  className="emotion-0"
+  tag="div"
+>
+  Content
+</Box>
+`;
