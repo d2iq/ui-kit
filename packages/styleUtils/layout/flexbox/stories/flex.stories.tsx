@@ -150,6 +150,7 @@ storiesOf("Style utilities/Layout/Flex", module)
         <FlexItem>
           <DemoChild>4</DemoChild>
         </FlexItem>
+        {null}
       </Flex>
     </div>
   ))

@@ -25,7 +25,7 @@ MonospaceText.defaultProps = {
   tag: "code",
   size: "m",
   weight: "medium",
-  align: "left",
+  align: "inherit",
   wrap: "wrap"
 };
 

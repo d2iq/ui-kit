@@ -33,6 +33,7 @@ const Text = (props: TextProps) => {
         textSize(size),
         tintContent(color),
         css`
+          margin: 0;
           text-align: ${align};
         `,
         {

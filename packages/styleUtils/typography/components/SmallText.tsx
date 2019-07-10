@@ -22,7 +22,7 @@ export interface SmallTextProps extends SharedTextProps {
 const SmallText = (props: SmallTextProps) => <Text size="s" {...props} />;
 
 SmallText.defaultProps = {
-  align: "left",
+  align: "inherit",
   color: themeTextColorPrimary,
   wrap: "wrap",
   weight: "normal",
