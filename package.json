@@ -98,6 +98,7 @@
     "babel-loader": "^8.0.5",
     "cache-loader": "2.0.1",
     "commander": "2.19.0",
+    "csstype": "2.6.5",
     "cz-conventional-changelog": "2.1.0",
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.6.0",

@@ -13,6 +13,7 @@ export {
 } from "./appChrome";
 export { Avatar } from "./avatar";
 export { Badge, BadgeButton } from "./badge";
+export { Breadcrumb } from "./breadcrumb";
 export {
   PrimaryButton,
   SecondaryButton,
@@ -25,8 +26,20 @@ export {
   SuccessDropdownButton,
   DangerDropdownButton
 } from "./button";
+export { Card } from "./card";
+export { LineChart } from "./chart";
 export { CheckboxInput } from "./checkboxInput";
-export { ConfigurationMap } from "./configurationmap";
+export {
+  ConfigurationMap,
+  ConfigurationMapSection,
+  ConfigurationMapHeading,
+  ConfigurationMapRow,
+  ConfigurationMapLabel,
+  ConfigurationMapValue,
+  ConfigurationMapValueWithDefault,
+  ConfigurationMapRowAction,
+  HashMap
+} from "./configurationmap";
 export { DonutChart } from "./donutChart";
 export { Dropdownable } from "./dropdownable";
 export { Icon } from "./icon";
@@ -54,6 +67,7 @@ export {
   SortableHeaderCell,
   NumberCell
 } from "./table";
+export { TabItem, TabTitle, Tabs } from "./tabs";
 export { TextInput, TextInputWithIcon } from "./textInput";
 export { Textarea } from "./textarea";
 export { Toaster, Toast } from "./toaster";
@@ -64,7 +78,22 @@ export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { Legacy };
-export { TabItem, TabTitle, Tabs } from "./tabs";
-export { Card } from "./card";
+
+// Style utility components
+export { Container, Flex, FlexItem, GridList } from "./styleUtils/layout";
+export { Box, BorderedBox, SpacingBox } from "./styleUtils/modifiers";
+export {
+  Text,
+  CaptionText,
+  DangerText,
+  HeadingText1,
+  HeadingText2,
+  HeadingText3,
+  InteractiveText,
+  MonospaceText,
+  SmallText,
+  SuccessText,
+  WarningText
+} from "./styleUtils/typography";
 
 injectGlobalCss();

@@ -4,13 +4,6 @@
 
 Use tables to display information in a way that’s easy to scan, so that user can look for patterns and insights. Users will use tables to troubleshoot, manage and monitor their systems.
 
-## Types of Tables
-
-There are two types of tables used in DC/OS today.
-
-1. Collection Tables: Collection tables are generally used when information needs to be displayed in more than two columns.
-2. Detail Tables: Detail tables generally used when information can be displayed in two columns.
-
 ## Width
 
 Collection tables should span the full width of the screen. In cases where there are too few columns to span the whole screen, the table should still span the whole screen.

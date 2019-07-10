@@ -1,11 +1,26 @@
 import { css } from "react-emotion";
 import { BoxSides } from "./modifierUtils";
-import { themeBorder } from "../../../../design-tokens/build/js/designTokens";
+import {
+  themeBorder,
+  themeBorderHeavy,
+  borderRadiusDefault,
+  borderRadiusSmall
+} from "../../../../design-tokens/build/js/designTokens";
 
-export const border = (side: BoxSides) => {
+export type BorderVariant = "default" | "heavy";
+
+const borderRadii = {
+  none: 0,
+  default: borderRadiusDefault,
+  small: borderRadiusSmall
+};
+
+export type BorderRadii = keyof typeof borderRadii | undefined;
+
+export const border = (side: BoxSides, variant: BorderVariant = "default") => {
   const borderBaseStyles = `
         border-width: 1px;
-        border-color: ${themeBorder};
+        border-color: ${variant === "heavy" ? themeBorderHeavy : themeBorder};
     `;
 
   const borderModifierStyles = () => {
@@ -31,3 +46,7 @@ export const border = (side: BoxSides) => {
     ${borderBaseStyles} ${borderModifierStyles()};
   `;
 };
+
+export const borderRadius = (radius: BorderRadii = "none") => css`
+  border-radius: ${borderRadii[radius]};
+`;

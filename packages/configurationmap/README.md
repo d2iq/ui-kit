@@ -1,15 +1,6 @@
 # ConfigurationMap
 
-The ConfigurationMap component renders a two column table like representation of a object which is a `key: value` form.
-The specific props interface is:
-```ts
-interface ConfigurationMapProps {
-  data: { [key: string]: string | number };
-}
-```
+The ConfigurationMap component renders a two column table-like representation of a data in a `key: value` form.
 
-A simplified implementation example:
-
-```jsx
-<ConfigurationMap data={{ id: "foobar", cmd: "sleep 100;", cpu: 1 }} />
-```
+## HashMap
+A HashMap component takes an object through the `hash` prop and renders the data in the form of a ConfigurationMap. This component has no design differences, it's just provided for developer convenience.
