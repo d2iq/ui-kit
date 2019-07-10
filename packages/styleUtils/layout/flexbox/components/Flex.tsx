@@ -14,7 +14,7 @@ interface FlexProps extends FlexboxProperties {
    */
   gutterSize?: SpaceSize;
   children:
-    | Array<React.ReactElement<FlexItemProps>>
+    | Array<React.ReactElement<FlexItemProps> | null>
     | React.ReactElement<FlexItemProps>;
 }
 

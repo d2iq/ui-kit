@@ -125,6 +125,12 @@ exports[`Flex renders with responsive props 1`] = `
   }
 }
 
+@media (min-width:900px) {
+  .emotion-0 {
+    height: auto;
+  }
+}
+
 @media (min-width:0) {
   .emotion-0 {
     -webkit-flex-direction: column;
@@ -181,9 +187,21 @@ exports[`Flex renders with responsive props 1`] = `
   }
 }
 
+@media (min-width:900px) {
+  .emotion-0 {
+    min-height: auto;
+  }
+}
+
 @media (min-width:0) {
   .emotion-0 > div {
     width: 100%;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 > div {
+    width: auto;
   }
 }
 
