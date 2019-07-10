@@ -29,7 +29,17 @@ export {
 export { Card } from "./card";
 export { LineChart } from "./chart";
 export { CheckboxInput } from "./checkboxInput";
-export { ConfigurationMap } from "./configurationmap";
+export {
+  ConfigurationMap,
+  ConfigurationMapSection,
+  ConfigurationMapHeading,
+  ConfigurationMapRow,
+  ConfigurationMapLabel,
+  ConfigurationMapValue,
+  ConfigurationMapValueWithDefault,
+  ConfigurationMapRowAction,
+  HashMap
+} from "./configurationmap";
 export { DonutChart } from "./donutChart";
 export { Dropdownable } from "./dropdownable";
 export { Icon } from "./icon";

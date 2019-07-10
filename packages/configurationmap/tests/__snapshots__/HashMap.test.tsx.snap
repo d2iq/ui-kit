@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HashMap renders array value 1`] = `
+<dl
+  class="css-1mqjlka"
+>
+  <div
+    class="css-13rkv0z"
+  >
+    <dt
+      class="css-1bnt6tn"
+    >
+      foo
+    </dt>
+    <dd
+      class="css-1pld8at"
+    >
+      foo, bar, baz
+    </dd>
+  </div>
+</dl>
+`;
+
+exports[`HashMap renders boolean value 1`] = `
+<dl
+  class="css-1mqjlka"
+>
+  <div
+    class="css-13rkv0z"
+  >
+    <dt
+      class="css-1bnt6tn"
+    >
+      foo
+    </dt>
+    <dd
+      class="css-1pld8at"
+    >
+      true
+    </dd>
+  </div>
+</dl>
+`;
+
+exports[`HashMap renders default 1`] = `
+<dl
+  class="css-1mqjlka"
+>
+  <div
+    class="css-13rkv0z"
+  >
+    <dt
+      class="css-1bnt6tn"
+    >
+      foo
+    </dt>
+    <dd
+      class="css-1pld8at"
+    >
+      bar
+    </dd>
+  </div>
+</dl>
+`;
+
+exports[`HashMap renders empty value 1`] = `
+<dl
+  class="css-1mqjlka"
+>
+  <div
+    class="css-13rkv0z"
+  >
+    <dt
+      class="css-1bnt6tn"
+    >
+      foo
+    </dt>
+    <dd
+      class="css-1pld8at"
+    >
+      empty
+    </dd>
+  </div>
+</dl>
+`;
+
+exports[`HashMap renders with a headline 1`] = `
+<dl
+  class="css-1mqjlka"
+>
+  <h1
+    class="css-14una7e"
+  >
+    baz
+  </h1>
+  <div
+    class="css-13rkv0z"
+  >
+    <dt
+      class="css-1bnt6tn"
+    >
+      foo
+    </dt>
+    <dd
+      class="css-1pld8at"
+    >
+      bar
+    </dd>
+  </div>
+</dl>
+`;
+
+exports[`HashMap renders with nested object hash 1`] = `
+<dl
+  class="css-1mqjlka"
+>
+  <dl
+    class="css-1mqjlka"
+  >
+    <h2
+      class="css-14una7e"
+    >
+      foo
+    </h2>
+    <div
+      class="css-13rkv0z"
+    >
+      <dt
+        class="css-1bnt6tn"
+      >
+        bar
+      </dt>
+      <dd
+        class="css-1pld8at"
+      >
+        baz
+      </dd>
+    </div>
+  </dl>
+</dl>
+`;
