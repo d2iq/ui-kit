@@ -9,7 +9,7 @@ const HeadingText2 = (props: HeadingTextProps) => (
 );
 
 HeadingText2.defaultProps = {
-  align: "left",
+  align: "inherit",
   color: themeTextColorPrimary,
   wrap: "wrap",
   tag: "h2"

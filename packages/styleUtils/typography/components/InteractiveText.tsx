@@ -15,7 +15,7 @@ const InteractiveText = (props: BasicTextProps) => (
 );
 
 InteractiveText.defaultProps = {
-  align: "left",
+  align: "inherit",
   weight: "normal",
   size: "m",
   wrap: "wrap",

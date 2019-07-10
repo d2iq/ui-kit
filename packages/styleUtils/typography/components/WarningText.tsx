@@ -8,7 +8,7 @@ const SuccessText = (props: BasicTextProps) => (
 );
 
 SuccessText.defaultProps = {
-  align: "left",
+  align: "inherit",
   weight: "normal",
   size: "m",
   wrap: "wrap",

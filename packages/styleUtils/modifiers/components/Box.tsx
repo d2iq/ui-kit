@@ -78,7 +78,7 @@ const Box = (props: BoxProps) => {
 
   const boxStyles = css`
     background-color: ${bgColor};
-    background-image: url(${bgImageUrl});
+    background-image: ${bgImageUrl ? `url(${bgImageUrl})` : null};
     background-position: ${getBgImageOptionVal("position")};
     background-repeat: ${getBgImageOptionVal("repeat") || "no-repeat"};
     background-size: ${getBgImageOptionVal("size")};

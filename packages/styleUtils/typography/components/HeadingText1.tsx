@@ -8,7 +8,7 @@ const HeadingText1 = (props: HeadingTextProps) => (
 );
 
 HeadingText1.defaultProps = {
-  align: "left",
+  align: "inherit",
   color: themeTextColorPrimary,
   wrap: "wrap",
   tag: "h3"

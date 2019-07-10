@@ -8,7 +8,7 @@ const DangerText = (props: BasicTextProps) => (
 );
 
 DangerText.defaultProps = {
-  align: "left",
+  align: "inherit",
   weight: "normal",
   size: "m",
   wrap: "wrap",

@@ -137,6 +137,7 @@ exports[`Typography Text renders all props 1`] = `
   font-size: 12px;
   color: black;
   fill: black;
+  margin: 0;
   text-align: center;
   white-space: nowrap;
 }
@@ -154,6 +155,7 @@ exports[`Typography Text renders all wrap variants 1`] = `
   font-size: 14px;
   color: black;
   fill: black;
+  margin: 0;
   text-align: left;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
@@ -174,6 +176,7 @@ exports[`Typography Text renders all wrap variants 2`] = `
   font-size: 14px;
   color: black;
   fill: black;
+  margin: 0;
   text-align: left;
   white-space: nowrap;
 }
@@ -191,6 +194,7 @@ exports[`Typography Text renders all wrap variants 3`] = `
   font-size: 14px;
   color: black;
   fill: black;
+  margin: 0;
   text-align: left;
 }
 
@@ -219,6 +223,7 @@ exports[`Typography renders all default 1`] = `
   font-size: 14px;
   color: var(--themeTextColorPrimary,#1B2029);
   fill: var(--themeTextColorPrimary,#1B2029);
+  margin: 0;
   text-align: left;
 }
 
