@@ -2,8 +2,24 @@
 
 exports[`Card default 1`] = `
 <div
-  class="css-qsaa8e"
+  class="css-1rmvfmi"
 >
-  Example Content
+  <div
+    class="css-2yjhih"
+  >
+    Example Content
+  </div>
+</div>
+`;
+
+exports[`Card with aspectRatio set 1`] = `
+<div
+  class="css-88gmn3"
+>
+  <div
+    class="css-2yjhih"
+  >
+    Example Content
+  </div>
 </div>
 `;
