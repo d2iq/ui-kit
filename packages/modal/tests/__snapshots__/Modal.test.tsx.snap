@@ -18,9 +18,17 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 .emotion-15 {
   border-radius: 6px;
   background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
+  overflow: auto;
   position: fixed;
   top: 50%;
   -webkit-transform: translate(-50%,-50%);
@@ -28,16 +36,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
-  height: 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
@@ -67,10 +65,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   .emotion-15 {
     width: 550px;
   }
-}
-
-.emotion-15 > div {
-  width: 100%;
 }
 
 .emotion-14 {
@@ -123,6 +117,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-6 {
+  box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -183,6 +178,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-7 {
+  box-sizing: border-box;
   overflow: auto;
   padding: 24px;
 }
@@ -385,9 +381,17 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 .emotion-2 {
   border-radius: 6px;
   background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
+  overflow: auto;
   position: fixed;
   top: 50%;
   -webkit-transform: translate(-50%,-50%);
@@ -395,16 +399,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
-  height: 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
@@ -434,10 +428,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   .emotion-2 {
     width: 550px;
   }
-}
-
-.emotion-2 > div {
-  width: 100%;
 }
 
 .emotion-1 {
@@ -497,9 +487,17 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 .emotion-17 {
   border-radius: 6px;
   background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
+  overflow: auto;
   position: fixed;
   top: 50%;
   -webkit-transform: translate(-50%,-50%);
@@ -507,16 +505,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
-  height: 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
@@ -546,10 +534,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   .emotion-17 {
     width: 550px;
   }
-}
-
-.emotion-17 > div {
-  width: 100%;
 }
 
 .emotion-16 {
@@ -602,6 +586,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-6 {
+  box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -662,6 +647,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 }
 
 .emotion-7 {
+  box-sizing: border-box;
   overflow: auto;
   padding: 24px;
 }
@@ -1303,12 +1289,14 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-9 {
+  box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
   background-color: var(--themeBgSecondary,#F7F8F9);
   padding: 32px;
 }
 
 .emotion-10 {
+  box-sizing: border-box;
   overflow: auto;
   padding: 32px;
 }
@@ -1316,9 +1304,17 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-13 {
   border-radius: 6px;
   background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
+  overflow: auto;
   position: fixed;
   top: 50%;
   -webkit-transform: translate(-50%,-50%);
@@ -1329,20 +1325,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   height: 100vh;
   max-height: 100vh;
   width: 100vw;
-  height: 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-13 > div {
-  width: 100%;
 }
 
 .emotion-8 {
@@ -1462,7 +1444,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                   class="css-9hdker"
                 />
                 <div
-                  class="css-1nysxia"
+                  class="css-58i6lf"
                   role="dialog"
                   tabindex="-1"
                 >
@@ -1484,7 +1466,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                   class="css-9hdker"
                 />
                 <div
-                  class="css-1nysxia"
+                  class="css-58i6lf"
                   role="dialog"
                   tabindex="-1"
                 >
@@ -1506,7 +1488,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                   class="css-9hdker"
                 />
                 <div
-                  class="css-1nysxia"
+                  class="css-58i6lf"
                   role="dialog"
                   tabindex="-1"
                 >
@@ -1514,7 +1496,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     class="emotion-12"
                   >
                     <div
-                      class="css-1n2j8fb"
+                      class="css-ard01v"
                     >
                       <div
                         class="css-1byz17q"
@@ -1550,7 +1532,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       </div>
                     </div>
                     <div
-                      class="css-un5g9q"
+                      class="css-1uzhd8w"
                     >
                       <div
                         tabindex="0"
@@ -1615,9 +1597,17 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-17 {
   border-radius: 6px;
   background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
+  overflow: auto;
   position: fixed;
   top: 50%;
   -webkit-transform: translate(-50%,-50%);
@@ -1625,16 +1615,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
-  height: 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
@@ -1664,10 +1644,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   .emotion-17 {
     width: 550px;
   }
-}
-
-.emotion-17 > div {
-  width: 100%;
 }
 
 .emotion-16 {
@@ -1720,6 +1696,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-6 {
+  box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -1780,6 +1757,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-7 {
+  box-sizing: border-box;
   overflow: auto;
   padding: 24px;
 }
@@ -2191,12 +2169,14 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 .emotion-11 {
+  box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
   background-color: var(--themeBgSecondary,#F7F8F9);
   padding: 32px;
 }
 
 .emotion-12 {
+  box-sizing: border-box;
   overflow: auto;
   padding: 32px;
 }
@@ -2204,9 +2184,17 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-15 {
   border-radius: 6px;
   background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
+  overflow: auto;
   position: fixed;
   top: 50%;
   -webkit-transform: translate(-50%,-50%);
@@ -2217,20 +2205,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   height: 100vh;
   max-height: 100vh;
   width: 100vw;
-  height: 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-15 > div {
-  width: 100%;
 }
 
 .emotion-10 {
@@ -2648,9 +2622,17 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
 .emotion-2 {
   border-radius: 6px;
   background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
+  overflow: auto;
   position: fixed;
   top: 50%;
   -webkit-transform: translate(-50%,-50%);
@@ -2658,16 +2640,6 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
-  height: 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
@@ -2697,10 +2669,6 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   .emotion-2 {
     width: 550px;
   }
-}
-
-.emotion-2 > div {
-  width: 100%;
 }
 
 .emotion-1 {
@@ -2765,9 +2733,17 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
 .emotion-2 {
   border-radius: 6px;
   background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
+  overflow: auto;
   position: fixed;
   top: 50%;
   -webkit-transform: translate(-50%,-50%);
@@ -2775,16 +2751,6 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
-  height: 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
@@ -2814,10 +2780,6 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   .emotion-2 {
     width: 550px;
   }
-}
-
-.emotion-2 > div {
-  width: 100%;
 }
 
 .emotion-1 {
