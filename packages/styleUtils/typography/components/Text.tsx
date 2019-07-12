@@ -12,6 +12,7 @@ import {
   fontWeightNormal,
   themeTextColorPrimary
 } from "../../../design-tokens/build/js/designTokens";
+import { textBase } from "../style";
 
 export interface TextProps extends BasicTextProps {
   /**
@@ -29,6 +30,7 @@ const Text = (props: TextProps) => {
     <TextTag
       className={cx(
         className,
+        textBase,
         textWeight(weight as FontWeights),
         textSize(size),
         tintContent(color),
