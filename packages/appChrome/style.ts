@@ -6,10 +6,12 @@ import {
   spaceXl,
   themeBgSelected,
   themeBgHover,
-  themeBgHoverInverted
+  themeBgHoverInverted,
+  themeTextColorPrimary,
+  themeTextColorPrimaryInverted
 } from "../design-tokens/build/js/designTokens";
 import { padding } from "../shared/styles/styleUtils";
-import { pickHoverBg } from "../shared/styles/color";
+import { pickHoverBg, pickReadableTextColor } from "../shared/styles/color";
 import getCSSVarValue from "../utilities/components/getCSSVarValue";
 
 const iconSize = "24px";
@@ -62,6 +64,13 @@ export const sidebarSectionList = css`
 export const sidebarNavItem = (isActive: boolean, sidebarBgColor: string) => {
   return css`
     background-color: ${isActive ? themeBgSelected : "transparent"};
+    color: ${isActive
+      ? pickReadableTextColor(
+          sidebarBgColor,
+          themeTextColorPrimary,
+          themeTextColorPrimaryInverted
+        )
+      : null};
     cursor: pointer;
     text-transform: capitalize;
 
