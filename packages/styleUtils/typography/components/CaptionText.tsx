@@ -8,7 +8,7 @@ const CaptionText = (props: SharedTextProps) => (
 );
 
 CaptionText.defaultProps = {
-  align: "left",
+  align: "inherit",
   tag: "p"
 };
 

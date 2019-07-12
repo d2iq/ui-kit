@@ -49,14 +49,17 @@ export const flex = (
 ) => {
   const { direction } = flexProps;
   const isColumn = direction === "column" || direction === "column-reverse";
-  const getResponsiveColumnStyles = valueForColumnDirection => {
+  const getResponsiveColumnStyles = (
+    valueForColumnDirection,
+    valueForOtherDirections = "auto"
+  ) => {
     if (isColumn) {
       return valueForColumnDirection;
     } else if (typeof direction === "object") {
       return Object.entries(direction).reduce((acc, [breakpoint, config]) => {
-        if (config.includes("column")) {
-          acc[breakpoint] = valueForColumnDirection;
-        }
+        acc[breakpoint] = config.includes("column")
+          ? valueForColumnDirection
+          : valueForOtherDirections;
 
         return acc;
       }, {});

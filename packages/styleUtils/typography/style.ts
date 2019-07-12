@@ -2,12 +2,10 @@ import { css } from "emotion";
 import {
   fontLineHeightS,
   fontLineHeightM,
-  fontLineHeightDefault,
-  fontSizeM
+  fontLineHeightDefault
 } from "../../design-tokens/build/js/designTokens";
 
 export const textBase = css`
-  font-size: ${fontSizeM};
   line-height: ${fontLineHeightDefault};
 `;
 
