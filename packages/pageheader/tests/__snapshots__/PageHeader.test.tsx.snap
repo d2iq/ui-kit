@@ -11,14 +11,14 @@ exports[`PageHeader default 1`] = `
       class="css-1v0xyde"
     >
       <div
-        class="css-1mdqktp"
+        class="css-1ixtlzk"
       >
         <span>
           One
         </span>
       </div>
       <div
-        class="css-1mdqktp"
+        class="css-19hcarb"
       >
         <svg
           aria-label="system-caret-right icon"
@@ -35,7 +35,7 @@ exports[`PageHeader default 1`] = `
         </svg>
       </div>
       <div
-        class="css-1ixtlzk"
+        class="css-19hcarb"
       >
         <span>
           Two
