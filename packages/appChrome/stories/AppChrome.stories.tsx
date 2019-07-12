@@ -376,7 +376,8 @@ storiesOf("AppChrome", module)
       m: "m",
       l: "l",
       xl: "xl",
-      xxl: "xxl"
+      xxl: "xxl",
+      none: "none"
     };
 
     const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
@@ -419,7 +420,8 @@ storiesOf("AppChrome", module)
       m: "m",
       l: "l",
       xl: "xl",
-      xxl: "xxl"
+      xxl: "xxl",
+      none: "none"
     };
 
     const paddingHorSize = select(
@@ -482,7 +484,8 @@ storiesOf("AppChrome", module)
       m: "m",
       l: "l",
       xl: "xl",
-      xxl: "xxl"
+      xxl: "xxl",
+      none: "none"
     };
 
     const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
