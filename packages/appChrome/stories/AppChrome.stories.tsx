@@ -451,7 +451,7 @@ storiesOf("AppChrome", module)
       <ThemeProvider theme={CustomTheme}>
         <Sidebar isOpen={true}>
           <SidebarSection label={sectionHeader}>
-            <SidebarItem onClick={action("clicked a nav item")}>
+            <SidebarItem isActive={true} onClick={action("clicked a nav item")}>
               <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
             </SidebarItem>
             <SidebarItem onClick={action("clicked a nav item")}>
