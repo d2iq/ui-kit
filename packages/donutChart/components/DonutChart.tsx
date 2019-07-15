@@ -4,6 +4,8 @@ import {
   themeBrandPrimary
 } from "../../design-tokens/build/js/designTokens";
 import { tintContentSecondary } from "../../shared/styles/styleUtils/typography/color";
+import { hexToRgbA } from "../../shared/styles/color";
+import getCSSVarValue from "../../utilities/components/getCSSVarValue";
 
 interface DonutChartDatum {
   percentage: number;
@@ -28,7 +30,7 @@ export interface DonutChartProps {
 class DonutChart extends React.PureComponent<DonutChartProps, {}> {
   public render() {
     const { data, label, text } = this.props;
-    const strokeWidth = 2;
+    const strokeWidth = 1.5;
     const radius = 100 / (Math.PI * 2);
     const diameter = radius * 2 + strokeWidth;
     const circleCenter = diameter / 2;
@@ -41,7 +43,7 @@ class DonutChart extends React.PureComponent<DonutChartProps, {}> {
           r={radius}
           fill="transparent"
           stroke-width={strokeWidth}
-          style={{ stroke: themeBorder }}
+          style={{ stroke: hexToRgbA(getCSSVarValue(themeBorder), 0.65) }}
         />
         {data.map((datum, i) => {
           const { percentage, color } = datum;

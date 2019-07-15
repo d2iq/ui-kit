@@ -2,29 +2,29 @@
 
 exports[`DonutChart renders default 1`] = `
 <svg
-  viewBox="0 0 33.83098861837907 33.83098861837907"
+  viewBox="0 0 33.33098861837907 33.33098861837907"
 >
   <circle
-    cx={16.915494309189533}
-    cy={16.915494309189533}
+    cx={16.665494309189533}
+    cy={16.665494309189533}
     fill="transparent"
     r={15.915494309189533}
-    stroke-width={2}
+    stroke-width={1.5}
     style={
       Object {
-        "stroke": "var(--themeBorder, #DADDE2)",
+        "stroke": "rgba(218,221,226,0.65)",
       }
     }
   />
   <circle
-    cx={16.915494309189533}
-    cy={16.915494309189533}
+    cx={16.665494309189533}
+    cy={16.665494309189533}
     fill="none"
     key="0"
     r={15.915494309189533}
     stroke-dasharray="10 90"
     stroke-dashoffset={125}
-    stroke-width={2}
+    stroke-width={1.5}
     style={
       Object {
         "stroke": "#F00",
@@ -37,8 +37,8 @@ exports[`DonutChart renders default 1`] = `
         "textAnchor": "middle",
       }
     }
-    x={16.915494309189533}
-    y={16.915494309189533}
+    x={16.665494309189533}
+    y={16.665494309189533}
   >
     <tspan
       dominantBaseline="central"
@@ -61,29 +61,29 @@ exports[`DonutChart renders with text and label 1`] = `
 }
 
 <svg
-  viewBox="0 0 33.83098861837907 33.83098861837907"
+  viewBox="0 0 33.33098861837907 33.33098861837907"
 >
   <circle
-    cx={16.915494309189533}
-    cy={16.915494309189533}
+    cx={16.665494309189533}
+    cy={16.665494309189533}
     fill="transparent"
     r={15.915494309189533}
-    stroke-width={2}
+    stroke-width={1.5}
     style={
       Object {
-        "stroke": "var(--themeBorder, #DADDE2)",
+        "stroke": "rgba(218,221,226,0.65)",
       }
     }
   />
   <circle
-    cx={16.915494309189533}
-    cy={16.915494309189533}
+    cx={16.665494309189533}
+    cy={16.665494309189533}
     fill="none"
     key="0"
     r={15.915494309189533}
     stroke-dasharray="10 90"
     stroke-dashoffset={125}
-    stroke-width={2}
+    stroke-width={1.5}
     style={
       Object {
         "stroke": "#F00",
@@ -96,8 +96,8 @@ exports[`DonutChart renders with text and label 1`] = `
         "textAnchor": "middle",
       }
     }
-    x={16.915494309189533}
-    y={16.915494309189533}
+    x={16.665494309189533}
+    y={16.665494309189533}
   >
     <tspan
       dominantBaseline="unset"
@@ -108,8 +108,8 @@ exports[`DonutChart renders with text and label 1`] = `
     <tspan
       className="emotion-0"
       fontSize={3}
-      x={16.915494309189533}
-      y={21.115494309189533}
+      x={16.665494309189533}
+      y={20.865494309189533}
     >
       1 of 10
     </tspan>
