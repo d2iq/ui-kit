@@ -23,3 +23,15 @@ exports[`Card with aspectRatio set 1`] = `
   </div>
 </div>
 `;
+
+exports[`Card with paddingSize set 1`] = `
+<div
+  class="css-1rmvfmi"
+>
+  <div
+    class="css-jl90x"
+  >
+    Example Content
+  </div>
+</div>
+`;
