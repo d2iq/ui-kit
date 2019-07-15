@@ -21,6 +21,7 @@ import {
   cyan,
   greyLight,
   greyDark,
+  greyDarkLighten2,
   red,
   yellow,
   green,
@@ -498,7 +499,19 @@ storiesOf("AppChrome", module)
       step: 1
     });
 
+    const colors = {
+      greyDarkLighten2,
+      black,
+      cyan,
+      red,
+      green,
+      blue,
+      purple
+    };
+    const color = select("Hover background color", colors, greyDarkLighten2);
+
     const CustomTheme = {
+      itemHoverBackgroundColor: color,
       sidebarItemPaddingHor: paddingHorSize,
       sidebarItemPaddingVert: paddingVertSize,
       iconWidth
@@ -535,7 +548,19 @@ storiesOf("AppChrome", module)
       step: 1
     });
 
+    const colors = {
+      greyDarkLighten2,
+      black,
+      cyan,
+      red,
+      green,
+      blue,
+      purple
+    };
+    const color = select("Hover background color", colors, greyDarkLighten2);
+
     const CustomTheme = {
+      itemHoverBackgroundColor: color,
       iconWidth
     };
 

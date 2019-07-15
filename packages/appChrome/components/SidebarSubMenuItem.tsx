@@ -47,7 +47,11 @@ class SidebarSubMenuItem extends React.PureComponent<
           getCSSVarValue(themeTextColorSecondaryInverted)
         )
       ),
-      sidebarNavItem(Boolean(isActive), sidebarBgColor),
+      sidebarNavItem(
+        Boolean(isActive),
+        sidebarBgColor,
+        theme && theme.itemHoverBackgroundColor
+      ),
       textSize("s"),
       flex({ align: "center" }),
       {
