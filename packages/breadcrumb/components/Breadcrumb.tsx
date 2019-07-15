@@ -15,31 +15,28 @@ export interface BreadcrumbProps {
   children?: React.ReactNode | string;
 }
 
+function intersperse<A>(list: A[], sep: JSX.Element) {
+  return Array.prototype.concat(...list.map(e => [sep, e])).slice(1);
+}
+
 class Breadcrumb extends React.PureComponent<BreadcrumbProps, {}> {
   public render() {
-    const { children } = this.props;
     const breadcrumbSeparator = (
       <Icon shape={SystemIcons.CaretRight} size={iconSizeXs} />
     );
-    const crumbsArr = React.Children.toArray(children).reduce(
-      (acc, crumb, i) => {
-        acc.push(crumb);
-        if (i !== React.Children.toArray(children).length - 1) {
-          acc.push(breadcrumbSeparator);
-        }
-        return acc;
-      },
-      Array()
+    const crumbsArr = intersperse(
+      React.Children.toArray(this.props.children),
+      breadcrumbSeparator
     );
 
     return (
       <nav className={cx(flex({ align: "center", wrap: "wrap" }))}>
         {crumbsArr.map((crumb, i) => (
           <div
-            className={cx(textWeight("medium"), textSize("l"), {
-              [padding("right", "xs")]: i !== crumbsArr.length - 1
-            })}
             key={`breadcrumb-wrapper-${i}`}
+            className={cx(textWeight("medium"), textSize("l"), {
+              [padding("left", "xs")]: i !== 0
+            })}
           >
             {crumb}
           </div>
