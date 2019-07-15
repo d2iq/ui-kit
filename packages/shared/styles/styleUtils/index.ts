@@ -1,3 +1,4 @@
+export { preserveAspectRatio } from "./modifiers/preserveAspectRatio";
 export { flex, flexItem } from "./layout/flexbox";
 export { flush } from "./modifiers/flush";
 export { textTruncate } from "./typography/textTruncate";

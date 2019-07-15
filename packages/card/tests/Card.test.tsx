@@ -8,4 +8,9 @@ describe("Card", () => {
   it("default", () => {
     expect(toJSON(render(<Card>Example Content</Card>))).toMatchSnapshot();
   });
+  it("with aspectRatio set", () => {
+    expect(
+      toJSON(render(<Card aspectRatio={[2, 1]}>Example Content</Card>))
+    ).toMatchSnapshot();
+  });
 });
