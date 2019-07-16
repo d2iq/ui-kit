@@ -69,7 +69,11 @@ export class SidebarSubMenuComponent extends React.PureComponent<
         <Expandable
           labelClassName={cx(
             appChromeInsetContent,
-            sidebarNavItem(false, sidebarBgColor),
+            sidebarNavItem(
+              false,
+              sidebarBgColor,
+              theme && theme.itemHoverBackgroundColor
+            ),
             tintContent(
               pickReadableTextColor(
                 sidebarBgColor,

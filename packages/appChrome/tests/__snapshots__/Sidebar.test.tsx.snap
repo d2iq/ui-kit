@@ -143,7 +143,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         </SidebarItemLabel>
       </div>
     }
-    labelClassName="css-193h9wh"
+    labelClassName="css-pd13g3"
   >
     <ul
       className="emotion-0"

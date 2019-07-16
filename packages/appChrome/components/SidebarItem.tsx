@@ -19,7 +19,8 @@ class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
         return css`
           ${sidebarNavItem(
             Boolean(isActive),
-            props.theme.sidebarBackgroundColor
+            props.theme.sidebarBackgroundColor,
+            props.theme.itemHoverBackgroundColor
           )};
           padding-left: ${props.theme.sidebarItemPaddingHor
             ? spaceSizes[props.theme.sidebarItemPaddingHor]
