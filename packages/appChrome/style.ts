@@ -61,31 +61,33 @@ export const sidebarSectionList = css`
   margin: 0;
 `;
 
-export const sidebarNavItem = (isActive: boolean, sidebarBgColor: string) => {
-  return css`
-    background-color: ${isActive ? themeBgSelected : "transparent"};
-    color: ${isActive
-      ? pickReadableTextColor(
-          sidebarBgColor,
-          themeTextColorPrimary,
-          themeTextColorPrimaryInverted
-        )
-      : null};
-    cursor: pointer;
-    text-transform: capitalize;
+export const sidebarNavItem = (
+  isActive: boolean,
+  sidebarBgColor: string,
+  themedHoverColor?: string
+) => css`
+  background-color: ${isActive ? themeBgSelected : "transparent"};
+  color: ${isActive
+    ? pickReadableTextColor(
+        sidebarBgColor,
+        themeTextColorPrimary,
+        themeTextColorPrimaryInverted
+      )
+    : null};
+  cursor: pointer;
+  text-transform: capitalize;
 
-    &:hover,
-    &:focus {
-      background-color: ${isActive
-        ? themeBgSelected
-        : pickHoverBg(
-            sidebarBgColor,
-            getCSSVarValue(themeBgHover),
-            getCSSVarValue(themeBgHoverInverted)
-          )};
-    }
-  `;
-};
+  &:hover,
+  &:focus {
+    background-color: ${isActive
+      ? themeBgSelected
+      : pickHoverBg(
+          sidebarBgColor,
+          themedHoverColor || getCSSVarValue(themeBgHover),
+          themedHoverColor || getCSSVarValue(themeBgHoverInverted)
+        )};
+  }
+`;
 
 export const sidebarNavItemIconWrap = css`
   line-height: 0;
