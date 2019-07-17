@@ -102,12 +102,18 @@ class Tabs extends React.PureComponent<TabsProps, {}> {
           const { tabs = [], tabsContent = [] } = acc;
           const { children } = item.props;
           const key = item.key ? item.key : undefined;
+          const childrenWithKeys = React.Children.toArray(children).map(
+            child =>
+              React.isValidElement<TabTitle>(child)
+                ? React.cloneElement(child, { key })
+                : child
+          );
 
-          const title = React.Children.toArray(children).find(
+          const title = childrenWithKeys.find(
             child =>
               React.isValidElement<TabTitle>(child) && child.type === TabTitle
           );
-          const tabChildren = React.Children.toArray(children).filter(
+          const tabChildren = childrenWithKeys.filter(
             child => !(React.isValidElement(child) && child.type === TabTitle)
           );
           return {
