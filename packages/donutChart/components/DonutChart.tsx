@@ -42,7 +42,7 @@ class DonutChart extends React.PureComponent<DonutChartProps, {}> {
           cy={circleCenter}
           r={radius}
           fill="transparent"
-          stroke-width={strokeWidth}
+          strokeWidth={strokeWidth}
           style={{ stroke: hexToRgbA(getCSSVarValue(themeBorder), 0.65) }}
         />
         {data.map((datum, i) => {
@@ -61,9 +61,9 @@ class DonutChart extends React.PureComponent<DonutChartProps, {}> {
               cy={circleCenter}
               r={radius}
               fill="none"
-              stroke-width={strokeWidth}
-              stroke-dasharray={`${percentage} ${100 - percentage}`}
-              stroke-dashoffset={dashoffset}
+              strokeWidth={strokeWidth}
+              strokeDasharray={`${percentage} ${100 - percentage}`}
+              strokeDashoffset={dashoffset}
               style={{ stroke: color || themeBrandPrimary }}
             />
           );
