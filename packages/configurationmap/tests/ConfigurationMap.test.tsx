@@ -122,35 +122,25 @@ describe("ConfigurationMap", () => {
     ).toMatchSnapshot();
   });
   it("calls onClick when action is clicked", () => {
-    const onClickCallback = jest.fn();
     const rowActionCallback = jest.fn();
     const component = mount(
       <ConfigurationMap>
         <ConfigurationMapSection>
-          <ConfigurationMapRow
-            onlyShowActionOnHover={true}
-            onClick={onClickCallback}
-          >
+          <ConfigurationMapRow onlyShowActionOnHover={true}>
             <ConfigurationMapLabel>Name</ConfigurationMapLabel>
             <ConfigurationMapValue>Jane Doe</ConfigurationMapValue>
             <ConfigurationMapRowAction onClick={rowActionCallback}>
               Action
             </ConfigurationMapRowAction>
           </ConfigurationMapRow>
-          <ConfigurationMapRow
-            onlyShowActionOnHover={true}
-            onClick={onClickCallback}
-          >
+          <ConfigurationMapRow onlyShowActionOnHover={true}>
             <ConfigurationMapLabel>Role</ConfigurationMapLabel>
             <ConfigurationMapValue>UX Designer</ConfigurationMapValue>
             <ConfigurationMapRowAction onClick={rowActionCallback}>
               Action
             </ConfigurationMapRowAction>
           </ConfigurationMapRow>
-          <ConfigurationMapRow
-            onlyShowActionOnHover={true}
-            onClick={onClickCallback}
-          >
+          <ConfigurationMapRow onlyShowActionOnHover={true}>
             <ConfigurationMapLabel>City</ConfigurationMapLabel>
             <ConfigurationMapValue>San Francisco</ConfigurationMapValue>
             <ConfigurationMapRowAction onClick={rowActionCallback}>
@@ -162,8 +152,8 @@ describe("ConfigurationMap", () => {
     );
     const button = component.find("button").first();
 
-    expect(onClickCallback).not.toHaveBeenCalled();
+    expect(rowActionCallback).not.toHaveBeenCalled();
     button.simulate("click");
-    expect(onClickCallback).toHaveBeenCalled();
+    expect(rowActionCallback).toHaveBeenCalled();
   });
 });

@@ -4,6 +4,7 @@ exports[`Typography CaptionText renders all props 1`] = `
 <SmallText
   align="center"
   color="var(--themeTextColorSecondary, #76797E)"
+  dataCy="captionText"
   tag="span"
   weight="normal"
   wrap="nowrap"
@@ -16,6 +17,7 @@ exports[`Typography DangerText renders all props 1`] = `
 <Text
   align="center"
   color="var(--themeError, #EB293A)"
+  dataCy="dangerText"
   size="l"
   tag="span"
   weight="medium"
@@ -29,6 +31,7 @@ exports[`Typography HeadingText renders all props all HeadingText variants 1`] =
 <Text
   align="center"
   color="black"
+  dataCy="headingText1"
   size="xl"
   tag="h1"
   weight="medium"
@@ -47,6 +50,7 @@ exports[`Typography HeadingText renders all props all HeadingText variants 2`] =
   align="center"
   className="emotion-0"
   color="black"
+  dataCy="headingText2"
   size="l"
   tag="h1"
   weight="medium"
@@ -60,6 +64,7 @@ exports[`Typography HeadingText renders all props all HeadingText variants 3`] =
 <Text
   align="center"
   color="black"
+  dataCy="headingText3"
   size="m"
   tag="h1"
   weight="medium"
@@ -78,6 +83,7 @@ exports[`Typography InteractiveText renders all props 1`] = `
   align="center"
   className="emotion-0"
   color="var(--themeTextColorInteractive, #7D58FF)"
+  dataCy="interactiveText"
   size="l"
   tag="span"
   weight="medium"
@@ -96,6 +102,7 @@ exports[`Typography MonospaceText renders all props 1`] = `
   align="center"
   className="emotion-0"
   color="black"
+  dataCy="monospaceText"
   size="l"
   tag="span"
   weight="medium"
@@ -109,6 +116,7 @@ exports[`Typography SmallText renders all props 1`] = `
 <Text
   align="center"
   color="black"
+  dataCy="smallText"
   size="s"
   tag="span"
   weight="medium"
@@ -122,6 +130,7 @@ exports[`Typography SuccessText renders all props 1`] = `
 <Text
   align="center"
   color="var(--themeSuccess, #14C684)"
+  dataCy="successText"
   size="l"
   tag="span"
   weight="medium"
@@ -145,6 +154,7 @@ exports[`Typography Text renders all props 1`] = `
 
 <span
   className="test emotion-0"
+  data-cy="text"
 >
   content
 </span>
@@ -167,6 +177,7 @@ exports[`Typography Text renders all wrap variants 1`] = `
 
 <p
   className="emotion-0"
+  data-cy="text"
 >
   content
 </p>
@@ -186,6 +197,7 @@ exports[`Typography Text renders all wrap variants 2`] = `
 
 <p
   className="emotion-0"
+  data-cy="text"
 >
   content
 </p>
@@ -204,6 +216,7 @@ exports[`Typography Text renders all wrap variants 3`] = `
 
 <p
   className="emotion-0"
+  data-cy="text"
 >
   content
 </p>
@@ -213,6 +226,7 @@ exports[`Typography WarningText renders all props 1`] = `
 <Text
   align="center"
   color="var(--themeWarning, #F9A328)"
+  dataCy="warningText"
   size="l"
   tag="span"
   weight="medium"
@@ -234,6 +248,7 @@ exports[`Typography renders all default 1`] = `
 
 <p
   className="emotion-0"
+  data-cy="text"
 >
   content
 </p>
@@ -243,6 +258,7 @@ exports[`Typography renders all default 2`] = `
 <SmallText
   align="left"
   color="var(--themeTextColorSecondary, #76797E)"
+  dataCy="captionText"
   tag="p"
   weight="normal"
   wrap="wrap"
@@ -255,6 +271,7 @@ exports[`Typography renders all default 3`] = `
 <Text
   align="left"
   color="var(--themeError, #EB293A)"
+  dataCy="dangerText"
   size="m"
   tag="p"
   weight="normal"
@@ -268,6 +285,7 @@ exports[`Typography renders all default 4`] = `
 <Text
   align="left"
   color="var(--themeTextColorPrimary, #1B2029)"
+  dataCy="headingText1"
   size="xl"
   tag="p"
   weight="medium"
@@ -286,6 +304,7 @@ exports[`Typography renders all default 5`] = `
   align="left"
   className="emotion-0"
   color="var(--themeTextColorPrimary, #1B2029)"
+  dataCy="headingText2"
   size="l"
   tag="p"
   weight="medium"
@@ -299,6 +318,7 @@ exports[`Typography renders all default 6`] = `
 <Text
   align="left"
   color="var(--themeTextColorPrimary, #1B2029)"
+  dataCy="headingText3"
   size="m"
   tag="p"
   weight="medium"
@@ -317,6 +337,7 @@ exports[`Typography renders all default 7`] = `
   align="left"
   className="emotion-0"
   color="var(--themeTextColorInteractive, #7D58FF)"
+  dataCy="interactiveText"
   size="m"
   tag="p"
   weight="normal"
@@ -335,6 +356,7 @@ exports[`Typography renders all default 8`] = `
   align="left"
   className="emotion-0"
   color="var(--themeTextColorPrimary, #1B2029)"
+  dataCy="monospaceText"
   size="m"
   tag="p"
   weight="medium"
@@ -348,6 +370,7 @@ exports[`Typography renders all default 9`] = `
 <Text
   align="left"
   color="var(--themeTextColorPrimary, #1B2029)"
+  dataCy="smallText"
   size="s"
   tag="p"
   weight="normal"
@@ -361,6 +384,7 @@ exports[`Typography renders all default 10`] = `
 <Text
   align="left"
   color="var(--themeSuccess, #14C684)"
+  dataCy="successText"
   size="m"
   tag="p"
   weight="normal"
@@ -374,6 +398,7 @@ exports[`Typography renders all default 11`] = `
 <Text
   align="left"
   color="var(--themeWarning, #F9A328)"
+  dataCy="warningText"
   size="m"
   tag="p"
   weight="normal"

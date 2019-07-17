@@ -128,7 +128,11 @@ class Tabs extends React.PureComponent<TabsProps, {}> {
       );
 
     return (
-      <ReactTabs selectedIndex={selectedIndex} onSelect={onSelect}>
+      <ReactTabs
+        selectedIndex={selectedIndex}
+        onSelect={onSelect}
+        data-cy="tabs"
+      >
         <TabList>{tabs}</TabList>
         {tabsContent}
       </ReactTabs>

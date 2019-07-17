@@ -52,9 +52,13 @@ export class SidebarSubMenuComponent extends React.PureComponent<
 
   public render() {
     const { children, label, isOpen, theme } = this.props;
+    const dataCy = [
+      "sidebarSubMenu",
+      ...(isOpen ? ["sidebarSubMenu.open"] : [])
+    ];
 
     return (
-      <li>
+      <li data-cy={dataCy}>
         <Expandable
           labelClassName={cx(
             appChromeInsetContent,

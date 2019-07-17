@@ -3,6 +3,7 @@
 exports[`PageHeader default 1`] = `
 <div
   class="css-ufu8px"
+  data-cy="pageHeader"
 >
   <div
     class="css-qi8t7c"
@@ -12,6 +13,7 @@ exports[`PageHeader default 1`] = `
     >
       <div
         class="css-1ixtlzk"
+        data-cy="breadcrumb"
       >
         <span>
           One
@@ -19,10 +21,12 @@ exports[`PageHeader default 1`] = `
       </div>
       <div
         class="css-19hcarb"
+        data-cy="breadcrumb"
       >
         <svg
           aria-label="system-caret-right icon"
           class="css-zgvqkl"
+          data-cy="icon"
           height="16"
           preserveAspectRatio="xMinYMin meet"
           role="img"
@@ -36,6 +40,7 @@ exports[`PageHeader default 1`] = `
       </div>
       <div
         class="css-19hcarb"
+        data-cy="breadcrumb"
       >
         <span>
           Two
@@ -48,6 +53,7 @@ exports[`PageHeader default 1`] = `
   >
     <ul
       class="css-1mj0r5f"
+      data-cy="pageHeader-actions"
     >
       <li
         class="css-1skqmzz"

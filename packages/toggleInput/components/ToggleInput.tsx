@@ -46,6 +46,10 @@ export interface ToggleInputProps extends React.HTMLProps<HTMLInputElement> {
    * How the text content vertically aligns with the input
    */
   vertAlign?: "center" | "top";
+  /**
+   * human-readable selector used for writing tests
+   */
+  dataCy?: string;
 }
 
 interface LocalToggleInputProps extends ToggleInputProps {
@@ -66,11 +70,12 @@ class ToggleInput extends React.PureComponent<LocalToggleInputProps, {}> {
       id,
       inputLabel,
       showInputLabel,
+      dataCy,
       vertAlign
     } = this.props;
 
     return (
-      <div>
+      <div data-cy={dataCy}>
         <label
           className={cx(
             flex({

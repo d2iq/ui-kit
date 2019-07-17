@@ -37,6 +37,7 @@ class TooltipContent extends React.PureComponent<TooltipContentProps, {}> {
           minWidth,
           maxWidth
         }}
+        data-cy="tooltipContent"
       >
         {children}
       </div>

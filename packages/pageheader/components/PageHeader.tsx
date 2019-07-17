@@ -28,12 +28,16 @@ class PageHeader extends React.PureComponent<PageHeaderProps, {}> {
           padding("all", "l"),
           border("bottom")
         )}
+        data-cy="pageHeader"
       >
         <div className={flexItem("grow")}>
           <Breadcrumb>{breadcrumbElements}</Breadcrumb>
         </div>
         <div className={flexItem("shrink")}>
-          <ul className={cx(listReset, flex({ align: "center" }))}>
+          <ul
+            className={cx(listReset, flex({ align: "center" }))}
+            data-cy="pageHeader-actions"
+          >
             {actions.map(action => {
               return (
                 <li

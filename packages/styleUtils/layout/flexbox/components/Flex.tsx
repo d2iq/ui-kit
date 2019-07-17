@@ -30,6 +30,7 @@ const Flex = (props: FlexProps) => {
           ${getResponsiveSpacingStyle("padding-left", gutterSize)};
         }
       `}
+      data-cy="flex"
     >
       {children}
     </div>

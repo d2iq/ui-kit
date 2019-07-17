@@ -38,6 +38,7 @@ const GridList = (props: GridListProps) => {
         ${gridColumnTemplate(columnCount)};
         ${listReset};
       `}
+      data-cy="gridList"
     >
       {children}
     </GridListEl>

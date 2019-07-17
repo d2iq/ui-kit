@@ -53,6 +53,7 @@ exports[`InfoBox renders default 1`] = `
 <div
   aria-live="polite"
   className="emotion-1"
+  data-cy="infoBox"
   role="log"
 >
   <div>
@@ -103,6 +104,7 @@ exports[`InfoBox renders with JSX message 1`] = `
 <div
   aria-live="polite"
   className="emotion-1"
+  data-cy="infoBox"
   role="log"
 >
   <div>
@@ -193,6 +195,7 @@ exports[`InfoBox renders with actions 1`] = `
 <div
   aria-live="polite"
   className="emotion-4"
+  data-cy="infoBox"
   role="log"
 >
   <div>
@@ -200,6 +203,7 @@ exports[`InfoBox renders with actions 1`] = `
   </div>
   <div
     className="emotion-2"
+    data-cy="infoBox-actions"
   >
     <span
       className="emotion-0"
@@ -251,6 +255,7 @@ exports[`InfoBox renders without dismiss button 1`] = `
 <div
   aria-live="polite"
   className="emotion-0"
+  data-cy="infoBox"
   role="log"
 >
   <div>

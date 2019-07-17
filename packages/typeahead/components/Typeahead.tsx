@@ -84,7 +84,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
     delete textFieldProps.onClick;
 
     return (
-      <div ref={this.containerRef}>
+      <div ref={this.containerRef} data-cy="typeahead">
         <Downshift
           itemToString={defaultItemToString}
           selectedItem={selectedItems}
@@ -106,7 +106,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                   open={isOpen}
                   overlayRoot={overlayRoot}
                   dropdown={
-                    <div>
+                    <div data-cy="typeahead-dropdown">
                       {!items.length && !menuEmptyState ? null : (
                         <div className={margin("top", "xxs")}>
                           <DropdownMenu

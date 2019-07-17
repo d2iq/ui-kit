@@ -40,6 +40,7 @@ const FlexItem = (props: FlexItemProps) => {
         ${getResponsiveStyle("flex-grow", props.growFactor)};
         ${getResponsiveStyle("order", props.order)};
       `}
+      data-cy="flexItem"
     >
       {props.children}
     </div>

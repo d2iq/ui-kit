@@ -20,7 +20,11 @@ export class Badge extends React.PureComponent<BadgeProps, {}> {
   public render() {
     const { appearance, children } = this.props;
 
-    return <span className={badge(appearance)}>{children}</span>;
+    return (
+      <span className={badge(appearance)} data-cy="badge">
+        {children}
+      </span>
+    );
   }
 }
 

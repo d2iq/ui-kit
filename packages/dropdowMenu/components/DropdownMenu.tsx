@@ -17,6 +17,7 @@ const DropdownMenu = (props: DropdownMenuProps) => {
       className={cx(menuList, border("all"))}
       ref={menuRef}
       style={{ width, maxHeight }}
+      data-cy="dropdownMenu"
       {...other}
     />
   );

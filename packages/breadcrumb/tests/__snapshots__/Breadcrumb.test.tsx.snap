@@ -6,6 +6,7 @@ exports[`Breadcrumb default 1`] = `
 >
   <div
     class="css-1ixtlzk"
+    data-cy="breadcrumb"
   >
     <span>
       One
@@ -13,10 +14,12 @@ exports[`Breadcrumb default 1`] = `
   </div>
   <div
     class="css-19hcarb"
+    data-cy="breadcrumb"
   >
     <svg
       aria-label="system-caret-right icon"
       class="css-zgvqkl"
+      data-cy="icon"
       height="16"
       preserveAspectRatio="xMinYMin meet"
       role="img"
@@ -30,6 +33,7 @@ exports[`Breadcrumb default 1`] = `
   </div>
   <div
     class="css-19hcarb"
+    data-cy="breadcrumb"
   >
     <span>
       Two

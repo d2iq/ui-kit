@@ -78,7 +78,10 @@ class Toaster extends React.PureComponent<ToasterProps, ToasterState> {
     const toastsToRender = this.state.toasts || [];
 
     return (
-      <div className={cx(toaster, margin("all"), marginAt.medium("all", "l"))}>
+      <div
+        className={cx(toaster, margin("all"), marginAt.medium("all", "l"))}
+        data-cy="toaster"
+      >
         <ol
           onMouseEnter={this.clearTimeouts}
           onMouseLeave={this.restartTimeouts}

@@ -28,7 +28,7 @@ class Card extends React.PureComponent<CardProps, {}> {
       : null;
 
     return (
-      <div className={cx(style, aspectRatioStyle)}>
+      <div className={cx(style, aspectRatioStyle)} data-cy="card">
         <div className={padding("all", paddingSize)}>{children}</div>
       </div>
     );

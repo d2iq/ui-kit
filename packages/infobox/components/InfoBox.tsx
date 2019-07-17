@@ -67,10 +67,14 @@ export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
       onDismiss,
       className
     } = this.props;
-
     const hasActions = primaryAction || secondaryAction;
-
     const isUrgentMessage = appearance === "danger" || appearance === "warning";
+    const dataCy = [
+      "infoBox",
+      ...(appearance && appearance !== "default"
+        ? [`infoBox.${appearance}`]
+        : [])
+    ].join(" ");
 
     return (
       <div
@@ -84,10 +88,14 @@ export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
         )}
         role={isUrgentMessage ? "alert" : "log"}
         aria-live={isUrgentMessage ? "assertive" : "polite"}
+        data-cy={dataCy}
       >
         <div>{message}</div>
         {hasActions && (
-          <div className={cx(infoBoxActions, display("inline-flex"))}>
+          <div
+            className={cx(infoBoxActions, display("inline-flex"))}
+            data-cy="infoBox-actions"
+          >
             {primaryAction && (
               <span className={primaryActionStyle}>{primaryAction}</span>
             )}

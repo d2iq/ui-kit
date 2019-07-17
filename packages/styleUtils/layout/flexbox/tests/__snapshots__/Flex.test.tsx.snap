@@ -29,6 +29,7 @@ exports[`Flex renders default 1`] = `
 
 <div
   className="emotion-0"
+  data-cy="flex"
 >
   <FlexItem
     flex="grow"
@@ -78,6 +79,7 @@ exports[`Flex renders with all props 1`] = `
 
 <div
   className="emotion-0"
+  data-cy="flex"
 >
   <FlexItem
     flex="grow"
@@ -219,6 +221,7 @@ exports[`Flex renders with responsive props 1`] = `
 
 <div
   className="emotion-0"
+  data-cy="flex"
 >
   <FlexItem
     flex="grow"
