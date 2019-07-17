@@ -9,7 +9,7 @@ exports[`DonutChart renders default 1`] = `
     cy={16.665494309189533}
     fill="transparent"
     r={15.915494309189533}
-    stroke-width={1.5}
+    strokeWidth={1.5}
     style={
       Object {
         "stroke": "rgba(218,221,226,0.65)",
@@ -22,9 +22,9 @@ exports[`DonutChart renders default 1`] = `
     fill="none"
     key="0"
     r={15.915494309189533}
-    stroke-dasharray="10 90"
-    stroke-dashoffset={125}
-    stroke-width={1.5}
+    strokeDasharray="10 90"
+    strokeDashoffset={125}
+    strokeWidth={1.5}
     style={
       Object {
         "stroke": "#F00",
@@ -68,7 +68,7 @@ exports[`DonutChart renders with text and label 1`] = `
     cy={16.665494309189533}
     fill="transparent"
     r={15.915494309189533}
-    stroke-width={1.5}
+    strokeWidth={1.5}
     style={
       Object {
         "stroke": "rgba(218,221,226,0.65)",
@@ -81,9 +81,9 @@ exports[`DonutChart renders with text and label 1`] = `
     fill="none"
     key="0"
     r={15.915494309189533}
-    stroke-dasharray="10 90"
-    stroke-dashoffset={125}
-    stroke-width={1.5}
+    strokeDasharray="10 90"
+    strokeDashoffset={125}
+    strokeWidth={1.5}
     style={
       Object {
         "stroke": "#F00",
