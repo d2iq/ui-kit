@@ -14,12 +14,17 @@ exports[`TextInput should display icon with tooltip if tooltipText is set 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-2 > div {
+  width: auto;
 }
 
 .emotion-1 {
@@ -72,12 +77,17 @@ exports[`TextInput should display validation message if set & appearance == Erro
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -136,12 +146,17 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div
@@ -177,12 +192,17 @@ exports[`TextInput should not display validation message if set & appearance == 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div
@@ -226,6 +246,7 @@ exports[`TextInput should render all appearances focus 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -234,11 +255,16 @@ exports[`TextInput should render all appearances focus 1`] = `
   min-height: 0;
 }
 
+.emotion-1 > div {
+  width: auto;
+}
+
 .emotion-3 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -255,6 +281,10 @@ exports[`TextInput should render all appearances focus 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3 > div {
+  width: auto;
 }
 
 .emotion-2 {
@@ -396,12 +426,17 @@ exports[`TextInput should render all appearances focus 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -419,6 +454,7 @@ exports[`TextInput should render all appearances focus 2`] = `
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -435,6 +471,10 @@ exports[`TextInput should render all appearances focus 2`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3 > div {
+  width: auto;
 }
 
 .emotion-2 {
@@ -579,6 +619,7 @@ exports[`TextInput should render all appearances focus 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -587,11 +628,16 @@ exports[`TextInput should render all appearances focus 3`] = `
   min-height: 0;
 }
 
+.emotion-1 > div {
+  width: auto;
+}
+
 .emotion-3 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -608,6 +654,10 @@ exports[`TextInput should render all appearances focus 3`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3 > div {
+  width: auto;
 }
 
 .emotion-2 {
@@ -752,12 +802,17 @@ exports[`TextInput should render all appearances with props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div
@@ -788,12 +843,17 @@ exports[`TextInput should render all appearances with props 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -842,12 +902,17 @@ exports[`TextInput should render all appearances with props 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div
@@ -886,12 +951,17 @@ exports[`TextInput should render node as inputLabel 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div
@@ -932,12 +1002,17 @@ exports[`TextInput should render string inputLabel 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div
