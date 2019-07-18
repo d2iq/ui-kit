@@ -110,7 +110,9 @@ export const processingTextStyle = css`
 
 export const buttonBase = css`
   cursor: pointer;
+  display: inline-block;
   outline: none;
+  text-decoration: none;
 `;
 
 export const buttonContent = css`
