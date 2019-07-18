@@ -17,3 +17,4 @@ packages/icons/dist/
 .cache-loader/
 .cache/
 cypress/videos/
+cypress/screenshots/

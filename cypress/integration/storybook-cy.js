@@ -1,5 +1,11 @@
+const navigateToStory = require("../utils/navigateToStory");
+
 describe("Storybook", () => {
-  it("opens storybook", () => {
-    cy.visit("/");
+  it("AppChrome has no error", () => {
+    navigateToStory("AppChrome");
+  });
+
+  it("Avatar has no error", () => {
+    navigateToStory("Avatar");
   });
 });
