@@ -15,7 +15,8 @@ import {
   themeTextColorPrimary,
   themeTextColorPrimaryInverted,
   themeTextColorSecondaryInverted,
-  themeBgPrimaryInverted
+  themeBgPrimaryInverted,
+  themeBgSelected
 } from "../../design-tokens/build/js/designTokens";
 import { pickReadableTextColor } from "../../shared/styles/color";
 import { AppChromeTheme } from "../types/appChromeTheme";
@@ -37,9 +38,14 @@ class SidebarSubMenuItem extends React.PureComponent<
       theme && theme.sidebarBackgroundColor
         ? theme.sidebarBackgroundColor
         : getCSSVarValue(themeBgPrimaryInverted);
+    const activeBgColor = theme && theme.itemActiveBackgroundColor;
+    const subMenuItemBgColor = isActive
+      ? activeBgColor || themeBgSelected
+      : sidebarBgColor;
     const classNames = cx(
       subMenuItem,
       appChromeInsetContent,
+      sidebarNavItem(Boolean(isActive), theme),
       tintContent(
         pickReadableTextColor(
           sidebarBgColor,
@@ -47,17 +53,12 @@ class SidebarSubMenuItem extends React.PureComponent<
           getCSSVarValue(themeTextColorSecondaryInverted)
         )
       ),
-      sidebarNavItem(
-        Boolean(isActive),
-        sidebarBgColor,
-        theme && theme.itemHoverBackgroundColor
-      ),
       textSize("s"),
       flex({ align: "center" }),
       {
         [tintContent(
           pickReadableTextColor(
-            sidebarBgColor,
+            subMenuItemBgColor,
             getCSSVarValue(themeTextColorPrimary),
             getCSSVarValue(themeTextColorPrimaryInverted)
           )

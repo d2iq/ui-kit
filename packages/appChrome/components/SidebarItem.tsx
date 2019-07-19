@@ -17,11 +17,7 @@ class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
     const Item = styled("li")`
       ${props => {
         return css`
-          ${sidebarNavItem(
-            Boolean(isActive),
-            props.theme.sidebarBackgroundColor,
-            props.theme.itemHoverBackgroundColor
-          )};
+          ${sidebarNavItem(Boolean(isActive), props.theme)};
           padding-left: ${props.theme.sidebarItemPaddingHor
             ? spaceSizes[props.theme.sidebarItemPaddingHor]
             : spaceSizes.l};
