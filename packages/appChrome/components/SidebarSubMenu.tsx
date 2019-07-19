@@ -4,17 +4,10 @@ import { Expandable } from "../../expandable";
 import { SidebarItemLabelProps } from "./SidebarItemLabel";
 import { SidebarSubMenuItemProps } from "./SidebarSubMenuItem";
 import { sidebarNavItem, appChromeInsetContent, spaceMenuIcon } from "../style";
-import { listReset, tintContent } from "../../shared/styles/styleUtils";
-import {
-  iconSizeS,
-  themeTextColorPrimary,
-  themeTextColorPrimaryInverted,
-  themeBgPrimaryInverted
-} from "../../design-tokens/build/js/designTokens";
+import { listReset } from "../../shared/styles/styleUtils";
+import { iconSizeS } from "../../design-tokens/build/js/designTokens";
 import { withTheme } from "emotion-theming";
-import { pickReadableTextColor } from "../../shared/styles/color";
 import { AppChromeTheme } from "../types/appChromeTheme";
-import getCSSVarValue from "../../utilities/components/getCSSVarValue";
 
 export interface SidebarSubMenuProps {
   children: Array<React.ReactElement<SidebarSubMenuItemProps>>;
@@ -59,28 +52,13 @@ export class SidebarSubMenuComponent extends React.PureComponent<
 
   public render() {
     const { children, label, isOpen, theme } = this.props;
-    const sidebarBgColor =
-      theme && theme.sidebarBackgroundColor
-        ? theme.sidebarBackgroundColor
-        : getCSSVarValue(themeBgPrimaryInverted);
 
     return (
       <li>
         <Expandable
           labelClassName={cx(
             appChromeInsetContent,
-            sidebarNavItem(
-              false,
-              sidebarBgColor,
-              theme && theme.itemHoverBackgroundColor
-            ),
-            tintContent(
-              pickReadableTextColor(
-                sidebarBgColor,
-                themeTextColorPrimary,
-                themeTextColorPrimaryInverted
-              )
-            )
+            sidebarNavItem(false, theme)
           )}
           isOpen={isOpen}
           label={<div>{label}</div>}
