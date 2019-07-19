@@ -6,4 +6,8 @@ export const style = css`
   background-color: ${themeBgPrimary};
   ${border("all")};
   ${borderRadius("default")};
+
+  > div {
+    height: 100%;
+  }
 `;
