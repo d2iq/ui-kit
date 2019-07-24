@@ -30,7 +30,7 @@
     "setup:git-hooks": "./scripts/pre-install",
     "start": "NODE_ENV=development npm run storybook --root ./ ",
     "storybook": "start-storybook -p 6006",
-    "test": "jest && npm run test:integration",
+    "test": "jest",
     "pretest:integration": "npm run storybook & sleep 30",
     "test:integration": "cypress run",
     "posttest:integration": "lsof -i ':6006' | awk 'NR > 1 {print $2}' | xargs kill",
