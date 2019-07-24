@@ -14,6 +14,7 @@ exports[`GridList renders default 1`] = `
 
 <ul
   className="emotion-0"
+  data-cy="gridList"
 >
   <li>
     list item
@@ -38,6 +39,7 @@ exports[`GridList renders with all props 1`] = `
 
 <ol
   className="emotion-0"
+  data-cy="gridList"
 >
   <li>
     list item
@@ -84,6 +86,7 @@ exports[`GridList renders with responsive props 1`] = `
 
 <ul
   className="emotion-0"
+  data-cy="gridList"
 >
   <li>
     list item

@@ -9,7 +9,10 @@ const BorderedList: React.SFC<SharedListProps> = props => {
   const BorderedListEl = tag;
 
   return (
-    <BorderedListEl className={cx(listReset, borderedListStyle)}>
+    <BorderedListEl
+      className={cx(listReset, borderedListStyle)}
+      data-cy="borderedList"
+    >
       {children}
     </BorderedListEl>
   );

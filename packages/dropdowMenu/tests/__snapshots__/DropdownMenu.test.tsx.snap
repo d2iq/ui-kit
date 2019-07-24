@@ -13,6 +13,7 @@ exports[`DropdownMenu renders 1`] = `
 
 <div
   className="emotion-0"
+  data-cy="dropdownMenu"
   style={
     Object {
       "maxHeight": 200,

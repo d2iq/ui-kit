@@ -19,11 +19,25 @@ export interface TextProps extends BasicTextProps {
    * The color of the text
    */
   color: React.CSSProperties["color"];
+  /**
+   * human-readable selector used for writing tests
+   */
+  dataCy?: string;
   className?: string;
 }
 
 const Text = (props: TextProps) => {
-  const { align, children, tag, wrap, weight, color, size, className } = props;
+  const {
+    align,
+    children,
+    tag,
+    wrap,
+    weight,
+    color,
+    size,
+    className,
+    dataCy
+  } = props;
   const TextTag = tag;
 
   return (
@@ -45,6 +59,7 @@ const Text = (props: TextProps) => {
           `]: wrap === "nowrap"
         }
       )}
+      data-cy={dataCy}
     >
       {children}
     </TextTag>
@@ -57,7 +72,8 @@ Text.defaultProps = {
   wrap: "wrap",
   weight: fontWeightNormal,
   color: themeTextColorPrimary,
-  size: "m"
+  size: "m",
+  dataCy: "text"
 };
 
 export default Text;

@@ -3,6 +3,7 @@
 exports[`Tabs default 1`] = `
 <div
   class="react-tabs"
+  data-cy="tabs"
   data-tabs="true"
 >
   <ul

@@ -51,7 +51,7 @@ class SidebarSection extends React.PureComponent<SidebarSectionProps, {}> {
     `;
 
     return (
-      <div>
+      <div data-cy="sidebarSection">
         {label && (
           <H3
             className={cx(

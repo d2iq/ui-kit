@@ -14,6 +14,11 @@ export interface SidebarItemProps {
 class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
   public render() {
     const { children, isActive, onClick } = this.props;
+    const dataCy = [
+      "sidebarItem",
+      ...(isActive ? ["sidebarItem.active"] : [])
+    ].join(" ");
+
     const Item = styled("li")`
       ${props => {
         return css`
@@ -40,6 +45,7 @@ class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
         tabIndex={0}
         role="link"
         disableFocusOutline={true}
+        dataCy={dataCy}
       >
         <Item>{children}</Item>
       </Clickable>

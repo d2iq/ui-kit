@@ -65,9 +65,13 @@ class SidebarSubMenuItem extends React.PureComponent<
         )]: isActive
       }
     );
+    const dataCy = [
+      "sidebarSubMenuItem",
+      ...(isActive ? ["sidebarSubMenuItem.active"] : [])
+    ].join(" ");
 
     return (
-      <Clickable action={onClick} tabIndex={0} role="link">
+      <Clickable action={onClick} tabIndex={0} role="link" dataCy={dataCy}>
         <div className={classNames}>
           <span className={subMenuItemText}>{children}</span>
         </div>

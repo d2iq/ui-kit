@@ -35,6 +35,7 @@ const ConfigurationMapHeading: React.StatelessComponent<
         padding("bottom", "xs"),
         border("bottom")
       )}
+      data-cy="configurationMapHeading"
     >
       {children}
     </Heading>

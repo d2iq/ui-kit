@@ -6,7 +6,9 @@ export interface ContainerProps {
 }
 
 const Container: React.StatelessComponent<ContainerProps> = ({ children }) => (
-  <div className={container}>{children}</div>
+  <div className={container} data-cy="conntainer">
+    {children}
+  </div>
 );
 
 export default Container;

@@ -4,7 +4,12 @@ import { SharedTextProps } from "../textTypes";
 import { themeTextColorSecondary } from "../../../design-tokens/build/js/designTokens";
 
 const CaptionText = (props: SharedTextProps) => (
-  <SmallText weight="normal" color={themeTextColorSecondary} {...props} />
+  <SmallText
+    weight="normal"
+    color={themeTextColorSecondary}
+    dataCy="captionText"
+    {...props}
+  />
 );
 
 CaptionText.defaultProps = {

@@ -25,6 +25,7 @@ exports[`BorderedList renders default 1`] = `
 
 <ul
   className="emotion-0"
+  data-cy="borderedList"
 >
   <li>
     list item

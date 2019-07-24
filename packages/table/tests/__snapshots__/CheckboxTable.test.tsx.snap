@@ -268,6 +268,7 @@ Array [
           >
             <div
               class="emotion-10"
+              data-cy="table-headerCell table-headerCell.col0 table-headerCell.row0"
               style="height:35px;left:0;position:absolute;top:0;width:24px"
             >
               <div
@@ -281,8 +282,11 @@ Array [
                   >
                     <div
                       class="emotion-5"
+                      data-cy="checkboxTable-headerCheckboxWrapper"
                     >
-                      <div>
+                      <div
+                        data-cy="checkboxInput"
+                      >
                         <label
                           class="emotion-4"
                           for="headerCheckbox"
@@ -296,6 +300,7 @@ Array [
                               <input
                                 aria-checked="0"
                                 class="emotion-0"
+                                data-cy="checkboxInput-input"
                                 id="headerCheckbox"
                                 type="checkbox"
                               />
@@ -318,6 +323,7 @@ Array [
             </div>
             <div
               class="emotion-10"
+              data-cy="table-headerCell table-headerCell.col1 table-headerCell.row0"
               style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
             >
               <div
@@ -353,6 +359,7 @@ Array [
             >
               <div
                 class="emotion-10"
+                data-cy="table-headerCell table-headerCell.col2 table-headerCell.row0"
                 style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -370,6 +377,7 @@ Array [
               </div>
               <div
                 class="emotion-10"
+                data-cy="table-headerCell table-headerCell.col3 table-headerCell.row0"
                 style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -387,6 +395,7 @@ Array [
               </div>
               <div
                 class="emotion-10"
+                data-cy="table-headerCell table-headerCell.col4 table-headerCell.row0"
                 style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -404,6 +413,7 @@ Array [
               </div>
               <div
                 class="emotion-10"
+                data-cy="table-headerCell table-headerCell.col5 table-headerCell.row0"
                 style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -444,13 +454,17 @@ Array [
             >
               <div
                 class="emotion-39"
+                data-cy="table-contentCell table-contentCell.col0 table-contentCell.row1"
                 data-rowindex="1"
                 style="height:35px;left:0;position:absolute;top:0;width:24px"
               >
                 <div
                   class="emotion-38"
+                  data-cy="table-checkboxCell table-checkboxCell.row0"
                 >
-                  <div>
+                  <div
+                    data-cy="checkboxInput"
+                  >
                     <label
                       class="emotion-4"
                       for="0"
@@ -464,6 +478,7 @@ Array [
                           <input
                             aria-checked="false"
                             class="emotion-0"
+                            data-cy="checkboxInput-input"
                             id="0"
                             type="checkbox"
                           />
@@ -480,6 +495,7 @@ Array [
               </div>
               <div
                 class="emotion-39"
+                data-cy="table-contentCell table-contentCell.col1 table-contentCell.row1"
                 data-rowindex="1"
                 style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
               >
@@ -489,13 +505,17 @@ Array [
               </div>
               <div
                 class="emotion-39"
+                data-cy="table-contentCell table-contentCell.col0 table-contentCell.row2"
                 data-rowindex="2"
                 style="height:35px;left:0;position:absolute;top:35px;width:24px"
               >
                 <div
                   class="emotion-38"
+                  data-cy="table-checkboxCell table-checkboxCell.row1"
                 >
-                  <div>
+                  <div
+                    data-cy="checkboxInput"
+                  >
                     <label
                       class="emotion-4"
                       for="1"
@@ -509,6 +529,7 @@ Array [
                           <input
                             aria-checked="false"
                             class="emotion-0"
+                            data-cy="checkboxInput-input"
                             id="1"
                             type="checkbox"
                           />
@@ -525,6 +546,7 @@ Array [
               </div>
               <div
                 class="emotion-39"
+                data-cy="table-contentCell table-contentCell.col1 table-contentCell.row2"
                 data-rowindex="2"
                 style="height:35px;left:24px;position:absolute;top:35px;width:170.66666666666666px"
               >
@@ -550,6 +572,7 @@ Array [
           >
             <div
               class="emotion-39"
+              data-cy="table-contentCell table-contentCell.col2 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -559,6 +582,7 @@ Array [
             </div>
             <div
               class="emotion-39"
+              data-cy="table-contentCell table-contentCell.col3 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -568,6 +592,7 @@ Array [
             </div>
             <div
               class="emotion-39"
+              data-cy="table-contentCell table-contentCell.col4 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -577,6 +602,7 @@ Array [
             </div>
             <div
               class="emotion-39"
+              data-cy="table-contentCell table-contentCell.col5 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -586,6 +612,7 @@ Array [
             </div>
             <div
               class="emotion-39"
+              data-cy="table-contentCell table-contentCell.col2 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:170.66666666666666px"
             >
@@ -595,6 +622,7 @@ Array [
             </div>
             <div
               class="emotion-39"
+              data-cy="table-contentCell table-contentCell.col3 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:170.66666666666666px;position:absolute;top:35px;width:170.66666666666666px"
             >
@@ -604,6 +632,7 @@ Array [
             </div>
             <div
               class="emotion-39"
+              data-cy="table-contentCell table-contentCell.col4 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:341.3333333333333px;position:absolute;top:35px;width:170.66666666666666px"
             >
@@ -613,6 +642,7 @@ Array [
             </div>
             <div
               class="emotion-39"
+              data-cy="table-contentCell table-contentCell.col5 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:512px;position:absolute;top:35px;width:170.66666666666666px"
             >
@@ -969,6 +999,7 @@ Array [
           >
             <div
               class="emotion-12"
+              data-cy="table-headerCell table-headerCell.col0 table-headerCell.row0"
               style="height:35px;left:0;position:absolute;top:0;width:24px"
             >
               <div
@@ -982,8 +1013,11 @@ Array [
                   >
                     <div
                       class="emotion-7"
+                      data-cy="checkboxTable-headerCheckboxWrapper"
                     >
-                      <div>
+                      <div
+                        data-cy="checkboxInput checkboxInput.indeterminate"
+                      >
                         <label
                           class="emotion-6"
                           for="headerCheckbox"
@@ -997,6 +1031,7 @@ Array [
                               <input
                                 aria-checked="mixed"
                                 class="emotion-0"
+                                data-cy="checkboxInput-input checkboxInput-input.indeterminate"
                                 id="headerCheckbox"
                                 type="checkbox"
                               />
@@ -1006,6 +1041,7 @@ Array [
                                 <svg
                                   aria-label="system-minus icon"
                                   class="emotion-1"
+                                  data-cy="icon"
                                   height="16"
                                   preserveAspectRatio="xMinYMin meet"
                                   role="img"
@@ -1036,6 +1072,7 @@ Array [
             </div>
             <div
               class="emotion-12"
+              data-cy="table-headerCell table-headerCell.col1 table-headerCell.row0"
               style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
             >
               <div
@@ -1071,6 +1108,7 @@ Array [
             >
               <div
                 class="emotion-12"
+                data-cy="table-headerCell table-headerCell.col2 table-headerCell.row0"
                 style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -1088,6 +1126,7 @@ Array [
               </div>
               <div
                 class="emotion-12"
+                data-cy="table-headerCell table-headerCell.col3 table-headerCell.row0"
                 style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -1105,6 +1144,7 @@ Array [
               </div>
               <div
                 class="emotion-12"
+                data-cy="table-headerCell table-headerCell.col4 table-headerCell.row0"
                 style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -1122,6 +1162,7 @@ Array [
               </div>
               <div
                 class="emotion-12"
+                data-cy="table-headerCell table-headerCell.col5 table-headerCell.row0"
                 style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -1162,13 +1203,17 @@ Array [
             >
               <div
                 class="emotion-43"
+                data-cy="table-contentCell table-contentCell.col0 table-contentCell.row1"
                 data-rowindex="1"
                 style="height:35px;left:0;position:absolute;top:0;width:24px"
               >
                 <div
                   class="emotion-42"
+                  data-cy="table-checkboxCell table-checkboxCell.row0"
                 >
-                  <div>
+                  <div
+                    data-cy="checkboxInput checkboxInput.checked"
+                  >
                     <label
                       class="emotion-6"
                       for="0"
@@ -1183,6 +1228,7 @@ Array [
                             aria-checked="true"
                             checked=""
                             class="emotion-0"
+                            data-cy="checkboxInput-input checkboxInput-input.checked"
                             id="0"
                             type="checkbox"
                           />
@@ -1192,6 +1238,7 @@ Array [
                             <svg
                               aria-label="system-check icon"
                               class="emotion-1"
+                              data-cy="icon"
                               height="16"
                               preserveAspectRatio="xMinYMin meet"
                               role="img"
@@ -1216,6 +1263,7 @@ Array [
               </div>
               <div
                 class="emotion-43"
+                data-cy="table-contentCell table-contentCell.col1 table-contentCell.row1"
                 data-rowindex="1"
                 style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
               >
@@ -1225,13 +1273,17 @@ Array [
               </div>
               <div
                 class="emotion-51"
+                data-cy="table-contentCell table-contentCell.col0 table-contentCell.row2"
                 data-rowindex="2"
                 style="height:35px;left:0;position:absolute;top:35px;width:24px"
               >
                 <div
                   class="emotion-42"
+                  data-cy="table-checkboxCell table-checkboxCell.row1"
                 >
-                  <div>
+                  <div
+                    data-cy="checkboxInput"
+                  >
                     <label
                       class="emotion-6"
                       for="1"
@@ -1245,6 +1297,7 @@ Array [
                           <input
                             aria-checked="false"
                             class="emotion-0"
+                            data-cy="checkboxInput-input"
                             id="1"
                             type="checkbox"
                           />
@@ -1261,6 +1314,7 @@ Array [
               </div>
               <div
                 class="emotion-51"
+                data-cy="table-contentCell table-contentCell.col1 table-contentCell.row2"
                 data-rowindex="2"
                 style="height:35px;left:24px;position:absolute;top:35px;width:170.66666666666666px"
               >
@@ -1286,6 +1340,7 @@ Array [
           >
             <div
               class="emotion-43"
+              data-cy="table-contentCell table-contentCell.col2 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -1295,6 +1350,7 @@ Array [
             </div>
             <div
               class="emotion-43"
+              data-cy="table-contentCell table-contentCell.col3 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -1304,6 +1360,7 @@ Array [
             </div>
             <div
               class="emotion-43"
+              data-cy="table-contentCell table-contentCell.col4 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -1313,6 +1370,7 @@ Array [
             </div>
             <div
               class="emotion-43"
+              data-cy="table-contentCell table-contentCell.col5 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -1322,6 +1380,7 @@ Array [
             </div>
             <div
               class="emotion-51"
+              data-cy="table-contentCell table-contentCell.col2 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:170.66666666666666px"
             >
@@ -1331,6 +1390,7 @@ Array [
             </div>
             <div
               class="emotion-51"
+              data-cy="table-contentCell table-contentCell.col3 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:170.66666666666666px;position:absolute;top:35px;width:170.66666666666666px"
             >
@@ -1340,6 +1400,7 @@ Array [
             </div>
             <div
               class="emotion-51"
+              data-cy="table-contentCell table-contentCell.col4 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:341.3333333333333px;position:absolute;top:35px;width:170.66666666666666px"
             >
@@ -1349,6 +1410,7 @@ Array [
             </div>
             <div
               class="emotion-51"
+              data-cy="table-contentCell table-contentCell.col5 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:512px;position:absolute;top:35px;width:170.66666666666666px"
             >
@@ -1664,6 +1726,7 @@ Array [
           >
             <div
               class="emotion-10"
+              data-cy="table-headerCell table-headerCell.col0 table-headerCell.row0"
               style="height:35px;left:0;position:absolute;top:0;width:24px"
             >
               <div
@@ -1677,8 +1740,11 @@ Array [
                   >
                     <div
                       class="emotion-5"
+                      data-cy="checkboxTable-headerCheckboxWrapper"
                     >
-                      <div>
+                      <div
+                        data-cy="checkboxInput"
+                      >
                         <label
                           class="emotion-4"
                           for="headerCheckbox"
@@ -1692,6 +1758,7 @@ Array [
                               <input
                                 aria-checked="0"
                                 class="emotion-0"
+                                data-cy="checkboxInput-input"
                                 id="headerCheckbox"
                                 type="checkbox"
                               />
@@ -1714,6 +1781,7 @@ Array [
             </div>
             <div
               class="emotion-10"
+              data-cy="table-headerCell table-headerCell.col1 table-headerCell.row0"
               style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
             >
               <div
@@ -1749,6 +1817,7 @@ Array [
             >
               <div
                 class="emotion-10"
+                data-cy="table-headerCell table-headerCell.col2 table-headerCell.row0"
                 style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -1766,6 +1835,7 @@ Array [
               </div>
               <div
                 class="emotion-10"
+                data-cy="table-headerCell table-headerCell.col3 table-headerCell.row0"
                 style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -1783,6 +1853,7 @@ Array [
               </div>
               <div
                 class="emotion-10"
+                data-cy="table-headerCell table-headerCell.col4 table-headerCell.row0"
                 style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -1800,6 +1871,7 @@ Array [
               </div>
               <div
                 class="emotion-10"
+                data-cy="table-headerCell table-headerCell.col5 table-headerCell.row0"
                 style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
               >
                 <div
@@ -1840,11 +1912,13 @@ Array [
             >
               <div
                 class="emotion-33"
+                data-cy="table-contentCell table-contentCell.col0 table-contentCell.row1"
                 data-rowindex="1"
                 style="height:35px;left:0;position:absolute;top:0;width:24px"
               />
               <div
                 class="emotion-33"
+                data-cy="table-contentCell table-contentCell.col1 table-contentCell.row1"
                 data-rowindex="1"
                 style="height:35px;left:24px;position:absolute;top:0;width:170.66666666666666px"
               >
@@ -1854,13 +1928,17 @@ Array [
               </div>
               <div
                 class="emotion-41"
+                data-cy="table-contentCell table-contentCell.col0 table-contentCell.row2"
                 data-rowindex="2"
                 style="height:35px;left:0;position:absolute;top:35px;width:24px"
               >
                 <div
                   class="emotion-40"
+                  data-cy="table-checkboxCell table-checkboxCell.row1"
                 >
-                  <div>
+                  <div
+                    data-cy="checkboxInput"
+                  >
                     <label
                       class="emotion-4"
                       for="1"
@@ -1874,6 +1952,7 @@ Array [
                           <input
                             aria-checked="false"
                             class="emotion-0"
+                            data-cy="checkboxInput-input"
                             id="1"
                             type="checkbox"
                           />
@@ -1890,6 +1969,7 @@ Array [
               </div>
               <div
                 class="emotion-41"
+                data-cy="table-contentCell table-contentCell.col1 table-contentCell.row2"
                 data-rowindex="2"
                 style="height:35px;left:24px;position:absolute;top:35px;width:170.66666666666666px"
               >
@@ -1915,6 +1995,7 @@ Array [
           >
             <div
               class="emotion-33"
+              data-cy="table-contentCell table-contentCell.col2 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -1924,6 +2005,7 @@ Array [
             </div>
             <div
               class="emotion-33"
+              data-cy="table-contentCell table-contentCell.col3 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:170.66666666666666px;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -1933,6 +2015,7 @@ Array [
             </div>
             <div
               class="emotion-33"
+              data-cy="table-contentCell table-contentCell.col4 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:341.3333333333333px;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -1942,6 +2025,7 @@ Array [
             </div>
             <div
               class="emotion-33"
+              data-cy="table-contentCell table-contentCell.col5 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:512px;position:absolute;top:0;width:170.66666666666666px"
             >
@@ -1951,6 +2035,7 @@ Array [
             </div>
             <div
               class="emotion-41"
+              data-cy="table-contentCell table-contentCell.col2 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:170.66666666666666px"
             >
@@ -1960,6 +2045,7 @@ Array [
             </div>
             <div
               class="emotion-41"
+              data-cy="table-contentCell table-contentCell.col3 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:170.66666666666666px;position:absolute;top:35px;width:170.66666666666666px"
             >
@@ -1969,6 +2055,7 @@ Array [
             </div>
             <div
               class="emotion-41"
+              data-cy="table-contentCell table-contentCell.col4 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:341.3333333333333px;position:absolute;top:35px;width:170.66666666666666px"
             >
@@ -1978,6 +2065,7 @@ Array [
             </div>
             <div
               class="emotion-41"
+              data-cy="table-contentCell table-contentCell.col5 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:512px;position:absolute;top:35px;width:170.66666666666666px"
             >

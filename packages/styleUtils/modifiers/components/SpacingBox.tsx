@@ -22,7 +22,11 @@ const SpacingBox = (props: SpacingBoxProps) => {
   const { side, spacingSize, className, ...other } = props;
 
   return (
-    <Box className={cx(className, padding(side, spacingSize))} {...other} />
+    <Box
+      className={cx(className, padding(side, spacingSize))}
+      dataCy="spacingBox"
+      {...other}
+    />
   );
 };
 

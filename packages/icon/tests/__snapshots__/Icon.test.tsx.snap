@@ -13,6 +13,7 @@ exports[`Icon renders 1`] = `
 <svg
   aria-label="test icon"
   className="emotion-0"
+  data-cy="icon"
   height={48}
   preserveAspectRatio="xMinYMin meet"
   role="img"
@@ -38,6 +39,7 @@ exports[`Icon renders with defaults 1`] = `
 <svg
   aria-label="system-arrow-down icon"
   className="emotion-0"
+  data-cy="icon"
   height={24}
   preserveAspectRatio="xMinYMin meet"
   role="img"

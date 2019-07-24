@@ -36,7 +36,7 @@ class DonutChart extends React.PureComponent<DonutChartProps, {}> {
     const circleCenter = diameter / 2;
 
     return (
-      <svg viewBox={`0 0 ${diameter} ${diameter}`}>
+      <svg viewBox={`0 0 ${diameter} ${diameter}`} data-cy="donutChart">
         <circle
           cx={circleCenter}
           cy={circleCenter}
@@ -73,7 +73,11 @@ class DonutChart extends React.PureComponent<DonutChartProps, {}> {
           y={circleCenter}
           style={{ textAnchor: "middle" }}
         >
-          <tspan dominantBaseline={text ? "unset" : "central"} fontSize={6}>
+          <tspan
+            dominantBaseline={text ? "unset" : "central"}
+            fontSize={6}
+            data-cy="donutChart-label"
+          >
             {label}
           </tspan>
           {text && (
@@ -82,6 +86,7 @@ class DonutChart extends React.PureComponent<DonutChartProps, {}> {
               y={circleCenter + 3 * 1.4} // adding font size plus a line height of 1.4 to create a visual line break
               fontSize={3}
               className={tintContentSecondary}
+              data-cy="donutChart-text"
             >
               {text}
             </tspan>

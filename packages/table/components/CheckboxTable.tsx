@@ -116,7 +116,7 @@ class CheckboxTable extends React.PureComponent<
     }
 
     return (
-      <Cell>
+      <Cell data-cy={`table-checkboxCell table-checkboxCell.row${rowIndex}`}>
         <CheckboxInput
           id={rowIndex.toString()}
           inputLabel={`Toggle row ${rowIndex}`}
@@ -154,7 +154,11 @@ class CheckboxTable extends React.PureComponent<
     };
 
     return (
-      <div ref={this.checkboxRef} className={display("inline-block")}>
+      <div
+        ref={this.checkboxRef}
+        className={display("inline-block")}
+        data-cy="checkboxTable-headerCheckboxWrapper"
+      >
         <CheckboxInput
           id="headerCheckbox"
           inputLabel="Toggle all rows"

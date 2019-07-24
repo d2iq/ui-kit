@@ -31,7 +31,7 @@ const List = (props: ListProps) => {
   const ListEl = tag;
 
   return (
-    <ListEl className={cx(listReset, listMarker(markerStyle))}>
+    <ListEl className={cx(listReset, listMarker(markerStyle))} data-cy="list">
       {children}
     </ListEl>
   );

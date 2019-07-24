@@ -37,6 +37,7 @@ class Breadcrumb extends React.PureComponent<BreadcrumbProps, {}> {
             className={cx(textWeight("medium"), textSize("l"), {
               [padding("left", "xs")]: i !== 0
             })}
+            data-cy="breadcrumb"
           >
             {crumb}
           </div>

@@ -42,6 +42,7 @@ class FullscreenModal extends React.PureComponent<FullscreenModalProps, {}> {
         size={ModalSizes.Fullscreen}
         onClose={onClose}
         isAnimated={false}
+        dataCy="fullscreenModal"
         {...other}
       >
         <div className={flex({ direction: "column" })}>
@@ -51,6 +52,7 @@ class FullscreenModal extends React.PureComponent<FullscreenModalProps, {}> {
               fullscreenModalHeader,
               padding("all", "xl")
             )}
+            data-cy="fullscreenModal-header"
           >
             <Delegate
               to={headerComponent}
@@ -62,6 +64,7 @@ class FullscreenModal extends React.PureComponent<FullscreenModalProps, {}> {
             className={cx(modalContent, {
               [padding("all", "xl")]: !isContentFlush
             })}
+            data-cy="fullscreenModal-content"
           >
             {children}
           </div>

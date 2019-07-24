@@ -17,6 +17,7 @@ exports[`BorderedBox renders default 1`] = `
     }
   }
   className="emotion-0"
+  dataCy="borderedBox"
   tag="div"
 >
   Content
@@ -40,6 +41,7 @@ exports[`BorderedBox renders with all props 1`] = `
     }
   }
   className="emotion-0"
+  dataCy="borderedBox"
   tag="div"
 >
   Content

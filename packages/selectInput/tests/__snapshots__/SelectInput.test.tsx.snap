@@ -216,7 +216,9 @@ exports[`SelectInput should render all appearances focus 1`] = `
   <FormFieldWrapper
     id="layers"
   >
-    <div>
+    <div
+      data-cy="selectInput selectInput.[object Object]"
+    >
       <label
         className="emotion-0"
         htmlFor="layers"
@@ -230,6 +232,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
           aria-describedby=""
           aria-invalid={false}
           className="emotion-1"
+          data-cy="selectInput-select selectInput-select.[object Object]"
           id="layers"
           onBlur={[Function]}
           onFocus={[Function]}
@@ -283,6 +286,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
             <svg
               aria-label="system-triangle-down icon"
               className="emotion-2"
+              data-cy="icon"
               height={16}
               preserveAspectRatio="xMinYMin meet"
               role="img"

@@ -39,6 +39,7 @@ const Avatar: React.StatelessComponent<AvatarProps> = (props: AvatarProps) => {
       className={cx(avatarContainer, avatarSize(size))}
       role="img"
       aria-label={label}
+      data-cy="avatar"
     >
       {/*
           tslint:disable react-a11y-img-has-alt

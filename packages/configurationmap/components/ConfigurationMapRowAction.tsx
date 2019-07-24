@@ -22,7 +22,10 @@ const ConfigurationMapRowAction: React.StatelessComponent<
   const { onClick, children } = props;
 
   return (
-    <span className={cx(rowActionStaticClassname, flexItem("shrink"))}>
+    <span
+      className={cx(rowActionStaticClassname, flexItem("shrink"))}
+      data-cy="configrationMapRowAction"
+    >
       <SecondaryButton onClick={onClick}>{children}</SecondaryButton>
     </span>
   );

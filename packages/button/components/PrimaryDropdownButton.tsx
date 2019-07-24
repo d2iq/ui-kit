@@ -4,7 +4,11 @@ import { ButtonProps } from "./ButtonBase";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const PrimaryDropdownButton = (props: ButtonProps) => (
-  <PrimaryButton iconEnd={SystemIcons.TriangleDown} {...props} />
+  <PrimaryButton
+    iconEnd={SystemIcons.TriangleDown}
+    data-cy="primaryDropdownButton"
+    {...props}
+  />
 );
 
 export default PrimaryDropdownButton;

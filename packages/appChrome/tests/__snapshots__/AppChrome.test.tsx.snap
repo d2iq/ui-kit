@@ -84,9 +84,10 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
 >
   <div
     className="emotion-3"
+    data-cy="appChrome"
   >
     <div
-      className="headerBar"
+      data-cy="headerBar"
     >
       <div>
         HeaderBar content goes here
@@ -97,6 +98,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
     >
       <div
         className="emotion-0"
+        data-cy="sidebar"
       >
         <div>
           Sidebar content
@@ -104,6 +106,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
       </div>
       <main
         className="emotion-1"
+        data-cy="main"
       >
         <div>
           Main app content goes here

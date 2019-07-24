@@ -78,12 +78,15 @@ exports[`CheckboxInput renders all appearances 1`] = `
 >
   <ToggleInput
     appearance="standard"
+    dataCy="checkboxInput"
     id="defaultId"
     inputLabel="Sample label"
     showInputLabel={true}
     vertAlign="center"
   >
-    <div>
+    <div
+      data-cy="checkboxInput"
+    >
       <label
         className="emotion-4"
         htmlFor="defaultId"
@@ -96,6 +99,7 @@ exports[`CheckboxInput renders all appearances 1`] = `
           >
             <input
               className="emotion-0"
+              data-cy="checkboxInput-input"
               id="defaultId"
               onBlur={[Function]}
               onFocus={[Function]}
@@ -195,12 +199,15 @@ exports[`CheckboxInput renders all appearances 2`] = `
 >
   <ToggleInput
     appearance="error"
+    dataCy="checkboxInput checkboxInput.error"
     id="defaultId"
     inputLabel="Sample label"
     showInputLabel={true}
     vertAlign="center"
   >
-    <div>
+    <div
+      data-cy="checkboxInput checkboxInput.error"
+    >
       <label
         className="emotion-4"
         htmlFor="defaultId"
@@ -213,6 +220,7 @@ exports[`CheckboxInput renders all appearances 2`] = `
           >
             <input
               className="emotion-0"
+              data-cy="checkboxInput-input checkboxInput-input.error"
               id="defaultId"
               onBlur={[Function]}
               onFocus={[Function]}
@@ -312,12 +320,15 @@ exports[`CheckboxInput renders all appearances 3`] = `
 >
   <ToggleInput
     appearance="success"
+    dataCy="checkboxInput checkboxInput.success"
     id="defaultId"
     inputLabel="Sample label"
     showInputLabel={true}
     vertAlign="center"
   >
-    <div>
+    <div
+      data-cy="checkboxInput checkboxInput.success"
+    >
       <label
         className="emotion-4"
         htmlFor="defaultId"
@@ -330,6 +341,7 @@ exports[`CheckboxInput renders all appearances 3`] = `
           >
             <input
               className="emotion-0"
+              data-cy="checkboxInput-input checkboxInput-input.success"
               id="defaultId"
               onBlur={[Function]}
               onFocus={[Function]}
@@ -456,12 +468,15 @@ exports[`CheckboxInput renders indeterminate 1`] = `
 >
   <ToggleInput
     appearance="standard"
+    dataCy="checkboxInput checkboxInput.indeterminate"
     id="indeterminateId"
     inputLabel="Sample Label"
     showInputLabel={true}
     vertAlign="center"
   >
-    <div>
+    <div
+      data-cy="checkboxInput checkboxInput.indeterminate"
+    >
       <label
         className="emotion-6"
         htmlFor="indeterminateId"
@@ -475,6 +490,7 @@ exports[`CheckboxInput renders indeterminate 1`] = `
             <input
               aria-checked="mixed"
               className="emotion-0"
+              data-cy="checkboxInput-input checkboxInput-input.indeterminate"
               id="indeterminateId"
               onBlur={[Function]}
               onFocus={[Function]}
@@ -492,6 +508,7 @@ exports[`CheckboxInput renders indeterminate 1`] = `
                 <svg
                   aria-label="system-minus icon"
                   className="emotion-1"
+                  data-cy="icon"
                   height={16}
                   preserveAspectRatio="xMinYMin meet"
                   role="img"
@@ -605,12 +622,15 @@ exports[`CheckboxInput renders with a hidden label 1`] = `
 >
   <ToggleInput
     appearance="standard"
+    dataCy="checkboxInput"
     id="hiddenLabel"
     inputLabel="Sample Label"
     showInputLabel={false}
     vertAlign="center"
   >
-    <div>
+    <div
+      data-cy="checkboxInput"
+    >
       <label
         className="emotion-4"
         htmlFor="hiddenLabel"
@@ -623,6 +643,7 @@ exports[`CheckboxInput renders with a hidden label 1`] = `
           >
             <input
               className="emotion-0"
+              data-cy="checkboxInput-input"
               id="hiddenLabel"
               onBlur={[Function]}
               onFocus={[Function]}

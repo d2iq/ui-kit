@@ -34,8 +34,11 @@ class DialogModal extends React.PureComponent<DialogModalProps, {}> {
     } = this.props;
 
     return (
-      <ModalBase {...other}>
-        <div className={cx(modalHeader, flexItem("shrink"))}>
+      <ModalBase dataCy="dialogModal" {...other}>
+        <div
+          className={cx(modalHeader, flexItem("shrink"))}
+          data-cy="dialogModal-header"
+        >
           <div className={cx(flex({ align: "center" }), padding("all", "l"))}>
             <div className={cx(flexItem("grow"), textSize("l"))}>{title}</div>
             <div
@@ -57,11 +60,15 @@ class DialogModal extends React.PureComponent<DialogModalProps, {}> {
           className={cx(modalContent, {
             [padding("all", "l")]: !isContentFlush
           })}
+          data-cy="dialogModal-content"
         >
           {children}
         </div>
         {footerContent && (
-          <div className={cx(flexItem("shrink"), padding("all", "l"))}>
+          <div
+            className={cx(flexItem("shrink"), padding("all", "l"))}
+            data-cy="dialogModal-footer"
+          >
             {footerContent}
           </div>
         )}

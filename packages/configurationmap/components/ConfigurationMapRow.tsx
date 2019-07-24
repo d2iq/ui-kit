@@ -1,38 +1,26 @@
-import { configurationMapRow } from "../style";
-import { css } from "emotion";
+import * as React from "react";
+import { configurationMapRow, showActionOnHoverStyle } from "../style";
 import styled from "react-emotion";
-import {
-  flex,
-  padding,
-  border,
-  visuallyHidden,
-  undoVisuallyHidden
-} from "../../shared/styles/styleUtils";
-import { rowActionStaticClassname } from "./ConfigurationMapRowAction";
+import { flex, padding, border } from "../../shared/styles/styleUtils";
 
-interface ConfigurationMapRowActionProps {
+interface ConfigurationMapRowProps {
   children: React.ReactNode;
   onlyShowActionOnHover?: boolean;
 }
 
-const showActionOnHoverStyle = (props: ConfigurationMapRowActionProps) => {
-  if (props.onlyShowActionOnHover) {
-    return css`
-      .${rowActionStaticClassname} {
-        ${visuallyHidden};
-      }
-
-      &:hover .${rowActionStaticClassname} {
-        ${undoVisuallyHidden};
-      }
-    `;
-  }
-};
-
-export default styled("div")`
+const ConfigurationMapRow = styled("div")<ConfigurationMapRowProps>`
+  ${props => showActionOnHoverStyle(props.onlyShowActionOnHover)};
   ${configurationMapRow};
-  ${showActionOnHoverStyle};
   ${border("bottom")};
   ${flex()};
   ${padding("vert", "xs")};
 `;
+
+export default (props: ConfigurationMapRowProps) => (
+  <ConfigurationMapRow
+    onlyShowActionOnHover={props.onlyShowActionOnHover}
+    data-cy="configurationMapRow"
+  >
+    {props.children}
+  </ConfigurationMapRow>
+);

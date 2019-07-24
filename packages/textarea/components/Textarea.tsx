@@ -63,16 +63,29 @@ class Textarea extends React.PureComponent<TextareaProps, {}> {
     } = this.props;
     const hasError = appearance === InputAppearance.Error;
     let { onChange } = other;
+    const inputAppearance = this.getInputAppearance();
     if (onChange == null && value != null) {
       onChange = Function.prototype as (
         event: React.FormEvent<HTMLTextAreaElement>
       ) => void;
     }
+    const parentDataCy = [
+      "textarea",
+      ...(inputAppearance !== InputAppearance.Standard
+        ? [`textarea.${this.getInputAppearance()}`]
+        : [])
+    ].join(" ");
+    const textareaDataCy = [
+      "textarea-textarea",
+      ...(inputAppearance !== InputAppearance.Standard
+        ? [`textarea-textarea.${this.getInputAppearance()}`]
+        : [])
+    ].join(" ");
 
     return (
       <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
         {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
-          <div>
+          <div data-cy={parentDataCy}>
             <label
               className={cx(getLabelStyle(hasError), {
                 [visuallyHidden]: !showInputLabel
@@ -96,10 +109,19 @@ class Textarea extends React.PureComponent<TextareaProps, {}> {
                 textarea
               )}
               required={required}
+              data-cy="textarea-textarea"
               {...{ ...other, onChange }}
             />
-            {getHintContent}
-            {hasError && getValidationErrors}
+            <div data-cy={textareaDataCy}>
+              {getHintContent ||
+                (hasError &&
+                  getValidationErrors && (
+                    <React.Fragment>
+                      {getHintContent}
+                      {hasError && getValidationErrors}
+                    </React.Fragment>
+                  ))}
+            </div>
           </div>
         )}
       </FormFieldWrapper>

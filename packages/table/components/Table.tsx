@@ -406,7 +406,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       column: React.ReactElement<ColumnProps>;
     }
   ) {
-    const { key, style, column, columnIndex } = args;
+    const { key, style, column, columnIndex, rowIndex } = args;
     const header = column.props.header as React.ReactElement<
       CellProps | SortableHeaderCellProps
     >;
@@ -421,6 +421,11 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     const onStartCallback = () => {
       this.setState({ resizeIndex: columnIndex });
     };
+    const dataCy = [
+      "table-headerCell",
+      `table-headerCell.col${columnIndex}`,
+      `table-headerCell.row${rowIndex}`
+    ].join(" ");
 
     return (
       <div
@@ -432,6 +437,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         })}
         style={style}
         key={key}
+        data-cy={dataCy}
       >
         <div className={flex()}>
           <div
@@ -563,13 +569,21 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       data: any[];
     }
   ) {
-    const { style, key, column, data, rowIndex } = args;
+    const { style, key, column, data, rowIndex, columnIndex } = args;
     const updateHoveredRowIndex = () => {
       this.setState({ hoveredRowIndex: rowIndex });
     };
     const header = column.props.header as React.ReactElement<
       CellProps | SortableHeaderCellProps
     >;
+    const dataCy = [
+      "table-contentCell",
+      `table-contentCell.col${columnIndex}`,
+      `table-contentCell.row${rowIndex}`,
+      ...(rowIndex === this.state.hoveredRowIndex
+        ? ["table-contentCell.hoveredRow"]
+        : [])
+    ].join(" ");
 
     return (
       /* tslint:disable:react-a11y-event-has-role */
@@ -586,6 +600,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         key={key}
         onMouseOver={updateHoveredRowIndex}
         data-rowindex={rowIndex}
+        data-cy={dataCy}
       >
         {column.props.cellRenderer(data[rowIndex], style.width as number)}
       </ContentCell>

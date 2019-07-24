@@ -93,6 +93,21 @@ describe('Badge', () => {
 });
 ```
 
+## Testing with Cypress
+To make it easier to select DOM nodes of our components, DOM nodes have a `data-cy` attribute.
+
+### `data-cy` value naming convention
+**Parent nodes:** The value of `data-cy` for component's parent node is the same as the component name, but camelCased. For example: The parent node for `<PrimaryButton>` will have `data-cy="primaryButton"`
+
+**Child nodes:** If a child node has a `data-cy` added, there will be a dash between the parent node's name and a string to describe the child node. For example: The footer element of a `<DialogModal>` will have `data-cy="fullscreenModal-footer"`
+
+**States and variants:** If a node has a special "state", `data-cy` will prepend a string describing that state after a dot.
+For example:
+* `<TextInput disabled>` will have `data-cy="textInput textInput.disabled"`
+* A `<TextInput>` with an error will have `data-cy="textInput textInput.error"`
+
+For more information on writing selectors, see the [Cypress guide](https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements).
+
 ## Commits
 
 You should follow [conventional commit](https://conventionalcommits.org/) formatting rules, as they provide a framework to write explicit messages that are easy to comprehend when looking through the project history and enable automatic change log generation.

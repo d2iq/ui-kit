@@ -17,6 +17,10 @@ export interface SmallTextProps extends SharedTextProps {
    * The font weight of the text
    */
   weight: FontWeights;
+  /**
+   * human-readable selector used for writing tests
+   */
+  dataCy?: string;
 }
 
 const SmallText = (props: SmallTextProps) => <Text size="s" {...props} />;
@@ -26,7 +30,8 @@ SmallText.defaultProps = {
   color: themeTextColorPrimary,
   wrap: "wrap",
   weight: "normal",
-  tag: "p"
+  tag: "p",
+  dataCy: "smallText"
 };
 
 export default SmallText;

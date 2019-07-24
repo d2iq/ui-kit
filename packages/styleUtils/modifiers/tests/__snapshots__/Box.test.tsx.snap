@@ -7,6 +7,7 @@ exports[`Box renders default 1`] = `
 
 <div
   className="emotion-0"
+  data-cy="box"
 >
   Content
 </div>
@@ -48,6 +49,7 @@ exports[`Box renders with all props 1`] = `
 
 <span
   className="emotion-0 test"
+  data-cy="box"
 >
   Content
 </span>
