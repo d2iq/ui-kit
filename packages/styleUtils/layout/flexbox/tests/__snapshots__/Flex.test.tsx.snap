@@ -21,6 +21,7 @@ exports[`Flex renders default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 > *:not(:first-child) {
@@ -61,12 +62,12 @@ exports[`Flex renders with all props 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 > div {
@@ -101,6 +102,7 @@ exports[`Flex renders with responsive props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 @media (min-width:0) {
@@ -180,18 +182,6 @@ exports[`Flex renders with responsive props 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-}
-
-@media (min-width:0) {
-  .emotion-0 {
-    min-height: 0;
-  }
-}
-
-@media (min-width:900px) {
-  .emotion-0 {
-    min-height: auto;
   }
 }
 

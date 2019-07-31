@@ -66,6 +66,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 {
@@ -178,6 +179,7 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 {
@@ -333,6 +335,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 {
@@ -496,6 +499,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 {
@@ -659,6 +663,7 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 {

@@ -101,6 +101,7 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 {
@@ -812,6 +813,7 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 {
@@ -1205,6 +1207,7 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 {

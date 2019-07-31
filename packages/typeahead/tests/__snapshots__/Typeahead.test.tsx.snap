@@ -21,6 +21,7 @@ exports[`Typeahead renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-11 {
@@ -60,6 +61,7 @@ exports[`Typeahead renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-2 {
@@ -720,6 +722,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-11 {
@@ -759,6 +762,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-2 {

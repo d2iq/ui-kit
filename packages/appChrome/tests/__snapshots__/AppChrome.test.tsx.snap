@@ -9,12 +9,12 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-3 > div {
@@ -41,6 +41,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   height: 100%;
 }
 
