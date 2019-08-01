@@ -23,6 +23,10 @@ export interface ClickableProps {
    * Whether or not to reset the :focus outline style
    */
   disableFocusOutline?: boolean;
+  /**
+   * human-readable selector used for writing tests
+   */
+  dataCy?: string;
 }
 
 export class Clickable extends React.PureComponent<ClickableProps, {}> {
@@ -43,7 +47,8 @@ export class Clickable extends React.PureComponent<ClickableProps, {}> {
       action,
       tabIndex,
       role,
-      disableFocusOutline
+      disableFocusOutline,
+      dataCy
     } = this.props;
     const { className = "" } = children.props;
 
@@ -52,7 +57,8 @@ export class Clickable extends React.PureComponent<ClickableProps, {}> {
       className: cx(className, pointer, { [outline]: disableFocusOutline }),
       role,
       tabIndex,
-      onKeyPress: this.handleKeyPress
+      onKeyPress: this.handleKeyPress,
+      ["data-cy"]: dataCy
     });
   }
 

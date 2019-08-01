@@ -2,21 +2,24 @@
 
 exports[`Breadcrumb default 1`] = `
 <nav
-  class="css-gowgo4"
+  class="css-1v0xyde"
 >
   <div
-    class="css-1fx6w60"
+    class="css-1ixtlzk"
+    data-cy="breadcrumb"
   >
     <span>
       One
     </span>
   </div>
   <div
-    class="css-1fx6w60"
+    class="css-19hcarb"
+    data-cy="breadcrumb"
   >
     <svg
       aria-label="system-caret-right icon"
       class="css-zgvqkl"
+      data-cy="icon"
       height="16"
       preserveAspectRatio="xMinYMin meet"
       role="img"
@@ -29,7 +32,8 @@ exports[`Breadcrumb default 1`] = `
     </svg>
   </div>
   <div
-    class="css-n2rkn1"
+    class="css-19hcarb"
+    data-cy="breadcrumb"
   >
     <span>
       Two

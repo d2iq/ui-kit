@@ -15,7 +15,8 @@ import {
   themeTextColorPrimary,
   themeTextColorPrimaryInverted,
   themeTextColorSecondaryInverted,
-  themeBgPrimaryInverted
+  themeBgPrimaryInverted,
+  themeBgSelected
 } from "../../design-tokens/build/js/designTokens";
 import { pickReadableTextColor } from "../../shared/styles/color";
 import { AppChromeTheme } from "../types/appChromeTheme";
@@ -37,9 +38,14 @@ class SidebarSubMenuItem extends React.PureComponent<
       theme && theme.sidebarBackgroundColor
         ? theme.sidebarBackgroundColor
         : getCSSVarValue(themeBgPrimaryInverted);
+    const activeBgColor = theme && theme.itemActiveBackgroundColor;
+    const subMenuItemBgColor = isActive
+      ? activeBgColor || themeBgSelected
+      : sidebarBgColor;
     const classNames = cx(
       subMenuItem,
       appChromeInsetContent,
+      sidebarNavItem(Boolean(isActive), theme),
       tintContent(
         pickReadableTextColor(
           sidebarBgColor,
@@ -47,22 +53,25 @@ class SidebarSubMenuItem extends React.PureComponent<
           getCSSVarValue(themeTextColorSecondaryInverted)
         )
       ),
-      sidebarNavItem(Boolean(isActive), sidebarBgColor),
       textSize("s"),
       flex({ align: "center" }),
       {
         [tintContent(
           pickReadableTextColor(
-            sidebarBgColor,
+            subMenuItemBgColor,
             getCSSVarValue(themeTextColorPrimary),
             getCSSVarValue(themeTextColorPrimaryInverted)
           )
         )]: isActive
       }
     );
+    const dataCy = [
+      "sidebarSubMenuItem",
+      ...(isActive ? ["sidebarSubMenuItem.active"] : [])
+    ].join(" ");
 
     return (
-      <Clickable action={onClick} tabIndex={0} role="link">
+      <Clickable action={onClick} tabIndex={0} role="link" dataCy={dataCy}>
         <div className={classNames}>
           <span className={subMenuItemText}>{children}</span>
         </div>

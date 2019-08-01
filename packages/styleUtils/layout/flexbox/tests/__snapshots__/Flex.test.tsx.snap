@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flex renders default 1`] = `
+.emotion-0 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 > *:not(:first-child) {
+  padding-left: 0;
+}
+
+<div
+  className="emotion-0"
+  data-cy="flex"
+>
+  <FlexItem
+    flex="grow"
+  >
+    content
+  </FlexItem>
+  <FlexItem
+    flex="grow"
+  >
+    content
+  </FlexItem>
+</div>
+`;
+
+exports[`Flex renders with all props 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 0;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 > div {
+  width: 100%;
+}
+
+.emotion-0 > *:not(:first-child) {
+  padding-left: 24px;
+}
+
+<div
+  className="emotion-0"
+  data-cy="flex"
+>
+  <FlexItem
+    flex="grow"
+  >
+    content
+  </FlexItem>
+  <FlexItem
+    flex="grow"
+  >
+    content
+  </FlexItem>
+</div>
+`;
+
+exports[`Flex renders with responsive props 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width:0) {
+  .emotion-0 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:0) {
+  .emotion-0 {
+    height: 100%;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    height: auto;
+  }
+}
+
+@media (min-width:0) {
+  .emotion-0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:0) {
+  .emotion-0 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width:0) {
+  .emotion-0 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:0) {
+  .emotion-0 {
+    min-height: 0;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    min-height: auto;
+  }
+}
+
+@media (min-width:0) {
+  .emotion-0 > div {
+    width: 100%;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 > div {
+    width: auto;
+  }
+}
+
+@media (min-width:0) {
+  .emotion-0 > *:not(:first-child) {
+    padding-left: 12px;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 > *:not(:first-child) {
+    padding-left: 16px;
+  }
+}
+
+<div
+  className="emotion-0"
+  data-cy="flex"
+>
+  <FlexItem
+    flex="grow"
+  >
+    content
+  </FlexItem>
+  <FlexItem
+    flex="grow"
+  >
+    content
+  </FlexItem>
+</div>
+`;

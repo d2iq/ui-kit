@@ -72,12 +72,14 @@ exports[`Dropdownable is visible after opening 1`] = `
         <PrimaryButton>
           <ButtonBase
             appearance="primary"
+            data-cy="primaryButton"
           >
             <FocusStyleManager
               focusEnabledClass="css-xcotv6"
             >
               <button
                 className="emotion-0"
+                data-cy="primaryButton"
                 onClick={[Function]}
                 tabIndex={0}
               >
@@ -237,12 +239,14 @@ exports[`Dropdownable is visible after opening 2`] = `
         <PrimaryButton>
           <ButtonBase
             appearance="primary"
+            data-cy="primaryButton"
           >
             <FocusStyleManager
               focusEnabledClass="css-xcotv6"
             >
               <button
                 className="emotion-0"
+                data-cy="primaryButton"
                 onClick={[Function]}
                 tabIndex={0}
               >

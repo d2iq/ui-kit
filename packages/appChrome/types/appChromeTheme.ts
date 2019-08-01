@@ -14,6 +14,8 @@ export interface AppChromeTheme extends Theme {
   headerPaddingHor?: PaddingHoriz;
   headerPaddingVert?: PaddingVert;
   iconWidth?: ElWidth;
+  itemActiveBackgroundColor?: BgColor;
+  itemHoverBackgroundColor?: BgColor;
   sidebarBackgroundColor?: BgColor;
   sidebarHeaderPaddingHor?: PaddingHoriz;
   sidebarHeaderPaddingVert?: PaddingVert;

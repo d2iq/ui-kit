@@ -2,8 +2,39 @@
 
 exports[`Card default 1`] = `
 <div
-  class="css-le9lyl"
+  class="css-1txfjje"
+  data-cy="card"
 >
-  Example Content
+  <div
+    class="css-2yjhih"
+  >
+    Example Content
+  </div>
+</div>
+`;
+
+exports[`Card with aspectRatio set 1`] = `
+<div
+  class="css-1jys0p8"
+  data-cy="card"
+>
+  <div
+    class="css-2yjhih"
+  >
+    Example Content
+  </div>
+</div>
+`;
+
+exports[`Card with paddingSize set 1`] = `
+<div
+  class="css-1txfjje"
+  data-cy="card"
+>
+  <div
+    class="css-jl90x"
+  >
+    Example Content
+  </div>
 </div>
 `;

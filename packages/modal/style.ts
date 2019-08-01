@@ -43,9 +43,12 @@ export const scrim = css`
 export const modal = css`
   border-radius: ${borderRadiusDefault};
   background-color: ${themeBgPrimary};
+  display: flex;
+  flex-direction: column;
   left: 50%;
   max-height: calc(100vh - ${modalInset * 2}px);
   outline: none;
+  overflow: auto;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -91,6 +94,7 @@ export const modalWidth = {
 };
 
 export const modalContent = css`
+  box-sizing: border-box;
   overflow: auto;
 `;
 
@@ -99,6 +103,7 @@ export const modalWrapper = css`
 `;
 
 export const modalHeader = css`
+  box-sizing: border-box;
   border-bottom: 1px solid ${borderColorDefault};
 `;
 

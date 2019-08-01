@@ -3,6 +3,7 @@
 exports[`Sidebar SidebarItem renders 1`] = `
 <Clickable
   action={[MockFunction]}
+  dataCy="sidebarItem"
   disableFocusOutline={true}
   role="link"
   tabIndex={0}
@@ -106,7 +107,9 @@ exports[`Sidebar SidebarSection renders 1`] = `
   padding-left: 0;
 }
 
-<div>
+<div
+  data-cy="sidebarSection"
+>
   <Styled(h3)
     className="emotion-0"
   >
@@ -131,7 +134,13 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
   padding-left: 0;
 }
 
-<li>
+<li
+  data-cy={
+    Array [
+      "sidebarSubMenu",
+    ]
+  }
+>
   <Expandable
     label={
       <div>
@@ -143,7 +152,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         </SidebarItemLabel>
       </div>
     }
-    labelClassName="css-1beii4s"
+    labelClassName="css-74vjzk"
   >
     <ul
       className="emotion-0"

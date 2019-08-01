@@ -1,6 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Typeahead renders 1`] = `
+.emotion-3 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-11 {
   position: relative;
 }
@@ -38,28 +60,6 @@ exports[`Typeahead renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-3 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
 }
 
 .emotion-2 {
@@ -166,8 +166,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-top: 8px;
 }
@@ -176,8 +176,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
 }
 
@@ -185,8 +185,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-bottom: 8px;
 }
@@ -220,7 +220,9 @@ exports[`Typeahead renders 1`] = `
     />
   }
 >
-  <div>
+  <div
+    data-cy="typeahead"
+  >
     <Downshift
       defaultHighlightedIndex={null}
       defaultIsOpen={false}
@@ -247,7 +249,9 @@ exports[`Typeahead renders 1`] = `
       >
         <Dropdownable
           dropdown={
-            <div>
+            <div
+              data-cy="typeahead-dropdown"
+            >
               <div
                 className="emotion-8"
               >
@@ -339,9 +343,12 @@ exports[`Typeahead renders 1`] = `
                   type="text"
                   value=""
                 >
-                  <div>
+                  <div
+                    data-cy="textInput"
+                  >
                     <div
                       className="emotion-1"
+                      data-cy="textInput-label"
                     >
                       <label
                         className="emotion-0"
@@ -366,6 +373,7 @@ exports[`Typeahead renders 1`] = `
                             aria-labelledby="downshift-0-label"
                             autoComplete="off"
                             className="emotion-2"
+                            data-cy="textInput-input"
                             id="standard.input"
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -377,7 +385,9 @@ exports[`Typeahead renders 1`] = `
                             value=""
                           />
                         </div>
-                        <div />
+                        <div
+                          data-cy="textInput-hintContent"
+                        />
                       </div>
                     </FormFieldWrapper>
                   </div>
@@ -415,8 +425,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-top: 8px;
 }
@@ -425,8 +435,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
 }
 
@@ -434,8 +444,8 @@ exports[`Typeahead renders 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-bottom: 8px;
 }
@@ -447,6 +457,7 @@ exports[`Typeahead renders 1`] = `
                       >
                         <div>
                           <div
+                            data-cy="typeahead-dropdown"
                             direction="bottom-left"
                           >
                             <div
@@ -455,6 +466,7 @@ exports[`Typeahead renders 1`] = `
                               <div
                                 aria-labelledby="downshift-0-label"
                                 class="emotion-3"
+                                data-cy="dropdownMenu"
                                 id="downshift-0-menu"
                                 role="listbox"
                                 style="max-height: 300px; width: 0px;"
@@ -462,6 +474,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-0"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-0-item-0"
                                   role="option"
                                 >
@@ -470,6 +483,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-1"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-0-item-1"
                                   role="option"
                                 >
@@ -478,6 +492,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-2"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-0-item-2"
                                   role="option"
                                 >
@@ -500,6 +515,7 @@ exports[`Typeahead renders 1`] = `
                       >
                         <div>
                           <div
+                            data-cy="typeahead-dropdown"
                             direction="bottom-left"
                           >
                             <div
@@ -508,6 +524,7 @@ exports[`Typeahead renders 1`] = `
                               <div
                                 aria-labelledby="downshift-0-label"
                                 class="emotion-7"
+                                data-cy="dropdownMenu"
                                 id="downshift-0-menu"
                                 role="listbox"
                                 style="max-height: 300px; width: 0px;"
@@ -515,6 +532,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-4"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-0-item-0"
                                   role="option"
                                 >
@@ -523,6 +541,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-5"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-0-item-1"
                                   role="option"
                                 >
@@ -531,6 +550,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-6"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-0-item-2"
                                   role="option"
                                 >
@@ -555,6 +575,7 @@ exports[`Typeahead renders 1`] = `
                           open={false}
                         >
                           <div
+                            data-cy="typeahead-dropdown"
                             direction="bottom-left"
                           >
                             <div
@@ -571,6 +592,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-labelledby="downshift-0-label"
                                   className="emotion-7"
+                                  data-cy="dropdownMenu"
                                   id="downshift-0-menu"
                                   role="listbox"
                                   style={
@@ -596,6 +618,7 @@ exports[`Typeahead renders 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-4"
+                                      data-cy="dropdownMenuItem"
                                       id="downshift-0-item-0"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}
@@ -621,6 +644,7 @@ exports[`Typeahead renders 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-5"
+                                      data-cy="dropdownMenuItem"
                                       id="downshift-0-item-1"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}
@@ -646,6 +670,7 @@ exports[`Typeahead renders 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-6"
+                                      data-cy="dropdownMenuItem"
                                       id="downshift-0-item-2"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}
@@ -675,6 +700,28 @@ exports[`Typeahead renders 1`] = `
 `;
 
 exports[`Typeahead renders a menu with a max height 1`] = `
+.emotion-3 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .emotion-11 {
   position: relative;
 }
@@ -712,28 +759,6 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-3 {
-  -webkit-align-items: flex;
-  -webkit-box-align: flex;
-  -ms-flex-align: flex;
-  align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
 }
 
 .emotion-2 {
@@ -840,8 +865,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-top: 8px;
 }
@@ -850,8 +875,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
 }
 
@@ -859,8 +884,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-bottom: 8px;
 }
@@ -894,7 +919,9 @@ exports[`Typeahead renders a menu with a max height 1`] = `
     />
   }
 >
-  <div>
+  <div
+    data-cy="typeahead"
+  >
     <Downshift
       defaultHighlightedIndex={null}
       defaultIsOpen={false}
@@ -921,7 +948,9 @@ exports[`Typeahead renders a menu with a max height 1`] = `
       >
         <Dropdownable
           dropdown={
-            <div>
+            <div
+              data-cy="typeahead-dropdown"
+            >
               <div
                 className="emotion-8"
               >
@@ -1013,9 +1042,12 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                   type="text"
                   value=""
                 >
-                  <div>
+                  <div
+                    data-cy="textInput"
+                  >
                     <div
                       className="emotion-1"
+                      data-cy="textInput-label"
                     >
                       <label
                         className="emotion-0"
@@ -1040,6 +1072,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                             aria-labelledby="downshift-1-label"
                             autoComplete="off"
                             className="emotion-2"
+                            data-cy="textInput-input"
                             id="standard.input"
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -1051,7 +1084,9 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                             value=""
                           />
                         </div>
-                        <div />
+                        <div
+                          data-cy="textInput-hintContent"
+                        />
                       </div>
                     </FormFieldWrapper>
                   </div>
@@ -1067,6 +1102,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                       >
                         <div>
                           <div
+                            data-cy="typeahead-dropdown"
                             direction="bottom-left"
                           >
                             <div
@@ -1075,6 +1111,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                               <div
                                 aria-labelledby="downshift-0-label"
                                 class="emotion-7"
+                                data-cy="dropdownMenu"
                                 id="downshift-0-menu"
                                 role="listbox"
                                 style="max-height: 300px; width: 0px;"
@@ -1082,6 +1119,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-4"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-0-item-0"
                                   role="option"
                                 >
@@ -1090,6 +1128,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-5"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-0-item-1"
                                   role="option"
                                 >
@@ -1098,6 +1137,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-6"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-0-item-2"
                                   role="option"
                                 >
@@ -1138,8 +1178,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-top: 8px;
 }
@@ -1148,8 +1188,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
 }
 
@@ -1157,8 +1197,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
   display: inline-block;
   margin-bottom: 8px;
 }
@@ -1169,6 +1209,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                       >
                         <div>
                           <div
+                            data-cy="typeahead-dropdown"
                             direction="bottom-left"
                           >
                             <div
@@ -1177,6 +1218,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                               <div
                                 aria-labelledby="downshift-1-label"
                                 class="emotion-3"
+                                data-cy="dropdownMenu"
                                 id="downshift-1-menu"
                                 role="listbox"
                                 style="max-height: 100px; width: 0px;"
@@ -1184,6 +1226,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-0"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-1-item-0"
                                   role="option"
                                 >
@@ -1192,6 +1235,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-1"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-1-item-1"
                                   role="option"
                                 >
@@ -1200,6 +1244,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-2"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-1-item-2"
                                   role="option"
                                 >
@@ -1222,6 +1267,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                       >
                         <div>
                           <div
+                            data-cy="typeahead-dropdown"
                             direction="bottom-left"
                           >
                             <div
@@ -1230,6 +1276,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                               <div
                                 aria-labelledby="downshift-1-label"
                                 class="emotion-7"
+                                data-cy="dropdownMenu"
                                 id="downshift-1-menu"
                                 role="listbox"
                                 style="max-height: 100px; width: 0px;"
@@ -1237,6 +1284,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-4"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-1-item-0"
                                   role="option"
                                 >
@@ -1245,6 +1293,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-5"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-1-item-1"
                                   role="option"
                                 >
@@ -1253,6 +1302,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-6"
+                                  data-cy="dropdownMenuItem"
                                   id="downshift-1-item-2"
                                   role="option"
                                 >
@@ -1277,6 +1327,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                           open={false}
                         >
                           <div
+                            data-cy="typeahead-dropdown"
                             direction="bottom-left"
                           >
                             <div
@@ -1293,6 +1344,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-labelledby="downshift-1-label"
                                   className="emotion-7"
+                                  data-cy="dropdownMenu"
                                   id="downshift-1-menu"
                                   role="listbox"
                                   style={
@@ -1318,6 +1370,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-4"
+                                      data-cy="dropdownMenuItem"
                                       id="downshift-1-item-0"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}
@@ -1343,6 +1396,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-5"
+                                      data-cy="dropdownMenuItem"
                                       id="downshift-1-item-1"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}
@@ -1368,6 +1422,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-6"
+                                      data-cy="dropdownMenuItem"
                                       id="downshift-1-item-2"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}

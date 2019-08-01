@@ -13,8 +13,8 @@ exports[`Tooltip renders 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {
@@ -38,6 +38,7 @@ exports[`Tooltip renders 1`] = `
 >
   <span
     aria-describedby="renders"
+    data-cy="tooltip"
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseLeave={[Function]}
@@ -80,8 +81,8 @@ exports[`Tooltip renders 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {
@@ -109,6 +110,7 @@ exports[`Tooltip renders 1`] = `
                         aria-hidden="true"
                         class="
     emotion-0    emotion-1   inverseColorMode emotion-2"
+                        data-cy="tooltipContent"
                         id="renders"
                         role="tooltip"
                       >
@@ -131,6 +133,7 @@ exports[`Tooltip renders 1`] = `
                         aria-hidden="true"
                         class="
     emotion-0    emotion-1   inverseColorMode emotion-2"
+                        data-cy="tooltipContent"
                         id="renders"
                         role="tooltip"
                       >
@@ -162,6 +165,7 @@ exports[`Tooltip renders 1`] = `
                           aria-hidden={true}
                           className="
     emotion-0    emotion-1   inverseColorMode emotion-2"
+                          data-cy="tooltipContent"
                           id="renders"
                           role="tooltip"
                           style={
@@ -200,8 +204,8 @@ exports[`Tooltip renders open tooltip 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {
@@ -226,6 +230,7 @@ exports[`Tooltip renders open tooltip 1`] = `
 >
   <span
     aria-describedby="opened"
+    data-cy="tooltip"
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseLeave={[Function]}
@@ -270,6 +275,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                         aria-hidden="true"
                         class="
     emotion-0    emotion-1   inverseColorMode emotion-2"
+                        data-cy="tooltipContent"
                         id="renders"
                         role="tooltip"
                       >
@@ -286,8 +292,8 @@ exports[`Tooltip renders open tooltip 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {
@@ -314,6 +320,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                         aria-hidden="false"
                         class="
     emotion-0    emotion-1   inverseColorMode emotion-2"
+                        data-cy="tooltipContent"
                         id="opened"
                         role="tooltip"
                       >
@@ -336,6 +343,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                         aria-hidden="false"
                         class="
     emotion-0    emotion-1   inverseColorMode emotion-2"
+                        data-cy="tooltipContent"
                         id="opened"
                         role="tooltip"
                       >
@@ -367,6 +375,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                           aria-hidden={false}
                           className="
     emotion-0    emotion-1   inverseColorMode emotion-2"
+                          data-cy="tooltipContent"
                           id="opened"
                           role="tooltip"
                           style={
@@ -405,8 +414,8 @@ exports[`Tooltip renders with preferred directions 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {
@@ -436,6 +445,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
 >
   <span
     aria-describedby="customDir"
+    data-cy="tooltip"
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseLeave={[Function]}
@@ -481,6 +491,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
     css-10cr3um
     css-miht3n
    inverseColorMode emotion-2"
+                        data-cy="tooltipContent"
                         id="renders"
                         role="tooltip"
                       >
@@ -500,6 +511,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
     css-10cr3um
     css-miht3n
    inverseColorMode emotion-2"
+                        data-cy="tooltipContent"
                         id="opened"
                         role="tooltip"
                       >
@@ -516,8 +528,8 @@ exports[`Tooltip renders with preferred directions 1`] = `
   position: relative;
   padding-left: 12px;
   padding-right: 12px;
-  padding-bottom: 8px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .emotion-2:after {
@@ -544,6 +556,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                         aria-hidden="false"
                         class="
     emotion-0    emotion-1   inverseColorMode emotion-2"
+                        data-cy="tooltipContent"
                         id="customDir"
                         role="tooltip"
                       >
@@ -566,6 +579,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                         aria-hidden="false"
                         class="
     emotion-0    emotion-1   inverseColorMode emotion-2"
+                        data-cy="tooltipContent"
                         id="customDir"
                         role="tooltip"
                       >
@@ -597,6 +611,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                           aria-hidden={false}
                           className="
     emotion-0    emotion-1   inverseColorMode emotion-2"
+                          data-cy="tooltipContent"
                           id="customDir"
                           role="tooltip"
                           style={

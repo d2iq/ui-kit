@@ -2,27 +2,31 @@
 
 exports[`PageHeader default 1`] = `
 <div
-  class="css-5juzgf"
+  class="css-ufu8px"
+  data-cy="pageHeader"
 >
   <div
     class="css-qi8t7c"
   >
     <nav
-      class="css-gowgo4"
+      class="css-1v0xyde"
     >
       <div
-        class="css-1fx6w60"
+        class="css-1ixtlzk"
+        data-cy="breadcrumb"
       >
         <span>
           One
         </span>
       </div>
       <div
-        class="css-1fx6w60"
+        class="css-19hcarb"
+        data-cy="breadcrumb"
       >
         <svg
           aria-label="system-caret-right icon"
           class="css-zgvqkl"
+          data-cy="icon"
           height="16"
           preserveAspectRatio="xMinYMin meet"
           role="img"
@@ -35,7 +39,8 @@ exports[`PageHeader default 1`] = `
         </svg>
       </div>
       <div
-        class="css-n2rkn1"
+        class="css-19hcarb"
+        data-cy="breadcrumb"
       >
         <span>
           Two
@@ -47,10 +52,11 @@ exports[`PageHeader default 1`] = `
     class="css-48ylac"
   >
     <ul
-      class="css-rrx0fi"
+      class="css-1mj0r5f"
+      data-cy="pageHeader-actions"
     >
       <li
-        class="css-kbi25z"
+        class="css-1skqmzz"
       >
         <div
           class="css-1h5x3dy"

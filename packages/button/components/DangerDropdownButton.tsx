@@ -4,7 +4,11 @@ import { ButtonProps } from "./ButtonBase";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const DangerDropdownButton = (props: ButtonProps) => (
-  <DangerButton iconEnd={SystemIcons.TriangleDown} {...props} />
+  <DangerButton
+    iconEnd={SystemIcons.TriangleDown}
+    data-cy="dangerDropdownButton"
+    {...props}
+  />
 );
 
 export default DangerDropdownButton;

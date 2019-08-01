@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container renders default 1`] = `
+.emotion-0 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 550px;
+  width: 100%;
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    max-width: 800px;
+  }
+}
+
+@media (min-width:1200px) {
+  .emotion-0 {
+    max-width: 900px;
+  }
+}
+
+@media (min-width:1800px) {
+  .emotion-0 {
+    max-width: 1100px;
+  }
+}
+
+<div
+  className="emotion-0"
+  data-cy="conntainer"
+>
+  <div>
+    content
+  </div>
+</div>
+`;

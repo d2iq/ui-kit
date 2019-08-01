@@ -4,7 +4,11 @@ import { ButtonProps } from "./ButtonBase";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const SecondaryDropdownButton = (props: ButtonProps) => (
-  <SecondaryButton iconEnd={SystemIcons.TriangleDown} {...props} />
+  <SecondaryButton
+    iconEnd={SystemIcons.TriangleDown}
+    data-cy="secondaryDropdownButton"
+    {...props}
+  />
 );
 
 export default SecondaryDropdownButton;

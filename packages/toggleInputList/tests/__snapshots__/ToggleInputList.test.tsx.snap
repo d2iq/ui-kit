@@ -150,12 +150,15 @@ exports[`ToggleInputList renders default 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput"
               id="id.1"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput"
+              >
                 <label
                   className="emotion-5"
                   htmlFor="id.1"
@@ -170,6 +173,7 @@ exports[`ToggleInputList renders default 1`] = `
                         aria-checked={false}
                         checked={false}
                         className="emotion-1"
+                        data-cy="checkboxInput-input"
                         id="id.1"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -204,12 +208,15 @@ exports[`ToggleInputList renders default 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput"
               id="id.2"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput"
+              >
                 <label
                   className="emotion-5"
                   htmlFor="id.2"
@@ -224,6 +231,7 @@ exports[`ToggleInputList renders default 1`] = `
                         aria-checked={false}
                         checked={false}
                         className="emotion-1"
+                        data-cy="checkboxInput-input"
                         id="id.2"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -258,12 +266,15 @@ exports[`ToggleInputList renders default 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput"
               id="id.3"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput"
+              >
                 <label
                   className="emotion-5"
                   htmlFor="id.3"
@@ -278,6 +289,7 @@ exports[`ToggleInputList renders default 1`] = `
                         aria-checked={false}
                         checked={false}
                         className="emotion-1"
+                        data-cy="checkboxInput-input"
                         id="id.3"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -479,12 +491,15 @@ exports[`ToggleInputList renders with errors 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput"
               id="id.1"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput"
+              >
                 <label
                   className="emotion-5"
                   htmlFor="id.1"
@@ -499,6 +514,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                         aria-checked={false}
                         checked={false}
                         className="emotion-1"
+                        data-cy="checkboxInput-input"
                         id="id.1"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -533,12 +549,15 @@ exports[`ToggleInputList renders with errors 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput"
               id="id.2"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput"
+              >
                 <label
                   className="emotion-5"
                   htmlFor="id.2"
@@ -553,6 +572,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                         aria-checked={false}
                         checked={false}
                         className="emotion-1"
+                        data-cy="checkboxInput-input"
                         id="id.2"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -587,12 +607,15 @@ exports[`ToggleInputList renders with errors 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput"
               id="id.3"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput"
+              >
                 <label
                   className="emotion-5"
                   htmlFor="id.3"
@@ -607,6 +630,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                         aria-checked={false}
                         checked={false}
                         className="emotion-1"
+                        data-cy="checkboxInput-input"
                         id="id.3"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -809,12 +833,15 @@ exports[`ToggleInputList renders with hidden label 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput"
               id="id.1"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput"
+              >
                 <label
                   className="emotion-5"
                   htmlFor="id.1"
@@ -829,6 +856,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                         aria-checked={false}
                         checked={false}
                         className="emotion-1"
+                        data-cy="checkboxInput-input"
                         id="id.1"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -863,12 +891,15 @@ exports[`ToggleInputList renders with hidden label 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput"
               id="id.2"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput"
+              >
                 <label
                   className="emotion-5"
                   htmlFor="id.2"
@@ -883,6 +914,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                         aria-checked={false}
                         checked={false}
                         className="emotion-1"
+                        data-cy="checkboxInput-input"
                         id="id.2"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -917,12 +949,15 @@ exports[`ToggleInputList renders with hidden label 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput"
               id="id.3"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput"
+              >
                 <label
                   className="emotion-5"
                   htmlFor="id.3"
@@ -937,6 +972,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                         aria-checked={false}
                         checked={false}
                         className="emotion-1"
+                        data-cy="checkboxInput-input"
                         id="id.3"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -1156,12 +1192,15 @@ exports[`ToggleInputList renders with selected items 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput checkboxInput.checked"
               id="id.1"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput checkboxInput.checked"
+              >
                 <label
                   className="emotion-7"
                   htmlFor="id.1"
@@ -1176,6 +1215,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                         aria-checked={true}
                         checked={true}
                         className="emotion-1"
+                        data-cy="checkboxInput-input checkboxInput-input.checked"
                         id="id.1"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -1194,6 +1234,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                           <svg
                             aria-label="system-check icon"
                             className="emotion-2"
+                            data-cy="icon"
                             height={16}
                             preserveAspectRatio="xMinYMin meet"
                             role="img"
@@ -1233,12 +1274,15 @@ exports[`ToggleInputList renders with selected items 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput checkboxInput.checked"
               id="id.2"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput checkboxInput.checked"
+              >
                 <label
                   className="emotion-7"
                   htmlFor="id.2"
@@ -1253,6 +1297,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                         aria-checked={true}
                         checked={true}
                         className="emotion-1"
+                        data-cy="checkboxInput-input checkboxInput-input.checked"
                         id="id.2"
                         onBlur={[Function]}
                         onChange={[Function]}
@@ -1271,6 +1316,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                           <svg
                             aria-label="system-check icon"
                             className="emotion-2"
+                            data-cy="icon"
                             height={16}
                             preserveAspectRatio="xMinYMin meet"
                             role="img"
@@ -1310,12 +1356,15 @@ exports[`ToggleInputList renders with selected items 1`] = `
           >
             <ToggleInput
               appearance="standard"
+              dataCy="checkboxInput"
               id="id.3"
               inputLabel="Sample label"
               showInputLabel={true}
               vertAlign="center"
             >
-              <div>
+              <div
+                data-cy="checkboxInput"
+              >
                 <label
                   className="emotion-7"
                   htmlFor="id.3"
@@ -1330,6 +1379,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                         aria-checked={false}
                         checked={false}
                         className="emotion-1"
+                        data-cy="checkboxInput-input"
                         id="id.3"
                         onBlur={[Function]}
                         onChange={[Function]}

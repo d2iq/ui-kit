@@ -51,6 +51,7 @@ const DropdownMenuItem = (props: DropdownMenuItemProps) => {
           [margin("bottom", "xs")]: index === listLength - 1
         }
       )}
+      data-cy="dropdownMenuItem"
       {...other}
     />
   );

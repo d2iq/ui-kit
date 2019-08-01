@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpacingBox renders default 1`] = `
+.emotion-0 {
+  padding: 16px;
+}
+
+<Box
+  bgImageOptions={
+    Object {
+      "position": undefined,
+      "repeat": undefined,
+      "size": undefined,
+    }
+  }
+  className="emotion-0"
+  dataCy="spacingBox"
+  tag="div"
+>
+  content
+</Box>
+`;
+
+exports[`SpacingBox renders with all props 1`] = `
+.emotion-0 {
+  padding-top: 24px;
+}
+
+<Box
+  bgImageOptions={
+    Object {
+      "position": undefined,
+      "repeat": undefined,
+      "size": undefined,
+    }
+  }
+  className="emotion-0"
+  dataCy="spacingBox"
+  tag="div"
+>
+  content
+</Box>
+`;
+
+exports[`SpacingBox renders with responsive spacingSize 1`] = `
+@media (min-width:0) {
+  .emotion-0 {
+    padding-top: 12px;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    padding-top: 16px;
+  }
+}
+
+<Box
+  bgImageOptions={
+    Object {
+      "position": undefined,
+      "repeat": undefined,
+      "size": undefined,
+    }
+  }
+  className="emotion-0"
+  dataCy="spacingBox"
+  tag="div"
+>
+  content
+</Box>
+`;

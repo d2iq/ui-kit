@@ -21,6 +21,7 @@ import {
   cyan,
   greyLight,
   greyDark,
+  greyDarkLighten2,
   red,
   yellow,
   green,
@@ -376,7 +377,8 @@ storiesOf("AppChrome", module)
       m: "m",
       l: "l",
       xl: "xl",
-      xxl: "xxl"
+      xxl: "xxl",
+      none: "none"
     };
 
     const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
@@ -419,7 +421,8 @@ storiesOf("AppChrome", module)
       m: "m",
       l: "l",
       xl: "xl",
-      xxl: "xxl"
+      xxl: "xxl",
+      none: "none"
     };
 
     const paddingHorSize = select(
@@ -451,7 +454,7 @@ storiesOf("AppChrome", module)
       <ThemeProvider theme={CustomTheme}>
         <Sidebar isOpen={true}>
           <SidebarSection label={sectionHeader}>
-            <SidebarItem onClick={action("clicked a nav item")}>
+            <SidebarItem isActive={true} onClick={action("clicked a nav item")}>
               <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
             </SidebarItem>
             <SidebarItem onClick={action("clicked a nav item")}>
@@ -482,7 +485,8 @@ storiesOf("AppChrome", module)
       m: "m",
       l: "l",
       xl: "xl",
-      xxl: "xxl"
+      xxl: "xxl",
+      none: "none"
     };
 
     const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
@@ -495,16 +499,34 @@ storiesOf("AppChrome", module)
       step: 1
     });
 
+    const colors = {
+      greyDarkLighten2,
+      black,
+      cyan,
+      red,
+      green,
+      blue,
+      purple
+    };
+    const hoverColor = select(
+      "Hover background color",
+      colors,
+      greyDarkLighten2
+    );
+    const activeColor = select("Selected background color", colors, purple);
+
     const CustomTheme = {
+      itemActiveBackgroundColor: activeColor,
+      itemHoverBackgroundColor: hoverColor,
       sidebarItemPaddingHor: paddingHorSize,
       sidebarItemPaddingVert: paddingVertSize,
       iconWidth
     };
 
     return (
-      <Sidebar isOpen={true}>
-        <SidebarSection label={sectionHeader}>
-          <ThemeProvider theme={CustomTheme}>
+      <ThemeProvider theme={CustomTheme}>
+        <Sidebar isOpen={true}>
+          <SidebarSection label={sectionHeader}>
             <SidebarItem onClick={action("clicked a nav item")}>
               <SidebarItemLabel
                 icon={
@@ -517,9 +539,21 @@ storiesOf("AppChrome", module)
                 {content}
               </SidebarItemLabel>
             </SidebarItem>
-          </ThemeProvider>
-        </SidebarSection>
-      </Sidebar>
+            <SidebarItem onClick={action("clicked a nav item")} isActive={true}>
+              <SidebarItemLabel
+                icon={
+                  <Icon
+                    shape={ProductIcons.ServicesInverse}
+                    size={`${iconWidth}px`}
+                  />
+                }
+              >
+                {content}
+              </SidebarItemLabel>
+            </SidebarItem>
+          </SidebarSection>
+        </Sidebar>
+      </ThemeProvider>
     );
   })
 
@@ -532,7 +566,25 @@ storiesOf("AppChrome", module)
       step: 1
     });
 
+    const colors = {
+      greyDarkLighten2,
+      black,
+      cyan,
+      red,
+      green,
+      blue,
+      purple
+    };
+    const hoverColor = select(
+      "Hover background color",
+      colors,
+      greyDarkLighten2
+    );
+    const activeColor = select("Active background color", colors, purple);
+
     const CustomTheme = {
+      itemActiveBackgroundColor: activeColor,
+      itemHoverBackgroundColor: hoverColor,
       iconWidth
     };
 
@@ -560,7 +612,10 @@ storiesOf("AppChrome", module)
               <SidebarSubMenuItem onClick={action("clicked a nav item")}>
                 Lorem Ipsum
               </SidebarSubMenuItem>
-              <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+              <SidebarSubMenuItem
+                onClick={action("clicked a nav item")}
+                isActive={true}
+              >
                 Dolor Sit
               </SidebarSubMenuItem>
             </SidebarSubMenu>

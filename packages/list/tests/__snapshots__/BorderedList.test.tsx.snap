@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BorderedList renders default 1`] = `
+.emotion-0 {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.emotion-0 > li:not(:last-child) {
+  padding-bottom: 16px;
+}
+
+.emotion-0 > li:not(:last-child) {
+  border-width: 1px;
+  border-color: var(--themeBorder,#DADDE2);
+  border-bottom-style: solid;
+}
+
+.emotion-0 > li:not(:first-child) {
+  padding-top: 16px;
+}
+
+<ul
+  className="emotion-0"
+  data-cy="borderedList"
+>
+  <li>
+    list item
+  </li>
+  <li>
+    list item
+  </li>
+</ul>
+`;

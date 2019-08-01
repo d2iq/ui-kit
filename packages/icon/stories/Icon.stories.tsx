@@ -25,41 +25,43 @@ import {
 
 const readme = require("../README.md");
 
+// used for Storybook knobs
+const colors = {
+  textColorPrimary,
+  textColorSecondary,
+  red,
+  yellow,
+  green,
+  blue,
+  purple
+};
+const sizes = {
+  iconSizeXxs,
+  iconSizeXs,
+  iconSizeS,
+  iconSizeM,
+  iconSizeL,
+  iconSizeXl,
+  iconSizeXxl
+};
+const shapes = {
+  ["SystemIcons.ArrowRight"]: SystemIcons.ArrowRight,
+  ["SystemIcons.Check"]: SystemIcons.Check,
+  ["SystemIcons.Close"]: SystemIcons.Close,
+  ["SystemIcons.Folder"]: SystemIcons.Folder,
+  ["SystemIcons.Gear"]: SystemIcons.Gear,
+  ["SystemIcons.Services"]: SystemIcons.Services,
+  ["SystemIcons.Users"]: SystemIcons.Users
+};
+
 storiesOf("Icon", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => {
-    const colors = {
-      textColorPrimary,
-      textColorSecondary,
-      red,
-      yellow,
-      green,
-      blue,
-      purple
-    };
-    const sizes = {
-      iconSizeXxs,
-      iconSizeXs,
-      iconSizeS,
-      iconSizeM,
-      iconSizeL,
-      iconSizeXl,
-      iconSizeXxl
-    };
-    const shapes = {
-      ["SystemIcons.ArrowRight"]: SystemIcons.ArrowRight,
-      ["SystemIcons.Check"]: SystemIcons.Check,
-      ["SystemIcons.Close"]: SystemIcons.Close,
-      ["SystemIcons.Folder"]: SystemIcons.Folder,
-      ["SystemIcons.Gear"]: SystemIcons.Gear,
-      ["SystemIcons.Services"]: SystemIcons.Services,
-      ["SystemIcons.Users"]: SystemIcons.Users
-    };
-
+    // used for Storybook knobs
     const color = select("Color", colors, textColorPrimary);
     const size = select("Size", sizes, iconSizeS);
-    const shape = select("shape", shapes, SystemIcons.ArrowRight);
+    const shape = select("Shape", shapes, SystemIcons.ArrowRight);
 
     return (
       <Icon shape={shape} color={color} size={size} ariaLabel="Sample icon" />

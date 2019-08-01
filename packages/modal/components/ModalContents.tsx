@@ -6,6 +6,10 @@ import { flex } from "../../shared/styles/styleUtils";
 export interface ModalContentsProps {
   isOpen: boolean;
   onClose: () => void;
+  /**
+   * human-readable selector used for writing tests
+   */
+  dataCy?: string;
 }
 export class ModalContentsUnwrapped extends React.Component<
   ModalContentsProps,
@@ -17,7 +21,10 @@ export class ModalContentsUnwrapped extends React.Component<
   }
   render() {
     return (
-      <div className={cx(modalWrapper, flex({ direction: "column" }))}>
+      <div
+        className={cx(modalWrapper, flex({ direction: "column" }))}
+        data-cy={this.props.dataCy}
+      >
         {this.props.children}
       </div>
     );

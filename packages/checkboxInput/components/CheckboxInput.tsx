@@ -63,6 +63,22 @@ class CheckboxInput extends React.PureComponent<
     delete other.onFocus;
     delete other.onBlur;
     const isIndeterminate = indeterminate && !checked;
+    const parentDataCy = [
+      "checkboxInput",
+      ...(checked ? ["checkboxInput.checked"] : []),
+      ...(isIndeterminate ? ["checkboxInput.indeterminate"] : []),
+      ...(appearance && appearance !== InputAppearance.Standard
+        ? [`checkboxInput.${appearance}`]
+        : [])
+    ].join(" ");
+    const inputDataCy = [
+      "checkboxInput-input",
+      ...(checked ? ["checkboxInput-input.checked"] : []),
+      ...(isIndeterminate ? ["checkboxInput-input.indeterminate"] : []),
+      ...(appearance && appearance !== InputAppearance.Standard
+        ? [`checkboxInput-input.${appearance}`]
+        : [])
+    ].join(" ");
 
     return (
       <ToggleInput
@@ -72,6 +88,7 @@ class CheckboxInput extends React.PureComponent<
         inputLabel={inputLabel}
         showInputLabel={showInputLabel}
         vertAlign={vertAlign}
+        dataCy={parentDataCy}
       >
         <div
           className={cx(toggleInput, checkbox, {
@@ -96,6 +113,7 @@ class CheckboxInput extends React.PureComponent<
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
             aria-checked={isIndeterminate ? "mixed" : checked}
+            data-cy={inputDataCy}
             {...other}
           />
           {/* tslint:enable */}

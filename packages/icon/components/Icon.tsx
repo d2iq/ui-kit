@@ -49,6 +49,7 @@ const Icon = (props: IconProps) => {
       role="img"
       aria-label={ariaLabel || `${shape} icon`}
       className={cx(icon, tintSVG(svgColor))}
+      data-cy="icon"
     >
       <use xlinkHref={`#${shape}`} />
     </svg>

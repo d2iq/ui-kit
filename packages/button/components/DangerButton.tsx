@@ -6,7 +6,11 @@ import {
 } from "./ButtonBase";
 
 const DangerButton = (props: ButtonProps) => (
-  <ButtonBase appearance={ButtonAppearances.Danger} {...props} />
+  <ButtonBase
+    appearance={ButtonAppearances.Danger}
+    data-cy="dangerButton"
+    {...props}
+  />
 );
 
 export default DangerButton;

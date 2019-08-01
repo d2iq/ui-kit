@@ -1,10 +1,24 @@
 import { css } from "react-emotion";
+import { getResponsiveStyle } from "../";
+import { BreakpointConfig } from "../../breakpoints";
 
-interface FlexboxProperties {
-  align?: "flex" | "center" | "flex-start" | "flex-end" | "space-between";
-  justify?: "flex" | "center" | "flex-start" | "flex-end" | "space-between";
-  direction?: "row" | "column" | "row-reverse" | "column-reverse";
-  wrap?: "wrap" | "nowrap";
+export interface FlexboxProperties {
+  /**
+   * The alignment of the `FlexItem` children. Refers to vertical alignment when `direction` is "row", and refers to horizontal alignment when `direction` is "column". Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints
+   */
+  align?: BreakpointConfig<React.CSSProperties["alignItems"]>;
+  /**
+   * The justification of the `FlexItem` children. Refers to horizontal justification when `direction` is "row", and refers to vertical justification when `direction` is "column". Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints
+   */
+  justify?: BreakpointConfig<React.CSSProperties["justifyContent"]>;
+  /**
+   * The direction the `FlexItem` children are laid out in. Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints
+   */
+  direction?: BreakpointConfig<React.CSSProperties["flexDirection"]>;
+  /**
+   * How `FlexItem` children should handle wrapping. Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints
+   */
+  wrap?: BreakpointConfig<React.CSSProperties["flexWrap"]>;
 }
 
 const flexStrategies = {
@@ -33,14 +47,44 @@ export const flex = (
     justify: "flex-start"
   }
 ) => {
+  const { direction } = flexProps;
+  const isColumn = direction === "column" || direction === "column-reverse";
+  const getResponsiveColumnStyles = (
+    valueForColumnDirection,
+    valueForOtherDirections = "auto"
+  ) => {
+    if (isColumn) {
+      return valueForColumnDirection;
+    } else if (typeof direction === "object") {
+      return Object.entries(direction).reduce((acc, [breakpoint, config]) => {
+        acc[breakpoint] = config.includes("column")
+          ? valueForColumnDirection
+          : valueForOtherDirections;
+
+        return acc;
+      }, {});
+    } else {
+      return null;
+    }
+  };
+
+  const minHeight = getResponsiveColumnStyles(0);
+  const childWidth = getResponsiveColumnStyles("100%");
+  const height = getResponsiveColumnStyles("100%");
+
   return css`
-    align-items: ${flexProps.align};
+    ${getResponsiveStyle("align-items", flexProps.align)};
+    ${getResponsiveStyle("height", height)};
+    ${getResponsiveStyle("flex-direction", flexProps.direction)};
+    ${getResponsiveStyle("flex-wrap", flexProps.wrap)};
+    ${getResponsiveStyle("justify-content", flexProps.justify)};
+    ${getResponsiveStyle("min-height", minHeight)};
     box-sizing: border-box;
     display: flex;
-    justify-content: ${flexProps.justify};
-    flex-direction: ${flexProps.direction};
-    flex-wrap: ${flexProps.wrap};
-    min-height: ${flexProps.direction === "column" ? 0 : null};
+
+    > div {
+      ${getResponsiveStyle("width", childWidth)};
+    }
   `;
 };
 

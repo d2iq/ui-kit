@@ -19,6 +19,7 @@ exports[`Avatar renders default 1`] = `
 
 <div
   className="emotion-1"
+  data-cy="avatar"
   role="img"
 >
   <img
@@ -49,6 +50,7 @@ exports[`Avatar renders with a src, size, and label 1`] = `
 <div
   aria-label="Kubernetes"
   className="emotion-1"
+  data-cy="avatar"
   role="img"
 >
   <img
