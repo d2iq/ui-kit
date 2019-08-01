@@ -3,7 +3,14 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withReadme } from "storybook-readme";
 import { ThemeProvider } from "emotion-theming";
-import { number, select, text, withKnobs } from "@storybook/addon-knobs";
+import {
+  number,
+  select,
+  text,
+  object,
+  boolean,
+  withKnobs
+} from "@storybook/addon-knobs";
 import { SidebarBareContent } from "./helpers/StorybookSidebarHelpers";
 import DCOSAppChrome from "./helpers/DCOSAppChrome";
 import AppChrome from "../components/AppChrome";
@@ -443,17 +450,56 @@ storiesOf("AppChrome", module)
       step: 1
     });
 
+    const sidebarIsOpen = boolean("isOpen", true);
+
     const CustomTheme = {
       sidebarBackgroundColor: color,
       sidebarHeaderPaddingHor: paddingHorSize,
       sidebarHeaderPaddingVert: paddingVertSize,
-      sidebarWidth: sidebarWidth + "px"
+      sidebarWidth: `${sidebarWidth}px`
     };
 
     return (
       <ThemeProvider theme={CustomTheme}>
-        <Sidebar isOpen={true}>
+        <Sidebar isOpen={sidebarIsOpen}>
           <SidebarSection label={sectionHeader}>
+            <SidebarItem isActive={true} onClick={action("clicked a nav item")}>
+              <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")}>
+              <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")}>
+              <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")}>
+              <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")}>
+              <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
+            </SidebarItem>
+          </SidebarSection>
+        </Sidebar>
+      </ThemeProvider>
+    );
+  })
+
+  .add("Sidebar Responsive Width w/ Knobs", () => {
+    const responsiveWidthsValue = object(
+      "Responsive widths",
+      { default: "200px", large: "300px" },
+      "responsiveWidths"
+    );
+    const sidebarIsOpen = boolean("isOpen", true);
+
+    const CustomTheme = {
+      sidebarWidth: responsiveWidthsValue
+    };
+
+    return (
+      <ThemeProvider theme={CustomTheme}>
+        <Sidebar isOpen={sidebarIsOpen}>
+          <SidebarSection label="Section header">
             <SidebarItem isActive={true} onClick={action("clicked a nav item")}>
               <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
             </SidebarItem>
