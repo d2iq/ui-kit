@@ -45,15 +45,6 @@ const getFormattedName = (prop, namePatterns) => {
   }
 };
 
-const fontNameJS = {
-  name: "value/fontNameJS",
-  type: "value",
-  matcher: prop => prop.attributes.category === "font",
-  transformer: (prop, options) => {
-    return prop.original.value.replace(/'/g, '"');
-  }
-};
-
 const cssVarJS = {
   name: "value/cssVarJS",
   type: "value",
@@ -89,4 +80,4 @@ const lessVar = {
     )
 };
 
-module.exports = [jsConstant, lessVar, fontNameJS, cssVarJS];
+module.exports = [jsConstant, lessVar, cssVarJS];
