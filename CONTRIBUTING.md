@@ -132,9 +132,13 @@ We don't want our components to create noise in the console for other apps that 
 When creating a new component, add a test to `cypress/integration/storybook-cy.js` to check for errors and warnings.
 
 #### Running Cypress
+Using the Cypress UI:
 1. `npm start`
 2. `npx cypress open`
 3. Click "storybook-cy" in the sidebar of the Cypress ui
+
+In the CLI:
+`npm run test:integration`
 
 ### Creating a Reusable Component
 

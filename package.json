@@ -31,9 +31,7 @@
     "start": "NODE_ENV=development npm run storybook --root ./ ",
     "storybook": "start-storybook -p 6006",
     "test": "jest",
-    "pretest:integration": "npm run storybook & sleep 30",
-    "test:integration": "cypress run",
-    "posttest:integration": "lsof -i ':6006' | awk 'NR > 1 {print $2}' | xargs kill",
+    "test:integration": "./scripts/test-integration",
     "test:watch": "jest --watch"
   },
   "files": [

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -e
+
+FRONTEND_PORT="6006"
+
+function waitForUrl() {
+    until curl --output /dev/null --silent --head --fail "$1"; do
+        sleep 2
+    done
+}
+
+function teardown() {
+    lsof -i ":$FRONTEND_PORT" | awk 'NR > 1 {print $2}' | xargs kill
+}
+
+# start frontend
+npm run storybook >/dev/null &
+sleep 30 &
+trap teardown EXIT
+
+# wait for servers to start
+waitForUrl "http://localhost:$FRONTEND_PORT"
+
+# run tests
+npx cypress run
