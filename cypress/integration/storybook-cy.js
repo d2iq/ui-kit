@@ -1,7 +1,7 @@
 const navigateToStory = require("../utils/navigateToStory");
 
 describe("Storybook", () => {
-  it("AppChrome has no error", () => {
+  it.skip("AppChrome has no error", () => {
     navigateToStory("AppChrome");
   });
 
