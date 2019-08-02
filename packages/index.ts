@@ -1,6 +1,8 @@
 import { injectGlobalCss } from "./shared/styles/global";
 import * as Legacy from "./legacy";
+import * as designTokens from "./design-tokens/build/js/designTokens";
 
+// Components
 export {
   AppChrome,
   HeaderBar,
@@ -95,5 +97,8 @@ export {
   SuccessText,
   WarningText
 } from "./styleUtils/typography";
+
+// Design Tokens
+export { designTokens };
 
 injectGlobalCss();

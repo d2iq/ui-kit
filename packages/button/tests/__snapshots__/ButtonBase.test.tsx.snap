@@ -23,6 +23,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   color: var(--themeTextColorDisabled,#AEB0B4);
   fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
+  pointer-events: none;
   background-color: var(--themeBgDisabled,#E8EAED);
 }
 
@@ -254,6 +255,7 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   color: var(--themeTextColorDisabled,#AEB0B4);
   fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
+  pointer-events: none;
 }
 
 .emotion-4::-moz-focus-inner {
@@ -413,6 +415,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   color: var(--themeTextColorDisabled,#AEB0B4);
   fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
+  pointer-events: none;
   background-color: var(--themeBgDisabled,#E8EAED);
 }
 
@@ -577,6 +580,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   color: var(--themeTextColorDisabled,#AEB0B4);
   fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
+  pointer-events: none;
   background-color: var(--themeBgDisabled,#E8EAED);
 }
 
@@ -741,6 +745,7 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   color: var(--themeTextColorDisabled,#AEB0B4);
   fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
+  pointer-events: none;
   background-color: var(--themeBgDisabled,#E8EAED);
 }
 
