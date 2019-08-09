@@ -11,6 +11,7 @@ exports[`Cell renders correctly 1`] = `
 
 <div
   class="emotion-0"
+  title="This is content"
 >
   This is content
 </div>
@@ -33,6 +34,7 @@ exports[`HeaderCell renders correctly 1`] = `
 
 <div
   class="emotion-0"
+  title="This is content"
 >
   This is content
 </div>
@@ -53,6 +55,7 @@ exports[`TextCell renders correctly 1`] = `
 
 <div
   class="emotion-0"
+  title="This is content"
 >
   This is content
 </div>
