@@ -1,4 +1,6 @@
+import * as React from "react";
 import styled, { css } from "react-emotion";
+import getReactChildrenText from "../../utilities/getReactChildrenText";
 import { innerCellCss, cellAlignmentCss } from "../style";
 
 export type TextAlign = "left" | "right" | "center";
@@ -12,7 +14,18 @@ const alignmentStyle = (props: CellProps) => css`
   ${cellAlignmentCss(props.textAlign || "left")};
 `;
 
-export default styled("div")`
+const CellStyled = styled("div")`
   ${innerCellCss};
   ${alignmentStyle};
 `;
+
+const Cell = props => {
+  return (
+    <CellStyled
+      title={getReactChildrenText(props.children) || null}
+      {...props}
+    />
+  );
+};
+
+export default Cell;
