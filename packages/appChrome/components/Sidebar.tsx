@@ -42,7 +42,7 @@ const sidebarAnimatorWidth = (isOpen: boolean) => css`
 `;
 
 class Sidebar extends React.PureComponent<SidebarProps, {}> {
-  public componentWillReceiveProps(nextProps: SidebarProps) {
+  public UNSAFE_componentWillReceiveProps(nextProps: SidebarProps) {
     const { onOpen, onClose } = this.props;
 
     if (nextProps.isOpen && onOpen) {
