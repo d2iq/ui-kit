@@ -110,6 +110,10 @@ class Toast extends React.PureComponent<ToastProps, {}> {
           return <WarningIcon className={tintSVG(yellow)} />;
       }
     };
+    const dataCy = [
+      "toast",
+      ...(appearance && appearance !== "default" ? [`toast.${appearance}`] : [])
+    ];
 
     return (
       <div
@@ -125,6 +129,7 @@ class Toast extends React.PureComponent<ToastProps, {}> {
         role={isUrgentMessage ? "alert" : "log"}
         aria-relevant="all"
         aria-atomic="true"
+        data-cy={dataCy}
       >
         <div
           className={cx(
@@ -147,7 +152,10 @@ class Toast extends React.PureComponent<ToastProps, {}> {
           <div className={flexItem("grow")}>{title}</div>
         </div>
         {description && (
-          <div className={cx(toastDesc, padding("bottom", "xs"))}>
+          <div
+            className={cx(toastDesc, padding("bottom", "xs"))}
+            data-cy="toast-description"
+          >
             {description}
           </div>
         )}
@@ -158,6 +166,7 @@ class Toast extends React.PureComponent<ToastProps, {}> {
               flex({ direction: "row-reverse" }),
               padding("bottom", "xs")
             )}
+            data-cy="toast-actions"
           >
             {primaryAction && (
               <span className={padding("left")}>{primaryAction}</span>

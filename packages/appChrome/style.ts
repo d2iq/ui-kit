@@ -6,11 +6,14 @@ import {
   spaceXl,
   themeBgSelected,
   themeBgHover,
-  themeBgHoverInverted
+  themeBgHoverInverted,
+  themeTextColorPrimary,
+  themeTextColorPrimaryInverted
 } from "../design-tokens/build/js/designTokens";
 import { padding } from "../shared/styles/styleUtils";
-import { pickHoverBg } from "../shared/styles/color";
+import { pickHoverBg, pickReadableTextColor } from "../shared/styles/color";
 import getCSSVarValue from "../utilities/components/getCSSVarValue";
+import { AppChromeTheme } from "./types/appChromeTheme";
 
 const iconSize = "24px";
 const layoutBreakpoint = "large";
@@ -59,20 +62,34 @@ export const sidebarSectionList = css`
   margin: 0;
 `;
 
-export const sidebarNavItem = (isActive: boolean, sidebarBgColor: string) => {
+export const sidebarNavItem = (isActive: boolean, theme?: AppChromeTheme) => {
+  const activeBgColor = theme && theme.itemActiveBackgroundColor;
+  const hoverBgColor = theme && theme.itemHoverBackgroundColor;
+  const sidebarBgColor = theme && theme.sidebarBackgroundColor;
+  const itemBgColor = isActive
+    ? activeBgColor || themeBgSelected
+    : sidebarBgColor;
+
   return css`
-    background-color: ${isActive ? themeBgSelected : "transparent"};
+    background-color: ${itemBgColor};
+    color: ${isActive
+      ? pickReadableTextColor(
+          itemBgColor,
+          getCSSVarValue(themeTextColorPrimary),
+          getCSSVarValue(themeTextColorPrimaryInverted)
+        )
+      : null};
     cursor: pointer;
     text-transform: capitalize;
 
     &:hover,
     &:focus {
       background-color: ${isActive
-        ? themeBgSelected
+        ? itemBgColor
         : pickHoverBg(
             sidebarBgColor,
-            getCSSVarValue(themeBgHover),
-            getCSSVarValue(themeBgHoverInverted)
+            hoverBgColor || getCSSVarValue(themeBgHover),
+            hoverBgColor || getCSSVarValue(themeBgHoverInverted)
           )};
     }
   `;

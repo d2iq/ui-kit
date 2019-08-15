@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List renders default 1`] = `
+.emotion-0 {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+<ul
+  className="emotion-0"
+  data-cy="list"
+>
+  <li>
+    list item
+  </li>
+  <li>
+    list item
+  </li>
+</ul>
+`;
+
+exports[`List renders with all props 1`] = `
+.emotion-0 {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: disc;
+  padding-left: 16px;
+}
+
+<ol
+  className="emotion-0"
+  data-cy="list"
+>
+  <li>
+    list item
+  </li>
+  <li>
+    list item
+  </li>
+</ol>
+`;

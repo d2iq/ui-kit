@@ -13,7 +13,8 @@ addDecorator(withKnobs);
 addDecorator(withA11y);
 addDecorator(
   withInfo({
-    inline: true
+    inline: true,
+    source: false
   })
 );
 withOptions({

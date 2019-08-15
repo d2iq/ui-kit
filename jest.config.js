@@ -40,6 +40,7 @@ module.exports = {
         "ts",
         "tsx"
       ],
+      "testPathIgnorePatterns": ["design-tokens"],
       "testMatch": [
         "<rootDir>/packages/**/*.{ts|tsx}",
         "tslint.json",

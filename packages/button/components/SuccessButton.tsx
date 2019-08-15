@@ -6,7 +6,11 @@ import {
 } from "./ButtonBase";
 
 const SuccessButton = (props: ButtonProps) => (
-  <ButtonBase appearance={ButtonAppearances.Success} {...props} />
+  <ButtonBase
+    appearance={ButtonAppearances.Success}
+    data-cy="successButton"
+    {...props}
+  />
 );
 
 export default SuccessButton;

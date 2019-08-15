@@ -21,9 +21,12 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -63,9 +66,12 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   fill: var(--themeError,#EB293A);
 }
 
-<div>
+<div
+  data-cy="textInput textInput.error"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -103,9 +109,12 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput textInput.success"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -143,9 +152,12 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -185,9 +197,12 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   fill: var(--themeError,#EB293A);
 }
 
-<div>
+<div
+  data-cy="textInput textInput.error"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -225,9 +240,12 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput textInput.success"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -265,9 +283,12 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -307,9 +328,12 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   fill: var(--themeError,#EB293A);
 }
 
-<div>
+<div
+  data-cy="textInput textInput.error"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -347,9 +371,12 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput textInput.success"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"

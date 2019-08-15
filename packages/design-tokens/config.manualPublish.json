@@ -1,0 +1,15 @@
+{
+  "source": ["./packages/design-tokens/properties/**/*.json"],
+  "platforms": {
+    "less": {
+      "transforms": ["attribute/cti", "name/cti/lessVar"],
+      "buildPath": "dist/packages/design-tokens/build/less/",
+      "files": [
+        {
+          "destination": "_designTokens.less",
+          "format": "less/variables"
+        }
+      ]
+    }
+  }
+}

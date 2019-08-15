@@ -1,14 +1,14 @@
 const transforms = require("./transforms");
 const formats = require("./formats");
 
-// Presently, design-tokens is a placeholder package that doesnt publish its own build.
-// This script is a hack to build two versions: one that will be published inside ui-kit,
-// and one that ui-kit can import in its own build.
+// Because we export non-Typescript files (only `.less` at the time of comment), we need
+// to build two versions: one that will be compiled by Typescript, and one that's manually
+// published in the `dist/` directory.
 
-const CONFIG = "./packages/design-tokens/config.release.json";
-const DEV_CONFIG = "./packages/design-tokens/config.dev.json";
+const CONFIG = "./packages/design-tokens/config.tsCompiled.json";
+const DIST_CONFIG = "./packages/design-tokens/config.manualPublish.json";
 
-[CONFIG, DEV_CONFIG].forEach(path => {
+[CONFIG, DIST_CONFIG].forEach(path => {
   const StyleDictionary = require("style-dictionary").extend(path);
 
   transforms.forEach(t => {

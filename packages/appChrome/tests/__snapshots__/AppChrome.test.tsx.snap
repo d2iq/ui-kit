@@ -5,15 +5,20 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   height: 100%;
   overflow: hidden;
   font-size: 14px;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
+}
+
+.emotion-3 > div {
+  width: 100%;
 }
 
 .emotion-2 {
@@ -21,21 +26,21 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 100%;
 }
 
@@ -67,6 +72,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   width: auto;
   padding-left: 0;
   margin-left: 0;
+  height: 100%;
 }
 
 <ThemeProvider
@@ -78,9 +84,10 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
 >
   <div
     className="emotion-3"
+    data-cy="appChrome"
   >
     <div
-      className="headerBar"
+      data-cy="headerBar"
     >
       <div>
         HeaderBar content goes here
@@ -91,6 +98,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
     >
       <div
         className="emotion-0"
+        data-cy="sidebar"
       >
         <div>
           Sidebar content
@@ -98,6 +106,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
       </div>
       <main
         className="emotion-1"
+        data-cy="main"
       >
         <div>
           Main app content goes here

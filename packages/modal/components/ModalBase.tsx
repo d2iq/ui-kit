@@ -14,7 +14,6 @@ import {
 } from "../style";
 import ModalContents from "./ModalContents";
 import Overlay from "../../shared/components/Overlay";
-import { flex } from "../../shared/styles/styleUtils";
 
 export enum ModalSizes {
   S = "s",
@@ -35,6 +34,10 @@ export interface ModalBaseProps {
   onClose: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /** Which size modal to render. ⚠️Do not use this directly⚠️ */
   size?: ModalSizes;
+  /**
+   * human-readable selector used for writing tests
+   */
+  dataCy?: string;
 }
 
 const animationDuration = 250;
@@ -57,7 +60,14 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
   }
 
   public render() {
-    const { children, isAnimated, size, initialFocus, isOpen } = this.props;
+    const {
+      children,
+      isAnimated,
+      size,
+      initialFocus,
+      isOpen,
+      dataCy
+    } = this.props;
     const modalSize = size || ModalSizes.M;
 
     return (
@@ -82,19 +92,18 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
                 }}
                 active={true}
                 role="dialog"
-                className={cx(
-                  modal,
-                  modalWidth[modalSize],
-                  flex({ direction: "column" }),
-                  {
-                    [modalPreTransitionStyle(animationDuration)]: isAnimated,
-                    [modalTransitionStyles[state]]: isAnimated
-                  }
-                )}
+                className={cx(modal, modalWidth[modalSize], {
+                  [modalPreTransitionStyle(animationDuration)]: isAnimated,
+                  [modalTransitionStyles[state]]: isAnimated
+                })}
                 onKeyDown={this.onKeyDown}
                 tabIndex={-1}
               >
-                <ModalContents isOpen={isOpen} onClose={this.props.onClose}>
+                <ModalContents
+                  isOpen={isOpen}
+                  onClose={this.props.onClose}
+                  dataCy={dataCy}
+                >
                   {children}
                 </ModalContents>
               </FocusTrap>

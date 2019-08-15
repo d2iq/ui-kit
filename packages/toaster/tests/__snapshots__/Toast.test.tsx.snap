@@ -28,6 +28,7 @@ exports[`Toast renders default 1`] = `
 
 <div
   className="emotion-1"
+  data-cy="toaster"
 >
   <ol
     aria-live="assertive"
@@ -95,6 +96,7 @@ exports[`Toast renders with actions 1`] = `
 
 <div
   className="emotion-1"
+  data-cy="toaster"
 >
   <ol
     aria-live="assertive"
@@ -162,6 +164,7 @@ exports[`Toast renders with description 1`] = `
 
 <div
   className="emotion-1"
+  data-cy="toaster"
 >
   <ol
     aria-live="assertive"

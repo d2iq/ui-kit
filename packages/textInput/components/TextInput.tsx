@@ -75,12 +75,20 @@ export class TextInput<
     const labelContent = this.getLabelContent();
     const tooltipContent = this.getTooltipContent();
     const containerProps: { className?: string } = {};
+    const appearance = this.getInputAppearance();
+    const dataCy = [
+      "textInput",
+      ...(appearance && appearance !== InputAppearance.Standard
+        ? [`textInput.${appearance}`]
+        : [])
+    ].join(" ");
+
     if (this.props.className) {
       containerProps.className = this.props.className;
     }
     return (
-      <div {...containerProps}>
-        <div className={flex({ align: "center" })}>
+      <div {...containerProps} data-cy={dataCy}>
+        <div className={flex({ align: "center" })} data-cy="textInput-label">
           {labelContent}
           {tooltipContent}
         </div>
@@ -132,7 +140,7 @@ export class TextInput<
                 describedByIds
               )}
             </div>
-            <div>
+            <div data-cy="textInput-hintContent">
               {getHintContent}
               {appearance === InputAppearance.Error && getValidationErrors}
             </div>
@@ -164,6 +172,13 @@ export class TextInput<
     describedBy
   ) {
     const { value, ...inputElementProps } = this.getInputElementProps();
+    const appearance = this.getInputAppearance();
+    const dataCy = [
+      "textInput-input",
+      ...(appearance && appearance !== InputAppearance.Standard
+        ? [`textInput-input.${appearance}`]
+        : [])
+    ].join(" ");
     let { onChange } = inputElementProps;
     if (onChange == null && value != null) {
       onChange = Function.prototype as (
@@ -177,6 +192,7 @@ export class TextInput<
         type={this.props.type}
         aria-invalid={!isValid}
         aria-describedby={describedBy}
+        data-cy={dataCy}
         {...{ ...inputElementProps, onChange, value }}
       />
     );

@@ -9,15 +9,17 @@ import {
 // TODO: when we do the design tokens lib,
 // generate a type for _only_ our colors
 // instead of just accepting any string
-export const tintText = (color: string) => css`
+export const tintText = (color: React.CSSProperties["color"]) => css`
   color: ${color};
 `;
 
-export const tintSVG = (color: string) => css`
+export const tintSVG = (color: React.CSSProperties["fill"]) => css`
   fill: ${color};
 `;
 
-export const tintContent = (color: string) => css`
+export const tintContent = (
+  color: React.CSSProperties["color"] | React.CSSProperties["fill"]
+) => css`
   ${tintText(color)};
   ${tintSVG(color)};
 `;

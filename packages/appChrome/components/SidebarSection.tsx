@@ -24,21 +24,34 @@ class SidebarSection extends React.PureComponent<SidebarSectionProps, {}> {
   public render() {
     const { label, children } = this.props;
 
-    /* tslint:disable:no-string-literal */
     const H3 = styled("h3")`
-      padding-left: ${props =>
-        spaceSizes[props.theme.sidebarHeaderPaddingHor] || spaceSizes["l"]};
-      padding-right: ${props =>
-        spaceSizes[props.theme.sidebarHeaderPaddingHor] || spaceSizes["l"]};
-      padding-bottom: ${props =>
-        spaceSizes[props.theme.sidebarHeaderPaddingVert] || spaceSizes["s"]};
-      padding-top: ${props =>
-        spaceSizes[props.theme.sidebarHeaderPaddingVert] || spaceSizes["s"]};
+      ${props => `
+        padding-left: ${
+          props.theme.sidebarHeaderPaddingHor
+            ? spaceSizes[props.theme.sidebarHeaderPaddingHor]
+            : spaceSizes.l
+        };
+        padding-right: ${
+          props.theme.sidebarHeaderPaddingHor
+            ? spaceSizes[props.theme.sidebarHeaderPaddingHor]
+            : spaceSizes.l
+        };
+        padding-bottom: ${
+          props.theme.sidebarHeaderPaddingVert
+            ? spaceSizes[props.theme.sidebarHeaderPaddingVert]
+            : spaceSizes.s
+        };
+        padding-top: ${
+          props.theme.sidebarHeaderPaddingVert
+            ? spaceSizes[props.theme.sidebarHeaderPaddingVert]
+            : spaceSizes.s
+        };
+
+        `};
     `;
-    /* tslint:enable:no-string-literal */
 
     return (
-      <div>
+      <div data-cy="sidebarSection">
         {label && (
           <H3
             className={cx(

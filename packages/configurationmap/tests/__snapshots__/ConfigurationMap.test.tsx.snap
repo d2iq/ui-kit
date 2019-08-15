@@ -1,159 +1,311 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ConfigurationMap default 1`] = `
-Array [
-  <div
-    class="css-8a3lli"
-    style="overflow:visible;height:0;width:0"
+exports[`ConfigurationMap renders default 1`] = `
+<div
+  class="css-1fnaylc"
+  data-cy="configurationMap"
+>
+  <dl
+    class="css-1mqjlka"
+    data-cy="configurationMapSection"
   >
     <div
-      style="height:768px;overflow:visible;width:1024px"
+      class="css-yktv50"
+      data-cy="configurationMapRow"
     >
-      <div
-        style="height:35px;position:relative;width:1024px"
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
       >
-        <div
-          aria-label="grid"
-          aria-readonly="true"
-          class="ReactVirtualized__Grid css-4bzelf"
-          role="grid"
-          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:512px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
-        >
-          <div
-            class="ReactVirtualized__Grid__innerScrollContainer"
-            role="rowgroup"
-            style="width:512px;height:35px;max-width:512px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
-          >
-            <div
-              class="css-1f9o6wj"
-              style="height:35px;left:0;position:absolute;top:0;width:512px"
-            >
-              <div
-                class="css-zjfx7"
-              >
-                <div
-                  class="css-qi8t7c"
-                />
-                <div
-                  class="css-zu7xr2"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="TopRightGrid_ScrollWrapper"
-          style="left:512px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:512px"
-        >
-          <div
-            aria-label="grid"
-            aria-readonly="true"
-            class="ReactVirtualized__Grid css-1n6cz8p"
-            role="grid"
-            style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:512px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
-          >
-            <div
-              class="ReactVirtualized__Grid__innerScrollContainer"
-              role="rowgroup"
-              style="width:512px;height:35px;max-width:512px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
-            >
-              <div
-                class="css-1f9o6wj"
-                style="height:35px;left:0;position:absolute;top:0;width:512px"
-              >
-                <div
-                  class="css-zjfx7"
-                >
-                  <div
-                    class="css-qi8t7c"
-                  />
-                  <div
-                    class="css-zu7xr2"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style="height:733px;overflow:visible;position:relative;width:1024px"
+        Name
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
       >
-        <div
-          class="BottomLeftGrid_ScrollWrapper"
-          style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:512px"
-        >
-          <div
-            aria-label="grid"
-            aria-readonly="true"
-            class="ReactVirtualized__Grid css-1oay0jc"
-            role="grid"
-            style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:512px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
-          >
-            <div
-              class="ReactVirtualized__Grid__innerScrollContainer"
-              role="rowgroup"
-              style="width:512px;height:70px;max-width:512px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
-            >
-              <div
-                class="css-wjthpu"
-                data-rowindex="1"
-                style="height:35px;left:0;position:absolute;top:0;width:512px"
-              >
-                <span>
-                  id
-                </span>
-              </div>
-              <div
-                class="css-wjthpu"
-                data-rowindex="2"
-                style="height:35px;left:0;position:absolute;top:35px;width:512px"
-              >
-                <span>
-                  cmd
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-label="grid"
-          aria-readonly="true"
-          class="ReactVirtualized__Grid css-1abf74x"
-          role="grid"
-          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:512px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:512px"
+        Jane Doe
+      </dd>
+    </div>
+    <div
+      class="css-yktv50"
+      data-cy="configurationMapRow"
+    >
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
+      >
+        Role
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
+      >
+        UX Designer
+      </dd>
+    </div>
+    <div
+      class="css-yktv50"
+      data-cy="configurationMapRow"
+    >
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
+      >
+        City
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
+      >
+        San Francisco
+      </dd>
+    </div>
+  </dl>
+</div>
+`;
+
+exports[`ConfigurationMap renders with actions 1`] = `
+<div
+  class="css-1fnaylc"
+  data-cy="configurationMap"
+>
+  <dl
+    class="css-1mqjlka"
+    data-cy="configurationMapSection"
+  >
+    <div
+      class="css-1f2226p"
+      data-cy="configurationMapRow"
+    >
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
+      >
+        Name
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
+      >
+        Jane Doe
+      </dd>
+      <span
+        class="static_configurationMapRowAction css-48ylac"
+        data-cy="configrationMapRowAction"
+      >
+        <button
+          class="css-1vveheu"
+          data-cy="secondaryButton"
           tabindex="0"
         >
-          <div
-            class="ReactVirtualized__Grid__innerScrollContainer"
-            role="rowgroup"
-            style="width:512px;height:70px;max-width:512px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+          <span
+            class=""
           >
-            <div
-              class="css-wjthpu"
-              data-rowindex="1"
-              style="height:35px;left:0;position:absolute;top:0;width:512px"
-            >
-              <span>
-                foobar
-              </span>
-            </div>
-            <div
-              class="css-wjthpu"
-              data-rowindex="2"
-              style="height:35px;left:0;position:absolute;top:35px;width:512px"
-            >
-              <span>
-                sleep 100;
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+            Action
+          </span>
+        </button>
+      </span>
     </div>
-  </div>,
-  <div
-    class="css-18lry1b"
-  />,
-]
+    <div
+      class="css-1f2226p"
+      data-cy="configurationMapRow"
+    >
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
+      >
+        Role
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
+      >
+        UX Designer
+      </dd>
+      <span
+        class="static_configurationMapRowAction css-48ylac"
+        data-cy="configrationMapRowAction"
+      >
+        <button
+          class="css-1vveheu"
+          data-cy="secondaryButton"
+          tabindex="0"
+        >
+          <span
+            class=""
+          >
+            Action
+          </span>
+        </button>
+      </span>
+    </div>
+    <div
+      class="css-1f2226p"
+      data-cy="configurationMapRow"
+    >
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
+      >
+        City
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
+      >
+        San Francisco
+      </dd>
+      <span
+        class="static_configurationMapRowAction css-48ylac"
+        data-cy="configrationMapRowAction"
+      >
+        <button
+          class="css-1vveheu"
+          data-cy="secondaryButton"
+          tabindex="0"
+        >
+          <span
+            class=""
+          >
+            Action
+          </span>
+        </button>
+      </span>
+    </div>
+  </dl>
+</div>
+`;
+
+exports[`ConfigurationMap renders with default value 1`] = `
+<div
+  class="css-1fnaylc"
+  data-cy="configurationMap"
+>
+  <dl
+    class="css-1mqjlka"
+    data-cy="configurationMapSection"
+  >
+    <div
+      class="css-yktv50"
+      data-cy="configurationMapRow"
+    >
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
+      >
+        Name
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
+      >
+        Jane Doe
+      </dd>
+    </div>
+    <div
+      class="css-yktv50"
+      data-cy="configurationMapRow"
+    >
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
+      >
+        Role
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
+      >
+        —
+      </dd>
+    </div>
+    <div
+      class="css-yktv50"
+      data-cy="configurationMapRow"
+    >
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
+      >
+        City
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
+      >
+        —
+      </dd>
+    </div>
+  </dl>
+</div>
+`;
+
+exports[`ConfigurationMap renders with headline 1`] = `
+<div
+  class="css-1fnaylc"
+  data-cy="configurationMap"
+>
+  <dl
+    class="css-1mqjlka"
+    data-cy="configurationMapSection"
+  >
+    <h1
+      class="css-14una7e"
+      data-cy="configurationMapHeading"
+    >
+      Jane Doe Info
+    </h1>
+    <div
+      class="css-yktv50"
+      data-cy="configurationMapRow"
+    >
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
+      >
+        Name
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
+      >
+        Jane Doe
+      </dd>
+    </div>
+    <div
+      class="css-yktv50"
+      data-cy="configurationMapRow"
+    >
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
+      >
+        Role
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
+      >
+        UX Designer
+      </dd>
+    </div>
+    <div
+      class="css-yktv50"
+      data-cy="configurationMapRow"
+    >
+      <dt
+        class="css-1bnt6tn"
+        data-cy="configurationMapLabel"
+      >
+        City
+      </dt>
+      <dd
+        class="css-1pld8at"
+        data-cy="configurationMapValue"
+      >
+        San Francisco
+      </dd>
+    </div>
+  </dl>
+</div>
 `;

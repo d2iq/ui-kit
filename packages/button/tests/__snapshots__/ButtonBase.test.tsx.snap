@@ -23,6 +23,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   color: var(--themeTextColorDisabled,#AEB0B4);
   fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
+  pointer-events: none;
   background-color: var(--themeBgDisabled,#E8EAED);
 }
 
@@ -57,15 +58,15 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .emotion-0 {
@@ -169,15 +170,15 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .emotion-0 {
@@ -252,6 +253,7 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   color: var(--themeTextColorDisabled,#AEB0B4);
   fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
+  pointer-events: none;
 }
 
 .emotion-4::-moz-focus-inner {
@@ -324,15 +326,15 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .emotion-0 {
@@ -410,6 +412,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   color: var(--themeTextColorDisabled,#AEB0B4);
   fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
+  pointer-events: none;
   background-color: var(--themeBgDisabled,#E8EAED);
 }
 
@@ -487,15 +490,15 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .emotion-0 {
@@ -573,6 +576,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   color: var(--themeTextColorDisabled,#AEB0B4);
   fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
+  pointer-events: none;
   background-color: var(--themeBgDisabled,#E8EAED);
 }
 
@@ -650,15 +654,15 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .emotion-0 {
@@ -736,6 +740,7 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   color: var(--themeTextColorDisabled,#AEB0B4);
   fill: var(--themeTextColorDisabled,#AEB0B4);
   cursor: default;
+  pointer-events: none;
   background-color: var(--themeBgDisabled,#E8EAED);
 }
 

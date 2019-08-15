@@ -99,11 +99,23 @@ class SelectInput extends React.PureComponent<
     delete other.onBlur;
 
     const hasError = appearance === InputAppearance.Error;
+    const parentDataCy = [
+      "selectInput",
+      ...(appearance && appearance !== InputAppearance.Standard
+        ? [`selectInput.${appearance}`]
+        : [])
+    ].join(" ");
+    const selectDataCy = [
+      "selectInput-select",
+      ...(appearance && appearance !== InputAppearance.Standard
+        ? [`selectInput-select.${appearance}`]
+        : [])
+    ].join(" ");
 
     return (
       <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
         {({ getValidationErrors, isValid, getHintContent, describedByIds }) => (
-          <div>
+          <div data-cy={parentDataCy}>
             <label
               className={cx(getLabelStyle(hasError), {
                 [visuallyHidden]: !showInputLabel
@@ -130,6 +142,7 @@ class SelectInput extends React.PureComponent<
                 id={id}
                 onFocus={this.handleFocus}
                 onBlur={this.handleBlur}
+                data-cy={selectDataCy}
                 {...other}
               >
                 {options.map((option, key) => (
@@ -153,8 +166,13 @@ class SelectInput extends React.PureComponent<
                 />
               </span>
             </span>
-            {getHintContent}
-            {appearance === InputAppearance.Error && getValidationErrors}
+            {hasError &&
+              getValidationErrors && (
+                <div data-cy="selectInput-hintContent">
+                  {getHintContent}
+                  {hasError && getValidationErrors}
+                </div>
+              )}
           </div>
         )}
       </FormFieldWrapper>

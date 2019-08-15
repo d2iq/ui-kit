@@ -6,7 +6,11 @@ import {
 } from "./ButtonBase";
 
 const SecondaryButton = (props: ButtonProps) => (
-  <ButtonBase appearance={ButtonAppearances.Secondary} {...props} />
+  <ButtonBase
+    appearance={ButtonAppearances.Secondary}
+    data-cy="secondaryButton"
+    {...props}
+  />
 );
 
 export default SecondaryButton;

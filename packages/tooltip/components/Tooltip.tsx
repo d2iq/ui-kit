@@ -58,6 +58,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
         onFocus={this.handleOpen}
         onBlur={this.handleClose}
         tabIndex={0}
+        data-cy="tooltip"
       >
         <Dropdownable
           open={this.state.open}

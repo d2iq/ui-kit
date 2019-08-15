@@ -33,11 +33,17 @@ class AppChrome extends React.PureComponent<AppChromeProps, {}> {
             textSize("m"),
             flex({ direction: "column" })
           )}
+          data-cy="appChrome"
         >
-          <div className="headerBar">{headerBar}</div>
+          <div data-cy="headerBar">{headerBar}</div>
           <div className={cx(flex(), appWrapper)}>
-            <div className={flexItem("shrink")}>{sidebar}</div>
-            <main className={cx(flexItem("grow"), flush("left"))}>
+            <div className={flexItem("shrink")} data-cy="sidebar">
+              {sidebar}
+            </div>
+            <main
+              className={cx(flexItem("grow"), flush("left"), appWrapper)}
+              data-cy="main"
+            >
               {mainContent}
             </main>
           </div>

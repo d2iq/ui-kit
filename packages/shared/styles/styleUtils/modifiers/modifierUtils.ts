@@ -1,3 +1,5 @@
+import { css } from "emotion";
+import * as CSS from "csstype";
 import {
   spaceXxs,
   spaceXs,
@@ -7,7 +9,10 @@ import {
   spaceXl,
   spaceXxl
 } from "../../../../design-tokens/build/js/designTokens";
+import { getResponsiveSpacingStyle } from "../layout/handleResponsiveStyle";
+import { BreakpointConfig } from "../../breakpoints";
 
+type CSSPropertyKeys = keyof CSS.PropertiesHyphen;
 export type BoxSides =
   | "all"
   | "top"
@@ -15,8 +20,10 @@ export type BoxSides =
   | "bottom"
   | "left"
   | "horiz"
-  | "vert";
+  | "vert"
+  | undefined;
 export type SpaceSizes = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "none";
+export type SpaceSize = BreakpointConfig<SpaceSizes>;
 
 export const spaceSizes = {
   xxs: spaceXxs,
@@ -32,24 +39,41 @@ export const spaceSizes = {
 export const boxSpacing = (
   property: "margin" | "padding",
   side: BoxSides,
-  spaceSize?: SpaceSizes
+  spaceSize: SpaceSize = "m"
 ) => {
-  const size = spaceSize || "m";
-
   switch (side) {
     case "all":
-      return `${property}: ${spaceSizes[size]};`;
+      return getResponsiveSpacingStyle(property, spaceSize);
     case "horiz":
-      return `
-        ${property}-left: ${spaceSizes[size]};
-        ${property}-right: ${spaceSizes[size]};
+      return css`
+        ${getResponsiveSpacingStyle(
+          `${property}-left` as CSSPropertyKeys,
+          spaceSize
+        )};
+        ${getResponsiveSpacingStyle(
+          `${property}-right` as CSSPropertyKeys,
+          spaceSize
+        )};
       `;
     case "vert":
-      return `
-        ${property}-bottom: ${spaceSizes[size]};
-        ${property}-top: ${spaceSizes[size]};
+      return css`
+        ${getResponsiveSpacingStyle(
+          `${property}-top` as CSSPropertyKeys,
+          spaceSize
+        )};
+        ${getResponsiveSpacingStyle(
+          `${property}-bottom` as CSSPropertyKeys,
+          spaceSize
+        )};
       `;
+    case undefined:
+      return;
     default:
-      return `${property}-${side}: ${spaceSizes[size]};`;
+      return css`
+        ${getResponsiveSpacingStyle(
+          `${property}-${side}` as CSSPropertyKeys,
+          spaceSize
+        )};
+      `;
   }
 };

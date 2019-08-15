@@ -26,9 +26,12 @@ exports[`TextInput should display icon with tooltip if tooltipText is set 1`] = 
   margin-bottom: 4px;
 }
 
-<div>
+<div
+  data-cy="textInput"
+>
   <div
     className="emotion-2"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -85,9 +88,12 @@ exports[`TextInput should display validation message if set & appearance == Erro
   fill: var(--themeError,#EB293A);
 }
 
-<div>
+<div
+  data-cy="textInput textInput.error"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -135,9 +141,12 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -172,9 +181,12 @@ exports[`TextInput should not display validation message if set & appearance == 
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput textInput.success"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -222,21 +234,21 @@ exports[`TextInput should render all appearances focus 1`] = `
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
@@ -335,9 +347,12 @@ exports[`TextInput should render all appearances focus 1`] = `
   showInputLabel={true}
   type="text"
 >
-  <div>
+  <div
+    data-cy="textInput"
+  >
     <div
       className="emotion-1"
+      data-cy="textInput-label"
     >
       <label
         className="emotion-0"
@@ -355,11 +370,14 @@ exports[`TextInput should render all appearances focus 1`] = `
             aria-describedby=""
             aria-invalid={false}
             className="emotion-2"
+            data-cy="textInput-input"
             id="test.input"
             type="text"
           />
         </div>
-        <div />
+        <div
+          data-cy="textInput-hintContent"
+        />
       </div>
     </FormFieldWrapper>
   </div>
@@ -394,21 +412,21 @@ exports[`TextInput should render all appearances focus 2`] = `
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
@@ -502,9 +520,12 @@ exports[`TextInput should render all appearances focus 2`] = `
   showInputLabel={true}
   type="text"
 >
-  <div>
+  <div
+    data-cy="textInput textInput.error"
+  >
     <div
       className="emotion-1"
+      data-cy="textInput-label"
     >
       <label
         className="emotion-0"
@@ -522,11 +543,14 @@ exports[`TextInput should render all appearances focus 2`] = `
             aria-describedby=""
             aria-invalid={false}
             className="emotion-2"
+            data-cy="textInput-input textInput-input.error"
             id="test.input"
             type="text"
           />
         </div>
-        <div />
+        <div
+          data-cy="textInput-hintContent"
+        />
       </div>
     </FormFieldWrapper>
   </div>
@@ -559,21 +583,21 @@ exports[`TextInput should render all appearances focus 3`] = `
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
@@ -667,9 +691,12 @@ exports[`TextInput should render all appearances focus 3`] = `
   showInputLabel={true}
   type="text"
 >
-  <div>
+  <div
+    data-cy="textInput textInput.success"
+  >
     <div
       className="emotion-1"
+      data-cy="textInput-label"
     >
       <label
         className="emotion-0"
@@ -687,11 +714,14 @@ exports[`TextInput should render all appearances focus 3`] = `
             aria-describedby=""
             aria-invalid={false}
             className="emotion-2"
+            data-cy="textInput-input textInput-input.success"
             id="test.input"
             type="text"
           />
         </div>
-        <div />
+        <div
+          data-cy="textInput-hintContent"
+        />
       </div>
     </FormFieldWrapper>
   </div>
@@ -719,9 +749,12 @@ exports[`TextInput should render all appearances with props 1`] = `
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -761,9 +794,12 @@ exports[`TextInput should render all appearances with props 2`] = `
   fill: var(--themeError,#EB293A);
 }
 
-<div>
+<div
+  data-cy="textInput textInput.error"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -801,9 +837,12 @@ exports[`TextInput should render all appearances with props 3`] = `
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput textInput.success"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -841,9 +880,12 @@ exports[`TextInput should render node as inputLabel 1`] = `
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
@@ -883,9 +925,12 @@ exports[`TextInput should render string inputLabel 1`] = `
   display: flex;
 }
 
-<div>
+<div
+  data-cy="textInput"
+>
   <div
     className="emotion-1"
+    data-cy="textInput-label"
   >
     <label
       className="emotion-0"

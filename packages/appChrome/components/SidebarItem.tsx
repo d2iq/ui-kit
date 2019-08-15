@@ -14,26 +14,30 @@ export interface SidebarItemProps {
 class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
   public render() {
     const { children, isActive, onClick } = this.props;
-    /* tslint:disable:no-string-literal */
+    const dataCy = [
+      "sidebarItem",
+      ...(isActive ? ["sidebarItem.active"] : [])
+    ].join(" ");
+
     const Item = styled("li")`
-      padding-left: ${props =>
-        spaceSizes[props.theme.sidebarItemPaddingHor] || spaceSizes["l"]};
-      padding-right: ${props =>
-        spaceSizes[props.theme.sidebarItemPaddingHor] || spaceSizes["l"]};
-      padding-bottom: ${props =>
-        spaceSizes[props.theme.sidebarItemPaddingVert] || spaceSizes["none"]};
-      padding-top: ${props =>
-        spaceSizes[props.theme.sidebarItemPaddingVert] || spaceSizes["none"]};
       ${props => {
         return css`
-          ${sidebarNavItem(
-            Boolean(isActive),
-            props.theme.sidebarBackgroundColor
-          )};
+          ${sidebarNavItem(Boolean(isActive), props.theme)};
+          padding-left: ${props.theme.sidebarItemPaddingHor
+            ? spaceSizes[props.theme.sidebarItemPaddingHor]
+            : spaceSizes.l};
+          padding-right: ${props.theme.sidebarItemPaddingHor
+            ? spaceSizes[props.theme.sidebarItemPaddingHor]
+            : spaceSizes.l};
+          padding-bottom: ${props.theme.sidebarItemPaddingVert
+            ? spaceSizes[props.theme.sidebarItemPaddingVert]
+            : spaceSizes.none};
+          padding-top: ${props.theme.sidebarItemPaddingVert
+            ? spaceSizes[props.theme.sidebarItemPaddingVert]
+            : spaceSizes.none};
         `;
       }};
     `;
-    /* tslint:enable:no-string-literal */
 
     return (
       <Clickable
@@ -41,6 +45,7 @@ class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
         tabIndex={0}
         role="link"
         disableFocusOutline={true}
+        dataCy={dataCy}
       >
         <Item>{children}</Item>
       </Clickable>

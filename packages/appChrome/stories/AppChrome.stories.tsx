@@ -4,10 +4,7 @@ import { action } from "@storybook/addon-actions";
 import { withReadme } from "storybook-readme";
 import { ThemeProvider } from "emotion-theming";
 import { number, select, text, withKnobs } from "@storybook/addon-knobs";
-import {
-  SidebarBareContent,
-  PlaceholderIcon
-} from "./helpers/StorybookSidebarHelpers";
+import { SidebarBareContent } from "./helpers/StorybookSidebarHelpers";
 import DCOSAppChrome from "./helpers/DCOSAppChrome";
 import AppChrome from "../components/AppChrome";
 import Sidebar from "../components/Sidebar";
@@ -24,6 +21,7 @@ import {
   cyan,
   greyLight,
   greyDark,
+  greyDarkLighten2,
   red,
   yellow,
   green,
@@ -31,6 +29,8 @@ import {
   pink,
   purple
 } from "../../design-tokens/build/js/designTokens";
+import { ProductIcons } from "../../icons/dist/product-icons-enum";
+import { Icon } from "../../icon";
 
 const readme = require("../README.md");
 
@@ -112,39 +112,39 @@ storiesOf("AppChrome", module)
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarItem onClick={action("clicked a nav item")}>
-          <SidebarItemLabel icon={<PlaceholderIcon />}>
+          <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Lorem Ipsum
           </SidebarItemLabel>
         </SidebarItem>
         <SidebarItem
-          icon={<PlaceholderIcon />}
+          icon={ProductIcons.ServicesInverse}
           onClick={action("clicked a nav item")}
         >
-          <SidebarItemLabel icon={<PlaceholderIcon />}>
+          <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Dolor Sit
           </SidebarItemLabel>
         </SidebarItem>
         <SidebarItem
-          icon={<PlaceholderIcon />}
+          icon={ProductIcons.ServicesInverse}
           onClick={action("clicked a nav item")}
         >
-          <SidebarItemLabel icon={<PlaceholderIcon />}>
+          <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Amet Consecutor
           </SidebarItemLabel>
         </SidebarItem>
         <SidebarItem
-          icon={<PlaceholderIcon />}
+          icon={ProductIcons.ServicesInverse}
           onClick={action("clicked a nav item")}
         >
-          <SidebarItemLabel icon={<PlaceholderIcon />}>
+          <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Adipiscing Edit
           </SidebarItemLabel>
         </SidebarItem>
         <SidebarItem
-          icon={<PlaceholderIcon />}
+          icon={ProductIcons.ServicesInverse}
           onClick={action("clicked a nav item")}
         >
-          <SidebarItemLabel icon={<PlaceholderIcon />}>
+          <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Praesent Massa
           </SidebarItemLabel>
         </SidebarItem>
@@ -275,7 +275,7 @@ storiesOf("AppChrome", module)
       <SidebarSection label="Section header">
         <SidebarSubMenu
           label={
-            <SidebarItemLabel icon={<PlaceholderIcon />}>
+            <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
               Lorem ipsum
             </SidebarItemLabel>
           }
@@ -290,7 +290,7 @@ storiesOf("AppChrome", module)
         </SidebarSubMenu>
         <SidebarSubMenu
           label={
-            <SidebarItemLabel icon={<PlaceholderIcon />}>
+            <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
               Dolor Sit
             </SidebarItemLabel>
           }
@@ -305,7 +305,7 @@ storiesOf("AppChrome", module)
         </SidebarSubMenu>
         <SidebarSubMenu
           label={
-            <SidebarItemLabel icon={<PlaceholderIcon />}>
+            <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
               Amet Consecutor
             </SidebarItemLabel>
           }
@@ -320,7 +320,7 @@ storiesOf("AppChrome", module)
         </SidebarSubMenu>
         <SidebarSubMenu
           label={
-            <SidebarItemLabel icon={<PlaceholderIcon />}>
+            <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
               Adipiscing Edit
             </SidebarItemLabel>
           }
@@ -335,7 +335,7 @@ storiesOf("AppChrome", module)
         </SidebarSubMenu>
         <SidebarSubMenu
           label={
-            <SidebarItemLabel icon={<PlaceholderIcon />}>
+            <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
               Praesent Massa
             </SidebarItemLabel>
           }
@@ -377,7 +377,8 @@ storiesOf("AppChrome", module)
       m: "m",
       l: "l",
       xl: "xl",
-      xxl: "xxl"
+      xxl: "xxl",
+      none: "none"
     };
 
     const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
@@ -420,7 +421,8 @@ storiesOf("AppChrome", module)
       m: "m",
       l: "l",
       xl: "xl",
-      xxl: "xxl"
+      xxl: "xxl",
+      none: "none"
     };
 
     const paddingHorSize = select(
@@ -452,7 +454,7 @@ storiesOf("AppChrome", module)
       <ThemeProvider theme={CustomTheme}>
         <Sidebar isOpen={true}>
           <SidebarSection label={sectionHeader}>
-            <SidebarItem onClick={action("clicked a nav item")}>
+            <SidebarItem isActive={true} onClick={action("clicked a nav item")}>
               <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
             </SidebarItem>
             <SidebarItem onClick={action("clicked a nav item")}>
@@ -483,7 +485,8 @@ storiesOf("AppChrome", module)
       m: "m",
       l: "l",
       xl: "xl",
-      xxl: "xxl"
+      xxl: "xxl",
+      none: "none"
     };
 
     const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
@@ -496,24 +499,61 @@ storiesOf("AppChrome", module)
       step: 1
     });
 
+    const colors = {
+      greyDarkLighten2,
+      black,
+      cyan,
+      red,
+      green,
+      blue,
+      purple
+    };
+    const hoverColor = select(
+      "Hover background color",
+      colors,
+      greyDarkLighten2
+    );
+    const activeColor = select("Selected background color", colors, purple);
+
     const CustomTheme = {
+      itemActiveBackgroundColor: activeColor,
+      itemHoverBackgroundColor: hoverColor,
       sidebarItemPaddingHor: paddingHorSize,
       sidebarItemPaddingVert: paddingVertSize,
       iconWidth
     };
 
     return (
-      <Sidebar isOpen={true}>
-        <SidebarSection label={sectionHeader}>
-          <ThemeProvider theme={CustomTheme}>
+      <ThemeProvider theme={CustomTheme}>
+        <Sidebar isOpen={true}>
+          <SidebarSection label={sectionHeader}>
             <SidebarItem onClick={action("clicked a nav item")}>
-              <SidebarItemLabel icon={<PlaceholderIcon width={iconWidth} />}>
+              <SidebarItemLabel
+                icon={
+                  <Icon
+                    shape={ProductIcons.ServicesInverse}
+                    size={`${iconWidth}px`}
+                  />
+                }
+              >
                 {content}
               </SidebarItemLabel>
             </SidebarItem>
-          </ThemeProvider>
-        </SidebarSection>
-      </Sidebar>
+            <SidebarItem onClick={action("clicked a nav item")} isActive={true}>
+              <SidebarItemLabel
+                icon={
+                  <Icon
+                    shape={ProductIcons.ServicesInverse}
+                    size={`${iconWidth}px`}
+                  />
+                }
+              >
+                {content}
+              </SidebarItemLabel>
+            </SidebarItem>
+          </SidebarSection>
+        </Sidebar>
+      </ThemeProvider>
     );
   })
 
@@ -526,7 +566,25 @@ storiesOf("AppChrome", module)
       step: 1
     });
 
+    const colors = {
+      greyDarkLighten2,
+      black,
+      cyan,
+      red,
+      green,
+      blue,
+      purple
+    };
+    const hoverColor = select(
+      "Hover background color",
+      colors,
+      greyDarkLighten2
+    );
+    const activeColor = select("Active background color", colors, purple);
+
     const CustomTheme = {
+      itemActiveBackgroundColor: activeColor,
+      itemHoverBackgroundColor: hoverColor,
       iconWidth
     };
 
@@ -536,17 +594,28 @@ storiesOf("AppChrome", module)
           <ThemeProvider theme={CustomTheme}>
             <SidebarSubMenu
               label={
-                <SidebarItemLabel icon={<PlaceholderIcon width={iconWidth} />}>
+                <SidebarItemLabel
+                  icon={
+                    <Icon
+                      shape={ProductIcons.ServicesInverse}
+                      size={`${iconWidth}px`}
+                    />
+                  }
+                >
                   Praesent Massa
                 </SidebarItemLabel>
               }
               iconWidth={iconWidth + "px"}
               isOpen={true}
+              menuHasIcon={true}
             >
               <SidebarSubMenuItem onClick={action("clicked a nav item")}>
                 Lorem Ipsum
               </SidebarSubMenuItem>
-              <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+              <SidebarSubMenuItem
+                onClick={action("clicked a nav item")}
+                isActive={true}
+              >
                 Dolor Sit
               </SidebarSubMenuItem>
             </SidebarSubMenu>

@@ -18,12 +18,29 @@ storiesOf("Buttons/Default", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {
-      propTablesExclude: [ButtonAppearanceSample]
+      propTablesExclude: [ButtonAppearanceSample, React.Fragment]
     }
   })
   .add(
     "PrimaryButton",
-    () => <ButtonAppearanceSample buttonComponent={PrimaryButton} />,
+    () => (
+      <React.Fragment>
+        <ButtonAppearanceSample>
+          <PrimaryButton>Button</PrimaryButton>
+          <PrimaryButton disabled={true}>Button</PrimaryButton>
+          <PrimaryButton isProcessing={true}>Button</PrimaryButton>
+        </ButtonAppearanceSample>
+        <ButtonAppearanceSample isInverse={true}>
+          <PrimaryButton isInverse={true}>Button</PrimaryButton>
+          <PrimaryButton disabled={true} isInverse={true}>
+            Button
+          </PrimaryButton>
+          <PrimaryButton isProcessing={true} isInverse={true}>
+            Button
+          </PrimaryButton>
+        </ButtonAppearanceSample>
+      </React.Fragment>
+    ),
     {
       info: {
         propTables: [PrimaryButton]
@@ -32,7 +49,24 @@ storiesOf("Buttons/Default", module)
   )
   .add(
     "SecondaryButton",
-    () => <ButtonAppearanceSample buttonComponent={SecondaryButton} />,
+    () => (
+      <React.Fragment>
+        <ButtonAppearanceSample>
+          <SecondaryButton>Button</SecondaryButton>
+          <SecondaryButton disabled={true}>Button</SecondaryButton>
+          <SecondaryButton isProcessing={true}>Button</SecondaryButton>
+        </ButtonAppearanceSample>
+        <ButtonAppearanceSample isInverse={true}>
+          <SecondaryButton isInverse={true}>Button</SecondaryButton>
+          <SecondaryButton disabled={true} isInverse={true}>
+            Button
+          </SecondaryButton>
+          <SecondaryButton isProcessing={true} isInverse={true}>
+            Button
+          </SecondaryButton>
+        </ButtonAppearanceSample>
+      </React.Fragment>
+    ),
     {
       info: {
         propTables: [SecondaryButton]
@@ -41,7 +75,24 @@ storiesOf("Buttons/Default", module)
   )
   .add(
     "StandardButton",
-    () => <ButtonAppearanceSample buttonComponent={StandardButton} />,
+    () => (
+      <React.Fragment>
+        <ButtonAppearanceSample>
+          <StandardButton>Button</StandardButton>
+          <StandardButton disabled={true}>Button</StandardButton>
+          <StandardButton isProcessing={true}>Button</StandardButton>
+        </ButtonAppearanceSample>
+        <ButtonAppearanceSample isInverse={true}>
+          <StandardButton isInverse={true}>Button</StandardButton>
+          <StandardButton disabled={true} isInverse={true}>
+            Button
+          </StandardButton>
+          <StandardButton isProcessing={true} isInverse={true}>
+            Button
+          </StandardButton>
+        </ButtonAppearanceSample>
+      </React.Fragment>
+    ),
     {
       info: {
         propTables: [StandardButton]
@@ -50,7 +101,24 @@ storiesOf("Buttons/Default", module)
   )
   .add(
     "SuccessButton",
-    () => <ButtonAppearanceSample buttonComponent={SuccessButton} />,
+    () => (
+      <React.Fragment>
+        <ButtonAppearanceSample>
+          <SuccessButton>Button</SuccessButton>
+          <SuccessButton disabled={true}>Button</SuccessButton>
+          <SuccessButton isProcessing={true}>Button</SuccessButton>
+        </ButtonAppearanceSample>
+        <ButtonAppearanceSample isInverse={true}>
+          <SuccessButton isInverse={true}>Button</SuccessButton>
+          <SuccessButton disabled={true} isInverse={true}>
+            Button
+          </SuccessButton>
+          <SuccessButton isProcessing={true} isInverse={true}>
+            Button
+          </SuccessButton>
+        </ButtonAppearanceSample>
+      </React.Fragment>
+    ),
     {
       info: {
         propTables: [SuccessButton]
@@ -59,7 +127,24 @@ storiesOf("Buttons/Default", module)
   )
   .add(
     "DangerButton",
-    () => <ButtonAppearanceSample buttonComponent={DangerButton} />,
+    () => (
+      <React.Fragment>
+        <ButtonAppearanceSample>
+          <DangerButton>Button</DangerButton>
+          <DangerButton disabled={true}>Button</DangerButton>
+          <DangerButton isProcessing={true}>Button</DangerButton>
+        </ButtonAppearanceSample>
+        <ButtonAppearanceSample isInverse={true}>
+          <DangerButton isInverse={true}>Button</DangerButton>
+          <DangerButton disabled={true} isInverse={true}>
+            Button
+          </DangerButton>
+          <DangerButton isProcessing={true} isInverse={true}>
+            Button
+          </DangerButton>
+        </ButtonAppearanceSample>
+      </React.Fragment>
+    ),
     {
       info: {
         propTables: [DangerButton]

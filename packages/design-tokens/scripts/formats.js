@@ -23,10 +23,10 @@ const colorsForStyleguide = {
 };
 
 const commonJS = {
-  name: "javascript/commonJS",
+  name: "typescript/es6",
   formatter: dictionary =>
     `${dateHeader()}\n${dictionary.allProperties
-      .map(prop => `exports.${prop.name} = '${prop.value}';`)
+      .map(prop => `export const ${prop.name}: string = "${prop.value}";`)
       .join("\n")}`
 };
 
