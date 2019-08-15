@@ -73,12 +73,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-14 > div {
@@ -99,6 +99,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-9 {
@@ -143,6 +144,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   padding: 24px;
 }
 
@@ -443,12 +445,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-1 > div {
@@ -549,12 +551,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-16 > div {
@@ -575,6 +577,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-10 {
@@ -619,6 +622,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   padding: 24px;
 }
 
@@ -1220,12 +1224,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-11 > div {
@@ -1238,12 +1242,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-12 > div {
@@ -1381,6 +1385,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -1546,7 +1551,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       data-cy="dialogModal-header"
                     >
                       <div
-                        class="css-1byz17q"
+                        class="css-1udp9vv"
                       >
                         <div
                           class="css-16jj0m8"
@@ -1594,7 +1599,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       data-cy="dialogModal-footer"
                     >
                       <div
-                        class="css-5n0frn"
+                        class="css-kqhhpv"
                       >
                         <div
                           class="css-48ylac"
@@ -1704,12 +1709,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-16 > div {
@@ -1730,6 +1735,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-10 {
@@ -1774,6 +1780,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   padding: 24px;
 }
 
@@ -2080,12 +2087,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-13 > div {
@@ -2098,12 +2105,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-14 > div {
@@ -2288,6 +2295,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -2767,12 +2775,12 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-1 > div {
@@ -2878,12 +2886,12 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-1 > div {

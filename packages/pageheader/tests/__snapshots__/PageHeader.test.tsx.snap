@@ -2,14 +2,14 @@
 
 exports[`PageHeader default 1`] = `
 <div
-  class="css-ufu8px"
+  class="css-4sqa7y"
   data-cy="pageHeader"
 >
   <div
     class="css-qi8t7c"
   >
     <nav
-      class="css-1v0xyde"
+      class="css-2wdnda"
     >
       <div
         class="css-1ixtlzk"
@@ -52,7 +52,7 @@ exports[`PageHeader default 1`] = `
     class="css-48ylac"
   >
     <ul
-      class="css-1mj0r5f"
+      class="css-1s6ufm8"
       data-cy="pageHeader-actions"
     >
       <li

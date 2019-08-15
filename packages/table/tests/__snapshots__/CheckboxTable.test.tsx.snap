@@ -106,6 +106,7 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-7 {
@@ -174,6 +175,7 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -778,6 +780,7 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-9 {
@@ -846,6 +849,7 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1546,6 +1550,7 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-7 {
@@ -1614,6 +1619,7 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

@@ -25,6 +25,7 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   padding-top: 12px;
   padding-bottom: 12px;
 }
@@ -91,6 +92,7 @@ exports[`Sidebar SidebarSection renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   color: #828487;
   font-size: 14px;
   font-weight: 500;
@@ -195,6 +197,7 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   padding-top: 12px;
   padding-bottom: 12px;
 }

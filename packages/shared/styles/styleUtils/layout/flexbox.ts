@@ -36,9 +36,6 @@ const flexStrategies = {
   `
 };
 
-// Note: the `min-height: 0` rule handles an issue with
-// flex containers that have `overflow: {auto|hidden|scroll}`
-// in Firefox and IE11
 export const flex = (
   flexProps: FlexboxProperties = {
     align: "flex",
@@ -68,19 +65,21 @@ export const flex = (
     }
   };
 
-  const minHeight = getResponsiveColumnStyles(0);
   const childWidth = getResponsiveColumnStyles("100%");
   const height = getResponsiveColumnStyles("100%");
 
+  // Note: the `min-height: 0` rule handles an issue with
+  // flex containers that have `overflow: {auto|hidden|scroll}`
+  // in Firefox and IE11
   return css`
     ${getResponsiveStyle("align-items", flexProps.align)};
     ${getResponsiveStyle("height", height)};
     ${getResponsiveStyle("flex-direction", flexProps.direction)};
     ${getResponsiveStyle("flex-wrap", flexProps.wrap)};
     ${getResponsiveStyle("justify-content", flexProps.justify)};
-    ${getResponsiveStyle("min-height", minHeight)};
     box-sizing: border-box;
     display: flex;
+    min-height: 0;
 
     > div {
       ${getResponsiveStyle("width", childWidth)};
