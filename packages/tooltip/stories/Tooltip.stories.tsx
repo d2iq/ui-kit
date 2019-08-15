@@ -5,17 +5,23 @@ import { select } from "@storybook/addon-knobs";
 
 import { Tooltip } from "../../index";
 import { Direction } from "../../dropdownable/components/Dropdownable";
+import { Box } from "../../styleUtils/modifiers";
 
 const readme = require("../README.md");
 
+const tooltipStoryDecorator = storyFn => (
+  <div style={{ textAlign: "center" }}>
+    <Box display="inline-block">{storyFn()}</Box>
+  </div>
+);
+
 storiesOf("Tooltip", module)
   .addDecorator(withReadme([readme]))
+  .addDecorator(tooltipStoryDecorator)
   .add("default", () => (
-    <div style={{ textAlign: "center" }}>
-      <Tooltip trigger="hover me" id="default">
-        content
-      </Tooltip>
-    </div>
+    <Tooltip trigger="hover me" id="default">
+      content
+    </Tooltip>
   ))
   .add("with custom direction", () => {
     const options = {
@@ -36,40 +42,34 @@ storiesOf("Tooltip", module)
     }
 
     return (
-      <div style={{ textAlign: "center" }}>
-        <Tooltip
-          trigger="hover me"
-          id="customDir"
-          preferredDirections={[Direction[getKeyByValue(knobDirection)]]}
-        >
-          Use the knobs to change tooltip alignment
-        </Tooltip>
-      </div>
+      <Tooltip
+        trigger="hover me"
+        id="customDir"
+        preferredDirections={[Direction[getKeyByValue(knobDirection)]]}
+      >
+        Use the knobs to change tooltip alignment
+      </Tooltip>
     );
   })
   .add("min or max width", () => (
-    <div>
-      <div style={{ textAlign: "center", marginBottom: "1em" }}>
+    <React.Fragment>
+      <div style={{ marginBottom: "1em" }}>
         <Tooltip trigger="maxWidth 100px" id="maxWidth" maxWidth={100}>
           content that is greater than 100px
         </Tooltip>
       </div>
-      <div style={{ textAlign: "center" }}>
-        <Tooltip
-          trigger="minWidth 200px"
-          id="minWidth"
-          minWidth={200}
-          preferredDirections={[Direction.BottomCenter]}
-        >
-          content
-        </Tooltip>
-      </div>
-    </div>
+      <Tooltip
+        trigger="minWidth 200px"
+        id="minWidth"
+        minWidth={200}
+        preferredDirections={[Direction.BottomCenter]}
+      >
+        content
+      </Tooltip>
+    </React.Fragment>
   ))
   .add("suppress toggle", () => (
-    <div style={{ textAlign: "center" }}>
-      <Tooltip trigger="hover me" id="suppress" open={true} suppress={true}>
-        I won't toggle open and closed
-      </Tooltip>
-    </div>
+    <Tooltip trigger="hover me" id="suppress" open={true} suppress={true}>
+      I won't toggle open and closed
+    </Tooltip>
   ));

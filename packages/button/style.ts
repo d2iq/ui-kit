@@ -65,6 +65,7 @@ export const filledButton = (
 const mutedButton = css`
   ${tintContent(themeTextColorDisabled)};
   cursor: default;
+  pointer-events: none;
 
   &:hover,
   &:focus,
