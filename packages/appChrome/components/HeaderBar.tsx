@@ -9,7 +9,7 @@ import {
   themeTextColorPrimaryInverted
 } from "../../design-tokens/build/js/designTokens";
 import { pickReadableTextColor } from "../../shared/styles/color";
-import { getCSSVarValue } from "../../utilities";
+import getCSSVarValue from "../../utilities/getCSSVarValue";
 
 export interface HeaderProps {
   children: React.ReactElement<HTMLElement> | string;

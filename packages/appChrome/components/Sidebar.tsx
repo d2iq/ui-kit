@@ -8,7 +8,7 @@ import {
   themeTextColorPrimaryInverted,
   themeBgPrimaryInverted
 } from "../../design-tokens/build/js/designTokens";
-import { getCSSVarValue } from "../../utilities";
+import getCSSVarValue from "../../utilities/getCSSVarValue";
 import { pickReadableTextColor } from "../../shared/styles/color";
 import {
   tintContent,

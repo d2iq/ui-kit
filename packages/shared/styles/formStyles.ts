@@ -20,7 +20,7 @@ import {
   display,
   tintContent
 } from "./styleUtils";
-import { getCSSVarValue } from "../../utilities";
+import getCSSVarValue from "../../utilities/getCSSVarValue";
 import { hexToRgbA } from "./color";
 const getFocusFieldBg = color => hexToRgbA(color, 0.05);
 

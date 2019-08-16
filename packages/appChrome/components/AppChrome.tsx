@@ -8,7 +8,7 @@ import {
   flush
 } from "../../shared/styles/styleUtils";
 import { ThemeProvider } from "emotion-theming";
-import { getCSSVarValue } from "../../utilities";
+import getCSSVarValue from "../../utilities/getCSSVarValue";
 import { themeBgPrimaryInverted } from "../../design-tokens/build/js/designTokens";
 import {
   defaultSidebarItemHorizPaddingSize,

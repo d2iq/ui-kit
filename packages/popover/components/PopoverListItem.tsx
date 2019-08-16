@@ -14,7 +14,7 @@ import {
   themeError,
   themeTextColorDisabled
 } from "../../design-tokens/build/js/designTokens";
-import getCSSVarValue from "../../utilities/components/getCSSVarValue";
+import getCSSVarValue from "../../utilities/getCSSVarValue";
 import { darken, pickReadableTextColor } from "../../shared/styles/color";
 import { PopoverListItemAppearances } from "../../shared/types/popoverListItemAppearances";
 import PopoverListItemIcon from "./PopoverListItemIcon";
