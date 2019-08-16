@@ -4,7 +4,7 @@ import Dropdownable from "../../dropdownable/components/Dropdownable";
 import Popover from "../../popover/components/Popover";
 import PopoverListItem from "../../popover/components/PopoverListItem";
 import { margin } from "../../shared/styles/styleUtils";
-import resizeEventManager from "../../utilities/resizeEventManager";
+import { resizeEventManager } from "../../utilities";
 
 export interface Item {
   value: string;

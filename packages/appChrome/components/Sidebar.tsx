@@ -1,20 +1,19 @@
 import * as React from "react";
 import { css } from "emotion";
 import styled from "react-emotion";
+import { ThemeProvider } from "emotion-theming";
 import { sidebar, sidebarAnimator } from "../style";
 import {
   themeTextColorPrimary,
   themeTextColorPrimaryInverted,
   themeBgPrimaryInverted
 } from "../../design-tokens/build/js/designTokens";
-import getCSSVarValue from "../../utilities/components/getCSSVarValue";
+import { getCSSVarValue } from "../../utilities";
 import { pickReadableTextColor } from "../../shared/styles/color";
 import {
   tintContent,
   getResponsiveStyle
 } from "../../shared/styles/styleUtils";
-import { ThemeProvider } from "emotion-theming";
-
 export interface SidebarProps {
   isOpen: boolean;
   onOpen?: () => void;

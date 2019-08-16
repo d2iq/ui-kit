@@ -1,4 +1,4 @@
-import { default as min } from "../components/min";
+import { default as min } from "../min";
 
 describe("min", () => {
   it("returns the smaller of its two arguments", () => {

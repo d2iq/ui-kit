@@ -1,4 +1,4 @@
-import { default as max } from "../components/max";
+import { default as max } from "../max";
 describe("max", () => {
   it("returns the larger of its two arguments", () => {
     expect(max(-7, 7)).toEqual(7);

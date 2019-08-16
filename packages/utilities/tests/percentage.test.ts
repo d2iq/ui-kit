@@ -1,4 +1,4 @@
-import { default as percentage } from "../components/percentage";
+import { default as percentage } from "../percentage";
 
 describe("percentage", () => {
   it("returns percentage of total", () => {

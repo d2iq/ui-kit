@@ -9,7 +9,7 @@ import {
 } from "../design-tokens/build/js/designTokens";
 import { padding } from "../shared/styles/styleUtils";
 import { pickHoverBg, pickReadableTextColor } from "../shared/styles/color";
-import getCSSVarValue from "../utilities/components/getCSSVarValue";
+import { getCSSVarValue } from "../utilities";
 import { AppChromeTheme } from "./types/appChromeTheme";
 import {
   spaceSizes,
