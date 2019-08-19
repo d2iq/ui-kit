@@ -72,6 +72,10 @@ export interface ButtonProps {
    * the type of button - same as HTML "type" attribute on the <button> tag
    */
   type?: "button" | "reset" | "submit";
+  /**
+   * a url the user will be navigated to when clicking the button. This also changes the tag to `<a>`
+   */
+  url?: string;
 }
 
 export interface ButtonBaseProps extends ButtonProps {
@@ -83,7 +87,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
-    this.buttonContentWithIcons = this.buttonContentWithIcons.bind(this);
+    this.getButtonContent = this.getButtonContent.bind(this);
   }
 
   public render() {
@@ -98,41 +102,66 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
       isProcessing,
       isFullWidth,
       onClick,
+      url,
       ...other
     } = this.props;
 
-    return (
-      <FocusStyleManager
-        focusEnabledClass={focusStyleByAppearance(appearance, isInverse)}
-      >
+    const buttonClassName = cx(
+      buttonReset,
+      button(appearance),
+      buttonBase,
+      textWeight("medium"),
+      className,
+      {
+        [fullWidthButton]: isFullWidth,
+        [buttonInverse(appearance)]: isInverse,
+        [getMutedButtonStyles(appearance)]: disabled || isProcessing,
+        [getInverseMutedButtonStyles(appearance)]:
+          (disabled || isProcessing) && isInverse
+      }
+    );
+
+    const getButtonNode = () => {
+      if (url) {
+        return !disabled && !isProcessing ? (
+          <a
+            href={url}
+            className={buttonClassName}
+            onClick={this.onClick}
+            tabIndex={0}
+          >
+            {this.getButtonContent()}
+          </a>
+        ) : (
+          // tslint:disable react-a11y-anchors
+          //
+          // this rule was erroring because the anchor had no href, but in this
+          // case that is intentional beacuse it's disabled
+          <a className={buttonClassName} aria-disabled="true" tabIndex={-1}>
+            {this.getButtonContent()}
+          </a>
+          // tslint:enable react-a11y-anchors
+        );
+      }
+
+      return (
         <button
-          className={cx(
-            buttonReset,
-            button(appearance),
-            buttonBase,
-            textWeight("medium"),
-            className,
-            {
-              [fullWidthButton]: isFullWidth,
-              [buttonInverse(appearance)]: isInverse,
-              [getMutedButtonStyles(appearance)]: disabled || isProcessing,
-              [getInverseMutedButtonStyles(appearance)]:
-                (disabled || isProcessing) && isInverse
-            }
-          )}
+          className={buttonClassName}
           disabled={disabled || isProcessing}
           onClick={this.onClick}
           tabIndex={0}
           {...other}
         >
-          {Boolean(iconStart) || Boolean(iconEnd) ? (
-            this.buttonContentWithIcons()
-          ) : (
-            <span className={isProcessing ? processingTextStyle : ""}>
-              {children}
-            </span>
-          )}
+          {this.getButtonContent()}
         </button>
+      );
+    };
+
+    return (
+      <FocusStyleManager
+        focusEnabledClass={focusStyleByAppearance(appearance, isInverse)}
+      >
+        {getButtonNode()}
       </FocusStyleManager>
     );
   }
@@ -167,9 +196,10 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
     );
   }
 
-  private buttonContentWithIcons() {
+  private getButtonContent() {
     const { iconStart, iconEnd, isProcessing, children } = this.props;
-    return (
+
+    return Boolean(iconStart) || Boolean(iconEnd) ? (
       <span className={flex({ align: "center", justify: "center" })}>
         {iconStart && this.getIconStart(iconStart)}
         {Boolean(children) && (
@@ -182,6 +212,10 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
           </span>
         )}
         {iconEnd && this.getIconEnd(iconEnd)}
+      </span>
+    ) : (
+      <span className={isProcessing ? processingTextStyle : ""}>
+        {children}
       </span>
     );
   }
