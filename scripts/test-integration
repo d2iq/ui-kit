@@ -5,17 +5,18 @@ set -e
 FRONTEND_PORT="6006"
 
 function waitForUrl() {
-    until curl --output /dev/null --silent --head --fail "$1"; do
-        sleep 2
-    done
+  until curl --output /dev/null --silent --head --fail "$1"; do
+    sleep 2
+  done
 }
 
 function teardown() {
-    lsof -i ":$FRONTEND_PORT" | awk 'NR > 1 {print $2}' | xargs kill
+  kill -9 "$FRONTEND_PID"
 }
 
 # start frontend
 npm run storybook >/dev/null &
+FRONTEND_PID="$!"
 sleep 30 &
 trap teardown EXIT
 
