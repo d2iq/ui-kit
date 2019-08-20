@@ -24,6 +24,7 @@ exports[`Sidebar renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0::-moz-focus-inner {

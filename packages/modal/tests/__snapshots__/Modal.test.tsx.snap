@@ -73,12 +73,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-14 > div {
@@ -99,6 +99,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-9 {
@@ -143,6 +144,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   padding: 24px;
 }
 
@@ -225,7 +227,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   color: var(--themeTextColorInteractive,#7D58FF);
   fill: var(--themeTextColorInteractive,#7D58FF);
   cursor: pointer;
+  display: inline-block;
   outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-weight: 500;
 }
 
@@ -259,7 +264,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   border-radius: 4px;
   padding: 10px 18px;
   cursor: pointer;
+  display: inline-block;
   outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-weight: 500;
 }
 
@@ -437,12 +445,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-1 > div {
@@ -543,12 +551,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-16 > div {
@@ -569,6 +577,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-10 {
@@ -613,6 +622,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   padding: 24px;
 }
 
@@ -683,6 +693,40 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   pointer-events: none;
 }
 
+.emotion-8 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-8::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-8:hover {
+  color: #704fe5;
+  fill: #704fe5;
+}
+
+.emotion-8:active {
+  color: #6446cc;
+  fill: #6446cc;
+}
+
 .emotion-9 {
   outline: none;
   position: relative;
@@ -710,7 +754,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   border-top-width: 0;
 }
 
-.emotion-8 {
+.emotion-11 {
   background: none;
   border: 0;
   color: inherit;
@@ -719,26 +763,30 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: var(--themeTextColorInteractive,#7D58FF);
-  fill: var(--themeTextColorInteractive,#7D58FF);
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  background-color: #7D58FF;
+  border-radius: 4px;
+  padding: 10px 18px;
   cursor: pointer;
+  display: inline-block;
   outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-weight: 500;
 }
 
-.emotion-8::-moz-focus-inner {
+.emotion-11::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-8:hover {
-  color: #704fe5;
-  fill: #704fe5;
+.emotion-11:hover {
+  background-color: #704fe5;
 }
 
-.emotion-8:active {
-  color: #6446cc;
-  fill: #6446cc;
+.emotion-11:active {
+  background-color: #6446cc;
 }
 
 .emotion-12 {
@@ -759,38 +807,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   position: absolute;
   right: -3px;
   top: -3px;
-}
-
-.emotion-11 {
-  background: none;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  overflow: visible;
-  padding: 0;
-  text-align: inherit;
-  color: #FFFFFF;
-  fill: #FFFFFF;
-  background-color: #7D58FF;
-  border-radius: 4px;
-  padding: 10px 18px;
-  cursor: pointer;
-  outline: none;
-  font-weight: 500;
-}
-
-.emotion-11::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-.emotion-11:hover {
-  background-color: #704fe5;
-}
-
-.emotion-11:active {
-  background-color: #6446cc;
 }
 
 <div>
@@ -1208,12 +1224,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-11 > div {
@@ -1226,12 +1242,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-12 > div {
@@ -1263,7 +1279,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   color: var(--themeTextColorInteractive,#7D58FF);
   fill: var(--themeTextColorInteractive,#7D58FF);
   cursor: pointer;
+  display: inline-block;
   outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-weight: 500;
 }
 
@@ -1297,7 +1316,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   border-radius: 4px;
   padding: 10px 18px;
   cursor: pointer;
+  display: inline-block;
   outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-weight: 500;
 }
 
@@ -1363,6 +1385,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -1528,7 +1551,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       data-cy="dialogModal-header"
                     >
                       <div
-                        class="css-1byz17q"
+                        class="css-1udp9vv"
                       >
                         <div
                           class="css-16jj0m8"
@@ -1576,7 +1599,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       data-cy="dialogModal-footer"
                     >
                       <div
-                        class="css-5n0frn"
+                        class="css-kqhhpv"
                       >
                         <div
                           class="css-48ylac"
@@ -1686,12 +1709,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-16 > div {
@@ -1712,6 +1735,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-10 {
@@ -1756,6 +1780,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   padding: 24px;
 }
 
@@ -1826,6 +1851,40 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   pointer-events: none;
 }
 
+.emotion-8 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-8::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-8:hover {
+  color: #704fe5;
+  fill: #704fe5;
+}
+
+.emotion-8:active {
+  color: #6446cc;
+  fill: #6446cc;
+}
+
 .emotion-9 {
   outline: none;
   position: relative;
@@ -1853,7 +1912,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   border-top-width: 0;
 }
 
-.emotion-8 {
+.emotion-11 {
   background: none;
   border: 0;
   color: inherit;
@@ -1862,26 +1921,30 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: var(--themeTextColorInteractive,#7D58FF);
-  fill: var(--themeTextColorInteractive,#7D58FF);
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  background-color: #7D58FF;
+  border-radius: 4px;
+  padding: 10px 18px;
   cursor: pointer;
+  display: inline-block;
   outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-weight: 500;
 }
 
-.emotion-8::-moz-focus-inner {
+.emotion-11::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-8:hover {
-  color: #704fe5;
-  fill: #704fe5;
+.emotion-11:hover {
+  background-color: #704fe5;
 }
 
-.emotion-8:active {
-  color: #6446cc;
-  fill: #6446cc;
+.emotion-11:active {
+  background-color: #6446cc;
 }
 
 .emotion-12 {
@@ -1902,38 +1965,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   position: absolute;
   right: -3px;
   top: -3px;
-}
-
-.emotion-11 {
-  background: none;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  overflow: visible;
-  padding: 0;
-  text-align: inherit;
-  color: #FFFFFF;
-  fill: #FFFFFF;
-  background-color: #7D58FF;
-  border-radius: 4px;
-  padding: 10px 18px;
-  cursor: pointer;
-  outline: none;
-  font-weight: 500;
-}
-
-.emotion-11::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-.emotion-11:hover {
-  background-color: #704fe5;
-}
-
-.emotion-11:active {
-  background-color: #6446cc;
 }
 
 <div>
@@ -2056,12 +2087,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-13 > div {
@@ -2074,12 +2105,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-14 > div {
@@ -2097,6 +2128,40 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-1::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-1:hover {
+  color: #704fe5;
+  fill: #704fe5;
+}
+
+.emotion-1:active {
+  color: #6446cc;
+  fill: #6446cc;
 }
 
 .emotion-2 {
@@ -2126,7 +2191,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   border-top-width: 0;
 }
 
-.emotion-1 {
+.emotion-7 {
   background: none;
   border: 0;
   color: inherit;
@@ -2135,26 +2200,30 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: var(--themeTextColorInteractive,#7D58FF);
-  fill: var(--themeTextColorInteractive,#7D58FF);
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  background-color: #7D58FF;
+  border-radius: 4px;
+  padding: 10px 18px;
   cursor: pointer;
+  display: inline-block;
   outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-weight: 500;
 }
 
-.emotion-1::-moz-focus-inner {
+.emotion-7::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-1:hover {
-  color: #704fe5;
-  fill: #704fe5;
+.emotion-7:hover {
+  background-color: #704fe5;
 }
 
-.emotion-1:active {
-  color: #6446cc;
-  fill: #6446cc;
+.emotion-7:active {
+  background-color: #6446cc;
 }
 
 .emotion-8 {
@@ -2175,38 +2244,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   position: absolute;
   right: -3px;
   top: -3px;
-}
-
-.emotion-7 {
-  background: none;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  overflow: visible;
-  padding: 0;
-  text-align: inherit;
-  color: #FFFFFF;
-  fill: #FFFFFF;
-  background-color: #7D58FF;
-  border-radius: 4px;
-  padding: 10px 18px;
-  cursor: pointer;
-  outline: none;
-  font-weight: 500;
-}
-
-.emotion-7::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-.emotion-7:hover {
-  background-color: #704fe5;
-}
-
-.emotion-7:active {
-  background-color: #6446cc;
 }
 
 .emotion-11 {
@@ -2258,6 +2295,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -2737,12 +2775,12 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-1 > div {
@@ -2848,12 +2886,12 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-1 > div {
