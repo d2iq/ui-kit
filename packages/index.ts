@@ -44,6 +44,13 @@ export {
 } from "./configurationmap";
 export { DonutChart } from "./donutChart";
 export { Dropdownable } from "./dropdownable";
+export {
+  Dropdown,
+  DropdownActions,
+  DropdownActionItem,
+  DropdownActionItemIcon,
+  DropdownActionItemAvatar
+} from "./dropdown";
 export { Icon } from "./icon";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
 export { InputAppearance } from "./shared/types/inputAppearance";

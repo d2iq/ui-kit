@@ -173,18 +173,25 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     windowDimensions
   ): Direction {
     // Determine if there is enough space in each direction to fit dropdown
-    // There is always enough room to be aligned to the right or left
-    const possibleDirections = {
+    const possibleVertDirections = {
       top: dropdownDimensions.height <= childBounds.top,
       bottom:
         childBounds.bottom + dropdownDimensions.height <=
         windowDimensions.height
     };
+    const possibleHorizDirections = {
+      left: dropdownDimensions.width >= childBounds.right,
+      right: dropdownDimensions.width <= childBounds.right
+    };
 
     // Pick the first available preference
     const preferredDirection = preferredDirections.find(direction => {
       const topOrBottom = direction.split("-", 2)[0];
-      return possibleDirections[topOrBottom];
+      const leftOrRight = direction.split("-", 2)[1];
+      return (
+        possibleVertDirections[topOrBottom] &&
+        possibleHorizDirections[leftOrRight]
+      );
     });
 
     // If nothing fits, fall back to the first preference

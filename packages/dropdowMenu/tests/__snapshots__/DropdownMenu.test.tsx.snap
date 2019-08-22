@@ -5,7 +5,8 @@ exports[`DropdownMenu renders 1`] = `
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow-y: scroll;
+  overflow: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
   border-width: 1px;
   border-color: var(--themeBorder,#DADDE2);
   border-style: solid;

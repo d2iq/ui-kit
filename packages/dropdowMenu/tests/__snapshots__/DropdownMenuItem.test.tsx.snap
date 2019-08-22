@@ -2,12 +2,14 @@
 
 exports[`DropdownMenuItem renders 1`] = `
 .emotion-0 {
+  box-sizing: border-box;
+  cursor: pointer;
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
-  display: inline-block;
+  display: table;
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -16,18 +18,38 @@ exports[`DropdownMenuItem renders 1`] = `
   className="emotion-0"
   data-cy="dropdownMenuItem"
 >
-  item content content
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="xs"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    />
+    <FlexItem
+      flex="grow"
+    >
+      item content content
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    />
+  </Flex>
 </div>
 `;
 
 exports[`DropdownMenuItem renders active 1`] = `
 .emotion-0 {
+  box-sizing: border-box;
+  cursor: pointer;
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
-  display: inline-block;
+  display: table;
   background-color: var(--themeBgHover,#F7F8F9);
   margin-top: 8px;
   margin-bottom: 8px;
@@ -37,18 +59,38 @@ exports[`DropdownMenuItem renders active 1`] = `
   className="emotion-0"
   data-cy="dropdownMenuItem"
 >
-  item content content
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="xs"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    />
+    <FlexItem
+      flex="grow"
+    >
+      item content content
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    />
+  </Flex>
 </div>
 `;
 
 exports[`DropdownMenuItem renders active and selected 1`] = `
 .emotion-0 {
+  box-sizing: border-box;
+  cursor: pointer;
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
-  display: inline-block;
+  display: table;
   background-color: var(--themeBgHover,#F7F8F9);
   background-color: var(--themeBgSelected,#7D58FF);
   color: #FFFFFF;
@@ -61,18 +103,82 @@ exports[`DropdownMenuItem renders active and selected 1`] = `
   className="emotion-0"
   data-cy="dropdownMenuItem"
 >
-  item content content
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="xs"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    />
+    <FlexItem
+      flex="grow"
+    >
+      item content content
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    />
+  </Flex>
 </div>
 `;
 
-exports[`DropdownMenuItem renders disabled 1`] = `
+exports[`DropdownMenuItem renders all appearances 1`] = `
 .emotion-0 {
+  box-sizing: border-box;
+  cursor: pointer;
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
-  display: inline-block;
+  display: table;
+  background-color: var(--themeBgSelected,#7D58FF);
+  color: #FFFFFF;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: var(--themeError,#EB293A);
+  fill: var(--themeError,#EB293A);
+}
+
+<div
+  className="emotion-0"
+  data-cy="dropdownMenuItem"
+>
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="xs"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    />
+    <FlexItem
+      flex="grow"
+    >
+      item content content
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    />
+  </Flex>
+</div>
+`;
+
+exports[`DropdownMenuItem renders disabled 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  cursor: pointer;
+  min-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: table;
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -81,18 +187,38 @@ exports[`DropdownMenuItem renders disabled 1`] = `
   className="emotion-0"
   data-cy="dropdownMenuItem"
 >
-  item content content
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="xs"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    />
+    <FlexItem
+      flex="grow"
+    >
+      item content content
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    />
+  </Flex>
 </div>
 `;
 
 exports[`DropdownMenuItem renders selected 1`] = `
 .emotion-0 {
+  box-sizing: border-box;
+  cursor: pointer;
   min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
-  display: inline-block;
+  display: table;
   background-color: var(--themeBgSelected,#7D58FF);
   color: #FFFFFF;
   margin-top: 8px;
@@ -103,6 +229,44 @@ exports[`DropdownMenuItem renders selected 1`] = `
   className="emotion-0"
   data-cy="dropdownMenuItem"
 >
-  item content content
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="xs"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    />
+    <FlexItem
+      flex="grow"
+    >
+      item content content
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    />
+  </Flex>
 </div>
+`;
+
+exports[`DropdownMenuItem renders with icon and avatar 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  cursor: pointer;
+  min-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: table;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+<div
+  className="emotion-0"
+  data-cy="dropdownMenuItem"
+/>
 `;
