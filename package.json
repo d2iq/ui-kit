@@ -57,7 +57,8 @@
     "react-toggled": "1.2.7",
     "react-transition-group": "2.5.0",
     "react-virtualized": "9.20.1",
-    "relative-luminance": "2.0.1"
+    "relative-luminance": "2.0.1",
+    "shortid": "2.2.14"
   },
   "peerDependencies": {
     "react": ">=16.2.0 <16.9.0 || 16.7.0-alpha.0",

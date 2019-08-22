@@ -58,6 +58,7 @@ export {
   FullscreenModal
 } from "./modal";
 export { PageHeader } from "./pageheader";
+export { SegmentedControl, SegmentedControlButton } from "./segmentedControl";
 export { SelectInput } from "./selectInput";
 export {
   Column,
