@@ -253,22 +253,16 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
 `;
 
 exports[`Sidebar renders 1`] = `
+.emotion-0 {
+  height: 100%;
+}
+
 .emotion-1 {
   height: 100%;
   overflow: hidden;
-  -webkit-transition: width 150ms ease-in-out;
-  transition: width 150ms ease-in-out;
-}
-
-.emotion-0 {
-  height: 100%;
-  width: 240px;
-}
-
-@media (min-width:1200px) {
-  .emotion-0 {
-    width: 280px;
-  }
+  -webkit-transition: width 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: width 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: width 150ms ease-in-out,transform 150ms ease-in-out;
 }
 
 <ThemeProvider
