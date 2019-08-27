@@ -2,14 +2,10 @@
 
 exports[`ProgressBar renders all sizes 1`] = `
 .emotion-0 {
-  padding-bottom: 4px;
-}
-
-.emotion-1 {
   fill: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-2 {
+.emotion-1 {
   background-color: rgba(218,221,226,0.65);
   border-radius: 999px;
   display: block;
@@ -22,9 +18,10 @@ exports[`ProgressBar renders all sizes 1`] = `
 }
 
 <Fragment>
-  <div
-    className="emotion-0"
-    data-cy="progressBar-text"
+  <SpacingBox
+    side="bottom"
+    spacingSize="xxs"
+    tag="div"
   >
     <Flex
       align="center"
@@ -33,13 +30,13 @@ exports[`ProgressBar renders all sizes 1`] = `
       justify="flex-end"
       wrap="nowrap"
     />
-  </div>
+  </SpacingBox>
   <svg
-    className="emotion-2"
+    className="emotion-1"
     data-cy="progressBar-chart"
   >
     <rect
-      className="emotion-1"
+      className="emotion-0"
       height="100%"
       key="pbSegment-0"
       width="40%"
@@ -51,14 +48,10 @@ exports[`ProgressBar renders all sizes 1`] = `
 
 exports[`ProgressBar renders all sizes 2`] = `
 .emotion-0 {
-  padding-bottom: 4px;
-}
-
-.emotion-1 {
   fill: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-2 {
+.emotion-1 {
   background-color: rgba(218,221,226,0.65);
   border-radius: 999px;
   display: block;
@@ -71,9 +64,10 @@ exports[`ProgressBar renders all sizes 2`] = `
 }
 
 <Fragment>
-  <div
-    className="emotion-0"
-    data-cy="progressBar-text"
+  <SpacingBox
+    side="bottom"
+    spacingSize="xxs"
+    tag="div"
   >
     <Flex
       align="center"
@@ -82,13 +76,13 @@ exports[`ProgressBar renders all sizes 2`] = `
       justify="flex-end"
       wrap="nowrap"
     />
-  </div>
+  </SpacingBox>
   <svg
-    className="emotion-2"
+    className="emotion-1"
     data-cy="progressBar-chart"
   >
     <rect
-      className="emotion-1"
+      className="emotion-0"
       height="100%"
       key="pbSegment-0"
       width="40%"
@@ -100,14 +94,10 @@ exports[`ProgressBar renders all sizes 2`] = `
 
 exports[`ProgressBar renders isProcessing 1`] = `
 .emotion-0 {
-  padding-bottom: 4px;
-}
-
-.emotion-1 {
   fill: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-2 {
+.emotion-1 {
   background-color: rgba(218,221,226,0.65);
   border-radius: 999px;
   display: block;
@@ -120,9 +110,10 @@ exports[`ProgressBar renders isProcessing 1`] = `
 }
 
 <Fragment>
-  <div
-    className="emotion-0"
-    data-cy="progressBar-text"
+  <SpacingBox
+    side="bottom"
+    spacingSize="xxs"
+    tag="div"
   >
     <Flex
       align="center"
@@ -131,13 +122,13 @@ exports[`ProgressBar renders isProcessing 1`] = `
       justify="flex-end"
       wrap="nowrap"
     />
-  </div>
+  </SpacingBox>
   <svg
-    className="emotion-2"
+    className="emotion-1"
     data-cy="progressBar-chart"
   >
     <rect
-      className="emotion-1"
+      className="emotion-0"
       height="100%"
       key="pbSegment-0"
       width="40%"
@@ -148,11 +139,7 @@ exports[`ProgressBar renders isProcessing 1`] = `
 `;
 
 exports[`ProgressBar renders with caption text and value text 1`] = `
-.emotion-2 {
-  padding-bottom: 4px;
-}
-
-.emotion-4 {
+.emotion-1 {
   background-color: rgba(218,221,226,0.65);
   border-radius: 999px;
   display: block;
@@ -160,30 +147,15 @@ exports[`ProgressBar renders with caption text and value text 1`] = `
   width: 100%;
 }
 
-.emotion-3 {
+.emotion-0 {
   fill: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-0 {
-  color: var(--themeTextColorSecondary,#76797E);
-  fill: var(--themeTextColorSecondary,#76797E);
-  font-size: 12px;
-}
-
-.inverseColorMode .emotion-0,
-.emotion-0.inverseColorMode {
-  color: var(--themeTextColorSecondaryInverted,#AEB0B4);
-  fill: var(--themeTextColorSecondaryInverted,#AEB0B4);
-}
-
-.emotion-1 {
-  font-weight: 500;
-}
-
 <Fragment>
-  <div
-    className="emotion-2"
-    data-cy="progressBar-text"
+  <SpacingBox
+    side="bottom"
+    spacingSize="xxs"
+    tag="div"
   >
     <Flex
       align="center"
@@ -195,29 +167,37 @@ exports[`ProgressBar renders with caption text and value text 1`] = `
       <FlexItem
         flex="grow"
       >
-        <span
-          className="emotion-0"
+        <CaptionText
+          align="inherit"
+          tag="p"
+          wrap="truncate"
         >
           Caption
-        </span>
+        </CaptionText>
       </FlexItem>
       <FlexItem
         flex="shrink"
       >
-        <span
-          className="emotion-1"
+        <Text
+          align="inherit"
+          color="var(--themeTextColorPrimary, #1B2029)"
+          dataCy="text"
+          size="m"
+          tag="p"
+          weight="medium"
+          wrap="wrap"
         >
           40%
-        </span>
+        </Text>
       </FlexItem>
     </Flex>
-  </div>
+  </SpacingBox>
   <svg
-    className="emotion-4"
+    className="emotion-1"
     data-cy="progressBar-chart"
   >
     <rect
-      className="emotion-3"
+      className="emotion-0"
       height="100%"
       key="pbSegment-0"
       width="40%"
@@ -228,11 +208,7 @@ exports[`ProgressBar renders with caption text and value text 1`] = `
 `;
 
 exports[`ProgressBar renders with multiple segments of data 1`] = `
-.emotion-0 {
-  padding-bottom: 4px;
-}
-
-.emotion-3 {
+.emotion-2 {
   background-color: rgba(218,221,226,0.65);
   border-radius: 999px;
   display: block;
@@ -240,18 +216,19 @@ exports[`ProgressBar renders with multiple segments of data 1`] = `
   width: 100%;
 }
 
-.emotion-1 {
+.emotion-0 {
   fill: green;
 }
 
-.emotion-2 {
+.emotion-1 {
   fill: yellow;
 }
 
 <Fragment>
-  <div
-    className="emotion-0"
-    data-cy="progressBar-text"
+  <SpacingBox
+    side="bottom"
+    spacingSize="xxs"
+    tag="div"
   >
     <Flex
       align="center"
@@ -260,20 +237,20 @@ exports[`ProgressBar renders with multiple segments of data 1`] = `
       justify="flex-end"
       wrap="nowrap"
     />
-  </div>
+  </SpacingBox>
   <svg
-    className="emotion-3"
+    className="emotion-2"
     data-cy="progressBar-chart"
   >
     <rect
-      className="emotion-1"
+      className="emotion-0"
       height="100%"
       key="pbSegment-0"
       width="40%"
       x="0%"
     />
     <rect
-      className="emotion-2"
+      className="emotion-1"
       height="100%"
       key="pbSegment-1"
       width="20%"
@@ -284,11 +261,7 @@ exports[`ProgressBar renders with multiple segments of data 1`] = `
 `;
 
 exports[`ProgressBar renders with one segment of data 1`] = `
-.emotion-0 {
-  padding-bottom: 4px;
-}
-
-.emotion-2 {
+.emotion-1 {
   background-color: rgba(218,221,226,0.65);
   border-radius: 999px;
   display: block;
@@ -296,14 +269,15 @@ exports[`ProgressBar renders with one segment of data 1`] = `
   width: 100%;
 }
 
-.emotion-1 {
+.emotion-0 {
   fill: var(--themeBrandPrimary,#7D58FF);
 }
 
 <Fragment>
-  <div
-    className="emotion-0"
-    data-cy="progressBar-text"
+  <SpacingBox
+    side="bottom"
+    spacingSize="xxs"
+    tag="div"
   >
     <Flex
       align="center"
@@ -312,13 +286,13 @@ exports[`ProgressBar renders with one segment of data 1`] = `
       justify="flex-end"
       wrap="nowrap"
     />
-  </div>
+  </SpacingBox>
   <svg
-    className="emotion-2"
+    className="emotion-1"
     data-cy="progressBar-chart"
   >
     <rect
-      className="emotion-1"
+      className="emotion-0"
       height="100%"
       key="pbSegment-0"
       width="40%"

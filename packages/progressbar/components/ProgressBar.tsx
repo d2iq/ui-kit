@@ -1,13 +1,9 @@
 import * as React from "react";
 import { cx } from "emotion";
 import { Flex, FlexItem } from "../../styleUtils/layout";
+import { SpacingBox } from "../../styleUtils/modifiers";
+import { Text, CaptionText } from "../../styleUtils/typography";
 import { progressBar, progressBarStaged, progressBarFill } from "../style";
-import {
-  tintContentSecondary,
-  textSize,
-  padding,
-  textWeight
-} from "../../shared/styles/styleUtils";
 
 export interface ProgressBarDatum {
   percentage: number;
@@ -48,22 +44,20 @@ class ProgressBar extends React.PureComponent<ProgressBarProps, {}> {
 
     return (
       <React.Fragment>
-        <div className={padding("bottom", "xxs")} data-cy="progressBar-text">
+        <SpacingBox side="bottom" spacingSize="xxs">
           <Flex align="center" justify="flex-end" gutterSize="s">
             {caption ? (
               <FlexItem>
-                <span className={cx(tintContentSecondary, textSize("s"))}>
-                  {caption}
-                </span>
+                <CaptionText wrap="truncate">{caption}</CaptionText>
               </FlexItem>
             ) : null}
             {value ? (
               <FlexItem flex="shrink">
-                <span className={textWeight("medium")}>{value}</span>
+                <Text weight="medium">{value}</Text>
               </FlexItem>
             ) : null}
           </Flex>
-        </div>
+        </SpacingBox>
         <svg
           className={cx(progressBar(size), {
             [progressBarStaged]: isProcessing

@@ -2,7 +2,10 @@ function calculate(a, b) {
   return (b / 100) * a;
 }
 
-function percentage(a?: number, b?: number) {
+// Using "any" to get around a Typescript error that popped up
+// when upgrading to 3.5.3.
+// This function isn't even used anywhere.
+function percentage(a?: number, b?: number): any {
   if (arguments.length === 0) {
     return percentage;
   }

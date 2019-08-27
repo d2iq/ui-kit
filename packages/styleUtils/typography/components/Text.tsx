@@ -7,24 +7,22 @@ import {
   tintContent,
   textTruncate
 } from "../../../shared/styles/styleUtils";
-import { FontWeights } from "../../../shared/styles/styleUtils/typography/weight";
-import {
-  fontWeightNormal,
-  themeTextColorPrimary
-} from "../../../design-tokens/build/js/designTokens";
+import { themeTextColorPrimary } from "../../../design-tokens/build/js/designTokens";
 import { textBase } from "../style";
 
 export interface TextProps extends BasicTextProps {
   /**
    * The color of the text
    */
-  color: React.CSSProperties["color"];
+  color?: React.CSSProperties["color"];
   /**
    * human-readable selector used for writing tests
    */
   dataCy?: string;
   className?: string;
 }
+
+const defaultTag = "p";
 
 const Text = (props: TextProps) => {
   const {
@@ -38,14 +36,14 @@ const Text = (props: TextProps) => {
     className,
     dataCy
   } = props;
-  const TextTag = tag;
+  const TextTag = tag || defaultTag;
 
   return (
     <TextTag
       className={cx(
         className,
         textBase,
-        textWeight(weight as FontWeights),
+        textWeight(weight),
         textSize(size),
         tintContent(color),
         css`
@@ -68,9 +66,9 @@ const Text = (props: TextProps) => {
 
 Text.defaultProps = {
   align: "inherit",
-  tag: "p",
+  tag: defaultTag,
   wrap: "wrap",
-  weight: fontWeightNormal,
+  weight: "normal",
   color: themeTextColorPrimary,
   size: "m",
   dataCy: "text"
