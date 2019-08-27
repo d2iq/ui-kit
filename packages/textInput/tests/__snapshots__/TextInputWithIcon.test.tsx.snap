@@ -19,6 +19,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 <div
@@ -54,6 +55,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 {
@@ -107,6 +109,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 <div
@@ -150,6 +153,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 <div
@@ -185,6 +189,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 {
@@ -238,6 +243,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 <div
@@ -281,6 +287,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 <div
@@ -316,6 +323,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0 {
@@ -369,6 +377,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 <div

@@ -16,11 +16,9 @@
   "scripts": {
     "build:storybook": "build-storybook -c .storybook -o storybook_static",
     "prebuild:storybook": "npm run build:design-tokens && npm run build:svg",
-    "prebuild:design-tokens": "npm run clean:design-tokens",
     "build:design-tokens": "node ./packages/design-tokens/scripts/build.js",
     "build:svg": "node ./packages/icons/scripts/build.js",
     "clean": "rimraf dist",
-    "clean:design-tokens": "rm -rf ./dist/packages/design-tokens && rm -rf ./packages/design-tokens/dist/",
     "commitlint": "commitlint -e",
     "create:component": "./scripts/create-component",
     "deploy:storybook": "storybook-to-ghpages",
@@ -59,7 +57,8 @@
     "react-toggled": "1.2.7",
     "react-transition-group": "2.5.0",
     "react-virtualized": "9.20.1",
-    "relative-luminance": "2.0.1"
+    "relative-luminance": "2.0.1",
+    "shortid": "2.2.14"
   },
   "peerDependencies": {
     "react": ">=16.2.0 <16.9.0 || 16.7.0-alpha.0",
