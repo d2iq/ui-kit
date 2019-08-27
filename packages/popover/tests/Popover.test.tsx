@@ -3,16 +3,16 @@ import { shallow } from "enzyme";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
 import toJson from "enzyme-to-json";
-import DropdownMenu from "../components/DropdownMenu";
+import Popover from "../components/Popover";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
-describe("DropdownMenu", () => {
+describe("Popover", () => {
   it("renders", () => {
     const component = shallow(
-      <DropdownMenu maxHeight={200} width={100}>
+      <Popover maxHeight={200} width={100}>
         menu content
-      </DropdownMenu>
+      </Popover>
     );
     expect(toJson(component)).toMatchSnapshot();
   });

@@ -1,8 +1,8 @@
 import * as React from "react";
 import Downshift from "downshift";
 import Dropdownable from "../../dropdownable/components/Dropdownable";
-import DropdownMenu from "../../dropdowMenu/components/DropdownMenu";
-import DropdownMenuItem from "../../dropdowMenu/components/DropdownMenuItem";
+import Popover from "../../popover/components/Popover";
+import PopoverListItem from "../../popover/components/PopoverListItem";
 import { margin } from "../../shared/styles/styleUtils";
 import resizeEventManager from "../../utilities/resizeEventManager";
 
@@ -109,14 +109,14 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                     <div data-cy="typeahead-dropdown">
                       {!items.length && !menuEmptyState ? null : (
                         <div className={margin("top", "xxs")}>
-                          <DropdownMenu
+                          <Popover
                             width={this.state.menuWidth}
                             maxHeight={menuMaxHeight}
                             {...getMenuProps({ refKey: "menuRef" })}
                           >
                             {items.length ? (
                               items.map((item, index) => (
-                                <DropdownMenuItem
+                                <PopoverListItem
                                   listLength={items.length}
                                   isActive={highlightedIndex === index}
                                   isSelected={
@@ -130,12 +130,12 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                                   })}
                                 >
                                   {item.label}
-                                </DropdownMenuItem>
+                                </PopoverListItem>
                               ))
                             ) : (
                               <div>{menuEmptyState}</div>
                             )}
-                          </DropdownMenu>
+                          </Popover>
                         </div>
                       )}
                     </div>

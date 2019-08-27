@@ -15,13 +15,13 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 import getCSSVarValue from "../../utilities/components/getCSSVarValue";
 import { darken, pickReadableTextColor } from "../../shared/styles/color";
-import { DropdownItemAppearances } from "../../shared/types/dropdownItemAppearances";
-import DropdownMenuItemIcon from "./DropdownMenuItemIcon";
-import DropdownMenuItemAvatar from "./DropdownMenuItemAvatar";
+import { PopoverListItemAppearances } from "../../shared/types/popoverListItemAppearances";
+import PopoverListItemIcon from "./PopoverListItemIcon";
+import PopoverListItemAvatar from "./PopoverListItemAvatar";
 import { Flex, FlexItem } from "../../styleUtils/layout";
 
-export interface DropdownMenuItemProps extends React.HTMLProps<HTMLDivElement> {
-  appearance?: DropdownItemAppearances;
+export interface PopoverListItemProps extends React.HTMLProps<HTMLDivElement> {
+  appearance?: PopoverListItemAppearances;
   children: React.ReactNode;
   disabled?: boolean;
   index: number;
@@ -30,7 +30,7 @@ export interface DropdownMenuItemProps extends React.HTMLProps<HTMLDivElement> {
   isSelected?: boolean;
 }
 
-const DropdownMenuItem = (props: DropdownMenuItemProps) => {
+const PopoverListItem = (props: PopoverListItemProps) => {
   const {
     appearance,
     isActive,
@@ -81,11 +81,11 @@ const DropdownMenuItem = (props: DropdownMenuItemProps) => {
         };
       }
       const isItemGraphic = child =>
-        child.type === DropdownMenuItemIcon ||
-        child.type === DropdownMenuItemAvatar;
+        child.type === PopoverListItemIcon ||
+        child.type === PopoverListItemAvatar;
       const itemGraphicStart = itemChildren.find(
         child =>
-          React.isValidElement<DropdownMenuItemIcon | DropdownMenuItemAvatar>(
+          React.isValidElement<PopoverListItemIcon | PopoverListItemAvatar>(
             child
           ) &&
           isItemGraphic(child) &&
@@ -93,7 +93,7 @@ const DropdownMenuItem = (props: DropdownMenuItemProps) => {
       );
       const itemGraphicEnd = itemChildren.find(
         child =>
-          React.isValidElement<DropdownMenuItemIcon | DropdownMenuItemAvatar>(
+          React.isValidElement<PopoverListItemIcon | PopoverListItemAvatar>(
             child
           ) &&
           isItemGraphic(child) &&
@@ -102,7 +102,7 @@ const DropdownMenuItem = (props: DropdownMenuItemProps) => {
       const itemContent = itemChildren.filter(
         child =>
           !(
-            React.isValidElement<DropdownMenuItemIcon | DropdownMenuItemAvatar>(
+            React.isValidElement<PopoverListItemIcon | PopoverListItemAvatar>(
               child
             ) && isItemGraphic(child)
           )
@@ -140,7 +140,7 @@ const DropdownMenuItem = (props: DropdownMenuItemProps) => {
           [tintContent(themeError)]: appearance === "danger"
         }
       )}
-      data-cy="dropdownMenuItem"
+      data-cy="PopoverListItem"
       {...other}
     >
       {itemGraphicStart || itemGraphicEnd ? (
@@ -160,4 +160,4 @@ const DropdownMenuItem = (props: DropdownMenuItemProps) => {
   );
 };
 
-export default DropdownMenuItem;
+export default PopoverListItem;

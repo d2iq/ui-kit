@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DropdownMenuItem renders 1`] = `
+exports[`PopoverListItem renders 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
@@ -16,7 +16,7 @@ exports[`DropdownMenuItem renders 1`] = `
 
 <div
   className="emotion-0"
-  data-cy="dropdownMenuItem"
+  data-cy="PopoverListItem"
 >
   <Flex
     align="center"
@@ -40,7 +40,7 @@ exports[`DropdownMenuItem renders 1`] = `
 </div>
 `;
 
-exports[`DropdownMenuItem renders active 1`] = `
+exports[`PopoverListItem renders active 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
@@ -57,7 +57,7 @@ exports[`DropdownMenuItem renders active 1`] = `
 
 <div
   className="emotion-0"
-  data-cy="dropdownMenuItem"
+  data-cy="PopoverListItem"
 >
   <Flex
     align="center"
@@ -81,7 +81,7 @@ exports[`DropdownMenuItem renders active 1`] = `
 </div>
 `;
 
-exports[`DropdownMenuItem renders active and selected 1`] = `
+exports[`PopoverListItem renders active and selected 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
@@ -101,7 +101,7 @@ exports[`DropdownMenuItem renders active and selected 1`] = `
 
 <div
   className="emotion-0"
-  data-cy="dropdownMenuItem"
+  data-cy="PopoverListItem"
 >
   <Flex
     align="center"
@@ -125,7 +125,7 @@ exports[`DropdownMenuItem renders active and selected 1`] = `
 </div>
 `;
 
-exports[`DropdownMenuItem renders all appearances 1`] = `
+exports[`PopoverListItem renders all appearances 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
@@ -145,7 +145,7 @@ exports[`DropdownMenuItem renders all appearances 1`] = `
 
 <div
   className="emotion-0"
-  data-cy="dropdownMenuItem"
+  data-cy="PopoverListItem"
 >
   <Flex
     align="center"
@@ -169,7 +169,7 @@ exports[`DropdownMenuItem renders all appearances 1`] = `
 </div>
 `;
 
-exports[`DropdownMenuItem renders disabled 1`] = `
+exports[`PopoverListItem renders disabled 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
@@ -185,7 +185,7 @@ exports[`DropdownMenuItem renders disabled 1`] = `
 
 <div
   className="emotion-0"
-  data-cy="dropdownMenuItem"
+  data-cy="PopoverListItem"
 >
   <Flex
     align="center"
@@ -209,7 +209,7 @@ exports[`DropdownMenuItem renders disabled 1`] = `
 </div>
 `;
 
-exports[`DropdownMenuItem renders selected 1`] = `
+exports[`PopoverListItem renders selected 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
@@ -227,7 +227,7 @@ exports[`DropdownMenuItem renders selected 1`] = `
 
 <div
   className="emotion-0"
-  data-cy="dropdownMenuItem"
+  data-cy="PopoverListItem"
 >
   <Flex
     align="center"
@@ -251,7 +251,7 @@ exports[`DropdownMenuItem renders selected 1`] = `
 </div>
 `;
 
-exports[`DropdownMenuItem renders with icon and avatar 1`] = `
+exports[`PopoverListItem renders with icon and avatar 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
@@ -267,6 +267,6 @@ exports[`DropdownMenuItem renders with icon and avatar 1`] = `
 
 <div
   className="emotion-0"
-  data-cy="dropdownMenuItem"
+  data-cy="PopoverListItem"
 />
 `;

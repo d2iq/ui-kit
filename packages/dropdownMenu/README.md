@@ -1,10 +1,10 @@
-# Dropdown
+# DropdownMenu
 
 A dropdown toggles an overlay menu of actions. It appears as a result of a user interacting with some trigger (usually a button or icon) to open the menu.
 
 Dropdown menus can be opened and navigated via cursor and keyboard.
 
-## Dropdown triggers
+## DropdownMenu triggers
 By default, use one of the dropdown button components (e.g.: `PrimaryDropdownButton`) as the dropdown trigger.
 
 If you're not using a button as your dropdown trigger, be sure whatever you use looks like something the user is supposed to interact with.

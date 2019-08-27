@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DropdownMenu renders 1`] = `
+exports[`Popover renders 1`] = `
 .emotion-0 {
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-radius: 6px;
@@ -14,7 +14,7 @@ exports[`DropdownMenu renders 1`] = `
 
 <div
   className="emotion-0"
-  data-cy="dropdownMenu"
+  data-cy="popover"
   style={
     Object {
       "maxHeight": 200,

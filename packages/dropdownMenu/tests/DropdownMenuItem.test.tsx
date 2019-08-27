@@ -3,32 +3,32 @@ import { mount } from "enzyme";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
 import toJson from "enzyme-to-json";
-import { DropdownItemAppearances } from "../../shared/types/dropdownItemAppearances";
+import { PopoverListItemAppearances } from "../../shared/types/popoverListItemAppearances";
 
-import { DropdownActionItem } from "../";
+import { DropdownMenuItem } from "..";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe("Dropdown", () => {
   it("default", () => {
     const component = mount(
-      <DropdownActionItem key="edit" value="edit">
+      <DropdownMenuItem key="edit" value="edit">
         Edit
-      </DropdownActionItem>
+      </DropdownMenuItem>
     );
 
     expect(toJson(component)).toMatchSnapshot();
   });
   it("default", () => {
-    Object.keys(DropdownItemAppearances).forEach(appearance => {
+    Object.keys(PopoverListItemAppearances).forEach(appearance => {
       const component = mount(
-        <DropdownActionItem
+        <DropdownMenuItem
           key="edit"
           value="edit"
-          appearance={DropdownItemAppearances[appearance]}
+          appearance={PopoverListItemAppearances[appearance]}
         >
           Edit
-        </DropdownActionItem>
+        </DropdownMenuItem>
       );
 
       expect(toJson(component)).toMatchSnapshot();

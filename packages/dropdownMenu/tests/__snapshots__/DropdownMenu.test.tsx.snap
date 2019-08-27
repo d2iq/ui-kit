@@ -83,7 +83,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
   margin-bottom: 8px;
 }
 
-<Dropdown
+<DropdownMenu
   preferredDirections={
     Array [
       "bottom-right",
@@ -123,7 +123,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
     >
       <Dropdownable
         dropdown={
-          <DropdownMenu
+          <Popover
             aria-labelledby="downshift-0-label"
             id="downshift-0-menu"
             menuRef={[Function]}
@@ -132,7 +132,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
             <div
               className=""
             >
-              <DropdownMenuItem
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-0-item-0"
                 index={0}
@@ -143,13 +143,13 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="edit"
                 >
                   Edit
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-0-item-1"
                 index={1}
@@ -160,13 +160,13 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="scale"
                 >
                   Scale
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-0-item-2"
                 index={2}
@@ -177,13 +177,13 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="restart"
                 >
                   Restart
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-0-item-3"
                 index={3}
@@ -194,14 +194,14 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="stop"
                 >
                   Stop
-                </DropdownActionItem>
-              </DropdownMenuItem>
+                </DropdownMenuItem>
+              </PopoverListItem>
             </div>
-          </DropdownMenu>
+          </Popover>
         }
         open={false}
         preferredDirections={
@@ -305,7 +305,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                         <div
                           aria-labelledby="downshift-0-label"
                           class="emotion-4"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-0-menu"
                           role="listbox"
@@ -316,7 +316,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-0"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-0"
                               role="option"
                             >
@@ -325,7 +325,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-1"
                               role="option"
                             >
@@ -334,7 +334,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-2"
                               role="option"
                             >
@@ -343,7 +343,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-3"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-3"
                               role="option"
                             >
@@ -367,7 +367,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                         <div
                           aria-labelledby="downshift-0-label"
                           class="emotion-5"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-0-menu"
                           role="listbox"
@@ -378,7 +378,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-0"
                               role="option"
                             >
@@ -387,7 +387,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-1"
                               role="option"
                             >
@@ -396,7 +396,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-2"
                               role="option"
                             >
@@ -405,7 +405,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-4"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-3"
                               role="option"
                             >
@@ -428,7 +428,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                       <DropdownContents
                         open={false}
                       >
-                        <DropdownMenu
+                        <Popover
                           aria-labelledby="downshift-0-label"
                           direction="bottom-right"
                           id="downshift-0-menu"
@@ -438,7 +438,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                           <div
                             aria-labelledby="downshift-0-label"
                             className="emotion-5"
-                            data-cy="dropdownMenu"
+                            data-cy="popover"
                             direction="bottom-right"
                             id="downshift-0-menu"
                             role="listbox"
@@ -453,7 +453,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                               className=""
                               key="dropdown-0"
                             >
-                              <DropdownMenuItem
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-0-item-0"
                                 index={0}
@@ -468,7 +468,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-1"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-0"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -477,8 +477,8 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                                 >
                                   Edit
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-0-item-1"
                                 index={1}
@@ -493,7 +493,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-2"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-1"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -502,8 +502,8 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                                 >
                                   Scale
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-0-item-2"
                                 index={2}
@@ -518,7 +518,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-2"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-2"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -527,8 +527,8 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                                 >
                                   Restart
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-0-item-3"
                                 index={3}
@@ -543,7 +543,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-4"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-3"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -552,10 +552,10 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                                 >
                                   Stop
                                 </div>
-                              </DropdownMenuItem>
+                              </PopoverListItem>
                             </div>
                           </div>
-                        </DropdownMenu>
+                        </Popover>
                       </DropdownContents>
                     </clickOutside(DropdownContents)>
                   </div>
@@ -567,7 +567,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
       </Dropdownable>
     </div>
   </Downshift>
-</Dropdown>
+</DropdownMenu>
 `;
 
 exports[`Dropdown renders a dropdown with a max height 1`] = `
@@ -653,7 +653,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
   margin-bottom: 8px;
 }
 
-<Dropdown
+<DropdownMenu
   menuMaxHeight={50}
   preferredDirections={
     Array [
@@ -694,7 +694,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
     >
       <Dropdownable
         dropdown={
-          <DropdownMenu
+          <Popover
             aria-labelledby="downshift-2-label"
             id="downshift-2-menu"
             maxHeight={50}
@@ -704,7 +704,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
             <div
               className=""
             >
-              <DropdownMenuItem
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-2-item-0"
                 index={0}
@@ -715,13 +715,13 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="edit"
                 >
                   Edit
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-2-item-1"
                 index={1}
@@ -732,13 +732,13 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="scale"
                 >
                   Scale
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-2-item-2"
                 index={2}
@@ -749,13 +749,13 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="restart"
                 >
                   Restart
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-2-item-3"
                 index={3}
@@ -766,14 +766,14 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="stop"
                 >
                   Stop
-                </DropdownActionItem>
-              </DropdownMenuItem>
+                </DropdownMenuItem>
+              </PopoverListItem>
             </div>
-          </DropdownMenu>
+          </Popover>
         }
         open={false}
         preferredDirections={
@@ -819,7 +819,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                         <div
                           aria-labelledby="downshift-0-label"
                           class="emotion-5"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-0-menu"
                           role="listbox"
@@ -830,7 +830,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-0"
                               role="option"
                             >
@@ -839,7 +839,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-1"
                               role="option"
                             >
@@ -848,7 +848,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-2"
                               role="option"
                             >
@@ -857,7 +857,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-4"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-3"
                               role="option"
                             >
@@ -876,7 +876,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                         <div
                           aria-labelledby="downshift-1-label"
                           class="emotion-5"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-1-menu"
                           role="listbox"
@@ -887,7 +887,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-0"
                               role="option"
                             >
@@ -896,7 +896,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-1"
                               role="option"
                             >
@@ -905,7 +905,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-2"
                               role="option"
                             >
@@ -914,7 +914,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-4"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-3"
                               role="option"
                             >
@@ -991,7 +991,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                         <div
                           aria-labelledby="downshift-2-label"
                           class="emotion-4"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-2-menu"
                           role="listbox"
@@ -1003,7 +1003,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-0"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-0"
                               role="option"
                             >
@@ -1012,7 +1012,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-1"
                               role="option"
                             >
@@ -1021,7 +1021,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-2"
                               role="option"
                             >
@@ -1030,7 +1030,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-3"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-3"
                               role="option"
                             >
@@ -1054,7 +1054,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                         <div
                           aria-labelledby="downshift-2-label"
                           class="emotion-5"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-2-menu"
                           role="listbox"
@@ -1066,7 +1066,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-0"
                               role="option"
                             >
@@ -1075,7 +1075,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-1"
                               role="option"
                             >
@@ -1084,7 +1084,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-2"
                               role="option"
                             >
@@ -1093,7 +1093,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-4"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-3"
                               role="option"
                             >
@@ -1116,7 +1116,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                       <DropdownContents
                         open={false}
                       >
-                        <DropdownMenu
+                        <Popover
                           aria-labelledby="downshift-2-label"
                           direction="bottom-right"
                           id="downshift-2-menu"
@@ -1127,7 +1127,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                           <div
                             aria-labelledby="downshift-2-label"
                             className="emotion-5"
-                            data-cy="dropdownMenu"
+                            data-cy="popover"
                             direction="bottom-right"
                             id="downshift-2-menu"
                             role="listbox"
@@ -1142,7 +1142,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                               className=""
                               key="dropdown-0"
                             >
-                              <DropdownMenuItem
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-2-item-0"
                                 index={0}
@@ -1157,7 +1157,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-1"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-2-item-0"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -1166,8 +1166,8 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                                 >
                                   Edit
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-2-item-1"
                                 index={1}
@@ -1182,7 +1182,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-2"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-2-item-1"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -1191,8 +1191,8 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                                 >
                                   Scale
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-2-item-2"
                                 index={2}
@@ -1207,7 +1207,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-2"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-2-item-2"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -1216,8 +1216,8 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                                 >
                                   Restart
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-2-item-3"
                                 index={3}
@@ -1232,7 +1232,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-4"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-2-item-3"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -1241,10 +1241,10 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                                 >
                                   Stop
                                 </div>
-                              </DropdownMenuItem>
+                              </PopoverListItem>
                             </div>
                           </div>
-                        </DropdownMenu>
+                        </Popover>
                       </DropdownContents>
                     </clickOutside(DropdownContents)>
                   </div>
@@ -1256,7 +1256,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
       </Dropdownable>
     </div>
   </Downshift>
-</Dropdown>
+</DropdownMenu>
 `;
 
 exports[`Dropdown renders an open dropdown 1`] = `
@@ -1342,7 +1342,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
   z-index: 2;
 }
 
-<Dropdown
+<DropdownMenu
   initialIsOpen={true}
   preferredDirections={
     Array [
@@ -1384,7 +1384,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
     >
       <Dropdownable
         dropdown={
-          <DropdownMenu
+          <Popover
             aria-labelledby="downshift-1-label"
             id="downshift-1-menu"
             menuRef={[Function]}
@@ -1393,7 +1393,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
             <div
               className=""
             >
-              <DropdownMenuItem
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-1-item-0"
                 index={0}
@@ -1404,13 +1404,13 @@ exports[`Dropdown renders an open dropdown 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="edit"
                 >
                   Edit
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-1-item-1"
                 index={1}
@@ -1421,13 +1421,13 @@ exports[`Dropdown renders an open dropdown 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="scale"
                 >
                   Scale
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-1-item-2"
                 index={2}
@@ -1438,13 +1438,13 @@ exports[`Dropdown renders an open dropdown 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="restart"
                 >
                   Restart
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-1-item-3"
                 index={3}
@@ -1455,14 +1455,14 @@ exports[`Dropdown renders an open dropdown 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="stop"
                 >
                   Stop
-                </DropdownActionItem>
-              </DropdownMenuItem>
+                </DropdownMenuItem>
+              </PopoverListItem>
             </div>
-          </DropdownMenu>
+          </Popover>
         }
         open={true}
         preferredDirections={
@@ -1508,7 +1508,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                         <div
                           aria-labelledby="downshift-0-label"
                           class="emotion-5"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-0-menu"
                           role="listbox"
@@ -1519,7 +1519,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-0"
                               role="option"
                             >
@@ -1528,7 +1528,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-1"
                               role="option"
                             >
@@ -1537,7 +1537,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-2"
                               role="option"
                             >
@@ -1546,7 +1546,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-4"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-3"
                               role="option"
                             >
@@ -1623,7 +1623,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                         <div
                           aria-labelledby="downshift-1-label"
                           class="emotion-4"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-1-menu"
                           role="listbox"
@@ -1634,7 +1634,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-0"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-0"
                               role="option"
                             >
@@ -1643,7 +1643,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-1"
                               role="option"
                             >
@@ -1652,7 +1652,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-2"
                               role="option"
                             >
@@ -1661,7 +1661,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-3"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-3"
                               role="option"
                             >
@@ -1685,7 +1685,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                         <div
                           aria-labelledby="downshift-1-label"
                           class="emotion-5"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-1-menu"
                           role="listbox"
@@ -1696,7 +1696,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-0"
                               role="option"
                             >
@@ -1705,7 +1705,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-1"
                               role="option"
                             >
@@ -1714,7 +1714,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-2"
                               role="option"
                             >
@@ -1723,7 +1723,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-4"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-3"
                               role="option"
                             >
@@ -1746,7 +1746,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                       <DropdownContents
                         open={true}
                       >
-                        <DropdownMenu
+                        <Popover
                           aria-labelledby="downshift-1-label"
                           direction="bottom-right"
                           id="downshift-1-menu"
@@ -1756,7 +1756,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                           <div
                             aria-labelledby="downshift-1-label"
                             className="emotion-5"
-                            data-cy="dropdownMenu"
+                            data-cy="popover"
                             direction="bottom-right"
                             id="downshift-1-menu"
                             role="listbox"
@@ -1771,7 +1771,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                               className=""
                               key="dropdown-0"
                             >
-                              <DropdownMenuItem
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-1-item-0"
                                 index={0}
@@ -1786,7 +1786,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-1"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-1-item-0"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -1795,8 +1795,8 @@ exports[`Dropdown renders an open dropdown 1`] = `
                                 >
                                   Edit
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-1-item-1"
                                 index={1}
@@ -1811,7 +1811,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-2"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-1-item-1"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -1820,8 +1820,8 @@ exports[`Dropdown renders an open dropdown 1`] = `
                                 >
                                   Scale
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-1-item-2"
                                 index={2}
@@ -1836,7 +1836,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-2"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-1-item-2"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -1845,8 +1845,8 @@ exports[`Dropdown renders an open dropdown 1`] = `
                                 >
                                   Restart
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-1-item-3"
                                 index={3}
@@ -1861,7 +1861,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-4"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-1-item-3"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -1870,10 +1870,10 @@ exports[`Dropdown renders an open dropdown 1`] = `
                                 >
                                   Stop
                                 </div>
-                              </DropdownMenuItem>
+                              </PopoverListItem>
                             </div>
                           </div>
-                        </DropdownMenu>
+                        </Popover>
                       </DropdownContents>
                     </clickOutside(DropdownContents)>
                   </div>
@@ -1885,7 +1885,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
       </Dropdownable>
     </div>
   </Downshift>
-</Dropdown>
+</DropdownMenu>
 `;
 
 exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
@@ -1966,7 +1966,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
   z-index: 2;
 }
 
-<Dropdown
+<DropdownMenu
   initialIsOpen={true}
   preferredDirections={
     Array [
@@ -2008,7 +2008,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
     >
       <Dropdownable
         dropdown={
-          <DropdownMenu
+          <Popover
             aria-labelledby="downshift-3-label"
             id="downshift-3-menu"
             menuRef={[Function]}
@@ -2017,7 +2017,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
             <div
               className=""
             >
-              <DropdownMenuItem
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-3-item-0"
                 index={0}
@@ -2028,13 +2028,13 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="edit"
                 >
                   Edit
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-3-item-1"
                 index={1}
@@ -2045,17 +2045,17 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="scale"
                 >
                   Scale
-                </DropdownActionItem>
-              </DropdownMenuItem>
+                </DropdownMenuItem>
+              </PopoverListItem>
             </div>
             <div
               className="emotion-5"
             >
-              <DropdownMenuItem
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-3-item-2"
                 index={0}
@@ -2066,13 +2066,13 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="restart"
                 >
                   Restart
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-3-item-3"
                 index={1}
@@ -2083,17 +2083,17 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="restartDelay"
                 >
                   Restart Delay
-                </DropdownActionItem>
-              </DropdownMenuItem>
+                </DropdownMenuItem>
+              </PopoverListItem>
             </div>
             <div
               className="emotion-5"
             >
-              <DropdownMenuItem
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-3-item-4"
                 index={0}
@@ -2104,13 +2104,13 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="pause"
                 >
                   Pause
-                </DropdownActionItem>
-              </DropdownMenuItem>
-              <DropdownMenuItem
+                </DropdownMenuItem>
+              </PopoverListItem>
+              <PopoverListItem
                 aria-selected={false}
                 id="downshift-3-item-5"
                 index={1}
@@ -2121,14 +2121,14 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                 onMouseMove={[Function]}
                 role="option"
               >
-                <DropdownActionItem
+                <DropdownMenuItem
                   value="stop"
                 >
                   Stop
-                </DropdownActionItem>
-              </DropdownMenuItem>
+                </DropdownMenuItem>
+              </PopoverListItem>
             </div>
-          </DropdownMenu>
+          </Popover>
         }
         open={true}
         preferredDirections={
@@ -2174,7 +2174,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                         <div
                           aria-labelledby="downshift-0-label"
                           class="emotion-9"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-0-menu"
                           role="listbox"
@@ -2185,7 +2185,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-0"
                               role="option"
                             >
@@ -2194,7 +2194,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="css-q57e5u"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-1"
                               role="option"
                             >
@@ -2203,7 +2203,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="css-q57e5u"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-2"
                               role="option"
                             >
@@ -2212,7 +2212,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-0-item-3"
                               role="option"
                             >
@@ -2231,7 +2231,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                         <div
                           aria-labelledby="downshift-1-label"
                           class="emotion-9"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-1-menu"
                           role="listbox"
@@ -2242,7 +2242,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-0"
                               role="option"
                             >
@@ -2251,7 +2251,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="css-q57e5u"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-1"
                               role="option"
                             >
@@ -2260,7 +2260,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="css-q57e5u"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-2"
                               role="option"
                             >
@@ -2269,7 +2269,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-3"
                               role="option"
                             >
@@ -2288,7 +2288,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                         <div
                           aria-labelledby="downshift-2-label"
                           class="emotion-9"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-2-menu"
                           role="listbox"
@@ -2300,7 +2300,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-0"
                               role="option"
                             >
@@ -2309,7 +2309,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="css-q57e5u"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-1"
                               role="option"
                             >
@@ -2318,7 +2318,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="css-q57e5u"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-2"
                               role="option"
                             >
@@ -2327,7 +2327,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-2-item-3"
                               role="option"
                             >
@@ -2399,7 +2399,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                         <div
                           aria-labelledby="downshift-3-label"
                           class="emotion-8"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-3-menu"
                           role="listbox"
@@ -2410,7 +2410,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-0"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-0"
                               role="option"
                             >
@@ -2419,7 +2419,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-1"
                               role="option"
                             >
@@ -2432,7 +2432,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-0"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-2"
                               role="option"
                             >
@@ -2441,7 +2441,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-3"
                               role="option"
                             >
@@ -2454,7 +2454,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-0"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-4"
                               role="option"
                             >
@@ -2463,7 +2463,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-5"
                               role="option"
                             >
@@ -2487,7 +2487,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                         <div
                           aria-labelledby="downshift-3-label"
                           class="emotion-9"
-                          data-cy="dropdownMenu"
+                          data-cy="popover"
                           direction="bottom-right"
                           id="downshift-3-menu"
                           role="listbox"
@@ -2498,7 +2498,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-0"
                               role="option"
                             >
@@ -2507,7 +2507,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-1"
                               role="option"
                             >
@@ -2520,7 +2520,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-2"
                               role="option"
                             >
@@ -2529,7 +2529,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-3"
                               role="option"
                             >
@@ -2542,7 +2542,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-1"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-4"
                               role="option"
                             >
@@ -2551,7 +2551,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             <div
                               aria-selected="false"
                               class="emotion-2"
-                              data-cy="dropdownMenuItem"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-5"
                               role="option"
                             >
@@ -2574,7 +2574,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                       <DropdownContents
                         open={true}
                       >
-                        <DropdownMenu
+                        <Popover
                           aria-labelledby="downshift-3-label"
                           direction="bottom-right"
                           id="downshift-3-menu"
@@ -2584,7 +2584,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                           <div
                             aria-labelledby="downshift-3-label"
                             className="emotion-9"
-                            data-cy="dropdownMenu"
+                            data-cy="popover"
                             direction="bottom-right"
                             id="downshift-3-menu"
                             role="listbox"
@@ -2599,7 +2599,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                               className=""
                               key="dropdown-0"
                             >
-                              <DropdownMenuItem
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-3-item-0"
                                 index={0}
@@ -2614,7 +2614,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-1"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-3-item-0"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -2623,8 +2623,8 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 >
                                   Edit
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-3-item-1"
                                 index={1}
@@ -2639,7 +2639,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-2"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-3-item-1"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -2648,13 +2648,13 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 >
                                   Scale
                                 </div>
-                              </DropdownMenuItem>
+                              </PopoverListItem>
                             </div>
                             <div
                               className="emotion-5"
                               key="dropdown-1"
                             >
-                              <DropdownMenuItem
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-3-item-2"
                                 index={0}
@@ -2669,7 +2669,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-1"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-3-item-2"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -2678,8 +2678,8 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 >
                                   Restart
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-3-item-3"
                                 index={1}
@@ -2694,7 +2694,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-2"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-3-item-3"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -2703,13 +2703,13 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 >
                                   Restart Delay
                                 </div>
-                              </DropdownMenuItem>
+                              </PopoverListItem>
                             </div>
                             <div
                               className="emotion-5"
                               key="dropdown-2"
                             >
-                              <DropdownMenuItem
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-3-item-4"
                                 index={0}
@@ -2724,7 +2724,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-1"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-3-item-4"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -2733,8 +2733,8 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 >
                                   Pause
                                 </div>
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
+                              </PopoverListItem>
+                              <PopoverListItem
                                 aria-selected={false}
                                 id="downshift-3-item-5"
                                 index={1}
@@ -2749,7 +2749,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 <div
                                   aria-selected={false}
                                   className="emotion-2"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-3-item-5"
                                   onClick={[Function]}
                                   onMouseDown={[Function]}
@@ -2758,10 +2758,10 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                                 >
                                   Stop
                                 </div>
-                              </DropdownMenuItem>
+                              </PopoverListItem>
                             </div>
                           </div>
-                        </DropdownMenu>
+                        </Popover>
                       </DropdownContents>
                     </clickOutside(DropdownContents)>
                   </div>
@@ -2773,5 +2773,5 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
       </Dropdownable>
     </div>
   </Downshift>
-</Dropdown>
+</DropdownMenu>
 `;

@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown default 1`] = `
-<DropdownActionItem
+<DropdownMenuItem
   value="edit"
 >
   Edit
-</DropdownActionItem>
+</DropdownMenuItem>
 `;
 
 exports[`Dropdown default 2`] = `
-<DropdownActionItem
+<DropdownMenuItem
   appearance="danger"
   value="edit"
 >
   Edit
-</DropdownActionItem>
+</DropdownMenuItem>
 `;

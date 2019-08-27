@@ -3,14 +3,14 @@ import { cx } from "emotion";
 import { menuList, hideHoriztonalScroll } from "../style";
 import { border } from "../../shared/styles/styleUtils";
 
-export interface DropdownMenuProps extends React.HTMLProps<HTMLDivElement> {
+export interface PopoverProps extends React.HTMLProps<HTMLDivElement> {
   children: React.ReactNode;
   maxHeight?: number;
   menuRef?: React.RefObject<HTMLDivElement>;
   width?: number;
 }
 
-const DropdownMenu = (props: DropdownMenuProps) => {
+const Popover = (props: PopoverProps) => {
   const { maxHeight, menuRef, width, ...other } = props;
   return (
     <div
@@ -19,10 +19,10 @@ const DropdownMenu = (props: DropdownMenuProps) => {
       })}
       ref={menuRef}
       style={{ width, maxHeight }}
-      data-cy="dropdownMenu"
+      data-cy="popover"
       {...other}
     />
   );
 };
 
-export default DropdownMenu;
+export default Popover;

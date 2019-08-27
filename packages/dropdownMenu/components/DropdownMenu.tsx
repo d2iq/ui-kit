@@ -3,19 +3,19 @@ import { cx } from "emotion";
 import Downshift, { ControllerStateAndHelpers } from "downshift";
 import { Dropdownable } from "../../dropdownable";
 import { border, buttonReset, display } from "../../shared/styles/styleUtils";
-import DropdownMenu from "../../dropdowMenu/components/DropdownMenu";
-import DropdownMenuItem from "../../dropdowMenu/components/DropdownMenuItem";
-import { DropdownActionsProps } from "../components/DropdownActions";
-import { DropdownActionItemProps } from "../components/DropdownActionItem";
+import Popover from "../../popover/components/Popover";
+import PopoverListItem from "../../popover/components/PopoverListItem";
+import { DropdownSectionProps } from "./DropdownSection";
+import { DropdownMenuItemProps } from "./DropdownMenuItem";
 import { Direction } from "../../dropdownable/components/Dropdownable";
 
-export interface DropdownProps {
+export interface DropdownMenuProps {
   /**
    * Groups of dropdown menu items
    */
   children:
-    | React.ReactElement<DropdownActionsProps>
-    | Array<React.ReactElement<DropdownActionsProps>>;
+    | React.ReactElement<DropdownSectionProps>
+    | Array<React.ReactElement<DropdownSectionProps>>;
   /**
    * Whether the dropdown starts open
    */
@@ -30,7 +30,7 @@ export interface DropdownProps {
   onSelect?: (
     selectedItem: string,
     stateAndHelpers?: ControllerStateAndHelpers<
-      React.ReactElement<DropdownActionItemProps>
+      React.ReactElement<DropdownMenuItemProps>
     >
   ) => void;
   /**
@@ -47,7 +47,7 @@ export interface DropdownProps {
   trigger: React.ReactNode;
 }
 
-const Dropdown: React.SFC<DropdownProps> = props => {
+const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
   const {
     children,
     initialIsOpen,
@@ -58,12 +58,12 @@ const Dropdown: React.SFC<DropdownProps> = props => {
     trigger
   } = props;
   const defaultItemToString = (
-    item: React.ReactElement<DropdownActionItemProps>
+    item: React.ReactElement<DropdownMenuItemProps>
   ) => (item ? item.props.value : "");
   const handleSelection = (
-    selectedItem: React.ReactElement<DropdownActionItemProps>,
+    selectedItem: React.ReactElement<DropdownMenuItemProps>,
     stateAndHelpers?: ControllerStateAndHelpers<
-      React.ReactElement<DropdownActionItemProps>
+      React.ReactElement<DropdownMenuItemProps>
     >
   ) => {
     if (onSelect) {
@@ -73,7 +73,7 @@ const Dropdown: React.SFC<DropdownProps> = props => {
 
   const getDropdownContents = (highlightedIndex, getItemProps) =>
     (React.Children.toArray(children) as Array<
-      React.ReactElement<DropdownActionsProps>
+      React.ReactElement<DropdownSectionProps>
     >).reduce<{
       sections: React.ReactNodeArray;
       menuItemIndex: number;
@@ -82,13 +82,13 @@ const Dropdown: React.SFC<DropdownProps> = props => {
         const { sections = [] } = acc;
         const { children } = item.props;
         const menuItems = React.Children.toArray(children) as Array<
-          React.ReactElement<DropdownActionItemProps>
+          React.ReactElement<DropdownMenuItemProps>
         >;
         const childrenWithKeys = menuItems.map((child, i) => {
           acc.menuItemIndex++;
 
           return (
-            <DropdownMenuItem
+            <PopoverListItem
               listLength={menuItems.length}
               isActive={highlightedIndex === acc.menuItemIndex}
               appearance={child.props.appearance}
@@ -99,7 +99,7 @@ const Dropdown: React.SFC<DropdownProps> = props => {
               })}
             >
               {child}
-            </DropdownMenuItem>
+            </PopoverListItem>
           );
         });
 
@@ -130,7 +130,7 @@ const Dropdown: React.SFC<DropdownProps> = props => {
             overlayRoot={overlayRoot}
             preferredDirections={preferredDirections}
             dropdown={
-              <DropdownMenu
+              <Popover
                 maxHeight={menuMaxHeight}
                 {...getMenuProps({ refKey: "menuRef" })}
               >
@@ -145,7 +145,7 @@ const Dropdown: React.SFC<DropdownProps> = props => {
                     {sectionContent}
                   </div>
                 ))}
-              </DropdownMenu>
+              </Popover>
             }
           >
             {React.isValidElement(trigger) ? (
@@ -166,7 +166,7 @@ const Dropdown: React.SFC<DropdownProps> = props => {
   );
 };
 
-Dropdown.defaultProps = {
+DropdownMenu.defaultProps = {
   preferredDirections: [
     Direction.BottomRight,
     Direction.BottomLeft,
@@ -177,4 +177,4 @@ Dropdown.defaultProps = {
   ]
 };
 
-export default Dropdown;
+export default DropdownMenu;

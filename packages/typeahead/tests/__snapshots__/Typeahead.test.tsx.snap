@@ -320,7 +320,7 @@ exports[`Typeahead renders 1`] = `
               <div
                 className="emotion-20"
               >
-                <DropdownMenu
+                <Popover
                   aria-labelledby="downshift-0-label"
                   id="downshift-0-menu"
                   maxHeight={300}
@@ -328,7 +328,7 @@ exports[`Typeahead renders 1`] = `
                   role="listbox"
                   width={0}
                 >
-                  <DropdownMenuItem
+                  <PopoverListItem
                     aria-selected={false}
                     id="downshift-0-item-0"
                     index={0}
@@ -341,8 +341,8 @@ exports[`Typeahead renders 1`] = `
                     role="option"
                   >
                     Exosphere
-                  </DropdownMenuItem>
-                  <DropdownMenuItem
+                  </PopoverListItem>
+                  <PopoverListItem
                     aria-selected={false}
                     id="downshift-0-item-1"
                     index={1}
@@ -355,8 +355,8 @@ exports[`Typeahead renders 1`] = `
                     role="option"
                   >
                     Thermosphere
-                  </DropdownMenuItem>
-                  <DropdownMenuItem
+                  </PopoverListItem>
+                  <PopoverListItem
                     aria-selected={false}
                     id="downshift-0-item-2"
                     index={2}
@@ -369,8 +369,8 @@ exports[`Typeahead renders 1`] = `
                     role="option"
                   >
                     Stratosphere
-                  </DropdownMenuItem>
-                </DropdownMenu>
+                  </PopoverListItem>
+                </Popover>
               </div>
             </div>
           }
@@ -594,7 +594,7 @@ exports[`Typeahead renders 1`] = `
                               <div
                                 aria-labelledby="downshift-0-label"
                                 class="emotion-15"
-                                data-cy="dropdownMenu"
+                                data-cy="popover"
                                 id="downshift-0-menu"
                                 role="listbox"
                                 style="max-height: 300px; width: 0px;"
@@ -602,7 +602,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-4"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-0"
                                   role="option"
                                 >
@@ -629,7 +629,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-9"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-1"
                                   role="option"
                                 >
@@ -656,7 +656,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-14"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-2"
                                   role="option"
                                 >
@@ -706,7 +706,7 @@ exports[`Typeahead renders 1`] = `
                               <div
                                 aria-labelledby="downshift-0-label"
                                 class="emotion-19"
-                                data-cy="dropdownMenu"
+                                data-cy="popover"
                                 id="downshift-0-menu"
                                 role="listbox"
                                 style="max-height: 300px; width: 0px;"
@@ -714,7 +714,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-8"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-0"
                                   role="option"
                                 >
@@ -741,7 +741,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-13"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-1"
                                   role="option"
                                 >
@@ -768,7 +768,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-18"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-2"
                                   role="option"
                                 >
@@ -817,7 +817,7 @@ exports[`Typeahead renders 1`] = `
                             <div
                               className="emotion-20"
                             >
-                              <DropdownMenu
+                              <Popover
                                 aria-labelledby="downshift-0-label"
                                 id="downshift-0-menu"
                                 maxHeight={300}
@@ -828,7 +828,7 @@ exports[`Typeahead renders 1`] = `
                                 <div
                                   aria-labelledby="downshift-0-label"
                                   className="emotion-19"
-                                  data-cy="dropdownMenu"
+                                  data-cy="popover"
                                   id="downshift-0-menu"
                                   role="listbox"
                                   style={
@@ -838,7 +838,7 @@ exports[`Typeahead renders 1`] = `
                                     }
                                   }
                                 >
-                                  <DropdownMenuItem
+                                  <PopoverListItem
                                     aria-selected={false}
                                     id="downshift-0-item-0"
                                     index={0}
@@ -854,7 +854,7 @@ exports[`Typeahead renders 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-8"
-                                      data-cy="dropdownMenuItem"
+                                      data-cy="PopoverListItem"
                                       id="downshift-0-item-0"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}
@@ -901,8 +901,8 @@ exports[`Typeahead renders 1`] = `
                                         </div>
                                       </Flex>
                                     </div>
-                                  </DropdownMenuItem>
-                                  <DropdownMenuItem
+                                  </PopoverListItem>
+                                  <PopoverListItem
                                     aria-selected={false}
                                     id="downshift-0-item-1"
                                     index={1}
@@ -918,7 +918,7 @@ exports[`Typeahead renders 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-13"
-                                      data-cy="dropdownMenuItem"
+                                      data-cy="PopoverListItem"
                                       id="downshift-0-item-1"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}
@@ -965,8 +965,8 @@ exports[`Typeahead renders 1`] = `
                                         </div>
                                       </Flex>
                                     </div>
-                                  </DropdownMenuItem>
-                                  <DropdownMenuItem
+                                  </PopoverListItem>
+                                  <PopoverListItem
                                     aria-selected={false}
                                     id="downshift-0-item-2"
                                     index={2}
@@ -982,7 +982,7 @@ exports[`Typeahead renders 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-18"
-                                      data-cy="dropdownMenuItem"
+                                      data-cy="PopoverListItem"
                                       id="downshift-0-item-2"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}
@@ -1029,9 +1029,9 @@ exports[`Typeahead renders 1`] = `
                                         </div>
                                       </Flex>
                                     </div>
-                                  </DropdownMenuItem>
+                                  </PopoverListItem>
                                 </div>
-                              </DropdownMenu>
+                              </Popover>
                             </div>
                           </div>
                         </DropdownContents>
@@ -1369,7 +1369,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
               <div
                 className="emotion-20"
               >
-                <DropdownMenu
+                <Popover
                   aria-labelledby="downshift-1-label"
                   id="downshift-1-menu"
                   maxHeight={100}
@@ -1377,7 +1377,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                   role="listbox"
                   width={0}
                 >
-                  <DropdownMenuItem
+                  <PopoverListItem
                     aria-selected={false}
                     id="downshift-1-item-0"
                     index={0}
@@ -1390,8 +1390,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                     role="option"
                   >
                     Exosphere
-                  </DropdownMenuItem>
-                  <DropdownMenuItem
+                  </PopoverListItem>
+                  <PopoverListItem
                     aria-selected={false}
                     id="downshift-1-item-1"
                     index={1}
@@ -1404,8 +1404,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                     role="option"
                   >
                     Thermosphere
-                  </DropdownMenuItem>
-                  <DropdownMenuItem
+                  </PopoverListItem>
+                  <PopoverListItem
                     aria-selected={false}
                     id="downshift-1-item-2"
                     index={2}
@@ -1418,8 +1418,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                     role="option"
                   >
                     Stratosphere
-                  </DropdownMenuItem>
-                </DropdownMenu>
+                  </PopoverListItem>
+                </Popover>
               </div>
             </div>
           }
@@ -1526,7 +1526,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                               <div
                                 aria-labelledby="downshift-0-label"
                                 class="emotion-19"
-                                data-cy="dropdownMenu"
+                                data-cy="popover"
                                 id="downshift-0-menu"
                                 role="listbox"
                                 style="max-height: 300px; width: 0px;"
@@ -1534,7 +1534,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-8"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-0"
                                   role="option"
                                 >
@@ -1561,7 +1561,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-13"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-1"
                                   role="option"
                                 >
@@ -1588,7 +1588,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-18"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-0-item-2"
                                   role="option"
                                 >
@@ -1750,7 +1750,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                               <div
                                 aria-labelledby="downshift-1-label"
                                 class="emotion-15"
-                                data-cy="dropdownMenu"
+                                data-cy="popover"
                                 id="downshift-1-menu"
                                 role="listbox"
                                 style="max-height: 100px; width: 0px;"
@@ -1758,7 +1758,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-4"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-1-item-0"
                                   role="option"
                                 >
@@ -1785,7 +1785,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-9"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-1-item-1"
                                   role="option"
                                 >
@@ -1812,7 +1812,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-14"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-1-item-2"
                                   role="option"
                                 >
@@ -1862,7 +1862,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                               <div
                                 aria-labelledby="downshift-1-label"
                                 class="emotion-19"
-                                data-cy="dropdownMenu"
+                                data-cy="popover"
                                 id="downshift-1-menu"
                                 role="listbox"
                                 style="max-height: 100px; width: 0px;"
@@ -1870,7 +1870,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-8"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-1-item-0"
                                   role="option"
                                 >
@@ -1897,7 +1897,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-13"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-1-item-1"
                                   role="option"
                                 >
@@ -1924,7 +1924,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-selected="false"
                                   class="emotion-18"
-                                  data-cy="dropdownMenuItem"
+                                  data-cy="PopoverListItem"
                                   id="downshift-1-item-2"
                                   role="option"
                                 >
@@ -1973,7 +1973,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                             <div
                               className="emotion-20"
                             >
-                              <DropdownMenu
+                              <Popover
                                 aria-labelledby="downshift-1-label"
                                 id="downshift-1-menu"
                                 maxHeight={100}
@@ -1984,7 +1984,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 <div
                                   aria-labelledby="downshift-1-label"
                                   className="emotion-19"
-                                  data-cy="dropdownMenu"
+                                  data-cy="popover"
                                   id="downshift-1-menu"
                                   role="listbox"
                                   style={
@@ -1994,7 +1994,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                     }
                                   }
                                 >
-                                  <DropdownMenuItem
+                                  <PopoverListItem
                                     aria-selected={false}
                                     id="downshift-1-item-0"
                                     index={0}
@@ -2010,7 +2010,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-8"
-                                      data-cy="dropdownMenuItem"
+                                      data-cy="PopoverListItem"
                                       id="downshift-1-item-0"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}
@@ -2057,8 +2057,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                         </div>
                                       </Flex>
                                     </div>
-                                  </DropdownMenuItem>
-                                  <DropdownMenuItem
+                                  </PopoverListItem>
+                                  <PopoverListItem
                                     aria-selected={false}
                                     id="downshift-1-item-1"
                                     index={1}
@@ -2074,7 +2074,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-13"
-                                      data-cy="dropdownMenuItem"
+                                      data-cy="PopoverListItem"
                                       id="downshift-1-item-1"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}
@@ -2121,8 +2121,8 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                         </div>
                                       </Flex>
                                     </div>
-                                  </DropdownMenuItem>
-                                  <DropdownMenuItem
+                                  </PopoverListItem>
+                                  <PopoverListItem
                                     aria-selected={false}
                                     id="downshift-1-item-2"
                                     index={2}
@@ -2138,7 +2138,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                     <div
                                       aria-selected={false}
                                       className="emotion-18"
-                                      data-cy="dropdownMenuItem"
+                                      data-cy="PopoverListItem"
                                       id="downshift-1-item-2"
                                       onClick={[Function]}
                                       onMouseDown={[Function]}
@@ -2185,9 +2185,9 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                         </div>
                                       </Flex>
                                     </div>
-                                  </DropdownMenuItem>
+                                  </PopoverListItem>
                                 </div>
-                              </DropdownMenu>
+                              </Popover>
                             </div>
                           </div>
                         </DropdownContents>
