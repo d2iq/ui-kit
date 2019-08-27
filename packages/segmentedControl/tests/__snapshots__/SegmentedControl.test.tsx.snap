@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SegmentedControl renders default 1`] = `
+.emotion-0 {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+<div
+  className="emotion-0"
+  data-cy="segmentedControl"
+>
+  <SegmentedControlButton
+    isActive={false}
+    key="0"
+    name="controlId"
+    onChange={[Function]}
+    value="one"
+  >
+    One
+  </SegmentedControlButton>
+  <SegmentedControlButton
+    isActive={false}
+    key="1"
+    name="controlId"
+    onChange={[Function]}
+    value="two"
+  >
+    Two
+  </SegmentedControlButton>
+  <SegmentedControlButton
+    isActive={false}
+    key="2"
+    name="controlId"
+    onChange={[Function]}
+    value="three"
+  >
+    Three
+  </SegmentedControlButton>
+</div>
+`;
+
+exports[`SegmentedControl renders with selected 1`] = `
+.emotion-0 {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+<div
+  className="emotion-0"
+  data-cy="segmentedControl"
+>
+  <SegmentedControlButton
+    isActive={true}
+    key="0"
+    name="controlId"
+    onChange={[Function]}
+    value="one"
+  >
+    One
+  </SegmentedControlButton>
+  <SegmentedControlButton
+    isActive={false}
+    key="1"
+    name="controlId"
+    onChange={[Function]}
+    value="two"
+  >
+    Two
+  </SegmentedControlButton>
+  <SegmentedControlButton
+    isActive={false}
+    key="2"
+    name="controlId"
+    onChange={[Function]}
+    value="three"
+  >
+    Three
+  </SegmentedControlButton>
+</div>
+`;
