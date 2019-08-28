@@ -126,6 +126,20 @@ There will be often a chance when you create a component in `DCOS-ui` which is a
 > Rule of Three:  
 > Try a component in three different places before placing it into ui-kit
 
+### Eliminate React errors/warnings
+We don't want our components to create noise in the console for other apps that use ui-kit. We've added Cypress to test for React errors/warnings and fail in CI if any are found.
+
+When creating a new component, add a test to `cypress/integration/storybook-cy.js` to check for errors and warnings.
+
+#### Running Cypress
+Using the Cypress UI:
+1. `npm start`
+2. `npx cypress open`
+3. Click "storybook-cy" in the sidebar of the Cypress ui
+
+In the CLI:
+`npm run test:integration`
+
 ### Creating a Reusable Component
 
 #### Avoid Weak Elements

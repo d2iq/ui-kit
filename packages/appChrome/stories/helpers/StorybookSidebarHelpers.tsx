@@ -16,7 +16,7 @@ const alignToLogoStyles = {
 };
 
 export const SidebarContent = ({ sidebarData }) =>
-  sidebarData.map(section => (
+  sidebarData.map((section, i) => (
     <SidebarSection
       label={
         section.sectionLabel ? (
@@ -25,6 +25,7 @@ export const SidebarContent = ({ sidebarData }) =>
           ""
         )
       }
+      key={`section-${i}`}
     >
       {section.items.map(
         item =>
@@ -39,15 +40,22 @@ export const SidebarContent = ({ sidebarData }) =>
                 </div>
               }
               menuHasIcon={true}
+              key={item.label}
             >
               {item.subItems.map(subItem => (
-                <SidebarSubMenuItem onClick={action(`go to ${subItem.label}`)}>
+                <SidebarSubMenuItem
+                  onClick={action(`go to ${subItem.label}`)}
+                  key={subItem.label}
+                >
                   <div style={alignToLogoStyles.outer}>{subItem.label}</div>
                 </SidebarSubMenuItem>
               ))}
             </SidebarSubMenu>
           ) : (
-            <SidebarItem onClick={action(`go to ${item.label}`)}>
+            <SidebarItem
+              onClick={action(`go to ${item.label}`)}
+              key={item.label}
+            >
               <div style={alignToLogoStyles.outer}>
                 <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
                   <div>{item.label}</div>
@@ -65,11 +73,21 @@ export const SidebarBareContent = () => (
       Content goes here
     </p>
     <ul>
-      <li className={padding("bottom")}>Lorem Ipsum</li>
-      <li className={padding("bottom")}>Dolor Sit</li>
-      <li className={padding("bottom")}>Amet Consecutor</li>
-      <li className={padding("bottom")}>Adipiscing Elit</li>
-      <li className={padding("bottom")}>Praesent Massa</li>
+      <li className={padding("bottom")} key="one">
+        Lorem Ipsum
+      </li>
+      <li className={padding("bottom")} key="two">
+        Dolor Sit
+      </li>
+      <li className={padding("bottom")} key="three">
+        Amet Consecutor
+      </li>
+      <li className={padding("bottom")} key="four">
+        Adipiscing Elit
+      </li>
+      <li className={padding("bottom")} key="five">
+        Praesent Massa
+      </li>
     </ul>
   </div>
 );
