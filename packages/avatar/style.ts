@@ -7,6 +7,7 @@ export const avatarContainer = css`
   border-radius: 25%;
   display: inline-block;
   overflow: hidden;
+  vertical-align: middle;
 `;
 
 export const avatarSize = (size: AvatarSizes) => css`

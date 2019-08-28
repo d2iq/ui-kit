@@ -13,6 +13,7 @@ exports[`Avatar renders default 1`] = `
   border-radius: 25%;
   display: inline-block;
   overflow: hidden;
+  vertical-align: middle;
   height: 32px;
   width: 32px;
 }
@@ -43,6 +44,7 @@ exports[`Avatar renders with a src, size, and label 1`] = `
   border-radius: 25%;
   display: inline-block;
   overflow: hidden;
+  vertical-align: middle;
   height: 64px;
   width: 64px;
 }
