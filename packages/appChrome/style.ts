@@ -46,7 +46,7 @@ export const sidebar = css`
 export const sidebarAnimator = css`
   height: 100%;
   overflow: hidden;
-  transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out, transform 150ms ease-in-out;
 `;
 
 export const sidebarItemHeight = css`

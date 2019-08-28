@@ -1,8 +1,7 @@
 import * as React from "react";
-import { cx, css } from "emotion";
+import { css } from "emotion";
 import styled from "react-emotion";
 import { sidebar, sidebarAnimator } from "../style";
-import { atMediaUp } from "../../shared/styles/breakpoints";
 import {
   themeTextColorPrimary,
   themeTextColorPrimaryInverted,
@@ -10,7 +9,10 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 import getCSSVarValue from "../../utilities/components/getCSSVarValue";
 import { pickReadableTextColor } from "../../shared/styles/color";
-import { tintContent } from "../../shared/styles/styleUtils";
+import {
+  tintContent,
+  getResponsiveStyle
+} from "../../shared/styles/styleUtils";
 import { ThemeProvider } from "emotion-theming";
 
 export interface SidebarProps {
@@ -19,26 +21,35 @@ export interface SidebarProps {
   onClose?: () => void;
 }
 
-const sidebarWidths = {
+const defaultSidebarWidths = {
   default: "240px",
   large: "280px"
 };
-const layoutBreakpoint = "large";
 
-const sidebarWidth = css`
-  width: ${sidebarWidths.default};
-
-  ${atMediaUp[layoutBreakpoint](css`
-    width: ${sidebarWidths[layoutBreakpoint]};
-  `)};
+const StyledSidebar = styled("div")`
+  ${props => {
+    const bgColor =
+      props.theme.sidebarBackgroundColor ||
+      getCSSVarValue(themeBgPrimaryInverted);
+    const textColor = pickReadableTextColor(
+      bgColor,
+      getCSSVarValue(themeTextColorPrimary),
+      getCSSVarValue(themeTextColorPrimaryInverted)
+    );
+    return css`
+      background-color: ${bgColor};
+      transform: ${`translateX(${props.theme.isOpen ? 0 : "-100%"})`};
+      ${tintContent(textColor)};
+      ${getResponsiveStyle(
+        "width",
+        props.theme.isOpen ? props.theme.sidebarWidth : 0
+      )};
+    `;
+  }};
 `;
 
-const sidebarAnimatorWidth = (isOpen: boolean) => css`
-  width: ${isOpen ? sidebarWidths.default : 0};
-
-  ${atMediaUp[layoutBreakpoint](css`
-    width: ${isOpen ? sidebarWidths[layoutBreakpoint] : 0};
-  `)};
+const StyledNav = styled("nav")`
+  ${props => getResponsiveStyle("min-width", props.theme.sidebarWidth)};
 `;
 
 class Sidebar extends React.PureComponent<SidebarProps, {}> {
@@ -54,49 +65,21 @@ class Sidebar extends React.PureComponent<SidebarProps, {}> {
 
   public render() {
     const { children, isOpen } = this.props;
-    const navClassNames = cx(sidebar, sidebarWidth);
-    const divClassNames = cx(sidebarAnimator);
-
-    const Sidebar = styled("div")`
-      ${props => {
-        const bgColor =
-          props.theme.sidebarBackgroundColor ||
-          getCSSVarValue(themeBgPrimaryInverted);
-        const textColor = pickReadableTextColor(
-          bgColor,
-          getCSSVarValue(themeTextColorPrimary),
-          getCSSVarValue(themeTextColorPrimaryInverted)
-        );
-        return css`
-          background-color: ${bgColor};
-          ${tintContent(textColor)};
-        `;
-      }};
-      ${props =>
-        props.theme.sidebarWidth
-          ? "width: " + props.theme.sidebarWidth
-          : sidebarAnimatorWidth(isOpen)};
-    `;
-
-    const Nav = styled("nav")`
-      ${props =>
-        props.theme.sidebarWidth
-          ? "width: " + props.theme.sidebarWidth
-          : sidebarWidth};
-    `;
 
     const adjustedTheme = ancestorTheme => {
       return {
         sidebarBackgroundColor: getCSSVarValue(themeBgPrimaryInverted),
+        sidebarWidth: defaultSidebarWidths,
+        isOpen,
         ...ancestorTheme
       };
     };
 
     return (
       <ThemeProvider theme={adjustedTheme}>
-        <Sidebar className={divClassNames}>
-          <Nav className={navClassNames}>{children}</Nav>
-        </Sidebar>
+        <StyledSidebar className={sidebarAnimator}>
+          <StyledNav className={sidebar}>{children}</StyledNav>
+        </StyledSidebar>
       </ThemeProvider>
     );
   }
