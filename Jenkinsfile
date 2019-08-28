@@ -66,6 +66,14 @@ pipeline {
       }
     }
 
+    stage('Run integration tests') {
+      steps {
+        ansiColor('xterm') {
+          sh '''npm run test:integration'''
+        }
+      }
+    }
+
     stage('Build Storybook') {
       steps {
         ansiColor('xterm') {
@@ -79,6 +87,8 @@ pipeline {
         }
       }
     }
+
+
 
     stage("Release") {
       steps {
