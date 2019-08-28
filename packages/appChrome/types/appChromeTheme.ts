@@ -1,4 +1,5 @@
 import { Theme } from "../../themes/types/appTheme";
+import { BreakpointConfig } from "../../shared/styles/breakpoints";
 
 type BgColor = React.CSSProperties["backgroundColor"];
 type PaddingHoriz =
@@ -19,7 +20,7 @@ export interface AppChromeTheme extends Theme {
   sidebarBackgroundColor?: BgColor;
   sidebarHeaderPaddingHor?: PaddingHoriz;
   sidebarHeaderPaddingVert?: PaddingVert;
-  sidebarWidth?: ElWidth;
+  sidebarWidth?: BreakpointConfig<ElWidth>;
   sidebarItemPaddingHor?: PaddingHoriz;
   sidebarItemPaddingVert?: PaddingVert;
 }
