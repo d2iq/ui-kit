@@ -74,7 +74,14 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
             </TooltipContent>
           }
           preferredDirections={
-            preferredDirections || [Direction.TopCenter, Direction.BottomCenter]
+            preferredDirections || [
+              Direction.TopCenter,
+              Direction.TopLeft,
+              Direction.TopRight,
+              Direction.BottomCenter,
+              Direction.BottomLeft,
+              Direction.BottomRight
+            ]
           }
         >
           {trigger}

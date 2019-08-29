@@ -23,7 +23,6 @@ export const segmentedControlButton = css`
   border-style: solid;
   border-right-width: 0;
   cursor: pointer;
-  padding: ${buttonPadding.vert} ${buttonPadding.horiz};
 
   &:first-child {
     border-radius: ${borderRadiusDefault} 0 0 ${borderRadiusDefault};
@@ -43,6 +42,10 @@ export const segmentedControlButton = css`
       getCSSVarValue(themeTextColorPrimaryInverted)
     )};
   }
+`;
+
+export const segmentedControlButtonInner = css`
+  padding: ${buttonPadding.vert} ${buttonPadding.horiz};
 `;
 
 export const segmentedControlButtonActive = css`

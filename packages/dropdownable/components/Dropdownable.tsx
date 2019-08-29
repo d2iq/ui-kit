@@ -173,6 +173,7 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     windowDimensions
   ): Direction {
     // Determine if there is enough space in each direction to fit dropdown
+    const triggerCenter = childBounds.width / 2 + childBounds.left;
     const possibleVertDirections = {
       top: dropdownDimensions.height <= childBounds.top,
       bottom:
@@ -181,7 +182,10 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     };
     const possibleHorizDirections = {
       left: dropdownDimensions.width >= childBounds.right,
-      right: dropdownDimensions.width <= childBounds.right
+      right: dropdownDimensions.width <= childBounds.right,
+      center:
+        triggerCenter - dropdownDimensions.width / 2 > 0 &&
+        triggerCenter + dropdownDimensions.width / 2 < windowDimensions.width
     };
 
     // Pick the first available preference

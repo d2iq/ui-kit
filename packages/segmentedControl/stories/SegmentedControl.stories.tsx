@@ -86,6 +86,38 @@ storiesOf("SegmentedControl", module)
       )}
     </SegmentedControlStoryHelper>
   ))
+  .add("with tooltip content", () => (
+    <SegmentedControlStoryHelper>
+      {({ changeHandler, selectedSegment }) => (
+        <SegmentedControl
+          id="nontextChildren"
+          selectedSegment={selectedSegment}
+          onSelect={changeHandler}
+        >
+          <SegmentedControlButton
+            value="list"
+            tooltipContent="Turn on the list"
+          >
+            <Icon
+              ariaLabel="list view"
+              shape={SystemIcons.List}
+              size={iconSizeXs}
+            />
+          </SegmentedControlButton>
+          <SegmentedControlButton
+            value="charts"
+            tooltipContent="Turn on the charts"
+          >
+            <Icon
+              ariaLabel="chart view"
+              shape={SystemIcons.Donut}
+              size={iconSizeXs}
+            />
+          </SegmentedControlButton>
+        </SegmentedControl>
+      )}
+    </SegmentedControlStoryHelper>
+  ))
   .add(
     "custom SegmentedControlButton id prop",
     () => (
