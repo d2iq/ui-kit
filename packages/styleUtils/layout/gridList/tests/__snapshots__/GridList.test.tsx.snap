@@ -4,7 +4,7 @@ exports[`GridList renders default 1`] = `
 .emotion-0 {
   display: grid;
   grid-gap: 16px;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2,minmax(0,1fr));
   list-style: none;
   margin-left: 0;
   margin-top: 0;
@@ -29,7 +29,7 @@ exports[`GridList renders with all props 1`] = `
 .emotion-0 {
   display: grid;
   grid-gap: 24px;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2,minmax(0,1fr));
   list-style: none;
   margin-left: 0;
   margin-top: 0;
