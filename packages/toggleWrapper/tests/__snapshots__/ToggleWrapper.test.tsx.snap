@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleWrapper renders 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-1 {
+  display: block;
+}
+
+<ToggleWrapper
+  isActive={true}
+  type="checkbox"
+>
+  <label
+    className="emotion-1"
+  >
+    <input
+      aria-checked={true}
+      checked={true}
+      className="emotion-0"
+      data-cy="toggleWrapper-input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      type="checkbox"
+    />
+    <div>
+      isActive? true
+    </div>
+  </label>
+</ToggleWrapper>
+`;
+
+exports[`ToggleWrapper renders as a radio input 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-1 {
+  display: block;
+}
+
+<ToggleWrapper
+  isActive={true}
+  type="radio"
+>
+  <label
+    className="emotion-1"
+  >
+    <input
+      aria-checked={true}
+      checked={true}
+      className="emotion-0"
+      data-cy="toggleWrapper-input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      type="radio"
+    />
+    <div>
+      isActive? true
+    </div>
+  </label>
+</ToggleWrapper>
+`;
