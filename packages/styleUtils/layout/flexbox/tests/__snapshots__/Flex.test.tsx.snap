@@ -6,6 +6,7 @@ exports[`Flex renders default 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -24,8 +25,13 @@ exports[`Flex renders default 1`] = `
   min-height: 0;
 }
 
+.emotion-0 > div {
+  width: auto;
+}
+
 .emotion-0 > *:not(:first-child) {
   padding-left: 0;
+  padding-top: 0;
 }
 
 <div
@@ -75,7 +81,8 @@ exports[`Flex renders with all props 1`] = `
 }
 
 .emotion-0 > *:not(:first-child) {
-  padding-left: 24px;
+  padding-left: 0;
+  padding-top: 24px;
 }
 
 <div
@@ -199,13 +206,25 @@ exports[`Flex renders with responsive props 1`] = `
 
 @media (min-width:0) {
   .emotion-0 > *:not(:first-child) {
-    padding-left: 12px;
+    padding-left: 0;
   }
 }
 
 @media (min-width:900px) {
   .emotion-0 > *:not(:first-child) {
     padding-left: 16px;
+  }
+}
+
+@media (min-width:0) {
+  .emotion-0 > *:not(:first-child) {
+    padding-top: 12px;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 > *:not(:first-child) {
+    padding-top: 0;
   }
 }
 

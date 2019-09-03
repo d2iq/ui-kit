@@ -61,6 +61,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -71,6 +72,10 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -174,6 +179,7 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -184,6 +190,10 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -334,6 +344,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -344,6 +355,10 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -502,6 +517,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -512,6 +528,10 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -670,6 +690,7 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -680,6 +701,10 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3 > div {
+  width: auto;
 }
 
 .emotion-0 {

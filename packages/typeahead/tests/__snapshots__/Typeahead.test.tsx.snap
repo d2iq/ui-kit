@@ -6,6 +6,7 @@ exports[`Typeahead renders 1`] = `
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -22,6 +23,10 @@ exports[`Typeahead renders 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3 > div {
+  width: auto;
 }
 
 .emotion-23 {
@@ -56,12 +61,17 @@ exports[`Typeahead renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 .emotion-2 {
@@ -183,6 +193,7 @@ exports[`Typeahead renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -201,8 +212,13 @@ exports[`Typeahead renders 1`] = `
   min-height: 0;
 }
 
+.emotion-7 > div {
+  width: auto;
+}
+
 .emotion-7 > *:not(:first-child) {
   padding-left: 8px;
+  padding-top: 0;
 }
 
 .emotion-4 {
@@ -505,6 +521,7 @@ exports[`Typeahead renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -523,8 +540,13 @@ exports[`Typeahead renders 1`] = `
   min-height: 0;
 }
 
+.emotion-3 > div {
+  width: auto;
+}
+
 .emotion-3 > *:not(:first-child) {
   padding-left: 8px;
+  padding-top: 0;
 }
 
 .emotion-0 {
@@ -1055,6 +1077,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1071,6 +1094,10 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3 > div {
+  width: auto;
 }
 
 .emotion-23 {
@@ -1105,12 +1132,17 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 .emotion-2 {
@@ -1232,6 +1264,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1250,8 +1283,13 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-height: 0;
 }
 
+.emotion-7 > div {
+  width: auto;
+}
+
 .emotion-7 > *:not(:first-child) {
   padding-left: 8px;
+  padding-top: 0;
 }
 
 .emotion-4 {
@@ -1662,6 +1700,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1680,8 +1719,13 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-height: 0;
 }
 
+.emotion-3 > div {
+  width: auto;
+}
+
 .emotion-3 > *:not(:first-child) {
   padding-left: 8px;
+  padding-top: 0;
 }
 
 .emotion-0 {

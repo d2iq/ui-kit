@@ -1,6 +1,7 @@
 import { css } from "react-emotion";
 import { getResponsiveStyle } from "../";
 import { BreakpointConfig } from "../../breakpoints";
+import { getResponsiveSpacingStyle } from "./handleResponsiveStyle";
 
 export interface FlexboxProperties {
   /**
@@ -36,6 +37,58 @@ const flexStrategies = {
   `
 };
 
+const getResponsiveColumnStyles = (
+  direction: BreakpointConfig<React.CSSProperties["flexDirection"]>,
+  valueForColumnDirection: any,
+  valueForOtherDirections: any = null
+) => {
+  const isColumn = direction === "column" || direction === "column-reverse";
+
+  if (isColumn) {
+    return valueForColumnDirection;
+  } else if (direction && typeof direction === "object") {
+    return Object.entries(direction).reduce((acc, [breakpoint, config]) => {
+      acc[breakpoint] = config.includes("column")
+        ? valueForColumnDirection
+        : valueForOtherDirections;
+
+      return acc;
+    }, {});
+  } else {
+    return valueForOtherDirections;
+  }
+};
+
+const getGutterPaddingValues = (responsivePaddingConfig, gutterSize) => {
+  let paddingValues = {};
+
+  // filter the responsivePaddingConfig to only have properties
+  // where we need to remove the padding
+  const breakpointsToRemovePadding = spacingSize =>
+    Object.keys(spacingSize).reduce((acc, breakpoint) => {
+      if (spacingSize[breakpoint] === "none") {
+        acc[breakpoint] = spacingSize[breakpoint];
+      }
+      return acc;
+    }, {});
+
+  // override gutter values that need to be set to "none"
+  const overideGutters = spacingSize => ({
+    ...gutterSize,
+    ...breakpointsToRemovePadding(spacingSize)
+  });
+
+  // remove any properties for breakpoints that did not have a responsive `direction` prop
+  Object.keys(responsivePaddingConfig).forEach(
+    key =>
+      (paddingValues[key] = (key in overideGutters(responsivePaddingConfig)
+        ? overideGutters(responsivePaddingConfig)
+        : responsivePaddingConfig)[key])
+  );
+
+  return paddingValues;
+};
+
 export const flex = (
   flexProps: FlexboxProperties = {
     align: "flex",
@@ -44,39 +97,20 @@ export const flex = (
     justify: "flex-start"
   }
 ) => {
-  const { direction } = flexProps;
-  const isColumn = direction === "column" || direction === "column-reverse";
-  const getResponsiveColumnStyles = (
-    valueForColumnDirection,
-    valueForOtherDirections = "auto"
-  ) => {
-    if (isColumn) {
-      return valueForColumnDirection;
-    } else if (typeof direction === "object") {
-      return Object.entries(direction).reduce((acc, [breakpoint, config]) => {
-        acc[breakpoint] = config.includes("column")
-          ? valueForColumnDirection
-          : valueForOtherDirections;
+  const { align, direction, wrap, justify } = flexProps;
 
-        return acc;
-      }, {});
-    } else {
-      return null;
-    }
-  };
-
-  const childWidth = getResponsiveColumnStyles("100%");
-  const height = getResponsiveColumnStyles("100%");
+  const childWidth = getResponsiveColumnStyles(direction, "100%", "auto");
+  const height = getResponsiveColumnStyles(direction, "100%", "auto");
 
   // Note: the `min-height: 0` rule handles an issue with
   // flex containers that have `overflow: {auto|hidden|scroll}`
   // in Firefox and IE11
   return css`
-    ${getResponsiveStyle("align-items", flexProps.align)};
+    ${getResponsiveStyle("align-items", align)};
     ${getResponsiveStyle("height", height)};
-    ${getResponsiveStyle("flex-direction", flexProps.direction)};
-    ${getResponsiveStyle("flex-wrap", flexProps.wrap)};
-    ${getResponsiveStyle("justify-content", flexProps.justify)};
+    ${getResponsiveStyle("flex-direction", direction)};
+    ${getResponsiveStyle("flex-wrap", wrap)};
+    ${getResponsiveStyle("justify-content", justify)};
     box-sizing: border-box;
     display: flex;
     min-height: 0;
@@ -92,3 +126,35 @@ export const flexItem = (flexStrategy: "grow" | "shrink") =>
     box-sizing: border-box;
     ${flexStrategies[flexStrategy]};
   `;
+
+export const applyFlexItemGutters = (direction, gutterSize) => {
+  if (!Boolean(gutterSize)) {
+    return;
+  }
+
+  const columnPaddingTop = getResponsiveColumnStyles(
+    direction,
+    gutterSize,
+    "none"
+  );
+  const columnPaddingLeft = getResponsiveColumnStyles(
+    direction,
+    "none",
+    gutterSize
+  );
+  const paddingTop =
+    typeof columnPaddingTop === "object"
+      ? getGutterPaddingValues(columnPaddingTop, gutterSize)
+      : columnPaddingTop;
+  const paddingLeft =
+    typeof columnPaddingLeft === "object"
+      ? getGutterPaddingValues(columnPaddingLeft, gutterSize)
+      : columnPaddingLeft;
+
+  return css`
+    > *:not(:first-child) {
+      ${getResponsiveSpacingStyle("padding-left", paddingLeft)};
+      ${getResponsiveSpacingStyle("padding-top", paddingTop)};
+    }
+  `;
+};

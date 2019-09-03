@@ -4,9 +4,9 @@ import { FlexItemProps } from "./FlexItem";
 import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifierUtils";
 import {
   FlexboxProperties,
-  flex
+  flex,
+  applyFlexItemGutters
 } from "../../../../shared/styles/styleUtils/layout/flexbox";
-import { getResponsiveSpacingStyle } from "../../../../shared/styles/styleUtils";
 
 interface FlexProps extends FlexboxProperties {
   /**
@@ -25,10 +25,7 @@ const Flex = (props: FlexProps) => {
     <div
       className={css`
         ${flex({ ...flexboxProperties })};
-
-        > *:not(:first-child) {
-          ${getResponsiveSpacingStyle("padding-left", gutterSize)};
-        }
+        ${applyFlexItemGutters(flexboxProperties.direction, gutterSize)};
       `}
       data-cy="flex"
     >
@@ -41,7 +38,8 @@ Flex.defaultProps = {
   align: "flex-start",
   direction: "row",
   wrap: "nowrap",
-  justify: "flex-start"
+  justify: "flex-start",
+  gutterSize: "none"
 };
 
 export default Flex;

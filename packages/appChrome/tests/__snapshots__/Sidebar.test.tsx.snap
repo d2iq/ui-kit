@@ -20,6 +20,7 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -28,6 +29,10 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
   min-height: 0;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.emotion-2 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -87,6 +92,7 @@ exports[`Sidebar SidebarSection renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -98,6 +104,10 @@ exports[`Sidebar SidebarSection renders 1`] = `
   font-weight: 500;
   margin-bottom: 0;
   margin-top: 0;
+}
+
+.emotion-0 > div {
+  width: auto;
 }
 
 .emotion-1 {
@@ -192,6 +202,7 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -200,6 +211,10 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
   min-height: 0;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.emotion-2 > div {
+  width: auto;
 }
 
 .emotion-0 {

@@ -26,6 +26,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -43,6 +44,10 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   display: flex;
   min-height: 0;
   height: 100%;
+}
+
+.emotion-2 > div {
+  width: auto;
 }
 
 .emotion-0 {
