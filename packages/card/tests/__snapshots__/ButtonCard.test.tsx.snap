@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonCard renders as disabled 1`] = `
+.emotion-0 {
+  padding: 16px;
+}
+
+.emotion-1 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--themeBgDisabled,#E8EAED);
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  cursor: auto;
+}
+
+.emotion-1 > div {
+  height: 100%;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-1:active {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-1,
+.emotion-1:hover,
+.emotion-1:focus {
+  box-shadow: 0 0 0 0 transparent;
+}
+
+<ButtonCard
+  disabled={true}
+  paddingSize="m"
+>
+  <div
+    aria-disabled={true}
+    className="emotion-1"
+    data-cy="buttonCard"
+    role="button"
+    tabIndex={-1}
+  >
+    <div
+      className="emotion-0"
+    >
+      default
+    </div>
+  </div>
+</ButtonCard>
+`;
+
+exports[`ButtonCard renders as hasFocus 1`] = `
+.emotion-0 {
+  padding: 16px;
+}
+
+.emotion-1 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-1 > div {
+  height: 100%;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-1:active {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+<ButtonCard
+  hasFocus={true}
+  paddingSize="m"
+>
+  <div
+    className="emotion-1"
+    data-cy="buttonCard"
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      className="emotion-0"
+    >
+      default
+    </div>
+  </div>
+</ButtonCard>
+`;
+
+exports[`ButtonCard renders as isActive 1`] = `
+.emotion-0 {
+  padding: 16px;
+}
+
+.emotion-1 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emotion-1 > div {
+  height: 100%;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-1:active {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-1,
+.emotion-1:hover,
+.emotion-1:focus {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-1:focus {
+  background-color: var(--themeBgHover,#F7F8F9);
+}
+
+<ButtonCard
+  isActive={true}
+  paddingSize="m"
+>
+  <div
+    aria-pressed={true}
+    className="emotion-1"
+    data-cy="buttonCard"
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      className="emotion-0"
+    >
+      default
+    </div>
+  </div>
+</ButtonCard>
+`;
+
+exports[`ButtonCard renders default 1`] = `
+.emotion-1 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emotion-1 > div {
+  height: 100%;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-1:active {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-0 {
+  padding: 16px;
+}
+
+<ButtonCard
+  paddingSize="m"
+>
+  <div
+    className="emotion-1"
+    data-cy="buttonCard"
+    role="button"
+    tabIndex={0}
+  >
+    <div
+      className="emotion-0"
+    >
+      default
+    </div>
+  </div>
+</ButtonCard>
+`;

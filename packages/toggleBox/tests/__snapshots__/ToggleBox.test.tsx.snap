@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleBox renders active 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-3 {
+  display: block;
+}
+
+.emotion-1 {
+  padding: 16px;
+}
+
+.emotion-2 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emotion-2 > div {
+  height: 100%;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-2:active {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-2,
+.emotion-2:hover,
+.emotion-2:focus {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-2:focus {
+  background-color: var(--themeBgHover,#F7F8F9);
+}
+
+<ToggleBox
+  id="active"
+  isActive={true}
+  value="active"
+>
+  <ToggleWrapper
+    disabled={false}
+    id="active"
+    isActive={true}
+    type="checkbox"
+    value="active"
+  >
+    <label
+      className="emotion-3"
+      htmlFor="active"
+    >
+      <input
+        aria-checked={true}
+        checked={true}
+        className="emotion-0"
+        data-cy="toggleWrapper-input"
+        disabled={false}
+        id="active"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="checkbox"
+        value="active"
+      />
+      <ButtonCard
+        disabled={false}
+        hasFocus={false}
+        isActive={true}
+        isInput={true}
+        paddingSize="m"
+      >
+        <div
+          className="emotion-2"
+          data-cy="buttonCard"
+        >
+          <div
+            className="emotion-1"
+          >
+            isActive
+          </div>
+        </div>
+      </ButtonCard>
+    </label>
+  </ToggleWrapper>
+</ToggleBox>
+`;
+
+exports[`ToggleBox renders default 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-3 {
+  display: block;
+}
+
+.emotion-2 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emotion-2 > div {
+  height: 100%;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-2:active {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-1 {
+  padding: 16px;
+}
+
+<ToggleBox
+  id="default"
+  value="default"
+>
+  <ToggleWrapper
+    disabled={false}
+    id="default"
+    type="checkbox"
+    value="default"
+  >
+    <label
+      className="emotion-3"
+      htmlFor="default"
+    >
+      <input
+        className="emotion-0"
+        data-cy="toggleWrapper-input"
+        disabled={false}
+        id="default"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="checkbox"
+        value="default"
+      />
+      <ButtonCard
+        disabled={false}
+        hasFocus={false}
+        isInput={true}
+        paddingSize="m"
+      >
+        <div
+          className="emotion-2"
+          data-cy="buttonCard"
+        >
+          <div
+            className="emotion-1"
+          >
+            default
+          </div>
+        </div>
+      </ButtonCard>
+    </label>
+  </ToggleWrapper>
+</ToggleBox>
+`;
+
+exports[`ToggleBox renders disabled 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-3 {
+  display: block;
+}
+
+.emotion-1 {
+  padding: 16px;
+}
+
+.emotion-2 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--themeBgDisabled,#E8EAED);
+  color: var(--themeTextColorDisabled,#AEB0B4);
+  cursor: auto;
+}
+
+.emotion-2 > div {
+  height: 100%;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-2:active {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-2,
+.emotion-2:hover,
+.emotion-2:focus {
+  box-shadow: 0 0 0 0 transparent;
+}
+
+<ToggleBox
+  disabled={true}
+  id="disabled"
+  value="disabled"
+>
+  <ToggleWrapper
+    disabled={true}
+    id="disabled"
+    type="checkbox"
+    value="disabled"
+  >
+    <label
+      className="emotion-3"
+      htmlFor="disabled"
+    >
+      <input
+        className="emotion-0"
+        data-cy="toggleWrapper-input"
+        disabled={true}
+        id="disabled"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        type="checkbox"
+        value="disabled"
+      />
+      <ButtonCard
+        disabled={true}
+        hasFocus={false}
+        isInput={true}
+        paddingSize="m"
+      >
+        <div
+          className="emotion-2"
+          data-cy="buttonCard"
+        >
+          <div
+            className="emotion-1"
+          >
+            disabled
+          </div>
+        </div>
+      </ButtonCard>
+    </label>
+  </ToggleWrapper>
+</ToggleBox>
+`;

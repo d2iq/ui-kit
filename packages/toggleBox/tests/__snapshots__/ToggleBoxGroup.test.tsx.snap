@@ -1,0 +1,963 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleBoxGroup renders default 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-15 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-15 > div {
+  width: auto;
+}
+
+.emotion-15 > *:not(:first-child) {
+  padding-left: 16px;
+  padding-top: 0;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-3 {
+  display: block;
+}
+
+.emotion-2 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emotion-2 > div {
+  height: 100%;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-2:active {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-1 {
+  padding: 16px;
+}
+
+<ToggleBoxGroup
+  id="default"
+>
+  <Flex
+    align="flex-start"
+    direction="row"
+    gutterSize="m"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <div
+      className="emotion-15"
+      data-cy="flex"
+    >
+      <FlexItem
+        flex="grow"
+        key="buttonWrapper-exosphere"
+      >
+        <div
+          className="emotion-4"
+          data-cy="flexItem"
+        >
+          <ToggleBox
+            id="exosphere"
+            isActive={false}
+            key=".0"
+            name="default"
+            onChange={[Function]}
+            type="radio"
+            value="exosphere"
+          >
+            <ToggleWrapper
+              disabled={false}
+              id="exosphere"
+              isActive={false}
+              name="default"
+              onChange={[Function]}
+              type="radio"
+              value="exosphere"
+            >
+              <label
+                className="emotion-3"
+                htmlFor="exosphere"
+              >
+                <input
+                  aria-checked={false}
+                  checked={false}
+                  className="emotion-0"
+                  data-cy="toggleWrapper-input"
+                  disabled={false}
+                  id="exosphere"
+                  name="default"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="exosphere"
+                />
+                <ButtonCard
+                  disabled={false}
+                  hasFocus={false}
+                  isActive={false}
+                  isInput={true}
+                  paddingSize="m"
+                >
+                  <div
+                    className="emotion-2"
+                    data-cy="buttonCard"
+                  >
+                    <div
+                      className="emotion-1"
+                    >
+                      Exosphere
+                    </div>
+                  </div>
+                </ButtonCard>
+              </label>
+            </ToggleWrapper>
+          </ToggleBox>
+        </div>
+      </FlexItem>
+      <FlexItem
+        flex="grow"
+        key="buttonWrapper-thermosphere"
+      >
+        <div
+          className="emotion-4"
+          data-cy="flexItem"
+        >
+          <ToggleBox
+            id="thermosphere"
+            isActive={false}
+            key=".1"
+            name="default"
+            onChange={[Function]}
+            type="radio"
+            value="thermosphere"
+          >
+            <ToggleWrapper
+              disabled={false}
+              id="thermosphere"
+              isActive={false}
+              name="default"
+              onChange={[Function]}
+              type="radio"
+              value="thermosphere"
+            >
+              <label
+                className="emotion-3"
+                htmlFor="thermosphere"
+              >
+                <input
+                  aria-checked={false}
+                  checked={false}
+                  className="emotion-0"
+                  data-cy="toggleWrapper-input"
+                  disabled={false}
+                  id="thermosphere"
+                  name="default"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="thermosphere"
+                />
+                <ButtonCard
+                  disabled={false}
+                  hasFocus={false}
+                  isActive={false}
+                  isInput={true}
+                  paddingSize="m"
+                >
+                  <div
+                    className="emotion-2"
+                    data-cy="buttonCard"
+                  >
+                    <div
+                      className="emotion-1"
+                    >
+                      Thermosphere
+                    </div>
+                  </div>
+                </ButtonCard>
+              </label>
+            </ToggleWrapper>
+          </ToggleBox>
+        </div>
+      </FlexItem>
+      <FlexItem
+        flex="grow"
+        key="buttonWrapper-mesosphere"
+      >
+        <div
+          className="emotion-4"
+          data-cy="flexItem"
+        >
+          <ToggleBox
+            id="mesosphere"
+            isActive={false}
+            key=".2"
+            name="default"
+            onChange={[Function]}
+            type="radio"
+            value="mesosphere"
+          >
+            <ToggleWrapper
+              disabled={false}
+              id="mesosphere"
+              isActive={false}
+              name="default"
+              onChange={[Function]}
+              type="radio"
+              value="mesosphere"
+            >
+              <label
+                className="emotion-3"
+                htmlFor="mesosphere"
+              >
+                <input
+                  aria-checked={false}
+                  checked={false}
+                  className="emotion-0"
+                  data-cy="toggleWrapper-input"
+                  disabled={false}
+                  id="mesosphere"
+                  name="default"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="mesosphere"
+                />
+                <ButtonCard
+                  disabled={false}
+                  hasFocus={false}
+                  isActive={false}
+                  isInput={true}
+                  paddingSize="m"
+                >
+                  <div
+                    className="emotion-2"
+                    data-cy="buttonCard"
+                  >
+                    <div
+                      className="emotion-1"
+                    >
+                      Mesosphere
+                    </div>
+                  </div>
+                </ButtonCard>
+              </label>
+            </ToggleWrapper>
+          </ToggleBox>
+        </div>
+      </FlexItem>
+    </div>
+  </Flex>
+</ToggleBoxGroup>
+`;
+
+exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-15 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-15 > div {
+  width: auto;
+}
+
+.emotion-15 > *:not(:first-child) {
+  padding-left: 16px;
+  padding-top: 0;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-3 {
+  display: block;
+}
+
+.emotion-2 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emotion-2 > div {
+  height: 100%;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-2:active {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-1 {
+  padding: 16px;
+}
+
+.emotion-12 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emotion-12 > div {
+  height: 100%;
+}
+
+.emotion-12:hover,
+.emotion-12:focus {
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-12:active {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-12,
+.emotion-12:hover,
+.emotion-12:focus {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-12:focus {
+  background-color: var(--themeBgHover,#F7F8F9);
+}
+
+<ToggleBoxGroup
+  id="selectedItems"
+  selectedItems={
+    Array [
+      "mesosphere",
+    ]
+  }
+>
+  <Flex
+    align="flex-start"
+    direction="row"
+    gutterSize="m"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <div
+      className="emotion-15"
+      data-cy="flex"
+    >
+      <FlexItem
+        flex="grow"
+        key="buttonWrapper-exosphere"
+      >
+        <div
+          className="emotion-4"
+          data-cy="flexItem"
+        >
+          <ToggleBox
+            id="exosphere"
+            isActive={false}
+            key=".0"
+            name="selectedItems"
+            onChange={[Function]}
+            type="radio"
+            value="exosphere"
+          >
+            <ToggleWrapper
+              disabled={false}
+              id="exosphere"
+              isActive={false}
+              name="selectedItems"
+              onChange={[Function]}
+              type="radio"
+              value="exosphere"
+            >
+              <label
+                className="emotion-3"
+                htmlFor="exosphere"
+              >
+                <input
+                  aria-checked={false}
+                  checked={false}
+                  className="emotion-0"
+                  data-cy="toggleWrapper-input"
+                  disabled={false}
+                  id="exosphere"
+                  name="selectedItems"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="exosphere"
+                />
+                <ButtonCard
+                  disabled={false}
+                  hasFocus={false}
+                  isActive={false}
+                  isInput={true}
+                  paddingSize="m"
+                >
+                  <div
+                    className="emotion-2"
+                    data-cy="buttonCard"
+                  >
+                    <div
+                      className="emotion-1"
+                    >
+                      Exosphere
+                    </div>
+                  </div>
+                </ButtonCard>
+              </label>
+            </ToggleWrapper>
+          </ToggleBox>
+        </div>
+      </FlexItem>
+      <FlexItem
+        flex="grow"
+        key="buttonWrapper-thermosphere"
+      >
+        <div
+          className="emotion-4"
+          data-cy="flexItem"
+        >
+          <ToggleBox
+            id="thermosphere"
+            isActive={false}
+            key=".1"
+            name="selectedItems"
+            onChange={[Function]}
+            type="radio"
+            value="thermosphere"
+          >
+            <ToggleWrapper
+              disabled={false}
+              id="thermosphere"
+              isActive={false}
+              name="selectedItems"
+              onChange={[Function]}
+              type="radio"
+              value="thermosphere"
+            >
+              <label
+                className="emotion-3"
+                htmlFor="thermosphere"
+              >
+                <input
+                  aria-checked={false}
+                  checked={false}
+                  className="emotion-0"
+                  data-cy="toggleWrapper-input"
+                  disabled={false}
+                  id="thermosphere"
+                  name="selectedItems"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="thermosphere"
+                />
+                <ButtonCard
+                  disabled={false}
+                  hasFocus={false}
+                  isActive={false}
+                  isInput={true}
+                  paddingSize="m"
+                >
+                  <div
+                    className="emotion-2"
+                    data-cy="buttonCard"
+                  >
+                    <div
+                      className="emotion-1"
+                    >
+                      Thermosphere
+                    </div>
+                  </div>
+                </ButtonCard>
+              </label>
+            </ToggleWrapper>
+          </ToggleBox>
+        </div>
+      </FlexItem>
+      <FlexItem
+        flex="grow"
+        key="buttonWrapper-mesosphere"
+      >
+        <div
+          className="emotion-4"
+          data-cy="flexItem"
+        >
+          <ToggleBox
+            id="mesosphere"
+            isActive={true}
+            key=".2"
+            name="selectedItems"
+            onChange={[Function]}
+            type="radio"
+            value="mesosphere"
+          >
+            <ToggleWrapper
+              disabled={false}
+              id="mesosphere"
+              isActive={true}
+              name="selectedItems"
+              onChange={[Function]}
+              type="radio"
+              value="mesosphere"
+            >
+              <label
+                className="emotion-3"
+                htmlFor="mesosphere"
+              >
+                <input
+                  aria-checked={true}
+                  checked={true}
+                  className="emotion-0"
+                  data-cy="toggleWrapper-input"
+                  disabled={false}
+                  id="mesosphere"
+                  name="selectedItems"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="mesosphere"
+                />
+                <ButtonCard
+                  disabled={false}
+                  hasFocus={false}
+                  isActive={true}
+                  isInput={true}
+                  paddingSize="m"
+                >
+                  <div
+                    className="emotion-12"
+                    data-cy="buttonCard"
+                  >
+                    <div
+                      className="emotion-1"
+                    >
+                      Mesosphere
+                    </div>
+                  </div>
+                </ButtonCard>
+              </label>
+            </ToggleWrapper>
+          </ToggleBox>
+        </div>
+      </FlexItem>
+    </div>
+  </Flex>
+</ToggleBoxGroup>
+`;
+
+exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-3 {
+  display: block;
+}
+
+.emotion-2 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emotion-2 > div {
+  height: 100%;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
+  outline: 0;
+}
+
+.emotion-2:active {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-1 {
+  padding: 16px;
+}
+
+.emotion-15 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-15 > div {
+  width: 100%;
+}
+
+.emotion-15 > *:not(:first-child) {
+  padding-left: 0;
+  padding-top: 48px;
+}
+
+<ToggleBoxGroup
+  direction="column"
+  gutterSize="xxl"
+  id="customLayoutProps"
+>
+  <Flex
+    align="flex-start"
+    direction="column"
+    gutterSize="xxl"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <div
+      className="emotion-15"
+      data-cy="flex"
+    >
+      <FlexItem
+        flex="grow"
+        key="buttonWrapper-exosphere"
+      >
+        <div
+          className="emotion-4"
+          data-cy="flexItem"
+        >
+          <ToggleBox
+            id="exosphere"
+            isActive={false}
+            key=".0"
+            name="customLayoutProps"
+            onChange={[Function]}
+            type="radio"
+            value="exosphere"
+          >
+            <ToggleWrapper
+              disabled={false}
+              id="exosphere"
+              isActive={false}
+              name="customLayoutProps"
+              onChange={[Function]}
+              type="radio"
+              value="exosphere"
+            >
+              <label
+                className="emotion-3"
+                htmlFor="exosphere"
+              >
+                <input
+                  aria-checked={false}
+                  checked={false}
+                  className="emotion-0"
+                  data-cy="toggleWrapper-input"
+                  disabled={false}
+                  id="exosphere"
+                  name="customLayoutProps"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="exosphere"
+                />
+                <ButtonCard
+                  disabled={false}
+                  hasFocus={false}
+                  isActive={false}
+                  isInput={true}
+                  paddingSize="m"
+                >
+                  <div
+                    className="emotion-2"
+                    data-cy="buttonCard"
+                  >
+                    <div
+                      className="emotion-1"
+                    >
+                      Exosphere
+                    </div>
+                  </div>
+                </ButtonCard>
+              </label>
+            </ToggleWrapper>
+          </ToggleBox>
+        </div>
+      </FlexItem>
+      <FlexItem
+        flex="grow"
+        key="buttonWrapper-thermosphere"
+      >
+        <div
+          className="emotion-4"
+          data-cy="flexItem"
+        >
+          <ToggleBox
+            id="thermosphere"
+            isActive={false}
+            key=".1"
+            name="customLayoutProps"
+            onChange={[Function]}
+            type="radio"
+            value="thermosphere"
+          >
+            <ToggleWrapper
+              disabled={false}
+              id="thermosphere"
+              isActive={false}
+              name="customLayoutProps"
+              onChange={[Function]}
+              type="radio"
+              value="thermosphere"
+            >
+              <label
+                className="emotion-3"
+                htmlFor="thermosphere"
+              >
+                <input
+                  aria-checked={false}
+                  checked={false}
+                  className="emotion-0"
+                  data-cy="toggleWrapper-input"
+                  disabled={false}
+                  id="thermosphere"
+                  name="customLayoutProps"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="thermosphere"
+                />
+                <ButtonCard
+                  disabled={false}
+                  hasFocus={false}
+                  isActive={false}
+                  isInput={true}
+                  paddingSize="m"
+                >
+                  <div
+                    className="emotion-2"
+                    data-cy="buttonCard"
+                  >
+                    <div
+                      className="emotion-1"
+                    >
+                      Thermosphere
+                    </div>
+                  </div>
+                </ButtonCard>
+              </label>
+            </ToggleWrapper>
+          </ToggleBox>
+        </div>
+      </FlexItem>
+      <FlexItem
+        flex="grow"
+        key="buttonWrapper-mesosphere"
+      >
+        <div
+          className="emotion-4"
+          data-cy="flexItem"
+        >
+          <ToggleBox
+            id="mesosphere"
+            isActive={false}
+            key=".2"
+            name="customLayoutProps"
+            onChange={[Function]}
+            type="radio"
+            value="mesosphere"
+          >
+            <ToggleWrapper
+              disabled={false}
+              id="mesosphere"
+              isActive={false}
+              name="customLayoutProps"
+              onChange={[Function]}
+              type="radio"
+              value="mesosphere"
+            >
+              <label
+                className="emotion-3"
+                htmlFor="mesosphere"
+              >
+                <input
+                  aria-checked={false}
+                  checked={false}
+                  className="emotion-0"
+                  data-cy="toggleWrapper-input"
+                  disabled={false}
+                  id="mesosphere"
+                  name="customLayoutProps"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  type="radio"
+                  value="mesosphere"
+                />
+                <ButtonCard
+                  disabled={false}
+                  hasFocus={false}
+                  isActive={false}
+                  isInput={true}
+                  paddingSize="m"
+                >
+                  <div
+                    className="emotion-2"
+                    data-cy="buttonCard"
+                  >
+                    <div
+                      className="emotion-1"
+                    >
+                      Mesosphere
+                    </div>
+                  </div>
+                </ButtonCard>
+              </label>
+            </ToggleWrapper>
+          </ToggleBox>
+        </div>
+      </FlexItem>
+    </div>
+  </Flex>
+</ToggleBoxGroup>
+`;
