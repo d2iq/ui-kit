@@ -28,7 +28,7 @@ export {
   SuccessDropdownButton,
   DangerDropdownButton
 } from "./button";
-export { Card } from "./card";
+export { ButtonCard, Card } from "./card";
 export { LineChart } from "./chart";
 export { CheckboxInput } from "./checkboxInput";
 export {
@@ -86,6 +86,7 @@ export { Toaster, Toast } from "./toaster";
 export { ToggleContent } from "./toggleContent";
 export { ToggleInput } from "./toggleInput";
 export { ToggleInputList } from "./toggleInputList";
+export { ToggleBox, ToggleBoxGroup } from "./toggleBox";
 export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
