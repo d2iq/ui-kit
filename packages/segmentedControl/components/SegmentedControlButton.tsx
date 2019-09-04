@@ -4,10 +4,12 @@ import shortid from "shortid";
 import {
   segmentedControlButton,
   segmentedControlButtonActive,
-  staticKeyboardFocusClassname
+  staticKeyboardFocusClassname,
+  segmentedControlButtonInner
 } from "../style";
 import { visuallyHidden, display } from "../../shared/styles/styleUtils";
 import FocusStyleManager from "../../shared/components/FocusStyleManager";
+import { Tooltip } from "../../tooltip";
 
 export interface SegmentedControlButtonProps {
   /**
@@ -30,12 +32,35 @@ export interface SegmentedControlButtonProps {
    * The value of the input
    */
   value: string;
+  /**
+   * Content that appears in a Tooltip when a users hovers the button
+   */
+  tooltipContent?: React.ReactNode;
 }
 
 const SegmentedControlButton: React.SFC<
   SegmentedControlButtonProps
 > = props => {
-  const { id = shortid.generate(), isActive, onChange, name, value } = props;
+  const {
+    id = shortid.generate(),
+    isActive,
+    onChange,
+    name,
+    value,
+    tooltipContent,
+    children
+  } = props;
+  const segmentChildren = tooltipContent ? (
+    <Tooltip
+      id={`${id}-tooltip`}
+      trigger={<div className={segmentedControlButtonInner}>{children}</div>}
+    >
+      {tooltipContent}
+    </Tooltip>
+  ) : (
+    <div className={segmentedControlButtonInner}>{children}</div>
+  );
+
   return (
     <React.Fragment>
       {/*
@@ -60,7 +85,7 @@ const SegmentedControlButton: React.SFC<
             checked={isActive}
             onChange={onChange}
           />
-          {props.children}
+          {segmentChildren}
         </label>
       </FocusStyleManager>
     </React.Fragment>
