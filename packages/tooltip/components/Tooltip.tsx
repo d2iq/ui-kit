@@ -24,6 +24,16 @@ export interface TooltipState {
 }
 
 class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
+  static getDerivedStateFromProps(props: TooltipProps, state: TooltipState) {
+    if (props.suppress && props.open !== state.open) {
+      return {
+        open: props.open
+      };
+    }
+
+    return null;
+  }
+
   constructor(props) {
     super(props);
 
