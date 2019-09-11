@@ -151,17 +151,9 @@ exports[`Typeahead renders 1`] = `
   opacity: 0.4;
 }
 
-.emotion-2 svg {
-  fill: var(--themeTextColorPrimary,#1B2029);
-}
-
 .emotion-2:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
-}
-
-.emotion-2:focus svg {
-  fill: var(--themeBrandPrimary,#7D58FF);
 }
 
 .emotion-19 {
@@ -412,6 +404,7 @@ exports[`Typeahead renders 1`] = `
                   aria-controls={null}
                   aria-labelledby="downshift-0-label"
                   autoComplete="off"
+                  downshiftReset={[Function]}
                   id="standard.input"
                   inputLabel="Standard"
                   onBlur={[Function]}
@@ -455,6 +448,7 @@ exports[`Typeahead renders 1`] = `
                             autoComplete="off"
                             className="emotion-2"
                             data-cy="textInput-input"
+                            downshiftReset={[Function]}
                             id="standard.input"
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -1222,17 +1216,9 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   opacity: 0.4;
 }
 
-.emotion-2 svg {
-  fill: var(--themeTextColorPrimary,#1B2029);
-}
-
 .emotion-2:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
-}
-
-.emotion-2:focus svg {
-  fill: var(--themeBrandPrimary,#7D58FF);
 }
 
 .emotion-19 {
@@ -1483,6 +1469,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                   aria-controls={null}
                   aria-labelledby="downshift-1-label"
                   autoComplete="off"
+                  downshiftReset={[Function]}
                   id="standard.input"
                   inputLabel="Standard"
                   onBlur={[Function]}
@@ -1526,6 +1513,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                             autoComplete="off"
                             className="emotion-2"
                             data-cy="textInput-input"
+                            downshiftReset={[Function]}
                             id="standard.input"
                             onBlur={[Function]}
                             onChange={[Function]}

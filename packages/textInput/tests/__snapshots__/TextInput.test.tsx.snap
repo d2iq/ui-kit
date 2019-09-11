@@ -364,17 +364,9 @@ exports[`TextInput should render all appearances focus 1`] = `
   opacity: 0.4;
 }
 
-.emotion-2 svg {
-  fill: var(--themeTextColorPrimary,#1B2029);
-}
-
 .emotion-2:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
-}
-
-.emotion-2:focus svg {
-  fill: var(--themeBrandPrimary,#7D58FF);
 }
 
 <TextInput
@@ -554,10 +546,6 @@ exports[`TextInput should render all appearances focus 2`] = `
   opacity: 0.4;
 }
 
-.emotion-2 svg {
-  fill: var(--themeError,#EB293A);
-}
-
 .emotion-2:focus {
   background-color: rgba(235,41,58,0.05);
 }
@@ -735,10 +723,6 @@ exports[`TextInput should render all appearances focus 3`] = `
 .emotion-2 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
-}
-
-.emotion-2 svg {
-  fill: var(--themeSuccess,#14C684);
 }
 
 .emotion-2:focus {

@@ -16,6 +16,7 @@ import getCSSVarValue from "../utilities/components/getCSSVarValue";
 
 const badgeAppearanceStyle = (color, isOutlined?: boolean) => {
   const bgColor = isOutlined ? getCSSVarValue(themeBgPrimary) : color;
+
   return css`
     background-color: ${bgColor};
     border-color: ${color};
