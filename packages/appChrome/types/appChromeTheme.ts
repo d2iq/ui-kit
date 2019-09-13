@@ -1,13 +1,10 @@
 import { Theme } from "../../themes/types/appTheme";
 import { BreakpointConfig } from "../../shared/styles/breakpoints";
+import { SpaceSizes } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 
 type BgColor = React.CSSProperties["backgroundColor"];
-type PaddingHoriz =
-  | React.CSSProperties["paddingLeft"]
-  | React.CSSProperties["paddingRight"];
-type PaddingVert =
-  | React.CSSProperties["paddingBottom"]
-  | React.CSSProperties["paddingTop"];
+type PaddingHoriz = SpaceSizes;
+type PaddingVert = SpaceSizes;
 type ElWidth = React.CSSProperties["width"];
 
 export interface AppChromeTheme extends Theme {

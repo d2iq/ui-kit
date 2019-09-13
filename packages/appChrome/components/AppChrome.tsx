@@ -10,6 +10,10 @@ import {
 import { ThemeProvider } from "emotion-theming";
 import getCSSVarValue from "../../utilities/components/getCSSVarValue";
 import { themeBgPrimaryInverted } from "../../design-tokens/build/js/designTokens";
+import {
+  defaultSidebarItemHorizPaddingSize,
+  defaultSidebarItemVertPaddingSize
+} from "./SidebarItem";
 
 export interface AppChromeProps {
   sidebar: React.ReactNode;
@@ -24,7 +28,9 @@ class AppChrome extends React.PureComponent<AppChromeProps, {}> {
     return (
       <ThemeProvider
         theme={{
-          sidebarBackgroundColor: getCSSVarValue(themeBgPrimaryInverted)
+          sidebarBackgroundColor: getCSSVarValue(themeBgPrimaryInverted),
+          sidebarItemPaddingHor: defaultSidebarItemHorizPaddingSize,
+          sidebarItemPaddingVert: defaultSidebarItemVertPaddingSize
         }}
       >
         <div

@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar SidebarItem renders 1`] = `
-<Clickable
-  action={[MockFunction]}
-  dataCy="sidebarItem"
-  disableFocusOutline={true}
-  role="link"
-  tabIndex={0}
+<ThemeProvider
+  theme={[Function]}
 >
-  <Styled(li)>
-    Item label
-  </Styled(li)>
-</Clickable>
+  <Clickable
+    action={[MockFunction]}
+    dataCy="sidebarItem"
+    disableFocusOutline={true}
+    role="link"
+    tabIndex={0}
+  >
+    <Styled(li)>
+      Item label
+    </Styled(li)>
+  </Clickable>
+</ThemeProvider>
 `;
 
 exports[`Sidebar SidebarItemLabel renders 1`] = `
@@ -164,7 +168,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         </SidebarItemLabel>
       </div>
     }
-    labelClassName="css-74vjzk"
+    labelClassName="css-1nvp5qn"
   >
     <ul
       className="emotion-0"

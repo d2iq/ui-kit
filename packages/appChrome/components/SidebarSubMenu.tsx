@@ -61,7 +61,7 @@ export class SidebarSubMenuComponent extends React.PureComponent<
       <li data-cy={dataCy}>
         <Expandable
           labelClassName={cx(
-            appChromeInsetContent,
+            appChromeInsetContent(theme && theme.sidebarItemPaddingHor),
             sidebarNavItem(false, theme)
           )}
           isOpen={isOpen}

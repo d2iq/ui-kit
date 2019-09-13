@@ -1,9 +1,6 @@
 import { css } from "emotion";
-import { atMediaUp } from "../shared/styles/breakpoints";
 import {
   spaceM,
-  spaceL,
-  spaceXl,
   themeBgSelected,
   themeBgHover,
   themeBgHoverInverted,
@@ -14,23 +11,26 @@ import { padding } from "../shared/styles/styleUtils";
 import { pickHoverBg, pickReadableTextColor } from "../shared/styles/color";
 import getCSSVarValue from "../utilities/components/getCSSVarValue";
 import { AppChromeTheme } from "./types/appChromeTheme";
+import {
+  spaceSizes,
+  SpaceSizes
+} from "../shared/styles/styleUtils/modifiers/modifierUtils";
+import { defaultSidebarItemHorizPaddingSize } from "./components/SidebarItem";
 
 const iconSize = "24px";
-const layoutBreakpoint = "large";
 
 export const appChrome = css`
   height: 100%;
   overflow: hidden;
 `;
 
-export const appChromeInsetContent = css`
-  padding-left: ${spaceL};
-  padding-right: ${spaceL};
-
-  ${atMediaUp[layoutBreakpoint](css`
-    padding-left: ${spaceXl};
-    padding-right: ${spaceXl};
-  `)};
+export const appChromeInsetContent = (horizPadding?: SpaceSizes) => css`
+  padding-left: ${horizPadding
+    ? spaceSizes[horizPadding]
+    : spaceSizes[defaultSidebarItemHorizPaddingSize]};
+  padding-right: ${horizPadding
+    ? spaceSizes[horizPadding]
+    : spaceSizes[defaultSidebarItemHorizPaddingSize]};
 `;
 
 export const appWrapper = css`
