@@ -1366,6 +1366,16 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-10 {
   box-sizing: border-box;
   overflow: auto;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
   padding: 32px;
 }
 
@@ -2291,6 +2301,16 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-12 {
   box-sizing: border-box;
   overflow: auto;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
   padding: 32px;
 }
 

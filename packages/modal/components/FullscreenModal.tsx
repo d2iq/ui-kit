@@ -4,7 +4,7 @@ import ModalBase from "../components/ModalBase";
 import { ModalBaseProps, ModalSizes } from "./ModalBase";
 import Delegate from "react-delegate-component";
 import { ButtonProps } from "../../button/components/ButtonBase";
-import { flex, padding } from "../../shared/styles/styleUtils";
+import { flex, padding, flexItem } from "../../shared/styles/styleUtils";
 import { modalContent, modalHeader, fullscreenModalHeader } from "../style";
 import FullscreenModalHeader from "./FullscreenModalHeader";
 
@@ -61,7 +61,7 @@ class FullscreenModal extends React.PureComponent<FullscreenModalProps, {}> {
             />
           </div>
           <div
-            className={cx(modalContent, {
+            className={cx(modalContent, flexItem("grow"), {
               [padding("all", "xl")]: !isContentFlush
             })}
             data-cy="fullscreenModal-content"
