@@ -2,9 +2,11 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 
-import { PageHeader } from "../index";
+import { PageHeader, PageHeaderTabs } from "../index";
 import { PrimaryButton, SecondaryButton } from "../../button";
+import { SpacingBox } from "../../styleUtils/modifiers";
 import PageHeaderOverflowMenu from "./helpers/PageHeaderOverflowMenu";
+import { Tabs, TabItem, TabTitle } from "../../tabs";
 
 const readme = require("../README.md");
 const action = () => alert("Action triggered");
@@ -54,4 +56,45 @@ storiesOf("PageHeader", module)
         <div key="Earth">Earth</div>
       ]}
     />
-  ));
+  ))
+  .add("with children", () => (
+    <PageHeader
+      breadcrumbElements={[
+        <div key="Universe">Universe</div>,
+        <div key="MilkyWay">Milky Way</div>,
+        <div key="Earth">Earth</div>
+      ]}
+    >
+      <SpacingBox side="top" spacingSize="l">
+        This content is PageHeader children
+      </SpacingBox>
+    </PageHeader>
+  ))
+  .add("with PageHeaderTabs", () => {
+    const tabOnSelect = selectedTab => {
+      alert(`${selectedTab} clicked`);
+    };
+
+    return (
+      <PageHeader
+        breadcrumbElements={[
+          <div key="Universe">Universe</div>,
+          <div key="MilkyWay">Milky Way</div>,
+          <div key="Earth">Earth</div>
+        ]}
+      >
+        <PageHeaderTabs>
+          <Tabs selectedIndex={0} onSelect={tabOnSelect}>
+            <TabItem>
+              <TabTitle>Tab 1 Name</TabTitle>
+              <div>First tab Content</div>
+            </TabItem>
+            <TabItem>
+              <TabTitle>Tab 2 Name</TabTitle>
+              Second Tab Content
+            </TabItem>
+          </Tabs>
+        </PageHeaderTabs>
+      </PageHeader>
+    );
+  });
