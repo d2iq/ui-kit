@@ -65,7 +65,7 @@ export {
   LargeDialogModalWithFooter,
   FullscreenModal
 } from "./modal";
-export { PageHeader } from "./pageheader";
+export { PageHeader, PageHeaderTabs } from "./pageheader";
 export { ProgressBar } from "./progressbar";
 export { SegmentedControl, SegmentedControlButton } from "./segmentedControl";
 export { SelectInput } from "./selectInput";
