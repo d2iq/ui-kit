@@ -1,14 +1,16 @@
 import * as React from "react";
 import { badge } from "../style";
 
+export type BadgeAppearance =
+  | "default"
+  | "success"
+  | "primary"
+  | "warning"
+  | "danger"
+  | "outline";
+
 export interface BadgeProps {
-  appearance?:
-    | "default"
-    | "success"
-    | "primary"
-    | "warning"
-    | "danger"
-    | "outline";
+  appearance?: BadgeAppearance;
   children: JSX.Element | string;
 }
 

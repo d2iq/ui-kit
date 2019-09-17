@@ -35,7 +35,7 @@ export interface TypeaheadProps {
   /**
    * callback for when an item is selected
    */
-  onSelect?: (selectedItems: string[]) => void;
+  onSelect?: (selectedItems: string[], lastSelectedItem?: string) => void;
   /**
    * which DOM node the dropdown menu will attach to
    */
@@ -44,6 +44,14 @@ export interface TypeaheadProps {
    * an array of item values that are selected
    */
   selectedItems?: string[];
+  /**
+   * whether the menu stays open on select
+   */
+  keepOpenOnSelect?: boolean;
+  /**
+   * whether the selected item's value is set as the input's value
+   */
+  resetInputOnSelect?: boolean;
 }
 
 interface TypeaheadState {
@@ -98,7 +106,8 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
             highlightedIndex,
             openMenu,
             selectedItem,
-            inputValue
+            inputValue,
+            ...other
           }) => {
             return (
               <div>
@@ -159,6 +168,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                         );
                       },
                       value: value === undefined ? inputValue : value,
+                      downshiftReset: other.reset,
                       ...textFieldProps
                     })
                   )}
@@ -216,7 +226,8 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
     if (this.props.onSelect) {
       this.props.onSelect(
-        this.getSelectedItems(selectedItem.value, !isItemSelected)
+        this.getSelectedItems(selectedItem.value, !isItemSelected),
+        selectedItem.value
       );
     }
   }
@@ -230,8 +241,12 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
         return {
           ...changes,
           selectedItem: [changes.selectedItem.value],
-          isOpen: this.props.multiSelect,
-          inputValue: this.props.multiSelect ? "" : changes.inputValue
+          isOpen:
+            this.props.multiSelect && !(this.props.keepOpenOnSelect === false),
+          inputValue:
+            this.props.multiSelect || this.props.resetInputOnSelect
+              ? ""
+              : changes.inputValue
         };
 
       case Downshift.stateChangeTypes.changeInput:

@@ -29,3 +29,6 @@ If the `tooltipContent` prop is set, an icon tooltip with the given text will be
 
 ## TextInputWithIcon
 `TextInputWithIcon` extends the `TextInput` component but adds two additional props, `iconStart` & `iconEnd`. These props can be provided a `ReactNode` to be rendered either at the start or end of the `TextInput` or both.
+
+## TextInputWithBadges
+`TextInputWithBadges` extends the `TextInputWithIcon` component. More info coming soon...

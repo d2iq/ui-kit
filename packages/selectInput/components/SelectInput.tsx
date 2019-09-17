@@ -4,7 +4,8 @@ import { select, selectIcon, selectContainer } from "../style";
 import {
   inputContainer,
   getInputAppearanceStyle,
-  getLabelStyle
+  getLabelStyle,
+  getIconAppearanceStyle
 } from "../../shared/styles/formStyles";
 import {
   inputReset,
@@ -158,7 +159,13 @@ class SelectInput extends React.PureComponent<
                   /* tslint:enable */
                 ))}
               </select>
-              <span className={cx(selectIcon, padding("horiz", "m"))}>
+              <span
+                className={cx(
+                  selectIcon,
+                  padding("horiz", "m"),
+                  getIconAppearanceStyle(this.getInputAppearance())
+                )}
+              >
                 <Icon
                   shape={SystemIcons.TriangleDown}
                   size={iconSizeXs}

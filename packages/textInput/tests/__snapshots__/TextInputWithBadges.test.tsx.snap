@@ -1,0 +1,1362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
+.emotion-5 {
+  cursor: pointer;
+}
+
+.emotion-9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-right: 8px;
+}
+
+.emotion-9,
+.emotion-9 * {
+  max-width: 100%;
+}
+
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
+}
+
+.emotion-27 {
+  height: auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: auto;
+  min-height: 36px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-color: var(--themeBorder,#DADDE2);
+}
+
+.emotion-27 > div {
+  width: auto;
+}
+
+.emotion-27::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-27 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27 input::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-26 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 50px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-right: 8px;
+}
+
+.emotion-26:focus {
+  outline: 0;
+}
+
+.emotion-26,
+.emotion-26 * {
+  max-width: 100%;
+}
+
+.emotion-2 {
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  white-space: nowrap;
+}
+
+.emotion-8 {
+  background-color: #7D58FF;
+  border-color: #7D58FF;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 8px 0;
+  font-size: 80%;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-7 > div {
+  width: auto;
+}
+
+.emotion-7 > *:not(:first-child) {
+  padding-left: 4px;
+  padding-top: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
+<TextInputWithBadges
+  appearance="standard"
+  badges={
+    Array [
+      Object {
+        "label": "Badge one",
+        "value": "badge-one",
+      },
+      Object {
+        "label": "Badge two",
+        "value": "badge-two",
+      },
+      Object {
+        "label": "Badge three",
+        "value": "badge-three",
+      },
+    ]
+  }
+  id="appearance"
+  inputLabel="Appearance"
+  showInputLabel={true}
+  type="text"
+>
+  <div
+    data-cy="textInput"
+  >
+    <div
+      className="emotion-1"
+      data-cy="textInput-label"
+    >
+      <label
+        className="emotion-0"
+        htmlFor="appearance"
+      >
+        Appearance
+      </label>
+    </div>
+    <FormFieldWrapper
+      id="appearance"
+    >
+      <div
+        className="emotion-27"
+      >
+        <span
+          className="emotion-9"
+          key="badge-one-badgeWrapper"
+        >
+          <Badge
+            appearance="primary"
+          >
+            <span
+              className="emotion-8"
+              data-cy="badge"
+            >
+              <Flex
+                align="center"
+                direction="row"
+                gutterSize="xxs"
+                justify="flex-start"
+                wrap="nowrap"
+              >
+                <div
+                  className="emotion-7"
+                  data-cy="flex"
+                >
+                  <FlexItem
+                    flex="grow"
+                  >
+                    <div
+                      className="emotion-3"
+                      data-cy="flexItem"
+                    >
+                      <div
+                        className="emotion-2"
+                      >
+                        Badge one
+                      </div>
+                    </div>
+                  </FlexItem>
+                  <FlexItem
+                    flex="shrink"
+                  >
+                    <div
+                      className="emotion-6"
+                      data-cy="flexItem"
+                    >
+                      <Clickable
+                        action={[Function]}
+                        disableFocusOutline={false}
+                        role="button"
+                        tabIndex={-1}
+                      >
+                        <span
+                          className="emotion-5"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={-1}
+                        >
+                          <Icon
+                            shape="system-close"
+                            size="12px"
+                          >
+                            <svg
+                              aria-label="system-close icon"
+                              className="emotion-4"
+                              data-cy="icon"
+                              height={12}
+                              preserveAspectRatio="xMinYMin meet"
+                              role="img"
+                              viewBox="0 0 12 12"
+                              width={12}
+                            >
+                              <use
+                                xlinkHref="#system-close"
+                              />
+                            </svg>
+                          </Icon>
+                        </span>
+                      </Clickable>
+                    </div>
+                  </FlexItem>
+                </div>
+              </Flex>
+            </span>
+          </Badge>
+        </span>
+        <span
+          className="emotion-9"
+          key="badge-two-badgeWrapper"
+        >
+          <Badge
+            appearance="primary"
+          >
+            <span
+              className="emotion-8"
+              data-cy="badge"
+            >
+              <Flex
+                align="center"
+                direction="row"
+                gutterSize="xxs"
+                justify="flex-start"
+                wrap="nowrap"
+              >
+                <div
+                  className="emotion-7"
+                  data-cy="flex"
+                >
+                  <FlexItem
+                    flex="grow"
+                  >
+                    <div
+                      className="emotion-3"
+                      data-cy="flexItem"
+                    >
+                      <div
+                        className="emotion-2"
+                      >
+                        Badge two
+                      </div>
+                    </div>
+                  </FlexItem>
+                  <FlexItem
+                    flex="shrink"
+                  >
+                    <div
+                      className="emotion-6"
+                      data-cy="flexItem"
+                    >
+                      <Clickable
+                        action={[Function]}
+                        disableFocusOutline={false}
+                        role="button"
+                        tabIndex={-1}
+                      >
+                        <span
+                          className="emotion-5"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={-1}
+                        >
+                          <Icon
+                            shape="system-close"
+                            size="12px"
+                          >
+                            <svg
+                              aria-label="system-close icon"
+                              className="emotion-4"
+                              data-cy="icon"
+                              height={12}
+                              preserveAspectRatio="xMinYMin meet"
+                              role="img"
+                              viewBox="0 0 12 12"
+                              width={12}
+                            >
+                              <use
+                                xlinkHref="#system-close"
+                              />
+                            </svg>
+                          </Icon>
+                        </span>
+                      </Clickable>
+                    </div>
+                  </FlexItem>
+                </div>
+              </Flex>
+            </span>
+          </Badge>
+        </span>
+        <span
+          className="emotion-9"
+          key="badge-three-badgeWrapper"
+        >
+          <Badge
+            appearance="primary"
+          >
+            <span
+              className="emotion-8"
+              data-cy="badge"
+            >
+              <Flex
+                align="center"
+                direction="row"
+                gutterSize="xxs"
+                justify="flex-start"
+                wrap="nowrap"
+              >
+                <div
+                  className="emotion-7"
+                  data-cy="flex"
+                >
+                  <FlexItem
+                    flex="grow"
+                  >
+                    <div
+                      className="emotion-3"
+                      data-cy="flexItem"
+                    >
+                      <div
+                        className="emotion-2"
+                      >
+                        Badge three
+                      </div>
+                    </div>
+                  </FlexItem>
+                  <FlexItem
+                    flex="shrink"
+                  >
+                    <div
+                      className="emotion-6"
+                      data-cy="flexItem"
+                    >
+                      <Clickable
+                        action={[Function]}
+                        disableFocusOutline={false}
+                        role="button"
+                        tabIndex={-1}
+                      >
+                        <span
+                          className="emotion-5"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={-1}
+                        >
+                          <Icon
+                            shape="system-close"
+                            size="12px"
+                          >
+                            <svg
+                              aria-label="system-close icon"
+                              className="emotion-4"
+                              data-cy="icon"
+                              height={12}
+                              preserveAspectRatio="xMinYMin meet"
+                              role="img"
+                              viewBox="0 0 12 12"
+                              width={12}
+                            >
+                              <use
+                                xlinkHref="#system-close"
+                              />
+                            </svg>
+                          </Icon>
+                        </span>
+                      </Clickable>
+                    </div>
+                  </FlexItem>
+                </div>
+              </Flex>
+            </span>
+          </Badge>
+        </span>
+        <input
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-26"
+          data-cy="textInput-input"
+          id="appearance"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          type="text"
+        />
+      </div>
+    </FormFieldWrapper>
+  </div>
+</TextInputWithBadges>
+`;
+
+exports[`TextInputWithBadges renders empty 1`] = `
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
+}
+
+.emotion-3 {
+  height: auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: auto;
+  min-height: 36px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-color: var(--themeBorder,#DADDE2);
+}
+
+.emotion-3 > div {
+  width: auto;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-3::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-3::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-3 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-3 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-3 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-3 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-3 input::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-3:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 50px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-right: 8px;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-2,
+.emotion-2 * {
+  max-width: 100%;
+}
+
+<TextInputWithBadges
+  appearance="standard"
+  id="empty"
+  inputLabel="empty"
+  showInputLabel={true}
+  type="text"
+>
+  <div
+    data-cy="textInput"
+  >
+    <div
+      className="emotion-1"
+      data-cy="textInput-label"
+    >
+      <label
+        className="emotion-0"
+        htmlFor="empty"
+      >
+        empty
+      </label>
+    </div>
+    <FormFieldWrapper
+      id="empty"
+    >
+      <div
+        className="emotion-3"
+      >
+        <input
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-2"
+          data-cy="textInput-input"
+          id="empty"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          type="text"
+        />
+      </div>
+    </FormFieldWrapper>
+  </div>
+</TextInputWithBadges>
+`;
+
+exports[`TextInputWithBadges renders with badges 1`] = `
+.emotion-5 {
+  cursor: pointer;
+}
+
+.emotion-9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-right: 8px;
+}
+
+.emotion-9,
+.emotion-9 * {
+  max-width: 100%;
+}
+
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
+}
+
+.emotion-27 {
+  height: auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: auto;
+  min-height: 36px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-color: var(--themeBorder,#DADDE2);
+}
+
+.emotion-27 > div {
+  width: auto;
+}
+
+.emotion-27::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-27 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27 input::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-27:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-26 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 50px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-right: 8px;
+}
+
+.emotion-26:focus {
+  outline: 0;
+}
+
+.emotion-26,
+.emotion-26 * {
+  max-width: 100%;
+}
+
+.emotion-2 {
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  white-space: nowrap;
+}
+
+.emotion-8 {
+  background-color: #7D58FF;
+  border-color: #7D58FF;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 8px 0;
+  font-size: 80%;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-7 > div {
+  width: auto;
+}
+
+.emotion-7 > *:not(:first-child) {
+  padding-left: 4px;
+  padding-top: 0;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
+<TextInputWithBadges
+  appearance="standard"
+  badges={
+    Array [
+      Object {
+        "label": "Badge one",
+        "value": "badge-one",
+      },
+      Object {
+        "label": "Badge two",
+        "value": "badge-two",
+      },
+      Object {
+        "label": "Badge three",
+        "value": "badge-three",
+      },
+    ]
+  }
+  id="withBadges"
+  inputLabel="With badges"
+  showInputLabel={true}
+  type="text"
+>
+  <div
+    data-cy="textInput"
+  >
+    <div
+      className="emotion-1"
+      data-cy="textInput-label"
+    >
+      <label
+        className="emotion-0"
+        htmlFor="withBadges"
+      >
+        With badges
+      </label>
+    </div>
+    <FormFieldWrapper
+      id="withBadges"
+    >
+      <div
+        className="emotion-27"
+      >
+        <span
+          className="emotion-9"
+          key="badge-one-badgeWrapper"
+        >
+          <Badge
+            appearance="primary"
+          >
+            <span
+              className="emotion-8"
+              data-cy="badge"
+            >
+              <Flex
+                align="center"
+                direction="row"
+                gutterSize="xxs"
+                justify="flex-start"
+                wrap="nowrap"
+              >
+                <div
+                  className="emotion-7"
+                  data-cy="flex"
+                >
+                  <FlexItem
+                    flex="grow"
+                  >
+                    <div
+                      className="emotion-3"
+                      data-cy="flexItem"
+                    >
+                      <div
+                        className="emotion-2"
+                      >
+                        Badge one
+                      </div>
+                    </div>
+                  </FlexItem>
+                  <FlexItem
+                    flex="shrink"
+                  >
+                    <div
+                      className="emotion-6"
+                      data-cy="flexItem"
+                    >
+                      <Clickable
+                        action={[Function]}
+                        disableFocusOutline={false}
+                        role="button"
+                        tabIndex={-1}
+                      >
+                        <span
+                          className="emotion-5"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={-1}
+                        >
+                          <Icon
+                            shape="system-close"
+                            size="12px"
+                          >
+                            <svg
+                              aria-label="system-close icon"
+                              className="emotion-4"
+                              data-cy="icon"
+                              height={12}
+                              preserveAspectRatio="xMinYMin meet"
+                              role="img"
+                              viewBox="0 0 12 12"
+                              width={12}
+                            >
+                              <use
+                                xlinkHref="#system-close"
+                              />
+                            </svg>
+                          </Icon>
+                        </span>
+                      </Clickable>
+                    </div>
+                  </FlexItem>
+                </div>
+              </Flex>
+            </span>
+          </Badge>
+        </span>
+        <span
+          className="emotion-9"
+          key="badge-two-badgeWrapper"
+        >
+          <Badge
+            appearance="primary"
+          >
+            <span
+              className="emotion-8"
+              data-cy="badge"
+            >
+              <Flex
+                align="center"
+                direction="row"
+                gutterSize="xxs"
+                justify="flex-start"
+                wrap="nowrap"
+              >
+                <div
+                  className="emotion-7"
+                  data-cy="flex"
+                >
+                  <FlexItem
+                    flex="grow"
+                  >
+                    <div
+                      className="emotion-3"
+                      data-cy="flexItem"
+                    >
+                      <div
+                        className="emotion-2"
+                      >
+                        Badge two
+                      </div>
+                    </div>
+                  </FlexItem>
+                  <FlexItem
+                    flex="shrink"
+                  >
+                    <div
+                      className="emotion-6"
+                      data-cy="flexItem"
+                    >
+                      <Clickable
+                        action={[Function]}
+                        disableFocusOutline={false}
+                        role="button"
+                        tabIndex={-1}
+                      >
+                        <span
+                          className="emotion-5"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={-1}
+                        >
+                          <Icon
+                            shape="system-close"
+                            size="12px"
+                          >
+                            <svg
+                              aria-label="system-close icon"
+                              className="emotion-4"
+                              data-cy="icon"
+                              height={12}
+                              preserveAspectRatio="xMinYMin meet"
+                              role="img"
+                              viewBox="0 0 12 12"
+                              width={12}
+                            >
+                              <use
+                                xlinkHref="#system-close"
+                              />
+                            </svg>
+                          </Icon>
+                        </span>
+                      </Clickable>
+                    </div>
+                  </FlexItem>
+                </div>
+              </Flex>
+            </span>
+          </Badge>
+        </span>
+        <span
+          className="emotion-9"
+          key="badge-three-badgeWrapper"
+        >
+          <Badge
+            appearance="primary"
+          >
+            <span
+              className="emotion-8"
+              data-cy="badge"
+            >
+              <Flex
+                align="center"
+                direction="row"
+                gutterSize="xxs"
+                justify="flex-start"
+                wrap="nowrap"
+              >
+                <div
+                  className="emotion-7"
+                  data-cy="flex"
+                >
+                  <FlexItem
+                    flex="grow"
+                  >
+                    <div
+                      className="emotion-3"
+                      data-cy="flexItem"
+                    >
+                      <div
+                        className="emotion-2"
+                      >
+                        Badge three
+                      </div>
+                    </div>
+                  </FlexItem>
+                  <FlexItem
+                    flex="shrink"
+                  >
+                    <div
+                      className="emotion-6"
+                      data-cy="flexItem"
+                    >
+                      <Clickable
+                        action={[Function]}
+                        disableFocusOutline={false}
+                        role="button"
+                        tabIndex={-1}
+                      >
+                        <span
+                          className="emotion-5"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={-1}
+                        >
+                          <Icon
+                            shape="system-close"
+                            size="12px"
+                          >
+                            <svg
+                              aria-label="system-close icon"
+                              className="emotion-4"
+                              data-cy="icon"
+                              height={12}
+                              preserveAspectRatio="xMinYMin meet"
+                              role="img"
+                              viewBox="0 0 12 12"
+                              width={12}
+                            >
+                              <use
+                                xlinkHref="#system-close"
+                              />
+                            </svg>
+                          </Icon>
+                        </span>
+                      </Clickable>
+                    </div>
+                  </FlexItem>
+                </div>
+              </Flex>
+            </span>
+          </Badge>
+        </span>
+        <input
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-26"
+          data-cy="textInput-input"
+          id="withBadges"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          type="text"
+        />
+      </div>
+    </FormFieldWrapper>
+  </div>
+</TextInputWithBadges>
+`;
