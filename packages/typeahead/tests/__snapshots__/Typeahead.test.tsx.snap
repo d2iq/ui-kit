@@ -334,7 +334,7 @@ exports[`Typeahead renders 1`] = `
                   maxHeight={300}
                   menuRef={[Function]}
                   role="listbox"
-                  width={0}
+                  width={null}
                 >
                   <PopoverListItem
                     aria-selected={false}
@@ -613,7 +613,7 @@ exports[`Typeahead renders 1`] = `
                                 data-cy="popover"
                                 id="downshift-0-menu"
                                 role="listbox"
-                                style="max-height: 300px; width: 0px;"
+                                style="max-height: 300px;"
                               >
                                 <div
                                   aria-selected="false"
@@ -725,7 +725,7 @@ exports[`Typeahead renders 1`] = `
                                 data-cy="popover"
                                 id="downshift-0-menu"
                                 role="listbox"
-                                style="max-height: 300px; width: 0px;"
+                                style="max-height: 300px;"
                               >
                                 <div
                                   aria-selected="false"
@@ -839,7 +839,7 @@ exports[`Typeahead renders 1`] = `
                                 maxHeight={300}
                                 menuRef={[Function]}
                                 role="listbox"
-                                width={0}
+                                width={null}
                               >
                                 <div
                                   aria-labelledby="downshift-0-label"
@@ -850,7 +850,7 @@ exports[`Typeahead renders 1`] = `
                                   style={
                                     Object {
                                       "maxHeight": 300,
-                                      "width": 0,
+                                      "width": null,
                                     }
                                   }
                                 >
@@ -1399,7 +1399,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                   maxHeight={100}
                   menuRef={[Function]}
                   role="listbox"
-                  width={0}
+                  width={null}
                 >
                   <PopoverListItem
                     aria-selected={false}
@@ -1555,7 +1555,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 data-cy="popover"
                                 id="downshift-0-menu"
                                 role="listbox"
-                                style="max-height: 300px; width: 0px;"
+                                style="max-height: 300px;"
                               >
                                 <div
                                   aria-selected="false"
@@ -1785,7 +1785,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 data-cy="popover"
                                 id="downshift-1-menu"
                                 role="listbox"
-                                style="max-height: 100px; width: 0px;"
+                                style="max-height: 100px;"
                               >
                                 <div
                                   aria-selected="false"
@@ -1897,7 +1897,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 data-cy="popover"
                                 id="downshift-1-menu"
                                 role="listbox"
-                                style="max-height: 100px; width: 0px;"
+                                style="max-height: 100px;"
                               >
                                 <div
                                   aria-selected="false"
@@ -2011,7 +2011,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                 maxHeight={100}
                                 menuRef={[Function]}
                                 role="listbox"
-                                width={0}
+                                width={null}
                               >
                                 <div
                                   aria-labelledby="downshift-1-label"
@@ -2022,7 +2022,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                   style={
                                     Object {
                                       "maxHeight": 100,
-                                      "width": 0,
+                                      "width": null,
                                     }
                                   }
                                 >

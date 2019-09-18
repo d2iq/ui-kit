@@ -1,6 +1,5 @@
 import React from "react";
 import { cx } from "emotion";
-import wrapWithClickOutside from "react-click-outside";
 import { modalWrapper } from "../style";
 import { flex } from "../../shared/styles/styleUtils";
 export interface ModalContentsProps {
@@ -11,13 +10,9 @@ export interface ModalContentsProps {
    */
   dataCy?: string;
 }
-export class ModalContentsUnwrapped extends React.Component<
-  ModalContentsProps,
-  {}
-> {
+export class ModalContents extends React.Component<ModalContentsProps, {}> {
   constructor(props) {
     super(props);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
   render() {
     return (
@@ -29,10 +24,5 @@ export class ModalContentsUnwrapped extends React.Component<
       </div>
     );
   }
-  handleClickOutside() {
-    if (this.props.isOpen) {
-      this.props.onClose();
-    }
-  }
 }
-export default wrapWithClickOutside(ModalContentsUnwrapped);
+export default ModalContents;

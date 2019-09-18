@@ -183,7 +183,6 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
   public componentDidMount() {
     resizeEventManager.add(this.setContainerWidth);
-    this.setContainerWidth();
   }
 
   public componentWillUnmount() {
@@ -193,7 +192,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   private setContainerWidth() {
     const container = this.containerRef.current;
 
-    if (container) {
+    if (container && container.getBoundingClientRect().width) {
       this.setState({ menuWidth: container.getBoundingClientRect().width });
     }
   }
@@ -215,6 +214,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
     }
 
     if (!isOpen) {
+      this.setContainerWidth();
       openMenu();
     }
   }
