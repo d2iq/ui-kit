@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Tabs as ReactTabs, TabList, TabPanel } from "react-tabs";
-import { injectGlobal } from "emotion";
+import { injectGlobal, css, cx } from "emotion";
 
 import { TabItemProps } from "./TabItem";
 import { TabTitle } from "..";
@@ -69,6 +69,7 @@ injectGlobal`
 
 .react-tabs__tab-panel {
   display: none;
+  flex-grow: 1;
   ${margin("horiz", "l")}
   ${margin("vert", "xl")}
 }
@@ -78,6 +79,12 @@ injectGlobal`
 }
 `;
 /* tslint:enable */
+
+const fullHeightTabs = css`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`;
 
 export type TabSelected = string;
 export interface TabsProps {
@@ -120,15 +127,19 @@ class Tabs extends React.PureComponent<TabsProps, {}> {
             tabs: [...tabs, title],
             tabsContent: [
               ...tabsContent,
-              <TabPanel key={key}>{tabChildren}</TabPanel>
+              ...(tabChildren.length
+                ? [<TabPanel key={key}>{tabChildren}</TabPanel>]
+                : [])
             ]
           };
         },
         { tabs: [], tabsContent: [] }
       );
-
     return (
       <ReactTabs
+        className={cx("react-tabs", {
+          [fullHeightTabs]: Boolean(tabsContent.length)
+        })}
         selectedIndex={selectedIndex}
         onSelect={onSelect}
         data-cy="tabs"

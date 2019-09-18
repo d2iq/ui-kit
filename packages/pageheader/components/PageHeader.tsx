@@ -11,6 +11,7 @@ import {
 } from "../../shared/styles/styleUtils";
 import { SpaceSizes } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 import PageHeaderTabs from "../components/PageHeaderTabs";
+import { fillHeight } from "../style";
 
 export interface PageHeaderProps {
   breadcrumbElements: React.ReactNodeArray;
@@ -29,7 +30,7 @@ class PageHeader extends React.PureComponent<PageHeaderProps, {}> {
 
     return (
       <div
-        className={cx(padding("all", pageHeaderPaddingSize), {
+        className={cx(padding("all", pageHeaderPaddingSize), fillHeight, {
           [border("bottom")]: !hasTabsChild
         })}
       >

@@ -2,7 +2,7 @@
 
 exports[`Tabs default 1`] = `
 <div
-  class="react-tabs"
+  class="react-tabs css-flq1iw"
   data-cy="tabs"
   data-tabs="true"
 >
