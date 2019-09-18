@@ -85,6 +85,8 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   theme={
     Object {
       "sidebarBackgroundColor": "#1B2029",
+      "sidebarItemPaddingHor": "l",
+      "sidebarItemPaddingVert": "none",
     }
   }
 >

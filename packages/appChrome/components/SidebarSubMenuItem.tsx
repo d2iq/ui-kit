@@ -44,7 +44,7 @@ class SidebarSubMenuItem extends React.PureComponent<
       : sidebarBgColor;
     const classNames = cx(
       subMenuItem,
-      appChromeInsetContent,
+      appChromeInsetContent(theme && theme.sidebarItemPaddingHor),
       sidebarNavItem(Boolean(isActive), theme),
       tintContent(
         pickReadableTextColor(
