@@ -181,8 +181,9 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
         windowDimensions.height
     };
     const possibleHorizDirections = {
-      left: dropdownDimensions.width >= childBounds.right,
-      right: dropdownDimensions.width <= childBounds.right,
+      left:
+        dropdownDimensions.width + childBounds.left <= windowDimensions.width,
+      right: childBounds.right - dropdownDimensions.width >= 0,
       center:
         triggerCenter - dropdownDimensions.width / 2 > 0 &&
         triggerCenter + dropdownDimensions.width / 2 < windowDimensions.width
