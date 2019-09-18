@@ -91,6 +91,7 @@ export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { Legacy };
+export { CodeSnippet } from "./codesnippet";
 
 // Style utility components
 export { Container, Flex, FlexItem, GridList } from "./styleUtils/layout";
