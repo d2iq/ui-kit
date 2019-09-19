@@ -80,7 +80,7 @@ export {
   NumberCell
 } from "./table";
 export { TabItem, TabTitle, Tabs } from "./tabs";
-export { TextInput, TextInputWithIcon } from "./textInput";
+export { TextInput, TextInputWithIcon, TextInputWithBadges } from "./textInput";
 export { Textarea } from "./textarea";
 export { Toaster, Toast } from "./toaster";
 export { ToggleContent } from "./toggleContent";
