@@ -5,7 +5,6 @@ import { themeBgSecondary } from "../design-tokens/build/js/designTokens";
 export const avatarContainer = css`
   background-color: ${themeBgSecondary};
   border-radius: 25%;
-  display: inline-block;
   overflow: hidden;
   vertical-align: middle;
 `;
