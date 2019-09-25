@@ -9,7 +9,8 @@ import { ThemeProvider } from "emotion-theming";
 export interface SidebarItemProps {
   icon?: React.ReactElement<HTMLElement> | string;
   isActive?: boolean;
-  onClick: (event?: React.SyntheticEvent<HTMLElement>) => void;
+  onClick?: (event?: React.SyntheticEvent<HTMLElement>) => void;
+  disabled?: boolean;
 }
 
 export const defaultSidebarItemHorizPaddingSize = "l";
@@ -17,7 +18,7 @@ export const defaultSidebarItemVertPaddingSize = "none";
 
 class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
   public render() {
-    const { children, isActive, onClick } = this.props;
+    const { children, isActive, onClick, disabled } = this.props;
     const dataCy = [
       "sidebarItem",
       ...(isActive ? ["sidebarItem.active"] : [])
@@ -26,7 +27,7 @@ class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
     const Item = styled("li")`
       ${props => {
         return css`
-          ${sidebarNavItem(Boolean(isActive), props.theme)};
+          ${sidebarNavItem(Boolean(isActive), Boolean(disabled), props.theme)};
           padding: ${spaceSizes[props.theme.sidebarItemPaddingVert]}
             ${spaceSizes[props.theme.sidebarItemPaddingHor]};
         `;

@@ -18,6 +18,7 @@ export interface SidebarSubMenuProps {
   menuHasIcon?: boolean;
   iconWidth?: string;
   theme?: AppChromeTheme;
+  disabled?: boolean;
 }
 
 export class SidebarSubMenuComponent extends React.PureComponent<
@@ -51,7 +52,7 @@ export class SidebarSubMenuComponent extends React.PureComponent<
   }
 
   public render() {
-    const { children, label, isOpen, theme } = this.props;
+    const { children, label, isOpen, theme, disabled } = this.props;
     const dataCy = [
       "sidebarSubMenu",
       ...(isOpen ? ["sidebarSubMenu.open"] : [])
@@ -62,9 +63,12 @@ export class SidebarSubMenuComponent extends React.PureComponent<
         <Expandable
           labelClassName={cx(
             appChromeInsetContent(theme && theme.sidebarItemPaddingHor),
-            sidebarNavItem(false, theme)
+            sidebarNavItem(false, Boolean(disabled), theme)
           )}
           isOpen={isOpen}
+          controlledIsOpen={
+            disabled !== undefined && disabled === true ? false : undefined
+          }
           label={<div>{label}</div>}
         >
           {this.getSubItemList(children)}

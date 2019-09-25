@@ -24,8 +24,9 @@ import { AppChromeTheme } from "../types/appChromeTheme";
 export interface SidebarSubMenuItemProps {
   children?: React.ReactElement<HTMLElement> | string;
   isActive?: boolean;
-  onClick: (event?: React.SyntheticEvent<HTMLElement>) => void;
+  onClick?: (event?: React.SyntheticEvent<HTMLElement>) => void;
   theme?: AppChromeTheme;
+  disabled?: boolean;
 }
 
 class SidebarSubMenuItem extends React.PureComponent<
@@ -33,7 +34,7 @@ class SidebarSubMenuItem extends React.PureComponent<
   {}
 > {
   public render() {
-    const { children, isActive, onClick, theme } = this.props;
+    const { children, isActive, onClick, disabled, theme } = this.props;
     const sidebarBgColor =
       theme && theme.sidebarBackgroundColor
         ? theme.sidebarBackgroundColor
@@ -45,7 +46,7 @@ class SidebarSubMenuItem extends React.PureComponent<
     const classNames = cx(
       subMenuItem,
       appChromeInsetContent(theme && theme.sidebarItemPaddingHor),
-      sidebarNavItem(Boolean(isActive), theme),
+      sidebarNavItem(Boolean(isActive), Boolean(disabled), theme),
       tintContent(
         pickReadableTextColor(
           sidebarBgColor,

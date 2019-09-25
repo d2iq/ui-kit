@@ -62,13 +62,16 @@ export const sidebarSectionList = css`
   margin: 0;
 `;
 
-export const sidebarNavItem = (isActive: boolean, theme?: AppChromeTheme) => {
+export const sidebarNavItem = (
+  isActive: boolean,
+  isDisabled?: boolean,
+  theme?: AppChromeTheme
+) => {
   const activeBgColor = theme && theme.itemActiveBackgroundColor;
   const hoverBgColor = theme && theme.itemHoverBackgroundColor;
   const sidebarBgColor = theme && theme.sidebarBackgroundColor;
-  const itemBgColor = isActive
-    ? activeBgColor || themeBgSelected
-    : sidebarBgColor;
+  const itemBgColor =
+    isActive && !isDisabled ? activeBgColor || themeBgSelected : sidebarBgColor;
 
   return css`
     background-color: ${itemBgColor};
@@ -79,12 +82,17 @@ export const sidebarNavItem = (isActive: boolean, theme?: AppChromeTheme) => {
           getCSSVarValue(themeTextColorPrimaryInverted)
         )
       : null};
-    cursor: pointer;
+    cursor: ${isDisabled ? "default !important" : "pointer"};
+    opacity: ${isDisabled ? "0.6" : "1"};
     text-transform: capitalize;
+
+    * {
+      cursor: ${isDisabled ? "default !important" : "unset"};
+    }
 
     &:hover,
     &:focus {
-      background-color: ${isActive
+      background-color: ${isActive || isDisabled
         ? itemBgColor
         : pickHoverBg(
             sidebarBgColor,
