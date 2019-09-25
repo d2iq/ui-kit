@@ -475,6 +475,69 @@ storiesOf("AppChrome", module)
       </SidebarSection>
     </Sidebar>
   ))
+  .add("Sidebar w/ disabled items", () => (
+    <Sidebar isOpen={true}>
+      <SidebarSection label="Section header">
+        <SidebarItem
+          disabled={true}
+          onClick={action("clicked a nav item")}
+          key="one"
+        >
+          <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
+            Disabled Sidebar Item
+          </SidebarItemLabel>
+        </SidebarItem>
+        <SidebarSubMenu
+          label={
+            <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
+              Disabled Submenu
+            </SidebarItemLabel>
+          }
+          menuHasIcon={true}
+          key="subOne"
+          disabled={true}
+          isOpen={false}
+        >
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
+            Lorem Ipsum
+          </SidebarSubMenuItem>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
+            Dolor Sit
+          </SidebarSubMenuItem>
+        </SidebarSubMenu>
+        <SidebarSubMenu
+          label={
+            <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
+              Dolor Sit
+            </SidebarItemLabel>
+          }
+          menuHasIcon={true}
+          key="subTwo"
+          isOpen={true}
+        >
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
+            Lorem Ipsum
+          </SidebarSubMenuItem>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+            disabled={true}
+          >
+            Disabled Submenu Item
+          </SidebarSubMenuItem>
+        </SidebarSubMenu>
+      </SidebarSection>
+    </Sidebar>
+  ))
   .add("HeaderBar bare", () => (
     <HeaderBar>HeaderBar content goes here</HeaderBar>
   ))

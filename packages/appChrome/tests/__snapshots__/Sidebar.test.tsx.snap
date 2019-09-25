@@ -168,7 +168,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         </SidebarItemLabel>
       </div>
     }
-    labelClassName="css-1nvp5qn"
+    labelClassName="css-enopth"
   >
     <ul
       className="emotion-0"

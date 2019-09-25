@@ -6,6 +6,7 @@ import { toggler } from "../style";
 
 export interface ExpandableProps {
   children: React.ReactElement<HTMLElement> | string;
+  controlledIsOpen?: boolean;
   isOpen?: boolean;
   label: React.ReactElement<HTMLElement> | string;
   labelClassName?: string;
@@ -13,10 +14,16 @@ export interface ExpandableProps {
 
 class Expandable extends React.PureComponent<ExpandableProps, {}> {
   public render() {
-    const { labelClassName, children, label, isOpen } = this.props;
+    const {
+      labelClassName,
+      children,
+      label,
+      isOpen,
+      controlledIsOpen
+    } = this.props;
 
     return (
-      <Toggle defaultOn={isOpen ? true : false}>
+      <Toggle defaultOn={Boolean(isOpen)} on={controlledIsOpen}>
         {({ on, getTogglerProps }) => (
           <div>
             <button
