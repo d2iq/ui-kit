@@ -10,6 +10,7 @@ exports[`Avatar renders default 1`] = `
 
 .emotion-1 {
   background-color: var(--themeBgSecondary,#F7F8F9);
+  border: 1px solid #F7F8F9;
   border-radius: 25%;
   overflow: hidden;
   vertical-align: middle;
@@ -40,6 +41,7 @@ exports[`Avatar renders with a src, size, and label 1`] = `
 
 .emotion-1 {
   background-color: var(--themeBgSecondary,#F7F8F9);
+  border: 1px solid #F7F8F9;
   border-radius: 25%;
   overflow: hidden;
   vertical-align: middle;
