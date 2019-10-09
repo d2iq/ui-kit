@@ -55,7 +55,7 @@ export const badge = appearance => {
     border-style: solid;
     padding: 0 8px 0;
     font-size: 80%;
-    line-height: inherit;
+    line-height: 20px;
     text-decoration: none;
     text-rendering: optimizeLegibility;
     border-radius: ${borderRadiusSmall};
