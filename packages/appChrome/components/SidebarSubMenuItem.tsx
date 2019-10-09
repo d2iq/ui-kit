@@ -72,7 +72,13 @@ class SidebarSubMenuItem extends React.PureComponent<
     ].join(" ");
 
     return (
-      <Clickable action={onClick} tabIndex={0} role="link" dataCy={dataCy}>
+      <Clickable
+        action={onClick}
+        tabIndex={0}
+        role="link"
+        dataCy={dataCy}
+        disableFocusOutline={true}
+      >
         <div className={classNames}>
           <span className={subMenuItemText}>{children}</span>
         </div>
