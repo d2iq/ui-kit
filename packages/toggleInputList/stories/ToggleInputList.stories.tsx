@@ -122,4 +122,50 @@ storiesOf("Forms/ToggleInputList", module)
         />
       )}
     </ToggleInputListStoryHelper>
-  ));
+  ))
+  .add(
+    "required",
+    () => (
+      <ToggleInputListStoryHelper>
+        {({ changeHandler, selectedItems }) => (
+          <ToggleInputList
+            id="checkbox"
+            items={options}
+            listLabel="Atmosphere layers"
+            onChange={changeHandler}
+            selectedItems={selectedItems}
+            required={true}
+          />
+        )}
+      </ToggleInputListStoryHelper>
+    ),
+    {
+      info: {
+        propTables: [ToggleInputList]
+      }
+    }
+  )
+  .add(
+    "error with message",
+    () => (
+      <ToggleInputListStoryHelper>
+        {({ changeHandler, selectedItems }) => (
+          <ToggleInputList
+            id="checkbox"
+            items={options}
+            listLabel="Atmosphere layers"
+            labelAppearance={InputAppearance.Error}
+            onChange={changeHandler}
+            selectedItems={[]}
+            errors={["Please select an item."]}
+            required={true}
+          />
+        )}
+      </ToggleInputListStoryHelper>
+    ),
+    {
+      info: {
+        propTables: [ToggleInputList]
+      }
+    }
+  );
