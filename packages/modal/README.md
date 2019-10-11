@@ -23,7 +23,7 @@ Modals can be dismissed by:
 
 ### Do
 
-Disable primary actions until user can proceed
+Disable primary actions until user can proceed.
 Use `DangerButton` to indicate destructive actions.
 Focus on the first input field.
 Bind the return key to the primary action.
@@ -34,4 +34,5 @@ Use primary action labels that enforce what taking the action does.
 Display an error message at the bottom of the modal body.
 Center align text in the modal body.
 Have sidebars in modals (use the tabbed navigation).
-Use use labels that are ambiguous at first glance e.g. use “Delete user” instead of “Are you sure?" and “Delete”
+Use labels that are ambiguous at first glance e.g. use “Delete user” instead of “Are you sure?" and “Delete”.
+Put a dialog modal inside of a dialog modal.
