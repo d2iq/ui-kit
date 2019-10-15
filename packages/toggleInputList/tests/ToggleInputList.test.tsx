@@ -87,7 +87,7 @@ describe("ToggleInputList", () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it("calls onChange prop with the selected values", () => {
+  it("calls onChange prop with all selected values and the last selected value", () => {
     const onChangeFn = jest.fn();
     const component = mount(
       <ToggleInputList
@@ -101,8 +101,11 @@ describe("ToggleInputList", () => {
 
     expect(onChangeFn).not.toHaveBeenCalled();
     checkbox.simulate("change", { target: { checked: true } });
-    expect(onChangeFn).toHaveBeenCalledWith([checkbox.prop("value")]);
+    expect(onChangeFn).toHaveBeenCalledWith(
+      [checkbox.prop("value")],
+      checkbox.prop("value")
+    );
     checkbox.simulate("change", { target: { checked: false } });
-    expect(onChangeFn).toHaveBeenCalledWith([]);
+    expect(onChangeFn).toHaveBeenCalledWith([], checkbox.prop("value"));
   });
 });
