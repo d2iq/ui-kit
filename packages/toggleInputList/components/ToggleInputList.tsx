@@ -43,9 +43,9 @@ export interface ToggleInputListProps {
    */
   listLabel: React.ReactNode | string;
   /**
-   * Callback for when a user makes a selection. Passes a list of selected items as parameter
+   * Callback for when a user makes a selection
    */
-  onChange?: (selectedItems: string[]) => void;
+  onChange?: (selectedItems: string[], affectedItem?: string) => void;
   /**
    * Defaults to `true`, but can be set to `false` to visibly hide the content passed to `listLabel`. The `listLabel` should still be set even when hidden for accessibility support.
    */
@@ -134,7 +134,7 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
 
       const handleChange = e => {
         if (onChange) {
-          onChange(this.getSelectedItems(value, e.target.checked));
+          onChange(this.getSelectedItems(value, e.target.checked), value);
         }
       };
 
