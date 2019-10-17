@@ -126,46 +126,57 @@ storiesOf("Table", module)
     </div>
   ))
   .add("column width fill remaining", () => (
-    <div
-      style={{
-        height: "175px",
-        width: "100%",
-        fontSize: "14px"
-      }}
-    >
-      <Table data={items}>
-        <Column
-          header={<HeaderCell>name</HeaderCell>}
-          cellRenderer={nameCellRenderer}
-          growToFill={true}
-          minWidth={100}
-          maxWidth={150}
-        />
-        <Column
-          header={<HeaderCell>role</HeaderCell>}
-          cellRenderer={roleCellRenderer}
-          growToFill={true}
-        />
-        <Column
-          header={<HeaderCell>state</HeaderCell>}
-          cellRenderer={stateCellRenderer}
-          growToFill={true}
-          minWidth={100}
-          maxWidth={150}
-        />
-        <Column
-          header={<HeaderCell>Very Long</HeaderCell>}
-          cellRenderer={veryLongRenderer}
-          growToFill={true}
-        />
-        <Column
-          header={<HeaderCell textAlign="right">zip code</HeaderCell>}
-          cellRenderer={zipcodeCellRenderer}
-          growToFill={true}
-          minWidth={100}
-          maxWidth={150}
-        />
-      </Table>
+    <div style={{ height: "300px", fontSize: "14px" }}>
+      <div
+        style={{
+          display: "flex",
+          height: "100%",
+          flexDirection: "column",
+          border: "1px solid red"
+        }}
+      >
+        <div>Lorem ipsum hassenichgesehn</div>
+        <div>Lorem ipsum hassenichgesehn</div>
+        <div>Lorem ipsum hassenichgesehn</div>
+        <div>Lorem ipsum hassenichgesehn</div>
+        <div>Lorem ipsum hassenichgesehn</div>
+        <div>Lorem ipsum hassenichgesehn</div>
+        <div>Lorem ipsum hassenichgesehn</div>
+
+        <Table data={items} style={{ flexGrow: 1 }}>
+          <Column
+            header={<HeaderCell>name</HeaderCell>}
+            cellRenderer={nameCellRenderer}
+            growToFill={true}
+            minWidth={100}
+            maxWidth={150}
+          />
+          <Column
+            header={<HeaderCell>role</HeaderCell>}
+            cellRenderer={roleCellRenderer}
+            growToFill={true}
+          />
+          <Column
+            header={<HeaderCell>state</HeaderCell>}
+            cellRenderer={stateCellRenderer}
+            growToFill={true}
+            minWidth={100}
+            maxWidth={150}
+          />
+          <Column
+            header={<HeaderCell>Very Long</HeaderCell>}
+            cellRenderer={veryLongRenderer}
+            growToFill={true}
+          />
+          <Column
+            header={<HeaderCell textAlign="right">zip code</HeaderCell>}
+            cellRenderer={zipcodeCellRenderer}
+            growToFill={true}
+            minWidth={100}
+            maxWidth={150}
+          />
+        </Table>
+      </div>
     </div>
   ))
   .add("width-aware render", () => {

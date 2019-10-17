@@ -69,6 +69,7 @@ export interface TableProps {
    * Set the row height
    */
   rowHeight?: number;
+  style?: any;
 }
 
 export interface TableState {
@@ -268,7 +269,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
 
   public render() {
     return (
-      <React.Fragment>
+      <div style={...this.props.style}>
         <AutoSizer
           __dataThatTriggersARerenderWhenChanged={this.props.data} // passed to notify react-virtualized about updates
           className={tableCss}
@@ -285,7 +286,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
           accurately calculate column widths
         */}
         <div className={scrollbarMeas} ref={this.scrollMeasRef} />
-      </React.Fragment>
+      </div>
     );
   }
 
