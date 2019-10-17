@@ -79,6 +79,7 @@ export {
   SortableHeaderCell,
   NumberCell
 } from "./table";
+export { TableView, TableViewHeader, TableViewBody } from "./tableView";
 export { TabItem, TabTitle, Tabs } from "./tabs";
 export { TextInput, TextInputWithIcon, TextInputWithBadges } from "./textInput";
 export { Textarea } from "./textarea";

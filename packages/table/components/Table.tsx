@@ -78,7 +78,7 @@ export interface TableState {
   resizeIndex: number;
 }
 
-const ROW_HEIGHT = 35;
+export const ROW_HEIGHT = 35;
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 768;
 const COL_RESIZE_MIN_WIDTH = 80;
