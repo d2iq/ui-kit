@@ -8,7 +8,6 @@ const PageHeaderTabs = ({ children }) => {
     <div
       className={css`
         flex-grow: 1;
-        height: 100vh;
         margin-left: -${spaceSizes[pageHeaderPaddingSize]};
         margin-right: -${spaceSizes[pageHeaderPaddingSize]};
       `}
