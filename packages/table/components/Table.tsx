@@ -201,7 +201,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
               currentIndex,
               remainingWidth
             })
-          : scrollbarAdjustedWidth / totalColumns;
+          : Math.floor(scrollbarAdjustedWidth / totalColumns);
 
         const clampedWidth = clampWidth(
           calculatedWidth,
