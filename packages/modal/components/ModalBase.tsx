@@ -38,6 +38,14 @@ export interface ModalBaseProps {
    * human-readable selector used for writing tests
    */
   dataCy?: string;
+  /**
+   * which DOM node the modal will attach to
+   */
+  overlayRoot?: HTMLElement;
+  /**
+   * the ID attribute that is passed to the modal dialog box
+   */
+  id?: string;
 }
 
 const animationDuration = 250;
@@ -63,11 +71,20 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
   public onKeyDown(e) {
     if (e.key === "Escape") {
       this.props.onClose(e);
+      e.stopPropagation();
     }
   }
 
   public render() {
-    const { children, isAnimated, size, isOpen, dataCy } = this.props;
+    const {
+      children,
+      isAnimated,
+      size,
+      isOpen,
+      dataCy,
+      overlayRoot,
+      id
+    } = this.props;
     const modalSize = size || ModalSizes.M;
 
     return (
@@ -78,7 +95,7 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
       >
         {state => {
           return (
-            <Overlay>
+            <Overlay overlayRoot={overlayRoot}>
               <FocusLock>
                 <div
                   role="button"
@@ -97,6 +114,7 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
                   role="dialog"
                   onKeyDown={this.onKeyDown}
                   tabIndex={-1}
+                  id={id}
                 >
                   <ModalContents
                     isOpen={isOpen}

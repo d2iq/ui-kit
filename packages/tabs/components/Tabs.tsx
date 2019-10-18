@@ -34,7 +34,7 @@ injectGlobal`
   position: relative;
   list-style: none;
   ${padding("vert", "s")}
-  ${margin("right", "s")}
+  ${margin("right", "m")}
   cursor: pointer;
   font-weight: ${fontWeightMedium};
   color: ${themeTextColorPrimary};

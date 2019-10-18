@@ -185,7 +185,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   border-style: solid;
   padding: 0 8px 0;
   font-size: 80%;
-  line-height: inherit;
+  line-height: 20px;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-rendering: optimizeLegibility;
@@ -959,7 +959,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   border-style: solid;
   padding: 0 8px 0;
   font-size: 80%;
-  line-height: inherit;
+  line-height: 20px;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-rendering: optimizeLegibility;
