@@ -161,7 +161,7 @@ exports[`Tooltip renders 1`] = `
                       open={false}
                     >
                       <TooltipContent
-                        direction="top-left"
+                        direction="bottom-left"
                         id="renders"
                         open={false}
                       >
@@ -282,7 +282,8 @@ exports[`Tooltip renders open tooltip 1`] = `
                       <div
                         aria-hidden="true"
                         class="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
+    css-nu8exu
+    emotion-1   inverseColorMode emotion-2"
                         data-cy="tooltipContent"
                         id="renders"
                         role="tooltip"
@@ -496,8 +497,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                       <div
                         aria-hidden="true"
                         class="
-    css-10cr3um
-    emotion-1   inverseColorMode emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                         data-cy="tooltipContent"
                         id="renders"
                         role="tooltip"
