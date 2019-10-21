@@ -35,6 +35,7 @@ export const appChromeInsetContent = (horizPadding?: SpaceSizes) => css`
 
 export const appWrapper = css`
   height: 100%;
+  overflow: auto;
 `;
 
 export const sidebar = css`

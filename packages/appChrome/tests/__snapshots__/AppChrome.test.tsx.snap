@@ -44,6 +44,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   display: flex;
   min-height: 0;
   height: 100%;
+  overflow: auto;
 }
 
 .emotion-2 > div {
@@ -79,6 +80,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   padding-left: 0;
   margin-left: 0;
   height: 100%;
+  overflow: auto;
 }
 
 <ThemeProvider

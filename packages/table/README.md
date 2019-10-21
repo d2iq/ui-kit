@@ -4,11 +4,19 @@
 
 Use tables to display information in a way that’s easy to scan, so that user can look for patterns and insights. Users will use tables to troubleshoot, manage and monitor their systems.
 
-## Width
+## Layout
+
+### Width
 
 Collection tables should span the full width of the screen. In cases where there are too few columns to span the whole screen, the table should still span the whole screen.
 
 Detail tables shouldn’t span the full width of the screen.
+
+### Height
+The Table expands to fill its parent but it will not stretch the parent. This means a table's parent node must have a height in order for the table to be visible.
+
+The `TableView` component is helpful when creating layouts that include the `Table` component.
+
 
 ## Column and Rows
 
