@@ -30,8 +30,9 @@ class PageHeader extends React.PureComponent<PageHeaderProps, {}> {
 
     return (
       <div
-        className={cx(padding("all", pageHeaderPaddingSize), fillHeight, {
-          [border("bottom")]: !hasTabsChild
+        className={cx(padding("all", pageHeaderPaddingSize), {
+          [border("bottom")]: !hasTabsChild,
+          [fillHeight]: hasTabsChild
         })}
       >
         <div className={cx(flex({ align: "center" }))} data-cy="pageHeader">
