@@ -142,6 +142,9 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
   }
 
   setPositionFromCurrentProps() {
+    if (!this.props.open) {
+      return;
+    }
     this.setPosition(this.props);
   }
 
