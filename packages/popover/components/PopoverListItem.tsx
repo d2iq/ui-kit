@@ -11,7 +11,8 @@ import {
   themeBgSelected,
   themeTextColorPrimary,
   themeTextColorPrimaryInverted,
-  themeError
+  themeError,
+  themeTextColorDisabled
 } from "../../design-tokens/build/js/designTokens";
 import getCSSVarValue from "../../utilities/components/getCSSVarValue";
 import { darken, pickReadableTextColor } from "../../shared/styles/color";
@@ -37,7 +38,6 @@ const PopoverListItem = (props: PopoverListItemProps) => {
     isSelected,
     index,
     listLength,
-    disabled,
     children,
     ...other
   } = props;
@@ -54,6 +54,10 @@ const PopoverListItem = (props: PopoverListItemProps) => {
   `;
   const menuListItemSelectedActive = css`
     background-color: ${darken(getCSSVarValue(themeBgSelected), 1)};
+  `;
+  const menuListItemDisabled = css`
+    background-color: transparent;
+    color: ${themeTextColorDisabled};
   `;
 
   const {
@@ -135,6 +139,7 @@ const PopoverListItem = (props: PopoverListItemProps) => {
           [menuListItemActive]: isActive,
           [menuListItemSelected]: isSelected,
           [menuListItemSelectedActive]: isActive && isSelected,
+          [menuListItemDisabled]: other.disabled,
           [margin("top", "xs")]: index === 0,
           [margin("bottom", "xs")]: index === listLength - 1,
           [tintContent(themeError)]: appearance === "danger"

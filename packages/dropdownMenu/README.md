@@ -12,6 +12,9 @@ If you're not using a button as your dropdown trigger, be sure whatever you use 
 ## Icons and avatars in items
 Dropdown menu items can display an icon or avatar before or after the menu item text. By default, the avatar or icon is sized at `iconSizeXs`.
 
+## Disabled menu items
+TODO: Collaborate with the design team to decide on some guidelines for disabled items. For example: when should we render a disabled item instead of not showing the item in the dropdown at all?
+
 ## Do's and Dont's
 
 ### Do
