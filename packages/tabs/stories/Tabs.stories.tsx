@@ -5,15 +5,23 @@ import { TabTitle, Tabs, TabItem } from "../index";
 
 const readme = require("../README.md");
 
-class Example extends React.Component<{}, Partial<{ selectedIndex: number }>> {
+class Example extends React.Component<
+  { direction?: "horiz" | "vert" },
+  Partial<{ selectedIndex: number }>
+> {
   state = { selectedIndex: 0 };
   handleSelect = selectedIndex => {
     this.setState({ selectedIndex });
+    // tslint:disable-next-line:semicolon
   };
   render() {
     const { selectedIndex } = this.state;
     return (
-      <Tabs selectedIndex={selectedIndex} onSelect={this.handleSelect}>
+      <Tabs
+        selectedIndex={selectedIndex}
+        onSelect={this.handleSelect}
+        direction={this.props.direction}
+      >
         <TabItem>
           <TabTitle>Tab 1 Name</TabTitle>
           <div>First tab Content</div>
@@ -29,4 +37,5 @@ class Example extends React.Component<{}, Partial<{ selectedIndex: number }>> {
 
 storiesOf("Tabs", module)
   .addDecorator(withReadme([readme]))
-  .add("default", () => <Example />);
+  .add("default", () => <Example />)
+  .add("vertical", () => <Example direction="vert" />);
