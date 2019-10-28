@@ -52,7 +52,7 @@
     "react-chartist": "^0.13.3",
     "react-click-outside": "3.0.1",
     "react-delegate-component": "1.0.0",
-    "react-draggable": "3.2.1",
+    "react-draggable": "3.3.2",
     "react-emotion": "9.2.12",
     "react-focus-lock": "2.0.5",
     "react-tabs": "^3.0.0",

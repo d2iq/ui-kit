@@ -469,6 +469,9 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
                     this.getContainerWidth() * (1 - COL_RESIZE_MAX_WIDTH),
                   bottom: 0
                 }}
+                // Needed for an issue where text inputs lose focus when a Draggable unmounts
+                // Github issue: https://github.com/mzabriskie/react-draggable/issues/315
+                enableUserSelectHack={false}
               >
                 <div>
                   <div
