@@ -179,6 +179,8 @@ exports[`PopoverListItem renders disabled 1`] = `
   padding-top: 8px;
   padding-bottom: 8px;
   display: table;
+  background-color: transparent;
+  color: var(--themeTextColorDisabled,#AEB0B4);
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -186,6 +188,7 @@ exports[`PopoverListItem renders disabled 1`] = `
 <div
   className="emotion-0"
   data-cy="PopoverListItem"
+  disabled={true}
 >
   <Flex
     align="center"

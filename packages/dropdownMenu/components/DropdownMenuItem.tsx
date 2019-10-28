@@ -9,6 +9,7 @@ export interface DropdownMenuItemProps {
    * The value that the item represents
    */
   value: string;
+  disabled?: boolean;
   children: React.ReactNode;
 }
 

@@ -242,4 +242,47 @@ describe("Dropdown", () => {
     // what to expect
     expect(onSelectFn).toHaveBeenCalledWith("edit", expect.anything());
   });
+  it("calls onSelect prop with the selected value", () => {
+    const onSelectFn = jest.fn();
+    const component = mount(
+      <DropdownMenu
+        onSelect={onSelectFn}
+        trigger={<div id={triggerId}>Dropdown trigger</div>}
+      >
+        <DropdownSection>
+          <DropdownMenuItem disabled={true} key="edit" value="edit">
+            Edit
+          </DropdownMenuItem>
+          <DropdownMenuItem key="scale" value="scale">
+            Scale
+          </DropdownMenuItem>
+          <DropdownMenuItem key="restart" value="restart">
+            Restart
+          </DropdownMenuItem>
+          <DropdownMenuItem key="stop" value="stop">
+            Stop
+          </DropdownMenuItem>
+        </DropdownSection>
+      </DropdownMenu>
+    );
+    const trigger = component.find(`#${triggerId}`);
+
+    trigger.simulate("focus");
+    trigger.simulate("keyDown", {
+      key: " " // space bar
+    });
+    expect(onSelectFn).not.toHaveBeenCalled();
+    trigger.simulate("keyDown", {
+      key: "ArrowDown"
+    });
+    trigger.simulate("keyDown", {
+      key: "Enter"
+    });
+    trigger.simulate("blur");
+
+    // using `expect.anything()` because the second parameter is an object
+    // that comes from Downshift, and there's no good way to know exactly
+    // what to expect
+    expect(onSelectFn).not.toHaveBeenCalledWith("edit", expect.anything());
+  });
 });
