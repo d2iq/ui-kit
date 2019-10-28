@@ -9,6 +9,7 @@ import resizeEventManager from "../../utilities/resizeEventManager";
 export interface Item {
   value: string;
   label: React.ReactNode;
+  disabled?: boolean;
 }
 
 export interface TypeaheadProps {
@@ -135,7 +136,8 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                                   index={index}
                                   {...getItemProps({
                                     key: item.value,
-                                    item
+                                    item,
+                                    disabled: item.disabled
                                   })}
                                 >
                                   {item.label}

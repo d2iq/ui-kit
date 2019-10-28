@@ -95,7 +95,8 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
               index={i}
               key={child.key || `${sectionIndex}-${i}`}
               {...getItemProps({
-                item: child
+                item: child,
+                disabled: child.props.disabled
               })}
             >
               {child}

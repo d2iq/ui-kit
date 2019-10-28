@@ -60,6 +60,27 @@ storiesOf("DropdownMenu", module)
       </DropdownSection>
     </DropdownMenu>
   ))
+  .add("with disabled action", () => (
+    <DropdownMenu trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}>
+      <DropdownSection>
+        <DropdownMenuItem key="edit" value="edit">
+          Edit
+        </DropdownMenuItem>
+        <DropdownMenuItem key="scale" value="scale">
+          Scale
+        </DropdownMenuItem>
+        <DropdownMenuItem key="restart" value="restart">
+          Restart
+        </DropdownMenuItem>
+        <DropdownMenuItem key="stop" value="stop">
+          Stop
+        </DropdownMenuItem>
+        <DropdownMenuItem disabled={true} key="delete" value="delete">
+          Delete
+        </DropdownMenuItem>
+      </DropdownSection>
+    </DropdownMenu>
+  ))
   .add("initialIsOpen", () => (
     <DropdownMenu
       initialIsOpen={true}
