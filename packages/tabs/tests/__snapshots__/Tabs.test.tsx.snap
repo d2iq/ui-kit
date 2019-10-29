@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tabs default 1`] = `
+exports[`Tabs renders default 1`] = `
 <div
-  class="react-tabs css-flq1iw"
+  class="react-tabs css-1jxz441"
   data-cy="tabs"
   data-tabs="true"
 >
@@ -46,6 +46,57 @@ exports[`Tabs default 1`] = `
     aria-labelledby="react-tabs-2"
     class="react-tabs__tab-panel"
     id="react-tabs-3"
+    role="tabpanel"
+  />
+</div>
+`;
+
+exports[`Tabs renders vertically 1`] = `
+<div
+  class="react-tabs css-11llber"
+  data-cy="tabs"
+  data-tabs="true"
+>
+  <ul
+    class="react-tabs__tab-list"
+    role="tablist"
+  >
+    <li
+      aria-controls="react-tabs-5"
+      aria-disabled="false"
+      aria-selected="true"
+      class="react-tabs__tab react-tabs__tab--selected"
+      id="react-tabs-4"
+      role="tab"
+      tabindex="0"
+    >
+      Tab 1 Name
+    </li>
+    <li
+      aria-controls="react-tabs-7"
+      aria-disabled="false"
+      aria-selected="false"
+      class="react-tabs__tab"
+      id="react-tabs-6"
+      role="tab"
+    >
+      Tab 2 Name
+    </li>
+  </ul>
+  <div
+    aria-labelledby="react-tabs-4"
+    class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+    id="react-tabs-5"
+    role="tabpanel"
+  >
+    <div>
+      First tab Content
+    </div>
+  </div>
+  <div
+    aria-labelledby="react-tabs-6"
+    class="react-tabs__tab-panel"
+    id="react-tabs-7"
     role="tabpanel"
   />
 </div>

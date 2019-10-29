@@ -1,17 +1,20 @@
 import * as React from "react";
 import { Tabs as ReactTabs, TabList, TabPanel } from "react-tabs";
-import { injectGlobal, css, cx } from "emotion";
+import { injectGlobal, cx } from "emotion";
 
 import { TabItemProps } from "./TabItem";
 import { TabTitle } from "..";
 import {
-  themeBorder,
   fontWeightMedium,
   themeTextColorPrimary,
   themeBrandPrimary,
   themeBgHover
 } from "../../design-tokens/build/js/designTokens";
-import { padding, margin } from "../../shared/styles/styleUtils";
+import { listReset } from "../../shared/styles/styleUtils";
+import { BreakpointConfig } from "../../shared/styles/breakpoints";
+import { fullHeightTabs, getTabLayout } from "../style";
+
+export const defaultTabDirection = "horiz";
 
 // Copy & paste from node_modules/react-tabs/style/react-tabs.css
 // Also changed to better fit the ui kit styles.
@@ -23,28 +26,17 @@ injectGlobal`
 }
 
 .react-tabs__tab-list {
-  border-bottom: 1px solid ${themeBorder};
-  ${margin("bottom", "s")}
-  ${padding("vert", "none")}
-  ${padding("horiz", "l")}
+  ${listReset};
 }
 
 .react-tabs__tab {
-  display: inline-block;
   position: relative;
-  list-style: none;
-  ${padding("vert", "s")}
-  ${margin("right", "m")}
   cursor: pointer;
   font-weight: ${fontWeightMedium};
   color: ${themeTextColorPrimary};
   &:after{
     content: "";
-    height: 2px;
     position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
     background: ${themeBrandPrimary};
     display:none;
   }
@@ -70,8 +62,6 @@ injectGlobal`
 .react-tabs__tab-panel {
   display: none;
   flex-grow: 1;
-  ${margin("horiz", "l")}
-  ${margin("vert", "xl")}
 }
 
 .react-tabs__tab-panel--selected {
@@ -80,22 +70,24 @@ injectGlobal`
 `;
 /* tslint:enable */
 
-const fullHeightTabs = css`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`;
-
+export type TabDirections = "horiz" | "vert";
+export type TabDirection = BreakpointConfig<TabDirections>;
 export type TabSelected = string;
 export interface TabsProps {
   children: Array<React.ReactElement<TabItemProps>>;
   selectedIndex: number;
   onSelect: (tabIndex: number) => void;
+  direction?: TabDirection;
 }
 
 class Tabs extends React.PureComponent<TabsProps, {}> {
   public render() {
-    const { children, selectedIndex, onSelect } = this.props;
+    const {
+      children,
+      selectedIndex,
+      onSelect,
+      direction = defaultTabDirection
+    } = this.props;
 
     const { tabs, tabsContent } = (React.Children.toArray(children) as Array<
       React.ReactElement<TabItemProps>
@@ -135,10 +127,12 @@ class Tabs extends React.PureComponent<TabsProps, {}> {
         },
         { tabs: [], tabsContent: [] }
       );
+
     return (
       <ReactTabs
         className={cx("react-tabs", {
-          [fullHeightTabs]: Boolean(tabsContent.length)
+          [fullHeightTabs]: Boolean(tabsContent.length),
+          [getTabLayout(direction)]: Boolean(direction)
         })}
         selectedIndex={selectedIndex}
         onSelect={onSelect}
