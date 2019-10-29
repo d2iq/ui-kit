@@ -10,21 +10,11 @@ import {
   themeBrandPrimary,
   themeBgHover
 } from "../../design-tokens/build/js/designTokens";
-import {
-  padding,
-  margin,
-  listReset,
-  border
-} from "../../shared/styles/styleUtils";
-import { SpaceSizes } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
+import { listReset } from "../../shared/styles/styleUtils";
+import { BreakpointConfig } from "../../shared/styles/breakpoints";
+import { fullHeightTabs, getTabLayout } from "../style";
 
-const spacingSizeConfig: { [key: string]: SpaceSizes } = {
-  inset: "l",
-  tabPanel: "xl",
-  tabList: "s",
-  betweenTabs: "m",
-  withinTab: "s"
-};
+export const defaultTabDirection = "horiz";
 
 // Copy & paste from node_modules/react-tabs/style/react-tabs.css
 // Also changed to better fit the ui kit styles.
@@ -77,77 +67,17 @@ injectGlobal`
 .react-tabs__tab-panel--selected {
   display: block;
 }
-
-.uiKit-tabs--fullHeight {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.uiKit-tabs--horizontal {
-  display: flex;
-  flex-direction: column;
-
-  .react-tabs__tab-list {
-    ${border("bottom")};
-    ${padding("horiz", spacingSizeConfig.inset)};
-  }
-
-  .react-tabs__tab {
-    display: inline-block;
-    ${padding("vert", spacingSizeConfig.withinTab)};
-    ${margin("right", spacingSizeConfig.betweenTabs)};
-
-    &:after {
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-  }
-
-  .react-tabs__tab-panel {
-    ${margin("horiz", spacingSizeConfig.inset)};
-    ${margin("vert", spacingSizeConfig.tabPanel)};
-  }
-}
-
-.uiKit-tabs--vertical {
-  display: flex;
-  flex-direction: row;
-
-  .react-tabs__tab-list {
-    ${border("right")};
-    ${padding("vert", spacingSizeConfig.inset)};
-  }
-
-  .react-tabs__tab {
-    display: block;
-    ${padding("horiz", spacingSizeConfig.withinTab)};
-    ${margin("bottom", spacingSizeConfig.betweenTabs)};
-
-    &:after {
-      width: 2px;
-      right: 0;
-      top: 0;
-      bottom: 0;
-    }
-  }
-
-  .react-tabs__tab-panel {
-    ${margin("vert", spacingSizeConfig.inset)};
-    ${margin("horiz", spacingSizeConfig.tabPanel)};
-  }
-}
 `;
 /* tslint:enable */
 
+export type TabDirections = "horiz" | "vert";
+export type TabDirection = BreakpointConfig<TabDirections>;
 export type TabSelected = string;
 export interface TabsProps {
   children: Array<React.ReactElement<TabItemProps>>;
   selectedIndex: number;
   onSelect: (tabIndex: number) => void;
-  direction?: "horiz" | "vert";
+  direction?: TabDirection;
 }
 
 class Tabs extends React.PureComponent<TabsProps, {}> {
@@ -156,7 +86,7 @@ class Tabs extends React.PureComponent<TabsProps, {}> {
       children,
       selectedIndex,
       onSelect,
-      direction = "horiz"
+      direction = defaultTabDirection
     } = this.props;
 
     const { tabs, tabsContent } = (React.Children.toArray(children) as Array<
@@ -197,12 +127,12 @@ class Tabs extends React.PureComponent<TabsProps, {}> {
         },
         { tabs: [], tabsContent: [] }
       );
+
     return (
       <ReactTabs
         className={cx("react-tabs", {
-          "uiKit-tabs--fullHeight": Boolean(tabsContent.length),
-          "uiKit-tabs--vertical": direction === "vert",
-          "uiKit-tabs--horizontal": direction === "horiz"
+          [fullHeightTabs]: Boolean(tabsContent.length),
+          [getTabLayout(direction)]: Boolean(direction)
         })}
         selectedIndex={selectedIndex}
         onSelect={onSelect}

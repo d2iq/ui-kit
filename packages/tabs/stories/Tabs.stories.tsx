@@ -2,11 +2,12 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { TabTitle, Tabs, TabItem } from "../index";
+import { TabDirection } from "../components/Tabs";
 
 const readme = require("../README.md");
 
 class Example extends React.Component<
-  { direction?: "horiz" | "vert" },
+  { direction?: TabDirection },
   Partial<{ selectedIndex: number }>
 > {
   state = { selectedIndex: 0 };
@@ -38,4 +39,10 @@ class Example extends React.Component<
 storiesOf("Tabs", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => <Example />)
-  .add("vertical", () => <Example direction="vert" />);
+  .add("vertical", () => <Example direction="vert" />)
+  .add("responsive", () => (
+    <>
+      <p>Resize your viewport width to see the tab direction change</p>
+      <Example direction={{ medium: "vert" }} />
+    </>
+  ));
