@@ -26,7 +26,7 @@ const ComplexItem = props => (
 
 export const items = [
   { label: "Exosphere", value: "Exosphere" },
-  { label: "Thermosphere", value: "Thermosphere", disabled: true },
+  { label: "Thermosphere", value: "Thermosphere" },
   { label: "Mesosphere", value: "Mesosphere" },
   { label: "Stratosphere", value: "Stratosphere" },
   { label: "Ozone Layer", value: "Ozone Layer" },

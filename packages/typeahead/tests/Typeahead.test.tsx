@@ -168,10 +168,10 @@ describe("Typeahead", () => {
     input.simulate("keyDown", {
       key: "Enter"
     });
-    expect(onSelectFn).toHaveBeenCalledWith([items[0].value]);
+    expect(onSelectFn).toHaveBeenCalledWith([items[0].value], items[0].value);
   });
 
-  it("sets the input value to the selected item's value on change", () => {
+  it("sets the input value to the selected item's value on select", () => {
     const onSelectFn = jest.fn();
     const component = mount(
       <Typeahead
@@ -196,6 +196,36 @@ describe("Typeahead", () => {
       key: "Enter"
     });
     expect(component.find("input").prop("value")).toBe(items[0].value);
+  });
+
+  it("does not set the input value to the selected item's value on select", () => {
+    const onSelectFn = jest.fn();
+    const component = mount(
+      <Typeahead
+        items={[
+          { label: "K8sphere", value: "K8sphere", disabled: true },
+          ...items
+        ]}
+        onSelect={onSelectFn}
+        textField={
+          <TextInput
+            id="standard.input"
+            inputLabel="Standard"
+            placeholder="Placeholder"
+          />
+        }
+      />
+    );
+    expect(component.find("input").prop("value")).toBe("");
+    component.find("input").simulate("focus");
+    expect(onSelectFn).not.toHaveBeenCalled();
+    component.find("input").simulate("keyDown", {
+      key: "ArrowDown"
+    });
+    component.find("input").simulate("keyDown", {
+      key: "Enter"
+    });
+    expect(component.find("input").prop("value")).not.toBe(items[0].value);
   });
 
   it("does not hide the dropdown when selecting an item if multiSelect is true", () => {
@@ -227,11 +257,70 @@ describe("Typeahead", () => {
     expect(component.find(DropdownContents).prop("open")).toBe(true);
   });
 
+  it("hides the dropdown when selecting an item if keepOpenOnSelect is false", () => {
+    const onSelectFn = jest.fn();
+    const component = mount(
+      <Typeahead
+        multiSelect={true}
+        keepOpenOnSelect={false}
+        items={items}
+        onSelect={onSelectFn}
+        textField={
+          <TextInput
+            id="standard.input"
+            inputLabel="Standard"
+            placeholder="Placeholder"
+          />
+        }
+      />
+    );
+
+    expect(component.find(DropdownContents).prop("open")).toBe(false);
+    component.find("input").simulate("focus");
+    expect(onSelectFn).not.toHaveBeenCalled();
+    component.find("input").simulate("keyDown", {
+      key: "ArrowDown"
+    });
+    component.find("input").simulate("keyDown", {
+      key: "Enter"
+    });
+    expect(component.find(DropdownContents).prop("open")).toBe(false);
+  });
+
   it("does not set the input value if multiSelect is true", () => {
     const onSelectFn = jest.fn();
     const component = mount(
       <Typeahead
         multiSelect={true}
+        items={items}
+        onSelect={onSelectFn}
+        textField={
+          <TextInput
+            id="standard.input"
+            inputLabel="Standard"
+            placeholder="Placeholder"
+          />
+        }
+      />
+    );
+
+    expect(component.find("input").prop("value")).toBe("");
+    component.find("input").simulate("focus");
+    expect(onSelectFn).not.toHaveBeenCalled();
+    component.find("input").simulate("keyDown", {
+      key: "ArrowDown"
+    });
+    component.find("input").simulate("keyDown", {
+      key: "Enter"
+    });
+    expect(component.find("input").prop("value")).toBe("");
+  });
+
+  it("does not set the input value if resetInputOnSelect is true", () => {
+    const onSelectFn = jest.fn();
+    const component = mount(
+      <Typeahead
+        resetInputOnSelect={true}
         items={items}
         onSelect={onSelectFn}
         textField={

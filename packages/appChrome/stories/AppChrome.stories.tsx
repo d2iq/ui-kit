@@ -3,7 +3,14 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withReadme } from "storybook-readme";
 import { ThemeProvider } from "emotion-theming";
-import { number, select, text, withKnobs } from "@storybook/addon-knobs";
+import {
+  number,
+  select,
+  text,
+  object,
+  boolean,
+  withKnobs
+} from "@storybook/addon-knobs";
 import { SidebarBareContent } from "./helpers/StorybookSidebarHelpers";
 import DCOSAppChrome from "./helpers/DCOSAppChrome";
 import AppChrome from "../components/AppChrome";
@@ -69,19 +76,19 @@ storiesOf("AppChrome", module)
   .add("Sidebar w/ items", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
-        <SidebarItem onClick={action("clicked a nav item")}>
+        <SidebarItem onClick={action("clicked a nav item")} key="one">
           <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")}>
+        <SidebarItem onClick={action("clicked a nav item")} key="two">
           <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")}>
+        <SidebarItem onClick={action("clicked a nav item")} key="three">
           <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")}>
+        <SidebarItem onClick={action("clicked a nav item")} key="four">
           <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")}>
+        <SidebarItem onClick={action("clicked a nav item")} key="five">
           <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
         </SidebarItem>
       </SidebarSection>
@@ -90,19 +97,23 @@ storiesOf("AppChrome", module)
   .add("Sidebar w/ items (1 active)", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
-        <SidebarItem onClick={action("clicked a nav item")} isActive={true}>
+        <SidebarItem
+          onClick={action("clicked a nav item")}
+          isActive={true}
+          key="one"
+        >
           <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")}>
+        <SidebarItem onClick={action("clicked a nav item")} key="two">
           <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")}>
+        <SidebarItem onClick={action("clicked a nav item")} key="three">
           <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")}>
+        <SidebarItem onClick={action("clicked a nav item")} key="four">
           <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")}>
+        <SidebarItem onClick={action("clicked a nav item")} key="five">
           <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
         </SidebarItem>
       </SidebarSection>
@@ -111,7 +122,7 @@ storiesOf("AppChrome", module)
   .add("Sidebar w/ items (w/ icons)", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
-        <SidebarItem onClick={action("clicked a nav item")}>
+        <SidebarItem onClick={action("clicked a nav item")} key="one">
           <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Lorem Ipsum
           </SidebarItemLabel>
@@ -119,6 +130,7 @@ storiesOf("AppChrome", module)
         <SidebarItem
           icon={ProductIcons.ServicesInverse}
           onClick={action("clicked a nav item")}
+          key="two"
         >
           <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Dolor Sit
@@ -127,6 +139,7 @@ storiesOf("AppChrome", module)
         <SidebarItem
           icon={ProductIcons.ServicesInverse}
           onClick={action("clicked a nav item")}
+          key="three"
         >
           <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Amet Consecutor
@@ -135,6 +148,7 @@ storiesOf("AppChrome", module)
         <SidebarItem
           icon={ProductIcons.ServicesInverse}
           onClick={action("clicked a nav item")}
+          key="four"
         >
           <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Adipiscing Edit
@@ -143,6 +157,7 @@ storiesOf("AppChrome", module)
         <SidebarItem
           icon={ProductIcons.ServicesInverse}
           onClick={action("clicked a nav item")}
+          key="five"
         >
           <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Praesent Massa
@@ -157,55 +172,90 @@ storiesOf("AppChrome", module)
         <SidebarSubMenu
           iconWidth="24px"
           label={<SidebarItemLabel>Lorem ipsum</SidebarItemLabel>}
+          key="subOne"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
           iconWidth="24px"
           label={<SidebarItemLabel>Dolor Sit</SidebarItemLabel>}
+          key="subTwo"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
           iconWidth="24px"
           label={<SidebarItemLabel>Amet Consecutor</SidebarItemLabel>}
+          key="subThree"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
           iconWidth="24px"
           label={<SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>}
+          key="subFour"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
           iconWidth="24px"
           label={<SidebarItemLabel>Praesent Massa</SidebarItemLabel>}
+          key="subFive"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -216,54 +266,93 @@ storiesOf("AppChrome", module)
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarSubMenu
-          isOpen={true}
+          iconWidth="24px"
           label={<SidebarItemLabel>Lorem ipsum</SidebarItemLabel>}
+          isOpen={true}
+          key="subOne"
         >
           <SidebarSubMenuItem
             onClick={action("clicked a nav item")}
-            isActive={true}
+            key="subItemOne"
           >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
-            Dolor Sit
-          </SidebarSubMenuItem>
-        </SidebarSubMenu>
-        <SidebarSubMenu label={<SidebarItemLabel>Dolor Sit</SidebarItemLabel>}>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
-            Lorem Ipsum
-          </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
+          iconWidth="24px"
+          label={<SidebarItemLabel>Dolor Sit</SidebarItemLabel>}
+          key="subTwo"
+        >
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
+            Lorem Ipsum
+          </SidebarSubMenuItem>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
+            Dolor Sit
+          </SidebarSubMenuItem>
+        </SidebarSubMenu>
+        <SidebarSubMenu
+          iconWidth="24px"
           label={<SidebarItemLabel>Amet Consecutor</SidebarItemLabel>}
+          key="subThree"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
+          iconWidth="24px"
           label={<SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>}
+          key="subFour"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
+          iconWidth="24px"
           label={<SidebarItemLabel>Praesent Massa</SidebarItemLabel>}
+          key="subFive"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -280,11 +369,18 @@ storiesOf("AppChrome", module)
             </SidebarItemLabel>
           }
           menuHasIcon={true}
+          key="subOne"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -295,11 +391,18 @@ storiesOf("AppChrome", module)
             </SidebarItemLabel>
           }
           menuHasIcon={true}
+          key="subTwo"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -310,11 +413,18 @@ storiesOf("AppChrome", module)
             </SidebarItemLabel>
           }
           menuHasIcon={true}
+          key="subThree"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -325,11 +435,18 @@ storiesOf("AppChrome", module)
             </SidebarItemLabel>
           }
           menuHasIcon={true}
+          key="subFour"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -340,12 +457,82 @@ storiesOf("AppChrome", module)
             </SidebarItemLabel>
           }
           menuHasIcon={true}
+          key="subFive"
         >
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
             Dolor Sit
+          </SidebarSubMenuItem>
+        </SidebarSubMenu>
+      </SidebarSection>
+    </Sidebar>
+  ))
+  .add("Sidebar w/ disabled items", () => (
+    <Sidebar isOpen={true}>
+      <SidebarSection label="Section header">
+        <SidebarItem
+          disabled={true}
+          onClick={action("clicked a nav item")}
+          key="one"
+        >
+          <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
+            Disabled Sidebar Item
+          </SidebarItemLabel>
+        </SidebarItem>
+        <SidebarSubMenu
+          label={
+            <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
+              Disabled Submenu
+            </SidebarItemLabel>
+          }
+          menuHasIcon={true}
+          key="subOne"
+          disabled={true}
+          isOpen={false}
+        >
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
+            Lorem Ipsum
+          </SidebarSubMenuItem>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+          >
+            Dolor Sit
+          </SidebarSubMenuItem>
+        </SidebarSubMenu>
+        <SidebarSubMenu
+          label={
+            <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
+              Dolor Sit
+            </SidebarItemLabel>
+          }
+          menuHasIcon={true}
+          key="subTwo"
+          isOpen={true}
+        >
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemOne"
+          >
+            Lorem Ipsum
+          </SidebarSubMenuItem>
+          <SidebarSubMenuItem
+            onClick={action("clicked a nav item")}
+            key="subItemTwo"
+            disabled={true}
+          >
+            Disabled Submenu Item
           </SidebarSubMenuItem>
         </SidebarSubMenu>
       </SidebarSection>
@@ -443,17 +630,60 @@ storiesOf("AppChrome", module)
       step: 1
     });
 
+    const sidebarIsOpen = boolean("isOpen", true);
+
     const CustomTheme = {
       sidebarBackgroundColor: color,
       sidebarHeaderPaddingHor: paddingHorSize,
       sidebarHeaderPaddingVert: paddingVertSize,
-      sidebarWidth: sidebarWidth + "px"
+      sidebarWidth: `${sidebarWidth}px`
     };
 
     return (
       <ThemeProvider theme={CustomTheme}>
-        <Sidebar isOpen={true}>
+        <Sidebar isOpen={sidebarIsOpen}>
           <SidebarSection label={sectionHeader}>
+            <SidebarItem
+              isActive={true}
+              onClick={action("clicked a nav item")}
+              key="one"
+            >
+              <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")} key="two">
+              <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")} key="three">
+              <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")} key="four">
+              <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
+            </SidebarItem>
+            <SidebarItem onClick={action("clicked a nav item")} key="five">
+              <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
+            </SidebarItem>
+          </SidebarSection>
+        </Sidebar>
+      </ThemeProvider>
+    );
+  })
+
+  .add("Sidebar Responsive Width w/ Knobs", () => {
+    const responsiveWidthsValue = object(
+      "Responsive widths",
+      { default: "200px", large: "300px" },
+      "responsiveWidths"
+    );
+    const sidebarIsOpen = boolean("isOpen", true);
+
+    const CustomTheme = {
+      sidebarWidth: responsiveWidthsValue
+    };
+
+    return (
+      <ThemeProvider theme={CustomTheme}>
+        <Sidebar isOpen={sidebarIsOpen}>
+          <SidebarSection label="Section header">
             <SidebarItem isActive={true} onClick={action("clicked a nav item")}>
               <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
             </SidebarItem>
@@ -609,12 +839,16 @@ storiesOf("AppChrome", module)
               isOpen={true}
               menuHasIcon={true}
             >
-              <SidebarSubMenuItem onClick={action("clicked a nav item")}>
+              <SidebarSubMenuItem
+                onClick={action("clicked a nav item")}
+                key="subItemOne"
+              >
                 Lorem Ipsum
               </SidebarSubMenuItem>
               <SidebarSubMenuItem
                 onClick={action("clicked a nav item")}
                 isActive={true}
+                key="subItemTwo"
               >
                 Dolor Sit
               </SidebarSubMenuItem>

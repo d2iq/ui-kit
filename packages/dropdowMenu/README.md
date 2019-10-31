@@ -1,3 +1,0 @@
-# DropdownMenu Name
-
-DropdownMenu documentation

@@ -125,6 +125,23 @@ storiesOf("Forms/Typeahead", module)
       />
     </div>
   ))
+  .add("with a disabled item", () => (
+    <div className={storyWrapper}>
+      <Typeahead
+        items={[
+          ...items,
+          { label: "K8sphere", value: "K8sphere", disabled: true }
+        ]}
+        textField={
+          <TextInput
+            id="default"
+            inputLabel="With a disabled item"
+            placeholder="Placeholder"
+          />
+        }
+      />
+    </div>
+  ))
   .add("filter while typing", () => (
     <div className={storyWrapper}>
       <FilteredListTypeahead items={items} />

@@ -30,7 +30,8 @@ export class ToggleContent extends React.PureComponent<
   }
 
   public handleClick(): void {
-    if (!window.getSelection().toString()) {
+    const windowSelection = window.getSelection() as Selection;
+    if (!windowSelection.toString()) {
       this.setState({
         isOn: !this.state.isOn
       });

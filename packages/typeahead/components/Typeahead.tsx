@@ -1,14 +1,15 @@
 import * as React from "react";
 import Downshift from "downshift";
 import Dropdownable from "../../dropdownable/components/Dropdownable";
-import DropdownMenu from "../../dropdowMenu/components/DropdownMenu";
-import DropdownMenuItem from "../../dropdowMenu/components/DropdownMenuItem";
+import Popover from "../../popover/components/Popover";
+import PopoverListItem from "../../popover/components/PopoverListItem";
 import { margin } from "../../shared/styles/styleUtils";
 import resizeEventManager from "../../utilities/resizeEventManager";
 
 export interface Item {
   value: string;
   label: React.ReactNode;
+  disabled?: boolean;
 }
 
 export interface TypeaheadProps {
@@ -35,7 +36,7 @@ export interface TypeaheadProps {
   /**
    * callback for when an item is selected
    */
-  onSelect?: (selectedItems: string[]) => void;
+  onSelect?: (selectedItems: string[], lastSelectedItem?: string) => void;
   /**
    * which DOM node the dropdown menu will attach to
    */
@@ -44,6 +45,14 @@ export interface TypeaheadProps {
    * an array of item values that are selected
    */
   selectedItems?: string[];
+  /**
+   * whether the menu stays open on select
+   */
+  keepOpenOnSelect?: boolean;
+  /**
+   * whether the selected item's value is set as the input's value
+   */
+  resetInputOnSelect?: boolean;
 }
 
 interface TypeaheadState {
@@ -98,7 +107,8 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
             highlightedIndex,
             openMenu,
             selectedItem,
-            inputValue
+            inputValue,
+            ...other
           }) => {
             return (
               <div>
@@ -109,14 +119,14 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                     <div data-cy="typeahead-dropdown">
                       {!items.length && !menuEmptyState ? null : (
                         <div className={margin("top", "xxs")}>
-                          <DropdownMenu
+                          <Popover
                             width={this.state.menuWidth}
                             maxHeight={menuMaxHeight}
                             {...getMenuProps({ refKey: "menuRef" })}
                           >
                             {items.length ? (
                               items.map((item, index) => (
-                                <DropdownMenuItem
+                                <PopoverListItem
                                   listLength={items.length}
                                   isActive={highlightedIndex === index}
                                   isSelected={
@@ -126,16 +136,17 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                                   index={index}
                                   {...getItemProps({
                                     key: item.value,
-                                    item
+                                    item,
+                                    disabled: item.disabled
                                   })}
                                 >
                                   {item.label}
-                                </DropdownMenuItem>
+                                </PopoverListItem>
                               ))
                             ) : (
                               <div>{menuEmptyState}</div>
                             )}
-                          </DropdownMenu>
+                          </Popover>
                         </div>
                       )}
                     </div>
@@ -159,6 +170,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                         );
                       },
                       value: value === undefined ? inputValue : value,
+                      downshiftReset: other.reset,
                       ...textFieldProps
                     })
                   )}
@@ -173,7 +185,6 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
   public componentDidMount() {
     resizeEventManager.add(this.setContainerWidth);
-    this.setContainerWidth();
   }
 
   public componentWillUnmount() {
@@ -183,7 +194,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   private setContainerWidth() {
     const container = this.containerRef.current;
 
-    if (container) {
+    if (container && container.getBoundingClientRect().width) {
       this.setState({ menuWidth: container.getBoundingClientRect().width });
     }
   }
@@ -205,6 +216,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
     }
 
     if (!isOpen) {
+      this.setContainerWidth();
       openMenu();
     }
   }
@@ -216,7 +228,8 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
     if (this.props.onSelect) {
       this.props.onSelect(
-        this.getSelectedItems(selectedItem.value, !isItemSelected)
+        this.getSelectedItems(selectedItem.value, !isItemSelected),
+        selectedItem.value
       );
     }
   }
@@ -230,8 +243,12 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
         return {
           ...changes,
           selectedItem: [changes.selectedItem.value],
-          isOpen: this.props.multiSelect,
-          inputValue: this.props.multiSelect ? "" : changes.inputValue
+          isOpen:
+            this.props.multiSelect && !(this.props.keepOpenOnSelect === false),
+          inputValue:
+            this.props.multiSelect || this.props.resetInputOnSelect
+              ? ""
+              : changes.inputValue
         };
 
       case Downshift.stateChangeTypes.changeInput:

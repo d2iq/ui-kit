@@ -1,9 +1,6 @@
 import { css } from "emotion";
-import { atMediaUp } from "../shared/styles/breakpoints";
 import {
   spaceM,
-  spaceL,
-  spaceXl,
   themeBgSelected,
   themeBgHover,
   themeBgHoverInverted,
@@ -14,27 +11,31 @@ import { padding } from "../shared/styles/styleUtils";
 import { pickHoverBg, pickReadableTextColor } from "../shared/styles/color";
 import getCSSVarValue from "../utilities/components/getCSSVarValue";
 import { AppChromeTheme } from "./types/appChromeTheme";
+import {
+  spaceSizes,
+  SpaceSizes
+} from "../shared/styles/styleUtils/modifiers/modifierUtils";
+import { defaultSidebarItemHorizPaddingSize } from "./components/SidebarItem";
 
 const iconSize = "24px";
-const layoutBreakpoint = "large";
 
 export const appChrome = css`
   height: 100%;
   overflow: hidden;
 `;
 
-export const appChromeInsetContent = css`
-  padding-left: ${spaceL};
-  padding-right: ${spaceL};
-
-  ${atMediaUp[layoutBreakpoint](css`
-    padding-left: ${spaceXl};
-    padding-right: ${spaceXl};
-  `)};
+export const appChromeInsetContent = (horizPadding?: SpaceSizes) => css`
+  padding-left: ${horizPadding
+    ? spaceSizes[horizPadding]
+    : spaceSizes[defaultSidebarItemHorizPaddingSize]};
+  padding-right: ${horizPadding
+    ? spaceSizes[horizPadding]
+    : spaceSizes[defaultSidebarItemHorizPaddingSize]};
 `;
 
 export const appWrapper = css`
   height: 100%;
+  overflow: auto;
 `;
 
 export const sidebar = css`
@@ -46,7 +47,7 @@ export const sidebar = css`
 export const sidebarAnimator = css`
   height: 100%;
   overflow: hidden;
-  transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out, transform 150ms ease-in-out;
 `;
 
 export const sidebarItemHeight = css`
@@ -62,13 +63,16 @@ export const sidebarSectionList = css`
   margin: 0;
 `;
 
-export const sidebarNavItem = (isActive: boolean, theme?: AppChromeTheme) => {
+export const sidebarNavItem = (
+  isActive: boolean,
+  isDisabled?: boolean,
+  theme?: AppChromeTheme
+) => {
   const activeBgColor = theme && theme.itemActiveBackgroundColor;
   const hoverBgColor = theme && theme.itemHoverBackgroundColor;
   const sidebarBgColor = theme && theme.sidebarBackgroundColor;
-  const itemBgColor = isActive
-    ? activeBgColor || themeBgSelected
-    : sidebarBgColor;
+  const itemBgColor =
+    isActive && !isDisabled ? activeBgColor || themeBgSelected : sidebarBgColor;
 
   return css`
     background-color: ${itemBgColor};
@@ -79,12 +83,17 @@ export const sidebarNavItem = (isActive: boolean, theme?: AppChromeTheme) => {
           getCSSVarValue(themeTextColorPrimaryInverted)
         )
       : null};
-    cursor: pointer;
+    cursor: ${isDisabled ? "default !important" : "pointer"};
+    opacity: ${isDisabled ? "0.6" : "1"};
     text-transform: capitalize;
+
+    * {
+      cursor: ${isDisabled ? "default !important" : "unset"};
+    }
 
     &:hover,
     &:focus {
-      background-color: ${isActive
+      background-color: ${isActive || isDisabled
         ? itemBgColor
         : pickHoverBg(
             sidebarBgColor,

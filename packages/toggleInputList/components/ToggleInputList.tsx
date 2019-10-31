@@ -7,10 +7,11 @@ import {
   fieldsetReset,
   legendReset,
   padding,
-  textWeight,
   visuallyHidden
 } from "../../shared/styles/styleUtils";
 import { InputAppearance } from "../../shared/types/inputAppearance";
+import { getLabelStyle } from "../../shared/styles/formStyles";
+import { DangerText } from "../../index";
 
 export interface ToggleInputProperties {
   appearance?: InputAppearance;
@@ -42,9 +43,9 @@ export interface ToggleInputListProps {
    */
   listLabel: React.ReactNode | string;
   /**
-   * Callback for when a user makes a selection. Passes a list of selected items as parameter
+   * Callback for when a user makes a selection
    */
-  onChange?: (selectedItems: string[]) => void;
+  onChange?: (selectedItems: string[], affectedItem?: string) => void;
   /**
    * Defaults to `true`, but can be set to `false` to visibly hide the content passed to `listLabel`. The `listLabel` should still be set even when hidden for accessibility support.
    */
@@ -57,23 +58,34 @@ export interface ToggleInputListProps {
    * How the text content of each option vertically aligns with it's related input
    */
   vertAlign?: "center" | "top";
+  /**
+   * If this entire input list is a required field
+   */
+  required?: boolean;
+  /**
+   * Sets the current appearance of the label component. This defaults to InputAppearance.Standard, but supports `InputAppearance.Error` & `InputAppearance.Success` appearances as well.
+   */
+  labelAppearance: InputAppearance;
 }
 
 class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
   public static defaultProps: Partial<ToggleInputListProps> = {
     showListLabel: true,
     vertAlign: "center",
-    selectedItems: []
+    selectedItems: [],
+    labelAppearance: InputAppearance.Standard
   };
 
   constructor(props) {
     super(props);
 
     this.getSelectedItems = this.getSelectedItems.bind(this);
+    this.listLegendContent = this.listLegendContent.bind(this);
+    this.inputListItems = this.inputListItems.bind(this);
   }
 
   public render() {
-    const { listLabel, showListLabel, errors, hintContent, id } = this.props;
+    const { errors, hintContent, id, required } = this.props;
 
     return (
       <FormFieldWrapper errors={errors} hintContent={hintContent} id={id}>
@@ -82,20 +94,33 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
             className={fieldsetReset}
             aria-invalid={!isValid}
             aria-describedby={describedByIds}
+            aria-required={required}
+            role="listbox"
           >
-            <legend
-              className={cx(legendReset, textWeight("medium"), {
-                [visuallyHidden]: !showListLabel
-              })}
-            >
-              {listLabel}
-            </legend>
+            {this.listLegendContent()}
             <ul className={listReset}>{this.inputListItems()}</ul>
             {getHintContent}
             {getValidationErrors}
           </fieldset>
         )}
       </FormFieldWrapper>
+    );
+  }
+
+  private listLegendContent() {
+    const { labelAppearance, showListLabel, listLabel, required } = this.props;
+    const requiredContent = required ? (
+      <DangerText tag="span"> *</DangerText>
+    ) : null;
+    const hasError = labelAppearance === InputAppearance.Error;
+    const legendClassName = showListLabel
+      ? getLabelStyle(hasError)
+      : cx(visuallyHidden);
+    return (
+      <legend className={cx(legendReset, legendClassName)}>
+        {listLabel}
+        {requiredContent}
+      </legend>
     );
   }
 
@@ -109,7 +134,7 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
 
       const handleChange = e => {
         if (onChange) {
-          onChange(this.getSelectedItems(value, e.target.checked));
+          onChange(this.getSelectedItems(value, e.target.checked), value);
         }
       };
 

@@ -15,6 +15,7 @@ exports[`Sidebar renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -24,6 +25,7 @@ exports[`Sidebar renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-0::-moz-focus-inner {
@@ -48,6 +50,10 @@ exports[`Sidebar renders 1`] = `
 
 .emotion-0:focus {
   outline: 0;
+}
+
+.emotion-0 > div {
+  width: auto;
 }
 
 <Expandable

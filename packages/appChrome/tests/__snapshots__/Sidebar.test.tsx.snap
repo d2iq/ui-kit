@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar SidebarItem renders 1`] = `
-<Clickable
-  action={[MockFunction]}
-  dataCy="sidebarItem"
-  disableFocusOutline={true}
-  role="link"
-  tabIndex={0}
+<ThemeProvider
+  theme={[Function]}
 >
-  <Styled(li)>
-    Item label
-  </Styled(li)>
-</Clickable>
+  <Clickable
+    action={[MockFunction]}
+    dataCy="sidebarItem"
+    disableFocusOutline={true}
+    role="link"
+    tabIndex={0}
+  >
+    <Styled(li)>
+      Item label
+    </Styled(li)>
+  </Clickable>
+</ThemeProvider>
 `;
 
 exports[`Sidebar SidebarItemLabel renders 1`] = `
@@ -20,13 +24,19 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.emotion-2 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -86,16 +96,22 @@ exports[`Sidebar SidebarSection renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   color: #828487;
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 0;
   margin-top: 0;
+}
+
+.emotion-0 > div {
+  width: auto;
 }
 
 .emotion-1 {
@@ -152,7 +168,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         </SidebarItemLabel>
       </div>
     }
-    labelClassName="css-74vjzk"
+    labelClassName="css-enopth"
   >
     <ul
       className="emotion-0"
@@ -190,13 +206,19 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.emotion-2 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -250,22 +272,16 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
 `;
 
 exports[`Sidebar renders 1`] = `
+.emotion-0 {
+  height: 100%;
+}
+
 .emotion-1 {
   height: 100%;
   overflow: hidden;
-  -webkit-transition: width 150ms ease-in-out;
-  transition: width 150ms ease-in-out;
-}
-
-.emotion-0 {
-  height: 100%;
-  width: 240px;
-}
-
-@media (min-width:1200px) {
-  .emotion-0 {
-    width: 280px;
-  }
+  -webkit-transition: width 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: width 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: width 150ms ease-in-out,transform 150ms ease-in-out;
 }
 
 <ThemeProvider

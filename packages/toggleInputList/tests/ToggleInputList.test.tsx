@@ -4,6 +4,7 @@ import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { ToggleInputList } from "../";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 const options = [
   { inputLabel: "Sample label", id: "id.1", value: "value.1" },
@@ -61,7 +62,32 @@ describe("ToggleInputList", () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
-  it("calls onChange prop with the selected values", () => {
+  it("renders with required", () => {
+    const component = mount(
+      <ToggleInputList
+        id="checkbox"
+        items={options}
+        listLabel="Sample legend"
+        required={true}
+      />
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it("renders with error label appearance", () => {
+    const component = mount(
+      <ToggleInputList
+        id="checkbox"
+        items={options}
+        listLabel="Sample legend"
+        labelAppearance={InputAppearance.Error}
+        errors={["error.1", "error.2"]}
+      />
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it("calls onChange prop with all selected values and the last selected value", () => {
     const onChangeFn = jest.fn();
     const component = mount(
       <ToggleInputList
@@ -75,8 +101,11 @@ describe("ToggleInputList", () => {
 
     expect(onChangeFn).not.toHaveBeenCalled();
     checkbox.simulate("change", { target: { checked: true } });
-    expect(onChangeFn).toHaveBeenCalledWith([checkbox.prop("value")]);
+    expect(onChangeFn).toHaveBeenCalledWith(
+      [checkbox.prop("value")],
+      checkbox.prop("value")
+    );
     checkbox.simulate("change", { target: { checked: false } });
-    expect(onChangeFn).toHaveBeenCalledWith([]);
+    expect(onChangeFn).toHaveBeenCalledWith([], checkbox.prop("value"));
   });
 });

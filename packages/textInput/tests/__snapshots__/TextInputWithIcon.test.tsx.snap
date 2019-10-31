@@ -14,11 +14,17 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div
@@ -49,11 +55,17 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -102,11 +114,17 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div
@@ -145,11 +163,17 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div
@@ -180,11 +204,17 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -233,11 +263,17 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div
@@ -276,11 +312,17 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div
@@ -311,11 +353,17 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -364,11 +412,17 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
 }
 
 <div

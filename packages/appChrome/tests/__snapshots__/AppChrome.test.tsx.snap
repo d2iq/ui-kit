@@ -9,12 +9,12 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 0;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
 }
 
 .emotion-3 > div {
@@ -26,6 +26,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -41,7 +42,13 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 0;
   height: 100%;
+  overflow: auto;
+}
+
+.emotion-2 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -73,12 +80,15 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   padding-left: 0;
   margin-left: 0;
   height: 100%;
+  overflow: auto;
 }
 
 <ThemeProvider
   theme={
     Object {
       "sidebarBackgroundColor": "#1B2029",
+      "sidebarItemPaddingHor": "l",
+      "sidebarItemPaddingVert": "none",
     }
   }
 >

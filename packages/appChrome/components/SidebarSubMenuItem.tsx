@@ -24,8 +24,9 @@ import { AppChromeTheme } from "../types/appChromeTheme";
 export interface SidebarSubMenuItemProps {
   children?: React.ReactElement<HTMLElement> | string;
   isActive?: boolean;
-  onClick: (event?: React.SyntheticEvent<HTMLElement>) => void;
+  onClick?: (event?: React.SyntheticEvent<HTMLElement>) => void;
   theme?: AppChromeTheme;
+  disabled?: boolean;
 }
 
 class SidebarSubMenuItem extends React.PureComponent<
@@ -33,7 +34,7 @@ class SidebarSubMenuItem extends React.PureComponent<
   {}
 > {
   public render() {
-    const { children, isActive, onClick, theme } = this.props;
+    const { children, isActive, onClick, disabled, theme } = this.props;
     const sidebarBgColor =
       theme && theme.sidebarBackgroundColor
         ? theme.sidebarBackgroundColor
@@ -44,8 +45,8 @@ class SidebarSubMenuItem extends React.PureComponent<
       : sidebarBgColor;
     const classNames = cx(
       subMenuItem,
-      appChromeInsetContent,
-      sidebarNavItem(Boolean(isActive), theme),
+      appChromeInsetContent(theme && theme.sidebarItemPaddingHor),
+      sidebarNavItem(Boolean(isActive), Boolean(disabled), theme),
       tintContent(
         pickReadableTextColor(
           sidebarBgColor,
@@ -71,7 +72,13 @@ class SidebarSubMenuItem extends React.PureComponent<
     ].join(" ");
 
     return (
-      <Clickable action={onClick} tabIndex={0} role="link" dataCy={dataCy}>
+      <Clickable
+        action={onClick}
+        tabIndex={0}
+        role="link"
+        dataCy={dataCy}
+        disableFocusOutline={true}
+      >
         <div className={classNames}>
           <span className={subMenuItemText}>{children}</span>
         </div>

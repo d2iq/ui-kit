@@ -69,9 +69,9 @@ describe("Tooltip", () => {
         content
       </Tooltip>
     );
-    expect(component.state("open")).toBe(false);
+    expect(component.state("open")).toBeFalsy();
     component.simulate("mouseEnter");
-    expect(component.state("open")).toBe(false);
+    expect(component.state("open")).toBeFalsy();
   });
 
   it("calls onClose prop when closed", () => {

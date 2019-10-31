@@ -31,6 +31,7 @@
     "start": "NODE_ENV=development npm run storybook --root ./ ",
     "storybook": "start-storybook -p 6006",
     "test": "jest",
+    "test:integration": "./scripts/test-integration",
     "test:watch": "jest --watch"
   },
   "files": [
@@ -42,22 +43,24 @@
     "@types/chartist": "^0.9.46",
     "@types/react-tabs": "^2.3.1",
     "chartist": "^0.11.0",
+    "copy-to-clipboard": "3.2.0",
     "downshift": "3.2.10",
     "emotion": "9.2.12",
     "emotion-theming": "9.2.9",
-    "focus-trap-react": "4.0.1",
     "immutable": "^4.0.0-rc.12",
     "memoize-one": "4.0.2",
     "react-chartist": "^0.13.3",
     "react-click-outside": "3.0.1",
     "react-delegate-component": "1.0.0",
-    "react-draggable": "3.2.1",
+    "react-draggable": "3.3.2",
     "react-emotion": "9.2.12",
+    "react-focus-lock": "2.0.5",
     "react-tabs": "^3.0.0",
     "react-toggled": "1.2.7",
     "react-transition-group": "2.5.0",
     "react-virtualized": "9.20.1",
-    "relative-luminance": "2.0.1"
+    "relative-luminance": "2.0.1",
+    "shortid": "2.2.14"
   },
   "peerDependencies": {
     "react": ">=16.2.0 <16.9.0 || 16.7.0-alpha.0",
@@ -65,7 +68,6 @@
     "react-gemini-scrollbar": "^2.1.5 || ^2.3.0"
   },
   "devDependencies": {
-    "acorn": "^6.0.5",
     "@babel/core": "^7.4.3",
     "@babel/generator": "^7.2.2",
     "@babel/types": "^7.2.2",
@@ -93,10 +95,12 @@
     "@types/storybook__addon-actions": "3.4.2",
     "@types/storybook__addon-info": "4.1.1",
     "@types/storybook__addon-knobs": "4.0.5",
+    "acorn": "^6.0.5",
     "babel-loader": "^8.0.5",
     "cache-loader": "2.0.1",
     "commander": "2.19.0",
     "csstype": "2.6.5",
+    "cypress": "^3.4.0",
     "cz-conventional-changelog": "2.1.0",
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.6.0",
@@ -104,7 +108,6 @@
     "file-loader": "2.0.0",
     "fork-ts-checker-webpack-plugin": "0.5.2",
     "fs-extra": "7.0.0",
-    "react-gemini-scrollbar": "2.3.x",
     "jest": "23.6.0",
     "jest-emotion": "9.2.11",
     "jest-runner-prettier": "0.2.6",
@@ -115,6 +118,7 @@
     "react": "16.8.6",
     "react-docgen-typescript-loader": "3.0.0",
     "react-dom": "16.8.6",
+    "react-gemini-scrollbar": "2.3.x",
     "react-test-renderer": "16.8.6",
     "rimraf": "2.6.2",
     "semantic-release": "15.13.3",
@@ -133,7 +137,7 @@
     "tslint-microsoft-contrib": "^6.0.0",
     "tslint-plugin-prettier": "2.0.0",
     "tslint-react": "3.6.0",
-    "typescript": "3.1.2",
+    "typescript": "3.5.3",
     "webpack": "4.29.6"
   }
 }
