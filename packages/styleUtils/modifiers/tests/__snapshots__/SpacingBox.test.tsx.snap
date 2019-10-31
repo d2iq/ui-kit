@@ -42,6 +42,95 @@ exports[`SpacingBox renders with all props 1`] = `
 </Box>
 `;
 
+exports[`SpacingBox renders with different spacing on each side 1`] = `
+.emotion-0 {
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+}
+
+<Box
+  bgImageOptions={
+    Object {
+      "position": undefined,
+      "repeat": undefined,
+      "size": undefined,
+    }
+  }
+  className="emotion-0"
+  dataCy="spacingBox"
+  tag="div"
+>
+  content
+</Box>
+`;
+
+exports[`SpacingBox renders with responsive spacing on each side 1`] = `
+@media (min-width:0) {
+  .emotion-0 {
+    padding-top: 0;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    padding-top: 8px;
+  }
+}
+
+@media (min-width:0) {
+  .emotion-0 {
+    padding-right: 0;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    padding-right: 12px;
+  }
+}
+
+@media (min-width:0) {
+  .emotion-0 {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    padding-bottom: 16px;
+  }
+}
+
+@media (min-width:0) {
+  .emotion-0 {
+    padding-left: 0;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-0 {
+    padding-left: 24px;
+  }
+}
+
+<Box
+  bgImageOptions={
+    Object {
+      "position": undefined,
+      "repeat": undefined,
+      "size": undefined,
+    }
+  }
+  className="emotion-0"
+  dataCy="spacingBox"
+  tag="div"
+>
+  content
+</Box>
+`;
+
 exports[`SpacingBox renders with responsive spacingSize 1`] = `
 @media (min-width:0) {
   .emotion-0 {

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { withKnobs, select } from "@storybook/addon-knobs";
+import { withKnobs, select, object } from "@storybook/addon-knobs";
 import { withReadme } from "storybook-readme";
 import SpacingBox from "../components/SpacingBox";
 import { outlineDecorator } from "./helpers/outlineDecorator";
@@ -61,6 +61,46 @@ storiesOf("Style utilities/Modifiers/SpacingBox", module)
           small: "m",
           medium: "l",
           jumbo: "xl"
+        }}
+      >
+        Resize your viewport width to see the spacing change
+      </SpacingBox>
+    );
+  })
+  .add("spacingSizePerSide", () => {
+    const defaultValue = {
+      top: "m",
+      bottom: "xs",
+      horiz: "xl"
+    };
+    const spacingSizePerSide = object(
+      "spacingSizePerSide",
+      defaultValue,
+      "spacingSizePerSide"
+    );
+
+    return (
+      <SpacingBox
+        spacingSizePerSide={
+          spacingSizePerSide as { [Side in BoxSides]?: SpaceSize }
+        }
+      >
+        Use the Knobs panel to change the sizes of the spacing per side
+      </SpacingBox>
+    );
+  })
+  .add("responsive spacingSizePerSide", () => {
+    return (
+      <SpacingBox
+        spacingSizePerSide={{
+          vert: {
+            default: "none",
+            medium: "l"
+          },
+          horiz: {
+            default: "none",
+            medium: "xl"
+          }
         }}
       >
         Resize your viewport width to see the spacing change
