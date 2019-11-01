@@ -24,7 +24,7 @@ import {
 } from "../../shared/styles/styleUtils";
 import { SecondaryButton } from "../../button";
 import { TextInput } from "../../textInput";
-import { fullscreenModalTitle } from "../style";
+import { fullscreenModalTitle } from "../../fullscreenView/style";
 
 const readme = require("../README.md");
 
