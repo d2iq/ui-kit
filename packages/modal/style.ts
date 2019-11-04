@@ -5,8 +5,7 @@ import {
   zIndexModal,
   borderRadiusDefault,
   themeBgScrim,
-  themeBgPrimary,
-  themeBgSecondary
+  themeBgPrimary
 } from "../design-tokens/build/js/designTokens";
 import { atMediaUp } from "../shared/styles/breakpoints";
 
@@ -107,26 +106,9 @@ export const modalHeader = css`
   border-bottom: 1px solid ${borderColorDefault};
 `;
 
-export const fullscreenModalHeader = css`
-  background-color: ${themeBgSecondary};
-`;
-
 export const modalCloseWrapper = css`
   cursor: pointer;
 `;
-
-export const fullscreenModalTitle = css`
-  text-align: center;
-`;
-
-export const fullscreenModalAction = {
-  dismiss: css`
-    text-align: left;
-  `,
-  cta: css`
-    text-align: right;
-  `
-};
 
 export const modalPreTransitionStyle = duration => css`
   transition: opacity ${duration}ms ease-in-out,

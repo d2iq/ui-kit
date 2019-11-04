@@ -1874,29 +1874,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   background-color: #6446cc;
 }
 
-.emotion-9 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  background-color: var(--themeBgSecondary,#F7F8F9);
-  padding: 32px;
-}
-
-.emotion-10 {
-  box-sizing: border-box;
-  overflow: auto;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding: 32px;
-}
-
 .emotion-13 {
   border-radius: 6px;
   background-color: var(--themeBgPrimary,#FFFFFF);
@@ -1921,6 +1898,29 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   height: 100vh;
   max-height: 100vh;
   width: 100vw;
+}
+
+.emotion-9 {
+  background-color: var(--themeBgSecondary,#F7F8F9);
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  padding: 32px;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  overflow: auto;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 32px;
 }
 
 .emotion-8 {
@@ -2936,29 +2936,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   top: -3px;
 }
 
-.emotion-11 {
-  box-sizing: border-box;
-  border-bottom: 1px solid #DADDE2;
-  background-color: var(--themeBgSecondary,#F7F8F9);
-  padding: 32px;
-}
-
-.emotion-12 {
-  box-sizing: border-box;
-  overflow: auto;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding: 32px;
-}
-
 .emotion-15 {
   border-radius: 6px;
   background-color: var(--themeBgPrimary,#FFFFFF);
@@ -2983,6 +2960,29 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   height: 100vh;
   max-height: 100vh;
   width: 100vw;
+}
+
+.emotion-11 {
+  background-color: var(--themeBgSecondary,#F7F8F9);
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  padding: 32px;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  overflow: auto;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 32px;
 }
 
 .emotion-10 {
@@ -3564,125 +3564,137 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                         className="emotion-12"
                         data-cy="fullscreenModal"
                       >
-                        <div
-                          className="emotion-11"
+                        <FullscreenView
+                          closeText="Close"
+                          ctaButton={
+                            <PrimaryButton>
+                              CTA
+                            </PrimaryButton>
+                          }
+                          cypressSelectorBase="fullscreenModal"
+                          onClose={[MockFunction]}
+                          title="Title"
                         >
                           <div
-                            className="emotion-9"
-                            data-cy="fullscreenModal-header"
-                          >
-                            <Delegate
-                              default={[Function]}
-                              passDefault={true}
-                              props={
-                                Object {
-                                  "closeText": "Close",
-                                  "ctaButton": <PrimaryButton>
-                                    CTA
-                                  </PrimaryButton>,
-                                  "onClose": [MockFunction],
-                                  "subtitle": undefined,
-                                  "title": "Title",
-                                }
-                              }
-                            >
-                              <FullscreenModalHeader
-                                closeText="Close"
-                                ctaButton={
-                                  <PrimaryButton>
-                                    CTA
-                                  </PrimaryButton>
-                                }
-                                onClose={[MockFunction]}
-                                title="Title"
-                              >
-                                <div
-                                  className="emotion-8"
-                                >
-                                  <div
-                                    className="emotion-2"
-                                  >
-                                    <SecondaryButton
-                                      onClick={[MockFunction]}
-                                    >
-                                      <ButtonBase
-                                        appearance="secondary"
-                                        data-cy="secondaryButton"
-                                        onClick={[MockFunction]}
-                                      >
-                                        <FocusStyleManager
-                                          focusEnabledClass="css-1h85cd2"
-                                        >
-                                          <button
-                                            className="emotion-1"
-                                            data-cy="secondaryButton"
-                                            onClick={[Function]}
-                                            tabIndex={0}
-                                          >
-                                            <span
-                                              className=""
-                                            >
-                                              Close
-                                            </span>
-                                          </button>
-                                        </FocusStyleManager>
-                                      </ButtonBase>
-                                    </SecondaryButton>
-                                  </div>
-                                  <div
-                                    className="emotion-5"
-                                  >
-                                    <h2
-                                      className="emotion-3"
-                                    >
-                                      Title
-                                    </h2>
-                                    <h3
-                                      className="emotion-4"
-                                    />
-                                  </div>
-                                  <div
-                                    className="emotion-7"
-                                  >
-                                    <PrimaryButton>
-                                      <ButtonBase
-                                        appearance="primary"
-                                        data-cy="primaryButton"
-                                      >
-                                        <FocusStyleManager
-                                          focusEnabledClass="css-xcotv6"
-                                        >
-                                          <button
-                                            className="emotion-6"
-                                            data-cy="primaryButton"
-                                            onClick={[Function]}
-                                            tabIndex={0}
-                                          >
-                                            <span
-                                              className=""
-                                            >
-                                              CTA
-                                            </span>
-                                          </button>
-                                        </FocusStyleManager>
-                                      </ButtonBase>
-                                    </PrimaryButton>
-                                  </div>
-                                </div>
-                              </FullscreenModalHeader>
-                            </Delegate>
-                          </div>
-                          <div
-                            className="emotion-10"
-                            data-cy="fullscreenModal-content"
+                            className="emotion-11"
                           >
                             <div
-                              tabIndex={0}
+                              className="emotion-9"
+                              data-cy="fullscreenModal-header"
                             >
-                              I am modal content
+                              <Delegate
+                                default={[Function]}
+                                passDefault={true}
+                                props={
+                                  Object {
+                                    "closeText": "Close",
+                                    "ctaButton": <PrimaryButton>
+                                      CTA
+                                    </PrimaryButton>,
+                                    "onClose": [MockFunction],
+                                    "subtitle": undefined,
+                                    "title": "Title",
+                                  }
+                                }
+                              >
+                                <FullscreenModalHeader
+                                  closeText="Close"
+                                  ctaButton={
+                                    <PrimaryButton>
+                                      CTA
+                                    </PrimaryButton>
+                                  }
+                                  onClose={[MockFunction]}
+                                  title="Title"
+                                >
+                                  <div
+                                    className="emotion-8"
+                                  >
+                                    <div
+                                      className="emotion-2"
+                                    >
+                                      <SecondaryButton
+                                        onClick={[MockFunction]}
+                                      >
+                                        <ButtonBase
+                                          appearance="secondary"
+                                          data-cy="secondaryButton"
+                                          onClick={[MockFunction]}
+                                        >
+                                          <FocusStyleManager
+                                            focusEnabledClass="css-1h85cd2"
+                                          >
+                                            <button
+                                              className="emotion-1"
+                                              data-cy="secondaryButton"
+                                              onClick={[Function]}
+                                              tabIndex={0}
+                                            >
+                                              <span
+                                                className=""
+                                              >
+                                                Close
+                                              </span>
+                                            </button>
+                                          </FocusStyleManager>
+                                        </ButtonBase>
+                                      </SecondaryButton>
+                                    </div>
+                                    <div
+                                      className="emotion-5"
+                                    >
+                                      <h2
+                                        className="emotion-3"
+                                      >
+                                        Title
+                                      </h2>
+                                      <h3
+                                        className="emotion-4"
+                                      />
+                                    </div>
+                                    <div
+                                      className="emotion-7"
+                                    >
+                                      <PrimaryButton>
+                                        <ButtonBase
+                                          appearance="primary"
+                                          data-cy="primaryButton"
+                                        >
+                                          <FocusStyleManager
+                                            focusEnabledClass="css-xcotv6"
+                                          >
+                                            <button
+                                              className="emotion-6"
+                                              data-cy="primaryButton"
+                                              onClick={[Function]}
+                                              tabIndex={0}
+                                            >
+                                              <span
+                                                className=""
+                                              >
+                                                CTA
+                                              </span>
+                                            </button>
+                                          </FocusStyleManager>
+                                        </ButtonBase>
+                                      </PrimaryButton>
+                                    </div>
+                                  </div>
+                                </FullscreenModalHeader>
+                              </Delegate>
+                            </div>
+                            <div
+                              className="emotion-10"
+                              data-cy="fullscreenModal-content"
+                            >
+                              <div
+                                tabIndex={0}
+                              >
+                                I am modal content
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        </FullscreenView>
                       </div>
                     </ModalContents>
                   </div>

@@ -10,6 +10,14 @@ Designer/Developer can choose whether to use a large or small modal depending on
 
 If the modal is complex and requires more than 4 navigation tabs then consider switching this to a full screen form.
 
+## FullscreenModal vs FullscreenView
+
+The FullscreenModal component is a layer that appears on top of all page content.
+The FullscreenView component renders in the normal document flow.
+
+The FullscreenModal uses the FullscreenView component, so the designs will always be in sync. The FullscreenView should be used when we want the same layout and style as a FullscreenModal, but we don't want any content to be rendered underneath.
+
+
 ## Closing modals
 
 Modals can be dismissed by:

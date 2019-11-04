@@ -52,6 +52,7 @@ export {
   DropdownMenuItemAvatar,
   DropdownMenuItemAppearances
 } from "./dropdownMenu";
+export { FullscreenView } from "./fullscreenView";
 export { Icon } from "./icon";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
 export { InputAppearance } from "./shared/types/inputAppearance";
