@@ -151,8 +151,8 @@ Array [
   padding: 7px;
   z-index: 1;
   text-align: left;
-  text-transform: capitalize;
   font-weight: bold;
+  text-transform: capitalize;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
@@ -835,8 +835,8 @@ Array [
   padding: 7px;
   z-index: 1;
   text-align: left;
-  text-transform: capitalize;
   font-weight: bold;
+  text-transform: capitalize;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
@@ -1615,8 +1615,8 @@ Array [
   padding: 7px;
   z-index: 1;
   text-align: left;
-  text-transform: capitalize;
   font-weight: bold;
+  text-transform: capitalize;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
