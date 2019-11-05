@@ -8,7 +8,8 @@ import {
   themeTextColorPrimary,
   themeBrandPrimary,
   themeError,
-  themeBgDisabled
+  themeBgDisabled,
+  iconSizeXs
 } from "../../design-tokens/build/js/designTokens";
 
 import {
@@ -70,6 +71,13 @@ export const toggleInputApperances = {
     box-shadow: inset 0px 0px 0px 1px ${themeBgPrimary};
   `
 };
+
+export const inputIconWrapper = css`
+  svg {
+    max-width: ${iconSizeXs};
+    height: auto;
+  }
+`;
 
 export const getIconAppearanceStyle = appearance => {
   switch (appearance) {

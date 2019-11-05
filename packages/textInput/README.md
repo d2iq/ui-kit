@@ -32,3 +32,15 @@ If the `tooltipContent` prop is set, an icon tooltip with the given text will be
 
 ## TextInputWithBadges
 `TextInputWithBadges` extends the `TextInputWithIcon` component. More info coming soon...
+
+## TextInputWithButtons
+`TextInputWithButtons` extends the `TextInputWithIcon` component, does not take an `iconEnd` prop.
+
+A `TextInputWithButtons` component is used when there is an action a user can take that is related to the text input. For example, clicking a button to clear the input's value.
+
+Please do not pass more than 2 buttons into a `TextInputWithButtons`. Instead, consider putting additional buttons outside of the text input.
+
+### Buttons
+The `TextInputButton` component is provided to keep text input buttons consistent. To save space, the buttons are always icons. These icon buttons can be filled with any color, and they do not get the same fill color as icons inside the text input that are not buttons.
+
+Because these buttons contain no text, please pass an `aria-label` to the button. For example, a button that clears the text input might get `aria-label="Clear input"`.

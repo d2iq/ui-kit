@@ -6,7 +6,7 @@ import {
   inputContainer
 } from "../../shared/styles/formStyles";
 import { Badge } from "../../badge";
-import { flex, textTruncate } from "../../shared/styles/styleUtils";
+import { flex, textTruncate, flexItem } from "../../shared/styles/styleUtils";
 import {
   badgeInput,
   badgeInputContainer,
@@ -97,6 +97,7 @@ export class TextInputWithBadges extends TextInputWithIcon<
                 getInputAppearanceStyle(inputAppearance)
               )}
             >
+              {this.getIconStartContent()}
               {this.props.badges &&
                 this.props.badges.map(badge => (
                   <span
@@ -129,10 +130,11 @@ export class TextInputWithBadges extends TextInputWithIcon<
                   </span>
                 ))}
               {this.getInputElement(
-                [badgeInput, badgeInputContents],
+                [badgeInput, badgeInputContents, flexItem("grow")],
                 isValid,
                 describedByIds
               )}
+              {this.getIconEndContent()}
             </div>
             {getHintContent}
             {getValidationErrors}

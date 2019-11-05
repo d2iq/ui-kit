@@ -1,0 +1,700 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInputWithIcon renders 1`] = `
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
+}
+
+.emotion-11 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-color: var(--themeBorder,#DADDE2);
+}
+
+.emotion-11 > div {
+  width: auto;
+}
+
+.emotion-11::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-11::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-11:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-11::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-11 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-11 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-11 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-11 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-11 input::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-11:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 0;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-6 > div {
+  width: auto;
+}
+
+.emotion-10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 12px;
+}
+
+.emotion-10 > div {
+  width: auto;
+}
+
+.emotion-5 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.emotion-5::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5:focus > div {
+  outline-color: Highlight;
+  outline-width: thin;
+}
+
+@media (-webkit-min-device-pixel-ratio:0) {
+  .emotion-5:focus > div {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: unset;
+  }
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-3 use {
+  pointer-events: none;
+}
+
+<TextInputWithButtons
+  appearance="standard"
+  buttons={
+    Array [
+      <TextInputButton
+        shape="system-close"
+      />,
+      <TextInputButton
+        shape="system-funnel"
+      />,
+    ]
+  }
+  id="renders"
+  inputLabel="Label"
+  showInputLabel={true}
+  type="text"
+>
+  <div
+    data-cy="textInput"
+  >
+    <div
+      className="emotion-1"
+      data-cy="textInput-label"
+    >
+      <label
+        className="emotion-0"
+        htmlFor="renders"
+      >
+        Label
+      </label>
+    </div>
+    <FormFieldWrapper
+      id="renders"
+    >
+      <div
+        className="emotion-11"
+      >
+        <input
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-2"
+          data-cy="textInput-input"
+          id="renders"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          type="text"
+        />
+        <span
+          className="emotion-6"
+          key="0"
+        >
+          <TextInputButton
+            key="0"
+            shape="system-close"
+          >
+            <ResetButton>
+              <button
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-4"
+                  tabIndex={-1}
+                >
+                  <Icon
+                    shape="system-close"
+                    size="16px"
+                  >
+                    <svg
+                      aria-label="system-close icon"
+                      className="emotion-3"
+                      data-cy="icon"
+                      height={16}
+                      preserveAspectRatio="xMinYMin meet"
+                      role="img"
+                      viewBox="0 0 16 16"
+                      width={16}
+                    >
+                      <use
+                        xlinkHref="#system-close"
+                      />
+                    </svg>
+                  </Icon>
+                </div>
+              </button>
+            </ResetButton>
+          </TextInputButton>
+        </span>
+        <span
+          className="emotion-10"
+          key="1"
+        >
+          <TextInputButton
+            key="1"
+            shape="system-funnel"
+          >
+            <ResetButton>
+              <button
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-4"
+                  tabIndex={-1}
+                >
+                  <Icon
+                    shape="system-funnel"
+                    size="16px"
+                  >
+                    <svg
+                      aria-label="system-funnel icon"
+                      className="emotion-3"
+                      data-cy="icon"
+                      height={16}
+                      preserveAspectRatio="xMinYMin meet"
+                      role="img"
+                      viewBox="0 0 16 16"
+                      width={16}
+                    >
+                      <use
+                        xlinkHref="#system-funnel"
+                      />
+                    </svg>
+                  </Icon>
+                </div>
+              </button>
+            </ResetButton>
+          </TextInputButton>
+        </span>
+      </div>
+    </FormFieldWrapper>
+  </div>
+</TextInputWithButtons>
+`;
+
+exports[`TextInputWithIcon renders with colored button 1`] = `
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: auto;
+}
+
+.emotion-7 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-color: var(--themeBorder,#DADDE2);
+}
+
+.emotion-7 > div {
+  width: auto;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-7::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-7::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-7 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-7 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-7 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-7 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-7 input::placeholder {
+  color: var(--themeTextColorPrimary,#1B2029);
+  opacity: 0.4;
+}
+
+.emotion-7:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary,#7D58FF);
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 0;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-6 > div {
+  width: auto;
+}
+
+.emotion-5 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.emotion-5::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5:focus > div {
+  outline-color: Highlight;
+  outline-width: thin;
+}
+
+@media (-webkit-min-device-pixel-ratio:0) {
+  .emotion-5:focus > div {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: unset;
+  }
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: red;
+}
+
+.emotion-3 use {
+  pointer-events: none;
+}
+
+<TextInputWithButtons
+  appearance="standard"
+  buttons={
+    Array [
+      <TextInputButton
+        color="red"
+        shape="system-close"
+      />,
+    ]
+  }
+  id="renders.coloredBtn"
+  inputLabel="Label"
+  showInputLabel={true}
+  type="text"
+>
+  <div
+    data-cy="textInput"
+  >
+    <div
+      className="emotion-1"
+      data-cy="textInput-label"
+    >
+      <label
+        className="emotion-0"
+        htmlFor="renders.coloredBtn"
+      >
+        Label
+      </label>
+    </div>
+    <FormFieldWrapper
+      id="renders.coloredBtn"
+    >
+      <div
+        className="emotion-7"
+      >
+        <input
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-2"
+          data-cy="textInput-input"
+          id="renders.coloredBtn"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          type="text"
+        />
+        <span
+          className="emotion-6"
+          key="0"
+        >
+          <TextInputButton
+            color="red"
+            key="0"
+            shape="system-close"
+          >
+            <ResetButton>
+              <button
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-4"
+                  tabIndex={-1}
+                >
+                  <Icon
+                    color="red"
+                    shape="system-close"
+                    size="16px"
+                  >
+                    <svg
+                      aria-label="system-close icon"
+                      className="emotion-3"
+                      data-cy="icon"
+                      height={16}
+                      preserveAspectRatio="xMinYMin meet"
+                      role="img"
+                      viewBox="0 0 16 16"
+                      width={16}
+                    >
+                      <use
+                        xlinkHref="#system-close"
+                      />
+                    </svg>
+                  </Icon>
+                </div>
+              </button>
+            </ResetButton>
+          </TextInputButton>
+        </span>
+      </div>
+    </FormFieldWrapper>
+  </div>
+</TextInputWithButtons>
+`;

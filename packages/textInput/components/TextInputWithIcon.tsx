@@ -6,7 +6,8 @@ import { TextInput, TextInputProps } from "./TextInput";
 import {
   getInputAppearanceStyle,
   inputContainer,
-  getIconAppearanceStyle
+  getIconAppearanceStyle,
+  inputIconWrapper
 } from "../../shared/styles/formStyles";
 import { flex, flexItem, flush, padding } from "../../shared/styles/styleUtils";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
@@ -82,7 +83,8 @@ export class TextInputWithIcon<
           padding("right", "xs"),
           flex({ align: "center", justify: "center" }),
           flexItem("shrink"),
-          getIconAppearanceStyle(this.getInputAppearance())
+          getIconAppearanceStyle(this.getInputAppearance()),
+          inputIconWrapper
         )}
       >
         {this.props.iconStart}
@@ -100,7 +102,8 @@ export class TextInputWithIcon<
           flex({ align: "center", justify: "center" }),
           flexItem("shrink"),
           flush("left"),
-          getIconAppearanceStyle(this.getInputAppearance())
+          getIconAppearanceStyle(this.getInputAppearance()),
+          inputIconWrapper
         )}
       >
         {this.props.iconEnd}
