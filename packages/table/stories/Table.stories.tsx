@@ -456,4 +456,51 @@ storiesOf("Table", module)
       propTables: [Table, Column],
       propTablesExclude: [ResizableTableOnResizeDemo]
     }
-  });
+  })
+  .add("with lower-case header cells", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <Table data={items}>
+        <Column
+          header={<HeaderCell lowerCase={true}>name</HeaderCell>}
+          cellRenderer={nameCellRenderer}
+          width={width}
+        />
+        <Column
+          header={<HeaderCell lowerCase={true}>role</HeaderCell>}
+          cellRenderer={roleCellRenderer}
+          width={width}
+        />
+        <Column
+          header={<HeaderCell lowerCase={true}>state</HeaderCell>}
+          cellRenderer={stateCellRenderer}
+          width={width}
+        />
+        <Column header="" cellRenderer={empty} width={width} />
+        <Column
+          header={<HeaderCell lowerCase={true}>Very Long</HeaderCell>}
+          cellRenderer={veryLongRenderer}
+          width={width}
+        />
+        <Column
+          header={
+            <HeaderCell lowerCase={true} textAlign="right">
+              zip code
+            </HeaderCell>
+          }
+          cellRenderer={zipcodeCellRenderer}
+          width={width}
+        />
+        <Column
+          header={<HeaderCell lowerCase={true}>city</HeaderCell>}
+          cellRenderer={cityCellRenderer}
+          width={width}
+        />
+      </Table>
+    </div>
+  ));
