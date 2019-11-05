@@ -35,7 +35,7 @@ exports[`SortableHeaderCell renders default 1`] = `
   role="button"
   tabIndex={0}
 >
-  <Styled(Cell)
+  <HeaderCell
     aria-label="sort by column content in ascending order"
     aria-sort="descending"
     className="emotion-0"
@@ -48,6 +48,6 @@ exports[`SortableHeaderCell renders default 1`] = `
     <span>
       column content
     </span>
-  </Styled(Cell)>
+  </HeaderCell>
 </Clickable>
 `;
