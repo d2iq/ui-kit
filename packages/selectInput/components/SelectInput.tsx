@@ -173,13 +173,12 @@ class SelectInput extends React.PureComponent<
                 />
               </span>
             </span>
-            {hasError &&
-              getValidationErrors && (
-                <div data-cy="selectInput-hintContent">
-                  {getHintContent}
-                  {hasError && getValidationErrors}
-                </div>
-              )}
+            {Boolean(getHintContent) || hasError ? (
+              <div data-cy="selectInput-hintContent">
+                {getHintContent}
+                {hasError && getValidationErrors}
+              </div>
+            ) : null}
           </div>
         )}
       </FormFieldWrapper>
