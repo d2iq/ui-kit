@@ -151,8 +151,8 @@ Array [
   padding: 7px;
   z-index: 1;
   text-align: left;
-  font-weight: bold;
   text-transform: capitalize;
+  font-weight: bold;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
@@ -254,6 +254,7 @@ Array [
   padding: 7px;
   z-index: 1;
   text-align: left;
+  text-transform: capitalize;
 }
 
 <div
@@ -835,8 +836,8 @@ Array [
   padding: 7px;
   z-index: 1;
   text-align: left;
-  font-weight: bold;
   text-transform: capitalize;
+  font-weight: bold;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
@@ -938,6 +939,7 @@ Array [
   padding: 7px;
   z-index: 1;
   text-align: left;
+  text-transform: capitalize;
 }
 
 .emotion-3 {
@@ -1615,8 +1617,8 @@ Array [
   padding: 7px;
   z-index: 1;
   text-align: left;
-  font-weight: bold;
   text-transform: capitalize;
+  font-weight: bold;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
@@ -1718,6 +1720,7 @@ Array [
   padding: 7px;
   z-index: 1;
   text-align: left;
+  text-transform: capitalize;
 }
 
 .emotion-33 {
