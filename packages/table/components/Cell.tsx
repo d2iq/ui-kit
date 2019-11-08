@@ -6,7 +6,7 @@ import { innerCellCss, cellAlignmentCss, textCapitalize } from "../style";
 export type TextAlign = "left" | "right" | "center";
 export interface CellProps {
   textAlign?: TextAlign;
-  lowerCase?: boolean;
+  capitalize?: boolean;
   children: React.ReactElement<HTMLElement> | string;
   className?: string;
   role?: string;
@@ -47,7 +47,7 @@ class Cell extends React.PureComponent<CellProps, CellState> {
   }
 
   render() {
-    const { children, className, textAlign, lowerCase, ...other } = this.props;
+    const { children, className, textAlign, capitalize, ...other } = this.props;
 
     return (
       <div
@@ -55,7 +55,7 @@ class Cell extends React.PureComponent<CellProps, CellState> {
         className={cx(
           innerCellCss,
           cellAlignmentCss(textAlign || "left"),
-          lowerCase ? null : textCapitalize,
+          !capitalize ? null : textCapitalize,
           className
         )}
         {...other}

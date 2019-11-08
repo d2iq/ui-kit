@@ -11,7 +11,7 @@ export interface SortableHeaderCellProps {
   sortDirection: SortDirection;
   columnContent: React.ReactNode;
   textAlign?: TextAlign;
-  lowerCase?: boolean;
+  capitalize?: boolean;
 }
 interface SortableHeaderCellState {
   hovered: boolean;
@@ -45,7 +45,7 @@ export class SortableHeaderCell extends React.Component<
       sortDirection,
       columnContent,
       textAlign,
-      lowerCase
+      capitalize
     } = this.props;
 
     const displaySortDirection =
@@ -74,7 +74,7 @@ export class SortableHeaderCell extends React.Component<
             ariaSortString === "descending" ? "ascending" : "descending"
           } order`}
           textAlign={textAlign}
-          lowerCase={lowerCase}
+          capitalize={capitalize}
         >
           <span>{columnContent}</span>
         </HeaderCell>
