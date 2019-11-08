@@ -73,6 +73,8 @@ export const infoBox = (appearance, hasActions) =>
     grid-gap: ${spaceM};
     grid-template-columns: 1fr auto;
     align-items: center;
+    overflow: auto;
+    word-break: break-word;
     ${hasActions &&
       atMediaUp[layoutBreakpoint](css`
         grid-template-columns: auto 1fr auto;

@@ -44,6 +44,8 @@ exports[`InfoBox renders default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  overflow: auto;
+  word-break: break-word;
   padding: 16px;
   font-size: 12px;
   display: grid;
@@ -95,6 +97,8 @@ exports[`InfoBox renders with JSX message 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  overflow: auto;
+  word-break: break-word;
   padding: 16px;
   font-size: 12px;
   display: grid;
@@ -152,6 +156,8 @@ exports[`InfoBox renders with actions 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  overflow: auto;
+  word-break: break-word;
   padding: 16px;
   font-size: 12px;
   display: grid;
@@ -246,6 +252,8 @@ exports[`InfoBox renders without dismiss button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  overflow: auto;
+  word-break: break-word;
   padding: 16px;
   font-size: 12px;
   display: grid;
