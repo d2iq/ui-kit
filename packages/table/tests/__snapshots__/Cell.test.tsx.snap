@@ -7,6 +7,7 @@ exports[`Cell renders correctly 1`] = `
   padding: 7px;
   z-index: 1;
   text-align: left;
+  text-transform: capitalize;
 }
 
 <div
@@ -45,6 +46,7 @@ exports[`TextCell renders correctly 1`] = `
   padding: 7px;
   z-index: 1;
   text-align: left;
+  text-transform: capitalize;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;

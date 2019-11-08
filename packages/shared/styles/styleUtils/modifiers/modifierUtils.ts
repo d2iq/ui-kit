@@ -20,8 +20,7 @@ export type BoxSides =
   | "bottom"
   | "left"
   | "horiz"
-  | "vert"
-  | undefined;
+  | "vert";
 export type SpaceSizes = "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl" | "none";
 export type SpaceSize = BreakpointConfig<SpaceSizes>;
 

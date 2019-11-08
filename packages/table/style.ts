@@ -29,8 +29,11 @@ export const headerHover = css`
 `;
 
 export const headerCellCss = css`
-  text-transform: capitalize;
   font-weight: bold;
+`;
+
+export const textCapitalize = css`
+  text-transform: capitalize;
 `;
 
 export const resizingHeader = css`
