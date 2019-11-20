@@ -157,6 +157,16 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   padding-bottom: 4px;
   padding-top: 4px;
   padding-right: 8px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
 }
 
 .emotion-26:focus {
@@ -718,6 +728,16 @@ exports[`TextInputWithBadges renders empty 1`] = `
   padding-bottom: 4px;
   padding-top: 4px;
   padding-right: 8px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
 }
 
 .emotion-2:focus {
@@ -931,6 +951,16 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   padding-bottom: 4px;
   padding-top: 4px;
   padding-right: 8px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
 }
 
 .emotion-26:focus {

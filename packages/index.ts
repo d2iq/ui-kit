@@ -82,7 +82,13 @@ export {
 } from "./table";
 export { TableView, TableViewHeader, TableViewBody } from "./tableView";
 export { TabItem, TabTitle, Tabs } from "./tabs";
-export { TextInput, TextInputWithIcon, TextInputWithBadges } from "./textInput";
+export {
+  TextInput,
+  TextInputWithIcon,
+  TextInputWithBadges,
+  TextInputWithButtons
+} from "./textInput";
+export { TextInputButton } from "./textInputButton";
 export { Textarea } from "./textarea";
 export { Toaster, Toast } from "./toaster";
 export { ToggleContent } from "./toggleContent";
