@@ -412,10 +412,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     >;
 
     const onStopCallback = (_, data) => {
-      this.resizeColumn({
-        dragDelta: data.x,
-        index: columnIndex.toString()
-      });
+      this.resizeColumn({ dragDelta: data.x, index: columnIndex.toString() });
       this.setState({ resizeIndex: -1 });
     };
     const onStartCallback = () => {
@@ -427,29 +424,42 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       `table-headerCell.row${rowIndex}`
     ].join(" ");
 
+    const className1 = cx(headerCss, vAlignChildren, {
+      [resizingHeader]: this.state.resizeIndex >= 0,
+      [headerHover]:
+        this.state.resizeIndex === -1 || this.state.resizeIndex === columnIndex
+    });
+    const className2 = cx(flexItem("grow"), {
+      [preventSortOverlap(RESIZE_ICON_SIZE)]: this.cellNeedsPreventIconOverlap(
+        header,
+        column
+      )
+    });
+    const className3 = cx(
+      dragHandleWrapper,
+      vAlignChildren,
+      padding("left", "l"),
+      "staticClass_dragHandleWrapper"
+    );
+
+    const className4 = cx(flexItem("shrink"), draggableContainer);
+    const bounds = {
+      top: 0,
+      left: colSizeCache[columnIndex] * -1 + COL_RESIZE_MIN_WIDTH,
+      right:
+        this.getContainerWidth() -
+        colSizeCache[columnIndex] -
+        this.getContainerWidth() * (1 - COL_RESIZE_MAX_WIDTH),
+      bottom: 0
+    };
+
+    const classFlex = flex();
+
     return (
-      <div
-        className={cx(headerCss, vAlignChildren, {
-          [resizingHeader]: this.state.resizeIndex >= 0,
-          [headerHover]:
-            this.state.resizeIndex === -1 ||
-            this.state.resizeIndex === columnIndex
-        })}
-        style={style}
-        key={key}
-        data-cy={dataCy}
-      >
-        <div className={flex()}>
-          <div
-            className={cx(flexItem("grow"), {
-              [preventSortOverlap(
-                RESIZE_ICON_SIZE
-              )]: this.cellNeedsPreventIconOverlap(header, column)
-            })}
-          >
-            {column.props.header}
-          </div>
-          <div className={cx(flexItem("shrink"), draggableContainer)}>
+      <div className={className1} style={style} key={key} data-cy={dataCy}>
+        <div className={classFlex}>
+          <div className={className2}>{column.props.header}</div>
+          <div className={className4}>
             {column.props.resizable && (
               <Draggable
                 axis="x"
@@ -460,28 +470,13 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
                   y: 0
                 }}
                 onStart={onStartCallback}
-                bounds={{
-                  top: 0,
-                  left: colSizeCache[columnIndex] * -1 + COL_RESIZE_MIN_WIDTH,
-                  right:
-                    this.getContainerWidth() -
-                    colSizeCache[columnIndex] -
-                    this.getContainerWidth() * (1 - COL_RESIZE_MAX_WIDTH),
-                  bottom: 0
-                }}
+                bounds={bounds}
                 // Needed for an issue where text inputs lose focus when a Draggable unmounts
                 // Github issue: https://github.com/mzabriskie/react-draggable/issues/315
                 enableUserSelectHack={false}
               >
                 <div>
-                  <div
-                    className={cx(
-                      dragHandleWrapper,
-                      vAlignChildren,
-                      padding("left", "l"),
-                      "staticClass_dragHandleWrapper"
-                    )}
-                  >
+                  <div className={className3}>
                     <Icon
                       shape={SystemIcons.ResizeHorizontal}
                       size={RESIZE_ICON_SIZE}
@@ -576,9 +571,6 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     const updateHoveredRowIndex = () => {
       this.setState({ hoveredRowIndex: rowIndex });
     };
-    const header = column.props.header as React.ReactElement<
-      CellProps | SortableHeaderCellProps
-    >;
     const dataCy = [
       "table-contentCell",
       `table-contentCell.col${columnIndex}`,
@@ -587,26 +579,29 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         ? ["table-contentCell.hoveredRow"]
         : [])
     ].join(" ");
+    const className = cx(cellCss, vAlignChildren, {
+      [css`
+        ${rowHoverStyles};
+      `]: rowIndex === this.state.hoveredRowIndex
+    });
+
+    const content = column.props.cellRenderer(
+      data[rowIndex],
+      style.width as number
+    );
 
     return (
       /* tslint:disable:react-a11y-event-has-role */
-      <ContentCell
-        className={cx(cellCss, vAlignChildren, {
-          [css`
-            ${rowHoverStyles};
-          `]: rowIndex === this.state.hoveredRowIndex,
-          [preventSortOverlap(
-            RESIZE_ICON_SIZE
-          )]: this.cellNeedsPreventIconOverlap(header, column)
-        })}
+      <div
+        className={className}
         style={style}
         key={key}
         onMouseOver={updateHoveredRowIndex}
         data-rowindex={rowIndex}
         data-cy={dataCy}
       >
-        {column.props.cellRenderer(data[rowIndex], style.width as number)}
-      </ContentCell>
+        {content}
+      </div>
       /* tslint:enable:react-a11y-event-has-role */
     );
   }
