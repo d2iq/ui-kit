@@ -23,10 +23,10 @@ exports[`SortableHeaderCell renders default 1`] = `
   content: "";
   height: 0;
   width: 0;
-  border-bottom: 4px solid currentColor;
+  border-top: 4px solid currentColor;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: none;
+  border-bottom: none;
 }
 
 <Clickable

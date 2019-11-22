@@ -139,13 +139,13 @@ export const styleArrowDirection = displaySortDirection => {
     case "DESC":
       return css`
         &:after {
-          ${pseudoElTriangle("bottom", pointerSize, "currentColor")};
+          ${pseudoElTriangle("top", pointerSize, "currentColor")};
         }
       `;
     case "ASC":
       return css`
         &:after {
-          ${pseudoElTriangle("top", pointerSize, "currentColor")};
+          ${pseudoElTriangle("bottom", pointerSize, "currentColor")};
         }
       `;
     default:
