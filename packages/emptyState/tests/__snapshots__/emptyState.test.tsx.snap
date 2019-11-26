@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyState default 1`] = `
+<div
+  class="css-1b4ui7p"
+  data-cy="emptyState"
+>
+  <div
+    class="css-1whabpp"
+    data-cy="card"
+  >
+    <div
+      class="css-boqfyw"
+    >
+      <div
+        class="css-olgrgd"
+        data-cy="spacingBox"
+      >
+        <h2
+          class="css-zf0nd2"
+          data-cy="headingText2"
+        >
+          Heading
+        </h2>
+      </div>
+      <div
+        class="css-2b834z"
+        data-cy="spacingBox"
+      >
+        Body content
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EmptyState renders with primary and secondary actions 1`] = `
+<div
+  class="css-1b4ui7p"
+  data-cy="emptyState"
+>
+  <div
+    class="css-1whabpp"
+    data-cy="card"
+  >
+    <div
+      class="css-boqfyw"
+    >
+      <div
+        class="css-olgrgd"
+        data-cy="spacingBox"
+      >
+        <h2
+          class="css-zf0nd2"
+          data-cy="headingText2"
+        >
+          Heading
+        </h2>
+      </div>
+      <div
+        class="css-1xeq5c6"
+        data-cy="spacingBox"
+      >
+        Body content
+      </div>
+      <div
+        class="css-8h0s7x"
+        data-cy="flex"
+      >
+        <div
+          class="css-149ndna"
+          data-cy="flexItem"
+        >
+          <button
+            class="css-67j5fi"
+            data-cy="secondaryButton"
+            tabindex="0"
+          >
+            <span
+              class=""
+            >
+              Secondary
+            </span>
+          </button>
+        </div>
+        <div
+          class="css-149ndna"
+          data-cy="flexItem"
+        >
+          <button
+            class="css-s9tdxz"
+            data-cy="primaryButton"
+            tabindex="0"
+          >
+            <span
+              class=""
+            >
+              Primary
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

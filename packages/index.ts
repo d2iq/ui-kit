@@ -52,6 +52,11 @@ export {
   DropdownMenuItemAvatar,
   DropdownMenuItemAppearances
 } from "./dropdownMenu";
+export {
+  EmptyState,
+  EmptyStateWithGraphic,
+  EmptyStateWrapper
+} from "./emptyState";
 export { FullscreenView } from "./fullscreenView";
 export { Icon } from "./icon";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
