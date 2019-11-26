@@ -22,6 +22,7 @@ import { TextInputWithIconProps } from "./TextInputWithIcon";
 import { TextInputWithIcon } from "..";
 import { BadgeAppearance } from "../../badge/components/badge";
 import { StateChangeOptions } from "downshift";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 export interface BadgeDatum {
   value: string;
@@ -39,6 +40,7 @@ interface TextInputWithBadgesProps extends TextInputWithIconProps {
     cb?: () => void
   ) => void;
   badgeAppearance?: BadgeAppearance;
+  addBadgeOnBlur?: boolean;
 }
 
 export const getStringAsBadgeDatum = (
@@ -52,6 +54,12 @@ export class TextInputWithBadges extends TextInputWithIcon<
   TextInputWithBadgesProps,
   {}
 > {
+  public static defaultProps: Partial<TextInputWithBadgesProps> = {
+    type: "text",
+    appearance: InputAppearance.Standard,
+    showInputLabel: true,
+    addBadgeOnBlur: true
+  };
   private inputRef = React.createRef<HTMLInputElement>();
 
   constructor(props) {
@@ -59,6 +67,7 @@ export class TextInputWithBadges extends TextInputWithIcon<
 
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
     this.handleTagAdd = this.handleTagAdd.bind(this);
     this.handleTagDelete = this.handleTagDelete.bind(this);
   }
@@ -69,10 +78,12 @@ export class TextInputWithBadges extends TextInputWithIcon<
       badges,
       onBadgeChange,
       downshiftReset,
+      addBadgeOnBlur,
       ...inputProps
     } = baseProps as TextInputWithBadgesProps;
     inputProps.onKeyDown = this.handleKeyDown;
     inputProps.onKeyUp = this.handleKeyUp;
+    inputProps.onBlur = this.handleBlur.bind(this, inputProps.onBlur);
     inputProps.type = "text";
     inputProps.ref = this.inputRef;
     return inputProps;
@@ -192,6 +203,14 @@ export class TextInputWithBadges extends TextInputWithIcon<
 
     if (this.props.onKeyUp) {
       this.props.onKeyUp(e);
+    }
+  }
+
+  private handleBlur(cb, e) {
+    cb(e); // calls the onBlur handler from the component this extends
+
+    if (this.props.addBadgeOnBlur) {
+      this.handleTagAdd(getStringAsBadgeDatum(e.target.value));
     }
   }
 

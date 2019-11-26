@@ -76,8 +76,52 @@ describe("TextInputWithBadges", () => {
       key: "Enter"
     });
 
-    // TODO: change this if I decide not to "sanitize" the `value` string
     expect(badgeChangeHandler).toHaveBeenCalledWith(
+      [getStringAsBadgeDatum(inputValue)],
+      getStringAsBadgeDatum(inputValue)
+    );
+  });
+
+  it("calls onBadgeChange with the badge data and input value when the input blurs", () => {
+    const badgeChangeHandler = jest.fn();
+    const inputValue = "some value";
+    const component = mount(
+      <TextInputWithBadges
+        id="appearance"
+        inputLabel="Appearance"
+        value={inputValue}
+        onBadgeChange={badgeChangeHandler}
+      />
+    );
+
+    expect(badgeChangeHandler).not.toHaveBeenCalled();
+    component.find("input").simulate("focus");
+    component.find("input").simulate("blur");
+
+    expect(badgeChangeHandler).toHaveBeenCalledWith(
+      [getStringAsBadgeDatum(inputValue)],
+      getStringAsBadgeDatum(inputValue)
+    );
+  });
+
+  it("does not call onBadgeChange with the badge data and input value when the input blurs if addBadgeOnBlur=false", () => {
+    const badgeChangeHandler = jest.fn();
+    const inputValue = "some value";
+    const component = mount(
+      <TextInputWithBadges
+        id="appearance"
+        inputLabel="Appearance"
+        value={inputValue}
+        onBadgeChange={badgeChangeHandler}
+        addBadgeOnBlur={false}
+      />
+    );
+
+    expect(badgeChangeHandler).not.toHaveBeenCalled();
+    component.find("input").simulate("focus");
+    component.find("input").simulate("blur");
+
+    expect(badgeChangeHandler).not.toHaveBeenCalledWith(
       [getStringAsBadgeDatum(inputValue)],
       getStringAsBadgeDatum(inputValue)
     );
