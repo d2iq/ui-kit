@@ -1,13 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CodeSnippet renders default 1`] = `
+.emotion-6 {
+  overflow: auto;
+  white-space: pre;
+}
+
 .emotion-5 {
+  overflow: auto;
+  white-space: pre;
   padding: 16px;
 }
 
 .emotion-4 {
   background-color: #1B2029;
   background-repeat: no-repeat;
+  overflow: auto;
+  white-space: pre;
   padding: 16px;
 }
 
@@ -75,6 +84,7 @@ exports[`CodeSnippet renders default 1`] = `
 <CodeSnippet>
   <SpacingBox
     bgColor="#1B2029"
+    className="emotion-6"
     side="all"
     spacingSize="m"
     tag="div"
@@ -155,13 +165,22 @@ exports[`CodeSnippet renders with copy button 1`] = `
   cursor: pointer;
 }
 
+.emotion-10 {
+  overflow: auto;
+  white-space: pre;
+}
+
 .emotion-9 {
+  overflow: auto;
+  white-space: pre;
   padding: 16px;
 }
 
 .emotion-8 {
   background-color: #1B2029;
   background-repeat: no-repeat;
+  overflow: auto;
+  white-space: pre;
   padding: 16px;
 }
 
@@ -261,6 +280,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
 >
   <SpacingBox
     bgColor="#1B2029"
+    className="emotion-10"
     side="all"
     spacingSize="m"
     tag="div"
