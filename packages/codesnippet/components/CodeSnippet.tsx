@@ -7,6 +7,7 @@ import {
   themeTextColorPrimaryInverted
 } from "../../design-tokens/build/js/designTokens";
 import { ClickToCopyButton } from "../../clicktocopybutton";
+import { codeSnippet } from "../style";
 
 export interface CodeSnippetProps {
   children?: string;
@@ -24,7 +25,7 @@ export interface CodeSnippetProps {
 
 const CodeSnippet = ({ children, textToCopy, onCopy }: CodeSnippetProps) => {
   return (
-    <SpacingBox bgColor={greyDark}>
+    <SpacingBox bgColor={greyDark} className={codeSnippet}>
       <Flex>
         <FlexItem>
           <MonospaceText color={themeTextColorPrimaryInverted}>
