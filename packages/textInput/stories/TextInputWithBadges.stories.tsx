@@ -73,6 +73,19 @@ storiesOf("Forms/TextInputWithBadges", module)
       )}
     </TextInputWithBadgesStoryHelper>
   ))
+  .add("don't add badge on blur", () => (
+    <TextInputWithBadgesStoryHelper>
+      {({ badges, badgeChangeHandler }) => (
+        <TextInputWithBadges
+          id="noAddOnBlur"
+          inputLabel="Don't add badge on blur"
+          onBadgeChange={badgeChangeHandler}
+          badges={badges}
+          addBadgeOnBlur={false}
+        />
+      )}
+    </TextInputWithBadgesStoryHelper>
+  ))
   .add("used w/ a Typeahead", () => (
     <TextInputWithBadgesTypeaheadStoryHelper items={typeaheadItems}>
       {({

@@ -285,6 +285,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
 }
 
 <TextInputWithBadges
+  addBadgeOnBlur={true}
   appearance="standard"
   badges={
     Array [
@@ -750,6 +751,7 @@ exports[`TextInputWithBadges renders empty 1`] = `
 }
 
 <TextInputWithBadges
+  addBadgeOnBlur={true}
   appearance="standard"
   id="empty"
   inputLabel="empty"
@@ -1079,6 +1081,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
 }
 
 <TextInputWithBadges
+  addBadgeOnBlur={true}
   appearance="standard"
   badges={
     Array [
