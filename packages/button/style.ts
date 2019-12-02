@@ -298,3 +298,28 @@ export const getInverseMutedButtonStyles = (appearance: ButtonAppearances) => {
       `
     : inverseMutedButton;
 };
+
+export const pointerCursor = css`
+  cursor: pointer;
+`;
+
+// Replicates default browser focus ring styles.
+//
+// The media query targets Webkit browsers, which can
+// more accurately replicate the native focus ring style
+export const keyboardFocus = css`
+  > div:focus {
+    outline: none;
+  }
+
+  &:focus > div {
+    outline-color: Highlight;
+    outline-width: thin;
+
+    @media (-webkit-min-device-pixel-ratio: 0) {
+      outline-color: -webkit-focus-ring-color;
+      outline-style: auto;
+      outline-width: unset;
+    }
+  }
+`;
