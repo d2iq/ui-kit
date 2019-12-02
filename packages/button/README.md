@@ -41,6 +41,9 @@ Use sentence-style capitalization (only the first word in a phrase and any prope
 
 For Sets of Buttons, use specific labels, such as Save or Cancel, instead of using Yes and No. This is particularly helpful when the user is confirming an action.
 
+## ResetButton
+A `ResetButton` component is essentially an unstyled HTML `<button>` element. It can be used for an element that is semantically a button, but is not intended to look like a button.
+
 ## Feedback
 
 Buttons should have hover, active, focus, disabled states.
