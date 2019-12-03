@@ -3,7 +3,10 @@ import { sectionLoadingWrapper, sectionLoadingIndicator } from "../style";
 
 const SectionLoadingIndicator: React.SFC = () => (
   <div className={sectionLoadingWrapper}>
-    <div className={sectionLoadingIndicator} />
+    <div
+      className={sectionLoadingIndicator}
+      data-cy="sectionLoadingIndicator"
+    />
   </div>
 );
 
