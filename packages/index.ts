@@ -26,7 +26,8 @@ export {
   SecondaryDropdownButton,
   StandardDropdownButton,
   SuccessDropdownButton,
-  DangerDropdownButton
+  DangerDropdownButton,
+  ResetButton
 } from "./button";
 export { ButtonCard, Card } from "./card";
 export { LineChart } from "./chart";
