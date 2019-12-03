@@ -6,6 +6,7 @@ exports[`Loading indicators renders InlineLoadingIndicator 1`] = `
 >
   <div
     class="css-15gzp3f"
+    data-cy="sectionLoadingIndicator"
   />
 </div>
 `;
@@ -14,7 +15,7 @@ exports[`Loading indicators renders SectionLoadingIndicator 1`] = `
 <svg
   aria-label="system-spinner icon"
   class="css-zgvqkl"
-  data-cy="icon"
+  data-cy="icon inlineLoadingIndicator"
   height="16"
   preserveAspectRatio="xMinYMin meet"
   role="img"
