@@ -65,6 +65,10 @@ export { InlineBorderedItems } from "./inlineBorderedItems";
 export { InputAppearance } from "./shared/types/inputAppearance";
 export { List, BorderedList } from "./list";
 export {
+  InlineLoadingIndicator,
+  SectionLoadingIndicator
+} from "./loadingIndicator";
+export {
   DialogModal,
   SmallDialogModal,
   LargeDialogModal,
