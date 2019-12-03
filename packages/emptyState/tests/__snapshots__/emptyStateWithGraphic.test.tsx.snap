@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyStateWithGraphic default 1`] = `
+<div
+  data-cy="emptyStateWithGraphic"
+>
+  <div
+    class="css-1gikt66"
+    data-cy="spacingBox"
+  >
+    <img
+      alt=""
+      class="css-1jv97ae"
+      role="presentation"
+      src="http://placehold.it/350x150"
+    />
+  </div>
+  <div
+    class="css-so2jx9"
+    data-cy="spacingBox"
+  >
+    <div
+      class="css-e463k1"
+      data-cy="spacingBox"
+    >
+      <h2
+        class="css-zf0nd2"
+        data-cy="headingText2"
+      >
+        Heading
+      </h2>
+    </div>
+    <div
+      class="css-1j4gpfm"
+    >
+      Body content
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EmptyStateWithGraphic renders with primary and secondary actions 1`] = `
+<div
+  data-cy="emptyStateWithGraphic"
+>
+  <div
+    class="css-1gikt66"
+    data-cy="spacingBox"
+  >
+    <img
+      alt=""
+      class="css-1jv97ae"
+      role="presentation"
+      src="http://placehold.it/350x150"
+    />
+  </div>
+  <div
+    class="css-1gikt66"
+    data-cy="spacingBox"
+  >
+    <div
+      class="css-e463k1"
+      data-cy="spacingBox"
+    >
+      <h2
+        class="css-zf0nd2"
+        data-cy="headingText2"
+      >
+        Heading
+      </h2>
+    </div>
+    <div
+      class="css-1j4gpfm"
+    >
+      Body content
+    </div>
+  </div>
+  <div
+    class="css-8h0s7x"
+    data-cy="flex"
+  >
+    <div
+      class="css-149ndna"
+      data-cy="flexItem"
+    >
+      <button
+        class="css-67j5fi"
+        data-cy="secondaryButton"
+        tabindex="0"
+      >
+        <span
+          class=""
+        >
+          Secondary
+        </span>
+      </button>
+    </div>
+    <div
+      class="css-149ndna"
+      data-cy="flexItem"
+    >
+      <button
+        class="css-s9tdxz"
+        data-cy="primaryButton"
+        tabindex="0"
+      >
+        <span
+          class=""
+        >
+          Primary
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
