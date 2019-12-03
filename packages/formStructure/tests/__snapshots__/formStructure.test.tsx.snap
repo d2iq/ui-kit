@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form structure components renders top-level form structure components 1`] = `
+Array [
+  <div
+    class="css-fyl4eb"
+    data-cy="formMessage"
+  >
+    <div
+      aria-live="assertive"
+      class="css-rvaq24"
+      data-cy="infoBox infoBox.warning"
+      role="alert"
+    >
+      <div>
+        Form message content
+      </div>
+    </div>
+  </div>,
+  <div
+    class="css-fyl4eb"
+    data-cy="spacingBox"
+  >
+    <h3
+      class="css-voj7vw"
+      data-cy="formTitle"
+    >
+      Form Title Content
+    </h3>
+  </div>,
+  <div
+    class="css-1gikt66"
+    data-cy="formSection"
+  >
+    <div
+      class="css-1jbsn52"
+      data-cy="formSectionBody"
+    >
+      <div>
+        Form section body content
+      </div>
+    </div>
+  </div>,
+  <div
+    class="css-1gikt66"
+    data-cy="formSection"
+  >
+    <div
+      class="css-e463k1"
+      data-cy="formSectionHeader"
+    >
+      <h2
+        class="css-2b5fnz"
+        data-cy="formSectionHeader-title"
+      >
+        Section title
+      </h2>
+      <div
+        class="css-1cgc4k2"
+        data-cy="spacingBox"
+      >
+        <div
+          class="css-i33f89"
+          data-cy="formSectionHeader-subtitle"
+        >
+          Section subtitle
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1jbsn52"
+      data-cy="formSectionBody"
+    >
+      <div
+        class="css-1whabpp"
+        data-cy="formSubSection"
+      >
+        <div
+          class="css-2yjhih"
+        >
+          <div
+            class="css-1jbsn52"
+          >
+            <div>
+              Form sub-section content
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

@@ -36,7 +36,7 @@ export interface InfoBoxProps {
   /**
    * the main content of the message
    */
-  message: React.ReactElement<HTMLElement> | string;
+  message: React.ReactNode;
   /**
    * the more prominent action presented to the user
    */
