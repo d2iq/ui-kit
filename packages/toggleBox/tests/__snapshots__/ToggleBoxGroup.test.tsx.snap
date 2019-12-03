@@ -13,11 +13,20 @@ exports[`ToggleBoxGroup renders default 1`] = `
   height: 1px;
 }
 
-.emotion-15 {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+.emotion-3,
+.emotion-3 > * {
+  height: 100%;
+}
+
+.emotion-6 > * {
+  height: 100%;
+}
+
+.emotion-21 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -37,16 +46,16 @@ exports[`ToggleBoxGroup renders default 1`] = `
   min-height: 0;
 }
 
-.emotion-15 > div {
+.emotion-21 > div {
   width: auto;
 }
 
-.emotion-15 > *:not(:first-child) {
+.emotion-21 > *:not(:first-child) {
   padding-left: 16px;
   padding-top: 0;
 }
 
-.emotion-4 {
+.emotion-5 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -59,7 +68,11 @@ exports[`ToggleBoxGroup renders default 1`] = `
   width: auto;
 }
 
-.emotion-3 {
+.emotion-5 > * {
+  height: 100%;
+}
+
+.emotion-4 {
   display: block;
 }
 
@@ -92,22 +105,23 @@ exports[`ToggleBoxGroup renders default 1`] = `
   id="default"
 >
   <Flex
-    align="flex-start"
+    align="stretch"
     direction="row"
     gutterSize="m"
     justify="flex-start"
     wrap="nowrap"
   >
     <div
-      className="emotion-15"
+      className="emotion-21"
       data-cy="flex"
     >
       <FlexItem
+        className="emotion-6"
         flex="grow"
         key="buttonWrapper-exosphere"
       >
         <div
-          className="emotion-4"
+          className="emotion-5"
           data-cy="flexItem"
         >
           <ToggleBox
@@ -129,7 +143,7 @@ exports[`ToggleBoxGroup renders default 1`] = `
               value="exosphere"
             >
               <label
-                className="emotion-3"
+                className="emotion-4"
                 htmlFor="exosphere"
               >
                 <input
@@ -146,35 +160,40 @@ exports[`ToggleBoxGroup renders default 1`] = `
                   type="radio"
                   value="exosphere"
                 />
-                <ButtonCard
-                  disabled={false}
-                  hasFocus={false}
-                  isActive={false}
-                  isInput={true}
-                  paddingSize="m"
+                <div
+                  className="emotion-3"
                 >
-                  <div
-                    className="emotion-2"
-                    data-cy="buttonCard"
+                  <ButtonCard
+                    disabled={false}
+                    hasFocus={false}
+                    isActive={false}
+                    isInput={true}
+                    paddingSize="m"
                   >
                     <div
-                      className="emotion-1"
+                      className="emotion-2"
+                      data-cy="buttonCard"
                     >
-                      Exosphere
+                      <div
+                        className="emotion-1"
+                      >
+                        Exosphere
+                      </div>
                     </div>
-                  </div>
-                </ButtonCard>
+                  </ButtonCard>
+                </div>
               </label>
             </ToggleWrapper>
           </ToggleBox>
         </div>
       </FlexItem>
       <FlexItem
+        className="emotion-6"
         flex="grow"
         key="buttonWrapper-thermosphere"
       >
         <div
-          className="emotion-4"
+          className="emotion-5"
           data-cy="flexItem"
         >
           <ToggleBox
@@ -196,7 +215,7 @@ exports[`ToggleBoxGroup renders default 1`] = `
               value="thermosphere"
             >
               <label
-                className="emotion-3"
+                className="emotion-4"
                 htmlFor="thermosphere"
               >
                 <input
@@ -213,35 +232,40 @@ exports[`ToggleBoxGroup renders default 1`] = `
                   type="radio"
                   value="thermosphere"
                 />
-                <ButtonCard
-                  disabled={false}
-                  hasFocus={false}
-                  isActive={false}
-                  isInput={true}
-                  paddingSize="m"
+                <div
+                  className="emotion-3"
                 >
-                  <div
-                    className="emotion-2"
-                    data-cy="buttonCard"
+                  <ButtonCard
+                    disabled={false}
+                    hasFocus={false}
+                    isActive={false}
+                    isInput={true}
+                    paddingSize="m"
                   >
                     <div
-                      className="emotion-1"
+                      className="emotion-2"
+                      data-cy="buttonCard"
                     >
-                      Thermosphere
+                      <div
+                        className="emotion-1"
+                      >
+                        Thermosphere
+                      </div>
                     </div>
-                  </div>
-                </ButtonCard>
+                  </ButtonCard>
+                </div>
               </label>
             </ToggleWrapper>
           </ToggleBox>
         </div>
       </FlexItem>
       <FlexItem
+        className="emotion-6"
         flex="grow"
         key="buttonWrapper-mesosphere"
       >
         <div
-          className="emotion-4"
+          className="emotion-5"
           data-cy="flexItem"
         >
           <ToggleBox
@@ -263,7 +287,7 @@ exports[`ToggleBoxGroup renders default 1`] = `
               value="mesosphere"
             >
               <label
-                className="emotion-3"
+                className="emotion-4"
                 htmlFor="mesosphere"
               >
                 <input
@@ -280,24 +304,28 @@ exports[`ToggleBoxGroup renders default 1`] = `
                   type="radio"
                   value="mesosphere"
                 />
-                <ButtonCard
-                  disabled={false}
-                  hasFocus={false}
-                  isActive={false}
-                  isInput={true}
-                  paddingSize="m"
+                <div
+                  className="emotion-3"
                 >
-                  <div
-                    className="emotion-2"
-                    data-cy="buttonCard"
+                  <ButtonCard
+                    disabled={false}
+                    hasFocus={false}
+                    isActive={false}
+                    isInput={true}
+                    paddingSize="m"
                   >
                     <div
-                      className="emotion-1"
+                      className="emotion-2"
+                      data-cy="buttonCard"
                     >
-                      Mesosphere
+                      <div
+                        className="emotion-1"
+                      >
+                        Mesosphere
+                      </div>
                     </div>
-                  </div>
-                </ButtonCard>
+                  </ButtonCard>
+                </div>
               </label>
             </ToggleWrapper>
           </ToggleBox>
@@ -321,11 +349,20 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   height: 1px;
 }
 
-.emotion-15 {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+.emotion-3,
+.emotion-3 > * {
+  height: 100%;
+}
+
+.emotion-6 > * {
+  height: 100%;
+}
+
+.emotion-21 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -345,16 +382,16 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   min-height: 0;
 }
 
-.emotion-15 > div {
+.emotion-21 > div {
   width: auto;
 }
 
-.emotion-15 > *:not(:first-child) {
+.emotion-21 > *:not(:first-child) {
   padding-left: 16px;
   padding-top: 0;
 }
 
-.emotion-4 {
+.emotion-5 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -367,7 +404,11 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   width: auto;
 }
 
-.emotion-3 {
+.emotion-5 > * {
+  height: 100%;
+}
+
+.emotion-4 {
   display: block;
 }
 
@@ -396,34 +437,34 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   padding: 16px;
 }
 
-.emotion-12 {
+.emotion-16 {
   background-color: var(--themeBgPrimary,#FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder,#DADDE2);
   border-radius: 6px;
   cursor: pointer;
 }
 
-.emotion-12 > div {
+.emotion-16 > div {
   height: 100%;
 }
 
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-16:hover,
+.emotion-16:focus {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
   outline: 0;
 }
 
-.emotion-12:active {
+.emotion-16:active {
   box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-12,
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-16,
+.emotion-16:hover,
+.emotion-16:focus {
   box-shadow: 0 0 0 2px var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-12:focus {
+.emotion-16:focus {
   background-color: var(--themeBgHover,#F7F8F9);
 }
 
@@ -436,22 +477,23 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   }
 >
   <Flex
-    align="flex-start"
+    align="stretch"
     direction="row"
     gutterSize="m"
     justify="flex-start"
     wrap="nowrap"
   >
     <div
-      className="emotion-15"
+      className="emotion-21"
       data-cy="flex"
     >
       <FlexItem
+        className="emotion-6"
         flex="grow"
         key="buttonWrapper-exosphere"
       >
         <div
-          className="emotion-4"
+          className="emotion-5"
           data-cy="flexItem"
         >
           <ToggleBox
@@ -473,7 +515,7 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
               value="exosphere"
             >
               <label
-                className="emotion-3"
+                className="emotion-4"
                 htmlFor="exosphere"
               >
                 <input
@@ -490,35 +532,40 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
                   type="radio"
                   value="exosphere"
                 />
-                <ButtonCard
-                  disabled={false}
-                  hasFocus={false}
-                  isActive={false}
-                  isInput={true}
-                  paddingSize="m"
+                <div
+                  className="emotion-3"
                 >
-                  <div
-                    className="emotion-2"
-                    data-cy="buttonCard"
+                  <ButtonCard
+                    disabled={false}
+                    hasFocus={false}
+                    isActive={false}
+                    isInput={true}
+                    paddingSize="m"
                   >
                     <div
-                      className="emotion-1"
+                      className="emotion-2"
+                      data-cy="buttonCard"
                     >
-                      Exosphere
+                      <div
+                        className="emotion-1"
+                      >
+                        Exosphere
+                      </div>
                     </div>
-                  </div>
-                </ButtonCard>
+                  </ButtonCard>
+                </div>
               </label>
             </ToggleWrapper>
           </ToggleBox>
         </div>
       </FlexItem>
       <FlexItem
+        className="emotion-6"
         flex="grow"
         key="buttonWrapper-thermosphere"
       >
         <div
-          className="emotion-4"
+          className="emotion-5"
           data-cy="flexItem"
         >
           <ToggleBox
@@ -540,7 +587,7 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
               value="thermosphere"
             >
               <label
-                className="emotion-3"
+                className="emotion-4"
                 htmlFor="thermosphere"
               >
                 <input
@@ -557,35 +604,40 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
                   type="radio"
                   value="thermosphere"
                 />
-                <ButtonCard
-                  disabled={false}
-                  hasFocus={false}
-                  isActive={false}
-                  isInput={true}
-                  paddingSize="m"
+                <div
+                  className="emotion-3"
                 >
-                  <div
-                    className="emotion-2"
-                    data-cy="buttonCard"
+                  <ButtonCard
+                    disabled={false}
+                    hasFocus={false}
+                    isActive={false}
+                    isInput={true}
+                    paddingSize="m"
                   >
                     <div
-                      className="emotion-1"
+                      className="emotion-2"
+                      data-cy="buttonCard"
                     >
-                      Thermosphere
+                      <div
+                        className="emotion-1"
+                      >
+                        Thermosphere
+                      </div>
                     </div>
-                  </div>
-                </ButtonCard>
+                  </ButtonCard>
+                </div>
               </label>
             </ToggleWrapper>
           </ToggleBox>
         </div>
       </FlexItem>
       <FlexItem
+        className="emotion-6"
         flex="grow"
         key="buttonWrapper-mesosphere"
       >
         <div
-          className="emotion-4"
+          className="emotion-5"
           data-cy="flexItem"
         >
           <ToggleBox
@@ -607,7 +659,7 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
               value="mesosphere"
             >
               <label
-                className="emotion-3"
+                className="emotion-4"
                 htmlFor="mesosphere"
               >
                 <input
@@ -624,24 +676,28 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
                   type="radio"
                   value="mesosphere"
                 />
-                <ButtonCard
-                  disabled={false}
-                  hasFocus={false}
-                  isActive={true}
-                  isInput={true}
-                  paddingSize="m"
+                <div
+                  className="emotion-3"
                 >
-                  <div
-                    className="emotion-12"
-                    data-cy="buttonCard"
+                  <ButtonCard
+                    disabled={false}
+                    hasFocus={false}
+                    isActive={true}
+                    isInput={true}
+                    paddingSize="m"
                   >
                     <div
-                      className="emotion-1"
+                      className="emotion-16"
+                      data-cy="buttonCard"
                     >
-                      Mesosphere
+                      <div
+                        className="emotion-1"
+                      >
+                        Mesosphere
+                      </div>
                     </div>
-                  </div>
-                </ButtonCard>
+                  </ButtonCard>
+                </div>
               </label>
             </ToggleWrapper>
           </ToggleBox>
@@ -665,7 +721,16 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   height: 1px;
 }
 
-.emotion-4 {
+.emotion-3,
+.emotion-3 > * {
+  height: 100%;
+}
+
+.emotion-6 > * {
+  height: 100%;
+}
+
+.emotion-5 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -678,7 +743,11 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   width: auto;
 }
 
-.emotion-3 {
+.emotion-5 > * {
+  height: 100%;
+}
+
+.emotion-4 {
   display: block;
 }
 
@@ -707,11 +776,11 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   padding: 16px;
 }
 
-.emotion-15 {
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+.emotion-21 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   height: 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -731,11 +800,11 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   min-height: 0;
 }
 
-.emotion-15 > div {
+.emotion-21 > div {
   width: 100%;
 }
 
-.emotion-15 > *:not(:first-child) {
+.emotion-21 > *:not(:first-child) {
   padding-left: 0;
   padding-top: 48px;
 }
@@ -746,22 +815,23 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   id="customLayoutProps"
 >
   <Flex
-    align="flex-start"
+    align="stretch"
     direction="column"
     gutterSize="xxl"
     justify="flex-start"
     wrap="nowrap"
   >
     <div
-      className="emotion-15"
+      className="emotion-21"
       data-cy="flex"
     >
       <FlexItem
+        className="emotion-6"
         flex="grow"
         key="buttonWrapper-exosphere"
       >
         <div
-          className="emotion-4"
+          className="emotion-5"
           data-cy="flexItem"
         >
           <ToggleBox
@@ -783,7 +853,7 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
               value="exosphere"
             >
               <label
-                className="emotion-3"
+                className="emotion-4"
                 htmlFor="exosphere"
               >
                 <input
@@ -800,35 +870,40 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
                   type="radio"
                   value="exosphere"
                 />
-                <ButtonCard
-                  disabled={false}
-                  hasFocus={false}
-                  isActive={false}
-                  isInput={true}
-                  paddingSize="m"
+                <div
+                  className="emotion-3"
                 >
-                  <div
-                    className="emotion-2"
-                    data-cy="buttonCard"
+                  <ButtonCard
+                    disabled={false}
+                    hasFocus={false}
+                    isActive={false}
+                    isInput={true}
+                    paddingSize="m"
                   >
                     <div
-                      className="emotion-1"
+                      className="emotion-2"
+                      data-cy="buttonCard"
                     >
-                      Exosphere
+                      <div
+                        className="emotion-1"
+                      >
+                        Exosphere
+                      </div>
                     </div>
-                  </div>
-                </ButtonCard>
+                  </ButtonCard>
+                </div>
               </label>
             </ToggleWrapper>
           </ToggleBox>
         </div>
       </FlexItem>
       <FlexItem
+        className="emotion-6"
         flex="grow"
         key="buttonWrapper-thermosphere"
       >
         <div
-          className="emotion-4"
+          className="emotion-5"
           data-cy="flexItem"
         >
           <ToggleBox
@@ -850,7 +925,7 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
               value="thermosphere"
             >
               <label
-                className="emotion-3"
+                className="emotion-4"
                 htmlFor="thermosphere"
               >
                 <input
@@ -867,35 +942,40 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
                   type="radio"
                   value="thermosphere"
                 />
-                <ButtonCard
-                  disabled={false}
-                  hasFocus={false}
-                  isActive={false}
-                  isInput={true}
-                  paddingSize="m"
+                <div
+                  className="emotion-3"
                 >
-                  <div
-                    className="emotion-2"
-                    data-cy="buttonCard"
+                  <ButtonCard
+                    disabled={false}
+                    hasFocus={false}
+                    isActive={false}
+                    isInput={true}
+                    paddingSize="m"
                   >
                     <div
-                      className="emotion-1"
+                      className="emotion-2"
+                      data-cy="buttonCard"
                     >
-                      Thermosphere
+                      <div
+                        className="emotion-1"
+                      >
+                        Thermosphere
+                      </div>
                     </div>
-                  </div>
-                </ButtonCard>
+                  </ButtonCard>
+                </div>
               </label>
             </ToggleWrapper>
           </ToggleBox>
         </div>
       </FlexItem>
       <FlexItem
+        className="emotion-6"
         flex="grow"
         key="buttonWrapper-mesosphere"
       >
         <div
-          className="emotion-4"
+          className="emotion-5"
           data-cy="flexItem"
         >
           <ToggleBox
@@ -917,7 +997,7 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
               value="mesosphere"
             >
               <label
-                className="emotion-3"
+                className="emotion-4"
                 htmlFor="mesosphere"
               >
                 <input
@@ -934,24 +1014,28 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
                   type="radio"
                   value="mesosphere"
                 />
-                <ButtonCard
-                  disabled={false}
-                  hasFocus={false}
-                  isActive={false}
-                  isInput={true}
-                  paddingSize="m"
+                <div
+                  className="emotion-3"
                 >
-                  <div
-                    className="emotion-2"
-                    data-cy="buttonCard"
+                  <ButtonCard
+                    disabled={false}
+                    hasFocus={false}
+                    isActive={false}
+                    isInput={true}
+                    paddingSize="m"
                   >
                     <div
-                      className="emotion-1"
+                      className="emotion-2"
+                      data-cy="buttonCard"
                     >
-                      Mesosphere
+                      <div
+                        className="emotion-1"
+                      >
+                        Mesosphere
+                      </div>
                     </div>
-                  </div>
-                </ButtonCard>
+                  </ButtonCard>
+                </div>
               </label>
             </ToggleWrapper>
           </ToggleBox>

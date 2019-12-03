@@ -4,6 +4,7 @@ import { ToggleBoxProps } from "./ToggleBox";
 import { Flex, FlexItem } from "../../styleUtils/layout";
 import { BreakpointConfig } from "../../shared/styles/breakpoints";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
+import { toggleBoxGroupItem } from "../style";
 
 type FlexDirection = BreakpointConfig<React.CSSProperties["flexDirection"]>;
 
@@ -66,7 +67,10 @@ const ToggleBoxGroup = ({
       delete childOther.onChange;
 
       return (
-        <FlexItem key={`buttonWrapper-${childOther.id}`}>
+        <FlexItem
+          key={`buttonWrapper-${childOther.id}`}
+          className={toggleBoxGroupItem}
+        >
           {React.cloneElement(toggleBox, {
             name: !multiSelect ? name || id : name,
             type: multiSelect ? "checkbox" : "radio",
@@ -80,7 +84,7 @@ const ToggleBoxGroup = ({
       );
     });
   return (
-    <Flex direction={direction} gutterSize={gutterSize}>
+    <Flex direction={direction} gutterSize={gutterSize} align="stretch">
       {toggleBoxes()}
     </Flex>
   );
