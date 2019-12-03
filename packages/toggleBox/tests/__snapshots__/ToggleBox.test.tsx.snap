@@ -13,7 +13,12 @@ exports[`ToggleBox renders active 1`] = `
   height: 1px;
 }
 
-.emotion-3 {
+.emotion-3,
+.emotion-3 > * {
+  height: 100%;
+}
+
+.emotion-4 {
   display: block;
 }
 
@@ -65,7 +70,7 @@ exports[`ToggleBox renders active 1`] = `
     value="active"
   >
     <label
-      className="emotion-3"
+      className="emotion-4"
       htmlFor="active"
     >
       <input
@@ -80,24 +85,28 @@ exports[`ToggleBox renders active 1`] = `
         type="checkbox"
         value="active"
       />
-      <ButtonCard
-        disabled={false}
-        hasFocus={false}
-        isActive={true}
-        isInput={true}
-        paddingSize="m"
+      <div
+        className="emotion-3"
       >
-        <div
-          className="emotion-2"
-          data-cy="buttonCard"
+        <ButtonCard
+          disabled={false}
+          hasFocus={false}
+          isActive={true}
+          isInput={true}
+          paddingSize="m"
         >
           <div
-            className="emotion-1"
+            className="emotion-2"
+            data-cy="buttonCard"
           >
-            isActive
+            <div
+              className="emotion-1"
+            >
+              isActive
+            </div>
           </div>
-        </div>
-      </ButtonCard>
+        </ButtonCard>
+      </div>
     </label>
   </ToggleWrapper>
 </ToggleBox>
@@ -116,7 +125,12 @@ exports[`ToggleBox renders default 1`] = `
   height: 1px;
 }
 
-.emotion-3 {
+.emotion-3,
+.emotion-3 > * {
+  height: 100%;
+}
+
+.emotion-4 {
   display: block;
 }
 
@@ -156,7 +170,7 @@ exports[`ToggleBox renders default 1`] = `
     value="default"
   >
     <label
-      className="emotion-3"
+      className="emotion-4"
       htmlFor="default"
     >
       <input
@@ -169,23 +183,27 @@ exports[`ToggleBox renders default 1`] = `
         type="checkbox"
         value="default"
       />
-      <ButtonCard
-        disabled={false}
-        hasFocus={false}
-        isInput={true}
-        paddingSize="m"
+      <div
+        className="emotion-3"
       >
-        <div
-          className="emotion-2"
-          data-cy="buttonCard"
+        <ButtonCard
+          disabled={false}
+          hasFocus={false}
+          isInput={true}
+          paddingSize="m"
         >
           <div
-            className="emotion-1"
+            className="emotion-2"
+            data-cy="buttonCard"
           >
-            default
+            <div
+              className="emotion-1"
+            >
+              default
+            </div>
           </div>
-        </div>
-      </ButtonCard>
+        </ButtonCard>
+      </div>
     </label>
   </ToggleWrapper>
 </ToggleBox>
@@ -204,7 +222,12 @@ exports[`ToggleBox renders disabled 1`] = `
   height: 1px;
 }
 
-.emotion-3 {
+.emotion-3,
+.emotion-3 > * {
+  height: 100%;
+}
+
+.emotion-4 {
   display: block;
 }
 
@@ -254,7 +277,7 @@ exports[`ToggleBox renders disabled 1`] = `
     value="disabled"
   >
     <label
-      className="emotion-3"
+      className="emotion-4"
       htmlFor="disabled"
     >
       <input
@@ -267,23 +290,27 @@ exports[`ToggleBox renders disabled 1`] = `
         type="checkbox"
         value="disabled"
       />
-      <ButtonCard
-        disabled={true}
-        hasFocus={false}
-        isInput={true}
-        paddingSize="m"
+      <div
+        className="emotion-3"
       >
-        <div
-          className="emotion-2"
-          data-cy="buttonCard"
+        <ButtonCard
+          disabled={true}
+          hasFocus={false}
+          isInput={true}
+          paddingSize="m"
         >
           <div
-            className="emotion-1"
+            className="emotion-2"
+            data-cy="buttonCard"
           >
-            disabled
+            <div
+              className="emotion-1"
+            >
+              disabled
+            </div>
           </div>
-        </div>
-      </ButtonCard>
+        </ButtonCard>
+      </div>
     </label>
   </ToggleWrapper>
 </ToggleBox>
