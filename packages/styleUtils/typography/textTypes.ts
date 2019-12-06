@@ -14,6 +14,10 @@ export interface SharedTextProps {
    * Which HTML tag to render the text in
    */
   tag?: keyof React.ReactHTML;
+  /**
+   * human-readable selector used for writing tests
+   */
+  dataCy?: string;
   children: React.ReactNode;
 }
 
