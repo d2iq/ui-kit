@@ -11,3 +11,5 @@ export {
   FieldListColumnSeparator
 } from "./components/FieldListColumn";
 export { default as FieldListAddButton } from "./components/FieldListAddButton";
+
+export { default as FieldGroup } from "./components/FieldGroup";
