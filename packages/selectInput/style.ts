@@ -39,3 +39,7 @@ export const selectIcon = css`
   top: 50%;
   transform: translateY(-50%);
 `;
+
+export const optionalIcon = css`
+  margin: auto;
+`;

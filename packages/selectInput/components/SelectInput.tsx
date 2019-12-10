@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { select, selectIcon, selectContainer } from "../style";
+import { optionalIcon, select, selectIcon, selectContainer } from "../style";
 import {
   inputContainer,
   getInputAppearanceStyle,
@@ -42,6 +42,10 @@ export interface SelectInputProps extends React.HTMLProps<HTMLSelectElement> {
    * hintContent is text or a ReactNode that is displayed directly under the input with additional information about the expected input.
    */
   hintContent?: React.ReactNode;
+  /**
+   * Optional icon to be displayed before the input value.
+   */
+  icon?: React.ReactElement<HTMLElement> | string;
   /**
    * Unique identifier used for the form input component
    */
@@ -89,6 +93,7 @@ class SelectInput extends React.PureComponent<
       appearance,
       errors,
       hintContent,
+      icon,
       id,
       inputLabel,
       options,
@@ -136,6 +141,7 @@ class SelectInput extends React.PureComponent<
                 display("flex")
               )}
             >
+              {<span className={cx(optionalIcon)}>{icon}</span>}
               <select
                 className={cx(inputReset, select, display("block"))}
                 aria-invalid={!isValid}
