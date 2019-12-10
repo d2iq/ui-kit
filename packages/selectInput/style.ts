@@ -2,6 +2,7 @@ import { css } from "emotion";
 import {
   iconSizeXs,
   spaceM,
+  spaceXs,
   themeTextColorPrimary
 } from "../design-tokens/build/js/designTokens";
 
@@ -41,5 +42,5 @@ export const selectIcon = css`
 `;
 
 export const optionalIcon = css`
-  margin: auto;
+  margin: auto ${spaceXs} auto 0;
 `;

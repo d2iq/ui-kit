@@ -45,7 +45,7 @@ export interface SelectInputProps extends React.HTMLProps<HTMLSelectElement> {
   /**
    * Optional icon to be displayed before the input value.
    */
-  icon?: React.ReactElement<HTMLElement> | string;
+  iconStart?: React.ReactElement<HTMLElement> | string;
   /**
    * Unique identifier used for the form input component
    */
@@ -93,7 +93,7 @@ class SelectInput extends React.PureComponent<
       appearance,
       errors,
       hintContent,
-      icon,
+      iconStart,
       id,
       inputLabel,
       options,
@@ -141,7 +141,7 @@ class SelectInput extends React.PureComponent<
                 display("flex")
               )}
             >
-              {<span className={cx(optionalIcon)}>{icon}</span>}
+              {<span className={cx(optionalIcon)}>{iconStart}</span>}
               <select
                 className={cx(inputReset, select, display("block"))}
                 aria-invalid={!isValid}

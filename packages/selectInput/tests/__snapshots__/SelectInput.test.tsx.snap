@@ -56,7 +56,7 @@ exports[`SelectInput renders with hidden label 1`] = `
 
 exports[`SelectInput should render all appearances focus 1`] = `
 .emotion-1 {
-  margin: auto;
+  margin: auto 8px auto 0;
 }
 
 .emotion-0 {
