@@ -25,6 +25,7 @@ export interface FieldListColumnWidthProps {
   minWidth?: number | string;
   /** The maximum width a column of fields can be. Accepts a number or any value that can be passed to CSS's `grid-template-columns` */
   maxWidth?: number | string;
+  key: React.Key;
 }
 export interface FieldListColumnProps<T = string> {
   /** Returns a function with render props as an argument. Storybook does not currently have a way to document render props, so you'll have to view the source of the `FieldListColumn` component to read the documentation. */

@@ -11,9 +11,9 @@ storiesOf("Form structure/Grouped fields/FieldGroup", module)
   })
   .add("default", () => (
     <FieldGroup>
-      <TextInput inputLabel="Name" id="name" />
-      <TextInput inputLabel="Role" id="role" />
-      <TextInput inputLabel="City" id="city" />
+      <TextInput inputLabel="Name" id="name" key="name" />
+      <TextInput inputLabel="Role" id="role" key="role" />
+      <TextInput inputLabel="City" id="city" key="city" />
     </FieldGroup>
   ))
   .add("responsive - switch to vertical layout on small screens", () => (
@@ -23,8 +23,8 @@ storiesOf("Form structure/Grouped fields/FieldGroup", module)
         small: "row"
       }}
     >
-      <TextInput inputLabel="Name" id="name" />
-      <TextInput inputLabel="Role" id="role" />
-      <TextInput inputLabel="City" id="city" />
+      <TextInput inputLabel="Name" id="name" key="name" />
+      <TextInput inputLabel="Role" id="role" key="role" />
+      <TextInput inputLabel="City" id="city" key="city" />
     </FieldGroup>
   ));

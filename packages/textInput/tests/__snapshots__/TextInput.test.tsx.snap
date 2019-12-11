@@ -9,6 +9,11 @@ exports[`TextInput should display icon with tooltip if tooltipText is set 1`] = 
   font-weight: 500;
 }
 
+.emotion-1 {
+  margin-left: 8px;
+  margin-bottom: 4px;
+}
+
 .emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -27,20 +32,15 @@ exports[`TextInput should display icon with tooltip if tooltipText is set 1`] = 
   width: auto;
 }
 
-.emotion-1 {
-  margin-left: 8px;
-  margin-bottom: 4px;
-}
-
 <div
   data-cy="textInput"
 >
   <div
     className="emotion-2"
-    data-cy="textInput-label"
   >
     <label
       className="emotion-0"
+      data-cy="textInput-label"
       htmlFor="input.with.tooltip"
     >
       Tooltip Message Test
@@ -72,24 +72,6 @@ exports[`TextInput should display icon with tooltip if tooltipText is set 1`] = 
 `;
 
 exports[`TextInput should display validation message if set & appearance == Error 1`] = `
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
 .emotion-0 {
   display: block;
   padding-top: 0;
@@ -103,17 +85,13 @@ exports[`TextInput should display validation message if set & appearance == Erro
 <div
   data-cy="textInput textInput.error"
 >
-  <div
-    className="emotion-1"
+  <label
+    className="emotion-0"
     data-cy="textInput-label"
+    htmlFor="input.error.with.message"
   >
-    <label
-      className="emotion-0"
-      htmlFor="input.error.with.message"
-    >
-      Error Message Test
-    </label>
-  </div>
+    Error Message Test
+  </label>
   <FormFieldWrapper
     errors={
       Array [
@@ -141,37 +119,15 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   height: 1px;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
 <div
   data-cy="textInput"
 >
-  <div
-    className="emotion-1"
+  <label
+    className="emotion-0"
     data-cy="textInput-label"
   >
-    <label
-      className="emotion-0"
-    >
-      I'm not displayed
-    </label>
-  </div>
+    I'm not displayed
+  </label>
   <FormFieldWrapper>
     <Component />
   </FormFieldWrapper>
@@ -187,38 +143,16 @@ exports[`TextInput should not display validation message if set & appearance == 
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
 <div
   data-cy="textInput textInput.success"
 >
-  <div
-    className="emotion-1"
+  <label
+    className="emotion-0"
     data-cy="textInput-label"
+    htmlFor="input.success.without.message"
   >
-    <label
-      className="emotion-0"
-      htmlFor="input.success.without.message"
-    >
-      No Error Message Test
-    </label>
-  </div>
+    No Error Message Test
+  </label>
   <FormFieldWrapper
     errors={
       Array [
@@ -241,25 +175,7 @@ exports[`TextInput should render all appearances focus 1`] = `
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
-.emotion-3 {
+.emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
@@ -283,11 +199,11 @@ exports[`TextInput should render all appearances focus 1`] = `
   min-height: 0;
 }
 
-.emotion-3 > div {
+.emotion-2 > div {
   width: auto;
 }
 
-.emotion-2 {
+.emotion-1 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -315,56 +231,56 @@ exports[`TextInput should render all appearances focus 1`] = `
   border-color: var(--themeBorder,#DADDE2);
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   outline: 0;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2::placeholder {
+.emotion-1::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input {
+.emotion-1 input {
   font-size: inherit;
   color: inherit;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-1 input::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-1 input::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-1 input:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input::placeholder {
+.emotion-1 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
 }
@@ -378,26 +294,22 @@ exports[`TextInput should render all appearances focus 1`] = `
   <div
     data-cy="textInput"
   >
-    <div
-      className="emotion-1"
+    <label
+      className="emotion-0"
       data-cy="textInput-label"
-    >
-      <label
-        className="emotion-0"
-        htmlFor="test.input"
-      />
-    </div>
+      htmlFor="test.input"
+    />
     <FormFieldWrapper
       id="test.input"
     >
       <div>
         <div
-          className="emotion-3"
+          className="emotion-2"
         >
           <input
             aria-describedby=""
             aria-invalid={false}
-            className="emotion-2"
+            className="emotion-1"
             data-cy="textInput-input"
             id="test.input"
             type="text"
@@ -413,24 +325,6 @@ exports[`TextInput should render all appearances focus 1`] = `
 `;
 
 exports[`TextInput should render all appearances focus 2`] = `
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
 .emotion-0 {
   display: block;
   padding-top: 0;
@@ -441,7 +335,7 @@ exports[`TextInput should render all appearances focus 2`] = `
   fill: var(--themeError,#EB293A);
 }
 
-.emotion-3 {
+.emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
@@ -465,11 +359,11 @@ exports[`TextInput should render all appearances focus 2`] = `
   min-height: 0;
 }
 
-.emotion-3 > div {
+.emotion-2 > div {
   width: auto;
 }
 
-.emotion-2 {
+.emotion-1 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -497,56 +391,56 @@ exports[`TextInput should render all appearances focus 2`] = `
   border-color: var(--themeError,#EB293A);
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   outline: 0;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2::placeholder {
+.emotion-1::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input {
+.emotion-1 input {
   font-size: inherit;
   color: inherit;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-1 input::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-1 input::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-1 input:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input::placeholder {
+.emotion-1 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   background-color: rgba(235,41,58,0.05);
 }
 
@@ -559,26 +453,22 @@ exports[`TextInput should render all appearances focus 2`] = `
   <div
     data-cy="textInput textInput.error"
   >
-    <div
-      className="emotion-1"
+    <label
+      className="emotion-0"
       data-cy="textInput-label"
-    >
-      <label
-        className="emotion-0"
-        htmlFor="test.input"
-      />
-    </div>
+      htmlFor="test.input"
+    />
     <FormFieldWrapper
       id="test.input"
     >
       <div>
         <div
-          className="emotion-3"
+          className="emotion-2"
         >
           <input
             aria-describedby=""
             aria-invalid={false}
-            className="emotion-2"
+            className="emotion-1"
             data-cy="textInput-input textInput-input.error"
             id="test.input"
             type="text"
@@ -602,25 +492,7 @@ exports[`TextInput should render all appearances focus 3`] = `
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
-.emotion-3 {
+.emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
@@ -644,11 +516,11 @@ exports[`TextInput should render all appearances focus 3`] = `
   min-height: 0;
 }
 
-.emotion-3 > div {
+.emotion-2 > div {
   width: auto;
 }
 
-.emotion-2 {
+.emotion-1 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -676,56 +548,56 @@ exports[`TextInput should render all appearances focus 3`] = `
   border-color: var(--themeSuccess,#14C684);
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   outline: 0;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2::placeholder {
+.emotion-1::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input {
+.emotion-1 input {
   font-size: inherit;
   color: inherit;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-1 input::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-1 input::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-1 input:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input::placeholder {
+.emotion-1 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   background-color: rgba(20,198,132,0.05);
 }
 
@@ -738,26 +610,22 @@ exports[`TextInput should render all appearances focus 3`] = `
   <div
     data-cy="textInput textInput.success"
   >
-    <div
-      className="emotion-1"
+    <label
+      className="emotion-0"
       data-cy="textInput-label"
-    >
-      <label
-        className="emotion-0"
-        htmlFor="test.input"
-      />
-    </div>
+      htmlFor="test.input"
+    />
     <FormFieldWrapper
       id="test.input"
     >
       <div>
         <div
-          className="emotion-3"
+          className="emotion-2"
         >
           <input
             aria-describedby=""
             aria-invalid={false}
-            className="emotion-2"
+            className="emotion-1"
             data-cy="textInput-input textInput-input.success"
             id="test.input"
             type="text"
@@ -781,38 +649,16 @@ exports[`TextInput should render all appearances with props 1`] = `
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
 <div
   data-cy="textInput"
 >
-  <div
-    className="emotion-1"
+  <label
+    className="emotion-0"
     data-cy="textInput-label"
+    htmlFor="test.input.standard"
   >
-    <label
-      className="emotion-0"
-      htmlFor="test.input.standard"
-    >
-      standard
-    </label>
-  </div>
+    standard
+  </label>
   <FormFieldWrapper
     id="test.input.standard"
   >
@@ -822,24 +668,6 @@ exports[`TextInput should render all appearances with props 1`] = `
 `;
 
 exports[`TextInput should render all appearances with props 2`] = `
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
 .emotion-0 {
   display: block;
   padding-top: 0;
@@ -853,17 +681,13 @@ exports[`TextInput should render all appearances with props 2`] = `
 <div
   data-cy="textInput textInput.error"
 >
-  <div
-    className="emotion-1"
+  <label
+    className="emotion-0"
     data-cy="textInput-label"
+    htmlFor="test.input.error"
   >
-    <label
-      className="emotion-0"
-      htmlFor="test.input.error"
-    >
-      error
-    </label>
-  </div>
+    error
+  </label>
   <FormFieldWrapper
     id="test.input.error"
   >
@@ -881,38 +705,16 @@ exports[`TextInput should render all appearances with props 3`] = `
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
 <div
   data-cy="textInput textInput.success"
 >
-  <div
-    className="emotion-1"
+  <label
+    className="emotion-0"
     data-cy="textInput-label"
+    htmlFor="test.input.success"
   >
-    <label
-      className="emotion-0"
-      htmlFor="test.input.success"
-    >
-      success
-    </label>
-  </div>
+    success
+  </label>
   <FormFieldWrapper
     id="test.input.success"
   >
@@ -930,40 +732,18 @@ exports[`TextInput should render node as inputLabel 1`] = `
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
 <div
   data-cy="textInput"
 >
-  <div
-    className="emotion-1"
+  <label
+    className="emotion-0"
     data-cy="textInput-label"
+    htmlFor="test.input"
   >
-    <label
-      className="emotion-0"
-      htmlFor="test.input"
-    >
-      <span>
-        My Test Node
-      </span>
-    </label>
-  </div>
+    <span>
+      My Test Node
+    </span>
+  </label>
   <FormFieldWrapper
     id="test.input"
   >
@@ -981,38 +761,16 @@ exports[`TextInput should render string inputLabel 1`] = `
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
 <div
   data-cy="textInput"
 >
-  <div
-    className="emotion-1"
+  <label
+    className="emotion-0"
     data-cy="textInput-label"
+    htmlFor="test.input"
   >
-    <label
-      className="emotion-0"
-      htmlFor="test.input"
-    >
-      Test Input
-    </label>
-  </div>
+    Test Input
+  </label>
   <FormFieldWrapper
     id="test.input"
   >

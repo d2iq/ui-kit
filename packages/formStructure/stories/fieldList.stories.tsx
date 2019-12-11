@@ -14,17 +14,20 @@ const mockItems = [
   {
     name: "Brian Vaughn",
     role: "Software Engineer",
-    city: "San Jose"
+    city: "San Jose",
+    key: 0
   },
   {
     name: "Jon Doe",
     role: "Product engineer",
-    city: "Mountain View"
+    city: "Mountain View",
+    key: 1
   },
   {
     name: "Jane Doe",
     role: "UX Designer",
-    city: "San Francisco"
+    city: "San Francisco",
+    key: 2
   }
 ];
 
@@ -44,6 +47,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
         {({ removeItemHander, addItemHandler, fieldUpdateHandler, items }) => (
           <FieldList data={items} onRemoveItem={removeItemHander}>
             <FieldListColumn
+              key="name"
               header="Name"
               pathToValue="name"
               onChange={fieldUpdateHandler}
@@ -57,6 +61,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
               )}
             </FieldListColumn>
             <FieldListColumn
+              key="role"
               header="Role"
               pathToValue="role"
               onChange={fieldUpdateHandler}
@@ -70,6 +75,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
               )}
             </FieldListColumn>
             <FieldListColumn
+              key="city"
               header="City"
               pathToValue="city"
               onChange={fieldUpdateHandler}
@@ -101,6 +107,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
   .add("varied column widths", () => (
     <FieldList data={mockItems} onRemoveItem={testRemoveHandler}>
       <FieldListColumn
+        key="name"
         header="Name"
         pathToValue="name"
         onChange={testFieldUpdateHandler}
@@ -110,6 +117,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
         )}
       </FieldListColumn>
       <FieldListColumn
+        key="role"
         header="Role"
         pathToValue="role"
         onChange={testFieldUpdateHandler}
@@ -119,6 +127,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
         )}
       </FieldListColumn>
       <FieldListColumn
+        key="city"
         header="City"
         pathToValue="city"
         onChange={testFieldUpdateHandler}
@@ -138,6 +147,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
       disabledRows={[1]}
     >
       <FieldListColumn
+        key="name"
         header="Name"
         pathToValue="name"
         onChange={testFieldUpdateHandler}
@@ -152,6 +162,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
         )}
       </FieldListColumn>
       <FieldListColumn
+        key="role"
         header="Role"
         pathToValue="role"
         onChange={testFieldUpdateHandler}
@@ -166,6 +177,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
         )}
       </FieldListColumn>
       <FieldListColumn
+        key="city"
         header="City"
         pathToValue="city"
         onChange={testFieldUpdateHandler}
@@ -184,6 +196,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
   .add("w/ add button", () => (
     <FieldList data={mockItems} onRemoveItem={testRemoveHandler}>
       <FieldListColumn
+        key="name"
         header="Name"
         pathToValue="name"
         onChange={testFieldUpdateHandler}
@@ -193,6 +206,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
         )}
       </FieldListColumn>
       <FieldListColumn
+        key="role"
         header="Role"
         pathToValue="role"
         onChange={testFieldUpdateHandler}
@@ -202,6 +216,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
         )}
       </FieldListColumn>
       <FieldListColumn
+        key="city"
         header="City"
         pathToValue="city"
         onChange={testFieldUpdateHandler}
@@ -216,6 +231,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
   .add("w/ column separators", () => (
     <FieldList data={mockItems} onRemoveItem={testRemoveHandler}>
       <FieldListColumn
+        key="name"
         header="Name"
         pathToValue="name"
         onChange={testFieldUpdateHandler}
@@ -224,8 +240,9 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
           <TextInput value={value} onChange={onChange} {...defaultProps} />
         )}
       </FieldListColumn>
-      <FieldListColumnSeparator>:</FieldListColumnSeparator>
+      <FieldListColumnSeparator key="separator1">:</FieldListColumnSeparator>
       <FieldListColumn
+        key="role"
         header="Role"
         pathToValue="role"
         onChange={testFieldUpdateHandler}
@@ -234,8 +251,9 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
           <TextInput value={value} onChange={onChange} {...defaultProps} />
         )}
       </FieldListColumn>
-      <FieldListColumnSeparator>👉</FieldListColumnSeparator>
+      <FieldListColumnSeparator key="separator2">👉</FieldListColumnSeparator>
       <FieldListColumn
+        key="city"
         header="City"
         pathToValue="city"
         onChange={testFieldUpdateHandler}

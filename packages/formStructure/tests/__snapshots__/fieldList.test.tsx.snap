@@ -38,17 +38,13 @@ Array [
         <div
           data-cy="textInput"
         >
-          <div
-            class="css-1s0dtwu"
+          <label
+            class="css-fvq1si"
             data-cy="textInput-label"
+            for="name-0"
           >
-            <label
-              class="css-fvq1si"
-              for="name-0"
-            >
-              Name 0
-            </label>
-          </div>
+            Name 0
+          </label>
           <div>
             <div
               class="css-ox6cpm"
@@ -82,17 +78,13 @@ Array [
         <div
           data-cy="textInput"
         >
-          <div
-            class="css-1s0dtwu"
+          <label
+            class="css-fvq1si"
             data-cy="textInput-label"
+            for="role-0"
           >
-            <label
-              class="css-fvq1si"
-              for="role-0"
-            >
-              Role 0
-            </label>
-          </div>
+            Role 0
+          </label>
           <div>
             <div
               class="css-ox6cpm"
@@ -113,30 +105,32 @@ Array [
           </div>
         </div>
       </div>
-      <button
-        class="css-1c1l20i"
-        data-cy="fieldList-removeButton"
-        disabled=""
-      >
-        <div
-          tabindex="-1"
+      <div>
+        <button
+          class="css-1c1l20i"
+          data-cy="fieldList-removeButton"
+          disabled=""
         >
-          <svg
-            aria-label="system-close icon"
-            class="css-1q5he24"
-            data-cy="icon"
-            height="16"
-            preserveAspectRatio="xMinYMin meet"
-            role="img"
-            viewBox="0 0 16 16"
-            width="16"
+          <div
+            tabindex="-1"
           >
-            <use
-              href="#system-close"
-            />
-          </svg>
-        </div>
-      </button>
+            <svg
+              aria-label="system-close icon"
+              class="css-1q5he24"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <use
+                href="#system-close"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
     <div
       class="css-1wztphk"
@@ -148,17 +142,13 @@ Array [
         <div
           data-cy="textInput"
         >
-          <div
-            class="css-1s0dtwu"
+          <label
+            class="css-fvq1si"
             data-cy="textInput-label"
+            for="name-1"
           >
-            <label
-              class="css-fvq1si"
-              for="name-1"
-            >
-              Name 1
-            </label>
-          </div>
+            Name 1
+          </label>
           <div>
             <div
               class="css-ox6cpm"
@@ -192,17 +182,13 @@ Array [
         <div
           data-cy="textInput"
         >
-          <div
-            class="css-1s0dtwu"
+          <label
+            class="css-fvq1si"
             data-cy="textInput-label"
+            for="role-1"
           >
-            <label
-              class="css-fvq1si"
-              for="role-1"
-            >
-              Role 1
-            </label>
-          </div>
+            Role 1
+          </label>
           <div>
             <div
               class="css-ox6cpm"
@@ -223,29 +209,31 @@ Array [
           </div>
         </div>
       </div>
-      <button
-        class="css-p8ocxc"
-        data-cy="fieldList-removeButton"
-      >
-        <div
-          tabindex="-1"
+      <div>
+        <button
+          class="css-p8ocxc"
+          data-cy="fieldList-removeButton"
         >
-          <svg
-            aria-label="system-close icon"
-            class="css-1qtjntg"
-            data-cy="icon"
-            height="16"
-            preserveAspectRatio="xMinYMin meet"
-            role="img"
-            viewBox="0 0 16 16"
-            width="16"
+          <div
+            tabindex="-1"
           >
-            <use
-              href="#system-close"
-            />
-          </svg>
-        </div>
-      </button>
+            <svg
+              aria-label="system-close icon"
+              class="css-1qtjntg"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <use
+                href="#system-close"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
     <div
       class="css-1wztphk"
@@ -257,17 +245,13 @@ Array [
         <div
           data-cy="textInput"
         >
-          <div
-            class="css-1s0dtwu"
+          <label
+            class="css-fvq1si"
             data-cy="textInput-label"
+            for="name-2"
           >
-            <label
-              class="css-fvq1si"
-              for="name-2"
-            >
-              Name 2
-            </label>
-          </div>
+            Name 2
+          </label>
           <div>
             <div
               class="css-ox6cpm"
@@ -301,17 +285,13 @@ Array [
         <div
           data-cy="textInput"
         >
-          <div
-            class="css-1s0dtwu"
+          <label
+            class="css-fvq1si"
             data-cy="textInput-label"
+            for="role-2"
           >
-            <label
-              class="css-fvq1si"
-              for="role-2"
-            >
-              Role 2
-            </label>
-          </div>
+            Role 2
+          </label>
           <div>
             <div
               class="css-ox6cpm"
@@ -332,29 +312,31 @@ Array [
           </div>
         </div>
       </div>
-      <button
-        class="css-p8ocxc"
-        data-cy="fieldList-removeButton"
-      >
-        <div
-          tabindex="-1"
+      <div>
+        <button
+          class="css-p8ocxc"
+          data-cy="fieldList-removeButton"
         >
-          <svg
-            aria-label="system-close icon"
-            class="css-1qtjntg"
-            data-cy="icon"
-            height="16"
-            preserveAspectRatio="xMinYMin meet"
-            role="img"
-            viewBox="0 0 16 16"
-            width="16"
+          <div
+            tabindex="-1"
           >
-            <use
-              href="#system-close"
-            />
-          </svg>
-        </div>
-      </button>
+            <svg
+              aria-label="system-close icon"
+              class="css-1qtjntg"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <use
+                href="#system-close"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
     <button
       class="css-67j5fi"

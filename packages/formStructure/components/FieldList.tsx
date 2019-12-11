@@ -29,7 +29,7 @@ const REMOVE_ICON_SIZE = iconSizeXs;
 
 interface FieldListProps {
   /** The data to populate the field values with */
-  data: Array<{ [key: string]: any }>;
+  data: Array<{ key: string | number; [key: string]: any }>;
   /** An array of the indexes of disabled rows */
   disabledRows?: number[];
   /** The callback for when the remove button is clicked */
@@ -56,7 +56,7 @@ const FieldList: React.SFC<FieldListProps> = ({
         spacingSize="xxs"
         className={getFieldRowGrid(columns, REMOVE_ICON_SIZE)}
       >
-        {columns.map((col, i) => (
+        {columns.map(col => (
           <Text
             tag="div"
             weight="medium"
@@ -64,7 +64,7 @@ const FieldList: React.SFC<FieldListProps> = ({
               [invisibleColHeader]: col.type === FieldListColumnSeparator
             })}
             dataCy="fieldList-columnHeader"
-            key={`fieldList-columnHeader.${i}`}
+            key={col.props.key}
           >
             {col.type === FieldListColumn && col.props.header}
             {col.type === FieldListColumnSeparator && col.props.children}
@@ -81,7 +81,7 @@ const FieldList: React.SFC<FieldListProps> = ({
     return (
       <div
         className={getFieldRowGrid(columns, REMOVE_ICON_SIZE)}
-        key={`fieldList-row.${rowIndex}`}
+        key={`fieldList-row.${rowData.key}`}
       >
         {columns.map((col, i) => {
           return (
@@ -113,21 +113,24 @@ const FieldList: React.SFC<FieldListProps> = ({
             </div>
           );
         })}
-        <ResetButton
-          onClick={onRemoveItem(rowIndex)}
-          disabled={isRowDisabled(rowIndex)}
-          data-cy="fieldList-removeButton"
-        >
-          <Icon
-            shape={SystemIcons.Close}
-            size={REMOVE_ICON_SIZE}
-            color={
-              isRowDisabled(rowIndex)
-                ? themeTextColorDisabled
-                : themeTextColorPrimary
-            }
-          />
-        </ResetButton>
+        {/* this wrapper div is needed to fix a vertical centering bug in Firefox with <button> elements that are children of display: grid */}
+        <div>
+          <ResetButton
+            onClick={onRemoveItem(rowIndex)}
+            disabled={isRowDisabled(rowIndex)}
+            data-cy="fieldList-removeButton"
+          >
+            <Icon
+              shape={SystemIcons.Close}
+              size={REMOVE_ICON_SIZE}
+              color={
+                isRowDisabled(rowIndex)
+                  ? themeTextColorDisabled
+                  : themeTextColorPrimary
+              }
+            />
+          </ResetButton>
+        </div>
       </div>
     );
   };
@@ -140,9 +143,9 @@ const FieldList: React.SFC<FieldListProps> = ({
 
   return (
     <>
-      {renderHeader()}
+      {data.length ? renderHeader() : null}
       <div className={fieldListStack}>
-        {data.map((datum, i) => renderRows(datum, i))}
+        {data.length ? data.map((datum, i) => renderRows(datum, i)) : null}
         {renderAddButton()}
       </div>
     </>

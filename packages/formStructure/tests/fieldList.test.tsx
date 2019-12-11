@@ -14,17 +14,20 @@ const mockItems = [
   {
     name: "Brian Vaughn",
     role: "Software Engineer",
-    city: "San Jose"
+    city: "San Jose",
+    key: 0
   },
   {
     name: "Jon Doe",
     role: "Product engineer",
-    city: "Mountain View"
+    city: "Mountain View",
+    key: 1
   },
   {
     name: "Jane Doe",
     role: "UX Designer",
-    city: "San Francisco"
+    city: "San Francisco",
+    key: 2
   }
 ];
 
@@ -48,6 +51,7 @@ describe("FieldList", () => {
               header="Name"
               pathToValue="name"
               onChange={testFieldUpdateHandler}
+              key="name"
             >
               {({ defaultProps, onChange, value }) => (
                 <TextInput
@@ -57,11 +61,14 @@ describe("FieldList", () => {
                 />
               )}
             </FieldListColumn>
-            <FieldListColumnSeparator>:</FieldListColumnSeparator>
+            <FieldListColumnSeparator key="separator">
+              :
+            </FieldListColumnSeparator>
             <FieldListColumn
               header="Role"
               pathToValue="role"
               onChange={testFieldUpdateHandler}
+              key="role"
             >
               {({ defaultProps, onChange, value }) => (
                 <TextInput
@@ -89,6 +96,7 @@ describe("FieldList", () => {
     const fieldListComponent = mount(
       <FieldList data={mockItems} onRemoveItem={testRemoveHandler}>
         <FieldListColumn
+          key="name"
           header="Name"
           pathToValue="name"
           onChange={testFieldUpdateHandler}
@@ -97,8 +105,8 @@ describe("FieldList", () => {
             <TextInput value={value} onChange={onChange} {...defaultProps} />
           )}
         </FieldListColumn>
-        <FieldListColumnSeparator>:</FieldListColumnSeparator>
         <FieldListColumn
+          key="role"
           header="Role"
           pathToValue="role"
           onChange={testFieldUpdateHandler}
@@ -133,6 +141,7 @@ describe("FieldList", () => {
         disabledRows={[0]}
       >
         <FieldListColumn
+          key="name"
           header="Name"
           pathToValue="name"
           onChange={testFieldUpdateHandler}
@@ -147,6 +156,7 @@ describe("FieldList", () => {
           )}
         </FieldListColumn>
         <FieldListColumn
+          key="role"
           header="Role"
           pathToValue="role"
           onChange={testFieldUpdateHandler}
@@ -192,6 +202,7 @@ describe("FieldList", () => {
     const fieldListComponent = mount(
       <FieldList data={mockItems} onRemoveItem={testRemoveHandler}>
         <FieldListColumn
+          key={pathToValue}
           header="Name"
           pathToValue={pathToValue}
           onChange={testFieldUpdateHandler}

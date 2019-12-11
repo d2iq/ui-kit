@@ -11,8 +11,10 @@ interface FieldGroupProps {
 
 const FieldGroup: React.SFC<FieldGroupProps> = ({ children, direction }) => (
   <Flex gutterSize="m" direction={direction}>
-    {React.Children.toArray(children).map((field, i) => (
-      <FlexItem key={i}>{field}</FlexItem>
+    {(React.Children.toArray(children) as Array<
+      React.ReactElement<{ key: React.Key }>
+    >).map(field => (
+      <FlexItem key={field.props.key}>{field}</FlexItem>
     ))}
   </Flex>
 );
