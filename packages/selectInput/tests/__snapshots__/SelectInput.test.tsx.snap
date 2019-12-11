@@ -55,10 +55,6 @@ exports[`SelectInput renders with hidden label 1`] = `
 `;
 
 exports[`SelectInput should render all appearances focus 1`] = `
-.emotion-1 {
-  margin: auto 8px auto 0;
-}
-
 .emotion-0 {
   display: block;
   padding-top: 0;
@@ -67,7 +63,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
   font-weight: 500;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: relative;
   border: 1px solid;
   border-radius: 4px;
@@ -82,52 +78,52 @@ exports[`SelectInput should render all appearances focus 1`] = `
   display: flex;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-5::placeholder {
+.emotion-4::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-5 input {
+.emotion-4 input {
   font-size: inherit;
   color: inherit;
 }
 
-.emotion-5 input::-webkit-input-placeholder {
+.emotion-4 input::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-5 input::-moz-placeholder {
+.emotion-4 input::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-5 input:-ms-input-placeholder {
+.emotion-4 input:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-5 input::placeholder {
+.emotion-4 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 {
+.emotion-1 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -142,20 +138,20 @@ exports[`SelectInput should render all appearances focus 1`] = `
   display: block;
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   outline: 0;
 }
 
-.emotion-2:-moz-focusring {
+.emotion-1:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 var(--themeTextColorPrimary,#1B2029);
 }
 
-.emotion-2::-ms-expand {
+.emotion-1::-ms-expand {
   display: none;
 }
 
-.emotion-4 {
+.emotion-3 {
   font-size: 0;
   pointer-events: none;
   position: absolute;
@@ -168,12 +164,12 @@ exports[`SelectInput should render all appearances focus 1`] = `
   padding-right: 16px;
 }
 
-.emotion-3 {
+.emotion-2 {
   vertical-align: middle;
   fill: inherit;
 }
 
-.emotion-3 use {
+.emotion-2 use {
   pointer-events: none;
 }
 
@@ -230,15 +226,12 @@ exports[`SelectInput should render all appearances focus 1`] = `
         Atmosphere layer
       </label>
       <span
-        className="emotion-5"
+        className="emotion-4"
       >
-        <span
-          className="emotion-1"
-        />
         <select
           aria-describedby=""
           aria-invalid={false}
-          className="emotion-2"
+          className="emotion-1"
           data-cy="selectInput-select selectInput-select.[object Object]"
           id="layers"
           onBlur={[Function]}
@@ -283,7 +276,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
           </option>
         </select>
         <span
-          className="emotion-4"
+          className="emotion-3"
         >
           <Icon
             color="inherit"
@@ -292,7 +285,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
           >
             <svg
               aria-label="system-triangle-down icon"
-              className="emotion-3"
+              className="emotion-2"
               data-cy="icon"
               height={16}
               preserveAspectRatio="xMinYMin meet"

@@ -138,12 +138,6 @@ storiesOf("Forms/SelectInput", module)
       id="layers"
       inputLabel="Atmosphere Layer"
       value="thermosphere"
-      iconStart={
-        <Icon
-          ariaLabel="select icon"
-          shape={SystemIcons.Donut}
-          size={iconSizeXs}
-        />
-      }
+      iconStart={SystemIcons.Donut}
     />
   ));

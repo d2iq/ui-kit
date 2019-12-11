@@ -14,7 +14,7 @@ import {
   display,
   tintText
 } from "../../shared/styles/styleUtils";
-import Icon from "../../icon/components/Icon";
+import Icon, { IconShapes } from "../../icon/components/Icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import {
   iconSizeXs,
@@ -22,6 +22,7 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
+import IconPropAdapter from "../../icon/components/IconPropAdapter";
 
 export interface SelectOption {
   disabled?: boolean;
@@ -45,7 +46,7 @@ export interface SelectInputProps extends React.HTMLProps<HTMLSelectElement> {
   /**
    * Optional icon to be displayed before the input value.
    */
-  iconStart?: React.ReactElement<HTMLElement> | string;
+  iconStart?: IconShapes | React.ReactElement<HTMLElement>;
   /**
    * Unique identifier used for the form input component
    */
@@ -141,7 +142,15 @@ class SelectInput extends React.PureComponent<
                 display("flex")
               )}
             >
-              {<span className={cx(optionalIcon)}>{iconStart}</span>}
+              {iconStart ? (
+                <span className={cx(optionalIcon)}>
+                  <IconPropAdapter
+                    icon={iconStart}
+                    size={iconSizeXs}
+                    color="inherit"
+                  />
+                </span>
+              ) : null}
               <select
                 className={cx(inputReset, select, display("block"))}
                 aria-invalid={!isValid}
