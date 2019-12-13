@@ -129,6 +129,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
             className={buttonClassName}
             onClick={this.onClick}
             tabIndex={0}
+            {...other}
           >
             {this.getButtonContent()}
           </a>
@@ -137,7 +138,12 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
           //
           // this rule was erroring because the anchor had no href, but in this
           // case that is intentional beacuse it's disabled
-          <a className={buttonClassName} aria-disabled="true" tabIndex={-1}>
+          <a
+            className={buttonClassName}
+            aria-disabled="true"
+            tabIndex={-1}
+            {...other}
+          >
             {this.getButtonContent()}
           </a>
           // tslint:enable react-a11y-anchors
