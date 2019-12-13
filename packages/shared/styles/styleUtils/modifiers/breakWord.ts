@@ -1,0 +1,7 @@
+import { css } from "emotion";
+
+// word-wrap is needed to support browsers in languages other than English
+export const breakWord = css`
+  hyphens: auto;
+  word-wrap: break-word;
+`;

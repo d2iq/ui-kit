@@ -11,6 +11,7 @@ export {
   tintContentSecondary
 } from "./typography/color";
 export { border, borderRadius } from "./modifiers/border";
+export { breakWord } from "./modifiers/breakWord";
 export { display } from "./modifiers/display";
 export { listReset } from "./resets/listReset";
 export { buttonReset } from "./resets/buttonReset";
