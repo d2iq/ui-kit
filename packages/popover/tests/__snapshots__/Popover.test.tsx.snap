@@ -18,6 +18,7 @@ exports[`Popover renders 1`] = `
   style={
     Object {
       "maxHeight": 200,
+      "maxWidth": undefined,
       "width": 100,
     }
   }

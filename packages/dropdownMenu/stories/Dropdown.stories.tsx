@@ -123,6 +123,30 @@ storiesOf("DropdownMenu", module)
       </DropdownSection>
     </DropdownMenu>
   ))
+  .add("menu has max width", () => (
+    <DropdownMenu
+      menuMaxWidth={200}
+      trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}
+    >
+      <DropdownSection>
+        <DropdownMenuItem key="longWord" value="longWord">
+          Donaudampfschifffahrtselektrizitätenhauptbetriebswerkbauunterbeamtengesellschaft
+        </DropdownMenuItem>
+        <DropdownMenuItem key="edit" value="edit">
+          Edit
+        </DropdownMenuItem>
+        <DropdownMenuItem key="scale" value="scale">
+          Scale
+        </DropdownMenuItem>
+        <DropdownMenuItem key="restart" value="restart">
+          Restart
+        </DropdownMenuItem>
+        <DropdownMenuItem key="stop" value="stop">
+          Stop
+        </DropdownMenuItem>
+      </DropdownSection>
+    </DropdownMenu>
+  ))
   .add("with onSelect callback", () => {
     const onSelect = selectedItem => {
       alert(`onSelect called with:
