@@ -88,10 +88,14 @@ export class TextInput<
     }
     return (
       <div {...containerProps} data-cy={dataCy}>
-        <div className={flex({ align: "center" })} data-cy="textInput-label">
-          {labelContent}
-          {tooltipContent}
-        </div>
+        {tooltipContent ? (
+          <div className={flex({ align: "center" })}>
+            {labelContent}
+            {tooltipContent}
+          </div>
+        ) : (
+          labelContent
+        )}
         {this.getInputContent()}
       </div>
     );
@@ -110,7 +114,11 @@ export class TextInput<
       ? getLabelStyle(hasError)
       : cx(visuallyHidden);
     return (
-      <label className={labelClassName} htmlFor={this.props.id}>
+      <label
+        className={labelClassName}
+        htmlFor={this.props.id}
+        data-cy="textInput-label"
+      >
         {this.props.inputLabel}
         {requiredContent}
       </label>

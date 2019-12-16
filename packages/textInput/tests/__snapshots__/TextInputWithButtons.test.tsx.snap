@@ -9,25 +9,7 @@ exports[`TextInputWithIcon renders 1`] = `
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
-.emotion-9 {
+.emotion-8 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
@@ -62,61 +44,61 @@ exports[`TextInputWithIcon renders 1`] = `
   border-color: var(--themeBorder,#DADDE2);
 }
 
-.emotion-9 > div {
+.emotion-8 > div {
   width: auto;
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-8::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-8::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-8:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-9::placeholder {
+.emotion-8::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-9 input {
+.emotion-8 input {
   font-size: inherit;
   color: inherit;
 }
 
-.emotion-9 input::-webkit-input-placeholder {
+.emotion-8 input::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-9 input::-moz-placeholder {
+.emotion-8 input::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-9 input:-ms-input-placeholder {
+.emotion-8 input:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-9 input::placeholder {
+.emotion-8 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-9:focus {
+.emotion-8:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-2 {
+.emotion-1 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -134,11 +116,11 @@ exports[`TextInputWithIcon renders 1`] = `
   padding: 0;
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   outline: 0;
 }
 
-.emotion-5 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -168,11 +150,11 @@ exports[`TextInputWithIcon renders 1`] = `
   width: initial;
 }
 
-.emotion-5 > div {
+.emotion-4 > div {
   width: auto;
 }
 
-.emotion-8 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -203,11 +185,11 @@ exports[`TextInputWithIcon renders 1`] = `
   padding-left: 12px;
 }
 
-.emotion-8 > div {
+.emotion-7 > div {
   width: auto;
 }
 
-.emotion-4 {
+.emotion-3 {
   background: none;
   border: 0;
   color: inherit;
@@ -219,34 +201,34 @@ exports[`TextInputWithIcon renders 1`] = `
   cursor: pointer;
 }
 
-.emotion-4::-moz-focus-inner {
+.emotion-3::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-4 > div:focus {
+.emotion-3 > div:focus {
   outline: none;
 }
 
-.emotion-4:focus > div {
+.emotion-3:focus > div {
   outline-color: Highlight;
   outline-width: thin;
 }
 
 @media (-webkit-min-device-pixel-ratio:0) {
-  .emotion-4:focus > div {
+  .emotion-3:focus > div {
     outline-color: -webkit-focus-ring-color;
     outline-style: auto;
     outline-width: unset;
   }
 }
 
-.emotion-3 {
+.emotion-2 {
   vertical-align: middle;
   fill: currentColor;
 }
 
-.emotion-3 use {
+.emotion-2 use {
   pointer-events: none;
 }
 
@@ -270,27 +252,23 @@ exports[`TextInputWithIcon renders 1`] = `
   <div
     data-cy="textInput"
   >
-    <div
-      className="emotion-1"
+    <label
+      className="emotion-0"
       data-cy="textInput-label"
+      htmlFor="renders"
     >
-      <label
-        className="emotion-0"
-        htmlFor="renders"
-      >
-        Label
-      </label>
-    </div>
+      Label
+    </label>
     <FormFieldWrapper
       id="renders"
     >
       <div
-        className="emotion-9"
+        className="emotion-8"
       >
         <input
           aria-describedby=""
           aria-invalid={false}
-          className="emotion-2"
+          className="emotion-1"
           data-cy="textInput-input"
           id="renders"
           onBlur={[Function]}
@@ -298,7 +276,7 @@ exports[`TextInputWithIcon renders 1`] = `
           type="text"
         />
         <span
-          className="emotion-5"
+          className="emotion-4"
           key="0"
         >
           <TextInputButton
@@ -307,7 +285,7 @@ exports[`TextInputWithIcon renders 1`] = `
           >
             <ResetButton>
               <button
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
                   tabIndex={-1}
@@ -318,7 +296,7 @@ exports[`TextInputWithIcon renders 1`] = `
                   >
                     <svg
                       aria-label="system-close icon"
-                      className="emotion-3"
+                      className="emotion-2"
                       data-cy="icon"
                       height={16}
                       preserveAspectRatio="xMinYMin meet"
@@ -337,7 +315,7 @@ exports[`TextInputWithIcon renders 1`] = `
           </TextInputButton>
         </span>
         <span
-          className="emotion-8"
+          className="emotion-7"
           key="1"
         >
           <TextInputButton
@@ -346,7 +324,7 @@ exports[`TextInputWithIcon renders 1`] = `
           >
             <ResetButton>
               <button
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
                   tabIndex={-1}
@@ -357,7 +335,7 @@ exports[`TextInputWithIcon renders 1`] = `
                   >
                     <svg
                       aria-label="system-funnel icon"
-                      className="emotion-3"
+                      className="emotion-2"
                       data-cy="icon"
                       height={16}
                       preserveAspectRatio="xMinYMin meet"
@@ -390,25 +368,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
-.emotion-6 {
+.emotion-5 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
@@ -443,61 +403,61 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
   border-color: var(--themeBorder,#DADDE2);
 }
 
-.emotion-6 > div {
+.emotion-5 > div {
   width: auto;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-6::placeholder {
+.emotion-5::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-6 input {
+.emotion-5 input {
   font-size: inherit;
   color: inherit;
 }
 
-.emotion-6 input::-webkit-input-placeholder {
+.emotion-5 input::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-6 input::-moz-placeholder {
+.emotion-5 input::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-6 input:-ms-input-placeholder {
+.emotion-5 input:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-6 input::placeholder {
+.emotion-5 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-6:focus {
+.emotion-5:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-2 {
+.emotion-1 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -515,11 +475,11 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
   padding: 0;
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   outline: 0;
 }
 
-.emotion-5 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -549,11 +509,11 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
   width: initial;
 }
 
-.emotion-5 > div {
+.emotion-4 > div {
   width: auto;
 }
 
-.emotion-4 {
+.emotion-3 {
   background: none;
   border: 0;
   color: inherit;
@@ -565,34 +525,34 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
   cursor: pointer;
 }
 
-.emotion-4::-moz-focus-inner {
+.emotion-3::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-4 > div:focus {
+.emotion-3 > div:focus {
   outline: none;
 }
 
-.emotion-4:focus > div {
+.emotion-3:focus > div {
   outline-color: Highlight;
   outline-width: thin;
 }
 
 @media (-webkit-min-device-pixel-ratio:0) {
-  .emotion-4:focus > div {
+  .emotion-3:focus > div {
     outline-color: -webkit-focus-ring-color;
     outline-style: auto;
     outline-width: unset;
   }
 }
 
-.emotion-3 {
+.emotion-2 {
   vertical-align: middle;
   fill: red;
 }
 
-.emotion-3 use {
+.emotion-2 use {
   pointer-events: none;
 }
 
@@ -614,27 +574,23 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
   <div
     data-cy="textInput"
   >
-    <div
-      className="emotion-1"
+    <label
+      className="emotion-0"
       data-cy="textInput-label"
+      htmlFor="renders.coloredBtn"
     >
-      <label
-        className="emotion-0"
-        htmlFor="renders.coloredBtn"
-      >
-        Label
-      </label>
-    </div>
+      Label
+    </label>
     <FormFieldWrapper
       id="renders.coloredBtn"
     >
       <div
-        className="emotion-6"
+        className="emotion-5"
       >
         <input
           aria-describedby=""
           aria-invalid={false}
-          className="emotion-2"
+          className="emotion-1"
           data-cy="textInput-input"
           id="renders.coloredBtn"
           onBlur={[Function]}
@@ -642,7 +598,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
           type="text"
         />
         <span
-          className="emotion-5"
+          className="emotion-4"
           key="0"
         >
           <TextInputButton
@@ -652,7 +608,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
           >
             <ResetButton>
               <button
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
                   tabIndex={-1}
@@ -664,7 +620,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
                   >
                     <svg
                       aria-label="system-close icon"
-                      className="emotion-3"
+                      className="emotion-2"
                       data-cy="icon"
                       height={16}
                       preserveAspectRatio="xMinYMin meet"
