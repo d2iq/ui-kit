@@ -27,7 +27,7 @@ const onRemoveSubSection = () => {
   alert("the box would be removed");
 };
 
-storiesOf("Form structure", module)
+storiesOf("Form structure/Overall form layout", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .addParameters({
@@ -128,7 +128,7 @@ storiesOf("Form structure", module)
       </FormSection>
     </Container>
   ))
-  .add("kitchen-sink example form", () => (
+  .add("kitchen-sink example form layout", () => (
     <Container>
       <FormMessage appearance="warning">
         There are already a bunch of teams. Are you sure you want another one?
