@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Typeahead renders 1`] = `
-.emotion-3 {
+.emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
@@ -25,19 +25,19 @@ exports[`Typeahead renders 1`] = `
   min-height: 0;
 }
 
-.emotion-3 > div {
+.emotion-2 > div {
   width: auto;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: relative;
 }
 
-.emotion-20 {
+.emotion-19 {
   margin-top: 4px;
 }
 
-.emotion-21 {
+.emotion-20 {
   top: 0px;
   left: 0px;
   position: absolute;
@@ -57,24 +57,6 @@ exports[`Typeahead renders 1`] = `
 }
 
 .emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
-.emotion-2 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -102,61 +84,61 @@ exports[`Typeahead renders 1`] = `
   border-color: var(--themeBorder,#DADDE2);
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   outline: 0;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2::placeholder {
+.emotion-1::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input {
+.emotion-1 input {
   font-size: inherit;
   color: inherit;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-1 input::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-1 input::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-1 input:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input::placeholder {
+.emotion-1 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-19 {
+.emotion-18 {
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -168,7 +150,7 @@ exports[`Typeahead renders 1`] = `
   overflow-x: hidden;
 }
 
-.emotion-8 {
+.emotion-7 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -180,7 +162,7 @@ exports[`Typeahead renders 1`] = `
   margin-top: 8px;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -204,16 +186,16 @@ exports[`Typeahead renders 1`] = `
   min-height: 0;
 }
 
-.emotion-7 > div {
+.emotion-6 > div {
   width: auto;
 }
 
-.emotion-7 > *:not(:first-child) {
+.emotion-6 > *:not(:first-child) {
   padding-left: 8px;
   padding-top: 0;
 }
 
-.emotion-4 {
+.emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -228,7 +210,7 @@ exports[`Typeahead renders 1`] = `
   width: initial;
 }
 
-.emotion-5 {
+.emotion-4 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -241,7 +223,7 @@ exports[`Typeahead renders 1`] = `
   width: auto;
 }
 
-.emotion-13 {
+.emotion-12 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -252,7 +234,7 @@ exports[`Typeahead renders 1`] = `
   display: table;
 }
 
-.emotion-18 {
+.emotion-17 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -326,7 +308,7 @@ exports[`Typeahead renders 1`] = `
               data-cy="typeahead-dropdown"
             >
               <div
-                className="emotion-20"
+                className="emotion-19"
               >
                 <Popover
                   aria-labelledby="downshift-0-label"
@@ -394,7 +376,7 @@ exports[`Typeahead renders 1`] = `
         >
           <Styled(div)>
             <div
-              className="emotion-23"
+              className="emotion-22"
             >
               <div>
                 <TextInput
@@ -420,23 +402,19 @@ exports[`Typeahead renders 1`] = `
                   <div
                     data-cy="textInput"
                   >
-                    <div
-                      className="emotion-1"
+                    <label
+                      className="emotion-0"
                       data-cy="textInput-label"
+                      htmlFor="standard.input"
                     >
-                      <label
-                        className="emotion-0"
-                        htmlFor="standard.input"
-                      >
-                        Standard
-                      </label>
-                    </div>
+                      Standard
+                    </label>
                     <FormFieldWrapper
                       id="standard.input"
                     >
                       <div>
                         <div
-                          className="emotion-3"
+                          className="emotion-2"
                         >
                           <input
                             aria-activedescendant={null}
@@ -446,7 +424,7 @@ exports[`Typeahead renders 1`] = `
                             aria-invalid={false}
                             aria-labelledby="downshift-0-label"
                             autoComplete="off"
-                            className="emotion-2"
+                            className="emotion-1"
                             data-cy="textInput-input"
                             downshiftReset={[Function]}
                             id="standard.input"
@@ -469,7 +447,7 @@ exports[`Typeahead renders 1`] = `
                 </TextInput>
               </div>
               <Overlay
-                className="emotion-21"
+                className="emotion-20"
                 overlayRoot={
                   .emotion-16 {
   margin-top: 4px;
@@ -709,7 +687,7 @@ exports[`Typeahead renders 1`] = `
                   containerInfo={
                     <div>
                       <div
-                        class="emotion-21"
+                        class="emotion-20"
                       >
                         <div>
                           <div
@@ -717,11 +695,11 @@ exports[`Typeahead renders 1`] = `
                             direction="bottom-left"
                           >
                             <div
-                              class="emotion-20"
+                              class="emotion-19"
                             >
                               <div
                                 aria-labelledby="downshift-0-label"
-                                class="emotion-19"
+                                class="emotion-18"
                                 data-cy="popover"
                                 id="downshift-0-menu"
                                 role="listbox"
@@ -729,81 +707,81 @@ exports[`Typeahead renders 1`] = `
                               >
                                 <div
                                   aria-selected="false"
-                                  class="emotion-8"
+                                  class="emotion-7"
                                   data-cy="PopoverListItem"
                                   id="downshift-0-item-0"
                                   role="option"
                                 >
                                   <div
-                                    class="emotion-7"
+                                    class="emotion-6"
                                     data-cy="flex"
                                   >
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                     <div
-                                      class="emotion-5"
+                                      class="emotion-4"
                                       data-cy="flexItem"
                                     >
                                       Exosphere
                                     </div>
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                   </div>
                                 </div>
                                 <div
                                   aria-selected="false"
-                                  class="emotion-13"
+                                  class="emotion-12"
                                   data-cy="PopoverListItem"
                                   id="downshift-0-item-1"
                                   role="option"
                                 >
                                   <div
-                                    class="emotion-7"
+                                    class="emotion-6"
                                     data-cy="flex"
                                   >
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                     <div
-                                      class="emotion-5"
+                                      class="emotion-4"
                                       data-cy="flexItem"
                                     >
                                       Thermosphere
                                     </div>
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                   </div>
                                 </div>
                                 <div
                                   aria-selected="false"
-                                  class="emotion-18"
+                                  class="emotion-17"
                                   data-cy="PopoverListItem"
                                   id="downshift-0-item-2"
                                   role="option"
                                 >
                                   <div
-                                    class="emotion-7"
+                                    class="emotion-6"
                                     data-cy="flex"
                                   >
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                     <div
-                                      class="emotion-5"
+                                      class="emotion-4"
                                       data-cy="flexItem"
                                     >
                                       Stratosphere
                                     </div>
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                   </div>
@@ -817,7 +795,7 @@ exports[`Typeahead renders 1`] = `
                   }
                 >
                   <div
-                    className="emotion-21"
+                    className="emotion-20"
                   >
                     <div>
                       <clickOutside(DropdownContents)
@@ -831,7 +809,7 @@ exports[`Typeahead renders 1`] = `
                             direction="bottom-left"
                           >
                             <div
-                              className="emotion-20"
+                              className="emotion-19"
                             >
                               <Popover
                                 aria-labelledby="downshift-0-label"
@@ -843,7 +821,7 @@ exports[`Typeahead renders 1`] = `
                               >
                                 <div
                                   aria-labelledby="downshift-0-label"
-                                  className="emotion-19"
+                                  className="emotion-18"
                                   data-cy="popover"
                                   id="downshift-0-menu"
                                   role="listbox"
@@ -869,7 +847,7 @@ exports[`Typeahead renders 1`] = `
                                   >
                                     <div
                                       aria-selected={false}
-                                      className="emotion-8"
+                                      className="emotion-7"
                                       data-cy="PopoverListItem"
                                       id="downshift-0-item-0"
                                       onClick={[Function]}
@@ -885,14 +863,14 @@ exports[`Typeahead renders 1`] = `
                                         wrap="nowrap"
                                       >
                                         <div
-                                          className="emotion-7"
+                                          className="emotion-6"
                                           data-cy="flex"
                                         >
                                           <FlexItem
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
@@ -900,7 +878,7 @@ exports[`Typeahead renders 1`] = `
                                             flex="grow"
                                           >
                                             <div
-                                              className="emotion-5"
+                                              className="emotion-4"
                                               data-cy="flexItem"
                                             >
                                               Exosphere
@@ -910,7 +888,7 @@ exports[`Typeahead renders 1`] = `
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
@@ -933,7 +911,7 @@ exports[`Typeahead renders 1`] = `
                                   >
                                     <div
                                       aria-selected={false}
-                                      className="emotion-13"
+                                      className="emotion-12"
                                       data-cy="PopoverListItem"
                                       id="downshift-0-item-1"
                                       onClick={[Function]}
@@ -949,14 +927,14 @@ exports[`Typeahead renders 1`] = `
                                         wrap="nowrap"
                                       >
                                         <div
-                                          className="emotion-7"
+                                          className="emotion-6"
                                           data-cy="flex"
                                         >
                                           <FlexItem
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
@@ -964,7 +942,7 @@ exports[`Typeahead renders 1`] = `
                                             flex="grow"
                                           >
                                             <div
-                                              className="emotion-5"
+                                              className="emotion-4"
                                               data-cy="flexItem"
                                             >
                                               Thermosphere
@@ -974,7 +952,7 @@ exports[`Typeahead renders 1`] = `
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
@@ -997,7 +975,7 @@ exports[`Typeahead renders 1`] = `
                                   >
                                     <div
                                       aria-selected={false}
-                                      className="emotion-18"
+                                      className="emotion-17"
                                       data-cy="PopoverListItem"
                                       id="downshift-0-item-2"
                                       onClick={[Function]}
@@ -1013,14 +991,14 @@ exports[`Typeahead renders 1`] = `
                                         wrap="nowrap"
                                       >
                                         <div
-                                          className="emotion-7"
+                                          className="emotion-6"
                                           data-cy="flex"
                                         >
                                           <FlexItem
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
@@ -1028,7 +1006,7 @@ exports[`Typeahead renders 1`] = `
                                             flex="grow"
                                           >
                                             <div
-                                              className="emotion-5"
+                                              className="emotion-4"
                                               data-cy="flexItem"
                                             >
                                               Stratosphere
@@ -1038,7 +1016,7 @@ exports[`Typeahead renders 1`] = `
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
@@ -1066,7 +1044,7 @@ exports[`Typeahead renders 1`] = `
 `;
 
 exports[`Typeahead renders a menu with a max height 1`] = `
-.emotion-3 {
+.emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
   -ms-flex-align: flex;
@@ -1090,19 +1068,19 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-height: 0;
 }
 
-.emotion-3 > div {
+.emotion-2 > div {
   width: auto;
 }
 
-.emotion-23 {
+.emotion-22 {
   position: relative;
 }
 
-.emotion-20 {
+.emotion-19 {
   margin-top: 4px;
 }
 
-.emotion-21 {
+.emotion-20 {
   top: 0px;
   left: 0px;
   position: absolute;
@@ -1122,24 +1100,6 @@ exports[`Typeahead renders a menu with a max height 1`] = `
 }
 
 .emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
-.emotion-2 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -1167,61 +1127,61 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   border-color: var(--themeBorder,#DADDE2);
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   outline: 0;
 }
 
-.emotion-2::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2::placeholder {
+.emotion-1::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input {
+.emotion-1 input {
   font-size: inherit;
   color: inherit;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-1 input::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-1 input::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-1 input:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2 input::placeholder {
+.emotion-1 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-19 {
+.emotion-18 {
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -1233,7 +1193,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   overflow-x: hidden;
 }
 
-.emotion-8 {
+.emotion-7 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -1245,7 +1205,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   margin-top: 8px;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1269,16 +1229,16 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   min-height: 0;
 }
 
-.emotion-7 > div {
+.emotion-6 > div {
   width: auto;
 }
 
-.emotion-7 > *:not(:first-child) {
+.emotion-6 > *:not(:first-child) {
   padding-left: 8px;
   padding-top: 0;
 }
 
-.emotion-4 {
+.emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -1293,7 +1253,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   width: initial;
 }
 
-.emotion-5 {
+.emotion-4 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -1306,7 +1266,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   width: auto;
 }
 
-.emotion-13 {
+.emotion-12 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -1317,7 +1277,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   display: table;
 }
 
-.emotion-18 {
+.emotion-17 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -1391,7 +1351,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
               data-cy="typeahead-dropdown"
             >
               <div
-                className="emotion-20"
+                className="emotion-19"
               >
                 <Popover
                   aria-labelledby="downshift-1-label"
@@ -1459,7 +1419,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
         >
           <Styled(div)>
             <div
-              className="emotion-23"
+              className="emotion-22"
             >
               <div>
                 <TextInput
@@ -1485,23 +1445,19 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                   <div
                     data-cy="textInput"
                   >
-                    <div
-                      className="emotion-1"
+                    <label
+                      className="emotion-0"
                       data-cy="textInput-label"
+                      htmlFor="standard.input"
                     >
-                      <label
-                        className="emotion-0"
-                        htmlFor="standard.input"
-                      >
-                        Standard
-                      </label>
-                    </div>
+                      Standard
+                    </label>
                     <FormFieldWrapper
                       id="standard.input"
                     >
                       <div>
                         <div
-                          className="emotion-3"
+                          className="emotion-2"
                         >
                           <input
                             aria-activedescendant={null}
@@ -1511,7 +1467,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                             aria-invalid={false}
                             aria-labelledby="downshift-1-label"
                             autoComplete="off"
-                            className="emotion-2"
+                            className="emotion-1"
                             data-cy="textInput-input"
                             downshiftReset={[Function]}
                             id="standard.input"
@@ -1534,12 +1490,12 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                 </TextInput>
               </div>
               <Overlay
-                className="emotion-21"
+                className="emotion-20"
                 overlayRoot={
                   <body>
                     <div>
                       <div
-                        class="emotion-21"
+                        class="emotion-20"
                       >
                         <div>
                           <div
@@ -1547,11 +1503,11 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                             direction="bottom-left"
                           >
                             <div
-                              class="emotion-20"
+                              class="emotion-19"
                             >
                               <div
                                 aria-labelledby="downshift-0-label"
-                                class="emotion-19"
+                                class="emotion-18"
                                 data-cy="popover"
                                 id="downshift-0-menu"
                                 role="listbox"
@@ -1559,81 +1515,81 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                               >
                                 <div
                                   aria-selected="false"
-                                  class="emotion-8"
+                                  class="emotion-7"
                                   data-cy="PopoverListItem"
                                   id="downshift-0-item-0"
                                   role="option"
                                 >
                                   <div
-                                    class="emotion-7"
+                                    class="emotion-6"
                                     data-cy="flex"
                                   >
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                     <div
-                                      class="emotion-5"
+                                      class="emotion-4"
                                       data-cy="flexItem"
                                     >
                                       Exosphere
                                     </div>
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                   </div>
                                 </div>
                                 <div
                                   aria-selected="false"
-                                  class="emotion-13"
+                                  class="emotion-12"
                                   data-cy="PopoverListItem"
                                   id="downshift-0-item-1"
                                   role="option"
                                 >
                                   <div
-                                    class="emotion-7"
+                                    class="emotion-6"
                                     data-cy="flex"
                                   >
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                     <div
-                                      class="emotion-5"
+                                      class="emotion-4"
                                       data-cy="flexItem"
                                     >
                                       Thermosphere
                                     </div>
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                   </div>
                                 </div>
                                 <div
                                   aria-selected="false"
-                                  class="emotion-18"
+                                  class="emotion-17"
                                   data-cy="PopoverListItem"
                                   id="downshift-0-item-2"
                                   role="option"
                                 >
                                   <div
-                                    class="emotion-7"
+                                    class="emotion-6"
                                     data-cy="flex"
                                   >
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                     <div
-                                      class="emotion-5"
+                                      class="emotion-4"
                                       data-cy="flexItem"
                                     >
                                       Stratosphere
                                     </div>
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                   </div>
@@ -1881,7 +1837,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                   containerInfo={
                     <div>
                       <div
-                        class="emotion-21"
+                        class="emotion-20"
                       >
                         <div>
                           <div
@@ -1889,11 +1845,11 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                             direction="bottom-left"
                           >
                             <div
-                              class="emotion-20"
+                              class="emotion-19"
                             >
                               <div
                                 aria-labelledby="downshift-1-label"
-                                class="emotion-19"
+                                class="emotion-18"
                                 data-cy="popover"
                                 id="downshift-1-menu"
                                 role="listbox"
@@ -1901,81 +1857,81 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                               >
                                 <div
                                   aria-selected="false"
-                                  class="emotion-8"
+                                  class="emotion-7"
                                   data-cy="PopoverListItem"
                                   id="downshift-1-item-0"
                                   role="option"
                                 >
                                   <div
-                                    class="emotion-7"
+                                    class="emotion-6"
                                     data-cy="flex"
                                   >
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                     <div
-                                      class="emotion-5"
+                                      class="emotion-4"
                                       data-cy="flexItem"
                                     >
                                       Exosphere
                                     </div>
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                   </div>
                                 </div>
                                 <div
                                   aria-selected="false"
-                                  class="emotion-13"
+                                  class="emotion-12"
                                   data-cy="PopoverListItem"
                                   id="downshift-1-item-1"
                                   role="option"
                                 >
                                   <div
-                                    class="emotion-7"
+                                    class="emotion-6"
                                     data-cy="flex"
                                   >
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                     <div
-                                      class="emotion-5"
+                                      class="emotion-4"
                                       data-cy="flexItem"
                                     >
                                       Thermosphere
                                     </div>
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                   </div>
                                 </div>
                                 <div
                                   aria-selected="false"
-                                  class="emotion-18"
+                                  class="emotion-17"
                                   data-cy="PopoverListItem"
                                   id="downshift-1-item-2"
                                   role="option"
                                 >
                                   <div
-                                    class="emotion-7"
+                                    class="emotion-6"
                                     data-cy="flex"
                                   >
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                     <div
-                                      class="emotion-5"
+                                      class="emotion-4"
                                       data-cy="flexItem"
                                     >
                                       Stratosphere
                                     </div>
                                     <div
-                                      class="emotion-4"
+                                      class="emotion-3"
                                       data-cy="flexItem"
                                     />
                                   </div>
@@ -1989,7 +1945,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                   }
                 >
                   <div
-                    className="emotion-21"
+                    className="emotion-20"
                   >
                     <div>
                       <clickOutside(DropdownContents)
@@ -2003,7 +1959,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                             direction="bottom-left"
                           >
                             <div
-                              className="emotion-20"
+                              className="emotion-19"
                             >
                               <Popover
                                 aria-labelledby="downshift-1-label"
@@ -2015,7 +1971,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                               >
                                 <div
                                   aria-labelledby="downshift-1-label"
-                                  className="emotion-19"
+                                  className="emotion-18"
                                   data-cy="popover"
                                   id="downshift-1-menu"
                                   role="listbox"
@@ -2041,7 +1997,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                   >
                                     <div
                                       aria-selected={false}
-                                      className="emotion-8"
+                                      className="emotion-7"
                                       data-cy="PopoverListItem"
                                       id="downshift-1-item-0"
                                       onClick={[Function]}
@@ -2057,14 +2013,14 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                         wrap="nowrap"
                                       >
                                         <div
-                                          className="emotion-7"
+                                          className="emotion-6"
                                           data-cy="flex"
                                         >
                                           <FlexItem
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
@@ -2072,7 +2028,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                             flex="grow"
                                           >
                                             <div
-                                              className="emotion-5"
+                                              className="emotion-4"
                                               data-cy="flexItem"
                                             >
                                               Exosphere
@@ -2082,7 +2038,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
@@ -2105,7 +2061,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                   >
                                     <div
                                       aria-selected={false}
-                                      className="emotion-13"
+                                      className="emotion-12"
                                       data-cy="PopoverListItem"
                                       id="downshift-1-item-1"
                                       onClick={[Function]}
@@ -2121,14 +2077,14 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                         wrap="nowrap"
                                       >
                                         <div
-                                          className="emotion-7"
+                                          className="emotion-6"
                                           data-cy="flex"
                                         >
                                           <FlexItem
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
@@ -2136,7 +2092,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                             flex="grow"
                                           >
                                             <div
-                                              className="emotion-5"
+                                              className="emotion-4"
                                               data-cy="flexItem"
                                             >
                                               Thermosphere
@@ -2146,7 +2102,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
@@ -2169,7 +2125,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                   >
                                     <div
                                       aria-selected={false}
-                                      className="emotion-18"
+                                      className="emotion-17"
                                       data-cy="PopoverListItem"
                                       id="downshift-1-item-2"
                                       onClick={[Function]}
@@ -2185,14 +2141,14 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                         wrap="nowrap"
                                       >
                                         <div
-                                          className="emotion-7"
+                                          className="emotion-6"
                                           data-cy="flex"
                                         >
                                           <FlexItem
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
@@ -2200,7 +2156,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                             flex="grow"
                                           >
                                             <div
-                                              className="emotion-5"
+                                              className="emotion-4"
                                               data-cy="flexItem"
                                             >
                                               Stratosphere
@@ -2210,7 +2166,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
                                             flex="shrink"
                                           >
                                             <div
-                                              className="emotion-4"
+                                              className="emotion-3"
                                               data-cy="flexItem"
                                             />
                                           </FlexItem>
