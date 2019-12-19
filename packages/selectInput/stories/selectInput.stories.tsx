@@ -5,6 +5,9 @@ import { withReadme } from "storybook-readme";
 import { SelectInput } from "../../index";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
+import { Icon } from "../../icon";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
+import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 
 const readme = require("../README.md");
 const defaultOptions = [
@@ -127,5 +130,14 @@ storiesOf("Forms/SelectInput", module)
       id="layers"
       inputLabel="Atmosphere Layer"
       value="thermosphere"
+    />
+  ))
+  .add("with icon", () => (
+    <SelectInput
+      options={defaultOptions}
+      id="layers"
+      inputLabel="Atmosphere Layer"
+      value="thermosphere"
+      iconStart={SystemIcons.Donut}
     />
   ));
