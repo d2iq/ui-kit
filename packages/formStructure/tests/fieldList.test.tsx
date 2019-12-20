@@ -15,19 +15,19 @@ const mockItems = [
     name: "Brian Vaughn",
     role: "Software Engineer",
     city: "San Jose",
-    key: 0
+    id: 0
   },
   {
     name: "Jon Doe",
     role: "Product engineer",
     city: "Mountain View",
-    key: 1
+    id: 1
   },
   {
     name: "Jane Doe",
     role: "UX Designer",
     city: "San Francisco",
-    key: 2
+    id: 2
   }
 ];
 
@@ -46,6 +46,7 @@ describe("FieldList", () => {
             data={mockItems}
             onRemoveItem={testRemoveHandler}
             disabledRows={[0]}
+            pathToUniqueKey="id"
           >
             <FieldListColumn
               header="Name"
@@ -94,7 +95,11 @@ describe("FieldList", () => {
       jest.fn();
     });
     const fieldListComponent = mount(
-      <FieldList data={mockItems} onRemoveItem={testRemoveHandler}>
+      <FieldList
+        data={mockItems}
+        onRemoveItem={testRemoveHandler}
+        pathToUniqueKey="id"
+      >
         <FieldListColumn
           key="name"
           header="Name"
@@ -139,6 +144,7 @@ describe("FieldList", () => {
         data={mockItems}
         onRemoveItem={testRemoveHandler}
         disabledRows={[0]}
+        pathToUniqueKey="id"
       >
         <FieldListColumn
           key="name"
@@ -200,7 +206,11 @@ describe("FieldList", () => {
       testFieldUpdateHandlerInner(rowIndex, pathToValue);
     });
     const fieldListComponent = mount(
-      <FieldList data={mockItems} onRemoveItem={testRemoveHandler}>
+      <FieldList
+        data={mockItems}
+        onRemoveItem={testRemoveHandler}
+        pathToUniqueKey="id"
+      >
         <FieldListColumn
           key={pathToValue}
           header="Name"
