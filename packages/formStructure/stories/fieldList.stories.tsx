@@ -15,19 +15,19 @@ const mockItems = [
     name: "Brian Vaughn",
     role: "Software Engineer",
     city: "San Jose",
-    key: 0
+    id: 0
   },
   {
     name: "Jon Doe",
     role: "Product engineer",
     city: "Mountain View",
-    key: 1
+    id: 1
   },
   {
     name: "Jane Doe",
     role: "UX Designer",
     city: "San Francisco",
-    key: 2
+    id: 2
   }
 ];
 
@@ -45,7 +45,11 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
     () => (
       <FieldListHelper items={mockItems}>
         {({ removeItemHander, addItemHandler, fieldUpdateHandler, items }) => (
-          <FieldList data={items} onRemoveItem={removeItemHander}>
+          <FieldList
+            data={items}
+            onRemoveItem={removeItemHander}
+            pathToUniqueKey="id"
+          >
             <FieldListColumn
               key="name"
               header="Name"
@@ -105,7 +109,11 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
     }
   )
   .add("varied column widths", () => (
-    <FieldList data={mockItems} onRemoveItem={testRemoveHandler}>
+    <FieldList
+      data={mockItems}
+      onRemoveItem={testRemoveHandler}
+      pathToUniqueKey="id"
+    >
       <FieldListColumn
         key="name"
         header="Name"
@@ -145,6 +153,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
       data={mockItems}
       onRemoveItem={testRemoveHandler}
       disabledRows={[1]}
+      pathToUniqueKey="id"
     >
       <FieldListColumn
         key="name"
@@ -194,7 +203,11 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
     </FieldList>
   ))
   .add("w/ add button", () => (
-    <FieldList data={mockItems} onRemoveItem={testRemoveHandler}>
+    <FieldList
+      data={mockItems}
+      onRemoveItem={testRemoveHandler}
+      pathToUniqueKey="id"
+    >
       <FieldListColumn
         key="name"
         header="Name"
@@ -229,7 +242,11 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
     </FieldList>
   ))
   .add("w/ column separators", () => (
-    <FieldList data={mockItems} onRemoveItem={testRemoveHandler}>
+    <FieldList
+      data={mockItems}
+      onRemoveItem={testRemoveHandler}
+      pathToUniqueKey="id"
+    >
       <FieldListColumn
         key="name"
         header="Name"
