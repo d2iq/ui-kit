@@ -5,9 +5,7 @@ import { withReadme } from "storybook-readme";
 import { SelectInput } from "../../index";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
-import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 
 const readme = require("../README.md");
 const defaultOptions = [
@@ -52,6 +50,17 @@ storiesOf("Forms/SelectInput", module)
         disabled={true}
       />
     </React.Fragment>
+  ))
+  .add("with placeholder", () => (
+    <SelectInput
+      options={[
+        { value: "placeholder", label: "Pick a layer", disabled: true },
+        ...defaultOptions
+      ]}
+      id="layers"
+      inputLabel="Atmosphere Layer"
+      value="placeholder"
+    />
   ))
   .add("hint text", () => (
     <React.Fragment>
