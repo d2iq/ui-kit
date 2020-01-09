@@ -24,7 +24,7 @@ exports[`EmptyState default 1`] = `
         </h2>
       </div>
       <div
-        class="css-2b834z"
+        class="css-59c18o"
         data-cy="spacingBox"
       >
         Body content
@@ -58,7 +58,7 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
         </h2>
       </div>
       <div
-        class="css-1xeq5c6"
+        class="css-z1a2ho"
         data-cy="spacingBox"
       >
         Body content
@@ -75,6 +75,7 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
             class="css-67j5fi"
             data-cy="secondaryButton"
             tabindex="0"
+            type="button"
           >
             <span
               class=""
@@ -91,6 +92,7 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
             class="css-s9tdxz"
             data-cy="primaryButton"
             tabindex="0"
+            type="button"
           >
             <span
               class=""

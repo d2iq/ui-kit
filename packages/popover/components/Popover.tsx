@@ -8,17 +8,18 @@ export interface PopoverProps extends React.HTMLProps<HTMLDivElement> {
   maxHeight?: number;
   menuRef?: React.RefObject<HTMLDivElement>;
   width?: number;
+  maxWidth?: number;
 }
 
 const Popover = (props: PopoverProps) => {
-  const { maxHeight, menuRef, width, ...other } = props;
+  const { maxHeight, menuRef, width, maxWidth, ...other } = props;
   return (
     <div
       className={cx(menuList, border("all"), {
-        [hideHoriztonalScroll]: !width
+        [hideHoriztonalScroll]: !width && !maxWidth
       })}
       ref={menuRef}
-      style={{ width, maxHeight }}
+      style={{ width, maxHeight, maxWidth }}
       data-cy="popover"
       {...other}
     />

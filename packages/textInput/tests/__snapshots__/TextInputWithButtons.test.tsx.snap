@@ -286,6 +286,7 @@ exports[`TextInputWithIcon renders 1`] = `
             <ResetButton>
               <button
                 className="emotion-3"
+                type="button"
               >
                 <div
                   tabIndex={-1}
@@ -325,6 +326,7 @@ exports[`TextInputWithIcon renders 1`] = `
             <ResetButton>
               <button
                 className="emotion-3"
+                type="button"
               >
                 <div
                   tabIndex={-1}
@@ -609,6 +611,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
             <ResetButton>
               <button
                 className="emotion-3"
+                type="button"
               >
                 <div
                   tabIndex={-1}

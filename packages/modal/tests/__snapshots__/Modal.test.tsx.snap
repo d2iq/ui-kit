@@ -1089,6 +1089,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                 class="emotion-8 emotion-9"
                                 data-cy="secondaryButton"
                                 tabindex="0"
+                                type="button"
                               >
                                 <span
                                   class=""
@@ -1104,6 +1105,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                 class="emotion-11 emotion-12"
                                 data-cy="primaryButton"
                                 tabindex="0"
+                                type="button"
                               >
                                 <span
                                   class=""
@@ -1220,6 +1222,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                 class="emotion-8 css-1h85cd2"
                                 data-cy="secondaryButton"
                                 tabindex="0"
+                                type="button"
                               >
                                 <span
                                   class=""
@@ -1235,6 +1238,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                 class="emotion-10 css-xcotv6"
                                 data-cy="primaryButton"
                                 tabindex="0"
+                                type="button"
                               >
                                 <span
                                   class=""
@@ -1389,6 +1393,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                       class="emotion-8 css-1h85cd2"
                                       data-cy="secondaryButton"
                                       tabindex="0"
+                                      type="button"
                                     >
                                       <span
                                         class=""
@@ -1404,6 +1409,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                       class="emotion-10 css-xcotv6"
                                       data-cy="primaryButton"
                                       tabindex="0"
+                                      type="button"
                                     >
                                       <span
                                         class=""
@@ -1519,6 +1525,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                         class="emotion-8 css-1h85cd2"
                                         data-cy="secondaryButton"
                                         tabindex="0"
+                                        type="button"
                                       >
                                         <span
                                           class=""
@@ -1534,6 +1541,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                         class="emotion-10 css-xcotv6"
                                         data-cy="primaryButton"
                                         tabindex="0"
+                                        type="button"
                                       >
                                         <span
                                           class=""
@@ -1676,6 +1684,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                         data-cy="secondaryButton"
                                         onClick={[Function]}
                                         tabIndex={0}
+                                        type="button"
                                       >
                                         <span
                                           className=""
@@ -1703,6 +1712,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                         data-cy="primaryButton"
                                         onClick={[Function]}
                                         tabIndex={0}
+                                        type="button"
                                       >
                                         <span
                                           className=""
@@ -2261,6 +2271,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                               class="emotion-1 css-1h85cd2"
                               data-cy="secondaryButton"
                               tabindex="0"
+                              type="button"
                             >
                               <span
                                 class=""
@@ -2276,6 +2287,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                               class="emotion-6 css-xcotv6"
                               data-cy="primaryButton"
                               tabindex="0"
+                              type="button"
                             >
                               <span
                                 class=""
@@ -2727,6 +2739,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                               class="emotion-8 emotion-9"
                               data-cy="secondaryButton"
                               tabindex="0"
+                              type="button"
                             >
                               <span
                                 class=""
@@ -2742,6 +2755,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                               class="emotion-11 emotion-12"
                               data-cy="primaryButton"
                               tabindex="0"
+                              type="button"
                             >
                               <span
                                 class=""
@@ -3108,6 +3122,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                 class="emotion-1 emotion-2"
                                 data-cy="secondaryButton"
                                 tabindex="0"
+                                type="button"
                               >
                                 <span
                                   class=""
@@ -3135,6 +3150,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                 class="emotion-7 emotion-8"
                                 data-cy="primaryButton"
                                 tabindex="0"
+                                type="button"
                               >
                                 <span
                                   class=""
@@ -3217,6 +3233,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                 class="emotion-1 css-1h85cd2"
                                 data-cy="secondaryButton"
                                 tabindex="0"
+                                type="button"
                               >
                                 <span
                                   class=""
@@ -3244,6 +3261,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                 class="emotion-6 css-xcotv6"
                                 data-cy="primaryButton"
                                 tabindex="0"
+                                type="button"
                               >
                                 <span
                                   class=""
@@ -3364,6 +3382,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                       class="emotion-1 css-1h85cd2"
                                       data-cy="secondaryButton"
                                       tabindex="0"
+                                      type="button"
                                     >
                                       <span
                                         class=""
@@ -3391,6 +3410,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                       class="emotion-6 css-xcotv6"
                                       data-cy="primaryButton"
                                       tabindex="0"
+                                      type="button"
                                     >
                                       <span
                                         class=""
@@ -3472,6 +3492,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                         class="emotion-1 css-1h85cd2"
                                         data-cy="secondaryButton"
                                         tabindex="0"
+                                        type="button"
                                       >
                                         <span
                                           class=""
@@ -3499,6 +3520,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                         class="emotion-6 css-xcotv6"
                                         data-cy="primaryButton"
                                         tabindex="0"
+                                        type="button"
                                       >
                                         <span
                                           class=""
@@ -3629,6 +3651,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                               data-cy="secondaryButton"
                                               onClick={[Function]}
                                               tabIndex={0}
+                                              type="button"
                                             >
                                               <span
                                                 className=""
@@ -3668,6 +3691,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                               data-cy="primaryButton"
                                               onClick={[Function]}
                                               tabIndex={0}
+                                              type="button"
                                             >
                                               <span
                                                 className=""

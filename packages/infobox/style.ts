@@ -1,5 +1,4 @@
 import { css } from "emotion";
-import { atMediaUp } from "../shared/styles/breakpoints";
 import {
   blueDarken4,
   blueLighten3,
@@ -8,15 +7,12 @@ import {
   greyDark,
   greyLightDarken3,
   greyLight,
-  spaceM,
   themeError,
   themeSuccess,
   themeWarning
 } from "../design-tokens/build/js/designTokens";
 import { lighten, darken } from "../shared/styles/color";
 import getCSSVarValue from "../utilities/components/getCSSVarValue";
-
-const layoutBreakpoint = "small";
 
 const infoBoxAppearances = appearance => {
   switch (appearance) {
@@ -55,30 +51,23 @@ const infoBoxAppearances = appearance => {
   }
 };
 
-export const infoBoxActions = css`
-  grid-row-start: 2;
-  grid-column: span 2;
-  justify-content: flex-end;
-
-  ${atMediaUp.small(css`
-    grid-row-start: auto;
-    grid-column: auto;
-    justify-content: flex-start;
-  `)};
+export const infoBoxContentWrap = css`
+  display: inline-flex;
+  flex-wrap: wrap;
 `;
 
-export const infoBox = (appearance, hasActions) =>
+export const infoBoxActions = css`
+  display: inline-flex;
+  margin-left: auto;
+`;
+
+export const infoBox = appearance =>
   css`
     ${infoBoxAppearances(appearance)};
-    grid-gap: ${spaceM};
-    grid-template-columns: 1fr auto;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
     overflow: auto;
     word-break: break-word;
-    ${hasActions &&
-      atMediaUp[layoutBreakpoint](css`
-        grid-template-columns: auto 1fr auto;
-      `)};
   `;
 
 export const infoBoxInline = css`
