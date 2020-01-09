@@ -7,7 +7,7 @@ import FullscreenView from "../../fullscreenView/components/FullscrenView";
 interface FullscreenModalProps extends ModalBaseProps {
   /** The primary button */
   ctaButton?: React.ReactElement<ButtonProps>;
-  /** The text for the button that secondary button, which closes the modal */
+  /** The text for the secondary button that closes the modal */
   closeText: React.ReactNode;
   /** The title that appears in the header */
   title: React.ReactNode;

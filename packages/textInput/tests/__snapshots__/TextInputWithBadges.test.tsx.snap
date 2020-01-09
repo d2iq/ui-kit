@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
-.emotion-5 {
+.emotion-4 {
   cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -22,8 +22,8 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   padding-right: 8px;
 }
 
-.emotion-9,
-.emotion-9 * {
+.emotion-8,
+.emotion-8 * {
   max-width: 100%;
 }
 
@@ -35,25 +35,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
-.emotion-27 {
+.emotion-26 {
   height: auto;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -79,61 +61,61 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   border-color: var(--themeBorder,#DADDE2);
 }
 
-.emotion-27 > div {
+.emotion-26 > div {
   width: auto;
 }
 
-.emotion-27::-webkit-input-placeholder {
+.emotion-26::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27::-moz-placeholder {
+.emotion-26::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27:-ms-input-placeholder {
+.emotion-26:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27::placeholder {
+.emotion-26::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27 input {
+.emotion-26 input {
   font-size: inherit;
   color: inherit;
 }
 
-.emotion-27 input::-webkit-input-placeholder {
+.emotion-26 input::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27 input::-moz-placeholder {
+.emotion-26 input::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27 input:-ms-input-placeholder {
+.emotion-26 input:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27 input::placeholder {
+.emotion-26 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27:focus {
+.emotion-26:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-26 {
+.emotion-25 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -169,16 +151,16 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   width: auto;
 }
 
-.emotion-26:focus {
+.emotion-25:focus {
   outline: 0;
 }
 
-.emotion-26,
-.emotion-26 * {
+.emotion-25,
+.emotion-25 * {
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
@@ -186,7 +168,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   white-space: nowrap;
 }
 
-.emotion-8 {
+.emotion-7 {
   background-color: #7D58FF;
   border-color: #7D58FF;
   color: #FFFFFF;
@@ -214,7 +196,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   justify-content: center;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -238,16 +220,16 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   min-height: 0;
 }
 
-.emotion-7 > div {
+.emotion-6 > div {
   width: auto;
 }
 
-.emotion-7 > *:not(:first-child) {
+.emotion-6 > *:not(:first-child) {
   padding-left: 4px;
   padding-top: 0;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -260,7 +242,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   width: auto;
 }
 
-.emotion-6 {
+.emotion-5 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -275,12 +257,12 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   width: initial;
 }
 
-.emotion-4 {
+.emotion-3 {
   vertical-align: middle;
   fill: currentColor;
 }
 
-.emotion-4 use {
+.emotion-3 use {
   pointer-events: none;
 }
 
@@ -311,32 +293,28 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   <div
     data-cy="textInput"
   >
-    <div
-      className="emotion-1"
+    <label
+      className="emotion-0"
       data-cy="textInput-label"
+      htmlFor="appearance"
     >
-      <label
-        className="emotion-0"
-        htmlFor="appearance"
-      >
-        Appearance
-      </label>
-    </div>
+      Appearance
+    </label>
     <FormFieldWrapper
       id="appearance"
     >
       <div
-        className="emotion-27"
+        className="emotion-26"
       >
         <span
-          className="emotion-9"
+          className="emotion-8"
           key="badge-one-badgeWrapper"
         >
           <Badge
             appearance="primary"
           >
             <span
-              className="emotion-8"
+              className="emotion-7"
               data-cy="badge"
             >
               <Flex
@@ -347,18 +325,18 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                 wrap="nowrap"
               >
                 <div
-                  className="emotion-7"
+                  className="emotion-6"
                   data-cy="flex"
                 >
                   <FlexItem
                     flex="grow"
                   >
                     <div
-                      className="emotion-3"
+                      className="emotion-2"
                       data-cy="flexItem"
                     >
                       <div
-                        className="emotion-2"
+                        className="emotion-1"
                       >
                         Badge one
                       </div>
@@ -368,7 +346,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                     flex="shrink"
                   >
                     <div
-                      className="emotion-6"
+                      className="emotion-5"
                       data-cy="flexItem"
                     >
                       <Clickable
@@ -378,7 +356,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                         tabIndex={-1}
                       >
                         <span
-                          className="emotion-5"
+                          className="emotion-4"
                           onClick={[Function]}
                           onKeyPress={[Function]}
                           role="button"
@@ -390,7 +368,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                           >
                             <svg
                               aria-label="system-close icon"
-                              className="emotion-4"
+                              className="emotion-3"
                               data-cy="icon"
                               height={12}
                               preserveAspectRatio="xMinYMin meet"
@@ -413,14 +391,14 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
           </Badge>
         </span>
         <span
-          className="emotion-9"
+          className="emotion-8"
           key="badge-two-badgeWrapper"
         >
           <Badge
             appearance="primary"
           >
             <span
-              className="emotion-8"
+              className="emotion-7"
               data-cy="badge"
             >
               <Flex
@@ -431,18 +409,18 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                 wrap="nowrap"
               >
                 <div
-                  className="emotion-7"
+                  className="emotion-6"
                   data-cy="flex"
                 >
                   <FlexItem
                     flex="grow"
                   >
                     <div
-                      className="emotion-3"
+                      className="emotion-2"
                       data-cy="flexItem"
                     >
                       <div
-                        className="emotion-2"
+                        className="emotion-1"
                       >
                         Badge two
                       </div>
@@ -452,7 +430,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                     flex="shrink"
                   >
                     <div
-                      className="emotion-6"
+                      className="emotion-5"
                       data-cy="flexItem"
                     >
                       <Clickable
@@ -462,7 +440,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                         tabIndex={-1}
                       >
                         <span
-                          className="emotion-5"
+                          className="emotion-4"
                           onClick={[Function]}
                           onKeyPress={[Function]}
                           role="button"
@@ -474,7 +452,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                           >
                             <svg
                               aria-label="system-close icon"
-                              className="emotion-4"
+                              className="emotion-3"
                               data-cy="icon"
                               height={12}
                               preserveAspectRatio="xMinYMin meet"
@@ -497,14 +475,14 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
           </Badge>
         </span>
         <span
-          className="emotion-9"
+          className="emotion-8"
           key="badge-three-badgeWrapper"
         >
           <Badge
             appearance="primary"
           >
             <span
-              className="emotion-8"
+              className="emotion-7"
               data-cy="badge"
             >
               <Flex
@@ -515,18 +493,18 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                 wrap="nowrap"
               >
                 <div
-                  className="emotion-7"
+                  className="emotion-6"
                   data-cy="flex"
                 >
                   <FlexItem
                     flex="grow"
                   >
                     <div
-                      className="emotion-3"
+                      className="emotion-2"
                       data-cy="flexItem"
                     >
                       <div
-                        className="emotion-2"
+                        className="emotion-1"
                       >
                         Badge three
                       </div>
@@ -536,7 +514,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                     flex="shrink"
                   >
                     <div
-                      className="emotion-6"
+                      className="emotion-5"
                       data-cy="flexItem"
                     >
                       <Clickable
@@ -546,7 +524,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                         tabIndex={-1}
                       >
                         <span
-                          className="emotion-5"
+                          className="emotion-4"
                           onClick={[Function]}
                           onKeyPress={[Function]}
                           role="button"
@@ -558,7 +536,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                           >
                             <svg
                               aria-label="system-close icon"
-                              className="emotion-4"
+                              className="emotion-3"
                               data-cy="icon"
                               height={12}
                               preserveAspectRatio="xMinYMin meet"
@@ -583,7 +561,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
         <input
           aria-describedby=""
           aria-invalid={false}
-          className="emotion-26"
+          className="emotion-25"
           data-cy="textInput-input"
           id="appearance"
           onBlur={[Function]}
@@ -607,25 +585,7 @@ exports[`TextInputWithBadges renders empty 1`] = `
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
-.emotion-3 {
+.emotion-2 {
   height: auto;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -651,61 +611,61 @@ exports[`TextInputWithBadges renders empty 1`] = `
   border-color: var(--themeBorder,#DADDE2);
 }
 
-.emotion-3 > div {
+.emotion-2 > div {
   width: auto;
 }
 
-.emotion-3::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-3::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-3:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-3::placeholder {
+.emotion-2::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-3 input {
+.emotion-2 input {
   font-size: inherit;
   color: inherit;
 }
 
-.emotion-3 input::-webkit-input-placeholder {
+.emotion-2 input::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-3 input::-moz-placeholder {
+.emotion-2 input::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-3 input:-ms-input-placeholder {
+.emotion-2 input:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-3 input::placeholder {
+.emotion-2 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-3:focus {
+.emotion-2:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-2 {
+.emotion-1 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -741,12 +701,12 @@ exports[`TextInputWithBadges renders empty 1`] = `
   width: auto;
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   outline: 0;
 }
 
-.emotion-2,
-.emotion-2 * {
+.emotion-1,
+.emotion-1 * {
   max-width: 100%;
 }
 
@@ -761,27 +721,23 @@ exports[`TextInputWithBadges renders empty 1`] = `
   <div
     data-cy="textInput"
   >
-    <div
-      className="emotion-1"
+    <label
+      className="emotion-0"
       data-cy="textInput-label"
+      htmlFor="empty"
     >
-      <label
-        className="emotion-0"
-        htmlFor="empty"
-      >
-        empty
-      </label>
-    </div>
+      empty
+    </label>
     <FormFieldWrapper
       id="empty"
     >
       <div
-        className="emotion-3"
+        className="emotion-2"
       >
         <input
           aria-describedby=""
           aria-invalid={false}
-          className="emotion-2"
+          className="emotion-1"
           data-cy="textInput-input"
           id="empty"
           onBlur={[Function]}
@@ -797,11 +753,11 @@ exports[`TextInputWithBadges renders empty 1`] = `
 `;
 
 exports[`TextInputWithBadges renders with badges 1`] = `
-.emotion-5 {
+.emotion-4 {
   cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -818,8 +774,8 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   padding-right: 8px;
 }
 
-.emotion-9,
-.emotion-9 * {
+.emotion-8,
+.emotion-8 * {
   max-width: 100%;
 }
 
@@ -831,25 +787,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   font-weight: 500;
 }
 
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: auto;
-}
-
-.emotion-27 {
+.emotion-26 {
   height: auto;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -875,61 +813,61 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   border-color: var(--themeBorder,#DADDE2);
 }
 
-.emotion-27 > div {
+.emotion-26 > div {
   width: auto;
 }
 
-.emotion-27::-webkit-input-placeholder {
+.emotion-26::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27::-moz-placeholder {
+.emotion-26::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27:-ms-input-placeholder {
+.emotion-26:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27::placeholder {
+.emotion-26::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27 input {
+.emotion-26 input {
   font-size: inherit;
   color: inherit;
 }
 
-.emotion-27 input::-webkit-input-placeholder {
+.emotion-26 input::-webkit-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27 input::-moz-placeholder {
+.emotion-26 input::-moz-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27 input:-ms-input-placeholder {
+.emotion-26 input:-ms-input-placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27 input::placeholder {
+.emotion-26 input::placeholder {
   color: var(--themeTextColorPrimary,#1B2029);
   opacity: 0.4;
 }
 
-.emotion-27:focus {
+.emotion-26:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-26 {
+.emotion-25 {
   background: none;
   border: 0;
   box-shadow: none;
@@ -965,16 +903,16 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   width: auto;
 }
 
-.emotion-26:focus {
+.emotion-25:focus {
   outline: 0;
 }
 
-.emotion-26,
-.emotion-26 * {
+.emotion-25,
+.emotion-25 * {
   max-width: 100%;
 }
 
-.emotion-2 {
+.emotion-1 {
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
@@ -982,7 +920,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   white-space: nowrap;
 }
 
-.emotion-8 {
+.emotion-7 {
   background-color: #7D58FF;
   border-color: #7D58FF;
   color: #FFFFFF;
@@ -1010,7 +948,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   justify-content: center;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1034,16 +972,16 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   min-height: 0;
 }
 
-.emotion-7 > div {
+.emotion-6 > div {
   width: auto;
 }
 
-.emotion-7 > *:not(:first-child) {
+.emotion-6 > *:not(:first-child) {
   padding-left: 4px;
   padding-top: 0;
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -1056,7 +994,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   width: auto;
 }
 
-.emotion-6 {
+.emotion-5 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -1071,12 +1009,12 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   width: initial;
 }
 
-.emotion-4 {
+.emotion-3 {
   vertical-align: middle;
   fill: currentColor;
 }
 
-.emotion-4 use {
+.emotion-3 use {
   pointer-events: none;
 }
 
@@ -1107,32 +1045,28 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   <div
     data-cy="textInput"
   >
-    <div
-      className="emotion-1"
+    <label
+      className="emotion-0"
       data-cy="textInput-label"
+      htmlFor="withBadges"
     >
-      <label
-        className="emotion-0"
-        htmlFor="withBadges"
-      >
-        With badges
-      </label>
-    </div>
+      With badges
+    </label>
     <FormFieldWrapper
       id="withBadges"
     >
       <div
-        className="emotion-27"
+        className="emotion-26"
       >
         <span
-          className="emotion-9"
+          className="emotion-8"
           key="badge-one-badgeWrapper"
         >
           <Badge
             appearance="primary"
           >
             <span
-              className="emotion-8"
+              className="emotion-7"
               data-cy="badge"
             >
               <Flex
@@ -1143,18 +1077,18 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                 wrap="nowrap"
               >
                 <div
-                  className="emotion-7"
+                  className="emotion-6"
                   data-cy="flex"
                 >
                   <FlexItem
                     flex="grow"
                   >
                     <div
-                      className="emotion-3"
+                      className="emotion-2"
                       data-cy="flexItem"
                     >
                       <div
-                        className="emotion-2"
+                        className="emotion-1"
                       >
                         Badge one
                       </div>
@@ -1164,7 +1098,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                     flex="shrink"
                   >
                     <div
-                      className="emotion-6"
+                      className="emotion-5"
                       data-cy="flexItem"
                     >
                       <Clickable
@@ -1174,7 +1108,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                         tabIndex={-1}
                       >
                         <span
-                          className="emotion-5"
+                          className="emotion-4"
                           onClick={[Function]}
                           onKeyPress={[Function]}
                           role="button"
@@ -1186,7 +1120,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                           >
                             <svg
                               aria-label="system-close icon"
-                              className="emotion-4"
+                              className="emotion-3"
                               data-cy="icon"
                               height={12}
                               preserveAspectRatio="xMinYMin meet"
@@ -1209,14 +1143,14 @@ exports[`TextInputWithBadges renders with badges 1`] = `
           </Badge>
         </span>
         <span
-          className="emotion-9"
+          className="emotion-8"
           key="badge-two-badgeWrapper"
         >
           <Badge
             appearance="primary"
           >
             <span
-              className="emotion-8"
+              className="emotion-7"
               data-cy="badge"
             >
               <Flex
@@ -1227,18 +1161,18 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                 wrap="nowrap"
               >
                 <div
-                  className="emotion-7"
+                  className="emotion-6"
                   data-cy="flex"
                 >
                   <FlexItem
                     flex="grow"
                   >
                     <div
-                      className="emotion-3"
+                      className="emotion-2"
                       data-cy="flexItem"
                     >
                       <div
-                        className="emotion-2"
+                        className="emotion-1"
                       >
                         Badge two
                       </div>
@@ -1248,7 +1182,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                     flex="shrink"
                   >
                     <div
-                      className="emotion-6"
+                      className="emotion-5"
                       data-cy="flexItem"
                     >
                       <Clickable
@@ -1258,7 +1192,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                         tabIndex={-1}
                       >
                         <span
-                          className="emotion-5"
+                          className="emotion-4"
                           onClick={[Function]}
                           onKeyPress={[Function]}
                           role="button"
@@ -1270,7 +1204,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                           >
                             <svg
                               aria-label="system-close icon"
-                              className="emotion-4"
+                              className="emotion-3"
                               data-cy="icon"
                               height={12}
                               preserveAspectRatio="xMinYMin meet"
@@ -1293,14 +1227,14 @@ exports[`TextInputWithBadges renders with badges 1`] = `
           </Badge>
         </span>
         <span
-          className="emotion-9"
+          className="emotion-8"
           key="badge-three-badgeWrapper"
         >
           <Badge
             appearance="primary"
           >
             <span
-              className="emotion-8"
+              className="emotion-7"
               data-cy="badge"
             >
               <Flex
@@ -1311,18 +1245,18 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                 wrap="nowrap"
               >
                 <div
-                  className="emotion-7"
+                  className="emotion-6"
                   data-cy="flex"
                 >
                   <FlexItem
                     flex="grow"
                   >
                     <div
-                      className="emotion-3"
+                      className="emotion-2"
                       data-cy="flexItem"
                     >
                       <div
-                        className="emotion-2"
+                        className="emotion-1"
                       >
                         Badge three
                       </div>
@@ -1332,7 +1266,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                     flex="shrink"
                   >
                     <div
-                      className="emotion-6"
+                      className="emotion-5"
                       data-cy="flexItem"
                     >
                       <Clickable
@@ -1342,7 +1276,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                         tabIndex={-1}
                       >
                         <span
-                          className="emotion-5"
+                          className="emotion-4"
                           onClick={[Function]}
                           onKeyPress={[Function]}
                           role="button"
@@ -1354,7 +1288,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                           >
                             <svg
                               aria-label="system-close icon"
-                              className="emotion-4"
+                              className="emotion-3"
                               data-cy="icon"
                               height={12}
                               preserveAspectRatio="xMinYMin meet"
@@ -1379,7 +1313,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
         <input
           aria-describedby=""
           aria-invalid={false}
-          className="emotion-26"
+          className="emotion-25"
           data-cy="textInput-input"
           id="withBadges"
           onBlur={[Function]}

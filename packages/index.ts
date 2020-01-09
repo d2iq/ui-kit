@@ -58,6 +58,7 @@ export {
   EmptyStateWithGraphic,
   EmptyStateWrapper
 } from "./emptyState";
+export * from "./formStructure";
 export { FullscreenView } from "./fullscreenView";
 export { Icon } from "./icon";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";

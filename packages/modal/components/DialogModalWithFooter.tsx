@@ -8,7 +8,7 @@ import DialogModal, { DialogModalProps } from "./DialogModal";
 export interface DialogModalWithFooterProps extends DialogModalProps {
   /** The primary button */
   ctaButton: React.ReactElement<ButtonProps>;
-  /** The text for the button that secondary button, which closes the modal */
+  /** The text for the secondary button that closes the modal */
   closeText?: React.ReactNode;
 }
 
