@@ -2,6 +2,7 @@ import { css } from "emotion";
 import {
   iconSizeXs,
   spaceM,
+  spaceXs,
   themeTextColorPrimary
 } from "../design-tokens/build/js/designTokens";
 
@@ -38,4 +39,8 @@ export const selectIcon = css`
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+`;
+
+export const optionalIcon = css`
+  margin: auto ${spaceXs} auto 0;
 `;
