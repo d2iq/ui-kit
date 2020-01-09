@@ -264,6 +264,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
                       data-cy="secondaryButton"
                       onClick={[Function]}
                       tabIndex={0}
+                      type="button"
                     >
                       <span
                         className=""
@@ -303,6 +304,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
                       data-cy="primaryButton"
                       onClick={[Function]}
                       tabIndex={0}
+                      type="button"
                     >
                       <span
                         className=""

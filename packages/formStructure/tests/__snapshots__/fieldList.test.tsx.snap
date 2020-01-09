@@ -110,6 +110,7 @@ Array [
           class="css-1c1l20i"
           data-cy="fieldList-removeButton"
           disabled=""
+          type="button"
         >
           <div
             tabindex="-1"
@@ -213,6 +214,7 @@ Array [
         <button
           class="css-p8ocxc"
           data-cy="fieldList-removeButton"
+          type="button"
         >
           <div
             tabindex="-1"
@@ -316,6 +318,7 @@ Array [
         <button
           class="css-p8ocxc"
           data-cy="fieldList-removeButton"
+          type="button"
         >
           <div
             tabindex="-1"
@@ -342,6 +345,7 @@ Array [
       class="css-67j5fi"
       data-cy="secondaryButton"
       tabindex="0"
+      type="button"
     >
       <span
         class="css-cdylxf"
