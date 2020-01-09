@@ -63,8 +63,8 @@
     "shortid": "2.2.14"
   },
   "peerDependencies": {
-    "react": ">=16.2.0 <16.9.0 || 16.7.0-alpha.0",
-    "react-dom": ">=16.2.0 <16.9.0 || 16.7.0-alpha.0",
+    "react": ">=16.2.0",
+    "react-dom": ">=16.2.0",
     "react-gemini-scrollbar": "^2.1.5 || ^2.3.0"
   },
   "devDependencies": {

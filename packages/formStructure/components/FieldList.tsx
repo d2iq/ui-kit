@@ -29,18 +29,28 @@ const REMOVE_ICON_SIZE = iconSizeXs;
 
 interface FieldListProps {
   /** The data to populate the field values with */
-  data: Array<{ key: string | number; [key: string]: any }>;
+  data: Array<{ [key: string]: any }>;
   /** An array of the indexes of disabled rows */
   disabledRows?: number[];
   /** The callback for when the remove button is clicked */
   onRemoveItem: (affectedRowIndex: number) => () => void;
+  /**
+   * The path to an object property who's value will be unique.
+   * Typically, this will be some kind of ID. The value of this property
+   * is used to set the key for each row in the field list.
+   *
+   * This key's value cannot be the field value because it will cause
+   * problems when the field value is changed
+   */
+  pathToUniqueKey?: string;
 }
 
 const FieldList: React.SFC<FieldListProps> = ({
   children,
   data,
   disabledRows,
-  onRemoveItem
+  onRemoveItem,
+  pathToUniqueKey
 }) => {
   const columns = (React.Children.toArray(children) as Array<
     React.ReactElement<FieldListColumnProps & FieldListColumnWidthProps>
@@ -56,7 +66,7 @@ const FieldList: React.SFC<FieldListProps> = ({
         spacingSize="xxs"
         className={getFieldRowGrid(columns, REMOVE_ICON_SIZE)}
       >
-        {columns.map(col => (
+        {columns.map((col, i) => (
           <Text
             tag="div"
             weight="medium"
@@ -64,7 +74,7 @@ const FieldList: React.SFC<FieldListProps> = ({
               [invisibleColHeader]: col.type === FieldListColumnSeparator
             })}
             dataCy="fieldList-columnHeader"
-            key={col.props.key}
+            key={col.key || `columnHeader.${i}`}
           >
             {col.type === FieldListColumn && col.props.header}
             {col.type === FieldListColumnSeparator && col.props.children}
@@ -81,7 +91,14 @@ const FieldList: React.SFC<FieldListProps> = ({
     return (
       <div
         className={getFieldRowGrid(columns, REMOVE_ICON_SIZE)}
-        key={`fieldList-row.${rowData.key}`}
+        key={
+          pathToUniqueKey
+            ? `fieldList-row.${findNestedPropertyInObject(
+                rowData,
+                pathToUniqueKey
+              )}`
+            : `fieldList-row.${rowIndex}`
+        }
       >
         {columns.map((col, i) => {
           return (
