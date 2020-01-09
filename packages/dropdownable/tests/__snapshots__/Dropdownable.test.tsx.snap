@@ -85,6 +85,7 @@ exports[`Dropdownable is visible after opening 1`] = `
                 data-cy="primaryButton"
                 onClick={[Function]}
                 tabIndex={0}
+                type="button"
               >
                 <span
                   className=""
@@ -255,6 +256,7 @@ exports[`Dropdownable is visible after opening 2`] = `
                 data-cy="primaryButton"
                 onClick={[Function]}
                 tabIndex={0}
+                type="button"
               >
                 <span
                   className=""

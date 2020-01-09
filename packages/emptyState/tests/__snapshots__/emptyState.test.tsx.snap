@@ -75,6 +75,7 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
             class="css-67j5fi"
             data-cy="secondaryButton"
             tabindex="0"
+            type="button"
           >
             <span
               class=""
@@ -91,6 +92,7 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
             class="css-s9tdxz"
             data-cy="primaryButton"
             tabindex="0"
+            type="button"
           >
             <span
               class=""
