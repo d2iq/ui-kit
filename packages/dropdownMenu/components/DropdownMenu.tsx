@@ -25,6 +25,10 @@ export interface DropdownMenuProps {
    */
   menuMaxHeight?: number;
   /**
+   * Maximum width the menu can grow to
+   */
+  menuMaxWidth?: number;
+  /**
    * callback for when a menu item is clicked
    */
   onSelect?: (
@@ -52,6 +56,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
     children,
     initialIsOpen,
     menuMaxHeight,
+    menuMaxWidth,
     onSelect,
     overlayRoot,
     preferredDirections,
@@ -133,6 +138,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
             dropdown={
               <Popover
                 maxHeight={menuMaxHeight}
+                maxWidth={menuMaxWidth}
                 {...getMenuProps({ refKey: "menuRef" })}
               >
                 {getDropdownContents(
