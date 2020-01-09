@@ -2,13 +2,32 @@
 
 Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.
 
-We use modals for creating and editing new objects as well as alert dialogs.
+We use modals for creating, editing, and deleting objects as well as alert dialogs.
 
 ## Modal sizes
 
 Designer/Developer can choose whether to use a large or small modal depending on the content.
 
-If the modal is complex and requires more than 4 navigation tabs then consider switching this to a full screen form.
+### Small Dialog Modal
+Small dialog modals are mostly used for alerts. E.g. confirm you want to continue with an action
+
+Alerts can require some small interaction from the user, but should be kept as simple as possible. E.g.: requiring the user to type the name of a cluster to confirm it should be deleted.
+
+
+### Large Dialog Modal
+Large dialog modals are used when the user would benefit from seeing the content underlying the content of the modal.
+
+Large dialog modals are used for:
+- simple forms
+- content-heavy alerts
+
+### Fullscreen Modal
+Fullscreen modals are used for complex interactions such as large forms. They let the user focus on the complexity and importance of the modal content by covering the entire viewport.
+
+Fullscreen modals are used for:
+- forms that affect high-priority features (e.g.: Kommander Projects, and Kommander Clusters)
+- forms that have many input fields
+- content that requires navigation tabs
 
 ## FullscreenModal vs FullscreenView
 
