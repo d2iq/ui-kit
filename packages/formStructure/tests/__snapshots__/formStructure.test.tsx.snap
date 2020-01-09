@@ -8,11 +8,13 @@ Array [
   >
     <div
       aria-live="assertive"
-      class="css-rvaq24"
+      class="css-8smtcw"
       data-cy="infoBox infoBox.warning"
       role="alert"
     >
-      <div>
+      <div
+        class="css-1xwef9y"
+      >
         Form message content
       </div>
     </div>
