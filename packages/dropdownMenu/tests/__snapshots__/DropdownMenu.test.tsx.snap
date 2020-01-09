@@ -445,6 +445,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
                             style={
                               Object {
                                 "maxHeight": undefined,
+                                "maxWidth": undefined,
                                 "width": undefined,
                               }
                             }
@@ -1134,6 +1135,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
                             style={
                               Object {
                                 "maxHeight": 50,
+                                "maxWidth": undefined,
                                 "width": undefined,
                               }
                             }
@@ -1763,6 +1765,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                             style={
                               Object {
                                 "maxHeight": undefined,
+                                "maxWidth": undefined,
                                 "width": undefined,
                               }
                             }
@@ -2591,6 +2594,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                             style={
                               Object {
                                 "maxHeight": undefined,
+                                "maxWidth": undefined,
                                 "width": undefined,
                               }
                             }
