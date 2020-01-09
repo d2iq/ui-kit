@@ -85,7 +85,7 @@ export default class ModalContents extends React.Component<
     }
   }
 
-  componentWillUpdate(nextProps) {
+  UNSAFE_componentWillUpdate(nextProps) {
     // Reset the height of the content to null when the modal is closing so
     // that the height will be recalculated next time it opens.
     if (this.props.open && !nextProps.open) {
@@ -98,7 +98,7 @@ export default class ModalContents extends React.Component<
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.props.open) {
       document.body.classList.add("no-overflow");
     }
