@@ -8,7 +8,8 @@ import {
   themeTextColorPrimary,
   themeBrandPrimary,
   themeError,
-  themeBgDisabled
+  themeBgDisabled,
+  iconSizeXs
 } from "../../design-tokens/build/js/designTokens";
 
 import {
@@ -25,6 +26,7 @@ const getFocusFieldBg = color => hexToRgbA(color, 0.05);
 
 const toggleInputHeight = 16;
 const toggleInputBorderWidth = 1;
+export const textInputHeight = 36;
 
 export const toggleInput = css`
   border-color: ${themeBorder};
@@ -70,23 +72,74 @@ export const toggleInputApperances = {
   `
 };
 
+export const inputIconWrapper = css`
+  svg {
+    max-width: ${iconSizeXs};
+    height: auto;
+  }
+`;
+
+export const getIconAppearanceStyle = appearance => {
+  switch (appearance) {
+    case "standard":
+      return css`
+        svg {
+          fill: ${themeTextColorPrimary};
+        }
+      `;
+    case "disabled":
+      return css`
+        svg {
+          fill: ${themeTextColorDisabled};
+        }
+      `;
+    case "error":
+      return css`
+        svg {
+          fill: ${themeError};
+        }
+      `;
+    case "success":
+      return css`
+        svg {
+          fill: ${themeSuccess};
+        }
+      `;
+    case "standard-focus":
+      return css`
+        svg {
+          fill: ${themeBrandPrimary};
+        }
+      `;
+    case "error-focus":
+      return css`
+        svg {
+          fill: ${themeError};
+        }
+      `;
+    case "success-focus":
+      return css`
+        svg {
+          fill: ${themeSuccess};
+        }
+      `;
+    default:
+      return "";
+  }
+};
+
 export const getInputAppearanceStyle = appearance => {
   switch (appearance) {
     case "standard":
       return css`
         background-color: ${themeBgPrimary};
         border-color: ${themeBorder};
-        svg {
-          fill: ${themeTextColorPrimary};
-        }
+
         &:focus {
           background-color: ${getFocusFieldBg(
             getCSSVarValue(themeBrandPrimary)
           )};
           border-color: ${themeBrandPrimary};
-          svg {
-            fill: ${themeBrandPrimary};
-          }
         }
       `;
     case "disabled":
@@ -94,12 +147,11 @@ export const getInputAppearanceStyle = appearance => {
         background-color: ${themeBgDisabled};
         border-color: ${themeBgDisabled};
         color: ${themeTextColorDisabled};
-        svg {
-          fill: ${themeTextColorDisabled};
-        }
+
         &::placeholder {
           color: ${themeTextColorDisabled};
         }
+
         input {
           color: ${themeTextColorDisabled};
           ::placeholder {
@@ -111,9 +163,7 @@ export const getInputAppearanceStyle = appearance => {
       return css`
         background-color: ${themeBgPrimary};
         border-color: ${themeError};
-        svg {
-          fill: ${themeError};
-        }
+
         &:focus {
           background-color: ${getFocusFieldBg(getCSSVarValue(themeError))};
         }
@@ -122,9 +172,7 @@ export const getInputAppearanceStyle = appearance => {
       return css`
         background-color: ${themeBgPrimary};
         border-color: ${themeSuccess};
-        svg {
-          fill: ${themeSuccess};
-        }
+
         &:focus {
           background-color: ${getFocusFieldBg(getCSSVarValue(themeSuccess))};
         }
@@ -133,25 +181,16 @@ export const getInputAppearanceStyle = appearance => {
       return css`
         background-color: ${getFocusFieldBg(getCSSVarValue(themeBrandPrimary))};
         border-color: ${themeBrandPrimary};
-        svg {
-          fill: ${themeBrandPrimary};
-        }
       `;
     case "error-focus":
       return css`
         background-color: ${getFocusFieldBg(getCSSVarValue(themeError))};
         border-color: ${themeError};
-        svg {
-          fill: ${themeError};
-        }
       `;
     case "success-focus":
       return css`
         background-color: ${getFocusFieldBg(getCSSVarValue(themeSuccess))};
         border-color: ${themeSuccess};
-        svg {
-          fill: ${themeSuccess};
-        }
       `;
     default:
       return "";
@@ -162,7 +201,7 @@ export const inputContainer = css`
   border: 1px solid;
   border-radius: ${borderRadiusSmall};
   color: inherit;
-  height: 36px;
+  height: ${textInputHeight}px;
   font-size: inherit;
   ${padding("horiz", "m")};
   &::placeholder {

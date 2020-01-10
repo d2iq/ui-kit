@@ -2,15 +2,16 @@ import * as React from "react";
 import { cx } from "emotion";
 import {
   infoBox,
-  primaryActionStyle,
   infoBoxActions,
+  infoBoxContentWrap,
+  primaryActionStyle,
   dismissBtn
 } from "../style";
 import Clickable from "../../clickable/components/clickable";
 import {
+  flush,
   padding,
   textSize,
-  display,
   textWeight
 } from "../../shared/styles/styleUtils";
 import {
@@ -36,7 +37,7 @@ export interface InfoBoxProps {
   /**
    * the main content of the message
    */
-  message: React.ReactElement<HTMLElement> | string;
+  message: React.ReactNode;
   /**
    * the more prominent action presented to the user
    */
@@ -79,10 +80,10 @@ export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
     return (
       <div
         className={cx(
-          infoBox(appearance, hasActions),
+          infoBox(appearance),
           padding("all"),
+          flush("bottom"),
           textSize("s"),
-          display("grid"),
           textWeight("medium"),
           className
         )}
@@ -90,20 +91,26 @@ export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
         aria-live={isUrgentMessage ? "assertive" : "polite"}
         data-cy={dataCy}
       >
-        <div>{message}</div>
-        {hasActions && (
-          <div
-            className={cx(infoBoxActions, display("inline-flex"))}
-            data-cy="infoBox-actions"
-          >
-            {primaryAction && (
-              <span className={primaryActionStyle}>{primaryAction}</span>
-            )}
+        {hasActions ? (
+          <div className={infoBoxContentWrap}>
+            <div className={padding("bottom")}>{message}</div>
+            <div
+              className={cx(infoBoxActions, padding("bottom"))}
+              data-cy="infoBox-actions"
+            >
+              {primaryAction && (
+                <span className={cx(primaryActionStyle, padding("left"))}>
+                  {primaryAction}
+                </span>
+              )}
 
-            {secondaryAction && (
-              <span className={padding("right")}>{secondaryAction}</span>
-            )}
+              {secondaryAction && (
+                <span className={padding("left")}>{secondaryAction}</span>
+              )}
+            </div>
           </div>
+        ) : (
+          <div className={padding("bottom")}>{message}</div>
         )}
 
         {onDismiss && (

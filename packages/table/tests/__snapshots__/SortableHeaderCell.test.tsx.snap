@@ -23,10 +23,10 @@ exports[`SortableHeaderCell renders default 1`] = `
   content: "";
   height: 0;
   width: 0;
-  border-bottom: 4px solid currentColor;
+  border-top: 4px solid currentColor;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: none;
+  border-bottom: none;
 }
 
 <Clickable
@@ -35,7 +35,7 @@ exports[`SortableHeaderCell renders default 1`] = `
   role="button"
   tabIndex={0}
 >
-  <Styled(Cell)
+  <Styled(HeaderCell)
     aria-label="sort by column content in ascending order"
     aria-sort="descending"
     className="emotion-0"
@@ -48,6 +48,6 @@ exports[`SortableHeaderCell renders default 1`] = `
     <span>
       column content
     </span>
-  </Styled(Cell)>
+  </Styled(HeaderCell)>
 </Clickable>
 `;

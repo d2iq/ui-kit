@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popover renders 1`] = `
+.emotion-0 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  border-width: 1px;
+  border-color: var(--themeBorder,#DADDE2);
+  border-style: solid;
+}
+
+<div
+  className="emotion-0"
+  data-cy="popover"
+  style={
+    Object {
+      "maxHeight": 200,
+      "maxWidth": undefined,
+      "width": 100,
+    }
+  }
+>
+  menu content
+</div>
+`;

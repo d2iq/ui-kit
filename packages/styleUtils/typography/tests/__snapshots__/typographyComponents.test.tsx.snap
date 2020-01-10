@@ -239,6 +239,7 @@ exports[`Typography WarningText renders all props 1`] = `
 exports[`Typography renders all default 1`] = `
 .emotion-0 {
   line-height: 1.4;
+  font-weight: 400;
   font-size: 14px;
   color: var(--themeTextColorPrimary,#1B2029);
   fill: var(--themeTextColorPrimary,#1B2029);

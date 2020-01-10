@@ -19,3 +19,5 @@ export {
 export {
   default as DangerDropdownButton
 } from "./components/DangerDropdownButton";
+
+export { default as ResetButton } from "./components/ResetButton";

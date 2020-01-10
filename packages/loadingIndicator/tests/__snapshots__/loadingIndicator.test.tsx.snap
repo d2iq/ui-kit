@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading indicators renders InlineLoadingIndicator 1`] = `
+<div
+  class="css-1ga5nac"
+>
+  <div
+    class="css-15gzp3f"
+    data-cy="sectionLoadingIndicator"
+  />
+</div>
+`;
+
+exports[`Loading indicators renders SectionLoadingIndicator 1`] = `
+<svg
+  aria-label="system-spinner icon"
+  class="css-zgvqkl"
+  data-cy="icon inlineLoadingIndicator"
+  height="16"
+  preserveAspectRatio="xMinYMin meet"
+  role="img"
+  viewBox="0 0 16 16"
+  width="16"
+>
+  <use
+    href="#system-spinner"
+  />
+</svg>
+`;

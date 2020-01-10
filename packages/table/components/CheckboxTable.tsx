@@ -178,7 +178,8 @@ class CheckboxTable extends React.PureComponent<
   }
 
   private getSelectedRows(rowId, checked) {
-    const selectedRows = this.props.selectedRows || {};
+    const selectedRows: { [key: string]: boolean } =
+      this.props.selectedRows || {};
 
     if (checked) {
       return { ...selectedRows, ...{ [rowId]: true } };

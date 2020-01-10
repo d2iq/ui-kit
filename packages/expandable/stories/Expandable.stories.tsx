@@ -18,6 +18,15 @@ storiesOf("Expandable", module)
       <div>Check out this exciting content</div>
     </Expandable>
   ))
+  .add("opened w/ control prop", () => (
+    <Expandable
+      label="Expand for content"
+      isOpen={true}
+      controlledIsOpen={true}
+    >
+      <div>You have to pass a boolean to `controlledIsOpen` to toggle this</div>
+    </Expandable>
+  ))
   .add("with custom label classname", () => (
     <Expandable
       label="Expand for blue content"

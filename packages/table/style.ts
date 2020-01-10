@@ -29,8 +29,11 @@ export const headerHover = css`
 `;
 
 export const headerCellCss = css`
-  text-transform: capitalize;
   font-weight: bold;
+`;
+
+export const textCapitalize = css`
+  text-transform: capitalize;
 `;
 
 export const resizingHeader = css`
@@ -136,13 +139,13 @@ export const styleArrowDirection = displaySortDirection => {
     case "DESC":
       return css`
         &:after {
-          ${pseudoElTriangle("bottom", pointerSize, "currentColor")};
+          ${pseudoElTriangle("top", pointerSize, "currentColor")};
         }
       `;
     case "ASC":
       return css`
         &:after {
-          ${pseudoElTriangle("top", pointerSize, "currentColor")};
+          ${pseudoElTriangle("bottom", pointerSize, "currentColor")};
         }
       `;
     default:

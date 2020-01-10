@@ -5,7 +5,9 @@ import { TextInput, TextInputProps } from "./TextInput";
 
 import {
   getInputAppearanceStyle,
-  inputContainer
+  inputContainer,
+  getIconAppearanceStyle,
+  inputIconWrapper
 } from "../../shared/styles/formStyles";
 import { flex, flexItem, flush, padding } from "../../shared/styles/styleUtils";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
@@ -23,13 +25,13 @@ export interface TextInputWithIconProps extends TextInputProps {
 }
 
 export interface TextInputWithIconState {
-  hasFocus: boolean;
+  hasFocus?: boolean;
 }
 
-export class TextInputWithIcon extends TextInput<
-  TextInputWithIconProps,
-  TextInputWithIconState
-> {
+export class TextInputWithIcon<
+  P extends TextInputWithIconProps,
+  S extends TextInputWithIconState
+> extends TextInput<P, S> {
   public static defaultProps: Partial<TextInputWithIconProps> = {
     type: "text",
     appearance: InputAppearance.Standard,
@@ -41,6 +43,9 @@ export class TextInputWithIcon extends TextInput<
     this.inputOnFocus = this.inputOnFocus.bind(this);
     this.inputOnBlur = this.inputOnBlur.bind(this);
 
+    // I can't find a workaround for this issue:
+    // https://stackoverflow.com/questions/51074355/cannot-assign-to-state-because-it-is-a-constant-or-a-read-only-property
+    // @ts-ignore
     this.state = {
       hasFocus: false
     };
@@ -77,7 +82,9 @@ export class TextInputWithIcon extends TextInput<
         className={cx(
           padding("right", "xs"),
           flex({ align: "center", justify: "center" }),
-          flexItem("shrink")
+          flexItem("shrink"),
+          getIconAppearanceStyle(this.getInputAppearance()),
+          inputIconWrapper
         )}
       >
         {this.props.iconStart}
@@ -94,7 +101,9 @@ export class TextInputWithIcon extends TextInput<
         className={cx(
           flex({ align: "center", justify: "center" }),
           flexItem("shrink"),
-          flush("left")
+          flush("left"),
+          getIconAppearanceStyle(this.getInputAppearance()),
+          inputIconWrapper
         )}
       >
         {this.props.iconEnd}

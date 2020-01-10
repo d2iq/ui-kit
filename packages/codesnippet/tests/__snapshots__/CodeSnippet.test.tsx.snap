@@ -1,0 +1,427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CodeSnippet renders default 1`] = `
+.emotion-6 {
+  overflow: auto;
+  white-space: pre;
+}
+
+.emotion-5 {
+  overflow: auto;
+  white-space: pre;
+  padding: 16px;
+}
+
+.emotion-4 {
+  background-color: #1B2029;
+  background-repeat: no-repeat;
+  overflow: auto;
+  white-space: pre;
+  padding: 16px;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-3 > div {
+  width: auto;
+}
+
+.emotion-3 > *:not(:first-child) {
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-1 {
+  font-family: monospace;
+}
+
+.emotion-0 {
+  font-family: monospace;
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--themeTextColorPrimaryInverted,#FFFFFF);
+  fill: var(--themeTextColorPrimaryInverted,#FFFFFF);
+  margin: 0;
+  text-align: inherit;
+}
+
+<CodeSnippet>
+  <SpacingBox
+    bgColor="#1B2029"
+    className="emotion-6"
+    side="all"
+    spacingSize="m"
+    tag="div"
+  >
+    <Box
+      bgColor="#1B2029"
+      bgImageOptions={
+        Object {
+          "position": undefined,
+          "repeat": undefined,
+          "size": undefined,
+        }
+      }
+      className="emotion-5"
+      dataCy="spacingBox"
+      tag="div"
+    >
+      <div
+        className="emotion-4"
+        data-cy="spacingBox"
+      >
+        <Flex
+          align="flex-start"
+          direction="row"
+          gutterSize="none"
+          justify="flex-start"
+          wrap="nowrap"
+        >
+          <div
+            className="emotion-3"
+            data-cy="flex"
+          >
+            <FlexItem
+              flex="grow"
+            >
+              <div
+                className="emotion-2"
+                data-cy="flexItem"
+              >
+                <MonospaceText
+                  align="inherit"
+                  color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
+                  size="m"
+                  tag="code"
+                  weight="medium"
+                  wrap="wrap"
+                >
+                  <Text
+                    align="inherit"
+                    className="emotion-1"
+                    color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
+                    dataCy="monospaceText"
+                    size="m"
+                    tag="code"
+                    weight="medium"
+                    wrap="wrap"
+                  >
+                    <code
+                      className="emotion-0"
+                      data-cy="monospaceText"
+                    >
+                      snippet content
+                    </code>
+                  </Text>
+                </MonospaceText>
+              </div>
+            </FlexItem>
+          </div>
+        </Flex>
+      </div>
+    </Box>
+  </SpacingBox>
+</CodeSnippet>
+`;
+
+exports[`CodeSnippet renders with copy button 1`] = `
+.emotion-5 {
+  cursor: pointer;
+}
+
+.emotion-10 {
+  overflow: auto;
+  white-space: pre;
+}
+
+.emotion-9 {
+  overflow: auto;
+  white-space: pre;
+  padding: 16px;
+}
+
+.emotion-8 {
+  background-color: #1B2029;
+  background-repeat: no-repeat;
+  overflow: auto;
+  white-space: pre;
+  padding: 16px;
+}
+
+.emotion-7 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-7 > div {
+  width: auto;
+}
+
+.emotion-7 > *:not(:first-child) {
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-1 {
+  font-family: monospace;
+}
+
+.emotion-0 {
+  font-family: monospace;
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--themeTextColorPrimaryInverted,#FFFFFF);
+  fill: var(--themeTextColorPrimaryInverted,#FFFFFF);
+  margin: 0;
+  text-align: inherit;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-4 {
+  background-repeat: no-repeat;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: var(--themeTextColorPrimaryInverted,#FFFFFF);
+}
+
+.emotion-3 use {
+  pointer-events: none;
+}
+
+<CodeSnippet
+  textToCopy="snippet content"
+>
+  <SpacingBox
+    bgColor="#1B2029"
+    className="emotion-10"
+    side="all"
+    spacingSize="m"
+    tag="div"
+  >
+    <Box
+      bgColor="#1B2029"
+      bgImageOptions={
+        Object {
+          "position": undefined,
+          "repeat": undefined,
+          "size": undefined,
+        }
+      }
+      className="emotion-9"
+      dataCy="spacingBox"
+      tag="div"
+    >
+      <div
+        className="emotion-8"
+        data-cy="spacingBox"
+      >
+        <Flex
+          align="flex-start"
+          direction="row"
+          gutterSize="none"
+          justify="flex-start"
+          wrap="nowrap"
+        >
+          <div
+            className="emotion-7"
+            data-cy="flex"
+          >
+            <FlexItem
+              flex="grow"
+            >
+              <div
+                className="emotion-2"
+                data-cy="flexItem"
+              >
+                <MonospaceText
+                  align="inherit"
+                  color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
+                  size="m"
+                  tag="code"
+                  weight="medium"
+                  wrap="wrap"
+                >
+                  <Text
+                    align="inherit"
+                    className="emotion-1"
+                    color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
+                    dataCy="monospaceText"
+                    size="m"
+                    tag="code"
+                    weight="medium"
+                    wrap="wrap"
+                  >
+                    <code
+                      className="emotion-0"
+                      data-cy="monospaceText"
+                    >
+                      snippet content
+                    </code>
+                  </Text>
+                </MonospaceText>
+              </div>
+            </FlexItem>
+            <FlexItem
+              flex="shrink"
+            >
+              <div
+                className="emotion-6"
+                data-cy="flexItem"
+              >
+                <ClickToCopyButton
+                  color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
+                  textToCopy="snippet content"
+                >
+                  <ClickToCopy
+                    textToCopy="snippet content"
+                  >
+                    <Clickable
+                      action={[Function]}
+                      disableFocusOutline={false}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      <Box
+                        bgImageOptions={
+                          Object {
+                            "position": undefined,
+                            "repeat": undefined,
+                            "size": undefined,
+                          }
+                        }
+                        className="emotion-5"
+                        dataCy="box"
+                        display="inline-block"
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        role="button"
+                        tabIndex={0}
+                        tag="span"
+                      >
+                        <span
+                          className="emotion-4"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={0}
+                        >
+                          <Icon
+                            color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
+                            shape="system-clipboard"
+                          >
+                            <svg
+                              aria-label="system-clipboard icon"
+                              className="emotion-3"
+                              data-cy="icon"
+                              height={24}
+                              preserveAspectRatio="xMinYMin meet"
+                              role="img"
+                              viewBox="0 0 24 24"
+                              width={24}
+                            >
+                              <use
+                                xlinkHref="#system-clipboard"
+                              />
+                            </svg>
+                          </Icon>
+                        </span>
+                      </Box>
+                    </Clickable>
+                  </ClickToCopy>
+                </ClickToCopyButton>
+              </div>
+            </FlexItem>
+          </div>
+        </Flex>
+      </div>
+    </Box>
+  </SpacingBox>
+</CodeSnippet>
+`;

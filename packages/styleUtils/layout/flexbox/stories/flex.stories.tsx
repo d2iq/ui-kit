@@ -29,12 +29,22 @@ storiesOf("Style utilities/Layout/Flex", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (
-    <Flex>
-      <FlexItem>1</FlexItem>
-      <FlexItem>2</FlexItem>
-      <FlexItem>3</FlexItem>
-      <FlexItem>4</FlexItem>
-    </Flex>
+    <SampleContainer>
+      <Flex>
+        <FlexItem>
+          <DemoChild>1</DemoChild>
+        </FlexItem>
+        <FlexItem>
+          <DemoChild>2</DemoChild>
+        </FlexItem>
+        <FlexItem>
+          <DemoChild>3</DemoChild>
+        </FlexItem>
+        <FlexItem>
+          <DemoChild>4</DemoChild>
+        </FlexItem>
+      </Flex>
+    </SampleContainer>
   ))
   .add("align", () => {
     const alignments = {
@@ -215,6 +225,36 @@ storiesOf("Style utilities/Layout/Flex", module)
       </div>
     );
   })
+  .add("responsive directions and gutterSize", () => (
+    <div>
+      <p>
+        Reduce the width of your viewport to see the boxes lay out as a column
+        and see the gutter size change
+      </p>
+      <Flex
+        direction={{
+          default: "column",
+          medium: "row",
+          large: "row"
+        }}
+        gutterSize={{ default: "xs", medium: "l", large: "xxl" }}
+      >
+        <FlexItem>
+          <DemoChild>1</DemoChild>
+        </FlexItem>
+        <FlexItem>
+          <DemoChild>2</DemoChild>
+        </FlexItem>
+        <FlexItem>
+          <DemoChild>3</DemoChild>
+        </FlexItem>
+        <FlexItem>
+          <DemoChild>4</DemoChild>
+        </FlexItem>
+        {null}
+      </Flex>
+    </div>
+  ))
   .add("justify", () => {
     const justifications = {
       flexStart: "flex-start",

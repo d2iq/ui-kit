@@ -26,9 +26,10 @@ export {
   SecondaryDropdownButton,
   StandardDropdownButton,
   SuccessDropdownButton,
-  DangerDropdownButton
+  DangerDropdownButton,
+  ResetButton
 } from "./button";
-export { Card } from "./card";
+export { ButtonCard, Card } from "./card";
 export { LineChart } from "./chart";
 export { CheckboxInput } from "./checkboxInput";
 export {
@@ -44,10 +45,30 @@ export {
 } from "./configurationmap";
 export { DonutChart } from "./donutChart";
 export { Dropdownable } from "./dropdownable";
+export {
+  DropdownMenu,
+  DropdownSection,
+  DropdownMenuItem,
+  DropdownMenuItemIcon,
+  DropdownMenuItemAvatar,
+  DropdownMenuItemAppearances
+} from "./dropdownMenu";
+export {
+  EmptyState,
+  EmptyStateWithGraphic,
+  EmptyStateWrapper
+} from "./emptyState";
+export * from "./formStructure";
+export { FullscreenView } from "./fullscreenView";
 export { Icon } from "./icon";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
+export { InlineBorderedItems } from "./inlineBorderedItems";
 export { InputAppearance } from "./shared/types/inputAppearance";
 export { List, BorderedList } from "./list";
+export {
+  InlineLoadingIndicator,
+  SectionLoadingIndicator
+} from "./loadingIndicator";
 export {
   DialogModal,
   SmallDialogModal,
@@ -57,7 +78,9 @@ export {
   LargeDialogModalWithFooter,
   FullscreenModal
 } from "./modal";
-export { PageHeader } from "./pageheader";
+export { PageHeader, PageHeaderTabs } from "./pageheader";
+export { ProgressBar } from "./progressbar";
+export { SegmentedControl, SegmentedControlButton } from "./segmentedControl";
 export { SelectInput } from "./selectInput";
 export {
   Column,
@@ -69,17 +92,26 @@ export {
   SortableHeaderCell,
   NumberCell
 } from "./table";
+export { TableView, TableViewHeader, TableViewBody } from "./tableView";
 export { TabItem, TabTitle, Tabs } from "./tabs";
-export { TextInput, TextInputWithIcon } from "./textInput";
+export {
+  TextInput,
+  TextInputWithIcon,
+  TextInputWithBadges,
+  TextInputWithButtons
+} from "./textInput";
+export { TextInputButton } from "./textInputButton";
 export { Textarea } from "./textarea";
 export { Toaster, Toast } from "./toaster";
 export { ToggleContent } from "./toggleContent";
 export { ToggleInput } from "./toggleInput";
 export { ToggleInputList } from "./toggleInputList";
+export { ToggleBox, ToggleBoxGroup } from "./toggleBox";
 export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { Legacy };
+export { CodeSnippet } from "./codesnippet";
 
 // Style utility components
 export { Container, Flex, FlexItem, GridList } from "./styleUtils/layout";

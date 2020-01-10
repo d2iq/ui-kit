@@ -201,4 +201,44 @@ storiesOf("Buttons/Default", module)
         propTables: [StandardButton]
       }
     }
+  )
+  .add(
+    "used as a link",
+    () => (
+      <React.Fragment>
+        <ButtonAppearanceSample>
+          <StandardButton url="http://google.com">Button</StandardButton>
+          <StandardButton url="http://google.com" disabled={true}>
+            Button
+          </StandardButton>
+          <StandardButton url="http://google.com" isProcessing={true}>
+            Button
+          </StandardButton>
+        </ButtonAppearanceSample>
+        <ButtonAppearanceSample isInverse={true}>
+          <StandardButton url="http://google.com" isInverse={true}>
+            Button
+          </StandardButton>
+          <StandardButton
+            url="http://google.com"
+            disabled={true}
+            isInverse={true}
+          >
+            Button
+          </StandardButton>
+          <StandardButton
+            url="http://google.com"
+            isProcessing={true}
+            isInverse={true}
+          >
+            Button
+          </StandardButton>
+        </ButtonAppearanceSample>
+      </React.Fragment>
+    ),
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
   );

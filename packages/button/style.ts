@@ -24,7 +24,7 @@ import { ButtonAppearances } from "./components/ButtonBase";
 import { tintContent } from "../shared/styles/styleUtils";
 import getCSSVarValue from "../utilities/components/getCSSVarValue";
 
-const buttonPadding = {
+export const buttonPadding = {
   vert: "10px",
   horiz: "18px"
 };
@@ -111,7 +111,9 @@ export const processingTextStyle = css`
 
 export const buttonBase = css`
   cursor: pointer;
+  display: inline-block;
   outline: none;
+  text-decoration: none;
 `;
 
 export const buttonContent = css`
@@ -296,3 +298,28 @@ export const getInverseMutedButtonStyles = (appearance: ButtonAppearances) => {
       `
     : inverseMutedButton;
 };
+
+export const pointerCursor = css`
+  cursor: pointer;
+`;
+
+// Replicates default browser focus ring styles.
+//
+// The media query targets Webkit browsers, which can
+// more accurately replicate the native focus ring style
+export const keyboardFocus = css`
+  > div:focus {
+    outline: none;
+  }
+
+  &:focus > div {
+    outline-color: Highlight;
+    outline-width: thin;
+
+    @media (-webkit-min-device-pixel-ratio: 0) {
+      outline-color: -webkit-focus-ring-color;
+      outline-style: auto;
+      outline-width: unset;
+    }
+  }
+`;

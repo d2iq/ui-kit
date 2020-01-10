@@ -4,10 +4,8 @@ import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
 import toJson from "enzyme-to-json";
 import ModalBase from "../components/ModalBase";
-import FocusTrap from "focus-trap-react";
 import DialogModalWithFooter from "../components/DialogModalWithFooter";
 import FullscreenModal from "../components/FullscreenModal";
-import { ModalContentsUnwrapped } from "../components/ModalContents";
 import { PrimaryButton } from "../../button";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
@@ -32,9 +30,24 @@ describe("Modal", () => {
       );
 
       expect(action).not.toHaveBeenCalled();
-      component.find(FocusTrap).simulate("keyDown", {
+      component.find('[role="dialog"]').simulate("keyDown", {
         key: "Escape"
       });
+      expect(action).toHaveBeenCalled();
+    });
+    it("calls this.props.onClose when clicking dark overlay", () => {
+      const action = jest.fn();
+      const component = mount(
+        <ModalBase isOpen={true} onClose={action}>
+          <div tabIndex={0}>I am modal content</div>
+        </ModalBase>
+      );
+
+      expect(action).not.toHaveBeenCalled();
+      component
+        .find('[role="button"]')
+        .first()
+        .simulate("click");
       expect(action).toHaveBeenCalled();
     });
   });
@@ -106,20 +119,6 @@ describe("Modal", () => {
       expect(closeAction).not.toHaveBeenCalled();
       closeButton.simulate("click");
       expect(closeAction).toHaveBeenCalled();
-    });
-  });
-  describe("ModalContents", () => {
-    it("calls onclose on an outside click", () => {
-      const action = jest.fn();
-      const component = mount(
-        <ModalContentsUnwrapped isOpen={true} onClose={action}>
-          <div>I am modal content</div>
-        </ModalContentsUnwrapped>
-      );
-      const instance = component.instance() as ModalContentsUnwrapped;
-      expect(action).not.toHaveBeenCalled();
-      instance.handleClickOutside();
-      expect(action).toHaveBeenCalled();
     });
   });
 });

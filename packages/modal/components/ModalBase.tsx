@@ -1,8 +1,8 @@
 import * as React from "react";
+import ReactDOM from "react-dom";
 import { cx } from "emotion";
-import FocusTrap from "focus-trap-react";
-import { FocusTarget } from "focus-trap";
 import { Transition } from "react-transition-group";
+import FocusLock from "react-focus-lock";
 import {
   modal,
   modalWidth,
@@ -28,8 +28,8 @@ export interface ModalBaseProps {
   isAnimated?: boolean;
   /** Whether the modal is open */
   isOpen: boolean;
-  /** Which element gets focus when the modal opens */
-  initialFocus?: FocusTarget;
+  /** A selector for which element gets focus when the modal opens. Uses `document.querySelector` under the hood */
+  initialFocus?: string;
   /** Function that gets called when the modal is closed */
   onClose: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /** Which size modal to render. ⚠️Do not use this directly⚠️ */
@@ -38,6 +38,14 @@ export interface ModalBaseProps {
    * human-readable selector used for writing tests
    */
   dataCy?: string;
+  /**
+   * which DOM node the modal will attach to
+   */
+  overlayRoot?: HTMLElement;
+  /**
+   * the ID attribute that is passed to the modal dialog box
+   */
+  id?: string;
 }
 
 const animationDuration = 250;
@@ -51,11 +59,19 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
     super(props);
 
     this.onKeyDown = this.onKeyDown.bind(this);
+    this.setInitialFocus = this.setInitialFocus.bind(this);
+  }
+
+  public componentDidUpdate() {
+    if (this.props.initialFocus && this.props.isOpen) {
+      this.setInitialFocus(this.props.initialFocus);
+    }
   }
 
   public onKeyDown(e) {
     if (e.key === "Escape") {
       this.props.onClose(e);
+      e.stopPropagation();
     }
   }
 
@@ -64,9 +80,10 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
       children,
       isAnimated,
       size,
-      initialFocus,
       isOpen,
-      dataCy
+      dataCy,
+      overlayRoot,
+      id
     } = this.props;
     const modalSize = size || ModalSizes.M;
 
@@ -78,40 +95,50 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
       >
         {state => {
           return (
-            <Overlay>
-              <div
-                className={cx(scrim, {
-                  [scrimPreTransitionStyle(animationDuration)]: isAnimated,
-                  [scrimTransitionStyles[state]]: isAnimated
-                })}
-              />
-              <FocusTrap
-                focusTrapOptions={{
-                  initialFocus,
-                  escapeDeactivates: false
-                }}
-                active={true}
-                role="dialog"
-                className={cx(modal, modalWidth[modalSize], {
-                  [modalPreTransitionStyle(animationDuration)]: isAnimated,
-                  [modalTransitionStyles[state]]: isAnimated
-                })}
-                onKeyDown={this.onKeyDown}
-                tabIndex={-1}
-              >
-                <ModalContents
-                  isOpen={isOpen}
-                  onClose={this.props.onClose}
-                  dataCy={dataCy}
+            <Overlay overlayRoot={overlayRoot}>
+              <FocusLock>
+                <div
+                  role="button"
+                  tabIndex={-1}
+                  className={cx(scrim, {
+                    [scrimPreTransitionStyle(animationDuration)]: isAnimated,
+                    [scrimTransitionStyles[state]]: isAnimated
+                  })}
+                  onClick={this.props.onClose}
+                />
+                <div
+                  className={cx(modal, modalWidth[modalSize], {
+                    [modalPreTransitionStyle(animationDuration)]: isAnimated,
+                    [modalTransitionStyles[state]]: isAnimated
+                  })}
+                  role="dialog"
+                  onKeyDown={this.onKeyDown}
+                  tabIndex={-1}
+                  id={id}
                 >
-                  {children}
-                </ModalContents>
-              </FocusTrap>
+                  <ModalContents
+                    isOpen={isOpen}
+                    onClose={this.props.onClose}
+                    dataCy={dataCy}
+                  >
+                    {children}
+                  </ModalContents>
+                </div>
+              </FocusLock>
             </Overlay>
           );
         }}
       </Transition>
     );
+  }
+
+  private setInitialFocus(initialFocus) {
+    const domNodeToFind = document.querySelector(initialFocus);
+
+    if (domNodeToFind) {
+      const node = ReactDOM.findDOMNode(domNodeToFind) as Element;
+      node.setAttribute("data-autofocus", "true");
+    }
   }
 }
 

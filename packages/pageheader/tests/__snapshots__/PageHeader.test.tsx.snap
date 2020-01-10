@@ -2,71 +2,75 @@
 
 exports[`PageHeader default 1`] = `
 <div
-  class="css-4sqa7y"
-  data-cy="pageHeader"
+  class="css-1ik9ay"
 >
   <div
-    class="css-qi8t7c"
+    class="css-1s0dtwu"
+    data-cy="pageHeader"
   >
-    <nav
-      class="css-2wdnda"
+    <div
+      class="css-qi8t7c"
     >
-      <div
-        class="css-1ixtlzk"
-        data-cy="breadcrumb"
-      >
-        <span>
-          One
-        </span>
-      </div>
-      <div
-        class="css-19hcarb"
-        data-cy="breadcrumb"
-      >
-        <svg
-          aria-label="system-caret-right icon"
-          class="css-zgvqkl"
-          data-cy="icon"
-          height="16"
-          preserveAspectRatio="xMinYMin meet"
-          role="img"
-          viewBox="0 0 16 16"
-          width="16"
-        >
-          <use
-            href="#system-caret-right"
-          />
-        </svg>
-      </div>
-      <div
-        class="css-19hcarb"
-        data-cy="breadcrumb"
-      >
-        <span>
-          Two
-        </span>
-      </div>
-    </nav>
-  </div>
-  <div
-    class="css-48ylac"
-  >
-    <ul
-      class="css-1s6ufm8"
-      data-cy="pageHeader-actions"
-    >
-      <li
-        class="css-1skqmzz"
+      <nav
+        class="css-td03f2"
       >
         <div
-          class="css-1h5x3dy"
-          role="button"
-          tabindex="-1"
+          class="css-1ixtlzk"
+          data-cy="breadcrumb"
         >
-          Action 1
+          <span>
+            One
+          </span>
         </div>
-      </li>
-    </ul>
+        <div
+          class="css-19hcarb"
+          data-cy="breadcrumb"
+        >
+          <svg
+            aria-label="system-caret-right icon"
+            class="css-zgvqkl"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              href="#system-caret-right"
+            />
+          </svg>
+        </div>
+        <div
+          class="css-19hcarb"
+          data-cy="breadcrumb"
+        >
+          <span>
+            Two
+          </span>
+        </div>
+      </nav>
+    </div>
+    <div
+      class="css-48ylac"
+    >
+      <ul
+        class="css-cdxrln"
+        data-cy="pageHeader-actions"
+      >
+        <li
+          class="css-1skqmzz"
+        >
+          <div
+            class="css-1h5x3dy"
+            role="button"
+            tabindex="-1"
+          >
+            Action 1
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;

@@ -1,11 +1,12 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 import { cx } from "emotion";
-import { innerCellCss, cellAlignmentCss } from "../style";
+import { innerCellCss, cellAlignmentCss, textCapitalize } from "../style";
 
 export type TextAlign = "left" | "right" | "center";
 export interface CellProps {
   textAlign?: TextAlign;
+  capitalize?: boolean;
   children: React.ReactElement<HTMLElement> | string;
   className?: string;
   role?: string;
@@ -46,7 +47,7 @@ class Cell extends React.PureComponent<CellProps, CellState> {
   }
 
   render() {
-    const { children, className, textAlign, ...other } = this.props;
+    const { children, className, textAlign, capitalize, ...other } = this.props;
 
     return (
       <div
@@ -54,6 +55,7 @@ class Cell extends React.PureComponent<CellProps, CellState> {
         className={cx(
           innerCellCss,
           cellAlignmentCss(textAlign || "left"),
+          !capitalize ? null : textCapitalize,
           className
         )}
         {...other}

@@ -11,6 +11,7 @@ type FlexStrategy = "shrink" | "grow";
 
 export interface FlexItemProps {
   children: React.ReactNode;
+  className?: string;
   /**
    * Whether the flex item should grow or shrinkwrap to it's children. Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints
    */
@@ -39,6 +40,7 @@ const FlexItem = (props: FlexItemProps) => {
         ${getResponsiveFlexItemStyles(props.flex)};
         ${getResponsiveStyle("flex-grow", props.growFactor)};
         ${getResponsiveStyle("order", props.order)};
+        ${props.className};
       `}
       data-cy="flexItem"
     >

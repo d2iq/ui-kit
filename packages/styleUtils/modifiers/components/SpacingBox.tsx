@@ -16,14 +16,32 @@ interface SpacingBoxProps extends BoxProps {
    * The size of the space to apply. It can set 1 spacing size for all breakpoints, or it can be used to set different spacing values at different viewport width breakpoints
    */
   spacingSize?: SpaceSize;
+  /**
+   * Used to set different spacing values on different sides of the element
+   */
+  spacingSizePerSide?: { [Side in NonNullable<BoxSides>]?: SpaceSize };
 }
 
 const SpacingBox = (props: SpacingBoxProps) => {
-  const { side, spacingSize, className, ...other } = props;
+  const {
+    side = "all",
+    spacingSize,
+    className,
+    spacingSizePerSide,
+    ...other
+  } = props;
+  const paddingStyles = spacingSizePerSide
+    ? Object.keys(spacingSizePerSide).map(sideToSize =>
+        padding(
+          sideToSize as BoxSides,
+          spacingSizePerSide[sideToSize] as SpaceSize
+        )
+      )
+    : padding(side, spacingSize);
 
   return (
     <Box
-      className={cx(className, padding(side, spacingSize))}
+      className={cx(className, paddingStyles)}
       dataCy="spacingBox"
       {...other}
     />

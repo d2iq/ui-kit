@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tooltip renders 1`] = `
+.emotion-3 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  z-index: 2;
+}
+
 .emotion-5 {
   position: relative;
 }
@@ -19,17 +30,6 @@ exports[`Tooltip renders 1`] = `
 
 .emotion-2:after {
   position: absolute;
-}
-
-.emotion-3 {
-  top: 0px;
-  left: NaNpx;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  opacity: 0;
-  z-index: 2;
 }
 
 <Tooltip
@@ -59,7 +59,11 @@ exports[`Tooltip renders 1`] = `
       preferredDirections={
         Array [
           "top-center",
+          "top-left",
+          "top-right",
           "bottom-center",
+          "bottom-left",
+          "bottom-right",
         ]
       }
     >
@@ -73,7 +77,18 @@ exports[`Tooltip renders 1`] = `
           <Overlay
             className="emotion-3"
             overlayRoot={
-              .emotion-2 {
+              .emotion-3 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  z-index: 2;
+}
+
+.emotion-2 {
   background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
@@ -87,17 +102,6 @@ exports[`Tooltip renders 1`] = `
 
 .emotion-2:after {
   position: absolute;
-}
-
-.emotion-3 {
-  top: 0px;
-  left: NaNpx;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  opacity: 0;
-  z-index: 2;
 }
 
 <body>
@@ -157,7 +161,7 @@ exports[`Tooltip renders 1`] = `
                       open={false}
                     >
                       <TooltipContent
-                        direction="top-center"
+                        direction="bottom-left"
                         id="renders"
                         open={false}
                       >
@@ -214,7 +218,7 @@ exports[`Tooltip renders open tooltip 1`] = `
 
 .emotion-3 {
   top: 0px;
-  left: NaNpx;
+  left: 0px;
   position: absolute;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -251,7 +255,11 @@ exports[`Tooltip renders open tooltip 1`] = `
       preferredDirections={
         Array [
           "top-center",
+          "top-left",
+          "top-right",
           "bottom-center",
+          "bottom-left",
+          "bottom-right",
         ]
       }
     >
@@ -268,13 +276,14 @@ exports[`Tooltip renders open tooltip 1`] = `
               <body>
                 <div>
                   <div
-                    class="css-xeraz5"
+                    class="css-ao6agm"
                   >
                     <div>
                       <div
                         aria-hidden="true"
                         class="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
+    css-nu8exu
+    emotion-1   inverseColorMode emotion-2"
                         data-cy="tooltipContent"
                         id="renders"
                         role="tooltip"
@@ -302,7 +311,7 @@ exports[`Tooltip renders open tooltip 1`] = `
 
 .emotion-3 {
   top: 0px;
-  left: NaNpx;
+  left: 0px;
   position: absolute;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -367,7 +376,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                       open={true}
                     >
                       <TooltipContent
-                        direction="top-center"
+                        direction="top-left"
                         id="opened"
                         open={true}
                       >
@@ -482,15 +491,13 @@ exports[`Tooltip renders with preferred directions 1`] = `
               <body>
                 <div>
                   <div
-                    class="css-xeraz5"
+                    class="css-ao6agm"
                   >
                     <div>
                       <div
                         aria-hidden="true"
                         class="
-    css-10cr3um
-    css-miht3n
-   inverseColorMode emotion-2"
+    emotion-0    emotion-1   inverseColorMode emotion-2"
                         data-cy="tooltipContent"
                         id="renders"
                         role="tooltip"
@@ -502,15 +509,14 @@ exports[`Tooltip renders with preferred directions 1`] = `
                 </div>
                 <div>
                   <div
-                    class="css-asbxzi"
+                    class="emotion-3"
                   >
                     <div>
                       <div
                         aria-hidden="false"
                         class="
     css-10cr3um
-    css-miht3n
-   inverseColorMode emotion-2"
+    emotion-1   inverseColorMode emotion-2"
                         data-cy="tooltipContent"
                         id="opened"
                         role="tooltip"

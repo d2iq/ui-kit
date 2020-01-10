@@ -10,7 +10,7 @@ exports[`ConfigurationMap renders default 1`] = `
     data-cy="configurationMapSection"
   >
     <div
-      class="css-td53qz"
+      class="css-2iygaf"
       data-cy="configurationMapRow"
     >
       <dt
@@ -27,7 +27,7 @@ exports[`ConfigurationMap renders default 1`] = `
       </dd>
     </div>
     <div
-      class="css-td53qz"
+      class="css-2iygaf"
       data-cy="configurationMapRow"
     >
       <dt
@@ -44,7 +44,7 @@ exports[`ConfigurationMap renders default 1`] = `
       </dd>
     </div>
     <div
-      class="css-td53qz"
+      class="css-2iygaf"
       data-cy="configurationMapRow"
     >
       <dt
@@ -74,7 +74,7 @@ exports[`ConfigurationMap renders with actions 1`] = `
     data-cy="configurationMapSection"
   >
     <div
-      class="css-yae4lb"
+      class="css-1jqckuv"
       data-cy="configurationMapRow"
     >
       <dt
@@ -94,9 +94,10 @@ exports[`ConfigurationMap renders with actions 1`] = `
         data-cy="configrationMapRowAction"
       >
         <button
-          class="css-1vveheu"
+          class="css-67j5fi"
           data-cy="secondaryButton"
           tabindex="0"
+          type="button"
         >
           <span
             class=""
@@ -107,7 +108,7 @@ exports[`ConfigurationMap renders with actions 1`] = `
       </span>
     </div>
     <div
-      class="css-yae4lb"
+      class="css-1jqckuv"
       data-cy="configurationMapRow"
     >
       <dt
@@ -127,9 +128,10 @@ exports[`ConfigurationMap renders with actions 1`] = `
         data-cy="configrationMapRowAction"
       >
         <button
-          class="css-1vveheu"
+          class="css-67j5fi"
           data-cy="secondaryButton"
           tabindex="0"
+          type="button"
         >
           <span
             class=""
@@ -140,7 +142,7 @@ exports[`ConfigurationMap renders with actions 1`] = `
       </span>
     </div>
     <div
-      class="css-yae4lb"
+      class="css-1jqckuv"
       data-cy="configurationMapRow"
     >
       <dt
@@ -160,9 +162,10 @@ exports[`ConfigurationMap renders with actions 1`] = `
         data-cy="configrationMapRowAction"
       >
         <button
-          class="css-1vveheu"
+          class="css-67j5fi"
           data-cy="secondaryButton"
           tabindex="0"
+          type="button"
         >
           <span
             class=""
@@ -186,7 +189,7 @@ exports[`ConfigurationMap renders with default value 1`] = `
     data-cy="configurationMapSection"
   >
     <div
-      class="css-td53qz"
+      class="css-2iygaf"
       data-cy="configurationMapRow"
     >
       <dt
@@ -203,7 +206,7 @@ exports[`ConfigurationMap renders with default value 1`] = `
       </dd>
     </div>
     <div
-      class="css-td53qz"
+      class="css-2iygaf"
       data-cy="configurationMapRow"
     >
       <dt
@@ -220,7 +223,7 @@ exports[`ConfigurationMap renders with default value 1`] = `
       </dd>
     </div>
     <div
-      class="css-td53qz"
+      class="css-2iygaf"
       data-cy="configurationMapRow"
     >
       <dt
@@ -256,7 +259,7 @@ exports[`ConfigurationMap renders with headline 1`] = `
       Jane Doe Info
     </h1>
     <div
-      class="css-td53qz"
+      class="css-2iygaf"
       data-cy="configurationMapRow"
     >
       <dt
@@ -273,7 +276,7 @@ exports[`ConfigurationMap renders with headline 1`] = `
       </dd>
     </div>
     <div
-      class="css-td53qz"
+      class="css-2iygaf"
       data-cy="configurationMapRow"
     >
       <dt
@@ -290,7 +293,7 @@ exports[`ConfigurationMap renders with headline 1`] = `
       </dd>
     </div>
     <div
-      class="css-td53qz"
+      class="css-2iygaf"
       data-cy="configurationMapRow"
     >
       <dt

@@ -24,7 +24,7 @@ import {
 } from "../../shared/styles/styleUtils";
 import { SecondaryButton } from "../../button";
 import { TextInput } from "../../textInput";
-import { fullscreenModalTitle } from "../style";
+import { fullscreenModalTitle } from "../../fullscreenView/style";
 
 const readme = require("../README.md");
 
@@ -319,6 +319,51 @@ storiesOf("Modal", module)
         )}
       </ModalStoryContainer>
     ),
+    {
+      info: {
+        propTables: [FullscreenModal]
+      }
+    }
+  )
+  .add(
+    "FullscreenModal w/ dialog modal",
+    () => {
+      return (
+        <ModalStoryContainer>
+          {({ isOpen, onClose }) => (
+            <FullscreenModal
+              isOpen={isOpen}
+              onClose={onClose}
+              title="I am modal"
+              subtitle="Optional subtitle"
+              closeText="Dismiss"
+              ctaButton={
+                <PrimaryButton
+                  onClick={action("handling CTA")}
+                  aria-haspopup={true}
+                >
+                  Continue
+                </PrimaryButton>
+              }
+              id="testId"
+            >
+              <ModalStoryContainer>
+                {({ isOpen, onClose }) => (
+                  <DialogModal
+                    isOpen={isOpen}
+                    onClose={onClose}
+                    title="I am modal"
+                    overlayRoot={document.querySelector("#testId")}
+                  >
+                    <ModalContent />
+                  </DialogModal>
+                )}
+              </ModalStoryContainer>
+            </FullscreenModal>
+          )}
+        </ModalStoryContainer>
+      );
+    },
     {
       info: {
         propTables: [FullscreenModal]

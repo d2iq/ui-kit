@@ -27,13 +27,17 @@ exports[`ToggleInputList renders default 1`] = `
   height: 1px;
 }
 
-.emotion-0 {
-  padding: 0;
-  font-weight: 500;
-}
-
 .emotion-6 {
   padding-top: 8px;
+}
+
+.emotion-0 {
+  padding: 0;
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
 }
 
 .emotion-2 {
@@ -52,6 +56,7 @@ exports[`ToggleInputList renders default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,6 +67,10 @@ exports[`ToggleInputList renders default 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.emotion-5 > div {
+  width: auto;
 }
 
 .emotion-3 {
@@ -115,6 +124,7 @@ exports[`ToggleInputList renders default 1`] = `
       },
     ]
   }
+  labelAppearance="standard"
   listLabel="Sample legend"
   selectedItems={Array []}
   showListLabel={true}
@@ -127,6 +137,7 @@ exports[`ToggleInputList renders default 1`] = `
       aria-describedby=""
       aria-invalid={false}
       className="emotion-20"
+      role="listbox"
     >
       <legend
         className="emotion-0"
@@ -316,6 +327,379 @@ exports[`ToggleInputList renders default 1`] = `
 </ToggleInputList>
 `;
 
+exports[`ToggleInputList renders with error label appearance 1`] = `
+.emotion-19 {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.emotion-23 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-1 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-6 {
+  padding-top: 8px;
+}
+
+.emotion-2 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-5 > div {
+  width: auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  display: inherit;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding-left: 12px;
+}
+
+.emotion-22 {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: var(--themeError,#EB293A);
+  fill: var(--themeError,#EB293A);
+}
+
+.emotion-20 {
+  text-indent: 0;
+  list-style-type: none;
+  padding-top: 4px;
+}
+
+.emotion-0 {
+  padding: 0;
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: var(--themeError,#EB293A);
+  fill: var(--themeError,#EB293A);
+}
+
+<ToggleInputList
+  errors={
+    Array [
+      "error.1",
+      "error.2",
+    ]
+  }
+  id="checkbox"
+  items={
+    Array [
+      Object {
+        "id": "id.1",
+        "inputLabel": "Sample label",
+        "value": "value.1",
+      },
+      Object {
+        "id": "id.2",
+        "inputLabel": "Sample label",
+        "value": "value.2",
+      },
+      Object {
+        "id": "id.3",
+        "inputLabel": "Sample label",
+        "value": "value.3",
+      },
+    ]
+  }
+  labelAppearance="error"
+  listLabel="Sample legend"
+  selectedItems={Array []}
+  showListLabel={true}
+  vertAlign="center"
+>
+  <FormFieldWrapper
+    errors={
+      Array [
+        "error.1",
+        "error.2",
+      ]
+    }
+    id="checkbox"
+  >
+    <fieldset
+      aria-describedby="checkbox-errorMsg0 checkbox-errorMsg1"
+      aria-invalid={true}
+      className="emotion-23"
+      role="listbox"
+    >
+      <legend
+        className="emotion-0"
+      >
+        Sample legend
+      </legend>
+      <ul
+        className="emotion-19"
+      >
+        <li
+          className="emotion-6"
+          key="id.1"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.1"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.1"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              dataCy="checkboxInput"
+              id="id.1"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div
+                data-cy="checkboxInput"
+              >
+                <label
+                  className="emotion-5"
+                  htmlFor="id.1"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        aria-checked={false}
+                        checked={false}
+                        className="emotion-1"
+                        data-cy="checkboxInput-input"
+                        id="id.1"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.1"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-6"
+          key="id.2"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.2"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.2"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              dataCy="checkboxInput"
+              id="id.2"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div
+                data-cy="checkboxInput"
+              >
+                <label
+                  className="emotion-5"
+                  htmlFor="id.2"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        aria-checked={false}
+                        checked={false}
+                        className="emotion-1"
+                        data-cy="checkboxInput-input"
+                        id="id.2"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.2"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-6"
+          key="id.3"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.3"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.3"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              dataCy="checkboxInput"
+              id="id.3"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div
+                data-cy="checkboxInput"
+              >
+                <label
+                  className="emotion-5"
+                  htmlFor="id.3"
+                >
+                  <div
+                    className="emotion-3"
+                  >
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        aria-checked={false}
+                        checked={false}
+                        className="emotion-1"
+                        data-cy="checkboxInput-input"
+                        id="id.3"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.3"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-4"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+      </ul>
+      <ul
+        className="emotion-22"
+      >
+        <li
+          className="emotion-20"
+          id="checkbox-errorMsg0"
+          key="0"
+        >
+          error.1
+        </li>
+        <li
+          className="emotion-20"
+          id="checkbox-errorMsg1"
+          key="1"
+        >
+          error.2
+        </li>
+      </ul>
+    </fieldset>
+  </FormFieldWrapper>
+</ToggleInputList>
+`;
+
 exports[`ToggleInputList renders with errors 1`] = `
 .emotion-19 {
   list-style: none;
@@ -343,13 +727,17 @@ exports[`ToggleInputList renders with errors 1`] = `
   height: 1px;
 }
 
-.emotion-0 {
-  padding: 0;
-  font-weight: 500;
-}
-
 .emotion-6 {
   padding-top: 8px;
+}
+
+.emotion-0 {
+  padding: 0;
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
 }
 
 .emotion-2 {
@@ -368,6 +756,7 @@ exports[`ToggleInputList renders with errors 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -378,6 +767,10 @@ exports[`ToggleInputList renders with errors 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.emotion-5 > div {
+  width: auto;
 }
 
 .emotion-3 {
@@ -451,6 +844,7 @@ exports[`ToggleInputList renders with errors 1`] = `
       },
     ]
   }
+  labelAppearance="standard"
   listLabel="Sample legend"
   selectedItems={Array []}
   showListLabel={true}
@@ -469,6 +863,7 @@ exports[`ToggleInputList renders with errors 1`] = `
       aria-describedby="checkbox-errorMsg0 checkbox-errorMsg1"
       aria-invalid={true}
       className="emotion-23"
+      role="listbox"
     >
       <legend
         className="emotion-0"
@@ -723,6 +1118,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -733,6 +1129,10 @@ exports[`ToggleInputList renders with hidden label 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.emotion-5 > div {
+  width: auto;
 }
 
 .emotion-3 {
@@ -767,7 +1167,6 @@ exports[`ToggleInputList renders with hidden label 1`] = `
 
 .emotion-0 {
   padding: 0;
-  font-weight: 500;
   border: 0;
   -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
@@ -800,6 +1199,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
       },
     ]
   }
+  labelAppearance="standard"
   listLabel="Sample legend"
   selectedItems={Array []}
   showListLabel={false}
@@ -812,6 +1212,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
       aria-describedby=""
       aria-invalid={false}
       className="emotion-20"
+      role="listbox"
     >
       <legend
         className="emotion-0"
@@ -1001,6 +1402,369 @@ exports[`ToggleInputList renders with hidden label 1`] = `
 </ToggleInputList>
 `;
 
+exports[`ToggleInputList renders with required 1`] = `
+.emotion-20 {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.emotion-21 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-2 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-7 {
+  padding-top: 8px;
+}
+
+.emotion-1 {
+  padding: 0;
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-3 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-6 > div {
+  width: auto;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  display: inherit;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding-left: 12px;
+}
+
+.emotion-0 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--themeError,#EB293A);
+  fill: var(--themeError,#EB293A);
+  margin: 0;
+  text-align: inherit;
+}
+
+<ToggleInputList
+  id="checkbox"
+  items={
+    Array [
+      Object {
+        "id": "id.1",
+        "inputLabel": "Sample label",
+        "value": "value.1",
+      },
+      Object {
+        "id": "id.2",
+        "inputLabel": "Sample label",
+        "value": "value.2",
+      },
+      Object {
+        "id": "id.3",
+        "inputLabel": "Sample label",
+        "value": "value.3",
+      },
+    ]
+  }
+  labelAppearance="standard"
+  listLabel="Sample legend"
+  required={true}
+  selectedItems={Array []}
+  showListLabel={true}
+  vertAlign="center"
+>
+  <FormFieldWrapper
+    id="checkbox"
+  >
+    <fieldset
+      aria-describedby=""
+      aria-invalid={false}
+      aria-required={true}
+      className="emotion-21"
+      role="listbox"
+    >
+      <legend
+        className="emotion-1"
+      >
+        Sample legend
+        <DangerText
+          align="inherit"
+          size="m"
+          tag="span"
+          weight="normal"
+          wrap="wrap"
+        >
+          <Text
+            align="inherit"
+            color="var(--themeError, #EB293A)"
+            dataCy="dangerText"
+            size="m"
+            tag="span"
+            weight="normal"
+            wrap="wrap"
+          >
+            <span
+              className="emotion-0"
+              data-cy="dangerText"
+            >
+               *
+            </span>
+          </Text>
+        </DangerText>
+      </legend>
+      <ul
+        className="emotion-20"
+      >
+        <li
+          className="emotion-7"
+          key="id.1"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.1"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.1"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              dataCy="checkboxInput"
+              id="id.1"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div
+                data-cy="checkboxInput"
+              >
+                <label
+                  className="emotion-6"
+                  htmlFor="id.1"
+                >
+                  <div
+                    className="emotion-4"
+                  >
+                    <div
+                      className="emotion-3"
+                    >
+                      <input
+                        aria-checked={false}
+                        checked={false}
+                        className="emotion-2"
+                        data-cy="checkboxInput-input"
+                        id="id.1"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.1"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-5"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-7"
+          key="id.2"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.2"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.2"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              dataCy="checkboxInput"
+              id="id.2"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div
+                data-cy="checkboxInput"
+              >
+                <label
+                  className="emotion-6"
+                  htmlFor="id.2"
+                >
+                  <div
+                    className="emotion-4"
+                  >
+                    <div
+                      className="emotion-3"
+                    >
+                      <input
+                        aria-checked={false}
+                        checked={false}
+                        className="emotion-2"
+                        data-cy="checkboxInput-input"
+                        id="id.2"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.2"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-5"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+        <li
+          className="emotion-7"
+          key="id.3"
+        >
+          <CheckboxInput
+            appearance="standard"
+            checked={false}
+            id="id.3"
+            inputLabel="Sample label"
+            onChange={[Function]}
+            value="value.3"
+            vertAlign="center"
+          >
+            <ToggleInput
+              appearance="standard"
+              dataCy="checkboxInput"
+              id="id.3"
+              inputLabel="Sample label"
+              showInputLabel={true}
+              vertAlign="center"
+            >
+              <div
+                data-cy="checkboxInput"
+              >
+                <label
+                  className="emotion-6"
+                  htmlFor="id.3"
+                >
+                  <div
+                    className="emotion-4"
+                  >
+                    <div
+                      className="emotion-3"
+                    >
+                      <input
+                        aria-checked={false}
+                        checked={false}
+                        className="emotion-2"
+                        data-cy="checkboxInput-input"
+                        id="id.3"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        type="checkbox"
+                        value="value.3"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="emotion-5"
+                  >
+                    Sample label
+                  </div>
+                </label>
+              </div>
+            </ToggleInput>
+          </CheckboxInput>
+        </li>
+      </ul>
+    </fieldset>
+  </FormFieldWrapper>
+</ToggleInputList>
+`;
+
 exports[`ToggleInputList renders with selected items 1`] = `
 .emotion-23 {
   list-style: none;
@@ -1028,13 +1792,17 @@ exports[`ToggleInputList renders with selected items 1`] = `
   height: 1px;
 }
 
-.emotion-0 {
-  padding: 0;
-  font-weight: 500;
-}
-
 .emotion-8 {
   padding-top: 8px;
+}
+
+.emotion-0 {
+  padding: 0;
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
 }
 
 .emotion-18 {
@@ -1053,6 +1821,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1063,6 +1832,10 @@ exports[`ToggleInputList renders with selected items 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.emotion-7 > div {
+  width: auto;
 }
 
 .emotion-5 {
@@ -1155,6 +1928,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
       },
     ]
   }
+  labelAppearance="standard"
   listLabel="Sample legend"
   selectedItems={
     Array [
@@ -1172,6 +1946,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
       aria-describedby=""
       aria-invalid={false}
       className="emotion-24"
+      role="listbox"
     >
       <legend
         className="emotion-0"

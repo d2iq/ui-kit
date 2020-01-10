@@ -5,15 +5,19 @@ export interface SharedTextProps {
   /**
    * How the text should be aligned
    */
-  align: React.CSSProperties["textAlign"];
+  align?: React.CSSProperties["textAlign"];
   /**
    * How the text should wrap in it's container
    */
-  wrap: "truncate" | "nowrap" | "wrap";
+  wrap?: "truncate" | "nowrap" | "wrap";
   /**
    * Which HTML tag to render the text in
    */
-  tag: keyof React.ReactHTML;
+  tag?: keyof React.ReactHTML;
+  /**
+   * human-readable selector used for writing tests
+   */
+  dataCy?: string;
   children: React.ReactNode;
 }
 

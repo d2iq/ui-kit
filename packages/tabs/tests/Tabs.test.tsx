@@ -8,11 +8,29 @@ const handler = (_: number): void => {
   /* empty*/
 };
 describe("Tabs", () => {
-  it("default", () => {
+  it("renders default", () => {
     expect(
       toJSON(
         render(
           <Tabs selectedIndex={0} onSelect={handler}>
+            <TabItem>
+              <TabTitle>Tab 1 Name</TabTitle>
+              <div>First tab Content</div>
+            </TabItem>
+            <TabItem>
+              <TabTitle>Tab 2 Name</TabTitle>
+              Second Tab Content
+            </TabItem>
+          </Tabs>
+        )
+      )
+    ).toMatchSnapshot();
+  });
+  it("renders vertically", () => {
+    expect(
+      toJSON(
+        render(
+          <Tabs selectedIndex={0} onSelect={handler} direction="vert">
             <TabItem>
               <TabTitle>Tab 1 Name</TabTitle>
               <div>First tab Content</div>

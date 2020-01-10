@@ -29,6 +29,7 @@ exports[`CheckboxInput renders all appearances 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -39,6 +40,10 @@ exports[`CheckboxInput renders all appearances 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.emotion-4 > div {
+  width: auto;
 }
 
 .emotion-2 {
@@ -149,6 +154,7 @@ exports[`CheckboxInput renders all appearances 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -159,6 +165,10 @@ exports[`CheckboxInput renders all appearances 2`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.emotion-4 > div {
+  width: auto;
 }
 
 .emotion-2 {
@@ -271,6 +281,7 @@ exports[`CheckboxInput renders all appearances 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -281,6 +292,10 @@ exports[`CheckboxInput renders all appearances 3`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.emotion-4 > div {
+  width: auto;
 }
 
 .emotion-2 {
@@ -382,6 +397,7 @@ exports[`CheckboxInput renders indeterminate 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -392,6 +408,10 @@ exports[`CheckboxInput renders indeterminate 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.emotion-6 > div {
+  width: auto;
 }
 
 .emotion-4 {
@@ -567,6 +587,7 @@ exports[`CheckboxInput renders with a hidden label 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: auto;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -577,6 +598,10 @@ exports[`CheckboxInput renders with a hidden label 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.emotion-4 > div {
+  width: auto;
 }
 
 .emotion-2 {

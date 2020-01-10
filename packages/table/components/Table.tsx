@@ -78,7 +78,7 @@ export interface TableState {
   resizeIndex: number;
 }
 
-const ROW_HEIGHT = 35;
+export const ROW_HEIGHT = 35;
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 768;
 const COL_RESIZE_MIN_WIDTH = 80;
@@ -201,7 +201,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
               currentIndex,
               remainingWidth
             })
-          : scrollbarAdjustedWidth / totalColumns;
+          : Math.floor(scrollbarAdjustedWidth / totalColumns);
 
         const clampedWidth = clampWidth(
           calculatedWidth,
@@ -469,6 +469,9 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
                     this.getContainerWidth() * (1 - COL_RESIZE_MAX_WIDTH),
                   bottom: 0
                 }}
+                // Needed for an issue where text inputs lose focus when a Draggable unmounts
+                // Github issue: https://github.com/mzabriskie/react-draggable/issues/315
+                enableUserSelectHack={false}
               >
                 <div>
                   <div

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { SecondaryButton } from "../../../button";
-import { DropdownMenu, DropdownMenuItem } from "../../../dropdowMenu";
+import { Popover, PopoverListItem } from "../../../popover";
 import { SystemIcons } from "../../../icons/dist/system-icons-enum";
 import Dropdownable, {
   Direction
@@ -38,17 +38,17 @@ class PageHeaderOverflowMenu extends React.PureComponent<
         onClose={this.handleClose}
         preferredDirections={[Direction.BottomRight, Direction.BottomLeft]}
         dropdown={
-          <DropdownMenu key="Dropdown">
-            <DropdownMenuItem index={0} listLength={3}>
+          <Popover key="Dropdown">
+            <PopoverListItem index={0} listLength={3}>
               Overflow One
-            </DropdownMenuItem>
-            <DropdownMenuItem index={1} listLength={3}>
+            </PopoverListItem>
+            <PopoverListItem index={1} listLength={3}>
               Overflow Two
-            </DropdownMenuItem>
-            <DropdownMenuItem index={2} listLength={3}>
+            </PopoverListItem>
+            <PopoverListItem index={2} listLength={3}>
               Overflow Three
-            </DropdownMenuItem>
-          </DropdownMenu>
+            </PopoverListItem>
+          </Popover>
         }
       >
         <SecondaryButton

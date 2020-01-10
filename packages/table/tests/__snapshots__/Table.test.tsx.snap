@@ -86,6 +86,7 @@ Array [
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -102,6 +103,10 @@ Array [
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-5 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -798,6 +803,7 @@ Array [
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -814,6 +820,10 @@ Array [
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-2 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -1192,6 +1202,7 @@ Array [
   -webkit-box-align: flex;
   -ms-flex-align: flex;
   align-items: flex;
+  height: auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1208,6 +1219,10 @@ Array [
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-2 > div {
+  width: auto;
 }
 
 .emotion-0 {
@@ -1273,17 +1288,17 @@ Array [
           aria-readonly="true"
           class="ReactVirtualized__Grid emotion-4"
           role="grid"
-          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:204.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
+          style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:204px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:hidden;left:0;top:0"
         >
           <div
             class="ReactVirtualized__Grid__innerScrollContainer"
             role="rowgroup"
-            style="width:204.8px;height:35px;max-width:204.8px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+            style="width:204px;height:35px;max-width:204px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
               class="emotion-3"
               data-cy="table-headerCell table-headerCell.col0 table-headerCell.row0"
-              style="height:35px;left:0;position:absolute;top:0;width:204.8px"
+              style="height:35px;left:0;position:absolute;top:0;width:204px"
             >
               <div
                 class="emotion-2"
@@ -1302,24 +1317,24 @@ Array [
         </div>
         <div
           class="TopRightGrid_ScrollWrapper"
-          style="left:204.8px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:819.2px"
+          style="left:204px;overflow-x:hidden;overflow-y:hidden;position:absolute;top:0;height:35px;width:820px"
         >
           <div
             aria-label="grid"
             aria-readonly="true"
             class="ReactVirtualized__Grid emotion-21"
             role="grid"
-            style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:819.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
+            style="box-sizing:border-box;direction:ltr;height:35px;position:absolute;width:820px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:0;top:0"
           >
             <div
               class="ReactVirtualized__Grid__innerScrollContainer"
               role="rowgroup"
-              style="width:1024px;height:35px;max-width:1024px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
+              style="width:1022.4000000000001px;height:35px;max-width:1022.4000000000001px;max-height:35px;overflow:hidden;pointer-events:;position:relative"
             >
               <div
                 class="emotion-3"
                 data-cy="table-headerCell table-headerCell.col1 table-headerCell.row0"
-                style="height:35px;left:0;position:absolute;top:0;width:204.8px"
+                style="height:35px;left:0;position:absolute;top:0;width:204px"
               >
                 <div
                   class="emotion-2"
@@ -1337,7 +1352,7 @@ Array [
               <div
                 class="emotion-3"
                 data-cy="table-headerCell table-headerCell.col2 table-headerCell.row0"
-                style="height:35px;left:204.8px;position:absolute;top:0;width:204.8px"
+                style="height:35px;left:204px;position:absolute;top:0;width:204px"
               >
                 <div
                   class="emotion-2"
@@ -1355,7 +1370,7 @@ Array [
               <div
                 class="emotion-3"
                 data-cy="table-headerCell table-headerCell.col3 table-headerCell.row0"
-                style="height:35px;left:409.6px;position:absolute;top:0;width:307.2px"
+                style="height:35px;left:408px;position:absolute;top:0;width:307.2px"
               >
                 <div
                   class="emotion-2"
@@ -1373,7 +1388,7 @@ Array [
               <div
                 class="emotion-3"
                 data-cy="table-headerCell table-headerCell.col4 table-headerCell.row0"
-                style="height:35px;left:716.8px;position:absolute;top:0;width:307.2px"
+                style="height:35px;left:715.2px;position:absolute;top:0;width:307.2px"
               >
                 <div
                   class="emotion-2"
@@ -1397,25 +1412,25 @@ Array [
       >
         <div
           class="BottomLeftGrid_ScrollWrapper"
-          style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:204.8px"
+          style="left:0;overflow-x:hidden;overflow-y:hidden;position:absolute;height:733px;width:204px"
         >
           <div
             aria-label="grid"
             aria-readonly="true"
             class="ReactVirtualized__Grid emotion-24"
             role="grid"
-            style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:204.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
+            style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:204px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
           >
             <div
               class="ReactVirtualized__Grid__innerScrollContainer"
               role="rowgroup"
-              style="width:204.8px;height:70px;max-width:204.8px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+              style="width:204px;height:70px;max-width:204px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
             >
               <div
                 class="emotion-22"
                 data-cy="table-contentCell table-contentCell.col0 table-contentCell.row1"
                 data-rowindex="1"
-                style="height:35px;left:0;position:absolute;top:0;width:204.8px"
+                style="height:35px;left:0;position:absolute;top:0;width:204px"
               >
                 <strong>
                   Brian Vaughn
@@ -1425,7 +1440,7 @@ Array [
                 class="emotion-22"
                 data-cy="table-contentCell table-contentCell.col0 table-contentCell.row2"
                 data-rowindex="2"
-                style="height:35px;left:0;position:absolute;top:35px;width:204.8px"
+                style="height:35px;left:0;position:absolute;top:35px;width:204px"
               >
                 <strong>
                   Jon Doe
@@ -1439,19 +1454,19 @@ Array [
           aria-readonly="true"
           class="ReactVirtualized__Grid emotion-33"
           role="grid"
-          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:819.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:204.8px"
+          style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:820px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:204px"
           tabindex="0"
         >
           <div
             class="ReactVirtualized__Grid__innerScrollContainer"
             role="rowgroup"
-            style="width:1024px;height:70px;max-width:1024px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
+            style="width:1022.4000000000001px;height:70px;max-width:1022.4000000000001px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
               class="emotion-22"
               data-cy="table-contentCell table-contentCell.col1 table-contentCell.row1"
               data-rowindex="1"
-              style="height:35px;left:0;position:absolute;top:0;width:204.8px"
+              style="height:35px;left:0;position:absolute;top:0;width:204px"
             >
               <em>
                 Software Engineer
@@ -1461,7 +1476,7 @@ Array [
               class="emotion-22"
               data-cy="table-contentCell table-contentCell.col2 table-contentCell.row1"
               data-rowindex="1"
-              style="height:35px;left:204.8px;position:absolute;top:0;width:204.8px"
+              style="height:35px;left:204px;position:absolute;top:0;width:204px"
             >
               <span>
                 CA
@@ -1471,7 +1486,7 @@ Array [
               class="emotion-22"
               data-cy="table-contentCell table-contentCell.col3 table-contentCell.row1"
               data-rowindex="1"
-              style="height:35px;left:409.6px;position:absolute;top:0;width:307.2px"
+              style="height:35px;left:408px;position:absolute;top:0;width:307.2px"
             >
               <span>
                 95125
@@ -1481,7 +1496,7 @@ Array [
               class="emotion-22"
               data-cy="table-contentCell table-contentCell.col4 table-contentCell.row1"
               data-rowindex="1"
-              style="height:35px;left:716.8px;position:absolute;top:0;width:307.2px"
+              style="height:35px;left:715.2px;position:absolute;top:0;width:307.2px"
             >
               <strong>
                 San Jose
@@ -1491,7 +1506,7 @@ Array [
               class="emotion-22"
               data-cy="table-contentCell table-contentCell.col1 table-contentCell.row2"
               data-rowindex="2"
-              style="height:35px;left:0;position:absolute;top:35px;width:204.8px"
+              style="height:35px;left:0;position:absolute;top:35px;width:204px"
             >
               <em>
                 Product engineer
@@ -1501,7 +1516,7 @@ Array [
               class="emotion-22"
               data-cy="table-contentCell table-contentCell.col2 table-contentCell.row2"
               data-rowindex="2"
-              style="height:35px;left:204.8px;position:absolute;top:35px;width:204.8px"
+              style="height:35px;left:204px;position:absolute;top:35px;width:204px"
             >
               <span>
                 CA
@@ -1511,7 +1526,7 @@ Array [
               class="emotion-22"
               data-cy="table-contentCell table-contentCell.col3 table-contentCell.row2"
               data-rowindex="2"
-              style="height:35px;left:409.6px;position:absolute;top:35px;width:307.2px"
+              style="height:35px;left:408px;position:absolute;top:35px;width:307.2px"
             >
               <span>
                 95125
@@ -1521,7 +1536,7 @@ Array [
               class="emotion-22"
               data-cy="table-contentCell table-contentCell.col4 table-contentCell.row2"
               data-rowindex="2"
-              style="height:35px;left:716.8px;position:absolute;top:35px;width:307.2px"
+              style="height:35px;left:715.2px;position:absolute;top:35px;width:307.2px"
             >
               <strong>
                 Mountain View

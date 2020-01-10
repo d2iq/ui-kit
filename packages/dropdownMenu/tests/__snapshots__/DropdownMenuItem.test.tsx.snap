@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown default 1`] = `
+<DropdownMenuItem
+  value="edit"
+>
+  Edit
+</DropdownMenuItem>
+`;
+
+exports[`Dropdown default 2`] = `
+<DropdownMenuItem
+  appearance="danger"
+  value="edit"
+>
+  Edit
+</DropdownMenuItem>
+`;

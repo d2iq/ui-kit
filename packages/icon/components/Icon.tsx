@@ -33,10 +33,12 @@ export interface IconProps {
   shape: SystemIcons | ProductIcons;
   /** The width and height of the icon */
   size?: IconSizes;
+  /** human-readable selector used for writing tests */
+  dataCy?: string;
 }
 
 const Icon = (props: IconProps) => {
-  const { color, size, shape, ariaLabel } = props;
+  const { color, size, shape, ariaLabel, dataCy } = props;
   const svgColor = color || "currentColor";
   const iconSize = size || iconSizeS;
 
@@ -49,7 +51,7 @@ const Icon = (props: IconProps) => {
       role="img"
       aria-label={ariaLabel || `${shape} icon`}
       className={cx(icon, tintSVG(svgColor))}
-      data-cy="icon"
+      data-cy={["icon", dataCy].filter(Boolean).join(" ")}
     >
       <use xlinkHref={`#${shape}`} />
     </svg>
