@@ -13,9 +13,9 @@ import {
 import { themeError } from "../../design-tokens/build/js/designTokens";
 
 interface RenderProps {
+  describedByIds: string;
   getValidationErrors: React.ReactNode;
   getHintContent: React.ReactNode;
-  describedByIds: string;
   isValid: boolean;
 }
 

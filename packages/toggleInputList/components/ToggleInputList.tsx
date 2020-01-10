@@ -19,6 +19,8 @@ export interface ToggleInputProperties {
   id: string;
   value: string;
   disabled?: boolean;
+  errors?: React.ReactNode[];
+  hintContent?: React.ReactNode;
 }
 
 export interface ToggleInputListProps {
@@ -128,7 +130,15 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
     const { items } = this.props;
 
     return items.map(item => {
-      const { id, value, inputLabel, appearance, disabled } = item;
+      const {
+        id,
+        value,
+        inputLabel,
+        appearance,
+        disabled,
+        errors,
+        hintContent
+      } = item;
       const { vertAlign, onChange } = this.props;
       const selectedItems = this.props.selectedItems || [];
 
@@ -151,6 +161,8 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
             value={value}
             vertAlign={vertAlign}
             checked={selectedItems.includes(value)}
+            errors={errors}
+            hintContent={hintContent}
           />
         </li>
       );

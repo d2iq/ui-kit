@@ -45,8 +45,8 @@ exports[`ToggleInputList renders default 1`] = `
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 4px;
   position: relative;
 }
@@ -160,49 +160,56 @@ exports[`ToggleInputList renders default 1`] = `
             value="value.1"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.1"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.1"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.1"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.1"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.1"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.1"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.1"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.1"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -218,49 +225,56 @@ exports[`ToggleInputList renders default 1`] = `
             value="value.2"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.2"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.2"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.2"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.2"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.2"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.2"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.2"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.2"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -276,49 +290,56 @@ exports[`ToggleInputList renders default 1`] = `
             value="value.3"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.3"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.3"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.3"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.3"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.3"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.3"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.3"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.3"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
       </ul>
@@ -363,8 +384,8 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 4px;
   position: relative;
 }
@@ -515,49 +536,56 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
             value="value.1"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.1"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.1"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.1"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.1"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.1"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.1"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.1"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.1"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -573,49 +601,56 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
             value="value.2"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.2"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.2"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.2"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.2"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.2"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.2"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.2"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.2"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -631,49 +666,56 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
             value="value.3"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.3"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.3"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.3"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.3"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.3"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.3"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.3"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.3"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
       </ul>
@@ -745,8 +787,8 @@ exports[`ToggleInputList renders with errors 1`] = `
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 4px;
   position: relative;
 }
@@ -886,49 +928,56 @@ exports[`ToggleInputList renders with errors 1`] = `
             value="value.1"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.1"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.1"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.1"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.1"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.1"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.1"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.1"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.1"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -944,49 +993,56 @@ exports[`ToggleInputList renders with errors 1`] = `
             value="value.2"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.2"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.2"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.2"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.2"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.2"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.2"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.2"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.2"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -1002,49 +1058,56 @@ exports[`ToggleInputList renders with errors 1`] = `
             value="value.3"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.3"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.3"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.3"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.3"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.3"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.3"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.3"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.3"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
       </ul>
@@ -1107,8 +1170,8 @@ exports[`ToggleInputList renders with hidden label 1`] = `
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 4px;
   position: relative;
 }
@@ -1235,49 +1298,56 @@ exports[`ToggleInputList renders with hidden label 1`] = `
             value="value.1"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.1"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.1"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.1"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.1"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.1"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.1"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.1"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.1"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -1293,49 +1363,56 @@ exports[`ToggleInputList renders with hidden label 1`] = `
             value="value.2"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.2"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.2"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.2"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.2"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.2"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.2"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.2"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.2"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -1351,49 +1428,56 @@ exports[`ToggleInputList renders with hidden label 1`] = `
             value="value.3"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.3"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.3"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-5"
-                  htmlFor="id.3"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-3"
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.3"
                   >
                     <div
-                      className="emotion-2"
+                      className="emotion-3"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.3"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.3"
-                      />
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.3"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.3"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-4"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
       </ul>
@@ -1447,8 +1531,8 @@ exports[`ToggleInputList renders with required 1`] = `
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 4px;
   position: relative;
 }
@@ -1598,49 +1682,56 @@ exports[`ToggleInputList renders with required 1`] = `
             value="value.1"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.1"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.1"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-6"
-                  htmlFor="id.1"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-4"
+                  <label
+                    className="emotion-6"
+                    htmlFor="id.1"
                   >
                     <div
-                      className="emotion-3"
+                      className="emotion-4"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-2"
-                        data-cy="checkboxInput-input"
-                        id="id.1"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.1"
-                      />
+                      <div
+                        className="emotion-3"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-2"
+                          data-cy="checkboxInput-input"
+                          id="id.1"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.1"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-5"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-5"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -1656,49 +1747,56 @@ exports[`ToggleInputList renders with required 1`] = `
             value="value.2"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.2"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.2"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-6"
-                  htmlFor="id.2"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-4"
+                  <label
+                    className="emotion-6"
+                    htmlFor="id.2"
                   >
                     <div
-                      className="emotion-3"
+                      className="emotion-4"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-2"
-                        data-cy="checkboxInput-input"
-                        id="id.2"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.2"
-                      />
+                      <div
+                        className="emotion-3"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-2"
+                          data-cy="checkboxInput-input"
+                          id="id.2"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.2"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-5"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-5"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -1714,49 +1812,56 @@ exports[`ToggleInputList renders with required 1`] = `
             value="value.3"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.3"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.3"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-6"
-                  htmlFor="id.3"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-4"
+                  <label
+                    className="emotion-6"
+                    htmlFor="id.3"
                   >
                     <div
-                      className="emotion-3"
+                      className="emotion-4"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-2"
-                        data-cy="checkboxInput-input"
-                        id="id.3"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.3"
-                      />
+                      <div
+                        className="emotion-3"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-2"
+                          data-cy="checkboxInput-input"
+                          id="id.3"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.3"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-5"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-5"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
       </ul>
@@ -1810,8 +1915,8 @@ exports[`ToggleInputList renders with selected items 1`] = `
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 4px;
   position: relative;
 }
@@ -1873,8 +1978,8 @@ exports[`ToggleInputList renders with selected items 1`] = `
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 4px;
   position: relative;
   background-color: var(--themeBrandPrimary,#7D58FF);
@@ -1969,73 +2074,80 @@ exports[`ToggleInputList renders with selected items 1`] = `
             value="value.1"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput checkboxInput.checked"
+            <FormFieldWrapper
               id="id.1"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput checkboxInput.checked"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput checkboxInput.checked"
+                errorContent={null}
+                hintContent={null}
+                id="id.1"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-7"
-                  htmlFor="id.1"
+                <div
+                  data-cy="checkboxInput checkboxInput.checked"
                 >
-                  <div
-                    className="emotion-5"
+                  <label
+                    className="emotion-7"
+                    htmlFor="id.1"
                   >
                     <div
-                      className="emotion-4"
+                      className="emotion-5"
                     >
-                      <input
-                        aria-checked={true}
-                        checked={true}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input checkboxInput-input.checked"
-                        id="id.1"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.1"
-                      />
-                      <span
-                        className="emotion-3"
+                      <div
+                        className="emotion-4"
                       >
-                        <Icon
-                          color="#FFF"
-                          shape="system-check"
-                          size="16px"
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={true}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input checkboxInput-input.checked"
+                          id="id.1"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.1"
+                        />
+                        <span
+                          className="emotion-3"
                         >
-                          <svg
-                            aria-label="system-check icon"
-                            className="emotion-2"
-                            data-cy="icon"
-                            height={16}
-                            preserveAspectRatio="xMinYMin meet"
-                            role="img"
-                            viewBox="0 0 16 16"
-                            width={16}
+                          <Icon
+                            color="#FFF"
+                            shape="system-check"
+                            size="16px"
                           >
-                            <use
-                              xlinkHref="#system-check"
-                            />
-                          </svg>
-                        </Icon>
-                      </span>
+                            <svg
+                              aria-label="system-check icon"
+                              className="emotion-2"
+                              data-cy="icon"
+                              height={16}
+                              preserveAspectRatio="xMinYMin meet"
+                              role="img"
+                              viewBox="0 0 16 16"
+                              width={16}
+                            >
+                              <use
+                                xlinkHref="#system-check"
+                              />
+                            </svg>
+                          </Icon>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-6"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-6"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -2051,73 +2163,80 @@ exports[`ToggleInputList renders with selected items 1`] = `
             value="value.2"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput checkboxInput.checked"
+            <FormFieldWrapper
               id="id.2"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput checkboxInput.checked"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput checkboxInput.checked"
+                errorContent={null}
+                hintContent={null}
+                id="id.2"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-7"
-                  htmlFor="id.2"
+                <div
+                  data-cy="checkboxInput checkboxInput.checked"
                 >
-                  <div
-                    className="emotion-5"
+                  <label
+                    className="emotion-7"
+                    htmlFor="id.2"
                   >
                     <div
-                      className="emotion-4"
+                      className="emotion-5"
                     >
-                      <input
-                        aria-checked={true}
-                        checked={true}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input checkboxInput-input.checked"
-                        id="id.2"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.2"
-                      />
-                      <span
-                        className="emotion-3"
+                      <div
+                        className="emotion-4"
                       >
-                        <Icon
-                          color="#FFF"
-                          shape="system-check"
-                          size="16px"
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={true}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input checkboxInput-input.checked"
+                          id="id.2"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.2"
+                        />
+                        <span
+                          className="emotion-3"
                         >
-                          <svg
-                            aria-label="system-check icon"
-                            className="emotion-2"
-                            data-cy="icon"
-                            height={16}
-                            preserveAspectRatio="xMinYMin meet"
-                            role="img"
-                            viewBox="0 0 16 16"
-                            width={16}
+                          <Icon
+                            color="#FFF"
+                            shape="system-check"
+                            size="16px"
                           >
-                            <use
-                              xlinkHref="#system-check"
-                            />
-                          </svg>
-                        </Icon>
-                      </span>
+                            <svg
+                              aria-label="system-check icon"
+                              className="emotion-2"
+                              data-cy="icon"
+                              height={16}
+                              preserveAspectRatio="xMinYMin meet"
+                              role="img"
+                              viewBox="0 0 16 16"
+                              width={16}
+                            >
+                              <use
+                                xlinkHref="#system-check"
+                              />
+                            </svg>
+                          </Icon>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-6"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-6"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
         <li
@@ -2133,49 +2252,56 @@ exports[`ToggleInputList renders with selected items 1`] = `
             value="value.3"
             vertAlign="center"
           >
-            <ToggleInput
-              appearance="standard"
-              dataCy="checkboxInput"
+            <FormFieldWrapper
               id="id.3"
-              inputLabel="Sample label"
-              showInputLabel={true}
-              vertAlign="center"
             >
-              <div
-                data-cy="checkboxInput"
+              <ToggleInput
+                appearance="standard"
+                dataCy="checkboxInput"
+                errorContent={null}
+                hintContent={null}
+                id="id.3"
+                inputLabel="Sample label"
+                showInputLabel={true}
+                vertAlign="center"
               >
-                <label
-                  className="emotion-7"
-                  htmlFor="id.3"
+                <div
+                  data-cy="checkboxInput"
                 >
-                  <div
-                    className="emotion-5"
+                  <label
+                    className="emotion-7"
+                    htmlFor="id.3"
                   >
                     <div
-                      className="emotion-18"
+                      className="emotion-5"
                     >
-                      <input
-                        aria-checked={false}
-                        checked={false}
-                        className="emotion-1"
-                        data-cy="checkboxInput-input"
-                        id="id.3"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        type="checkbox"
-                        value="value.3"
-                      />
+                      <div
+                        className="emotion-18"
+                      >
+                        <input
+                          aria-describedBy=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="checkboxInput-input"
+                          id="id.3"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value="value.3"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-6"
-                  >
-                    Sample label
-                  </div>
-                </label>
-              </div>
-            </ToggleInput>
+                    <div
+                      className="emotion-6"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </ToggleInput>
+            </FormFieldWrapper>
           </CheckboxInput>
         </li>
       </ul>

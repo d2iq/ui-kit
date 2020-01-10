@@ -46,7 +46,7 @@ class CheckboxTable extends React.PureComponent<
 
     return {
       headerChecked:
-        Object.keys(selectedRows).length &&
+        Boolean(Object.keys(selectedRows).length) &&
         Object.keys(selectedRows).length ===
           data.length - Object.keys(disabledRows).length
     };

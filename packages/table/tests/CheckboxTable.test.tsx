@@ -3,7 +3,7 @@ import React from "react";
 import { CheckboxTable, Column } from "../";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
-import { shallow, render } from "enzyme";
+import { shallow, render, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
@@ -144,7 +144,7 @@ describe("CheckboxTable", () => {
       .prop("cellRenderer")(items[0], 100) as React.ReactElement<{
       children: any;
     }>;
-    const checkbox = shallow(cellRendererResult.props.children).find("input");
+    const checkbox = mount(cellRendererResult.props.children).find("input");
 
     expect(onChangeFn).not.toHaveBeenCalled();
     checkbox.simulate("change", { target: { checked: true } });
