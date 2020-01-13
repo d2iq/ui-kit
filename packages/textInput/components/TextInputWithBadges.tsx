@@ -83,6 +83,14 @@ export class TextInputWithBadges extends TextInputWithIcon<
     } = baseProps as TextInputWithBadgesProps;
     inputProps.onKeyDown = this.handleKeyDown;
     inputProps.onKeyUp = this.handleKeyUp;
+    inputProps.onKeyPress = e => {
+      if (this.props.onKeyPress) {
+        this.props.onKeyPress(e);
+      }
+      if (e.key === "Enter") {
+        e.preventDefault();
+      }
+    };
     inputProps.onBlur = this.handleBlur.bind(this, inputProps.onBlur);
     inputProps.type = "text";
     inputProps.ref = this.inputRef;
@@ -198,6 +206,7 @@ export class TextInputWithBadges extends TextInputWithIcon<
 
   private handleKeyUp(e) {
     if (e.key === "Enter") {
+      e.preventDefault();
       this.handleTagAdd(getStringAsBadgeDatum(e.target.value));
     }
 
