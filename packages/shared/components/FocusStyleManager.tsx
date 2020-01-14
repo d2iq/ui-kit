@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { InteractionModeEngine } from "../../utilities/components/interactionMode";
+import { InteractionModeEngine } from "../../utilities/interactionMode";
 
 class FocusStyleManager extends React.PureComponent<
   { focusEnabledClass: string; children: string | React.ReactNode },
