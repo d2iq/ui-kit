@@ -1,5 +1,6 @@
 import { cx } from "emotion";
 import * as React from "react";
+import nextId from "react-id-generator";
 
 import {
   greyLightDarken2,
@@ -70,6 +71,7 @@ export class TextInput<
     appearance: InputAppearance.Standard,
     showInputLabel: true
   };
+  placeholderId = nextId("textInput-");
 
   public render() {
     const labelContent = this.getLabelContent();
@@ -116,7 +118,7 @@ export class TextInput<
     return (
       <label
         className={labelClassName}
-        htmlFor={this.props.id}
+        htmlFor={this.props.id || this.placeholderId}
         data-cy="textInput-label"
       >
         {this.props.inputLabel}
@@ -130,7 +132,7 @@ export class TextInput<
 
     return (
       <FormFieldWrapper
-        id={this.props.id}
+        id={this.props.id || this.placeholderId}
         errors={this.props.errors}
         hintContent={this.props.hintContent}
       >
@@ -168,10 +170,11 @@ export class TextInput<
       showInputLabel,
       type,
       errors,
+      id = this.placeholderId,
       ...inputElementProps
     } = this.props as TextInputProps;
 
-    return inputElementProps;
+    return { id, ...inputElementProps };
   }
 
   protected getInputElement(
@@ -221,7 +224,7 @@ export class TextInput<
               size={iconSizeXs}
             />
           }
-          id={`labelTooltip-${this.props.id}`}
+          id={`labelTooltip-${this.props.id || this.placeholderId}`}
           maxWidth={200}
         >
           {this.props.tooltipContent}

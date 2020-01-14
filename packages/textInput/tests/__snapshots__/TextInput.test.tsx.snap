@@ -125,10 +125,13 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   <label
     className="emotion-0"
     data-cy="textInput-label"
+    htmlFor="input.with.hidden.label"
   >
     I'm not displayed
   </label>
-  <FormFieldWrapper>
+  <FormFieldWrapper
+    id="input.with.hidden.label"
+  >
     <Component />
   </FormFieldWrapper>
 </div>
