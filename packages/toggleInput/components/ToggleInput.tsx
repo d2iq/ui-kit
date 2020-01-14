@@ -7,12 +7,15 @@ import {
   visuallyHidden,
   display,
   tintContent,
-  tintContentSecondary
+  tintContentSecondary,
+  vAlignChildren
 } from "../../shared/styles/styleUtils";
+
 import {
   themeError,
   themeSuccess
 } from "../../design-tokens/build/js/designTokens";
+import { bruteForceKillLabelMargin } from "../style";
 import { CheckboxInputProps } from "../../checkboxInput/components/CheckboxInput";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import {
@@ -90,13 +93,14 @@ class ToggleInput extends React.PureComponent<LocalToggleInputProps, {}> {
     } = this.props;
 
     return (
-      <div data-cy={dataCy}>
+      <div className={vAlignChildren} data-cy={dataCy}>
         <label
           className={cx(
             flex({
               align: vertAlign === "top" ? "flex-start" : "center"
             }),
-            display("inline-flex")
+            display("inline-flex"),
+            bruteForceKillLabelMargin // to override CNVS bottom margin on <label>
           )}
           htmlFor={id}
         >
