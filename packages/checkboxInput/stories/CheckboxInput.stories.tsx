@@ -173,6 +173,28 @@ storiesOf("Forms/CheckboxInput", module)
     }
   )
   .add(
+    "hint text",
+    () => (
+      <CheckboxStoryHelper isChecked={true}>
+        {({ changeHandler, isChecked }) => (
+          <CheckboxInput
+            id="hiddenLabel"
+            inputLabel="You can't see me"
+            hintContent="Here's a hint"
+            value="hiddenLabelValue"
+            checked={isChecked}
+            onChange={changeHandler}
+          />
+        )}
+      </CheckboxStoryHelper>
+    ),
+    {
+      info: {
+        propTables: [CheckboxInput]
+      }
+    }
+  )
+  .add(
     "hidden label",
     () => (
       <CheckboxStoryHelper isChecked={true}>

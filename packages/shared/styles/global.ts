@@ -6,9 +6,12 @@ import {
   themeTextColorPrimary,
   themeBgPrimary
 } from "../../design-tokens/build/js/designTokens";
+import { normalize } from "./normalize";
 
 export const injectGlobalCss = () => {
   return injectGlobal`
+    ${normalize};
+
     .ReactVirtualized__Grid {
       outline: none;
     }

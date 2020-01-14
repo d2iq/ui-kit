@@ -35,6 +35,7 @@ export interface CheckboxTableProps extends TableProps {
 
 export interface CheckboxTableState {
   headerChecked: boolean;
+  checkboxWidth: number;
 }
 
 class CheckboxTable extends React.PureComponent<
@@ -46,7 +47,7 @@ class CheckboxTable extends React.PureComponent<
 
     return {
       headerChecked:
-        Object.keys(selectedRows).length &&
+        Boolean(Object.keys(selectedRows).length) &&
         Object.keys(selectedRows).length ===
           data.length - Object.keys(disabledRows).length
     };
@@ -57,13 +58,13 @@ class CheckboxTable extends React.PureComponent<
     super(props);
 
     this.state = {
-      headerChecked: false
+      headerChecked: false,
+      checkboxWidth: 24
     };
 
     this.getSelectedRows = this.getSelectedRows.bind(this);
     this.checkboxCellRenderer = this.checkboxCellRenderer.bind(this);
     this.getHeaderCheckbox = this.getHeaderCheckbox.bind(this);
-    this.getCheckboxColWidth = this.getCheckboxColWidth.bind(this);
   }
 
   render() {
@@ -72,6 +73,7 @@ class CheckboxTable extends React.PureComponent<
       coloredRows: data.map(item => selectedRows[item[uniqueKey]]),
       mutedRows: data.map(item => mutedRows[item[uniqueKey]])
     };
+    const getColumnWidth = (_args: WidthArgs) => this.state.checkboxWidth;
 
     return (
       <ThemeProvider theme={theme}>
@@ -79,7 +81,7 @@ class CheckboxTable extends React.PureComponent<
           <Column
             header={<HeaderCell>{this.getHeaderCheckbox()}</HeaderCell>}
             cellRenderer={this.checkboxCellRenderer}
-            width={this.getCheckboxColWidth}
+            width={getColumnWidth}
           />
           {this.props.children as any}
         </Table>
@@ -87,12 +89,14 @@ class CheckboxTable extends React.PureComponent<
     );
   }
 
-  private getCheckboxColWidth(_args: WidthArgs) {
+  componentDidMount() {
     const checkbox = this.checkboxRef.current;
 
-    return checkbox
-      ? checkbox.getBoundingClientRect().width + parseInt(spaceM, 10)
-      : 24;
+    this.setState({
+      checkboxWidth: checkbox
+        ? checkbox.getBoundingClientRect().width + parseInt(spaceM, 10)
+        : 17 + parseInt(spaceM, 10) // 17 is the width of our CheckboxInput component at the time of this change
+    });
   }
 
   private checkboxCellRenderer(rowData) {

@@ -10,7 +10,8 @@ import {
   modalTransitionStyles,
   scrim,
   scrimPreTransitionStyle,
-  scrimTransitionStyles
+  scrimTransitionStyles,
+  centerDialogWrapper
 } from "../style";
 import ModalContents from "./ModalContents";
 import Overlay from "../../shared/components/Overlay";
@@ -106,23 +107,25 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
                   })}
                   onClick={this.props.onClose}
                 />
-                <div
-                  className={cx(modal, modalWidth[modalSize], {
-                    [modalPreTransitionStyle(animationDuration)]: isAnimated,
-                    [modalTransitionStyles[state]]: isAnimated
-                  })}
-                  role="dialog"
-                  onKeyDown={this.onKeyDown}
-                  tabIndex={-1}
-                  id={id}
-                >
-                  <ModalContents
-                    isOpen={isOpen}
-                    onClose={this.props.onClose}
-                    dataCy={dataCy}
+                <div className={centerDialogWrapper}>
+                  <div
+                    className={cx(modal, modalWidth[modalSize], {
+                      [modalPreTransitionStyle(animationDuration)]: isAnimated,
+                      [modalTransitionStyles[state]]: isAnimated
+                    })}
+                    role="dialog"
+                    onKeyDown={this.onKeyDown}
+                    tabIndex={-1}
+                    id={id}
                   >
-                    {children}
-                  </ModalContents>
+                    <ModalContents
+                      isOpen={isOpen}
+                      onClose={this.props.onClose}
+                      dataCy={dataCy}
+                    >
+                      {children}
+                    </ModalContents>
+                  </div>
                 </div>
               </FocusLock>
             </Overlay>

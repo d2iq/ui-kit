@@ -9,7 +9,8 @@ import {
   themeBrandPrimary,
   themeError,
   themeBgDisabled,
-  iconSizeXs
+  iconSizeXs,
+  spaceS
 } from "../../design-tokens/build/js/designTokens";
 
 import {
@@ -27,14 +28,23 @@ const getFocusFieldBg = color => hexToRgbA(color, 0.05);
 const toggleInputHeight = 16;
 const toggleInputBorderWidth = 1;
 export const textInputHeight = 36;
+const toggleInputTextPadding = spaceS;
 
 export const toggleInput = css`
   border-color: ${themeBorder};
   background-color: ${themeBgPrimary};
   border-style: solid;
   border-width: ${toggleInputBorderWidth}px;
-  height: ${toggleInputHeight - toggleInputBorderWidth}px;
-  width: ${toggleInputHeight - toggleInputBorderWidth}px;
+  height: ${toggleInputHeight - toggleInputBorderWidth * 2}px;
+  width: ${toggleInputHeight - toggleInputBorderWidth * 2}px;
+`;
+
+export const toggleInputLabel = css`
+  padding-left: ${toggleInputTextPadding};
+`;
+
+export const toggleInputFeedbackText = css`
+  padding-left: ${toggleInputHeight + parseInt(toggleInputTextPadding, 10)}px;
 `;
 
 export const toggleInputApperances = {
