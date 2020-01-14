@@ -4,7 +4,6 @@ import { cx } from "emotion";
 import {
   flex,
   flexItem,
-  padding,
   visuallyHidden,
   display,
   tintContent,
@@ -16,6 +15,10 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 import { CheckboxInputProps } from "../../checkboxInput/components/CheckboxInput";
 import { InputAppearance } from "../../shared/types/inputAppearance";
+import {
+  toggleInputFeedbackText,
+  toggleInputLabel
+} from "../../shared/styles/formStyles";
 
 export interface ToggleInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
@@ -50,10 +53,20 @@ export interface ToggleInputProps extends React.HTMLProps<HTMLInputElement> {
    * human-readable selector used for writing tests
    */
   dataCy?: string;
+  /**
+   * hintContent is text or a ReactNode that is displayed directly under the input with additional information about the expected input.
+   */
+  hintContent?: React.ReactNode;
+  /**
+   * Sets the contents for validation errors. This will be displayed below the input element. Errors are only visible when the `TextInput` appearance is also set to `TextInputAppearance.Error`.
+   */
+  errors?: React.ReactNode[];
 }
 
 interface LocalToggleInputProps extends ToggleInputProps {
   children: React.ReactElement<CheckboxInputProps>; // TODO: accept radio and toggle switch components when we have them
+  errorContent: React.ReactNode | string;
+  hintContent: React.ReactNode | string;
 }
 
 class ToggleInput extends React.PureComponent<LocalToggleInputProps, {}> {
@@ -67,6 +80,8 @@ class ToggleInput extends React.PureComponent<LocalToggleInputProps, {}> {
       appearance,
       children,
       disabled,
+      errorContent,
+      hintContent,
       id,
       inputLabel,
       showInputLabel,
@@ -89,7 +104,7 @@ class ToggleInput extends React.PureComponent<LocalToggleInputProps, {}> {
             {children}
           </div>
           <div
-            className={cx(flexItem("grow"), padding("left", "s"), {
+            className={cx(flexItem("grow"), toggleInputLabel, {
               [visuallyHidden]: !showInputLabel,
               [tintContent(themeError)]: appearance === InputAppearance.Error,
               [tintContent(themeSuccess)]:
@@ -100,6 +115,12 @@ class ToggleInput extends React.PureComponent<LocalToggleInputProps, {}> {
             {inputLabel}
           </div>
         </label>
+        {hintContent && (
+          <div className={toggleInputFeedbackText}>
+            {hintContent}
+            {appearance === InputAppearance.Error && errorContent}
+          </div>
+        )}
       </div>
     );
   }

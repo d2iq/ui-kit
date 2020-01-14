@@ -164,8 +164,8 @@ Array [
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 4px;
   position: relative;
 }
@@ -310,7 +310,8 @@ Array [
                               class="emotion-1"
                             >
                               <input
-                                aria-checked="0"
+                                aria-describedby=""
+                                aria-invalid="false"
                                 class="emotion-0"
                                 data-cy="checkboxInput-input"
                                 id="headerCheckbox"
@@ -488,7 +489,8 @@ Array [
                           class="emotion-1"
                         >
                           <input
-                            aria-checked="false"
+                            aria-describedby=""
+                            aria-invalid="false"
                             class="emotion-0"
                             data-cy="checkboxInput-input"
                             id="0"
@@ -539,7 +541,8 @@ Array [
                           class="emotion-1"
                         >
                           <input
-                            aria-checked="false"
+                            aria-describedby=""
+                            aria-invalid="false"
                             class="emotion-0"
                             data-cy="checkboxInput-input"
                             id="1"
@@ -848,8 +851,8 @@ Array [
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 4px;
   position: relative;
 }
@@ -945,8 +948,8 @@ Array [
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 4px;
   position: relative;
   background-color: var(--themeBrandPrimary,#7D58FF);
@@ -1053,7 +1056,8 @@ Array [
                               class="emotion-3"
                             >
                               <input
-                                aria-checked="mixed"
+                                aria-describedby=""
+                                aria-invalid="false"
                                 class="emotion-0"
                                 data-cy="checkboxInput-input checkboxInput-input.indeterminate"
                                 id="headerCheckbox"
@@ -1249,7 +1253,8 @@ Array [
                           class="emotion-3"
                         >
                           <input
-                            aria-checked="true"
+                            aria-describedby=""
+                            aria-invalid="false"
                             checked=""
                             class="emotion-0"
                             data-cy="checkboxInput-input checkboxInput-input.checked"
@@ -1319,7 +1324,8 @@ Array [
                           class="emotion-46"
                         >
                           <input
-                            aria-checked="false"
+                            aria-describedby=""
+                            aria-invalid="false"
                             class="emotion-0"
                             data-cy="checkboxInput-input"
                             id="1"
@@ -1628,8 +1634,8 @@ Array [
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-style: solid;
   border-width: 1px;
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 4px;
   position: relative;
 }
@@ -1792,7 +1798,8 @@ Array [
                               class="emotion-1"
                             >
                               <input
-                                aria-checked="0"
+                                aria-describedby=""
+                                aria-invalid="false"
                                 class="emotion-0"
                                 data-cy="checkboxInput-input"
                                 id="headerCheckbox"
@@ -1986,7 +1993,8 @@ Array [
                           class="emotion-1"
                         >
                           <input
-                            aria-checked="false"
+                            aria-describedby=""
+                            aria-invalid="false"
                             class="emotion-0"
                             data-cy="checkboxInput-input"
                             id="1"

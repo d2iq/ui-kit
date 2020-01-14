@@ -102,6 +102,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
       isProcessing,
       isFullWidth,
       onClick,
+      type = "button",
       url,
       ...other
     } = this.props;
@@ -156,6 +157,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
           disabled={disabled || isProcessing}
           onClick={this.onClick}
           tabIndex={0}
+          type={type}
           {...other}
         >
           {this.getButtonContent()}

@@ -97,6 +97,7 @@ exports[`ConfigurationMap renders with actions 1`] = `
           class="css-67j5fi"
           data-cy="secondaryButton"
           tabindex="0"
+          type="button"
         >
           <span
             class=""
@@ -130,6 +131,7 @@ exports[`ConfigurationMap renders with actions 1`] = `
           class="css-67j5fi"
           data-cy="secondaryButton"
           tabindex="0"
+          type="button"
         >
           <span
             class=""
@@ -163,6 +165,7 @@ exports[`ConfigurationMap renders with actions 1`] = `
           class="css-67j5fi"
           data-cy="secondaryButton"
           tabindex="0"
+          type="button"
         >
           <span
             class=""

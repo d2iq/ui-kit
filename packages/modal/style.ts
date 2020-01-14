@@ -39,18 +39,26 @@ export const scrim = css`
   z-index: ${zIndexContent};
 `;
 
+export const centerDialogWrapper = css`
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+`;
+
 export const modal = css`
   border-radius: ${borderRadiusDefault};
   background-color: ${themeBgPrimary};
   display: flex;
   flex-direction: column;
-  left: 50%;
   max-height: calc(100vh - ${modalInset * 2}px);
   outline: none;
   overflow: auto;
-  position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%);
   z-index: ${zIndexModal};
 `;
 
@@ -114,17 +122,17 @@ export const modalPreTransitionStyle = duration => css`
   transition: opacity ${duration}ms ease-in-out,
     transform ${duration}ms ease-in-out;
   opacity: 0;
-  transform: translate(-50%, calc(-50% - 50px));
+  transform: translate(0, calc(-50px));
 `;
 
 export const modalTransitionStyles = {
   entered: css`
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(0, 0);
   `,
   exiting: css`
     opacity: 0;
-    transform: translate(-50%, calc(-50% - 50px));
+    transform: translate(0, calc(-50px));
   `
 };
 

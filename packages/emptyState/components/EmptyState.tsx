@@ -3,6 +3,7 @@ import { emptyStateContainer } from "../style";
 import { Card } from "../../card";
 import { SpacingBox } from "../../styleUtils/modifiers";
 import { HeadingText2 } from "../../styleUtils/typography";
+import { breakWord } from "../../shared/styles/styleUtils";
 import EmptyStateActions from "./EmptyStateActions";
 
 export interface EmptyStateProps {
@@ -40,6 +41,7 @@ const EmptyState: React.SFC<EmptyStateProps> = ({
             side="bottom"
             spacingSize={hasActions ? "l" : "none"}
             textAlign="center"
+            className={breakWord}
           >
             {children}
           </SpacingBox>

@@ -12,6 +12,7 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { iconSizeXs, white } from "../../design-tokens/build/js/designTokens";
 import { ToggleInputProps } from "../../toggleInput/components/ToggleInput";
 import { InputAppearance } from "../../shared/types/inputAppearance";
+import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 
 export interface CheckboxInputState {
   hasFocus: boolean;
@@ -58,6 +59,8 @@ class CheckboxInput extends React.PureComponent<
       vertAlign,
       disabled,
       value,
+      errors,
+      hintContent,
       ...other
     } = this.props;
     delete other.onFocus;
@@ -81,54 +84,65 @@ class CheckboxInput extends React.PureComponent<
     ].join(" ");
 
     return (
-      <ToggleInput
-        appearance={appearance}
-        disabled={disabled}
-        id={id}
-        inputLabel={inputLabel}
-        showInputLabel={showInputLabel}
-        vertAlign={vertAlign}
-        dataCy={parentDataCy}
-      >
-        <div
-          className={cx(toggleInput, checkbox, {
-            [toggleInputApperances[`${this.props.appearance}-focus`]]: this
-              .state.hasFocus,
-            [toggleInputApperances[`${this.props.appearance}-active`]]:
-              checked || isIndeterminate,
-            [toggleInputApperances["focus-active"]]:
-              checked && this.state.hasFocus,
-            [toggleInputApperances.disabled]: disabled,
-            [toggleInputApperances["disabled-active"]]: disabled && checked
-          })}
-        >
-          {/* tslint:disable react-a11y-role-has-required-aria-props */}
-          <input
-            type="checkbox"
-            id={id}
-            className={visuallyHidden}
-            checked={checked}
+      <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
+        {({ getValidationErrors, isValid, describedByIds, getHintContent }) => (
+          <ToggleInput
+            appearance={appearance}
             disabled={disabled}
-            value={value}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-            aria-checked={isIndeterminate ? "mixed" : checked}
-            data-cy={inputDataCy}
-            {...other}
-          />
-          {/* tslint:enable */}
-
-          {(checked || isIndeterminate) && (
-            <span className={cx(checkboxIconContainer, display("inline-flex"))}>
-              <Icon
-                shape={indeterminate ? SystemIcons.Minus : SystemIcons.Check}
-                size={iconSizeXs}
-                color={white}
+            errorContent={getValidationErrors}
+            hintContent={getHintContent}
+            id={id}
+            inputLabel={inputLabel}
+            showInputLabel={showInputLabel}
+            vertAlign={vertAlign}
+            dataCy={parentDataCy}
+          >
+            <div
+              className={cx(toggleInput, checkbox, {
+                [toggleInputApperances[`${this.props.appearance}-focus`]]: this
+                  .state.hasFocus,
+                [toggleInputApperances[`${this.props.appearance}-active`]]:
+                  checked || isIndeterminate,
+                [toggleInputApperances["focus-active"]]:
+                  checked && this.state.hasFocus,
+                [toggleInputApperances.disabled]: disabled,
+                [toggleInputApperances["disabled-active"]]: disabled && checked
+              })}
+            >
+              {/* tslint:disable react-a11y-role-has-required-aria-props */}
+              <input
+                type="checkbox"
+                id={id}
+                className={visuallyHidden}
+                checked={checked}
+                disabled={disabled}
+                value={value}
+                aria-invalid={!isValid}
+                aria-describedBy={describedByIds}
+                onFocus={this.handleFocus}
+                onBlur={this.handleBlur}
+                data-cy={inputDataCy}
+                {...other}
               />
-            </span>
-          )}
-        </div>
-      </ToggleInput>
+              {/* tslint:enable */}
+
+              {(checked || isIndeterminate) && (
+                <span
+                  className={cx(checkboxIconContainer, display("inline-flex"))}
+                >
+                  <Icon
+                    shape={
+                      indeterminate ? SystemIcons.Minus : SystemIcons.Check
+                    }
+                    size={iconSizeXs}
+                    color={white}
+                  />
+                </span>
+              )}
+            </div>
+          </ToggleInput>
+        )}
+      </FormFieldWrapper>
     );
   }
 
