@@ -9,7 +9,7 @@ import { cx } from "emotion";
 import { textSize, flex, tintContent } from "../../shared/styles/styleUtils";
 import Clickable from "../../clickable/components/clickable";
 import { withTheme } from "emotion-theming";
-import getCSSVarValue from "../../utilities/components/getCSSVarValue";
+import getCSSVarValue from "../../utilities/getCSSVarValue";
 import {
   themeTextColorSecondary,
   themeTextColorPrimary,

@@ -1,6 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Modal DialogModal renders DialogModal 1`] = `
+.emotion-16 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .emotion-0 {
   background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
@@ -25,28 +48,22 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
   overflow: auto;
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   opacity: 0;
-  -webkit-transform: translate(-50%,calc(-50% - 50px));
-  -ms-transform: translate(-50%,calc(-50% - 50px));
-  transform: translate(-50%,calc(-50% - 50px));
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
   opacity: 1;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
 }
 
 @media (min-width:600px) {
@@ -382,17 +399,21 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       tabindex="-1"
                     />
                     <div
-                      class="emotion-15"
-                      role="dialog"
-                      tabindex="-1"
+                      class="emotion-16"
                     >
                       <div
-                        class="emotion-14"
+                        class="emotion-15"
+                        role="dialog"
+                        tabindex="-1"
                       >
                         <div
-                          tabindex="0"
+                          class="emotion-14"
                         >
-                          I am modal content
+                          <div
+                            tabindex="0"
+                          >
+                            I am modal content
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -404,7 +425,30 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                   />
                 </div>
               </div>
-              .emotion-0 {
+              .emotion-3 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-0 {
   background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
@@ -428,28 +472,22 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
   overflow: auto;
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   opacity: 0;
-  -webkit-transform: translate(-50%,calc(-50% - 50px));
-  -ms-transform: translate(-50%,calc(-50% - 50px));
-  transform: translate(-50%,calc(-50% - 50px));
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
   opacity: 1;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
 }
 
 @media (min-width:600px) {
@@ -509,17 +547,21 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       tabindex="-1"
                     />
                     <div
-                      class="emotion-2"
-                      role="dialog"
-                      tabindex="-1"
+                      class="emotion-3"
                     >
                       <div
-                        class="emotion-1"
+                        class="emotion-2"
+                        role="dialog"
+                        tabindex="-1"
                       >
                         <div
-                          tabindex="0"
+                          class="emotion-1"
                         >
-                          I am modal content
+                          <div
+                            tabindex="0"
+                          >
+                            I am modal content
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -531,7 +573,30 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                   />
                 </div>
               </div>
-              .emotion-0 {
+              .emotion-3 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-0 {
   background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
@@ -555,28 +620,22 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
   overflow: auto;
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   opacity: 0;
-  -webkit-transform: translate(-50%,calc(-50% - 50px));
-  -ms-transform: translate(-50%,calc(-50% - 50px));
-  transform: translate(-50%,calc(-50% - 50px));
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
   opacity: 1;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
 }
 
 @media (min-width:600px) {
@@ -636,17 +695,21 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       tabindex="-1"
                     />
                     <div
-                      class="emotion-2"
-                      role="dialog"
-                      tabindex="-1"
+                      class="emotion-3"
                     >
                       <div
-                        class="emotion-1"
+                        class="emotion-2"
+                        role="dialog"
+                        tabindex="-1"
                       >
                         <div
-                          tabindex="0"
+                          class="emotion-1"
                         >
-                          I am modal content
+                          <div
+                            tabindex="0"
+                          >
+                            I am modal content
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -658,7 +721,30 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                   />
                 </div>
               </div>
-              .emotion-0 {
+              .emotion-18 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-0 {
   background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
@@ -682,28 +768,22 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
   overflow: auto;
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   opacity: 0;
-  -webkit-transform: translate(-50%,calc(-50% - 50px));
-  -ms-transform: translate(-50%,calc(-50% - 50px));
-  transform: translate(-50%,calc(-50% - 50px));
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
   opacity: 1;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
 }
 
 @media (min-width:600px) {
@@ -1019,100 +1099,104 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       tabindex="-1"
                     />
                     <div
-                      class="emotion-17"
-                      role="dialog"
-                      tabindex="-1"
+                      class="emotion-18"
                     >
                       <div
-                        class="emotion-16"
-                        data-cy="dialogModal"
+                        class="emotion-17"
+                        role="dialog"
+                        tabindex="-1"
                       >
                         <div
-                          class="emotion-6"
-                          data-cy="dialogModal-header"
+                          class="emotion-16"
+                          data-cy="dialogModal"
                         >
                           <div
-                            class="emotion-5"
+                            class="emotion-6"
+                            data-cy="dialogModal-header"
                           >
                             <div
-                              class="emotion-1"
+                              class="emotion-5"
                             >
-                              Title
-                            </div>
-                            <div
-                              class="emotion-4"
-                            >
-                              <span
-                                class="emotion-3"
-                                role="button"
-                                tabindex="0"
+                              <div
+                                class="emotion-1"
                               >
-                                <svg
-                                  aria-label="system-close icon"
-                                  class="emotion-2"
-                                  data-cy="icon"
-                                  height="16"
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width="16"
-                                >
-                                  <use
-                                    xlink:href="#system-close"
-                                  />
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="emotion-7"
-                          data-cy="dialogModal-content"
-                        >
-                          <div
-                            tabindex="0"
-                          >
-                            I am modal content
-                          </div>
-                        </div>
-                        <div
-                          class="emotion-15"
-                          data-cy="dialogModal-footer"
-                        >
-                          <div
-                            class="emotion-14"
-                          >
-                            <div
-                              class="emotion-10"
-                            >
-                              <button
-                                class="emotion-8 emotion-9"
-                                data-cy="secondaryButton"
-                                tabindex="0"
-                                type="button"
+                                Title
+                              </div>
+                              <div
+                                class="emotion-4"
                               >
                                 <span
-                                  class=""
+                                  class="emotion-3"
+                                  role="button"
+                                  tabindex="0"
                                 >
-                                  Close
+                                  <svg
+                                    aria-label="system-close icon"
+                                    class="emotion-2"
+                                    data-cy="icon"
+                                    height="16"
+                                    preserveAspectRatio="xMinYMin meet"
+                                    role="img"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <use
+                                      xlink:href="#system-close"
+                                    />
+                                  </svg>
                                 </span>
-                              </button>
+                              </div>
                             </div>
+                          </div>
+                          <div
+                            class="emotion-7"
+                            data-cy="dialogModal-content"
+                          >
                             <div
-                              class="emotion-10"
+                              tabindex="0"
                             >
-                              <button
-                                class="emotion-11 emotion-12"
-                                data-cy="primaryButton"
-                                tabindex="0"
-                                type="button"
+                              I am modal content
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-15"
+                            data-cy="dialogModal-footer"
+                          >
+                            <div
+                              class="emotion-14"
+                            >
+                              <div
+                                class="emotion-10"
                               >
-                                <span
-                                  class=""
+                                <button
+                                  class="emotion-8 emotion-9"
+                                  data-cy="secondaryButton"
+                                  tabindex="0"
+                                  type="button"
                                 >
-                                  CTA
-                                </span>
-                              </button>
+                                  <span
+                                    class=""
+                                  >
+                                    Close
+                                  </span>
+                                </button>
+                              </div>
+                              <div
+                                class="emotion-10"
+                              >
+                                <button
+                                  class="emotion-11 emotion-12"
+                                  data-cy="primaryButton"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    class=""
+                                  >
+                                    CTA
+                                  </span>
+                                </button>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1152,100 +1236,104 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       tabindex="-1"
                     />
                     <div
-                      class="emotion-15"
-                      role="dialog"
-                      tabindex="-1"
+                      class="emotion-16"
                     >
                       <div
-                        class="emotion-14"
-                        data-cy="dialogModal"
+                        class="emotion-15"
+                        role="dialog"
+                        tabindex="-1"
                       >
                         <div
-                          class="emotion-6"
-                          data-cy="dialogModal-header"
+                          class="emotion-14"
+                          data-cy="dialogModal"
                         >
                           <div
-                            class="emotion-5"
+                            class="emotion-6"
+                            data-cy="dialogModal-header"
                           >
                             <div
-                              class="emotion-1"
+                              class="emotion-5"
                             >
-                              Title
-                            </div>
-                            <div
-                              class="emotion-4"
-                            >
-                              <span
-                                class="emotion-3"
-                                role="button"
-                                tabindex="0"
+                              <div
+                                class="emotion-1"
                               >
-                                <svg
-                                  aria-label="system-close icon"
-                                  class="emotion-2"
-                                  data-cy="icon"
-                                  height="16"
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width="16"
-                                >
-                                  <use
-                                    xlink:href="#system-close"
-                                  />
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="emotion-7"
-                          data-cy="dialogModal-content"
-                        >
-                          <div
-                            tabindex="0"
-                          >
-                            I am modal content
-                          </div>
-                        </div>
-                        <div
-                          class="emotion-13"
-                          data-cy="dialogModal-footer"
-                        >
-                          <div
-                            class="emotion-12"
-                          >
-                            <div
-                              class="emotion-9"
-                            >
-                              <button
-                                class="emotion-8 css-1h85cd2"
-                                data-cy="secondaryButton"
-                                tabindex="0"
-                                type="button"
+                                Title
+                              </div>
+                              <div
+                                class="emotion-4"
                               >
                                 <span
-                                  class=""
+                                  class="emotion-3"
+                                  role="button"
+                                  tabindex="0"
                                 >
-                                  Close
+                                  <svg
+                                    aria-label="system-close icon"
+                                    class="emotion-2"
+                                    data-cy="icon"
+                                    height="16"
+                                    preserveAspectRatio="xMinYMin meet"
+                                    role="img"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <use
+                                      xlink:href="#system-close"
+                                    />
+                                  </svg>
                                 </span>
-                              </button>
+                              </div>
                             </div>
+                          </div>
+                          <div
+                            class="emotion-7"
+                            data-cy="dialogModal-content"
+                          >
                             <div
-                              class="emotion-9"
+                              tabindex="0"
                             >
-                              <button
-                                class="emotion-10 css-xcotv6"
-                                data-cy="primaryButton"
-                                tabindex="0"
-                                type="button"
+                              I am modal content
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-13"
+                            data-cy="dialogModal-footer"
+                          >
+                            <div
+                              class="emotion-12"
+                            >
+                              <div
+                                class="emotion-9"
                               >
-                                <span
-                                  class=""
+                                <button
+                                  class="emotion-8 css-1h85cd2"
+                                  data-cy="secondaryButton"
+                                  tabindex="0"
+                                  type="button"
                                 >
-                                  CTA
-                                </span>
-                              </button>
+                                  <span
+                                    class=""
+                                  >
+                                    Close
+                                  </span>
+                                </button>
+                              </div>
+                              <div
+                                class="emotion-9"
+                              >
+                                <button
+                                  class="emotion-10 css-xcotv6"
+                                  data-cy="primaryButton"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    class=""
+                                  >
+                                    CTA
+                                  </span>
+                                </button>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1323,137 +1411,8 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                             tabindex="-1"
                           />
                           <div
-                            class="emotion-15"
-                            role="dialog"
-                            tabindex="-1"
+                            class="emotion-16"
                           >
-                            <div
-                              class="emotion-14"
-                              data-cy="dialogModal"
-                            >
-                              <div
-                                class="emotion-6"
-                                data-cy="dialogModal-header"
-                              >
-                                <div
-                                  class="emotion-5"
-                                >
-                                  <div
-                                    class="emotion-1"
-                                  >
-                                    Title
-                                  </div>
-                                  <div
-                                    class="emotion-4"
-                                  >
-                                    <span
-                                      class="emotion-3"
-                                      role="button"
-                                      tabindex="0"
-                                    >
-                                      <svg
-                                        aria-label="system-close icon"
-                                        class="emotion-2"
-                                        data-cy="icon"
-                                        height="16"
-                                        preserveAspectRatio="xMinYMin meet"
-                                        role="img"
-                                        viewBox="0 0 16 16"
-                                        width="16"
-                                      >
-                                        <use
-                                          xlink:href="#system-close"
-                                        />
-                                      </svg>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                class="emotion-7"
-                                data-cy="dialogModal-content"
-                              >
-                                <div
-                                  tabindex="0"
-                                >
-                                  I am modal content
-                                </div>
-                              </div>
-                              <div
-                                class="emotion-13"
-                                data-cy="dialogModal-footer"
-                              >
-                                <div
-                                  class="emotion-12"
-                                >
-                                  <div
-                                    class="emotion-9"
-                                  >
-                                    <button
-                                      class="emotion-8 css-1h85cd2"
-                                      data-cy="secondaryButton"
-                                      tabindex="0"
-                                      type="button"
-                                    >
-                                      <span
-                                        class=""
-                                      >
-                                        Close
-                                      </span>
-                                    </button>
-                                  </div>
-                                  <div
-                                    class="emotion-9"
-                                  >
-                                    <button
-                                      class="emotion-10 css-xcotv6"
-                                      data-cy="primaryButton"
-                                      tabindex="0"
-                                      type="button"
-                                    >
-                                      <span
-                                        class=""
-                                      >
-                                        CTA
-                                      </span>
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      }
-                      onActivation={[Function]}
-                      onDeactivation={[Function]}
-                      persistentFocus={false}
-                      returnFocus={[Function]}
-                      shards={Array []}
-                      sideCar={
-                        Object {
-                          "assignMedium": [Function],
-                          "assignSyncMedium": [Function],
-                          "options": Object {
-                            "async": true,
-                            "ssr": false,
-                          },
-                          "read": [Function],
-                          "useMedium": [Function],
-                        }
-                      }
-                    >
-                      <FocusWatcher
-                        autoFocus={true}
-                        disabled={false}
-                        observed={
-                          <div
-                            data-focus-lock-disabled="false"
-                          >
-                            <div
-                              class="emotion-0"
-                              role="button"
-                              tabindex="-1"
-                            />
                             <div
                               class="emotion-15"
                               role="dialog"
@@ -1555,6 +1514,143 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                               </div>
                             </div>
                           </div>
+                        </div>
+                      }
+                      onActivation={[Function]}
+                      onDeactivation={[Function]}
+                      persistentFocus={false}
+                      returnFocus={[Function]}
+                      shards={Array []}
+                      sideCar={
+                        Object {
+                          "assignMedium": [Function],
+                          "assignSyncMedium": [Function],
+                          "options": Object {
+                            "async": true,
+                            "ssr": false,
+                          },
+                          "read": [Function],
+                          "useMedium": [Function],
+                        }
+                      }
+                    >
+                      <FocusWatcher
+                        autoFocus={true}
+                        disabled={false}
+                        observed={
+                          <div
+                            data-focus-lock-disabled="false"
+                          >
+                            <div
+                              class="emotion-0"
+                              role="button"
+                              tabindex="-1"
+                            />
+                            <div
+                              class="emotion-16"
+                            >
+                              <div
+                                class="emotion-15"
+                                role="dialog"
+                                tabindex="-1"
+                              >
+                                <div
+                                  class="emotion-14"
+                                  data-cy="dialogModal"
+                                >
+                                  <div
+                                    class="emotion-6"
+                                    data-cy="dialogModal-header"
+                                  >
+                                    <div
+                                      class="emotion-5"
+                                    >
+                                      <div
+                                        class="emotion-1"
+                                      >
+                                        Title
+                                      </div>
+                                      <div
+                                        class="emotion-4"
+                                      >
+                                        <span
+                                          class="emotion-3"
+                                          role="button"
+                                          tabindex="0"
+                                        >
+                                          <svg
+                                            aria-label="system-close icon"
+                                            class="emotion-2"
+                                            data-cy="icon"
+                                            height="16"
+                                            preserveAspectRatio="xMinYMin meet"
+                                            role="img"
+                                            viewBox="0 0 16 16"
+                                            width="16"
+                                          >
+                                            <use
+                                              xlink:href="#system-close"
+                                            />
+                                          </svg>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="emotion-7"
+                                    data-cy="dialogModal-content"
+                                  >
+                                    <div
+                                      tabindex="0"
+                                    >
+                                      I am modal content
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="emotion-13"
+                                    data-cy="dialogModal-footer"
+                                  >
+                                    <div
+                                      class="emotion-12"
+                                    >
+                                      <div
+                                        class="emotion-9"
+                                      >
+                                        <button
+                                          class="emotion-8 css-1h85cd2"
+                                          data-cy="secondaryButton"
+                                          tabindex="0"
+                                          type="button"
+                                        >
+                                          <span
+                                            class=""
+                                          >
+                                            Close
+                                          </span>
+                                        </button>
+                                      </div>
+                                      <div
+                                        class="emotion-9"
+                                      >
+                                        <button
+                                          class="emotion-10 css-xcotv6"
+                                          data-cy="primaryButton"
+                                          tabindex="0"
+                                          type="button"
+                                        >
+                                          <span
+                                            class=""
+                                          >
+                                            CTA
+                                          </span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         }
                         onActivation={[Function]}
                         onDeactivation={[Function]}
@@ -1582,152 +1678,156 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       tabIndex={-1}
                     />
                     <div
-                      className="emotion-15"
-                      onKeyDown={[Function]}
-                      role="dialog"
-                      tabIndex={-1}
+                      className="emotion-16"
                     >
-                      <ModalContents
-                        dataCy="dialogModal"
-                        isOpen={true}
-                        onClose={[MockFunction]}
+                      <div
+                        className="emotion-15"
+                        onKeyDown={[Function]}
+                        role="dialog"
+                        tabIndex={-1}
                       >
-                        <div
-                          className="emotion-14"
-                          data-cy="dialogModal"
+                        <ModalContents
+                          dataCy="dialogModal"
+                          isOpen={true}
+                          onClose={[MockFunction]}
                         >
                           <div
-                            className="emotion-6"
-                            data-cy="dialogModal-header"
+                            className="emotion-14"
+                            data-cy="dialogModal"
                           >
                             <div
-                              className="emotion-5"
+                              className="emotion-6"
+                              data-cy="dialogModal-header"
                             >
                               <div
-                                className="emotion-1"
+                                className="emotion-5"
                               >
-                                Title
-                              </div>
-                              <div
-                                className="emotion-4"
-                              >
-                                <Clickable
-                                  action={[MockFunction]}
-                                  disableFocusOutline={false}
-                                  role="button"
-                                  tabIndex={0}
+                                <div
+                                  className="emotion-1"
                                 >
-                                  <span
-                                    className="emotion-3"
-                                    onClick={[MockFunction]}
-                                    onKeyPress={[Function]}
+                                  Title
+                                </div>
+                                <div
+                                  className="emotion-4"
+                                >
+                                  <Clickable
+                                    action={[MockFunction]}
+                                    disableFocusOutline={false}
                                     role="button"
                                     tabIndex={0}
                                   >
-                                    <Icon
-                                      shape="system-close"
-                                      size="16px"
+                                    <span
+                                      className="emotion-3"
+                                      onClick={[MockFunction]}
+                                      onKeyPress={[Function]}
+                                      role="button"
+                                      tabIndex={0}
                                     >
-                                      <svg
-                                        aria-label="system-close icon"
-                                        className="emotion-2"
-                                        data-cy="icon"
-                                        height={16}
-                                        preserveAspectRatio="xMinYMin meet"
-                                        role="img"
-                                        viewBox="0 0 16 16"
-                                        width={16}
+                                      <Icon
+                                        shape="system-close"
+                                        size="16px"
                                       >
-                                        <use
-                                          xlinkHref="#system-close"
-                                        />
-                                      </svg>
-                                    </Icon>
-                                  </span>
-                                </Clickable>
+                                        <svg
+                                          aria-label="system-close icon"
+                                          className="emotion-2"
+                                          data-cy="icon"
+                                          height={16}
+                                          preserveAspectRatio="xMinYMin meet"
+                                          role="img"
+                                          viewBox="0 0 16 16"
+                                          width={16}
+                                        >
+                                          <use
+                                            xlinkHref="#system-close"
+                                          />
+                                        </svg>
+                                      </Icon>
+                                    </span>
+                                  </Clickable>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div
-                            className="emotion-7"
-                            data-cy="dialogModal-content"
-                          >
                             <div
-                              tabIndex={0}
-                            >
-                              I am modal content
-                            </div>
-                          </div>
-                          <div
-                            className="emotion-13"
-                            data-cy="dialogModal-footer"
-                          >
-                            <div
-                              className="emotion-12"
+                              className="emotion-7"
+                              data-cy="dialogModal-content"
                             >
                               <div
-                                className="emotion-9"
+                                tabIndex={0}
                               >
-                                <SecondaryButton
-                                  onClick={[MockFunction]}
+                                I am modal content
+                              </div>
+                            </div>
+                            <div
+                              className="emotion-13"
+                              data-cy="dialogModal-footer"
+                            >
+                              <div
+                                className="emotion-12"
+                              >
+                                <div
+                                  className="emotion-9"
                                 >
-                                  <ButtonBase
-                                    appearance="secondary"
-                                    data-cy="secondaryButton"
+                                  <SecondaryButton
                                     onClick={[MockFunction]}
                                   >
-                                    <FocusStyleManager
-                                      focusEnabledClass="css-1h85cd2"
+                                    <ButtonBase
+                                      appearance="secondary"
+                                      data-cy="secondaryButton"
+                                      onClick={[MockFunction]}
                                     >
-                                      <button
-                                        className="emotion-8"
-                                        data-cy="secondaryButton"
-                                        onClick={[Function]}
-                                        tabIndex={0}
-                                        type="button"
+                                      <FocusStyleManager
+                                        focusEnabledClass="css-1h85cd2"
                                       >
-                                        <span
-                                          className=""
+                                        <button
+                                          className="emotion-8"
+                                          data-cy="secondaryButton"
+                                          onClick={[Function]}
+                                          tabIndex={0}
+                                          type="button"
                                         >
-                                          Close
-                                        </span>
-                                      </button>
-                                    </FocusStyleManager>
-                                  </ButtonBase>
-                                </SecondaryButton>
-                              </div>
-                              <div
-                                className="emotion-9"
-                              >
-                                <PrimaryButton>
-                                  <ButtonBase
-                                    appearance="primary"
-                                    data-cy="primaryButton"
-                                  >
-                                    <FocusStyleManager
-                                      focusEnabledClass="css-xcotv6"
+                                          <span
+                                            className=""
+                                          >
+                                            Close
+                                          </span>
+                                        </button>
+                                      </FocusStyleManager>
+                                    </ButtonBase>
+                                  </SecondaryButton>
+                                </div>
+                                <div
+                                  className="emotion-9"
+                                >
+                                  <PrimaryButton>
+                                    <ButtonBase
+                                      appearance="primary"
+                                      data-cy="primaryButton"
                                     >
-                                      <button
-                                        className="emotion-10"
-                                        data-cy="primaryButton"
-                                        onClick={[Function]}
-                                        tabIndex={0}
-                                        type="button"
+                                      <FocusStyleManager
+                                        focusEnabledClass="css-xcotv6"
                                       >
-                                        <span
-                                          className=""
+                                        <button
+                                          className="emotion-10"
+                                          data-cy="primaryButton"
+                                          onClick={[Function]}
+                                          tabIndex={0}
+                                          type="button"
                                         >
-                                          CTA
-                                        </span>
-                                      </button>
-                                    </FocusStyleManager>
-                                  </ButtonBase>
-                                </PrimaryButton>
+                                          <span
+                                            className=""
+                                          >
+                                            CTA
+                                          </span>
+                                        </button>
+                                      </FocusStyleManager>
+                                    </ButtonBase>
+                                  </PrimaryButton>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </ModalContents>
+                        </ModalContents>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -1765,6 +1865,29 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   top: 0;
   right: 0;
   z-index: 0;
+}
+
+.emotion-14 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .emotion-11 {
@@ -1894,15 +2017,9 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
   overflow: auto;
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
   z-index: 1;
   border-radius: 0;
   height: 100vh;
@@ -2072,184 +2189,15 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     tabindex="-1"
                   />
                   <div
-                    class="css-58i6lf"
-                    role="dialog"
-                    tabindex="-1"
+                    class="emotion-14"
                   >
                     <div
-                      class="emotion-12"
+                      class="css-ozp89p"
+                      role="dialog"
+                      tabindex="-1"
                     >
                       <div
-                        tabindex="0"
-                      >
-                        I am modal content
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  data-focus-guard="true"
-                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                  tabindex="0"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <div
-                  data-focus-guard="true"
-                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                  tabindex="0"
-                />
-                <div
-                  data-focus-guard="true"
-                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                  tabindex="1"
-                />
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    class="css-9hdker"
-                    role="button"
-                    tabindex="-1"
-                  />
-                  <div
-                    class="css-58i6lf"
-                    role="dialog"
-                    tabindex="-1"
-                  >
-                    <div
-                      class="emotion-12"
-                    >
-                      <div
-                        tabindex="0"
-                      >
-                        I am modal content
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  data-focus-guard="true"
-                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                  tabindex="0"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <div
-                  data-focus-guard="true"
-                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                  tabindex="0"
-                />
-                <div
-                  data-focus-guard="true"
-                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                  tabindex="1"
-                />
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    class="css-9hdker"
-                    role="button"
-                    tabindex="-1"
-                  />
-                  <div
-                    class="css-58i6lf"
-                    role="dialog"
-                    tabindex="-1"
-                  >
-                    <div
-                      class="emotion-12"
-                    >
-                      <div
-                        tabindex="0"
-                      >
-                        I am modal content
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  data-focus-guard="true"
-                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                  tabindex="0"
-                />
-              </div>
-            </div>
-            <div>
-              <div>
-                <div
-                  data-focus-guard="true"
-                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                  tabindex="0"
-                />
-                <div
-                  data-focus-guard="true"
-                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                  tabindex="1"
-                />
-                <div
-                  data-focus-lock-disabled="false"
-                >
-                  <div
-                    class="css-9hdker"
-                    role="button"
-                    tabindex="-1"
-                  />
-                  <div
-                    class="css-58i6lf"
-                    role="dialog"
-                    tabindex="-1"
-                  >
-                    <div
-                      class="emotion-12"
-                      data-cy="dialogModal"
-                    >
-                      <div
-                        class="css-ard01v"
-                        data-cy="dialogModal-header"
-                      >
-                        <div
-                          class="css-mrra2t"
-                        >
-                          <div
-                            class="css-16jj0m8"
-                          >
-                            Title
-                          </div>
-                          <div
-                            class="css-tqlthn"
-                          >
-                            <span
-                              class="css-6wyq6k"
-                              role="button"
-                              tabindex="0"
-                            >
-                              <svg
-                                aria-label="system-close icon"
-                                class="css-zgvqkl"
-                                data-cy="icon"
-                                height="16"
-                                preserveAspectRatio="xMinYMin meet"
-                                role="img"
-                                viewBox="0 0 16 16"
-                                width="16"
-                              >
-                                <use
-                                  xlink:href="#system-close"
-                                />
-                              </svg>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="css-1uzhd8w"
-                        data-cy="dialogModal-content"
+                        class="emotion-12"
                       >
                         <div
                           tabindex="0"
@@ -2257,44 +2205,229 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           I am modal content
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-focus-guard="true"
+                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                  tabindex="0"
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <div
+                  data-focus-guard="true"
+                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                  tabindex="0"
+                />
+                <div
+                  data-focus-guard="true"
+                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                  tabindex="1"
+                />
+                <div
+                  data-focus-lock-disabled="false"
+                >
+                  <div
+                    class="css-9hdker"
+                    role="button"
+                    tabindex="-1"
+                  />
+                  <div
+                    class="emotion-14"
+                  >
+                    <div
+                      class="css-ozp89p"
+                      role="dialog"
+                      tabindex="-1"
+                    >
                       <div
-                        class="css-1oke5ex"
-                        data-cy="dialogModal-footer"
+                        class="emotion-12"
                       >
                         <div
-                          class="css-1yp2uay"
+                          tabindex="0"
+                        >
+                          I am modal content
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-focus-guard="true"
+                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                  tabindex="0"
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <div
+                  data-focus-guard="true"
+                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                  tabindex="0"
+                />
+                <div
+                  data-focus-guard="true"
+                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                  tabindex="1"
+                />
+                <div
+                  data-focus-lock-disabled="false"
+                >
+                  <div
+                    class="css-9hdker"
+                    role="button"
+                    tabindex="-1"
+                  />
+                  <div
+                    class="emotion-14"
+                  >
+                    <div
+                      class="css-ozp89p"
+                      role="dialog"
+                      tabindex="-1"
+                    >
+                      <div
+                        class="emotion-12"
+                      >
+                        <div
+                          tabindex="0"
+                        >
+                          I am modal content
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-focus-guard="true"
+                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                  tabindex="0"
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <div
+                  data-focus-guard="true"
+                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                  tabindex="0"
+                />
+                <div
+                  data-focus-guard="true"
+                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                  tabindex="1"
+                />
+                <div
+                  data-focus-lock-disabled="false"
+                >
+                  <div
+                    class="css-9hdker"
+                    role="button"
+                    tabindex="-1"
+                  />
+                  <div
+                    class="emotion-14"
+                  >
+                    <div
+                      class="css-ozp89p"
+                      role="dialog"
+                      tabindex="-1"
+                    >
+                      <div
+                        class="emotion-12"
+                        data-cy="dialogModal"
+                      >
+                        <div
+                          class="css-ard01v"
+                          data-cy="dialogModal-header"
                         >
                           <div
-                            class="css-48ylac"
+                            class="css-mrra2t"
                           >
-                            <button
-                              class="emotion-1 css-1h85cd2"
-                              data-cy="secondaryButton"
-                              tabindex="0"
-                              type="button"
+                            <div
+                              class="css-16jj0m8"
+                            >
+                              Title
+                            </div>
+                            <div
+                              class="css-tqlthn"
                             >
                               <span
-                                class=""
+                                class="css-6wyq6k"
+                                role="button"
+                                tabindex="0"
                               >
-                                Close
+                                <svg
+                                  aria-label="system-close icon"
+                                  class="css-zgvqkl"
+                                  data-cy="icon"
+                                  height="16"
+                                  preserveAspectRatio="xMinYMin meet"
+                                  role="img"
+                                  viewBox="0 0 16 16"
+                                  width="16"
+                                >
+                                  <use
+                                    xlink:href="#system-close"
+                                  />
+                                </svg>
                               </span>
-                            </button>
+                            </div>
                           </div>
+                        </div>
+                        <div
+                          class="css-1uzhd8w"
+                          data-cy="dialogModal-content"
+                        >
                           <div
-                            class="css-48ylac"
+                            tabindex="0"
                           >
-                            <button
-                              class="emotion-6 css-xcotv6"
-                              data-cy="primaryButton"
-                              tabindex="0"
-                              type="button"
+                            I am modal content
+                          </div>
+                        </div>
+                        <div
+                          class="css-1oke5ex"
+                          data-cy="dialogModal-footer"
+                        >
+                          <div
+                            class="css-1yp2uay"
+                          >
+                            <div
+                              class="css-48ylac"
                             >
-                              <span
-                                class=""
+                              <button
+                                class="emotion-1 css-1h85cd2"
+                                data-cy="secondaryButton"
+                                tabindex="0"
+                                type="button"
                               >
-                                CTA
-                              </span>
-                            </button>
+                                <span
+                                  class=""
+                                >
+                                  Close
+                                </span>
+                              </button>
+                            </div>
+                            <div
+                              class="css-48ylac"
+                            >
+                              <button
+                                class="emotion-6 css-xcotv6"
+                                data-cy="primaryButton"
+                                tabindex="0"
+                                type="button"
+                              >
+                                <span
+                                  class=""
+                                >
+                                  CTA
+                                </span>
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2308,7 +2441,30 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                 />
               </div>
             </div>
-            .emotion-0 {
+            .emotion-18 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-0 {
   background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
@@ -2332,28 +2488,22 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
   overflow: auto;
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   opacity: 0;
-  -webkit-transform: translate(-50%,calc(-50% - 50px));
-  -ms-transform: translate(-50%,calc(-50% - 50px));
-  transform: translate(-50%,calc(-50% - 50px));
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
   opacity: 1;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
 }
 
 @media (min-width:600px) {
@@ -2669,100 +2819,104 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     tabindex="-1"
                   />
                   <div
-                    class="emotion-17"
-                    role="dialog"
-                    tabindex="-1"
+                    class="emotion-18"
                   >
                     <div
-                      class="emotion-16"
-                      data-cy="dialogModal"
+                      class="emotion-17"
+                      role="dialog"
+                      tabindex="-1"
                     >
                       <div
-                        class="emotion-6"
-                        data-cy="dialogModal-header"
+                        class="emotion-16"
+                        data-cy="dialogModal"
                       >
                         <div
-                          class="emotion-5"
+                          class="emotion-6"
+                          data-cy="dialogModal-header"
                         >
                           <div
-                            class="emotion-1"
+                            class="emotion-5"
                           >
-                            Title
-                          </div>
-                          <div
-                            class="emotion-4"
-                          >
-                            <span
-                              class="emotion-3"
-                              role="button"
-                              tabindex="0"
+                            <div
+                              class="emotion-1"
                             >
-                              <svg
-                                aria-label="system-close icon"
-                                class="emotion-2"
-                                data-cy="icon"
-                                height="16"
-                                preserveAspectRatio="xMinYMin meet"
-                                role="img"
-                                viewBox="0 0 16 16"
-                                width="16"
-                              >
-                                <use
-                                  xlink:href="#system-close"
-                                />
-                              </svg>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-7"
-                        data-cy="dialogModal-content"
-                      >
-                        <div
-                          tabindex="0"
-                        >
-                          I am modal content
-                        </div>
-                      </div>
-                      <div
-                        class="emotion-15"
-                        data-cy="dialogModal-footer"
-                      >
-                        <div
-                          class="emotion-14"
-                        >
-                          <div
-                            class="emotion-10"
-                          >
-                            <button
-                              class="emotion-8 emotion-9"
-                              data-cy="secondaryButton"
-                              tabindex="0"
-                              type="button"
+                              Title
+                            </div>
+                            <div
+                              class="emotion-4"
                             >
                               <span
-                                class=""
+                                class="emotion-3"
+                                role="button"
+                                tabindex="0"
                               >
-                                Close
+                                <svg
+                                  aria-label="system-close icon"
+                                  class="emotion-2"
+                                  data-cy="icon"
+                                  height="16"
+                                  preserveAspectRatio="xMinYMin meet"
+                                  role="img"
+                                  viewBox="0 0 16 16"
+                                  width="16"
+                                >
+                                  <use
+                                    xlink:href="#system-close"
+                                  />
+                                </svg>
                               </span>
-                            </button>
+                            </div>
                           </div>
+                        </div>
+                        <div
+                          class="emotion-7"
+                          data-cy="dialogModal-content"
+                        >
                           <div
-                            class="emotion-10"
+                            tabindex="0"
                           >
-                            <button
-                              class="emotion-11 emotion-12"
-                              data-cy="primaryButton"
-                              tabindex="0"
-                              type="button"
+                            I am modal content
+                          </div>
+                        </div>
+                        <div
+                          class="emotion-15"
+                          data-cy="dialogModal-footer"
+                        >
+                          <div
+                            class="emotion-14"
+                          >
+                            <div
+                              class="emotion-10"
                             >
-                              <span
-                                class=""
+                              <button
+                                class="emotion-8 emotion-9"
+                                data-cy="secondaryButton"
+                                tabindex="0"
+                                type="button"
                               >
-                                CTA
-                              </span>
-                            </button>
+                                <span
+                                  class=""
+                                >
+                                  Close
+                                </span>
+                              </button>
+                            </div>
+                            <div
+                              class="emotion-10"
+                            >
+                              <button
+                                class="emotion-11 emotion-12"
+                                data-cy="primaryButton"
+                                tabindex="0"
+                                type="button"
+                              >
+                                <span
+                                  class=""
+                                >
+                                  CTA
+                                </span>
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2784,6 +2938,29 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   top: 0;
   right: 0;
   z-index: 0;
+}
+
+.emotion-16 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .emotion-13 {
@@ -2960,15 +3137,9 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
   overflow: auto;
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
   z-index: 1;
   border-radius: 0;
   height: 100vh;
@@ -3097,78 +3268,82 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     tabindex="-1"
                   />
                   <div
-                    class="emotion-15"
-                    role="dialog"
-                    tabindex="-1"
+                    class="emotion-16"
                   >
                     <div
-                      class="emotion-14"
-                      data-cy="fullscreenModal"
+                      class="emotion-15"
+                      role="dialog"
+                      tabindex="-1"
                     >
                       <div
-                        class="emotion-13"
+                        class="emotion-14"
+                        data-cy="fullscreenModal"
                       >
                         <div
-                          class="emotion-11"
-                          data-cy="fullscreenModal-header"
+                          class="emotion-13"
                         >
                           <div
-                            class="emotion-10"
+                            class="emotion-11"
+                            data-cy="fullscreenModal-header"
                           >
                             <div
-                              class="emotion-3"
+                              class="emotion-10"
                             >
-                              <button
-                                class="emotion-1 emotion-2"
-                                data-cy="secondaryButton"
-                                tabindex="0"
-                                type="button"
+                              <div
+                                class="emotion-3"
                               >
-                                <span
-                                  class=""
+                                <button
+                                  class="emotion-1 emotion-2"
+                                  data-cy="secondaryButton"
+                                  tabindex="0"
+                                  type="button"
                                 >
-                                  Close
-                                </span>
-                              </button>
-                            </div>
-                            <div
-                              class="emotion-6"
-                            >
-                              <h2
-                                class="emotion-4"
+                                  <span
+                                    class=""
+                                  >
+                                    Close
+                                  </span>
+                                </button>
+                              </div>
+                              <div
+                                class="emotion-6"
                               >
-                                Title
-                              </h2>
-                              <h3
-                                class="emotion-5"
-                              />
-                            </div>
-                            <div
-                              class="emotion-9"
-                            >
-                              <button
-                                class="emotion-7 emotion-8"
-                                data-cy="primaryButton"
-                                tabindex="0"
-                                type="button"
-                              >
-                                <span
-                                  class=""
+                                <h2
+                                  class="emotion-4"
                                 >
-                                  CTA
-                                </span>
-                              </button>
+                                  Title
+                                </h2>
+                                <h3
+                                  class="emotion-5"
+                                />
+                              </div>
+                              <div
+                                class="emotion-9"
+                              >
+                                <button
+                                  class="emotion-7 emotion-8"
+                                  data-cy="primaryButton"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    class=""
+                                  >
+                                    CTA
+                                  </span>
+                                </button>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div
-                          class="emotion-12"
-                          data-cy="fullscreenModal-content"
-                        >
                           <div
-                            tabindex="0"
+                            class="emotion-12"
+                            data-cy="fullscreenModal-content"
                           >
-                            I am modal content
+                            <div
+                              tabindex="0"
+                            >
+                              I am modal content
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3208,78 +3383,82 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     tabindex="-1"
                   />
                   <div
-                    class="emotion-13"
-                    role="dialog"
-                    tabindex="-1"
+                    class="emotion-14"
                   >
                     <div
-                      class="emotion-12"
-                      data-cy="fullscreenModal"
+                      class="emotion-13"
+                      role="dialog"
+                      tabindex="-1"
                     >
                       <div
-                        class="emotion-11"
+                        class="emotion-12"
+                        data-cy="fullscreenModal"
                       >
                         <div
-                          class="emotion-9"
-                          data-cy="fullscreenModal-header"
+                          class="emotion-11"
                         >
                           <div
-                            class="emotion-8"
+                            class="emotion-9"
+                            data-cy="fullscreenModal-header"
                           >
                             <div
-                              class="emotion-2"
+                              class="emotion-8"
                             >
-                              <button
-                                class="emotion-1 css-1h85cd2"
-                                data-cy="secondaryButton"
-                                tabindex="0"
-                                type="button"
+                              <div
+                                class="emotion-2"
                               >
-                                <span
-                                  class=""
+                                <button
+                                  class="emotion-1 css-1h85cd2"
+                                  data-cy="secondaryButton"
+                                  tabindex="0"
+                                  type="button"
                                 >
-                                  Close
-                                </span>
-                              </button>
-                            </div>
-                            <div
-                              class="emotion-5"
-                            >
-                              <h2
-                                class="emotion-3"
+                                  <span
+                                    class=""
+                                  >
+                                    Close
+                                  </span>
+                                </button>
+                              </div>
+                              <div
+                                class="emotion-5"
                               >
-                                Title
-                              </h2>
-                              <h3
-                                class="emotion-4"
-                              />
-                            </div>
-                            <div
-                              class="emotion-7"
-                            >
-                              <button
-                                class="emotion-6 css-xcotv6"
-                                data-cy="primaryButton"
-                                tabindex="0"
-                                type="button"
-                              >
-                                <span
-                                  class=""
+                                <h2
+                                  class="emotion-3"
                                 >
-                                  CTA
-                                </span>
-                              </button>
+                                  Title
+                                </h2>
+                                <h3
+                                  class="emotion-4"
+                                />
+                              </div>
+                              <div
+                                class="emotion-7"
+                              >
+                                <button
+                                  class="emotion-6 css-xcotv6"
+                                  data-cy="primaryButton"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    class=""
+                                  >
+                                    CTA
+                                  </span>
+                                </button>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div
-                          class="emotion-10"
-                          data-cy="fullscreenModal-content"
-                        >
                           <div
-                            tabindex="0"
+                            class="emotion-10"
+                            data-cy="fullscreenModal-content"
                           >
-                            I am modal content
+                            <div
+                              tabindex="0"
+                            >
+                              I am modal content
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3357,115 +3536,8 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           tabindex="-1"
                         />
                         <div
-                          class="emotion-13"
-                          role="dialog"
-                          tabindex="-1"
+                          class="emotion-14"
                         >
-                          <div
-                            class="emotion-12"
-                            data-cy="fullscreenModal"
-                          >
-                            <div
-                              class="emotion-11"
-                            >
-                              <div
-                                class="emotion-9"
-                                data-cy="fullscreenModal-header"
-                              >
-                                <div
-                                  class="emotion-8"
-                                >
-                                  <div
-                                    class="emotion-2"
-                                  >
-                                    <button
-                                      class="emotion-1 css-1h85cd2"
-                                      data-cy="secondaryButton"
-                                      tabindex="0"
-                                      type="button"
-                                    >
-                                      <span
-                                        class=""
-                                      >
-                                        Close
-                                      </span>
-                                    </button>
-                                  </div>
-                                  <div
-                                    class="emotion-5"
-                                  >
-                                    <h2
-                                      class="emotion-3"
-                                    >
-                                      Title
-                                    </h2>
-                                    <h3
-                                      class="emotion-4"
-                                    />
-                                  </div>
-                                  <div
-                                    class="emotion-7"
-                                  >
-                                    <button
-                                      class="emotion-6 css-xcotv6"
-                                      data-cy="primaryButton"
-                                      tabindex="0"
-                                      type="button"
-                                    >
-                                      <span
-                                        class=""
-                                      >
-                                        CTA
-                                      </span>
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                class="emotion-10"
-                                data-cy="fullscreenModal-content"
-                              >
-                                <div
-                                  tabindex="0"
-                                >
-                                  I am modal content
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    }
-                    onActivation={[Function]}
-                    onDeactivation={[Function]}
-                    persistentFocus={false}
-                    returnFocus={[Function]}
-                    shards={Array []}
-                    sideCar={
-                      Object {
-                        "assignMedium": [Function],
-                        "assignSyncMedium": [Function],
-                        "options": Object {
-                          "async": true,
-                          "ssr": false,
-                        },
-                        "read": [Function],
-                        "useMedium": [Function],
-                      }
-                    }
-                  >
-                    <FocusWatcher
-                      autoFocus={true}
-                      disabled={false}
-                      observed={
-                        <div
-                          data-focus-lock-disabled="false"
-                        >
-                          <div
-                            class="emotion-0"
-                            role="button"
-                            tabindex="-1"
-                          />
                           <div
                             class="emotion-13"
                             role="dialog"
@@ -3545,6 +3617,121 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                             </div>
                           </div>
                         </div>
+                      </div>
+                    }
+                    onActivation={[Function]}
+                    onDeactivation={[Function]}
+                    persistentFocus={false}
+                    returnFocus={[Function]}
+                    shards={Array []}
+                    sideCar={
+                      Object {
+                        "assignMedium": [Function],
+                        "assignSyncMedium": [Function],
+                        "options": Object {
+                          "async": true,
+                          "ssr": false,
+                        },
+                        "read": [Function],
+                        "useMedium": [Function],
+                      }
+                    }
+                  >
+                    <FocusWatcher
+                      autoFocus={true}
+                      disabled={false}
+                      observed={
+                        <div
+                          data-focus-lock-disabled="false"
+                        >
+                          <div
+                            class="emotion-0"
+                            role="button"
+                            tabindex="-1"
+                          />
+                          <div
+                            class="emotion-14"
+                          >
+                            <div
+                              class="emotion-13"
+                              role="dialog"
+                              tabindex="-1"
+                            >
+                              <div
+                                class="emotion-12"
+                                data-cy="fullscreenModal"
+                              >
+                                <div
+                                  class="emotion-11"
+                                >
+                                  <div
+                                    class="emotion-9"
+                                    data-cy="fullscreenModal-header"
+                                  >
+                                    <div
+                                      class="emotion-8"
+                                    >
+                                      <div
+                                        class="emotion-2"
+                                      >
+                                        <button
+                                          class="emotion-1 css-1h85cd2"
+                                          data-cy="secondaryButton"
+                                          tabindex="0"
+                                          type="button"
+                                        >
+                                          <span
+                                            class=""
+                                          >
+                                            Close
+                                          </span>
+                                        </button>
+                                      </div>
+                                      <div
+                                        class="emotion-5"
+                                      >
+                                        <h2
+                                          class="emotion-3"
+                                        >
+                                          Title
+                                        </h2>
+                                        <h3
+                                          class="emotion-4"
+                                        />
+                                      </div>
+                                      <div
+                                        class="emotion-7"
+                                      >
+                                        <button
+                                          class="emotion-6 css-xcotv6"
+                                          data-cy="primaryButton"
+                                          tabindex="0"
+                                          type="button"
+                                        >
+                                          <span
+                                            class=""
+                                          >
+                                            CTA
+                                          </span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="emotion-10"
+                                    data-cy="fullscreenModal-content"
+                                  >
+                                    <div
+                                      tabindex="0"
+                                    >
+                                      I am modal content
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       }
                       onActivation={[Function]}
                       onDeactivation={[Function]}
@@ -3572,155 +3759,159 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     tabIndex={-1}
                   />
                   <div
-                    className="emotion-13"
-                    onKeyDown={[Function]}
-                    role="dialog"
-                    tabIndex={-1}
+                    className="emotion-14"
                   >
-                    <ModalContents
-                      dataCy="fullscreenModal"
-                      isOpen={true}
-                      onClose={[MockFunction]}
+                    <div
+                      className="emotion-13"
+                      onKeyDown={[Function]}
+                      role="dialog"
+                      tabIndex={-1}
                     >
-                      <div
-                        className="emotion-12"
-                        data-cy="fullscreenModal"
+                      <ModalContents
+                        dataCy="fullscreenModal"
+                        isOpen={true}
+                        onClose={[MockFunction]}
                       >
-                        <FullscreenView
-                          closeText="Close"
-                          ctaButton={
-                            <PrimaryButton>
-                              CTA
-                            </PrimaryButton>
-                          }
-                          cypressSelectorBase="fullscreenModal"
-                          onClose={[MockFunction]}
-                          title="Title"
+                        <div
+                          className="emotion-12"
+                          data-cy="fullscreenModal"
                         >
-                          <div
-                            className="emotion-11"
+                          <FullscreenView
+                            closeText="Close"
+                            ctaButton={
+                              <PrimaryButton>
+                                CTA
+                              </PrimaryButton>
+                            }
+                            cypressSelectorBase="fullscreenModal"
+                            onClose={[MockFunction]}
+                            title="Title"
                           >
                             <div
-                              className="emotion-9"
-                              data-cy="fullscreenModal-header"
-                            >
-                              <Delegate
-                                default={[Function]}
-                                passDefault={true}
-                                props={
-                                  Object {
-                                    "closeText": "Close",
-                                    "ctaButton": <PrimaryButton>
-                                      CTA
-                                    </PrimaryButton>,
-                                    "onClose": [MockFunction],
-                                    "subtitle": undefined,
-                                    "title": "Title",
-                                  }
-                                }
-                              >
-                                <FullscreenModalHeader
-                                  closeText="Close"
-                                  ctaButton={
-                                    <PrimaryButton>
-                                      CTA
-                                    </PrimaryButton>
-                                  }
-                                  onClose={[MockFunction]}
-                                  title="Title"
-                                >
-                                  <div
-                                    className="emotion-8"
-                                  >
-                                    <div
-                                      className="emotion-2"
-                                    >
-                                      <SecondaryButton
-                                        onClick={[MockFunction]}
-                                      >
-                                        <ButtonBase
-                                          appearance="secondary"
-                                          data-cy="secondaryButton"
-                                          onClick={[MockFunction]}
-                                        >
-                                          <FocusStyleManager
-                                            focusEnabledClass="css-1h85cd2"
-                                          >
-                                            <button
-                                              className="emotion-1"
-                                              data-cy="secondaryButton"
-                                              onClick={[Function]}
-                                              tabIndex={0}
-                                              type="button"
-                                            >
-                                              <span
-                                                className=""
-                                              >
-                                                Close
-                                              </span>
-                                            </button>
-                                          </FocusStyleManager>
-                                        </ButtonBase>
-                                      </SecondaryButton>
-                                    </div>
-                                    <div
-                                      className="emotion-5"
-                                    >
-                                      <h2
-                                        className="emotion-3"
-                                      >
-                                        Title
-                                      </h2>
-                                      <h3
-                                        className="emotion-4"
-                                      />
-                                    </div>
-                                    <div
-                                      className="emotion-7"
-                                    >
-                                      <PrimaryButton>
-                                        <ButtonBase
-                                          appearance="primary"
-                                          data-cy="primaryButton"
-                                        >
-                                          <FocusStyleManager
-                                            focusEnabledClass="css-xcotv6"
-                                          >
-                                            <button
-                                              className="emotion-6"
-                                              data-cy="primaryButton"
-                                              onClick={[Function]}
-                                              tabIndex={0}
-                                              type="button"
-                                            >
-                                              <span
-                                                className=""
-                                              >
-                                                CTA
-                                              </span>
-                                            </button>
-                                          </FocusStyleManager>
-                                        </ButtonBase>
-                                      </PrimaryButton>
-                                    </div>
-                                  </div>
-                                </FullscreenModalHeader>
-                              </Delegate>
-                            </div>
-                            <div
-                              className="emotion-10"
-                              data-cy="fullscreenModal-content"
+                              className="emotion-11"
                             >
                               <div
-                                tabIndex={0}
+                                className="emotion-9"
+                                data-cy="fullscreenModal-header"
                               >
-                                I am modal content
+                                <Delegate
+                                  default={[Function]}
+                                  passDefault={true}
+                                  props={
+                                    Object {
+                                      "closeText": "Close",
+                                      "ctaButton": <PrimaryButton>
+                                        CTA
+                                      </PrimaryButton>,
+                                      "onClose": [MockFunction],
+                                      "subtitle": undefined,
+                                      "title": "Title",
+                                    }
+                                  }
+                                >
+                                  <FullscreenModalHeader
+                                    closeText="Close"
+                                    ctaButton={
+                                      <PrimaryButton>
+                                        CTA
+                                      </PrimaryButton>
+                                    }
+                                    onClose={[MockFunction]}
+                                    title="Title"
+                                  >
+                                    <div
+                                      className="emotion-8"
+                                    >
+                                      <div
+                                        className="emotion-2"
+                                      >
+                                        <SecondaryButton
+                                          onClick={[MockFunction]}
+                                        >
+                                          <ButtonBase
+                                            appearance="secondary"
+                                            data-cy="secondaryButton"
+                                            onClick={[MockFunction]}
+                                          >
+                                            <FocusStyleManager
+                                              focusEnabledClass="css-1h85cd2"
+                                            >
+                                              <button
+                                                className="emotion-1"
+                                                data-cy="secondaryButton"
+                                                onClick={[Function]}
+                                                tabIndex={0}
+                                                type="button"
+                                              >
+                                                <span
+                                                  className=""
+                                                >
+                                                  Close
+                                                </span>
+                                              </button>
+                                            </FocusStyleManager>
+                                          </ButtonBase>
+                                        </SecondaryButton>
+                                      </div>
+                                      <div
+                                        className="emotion-5"
+                                      >
+                                        <h2
+                                          className="emotion-3"
+                                        >
+                                          Title
+                                        </h2>
+                                        <h3
+                                          className="emotion-4"
+                                        />
+                                      </div>
+                                      <div
+                                        className="emotion-7"
+                                      >
+                                        <PrimaryButton>
+                                          <ButtonBase
+                                            appearance="primary"
+                                            data-cy="primaryButton"
+                                          >
+                                            <FocusStyleManager
+                                              focusEnabledClass="css-xcotv6"
+                                            >
+                                              <button
+                                                className="emotion-6"
+                                                data-cy="primaryButton"
+                                                onClick={[Function]}
+                                                tabIndex={0}
+                                                type="button"
+                                              >
+                                                <span
+                                                  className=""
+                                                >
+                                                  CTA
+                                                </span>
+                                              </button>
+                                            </FocusStyleManager>
+                                          </ButtonBase>
+                                        </PrimaryButton>
+                                      </div>
+                                    </div>
+                                  </FullscreenModalHeader>
+                                </Delegate>
+                              </div>
+                              <div
+                                className="emotion-10"
+                                data-cy="fullscreenModal-content"
+                              >
+                                <div
+                                  tabIndex={0}
+                                >
+                                  I am modal content
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </FullscreenView>
-                      </div>
-                    </ModalContents>
+                          </FullscreenView>
+                        </div>
+                      </ModalContents>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -3749,6 +3940,29 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 `;
 
 exports[`Modal ModalBase renders ModalBase 1`] = `
+.emotion-3 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .emotion-0 {
   background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
@@ -3773,28 +3987,22 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
   overflow: auto;
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   opacity: 0;
-  -webkit-transform: translate(-50%,calc(-50% - 50px));
-  -ms-transform: translate(-50%,calc(-50% - 50px));
-  transform: translate(-50%,calc(-50% - 50px));
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
   opacity: 1;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
 }
 
 @media (min-width:600px) {
@@ -3860,7 +4068,30 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   >
     <Overlay
       overlayRoot={
-        .emotion-0 {
+        .emotion-3 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-0 {
   background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
   left: 0;
@@ -3884,28 +4115,22 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  left: 50%;
   max-height: calc(100vh - 48px);
   outline: none;
   overflow: auto;
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
   z-index: 1;
   width: 350px;
   -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   opacity: 0;
-  -webkit-transform: translate(-50%,calc(-50% - 50px));
-  -ms-transform: translate(-50%,calc(-50% - 50px));
-  transform: translate(-50%,calc(-50% - 50px));
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
   opacity: 1;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
 }
 
 @media (min-width:600px) {
@@ -3966,17 +4191,21 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                   tabindex="-1"
                 />
                 <div
-                  class="emotion-2"
-                  role="dialog"
-                  tabindex="-1"
+                  class="emotion-3"
                 >
                   <div
-                    class="emotion-1"
+                    class="emotion-2"
+                    role="dialog"
+                    tabindex="-1"
                   >
                     <div
-                      tabindex="0"
+                      class="emotion-1"
                     >
-                      I am modal content
+                      <div
+                        tabindex="0"
+                      >
+                        I am modal content
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4014,17 +4243,21 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                   tabindex="-1"
                 />
                 <div
-                  class="emotion-2"
-                  role="dialog"
-                  tabindex="-1"
+                  class="emotion-3"
                 >
                   <div
-                    class="emotion-1"
+                    class="emotion-2"
+                    role="dialog"
+                    tabindex="-1"
                   >
                     <div
-                      tabindex="0"
+                      class="emotion-1"
                     >
-                      I am modal content
+                      <div
+                        tabindex="0"
+                      >
+                        I am modal content
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4100,17 +4333,21 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                         tabindex="-1"
                       />
                       <div
-                        class="emotion-2"
-                        role="dialog"
-                        tabindex="-1"
+                        class="emotion-3"
                       >
                         <div
-                          class="emotion-1"
+                          class="emotion-2"
+                          role="dialog"
+                          tabindex="-1"
                         >
                           <div
-                            tabindex="0"
+                            class="emotion-1"
                           >
-                            I am modal content
+                            <div
+                              tabindex="0"
+                            >
+                              I am modal content
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -4147,17 +4384,21 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                           tabindex="-1"
                         />
                         <div
-                          class="emotion-2"
-                          role="dialog"
-                          tabindex="-1"
+                          class="emotion-3"
                         >
                           <div
-                            class="emotion-1"
+                            class="emotion-2"
+                            role="dialog"
+                            tabindex="-1"
                           >
                             <div
-                              tabindex="0"
+                              class="emotion-1"
                             >
-                              I am modal content
+                              <div
+                                tabindex="0"
+                              >
+                                I am modal content
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -4189,25 +4430,29 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                   tabIndex={-1}
                 />
                 <div
-                  className="emotion-2"
-                  onKeyDown={[Function]}
-                  role="dialog"
-                  tabIndex={-1}
+                  className="emotion-3"
                 >
-                  <ModalContents
-                    isOpen={true}
-                    onClose={[MockFunction]}
+                  <div
+                    className="emotion-2"
+                    onKeyDown={[Function]}
+                    role="dialog"
+                    tabIndex={-1}
                   >
-                    <div
-                      className="emotion-1"
+                    <ModalContents
+                      isOpen={true}
+                      onClose={[MockFunction]}
                     >
                       <div
-                        tabIndex={0}
+                        className="emotion-1"
                       >
-                        I am modal content
+                        <div
+                          tabIndex={0}
+                        >
+                          I am modal content
+                        </div>
                       </div>
-                    </div>
-                  </ModalContents>
+                    </ModalContents>
+                  </div>
                 </div>
               </div>
               <div
