@@ -14,13 +14,13 @@ exports[`ConfigurationMap renders default 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         Name
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         Jane Doe
@@ -31,13 +31,13 @@ exports[`ConfigurationMap renders default 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         Role
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         UX Designer
@@ -48,13 +48,13 @@ exports[`ConfigurationMap renders default 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         City
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         San Francisco
@@ -78,13 +78,13 @@ exports[`ConfigurationMap renders with actions 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         Name
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         Jane Doe
@@ -112,13 +112,13 @@ exports[`ConfigurationMap renders with actions 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         Role
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         UX Designer
@@ -146,13 +146,13 @@ exports[`ConfigurationMap renders with actions 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         City
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         San Francisco
@@ -193,13 +193,13 @@ exports[`ConfigurationMap renders with default value 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         Name
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         Jane Doe
@@ -210,13 +210,13 @@ exports[`ConfigurationMap renders with default value 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         Role
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         —
@@ -227,13 +227,13 @@ exports[`ConfigurationMap renders with default value 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         City
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         —
@@ -263,13 +263,13 @@ exports[`ConfigurationMap renders with headline 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         Name
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         Jane Doe
@@ -280,13 +280,13 @@ exports[`ConfigurationMap renders with headline 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         Role
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         UX Designer
@@ -297,13 +297,13 @@ exports[`ConfigurationMap renders with headline 1`] = `
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1bnt6tn"
+        class="css-1gx6v34"
         data-cy="configurationMapLabel"
       >
         City
       </dt>
       <dd
-        class="css-1pld8at"
+        class="css-rhtsr1"
         data-cy="configurationMapValue"
       >
         San Francisco
