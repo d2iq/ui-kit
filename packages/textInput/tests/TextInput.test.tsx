@@ -109,7 +109,11 @@ describe("TextInput", () => {
 
   it("should hide label if `showInputLabel` set to false", () => {
     const component = shallow(
-      <TextInput inputLabel="I'm not displayed" showInputLabel={false} />
+      <TextInput
+        id="input.with.hidden.label"
+        inputLabel="I'm not displayed"
+        showInputLabel={false}
+      />
     );
     expect(toJson(component)).toMatchSnapshot();
   });

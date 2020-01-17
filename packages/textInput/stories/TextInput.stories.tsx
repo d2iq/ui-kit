@@ -1,6 +1,5 @@
 import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react";
-import { css, cx } from "emotion";
 import * as React from "react";
 import { withReadme } from "storybook-readme";
 import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";

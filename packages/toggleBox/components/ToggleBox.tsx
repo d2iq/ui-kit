@@ -1,5 +1,4 @@
 import * as React from "react";
-import shortid from "shortid";
 import { ToggleWrapper } from "../../toggleWrapper";
 import { ButtonCard } from "../../card";
 import { ToggleWrapperProps } from "../../toggleWrapper/components/ToggleWrapper";
@@ -9,12 +8,7 @@ export interface ToggleBoxProps extends ToggleWrapperProps {
   children: React.ReactNode;
 }
 
-const ToggleBox = ({
-  children,
-  id = shortid.generate(),
-  disabled = false,
-  ...other
-}) => (
+const ToggleBox = ({ children, id, disabled = false, ...other }) => (
   <ToggleWrapper disabled={disabled} id={id} {...other}>
     {({ isActive, hasFocus }) => (
       <div className={toggleBoxWrapper}>

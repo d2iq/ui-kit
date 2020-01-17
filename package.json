@@ -55,12 +55,12 @@
     "react-draggable": "3.3.2",
     "react-emotion": "9.2.12",
     "react-focus-lock": "2.0.5",
+    "react-id-generator": "3.0.0",
     "react-tabs": "^3.0.0",
     "react-toggled": "1.2.7",
     "react-transition-group": "2.5.0",
     "react-virtualized": "9.20.1",
-    "relative-luminance": "2.0.1",
-    "shortid": "2.2.14"
+    "relative-luminance": "2.0.1"
   },
   "peerDependencies": {
     "react": ">=16.2.0",
