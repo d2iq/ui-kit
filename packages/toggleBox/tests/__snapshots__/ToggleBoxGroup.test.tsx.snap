@@ -88,7 +88,8 @@ exports[`ToggleBoxGroup renders default 1`] = `
 }
 
 .emotion-2:hover,
-.emotion-2:focus {
+.emotion-2:focus,
+.emotion-2:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
   outline: 0;
 }
@@ -424,7 +425,8 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
 }
 
 .emotion-2:hover,
-.emotion-2:focus {
+.emotion-2:focus,
+.emotion-2:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
   outline: 0;
 }
@@ -449,7 +451,8 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
 }
 
 .emotion-16:hover,
-.emotion-16:focus {
+.emotion-16:focus,
+.emotion-16:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
   outline: 0;
 }
@@ -763,7 +766,8 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
 }
 
 .emotion-2:hover,
-.emotion-2:focus {
+.emotion-2:focus,
+.emotion-2:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
   outline: 0;
 }

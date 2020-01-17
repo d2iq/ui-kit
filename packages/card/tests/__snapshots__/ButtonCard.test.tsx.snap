@@ -20,7 +20,8 @@ exports[`ButtonCard renders as disabled 1`] = `
 }
 
 .emotion-1:hover,
-.emotion-1:focus {
+.emotion-1:focus,
+.emotion-1:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
   outline: 0;
 }
@@ -43,6 +44,7 @@ exports[`ButtonCard renders as disabled 1`] = `
     aria-disabled={true}
     className="emotion-1"
     data-cy="buttonCard"
+    onKeyPress={[Function]}
     role="button"
     tabIndex={-1}
   >
@@ -74,7 +76,8 @@ exports[`ButtonCard renders as hasFocus 1`] = `
 }
 
 .emotion-1:hover,
-.emotion-1:focus {
+.emotion-1:focus,
+.emotion-1:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
   outline: 0;
 }
@@ -90,6 +93,7 @@ exports[`ButtonCard renders as hasFocus 1`] = `
   <div
     className="emotion-1"
     data-cy="buttonCard"
+    onKeyPress={[Function]}
     role="button"
     tabIndex={0}
   >
@@ -119,7 +123,8 @@ exports[`ButtonCard renders as isActive 1`] = `
 }
 
 .emotion-1:hover,
-.emotion-1:focus {
+.emotion-1:focus,
+.emotion-1:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
   outline: 0;
 }
@@ -146,6 +151,7 @@ exports[`ButtonCard renders as isActive 1`] = `
     aria-pressed={true}
     className="emotion-1"
     data-cy="buttonCard"
+    onKeyPress={[Function]}
     role="button"
     tabIndex={0}
   >
@@ -171,7 +177,8 @@ exports[`ButtonCard renders default 1`] = `
 }
 
 .emotion-1:hover,
-.emotion-1:focus {
+.emotion-1:focus,
+.emotion-1:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary,#7D58FF);
   outline: 0;
 }
@@ -190,6 +197,7 @@ exports[`ButtonCard renders default 1`] = `
   <div
     className="emotion-1"
     data-cy="buttonCard"
+    onKeyPress={[Function]}
     role="button"
     tabIndex={0}
   >
