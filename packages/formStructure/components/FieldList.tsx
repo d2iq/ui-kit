@@ -159,13 +159,13 @@ const FieldList: React.SFC<FieldListProps> = ({
   };
 
   return (
-    <>
+    <div>
       {data.length ? renderHeader() : null}
       <div className={fieldListStack}>
         {data.length ? data.map((datum, i) => renderRows(datum, i)) : null}
         {renderAddButton()}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FieldList renders 1`] = `
-Array [
+<div>
   <div
     class="css-1xeyz59"
     data-cy="spacingBox"
@@ -24,7 +24,7 @@ Array [
     >
       Role
     </div>
-  </div>,
+  </div>
   <div
     class="css-jq21gt"
   >
@@ -375,6 +375,6 @@ Array [
         </span>
       </span>
     </button>
-  </div>,
-]
+  </div>
+</div>
 `;
