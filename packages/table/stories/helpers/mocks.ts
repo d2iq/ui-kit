@@ -22,5 +22,11 @@ export const items = [
   }
 ];
 
+export const whitespaceItem = [
+  {
+    name: "A         lot   of    spaces"
+  }
+];
+
 export const width = ({ width: totalWidth }: { width?: number }) =>
   totalWidth ? totalWidth * 0.3 : 100;

@@ -172,7 +172,7 @@ exports[`Typography Text renders all wrap variants 1`] = `
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre;
 }
 
 <p

@@ -164,7 +164,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre;
   white-space: nowrap;
 }
 
@@ -918,7 +918,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre;
   white-space: nowrap;
 }
 

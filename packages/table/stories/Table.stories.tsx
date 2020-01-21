@@ -6,7 +6,7 @@ import { Table, Column, Cell, HeaderCell, TextCell, NumberCell } from "..";
 import ChangingTable from "./helpers/ChangingTable";
 import SortableTable from "./helpers/SortableTable";
 import ResizableTableOnResizeDemo from "./helpers/ResizableTableOnResizeDemo";
-import { items, width } from "./helpers/mocks";
+import { items, width, whitespaceItem } from "./helpers/mocks";
 import { StandardButton } from "../../button";
 
 const readme = require("../README.md");
@@ -499,6 +499,30 @@ storiesOf("Table", module)
         <Column
           header={<HeaderCell lowerCase={true}>city</HeaderCell>}
           cellRenderer={cityCellRenderer}
+          width={width}
+        />
+      </Table>
+    </div>
+  ))
+  .add("resizeable onResize demo", () => <ResizableTableOnResizeDemo />, {
+    info: {
+      propTables: [Table, Column],
+      propTablesExclude: [ResizableTableOnResizeDemo]
+    }
+  })
+  .add("with whitespace value", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <Table data={whitespaceItem}>
+        <Column
+          cellRenderer={nameCellRenderer}
+          header={<HeaderCell>name</HeaderCell>}
+          resizable={true}
           width={width}
         />
       </Table>

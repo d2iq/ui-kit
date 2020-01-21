@@ -170,7 +170,7 @@ Array [
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre;
 }
 
 .emotion-1 {
@@ -875,7 +875,7 @@ Array [
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre;
 }
 
 .emotion-48 {
@@ -1676,7 +1676,7 @@ Array [
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre;
 }
 
 .emotion-1 {

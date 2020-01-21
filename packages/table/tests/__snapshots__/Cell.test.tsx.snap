@@ -28,7 +28,7 @@ exports[`HeaderCell renders correctly 1`] = `
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre;
 }
 
 <div
@@ -48,7 +48,7 @@ exports[`TextCell renders correctly 1`] = `
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre;
 }
 
 <div
