@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Typeahead renders 1`] = `
+.emotion-22 {
+  position: relative;
+}
+
 .emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -27,10 +31,6 @@ exports[`Typeahead renders 1`] = `
 
 .emotion-2 > div {
   width: auto;
-}
-
-.emotion-22 {
-  position: relative;
 }
 
 .emotion-19 {
@@ -1045,6 +1045,10 @@ exports[`Typeahead renders 1`] = `
 `;
 
 exports[`Typeahead renders a menu with a max height 1`] = `
+.emotion-22 {
+  position: relative;
+}
+
 .emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -1071,10 +1075,6 @@ exports[`Typeahead renders a menu with a max height 1`] = `
 
 .emotion-2 > div {
   width: auto;
-}
-
-.emotion-22 {
-  position: relative;
 }
 
 .emotion-19 {

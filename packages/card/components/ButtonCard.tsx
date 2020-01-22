@@ -30,11 +30,33 @@ export interface ButtonCardProps extends CardProps {
 
 class ButtonCard extends Card<ButtonCardProps, {}> {
   public render() {
-    const { isActive, isInput, disabled, hasFocus, ...other } = this.props;
+    const {
+      isActive,
+      isInput,
+      disabled,
+      hasFocus,
+      onClick,
+      onKeyPress,
+      ...other
+    } = this.props;
     const tabIndex = disabled ? -1 : 0;
+    // mimic native <button> keyboard behavior without using a <button>
+    const keyPressClick = e => {
+      if (onClick && (e.key === " " || e.key === "Enter")) {
+        onClick(e);
+      }
+    };
+    const handleKeyPress = e => {
+      keyPressClick(e);
+      if (onKeyPress) {
+        onKeyPress(e);
+      }
+    };
     const buttonProps = !isInput
       ? {
           tabIndex,
+          onKeyPress: handleKeyPress,
+          onClick,
           role: "button",
           "aria-disabled": disabled,
           "aria-pressed": isActive

@@ -34,7 +34,8 @@ export const buttonCard = css`
   cursor: pointer;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-within {
     ${buttonCardFocusStyles};
   }
 
@@ -81,4 +82,17 @@ export const buttonCardDisabledActive = css`
 
 export const buttonCardFocusedActive = css`
   ${buttonCardFocusedActiveStyles};
+`;
+
+export const cardWithLink = css`
+  position: relative;
+`;
+
+export const cardLink = css`
+  bottom: 0;
+  left: 0;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
 `;
