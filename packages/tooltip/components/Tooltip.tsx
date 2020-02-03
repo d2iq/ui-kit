@@ -17,6 +17,7 @@ export interface TooltipProps extends BaseTooltipProps {
   suppress?: boolean;
   trigger: React.ReactNode;
   onClose?: () => void;
+  disablePortal?: boolean;
 }
 
 export interface TooltipState {
@@ -50,26 +51,26 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     const {
       ariaLabel,
       children,
+      disablePortal,
       id,
       maxWidth,
       minWidth,
       preferredDirections,
       trigger
     } = this.props;
+    const triggerProps = {
+      ["aria-label"]: ariaLabel,
+      ["aria-describedby"]: id,
+      onMouseOver: this.handleOpen,
+      onMouseLeave: this.handleClose,
+      onFocus: this.handleOpen,
+      onBlur: this.handleClose,
+      tabIndex: 0,
+      ["data-cy"]: "tooltip"
+    };
 
     return (
-      /* tslint:disable:react-a11y-event-has-role */
-      /* disabled because there is no appropriate role */
-      <span
-        aria-label={ariaLabel}
-        aria-describedby={id}
-        onMouseOver={this.handleOpen}
-        onMouseLeave={this.handleClose}
-        onFocus={this.handleOpen}
-        onBlur={this.handleClose}
-        tabIndex={0}
-        data-cy="tooltip"
-      >
+      <span {...(!disablePortal ? triggerProps : {})}>
         <Dropdownable
           open={this.state.open}
           onClose={this.handleDropdownableClose}
@@ -93,11 +94,11 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
               Direction.BottomRight
             ]
           }
+          disablePortal={disablePortal}
         >
-          {trigger}
+          {disablePortal ? <span {...triggerProps}>{trigger}</span> : trigger}
         </Dropdownable>
       </span>
-      /* tslint:enable:react-a11y-event-has-role */
     );
   }
 

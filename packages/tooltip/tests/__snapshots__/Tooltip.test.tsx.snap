@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tooltip renders 1`] = `
+.emotion-5 {
+  position: relative;
+}
+
 .emotion-3 {
-  top: 0px;
-  left: 0px;
+  opacity: 0;
   position: absolute;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  opacity: 0;
   z-index: 2;
-}
-
-.emotion-5 {
-  position: relative;
+  top: 0px;
+  left: 0px;
 }
 
 .emotion-2 {
@@ -67,25 +67,24 @@ exports[`Tooltip renders 1`] = `
         ]
       }
     >
-      <Styled(div)>
-        <div
-          className="emotion-5"
-        >
-          <div>
-            trigger
-          </div>
-          <Overlay
-            className="emotion-3"
-            overlayRoot={
-              .emotion-3 {
-  top: 0px;
-  left: 0px;
+      <div
+        className="emotion-5"
+      >
+        <div>
+          trigger
+        </div>
+        <Overlay
+          className="emotion-3"
+          overlayRoot={
+            .emotion-3 {
+  opacity: 0;
   position: absolute;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  opacity: 0;
   z-index: 2;
+  top: 0px;
+  left: 0px;
 }
 
 .emotion-2 {
@@ -105,91 +104,96 @@ exports[`Tooltip renders 1`] = `
 }
 
 <body>
-                <div>
+              <div>
+                <div
+                  class="emotion-3"
+                >
                   <div
-                    class="emotion-3"
+                    class=""
                   >
-                    <div>
-                      <div
-                        aria-hidden="true"
-                        class="
+                    <div
+                      aria-hidden="true"
+                      class="
     emotion-0    emotion-1   inverseColorMode emotion-2"
-                        data-cy="tooltipContent"
-                        id="renders"
-                        role="tooltip"
-                      >
-                        content
-                      </div>
+                      data-cy="tooltipContent"
+                      id="renders"
+                      role="tooltip"
+                    >
+                      content
                     </div>
                   </div>
                 </div>
-              </body>
+              </div>
+            </body>
+          }
+        >
+          <Portal
+            containerInfo={
+              <div>
+                <div
+                  class="emotion-3"
+                >
+                  <div
+                    class=""
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="
+    emotion-0    emotion-1   inverseColorMode emotion-2"
+                      data-cy="tooltipContent"
+                      id="renders"
+                      role="tooltip"
+                    >
+                      content
+                    </div>
+                  </div>
+                </div>
+              </div>
             }
           >
-            <Portal
-              containerInfo={
-                <div>
-                  <div
-                    class="emotion-3"
-                  >
-                    <div>
-                      <div
-                        aria-hidden="true"
-                        class="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
-                        data-cy="tooltipContent"
-                        id="renders"
-                        role="tooltip"
-                      >
-                        content
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              }
+            <div
+              className="emotion-3"
             >
               <div
-                className="emotion-3"
+                className=""
               >
-                <div>
-                  <clickOutside(DropdownContents)
+                <clickOutside(DropdownContents)
+                  onClose={[Function]}
+                  open={false}
+                >
+                  <DropdownContents
                     onClose={[Function]}
                     open={false}
                   >
-                    <DropdownContents
-                      onClose={[Function]}
+                    <TooltipContent
+                      direction="bottom-left"
+                      id="renders"
                       open={false}
                     >
-                      <TooltipContent
-                        direction="bottom-left"
-                        id="renders"
-                        open={false}
-                      >
-                        <div
-                          aria-hidden={true}
-                          className="
+                      <div
+                        aria-hidden={true}
+                        className="
     emotion-0    emotion-1   inverseColorMode emotion-2"
-                          data-cy="tooltipContent"
-                          id="renders"
-                          role="tooltip"
-                          style={
-                            Object {
-                              "maxWidth": undefined,
-                              "minWidth": undefined,
-                            }
+                        data-cy="tooltipContent"
+                        id="renders"
+                        role="tooltip"
+                        style={
+                          Object {
+                            "maxWidth": undefined,
+                            "minWidth": undefined,
                           }
-                        >
-                          content
-                        </div>
-                      </TooltipContent>
-                    </DropdownContents>
-                  </clickOutside(DropdownContents)>
-                </div>
+                        }
+                      >
+                        content
+                      </div>
+                    </TooltipContent>
+                  </DropdownContents>
+                </clickOutside(DropdownContents)>
               </div>
-            </Portal>
-          </Overlay>
-        </div>
-      </Styled(div)>
+            </div>
+          </Portal>
+        </Overlay>
+      </div>
     </Dropdownable>
   </span>
 </Tooltip>
@@ -217,14 +221,14 @@ exports[`Tooltip renders open tooltip 1`] = `
 }
 
 .emotion-3 {
-  top: 0px;
-  left: 0px;
+  opacity: 1;
   position: absolute;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  opacity: 1;
   z-index: 2;
+  top: 0px;
+  left: 0px;
 }
 
 <Tooltip
@@ -263,37 +267,38 @@ exports[`Tooltip renders open tooltip 1`] = `
         ]
       }
     >
-      <Styled(div)>
-        <div
-          className="emotion-5"
-        >
-          <div>
-            trigger
-          </div>
-          <Overlay
-            className="emotion-3"
-            overlayRoot={
-              <body>
-                <div>
+      <div
+        className="emotion-5"
+      >
+        <div>
+          trigger
+        </div>
+        <Overlay
+          className="emotion-3"
+          overlayRoot={
+            <body>
+              <div>
+                <div
+                  class="css-p0rea1"
+                >
                   <div
-                    class="css-ao6agm"
+                    class=""
                   >
-                    <div>
-                      <div
-                        aria-hidden="true"
-                        class="
+                    <div
+                      aria-hidden="true"
+                      class="
     css-nu8exu
     emotion-1   inverseColorMode emotion-2"
-                        data-cy="tooltipContent"
-                        id="renders"
-                        role="tooltip"
-                      >
-                        content
-                      </div>
+                      data-cy="tooltipContent"
+                      id="renders"
+                      role="tooltip"
+                    >
+                      content
                     </div>
                   </div>
                 </div>
-                .emotion-2 {
+              </div>
+              .emotion-2 {
   background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
@@ -310,101 +315,106 @@ exports[`Tooltip renders open tooltip 1`] = `
 }
 
 .emotion-3 {
-  top: 0px;
-  left: 0px;
+  opacity: 1;
   position: absolute;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  opacity: 1;
   z-index: 2;
+  top: 0px;
+  left: 0px;
 }
 
 <div>
+                <div
+                  class="emotion-3"
+                >
                   <div
-                    class="emotion-3"
+                    class=""
                   >
-                    <div>
-                      <div
-                        aria-hidden="false"
-                        class="
+                    <div
+                      aria-hidden="false"
+                      class="
     emotion-0    emotion-1   inverseColorMode emotion-2"
-                        data-cy="tooltipContent"
-                        id="opened"
-                        role="tooltip"
-                      >
-                        content
-                      </div>
+                      data-cy="tooltipContent"
+                      id="opened"
+                      role="tooltip"
+                    >
+                      content
                     </div>
                   </div>
                 </div>
-              </body>
+              </div>
+            </body>
+          }
+        >
+          <Portal
+            containerInfo={
+              <div>
+                <div
+                  class="emotion-3"
+                >
+                  <div
+                    class=""
+                  >
+                    <div
+                      aria-hidden="false"
+                      class="
+    emotion-0    emotion-1   inverseColorMode emotion-2"
+                      data-cy="tooltipContent"
+                      id="opened"
+                      role="tooltip"
+                    >
+                      content
+                    </div>
+                  </div>
+                </div>
+              </div>
             }
           >
-            <Portal
-              containerInfo={
-                <div>
-                  <div
-                    class="emotion-3"
-                  >
-                    <div>
-                      <div
-                        aria-hidden="false"
-                        class="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
-                        data-cy="tooltipContent"
-                        id="opened"
-                        role="tooltip"
-                      >
-                        content
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              }
+            <div
+              className="emotion-3"
             >
               <div
-                className="emotion-3"
+                className=""
               >
-                <div>
-                  <clickOutside(DropdownContents)
+                <clickOutside(DropdownContents)
+                  onClose={[Function]}
+                  open={true}
+                >
+                  <DropdownContents
                     onClose={[Function]}
                     open={true}
                   >
-                    <DropdownContents
-                      onClose={[Function]}
+                    <TooltipContent
+                      direction="top-left"
+                      id="opened"
                       open={true}
                     >
-                      <TooltipContent
-                        direction="top-left"
-                        id="opened"
-                        open={true}
-                      >
-                        <div
-                          aria-hidden={false}
-                          className="
+                      <div
+                        aria-hidden={false}
+                        className="
     emotion-0    emotion-1   inverseColorMode emotion-2"
-                          data-cy="tooltipContent"
-                          id="opened"
-                          role="tooltip"
-                          style={
-                            Object {
-                              "maxWidth": undefined,
-                              "minWidth": undefined,
-                            }
+                        data-cy="tooltipContent"
+                        id="opened"
+                        role="tooltip"
+                        style={
+                          Object {
+                            "maxWidth": undefined,
+                            "minWidth": undefined,
                           }
-                        >
-                          content
-                        </div>
-                      </TooltipContent>
-                    </DropdownContents>
-                  </clickOutside(DropdownContents)>
-                </div>
+                        }
+                      >
+                        content
+                      </div>
+                    </TooltipContent>
+                  </DropdownContents>
+                </clickOutside(DropdownContents)>
               </div>
-            </Portal>
-          </Overlay>
-        </div>
-      </Styled(div)>
+            </div>
+          </Portal>
+        </Overlay>
+      </div>
     </Dropdownable>
   </span>
 </Tooltip>
@@ -432,14 +442,14 @@ exports[`Tooltip renders with preferred directions 1`] = `
 }
 
 .emotion-3 {
-  top: 0px;
-  left: 0px;
+  opacity: 1;
   position: absolute;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  opacity: 1;
   z-index: 2;
+  top: 0px;
+  left: 0px;
 }
 
 <Tooltip
@@ -478,55 +488,58 @@ exports[`Tooltip renders with preferred directions 1`] = `
         ]
       }
     >
-      <Styled(div)>
-        <div
-          className="emotion-5"
-        >
-          <div>
-            trigger
-          </div>
-          <Overlay
-            className="emotion-3"
-            overlayRoot={
-              <body>
-                <div>
+      <div
+        className="emotion-5"
+      >
+        <div>
+          trigger
+        </div>
+        <Overlay
+          className="emotion-3"
+          overlayRoot={
+            <body>
+              <div>
+                <div
+                  class="css-p0rea1"
+                >
                   <div
-                    class="css-ao6agm"
+                    class=""
                   >
-                    <div>
-                      <div
-                        aria-hidden="true"
-                        class="
+                    <div
+                      aria-hidden="true"
+                      class="
     emotion-0    emotion-1   inverseColorMode emotion-2"
-                        data-cy="tooltipContent"
-                        id="renders"
-                        role="tooltip"
-                      >
-                        content
-                      </div>
+                      data-cy="tooltipContent"
+                      id="renders"
+                      role="tooltip"
+                    >
+                      content
                     </div>
                   </div>
                 </div>
-                <div>
+              </div>
+              <div>
+                <div
+                  class="emotion-3"
+                >
                   <div
-                    class="emotion-3"
+                    class=""
                   >
-                    <div>
-                      <div
-                        aria-hidden="false"
-                        class="
+                    <div
+                      aria-hidden="false"
+                      class="
     css-10cr3um
     emotion-1   inverseColorMode emotion-2"
-                        data-cy="tooltipContent"
-                        id="opened"
-                        role="tooltip"
-                      >
-                        content
-                      </div>
+                      data-cy="tooltipContent"
+                      id="opened"
+                      role="tooltip"
+                    >
+                      content
                     </div>
                   </div>
                 </div>
-                .emotion-2 {
+              </div>
+              .emotion-2 {
   background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
@@ -543,101 +556,106 @@ exports[`Tooltip renders with preferred directions 1`] = `
 }
 
 .emotion-3 {
-  top: 0px;
-  left: 0px;
+  opacity: 1;
   position: absolute;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  opacity: 1;
   z-index: 2;
+  top: 0px;
+  left: 0px;
 }
 
 <div>
+                <div
+                  class="emotion-3"
+                >
                   <div
-                    class="emotion-3"
+                    class=""
                   >
-                    <div>
-                      <div
-                        aria-hidden="false"
-                        class="
+                    <div
+                      aria-hidden="false"
+                      class="
     emotion-0    emotion-1   inverseColorMode emotion-2"
-                        data-cy="tooltipContent"
-                        id="customDir"
-                        role="tooltip"
-                      >
-                        content
-                      </div>
+                      data-cy="tooltipContent"
+                      id="customDir"
+                      role="tooltip"
+                    >
+                      content
                     </div>
                   </div>
                 </div>
-              </body>
+              </div>
+            </body>
+          }
+        >
+          <Portal
+            containerInfo={
+              <div>
+                <div
+                  class="emotion-3"
+                >
+                  <div
+                    class=""
+                  >
+                    <div
+                      aria-hidden="false"
+                      class="
+    emotion-0    emotion-1   inverseColorMode emotion-2"
+                      data-cy="tooltipContent"
+                      id="customDir"
+                      role="tooltip"
+                    >
+                      content
+                    </div>
+                  </div>
+                </div>
+              </div>
             }
           >
-            <Portal
-              containerInfo={
-                <div>
-                  <div
-                    class="emotion-3"
-                  >
-                    <div>
-                      <div
-                        aria-hidden="false"
-                        class="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
-                        data-cy="tooltipContent"
-                        id="customDir"
-                        role="tooltip"
-                      >
-                        content
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              }
+            <div
+              className="emotion-3"
             >
               <div
-                className="emotion-3"
+                className=""
               >
-                <div>
-                  <clickOutside(DropdownContents)
+                <clickOutside(DropdownContents)
+                  onClose={[Function]}
+                  open={true}
+                >
+                  <DropdownContents
                     onClose={[Function]}
                     open={true}
                   >
-                    <DropdownContents
-                      onClose={[Function]}
+                    <TooltipContent
+                      direction="bottom-left"
+                      id="customDir"
                       open={true}
                     >
-                      <TooltipContent
-                        direction="bottom-left"
-                        id="customDir"
-                        open={true}
-                      >
-                        <div
-                          aria-hidden={false}
-                          className="
+                      <div
+                        aria-hidden={false}
+                        className="
     emotion-0    emotion-1   inverseColorMode emotion-2"
-                          data-cy="tooltipContent"
-                          id="customDir"
-                          role="tooltip"
-                          style={
-                            Object {
-                              "maxWidth": undefined,
-                              "minWidth": undefined,
-                            }
+                        data-cy="tooltipContent"
+                        id="customDir"
+                        role="tooltip"
+                        style={
+                          Object {
+                            "maxWidth": undefined,
+                            "minWidth": undefined,
                           }
-                        >
-                          content
-                        </div>
-                      </TooltipContent>
-                    </DropdownContents>
-                  </clickOutside(DropdownContents)>
-                </div>
+                        }
+                      >
+                        content
+                      </div>
+                    </TooltipContent>
+                  </DropdownContents>
+                </clickOutside(DropdownContents)>
               </div>
-            </Portal>
-          </Overlay>
-        </div>
-      </Styled(div)>
+            </div>
+          </Portal>
+        </Overlay>
+      </div>
     </Dropdownable>
   </span>
 </Tooltip>

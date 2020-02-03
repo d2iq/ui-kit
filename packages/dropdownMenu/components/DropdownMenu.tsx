@@ -49,11 +49,16 @@ export interface DropdownMenuProps {
    * The node that opens the menu when clicked
    */
   trigger: React.ReactNode;
+  /**
+   * Whether the dropdown node should be portalled to document.body, or open in it's parent DOM node
+   */
+  disablePortal?: boolean;
 }
 
 const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
   const {
     children,
+    disablePortal,
     initialIsOpen,
     menuMaxHeight,
     menuMaxWidth,
@@ -154,6 +159,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
                 ))}
               </Popover>
             }
+            disablePortal={disablePortal}
           >
             {React.isValidElement(trigger) ? (
               React.cloneElement(trigger, {

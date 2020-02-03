@@ -53,6 +53,10 @@ export interface TypeaheadProps {
    * whether the selected item's value is set as the input's value
    */
   resetInputOnSelect?: boolean;
+  /**
+   * Whether the dropdown node should be portalled to document.body, or open in it's parent DOM node
+   */
+  disablePortal?: boolean;
 }
 
 interface TypeaheadState {
@@ -80,6 +84,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
   public render() {
     const {
+      disablePortal,
       items,
       menuEmptyState,
       menuMaxHeight,
@@ -151,6 +156,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                       )}
                     </div>
                   }
+                  disablePortal={disablePortal}
                 >
                   {React.cloneElement(
                     textField,
