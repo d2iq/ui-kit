@@ -1,10 +1,14 @@
 import React from "react";
-import styled, { css } from "react-emotion";
 
 import Overlay from "../../shared/components/Overlay";
 import DropdownContents from "./DropdownContents";
 import resizeEventManager from "../../utilities/resizeEventManager";
-import { zIndexDropdownable } from "../../design-tokens/build/js/designTokens";
+import {
+  getNonPortalledDropdownStyle,
+  getPortalledDropdownStyle,
+  dropdownableContainer
+} from "../style";
+import { cx } from "emotion";
 
 export enum Direction {
   BottomLeft = "bottom-left",
@@ -21,20 +25,16 @@ const DEFAULT_DIRECTION_PREFERENCES = [
   Direction.TopRight,
   Direction.TopLeft
 ];
-
-const Container = styled("div")`
-  position: relative;
-`;
-
 export interface DropdownableProps {
   open: boolean;
   dropdown: React.ReactElement<any>;
   preferredDirections?: Direction[];
   onClose?: () => void;
   overlayRoot?: HTMLElement;
+  disablePortal?: boolean;
 }
 
-interface PositionCoord {
+export interface PositionCoord {
   top: number;
   left: number;
 }
@@ -101,37 +101,40 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
 
   render() {
     return (
-      <Container>
+      <div className={dropdownableContainer}>
         <div ref={this.child}>{this.props.children}</div>
         {this.getOverlay()}
-      </Container>
+      </div>
     );
   }
 
   getOverlay() {
     const { position } = this.state;
-    const { open, overlayRoot } = this.props;
+    const { open, overlayRoot, disablePortal } = this.props;
 
-    const overlayStyle = css({
-      top: `${position.top}px`,
-      left: `${position.left}px`,
-      position: "absolute",
-      transform: `scale(${open ? 1 : 0})`,
-      opacity: open ? 1 : 0,
-      "z-index": zIndexDropdownable
-    });
-    return (
-      <Overlay overlayRoot={overlayRoot} className={overlayStyle}>
+    return !disablePortal ? (
+      <Overlay
+        overlayRoot={overlayRoot}
+        className={getPortalledDropdownStyle(position, open)}
+      >
         {this.getDropdown()}
       </Overlay>
+    ) : (
+      this.getDropdown()
     );
   }
 
   getDropdown() {
-    const { open, dropdown, onClose } = this.props;
+    const { direction } = this.state;
+    const { open, dropdown, onClose, disablePortal } = this.props;
 
     return (
-      <div ref={this.dropdown}>
+      <div
+        ref={this.dropdown}
+        className={cx({
+          [getNonPortalledDropdownStyle(direction, open)]: disablePortal
+        })}
+      >
         <DropdownContents open={open} onClose={onClose}>
           {React.cloneElement(dropdown, {
             direction: this.state.direction

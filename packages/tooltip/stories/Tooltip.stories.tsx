@@ -4,8 +4,11 @@ import { withReadme } from "storybook-readme";
 import { select } from "@storybook/addon-knobs";
 
 import { Tooltip } from "../../index";
-import { Direction } from "../../dropdownable/components/Dropdownable";
+import Dropdownable, {
+  Direction
+} from "../../dropdownable/components/Dropdownable";
 import { Box } from "../../styleUtils/modifiers";
+import { Card } from "../../card";
 
 const readme = require("../README.md");
 
@@ -22,6 +25,20 @@ storiesOf("Tooltip", module)
     <Tooltip trigger="hover me" id="default">
       content
     </Tooltip>
+  ))
+  .add("mounted inside dropdown (does not portal to document.body)", () => (
+    <Dropdownable
+      open={true}
+      dropdown={
+        <Card>
+          <Tooltip trigger="hover me" id="default" disablePortal={true}>
+            content
+          </Tooltip>
+        </Card>
+      }
+    >
+      Dropdown trigger
+    </Dropdownable>
   ))
   .add("with custom direction", () => {
     const options = {
