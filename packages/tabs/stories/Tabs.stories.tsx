@@ -2,12 +2,12 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { TabTitle, Tabs, TabItem } from "../index";
-import { TabDirection } from "../components/Tabs";
+import { TabDirection, TabSpacing } from "../components/Tabs";
 
 const readme = require("../README.md");
 
 class Example extends React.Component<
-  { direction?: TabDirection },
+  { direction?: TabDirection; spacing?: TabSpacing },
   Partial<{ selectedIndex: number }>
 > {
   state = { selectedIndex: 0 };
@@ -22,6 +22,7 @@ class Example extends React.Component<
         selectedIndex={selectedIndex}
         onSelect={this.handleSelect}
         direction={this.props.direction}
+        spacing={this.props.spacing}
       >
         <TabItem>
           <TabTitle>Tab 1 Name</TabTitle>
@@ -45,4 +46,8 @@ storiesOf("Tabs", module)
       <p>Resize your viewport width to see the tab direction change</p>
       <Example direction={{ medium: "vert" }} />
     </>
+  ))
+  .add("with large spacing", () => <Example spacing="large" />)
+  .add("with large spacing vertical", () => (
+    <Example spacing="large" direction="vert" />
   ));

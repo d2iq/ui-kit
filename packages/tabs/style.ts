@@ -8,7 +8,8 @@ import { atMediaUp } from "../shared/styles/breakpoints";
 import {
   TabDirection,
   TabDirections,
-  defaultTabDirection
+  defaultTabDirection,
+  TabSpacing
 } from "./components/Tabs";
 
 const spacingSizeConfig: { [key: string]: SpaceSizes } = {
@@ -16,6 +17,7 @@ const spacingSizeConfig: { [key: string]: SpaceSizes } = {
   tabPanel: "xl",
   tabList: "s",
   betweenTabs: "m",
+  betweenTabsLarge: "xl",
   withinTab: "s"
 };
 
@@ -36,7 +38,7 @@ const unsetVertSelectedUnderline = css`
   top: auto;
   width: auto;
 `;
-const horizTabs = css`
+const horizTabs = (spacing: TabSpacing) => css`
   display: flex;
   flex-direction: column;
 
@@ -49,7 +51,11 @@ const horizTabs = css`
   .react-tabs__tab {
     display: inline-block;
     padding: ${spaceSizes[spacingSizeConfig.withinTab]} 0;
-    margin: 0 ${spaceSizes[spacingSizeConfig.betweenTabs]} 0 0;
+    margin: 0
+      ${spacing && spacing === "large"
+        ? spaceSizes[spacingSizeConfig.betweenTabsLarge]
+        : spaceSizes[spacingSizeConfig.betweenTabs]}
+      0 0;
 
     &:after {
       ${unsetVertSelectedUnderline};
@@ -66,7 +72,7 @@ const horizTabs = css`
   }
 `;
 
-const vertTabs = css`
+const vertTabs = (spacing: TabSpacing) => css`
   display: flex;
   flex-direction: row;
 
@@ -79,7 +85,11 @@ const vertTabs = css`
   .react-tabs__tab {
     display: block;
     padding: 0 ${spaceSizes[spacingSizeConfig.withinTab]};
-    margin: 0 0 ${spaceSizes[spacingSizeConfig.betweenTabs]} 0;
+    margin: 0 0
+      ${spacing && spacing === "large"
+        ? spaceSizes[spacingSizeConfig.betweenTabsLarge]
+        : spaceSizes[spacingSizeConfig.betweenTabs]}
+      0;
 
     &:after {
       ${unsetHorizSelectedUnderline};
@@ -102,9 +112,12 @@ export const fullHeightTabs = css`
   height: 100%;
 `;
 
-export const getTabLayout = (direction: TabDirection): string => {
-  const getHorizOrVertStyle = (direction: TabDirections) =>
-    direction === "vert" ? vertTabs : horizTabs;
+export const getTabLayout = (
+  direction: TabDirection,
+  spacing: TabSpacing
+): string => {
+  const getHorizOrVertStyle = (direction: TabDirections, spacing: TabSpacing) =>
+    direction === "vert" ? vertTabs(spacing) : horizTabs(spacing);
 
   return typeof direction === "object"
     ? cx(
@@ -113,7 +126,7 @@ export const getTabLayout = (direction: TabDirection): string => {
             acc.push(
               css`
                 ${atMediaUp[breakpoint](css`
-                  ${getHorizOrVertStyle(direction[breakpoint])};
+                  ${getHorizOrVertStyle(direction[breakpoint], spacing)};
                 `)};
               `
             );
@@ -123,5 +136,5 @@ export const getTabLayout = (direction: TabDirection): string => {
           Array()
         )
       )
-    : getHorizOrVertStyle(direction);
+    : getHorizOrVertStyle(direction, spacing);
 };

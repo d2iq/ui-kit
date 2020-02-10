@@ -71,6 +71,7 @@ injectGlobal`
 /* tslint:enable */
 
 export type TabDirections = "horiz" | "vert";
+export type TabSpacing = "default" | "large";
 export type TabDirection = BreakpointConfig<TabDirections>;
 export type TabSelected = string;
 export interface TabsProps {
@@ -78,6 +79,7 @@ export interface TabsProps {
   selectedIndex: number;
   onSelect: (tabIndex: number) => void;
   direction?: TabDirection;
+  spacing?: TabSpacing;
 }
 
 class Tabs extends React.PureComponent<TabsProps, {}> {
@@ -86,7 +88,8 @@ class Tabs extends React.PureComponent<TabsProps, {}> {
       children,
       selectedIndex,
       onSelect,
-      direction = defaultTabDirection
+      direction = defaultTabDirection,
+      spacing = "default"
     } = this.props;
 
     const { tabs, tabsContent } = (React.Children.toArray(children) as Array<
@@ -132,7 +135,7 @@ class Tabs extends React.PureComponent<TabsProps, {}> {
       <ReactTabs
         className={cx("react-tabs", {
           [fullHeightTabs]: Boolean(tabsContent.length),
-          [getTabLayout(direction)]: Boolean(direction)
+          [getTabLayout(direction, spacing)]: Boolean(direction)
         })}
         selectedIndex={selectedIndex}
         onSelect={onSelect}
