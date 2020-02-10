@@ -10,6 +10,7 @@ const PageHeaderTabs = ({ children }) => {
         flex-grow: 1;
         margin-left: -${spaceSizes[pageHeaderPaddingSize]};
         margin-right: -${spaceSizes[pageHeaderPaddingSize]};
+        padding-top: ${spaceSizes[pageHeaderPaddingSize]};
       `}
     >
       {children}
