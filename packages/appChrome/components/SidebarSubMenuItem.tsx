@@ -11,7 +11,6 @@ import Clickable from "../../clickable/components/clickable";
 import { withTheme } from "emotion-theming";
 import getCSSVarValue from "../../utilities/getCSSVarValue";
 import {
-  themeTextColorSecondary,
   themeTextColorPrimary,
   themeTextColorPrimaryInverted,
   themeTextColorSecondaryInverted,
@@ -50,7 +49,7 @@ class SidebarSubMenuItem extends React.PureComponent<
       tintContent(
         pickReadableTextColor(
           sidebarBgColor,
-          getCSSVarValue(themeTextColorSecondary),
+          getCSSVarValue(themeTextColorPrimary),
           getCSSVarValue(themeTextColorSecondaryInverted)
         )
       ),
