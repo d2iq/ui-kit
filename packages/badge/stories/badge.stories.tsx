@@ -34,7 +34,12 @@ storiesOf("Badge", module)
   .add("Outline", () => <Badge appearance="outline">Outline</Badge>, {
     info: {
       text:
-        "Outline badges for when we want the density of the badge to be lighter e.g. when next to data in a table cell"
+        "Outline badges for when we want the density of the badge to be lighter e.g. when next to data in a table cell."
+    }
+  })
+  .add("Info", () => <Badge appearance="info">Info</Badge>, {
+    info: {
+      text: "Info badges for when we want to display information to the user."
     }
   })
   .add(
@@ -44,7 +49,7 @@ storiesOf("Badge", module)
     ),
     {
       info: {
-        text: "Button badges for when we want add click event"
+        text: "Button badges for when we want add click event."
       }
     }
   );

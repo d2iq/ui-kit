@@ -13,6 +13,10 @@
                 "base": {"value": "#14C684"},
                 "inverted": {"value": "#14C684"}
             },
+            "info": {
+                "base": {"value": "#72B2F7"},
+                "inverted": {"value": "#72B2F7"}
+            },
             "warning": {
                 "base": {"value": "#F9A328"},
                 "inverted": {"value": "#F9A328"}

@@ -7,7 +7,8 @@ export type BadgeAppearance =
   | "primary"
   | "warning"
   | "danger"
-  | "outline";
+  | "outline"
+  | "info";
 
 export interface BadgeProps {
   appearance?: BadgeAppearance;

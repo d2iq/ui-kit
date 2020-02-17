@@ -2,14 +2,15 @@ import { css } from "emotion";
 import {
   borderRadiusSmall,
   greyLight,
-  themeSuccess,
-  themeWarning,
-  themeError,
-  themeBrandPrimary,
   themeBgPrimary,
+  themeBorder,
+  themeBrandPrimary,
+  themeError,
+  themeInfo,
+  themeSuccess,
   themeTextColorPrimary,
   themeTextColorPrimaryInverted,
-  themeBorder
+  themeWarning
 } from "../design-tokens/build/js/designTokens";
 import { pickReadableTextColor } from "../shared/styles/color";
 import getCSSVarValue from "../utilities/getCSSVarValue";
@@ -42,6 +43,8 @@ const badgeAppearance = appearance => {
       return badgeAppearanceStyle(getCSSVarValue(themeError));
     case "outline":
       return badgeAppearanceStyle(getCSSVarValue(themeBorder), true);
+    case "info":
+      return badgeAppearanceStyle(getCSSVarValue(themeInfo));
     case "outline-primary":
       return badgeAppearanceStyle(getCSSVarValue(themeBrandPrimary), true);
   }
