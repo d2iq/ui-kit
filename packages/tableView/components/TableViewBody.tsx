@@ -12,8 +12,14 @@ export interface TableViewBodyProps {
 }
 
 const setMinTableHeight = (rowHeight: number, minRows: number) => css`
-  min-height: ${rowHeight * minRows}px;
+  min-height: ${(minRows + 1) * rowHeight}px;
+  position: relative;
 `;
+// position: relative is needed so that div.resize-triggers (rendered by react-virtualized)
+// is getting it's size from the element wrapping the table
+//
+// this is usually applied by react-virtualized in the `style` attribute, but there have been
+// cases in Kommander where this is not happening
 
 const TableViewBody: React.SFC<TableViewBodyProps> = ({
   children,
