@@ -17,16 +17,11 @@ interface IconPropAdapterProps {
   size?: IconSizes;
 }
 
-const IconPropAdapter = (props: IconPropAdapterProps) => {
-  const { icon, color, size } = props;
-  const iconElement =
-    typeof icon === "object" ? (
-      icon
-    ) : (
-      <Icon shape={icon} size={size} color={color} />
-    );
-
-  return iconElement;
-};
+const IconPropAdapter = ({ icon, color, size }: IconPropAdapterProps) =>
+  typeof icon === "object" ? (
+    icon
+  ) : (
+    <Icon shape={icon} size={size} color={color} />
+  );
 
 export default IconPropAdapter;

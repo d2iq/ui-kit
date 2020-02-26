@@ -54,12 +54,12 @@ export default class ModalContents extends React.Component<
 
   public lastConstrainedHeight;
   public lastViewportHeight;
-  private footerRef = React.createRef<any>();
-  private geminiRef = React.createRef<any>();
-  private headerRef = React.createRef<any>();
-  private innerContentContainerRef = React.createRef<any>();
-  private innerContentRef = React.createRef<any>();
-  private modalRef = React.createRef<any>();
+  private readonly footerRef = React.createRef<any>();
+  private readonly geminiRef = React.createRef<any>();
+  private readonly headerRef = React.createRef<any>();
+  private readonly innerContentContainerRef = React.createRef<any>();
+  private readonly innerContentRef = React.createRef<any>();
+  private readonly modalRef = React.createRef<any>();
 
   constructor(props) {
     super(props);

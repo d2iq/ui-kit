@@ -97,7 +97,7 @@ export const fillColumns = (
   colWidths: number[],
   width: number
 ): number[] => {
-  let copiedColWidths = [...colWidths];
+  const copiedColWidths = [...colWidths];
   const filledArea = columns
     .filter(child => !child.props.growToFill)
     .map(col => copiedColWidths[columns.indexOf(col)])
@@ -134,13 +134,11 @@ export const fillColumns = (
         return (
           widthToRedistribute / colsToRedistributeTo.length + copiedColWidths[i]
         );
-      } else {
-        return copiedColWidths[i];
       }
+      return copiedColWidths[i];
     });
-  } else {
-    return copiedColWidths;
   }
+  return copiedColWidths;
 };
 
 const ContentCell = styled("div")`
@@ -211,10 +209,9 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         return resizedColWidths.get(currentIndex.toString()) || clampedWidth;
       });
 
-      const colSizeCacheVals = colSizeCache.map((colSize, i) => {
-        const colWidth = resizedColWidths.get(i.toString()) || colSize;
-        return colWidth;
-      });
+      const colSizeCacheVals = colSizeCache.map(
+        (colSize, i) => resizedColWidths.get(i.toString()) || colSize
+      );
 
       const valsToSet =
         hasFillingColumns && colSizeCache.length ? colSizeCacheVals : colWidths;
@@ -396,9 +393,8 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
         column.props.resizable &&
         header.type === sortableHeaderCell
       );
-    } else {
-      return false;
     }
+    return false;
   }
 
   private getHeaderCell(

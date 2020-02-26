@@ -7,9 +7,9 @@ const TAB_KEY_CODE = 9;
 
 export class InteractionModeEngine {
   constructor(
-    private container: Element,
-    private className: string,
-    private docEl: Element
+    private readonly container: Element,
+    private readonly className: string,
+    private readonly docEl: Element
   ) {}
 
   public start() {
@@ -24,14 +24,14 @@ export class InteractionModeEngine {
   }
 
   /*tslint:disable:semicolon*/
-  private handleKeyDown = e => {
+  private readonly handleKeyDown = e => {
     if (e.which === TAB_KEY_CODE) {
       this.reset();
       this.docEl.addEventListener("mousedown", this.handleMouseDown);
     }
   };
 
-  private handleMouseDown = () => {
+  private readonly handleMouseDown = () => {
     this.reset();
     this.container.classList.remove(this.className);
     this.docEl.addEventListener("keydown", this.handleKeyDown);

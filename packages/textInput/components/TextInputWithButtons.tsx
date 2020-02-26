@@ -21,7 +21,7 @@ class TextInputWithButtons extends TextInputWithIcon<
   TextInputWithButtonsProps
 > {
   protected getInputElementProps() {
-    let baseProps = super.getInputElementProps();
+    const baseProps = super.getInputElementProps();
     const { buttons, ...inputProps } = baseProps as TextInputWithButtonsProps;
 
     return inputProps;

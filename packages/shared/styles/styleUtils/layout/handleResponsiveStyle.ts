@@ -27,11 +27,10 @@ const parseResponsiveStyle = (
         return acc;
       }, Array())
     );
-  } else {
-    return css`
-      ${property}: ${value};
-    `;
   }
+  return css`
+    ${property}: ${value};
+  `;
 };
 
 export const getResponsiveStyleData = (

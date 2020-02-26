@@ -6,7 +6,7 @@ exports[`LinkCard renders default 1`] = `
   data-cy="linkCard"
 >
   <div
-    class="css-2yjhih"
+    class="css-1hc6qpp"
   >
     <a
       class="css-gsqxnx"
@@ -30,7 +30,7 @@ exports[`LinkCard renders with external link 1`] = `
   data-cy="linkCard"
 >
   <div
-    class="css-2yjhih"
+    class="css-1hc6qpp"
   >
     <a
       class="css-gsqxnx"

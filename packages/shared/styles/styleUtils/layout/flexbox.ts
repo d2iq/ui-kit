@@ -46,7 +46,8 @@ const getResponsiveColumnStyles = (
 
   if (isColumn) {
     return valueForColumnDirection;
-  } else if (direction && typeof direction === "object") {
+  }
+  if (direction && typeof direction === "object") {
     return Object.entries(direction).reduce((acc, [breakpoint, config]) => {
       acc[breakpoint] = config.includes("column")
         ? valueForColumnDirection
@@ -54,13 +55,12 @@ const getResponsiveColumnStyles = (
 
       return acc;
     }, {});
-  } else {
-    return valueForOtherDirections;
   }
+  return valueForOtherDirections;
 };
 
 const getGutterPaddingValues = (responsivePaddingConfig, gutterSize) => {
-  let paddingValues = {};
+  const paddingValues = {};
 
   // filter the responsivePaddingConfig to only have properties
   // where we need to remove the padding

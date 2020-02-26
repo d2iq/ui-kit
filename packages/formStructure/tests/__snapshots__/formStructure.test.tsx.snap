@@ -3,35 +3,35 @@
 exports[`Form structure components renders top-level form structure components 1`] = `
 Array [
   <div
-    class="css-fyl4eb"
+    class="css-wl7hq3"
     data-cy="formMessage"
   >
     <div
       aria-live="assertive"
-      class="css-8smtcw"
+      class="css-1ij0p3n"
       data-cy="infoBox infoBox.warning"
       role="alert"
     >
       <div
-        class="css-1xwef9y"
+        class="css-1w2mvpm"
       >
         Form message content
       </div>
     </div>
   </div>,
   <div
-    class="css-fyl4eb"
+    class="css-wl7hq3"
     data-cy="spacingBox"
   >
     <h3
-      class="css-voj7vw"
+      class="css-1ewrfgu"
       data-cy="formTitle"
     >
       Form Title Content
     </h3>
   </div>,
   <div
-    class="css-1gikt66"
+    class="css-1534o5d"
     data-cy="formSection"
   >
     <div
@@ -44,25 +44,25 @@ Array [
     </div>
   </div>,
   <div
-    class="css-1gikt66"
+    class="css-1534o5d"
     data-cy="formSection"
   >
     <div
-      class="css-e463k1"
+      class="css-ilu7d6"
       data-cy="formSectionHeader"
     >
       <h2
-        class="css-2b5fnz"
+        class="css-1kkb77q"
         data-cy="formSectionHeader-title"
       >
         Section title
       </h2>
       <div
-        class="css-1cgc4k2"
+        class="css-1vewm7l"
         data-cy="spacingBox"
       >
         <div
-          class="css-i33f89"
+          class="css-114tuqy"
           data-cy="formSectionHeader-subtitle"
         >
           Section subtitle
@@ -78,7 +78,7 @@ Array [
         data-cy="formSubSection"
       >
         <div
-          class="css-2yjhih"
+          class="css-1hc6qpp"
         >
           <div
             class="css-1jbsn52"

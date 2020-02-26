@@ -2,19 +2,19 @@
 
 exports[`ConfigurationMap renders default 1`] = `
 <div
-  class="css-1fnaylc"
+  class="css-iq9swa"
   data-cy="configurationMap"
 >
   <dl
-    class="css-1mqjlka"
+    class="css-1p6nhgy"
     data-cy="configurationMapSection"
   >
     <div
-      class="css-2iygaf"
+      class="css-1afpcs7"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         Name
@@ -27,11 +27,11 @@ exports[`ConfigurationMap renders default 1`] = `
       </dd>
     </div>
     <div
-      class="css-2iygaf"
+      class="css-1afpcs7"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         Role
@@ -44,11 +44,11 @@ exports[`ConfigurationMap renders default 1`] = `
       </dd>
     </div>
     <div
-      class="css-2iygaf"
+      class="css-1afpcs7"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         City
@@ -66,19 +66,19 @@ exports[`ConfigurationMap renders default 1`] = `
 
 exports[`ConfigurationMap renders with actions 1`] = `
 <div
-  class="css-1fnaylc"
+  class="css-iq9swa"
   data-cy="configurationMap"
 >
   <dl
-    class="css-1mqjlka"
+    class="css-1p6nhgy"
     data-cy="configurationMapSection"
   >
     <div
-      class="css-1jqckuv"
+      class="css-1efprzz"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         Name
@@ -108,11 +108,11 @@ exports[`ConfigurationMap renders with actions 1`] = `
       </span>
     </div>
     <div
-      class="css-1jqckuv"
+      class="css-1efprzz"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         Role
@@ -142,11 +142,11 @@ exports[`ConfigurationMap renders with actions 1`] = `
       </span>
     </div>
     <div
-      class="css-1jqckuv"
+      class="css-1efprzz"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         City
@@ -181,19 +181,19 @@ exports[`ConfigurationMap renders with actions 1`] = `
 
 exports[`ConfigurationMap renders with default value 1`] = `
 <div
-  class="css-1fnaylc"
+  class="css-iq9swa"
   data-cy="configurationMap"
 >
   <dl
-    class="css-1mqjlka"
+    class="css-1p6nhgy"
     data-cy="configurationMapSection"
   >
     <div
-      class="css-2iygaf"
+      class="css-1afpcs7"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         Name
@@ -206,11 +206,11 @@ exports[`ConfigurationMap renders with default value 1`] = `
       </dd>
     </div>
     <div
-      class="css-2iygaf"
+      class="css-1afpcs7"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         Role
@@ -223,11 +223,11 @@ exports[`ConfigurationMap renders with default value 1`] = `
       </dd>
     </div>
     <div
-      class="css-2iygaf"
+      class="css-1afpcs7"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         City
@@ -245,25 +245,25 @@ exports[`ConfigurationMap renders with default value 1`] = `
 
 exports[`ConfigurationMap renders with headline 1`] = `
 <div
-  class="css-1fnaylc"
+  class="css-iq9swa"
   data-cy="configurationMap"
 >
   <dl
-    class="css-1mqjlka"
+    class="css-1p6nhgy"
     data-cy="configurationMapSection"
   >
     <h1
-      class="css-14una7e"
+      class="css-13pfdrv"
       data-cy="configurationMapHeading"
     >
       Jane Doe Info
     </h1>
     <div
-      class="css-2iygaf"
+      class="css-1afpcs7"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         Name
@@ -276,11 +276,11 @@ exports[`ConfigurationMap renders with headline 1`] = `
       </dd>
     </div>
     <div
-      class="css-2iygaf"
+      class="css-1afpcs7"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         Role
@@ -293,11 +293,11 @@ exports[`ConfigurationMap renders with headline 1`] = `
       </dd>
     </div>
     <div
-      class="css-2iygaf"
+      class="css-1afpcs7"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-1gx6v34"
+        class="css-n8bfbv"
         data-cy="configurationMapLabel"
       >
         City

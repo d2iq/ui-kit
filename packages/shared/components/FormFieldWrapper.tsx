@@ -99,9 +99,8 @@ class FormFieldWrapper extends React.PureComponent<FormFieldWrapperProps, {}> {
   private getDescribedBy(hintContent, errors) {
     if (hintContent && errors) {
       return `${hintContent} ${errors}`;
-    } else {
-      return errors || hintContent;
     }
+    return errors || hintContent;
   }
 }
 

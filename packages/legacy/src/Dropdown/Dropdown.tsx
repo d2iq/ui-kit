@@ -63,8 +63,8 @@ export class Dropdown extends React.Component<DropdownProps, any> {
 
   private container;
   private currentBlurTimeout;
-  private dropdownMenuRef = React.createRef<any>();
-  private dropdownWrapperRef = React.createRef<any>();
+  private readonly dropdownMenuRef = React.createRef<any>();
+  private readonly dropdownWrapperRef = React.createRef<any>();
 
   constructor(props) {
     super(props);

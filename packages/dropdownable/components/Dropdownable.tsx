@@ -65,8 +65,8 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
     preferredDirections: DEFAULT_DIRECTION_PREFERENCES
   };
 
-  private child = React.createRef<HTMLDivElement>();
-  private dropdown = React.createRef<HTMLDivElement>();
+  private readonly child = React.createRef<HTMLDivElement>();
+  private readonly dropdown = React.createRef<HTMLDivElement>();
 
   constructor(props) {
     super(props);
@@ -231,16 +231,16 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
           dropdownDimensions.width / 2 +
           window.scrollX
         );
-      } else if (isLeft) {
-        return childBounds.left + window.scrollX;
-      } else {
-        return (
-          childBounds.left -
-          dropdownDimensions.width +
-          childBounds.width +
-          window.scrollX
-        );
       }
+      if (isLeft) {
+        return childBounds.left + window.scrollX;
+      }
+      return (
+        childBounds.left -
+        dropdownDimensions.width +
+        childBounds.width +
+        window.scrollX
+      );
     };
 
     return {
