@@ -84,33 +84,19 @@ const PopoverListItem = (props: PopoverListItemProps) => {
           itemContent: children
         };
       }
-      const isItemGraphic = child =>
-        child.type === PopoverListItemIcon ||
+      const isItemGraphic = (
+        child
+      ): child is typeof PopoverListItemIcon | typeof PopoverListItemAvatar =>
+        (React.isValidElement(child) && child.type === PopoverListItemIcon) ||
         child.type === PopoverListItemAvatar;
+
       const itemGraphicStart = itemChildren.find(
-        child =>
-          React.isValidElement<PopoverListItemIcon | PopoverListItemAvatar>(
-            child
-          ) &&
-          isItemGraphic(child) &&
-          child.props.position === "start"
+        child => isItemGraphic(child) && child.props.position === "start"
       );
       const itemGraphicEnd = itemChildren.find(
-        child =>
-          React.isValidElement<PopoverListItemIcon | PopoverListItemAvatar>(
-            child
-          ) &&
-          isItemGraphic(child) &&
-          child.props.position === "end"
+        child => isItemGraphic(child) && child.props.position === "end"
       );
-      const itemContent = itemChildren.filter(
-        child =>
-          !(
-            React.isValidElement<PopoverListItemIcon | PopoverListItemAvatar>(
-              child
-            ) && isItemGraphic(child)
-          )
-      );
+      const itemContent = itemChildren.filter(child => !isItemGraphic(child));
 
       return {
         itemGraphicStart,
