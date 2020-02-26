@@ -241,4 +241,60 @@ storiesOf("Buttons/Default", module)
         propTables: [StandardButton]
       }
     }
+  )
+  .add(
+    "used as a link that opens in a new tab",
+    () => (
+      <React.Fragment>
+        <ButtonAppearanceSample>
+          <StandardButton url="http://google.com" openInNewTab={true}>
+            Button
+          </StandardButton>
+          <StandardButton
+            url="http://google.com"
+            openInNewTab={true}
+            disabled={true}
+          >
+            Button
+          </StandardButton>
+          <StandardButton
+            url="http://google.com"
+            openInNewTab={true}
+            isProcessing={true}
+          >
+            Button
+          </StandardButton>
+        </ButtonAppearanceSample>
+        <ButtonAppearanceSample isInverse={true}>
+          <StandardButton
+            url="http://google.com"
+            openInNewTab={true}
+            isInverse={true}
+          >
+            Button
+          </StandardButton>
+          <StandardButton
+            url="http://google.com"
+            openInNewTab={true}
+            disabled={true}
+            isInverse={true}
+          >
+            Button
+          </StandardButton>
+          <StandardButton
+            url="http://google.com"
+            openInNewTab={true}
+            isProcessing={true}
+            isInverse={true}
+          >
+            Button
+          </StandardButton>
+        </ButtonAppearanceSample>
+      </React.Fragment>
+    ),
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
   );
