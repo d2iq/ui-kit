@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
 import { shallow, mount } from "enzyme";
@@ -98,7 +98,7 @@ describe("TextInput", () => {
     const widthTest = css`
       width: 200px;
     `;
-    const component = shallow(<TextInput className={cx(widthTest)} />);
+    const component = shallow(<TextInput id="1" className={cx(widthTest)} />);
     expect(
       component
         .find("div")

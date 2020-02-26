@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import { FieldGroup } from "..";
 import { TextInput } from "../../textInput";
@@ -16,9 +16,9 @@ describe("FieldGroup", () => {
               small: "row"
             }}
           >
-            <TextInput />
-            <TextInput />
-            <TextInput />
+            <TextInput id="1" />
+            <TextInput id="2" />
+            <TextInput id="3" />
           </FieldGroup>
         )
       )

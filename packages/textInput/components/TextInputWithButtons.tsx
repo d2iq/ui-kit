@@ -18,8 +18,7 @@ export interface TextInputWithButtonsProps
 }
 
 class TextInputWithButtons extends TextInputWithIcon<
-  TextInputWithButtonsProps,
-  {}
+  TextInputWithButtonsProps
 > {
   protected getInputElementProps() {
     let baseProps = super.getInputElementProps();

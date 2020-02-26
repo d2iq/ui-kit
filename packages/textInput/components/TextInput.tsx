@@ -43,7 +43,7 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
    * Sets the contents of the input label. This can be a `string` or any `ReactNode`.
    */
-  inputLabel: React.ReactNode;
+  inputLabel?: React.ReactNode;
   /**
    * Defaults to `true`, but can be set to `false` to visibly hide the `TextInput`'s label. The `inputLabel` should still be set even when hidden for accessibility support.
    */
@@ -62,11 +62,8 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   tooltipContent?: React.ReactNode;
 }
 
-export class TextInput<
-  P extends TextInputProps,
-  S extends {}
-> extends React.PureComponent<P, S> {
-  public static defaultProps: Partial<TextInputProps> = {
+export class TextInput<P extends TextInputProps> extends React.Component<P> {
+  public static defaultProps = {
     type: "text",
     appearance: InputAppearance.Standard,
     showInputLabel: true
@@ -179,8 +176,8 @@ export class TextInput<
 
   protected getInputElement(
     additionalClasses: string[] = [],
-    isValid,
-    describedBy
+    isValid: boolean,
+    describedBy: string
   ) {
     const { value, ...inputElementProps } = this.getInputElementProps();
     const appearance = this.getInputAppearance();
