@@ -51,10 +51,9 @@ export const getStringAsBadgeDatum = (
 });
 
 export class TextInputWithBadges extends TextInputWithIcon<
-  TextInputWithBadgesProps,
-  {}
+  TextInputWithBadgesProps
 > {
-  public static defaultProps: Partial<TextInputWithBadgesProps> = {
+  public static defaultProps = {
     type: "text",
     appearance: InputAppearance.Standard,
     showInputLabel: true,

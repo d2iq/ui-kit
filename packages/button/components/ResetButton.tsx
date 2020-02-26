@@ -3,7 +3,7 @@ import { cx } from "emotion";
 import { buttonReset } from "../../shared/styles/styleUtils";
 import { keyboardFocus, pointerCursor } from "../style";
 
-const ResetButton = (props: React.HTMLProps<HTMLButtonElement>) => {
+const ResetButton = (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   const { children, className, disabled, type = "button", ...other } = props;
   const classNames = cx(buttonReset, className, keyboardFocus, {
     [pointerCursor]: !disabled

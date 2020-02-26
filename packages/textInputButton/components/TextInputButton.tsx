@@ -5,7 +5,7 @@ import { IconShapes } from "../../icon/components/Icon";
 import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 
 export interface TextInputButtonProps
-  extends React.HTMLProps<HTMLButtonElement> {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The fill color of the icon inside the b utton
    */
