@@ -34,9 +34,8 @@ export const rgbToHex = (rgbArr: number[]): string => {
 
       return acc;
     }, "#");
-  } else {
-    return "#000000";
   }
+  return "#000000";
 };
 
 export const hexToRgbA = (hex: string, alpha: string | number = 1): string => {
@@ -95,11 +94,10 @@ export const pickReadableTextColor = (
     return baseTextBrightness < invertedTextBrightness
       ? baseTextOption
       : invertedTextOption;
-  } else {
-    return baseTextBrightness > invertedTextBrightness
-      ? baseTextOption
-      : invertedTextOption;
   }
+  return baseTextBrightness > invertedTextBrightness
+    ? baseTextOption
+    : invertedTextOption;
 };
 
 // Assumes we always want our default hover colors to be lower
@@ -123,13 +121,8 @@ export const mixHex = (color1, color2, percent) => {
     );
 
     return rgbToHex(blendedRgbArr);
-  } else {
-    return isValidHex(color1)
-      ? color1
-      : isValidHex(color2)
-        ? color2
-        : "#000000";
   }
+  return isValidHex(color1) ? color1 : isValidHex(color2) ? color2 : "#000000";
 };
 
 // We lighten and darken our colors by tinting and shading, not

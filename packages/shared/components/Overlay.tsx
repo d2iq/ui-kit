@@ -11,7 +11,7 @@ class Overlay extends React.Component<OverlayProps> {
     overlayRoot: document.body
   };
 
-  private el: HTMLElement;
+  private readonly el: HTMLElement;
 
   constructor(props) {
     super(props);

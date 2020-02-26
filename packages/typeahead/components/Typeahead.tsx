@@ -67,7 +67,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   public static defaultProps: Partial<TypeaheadProps> = {
     menuMaxHeight: 300
   };
-  private containerRef = React.createRef<HTMLDivElement>();
+  private readonly containerRef = React.createRef<HTMLDivElement>();
 
   constructor(props) {
     super(props);

@@ -2346,10 +2346,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           data-cy="dialogModal-header"
                         >
                           <div
-                            class="css-mrra2t"
+                            class="css-1a5xokz"
                           >
                             <div
-                              class="css-16jj0m8"
+                              class="css-9yi0we"
                             >
                               Title
                             </div>
@@ -2380,7 +2380,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="css-1uzhd8w"
+                          class="css-1600ex7"
                           data-cy="dialogModal-content"
                         >
                           <div
@@ -2390,11 +2390,11 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="css-1oke5ex"
+                          class="css-qhrtbg"
                           data-cy="dialogModal-footer"
                         >
                           <div
-                            class="css-1yp2uay"
+                            class="css-1ej6tgc"
                           >
                             <div
                               class="css-48ylac"

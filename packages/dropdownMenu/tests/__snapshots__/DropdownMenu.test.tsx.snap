@@ -2215,7 +2215,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                           </div>
                           <div
                             aria-selected="false"
-                            class="css-q57e5u"
+                            class="css-vzhvp0"
                             data-cy="PopoverListItem"
                             id="downshift-0-item-1"
                             role="option"
@@ -2224,7 +2224,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                           </div>
                           <div
                             aria-selected="false"
-                            class="css-q57e5u"
+                            class="css-vzhvp0"
                             data-cy="PopoverListItem"
                             id="downshift-0-item-2"
                             role="option"
@@ -2274,7 +2274,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                           </div>
                           <div
                             aria-selected="false"
-                            class="css-q57e5u"
+                            class="css-vzhvp0"
                             data-cy="PopoverListItem"
                             id="downshift-1-item-1"
                             role="option"
@@ -2283,7 +2283,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                           </div>
                           <div
                             aria-selected="false"
-                            class="css-q57e5u"
+                            class="css-vzhvp0"
                             data-cy="PopoverListItem"
                             id="downshift-1-item-2"
                             role="option"
@@ -2334,7 +2334,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                           </div>
                           <div
                             aria-selected="false"
-                            class="css-q57e5u"
+                            class="css-vzhvp0"
                             data-cy="PopoverListItem"
                             id="downshift-2-item-1"
                             role="option"
@@ -2343,7 +2343,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                           </div>
                           <div
                             aria-selected="false"
-                            class="css-q57e5u"
+                            class="css-vzhvp0"
                             data-cy="PopoverListItem"
                             id="downshift-2-item-2"
                             role="option"

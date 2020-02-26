@@ -52,7 +52,7 @@ class CheckboxTable extends React.PureComponent<
           data.length - Object.keys(disabledRows).length
     };
   }
-  private checkboxRef = React.createRef<HTMLDivElement>();
+  private readonly checkboxRef = React.createRef<HTMLDivElement>();
 
   constructor(props) {
     super(props);

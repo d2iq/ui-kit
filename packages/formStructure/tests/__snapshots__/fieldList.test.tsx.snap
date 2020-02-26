@@ -3,23 +3,23 @@
 exports[`FieldList renders 1`] = `
 <div>
   <div
-    class="css-1xeyz59"
+    class="css-m7nb2t"
     data-cy="spacingBox"
   >
     <div
-      class="css-4km9oy"
+      class="css-1jwdn64"
       data-cy="fieldList-columnHeader"
     >
       Name
     </div>
     <div
-      class="css-x79tld"
+      class="css-jfmyn"
       data-cy="fieldList-columnHeader"
     >
       :
     </div>
     <div
-      class="css-4km9oy"
+      class="css-1jwdn64"
       data-cy="fieldList-columnHeader"
     >
       Role
@@ -39,7 +39,7 @@ exports[`FieldList renders 1`] = `
           data-cy="textInput"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="name-0"
           >
@@ -47,12 +47,12 @@ exports[`FieldList renders 1`] = `
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="name-0"
                 type="text"
@@ -79,7 +79,7 @@ exports[`FieldList renders 1`] = `
           data-cy="textInput"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="role-0"
           >
@@ -87,12 +87,12 @@ exports[`FieldList renders 1`] = `
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="role-0"
                 type="text"
@@ -144,7 +144,7 @@ exports[`FieldList renders 1`] = `
           data-cy="textInput"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="name-1"
           >
@@ -152,12 +152,12 @@ exports[`FieldList renders 1`] = `
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="name-1"
                 type="text"
@@ -184,7 +184,7 @@ exports[`FieldList renders 1`] = `
           data-cy="textInput"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="role-1"
           >
@@ -192,12 +192,12 @@ exports[`FieldList renders 1`] = `
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="role-1"
                 type="text"
@@ -248,7 +248,7 @@ exports[`FieldList renders 1`] = `
           data-cy="textInput"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="name-2"
           >
@@ -256,12 +256,12 @@ exports[`FieldList renders 1`] = `
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="name-2"
                 type="text"
@@ -288,7 +288,7 @@ exports[`FieldList renders 1`] = `
           data-cy="textInput"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="role-2"
           >
@@ -296,12 +296,12 @@ exports[`FieldList renders 1`] = `
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="role-2"
                 type="text"
@@ -348,7 +348,7 @@ exports[`FieldList renders 1`] = `
       type="button"
     >
       <span
-        class="css-cdylxf"
+        class="css-1hesotu"
       >
         <span
           class="css-ew6x4b"
@@ -369,7 +369,7 @@ exports[`FieldList renders 1`] = `
           </svg>
         </span>
         <span
-          class="css-q27fe3"
+          class="css-1tbd6ha"
         >
           Add row
         </span>

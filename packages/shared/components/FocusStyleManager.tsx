@@ -18,12 +18,12 @@ class FocusStyleManager extends React.PureComponent<{
   }
 
   public render() {
-    return React.cloneElement(React.Children.only(this.props.children)!, {
+    return React.cloneElement(React.Children.only(this.props.children), {
       ref: this.setRef
     });
   }
 
-  private setRef = ref => {
+  private readonly setRef = ref => {
     this.focusWrapperRef = ref;
   };
 }

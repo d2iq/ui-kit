@@ -10,21 +10,21 @@ exports[`EmptyState default 1`] = `
     data-cy="card"
   >
     <div
-      class="css-boqfyw"
+      class="css-yy1d4r"
     >
       <div
-        class="css-olgrgd"
+        class="css-1c71uxj"
         data-cy="spacingBox"
       >
         <h2
-          class="css-zf0nd2"
+          class="css-sg507t"
           data-cy="headingText2"
         >
           Heading
         </h2>
       </div>
       <div
-        class="css-59c18o"
+        class="css-dbyz3d"
         data-cy="spacingBox"
       >
         Body content
@@ -44,27 +44,27 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
     data-cy="card"
   >
     <div
-      class="css-boqfyw"
+      class="css-yy1d4r"
     >
       <div
-        class="css-olgrgd"
+        class="css-1c71uxj"
         data-cy="spacingBox"
       >
         <h2
-          class="css-zf0nd2"
+          class="css-sg507t"
           data-cy="headingText2"
         >
           Heading
         </h2>
       </div>
       <div
-        class="css-z1a2ho"
+        class="css-1tq4izn"
         data-cy="spacingBox"
       >
         Body content
       </div>
       <div
-        class="css-8h0s7x"
+        class="css-1m9h7kz"
         data-cy="flex"
       >
         <div

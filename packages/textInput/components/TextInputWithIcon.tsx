@@ -52,7 +52,7 @@ export class TextInputWithIcon<
   }
 
   protected getInputElementProps() {
-    let baseProps = super.getInputElementProps();
+    const baseProps = super.getInputElementProps();
     const {
       iconStart,
       iconEnd,

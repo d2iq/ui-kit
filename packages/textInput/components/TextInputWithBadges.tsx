@@ -59,7 +59,7 @@ export class TextInputWithBadges extends TextInputWithIcon<
     showInputLabel: true,
     addBadgeOnBlur: true
   };
-  private inputRef = React.createRef<HTMLInputElement>();
+  private readonly inputRef = React.createRef<HTMLInputElement>();
 
   constructor(props) {
     super(props);
@@ -72,7 +72,7 @@ export class TextInputWithBadges extends TextInputWithIcon<
   }
 
   protected getInputElementProps() {
-    let baseProps = super.getInputElementProps();
+    const baseProps = super.getInputElementProps();
     const {
       badges,
       onBadgeChange,

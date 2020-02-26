@@ -6,7 +6,7 @@ exports[`Card default 1`] = `
   data-cy="card"
 >
   <div
-    class="css-2yjhih"
+    class="css-1hc6qpp"
   >
     Example Content
   </div>
@@ -19,7 +19,7 @@ exports[`Card with aspectRatio set 1`] = `
   data-cy="card"
 >
   <div
-    class="css-2yjhih"
+    class="css-1hc6qpp"
   >
     Example Content
   </div>
@@ -32,7 +32,7 @@ exports[`Card with paddingSize set 1`] = `
   data-cy="card"
 >
   <div
-    class="css-jl90x"
+    class="css-m6tl3x"
   >
     Example Content
   </div>

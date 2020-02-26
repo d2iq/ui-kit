@@ -6,9 +6,7 @@ export interface TabItemProps {
 
 class TabItem extends React.PureComponent<TabItemProps, {}> {
   public render() {
-    const { children } = this.props;
-
-    return children;
+    return this.props.children;
   }
 }
 
