@@ -5,6 +5,7 @@
     "rootDir": "./",
     "sourceMap": true,
     "noImplicitAny": false,
+    "incremental": true,
     "target": "es5",
     "module": "commonjs",
     "jsx": "react",
@@ -14,6 +15,7 @@
     "strict": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
+    "tsBuildInfoFile": ".tsbuildinfo",
     "typeRoots": [
       "node_modules/@types",
       "node_modules/emotion/types",
