@@ -47,7 +47,6 @@
     "downshift": "3.2.10",
     "emotion": "9.2.12",
     "emotion-theming": "9.2.9",
-    "immutable": "^4.0.0-rc.12",
     "memoize-one": "4.0.2",
     "react-chartist": "^0.13.3",
     "react-click-outside": "3.0.1",

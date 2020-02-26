@@ -1,5 +1,4 @@
 import * as React from "react";
-import Immutable from "immutable";
 import Draggable from "react-draggable";
 import { cx, css } from "emotion";
 import memoizeOne from "memoize-one";
@@ -74,7 +73,7 @@ export interface TableProps {
 export interface TableState {
   isScrolling: boolean;
   hoveredRowIndex: number;
-  resizedColWidths: Immutable.Map<string, number>;
+  resizedColWidths: Map<string, number>;
   resizeIndex: number;
 }
 
@@ -209,11 +208,11 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
           child.props.maxWidth || width
         );
         remainingWidth -= clampedWidth;
-        return resizedColWidths.get(currentIndex.toString(), clampedWidth);
+        return resizedColWidths.get(currentIndex.toString()) || clampedWidth;
       });
 
       const colSizeCacheVals = colSizeCache.map((colSize, i) => {
-        const colWidth = resizedColWidths.get(i.toString(), colSize);
+        const colWidth = resizedColWidths.get(i.toString()) || colSize;
         return colWidth;
       });
 
@@ -253,7 +252,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     this.state = {
       isScrolling: false,
       hoveredRowIndex: -1,
-      resizedColWidths: Immutable.Map(),
+      resizedColWidths: new Map(),
       resizeIndex: -1
     };
   }
@@ -305,7 +304,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
       width
     );
 
-    return resizedColWidths.get(index.toString(), columnSizes[index]);
+    return resizedColWidths.get(index.toString()) || columnSizes[index];
   }
 
   public resizeColumn(args: { dragDelta: number; index: string }) {
@@ -318,9 +317,10 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     let columnWidth = this.getColumnWidth(index, this.getContainerWidth());
     columnWidth = columnWidth + dragDelta;
 
+    const newResizedColWidths = new Map(resizedColWidths);
     this.setState(
       {
-        resizedColWidths: resizedColWidths.set(index, columnWidth)
+        resizedColWidths: newResizedColWidths.set(index, columnWidth)
       },
       () => {
         if (columns[index].props.onResize) {
