@@ -12,11 +12,11 @@ Collection tables should span the full width of the screen. In cases where there
 
 Detail tables shouldn’t span the full width of the screen.
 
-### Height
+### Height (applies to Table v1 only)
+
 The Table expands to fill its parent but it will not stretch the parent. This means a table's parent node must have a height in order for the table to be visible.
 
 The `TableView` component is helpful when creating layouts that include the `Table` component.
-
 
 ## Column and Rows
 
@@ -58,7 +58,7 @@ In the collection table, the primary column is the first column (on the left) in
 
 In the details table, the primary column is also the first column (on the left) in the two column table. This column represents all the unique key attributes on the table. The primary column in this case is not hyperlinked.
 
-## Group Actions
+## Group Actions (applies to Table v1 only)
 
 Group actions remain hidden until the user selects a checkbox. Use this component when there is at least one common action among the majority of your table rows.
 
@@ -66,7 +66,7 @@ Group actions remain hidden until the user selects a checkbox. Use this componen
 - Must provide feedback to the user when action button is pressed to indicate if they action was successful or if there was a error.
 - Sometimes, a specific group action cannot be applied to a certain item on the table (ex: a service is in a deleting state and cannot be touched). In these instances, we should disable that action when the user selects the item in the table.
 
-## Group Actions
+## Global Actions
 
 Global actions are actions that pertain to the whole table (i.e. Download, Logs).
 

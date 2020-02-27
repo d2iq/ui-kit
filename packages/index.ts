@@ -95,6 +95,12 @@ export {
   NumberCell
 } from "./table";
 export { TableView, TableViewHeader, TableViewBody } from "./tableView";
+export {
+  Table as TableV2,
+  DropdownMenuCell,
+  EmptyCell,
+  Sorter
+} from "./tablev2";
 export { TabItem, TabTitle, Tabs } from "./tabs";
 export {
   TextInput,
