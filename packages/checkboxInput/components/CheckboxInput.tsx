@@ -118,7 +118,7 @@ class CheckboxInput extends React.PureComponent<
                 disabled={disabled}
                 value={value}
                 aria-invalid={!isValid}
-                aria-describedBy={describedByIds}
+                aria-describedby={describedByIds}
                 onFocus={this.handleFocus}
                 onBlur={this.handleBlur}
                 data-cy={inputDataCy}
