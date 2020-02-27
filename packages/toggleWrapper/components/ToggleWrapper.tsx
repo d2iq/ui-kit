@@ -69,7 +69,7 @@ class ToggleWrapper extends React.PureComponent<
         <input
           id={id}
           className={visuallyHidden}
-          checked={isActive}
+          defaultChecked={isActive}
           aria-checked={isActive}
           data-cy="toggleWrapper-input"
           onFocus={this.handleFocus}

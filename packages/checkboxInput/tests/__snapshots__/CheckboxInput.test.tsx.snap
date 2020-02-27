@@ -125,7 +125,7 @@ exports[`CheckboxInput renders all appearances 1`] = `
               className="emotion-1"
             >
               <input
-                aria-describedBy=""
+                aria-describedby=""
                 aria-invalid={false}
                 className="emotion-0"
                 data-cy="checkboxInput-input"
@@ -276,7 +276,7 @@ exports[`CheckboxInput renders all appearances 2`] = `
               className="emotion-1"
             >
               <input
-                aria-describedBy=""
+                aria-describedby=""
                 aria-invalid={false}
                 className="emotion-0"
                 data-cy="checkboxInput-input checkboxInput-input.error"
@@ -427,7 +427,7 @@ exports[`CheckboxInput renders all appearances 3`] = `
               className="emotion-1"
             >
               <input
-                aria-describedBy=""
+                aria-describedby=""
                 aria-invalid={false}
                 className="emotion-0"
                 data-cy="checkboxInput-input checkboxInput-input.success"
@@ -605,7 +605,7 @@ exports[`CheckboxInput renders indeterminate 1`] = `
               className="emotion-3"
             >
               <input
-                aria-describedBy=""
+                aria-describedby=""
                 aria-invalid={false}
                 className="emotion-0"
                 data-cy="checkboxInput-input checkboxInput-input.indeterminate"
@@ -788,7 +788,7 @@ exports[`CheckboxInput renders with a hidden label 1`] = `
               className="emotion-1"
             >
               <input
-                aria-describedBy=""
+                aria-describedby=""
                 aria-invalid={false}
                 className="emotion-0"
                 data-cy="checkboxInput-input"
