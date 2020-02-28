@@ -1,12 +1,11 @@
 import * as React from "react";
-import Immutable from "immutable";
 import { cx } from "emotion";
 import { Table, Column, HeaderCell, TextCell } from "../..";
 import { items } from "./mocks";
 import { listReset, padding } from "../../../shared/styles/styleUtils";
 
 interface ResizableTableDemoState {
-  resizedVals: Immutable.Map<string, number>;
+  resizedVals: Map<string, number>;
 }
 
 const nameCellRenderer = ({ name }: { name?: string }) => (
@@ -32,7 +31,7 @@ class ResizableTableDemo extends React.Component<{}, ResizableTableDemoState> {
     super(props);
 
     this.state = {
-      resizedVals: Immutable.Map()
+      resizedVals: new Map()
     };
 
     this.handleResize = this.handleResize.bind(this);
@@ -41,8 +40,9 @@ class ResizableTableDemo extends React.Component<{}, ResizableTableDemoState> {
   handleResize(columnName, resizedColWidth) {
     const { resizedVals } = this.state;
 
+    const newResizedVals = new Map(resizedVals);
     this.setState({
-      resizedVals: resizedVals.set(columnName, resizedColWidth)
+      resizedVals: newResizedVals.set(columnName, resizedColWidth)
     });
   }
 
@@ -52,9 +52,9 @@ class ResizableTableDemo extends React.Component<{}, ResizableTableDemoState> {
     return (
       <div>
         <ul className={cx(listReset, padding("bottom"))}>
-          <li>Name resized value: {resizedVals.get("name", "unset")}</li>
-          <li>Role resized value: {resizedVals.get("role", "unset")}</li>
-          <li>State resized value: {resizedVals.get("state", "unset")}</li>
+          <li>Name resized value: {resizedVals.get("name") || "unset"}</li>
+          <li>Role resized value: {resizedVals.get("role") || "unset"}</li>
+          <li>State resized value: {resizedVals.get("state") || "unset"}</li>
         </ul>
         <div
           style={{
