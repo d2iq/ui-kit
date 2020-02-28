@@ -44,6 +44,6 @@ export const FieldListColumn: <T = string>(
   FieldListColumnProps<T> & FieldListColumnWidthProps
 > = () => <React.Fragment />;
 
-export const FieldListColumnSeparator: React.SFC<
-  FieldListColumnWidthProps
-> = () => <React.Fragment />;
+export const FieldListColumnSeparator: React.SFC<FieldListColumnWidthProps> = () => (
+  <React.Fragment />
+);

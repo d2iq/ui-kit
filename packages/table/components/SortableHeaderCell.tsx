@@ -54,8 +54,8 @@ export class SortableHeaderCell extends React.Component<
     const ariaSortString = !displaySortDirection
       ? "none"
       : displaySortDirection === "DESC"
-        ? "descending"
-        : "ascending";
+      ? "descending"
+      : "ascending";
 
     return (
       <Clickable tabIndex={0} action={sortHandler} disableFocusOutline={true}>

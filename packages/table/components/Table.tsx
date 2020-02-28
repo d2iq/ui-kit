@@ -166,11 +166,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
   } = {};
   public scrollMeasRef = React.createRef<HTMLDivElement>();
 
-  public getData = memoizeOne(
-    (data: T[]): Array<{}> | T[] => {
-      return [{}, ...data];
-    }
-  );
+  public getData = memoizeOne((data: T[]): Array<{}> | T[] => [{}, ...data]);
 
   public getColumnSizes = memoizeOne(
     (

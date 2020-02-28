@@ -1,3 +1,1 @@
-export {
-  default as InlineBorderedItems
-} from "./components/InlineBorderedItems";
+export { default as InlineBorderedItems } from "./components/InlineBorderedItems";

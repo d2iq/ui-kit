@@ -14,9 +14,7 @@ interface ConfigurationMapHeadingProps {
   headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
-const ConfigurationMapHeading: React.StatelessComponent<
-  ConfigurationMapHeadingProps
-> = props => {
+const ConfigurationMapHeading: React.StatelessComponent<ConfigurationMapHeadingProps> = props => {
   const { children, headingLevel = 1 } = props;
   // TODO: when we have our typographic scale and component for headings,
   // use those header components instead of HTML headings
