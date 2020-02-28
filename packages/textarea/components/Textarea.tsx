@@ -114,13 +114,12 @@ class Textarea extends React.PureComponent<TextareaProps, {}> {
             />
             <div data-cy={textareaDataCy}>
               {getHintContent ||
-                (hasError &&
-                  getValidationErrors && (
-                    <React.Fragment>
-                      {getHintContent}
-                      {hasError && getValidationErrors}
-                    </React.Fragment>
-                  ))}
+                (hasError && getValidationErrors && (
+                  <React.Fragment>
+                    {getHintContent}
+                    {hasError && getValidationErrors}
+                  </React.Fragment>
+                ))}
             </div>
           </div>
         )}
