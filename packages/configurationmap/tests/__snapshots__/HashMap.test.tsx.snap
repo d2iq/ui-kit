@@ -2,7 +2,7 @@
 
 exports[`HashMap renders array value 1`] = `
 <dl
-  class="css-1p6nhgy"
+  class="css-yjq8nq"
   data-cy="configurationMapSection"
 >
   <div
@@ -27,7 +27,7 @@ exports[`HashMap renders array value 1`] = `
 
 exports[`HashMap renders boolean value 1`] = `
 <dl
-  class="css-1p6nhgy"
+  class="css-yjq8nq"
   data-cy="configurationMapSection"
 >
   <div
@@ -52,7 +52,7 @@ exports[`HashMap renders boolean value 1`] = `
 
 exports[`HashMap renders default 1`] = `
 <dl
-  class="css-1p6nhgy"
+  class="css-yjq8nq"
   data-cy="configurationMapSection"
 >
   <div
@@ -77,7 +77,7 @@ exports[`HashMap renders default 1`] = `
 
 exports[`HashMap renders empty value 1`] = `
 <dl
-  class="css-1p6nhgy"
+  class="css-yjq8nq"
   data-cy="configurationMapSection"
 >
   <div
@@ -102,15 +102,20 @@ exports[`HashMap renders empty value 1`] = `
 
 exports[`HashMap renders with a headline 1`] = `
 <dl
-  class="css-1p6nhgy"
+  class="css-yjq8nq"
   data-cy="configurationMapSection"
 >
-  <h1
-    class="css-13pfdrv"
+  <div
+    class="css-4p29as"
     data-cy="configurationMapHeading"
   >
-    baz
-  </h1>
+    <h1
+      class="css-1ewrfgu"
+      data-cy="headingText1"
+    >
+      baz
+    </h1>
+  </div>
   <div
     class="css-1afpcs7"
     data-cy="configurationMapRow"
@@ -133,19 +138,24 @@ exports[`HashMap renders with a headline 1`] = `
 
 exports[`HashMap renders with nested object hash 1`] = `
 <dl
-  class="css-1p6nhgy"
+  class="css-yjq8nq"
   data-cy="configurationMapSection"
 >
   <dl
-    class="css-1p6nhgy"
+    class="css-yjq8nq"
     data-cy="configurationMapSection"
   >
-    <h2
-      class="css-13pfdrv"
+    <div
+      class="css-4p29as"
       data-cy="configurationMapHeading"
     >
-      foo
-    </h2>
+      <h2
+        class="css-1kkb77q"
+        data-cy="headingText2"
+      >
+        foo
+      </h2>
+    </div>
     <div
       class="css-1afpcs7"
       data-cy="configurationMapRow"
