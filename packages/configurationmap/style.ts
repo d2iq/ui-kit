@@ -12,7 +12,7 @@ export const configurationMapRow = css`
 `;
 
 export const configurationMapHeadingStyle = css`
-  margin-bottom: 1em;
+  margin: 1em 0;
 `;
 
 export const configurationMapLabel = css`
