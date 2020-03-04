@@ -1,20 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar SidebarItem renders 1`] = `
+.emotion-0 {
+  height: 100%;
+}
+
+.emotion-1 {
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-transition: width 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: width 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: width 150ms ease-in-out,transform 150ms ease-in-out;
+}
+
 <ThemeProvider
   theme={[Function]}
 >
-  <Clickable
-    action={[MockFunction]}
-    dataCy="sidebarItem"
-    disableFocusOutline={true}
-    role="link"
-    tabIndex={0}
+  <Styled(div)
+    className="emotion-1"
   >
-    <Styled(li)>
-      Item label
-    </Styled(li)>
-  </Clickable>
+    <Styled(nav)
+      className="emotion-0"
+    >
+      <WithTheme(SidebarItemComponent)
+        icon="product-components-inverse"
+        onClick={[MockFunction]}
+        openInNewTab={true}
+        url="http://google.com"
+      >
+        Item label
+      </WithTheme(SidebarItemComponent)>
+    </Styled(nav)>
+  </Styled(div)>
 </ThemeProvider>
 `;
 
@@ -168,7 +185,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         </SidebarItemLabel>
       </div>
     }
-    labelClassName="css-enopth"
+    labelClassName="css-133dzlb"
   >
     <ul
       className="emotion-0"
@@ -180,6 +197,8 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         <WithTheme(SidebarSubMenuItem)
           key="0"
           onClick={[MockFunction]}
+          openInNewTab={true}
+          url="http://google.com"
         >
           Item label
         </WithTheme(SidebarSubMenuItem)>
@@ -191,6 +210,8 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         <WithTheme(SidebarSubMenuItem)
           key="1"
           onClick={[MockFunction]}
+          openInNewTab={true}
+          url="http://google.com"
         >
           Item label
         </WithTheme(SidebarSubMenuItem)>
