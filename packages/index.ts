@@ -64,6 +64,7 @@ export { Icon } from "./icon";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
 export { InlineBorderedItems } from "./inlineBorderedItems";
 export { InputAppearance } from "./shared/types/inputAppearance";
+export { Link, ResetLink } from "./link";
 export { List, BorderedList } from "./list";
 export {
   InlineLoadingIndicator,
