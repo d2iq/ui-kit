@@ -101,7 +101,10 @@ export class TextInputWithBadges extends TextInputWithIcon<
     const { badgeAppearance = "primary" } = this.props;
     return (
       <FormFieldWrapper
-        id={this.props.id}
+        // TODO: figure out how to get rid of this non-null assertion
+        // If we stop generating an `id` prop in the TextInput component,
+        // it would be possible for `this.props.id` to be undefined
+        id={this.props.id!}
         errors={this.props.errors}
         hintContent={this.props.hintContent}
       >
