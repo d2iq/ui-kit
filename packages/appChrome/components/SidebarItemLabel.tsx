@@ -10,7 +10,6 @@ export interface SidebarItemLabelProps {
   children?: React.ReactElement<HTMLElement> | string;
   // TODO: only accept IconShapes when we make a big breaking change
   icon?: IconShapes | React.ReactElement<HTMLElement>;
-  isActive?: boolean;
   iconWidth?: string;
 }
 

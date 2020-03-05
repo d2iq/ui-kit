@@ -59,9 +59,16 @@ describe("Sidebar", () => {
     it("renders", () => {
       const onClickFn = jest.fn();
       const component = shallow(
-        <SidebarItem icon={ProductIcons.ComponentsInverse} onClick={onClickFn}>
-          Item label
-        </SidebarItem>
+        <Sidebar isOpen={true}>
+          <SidebarItem
+            icon={ProductIcons.ComponentsInverse}
+            onClick={onClickFn}
+            url="http://google.com"
+            openInNewTab={true}
+          >
+            Item label
+          </SidebarItem>
+        </Sidebar>
       );
       expect(toJson(component)).toMatchSnapshot();
     });
@@ -82,10 +89,20 @@ describe("Sidebar", () => {
     const onClickFn = jest.fn();
     // tslint:disable:jsx-wrap-multiline
     const subMenuItems = [
-      <SidebarSubMenuItem key={0} onClick={onClickFn}>
+      <SidebarSubMenuItem
+        key={0}
+        onClick={onClickFn}
+        url="http://google.com"
+        openInNewTab={true}
+      >
         Item label
       </SidebarSubMenuItem>,
-      <SidebarSubMenuItem key={1} onClick={onClickFn}>
+      <SidebarSubMenuItem
+        key={1}
+        onClick={onClickFn}
+        url="http://google.com"
+        openInNewTab={true}
+      >
         Item label
       </SidebarSubMenuItem>
     ];
