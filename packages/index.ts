@@ -115,7 +115,13 @@ export { Legacy };
 export { CodeSnippet } from "./codesnippet";
 
 // Style utility components
-export { Container, Flex, FlexItem, GridList } from "./styleUtils/layout";
+export {
+  Container,
+  Flex,
+  FlexItem,
+  GridList,
+  Stack
+} from "./styleUtils/layout";
 export { Box, BorderedBox, SpacingBox } from "./styleUtils/modifiers";
 export {
   Text,

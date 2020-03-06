@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stack renders default 1`] = `
+<div
+  class="css-vei10c"
+  data-cy="stack"
+>
+  <div>
+    Lorem Ipsum is simply dummy text
+  </div>
+  <div>
+    of the printing and typesetting industry.
+  </div>
+  <div>
+    Lorem Ipsum has been the industry's
+  </div>
+</div>
+`;
+
+exports[`Stack renders with a custom tag 1`] = `
+<ul
+  class="css-nfkiux"
+  data-cy="stack"
+>
+  <li>
+    Lorem Ipsum is simply dummy text
+  </li>
+  <li>
+    of the printing and typesetting industry.
+  </li>
+  <li>
+    Lorem Ipsum has been the industry's
+  </li>
+</ul>
+`;
+
+exports[`Stack renders with different spacingSize 1`] = `
+<div
+  class="css-fobxt5"
+  data-cy="stack"
+>
+  <div>
+    Lorem Ipsum is simply dummy text
+  </div>
+  <div>
+    of the printing and typesetting industry.
+  </div>
+  <div>
+    Lorem Ipsum has been the industry's
+  </div>
+</div>
+`;
+
+exports[`Stack renders with responsive spacingSize 1`] = `
+<div
+  class="css-lbur81"
+  data-cy="stack"
+>
+  <div>
+    Lorem Ipsum is simply dummy text
+  </div>
+  <div>
+    of the printing and typesetting industry.
+  </div>
+  <div>
+    Lorem Ipsum has been the industry's
+  </div>
+</div>
+`;
