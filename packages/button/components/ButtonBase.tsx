@@ -112,21 +112,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
       textWeight("medium"),
       className,
       {
-        [fullWidthButton]: isFullWidth,
-        [buttonInverse(appearance)]: isInverse,
-        [getMutedButtonStyles(appearance)]: disabled || isProcessing,
-        [getInverseMutedButtonStyles(appearance)]:
-          (disabled || isProcessing) && isInverse
-      }
-    );
-
-    const linkClassName = cx(
-      linkReset,
-      button(appearance),
-      buttonBase,
-      textWeight("medium"),
-      className,
-      {
+        [linkReset]: url,
         [fullWidthButton]: isFullWidth,
         [buttonInverse(appearance)]: isInverse,
         [getMutedButtonStyles(appearance)]: disabled || isProcessing,
@@ -140,7 +126,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
         return !disabled && !isProcessing ? (
           <a
             href={url}
-            className={linkClassName}
+            className={buttonClassName}
             onClick={this.onClick}
             tabIndex={0}
             target={openInNewTab ? "_blank" : "_self"}
@@ -154,7 +140,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
           // this rule was erroring because the anchor had no href, but in this
           // case that is intentional beacuse it's disabled
           <a
-            className={linkClassName}
+            className={buttonClassName}
             aria-disabled="true"
             tabIndex={-1}
             {...other}
