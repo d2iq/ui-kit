@@ -467,29 +467,29 @@ storiesOf("Table", module)
     >
       <Table data={items}>
         <Column
-          header={<HeaderCell lowerCase={true}>name</HeaderCell>}
+          header={<HeaderCell capitalize={false}>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
           width={width}
         />
         <Column
-          header={<HeaderCell lowerCase={true}>role</HeaderCell>}
+          header={<HeaderCell capitalize={false}>role</HeaderCell>}
           cellRenderer={roleCellRenderer}
           width={width}
         />
         <Column
-          header={<HeaderCell lowerCase={true}>state</HeaderCell>}
+          header={<HeaderCell capitalize={false}>state</HeaderCell>}
           cellRenderer={stateCellRenderer}
           width={width}
         />
         <Column header="" cellRenderer={empty} width={width} />
         <Column
-          header={<HeaderCell lowerCase={true}>Very Long</HeaderCell>}
+          header={<HeaderCell capitalize={false}>Very Long</HeaderCell>}
           cellRenderer={veryLongRenderer}
           width={width}
         />
         <Column
           header={
-            <HeaderCell lowerCase={true} textAlign="right">
+            <HeaderCell capitalize={false} textAlign="right">
               zip code
             </HeaderCell>
           }
@@ -497,7 +497,7 @@ storiesOf("Table", module)
           width={width}
         />
         <Column
-          header={<HeaderCell lowerCase={true}>city</HeaderCell>}
+          header={<HeaderCell capitalize={false}>city</HeaderCell>}
           cellRenderer={cityCellRenderer}
           width={width}
         />
