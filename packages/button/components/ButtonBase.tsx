@@ -23,6 +23,7 @@ import {
   processingTextStyle
 } from "../style";
 import { SharedLinkProps } from "../../link/types";
+import { linkReset } from "../../shared/styles/styleUtils/resets/linkReset";
 
 export enum ButtonAppearances {
   Primary = "primary",
@@ -119,12 +120,27 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
       }
     );
 
+    const linkClassName = cx(
+      linkReset,
+      button(appearance),
+      buttonBase,
+      textWeight("medium"),
+      className,
+      {
+        [fullWidthButton]: isFullWidth,
+        [buttonInverse(appearance)]: isInverse,
+        [getMutedButtonStyles(appearance)]: disabled || isProcessing,
+        [getInverseMutedButtonStyles(appearance)]:
+          (disabled || isProcessing) && isInverse
+      }
+    );
+
     const getButtonNode = () => {
       if (url) {
         return !disabled && !isProcessing ? (
           <a
             href={url}
-            className={buttonClassName}
+            className={linkClassName}
             onClick={this.onClick}
             tabIndex={0}
             target={openInNewTab ? "_blank" : "_self"}
@@ -138,7 +154,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
           // this rule was erroring because the anchor had no href, but in this
           // case that is intentional beacuse it's disabled
           <a
-            className={buttonClassName}
+            className={linkClassName}
             aria-disabled="true"
             tabIndex={-1}
             {...other}
