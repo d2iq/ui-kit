@@ -7,7 +7,7 @@ import { sidebarNavItem, appChromeInsetContent, spaceMenuIcon } from "../style";
 import { listReset } from "../../shared/styles/styleUtils";
 import { iconSizeS } from "../../design-tokens/build/js/designTokens";
 import { withTheme } from "emotion-theming";
-import { AppChromeTheme } from "../types/appChromeTheme";
+import { AppChromeTheme } from "../types";
 
 export interface SidebarSubMenuProps {
   children: Array<React.ReactElement<SidebarSubMenuItemProps>>;

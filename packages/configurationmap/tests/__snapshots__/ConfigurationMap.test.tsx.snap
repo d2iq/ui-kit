@@ -2,11 +2,10 @@
 
 exports[`ConfigurationMap renders default 1`] = `
 <div
-  class="css-iq9swa"
   data-cy="configurationMap"
 >
   <dl
-    class="css-1p6nhgy"
+    class="css-yjq8nq"
     data-cy="configurationMapSection"
   >
     <div
@@ -66,11 +65,10 @@ exports[`ConfigurationMap renders default 1`] = `
 
 exports[`ConfigurationMap renders with actions 1`] = `
 <div
-  class="css-iq9swa"
   data-cy="configurationMap"
 >
   <dl
-    class="css-1p6nhgy"
+    class="css-yjq8nq"
     data-cy="configurationMapSection"
   >
     <div
@@ -181,11 +179,10 @@ exports[`ConfigurationMap renders with actions 1`] = `
 
 exports[`ConfigurationMap renders with default value 1`] = `
 <div
-  class="css-iq9swa"
   data-cy="configurationMap"
 >
   <dl
-    class="css-1p6nhgy"
+    class="css-yjq8nq"
     data-cy="configurationMapSection"
   >
     <div
@@ -245,19 +242,23 @@ exports[`ConfigurationMap renders with default value 1`] = `
 
 exports[`ConfigurationMap renders with headline 1`] = `
 <div
-  class="css-iq9swa"
   data-cy="configurationMap"
 >
   <dl
-    class="css-1p6nhgy"
+    class="css-yjq8nq"
     data-cy="configurationMapSection"
   >
-    <h1
-      class="css-13pfdrv"
+    <div
+      class="css-4p29as"
       data-cy="configurationMapHeading"
     >
-      Jane Doe Info
-    </h1>
+      <h1
+        class="css-1ewrfgu"
+        data-cy="headingText1"
+      >
+        Jane Doe Info
+      </h1>
+    </div>
     <div
       class="css-1afpcs7"
       data-cy="configurationMapRow"

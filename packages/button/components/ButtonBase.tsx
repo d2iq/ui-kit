@@ -4,7 +4,6 @@ import FocusStyleManager from "../../shared/components/FocusStyleManager";
 import { IconShapes } from "../../icon/components/Icon";
 import IconPropAdapter from "../../icon/components/IconPropAdapter";
 import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
-
 import {
   buttonReset,
   textWeight,
@@ -23,6 +22,7 @@ import {
   getMutedButtonStyles,
   processingTextStyle
 } from "../style";
+import { SharedLinkProps } from "../../link/types";
 
 export enum ButtonAppearances {
   Primary = "primary",
@@ -32,7 +32,7 @@ export enum ButtonAppearances {
   Success = "success"
 }
 
-export interface ButtonProps {
+export interface ButtonProps extends SharedLinkProps {
   /**
    * if the button triggers new content to appear (e.g.: modals and dropdowns)
    */
@@ -72,14 +72,6 @@ export interface ButtonProps {
    * the type of button - same as HTML "type" attribute on the <button> tag
    */
   type?: "button" | "reset" | "submit";
-  /**
-   * a url the user will be navigated to when clicking the button. This also changes the tag to `<a>`
-   */
-  url?: string;
-  /**
-   * if the `url` prop is set, this will open that link in a new tab
-   */
-  openInNewTab?: boolean;
 }
 
 export interface ButtonBaseProps extends ButtonProps {

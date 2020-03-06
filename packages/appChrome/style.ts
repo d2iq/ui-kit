@@ -10,12 +10,15 @@ import {
 import { padding } from "../shared/styles/styleUtils";
 import { pickHoverBg, pickReadableTextColor } from "../shared/styles/color";
 import getCSSVarValue from "../utilities/getCSSVarValue";
-import { AppChromeTheme } from "./types/appChromeTheme";
+import { AppChromeTheme } from "./types";
 import {
   spaceSizes,
   SpaceSizes
 } from "../shared/styles/styleUtils/modifiers/modifierUtils";
-import { defaultSidebarItemHorizPaddingSize } from "./components/SidebarItem";
+import {
+  defaultSidebarItemHorizPaddingSize,
+  defaultSidebarItemVertPaddingSize
+} from "./components/SidebarItem";
 
 const iconSize = "24px";
 
@@ -86,6 +89,12 @@ export const sidebarNavItem = (
     cursor: ${isDisabled ? "default !important" : "pointer"};
     opacity: ${isDisabled ? "0.6" : "1"};
     text-transform: capitalize;
+    padding: ${spaceSizes[
+        theme?.sidebarItemPaddingVert || defaultSidebarItemVertPaddingSize
+      ]}
+      ${spaceSizes[
+        theme?.sidebarItemPaddingHor || defaultSidebarItemHorizPaddingSize
+      ]};
 
     * {
       cursor: ${isDisabled ? "default !important" : "unset"};

@@ -3,23 +3,16 @@ import { cx } from "emotion";
 import { Box } from "../../styleUtils/modifiers";
 import Card, { CardProps } from "./Card";
 import { buttonCard, cardLink, cardWithLink } from "../style";
+import { SharedLinkProps } from "../../link/types";
 
 export interface ButtonCardProps extends CardProps {
-  /**
-   * a url the user will be navigated to when clicking the card
-   */
-  url: string;
-  /**
-   * Whether the link should open in a new tab
-   */
-  openInNewTab?: boolean;
   /**
    * What screenreaders read aloud for the link
    */
   linkDescription: string;
 }
 
-class LinkCard extends Card<ButtonCardProps, {}> {
+class LinkCard extends Card<ButtonCardProps & SharedLinkProps, {}> {
   public render() {
     const {
       openInNewTab,

@@ -1,6 +1,7 @@
-import { Theme } from "../../themes/types/appTheme";
-import { BreakpointConfig } from "../../shared/styles/breakpoints";
-import { SpaceSizes } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
+import { Theme } from "../themes/types/appTheme";
+import { BreakpointConfig } from "../shared/styles/breakpoints";
+import { SpaceSizes } from "../shared/styles/styleUtils/modifiers/modifierUtils";
+import { SharedLinkProps } from "../link/types";
 
 type BgColor = React.CSSProperties["backgroundColor"];
 type PaddingHoriz = SpaceSizes;
@@ -20,4 +21,10 @@ export interface AppChromeTheme extends Theme {
   sidebarWidth?: BreakpointConfig<ElWidth>;
   sidebarItemPaddingHor?: PaddingHoriz;
   sidebarItemPaddingVert?: PaddingVert;
+}
+
+export interface SidebarNavItemProps extends SharedLinkProps {
+  isActive?: boolean;
+  onClick?: (event?: React.SyntheticEvent<HTMLElement>) => void;
+  disabled?: boolean;
 }
