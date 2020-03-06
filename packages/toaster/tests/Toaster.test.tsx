@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { shallow, mount } from "enzyme";
 import { Toaster, Toast } from "../";
 import { DELAY_TIME } from "../components/Toaster";
@@ -96,8 +96,8 @@ describe("Toaster", () => {
     const component = mount(<ToastWithProps />);
     const instance = component.find(Toaster).instance() as Toaster;
 
-    expect(instance.state.toasts && instance.state.toasts.length).toEqual(1);
+    expect(instance.state.toasts.length).toEqual(1);
     instance.componentWillReceiveProps(newProps);
-    expect(instance.state.toasts && instance.state.toasts.length).toEqual(2);
+    expect(instance.state.toasts.length).toEqual(2);
   });
 });
