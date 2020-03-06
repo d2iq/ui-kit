@@ -17,14 +17,8 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "tsBuildInfoFile": ".tsbuildinfo",
-    "typeRoots": [
-      "node_modules/@types",
-      "node_modules/emotion/types",
-      "node_modules/create-emotion-styled/types",
-      "node_modules/create-emotion-styled/types/react"
-    ],
     "lib": ["es6", "dom", "es2017"]
   },
-  "include": ["./packages/index.ts"],
+  "include": ["./packages/index.ts", "./typings/*"],
   "exclude": ["**/*.test.*", "**/*.stories.*"]
 }

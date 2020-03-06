@@ -6,7 +6,9 @@ import { DELAY_TIME } from "../components/Toaster";
 describe("Toaster", () => {
   it("stores toasts in state", () => {
     const component = shallow(
-      <Toaster children={[<Toast id={0} title="I Am Toast" key={0} />]} />
+      <Toaster>
+        <Toast id={0} title="I Am Toast" key={0} />
+      </Toaster>
     );
     expect(Object.keys(component.state("toasts")).length).toBe(1);
   });
@@ -15,7 +17,9 @@ describe("Toaster", () => {
     const clearTimeoutsSpy = spyOn(Toaster.prototype, "clearTimeouts");
     const setTimerSpy = spyOn(Toaster.prototype, "setTimer");
     const component = shallow(
-      <Toaster children={[<Toast id={0} title="I Am Toast" key={0} />]} />
+      <Toaster>
+        <Toast id={0} title="I Am Toast" key={0} />
+      </Toaster>
     );
 
     component.find("ol").simulate("mouseEnter");

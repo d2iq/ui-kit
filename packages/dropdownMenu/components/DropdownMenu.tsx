@@ -91,9 +91,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
       (acc, item, sectionIndex) => {
         const { sections = [] } = acc;
         const { children } = item.props;
-        const menuItems = React.Children.toArray(children) as Array<
-          React.ReactElement<DropdownMenuItemProps>
-        >;
+        const menuItems = React.Children.toArray(children);
         const childrenWithKeys = menuItems.map((child, i) => {
           acc.menuItemIndex++;
 

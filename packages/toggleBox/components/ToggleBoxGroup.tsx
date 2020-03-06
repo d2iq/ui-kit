@@ -66,9 +66,7 @@ class ToggleBoxGroup extends React.PureComponent<ToggleBoxGroupProps> {
 
     const toggleBoxes = () => (
       <Flex direction={direction} gutterSize={gutterSize} align="stretch">
-        {(React.Children.toArray(children) as Array<
-          React.ReactElement<ToggleBoxProps>
-        >).map(toggleBox => {
+        {React.Children.toArray(children).map(toggleBox => {
           const { name, value, ...childOther } = toggleBox.props;
           const handleChange = e => {
             if (onChange) {
