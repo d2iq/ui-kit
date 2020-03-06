@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
-import { shallow, mount } from "enzyme";
+import { shallow, mount, render } from "enzyme";
 import toJson from "enzyme-to-json";
 // tslint:disable:no-duplicate-imports
 import { css, cx } from "emotion";
@@ -151,5 +151,12 @@ describe("TextInput", () => {
       />
     );
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it("should generate an ID if one is not passed", () => {
+    const component = render(<TextInput inputLabel="Test Input" />);
+    // const textInputId = component.find("input").prop("id");
+    // console.log(`textInputId: ${textInputId}`);
+    expect(component.find("input").prop("id")).toBeDefined();
   });
 });

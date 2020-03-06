@@ -18,3 +18,4 @@ packages/icons/dist/
 .cache/
 cypress/videos/
 cypress/screenshots/
+.tsbuildinfo

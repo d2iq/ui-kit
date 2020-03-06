@@ -29,10 +29,6 @@ import Tooltip from "../../tooltip/components/Tooltip";
 
 export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
-   * Unique identifier used for the form input component
-   */
-  id: string;
-  /**
    * The HTML input type for this component.
    */
   type: "text" | "number" | "search" | "email" | "password" | "tel" | "url";
@@ -115,7 +111,7 @@ export class TextInput<P extends TextInputProps> extends React.Component<P> {
     return (
       <label
         className={labelClassName}
-        htmlFor={this.props.id || this.placeholderId}
+        htmlFor={this.getId()}
         data-cy="textInput-label"
       >
         {this.props.inputLabel}
@@ -129,7 +125,7 @@ export class TextInput<P extends TextInputProps> extends React.Component<P> {
 
     return (
       <FormFieldWrapper
-        id={this.props.id || this.placeholderId}
+        id={this.getId()}
         errors={this.props.errors}
         hintContent={this.props.hintContent}
       >
@@ -156,22 +152,19 @@ export class TextInput<P extends TextInputProps> extends React.Component<P> {
       </FormFieldWrapper>
     );
   }
-  protected getInputElementProps() {
+  protected getInputElementProps(): TextInputProps {
     // omit props for container and that we override, otherwise pass through
     // TextInput props to input element
     const {
-      appearance,
       className,
       hintContent,
       inputLabel,
-      showInputLabel,
-      type,
       errors,
       id = this.placeholderId,
       ...inputElementProps
-    } = this.props as TextInputProps;
+    } = this.props;
 
-    return { id, ...inputElementProps };
+    return { ...inputElementProps, id };
   }
 
   protected getInputElement(
@@ -179,12 +172,18 @@ export class TextInput<P extends TextInputProps> extends React.Component<P> {
     isValid: boolean,
     describedBy: string
   ) {
-    const { value, ...inputElementProps } = this.getInputElementProps();
-    const appearance = this.getInputAppearance();
+    const {
+      value,
+      showInputLabel,
+      appearance,
+      ...inputElementProps
+    } = this.getInputElementProps();
+    const textInputAppearance = this.getInputAppearance();
     const dataCy = [
       "textInput-input",
-      ...(appearance && appearance !== InputAppearance.Standard
-        ? [`textInput-input.${appearance}`]
+      ...(textInputAppearance &&
+      textInputAppearance !== InputAppearance.Standard
+        ? [`textInput-input.${textInputAppearance}`]
         : [])
     ].join(" ");
     let { onChange } = inputElementProps;
@@ -221,13 +220,21 @@ export class TextInput<P extends TextInputProps> extends React.Component<P> {
               size={iconSizeXs}
             />
           }
-          id={`labelTooltip-${this.props.id || this.placeholderId}`}
+          id={`labelTooltip-${this.getId()}`}
           maxWidth={200}
         >
           {this.props.tooltipContent}
         </Tooltip>
       </span>
     );
+  }
+
+  private getId(): string {
+    if (typeof this.props.id === "string") {
+      return this.props.id;
+    }
+
+    return this.placeholderId;
   }
 }
 
