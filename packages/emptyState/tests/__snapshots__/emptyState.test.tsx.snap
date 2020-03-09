@@ -72,7 +72,7 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
           data-cy="flexItem"
         >
           <button
-            class="css-67j5fi"
+            class="css-8g34zf"
             data-cy="secondaryButton"
             tabindex="0"
             type="button"
@@ -89,7 +89,7 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
           data-cy="flexItem"
         >
           <button
-            class="css-s9tdxz"
+            class="css-1jip74i"
             data-cy="primaryButton"
             tabindex="0"
             type="button"

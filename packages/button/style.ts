@@ -52,6 +52,11 @@ export const filledButton = (
     border-radius: ${borderRadiusSmall};
     padding: ${buttonPadding.vert} ${buttonPadding.horiz};
 
+    &[href],
+    &[href]:visited {
+      ${tintContent(contentColor)};
+    }
+
     &:hover {
       background-color: ${hoverColor};
     }
@@ -212,6 +217,10 @@ export const button = appearance => {
             getActiveColor(getCSSVarValue(themeTextColorInteractive))
           )};
         }
+        &[href],
+        &[href]:visited {
+          ${tintContent(themeTextColorInteractive)};
+        }
       `;
     case "standard":
       return filledButton(
@@ -256,6 +265,10 @@ export const buttonInverse = appearance => {
           ${tintContent(
             getActiveColor(getCSSVarValue(themeTextColorInteractiveInverted))
           )};
+        }
+        &[href],
+        &[href]:visited {
+          ${tintContent(themeTextColorInteractiveInverted)};
         }
       `;
     case "standard":

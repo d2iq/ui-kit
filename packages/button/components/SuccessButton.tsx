@@ -4,8 +4,9 @@ import {
   ButtonProps,
   ButtonAppearances
 } from "./ButtonBase";
+import { SharedLinkProps } from "../../link/types";
 
-const SuccessButton = (props: ButtonProps) => (
+const SuccessButton = (props: ButtonProps & SharedLinkProps) => (
   <ButtonBase
     appearance={ButtonAppearances.Success}
     data-cy="successButton"
