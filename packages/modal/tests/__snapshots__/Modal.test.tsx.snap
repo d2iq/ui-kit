@@ -276,6 +276,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   fill: #6446cc;
 }
 
+.emotion-8[href],
+.emotion-8[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
 .emotion-10 {
   background: none;
   border: 0;
@@ -301,6 +307,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 .emotion-10::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.emotion-10[href],
+.emotion-10[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
 }
 
 .emotion-10:hover {
@@ -996,6 +1008,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   fill: #6446cc;
 }
 
+.emotion-8[href],
+.emotion-8[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
 .emotion-9 {
   outline: none;
   position: relative;
@@ -1048,6 +1066,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
 .emotion-11::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.emotion-11[href],
+.emotion-11[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
 }
 
 .emotion-11:hover {
@@ -1972,6 +1996,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   fill: #6446cc;
 }
 
+.emotion-1[href],
+.emotion-1[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
 .emotion-6 {
   background: none;
   border: 0;
@@ -1997,6 +2027,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-6::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.emotion-6[href],
+.emotion-6[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
 }
 
 .emotion-6:hover {
@@ -2716,6 +2752,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   fill: #6446cc;
 }
 
+.emotion-8[href],
+.emotion-8[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
 .emotion-9 {
   outline: none;
   position: relative;
@@ -2768,6 +2810,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-11::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.emotion-11[href],
+.emotion-11[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
 }
 
 .emotion-11:hover {
@@ -3045,6 +3093,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   fill: #6446cc;
 }
 
+.emotion-1[href],
+.emotion-1[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
 .emotion-2 {
   outline: none;
   position: relative;
@@ -3097,6 +3151,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 .emotion-7::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.emotion-7[href],
+.emotion-7[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
 }
 
 .emotion-7:hover {

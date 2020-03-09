@@ -6,8 +6,13 @@ import {
   SecondaryButton,
   StandardButton,
   SuccessButton,
-  DangerButton
-} from "../../index";
+  DangerButton,
+  SpacingBox
+} from "../../";
+import {
+  SpaceSize,
+  BoxSides
+} from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 import ButtonAppearanceSample from "./helpers/ButtonAppearanceSample";
 import { CloseIcon } from "../../shared/icons";
 import { action } from "@storybook/addon-actions";
@@ -204,41 +209,169 @@ storiesOf("Buttons/Default", module)
   )
   .add(
     "used as a link",
-    () => (
-      <React.Fragment>
-        <ButtonAppearanceSample>
-          <StandardButton url="http://google.com">Button</StandardButton>
-          <StandardButton url="http://google.com" disabled={true}>
-            Button
-          </StandardButton>
-          <StandardButton url="http://google.com" isProcessing={true}>
-            Button
-          </StandardButton>
-        </ButtonAppearanceSample>
-        <ButtonAppearanceSample isInverse={true}>
-          <StandardButton url="http://google.com" isInverse={true}>
-            Button
-          </StandardButton>
-          <StandardButton
-            url="http://google.com"
-            disabled={true}
-            isInverse={true}
-          >
-            Button
-          </StandardButton>
-          <StandardButton
-            url="http://google.com"
-            isProcessing={true}
-            isInverse={true}
-          >
-            Button
-          </StandardButton>
-        </ButtonAppearanceSample>
-      </React.Fragment>
-    ),
+    () => {
+      const spacingBoxProps = {
+        spacingSize: "xxl" as SpaceSize,
+        side: "bottom" as BoxSides
+      };
+      return (
+        <React.Fragment>
+          <SpacingBox {...spacingBoxProps}>
+            <ButtonAppearanceSample>
+              <PrimaryButton url="http://google.com">Button</PrimaryButton>
+              <PrimaryButton url="http://google.com" disabled={true}>
+                Button
+              </PrimaryButton>
+              <PrimaryButton url="http://google.com" isProcessing={true}>
+                Button
+              </PrimaryButton>
+            </ButtonAppearanceSample>
+            <ButtonAppearanceSample isInverse={true}>
+              <PrimaryButton url="http://google.com" isInverse={true}>
+                Button
+              </PrimaryButton>
+              <PrimaryButton
+                url="http://google.com"
+                disabled={true}
+                isInverse={true}
+              >
+                Button
+              </PrimaryButton>
+              <PrimaryButton
+                url="http://google.com"
+                isProcessing={true}
+                isInverse={true}
+              >
+                Button
+              </PrimaryButton>
+            </ButtonAppearanceSample>
+          </SpacingBox>
+          <SpacingBox {...spacingBoxProps}>
+            <ButtonAppearanceSample>
+              <SecondaryButton url="http://google.com">Button</SecondaryButton>
+              <SecondaryButton url="http://google.com" disabled={true}>
+                Button
+              </SecondaryButton>
+              <SecondaryButton url="http://google.com" isProcessing={true}>
+                Button
+              </SecondaryButton>
+            </ButtonAppearanceSample>
+            <ButtonAppearanceSample isInverse={true}>
+              <SecondaryButton url="http://google.com" isInverse={true}>
+                Button
+              </SecondaryButton>
+              <SecondaryButton
+                url="http://google.com"
+                disabled={true}
+                isInverse={true}
+              >
+                Button
+              </SecondaryButton>
+              <SecondaryButton
+                url="http://google.com"
+                isProcessing={true}
+                isInverse={true}
+              >
+                Button
+              </SecondaryButton>
+            </ButtonAppearanceSample>
+          </SpacingBox>
+          <SpacingBox {...spacingBoxProps}>
+            <ButtonAppearanceSample>
+              <StandardButton url="http://google.com">Button</StandardButton>
+              <StandardButton url="http://google.com" disabled={true}>
+                Button
+              </StandardButton>
+              <StandardButton url="http://google.com" isProcessing={true}>
+                Button
+              </StandardButton>
+            </ButtonAppearanceSample>
+            <ButtonAppearanceSample isInverse={true}>
+              <StandardButton url="http://google.com" isInverse={true}>
+                Button
+              </StandardButton>
+              <StandardButton
+                url="http://google.com"
+                disabled={true}
+                isInverse={true}
+              >
+                Button
+              </StandardButton>
+              <StandardButton
+                url="http://google.com"
+                isProcessing={true}
+                isInverse={true}
+              >
+                Button
+              </StandardButton>
+            </ButtonAppearanceSample>
+          </SpacingBox>
+          <SpacingBox {...spacingBoxProps}>
+            <ButtonAppearanceSample>
+              <SuccessButton url="http://google.com">Button</SuccessButton>
+              <SuccessButton url="http://google.com" disabled={true}>
+                Button
+              </SuccessButton>
+              <SuccessButton url="http://google.com" isProcessing={true}>
+                Button
+              </SuccessButton>
+            </ButtonAppearanceSample>
+            <ButtonAppearanceSample isInverse={true}>
+              <SuccessButton url="http://google.com" isInverse={true}>
+                Button
+              </SuccessButton>
+              <SuccessButton
+                url="http://google.com"
+                disabled={true}
+                isInverse={true}
+              >
+                Button
+              </SuccessButton>
+              <SuccessButton
+                url="http://google.com"
+                isProcessing={true}
+                isInverse={true}
+              >
+                Button
+              </SuccessButton>
+            </ButtonAppearanceSample>
+          </SpacingBox>
+          <SpacingBox {...spacingBoxProps}>
+            <ButtonAppearanceSample>
+              <DangerButton url="http://google.com">Button</DangerButton>
+              <DangerButton url="http://google.com" disabled={true}>
+                Button
+              </DangerButton>
+              <DangerButton url="http://google.com" isProcessing={true}>
+                Button
+              </DangerButton>
+            </ButtonAppearanceSample>
+            <ButtonAppearanceSample isInverse={true}>
+              <DangerButton url="http://google.com" isInverse={true}>
+                Button
+              </DangerButton>
+              <DangerButton
+                url="http://google.com"
+                disabled={true}
+                isInverse={true}
+              >
+                Button
+              </DangerButton>
+              <DangerButton
+                url="http://google.com"
+                isProcessing={true}
+                isInverse={true}
+              >
+                Button
+              </DangerButton>
+            </ButtonAppearanceSample>
+          </SpacingBox>
+        </React.Fragment>
+      );
+    },
     {
       info: {
-        propTables: [StandardButton]
+        propTablesExclude: [SpacingBox, React.Fragment]
       }
     }
   )
