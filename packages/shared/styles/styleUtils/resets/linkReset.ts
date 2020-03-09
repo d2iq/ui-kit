@@ -8,3 +8,12 @@ export const linkReset = css`
     color: inherit;
   }
 `;
+
+export const primaryLinkReset = css`
+  color: white;
+  text-decoration: none;
+
+  &:visited {
+    color: white;
+  }
+`;

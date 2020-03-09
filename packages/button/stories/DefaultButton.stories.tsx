@@ -243,6 +243,46 @@ storiesOf("Buttons/Default", module)
     }
   )
   .add(
+    "PrimaryButton used as a link",
+    () => (
+      <React.Fragment>
+        <ButtonAppearanceSample>
+          <PrimaryButton url="http://google.com">Button</PrimaryButton>
+          <PrimaryButton url="http://google.com" disabled={true}>
+            Button
+          </PrimaryButton>
+          <PrimaryButton url="http://google.com" isProcessing={true}>
+            Button
+          </PrimaryButton>
+        </ButtonAppearanceSample>
+        <ButtonAppearanceSample isInverse={true}>
+          <PrimaryButton url="http://google.com" isInverse={true}>
+            Button
+          </PrimaryButton>
+          <PrimaryButton
+            url="http://google.com"
+            disabled={true}
+            isInverse={true}
+          >
+            Button
+          </PrimaryButton>
+          <PrimaryButton
+            url="http://google.com"
+            isProcessing={true}
+            isInverse={true}
+          >
+            Button
+          </PrimaryButton>
+        </ButtonAppearanceSample>
+      </React.Fragment>
+    ),
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
+  )
+  .add(
     "used as a link that opens in a new tab",
     () => (
       <React.Fragment>
