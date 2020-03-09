@@ -23,10 +23,6 @@ import {
   processingTextStyle
 } from "../style";
 import { SharedLinkProps } from "../../link/types";
-import {
-  linkReset,
-  primaryLinkReset
-} from "../../shared/styles/styleUtils/resets/linkReset";
 
 export enum ButtonAppearances {
   Primary = "primary",
@@ -115,7 +111,6 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
       textWeight("medium"),
       className,
       {
-        [appearance === "primary" ? primaryLinkReset : linkReset]: url,
         [fullWidthButton]: isFullWidth,
         [buttonInverse(appearance)]: isInverse,
         [getMutedButtonStyles(appearance)]: disabled || isProcessing,

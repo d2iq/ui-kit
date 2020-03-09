@@ -43,6 +43,12 @@ exports[`Dropdownable is visible after opening 1`] = `
   padding: 0;
 }
 
+.emotion-0[href],
+.emotion-0[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
 .emotion-0:hover {
   background-color: #704fe5;
 }
@@ -205,6 +211,12 @@ exports[`Dropdownable is visible after opening 2`] = `
 .emotion-0::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.emotion-0[href],
+.emotion-0[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
 }
 
 .emotion-0:hover {
