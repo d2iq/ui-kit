@@ -32,6 +32,28 @@ storiesOf("Forms/ToggleBoxGroup", module)
       )}
     </ToggleBoxGroupStoryHelper>
   ))
+  .add("with label", () => (
+    <ToggleBoxGroupStoryHelper>
+      {({ changeHandler, selectedItems }) => (
+        <ToggleBoxGroup
+          onChange={changeHandler}
+          selectedItems={selectedItems}
+          id="withLabel"
+          label="Atmosphere layer"
+        >
+          <ToggleBox id="exosphere" value="exosphere">
+            Exosphere
+          </ToggleBox>
+          <ToggleBox id="thermosphere" value="thermosphere">
+            Thermosphere
+          </ToggleBox>
+          <ToggleBox id="mesosphere" value="mesosphere">
+            Mesosphere
+          </ToggleBox>
+        </ToggleBoxGroup>
+      )}
+    </ToggleBoxGroupStoryHelper>
+  ))
   .add("multiSelect", () => (
     <ToggleBoxGroupStoryHelper>
       {({ changeHandler, selectedItems }) => (

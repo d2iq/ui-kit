@@ -27,6 +27,24 @@ describe("ToggleBoxGroup", () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it("renders with a label", () => {
+    const component = mount(
+      <ToggleBoxGroup id="default" label="Atmosphere layer">
+        <ToggleBox id="exosphere" value="exosphere">
+          Exosphere
+        </ToggleBox>
+        <ToggleBox id="thermosphere" value="thermosphere">
+          Thermosphere
+        </ToggleBox>
+        <ToggleBox id="mesosphere" value="mesosphere">
+          Mesosphere
+        </ToggleBox>
+      </ToggleBoxGroup>
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it("renders with a selected ToggleBox", () => {
     const component = mount(
       <ToggleBoxGroup id="selectedItems" selectedItems={["mesosphere"]}>
