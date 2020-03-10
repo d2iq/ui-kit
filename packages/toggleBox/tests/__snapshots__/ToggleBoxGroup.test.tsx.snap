@@ -149,9 +149,9 @@ exports[`ToggleBoxGroup renders default 1`] = `
               >
                 <input
                   aria-checked={false}
+                  checked={false}
                   className="emotion-0"
                   data-cy="toggleWrapper-input"
-                  defaultChecked={false}
                   disabled={false}
                   id="exosphere"
                   name="default"
@@ -221,9 +221,9 @@ exports[`ToggleBoxGroup renders default 1`] = `
               >
                 <input
                   aria-checked={false}
+                  checked={false}
                   className="emotion-0"
                   data-cy="toggleWrapper-input"
-                  defaultChecked={false}
                   disabled={false}
                   id="thermosphere"
                   name="default"
@@ -293,9 +293,9 @@ exports[`ToggleBoxGroup renders default 1`] = `
               >
                 <input
                   aria-checked={false}
+                  checked={false}
                   className="emotion-0"
                   data-cy="toggleWrapper-input"
-                  defaultChecked={false}
                   disabled={false}
                   id="mesosphere"
                   name="default"
@@ -510,9 +510,9 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
                 >
                   <input
                     aria-checked={false}
+                    checked={false}
                     className="emotion-1"
                     data-cy="toggleWrapper-input"
-                    defaultChecked={false}
                     disabled={false}
                     id="exosphere"
                     name="default"
@@ -582,9 +582,9 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
                 >
                   <input
                     aria-checked={false}
+                    checked={false}
                     className="emotion-1"
                     data-cy="toggleWrapper-input"
-                    defaultChecked={false}
                     disabled={false}
                     id="thermosphere"
                     name="default"
@@ -654,9 +654,9 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
                 >
                   <input
                     aria-checked={false}
+                    checked={false}
                     className="emotion-1"
                     data-cy="toggleWrapper-input"
-                    defaultChecked={false}
                     disabled={false}
                     id="mesosphere"
                     name="default"
@@ -885,9 +885,9 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
               >
                 <input
                   aria-checked={false}
+                  checked={false}
                   className="emotion-0"
                   data-cy="toggleWrapper-input"
-                  defaultChecked={false}
                   disabled={false}
                   id="exosphere"
                   name="selectedItems"
@@ -957,9 +957,9 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
               >
                 <input
                   aria-checked={false}
+                  checked={false}
                   className="emotion-0"
                   data-cy="toggleWrapper-input"
-                  defaultChecked={false}
                   disabled={false}
                   id="thermosphere"
                   name="selectedItems"
@@ -1029,9 +1029,9 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
               >
                 <input
                   aria-checked={true}
+                  checked={true}
                   className="emotion-0"
                   data-cy="toggleWrapper-input"
-                  defaultChecked={true}
                   disabled={false}
                   id="mesosphere"
                   name="selectedItems"
@@ -1224,9 +1224,9 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
               >
                 <input
                   aria-checked={false}
+                  checked={false}
                   className="emotion-0"
                   data-cy="toggleWrapper-input"
-                  defaultChecked={false}
                   disabled={false}
                   id="exosphere"
                   name="customLayoutProps"
@@ -1296,9 +1296,9 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
               >
                 <input
                   aria-checked={false}
+                  checked={false}
                   className="emotion-0"
                   data-cy="toggleWrapper-input"
-                  defaultChecked={false}
                   disabled={false}
                   id="thermosphere"
                   name="customLayoutProps"
@@ -1368,9 +1368,9 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
               >
                 <input
                   aria-checked={false}
+                  checked={false}
                   className="emotion-0"
                   data-cy="toggleWrapper-input"
-                  defaultChecked={false}
                   disabled={false}
                   id="mesosphere"
                   name="customLayoutProps"

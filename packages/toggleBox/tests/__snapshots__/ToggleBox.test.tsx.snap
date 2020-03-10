@@ -76,9 +76,9 @@ exports[`ToggleBox renders active 1`] = `
     >
       <input
         aria-checked={true}
+        checked={true}
         className="emotion-0"
         data-cy="toggleWrapper-input"
-        defaultChecked={true}
         disabled={false}
         id="active"
         onBlur={[Function]}
