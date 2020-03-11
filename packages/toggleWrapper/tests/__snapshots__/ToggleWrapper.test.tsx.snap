@@ -26,9 +26,9 @@ exports[`ToggleWrapper renders 1`] = `
   >
     <input
       aria-checked={true}
+      checked={true}
       className="emotion-0"
       data-cy="toggleWrapper-input"
-      defaultChecked={true}
       onBlur={[Function]}
       onFocus={[Function]}
       type="checkbox"
@@ -66,9 +66,9 @@ exports[`ToggleWrapper renders as a radio input 1`] = `
   >
     <input
       aria-checked={true}
+      checked={true}
       className="emotion-0"
       data-cy="toggleWrapper-input"
-      defaultChecked={true}
       onBlur={[Function]}
       onFocus={[Function]}
       type="radio"
