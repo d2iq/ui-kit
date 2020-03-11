@@ -168,11 +168,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
 }
 
 <li
-  data-cy={
-    Array [
-      "sidebarSubMenu",
-    ]
-  }
+  data-cy="sidebarSubMenu"
 >
   <Expandable
     label={

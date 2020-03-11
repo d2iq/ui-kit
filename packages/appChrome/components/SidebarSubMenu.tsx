@@ -56,7 +56,7 @@ export class SidebarSubMenuComponent extends React.PureComponent<
     const dataCy = [
       "sidebarSubMenu",
       ...(isOpen ? ["sidebarSubMenu.open"] : [])
-    ];
+    ].join(" ");
 
     return (
       <li data-cy={dataCy}>
