@@ -82,6 +82,7 @@ class SidebarSubMenuItem extends React.PureComponent<
         onClick={onClick}
         aria-disabled={disabled}
         tabIndex={disabled ? -1 : undefined}
+        data-cy={dataCy}
       >
         <span className={subMenuItemText}>{children}</span>
       </ResetLink>
