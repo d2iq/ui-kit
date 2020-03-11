@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { shallow, mount } from "enzyme";
 import { Toaster, Toast } from "../";
 import { DELAY_TIME } from "../components/Toaster";
@@ -6,7 +6,9 @@ import { DELAY_TIME } from "../components/Toaster";
 describe("Toaster", () => {
   it("stores toasts in state", () => {
     const component = shallow(
-      <Toaster children={[<Toast id={0} title="I Am Toast" key={0} />]} />
+      <Toaster>
+        <Toast id={0} title="I Am Toast" key={0} />
+      </Toaster>
     );
     expect(Object.keys(component.state("toasts")).length).toBe(1);
   });
@@ -15,7 +17,9 @@ describe("Toaster", () => {
     const clearTimeoutsSpy = spyOn(Toaster.prototype, "clearTimeouts");
     const setTimerSpy = spyOn(Toaster.prototype, "setTimer");
     const component = shallow(
-      <Toaster children={[<Toast id={0} title="I Am Toast" key={0} />]} />
+      <Toaster>
+        <Toast id={0} title="I Am Toast" key={0} />
+      </Toaster>
     );
 
     component.find("ol").simulate("mouseEnter");
@@ -96,8 +100,8 @@ describe("Toaster", () => {
     const component = mount(<ToastWithProps />);
     const instance = component.find(Toaster).instance() as Toaster;
 
-    expect(instance.state.toasts && instance.state.toasts.length).toEqual(1);
+    expect(instance.state.toasts.length).toEqual(1);
     instance.componentWillReceiveProps(newProps);
-    expect(instance.state.toasts && instance.state.toasts.length).toEqual(2);
+    expect(instance.state.toasts.length).toEqual(2);
   });
 });
