@@ -34,6 +34,7 @@ class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
       <>
         {url ? (
           <li
+            data-cy={dataCy}
             className={sidebarNavItem(
               Boolean(isActive),
               Boolean(disabled),

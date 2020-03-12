@@ -9,6 +9,6 @@ export const linkReset = css`
   }
 
   :focus {
-    outline:none;
+    outline: none;
   }
 `;

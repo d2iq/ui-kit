@@ -2,7 +2,7 @@
 
 exports[`Link renders ResetLink 1`] = `
 <a
-  class="css-1nomj1t"
+  class="css-1ez2pc8"
   href="http://google.com"
   rel="noopener"
   target="_blank"
@@ -13,7 +13,7 @@ exports[`Link renders ResetLink 1`] = `
 
 exports[`Link renders default 1`] = `
 <a
-  class="css-1k6f9tx"
+  class="css-1gv1zvs"
   href="http://google.com"
   rel="noopener"
   target="_blank"
