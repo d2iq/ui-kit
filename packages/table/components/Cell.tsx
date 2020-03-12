@@ -4,16 +4,11 @@ import { cx } from "emotion";
 import { innerCellCss, cellAlignmentCss, textCapitalize } from "../style";
 
 export type TextAlign = "left" | "right" | "center";
-export interface CellProps {
+export interface CellProps extends React.HTMLAttributes<HTMLDivElement> {
   textAlign?: TextAlign;
   capitalize?: boolean;
   children: React.ReactElement<HTMLElement> | string;
   className?: string;
-  role?: string;
-  onMouseEnter?: (event?: React.SyntheticEvent<HTMLElement>) => void;
-  onMouseLeave?: (event?: React.SyntheticEvent<HTMLElement>) => void;
-  onFocus?: (event?: React.SyntheticEvent<HTMLElement>) => void;
-  onBlur?: (event?: React.SyntheticEvent<HTMLElement>) => void;
 }
 
 interface CellState {
@@ -21,19 +16,12 @@ interface CellState {
 }
 
 class Cell extends React.PureComponent<CellProps, CellState> {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      renderedTextContent: null
-    };
-  }
+  state = {
+    renderedTextContent: null
+  };
 
   getTextContent() {
-    const node = ReactDOM.findDOMNode(this);
-    if (node) {
-      return node.textContent;
-    }
+    return ReactDOM.findDOMNode(this)?.textContent;
   }
 
   componentDidMount() {
@@ -55,7 +43,7 @@ class Cell extends React.PureComponent<CellProps, CellState> {
         className={cx(
           innerCellCss,
           cellAlignmentCss(textAlign || "left"),
-          !capitalize ? null : textCapitalize,
+          capitalize ? textCapitalize : null,
           className
         )}
         {...other}

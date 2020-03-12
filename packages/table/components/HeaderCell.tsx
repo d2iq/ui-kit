@@ -23,46 +23,37 @@ export interface HeaderCellProps extends CellProps {
   tooltipId?: string;
 }
 
-// Make capitalize false only if it is explicitly passed as false.
-// If it is undefned, make it true.
 const HeaderCell = ({
-  capitalize,
+  capitalize = true,
   children,
   tooltipContent,
-  tooltipId,
+  tooltipId = useId(1, "columnHeaderTooltip-")[0],
   ...other
-}: HeaderCellProps) => {
-  const [placeholderId] = useId(1, "columnHeaderTooltip-");
-  return (
-    <Cell capitalize={capitalize === false ? false : true} {...other}>
-      <div className={cx(display("inline-flex"), headerCellInner)}>
-        <div
-          className={cx(
-            textTruncate,
-            flexItem("grow"),
-            padding("right", "xxs")
-          )}
-        >
-          {children}
-        </div>
-        {tooltipContent ? (
-          <Tooltip
-            id={tooltipId || placeholderId}
-            trigger={
-              <Icon
-                shape={SystemIcons.CircleQuestion}
-                size={iconSizeXs}
-                color={greyLightDarken2}
-              />
-            }
-          >
-            {tooltipContent}
-          </Tooltip>
-        ) : null}
+}: HeaderCellProps) => (
+  <Cell capitalize={capitalize} {...other}>
+    <div className={cx(display("inline-flex"), headerCellInner)}>
+      <div
+        className={cx(textTruncate, flexItem("grow"), padding("right", "xxs"))}
+      >
+        {children}
       </div>
-    </Cell>
-  );
-};
+      {tooltipContent ? (
+        <Tooltip
+          id={tooltipId}
+          trigger={
+            <Icon
+              shape={SystemIcons.CircleQuestion}
+              size={iconSizeXs}
+              color={greyLightDarken2}
+            />
+          }
+        >
+          {tooltipContent}
+        </Tooltip>
+      ) : null}
+    </div>
+  </Cell>
+);
 
 export default styled(HeaderCell)`
   ${headerCellCss};
