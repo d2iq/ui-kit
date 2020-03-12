@@ -1,5 +1,12 @@
 import * as React from "react";
-import { Table, Column, SortableHeaderCell, Cell, NumberCell } from "../..";
+import {
+  Table,
+  Column,
+  SortableHeaderCell,
+  Cell,
+  NumberCell,
+  TextCell
+} from "../..";
 import { items, width } from "./mocks";
 
 type SortDirection = "ASC" | "DESC" | null;
@@ -34,6 +41,16 @@ const zipcodeCellRenderer = ({ zipcode }: { zipcode?: string }) => (
   <NumberCell>
     <span>{zipcode}</span>
   </NumberCell>
+);
+
+const veryLongRenderer = () => (
+  <TextCell>
+    <span>
+      {Array(100)
+        .fill("VeryLongWord")
+        .join("")}
+    </span>
+  </TextCell>
 );
 
 class SortableTable extends React.Component<{}, ISortableTableDemoState> {
@@ -110,6 +127,19 @@ class SortableTable extends React.Component<{}, ISortableTableDemoState> {
             />
           }
           cellRenderer={nameCellRenderer}
+          width={width}
+        />
+        <Column
+          resizable={true}
+          header={
+            <SortableHeaderCell
+              sortHandler={this.handleSortClick.bind(null, "veryLong")}
+              sortDirection={sortColumn === "veryLong" ? sortDirection : null}
+              columnContent="very long header cell that truncates"
+              tooltipContent="Resizing the column shouldn't hide the tooltip trigger"
+            />
+          }
+          cellRenderer={veryLongRenderer}
           width={width}
         />
         <Column
