@@ -101,7 +101,8 @@ export const sidebarNavItem = (
     }
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:focus-within {
       background-color: ${isActive || isDisabled
         ? itemBgColor
         : pickHoverBg(
@@ -109,6 +110,10 @@ export const sidebarNavItem = (
             hoverBgColor || getCSSVarValue(themeBgHover),
             hoverBgColor || getCSSVarValue(themeBgHoverInverted)
           )};
+
+      a {
+        outline: none;
+      }
     }
   `;
 };
