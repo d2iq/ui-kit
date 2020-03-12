@@ -385,9 +385,8 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     >;
     if (header && header.props && column.props) {
       return (
-        header.props.textAlign === "right" &&
-        column.props.resizable &&
-        header.type === sortableHeaderCell
+        (header.props.tooltipContent || header.type === sortableHeaderCell) &&
+        column.props.resizable
       );
     }
     return false;
@@ -435,7 +434,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
           <div
             className={cx(flexItem("grow"), {
               [preventSortOverlap(
-                RESIZE_ICON_SIZE
+                parseInt(RESIZE_ICON_SIZE, 10)
               )]: this.cellNeedsPreventIconOverlap(header, column)
             })}
           >
@@ -588,7 +587,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
             ${rowHoverStyles};
           `]: rowIndex === this.state.hoveredRowIndex,
           [preventSortOverlap(
-            RESIZE_ICON_SIZE
+            parseInt(RESIZE_ICON_SIZE, 10)
           )]: this.cellNeedsPreventIconOverlap(header, column)
         })}
         style={style}

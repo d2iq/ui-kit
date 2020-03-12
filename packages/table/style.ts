@@ -32,6 +32,13 @@ export const headerCellCss = css`
   font-weight: bold;
 `;
 
+export const headerCellInner = css`
+  align-items: center;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+`;
+
 export const textCapitalize = css`
   text-transform: capitalize;
 `;
@@ -51,7 +58,7 @@ export const innerCellCss = css`
   height: auto;
   box-sizing: border-box;
   padding: ${cellPadding}px;
-  z-index: 1;
+  z-index: 2;
 `;
 
 export const cellAlignmentCss = (textAlign: string) => css`
@@ -61,9 +68,9 @@ export const cellAlignmentCss = (textAlign: string) => css`
     : null};
 `;
 
-export const preventSortOverlap = (iconSize: string) => css`
+export const preventSortOverlap = (iconSizePx: number) => css`
   & > div {
-    margin-right: ${iconSize};
+    margin-right: ${iconSizePx + pointerSize + pointerSpace}px;
   }
 `;
 
