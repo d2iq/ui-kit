@@ -7,4 +7,8 @@ export const linkReset = css`
   &:visited {
     color: inherit;
   }
+
+  :focus {
+    outline:none;
+  }
 `;
