@@ -3,15 +3,14 @@ import { cx } from "emotion";
 import { default as HeaderCell } from "./HeaderCell";
 import Clickable from "../../clickable/components/clickable";
 import { sortableHeaderIconBaseCSS, styleArrowDirection } from "../style";
-import { TextAlign } from "./Cell";
+import { HeaderCellProps } from "./HeaderCell";
 
 type SortDirection = "ASC" | "DESC" | null;
-export interface SortableHeaderCellProps {
+export interface SortableHeaderCellProps
+  extends Omit<HeaderCellProps, "children"> {
   sortHandler: () => void;
   sortDirection: SortDirection;
   columnContent: React.ReactNode;
-  textAlign?: TextAlign;
-  capitalize?: boolean;
 }
 interface SortableHeaderCellState {
   hovered: boolean;
@@ -45,7 +44,9 @@ export class SortableHeaderCell extends React.Component<
       sortDirection,
       columnContent,
       textAlign,
-      capitalize
+      capitalize,
+      tooltipContent,
+      tooltipId
     } = this.props;
 
     const displaySortDirection =
@@ -75,6 +76,8 @@ export class SortableHeaderCell extends React.Component<
           } order`}
           textAlign={textAlign}
           capitalize={capitalize}
+          tooltipContent={tooltipContent}
+          tooltipId={tooltipId}
         >
           <span>{columnContent}</span>
         </HeaderCell>

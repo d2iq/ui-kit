@@ -503,4 +503,51 @@ storiesOf("Table", module)
         />
       </Table>
     </div>
+  ))
+  .add("with column header tooltips", () => (
+    <div
+      style={{
+        height: "175px",
+        width: "100%",
+        fontSize: "14px"
+      }}
+    >
+      <Table data={items}>
+        <Column
+          resizable={true}
+          header={<HeaderCell tooltipContent="I am a tooltip">name</HeaderCell>}
+          cellRenderer={nameCellRenderer}
+        />
+        <Column
+          resizable={true}
+          header={<HeaderCell tooltipContent="I am a tooltip">role</HeaderCell>}
+          cellRenderer={roleCellRenderer}
+        />
+        <Column
+          resizable={true}
+          header={
+            <HeaderCell tooltipContent="I am a tooltip">state</HeaderCell>
+          }
+          cellRenderer={stateCellRenderer}
+        />
+        <Column
+          resizable={true}
+          header={
+            <HeaderCell tooltipContent="I am a tooltip">
+              very long header cell that truncates
+            </HeaderCell>
+          }
+          cellRenderer={veryLongRenderer}
+        />
+        <Column
+          resizable={true}
+          header={
+            <HeaderCell tooltipContent="I am a tooltip" textAlign="right">
+              zip code
+            </HeaderCell>
+          }
+          cellRenderer={zipcodeCellRenderer}
+        />
+      </Table>
+    </div>
   ));
