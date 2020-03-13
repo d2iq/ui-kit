@@ -111,6 +111,7 @@ export const sidebarNavItem = (
             hoverBgColor || getCSSVarValue(themeBgHoverInverted)
           )};
 
+      &,
       a {
         outline: none;
       }
