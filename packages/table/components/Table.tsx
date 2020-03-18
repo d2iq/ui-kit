@@ -250,10 +250,19 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
     };
   }
 
-  componentDidUpdate(_, nextState) {
+  componentDidUpdate(prevProps, nextState) {
     const { resizedColWidths } = this.state;
+    const currColumns = React.Children.toArray(this.props.children) as Array<
+      React.ReactElement<ColumnProps>
+    >;
+    const prevColumns = React.Children.toArray(prevProps.children) as Array<
+      React.ReactElement<ColumnProps>
+    >;
 
-    if (resizedColWidths !== nextState.resizedColWidths) {
+    if (
+      resizedColWidths !== nextState.resizedColWidths ||
+      currColumns.length !== prevColumns.length
+    ) {
       this.updateGridSize();
     }
   }
