@@ -167,11 +167,15 @@ storiesOf("Buttons/Default", module)
       }
     }
   )
-  .add("only an icon", () => <StandardButton iconStart={<CloseIcon />} />, {
-    info: {
-      propTables: [StandardButton]
+  .add(
+    "only an icon",
+    () => <StandardButton ariaLabel="Close" iconStart={<CloseIcon />} />,
+    {
+      info: {
+        propTables: [StandardButton]
+      }
     }
-  })
+  )
   .add(
     "full-width",
     () => <StandardButton isFullWidth={true}>Full-width</StandardButton>,
@@ -199,6 +203,22 @@ storiesOf("Buttons/Default", module)
     () => (
       <StandardButton onClick={action("Button pressed")}>
         Click me
+      </StandardButton>
+    ),
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
+  )
+  .add(
+    "with onFocus and onBlur",
+    () => (
+      <StandardButton
+        onFocus={action("Button focused")}
+        onBlur={action("Button blured")}
+      >
+        Focus me
       </StandardButton>
     ),
     {
