@@ -6,7 +6,7 @@ import toJson from "enzyme-to-json";
 
 import TextInputWithIcon from "../components/TextInputWithIcon";
 import { InputAppearance } from "../../shared/types/inputAppearance";
-import { CloseIcon, DownTriangle } from "../../shared/icons";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
@@ -18,7 +18,7 @@ describe("TextInputWithIcon", () => {
           id={`test.icon_start_input.${InputAppearance[appearance]}`}
           inputLabel={InputAppearance[appearance]}
           appearance={InputAppearance[appearance]}
-          iconStart={<DownTriangle />}
+          iconStart={SystemIcons.TriangleDown}
         />
       );
       expect(toJson(component)).toMatchSnapshot();
@@ -32,7 +32,7 @@ describe("TextInputWithIcon", () => {
           id={`test.icon_end_input.${InputAppearance[appearance]}`}
           inputLabel={InputAppearance[appearance]}
           appearance={InputAppearance[appearance]}
-          iconEnd={<CloseIcon />}
+          iconEnd={SystemIcons.Close}
         />
       );
       expect(toJson(component)).toMatchSnapshot();
@@ -46,8 +46,8 @@ describe("TextInputWithIcon", () => {
           id={`test.two_icon_input.${InputAppearance[appearance]}`}
           inputLabel={InputAppearance[appearance]}
           appearance={InputAppearance[appearance]}
-          iconStart={<DownTriangle />}
-          iconEnd={<CloseIcon />}
+          iconStart={SystemIcons.TriangleDown}
+          iconEnd={SystemIcons.Close}
         />
       );
       expect(toJson(component)).toMatchSnapshot();
@@ -61,7 +61,7 @@ describe("TextInputWithIcon", () => {
         id="test.input"
         inputLabel="Test Focus"
         onFocus={focusFn}
-        iconStart={<DownTriangle />}
+        iconStart={SystemIcons.TriangleDown}
       />
     );
     expect(focusFn).not.toHaveBeenCalled();
@@ -76,7 +76,7 @@ describe("TextInputWithIcon", () => {
         id="test.input"
         inputLabel="Test Blur"
         onBlur={blurFn}
-        iconStart={<DownTriangle />}
+        iconStart={SystemIcons.TriangleDown}
       />
     );
     expect(blurFn).not.toHaveBeenCalled();
