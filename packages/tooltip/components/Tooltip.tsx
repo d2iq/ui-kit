@@ -3,6 +3,7 @@ import Dropdownable, {
   Direction
 } from "../../dropdownable/components/Dropdownable";
 import TooltipContent from "./TooltipContent";
+import getFirstFocusableChildNode from "../../utilities/getFirstFocusableChildNode";
 
 export interface BaseTooltipProps {
   children: React.ReactNode | string;
@@ -22,6 +23,7 @@ export interface TooltipProps extends BaseTooltipProps {
 
 export interface TooltipState {
   open: boolean;
+  triggerNode: HTMLElement | null;
 }
 
 class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
@@ -35,16 +37,29 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     return null;
   }
 
+  private triggerRef: React.MutableRefObject<HTMLElement | null> = React.createRef<
+    HTMLElement
+  >();
+
   constructor(props) {
     super(props);
 
     this.state = {
-      open: props.open || false
+      open: props.open || false,
+      triggerNode: null
     };
 
     this.handleClose = this.handleClose.bind(this);
     this.handleOpen = this.handleOpen.bind(this);
     this.handleDropdownableClose = this.handleDropdownableClose.bind(this);
+  }
+
+  componentDidMount() {
+    this.setAccessibilityAttributes();
+  }
+
+  componentDidUpdate() {
+    this.setAccessibilityAttributes();
   }
 
   public render() {
@@ -60,17 +75,15 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     } = this.props;
     const triggerProps = {
       ["aria-label"]: ariaLabel,
-      ["aria-describedby"]: id,
       onMouseOver: this.handleOpen,
       onMouseLeave: this.handleClose,
       onFocus: this.handleOpen,
       onBlur: this.handleClose,
-      tabIndex: 0,
       ["data-cy"]: "tooltip"
     };
 
     return (
-      <span {...(!disablePortal ? triggerProps : {})}>
+      <span {...(!disablePortal ? triggerProps : {})} ref={this.setTriggerNode}>
         <Dropdownable
           open={this.state.open}
           onClose={this.handleDropdownableClose}
@@ -124,6 +137,41 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
         this.props.onClose();
       }
     });
+  }
+
+  private setTriggerNode = (node: HTMLElement | null) => {
+    if (node == null) {
+      this.triggerRef.current = null;
+      this.setState({ triggerNode: null });
+      return;
+    }
+
+    this.setState({
+      triggerNode:
+        node.firstElementChild instanceof HTMLElement
+          ? node.firstElementChild
+          : null
+    });
+    this.triggerRef.current = node;
+  };
+
+  private setAccessibilityAttributes() {
+    const { triggerRef } = this;
+    if (triggerRef == null) {
+      return;
+    }
+
+    const firstFocusable = triggerRef.current
+      ? getFirstFocusableChildNode(triggerRef.current)
+      : null;
+    const nodeToFocus = firstFocusable || triggerRef.current;
+
+    if (!nodeToFocus) {
+      return;
+    }
+
+    nodeToFocus.setAttribute("tabindex", "0");
+    nodeToFocus.setAttribute("aria-describedby", this.props.id);
   }
 }
 
