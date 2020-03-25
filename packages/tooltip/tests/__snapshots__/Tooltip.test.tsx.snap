@@ -52,7 +52,6 @@ exports[`Tooltip renders 1`] = `
           content
         </TooltipContent>
       }
-      onClose={[Function]}
       open={false}
       preferredDirections={
         Array [
@@ -156,11 +155,9 @@ exports[`Tooltip renders 1`] = `
                 className=""
               >
                 <clickOutside(DropdownContents)
-                  onClose={[Function]}
                   open={false}
                 >
                   <DropdownContents
-                    onClose={[Function]}
                     open={false}
                   >
                     <TooltipContent
@@ -250,7 +247,6 @@ exports[`Tooltip renders open tooltip 1`] = `
           content
         </TooltipContent>
       }
-      onClose={[Function]}
       open={true}
       preferredDirections={
         Array [
@@ -375,11 +371,9 @@ exports[`Tooltip renders open tooltip 1`] = `
                 className=""
               >
                 <clickOutside(DropdownContents)
-                  onClose={[Function]}
                   open={true}
                 >
                   <DropdownContents
-                    onClose={[Function]}
                     open={true}
                   >
                     <TooltipContent
@@ -474,7 +468,6 @@ exports[`Tooltip renders with preferred directions 1`] = `
           content
         </TooltipContent>
       }
-      onClose={[Function]}
       open={true}
       preferredDirections={
         Array [
@@ -614,11 +607,9 @@ exports[`Tooltip renders with preferred directions 1`] = `
                 className=""
               >
                 <clickOutside(DropdownContents)
-                  onClose={[Function]}
                   open={true}
                 >
                   <DropdownContents
-                    onClose={[Function]}
                     open={true}
                   >
                     <TooltipContent

@@ -26,141 +26,58 @@ export interface TooltipState {
   triggerNode: HTMLElement | null;
 }
 
-class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
-  static getDerivedStateFromProps(props: TooltipProps, state: TooltipState) {
-    if (props.suppress && props.open !== state.open) {
-      return {
-        open: props.open
-      };
-    }
-
-    return null;
-  }
-
-  private triggerRef: React.MutableRefObject<HTMLElement | null> = React.createRef<
+const Tooltip = ({
+  ariaLabel,
+  children,
+  disablePortal,
+  id,
+  maxWidth,
+  minWidth,
+  onClose,
+  open = false,
+  preferredDirections,
+  suppress,
+  trigger
+}: TooltipProps) => {
+  const triggerRef: React.MutableRefObject<HTMLElement | null> = React.useRef<
     HTMLElement
-  >();
+  >(null);
+  const [isOpen, setIsOpen] = React.useState<boolean>(open);
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      open: props.open || false,
-      triggerNode: null
-    };
-
-    this.handleClose = this.handleClose.bind(this);
-    this.handleOpen = this.handleOpen.bind(this);
-    this.handleDropdownableClose = this.handleDropdownableClose.bind(this);
+  if (suppress && open !== isOpen) {
+    setIsOpen(open);
   }
 
-  componentDidMount() {
-    this.setAccessibilityAttributes();
-  }
-
-  componentDidUpdate() {
-    this.setAccessibilityAttributes();
-  }
-
-  public render() {
-    const {
-      ariaLabel,
-      children,
-      disablePortal,
-      id,
-      maxWidth,
-      minWidth,
-      preferredDirections,
-      trigger
-    } = this.props;
-    const triggerProps = {
-      ["aria-label"]: ariaLabel,
-      onMouseOver: this.handleOpen,
-      onMouseLeave: this.handleClose,
-      onFocus: this.handleOpen,
-      onBlur: this.handleClose,
-      ["data-cy"]: "tooltip"
-    };
-
-    return (
-      <span {...(!disablePortal ? triggerProps : {})} ref={this.setTriggerNode}>
-        <Dropdownable
-          open={this.state.open}
-          onClose={this.handleDropdownableClose}
-          dropdown={
-            <TooltipContent
-              id={id}
-              open={this.state.open}
-              minWidth={minWidth}
-              maxWidth={maxWidth}
-            >
-              {children}
-            </TooltipContent>
-          }
-          preferredDirections={
-            preferredDirections || [
-              Direction.TopCenter,
-              Direction.TopLeft,
-              Direction.TopRight,
-              Direction.BottomCenter,
-              Direction.BottomLeft,
-              Direction.BottomRight
-            ]
-          }
-          disablePortal={disablePortal}
-        >
-          {disablePortal ? <span {...triggerProps}>{trigger}</span> : trigger}
-        </Dropdownable>
-      </span>
-    );
-  }
-
-  private handleDropdownableClose() {
-    // No need for inner component to close using "on click outside" since
-    // the parent is handling onMouseLeave already
-  }
-
-  private handleOpen() {
-    if (this.props.suppress) {
-      return;
-    }
-    this.setState({ open: true });
-  }
-
-  private handleClose() {
-    if (this.props.suppress) {
-      return;
-    }
-
-    this.setState({ open: false }, () => {
-      if (this.props.onClose) {
-        this.props.onClose();
-      }
-    });
-  }
-
-  private setTriggerNode = (node: HTMLElement | null) => {
+  const setTriggerNode = (node: HTMLElement | null) => {
     if (node == null) {
-      this.triggerRef.current = null;
-      this.setState({ triggerNode: null });
+      triggerRef.current = null;
       return;
     }
 
-    this.setState({
-      triggerNode:
-        node.firstElementChild instanceof HTMLElement
-          ? node.firstElementChild
-          : null
-    });
-    this.triggerRef.current = node;
+    triggerRef.current = node;
   };
 
-  private setAccessibilityAttributes() {
-    const { triggerRef } = this;
-    if (triggerRef == null) {
+  const handleOpen = () => {
+    if (suppress) {
       return;
     }
 
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    if (suppress) {
+      return;
+    }
+
+    setIsOpen(false);
+
+    if (onClose) {
+      onClose();
+    }
+  };
+
+  React.useEffect(() => {
     const firstFocusable = triggerRef.current
       ? getFirstFocusableChildNode(triggerRef.current)
       : null;
@@ -171,8 +88,49 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     }
 
     nodeToFocus.setAttribute("tabindex", "0");
-    nodeToFocus.setAttribute("aria-describedby", this.props.id);
-  }
-}
+    nodeToFocus.setAttribute("aria-describedby", id);
+  });
+
+  const triggerProps = {
+    ["aria-label"]: ariaLabel,
+    onMouseOver: handleOpen,
+    onMouseLeave: handleClose,
+    onFocus: handleOpen,
+    onBlur: handleClose,
+    ["data-cy"]: "tooltip",
+    ref: setTriggerNode
+  };
+
+  return (
+    <span {...(!disablePortal ? triggerProps : {})}>
+      <Dropdownable
+        open={isOpen}
+        dropdown={
+          <TooltipContent
+            id={id}
+            open={isOpen}
+            minWidth={minWidth}
+            maxWidth={maxWidth}
+          >
+            {children}
+          </TooltipContent>
+        }
+        preferredDirections={
+          preferredDirections || [
+            Direction.TopCenter,
+            Direction.TopLeft,
+            Direction.TopRight,
+            Direction.BottomCenter,
+            Direction.BottomLeft,
+            Direction.BottomRight
+          ]
+        }
+        disablePortal={disablePortal}
+      >
+        {disablePortal ? <span {...triggerProps}>{trigger}</span> : trigger}
+      </Dropdownable>
+    </span>
+  );
+};
 
 export default Tooltip;
