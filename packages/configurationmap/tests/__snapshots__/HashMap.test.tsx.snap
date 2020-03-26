@@ -110,7 +110,7 @@ exports[`HashMap renders with a headline 1`] = `
     data-cy="configurationMapHeading"
   >
     <h1
-      class="css-1ewrfgu"
+      class="rmMargins css-ipvdfg"
       data-cy="headingText1"
     >
       baz
@@ -150,7 +150,7 @@ exports[`HashMap renders with nested object hash 1`] = `
       data-cy="configurationMapHeading"
     >
       <h2
-        class="css-1kkb77q"
+        class="rmMargins css-1jlnqz6"
         data-cy="headingText2"
       >
         foo

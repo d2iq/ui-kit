@@ -77,7 +77,6 @@ exports[`CodeSnippet renders default 1`] = `
   font-size: 14px;
   color: var(--themeTextColorPrimaryInverted,#FFFFFF);
   fill: var(--themeTextColorPrimaryInverted,#FFFFFF);
-  margin: 0;
   text-align: inherit;
 }
 
@@ -143,7 +142,7 @@ exports[`CodeSnippet renders default 1`] = `
                     wrap="wrap"
                   >
                     <code
-                      className="emotion-0"
+                      className="rmMargins emotion-0"
                       data-cy="monospaceText"
                     >
                       snippet content
@@ -241,7 +240,6 @@ exports[`CodeSnippet renders with copy button 1`] = `
   font-size: 14px;
   color: var(--themeTextColorPrimaryInverted,#FFFFFF);
   fill: var(--themeTextColorPrimaryInverted,#FFFFFF);
-  margin: 0;
   text-align: inherit;
 }
 
@@ -339,7 +337,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                     wrap="wrap"
                   >
                     <code
-                      className="emotion-0"
+                      className="rmMargins emotion-0"
                       data-cy="monospaceText"
                     >
                       snippet content

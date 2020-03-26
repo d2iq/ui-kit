@@ -9,3 +9,4 @@ export { default as MonospaceText } from "./components/MonospaceText";
 export { default as SmallText } from "./components/SmallText";
 export { default as SuccessText } from "./components/SuccessText";
 export { default as WarningText } from "./components/WarningText";
+export { default as TextBlock } from "./components/TextBlock";

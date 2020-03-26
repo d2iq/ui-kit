@@ -8,9 +8,21 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 import { normalize } from "./normalize";
 
+// this is used to remove top and bottom margins for <p> and <h1-6> tags
+//
+// removing the margin directly in the <Text> component styles makes it impossible to use
+// child selectors to change the margins.
+// e.g.: using the Stack or TextBlock components.
+export const staticClass_resetTextMargin = "rmMargins";
+
 export const injectGlobalCss = () => {
   return injectGlobal`
     ${normalize};
+
+    .${staticClass_resetTextMargin} {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 
     .ReactVirtualized__Grid {
       outline: none;

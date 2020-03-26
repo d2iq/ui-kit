@@ -9,6 +9,7 @@ import {
 } from "../../../shared/styles/styleUtils";
 import { themeTextColorPrimary } from "../../../design-tokens/build/js/designTokens";
 import { textBase } from "../style";
+import { staticClass_resetTextMargin } from "../../../shared/styles/global";
 
 export interface TextProps extends BasicTextProps {
   /**
@@ -41,13 +42,13 @@ const Text = (props: TextProps) => {
   return (
     <TextTag
       className={cx(
+        staticClass_resetTextMargin,
         className,
         textBase,
         textWeight(weight),
         textSize(size),
         tintContent(color),
         css`
-          margin: 0;
           text-align: ${align};
         `,
         {
