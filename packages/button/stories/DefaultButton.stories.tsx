@@ -14,8 +14,8 @@ import {
   BoxSides
 } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 import ButtonAppearanceSample from "./helpers/ButtonAppearanceSample";
-import { CloseIcon } from "../../shared/icons";
 import { action } from "@storybook/addon-actions";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const readme = require("../README.md");
 
@@ -157,9 +157,9 @@ storiesOf("Buttons/Default", module)
     }
   )
   .add(
-    "with icon",
+    "with icon before button text",
     () => (
-      <StandardButton iconStart={<CloseIcon />}>Icon button</StandardButton>
+      <StandardButton iconStart={SystemIcons.Close}>Icon button</StandardButton>
     ),
     {
       info: {
@@ -167,11 +167,26 @@ storiesOf("Buttons/Default", module)
       }
     }
   )
-  .add("only an icon", () => <StandardButton iconStart={<CloseIcon />} />, {
-    info: {
-      propTables: [StandardButton]
+  .add(
+    "with icon before button text",
+    () => (
+      <StandardButton iconStart={SystemIcons.Close}>Icon button</StandardButton>
+    ),
+    {
+      info: {
+        propTables: [StandardButton]
+      }
     }
-  })
+  )
+  .add(
+    "only an icon",
+    () => <StandardButton ariaLabel="Close" iconStart={SystemIcons.Close} />,
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
+  )
   .add(
     "full-width",
     () => <StandardButton isFullWidth={true}>Full-width</StandardButton>,
@@ -184,7 +199,7 @@ storiesOf("Buttons/Default", module)
   .add(
     "full-width with icon",
     () => (
-      <StandardButton isFullWidth={true} iconStart={<CloseIcon />}>
+      <StandardButton isFullWidth={true} iconStart={SystemIcons.Close}>
         Full-width
       </StandardButton>
     ),
@@ -199,6 +214,22 @@ storiesOf("Buttons/Default", module)
     () => (
       <StandardButton onClick={action("Button pressed")}>
         Click me
+      </StandardButton>
+    ),
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
+  )
+  .add(
+    "with onFocus and onBlur",
+    () => (
+      <StandardButton
+        onFocus={action("Button focused")}
+        onBlur={action("Button blured")}
+      >
+        Focus me
       </StandardButton>
     ),
     {
