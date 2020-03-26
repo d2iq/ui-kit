@@ -1744,7 +1744,7 @@ exports[`ToggleInputList renders with required 1`] = `
             wrap="wrap"
           >
             <span
-              className="rmMargins emotion-0"
+              className="rmTextMargins emotion-0"
               data-cy="dangerText"
             >
                *

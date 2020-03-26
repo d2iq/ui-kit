@@ -152,7 +152,7 @@ exports[`Typography Text renders all props 1`] = `
 }
 
 <span
-  className="rmMargins test emotion-0"
+  className="rmTextMargins test emotion-0"
   data-cy="text"
 >
   content
@@ -174,7 +174,7 @@ exports[`Typography Text renders all wrap variants 1`] = `
 }
 
 <p
-  className="rmMargins emotion-0"
+  className="rmTextMargins emotion-0"
   data-cy="text"
 >
   content
@@ -193,7 +193,7 @@ exports[`Typography Text renders all wrap variants 2`] = `
 }
 
 <p
-  className="rmMargins emotion-0"
+  className="rmTextMargins emotion-0"
   data-cy="text"
 >
   content
@@ -211,7 +211,7 @@ exports[`Typography Text renders all wrap variants 3`] = `
 }
 
 <p
-  className="rmMargins emotion-0"
+  className="rmTextMargins emotion-0"
   data-cy="text"
 >
   content
@@ -291,7 +291,7 @@ exports[`Typography renders all default 1`] = `
 }
 
 <p
-  className="rmMargins emotion-0"
+  className="rmTextMargins emotion-0"
   data-cy="text"
 >
   content

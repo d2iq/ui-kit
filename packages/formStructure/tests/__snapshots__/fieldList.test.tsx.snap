@@ -7,19 +7,19 @@ exports[`FieldList renders 1`] = `
     data-cy="spacingBox"
   >
     <div
-      class="rmMargins css-1xq9107"
+      class="rmTextMargins css-1xq9107"
       data-cy="fieldList-columnHeader"
     >
       Name
     </div>
     <div
-      class="rmMargins css-6pwokj"
+      class="rmTextMargins css-6pwokj"
       data-cy="fieldList-columnHeader"
     >
       :
     </div>
     <div
-      class="rmMargins css-1xq9107"
+      class="rmTextMargins css-1xq9107"
       data-cy="fieldList-columnHeader"
     >
       Role

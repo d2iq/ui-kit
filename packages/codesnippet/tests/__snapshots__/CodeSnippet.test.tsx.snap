@@ -142,7 +142,7 @@ exports[`CodeSnippet renders default 1`] = `
                     wrap="wrap"
                   >
                     <code
-                      className="rmMargins emotion-0"
+                      className="rmTextMargins emotion-0"
                       data-cy="monospaceText"
                     >
                       snippet content
@@ -337,7 +337,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                     wrap="wrap"
                   >
                     <code
-                      className="rmMargins emotion-0"
+                      className="rmTextMargins emotion-0"
                       data-cy="monospaceText"
                     >
                       snippet content
