@@ -37,13 +37,11 @@ exports[`Tooltip renders 1`] = `
   trigger="trigger"
 >
   <span
-    aria-describedby="renders"
     data-cy="tooltip"
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseLeave={[Function]}
     onMouseOver={[Function]}
-    tabIndex={0}
   >
     <Dropdownable
       dropdown={
@@ -54,7 +52,6 @@ exports[`Tooltip renders 1`] = `
           content
         </TooltipContent>
       }
-      onClose={[Function]}
       open={false}
       preferredDirections={
         Array [
@@ -158,11 +155,9 @@ exports[`Tooltip renders 1`] = `
                 className=""
               >
                 <clickOutside(DropdownContents)
-                  onClose={[Function]}
                   open={false}
                 >
                   <DropdownContents
-                    onClose={[Function]}
                     open={false}
                   >
                     <TooltipContent
@@ -237,13 +232,11 @@ exports[`Tooltip renders open tooltip 1`] = `
   trigger="trigger"
 >
   <span
-    aria-describedby="opened"
     data-cy="tooltip"
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseLeave={[Function]}
     onMouseOver={[Function]}
-    tabIndex={0}
   >
     <Dropdownable
       dropdown={
@@ -254,7 +247,6 @@ exports[`Tooltip renders open tooltip 1`] = `
           content
         </TooltipContent>
       }
-      onClose={[Function]}
       open={true}
       preferredDirections={
         Array [
@@ -379,11 +371,9 @@ exports[`Tooltip renders open tooltip 1`] = `
                 className=""
               >
                 <clickOutside(DropdownContents)
-                  onClose={[Function]}
                   open={true}
                 >
                   <DropdownContents
-                    onClose={[Function]}
                     open={true}
                   >
                     <TooltipContent
@@ -463,13 +453,11 @@ exports[`Tooltip renders with preferred directions 1`] = `
   trigger="trigger"
 >
   <span
-    aria-describedby="customDir"
     data-cy="tooltip"
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseLeave={[Function]}
     onMouseOver={[Function]}
-    tabIndex={0}
   >
     <Dropdownable
       dropdown={
@@ -480,7 +468,6 @@ exports[`Tooltip renders with preferred directions 1`] = `
           content
         </TooltipContent>
       }
-      onClose={[Function]}
       open={true}
       preferredDirections={
         Array [
@@ -620,11 +607,9 @@ exports[`Tooltip renders with preferred directions 1`] = `
                 className=""
               >
                 <clickOutside(DropdownContents)
-                  onClose={[Function]}
                   open={true}
                 >
                   <DropdownContents
-                    onClose={[Function]}
                     open={true}
                   >
                     <TooltipContent
