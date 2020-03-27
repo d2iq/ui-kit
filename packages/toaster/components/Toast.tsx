@@ -17,7 +17,6 @@ import {
 } from "../../shared/styles/styleUtils";
 import Clickable from "../../clickable/components/clickable";
 import * as dt from "../../design-tokens/build/js/designTokens";
-import { CloseIcon } from "../../shared/icons";
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
@@ -139,7 +138,11 @@ class Toast extends React.PureComponent<ToastProps, {}> {
         )}
         <Clickable tabIndex={0} action={this.handleDismiss}>
           <span className={toastDismiss}>
-            <CloseIcon />
+            <Icon
+              shape={SystemIcons.Close}
+              color="inherit"
+              size={dt.iconSizeXs}
+            />
           </span>
         </Clickable>
       </div>

@@ -37,6 +37,10 @@ export interface ButtonProps extends SharedLinkProps {
    * if the button triggers new content to appear (e.g.: modals and dropdowns)
    */
   ariaHaspopup?: boolean;
+  /**
+   * should be used if the button does not contain text children. For example: a button that is just an icon
+   */
+  ariaLabel?: string;
   children?: React.ReactNode | string;
   /**
    * whether or not the button is enabled
@@ -65,7 +69,15 @@ export interface ButtonProps extends SharedLinkProps {
    */
   isInverse?: boolean;
   /**
-   * the function the button calls
+   * the funtion that is called when the button loses focus
+   */
+  onBlur?: (e?: React.SyntheticEvent<HTMLElement>) => void;
+  /**
+   * the funtion that is called when the button gets focus
+   */
+  onFocus?: (e?: React.SyntheticEvent<HTMLElement>) => void;
+  /**
+   * the funtion that is called when the button is "clicked" via cursor, touch, or keyboard
    */
   onClick?: (e?: React.SyntheticEvent<HTMLElement>) => void;
   /**
