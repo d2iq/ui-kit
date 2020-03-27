@@ -7,7 +7,7 @@ import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtil
 
 const readme = require("../README.md");
 
-storiesOf("InlineBorderedItems", module)
+storiesOf("Layout|InlineBorderedItems", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (

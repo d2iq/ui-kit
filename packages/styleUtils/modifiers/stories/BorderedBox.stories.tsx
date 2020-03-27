@@ -9,7 +9,7 @@ import SpacingBox from "../components/SpacingBox";
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Modifiers/BorderedBox", module)
+storiesOf("Style utilities|BorderedBox", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("side", () => {

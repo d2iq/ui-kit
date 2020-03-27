@@ -17,7 +17,7 @@ import { configurationMapStoryWrapper } from "./helpers/ConfigurationMapStoryWra
 const readme = require("../README.md");
 const rowAction = action("row action");
 
-storiesOf("ConfigurationMap/ConfigurationMap", module)
+storiesOf("Data listing|ConfigurationMap", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(configurationMapStoryWrapper)
   .add("default", () => (

@@ -12,7 +12,7 @@ import {
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Typography/SmallText", module)
+storiesOf("Typography|SmallText", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (

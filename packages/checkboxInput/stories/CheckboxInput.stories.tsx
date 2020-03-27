@@ -8,7 +8,7 @@ import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 
 const readme = require("../README.md");
 
-storiesOf("Forms/CheckboxInput", module)
+storiesOf("Forms|CheckboxInput", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(inputStoryWrapper)
   .add("default", () => (

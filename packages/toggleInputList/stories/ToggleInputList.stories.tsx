@@ -12,7 +12,7 @@ const options = [
   { inputLabel: "Stratosphere", id: "id.3", value: "stratosphere" }
 ];
 
-storiesOf("Forms/ToggleInputList", module)
+storiesOf("Forms|ToggleInputList", module)
   .addDecorator(withReadme([readme]))
   .add(
     "checkbox",

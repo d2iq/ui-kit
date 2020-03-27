@@ -7,7 +7,7 @@ import { FontSize } from "../../../shared/styles/styleUtils/typography/textSize"
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Typography/InteractiveText", module)
+storiesOf("Typography|InteractiveText", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => <InteractiveText>Click me</InteractiveText>)

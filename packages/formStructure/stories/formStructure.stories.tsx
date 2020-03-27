@@ -27,7 +27,7 @@ const onRemoveSubSection = () => {
   alert("the box would be removed");
 };
 
-storiesOf("Form structure/Overall form layout", module)
+storiesOf("Forms|Form layout", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .addParameters({

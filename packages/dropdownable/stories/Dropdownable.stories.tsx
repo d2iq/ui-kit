@@ -9,7 +9,7 @@ import Dropdownable, { Direction } from "../components/Dropdownable";
 import DropdownStory from "./helpers/DropdownStory";
 import DropdownStoryFit from "./helpers/DropdownStoryFit";
 
-storiesOf("Dropdownable", module)
+storiesOf("Utils|Dropdownable", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {

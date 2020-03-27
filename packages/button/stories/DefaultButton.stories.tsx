@@ -19,7 +19,7 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const readme = require("../README.md");
 
-storiesOf("Buttons/Default", module)
+storiesOf("Actions|Default button", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {

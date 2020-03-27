@@ -6,7 +6,7 @@ import { List } from "../index";
 
 const readme = require("../README.md");
 
-storiesOf("Vertical lists/List", module)
+storiesOf("Data listing|List", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (

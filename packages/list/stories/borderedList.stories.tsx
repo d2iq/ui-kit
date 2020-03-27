@@ -5,7 +5,7 @@ import { BorderedList } from "../index";
 
 const readme = require("../README.md");
 
-storiesOf("Vertical lists/BorderedList", module)
+storiesOf("Data listing|BorderedList", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <BorderedList>

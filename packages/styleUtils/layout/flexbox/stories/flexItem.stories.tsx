@@ -23,7 +23,7 @@ const DemoChild = styled("div")`
   text-align: center;
 `;
 
-storiesOf("Style utilities/Layout/FlexItem", module)
+storiesOf("Layout|FlexItem", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (

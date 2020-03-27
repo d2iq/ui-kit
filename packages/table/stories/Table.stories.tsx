@@ -48,7 +48,7 @@ const veryLongRenderer = () => (
 
 const empty = () => <Cell>empty</Cell>;
 
-storiesOf("Table", module)
+storiesOf("Data listing|Table", module)
   .addDecorator(withReadme([readme]))
   .add("collection table", () => (
     <div

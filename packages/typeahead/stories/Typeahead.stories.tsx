@@ -14,7 +14,7 @@ const storyWrapper = css`
   width: 300px;
 `;
 
-storiesOf("Forms/Typeahead", module)
+storiesOf("Forms|Typeahead", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <div className={storyWrapper}>

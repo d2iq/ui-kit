@@ -18,7 +18,7 @@ const gridChildren = new Array(12).fill(0).map((_, i) => (
   </li>
 ));
 
-storiesOf("Style utilities/Layout/GridList", module)
+storiesOf("Layout|GridList", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("columnCount", () => {

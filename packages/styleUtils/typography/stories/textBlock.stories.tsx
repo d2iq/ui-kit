@@ -13,7 +13,7 @@ import {
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Typography/TextBlock", module)
+storiesOf("Typography|Containers/TextBlock", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <Container>

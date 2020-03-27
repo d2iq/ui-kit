@@ -7,7 +7,7 @@ import { FontSize } from "../../../shared/styles/styleUtils/typography/textSize"
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Typography/WarningText", module)
+storiesOf("Typography|WarningText", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (

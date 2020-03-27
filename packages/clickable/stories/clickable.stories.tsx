@@ -6,7 +6,7 @@ import { action } from "@storybook/addon-actions";
 
 const readme = require("../README.md");
 
-storiesOf("Clickable", module)
+storiesOf("Utils|Clickable", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <Clickable action={action("action trigger")} tabIndex="0">

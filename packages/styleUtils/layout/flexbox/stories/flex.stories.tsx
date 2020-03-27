@@ -25,7 +25,7 @@ const DemoChild = styled("div")`
   text-align: center;
 `;
 
-storiesOf("Style utilities/Layout/Flex", module)
+storiesOf("Layout|Flex", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (

@@ -18,7 +18,7 @@ type VerticalAlignments = "top" | "bottom" | "center";
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Modifiers/Box", module)
+storiesOf("Style utilities|Box", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("bgColor", () => {

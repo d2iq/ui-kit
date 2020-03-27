@@ -6,7 +6,7 @@ import { HeadingText3 } from "../index";
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Typography/HeadingText3", module)
+storiesOf("Typography|HeadingText3", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => <HeadingText3>Tertiary Heading</HeadingText3>)

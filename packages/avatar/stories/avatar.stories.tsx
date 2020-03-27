@@ -14,7 +14,7 @@ import { serviceImg } from "./helpers/serviceImg";
 const readme = require("../README.md");
 const iconSizes = [iconSizeXs, iconSizeS, iconSizeM, iconSizeL, iconSizeXl];
 
-storiesOf("Avatar", module)
+storiesOf("Graphic elements|Avatar", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => <Avatar src={serviceImg} label="Kubernetes" />)
   .add("all sizes", () => (

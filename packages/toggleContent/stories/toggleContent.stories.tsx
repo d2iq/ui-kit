@@ -8,7 +8,7 @@ const readme = require("../README.md");
 const primary = () => <div>primary component</div>;
 const secondary = () => <div>secondary component</div>;
 
-storiesOf("Toggle", module)
+storiesOf("Utils|Toggle", module)
   .addDecorator(withReadme([readme]))
   .add("string", () => <ToggleContent contentOn="Hello" contentOff="Bye" />)
   .add("component", () => (

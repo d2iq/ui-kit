@@ -18,7 +18,7 @@ const tooltipStoryDecorator = storyFn => (
   </div>
 );
 
-storiesOf("Tooltip", module)
+storiesOf("Overlays|Tooltip", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(tooltipStoryDecorator)
   .add("default", () => (

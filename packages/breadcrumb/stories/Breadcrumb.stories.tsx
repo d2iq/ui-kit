@@ -6,7 +6,7 @@ import { Breadcrumb } from "../index";
 
 const readme = require("../README.md");
 
-storiesOf("Breadcrumb", module)
+storiesOf("Navigation|Breadcrumb", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <Breadcrumb>

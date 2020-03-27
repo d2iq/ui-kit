@@ -8,7 +8,7 @@ import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 
 const readme = require("../README.md");
 
-storiesOf("Forms/Textarea", module)
+storiesOf("Forms|Textarea", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(inputStoryWrapper)
   .add("default", () => (

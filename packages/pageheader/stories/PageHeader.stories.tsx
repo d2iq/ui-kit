@@ -11,7 +11,7 @@ import { Tabs, TabItem, TabTitle } from "../../tabs";
 const readme = require("../README.md");
 const action = () => alert("Action triggered");
 
-storiesOf("PageHeader", module)
+storiesOf("Page structure|PageHeader", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <PageHeader

@@ -7,7 +7,7 @@ import { Badge, BadgeButton } from "../../index";
 
 const readme = require("../README.md");
 
-storiesOf("Badge", module)
+storiesOf("Graphic elements|Badge", module)
   .addDecorator(withReadme([readme]))
   .add("Default", () => <Badge>Default</Badge>)
   .add("Success", () => <Badge appearance="success">Success</Badge>, {

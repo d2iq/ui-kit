@@ -41,7 +41,7 @@ import { Icon } from "../../icon";
 
 const readme = require("../README.md");
 
-storiesOf("AppChrome", module)
+storiesOf("Page structure|AppChrome", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .addParameters({

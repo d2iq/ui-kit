@@ -6,7 +6,7 @@ import { Text } from "../../styleUtils/typography";
 
 const readme = require("../README.md");
 
-storiesOf("Link", module)
+storiesOf("Navigation|Link", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {

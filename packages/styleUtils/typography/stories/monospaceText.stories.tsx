@@ -13,7 +13,7 @@ import {
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Typography/MonospaceText", module)
+storiesOf("Typography|MonospaceText", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (
