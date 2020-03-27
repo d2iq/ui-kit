@@ -16,7 +16,7 @@
   "scripts": {
     "build:storybook": "build-storybook -c .storybook -o storybook_static",
     "prebuild:storybook": "npm run build:design-tokens && npm run build:svg",
-    "build:design-tokens": "node ./packages/design-tokens/scripts/build.js",
+    "build:design-tokens": "node ./packages/design-tokens/scripts/build.js && tsc -p tsconfig.designTokens.json",
     "build:svg": "node ./packages/icons/scripts/build.js",
     "clean": "rimraf dist",
     "commitlint": "commitlint -e",

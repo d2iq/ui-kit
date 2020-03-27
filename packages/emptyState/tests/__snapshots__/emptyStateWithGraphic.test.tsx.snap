@@ -24,7 +24,7 @@ exports[`EmptyStateWithGraphic default 1`] = `
       data-cy="spacingBox"
     >
       <h2
-        class="css-sg507t"
+        class="rmTextMargins css-1rl5bwh"
         data-cy="headingText2"
       >
         Heading
@@ -63,7 +63,7 @@ exports[`EmptyStateWithGraphic renders with primary and secondary actions 1`] = 
       data-cy="spacingBox"
     >
       <h2
-        class="css-sg507t"
+        class="rmTextMargins css-1rl5bwh"
         data-cy="headingText2"
       >
         Heading

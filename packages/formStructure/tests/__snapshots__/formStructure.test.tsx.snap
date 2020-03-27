@@ -24,7 +24,7 @@ Array [
     data-cy="spacingBox"
   >
     <h3
-      class="css-1ewrfgu"
+      class="rmTextMargins css-ipvdfg"
       data-cy="formTitle"
     >
       Form Title Content
@@ -52,7 +52,7 @@ Array [
       data-cy="formSectionHeader"
     >
       <h2
-        class="css-1kkb77q"
+        class="rmTextMargins css-1jlnqz6"
         data-cy="formSectionHeader-title"
       >
         Section title
@@ -62,7 +62,7 @@ Array [
         data-cy="spacingBox"
       >
         <div
-          class="css-114tuqy"
+          class="rmTextMargins css-wgr9z0"
           data-cy="formSectionHeader-subtitle"
         >
           Section subtitle

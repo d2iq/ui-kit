@@ -253,7 +253,7 @@ exports[`ConfigurationMap renders with headline 1`] = `
       data-cy="configurationMapHeading"
     >
       <h1
-        class="css-1ewrfgu"
+        class="rmTextMargins css-ipvdfg"
         data-cy="headingText1"
       >
         Jane Doe Info

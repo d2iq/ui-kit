@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "outDir": "./",
+    "declaration": true,
+    "allowJs": false
+  },
+  "include": ["./packages/design-tokens/build/js/designTokens.ts"]
+}

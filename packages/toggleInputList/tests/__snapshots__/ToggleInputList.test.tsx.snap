@@ -1682,7 +1682,6 @@ exports[`ToggleInputList renders with required 1`] = `
   font-size: 14px;
   color: var(--themeError,#EB293A);
   fill: var(--themeError,#EB293A);
-  margin: 0;
   text-align: inherit;
 }
 
@@ -1745,7 +1744,7 @@ exports[`ToggleInputList renders with required 1`] = `
             wrap="wrap"
           >
             <span
-              className="emotion-0"
+              className="rmTextMargins emotion-0"
               data-cy="dangerText"
             >
                *
