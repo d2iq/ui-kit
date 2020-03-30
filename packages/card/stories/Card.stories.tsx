@@ -2,12 +2,12 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { withKnobs, select } from "@storybook/addon-knobs";
-import { Card } from "../index";
+import { ButtonCard, Card, LinkCard } from "../index";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 
 const readme = require("../README.md");
 
-storiesOf("Card", module)
+storiesOf("Layout|Card", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => <Card>default</Card>)
@@ -43,4 +43,10 @@ storiesOf("Card", module)
     <div style={{ maxWidth: "400px" }}>
       <Card aspectRatio={[2, 1]}>I stay at a 2:1 aspect ratio</Card>
     </div>
-  ));
+  ))
+  .add("LinkCard", () => (
+    <LinkCard url="http://google.com" linkDescription="Google">
+      default
+    </LinkCard>
+  ))
+  .add("ButtonCard", () => <ButtonCard>default</ButtonCard>);

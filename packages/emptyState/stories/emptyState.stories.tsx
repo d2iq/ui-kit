@@ -7,7 +7,7 @@ import { PageHeader } from "../../pageheader";
 
 const readme = require("../README.md");
 
-storiesOf("EmptyState", module)
+storiesOf("Feedback|EmptyState", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {

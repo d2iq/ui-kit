@@ -9,7 +9,7 @@ import { InputAppearance } from "../../shared/types/inputAppearance";
 
 const readme = require("../README.md");
 
-storiesOf("Forms/TextInput", module)
+storiesOf("Forms|TextInput", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(inputStoryWrapper)
   .add("default", () => (

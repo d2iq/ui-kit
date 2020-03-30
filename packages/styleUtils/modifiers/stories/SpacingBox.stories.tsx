@@ -11,7 +11,7 @@ import {
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Modifiers/SpacingBox", module)
+storiesOf("Style utilities|SpacingBox", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .addDecorator(outlineDecorator)

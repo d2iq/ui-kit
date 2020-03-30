@@ -7,7 +7,7 @@ import { green, yellow } from "../../design-tokens/build/js/designTokens";
 
 const readme = require("../README.md");
 
-storiesOf("Charts/ProgressBar", module)
+storiesOf("Charts|ProgressBar", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => <ProgressBar data={[{ percentage: 40 }]} />)
   .add("custom fill color", () => (

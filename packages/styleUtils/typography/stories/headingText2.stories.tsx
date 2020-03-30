@@ -6,7 +6,7 @@ import { HeadingText2 } from "../index";
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Typography/HeadingText2", module)
+storiesOf("Typography|HeadingText2", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => <HeadingText2>Secondary Heading</HeadingText2>)

@@ -8,7 +8,7 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const readme = require("../README.md");
 
-storiesOf("Forms/TextInputWithIcon", module)
+storiesOf("Forms|TextInputWithIcon", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(inputStoryWrapper)
   .add("iconStart", () => (

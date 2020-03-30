@@ -13,7 +13,7 @@ const btnClickFn = () => {
   alert("button one clicked");
 };
 
-storiesOf("Forms/TextInputWithButtons", module)
+storiesOf("Forms|TextInputWithButtons", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(inputStoryWrapper)
   .addParameters({

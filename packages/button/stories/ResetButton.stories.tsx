@@ -6,9 +6,9 @@ import { Text } from "../../styleUtils/typography";
 
 const readme = require("../README.md");
 
-storiesOf("Buttons", module)
+storiesOf("Actions|ResetButton", module)
   .addDecorator(withReadme([readme]))
-  .add("ResetButton", () => (
+  .add("default", () => (
     <div>
       The{" "}
       <Text tag="span" color="red">

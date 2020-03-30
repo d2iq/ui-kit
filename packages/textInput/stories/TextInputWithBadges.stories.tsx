@@ -33,7 +33,7 @@ const defaultBadges = [
   }
 ];
 
-storiesOf("Forms/TextInputWithBadges", module)
+storiesOf("Forms|TextInputWithBadges", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(inputStoryWrapper)
   .add("default", () => (

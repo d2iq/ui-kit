@@ -7,7 +7,7 @@ import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifi
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Layout/Stack", module)
+storiesOf("Layout|Stack", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (

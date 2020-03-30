@@ -9,7 +9,7 @@ import { Box } from "../../styleUtils/modifiers";
 const readme = require("../README.md");
 const textToCopy = "Nobody likes a copycat";
 
-storiesOf("ClickToCopyButton", module)
+storiesOf("Actions|ClickToCopyButton", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => <ClickToCopyButton textToCopy={textToCopy} />)
   .add("show tooltip onCopy", () => (

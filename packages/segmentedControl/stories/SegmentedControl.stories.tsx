@@ -10,7 +10,7 @@ import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 
 const readme = require("../README.md");
 
-storiesOf("SegmentedControl", module)
+storiesOf("Forms|SegmentedControl", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <SegmentedControlStoryHelper>

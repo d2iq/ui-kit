@@ -5,7 +5,7 @@ import { ToggleWrapper } from "../index";
 
 const readme = require("../README.md");
 
-storiesOf("ToggleWrapper", module)
+storiesOf("Utils|ToggleWrapper", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <ToggleWrapper>

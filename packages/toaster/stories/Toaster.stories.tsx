@@ -69,7 +69,7 @@ class ToasterContainer extends React.PureComponent<
   }
 }
 
-storiesOf("Toaster", module)
+storiesOf("Feedback|Toaster", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {

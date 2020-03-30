@@ -13,7 +13,7 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const readme = require("../README.md");
 
-storiesOf("Buttons/Dropdown", module)
+storiesOf("Actions|Dropdown button", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {

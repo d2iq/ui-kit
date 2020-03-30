@@ -15,7 +15,7 @@ import { Text } from "../";
 const readme = require("../README.md");
 type WrapVals = "truncate" | "nowrap" | "wrap";
 
-storiesOf("Style utilities/Typography/Text", module)
+storiesOf("Typography|Text", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (

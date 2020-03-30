@@ -8,7 +8,7 @@ import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtil
 
 const readme = require("../README.md");
 
-storiesOf("Forms/ToggleBoxGroup", module)
+storiesOf("Forms|ToggleBoxGroup", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (

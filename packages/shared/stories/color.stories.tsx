@@ -1,6 +1,5 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import styled from "react-emotion";
 import { coreColors } from "../../design-tokens/build/js/colorsForStyleguide";
 import { Tooltip } from "../../tooltip";
@@ -76,6 +75,6 @@ const ColorTable = () => (
   </React.Fragment>
 );
 
-storiesOf("Colors", module)
-  .addDecorator(withReadme([``]))
-  .add("Color table", () => <ColorTable />);
+storiesOf("Visual design core|Colors", module).add("Color table", () => (
+  <ColorTable />
+));

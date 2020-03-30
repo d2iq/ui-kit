@@ -43,7 +43,7 @@ const veryLongRenderer = () => (
   </TextCell>
 );
 
-storiesOf("Table/CheckboxTable", module)
+storiesOf("Data listing|Table/CheckboxTable", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {

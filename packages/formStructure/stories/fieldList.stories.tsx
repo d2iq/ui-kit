@@ -39,7 +39,7 @@ const testFieldUpdateHandler = (rowIndex, pathToValue) => () =>
     `update row ${rowIndex} with the property that has the key ${pathToValue}`
   );
 
-storiesOf("Form structure/Grouped fields/FieldList", module)
+storiesOf("Forms|Form layout/Grouped fields/FieldList", module)
   .add(
     "interactive example",
     () => (

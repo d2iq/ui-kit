@@ -36,7 +36,7 @@ class Example extends React.Component<
   }
 }
 
-storiesOf("Tabs", module)
+storiesOf("Navigation|Tabs", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => <Example />)
   .add("vertical", () => <Example direction="vert" />)

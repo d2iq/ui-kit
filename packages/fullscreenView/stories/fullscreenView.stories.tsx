@@ -24,7 +24,7 @@ const onClose = () => {
 
 const readme = require("../README.md");
 
-storiesOf("FullscreenView", module)
+storiesOf("Page structure|FullscreenView", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <div style={{ height: "500px" }}>
