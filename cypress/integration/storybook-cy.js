@@ -6,6 +6,6 @@ describe("Storybook", () => {
   });
 
   it("Avatar has no error", () => {
-    navigateToStory("Avatar");
+    navigateToStory("Graphic Elements ", "Avatar");
   });
 });
