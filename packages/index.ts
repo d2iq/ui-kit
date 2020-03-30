@@ -81,6 +81,7 @@ export {
 } from "./modal";
 export { PageHeader, PageHeaderTabs } from "./pageheader";
 export { ProgressBar } from "./progressbar";
+export { PromoBanner, PromoInline } from "./promo";
 export { SegmentedControl, SegmentedControlButton } from "./segmentedControl";
 export { SelectInput } from "./selectInput";
 export {
