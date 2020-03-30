@@ -124,7 +124,6 @@ export {
 } from "./styleUtils/layout";
 export { Box, BorderedBox, SpacingBox } from "./styleUtils/modifiers";
 export {
-  Text,
   CaptionText,
   DangerText,
   HeadingText1,
@@ -134,6 +133,8 @@ export {
   MonospaceText,
   SmallText,
   SuccessText,
+  Text,
+  TextBlock,
   WarningText
 } from "./styleUtils/typography";
 
