@@ -4,6 +4,7 @@ import { Flex, FlexItem } from "../../styleUtils/layout";
 import { SpacingBox } from "../../styleUtils/modifiers";
 import { Text, CaptionText } from "../../styleUtils/typography";
 import { progressBar, progressBarStaged, progressBarFill } from "../style";
+import { visuallyHidden } from "../../shared/styles/styleUtils";
 
 export interface ProgressBarDatum {
   percentage: number;
@@ -33,57 +34,83 @@ export interface ProgressBarProps {
    */
   value?: React.ReactNode;
   /**
+   * Shows the progress bar and value on the same line, and hides the caption above the progress bar.
+   */
+  isCondensedLayout?: boolean;
+  /**
    * Which size variant to use
    */
   size?: ProgressBarSizes;
 }
 
-class ProgressBar extends React.PureComponent<ProgressBarProps, {}> {
-  public render() {
-    const { caption, data, value, size, isProcessing } = this.props;
+const ProgressBar: React.StatelessComponent<ProgressBarProps> = ({
+  caption,
+  data,
+  value,
+  size,
+  isProcessing,
+  isCondensedLayout
+}) => {
+  const renderProgressBar = () => (
+    <svg
+      className={cx(progressBar(size), {
+        [progressBarStaged]: isProcessing
+      })}
+      data-cy="progressBar-chart"
+      role="presentation"
+    >
+      {data.map((datum, i) => {
+        const { percentage, color } = datum;
+        const precedingTotal = data
+          .slice(0, i)
+          .reduce((acc, curr) => acc + curr.percentage, 0);
 
-    return (
-      <React.Fragment>
-        <SpacingBox side="bottom" spacingSize="xxs">
-          <Flex align="center" justify="flex-end" gutterSize="s">
-            {caption ? (
-              <FlexItem>
-                <CaptionText wrap="truncate">{caption}</CaptionText>
-              </FlexItem>
-            ) : null}
-            {value ? (
-              <FlexItem flex="shrink">
-                <Text weight="medium">{value}</Text>
-              </FlexItem>
-            ) : null}
-          </Flex>
-        </SpacingBox>
-        <svg
-          className={cx(progressBar(size), {
-            [progressBarStaged]: isProcessing
-          })}
-          data-cy="progressBar-chart"
-        >
-          {data.map((datum, i) => {
-            const { percentage, color } = datum;
-            const precedingTotal = data
-              .slice(0, i)
-              .reduce((acc, curr) => acc + curr.percentage, 0);
+        return (
+          <rect
+            x={`${precedingTotal}%`}
+            width={`${percentage}%`}
+            height="100%"
+            className={progressBarFill(color)}
+            key={`pbSegment-${i}`}
+          />
+        );
+      })}
+    </svg>
+  );
 
-            return (
-              <rect
-                x={`${precedingTotal}%`}
-                width={`${percentage}%`}
-                height="100%"
-                className={progressBarFill(color)}
-                key={`pbSegment-${i}`}
-              />
-            );
-          })}
-        </svg>
-      </React.Fragment>
-    );
-  }
-}
+  return isCondensedLayout ? (
+    <Flex align="center" gutterSize="s">
+      <FlexItem>{renderProgressBar()}</FlexItem>
+      {caption ? (
+        <FlexItem flex="shrink" className={visuallyHidden}>
+          {caption}
+        </FlexItem>
+      ) : null}
+      {value ? (
+        <FlexItem flex="shrink">
+          <Text>{value}</Text>
+        </FlexItem>
+      ) : null}
+    </Flex>
+  ) : (
+    <React.Fragment>
+      <SpacingBox side="bottom" spacingSize="xxs">
+        <Flex align="center" justify="flex-end" gutterSize="s">
+          {caption ? (
+            <FlexItem>
+              <CaptionText wrap="truncate">{caption}</CaptionText>
+            </FlexItem>
+          ) : null}
+          {value ? (
+            <FlexItem flex="shrink">
+              <Text weight="medium">{value}</Text>
+            </FlexItem>
+          ) : null}
+        </Flex>
+      </SpacingBox>
+      {renderProgressBar()}
+    </React.Fragment>
+  );
+};
 
 export default ProgressBar;
