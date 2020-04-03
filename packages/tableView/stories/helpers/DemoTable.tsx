@@ -5,7 +5,7 @@ import {
   HeaderCell,
   TextCell,
   NumberCell
-} from "../../../table";
+} from "../../../table_deprecated";
 
 export const items = [
   {

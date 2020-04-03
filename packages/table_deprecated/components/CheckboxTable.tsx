@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ThemeProvider } from "emotion-theming";
-import { Table, Column, Cell, HeaderCell } from "..";
+import { Table_Deprecated, Column, Cell, HeaderCell } from "..";
 import { TableProps } from "./Table";
 import CheckboxInput from "../../checkboxInput/components/CheckboxInput";
 import { WidthArgs } from "./Column";
@@ -77,14 +77,14 @@ class CheckboxTable extends React.PureComponent<
 
     return (
       <ThemeProvider theme={theme}>
-        <Table data={this.props.data} fixedColumnCount={2}>
+        <Table_Deprecated data={this.props.data} fixedColumnCount={2}>
           <Column
             header={<HeaderCell>{this.getHeaderCheckbox()}</HeaderCell>}
             cellRenderer={this.checkboxCellRenderer}
             width={getColumnWidth}
           />
           {this.props.children as any}
-        </Table>
+        </Table_Deprecated>
       </ThemeProvider>
     );
   }

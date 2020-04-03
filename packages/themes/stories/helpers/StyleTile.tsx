@@ -1,13 +1,13 @@
 import * as React from "react";
 import { InfoBoxInline } from "../../../infobox";
 import {
-  Table,
+  Table_Deprecated,
   Column,
   HeaderCell,
   TextCell,
   NumberCell
-} from "../../../table";
-import { items, width } from "../../../table/stories/helpers/mocks";
+} from "../../../table_deprecated";
+import { items, width } from "../../../table_deprecated/stories/helpers/mocks";
 import { css } from "emotion";
 import { TextInput } from "../../../textInput";
 import { InputAppearance } from "../../../shared/types/inputAppearance";
@@ -135,7 +135,7 @@ const StyleTile = () => (
     </div>
 
     <div style={{ height: "300px" }}>
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
@@ -161,7 +161,7 @@ const StyleTile = () => (
           cellRenderer={cityCellRenderer}
           width={width}
         />
-      </Table>
+      </Table_Deprecated>
     </div>
   </div>
 );

@@ -59,7 +59,7 @@ const DataUpdateContainer = ({
 };
 
 /* tslint:disable:jsx-no-lambda */
-storiesOf("Data listing|Table V2", module)
+storiesOf("Data listing|Table", module)
   .add("default", () => (
     <Table
       data={initialData}
