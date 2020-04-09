@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CheckboxTable, Column } from "../";
+import { CheckboxTable_Deprecated, Column } from "../";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
 import { shallow, render, mount } from "enzyme";
@@ -42,20 +42,20 @@ describe("CheckboxTable", () => {
 
   it("renders default", () => {
     const component = render(
-      <CheckboxTable data={items} uniqueKey="name">
+      <CheckboxTable_Deprecated data={items} uniqueKey="name">
         <Column header="name" cellRenderer={nameCellRenderer} />
         <Column header="role" cellRenderer={roleCellRenderer} />
         <Column header="state" cellRenderer={stateCellRenderer} />
         <Column header="zipcode" cellRenderer={zipcodeCellRenderer} />
         <Column header="city" cellRenderer={cityCellRenderer} />
-      </CheckboxTable>
+      </CheckboxTable_Deprecated>
     );
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it("renders with checked row", () => {
     const component = render(
-      <CheckboxTable
+      <CheckboxTable_Deprecated
         data={items}
         selectedRows={{ [items[0].name]: true }}
         uniqueKey="name"
@@ -65,14 +65,14 @@ describe("CheckboxTable", () => {
         <Column header="state" cellRenderer={stateCellRenderer} />
         <Column header="zipcode" cellRenderer={zipcodeCellRenderer} />
         <Column header="city" cellRenderer={cityCellRenderer} />
-      </CheckboxTable>
+      </CheckboxTable_Deprecated>
     );
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it("renders with disabled and muted row", () => {
     const component = render(
-      <CheckboxTable
+      <CheckboxTable_Deprecated
         data={items}
         disabledRows={{ [items[0].name]: true }}
         mutedRows={{ [items[0].name]: true }}
@@ -83,14 +83,14 @@ describe("CheckboxTable", () => {
         <Column header="state" cellRenderer={stateCellRenderer} />
         <Column header="zipcode" cellRenderer={zipcodeCellRenderer} />
         <Column header="city" cellRenderer={cityCellRenderer} />
-      </CheckboxTable>
+      </CheckboxTable_Deprecated>
     );
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it("checks header checkbox when all selectable rows are selected", () => {
     const component = render(
-      <CheckboxTable
+      <CheckboxTable_Deprecated
         data={items}
         disabledRows={{ [items[0].name]: true }}
         selectedRows={items.slice(1).map(item => ({ [item.name]: true }))}
@@ -101,7 +101,7 @@ describe("CheckboxTable", () => {
         <Column header="state" cellRenderer={stateCellRenderer} />
         <Column header="zipcode" cellRenderer={zipcodeCellRenderer} />
         <Column header="city" cellRenderer={cityCellRenderer} />
-      </CheckboxTable>
+      </CheckboxTable_Deprecated>
     );
 
     expect(component.find("#headerCheckbox").prop("aria-checked")).not.toBe(
@@ -112,7 +112,7 @@ describe("CheckboxTable", () => {
 
   it("does not check header checkbox when all rows are not selected", () => {
     const component = render(
-      <CheckboxTable
+      <CheckboxTable_Deprecated
         data={items}
         selectedRows={{ [items[0].name]: true }}
         uniqueKey="name"
@@ -122,7 +122,7 @@ describe("CheckboxTable", () => {
         <Column header="state" cellRenderer={stateCellRenderer} />
         <Column header="zipcode" cellRenderer={zipcodeCellRenderer} />
         <Column header="city" cellRenderer={cityCellRenderer} />
-      </CheckboxTable>
+      </CheckboxTable_Deprecated>
     );
     expect(component.find("#headerCheckbox").prop("checked")).toBe(false);
   });
@@ -130,13 +130,17 @@ describe("CheckboxTable", () => {
   it("calls onChange prop with the selected rows data", () => {
     const onChangeFn = jest.fn();
     const component = shallow(
-      <CheckboxTable data={items} onChange={onChangeFn} uniqueKey="name">
+      <CheckboxTable_Deprecated
+        data={items}
+        onChange={onChangeFn}
+        uniqueKey="name"
+      >
         <Column header="name" cellRenderer={nameCellRenderer} />
         <Column header="role" cellRenderer={roleCellRenderer} />
         <Column header="state" cellRenderer={stateCellRenderer} />
         <Column header="zipcode" cellRenderer={zipcodeCellRenderer} />
         <Column header="city" cellRenderer={cityCellRenderer} />
-      </CheckboxTable>
+      </CheckboxTable_Deprecated>
     );
     const cellRendererResult = component
       .find(Column)
@@ -156,7 +160,7 @@ describe("CheckboxTable", () => {
   it("toggles all selectable rows with header checkbox", () => {
     const onChangeFn = jest.fn();
     const component = shallow(
-      <CheckboxTable
+      <CheckboxTable_Deprecated
         data={items}
         disabledRows={{ [items[0].name]: true }}
         onChange={onChangeFn}
@@ -167,7 +171,7 @@ describe("CheckboxTable", () => {
         <Column header="state" cellRenderer={stateCellRenderer} />
         <Column header="zipcode" cellRenderer={zipcodeCellRenderer} />
         <Column header="city" cellRenderer={cityCellRenderer} />
-      </CheckboxTable>
+      </CheckboxTable_Deprecated>
     );
     const headerContent = component
       .find(Column)

@@ -2,7 +2,14 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { WidthArgs } from "../components/Column";
-import { Table, Column, Cell, HeaderCell, TextCell, NumberCell } from "..";
+import {
+  Table_Deprecated,
+  Column,
+  Cell,
+  HeaderCell,
+  TextCell,
+  NumberCell
+} from "..";
 import ChangingTable from "./helpers/ChangingTable";
 import SortableTable from "./helpers/SortableTable";
 import ResizableTableOnResizeDemo from "./helpers/ResizableTableOnResizeDemo";
@@ -48,7 +55,7 @@ const veryLongRenderer = () => (
 
 const empty = () => <Cell>empty</Cell>;
 
-storiesOf("Data listing|Table", module)
+storiesOf("Data listing|Table_Deprecated", module)
   .addDecorator(withReadme([readme]))
   .add("collection table", () => (
     <div
@@ -58,7 +65,7 @@ storiesOf("Data listing|Table", module)
         fontSize: "14px"
       }}
     >
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
@@ -90,7 +97,7 @@ storiesOf("Data listing|Table", module)
           cellRenderer={cityCellRenderer}
           width={width}
         />
-      </Table>
+      </Table_Deprecated>
     </div>
   ))
   .add("default column widths", () => (
@@ -101,7 +108,7 @@ storiesOf("Data listing|Table", module)
         fontSize: "14px"
       }}
     >
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
@@ -122,7 +129,7 @@ storiesOf("Data listing|Table", module)
           header={<HeaderCell textAlign="right">zip code</HeaderCell>}
           cellRenderer={zipcodeCellRenderer}
         />
-      </Table>
+      </Table_Deprecated>
     </div>
   ))
   .add("column width fill remaining", () => (
@@ -133,7 +140,7 @@ storiesOf("Data listing|Table", module)
         fontSize: "14px"
       }}
     >
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
@@ -165,7 +172,7 @@ storiesOf("Data listing|Table", module)
           minWidth={100}
           maxWidth={150}
         />
-      </Table>
+      </Table_Deprecated>
     </div>
   ))
   .add("width-aware render", () => {
@@ -193,7 +200,7 @@ storiesOf("Data listing|Table", module)
           fontSize: "14px"
         }}
       >
-        <Table data={items}>
+        <Table_Deprecated data={items}>
           <Column
             header={<HeaderCell>name</HeaderCell>}
             cellRenderer={nameCellRendererWithWidth}
@@ -209,7 +216,7 @@ storiesOf("Data listing|Table", module)
             cellRenderer={veryLongRenderer}
             width={fillRemainingWidth}
           />
-        </Table>
+        </Table_Deprecated>
       </div>
     );
   })
@@ -228,7 +235,7 @@ storiesOf("Data listing|Table", module)
     ),
     {
       info: {
-        propTables: [Table, Column],
+        propTables: [Table_Deprecated, Column],
         propTablesExclude: [SortableTable]
       }
     }
@@ -241,7 +248,7 @@ storiesOf("Data listing|Table", module)
         fontSize: "14px"
       }}
     >
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
@@ -257,7 +264,7 @@ storiesOf("Data listing|Table", module)
           cellRenderer={stateCellRenderer}
           width={width}
         />
-      </Table>
+      </Table_Deprecated>
     </div>
   ))
   .add(
@@ -275,7 +282,7 @@ storiesOf("Data listing|Table", module)
     ),
     {
       info: {
-        propTables: [Table, Column],
+        propTables: [Table_Deprecated, Column],
         propTablesExclude: [ChangingTable]
       }
     }
@@ -296,7 +303,7 @@ storiesOf("Data listing|Table", module)
       >
         <StandardButton>Global action</StandardButton>
       </div>
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
@@ -324,7 +331,7 @@ storiesOf("Data listing|Table", module)
           cellRenderer={cityCellRenderer}
           growToFill={true}
         />
-      </Table>
+      </Table_Deprecated>
     </div>
   ))
   .add("with custom row height", () => (
@@ -335,7 +342,7 @@ storiesOf("Data listing|Table", module)
         fontSize: "14px"
       }}
     >
-      <Table data={items} rowHeight={60}>
+      <Table_Deprecated data={items} rowHeight={60}>
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
@@ -363,7 +370,7 @@ storiesOf("Data listing|Table", module)
           cellRenderer={cityCellRenderer}
           growToFill={true}
         />
-      </Table>
+      </Table_Deprecated>
     </div>
   ))
   .add("resizeable + default column widths", () => (
@@ -374,7 +381,7 @@ storiesOf("Data listing|Table", module)
         fontSize: "14px"
       }}
     >
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
@@ -400,7 +407,7 @@ storiesOf("Data listing|Table", module)
           cellRenderer={zipcodeCellRenderer}
           resizable={true}
         />
-      </Table>
+      </Table_Deprecated>
     </div>
   ))
   .add("resizable + column width fill remaining", () => (
@@ -411,7 +418,7 @@ storiesOf("Data listing|Table", module)
         fontSize: "14px"
       }}
     >
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           header={<HeaderCell>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
@@ -448,12 +455,12 @@ storiesOf("Data listing|Table", module)
           minWidth={100}
           maxWidth={150}
         />
-      </Table>
+      </Table_Deprecated>
     </div>
   ))
   .add("resizeable onResize demo", () => <ResizableTableOnResizeDemo />, {
     info: {
-      propTables: [Table, Column],
+      propTables: [Table_Deprecated, Column],
       propTablesExclude: [ResizableTableOnResizeDemo]
     }
   })
@@ -465,7 +472,7 @@ storiesOf("Data listing|Table", module)
         fontSize: "14px"
       }}
     >
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           header={<HeaderCell capitalize={false}>name</HeaderCell>}
           cellRenderer={nameCellRenderer}
@@ -501,7 +508,7 @@ storiesOf("Data listing|Table", module)
           cellRenderer={cityCellRenderer}
           width={width}
         />
-      </Table>
+      </Table_Deprecated>
     </div>
   ))
   .add("with column header tooltips", () => (
@@ -512,7 +519,7 @@ storiesOf("Data listing|Table", module)
         fontSize: "14px"
       }}
     >
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           resizable={true}
           header={<HeaderCell tooltipContent="I am a tooltip">name</HeaderCell>}
@@ -548,6 +555,6 @@ storiesOf("Data listing|Table", module)
           }
           cellRenderer={zipcodeCellRenderer}
         />
-      </Table>
+      </Table_Deprecated>
     </div>
   ));

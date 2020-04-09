@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Table, Column } from "../";
+import { Table_Deprecated, Column } from "../";
 import { fillColumns, clampWidth } from "../components/Table";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
@@ -45,7 +45,7 @@ describe("Table", () => {
 
   it("renders default", () => {
     const component = render(
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column header="name" cellRenderer={nameCellRenderer} width={width} />
         <Column header="role" cellRenderer={roleCellRenderer} width={width} />
         <Column header="state" cellRenderer={stateCellRenderer} width={width} />
@@ -55,14 +55,14 @@ describe("Table", () => {
           width={width}
         />
         <Column header="city" cellRenderer={cityCellRenderer} width={width} />
-      </Table>
+      </Table_Deprecated>
     );
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it("renders with growToFill cols", () => {
     const component = render(
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           header="name"
           cellRenderer={nameCellRenderer}
@@ -84,7 +84,7 @@ describe("Table", () => {
           width={width}
         />
         <Column header="city" cellRenderer={cityCellRenderer} width={width} />
-      </Table>
+      </Table_Deprecated>
     );
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -92,9 +92,9 @@ describe("Table", () => {
   it("renders again with new data", () => {
     const itemRenderer = item => <span>{item}</span>;
     const component = mount(
-      <Table data={[1, 2, 3]}>
+      <Table_Deprecated data={[1, 2, 3]}>
         <Column header="item" cellRenderer={itemRenderer} width={width} />
-      </Table>
+      </Table_Deprecated>
     );
     expect(toJson(component)).toMatchSnapshot();
 
@@ -109,11 +109,11 @@ describe("Table", () => {
       const width = () => 10;
       const cell = number => <span>{number}</span>;
       const component = shallow(
-        <Table data={[1, 2, 3]}>
+        <Table_Deprecated data={[1, 2, 3]}>
           <Column header="test" cellRenderer={cell} width={width} />
-        </Table>
+        </Table_Deprecated>
       );
-      const instance = component.instance() as Table<number>;
+      const instance = component.instance() as Table_Deprecated<number>;
       expect(instance.getData([1, 2, 3])).toEqual([{}, 1, 2, 3]);
     });
   });
@@ -222,7 +222,7 @@ describe("Table", () => {
   });
   it("renders a table with resizable columns", () => {
     const component = render(
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           resizable={true}
           header="name"
@@ -253,14 +253,14 @@ describe("Table", () => {
           cellRenderer={cityCellRenderer}
           width={width}
         />
-      </Table>
+      </Table_Deprecated>
     );
     expect(toJson(component)).toMatchSnapshot();
   });
   it("calls onResize prop with resized column value when that column is resized", () => {
     const onResizeCallback = jest.fn();
     const component = shallow(
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           resizable={true}
           header="name"
@@ -292,9 +292,9 @@ describe("Table", () => {
           cellRenderer={cityCellRenderer}
           width={width}
         />
-      </Table>
+      </Table_Deprecated>
     );
-    const instance = component.instance() as Table<number>;
+    const instance = component.instance() as Table_Deprecated<number>;
     expect(onResizeCallback).not.toHaveBeenCalled();
     instance.resizeColumn({ dragDelta: 50, index: "0" });
     expect(onResizeCallback).toHaveBeenCalledWith(
@@ -303,7 +303,7 @@ describe("Table", () => {
   });
   it("sets state with resized values", () => {
     const component = shallow(
-      <Table data={items}>
+      <Table_Deprecated data={items}>
         <Column
           resizable={true}
           header="name"
@@ -334,9 +334,9 @@ describe("Table", () => {
           cellRenderer={cityCellRenderer}
           width={width}
         />
-      </Table>
+      </Table_Deprecated>
     );
-    const instance = component.instance() as Table<number>;
+    const instance = component.instance() as Table_Deprecated<number>;
     expect(instance.state.resizedColWidths.get("1")).toBe(undefined);
     instance.resizeColumn({ dragDelta: 50, index: "1" });
     expect(instance.state.resizedColWidths.get("1")).toEqual(
