@@ -53,6 +53,7 @@ export {
   DropdownMenuItemAvatar,
   DropdownMenuItemAppearances
 } from "./dropdownMenu";
+export { NonMenuDropdown as Dropdown } from "./nonMenuDropdown";
 export {
   EmptyState,
   EmptyStateWithGraphic,
