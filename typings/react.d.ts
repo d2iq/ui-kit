@@ -1,4 +1,6 @@
 namespace React {
+  function memo<T>(c: T): T;
+
   interface ReactChildren {
     // we sometimes want to handle typed children, which react does not support out of the box.
     // instead of jumping through hoops, we introduce this parameterized version of toArray.

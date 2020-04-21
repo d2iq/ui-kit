@@ -1,7 +1,13 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { Column, HeaderCell, TextCell, NumberCell, CheckboxTable } from "..";
+import {
+  Column,
+  HeaderCell,
+  TextCell,
+  NumberCell,
+  CheckboxTable_Deprecated
+} from "..";
 import SortableCheckboxTable from "./helpers/SortableCheckboxTable";
 import { items } from "./helpers/mocks";
 import CheckboxTableHelper from "./helpers/CheckboxTableHelper";
@@ -43,12 +49,12 @@ const veryLongRenderer = () => (
   </TextCell>
 );
 
-storiesOf("Data listing|Table/CheckboxTable", module)
+storiesOf("Data listing|Table_Deprecated/CheckboxTable", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {
       propTablesExclude: [CheckboxTableHelper],
-      propTables: [CheckboxTable, Column]
+      propTables: [CheckboxTable_Deprecated, Column]
     }
   })
   .add("default", () => (

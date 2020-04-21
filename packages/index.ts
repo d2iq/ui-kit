@@ -87,15 +87,16 @@ export { SegmentedControl, SegmentedControlButton } from "./segmentedControl";
 export { SelectInput } from "./selectInput";
 export {
   Column,
-  Table,
-  CheckboxTable,
+  Table_Deprecated,
+  CheckboxTable_Deprecated,
   Cell,
   TextCell,
   HeaderCell,
   SortableHeaderCell,
   NumberCell
-} from "./table";
+} from "./table_deprecated";
 export { TableView, TableViewHeader, TableViewBody } from "./tableView";
+export { Table, DropdownMenuCell, EmptyCell, Sorter } from "./tablev2";
 export { TabItem, TabTitle, Tabs } from "./tabs";
 export {
   TextInput,
