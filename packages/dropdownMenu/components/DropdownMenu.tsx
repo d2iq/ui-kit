@@ -3,7 +3,7 @@ import { cx } from "emotion";
 import Downshift, { ControllerStateAndHelpers } from "downshift";
 import { Dropdownable } from "../../dropdownable";
 import { border, buttonReset, display } from "../../shared/styles/styleUtils";
-import Popover from "../../popover/components/Popover";
+import PopoverBox from "../../popover/components/PopoverBox";
 import PopoverListItem from "../../popover/components/PopoverListItem";
 import { DropdownSectionProps } from "./DropdownSection";
 import { DropdownMenuItemProps } from "./DropdownMenuItem";
@@ -139,7 +139,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
             overlayRoot={overlayRoot}
             preferredDirections={preferredDirections}
             dropdown={
-              <Popover
+              <PopoverBox
                 maxHeight={menuMaxHeight}
                 maxWidth={menuMaxWidth}
                 {...getMenuProps({ refKey: "menuRef" })}
@@ -155,7 +155,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
                     {sectionContent}
                   </div>
                 ))}
-              </Popover>
+              </PopoverBox>
             }
             disablePortal={disablePortal}
           >

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Downshift from "downshift";
 import Dropdownable from "../../dropdownable/components/Dropdownable";
-import Popover from "../../popover/components/Popover";
+import PopoverBox from "../../popover/components/PopoverBox";
 import PopoverListItem from "../../popover/components/PopoverListItem";
 import { margin } from "../../shared/styles/styleUtils";
 import resizeEventManager from "../../utilities/resizeEventManager";
@@ -124,7 +124,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                     <div data-cy="typeahead-dropdown">
                       {!items.length && !menuEmptyState ? null : (
                         <div className={margin("top", "xxs")}>
-                          <Popover
+                          <PopoverBox
                             width={this.state.menuWidth}
                             maxHeight={menuMaxHeight}
                             {...getMenuProps({ refKey: "menuRef" })}
@@ -151,7 +151,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                             ) : (
                               <div>{menuEmptyState}</div>
                             )}
-                          </Popover>
+                          </PopoverBox>
                         </div>
                       )}
                     </div>

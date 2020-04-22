@@ -3,10 +3,16 @@ import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 
 import { PageHeader, PageHeaderTabs } from "../index";
-import { PrimaryButton, SecondaryButton } from "../../button";
+import { PrimaryButton, SecondaryButton, ResetButton } from "../../button";
 import { SpacingBox } from "../../styleUtils/modifiers";
-import PageHeaderOverflowMenu from "./helpers/PageHeaderOverflowMenu";
 import { Tabs, TabItem, TabTitle } from "../../tabs";
+import {
+  DropdownMenu,
+  DropdownSection,
+  DropdownMenuItem
+} from "../../dropdownMenu";
+import { Icon } from "../../icon";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const readme = require("../README.md");
 const action = () => alert("Action triggered");
@@ -44,7 +50,26 @@ storiesOf("Page structure|PageHeader", module)
         <PrimaryButton onClick={action} key="Action1">
           Primary
         </PrimaryButton>,
-        <PageHeaderOverflowMenu key="OverflowMenu" />
+        <DropdownMenu
+          key="OverflowMenu"
+          trigger={
+            <ResetButton>
+              <Icon shape={SystemIcons.EllipsisVertical} />
+            </ResetButton>
+          }
+        >
+          <DropdownSection>
+            <DropdownMenuItem key="overflowone" value="overflowone">
+              Overflow One
+            </DropdownMenuItem>
+            <DropdownMenuItem key="overflowtwo" value="overflowtwo">
+              Overflow Two
+            </DropdownMenuItem>
+            <DropdownMenuItem key="overflowthree" value="overflowthree">
+              Overflow Three
+            </DropdownMenuItem>
+          </DropdownSection>
+        </DropdownMenu>
       ]}
     />
   ))

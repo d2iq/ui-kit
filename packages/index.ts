@@ -80,6 +80,7 @@ export {
   FullscreenModal
 } from "./modal";
 export { PageHeader, PageHeaderTabs } from "./pageheader";
+export { Popover } from "./popover";
 export { ProgressBar } from "./progressbar";
 export { PromoBanner, PromoInline } from "./promo";
 export { SegmentedControl, SegmentedControlButton } from "./segmentedControl";
