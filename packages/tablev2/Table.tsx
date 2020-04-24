@@ -194,7 +194,7 @@ function HeaderRow<Entry>({
   );
   return (
     <div role="row" className={className} key="headerRow">
-      {state.columns.map(toHeaderCell)}
+      {columns.map(toHeaderCell)}
     </div>
   );
 }
