@@ -58,23 +58,38 @@ const DataUpdateContainer = ({
   return children({ items });
 };
 
+const defaultCols = [
+  { id: "name", header: "Name", render: x => x.name },
+  { id: "username", header: "Username", render: x => x.username },
+  { id: "email", header: "Email", render: x => x.email },
+  { id: "phone", header: "Phone", render: x => x.phone },
+  { id: "website", header: "Website", render: x => x.website },
+  { id: "company", header: "Company", render: x => x.company.name }
+];
+
+const StoryWithVariableCols = () => {
+  const [cols, setCols] = React.useState(defaultCols);
+
+  // every seconds we're changing the columns to show.
+  everySecond(i => {
+    setCols(i % 2 ? defaultCols : defaultCols.filter(c => c.id === "name"));
+  });
+
+  return (
+    <Table data={initialData} toId={el => el.id.toString()} columns={cols} />
+  );
+};
+
 /* tslint:disable:jsx-no-lambda */
 storiesOf("Data listing|Table", module)
   .add("default", () => (
     <Table
       data={initialData}
-      // toId fn needed to make react render stuff fast.
       toId={el => el.id.toString()}
-      columns={[
-        { id: "name", header: "Name", render: x => x.name },
-        { id: "username", header: "Username", render: x => x.username },
-        { id: "email", header: "Email", render: x => x.email },
-        { id: "phone", header: "Phone", render: x => x.phone },
-        { id: "website", header: "Website", render: x => x.website },
-        { id: "company", header: "Company", render: x => x.company.name }
-      ]}
+      columns={defaultColumnss}
     />
   ))
+  .add("with variable cols", () => <StoryWithVariableCols />)
   .add("with updating data", () => (
     <DataUpdateContainer updateRateMs={1000}>
       {({ items }) => (
@@ -82,14 +97,7 @@ storiesOf("Data listing|Table", module)
           data={items}
           // toId fn needed to make react render stuff fast.
           toId={el => el.id.toString()}
-          columns={[
-            { id: "name", header: "Name", render: x => x.name },
-            { id: "username", header: "Username", render: x => x.username },
-            { id: "email", header: "Email", render: x => x.email },
-            { id: "phone", header: "Phone", render: x => x.phone },
-            { id: "website", header: "Website", render: x => x.website },
-            { id: "company", header: "Company", render: x => x.company.name }
-          ]}
+          columns={defaultCols}
         />
       )}
     </DataUpdateContainer>
@@ -393,15 +401,22 @@ storiesOf("Data listing|Table", module)
           // TODO: make this work with storybook actions
           console.log(state);
         }}
-        columns={[
-          { id: "name", header: "Name", render: x => x.name },
-          { id: "username", header: "Username", render: x => x.username },
-          { id: "email", header: "Email", render: x => x.email },
-          { id: "phone", header: "Phone", render: x => x.phone },
-          { id: "website", header: "Website", render: x => x.website },
-          { id: "company", header: "Company", render: x => x.company.name }
-        ]}
+        columns={defaultCols}
       />
     </>
   ));
 /* tslint:enable */
+
+// helpers
+
+const everySecond = fn => {
+  const [i, setI] = React.useState(0);
+  let intervalId = null;
+  React.useEffect(() => {
+    intervalId = setInterval(() => {
+      setI(i + 1);
+      fn(i);
+    }, 1000);
+    return () => clearInterval(intervalId);
+  });
+};
