@@ -99,36 +99,6 @@ exports[`Table v2 rendering renders default 1`] = `
   z-index: 1;
 }
 
-.emotion-39 {
-  padding: 8px;
-  overflow: hidden;
-  overflow: -moz-hidden-unscrollable;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  min-width: 0;
-  padding-right: calc(8px + 12px);
-  position: relative;
-  text-align: left;
-}
-
-.emotion-39:first-child {
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-}
-
-.emotion-39:first-child a {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.emotion-39:first-child a:visited {
-  color: inherit;
-}
-
 .emotion-4 {
   padding: 8px;
   overflow: hidden;
@@ -196,6 +166,12 @@ exports[`Table v2 rendering renders default 1`] = `
   display: inline-block;
 }
 
+.emotion-4:first-child {
+  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
+  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+}
+
 .emotion-0 {
   background: none;
   border: 0;
@@ -238,36 +214,6 @@ exports[`Table v2 rendering renders default 1`] = `
 
 .emotion-2 use {
   pointer-events: none;
-}
-
-.emotion-40 {
-  padding: 8px;
-  overflow: hidden;
-  overflow: -moz-hidden-unscrollable;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  min-width: 0;
-  padding-right: calc(8px + 12px);
-  position: relative;
-  text-align: center;
-}
-
-.emotion-40:first-child {
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-}
-
-.emotion-40:first-child a {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.emotion-40:first-child a:visited {
-  color: inherit;
 }
 
 .emotion-19 {
@@ -313,6 +259,12 @@ exports[`Table v2 rendering renders default 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-19:first-child {
+  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
+  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
 }
 
 .emotion-15 {
@@ -417,36 +369,6 @@ exports[`Table v2 rendering renders default 1`] = `
   position: absolute;
 }
 
-.emotion-41 {
-  padding: 8px;
-  overflow: hidden;
-  overflow: -moz-hidden-unscrollable;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  min-width: 0;
-  padding-right: calc(8px + 12px);
-  position: relative;
-  text-align: right;
-}
-
-.emotion-41:first-child {
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-}
-
-.emotion-41:first-child a {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.emotion-41:first-child a:visited {
-  color: inherit;
-}
-
 .emotion-22 {
   padding: 8px;
   overflow: hidden;
@@ -492,33 +414,10 @@ exports[`Table v2 rendering renders default 1`] = `
   user-select: none;
 }
 
-.emotion-42 {
-  padding: 8px;
-  overflow: hidden;
-  overflow: -moz-hidden-unscrollable;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  min-width: 0;
-  padding-right: calc(8px + 12px);
-  position: relative;
-}
-
-.emotion-42:first-child {
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-}
-
-.emotion-42:first-child a {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.emotion-42:first-child a:visited {
-  color: inherit;
+.emotion-22:first-child {
+  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
+  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
 }
 
 .emotion-25 {
@@ -565,6 +464,12 @@ exports[`Table v2 rendering renders default 1`] = `
   user-select: none;
 }
 
+.emotion-25:first-child {
+  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
+  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+}
+
 .emotion-59 {
   border-width: 1px;
   border-color: var(--themeBorder,#DADDE2);
@@ -584,6 +489,149 @@ exports[`Table v2 rendering renders default 1`] = `
 .emotion-59:hover,
 .emotion-59:hover > [role="gridcell"] {
   background-color: var(--themeBgHover,#F7F8F9);
+}
+
+.emotion-39 {
+  padding: 8px;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  min-width: 0;
+  padding-right: calc(8px + 12px);
+  position: relative;
+  text-align: left;
+}
+
+.emotion-39:first-child {
+  -webkit-transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.emotion-39:first-child a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-39:first-child a:visited {
+  color: inherit;
+}
+
+.emotion-39:first-child {
+  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
+  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+}
+
+.emotion-40 {
+  padding: 8px;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  min-width: 0;
+  padding-right: calc(8px + 12px);
+  position: relative;
+  text-align: center;
+}
+
+.emotion-40:first-child {
+  -webkit-transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.emotion-40:first-child a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-40:first-child a:visited {
+  color: inherit;
+}
+
+.emotion-40:first-child {
+  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
+  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+}
+
+.emotion-41 {
+  padding: 8px;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  min-width: 0;
+  padding-right: calc(8px + 12px);
+  position: relative;
+  text-align: right;
+}
+
+.emotion-41:first-child {
+  -webkit-transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.emotion-41:first-child a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-41:first-child a:visited {
+  color: inherit;
+}
+
+.emotion-41:first-child {
+  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
+  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+}
+
+.emotion-42 {
+  padding: 8px;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  min-width: 0;
+  padding-right: calc(8px + 12px);
+  position: relative;
+}
+
+.emotion-42:first-child {
+  -webkit-transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.emotion-42:first-child a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-42:first-child a:visited {
+  color: inherit;
+}
+
+.emotion-42:first-child {
+  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
+  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
 }
 
 .emotion-56 {
@@ -692,6 +740,7 @@ exports[`Table v2 rendering renders default 1`] = `
         "render": [Function],
         "sorter": [Function],
         "textAlign": "left",
+        "width": "300px",
       },
       Object {
         "header": <Unknown
@@ -703,37 +752,44 @@ exports[`Table v2 rendering renders default 1`] = `
         "initialWidth": "minmax(300px, 1fr)",
         "render": [Function],
         "textAlign": "center",
+        "width": "minmax(300px, 1fr)",
       },
       Object {
         "header": "Email",
         "id": "email",
         "render": [Function],
         "textAlign": "right",
+        "width": "1fr",
       },
       Object {
         "header": "Phone",
         "id": "phone",
         "render": [Function],
+        "width": "1fr",
       },
       Object {
         "header": "Company",
         "id": "company",
         "render": [Function],
+        "width": "1fr",
       },
       Object {
         "header": "Website",
         "id": "website",
         "render": [Function],
+        "width": "1fr",
       },
       Object {
         "header": "Empty",
         "id": "empty",
         "render": [Function],
+        "width": "1fr",
       },
       Object {
         "header": "",
         "id": "dropdown",
         "render": [Function],
+        "width": "1fr",
       },
     ]
   }
@@ -804,6 +860,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -815,41 +872,48 @@ exports[`Table v2 rendering renders default 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }
-      showScrollShadow={false}
+      showScrollShadow={true}
       state={
         Object {
           "columns": Array [
@@ -863,27 +927,27 @@ exports[`Table v2 rendering renders default 1`] = `
             },
             Object {
               "id": "email",
-              "width": "1fr",
+              "width": null,
             },
             Object {
               "id": "phone",
-              "width": "1fr",
+              "width": null,
             },
             Object {
               "id": "company",
-              "width": "1fr",
+              "width": null,
             },
             Object {
               "id": "website",
-              "width": "1fr",
+              "width": null,
             },
             Object {
               "id": "empty",
-              "width": "1fr",
+              "width": null,
             },
             Object {
               "id": "dropdown",
-              "width": "1fr",
+              "width": null,
             },
           ],
           "order": "asc",
@@ -909,11 +973,12 @@ exports[`Table v2 rendering renders default 1`] = `
               "render": [Function],
               "sorter": [Function],
               "textAlign": "left",
+              "width": "300px",
             }
           }
           id="name"
           key="name"
-          showScrollShadow={false}
+          showScrollShadow={true}
           state={
             Object {
               "columns": Array [
@@ -927,27 +992,27 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -1031,11 +1096,12 @@ exports[`Table v2 rendering renders default 1`] = `
               "initialWidth": "minmax(300px, 1fr)",
               "render": [Function],
               "textAlign": "center",
+              "width": "minmax(300px, 1fr)",
             }
           }
           id="username"
           key="username"
-          showScrollShadow={false}
+          showScrollShadow={true}
           state={
             Object {
               "columns": Array [
@@ -1049,27 +1115,27 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -1698,11 +1764,12 @@ exports[`Table v2 rendering renders default 1`] = `
               "id": "email",
               "render": [Function],
               "textAlign": "right",
+              "width": "1fr",
             }
           }
           id="email"
           key="email"
-          showScrollShadow={false}
+          showScrollShadow={true}
           state={
             Object {
               "columns": Array [
@@ -1716,27 +1783,27 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -1797,11 +1864,12 @@ exports[`Table v2 rendering renders default 1`] = `
               "header": "Phone",
               "id": "phone",
               "render": [Function],
+              "width": "1fr",
             }
           }
           id="phone"
           key="phone"
-          showScrollShadow={false}
+          showScrollShadow={true}
           state={
             Object {
               "columns": Array [
@@ -1815,27 +1883,27 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -1896,11 +1964,12 @@ exports[`Table v2 rendering renders default 1`] = `
               "header": "Company",
               "id": "company",
               "render": [Function],
+              "width": "1fr",
             }
           }
           id="company"
           key="company"
-          showScrollShadow={false}
+          showScrollShadow={true}
           state={
             Object {
               "columns": Array [
@@ -1914,27 +1983,27 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -1995,11 +2064,12 @@ exports[`Table v2 rendering renders default 1`] = `
               "header": "Website",
               "id": "website",
               "render": [Function],
+              "width": "1fr",
             }
           }
           id="website"
           key="website"
-          showScrollShadow={false}
+          showScrollShadow={true}
           state={
             Object {
               "columns": Array [
@@ -2013,27 +2083,27 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -2094,11 +2164,12 @@ exports[`Table v2 rendering renders default 1`] = `
               "header": "Empty",
               "id": "empty",
               "render": [Function],
+              "width": "1fr",
             }
           }
           id="empty"
           key="empty"
-          showScrollShadow={false}
+          showScrollShadow={true}
           state={
             Object {
               "columns": Array [
@@ -2112,27 +2183,27 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -2193,11 +2264,12 @@ exports[`Table v2 rendering renders default 1`] = `
               "header": "",
               "id": "dropdown",
               "render": [Function],
+              "width": "1fr",
             }
           }
           id="dropdown"
           key="dropdown"
-          showScrollShadow={false}
+          showScrollShadow={true}
           state={
             Object {
               "columns": Array [
@@ -2211,27 +2283,27 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -2288,18 +2360,6 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
     </HeaderRow>
     <Memo(Row)
-      colWidths={
-        Array [
-          "300px",
-          "minmax(300px, 1fr)",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-        ]
-      }
       columns={
         Array [
           Object {
@@ -2311,6 +2371,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -2322,37 +2383,44 @@ exports[`Table v2 rendering renders default 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }
@@ -2368,7 +2436,7 @@ exports[`Table v2 rendering renders default 1`] = `
         }
       }
       key="row-0"
-      showScrollShadow={false}
+      showScrollShadow={true}
       stickyFirstCol={true}
       toId={[Function]}
     >
@@ -3190,18 +3258,6 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
     </Memo(Row)>
     <Memo(Row)
-      colWidths={
-        Array [
-          "300px",
-          "minmax(300px, 1fr)",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-        ]
-      }
       columns={
         Array [
           Object {
@@ -3213,6 +3269,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -3224,37 +3281,44 @@ exports[`Table v2 rendering renders default 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }
@@ -3270,7 +3334,7 @@ exports[`Table v2 rendering renders default 1`] = `
         }
       }
       key="row-1"
-      showScrollShadow={false}
+      showScrollShadow={true}
       stickyFirstCol={true}
       toId={[Function]}
     >
@@ -4092,18 +4156,6 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
     </Memo(Row)>
     <Memo(Row)
-      colWidths={
-        Array [
-          "300px",
-          "minmax(300px, 1fr)",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-        ]
-      }
       columns={
         Array [
           Object {
@@ -4115,6 +4167,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -4126,37 +4179,44 @@ exports[`Table v2 rendering renders default 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }
@@ -4172,7 +4232,7 @@ exports[`Table v2 rendering renders default 1`] = `
         }
       }
       key="row-2"
-      showScrollShadow={false}
+      showScrollShadow={true}
       stickyFirstCol={true}
       toId={[Function]}
     >
@@ -4994,18 +5054,6 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
     </Memo(Row)>
     <Memo(Row)
-      colWidths={
-        Array [
-          "300px",
-          "minmax(300px, 1fr)",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-        ]
-      }
       columns={
         Array [
           Object {
@@ -5017,6 +5065,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -5028,37 +5077,44 @@ exports[`Table v2 rendering renders default 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }
@@ -5074,7 +5130,7 @@ exports[`Table v2 rendering renders default 1`] = `
         }
       }
       key="row-3"
-      showScrollShadow={false}
+      showScrollShadow={true}
       stickyFirstCol={true}
       toId={[Function]}
     >
@@ -5896,18 +5952,6 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
     </Memo(Row)>
     <Memo(Row)
-      colWidths={
-        Array [
-          "300px",
-          "minmax(300px, 1fr)",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-        ]
-      }
       columns={
         Array [
           Object {
@@ -5919,6 +5963,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -5930,37 +5975,44 @@ exports[`Table v2 rendering renders default 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }
@@ -5976,7 +6028,7 @@ exports[`Table v2 rendering renders default 1`] = `
         }
       }
       key="row-4"
-      showScrollShadow={false}
+      showScrollShadow={true}
       stickyFirstCol={true}
       toId={[Function]}
     >
@@ -6909,73 +6961,6 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   color: inherit;
 }
 
-.emotion-4 {
-  padding: 8px;
-  overflow: hidden;
-  overflow: -moz-hidden-unscrollable;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  min-width: 0;
-  padding-right: calc(8px + 12px);
-  position: relative;
-  text-align: left;
-  font-weight: 500;
-  overflow: visible;
-  white-space: nowrap;
-  --draggable-opacity: 0;
-  padding-right: calc( 8px + 12px + 12px );
-  position: relative;
-}
-
-.emotion-4:first-child {
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-}
-
-.emotion-4:first-child a {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.emotion-4:first-child a:visited {
-  color: inherit;
-}
-
-.emotion-4:hover {
-  --draggable-opacity: 1;
-}
-
-.emotion-4:active ~ * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-4:after {
-  content: "";
-  display: none;
-  line-height: 0;
-  margin-left: 4px;
-  margin-right: -12px;
-  vertical-align: middle;
-  content: "";
-  height: 0;
-  width: 0;
-  border-bottom: 4px solid currentColor;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: none;
-}
-
-.emotion-4:hover:after {
-  display: inline-block;
-}
-
 .emotion-0 {
   background: none;
   border: 0;
@@ -7455,6 +7440,73 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   z-index: 2;
 }
 
+.emotion-4 {
+  padding: 8px;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  min-width: 0;
+  padding-right: calc(8px + 12px);
+  position: relative;
+  text-align: left;
+  font-weight: 500;
+  overflow: visible;
+  white-space: nowrap;
+  --draggable-opacity: 0;
+  padding-right: calc( 8px + 12px + 12px );
+  position: relative;
+}
+
+.emotion-4:first-child {
+  -webkit-transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.emotion-4:first-child a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-4:first-child a:visited {
+  color: inherit;
+}
+
+.emotion-4:hover {
+  --draggable-opacity: 1;
+}
+
+.emotion-4:active ~ * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-4:after {
+  content: "";
+  display: none;
+  line-height: 0;
+  margin-left: 4px;
+  margin-right: -12px;
+  vertical-align: middle;
+  content: "";
+  height: 0;
+  width: 0;
+  border-bottom: 4px solid currentColor;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: none;
+}
+
+.emotion-4:hover:after {
+  display: inline-block;
+}
+
 .emotion-59 {
   border-width: 1px;
   border-color: var(--themeBorder,#DADDE2);
@@ -7480,6 +7532,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         "render": [Function],
         "sorter": [Function],
         "textAlign": "left",
+        "width": "300px",
       },
       Object {
         "header": <Unknown
@@ -7491,37 +7544,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         "initialWidth": "minmax(300px, 1fr)",
         "render": [Function],
         "textAlign": "center",
+        "width": "minmax(300px, 1fr)",
       },
       Object {
         "header": "Email",
         "id": "email",
         "render": [Function],
         "textAlign": "right",
+        "width": "1fr",
       },
       Object {
         "header": "Phone",
         "id": "phone",
         "render": [Function],
+        "width": "1fr",
       },
       Object {
         "header": "Company",
         "id": "company",
         "render": [Function],
+        "width": "1fr",
       },
       Object {
         "header": "Website",
         "id": "website",
         "render": [Function],
+        "width": "1fr",
       },
       Object {
         "header": "Empty",
         "id": "empty",
         "render": [Function],
+        "width": "1fr",
       },
       Object {
         "header": "",
         "id": "dropdown",
         "render": [Function],
+        "width": "1fr",
       },
     ]
   }
@@ -7593,6 +7653,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -7604,37 +7665,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }
@@ -7652,27 +7720,27 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             },
             Object {
               "id": "email",
-              "width": "1fr",
+              "width": null,
             },
             Object {
               "id": "phone",
-              "width": "1fr",
+              "width": null,
             },
             Object {
               "id": "company",
-              "width": "1fr",
+              "width": null,
             },
             Object {
               "id": "website",
-              "width": "1fr",
+              "width": null,
             },
             Object {
               "id": "empty",
-              "width": "1fr",
+              "width": null,
             },
             Object {
               "id": "dropdown",
-              "width": "1fr",
+              "width": null,
             },
           ],
           "order": "asc",
@@ -7698,6 +7766,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               "render": [Function],
               "sorter": [Function],
               "textAlign": "left",
+              "width": "300px",
             }
           }
           id="name"
@@ -7716,27 +7785,27 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -7820,6 +7889,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               "initialWidth": "minmax(300px, 1fr)",
               "render": [Function],
               "textAlign": "center",
+              "width": "minmax(300px, 1fr)",
             }
           }
           id="username"
@@ -7838,27 +7908,27 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -9045,6 +9115,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               "id": "email",
               "render": [Function],
               "textAlign": "right",
+              "width": "1fr",
             }
           }
           id="email"
@@ -9063,27 +9134,27 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -9144,6 +9215,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               "header": "Phone",
               "id": "phone",
               "render": [Function],
+              "width": "1fr",
             }
           }
           id="phone"
@@ -9162,27 +9234,27 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -9243,6 +9315,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               "header": "Company",
               "id": "company",
               "render": [Function],
+              "width": "1fr",
             }
           }
           id="company"
@@ -9261,27 +9334,27 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -9342,6 +9415,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               "header": "Website",
               "id": "website",
               "render": [Function],
+              "width": "1fr",
             }
           }
           id="website"
@@ -9360,27 +9434,27 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -9441,6 +9515,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               "header": "Empty",
               "id": "empty",
               "render": [Function],
+              "width": "1fr",
             }
           }
           id="empty"
@@ -9459,27 +9534,27 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -9540,6 +9615,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               "header": "",
               "id": "dropdown",
               "render": [Function],
+              "width": "1fr",
             }
           }
           id="dropdown"
@@ -9558,27 +9634,27 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "email",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "phone",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "company",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "website",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "empty",
-                  "width": "1fr",
+                  "width": null,
                 },
                 Object {
                   "id": "dropdown",
-                  "width": "1fr",
+                  "width": null,
                 },
               ],
               "order": "asc",
@@ -9635,18 +9711,6 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
     </HeaderRow>
     <Memo(Row)
-      colWidths={
-        Array [
-          "300px",
-          "minmax(300px, 1fr)",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-        ]
-      }
       columns={
         Array [
           Object {
@@ -9658,6 +9722,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -9669,37 +9734,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }
@@ -10852,18 +10924,6 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
     </Memo(Row)>
     <Memo(Row)
-      colWidths={
-        Array [
-          "300px",
-          "minmax(300px, 1fr)",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-        ]
-      }
       columns={
         Array [
           Object {
@@ -10875,6 +10935,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -10886,37 +10947,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }
@@ -12069,18 +12137,6 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
     </Memo(Row)>
     <Memo(Row)
-      colWidths={
-        Array [
-          "300px",
-          "minmax(300px, 1fr)",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-        ]
-      }
       columns={
         Array [
           Object {
@@ -12092,6 +12148,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -12103,37 +12160,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }
@@ -13286,18 +13350,6 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
     </Memo(Row)>
     <Memo(Row)
-      colWidths={
-        Array [
-          "300px",
-          "minmax(300px, 1fr)",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-        ]
-      }
       columns={
         Array [
           Object {
@@ -13309,6 +13361,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -13320,37 +13373,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }
@@ -14503,18 +14563,6 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
     </Memo(Row)>
     <Memo(Row)
-      colWidths={
-        Array [
-          "300px",
-          "minmax(300px, 1fr)",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-          "1fr",
-        ]
-      }
       columns={
         Array [
           Object {
@@ -14526,6 +14574,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "render": [Function],
             "sorter": [Function],
             "textAlign": "left",
+            "width": "300px",
           },
           Object {
             "header": <Unknown
@@ -14537,37 +14586,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
             "textAlign": "center",
+            "width": "minmax(300px, 1fr)",
           },
           Object {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
+            "width": "1fr",
           },
           Object {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Company",
             "id": "company",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Website",
             "id": "website",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
+            "width": "1fr",
           },
           Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
+            "width": "1fr",
           },
         ]
       }

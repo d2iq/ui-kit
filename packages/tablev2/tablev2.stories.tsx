@@ -58,7 +58,7 @@ const DataUpdateContainer = ({
   return children({ items });
 };
 
-const defaultCols = [
+const defaultColumns = [
   { id: "name", header: "Name", render: x => x.name },
   { id: "username", header: "Username", render: x => x.username },
   { id: "email", header: "Email", render: x => x.email },
@@ -68,11 +68,12 @@ const defaultCols = [
 ];
 
 const StoryWithVariableCols = () => {
-  const [cols, setCols] = React.useState(defaultCols);
+  const [cols, setCols] = React.useState(defaultColumns);
 
   // every seconds we're changing the columns to show.
   everySecond(i => {
-    setCols(i % 2 ? defaultCols : defaultCols.filter(c => c.id === "name"));
+    const toRemove = i % 2 ? [] : ["email", "phone"];
+    setCols(defaultColumns.filter(c => !toRemove.includes(c.id)));
   });
 
   return (
@@ -86,7 +87,7 @@ storiesOf("Data listing|Table", module)
     <Table
       data={initialData}
       toId={el => el.id.toString()}
-      columns={defaultColumnss}
+      columns={defaultColumns}
     />
   ))
   .add("with variable cols", () => <StoryWithVariableCols />)
@@ -97,7 +98,7 @@ storiesOf("Data listing|Table", module)
           data={items}
           // toId fn needed to make react render stuff fast.
           toId={el => el.id.toString()}
-          columns={defaultCols}
+          columns={defaultColumns}
         />
       )}
     </DataUpdateContainer>
@@ -401,7 +402,7 @@ storiesOf("Data listing|Table", module)
           // TODO: make this work with storybook actions
           console.log(state);
         }}
-        columns={defaultCols}
+        columns={defaultColumns}
       />
     </>
   ));
