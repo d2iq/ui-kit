@@ -740,7 +740,6 @@ exports[`Table v2 rendering renders default 1`] = `
         "render": [Function],
         "sorter": [Function],
         "textAlign": "left",
-        "width": "300px",
       },
       Object {
         "header": <Unknown
@@ -752,44 +751,37 @@ exports[`Table v2 rendering renders default 1`] = `
         "initialWidth": "minmax(300px, 1fr)",
         "render": [Function],
         "textAlign": "center",
-        "width": "minmax(300px, 1fr)",
       },
       Object {
         "header": "Email",
         "id": "email",
         "render": [Function],
         "textAlign": "right",
-        "width": "1fr",
       },
       Object {
         "header": "Phone",
         "id": "phone",
         "render": [Function],
-        "width": "1fr",
       },
       Object {
         "header": "Company",
         "id": "company",
         "render": [Function],
-        "width": "1fr",
       },
       Object {
         "header": "Website",
         "id": "website",
         "render": [Function],
-        "width": "1fr",
       },
       Object {
         "header": "Empty",
         "id": "empty",
         "render": [Function],
-        "width": "1fr",
       },
       Object {
         "header": "",
         "id": "dropdown",
         "render": [Function],
-        "width": "1fr",
       },
     ]
   }
@@ -7532,7 +7524,6 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         "render": [Function],
         "sorter": [Function],
         "textAlign": "left",
-        "width": "300px",
       },
       Object {
         "header": <Unknown
@@ -7544,44 +7535,37 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         "initialWidth": "minmax(300px, 1fr)",
         "render": [Function],
         "textAlign": "center",
-        "width": "minmax(300px, 1fr)",
       },
       Object {
         "header": "Email",
         "id": "email",
         "render": [Function],
         "textAlign": "right",
-        "width": "1fr",
       },
       Object {
         "header": "Phone",
         "id": "phone",
         "render": [Function],
-        "width": "1fr",
       },
       Object {
         "header": "Company",
         "id": "company",
         "render": [Function],
-        "width": "1fr",
       },
       Object {
         "header": "Website",
         "id": "website",
         "render": [Function],
-        "width": "1fr",
       },
       Object {
         "header": "Empty",
         "id": "empty",
         "render": [Function],
-        "width": "1fr",
       },
       Object {
         "header": "",
         "id": "dropdown",
         "render": [Function],
-        "width": "1fr",
       },
     ]
   }
