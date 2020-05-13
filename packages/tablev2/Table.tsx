@@ -47,6 +47,9 @@ export type Column<A, B = string> = {
   textAlign?: React.CSSProperties["textAlign"];
 };
 
+// we internally use a different type than we expose in the API.
+type InternalColumn<A, B = string> = Column<A, B> & { width: string };
+
 type TableProps<A, B = string, C extends B = B> = {
   /**
    * Table columns
@@ -81,15 +84,15 @@ type State = {
   order: "asc" | "desc";
   columns: Array<{
     id: string;
-    width: string;
+    width: string | null;
   }>;
 };
 
-const getCellClassName = (
-  gridTemplateFragments: string[],
+const rowClassName = <A extends unknown>(
+  columns: Array<InternalColumn<A>>,
   stickyFirstCol?: boolean
 ) =>
-  cx(style.row(gridTemplateFragments), {
+  cx(style.row(columns.map(c => c.width)), {
     [style.rowWithStickyColumn]: stickyFirstCol
   });
 
@@ -130,6 +133,14 @@ function HeaderCell<Entry>({
     column.sorter &&
     (() => update({ sortBy: id, order: order === "asc" ? "desc" : "asc" }));
 
+  const header = column.sorter ? (
+    <ResetButton onClick={onClick} className={style.sortableButton}>
+      {column.header}
+    </ResetButton>
+  ) : (
+    column.header
+  );
+
   return (
     <div
       className={cx(style.headerCell(column.textAlign), {
@@ -142,25 +153,14 @@ function HeaderCell<Entry>({
       role="columnheader"
       aria-sort={order ? ariaSortStringMap[order] : "none"}
     >
-      {column.sorter ? (
-        <>
-          <ResetButton onClick={onClick} className={style.sortableButton}>
-            {column.header}
-          </ResetButton>
-          <Draggable onRelativeXChange={onRelativeXChange} />
-        </>
-      ) : (
-        <>
-          {column.header}
-          <Draggable onRelativeXChange={onRelativeXChange} />
-        </>
-      )}
+      {header}
+      <Draggable onRelativeXChange={onRelativeXChange} />
     </div>
   );
 }
 
 type HeaderRowProps<Entry> = {
-  columns: Array<Column<Entry>>;
+  columns: Array<InternalColumn<Entry>>;
   stickyFirstCol?: boolean;
   state: State;
   update: (a: Partial<State>) => void;
@@ -185,19 +185,16 @@ function HeaderRow<Entry>({
     />
   );
 
-  const className = cx(
-    getCellClassName(
-      state.columns.map(c => c.width),
-      stickyFirstCol
-    ),
-    style.headerRow
-  );
+  const className = cx(rowClassName(columns, stickyFirstCol), style.headerRow);
   return (
     <div role="row" className={className} key="headerRow">
       {columns.map(toHeaderCell)}
     </div>
   );
 }
+
+const getWidth = (col: Column<any>, state: State["columns"]) =>
+  state.find(s => s.id === col.id)?.width || col.initialWidth || "1fr";
 
 type DivProps = React.HTMLAttributes<HTMLDivElement>;
 export function Table<Entry, ColIDs extends string, Sort extends ColIDs>({
@@ -211,17 +208,12 @@ export function Table<Entry, ColIDs extends string, Sort extends ColIDs>({
   ...divProps
 }: { data: Entry[] } & DivProps & TableProps<Entry, ColIDs, Sort>) {
   const [state, setState] = React.useState<State>({
-    columns: columns.map(c => ({
-      id: c.id,
-      width: c.initialWidth ?? "1fr"
-    })),
+    columns: columns.map(c => ({ id: c.id, width: c.initialWidth || null })),
     order: initialSorter?.order ?? "asc",
     sortBy: initialSorter?.by ?? null
   });
   const tableRef = React.useRef<HTMLDivElement>(null);
-  const [ref, entry] = useIntersect({
-    root: tableRef.current
-  });
+  const [ref, entry] = useIntersect({ root: tableRef.current });
 
   const update = (x: Partial<State>) => {
     setState({ ...state, ...x });
@@ -231,30 +223,28 @@ export function Table<Entry, ColIDs extends string, Sort extends ColIDs>({
   const sort =
     col?.sorter?.(state.order, state.order === "asc" ? 1 : -1) ?? (() => 0);
   const sortedData = data.sort(sort);
+  const internalColumns: Array<InternalColumn<Entry>> = columns.map(c => {
+    return { ...c, width: getWidth(c, state.columns) };
+  });
   const toRow = (el: Entry) => (
     <Row
       key={"row-" + toId(el)}
-      columns={columns}
-      colWidths={state.columns.map(c => c.width)}
+      columns={internalColumns}
       el={el}
       toId={toId}
       stickyFirstCol={stickyFirstCol}
-      showScrollShadow={
-        Boolean(entry) && !entry?.isIntersecting && stickyFirstCol
-      }
+      showScrollShadow={!entry?.isIntersecting && stickyFirstCol}
     />
   );
 
   return (
     <div {...divProps} className={style.table} role="grid" ref={tableRef}>
       <HeaderRow
-        columns={columns}
+        columns={internalColumns}
         stickyFirstCol={stickyFirstCol}
         state={state}
         update={update}
-        showScrollShadow={
-          Boolean(entry) && !entry?.isIntersecting && stickyFirstCol
-        }
+        showScrollShadow={!entry?.isIntersecting && stickyFirstCol}
       />
 
       {sortedData.map(toRow)}
@@ -264,15 +254,13 @@ export function Table<Entry, ColIDs extends string, Sort extends ColIDs>({
 }
 
 type RowProps<Data> = {
-  colWidths: string[];
-  columns: Array<Column<Data>>;
+  columns: Array<InternalColumn<Data>>;
   el: Data;
   stickyFirstCol: boolean;
   toId: TableProps<Data>["toId"];
   showScrollShadow: boolean;
 };
 const Row = React.memo(function Row<A>({
-  colWidths,
   columns,
   el,
   stickyFirstCol,
@@ -280,10 +268,7 @@ const Row = React.memo(function Row<A>({
   showScrollShadow = false
 }: RowProps<A>) {
   const rowId = toId(el);
-  const className = cx(
-    getCellClassName(colWidths, stickyFirstCol),
-    style.contentRow
-  );
+  const className = cx(rowClassName(columns, stickyFirstCol), style.contentRow);
 
   return (
     <div role="row" className={className} key={`row-${rowId}`}>
