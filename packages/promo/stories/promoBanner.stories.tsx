@@ -6,6 +6,7 @@ import { PageHeader, SpacingBox, PrimaryButton, SecondaryButton } from "../../";
 import { PromoBanner } from "../";
 import PromoContent from "../components/PromoContent";
 import { gradientStyles } from "../style";
+import { PromoBackgroundColor } from "../types";
 
 const readme = require("../README.md");
 
@@ -52,6 +53,27 @@ storiesOf("Feedback|PromoBanner", module)
       <SpacingBox spacingSize="l">Primary page content</SpacingBox>
     </>
   ))
+  .add("w/ custom background color", () => {
+    const bgColors: { [key: string]: PromoBackgroundColor } = {
+      purpleLighten5: "purpleLighten5",
+      themeBgSecondary: "themeBgSecondary"
+    };
+    const bgColor = select("bgColor", bgColors, "purpleLighten5");
+
+    return (
+      <>
+        <PageHeader breadcrumbElements={["Page Header"]} />
+        <PromoBanner
+          bgColor={bgColor}
+          headingText="Use knobs panel to change background color"
+          bodyContent="The PromoBanner component is used to bring the user's attention to informational content relevant to the page it's being displayed on. It typically appears below the PageHeader."
+          dismissHandler={action("Hide the promo")}
+          optOutHandler={action("Do not show this promo again")}
+        />
+        <SpacingBox spacingSize="l">Primary page content</SpacingBox>
+      </>
+    );
+  })
   .add("w/ gradient background", () => {
     const gradients = Object.keys(gradientStyles).reduce((acc, curr) => {
       acc[curr] = curr;

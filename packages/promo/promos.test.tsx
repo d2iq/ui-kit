@@ -45,6 +45,25 @@ describe("Promos", () => {
     ).toMatchSnapshot();
   });
 
+  it("renders PromoBanner with a custom background color", () => {
+    expect(
+      toJSON(
+        render(
+          <PromoBanner
+            bgColor="purpleLighten5"
+            graphicSrc="http://placehold.it/350x150"
+            primaryAction={<button>Primary Action</button>}
+            secondaryAction={<button>Secondary Action</button>}
+            headingText="Promo Banner"
+            bodyContent="Some promo details"
+            dismissHandler={dismissHandler}
+            optOutHandler={optOutHandler}
+          />
+        )
+      )
+    ).toMatchSnapshot();
+  });
+
   it("renders PromoInline", () => {
     expect(
       toJSON(
