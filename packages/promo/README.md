@@ -8,6 +8,10 @@ The `PromoBanner` and `PromoCard` component are used to bring the user's attenti
 
 The `PromoBanner` component is used for informational content relevant to the page it's being displayed on. It typically appears below the `PageHeader`.
 
+### Customize background
+
+The background can be customized with a pre-defined set of colors or gradients. At the time of this writing, the colors and gradients don't have any semantic meaning attached to them.
+
 ### PromoInline
 
 The `PromoCard` component is less attention-grabbing than the `PromoInline`. It appears inline with the other content on the page.

@@ -23,3 +23,4 @@ export interface PromoProps {
 
 export type GradientStyle = "lightBlue" | "purple";
 export type GradientColors = [string, string];
+export type PromoBackgroundColor = "themeBgSecondary" | "purpleLighten5";
