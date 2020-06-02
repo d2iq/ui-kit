@@ -1,4 +1,5 @@
 import React from "react";
+import { cx } from "emotion";
 
 import Overlay from "../../shared/components/Overlay";
 import DropdownContents from "./DropdownContents";
@@ -8,7 +9,6 @@ import {
   getPortalledDropdownStyle,
   dropdownableContainer
 } from "../style";
-import { cx } from "emotion";
 
 export enum Direction {
   BottomLeft = "bottom-left",
@@ -40,6 +40,7 @@ export interface PositionCoord {
 }
 
 interface State {
+  open: boolean;
   direction: Direction;
   position: PositionCoord;
 }
@@ -57,14 +58,14 @@ const METHODS_TO_BIND = [
   "positionForDirection",
   "childBounds",
   "windowDimensions",
-  "dropdownDimensions"
+  "dropdownDimensions",
+  "hideDropdownable"
 ];
 
 class Dropdownable extends React.Component<DropdownableProps, State> {
   public static defaultProps: Partial<DropdownableProps> = {
     preferredDirections: DEFAULT_DIRECTION_PREFERENCES
   };
-
   private readonly child = React.createRef<HTMLDivElement>();
   private readonly dropdown = React.createRef<HTMLDivElement>();
 
@@ -76,7 +77,8 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
       position: {
         top: 0,
         left: 0
-      }
+      },
+      open: props.open
     };
 
     METHODS_TO_BIND.forEach(method => {
@@ -86,16 +88,25 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
 
   componentDidMount() {
     resizeEventManager.add(this.setPositionFromCurrentProps);
+    window.addEventListener("scroll", this.hideDropdownable, true);
+    // windowEventManager.add("scroll", this.hideDropdownable, true);
     this.setPositionFromCurrentProps();
   }
 
   componentWillUnmount() {
     resizeEventManager.remove(this.setPositionFromCurrentProps);
+    window.removeEventListener("scroll", this.hideDropdownable);
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.open) {
       this.setPosition(nextProps);
+    }
+
+    if (nextProps.open !== this.state.open) {
+      this.setState({
+        open: nextProps.open
+      });
     }
   }
 
@@ -109,8 +120,8 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
   }
 
   getOverlay() {
-    const { position } = this.state;
-    const { open, overlayRoot, disablePortal } = this.props;
+    const { open, position } = this.state;
+    const { overlayRoot, disablePortal } = this.props;
 
     return !disablePortal ? (
       <Overlay
@@ -125,8 +136,8 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
   }
 
   getDropdown() {
-    const { direction } = this.state;
-    const { open, dropdown, onClose, disablePortal } = this.props;
+    const { direction, open } = this.state;
+    const { dropdown, onClose, disablePortal } = this.props;
 
     return (
       <div
@@ -145,10 +156,22 @@ class Dropdownable extends React.Component<DropdownableProps, State> {
   }
 
   setPositionFromCurrentProps() {
-    if (!this.props.open) {
+    if (!this.state.open) {
       return;
     }
     this.setPosition(this.props);
+  }
+
+  hideDropdownable() {
+    if (!this.state.open) {
+      return;
+    }
+
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+
+    this.setState({ open: false });
   }
 
   setPosition(props: DropdownableProps) {
