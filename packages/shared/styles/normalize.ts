@@ -19,4 +19,8 @@ export const normalize = `
     a {
         ${defaultLinkStyles};
     }
+
+    textarea {
+        font-family: inherit;
+    }
 `;
