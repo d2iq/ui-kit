@@ -127,7 +127,12 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                           <PopoverBox
                             width={this.state.menuWidth}
                             maxHeight={menuMaxHeight}
-                            {...getMenuProps({ refKey: "menuRef" })}
+                            {...getMenuProps(
+                              { refKey: "menuRef" },
+                              // The menu is not mounted when `isOpen` is false, so Downshift's ref check fails incorrectly
+                              // The menu behaves as expected, and has all the correct attributes
+                              { suppressRefError: true }
+                            )}
                           >
                             {items.length ? (
                               items.map((item, index) => (

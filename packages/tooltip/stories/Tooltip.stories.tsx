@@ -42,12 +42,12 @@ storiesOf("Overlays|Tooltip", module)
   ))
   .add("with custom direction", () => {
     const options = {
-      BottomLeft: "bottom-left",
-      BottomRight: "bottom-right",
-      BottomCenter: "bottom-center",
-      TopLeft: "top-left",
-      TopRight: "top-right",
-      TopCenter: "top-center"
+      BottomLeft: "bottom-start",
+      BottomRight: "bottom-end",
+      BottomCenter: "bottom",
+      TopLeft: "top-start",
+      TopRight: "top-end",
+      TopCenter: "top"
     };
 
     const knobDirection = select("Direction", options, "BottomLeft");
@@ -62,7 +62,7 @@ storiesOf("Overlays|Tooltip", module)
       <Tooltip
         trigger="hover me"
         id="customDir"
-        preferredDirections={[Direction[getKeyByValue(knobDirection)]]}
+        preferredDirections={Direction[getKeyByValue(knobDirection)]}
       >
         Use the knobs to change tooltip alignment
       </Tooltip>

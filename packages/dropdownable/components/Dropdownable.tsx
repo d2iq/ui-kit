@@ -1,320 +1,132 @@
-import React from "react";
-import { cx } from "emotion";
-
+import React, { CSSProperties } from "react";
+import { usePopper } from "react-popper";
+import { Placement, Modifier } from "@popperjs/core";
 import Overlay from "../../shared/components/Overlay";
 import DropdownContents from "./DropdownContents";
-import resizeEventManager from "../../utilities/resizeEventManager";
-import {
-  getNonPortalledDropdownStyle,
-  getPortalledDropdownStyle,
-  dropdownableContainer
-} from "../style";
+import { zIndexDropdownable } from "../../design-tokens/build/js/designTokens";
 
 export enum Direction {
-  BottomLeft = "bottom-left",
-  BottomRight = "bottom-right",
-  BottomCenter = "bottom-center",
-  TopLeft = "top-left",
-  TopRight = "top-right",
-  TopCenter = "top-center"
+  BottomLeft = "bottom-start",
+  BottomRight = "bottom-end",
+  BottomCenter = "bottom",
+  TopLeft = "top-start",
+  TopRight = "top-end",
+  TopCenter = "top"
 }
 
-const DEFAULT_DIRECTION_PREFERENCES = [
-  Direction.BottomLeft,
-  Direction.BottomRight,
-  Direction.TopRight,
-  Direction.TopLeft
-];
 export interface DropdownableProps {
+  /** Whether the Dropdownable overlay is visible */
   open: boolean;
+  /** Element to render in the Dropdownable overlay */
   dropdown: React.ReactElement<any>;
-  preferredDirections?: Direction[];
+  /** Which direction the Dropdownable should open in relation to the Dropdownable children */
+  preferredDirections?: Direction | Direction[];
+  /** Function that is called when a user clicks outside of the Dropdownable overlay or children */
   onClose?: () => void;
+  /** Which element the Dropdownable overlay is mounted in. Defaults to the default element created by the Overlay component */
   overlayRoot?: HTMLElement;
+  /** Whether the Dropdownable overlay should open in it's parent element instead of `overlayRoot` */
   disablePortal?: boolean;
 }
 
-export interface PositionCoord {
-  top: number;
-  left: number;
-}
-
-interface State {
-  open: boolean;
-  direction: Direction;
-  position: PositionCoord;
-}
-
-interface Dimension {
-  width: number;
-  height: number;
-}
-
-const METHODS_TO_BIND = [
-  "getDropdown",
-  "setPosition",
-  "setPositionFromCurrentProps",
-  "calculateBestDirection",
-  "positionForDirection",
-  "childBounds",
-  "windowDimensions",
-  "dropdownDimensions",
-  "hideDropdownable"
-];
-
-class Dropdownable extends React.Component<DropdownableProps, State> {
-  public static defaultProps: Partial<DropdownableProps> = {
-    preferredDirections: DEFAULT_DIRECTION_PREFERENCES
-  };
-  private readonly child = React.createRef<HTMLDivElement>();
-  private readonly dropdown = React.createRef<HTMLDivElement>();
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      direction: Direction.BottomLeft,
-      position: {
-        top: 0,
-        left: 0
-      },
-      open: props.open
+const getPlacementConfig = (
+  preferredDirections?: Direction | Direction[]
+): {
+  placement: Placement;
+  modifiers?: Array<
+    Pick<
+      Modifier<"flip", { fallbackPlacements: Direction[] }>,
+      "name" | "options"
+    >
+  >;
+} => {
+  if (!preferredDirections || !preferredDirections.length) {
+    return { placement: Direction.BottomLeft };
+  }
+  if (typeof preferredDirections === "string") {
+    return {
+      placement: preferredDirections
     };
-
-    METHODS_TO_BIND.forEach(method => {
-      this[method] = this[method].bind(this);
-    });
   }
 
-  componentDidMount() {
-    resizeEventManager.add(this.setPositionFromCurrentProps);
-    window.addEventListener("scroll", this.hideDropdownable, true);
-    // windowEventManager.add("scroll", this.hideDropdownable, true);
-    this.setPositionFromCurrentProps();
+  if (preferredDirections.length === 1) {
+    return {
+      placement: preferredDirections[0]
+    };
   }
 
-  componentWillUnmount() {
-    resizeEventManager.remove(this.setPositionFromCurrentProps);
-    window.removeEventListener("scroll", this.hideDropdownable);
-  }
+  return {
+    placement: preferredDirections[0],
+    modifiers: [
+      {
+        name: "flip",
+        options: {
+          fallbackPlacements: preferredDirections.slice(1)
+        }
+      }
+    ]
+  };
+};
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.open) {
-      this.setPosition(nextProps);
-    }
-
-    if (nextProps.open !== this.state.open) {
-      this.setState({
-        open: nextProps.open
+const Dropdownable: React.FC<DropdownableProps> = ({
+  open,
+  dropdown,
+  preferredDirections,
+  onClose,
+  overlayRoot,
+  disablePortal,
+  children
+}) => {
+  const [
+    referenceElement,
+    setReferenceElement
+  ] = React.useState<HTMLDivElement | null>(null);
+  const [
+    popperElement,
+    setPopperElement
+  ] = React.useState<HTMLDivElement | null>(null);
+  const { styles, attributes } = usePopper(referenceElement, popperElement, {
+    ...getPlacementConfig(preferredDirections)
+  });
+  const popperAttributes = {
+    ref: setPopperElement,
+    style: {
+      zIndex: parseInt(zIndexDropdownable, 10),
+      ...(attributes.popper &&
+        attributes.popper["data-popper-reference-hidden"] && {
+          visibility: "hidden",
+          pointerEvents: "none"
+        }),
+      ...styles.popper
+    } as CSSProperties,
+    ...attributes.popper
+  };
+  const getDropdown = () => {
+    if (attributes.popper) {
+      return React.cloneElement(dropdown, {
+        direction: attributes.popper["data-popper-placement"]
       });
     }
-  }
+    return dropdown;
+  };
 
-  render() {
-    return (
-      <div className={dropdownableContainer}>
-        <div ref={this.child}>{this.props.children}</div>
-        {this.getOverlay()}
-      </div>
-    );
-  }
+  return (
+    <>
+      <div ref={setReferenceElement}>{children}</div>
 
-  getOverlay() {
-    const { open, position } = this.state;
-    const { overlayRoot, disablePortal } = this.props;
-
-    return !disablePortal ? (
-      <Overlay
-        overlayRoot={overlayRoot}
-        className={getPortalledDropdownStyle(position, open)}
-      >
-        {this.getDropdown()}
-      </Overlay>
-    ) : (
-      this.getDropdown()
-    );
-  }
-
-  getDropdown() {
-    const { direction, open } = this.state;
-    const { dropdown, onClose, disablePortal } = this.props;
-
-    return (
-      <div
-        ref={this.dropdown}
-        className={cx({
-          [getNonPortalledDropdownStyle(direction, open)]: disablePortal
-        })}
-      >
+      {open && (
         <DropdownContents open={open} onClose={onClose}>
-          {React.cloneElement(dropdown, {
-            direction: this.state.direction
-          })}
+          {!disablePortal ? (
+            <Overlay overlayRoot={overlayRoot} {...popperAttributes}>
+              {getDropdown()}
+            </Overlay>
+          ) : (
+            <div {...popperAttributes}>{getDropdown()}</div>
+          )}
         </DropdownContents>
-      </div>
-    );
-  }
-
-  setPositionFromCurrentProps() {
-    if (!this.state.open) {
-      return;
-    }
-    this.setPosition(this.props);
-  }
-
-  hideDropdownable() {
-    if (!this.state.open) {
-      return;
-    }
-
-    if (document.activeElement instanceof HTMLElement) {
-      document.activeElement.blur();
-    }
-
-    this.setState({ open: false });
-  }
-
-  setPosition(props: DropdownableProps) {
-    const dropdownDimensions: Dimension = this.dropdownDimensions();
-    const windowDimensions: Dimension = this.windowDimensions();
-    const childBounds: ClientRect = this.childBounds();
-    const direction: Direction = this.calculateBestDirection(
-      props.preferredDirections,
-      childBounds,
-      dropdownDimensions,
-      windowDimensions
-    );
-
-    this.setState({
-      direction,
-      position: this.positionForDirection(
-        direction,
-        childBounds,
-        dropdownDimensions
-      )
-    });
-  }
-
-  calculateBestDirection(
-    preferredDirections,
-    childBounds,
-    dropdownDimensions,
-    windowDimensions
-  ): Direction {
-    // Determine if there is enough space in each direction to fit dropdown
-    const triggerCenter = childBounds.width / 2 + childBounds.left;
-    const possibleVertDirections = {
-      top: dropdownDimensions.height <= childBounds.top,
-      bottom:
-        childBounds.bottom + dropdownDimensions.height <=
-        windowDimensions.height
-    };
-    const possibleHorizDirections = {
-      left:
-        dropdownDimensions.width + childBounds.left <= windowDimensions.width,
-      right: childBounds.right - dropdownDimensions.width >= 0,
-      center:
-        triggerCenter - dropdownDimensions.width / 2 > 0 &&
-        triggerCenter + dropdownDimensions.width / 2 < windowDimensions.width
-    };
-
-    // Pick the first available preference
-    const preferredDirection = preferredDirections.find(direction => {
-      const topOrBottom = direction.split("-", 2)[0];
-      const leftOrRight = direction.split("-", 2)[1];
-      return (
-        possibleVertDirections[topOrBottom] &&
-        possibleHorizDirections[leftOrRight]
-      );
-    });
-
-    // If nothing fits, fall back to the first preference
-    return preferredDirection || preferredDirections[0];
-  }
-
-  positionForDirection(
-    direction: Direction,
-    childBounds,
-    dropdownDimensions
-  ): PositionCoord {
-    const isTop: boolean =
-      direction === Direction.TopLeft ||
-      direction === Direction.TopRight ||
-      direction === Direction.TopCenter;
-    const isLeft: boolean =
-      direction === Direction.TopLeft || direction === Direction.BottomLeft;
-    const isCenter: boolean =
-      direction === Direction.TopCenter || direction === Direction.BottomCenter;
-
-    const getHorizAlignment = () => {
-      if (isCenter) {
-        return (
-          childBounds.x +
-          childBounds.width / 2 -
-          dropdownDimensions.width / 2 +
-          window.scrollX
-        );
-      }
-      if (isLeft) {
-        return childBounds.left + window.scrollX;
-      }
-      return (
-        childBounds.left -
-        dropdownDimensions.width +
-        childBounds.width +
-        window.scrollX
-      );
-    };
-
-    return {
-      top: isTop
-        ? childBounds.top - dropdownDimensions.height + window.scrollY
-        : childBounds.top + childBounds.height + window.scrollY,
-      left: getHorizAlignment()
-    };
-  }
-
-  childBounds(): ClientRect {
-    const child = this.child.current;
-
-    if (child) {
-      return child.getBoundingClientRect();
-    }
-
-    // child.current should not be null due to React lifecycle but
-    // is not guarateed by the type.
-    return {
-      width: 0,
-      height: 0,
-      top: 0,
-      left: 0,
-      bottom: 0,
-      right: 0
-    };
-  }
-
-  windowDimensions(): Dimension {
-    const body = document.body;
-    return { width: body.clientWidth, height: body.clientHeight };
-  }
-
-  dropdownDimensions(): Dimension {
-    const dropdown = this.dropdown.current!;
-
-    if (dropdown) {
-      return {
-        width: dropdown.clientWidth,
-        height: dropdown.clientHeight
-      };
-    }
-
-    // dropdown.current should not be null due to React lifecycle but
-    // is not guarateed by the type.
-    return {
-      width: 0,
-      height: 0
-    };
-  }
-}
+      )}
+    </>
+  );
+};
 
 export default Dropdownable;

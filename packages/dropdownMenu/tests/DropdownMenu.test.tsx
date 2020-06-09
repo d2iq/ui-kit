@@ -154,11 +154,11 @@ describe("Dropdown", () => {
       </DropdownMenu>
     );
 
-    expect(component.find(DropdownContents).prop("open")).toBe(false);
+    expect(component.find(DropdownContents).length).toBe(0);
     component.find(`#${triggerId}`).simulate("click");
     expect(component.find(DropdownContents).prop("open")).toBe(true);
     component.find(`#${triggerId}`).simulate("click");
-    expect(component.find(DropdownContents).prop("open")).toBe(false);
+    expect(component.find(DropdownContents).length).toBe(0);
   });
   it("toggles the dropdown menu when focusing and pressing the spacebar", () => {
     const component = mount(
@@ -181,7 +181,7 @@ describe("Dropdown", () => {
     );
     const trigger = component.find(`#${triggerId}`);
 
-    expect(component.find(DropdownContents).prop("open")).toBe(false);
+    expect(component.find(DropdownContents).length).toBe(0);
 
     trigger.simulate("focus");
     trigger.simulate("keyDown", {
@@ -197,7 +197,7 @@ describe("Dropdown", () => {
     });
     trigger.simulate("blur");
 
-    expect(component.find(DropdownContents).prop("open")).toBe(false);
+    expect(component.find(DropdownContents).length).toBe(0);
   });
   it("calls onSelect prop with the selected value", () => {
     const onSelectFn = jest.fn();

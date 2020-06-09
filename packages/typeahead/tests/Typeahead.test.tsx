@@ -64,7 +64,7 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find(DropdownContents).prop("open")).toBe(false);
+    expect(component.find(DropdownContents).length).toBe(0);
     component.find("input").simulate("focus");
     expect(component.find(DropdownContents).prop("open")).toBe(true);
   });
@@ -83,7 +83,7 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find(DropdownContents).prop("open")).toBe(false);
+    expect(component.find(DropdownContents).length).toBe(0);
     component.find("input").simulate("focus");
     component.find("input").simulate("keyDown", {
       key: "ArrowDown"
@@ -91,8 +91,7 @@ describe("Typeahead", () => {
     component.find("input").simulate("keyDown", {
       key: "Enter"
     });
-    // using `toBeFalsy` because DropdownContents is removed when `open` prop changes to false
-    expect(component.find(DropdownContents).prop("open")).toBeFalsy();
+    expect(component.find(DropdownContents).length).toBe(0);
     component.find("input").simulate("click");
     expect(component.find(DropdownContents).prop("open")).toBe(true);
   });
@@ -245,7 +244,7 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find(DropdownContents).prop("open")).toBe(false);
+    expect(component.find(DropdownContents).length).toBe(0);
     component.find("input").simulate("focus");
     expect(onSelectFn).not.toHaveBeenCalled();
     component.find("input").simulate("keyDown", {
@@ -275,7 +274,7 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find(DropdownContents).prop("open")).toBe(false);
+    expect(component.find(DropdownContents).length).toBe(0);
     component.find("input").simulate("focus");
     expect(onSelectFn).not.toHaveBeenCalled();
     component.find("input").simulate("keyDown", {
@@ -284,7 +283,7 @@ describe("Typeahead", () => {
     component.find("input").simulate("keyDown", {
       key: "Enter"
     });
-    expect(component.find(DropdownContents).prop("open")).toBe(false);
+    expect(component.find(DropdownContents).length).toBe(0);
   });
 
   it("does not set the input value if multiSelect is true", () => {

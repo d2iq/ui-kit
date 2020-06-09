@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown renders a closed dropdown 1`] = `
-.emotion-8 {
-  position: relative;
-}
-
 .emotion-0 {
   background: none;
   border: 0;
@@ -21,77 +17,19 @@ exports[`Dropdown renders a closed dropdown 1`] = `
   padding: 0;
 }
 
-.emotion-9 {
-  display: inline-block;
-}
-
-.emotion-6 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
-.emotion-5 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-  overflow-x: hidden;
-}
-
 .emotion-1 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-top: 8px;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-bottom: 8px;
+  display: inline-block;
 }
 
 <DropdownMenu
   preferredDirections={
     Array [
-      "bottom-right",
-      "bottom-left",
-      "bottom-center",
-      "top-right",
-      "top-center",
-      "top-left",
+      "bottom-end",
+      "bottom-start",
+      "bottom",
+      "top-end",
+      "top",
+      "top-start",
     ]
   }
   trigger="Dropdown trigger"
@@ -118,7 +56,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
       aria-haspopup="listbox"
       aria-labelledby="downshift-0-label"
       aria-owns={null}
-      className="emotion-9"
+      className="emotion-1"
       role="combobox"
     >
       <Dropdownable
@@ -206,368 +144,30 @@ exports[`Dropdown renders a closed dropdown 1`] = `
         open={false}
         preferredDirections={
           Array [
-            "bottom-right",
-            "bottom-left",
-            "bottom-center",
-            "top-right",
-            "top-center",
-            "top-left",
+            "bottom-end",
+            "bottom-start",
+            "bottom",
+            "top-end",
+            "top",
+            "top-start",
           ]
         }
       >
-        <div
-          className="emotion-8"
-        >
-          <div>
-            <button
-              aria-haspopup={true}
-              aria-label="open menu"
-              className="emotion-0"
-              data-toggle={true}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              role="button"
-              type="button"
-            >
-              Dropdown trigger
-            </button>
-          </div>
-          <Overlay
-            className="emotion-6"
-            overlayRoot={
-              .emotion-5 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
-.emotion-4 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-  overflow-x: hidden;
-}
-
-.emotion-0 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-top: 8px;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-bottom: 8px;
-}
-
-<body>
-                <div>
-                  <div
-                    class="emotion-5"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        aria-labelledby="downshift-0-label"
-                        class="emotion-4"
-                        data-cy="popover"
-                        direction="bottom-left"
-                        id="downshift-0-menu"
-                        role="listbox"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-0"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-3"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-3"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </body>
-            }
+        <div>
+          <button
+            aria-haspopup={true}
+            aria-label="open menu"
+            className="emotion-0"
+            data-toggle={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            role="button"
+            type="button"
           >
-            <Portal
-              containerInfo={
-                <div>
-                  <div
-                    class="emotion-6"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        aria-labelledby="downshift-0-label"
-                        class="emotion-5"
-                        data-cy="popover"
-                        direction="bottom-left"
-                        id="downshift-0-menu"
-                        role="listbox"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-4"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-3"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              }
-            >
-              <div
-                className="emotion-6"
-              >
-                <div
-                  className=""
-                >
-                  <clickOutside(DropdownContents)
-                    open={false}
-                  >
-                    <DropdownContents
-                      open={false}
-                    >
-                      <Popover
-                        aria-labelledby="downshift-0-label"
-                        direction="bottom-left"
-                        id="downshift-0-menu"
-                        menuRef={[Function]}
-                        role="listbox"
-                      >
-                        <div
-                          aria-labelledby="downshift-0-label"
-                          className="emotion-5"
-                          data-cy="popover"
-                          direction="bottom-left"
-                          id="downshift-0-menu"
-                          role="listbox"
-                          style={
-                            Object {
-                              "maxHeight": undefined,
-                              "maxWidth": undefined,
-                              "width": undefined,
-                            }
-                          }
-                        >
-                          <div
-                            className=""
-                            key="dropdown-0"
-                          >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-0-item-0"
-                              index={0}
-                              isActive={false}
-                              key=".$edit"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <div
-                                aria-selected={false}
-                                className="emotion-1"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-0"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Edit
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-0-item-1"
-                              index={1}
-                              isActive={false}
-                              key=".$scale"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <div
-                                aria-selected={false}
-                                className="emotion-2"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-1"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Scale
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-0-item-2"
-                              index={2}
-                              isActive={false}
-                              key=".$restart"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <div
-                                aria-selected={false}
-                                className="emotion-2"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-2"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Restart
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-0-item-3"
-                              index={3}
-                              isActive={false}
-                              key=".$stop"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <div
-                                aria-selected={false}
-                                className="emotion-4"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-3"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Stop
-                              </div>
-                            </PopoverListItem>
-                          </div>
-                        </div>
-                      </Popover>
-                    </DropdownContents>
-                  </clickOutside(DropdownContents)>
-                </div>
-              </div>
-            </Portal>
-          </Overlay>
+            Dropdown trigger
+          </button>
         </div>
       </Dropdownable>
     </div>
@@ -576,10 +176,6 @@ exports[`Dropdown renders a closed dropdown 1`] = `
 `;
 
 exports[`Dropdown renders a dropdown with a max height 1`] = `
-.emotion-8 {
-  position: relative;
-}
-
 .emotion-0 {
   background: none;
   border: 0;
@@ -596,78 +192,20 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
   padding: 0;
 }
 
-.emotion-9 {
-  display: inline-block;
-}
-
-.emotion-6 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
-.emotion-5 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-  overflow-x: hidden;
-}
-
 .emotion-1 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-top: 8px;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-bottom: 8px;
+  display: inline-block;
 }
 
 <DropdownMenu
   menuMaxHeight={50}
   preferredDirections={
     Array [
-      "bottom-right",
-      "bottom-left",
-      "bottom-center",
-      "top-right",
-      "top-center",
-      "top-left",
+      "bottom-end",
+      "bottom-start",
+      "bottom",
+      "top-end",
+      "top",
+      "top-start",
     ]
   }
   trigger="Dropdown trigger"
@@ -694,7 +232,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
       aria-haspopup="listbox"
       aria-labelledby="downshift-2-label"
       aria-owns={null}
-      className="emotion-9"
+      className="emotion-1"
       role="combobox"
     >
       <Dropdownable
@@ -783,489 +321,30 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
         open={false}
         preferredDirections={
           Array [
-            "bottom-right",
-            "bottom-left",
-            "bottom-center",
-            "top-right",
-            "top-center",
-            "top-left",
+            "bottom-end",
+            "bottom-start",
+            "bottom",
+            "top-end",
+            "top",
+            "top-start",
           ]
         }
       >
-        <div
-          className="emotion-8"
-        >
-          <div>
-            <button
-              aria-haspopup={true}
-              aria-label="open menu"
-              className="emotion-0"
-              data-toggle={true}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              role="button"
-              type="button"
-            >
-              Dropdown trigger
-            </button>
-          </div>
-          <Overlay
-            className="emotion-6"
-            overlayRoot={
-              <body>
-                <div>
-                  <div
-                    class="emotion-6"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        aria-labelledby="downshift-0-label"
-                        class="emotion-5"
-                        data-cy="popover"
-                        direction="bottom-left"
-                        id="downshift-0-menu"
-                        role="listbox"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-4"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-3"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    class="css-9idtg8"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        aria-labelledby="downshift-1-label"
-                        class="emotion-5"
-                        data-cy="popover"
-                        direction="bottom-right"
-                        id="downshift-1-menu"
-                        role="listbox"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-4"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-3"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                .emotion-5 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
-.emotion-4 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-  overflow-x: hidden;
-}
-
-.emotion-0 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-top: 8px;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-bottom: 8px;
-}
-
-<div>
-                  <div
-                    class="emotion-5"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        aria-labelledby="downshift-2-label"
-                        class="emotion-4"
-                        data-cy="popover"
-                        direction="bottom-left"
-                        id="downshift-2-menu"
-                        role="listbox"
-                        style="max-height: 50px;"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-0"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-3"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-3"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </body>
-            }
+        <div>
+          <button
+            aria-haspopup={true}
+            aria-label="open menu"
+            className="emotion-0"
+            data-toggle={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            role="button"
+            type="button"
           >
-            <Portal
-              containerInfo={
-                <div>
-                  <div
-                    class="emotion-6"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        aria-labelledby="downshift-2-label"
-                        class="emotion-5"
-                        data-cy="popover"
-                        direction="bottom-left"
-                        id="downshift-2-menu"
-                        role="listbox"
-                        style="max-height: 50px;"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-4"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-3"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              }
-            >
-              <div
-                className="emotion-6"
-              >
-                <div
-                  className=""
-                >
-                  <clickOutside(DropdownContents)
-                    open={false}
-                  >
-                    <DropdownContents
-                      open={false}
-                    >
-                      <Popover
-                        aria-labelledby="downshift-2-label"
-                        direction="bottom-left"
-                        id="downshift-2-menu"
-                        maxHeight={50}
-                        menuRef={[Function]}
-                        role="listbox"
-                      >
-                        <div
-                          aria-labelledby="downshift-2-label"
-                          className="emotion-5"
-                          data-cy="popover"
-                          direction="bottom-left"
-                          id="downshift-2-menu"
-                          role="listbox"
-                          style={
-                            Object {
-                              "maxHeight": 50,
-                              "maxWidth": undefined,
-                              "width": undefined,
-                            }
-                          }
-                        >
-                          <div
-                            className=""
-                            key="dropdown-0"
-                          >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-2-item-0"
-                              index={0}
-                              isActive={false}
-                              key=".$edit"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <div
-                                aria-selected={false}
-                                className="emotion-1"
-                                data-cy="PopoverListItem"
-                                id="downshift-2-item-0"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Edit
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-2-item-1"
-                              index={1}
-                              isActive={false}
-                              key=".$scale"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <div
-                                aria-selected={false}
-                                className="emotion-2"
-                                data-cy="PopoverListItem"
-                                id="downshift-2-item-1"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Scale
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-2-item-2"
-                              index={2}
-                              isActive={false}
-                              key=".$restart"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <div
-                                aria-selected={false}
-                                className="emotion-2"
-                                data-cy="PopoverListItem"
-                                id="downshift-2-item-2"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Restart
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-2-item-3"
-                              index={3}
-                              isActive={false}
-                              key=".$stop"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <div
-                                aria-selected={false}
-                                className="emotion-4"
-                                data-cy="PopoverListItem"
-                                id="downshift-2-item-3"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Stop
-                              </div>
-                            </PopoverListItem>
-                          </div>
-                        </div>
-                      </Popover>
-                    </DropdownContents>
-                  </clickOutside(DropdownContents)>
-                </div>
-              </div>
-            </Portal>
-          </Overlay>
+            Dropdown trigger
+          </button>
         </div>
       </Dropdownable>
     </div>
@@ -1274,10 +353,6 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
 `;
 
 exports[`Dropdown renders an open dropdown 1`] = `
-.emotion-8 {
-  position: relative;
-}
-
 .emotion-0 {
   background: none;
   border: 0;
@@ -1294,7 +369,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
   padding: 0;
 }
 
-.emotion-9 {
+.emotion-6 {
   display: inline-block;
 }
 
@@ -1345,27 +420,16 @@ exports[`Dropdown renders an open dropdown 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-6 {
-  opacity: 1;
-  position: absolute;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
 <DropdownMenu
   initialIsOpen={true}
   preferredDirections={
     Array [
-      "bottom-right",
-      "bottom-left",
-      "bottom-center",
-      "top-right",
-      "top-center",
-      "top-left",
+      "bottom-end",
+      "bottom-start",
+      "bottom",
+      "top-end",
+      "top",
+      "top-start",
     ]
   }
   trigger="Dropdown trigger"
@@ -1393,7 +457,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
       aria-haspopup="listbox"
       aria-labelledby="downshift-1-label"
       aria-owns="downshift-1-menu"
-      className="emotion-9"
+      className="emotion-6"
       role="combobox"
     >
       <Dropdownable
@@ -1481,98 +545,51 @@ exports[`Dropdown renders an open dropdown 1`] = `
         open={true}
         preferredDirections={
           Array [
-            "bottom-right",
-            "bottom-left",
-            "bottom-center",
-            "top-right",
-            "top-center",
-            "top-left",
+            "bottom-end",
+            "bottom-start",
+            "bottom",
+            "top-end",
+            "top",
+            "top-start",
           ]
         }
       >
-        <div
-          className="emotion-8"
+        <div>
+          <button
+            aria-haspopup={true}
+            aria-label="close menu"
+            className="emotion-0"
+            data-toggle={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            role="button"
+            type="button"
+          >
+            Dropdown trigger
+          </button>
+        </div>
+        <clickOutside(DropdownContents)
+          open={true}
         >
-          <div>
-            <button
-              aria-haspopup={true}
-              aria-label="close menu"
-              className="emotion-0"
-              data-toggle={true}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              role="button"
-              type="button"
+          <DropdownContents
+            open={true}
+          >
+            <ForwardRef
+              style={
+                Object {
+                  "left": "0",
+                  "position": "absolute",
+                  "top": "0",
+                  "zIndex": 2,
+                }
+              }
             >
-              Dropdown trigger
-            </button>
-          </div>
-          <Overlay
-            className="emotion-6"
-            overlayRoot={
-              <body>
-                <div>
-                  <div
-                    class="css-p0rea1"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        aria-labelledby="downshift-0-label"
-                        class="emotion-5"
-                        data-cy="popover"
-                        direction="bottom-left"
-                        id="downshift-0-menu"
-                        role="listbox"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-4"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-3"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                .emotion-4 {
+              <Overlay
+                innerRef={[Function]}
+                overlayRoot={
+                  .emotion-4 {
   background-color: var(--themeBgPrimary,#FFFFFF);
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -1619,290 +636,273 @@ exports[`Dropdown renders an open dropdown 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-5 {
-  opacity: 1;
-  position: absolute;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
-<div>
-                  <div
-                    class="emotion-5"
-                  >
-                    <div
-                      class=""
-                    >
+<body>
+                    <div>
                       <div
-                        aria-labelledby="downshift-1-label"
-                        class="emotion-4"
-                        data-cy="popover"
-                        direction="bottom-right"
-                        id="downshift-1-menu"
-                        role="listbox"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-0"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-3"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-3"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </body>
-            }
-          >
-            <Portal
-              containerInfo={
-                <div>
-                  <div
-                    class="emotion-6"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        aria-labelledby="downshift-1-label"
-                        class="emotion-5"
-                        data-cy="popover"
-                        direction="bottom-right"
-                        id="downshift-1-menu"
-                        role="listbox"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-4"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-3"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              }
-            >
-              <div
-                className="emotion-6"
-              >
-                <div
-                  className=""
-                >
-                  <clickOutside(DropdownContents)
-                    open={true}
-                  >
-                    <DropdownContents
-                      open={true}
-                    >
-                      <Popover
-                        aria-labelledby="downshift-1-label"
-                        direction="bottom-right"
-                        id="downshift-1-menu"
-                        menuRef={[Function]}
-                        role="listbox"
+                        style="z-index: 2; position: absolute; left: 0px; top: 0px;"
                       >
                         <div
                           aria-labelledby="downshift-1-label"
-                          className="emotion-5"
+                          class="emotion-4"
                           data-cy="popover"
-                          direction="bottom-right"
                           id="downshift-1-menu"
                           role="listbox"
-                          style={
-                            Object {
-                              "maxHeight": undefined,
-                              "maxWidth": undefined,
-                              "width": undefined,
-                            }
-                          }
                         >
                           <div
-                            className=""
-                            key="dropdown-0"
+                            class=""
                           >
-                            <PopoverListItem
-                              aria-selected={false}
+                            <div
+                              aria-selected="false"
+                              class="emotion-0"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-0"
-                              index={0}
-                              isActive={false}
-                              key=".$edit"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
                               role="option"
                             >
-                              <div
-                                aria-selected={false}
-                                className="emotion-1"
-                                data-cy="PopoverListItem"
-                                id="downshift-1-item-0"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Edit
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
+                              Edit
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-1"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-1"
-                              index={1}
-                              isActive={false}
-                              key=".$scale"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
                               role="option"
                             >
-                              <div
-                                aria-selected={false}
-                                className="emotion-2"
-                                data-cy="PopoverListItem"
-                                id="downshift-1-item-1"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Scale
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
+                              Scale
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-1"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-2"
-                              index={2}
-                              isActive={false}
-                              key=".$restart"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
                               role="option"
                             >
-                              <div
-                                aria-selected={false}
-                                className="emotion-2"
-                                data-cy="PopoverListItem"
-                                id="downshift-1-item-2"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Restart
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
+                              Restart
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-3"
+                              data-cy="PopoverListItem"
                               id="downshift-1-item-3"
-                              index={3}
-                              isActive={false}
-                              key=".$stop"
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
                               role="option"
                             >
-                              <div
-                                aria-selected={false}
-                                className="emotion-4"
-                                data-cy="PopoverListItem"
-                                id="downshift-1-item-3"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Stop
-                              </div>
-                            </PopoverListItem>
+                              Stop
+                            </div>
                           </div>
                         </div>
-                      </Popover>
-                    </DropdownContents>
-                  </clickOutside(DropdownContents)>
-                </div>
-              </div>
-            </Portal>
-          </Overlay>
-        </div>
+                      </div>
+                    </div>
+                  </body>
+                }
+                style={
+                  Object {
+                    "left": "0",
+                    "position": "absolute",
+                    "top": "0",
+                    "zIndex": 2,
+                  }
+                }
+              >
+                <Portal
+                  containerInfo={
+                    <div>
+                      <div
+                        style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+                      >
+                        <div
+                          aria-labelledby="downshift-1-label"
+                          class="emotion-5"
+                          data-cy="popover"
+                          id="downshift-1-menu"
+                          role="listbox"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              aria-selected="false"
+                              class="emotion-1"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-0"
+                              role="option"
+                            >
+                              Edit
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-2"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-1"
+                              role="option"
+                            >
+                              Scale
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-2"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-2"
+                              role="option"
+                            >
+                              Restart
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-4"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-3"
+                              role="option"
+                            >
+                              Stop
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "left": "0",
+                        "position": "absolute",
+                        "top": "0",
+                        "zIndex": 2,
+                      }
+                    }
+                  >
+                    <Popover
+                      aria-labelledby="downshift-1-label"
+                      id="downshift-1-menu"
+                      menuRef={[Function]}
+                      role="listbox"
+                    >
+                      <div
+                        aria-labelledby="downshift-1-label"
+                        className="emotion-5"
+                        data-cy="popover"
+                        id="downshift-1-menu"
+                        role="listbox"
+                        style={
+                          Object {
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      >
+                        <div
+                          className=""
+                          key="dropdown-0"
+                        >
+                          <PopoverListItem
+                            aria-selected={false}
+                            id="downshift-1-item-0"
+                            index={0}
+                            isActive={false}
+                            key=".$edit"
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseMove={[Function]}
+                            role="option"
+                          >
+                            <div
+                              aria-selected={false}
+                              className="emotion-1"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-0"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseMove={[Function]}
+                              role="option"
+                            >
+                              Edit
+                            </div>
+                          </PopoverListItem>
+                          <PopoverListItem
+                            aria-selected={false}
+                            id="downshift-1-item-1"
+                            index={1}
+                            isActive={false}
+                            key=".$scale"
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseMove={[Function]}
+                            role="option"
+                          >
+                            <div
+                              aria-selected={false}
+                              className="emotion-2"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-1"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseMove={[Function]}
+                              role="option"
+                            >
+                              Scale
+                            </div>
+                          </PopoverListItem>
+                          <PopoverListItem
+                            aria-selected={false}
+                            id="downshift-1-item-2"
+                            index={2}
+                            isActive={false}
+                            key=".$restart"
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseMove={[Function]}
+                            role="option"
+                          >
+                            <div
+                              aria-selected={false}
+                              className="emotion-2"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-2"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseMove={[Function]}
+                              role="option"
+                            >
+                              Restart
+                            </div>
+                          </PopoverListItem>
+                          <PopoverListItem
+                            aria-selected={false}
+                            id="downshift-1-item-3"
+                            index={3}
+                            isActive={false}
+                            key=".$stop"
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseMove={[Function]}
+                            role="option"
+                          >
+                            <div
+                              aria-selected={false}
+                              className="emotion-4"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-3"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseMove={[Function]}
+                              role="option"
+                            >
+                              Stop
+                            </div>
+                          </PopoverListItem>
+                        </div>
+                      </div>
+                    </Popover>
+                  </div>
+                </Portal>
+              </Overlay>
+            </ForwardRef>
+          </DropdownContents>
+        </clickOutside(DropdownContents)>
       </Dropdownable>
     </div>
   </Downshift>
@@ -1910,10 +910,6 @@ exports[`Dropdown renders an open dropdown 1`] = `
 `;
 
 exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
-.emotion-12 {
-  position: relative;
-}
-
 .emotion-0 {
   background: none;
   border: 0;
@@ -1930,7 +926,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
   padding: 0;
 }
 
-.emotion-13 {
+.emotion-10 {
   display: inline-block;
 }
 
@@ -1976,27 +972,16 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-10 {
-  opacity: 1;
-  position: absolute;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
 <DropdownMenu
   initialIsOpen={true}
   preferredDirections={
     Array [
-      "bottom-right",
-      "bottom-left",
-      "bottom-center",
-      "top-right",
-      "top-center",
-      "top-left",
+      "bottom-end",
+      "bottom-start",
+      "bottom",
+      "top-end",
+      "top",
+      "top-start",
     ]
   }
   trigger="Dropdown trigger"
@@ -2024,7 +1009,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
       aria-haspopup="listbox"
       aria-labelledby="downshift-3-label"
       aria-owns="downshift-3-menu"
-      className="emotion-13"
+      className="emotion-10"
       role="combobox"
     >
       <Dropdownable
@@ -2154,217 +1139,110 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
         open={true}
         preferredDirections={
           Array [
-            "bottom-right",
-            "bottom-left",
-            "bottom-center",
-            "top-right",
-            "top-center",
-            "top-left",
+            "bottom-end",
+            "bottom-start",
+            "bottom",
+            "top-end",
+            "top",
+            "top-start",
           ]
         }
       >
-        <div
-          className="emotion-12"
+        <div>
+          <button
+            aria-haspopup={true}
+            aria-label="close menu"
+            className="emotion-0"
+            data-toggle={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            role="button"
+            type="button"
+          >
+            Dropdown trigger
+          </button>
+        </div>
+        <clickOutside(DropdownContents)
+          open={true}
         >
-          <div>
-            <button
-              aria-haspopup={true}
-              aria-label="close menu"
-              className="emotion-0"
-              data-toggle={true}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              role="button"
-              type="button"
+          <DropdownContents
+            open={true}
+          >
+            <ForwardRef
+              style={
+                Object {
+                  "left": "0",
+                  "position": "absolute",
+                  "top": "0",
+                  "zIndex": 2,
+                }
+              }
             >
-              Dropdown trigger
-            </button>
-          </div>
-          <Overlay
-            className="emotion-10"
-            overlayRoot={
-              <body>
-                <div>
-                  <div
-                    class="css-p0rea1"
-                  >
-                    <div
-                      class=""
-                    >
+              <Overlay
+                innerRef={[Function]}
+                overlayRoot={
+                  <body>
+                    <div>
                       <div
-                        aria-labelledby="downshift-0-label"
-                        class="emotion-9"
-                        data-cy="popover"
-                        direction="bottom-left"
-                        id="downshift-0-menu"
-                        role="listbox"
+                        data-popper-escaped="true"
+                        data-popper-placement="bottom-end"
+                        data-popper-reference-hidden="true"
+                        style="z-index: 2; position: absolute; left: 0px; top: 0px; visibility: hidden; pointer-events: none; transform: translate(0px, 0px);"
                       >
                         <div
-                          class=""
+                          aria-labelledby="downshift-1-label"
+                          class="emotion-9"
+                          data-cy="popover"
+                          direction="bottom-end"
+                          id="downshift-1-menu"
+                          role="listbox"
                         >
                           <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-0"
-                            role="option"
+                            class=""
                           >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="css-vzhvp0"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="css-vzhvp0"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-0-item-3"
-                            role="option"
-                          >
-                            Stop
+                            <div
+                              aria-selected="false"
+                              class="emotion-1"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-0"
+                              role="option"
+                            >
+                              Edit
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="css-vzhvp0"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-1"
+                              role="option"
+                            >
+                              Scale
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="css-vzhvp0"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-2"
+                              role="option"
+                            >
+                              Restart
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-2"
+                              data-cy="PopoverListItem"
+                              id="downshift-1-item-3"
+                              role="option"
+                            >
+                              Stop
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    class="emotion-10"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        aria-labelledby="downshift-1-label"
-                        class="emotion-9"
-                        data-cy="popover"
-                        direction="bottom-right"
-                        id="downshift-1-menu"
-                        role="listbox"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="css-vzhvp0"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="css-vzhvp0"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-1-item-3"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    class="css-p0rea1"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        aria-labelledby="downshift-2-label"
-                        class="emotion-9"
-                        data-cy="popover"
-                        direction="bottom-left"
-                        id="downshift-2-menu"
-                        role="listbox"
-                        style="max-height: 50px;"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="css-vzhvp0"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="css-vzhvp0"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-2-item-3"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                .emotion-4 {
+                    .emotion-4 {
   border-width: 1px;
   border-color: var(--themeBorder,#DADDE2);
   border-top-style: solid;
@@ -2406,402 +1284,384 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-9 {
-  opacity: 1;
-  position: absolute;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
 <div>
-                  <div
-                    class="emotion-9"
-                  >
-                    <div
-                      class=""
-                    >
                       <div
-                        aria-labelledby="downshift-3-label"
-                        class="emotion-8"
-                        data-cy="popover"
-                        direction="bottom-right"
-                        id="downshift-3-menu"
-                        role="listbox"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-0"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                        </div>
-                        <div
-                          class="emotion-4"
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-0"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-3"
-                            role="option"
-                          >
-                            Restart Delay
-                          </div>
-                        </div>
-                        <div
-                          class="emotion-4"
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-0"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-4"
-                            role="option"
-                          >
-                            Pause
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-5"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </body>
-            }
-          >
-            <Portal
-              containerInfo={
-                <div>
-                  <div
-                    class="emotion-10"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        aria-labelledby="downshift-3-label"
-                        class="emotion-9"
-                        data-cy="popover"
-                        direction="bottom-right"
-                        id="downshift-3-menu"
-                        role="listbox"
-                      >
-                        <div
-                          class=""
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-0"
-                            role="option"
-                          >
-                            Edit
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-1"
-                            role="option"
-                          >
-                            Scale
-                          </div>
-                        </div>
-                        <div
-                          class="emotion-5"
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-2"
-                            role="option"
-                          >
-                            Restart
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-3"
-                            role="option"
-                          >
-                            Restart Delay
-                          </div>
-                        </div>
-                        <div
-                          class="emotion-5"
-                        >
-                          <div
-                            aria-selected="false"
-                            class="emotion-1"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-4"
-                            role="option"
-                          >
-                            Pause
-                          </div>
-                          <div
-                            aria-selected="false"
-                            class="emotion-2"
-                            data-cy="PopoverListItem"
-                            id="downshift-3-item-5"
-                            role="option"
-                          >
-                            Stop
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              }
-            >
-              <div
-                className="emotion-10"
-              >
-                <div
-                  className=""
-                >
-                  <clickOutside(DropdownContents)
-                    open={true}
-                  >
-                    <DropdownContents
-                      open={true}
-                    >
-                      <Popover
-                        aria-labelledby="downshift-3-label"
-                        direction="bottom-right"
-                        id="downshift-3-menu"
-                        menuRef={[Function]}
-                        role="listbox"
+                        style="z-index: 2; position: absolute; left: 0px; top: 0px;"
                       >
                         <div
                           aria-labelledby="downshift-3-label"
-                          className="emotion-9"
+                          class="emotion-8"
                           data-cy="popover"
-                          direction="bottom-right"
                           id="downshift-3-menu"
                           role="listbox"
-                          style={
-                            Object {
-                              "maxHeight": undefined,
-                              "maxWidth": undefined,
-                              "width": undefined,
-                            }
-                          }
                         >
                           <div
-                            className=""
-                            key="dropdown-0"
+                            class=""
                           >
-                            <PopoverListItem
-                              aria-selected={false}
+                            <div
+                              aria-selected="false"
+                              class="emotion-0"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-0"
-                              index={0}
-                              isActive={false}
-                              key=".$edit"
-                              listLength={2}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
                               role="option"
                             >
-                              <div
-                                aria-selected={false}
-                                className="emotion-1"
-                                data-cy="PopoverListItem"
-                                id="downshift-3-item-0"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Edit
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
+                              Edit
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-1"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-1"
-                              index={1}
-                              isActive={false}
-                              key=".$scale"
-                              listLength={2}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
                               role="option"
                             >
-                              <div
-                                aria-selected={false}
-                                className="emotion-2"
-                                data-cy="PopoverListItem"
-                                id="downshift-3-item-1"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Scale
-                              </div>
-                            </PopoverListItem>
+                              Scale
+                            </div>
                           </div>
                           <div
-                            className="emotion-5"
-                            key="dropdown-1"
+                            class="emotion-4"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
+                            <div
+                              aria-selected="false"
+                              class="emotion-0"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-2"
-                              index={0}
-                              isActive={false}
-                              key=".$restart"
-                              listLength={2}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
                               role="option"
                             >
-                              <div
-                                aria-selected={false}
-                                className="emotion-1"
-                                data-cy="PopoverListItem"
-                                id="downshift-3-item-2"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Restart
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
+                              Restart
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-1"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-3"
-                              index={1}
-                              isActive={false}
-                              key=".$restartDelay"
-                              listLength={2}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
                               role="option"
                             >
-                              <div
-                                aria-selected={false}
-                                className="emotion-2"
-                                data-cy="PopoverListItem"
-                                id="downshift-3-item-3"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Restart Delay
-                              </div>
-                            </PopoverListItem>
+                              Restart Delay
+                            </div>
                           </div>
                           <div
-                            className="emotion-5"
-                            key="dropdown-2"
+                            class="emotion-4"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
+                            <div
+                              aria-selected="false"
+                              class="emotion-0"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-4"
-                              index={0}
-                              isActive={false}
-                              key=".$pause"
-                              listLength={2}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
                               role="option"
                             >
-                              <div
-                                aria-selected={false}
-                                className="emotion-1"
-                                data-cy="PopoverListItem"
-                                id="downshift-3-item-4"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Pause
-                              </div>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
+                              Pause
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-1"
+                              data-cy="PopoverListItem"
                               id="downshift-3-item-5"
-                              index={1}
-                              isActive={false}
-                              key=".$stop"
-                              listLength={2}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
                               role="option"
                             >
-                              <div
-                                aria-selected={false}
-                                className="emotion-2"
-                                data-cy="PopoverListItem"
-                                id="downshift-3-item-5"
-                                onClick={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseMove={[Function]}
-                                role="option"
-                              >
-                                Stop
-                              </div>
-                            </PopoverListItem>
+                              Stop
+                            </div>
                           </div>
                         </div>
-                      </Popover>
-                    </DropdownContents>
-                  </clickOutside(DropdownContents)>
-                </div>
-              </div>
-            </Portal>
-          </Overlay>
-        </div>
+                      </div>
+                    </div>
+                  </body>
+                }
+                style={
+                  Object {
+                    "left": "0",
+                    "position": "absolute",
+                    "top": "0",
+                    "zIndex": 2,
+                  }
+                }
+              >
+                <Portal
+                  containerInfo={
+                    <div>
+                      <div
+                        style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+                      >
+                        <div
+                          aria-labelledby="downshift-3-label"
+                          class="emotion-9"
+                          data-cy="popover"
+                          id="downshift-3-menu"
+                          role="listbox"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              aria-selected="false"
+                              class="emotion-1"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-0"
+                              role="option"
+                            >
+                              Edit
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-2"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-1"
+                              role="option"
+                            >
+                              Scale
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-5"
+                          >
+                            <div
+                              aria-selected="false"
+                              class="emotion-1"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-2"
+                              role="option"
+                            >
+                              Restart
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-2"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-3"
+                              role="option"
+                            >
+                              Restart Delay
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-5"
+                          >
+                            <div
+                              aria-selected="false"
+                              class="emotion-1"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-4"
+                              role="option"
+                            >
+                              Pause
+                            </div>
+                            <div
+                              aria-selected="false"
+                              class="emotion-2"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-5"
+                              role="option"
+                            >
+                              Stop
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                >
+                  <div
+                    style={
+                      Object {
+                        "left": "0",
+                        "position": "absolute",
+                        "top": "0",
+                        "zIndex": 2,
+                      }
+                    }
+                  >
+                    <Popover
+                      aria-labelledby="downshift-3-label"
+                      id="downshift-3-menu"
+                      menuRef={[Function]}
+                      role="listbox"
+                    >
+                      <div
+                        aria-labelledby="downshift-3-label"
+                        className="emotion-9"
+                        data-cy="popover"
+                        id="downshift-3-menu"
+                        role="listbox"
+                        style={
+                          Object {
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "width": undefined,
+                          }
+                        }
+                      >
+                        <div
+                          className=""
+                          key="dropdown-0"
+                        >
+                          <PopoverListItem
+                            aria-selected={false}
+                            id="downshift-3-item-0"
+                            index={0}
+                            isActive={false}
+                            key=".$edit"
+                            listLength={2}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseMove={[Function]}
+                            role="option"
+                          >
+                            <div
+                              aria-selected={false}
+                              className="emotion-1"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-0"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseMove={[Function]}
+                              role="option"
+                            >
+                              Edit
+                            </div>
+                          </PopoverListItem>
+                          <PopoverListItem
+                            aria-selected={false}
+                            id="downshift-3-item-1"
+                            index={1}
+                            isActive={false}
+                            key=".$scale"
+                            listLength={2}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseMove={[Function]}
+                            role="option"
+                          >
+                            <div
+                              aria-selected={false}
+                              className="emotion-2"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-1"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseMove={[Function]}
+                              role="option"
+                            >
+                              Scale
+                            </div>
+                          </PopoverListItem>
+                        </div>
+                        <div
+                          className="emotion-5"
+                          key="dropdown-1"
+                        >
+                          <PopoverListItem
+                            aria-selected={false}
+                            id="downshift-3-item-2"
+                            index={0}
+                            isActive={false}
+                            key=".$restart"
+                            listLength={2}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseMove={[Function]}
+                            role="option"
+                          >
+                            <div
+                              aria-selected={false}
+                              className="emotion-1"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-2"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseMove={[Function]}
+                              role="option"
+                            >
+                              Restart
+                            </div>
+                          </PopoverListItem>
+                          <PopoverListItem
+                            aria-selected={false}
+                            id="downshift-3-item-3"
+                            index={1}
+                            isActive={false}
+                            key=".$restartDelay"
+                            listLength={2}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseMove={[Function]}
+                            role="option"
+                          >
+                            <div
+                              aria-selected={false}
+                              className="emotion-2"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-3"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseMove={[Function]}
+                              role="option"
+                            >
+                              Restart Delay
+                            </div>
+                          </PopoverListItem>
+                        </div>
+                        <div
+                          className="emotion-5"
+                          key="dropdown-2"
+                        >
+                          <PopoverListItem
+                            aria-selected={false}
+                            id="downshift-3-item-4"
+                            index={0}
+                            isActive={false}
+                            key=".$pause"
+                            listLength={2}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseMove={[Function]}
+                            role="option"
+                          >
+                            <div
+                              aria-selected={false}
+                              className="emotion-1"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-4"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseMove={[Function]}
+                              role="option"
+                            >
+                              Pause
+                            </div>
+                          </PopoverListItem>
+                          <PopoverListItem
+                            aria-selected={false}
+                            id="downshift-3-item-5"
+                            index={1}
+                            isActive={false}
+                            key=".$stop"
+                            listLength={2}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseMove={[Function]}
+                            role="option"
+                          >
+                            <div
+                              aria-selected={false}
+                              className="emotion-2"
+                              data-cy="PopoverListItem"
+                              id="downshift-3-item-5"
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseMove={[Function]}
+                              role="option"
+                            >
+                              Stop
+                            </div>
+                          </PopoverListItem>
+                        </div>
+                      </div>
+                    </Popover>
+                  </div>
+                </Portal>
+              </Overlay>
+            </ForwardRef>
+          </DropdownContents>
+        </clickOutside(DropdownContents)>
       </Dropdownable>
     </div>
   </Downshift>

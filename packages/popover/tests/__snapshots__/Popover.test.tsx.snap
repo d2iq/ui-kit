@@ -1,27 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Popover renders a closed dropdown 1`] = `
-.emotion-7 {
-  position: relative;
-}
-
-.emotion-8 {
+.emotion-1 {
   display: inline-block;
-}
-
-.emotion-3:focus {
-  outline: none;
-}
-
-.emotion-5 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
 }
 
 .emotion-0 {
@@ -58,33 +39,12 @@ exports[`Popover renders a closed dropdown 1`] = `
   }
 }
 
-.emotion-4 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-  overflow-x: hidden;
-}
-
-.emotion-2 {
-  padding: 16px;
-}
-
-.emotion-1 {
-  background-repeat: no-repeat;
-  padding: 16px;
-}
-
 <Popover
   data-cy="popover"
   trigger="Dropdown trigger"
 >
   <div
-    className="emotion-8"
+    className="emotion-1"
   >
     <Dropdownable
       dropdown={
@@ -97,7 +57,7 @@ exports[`Popover renders a closed dropdown 1`] = `
             disabled={true}
           >
             <div
-              className="emotion-3"
+              className="css-1y3xrxk"
               tabIndex={-1}
             >
               <SpacingBox
@@ -114,326 +74,31 @@ exports[`Popover renders a closed dropdown 1`] = `
         </Popover>
       }
       open={false}
-      preferredDirections={
-        Array [
-          "bottom-left",
-          "bottom-right",
-          "top-right",
-          "top-left",
-        ]
-      }
     >
-      <div
-        className="emotion-7"
-      >
-        <div>
-          <ResetButton
+      <div>
+        <ResetButton
+          aria-expanded={false}
+          aria-owns="dropdown1"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <button
             aria-expanded={false}
             aria-owns="dropdown1"
+            className="emotion-0"
             onBlur={[Function]}
             onClick={[Function]}
             onKeyDown={[Function]}
-          >
-            <button
-              aria-expanded={false}
-              aria-owns="dropdown1"
-              className="emotion-0"
-              onBlur={[Function]}
-              onClick={[Function]}
-              onKeyDown={[Function]}
-              type="button"
-            >
-              <div
-                tabIndex={-1}
-              >
-                Dropdown trigger
-              </div>
-            </button>
-          </ResetButton>
-        </div>
-        <Overlay
-          className="emotion-5"
-          overlayRoot={
-            .emotion-1:focus {
-  outline: none;
-}
-
-.emotion-3 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
-.emotion-2 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-  overflow-x: hidden;
-}
-
-.emotion-0 {
-  background-repeat: no-repeat;
-  padding: 16px;
-}
-
-<body>
-              <div>
-                <div
-                  class="emotion-3"
-                >
-                  <div
-                    class=""
-                  >
-                    <div
-                      class="emotion-2"
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown1"
-                      role="dialog"
-                    >
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-lock-disabled="disabled"
-                      >
-                        <div
-                          class="emotion-1"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="emotion-0"
-                            data-cy="spacingBox"
-                          >
-                            <div>
-                              dropdown content
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </body>
-          }
-        >
-          <Portal
-            containerInfo={
-              <div>
-                <div
-                  class="emotion-5"
-                >
-                  <div
-                    class=""
-                  >
-                    <div
-                      class="emotion-4"
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown1"
-                      role="dialog"
-                    >
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-lock-disabled="disabled"
-                      >
-                        <div
-                          class="emotion-3"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="emotion-1"
-                            data-cy="spacingBox"
-                          >
-                            <div>
-                              dropdown content
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            }
+            type="button"
           >
             <div
-              className="emotion-5"
+              tabIndex={-1}
             >
-              <div
-                className=""
-              >
-                <clickOutside(DropdownContents)
-                  open={false}
-                >
-                  <DropdownContents
-                    open={false}
-                  >
-                    <Popover
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown1"
-                      role="dialog"
-                    >
-                      <div
-                        className="emotion-4"
-                        data-cy="popover"
-                        direction="bottom-left"
-                        id="dropdown1"
-                        role="dialog"
-                        style={
-                          Object {
-                            "maxHeight": undefined,
-                            "maxWidth": undefined,
-                            "width": undefined,
-                          }
-                        }
-                      >
-                        <FocusLockCombination
-                          disabled={true}
-                        >
-                          <FocusLock
-                            as="div"
-                            autoFocus={true}
-                            disabled={true}
-                            lockProps={Object {}}
-                            noFocusGuards={false}
-                            persistentFocus={false}
-                            returnFocus={false}
-                            sideCar={[Function]}
-                          >
-                            <div
-                              data-focus-guard={true}
-                              key="guard-first"
-                              style={
-                                Object {
-                                  "height": "0px",
-                                  "left": "1px",
-                                  "overflow": "hidden",
-                                  "padding": 0,
-                                  "position": "fixed",
-                                  "top": "1px",
-                                  "width": "1px",
-                                }
-                              }
-                              tabIndex={-1}
-                            />
-                            <div
-                              data-focus-guard={true}
-                              key="guard-nearest"
-                              style={
-                                Object {
-                                  "height": "0px",
-                                  "left": "1px",
-                                  "overflow": "hidden",
-                                  "padding": 0,
-                                  "position": "fixed",
-                                  "top": "1px",
-                                  "width": "1px",
-                                }
-                              }
-                              tabIndex={-1}
-                            />
-                            <div
-                              data-focus-lock-disabled="disabled"
-                              onBlur={[Function]}
-                              onFocus={[Function]}
-                            >
-                              <div
-                                className="emotion-3"
-                                tabIndex={-1}
-                              >
-                                <SpacingBox
-                                  side="all"
-                                  spacingSize="m"
-                                  tag="div"
-                                >
-                                  <Box
-                                    bgImageOptions={
-                                      Object {
-                                        "position": undefined,
-                                        "repeat": undefined,
-                                        "size": undefined,
-                                      }
-                                    }
-                                    className="emotion-2"
-                                    dataCy="spacingBox"
-                                    tag="div"
-                                  >
-                                    <div
-                                      className="emotion-1"
-                                      data-cy="spacingBox"
-                                    >
-                                      <div>
-                                        dropdown content
-                                      </div>
-                                    </div>
-                                  </Box>
-                                </SpacingBox>
-                              </div>
-                            </div>
-                            <div
-                              data-focus-guard={true}
-                              style={
-                                Object {
-                                  "height": "0px",
-                                  "left": "1px",
-                                  "overflow": "hidden",
-                                  "padding": 0,
-                                  "position": "fixed",
-                                  "top": "1px",
-                                  "width": "1px",
-                                }
-                              }
-                              tabIndex={-1}
-                            />
-                          </FocusLock>
-                        </FocusLockCombination>
-                      </div>
-                    </Popover>
-                  </DropdownContents>
-                </clickOutside(DropdownContents)>
-              </div>
+              Dropdown trigger
             </div>
-          </Portal>
-        </Overlay>
+          </button>
+        </ResetButton>
       </div>
     </Dropdownable>
   </div>
@@ -441,27 +106,8 @@ exports[`Popover renders a closed dropdown 1`] = `
 `;
 
 exports[`Popover renders a dropdown with a max width and max height 1`] = `
-.emotion-7 {
-  position: relative;
-}
-
-.emotion-8 {
+.emotion-1 {
   display: inline-block;
-}
-
-.emotion-3:focus {
-  outline: none;
-}
-
-.emotion-5 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
 }
 
 .emotion-0 {
@@ -498,26 +144,6 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
   }
 }
 
-.emotion-2 {
-  padding: 16px;
-}
-
-.emotion-1 {
-  background-repeat: no-repeat;
-  padding: 16px;
-}
-
-.emotion-4 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-}
-
 <Popover
   data-cy="popover"
   maxHeight={50}
@@ -525,7 +151,7 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
   trigger="Dropdown trigger"
 >
   <div
-    className="emotion-8"
+    className="emotion-1"
   >
     <Dropdownable
       dropdown={
@@ -540,7 +166,7 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
             disabled={true}
           >
             <div
-              className="emotion-3"
+              className="css-1y3xrxk"
               tabIndex={-1}
             >
               <SpacingBox
@@ -557,429 +183,31 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
         </Popover>
       }
       open={false}
-      preferredDirections={
-        Array [
-          "bottom-left",
-          "bottom-right",
-          "top-right",
-          "top-left",
-        ]
-      }
     >
-      <div
-        className="emotion-7"
-      >
-        <div>
-          <ResetButton
+      <div>
+        <ResetButton
+          aria-expanded={false}
+          aria-owns="dropdown3"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <button
             aria-expanded={false}
             aria-owns="dropdown3"
+            className="emotion-0"
             onBlur={[Function]}
             onClick={[Function]}
             onKeyDown={[Function]}
-          >
-            <button
-              aria-expanded={false}
-              aria-owns="dropdown3"
-              className="emotion-0"
-              onBlur={[Function]}
-              onClick={[Function]}
-              onKeyDown={[Function]}
-              type="button"
-            >
-              <div
-                tabIndex={-1}
-              >
-                Dropdown trigger
-              </div>
-            </button>
-          </ResetButton>
-        </div>
-        <Overlay
-          className="emotion-5"
-          overlayRoot={
-            <body>
-              <div>
-                <div
-                  class="emotion-5"
-                >
-                  <div
-                    class=""
-                  >
-                    <div
-                      class="css-v92gwc"
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown1"
-                      role="dialog"
-                    >
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-lock-disabled="disabled"
-                      >
-                        <div
-                          class="emotion-3"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="emotion-1"
-                            data-cy="spacingBox"
-                          >
-                            <div>
-                              dropdown content
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div
-                  class="css-9idtg8"
-                >
-                  <div
-                    class=""
-                  >
-                    <div
-                      class="css-v92gwc"
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown2"
-                      role="dialog"
-                    >
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="0"
-                      />
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="1"
-                      />
-                      <div
-                        data-focus-lock-disabled="false"
-                      >
-                        <div
-                          class="emotion-3"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="emotion-1"
-                            data-cy="spacingBox"
-                          >
-                            <div>
-                              dropdown content
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="0"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              .emotion-1:focus {
-  outline: none;
-}
-
-.emotion-3 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
-.emotion-0 {
-  background-repeat: no-repeat;
-  padding: 16px;
-}
-
-.emotion-2 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-}
-
-<div>
-                <div
-                  class="emotion-3"
-                >
-                  <div
-                    class=""
-                  >
-                    <div
-                      class="emotion-2"
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown3"
-                      role="dialog"
-                      style="max-height: 50px; max-width: 50px;"
-                    >
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-lock-disabled="disabled"
-                      >
-                        <div
-                          class="emotion-1"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="emotion-0"
-                            data-cy="spacingBox"
-                          >
-                            <div>
-                              dropdown content
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </body>
-          }
-        >
-          <Portal
-            containerInfo={
-              <div>
-                <div
-                  class="emotion-5"
-                >
-                  <div
-                    class=""
-                  >
-                    <div
-                      class="emotion-4"
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown3"
-                      role="dialog"
-                      style="max-height: 50px; max-width: 50px;"
-                    >
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-lock-disabled="disabled"
-                      >
-                        <div
-                          class="emotion-3"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="emotion-1"
-                            data-cy="spacingBox"
-                          >
-                            <div>
-                              dropdown content
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            }
+            type="button"
           >
             <div
-              className="emotion-5"
+              tabIndex={-1}
             >
-              <div
-                className=""
-              >
-                <clickOutside(DropdownContents)
-                  open={false}
-                >
-                  <DropdownContents
-                    open={false}
-                  >
-                    <Popover
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown3"
-                      maxHeight={50}
-                      maxWidth={50}
-                      role="dialog"
-                    >
-                      <div
-                        className="emotion-4"
-                        data-cy="popover"
-                        direction="bottom-left"
-                        id="dropdown3"
-                        role="dialog"
-                        style={
-                          Object {
-                            "maxHeight": 50,
-                            "maxWidth": 50,
-                            "width": undefined,
-                          }
-                        }
-                      >
-                        <FocusLockCombination
-                          disabled={true}
-                        >
-                          <FocusLock
-                            as="div"
-                            autoFocus={true}
-                            disabled={true}
-                            lockProps={Object {}}
-                            noFocusGuards={false}
-                            persistentFocus={false}
-                            returnFocus={false}
-                            sideCar={[Function]}
-                          >
-                            <div
-                              data-focus-guard={true}
-                              key="guard-first"
-                              style={
-                                Object {
-                                  "height": "0px",
-                                  "left": "1px",
-                                  "overflow": "hidden",
-                                  "padding": 0,
-                                  "position": "fixed",
-                                  "top": "1px",
-                                  "width": "1px",
-                                }
-                              }
-                              tabIndex={-1}
-                            />
-                            <div
-                              data-focus-guard={true}
-                              key="guard-nearest"
-                              style={
-                                Object {
-                                  "height": "0px",
-                                  "left": "1px",
-                                  "overflow": "hidden",
-                                  "padding": 0,
-                                  "position": "fixed",
-                                  "top": "1px",
-                                  "width": "1px",
-                                }
-                              }
-                              tabIndex={-1}
-                            />
-                            <div
-                              data-focus-lock-disabled="disabled"
-                              onBlur={[Function]}
-                              onFocus={[Function]}
-                            >
-                              <div
-                                className="emotion-3"
-                                tabIndex={-1}
-                              >
-                                <SpacingBox
-                                  side="all"
-                                  spacingSize="m"
-                                  tag="div"
-                                >
-                                  <Box
-                                    bgImageOptions={
-                                      Object {
-                                        "position": undefined,
-                                        "repeat": undefined,
-                                        "size": undefined,
-                                      }
-                                    }
-                                    className="emotion-2"
-                                    dataCy="spacingBox"
-                                    tag="div"
-                                  >
-                                    <div
-                                      className="emotion-1"
-                                      data-cy="spacingBox"
-                                    >
-                                      <div>
-                                        dropdown content
-                                      </div>
-                                    </div>
-                                  </Box>
-                                </SpacingBox>
-                              </div>
-                            </div>
-                            <div
-                              data-focus-guard={true}
-                              style={
-                                Object {
-                                  "height": "0px",
-                                  "left": "1px",
-                                  "overflow": "hidden",
-                                  "padding": 0,
-                                  "position": "fixed",
-                                  "top": "1px",
-                                  "width": "1px",
-                                }
-                              }
-                              tabIndex={-1}
-                            />
-                          </FocusLock>
-                        </FocusLockCombination>
-                      </div>
-                    </Popover>
-                  </DropdownContents>
-                </clickOutside(DropdownContents)>
-              </div>
+              Dropdown trigger
             </div>
-          </Portal>
-        </Overlay>
+          </button>
+        </ResetButton>
       </div>
     </Dropdownable>
   </div>
@@ -987,11 +215,7 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
 `;
 
 exports[`Popover renders an open dropdown 1`] = `
-.emotion-7 {
-  position: relative;
-}
-
-.emotion-8 {
+.emotion-5 {
   display: inline-block;
 }
 
@@ -1054,24 +278,13 @@ exports[`Popover renders an open dropdown 1`] = `
   padding: 16px;
 }
 
-.emotion-5 {
-  opacity: 1;
-  position: absolute;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
 <Popover
   data-cy="popover"
   initialIsOpen={true}
   trigger="Dropdown trigger"
 >
   <div
-    className="emotion-8"
+    className="emotion-5"
   >
     <Dropdownable
       dropdown={
@@ -1101,98 +314,52 @@ exports[`Popover renders an open dropdown 1`] = `
         </Popover>
       }
       open={true}
-      preferredDirections={
-        Array [
-          "bottom-left",
-          "bottom-right",
-          "top-right",
-          "top-left",
-        ]
-      }
     >
-      <div
-        className="emotion-7"
-      >
-        <div>
-          <ResetButton
+      <div>
+        <ResetButton
+          aria-expanded={true}
+          aria-owns="dropdown2"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <button
             aria-expanded={true}
             aria-owns="dropdown2"
+            className="emotion-0"
             onBlur={[Function]}
             onClick={[Function]}
             onKeyDown={[Function]}
+            type="button"
           >
-            <button
-              aria-expanded={true}
-              aria-owns="dropdown2"
-              className="emotion-0"
-              onBlur={[Function]}
-              onClick={[Function]}
-              onKeyDown={[Function]}
-              type="button"
+            <div
+              tabIndex={-1}
             >
-              <div
-                tabIndex={-1}
-              >
-                Dropdown trigger
-              </div>
-            </button>
-          </ResetButton>
-        </div>
-        <Overlay
-          className="emotion-5"
-          overlayRoot={
-            <body>
-              <div>
-                <div
-                  class="css-p0rea1"
-                >
-                  <div
-                    class=""
-                  >
-                    <div
-                      class="emotion-4"
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown1"
-                      role="dialog"
-                    >
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                      <div
-                        data-focus-lock-disabled="disabled"
-                      >
-                        <div
-                          class="emotion-3"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="emotion-1"
-                            data-cy="spacingBox"
-                          >
-                            <div>
-                              dropdown content
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="-1"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              .emotion-1:focus {
+              Dropdown trigger
+            </div>
+          </button>
+        </ResetButton>
+      </div>
+      <clickOutside(DropdownContents)
+        open={true}
+      >
+        <DropdownContents
+          open={true}
+        >
+          <ForwardRef
+            style={
+              Object {
+                "left": "0",
+                "position": "absolute",
+                "top": "0",
+                "zIndex": 2,
+              }
+            }
+          >
+            <Overlay
+              innerRef={[Function]}
+              overlayRoot={
+                .emotion-1:focus {
   outline: none;
 }
 
@@ -1213,207 +380,231 @@ exports[`Popover renders an open dropdown 1`] = `
   padding: 16px;
 }
 
-.emotion-3 {
-  opacity: 1;
-  position: absolute;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
-<div>
-                <div
-                  class="emotion-3"
-                >
-                  <div
-                    class=""
-                  >
+<body>
+                  <div>
                     <div
-                      class="emotion-2"
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown2"
-                      role="dialog"
+                      style="z-index: 2; position: absolute; left: 0px; top: 0px;"
                     >
                       <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="0"
-                      />
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="1"
-                      />
-                      <div
-                        data-focus-lock-disabled="false"
+                        class="emotion-2"
+                        data-cy="popover"
+                        id="dropdown2"
+                        role="dialog"
                       >
                         <div
-                          class="emotion-1"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="emotion-0"
-                            data-cy="spacingBox"
-                          >
-                            <div>
-                              dropdown content
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="0"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </body>
-          }
-        >
-          <Portal
-            containerInfo={
-              <div>
-                <div
-                  class="emotion-5"
-                >
-                  <div
-                    class=""
-                  >
-                    <div
-                      class="emotion-4"
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown2"
-                      role="dialog"
-                    >
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="0"
-                      />
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="1"
-                      />
-                      <div
-                        data-focus-lock-disabled="false"
-                      >
+                          data-focus-guard="true"
+                          style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                          tabindex="0"
+                        />
                         <div
-                          class="emotion-3"
-                          tabindex="-1"
+                          data-focus-guard="true"
+                          style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                          tabindex="1"
+                        />
+                        <div
+                          data-focus-lock-disabled="false"
                         >
                           <div
                             class="emotion-1"
-                            data-cy="spacingBox"
+                            tabindex="-1"
                           >
-                            <div>
-                              dropdown content
+                            <div
+                              class="emotion-0"
+                              data-cy="spacingBox"
+                            >
+                              <div>
+                                dropdown content
+                              </div>
                             </div>
                           </div>
                         </div>
+                        <div
+                          data-focus-guard="true"
+                          style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                          tabindex="0"
+                        />
                       </div>
-                      <div
-                        data-focus-guard="true"
-                        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                        tabindex="0"
-                      />
                     </div>
                   </div>
-                </div>
-              </div>
-            }
-          >
-            <div
-              className="emotion-5"
+                </body>
+              }
+              style={
+                Object {
+                  "left": "0",
+                  "position": "absolute",
+                  "top": "0",
+                  "zIndex": 2,
+                }
+              }
             >
-              <div
-                className=""
-              >
-                <clickOutside(DropdownContents)
-                  open={true}
-                >
-                  <DropdownContents
-                    open={true}
-                  >
-                    <Popover
-                      data-cy="popover"
-                      direction="bottom-left"
-                      id="dropdown2"
-                      role="dialog"
+              <Portal
+                containerInfo={
+                  <div>
+                    <div
+                      style="z-index: 2; position: absolute; left: 0px; top: 0px;"
                     >
                       <div
-                        className="emotion-4"
+                        class="emotion-4"
                         data-cy="popover"
-                        direction="bottom-left"
                         id="dropdown2"
                         role="dialog"
-                        style={
-                          Object {
-                            "maxHeight": undefined,
-                            "maxWidth": undefined,
-                            "width": undefined,
-                          }
-                        }
                       >
-                        <FocusLockCombination
-                          disabled={false}
+                        <div
+                          data-focus-guard="true"
+                          style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                          tabindex="0"
+                        />
+                        <div
+                          data-focus-guard="true"
+                          style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                          tabindex="1"
+                        />
+                        <div
+                          data-focus-lock-disabled="false"
                         >
-                          <FocusLock
-                            as="div"
-                            autoFocus={true}
-                            disabled={false}
-                            lockProps={Object {}}
-                            noFocusGuards={false}
-                            persistentFocus={false}
-                            returnFocus={false}
-                            sideCar={[Function]}
+                          <div
+                            class="emotion-3"
+                            tabindex="-1"
                           >
                             <div
-                              data-focus-guard={true}
-                              key="guard-first"
-                              style={
-                                Object {
-                                  "height": "0px",
-                                  "left": "1px",
-                                  "overflow": "hidden",
-                                  "padding": 0,
-                                  "position": "fixed",
-                                  "top": "1px",
-                                  "width": "1px",
-                                }
-                              }
-                              tabIndex={0}
-                            />
-                            <div
-                              data-focus-guard={true}
-                              key="guard-nearest"
-                              style={
-                                Object {
-                                  "height": "0px",
-                                  "left": "1px",
-                                  "overflow": "hidden",
-                                  "padding": 0,
-                                  "position": "fixed",
-                                  "top": "1px",
-                                  "width": "1px",
-                                }
-                              }
-                              tabIndex={1}
-                            />
-                            <div
-                              data-focus-lock-disabled={false}
-                              onBlur={[Function]}
-                              onFocus={[Function]}
+                              class="emotion-1"
+                              data-cy="spacingBox"
                             >
-                              <SideEffect(FocusWatcher)
+                              <div>
+                                dropdown content
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-focus-guard="true"
+                          style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                          tabindex="0"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                }
+              >
+                <div
+                  style={
+                    Object {
+                      "left": "0",
+                      "position": "absolute",
+                      "top": "0",
+                      "zIndex": 2,
+                    }
+                  }
+                >
+                  <Popover
+                    data-cy="popover"
+                    id="dropdown2"
+                    role="dialog"
+                  >
+                    <div
+                      className="emotion-4"
+                      data-cy="popover"
+                      id="dropdown2"
+                      role="dialog"
+                      style={
+                        Object {
+                          "maxHeight": undefined,
+                          "maxWidth": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <FocusLockCombination
+                        disabled={false}
+                      >
+                        <FocusLock
+                          as="div"
+                          autoFocus={true}
+                          disabled={false}
+                          lockProps={Object {}}
+                          noFocusGuards={false}
+                          persistentFocus={false}
+                          returnFocus={false}
+                          sideCar={[Function]}
+                        >
+                          <div
+                            data-focus-guard={true}
+                            key="guard-first"
+                            style={
+                              Object {
+                                "height": "0px",
+                                "left": "1px",
+                                "overflow": "hidden",
+                                "padding": 0,
+                                "position": "fixed",
+                                "top": "1px",
+                                "width": "1px",
+                              }
+                            }
+                            tabIndex={0}
+                          />
+                          <div
+                            data-focus-guard={true}
+                            key="guard-nearest"
+                            style={
+                              Object {
+                                "height": "0px",
+                                "left": "1px",
+                                "overflow": "hidden",
+                                "padding": 0,
+                                "position": "fixed",
+                                "top": "1px",
+                                "width": "1px",
+                              }
+                            }
+                            tabIndex={1}
+                          />
+                          <div
+                            data-focus-lock-disabled={false}
+                            onBlur={[Function]}
+                            onFocus={[Function]}
+                          >
+                            <SideEffect(FocusWatcher)
+                              autoFocus={true}
+                              disabled={false}
+                              observed={
+                                <div
+                                  data-focus-lock-disabled="false"
+                                >
+                                  <div
+                                    class="emotion-3"
+                                    tabindex="-1"
+                                  >
+                                    <div
+                                      class="emotion-1"
+                                      data-cy="spacingBox"
+                                    >
+                                      <div>
+                                        dropdown content
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              }
+                              onActivation={[Function]}
+                              onDeactivation={[Function]}
+                              persistentFocus={false}
+                              returnFocus={[Function]}
+                              shards={Array []}
+                              sideCar={
+                                Object {
+                                  "assignMedium": [Function],
+                                  "assignSyncMedium": [Function],
+                                  "options": Object {
+                                    "async": true,
+                                    "ssr": false,
+                                  },
+                                  "read": [Function],
+                                  "useMedium": [Function],
+                                }
+                              }
+                            >
+                              <FocusWatcher
                                 autoFocus={true}
                                 disabled={false}
                                 observed={
@@ -1452,107 +643,66 @@ exports[`Popover renders an open dropdown 1`] = `
                                     "useMedium": [Function],
                                   }
                                 }
+                              />
+                            </SideEffect(FocusWatcher)>
+                            <div
+                              className="emotion-3"
+                              tabIndex={-1}
+                            >
+                              <SpacingBox
+                                side="all"
+                                spacingSize="m"
+                                tag="div"
                               >
-                                <FocusWatcher
-                                  autoFocus={true}
-                                  disabled={false}
-                                  observed={
-                                    <div
-                                      data-focus-lock-disabled="false"
-                                    >
-                                      <div
-                                        class="emotion-3"
-                                        tabindex="-1"
-                                      >
-                                        <div
-                                          class="emotion-1"
-                                          data-cy="spacingBox"
-                                        >
-                                          <div>
-                                            dropdown content
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  }
-                                  onActivation={[Function]}
-                                  onDeactivation={[Function]}
-                                  persistentFocus={false}
-                                  returnFocus={[Function]}
-                                  shards={Array []}
-                                  sideCar={
+                                <Box
+                                  bgImageOptions={
                                     Object {
-                                      "assignMedium": [Function],
-                                      "assignSyncMedium": [Function],
-                                      "options": Object {
-                                        "async": true,
-                                        "ssr": false,
-                                      },
-                                      "read": [Function],
-                                      "useMedium": [Function],
+                                      "position": undefined,
+                                      "repeat": undefined,
+                                      "size": undefined,
                                     }
                                   }
-                                />
-                              </SideEffect(FocusWatcher)>
-                              <div
-                                className="emotion-3"
-                                tabIndex={-1}
-                              >
-                                <SpacingBox
-                                  side="all"
-                                  spacingSize="m"
+                                  className="emotion-2"
+                                  dataCy="spacingBox"
                                   tag="div"
                                 >
-                                  <Box
-                                    bgImageOptions={
-                                      Object {
-                                        "position": undefined,
-                                        "repeat": undefined,
-                                        "size": undefined,
-                                      }
-                                    }
-                                    className="emotion-2"
-                                    dataCy="spacingBox"
-                                    tag="div"
+                                  <div
+                                    className="emotion-1"
+                                    data-cy="spacingBox"
                                   >
-                                    <div
-                                      className="emotion-1"
-                                      data-cy="spacingBox"
-                                    >
-                                      <div>
-                                        dropdown content
-                                      </div>
+                                    <div>
+                                      dropdown content
                                     </div>
-                                  </Box>
-                                </SpacingBox>
-                              </div>
+                                  </div>
+                                </Box>
+                              </SpacingBox>
                             </div>
-                            <div
-                              data-focus-guard={true}
-                              style={
-                                Object {
-                                  "height": "0px",
-                                  "left": "1px",
-                                  "overflow": "hidden",
-                                  "padding": 0,
-                                  "position": "fixed",
-                                  "top": "1px",
-                                  "width": "1px",
-                                }
+                          </div>
+                          <div
+                            data-focus-guard={true}
+                            style={
+                              Object {
+                                "height": "0px",
+                                "left": "1px",
+                                "overflow": "hidden",
+                                "padding": 0,
+                                "position": "fixed",
+                                "top": "1px",
+                                "width": "1px",
                               }
-                              tabIndex={0}
-                            />
-                          </FocusLock>
-                        </FocusLockCombination>
-                      </div>
-                    </Popover>
-                  </DropdownContents>
-                </clickOutside(DropdownContents)>
-              </div>
-            </div>
-          </Portal>
-        </Overlay>
-      </div>
+                            }
+                            tabIndex={0}
+                          />
+                        </FocusLock>
+                      </FocusLockCombination>
+                    </div>
+                  </Popover>
+                </div>
+              </Portal>
+            </Overlay>
+          </ForwardRef>
+        </DropdownContents>
+      </clickOutside(DropdownContents)>
     </Dropdownable>
   </div>
 </Popover>
