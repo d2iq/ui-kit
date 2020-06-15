@@ -20,10 +20,10 @@ storiesOf("Utils|Dropdownable", module)
     "with custom direction",
     () => {
       const options = {
-        BottomLeft: "bottom-left",
-        BottomRight: "bottom-right",
-        TopLeft: "top-left",
-        TopRight: "top-right"
+        BottomLeft: "bottom-start",
+        BottomRight: "bottom-end",
+        TopLeft: "top-start",
+        TopRight: "top-end"
       };
 
       const knobDirection = select("Direction", options, "BottomLeft");

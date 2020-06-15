@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Typeahead renders 1`] = `
-.emotion-22 {
-  position: relative;
-}
-
 .emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -31,21 +27,6 @@ exports[`Typeahead renders 1`] = `
 
 .emotion-2 > div {
   width: auto;
-}
-
-.emotion-19 {
-  margin-top: 4px;
-}
-
-.emotion-20 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
 }
 
 .emotion-0 {
@@ -136,114 +117,6 @@ exports[`Typeahead renders 1`] = `
 .emotion-1:focus {
   background-color: rgba(125,88,255,0.05);
   border-color: var(--themeBrandPrimary,#7D58FF);
-}
-
-.emotion-18 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-  overflow-x: hidden;
-}
-
-.emotion-7 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-top: 8px;
-}
-
-.emotion-6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-6 > div {
-  width: auto;
-}
-
-.emotion-6 > *:not(:first-child) {
-  padding-left: 8px;
-  padding-top: 0;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-}
-
-.emotion-12 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-}
-
-.emotion-17 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-bottom: 8px;
 }
 
 <Typeahead
@@ -308,7 +181,7 @@ exports[`Typeahead renders 1`] = `
               data-cy="typeahead-dropdown"
             >
               <div
-                className="emotion-19"
+                className="css-1432z9w"
               >
                 <Popover
                   aria-labelledby="downshift-0-label"
@@ -365,681 +238,74 @@ exports[`Typeahead renders 1`] = `
             </div>
           }
           open={false}
-          preferredDirections={
-            Array [
-              "bottom-left",
-              "bottom-right",
-              "top-right",
-              "top-left",
-            ]
-          }
         >
-          <div
-            className="emotion-22"
-          >
-            <div>
-              <TextInput
-                appearance="standard"
-                aria-activedescendant={null}
-                aria-autocomplete="list"
-                aria-controls={null}
-                aria-labelledby="downshift-0-label"
-                autoComplete="off"
-                downshiftReset={[Function]}
-                id="standard.input"
-                inputLabel="Standard"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                placeholder="Placeholder"
-                showInputLabel={true}
-                type="text"
-                value=""
+          <div>
+            <TextInput
+              appearance="standard"
+              aria-activedescendant={null}
+              aria-autocomplete="list"
+              aria-controls={null}
+              aria-labelledby="downshift-0-label"
+              autoComplete="off"
+              downshiftReset={[Function]}
+              id="standard.input"
+              inputLabel="Standard"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Placeholder"
+              showInputLabel={true}
+              type="text"
+              value=""
+            >
+              <div
+                data-cy="textInput"
               >
-                <div
-                  data-cy="textInput"
+                <label
+                  className="emotion-0"
+                  data-cy="textInput-label"
+                  htmlFor="standard.input"
                 >
-                  <label
-                    className="emotion-0"
-                    data-cy="textInput-label"
-                    htmlFor="standard.input"
-                  >
-                    Standard
-                  </label>
-                  <FormFieldWrapper
-                    id="standard.input"
-                  >
-                    <div>
-                      <div
-                        className="emotion-2"
-                      >
-                        <input
-                          aria-activedescendant={null}
-                          aria-autocomplete="list"
-                          aria-controls={null}
-                          aria-describedby=""
-                          aria-invalid={false}
-                          aria-labelledby="downshift-0-label"
-                          autoComplete="off"
-                          className="emotion-1"
-                          data-cy="textInput-input"
-                          downshiftReset={[Function]}
-                          id="standard.input"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Placeholder"
-                          type="text"
-                          value=""
-                        />
-                      </div>
-                      <div
-                        data-cy="textInput-hintContent"
+                  Standard
+                </label>
+                <FormFieldWrapper
+                  id="standard.input"
+                >
+                  <div>
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        aria-activedescendant={null}
+                        aria-autocomplete="list"
+                        aria-controls={null}
+                        aria-describedby=""
+                        aria-invalid={false}
+                        aria-labelledby="downshift-0-label"
+                        autoComplete="off"
+                        className="emotion-1"
+                        data-cy="textInput-input"
+                        downshiftReset={[Function]}
+                        id="standard.input"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Placeholder"
+                        type="text"
+                        value=""
                       />
                     </div>
-                  </FormFieldWrapper>
-                </div>
-              </TextInput>
-            </div>
-            <Overlay
-              className="emotion-20"
-              overlayRoot={
-                .emotion-16 {
-  margin-top: 4px;
-}
-
-.emotion-17 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
-.emotion-15 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-  overflow-x: hidden;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-top: 8px;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-3 > div {
-  width: auto;
-}
-
-.emotion-3 > *:not(:first-child) {
-  padding-left: 8px;
-  padding-top: 0;
-}
-
-.emotion-0 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-}
-
-.emotion-9 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-}
-
-.emotion-14 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-bottom: 8px;
-}
-
-<body>
-                  <div>
                     <div
-                      class="emotion-17"
-                    >
-                      <div
-                        class=""
-                      >
-                        <div
-                          data-cy="typeahead-dropdown"
-                          direction="bottom-left"
-                        >
-                          <div
-                            class="emotion-16"
-                          >
-                            <div
-                              aria-labelledby="downshift-0-label"
-                              class="emotion-15"
-                              data-cy="popover"
-                              id="downshift-0-menu"
-                              role="listbox"
-                              style="max-height: 300px;"
-                            >
-                              <div
-                                aria-selected="false"
-                                class="emotion-4"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-0"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-3"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-1"
-                                    data-cy="flexItem"
-                                  >
-                                    Exosphere
-                                  </div>
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                aria-selected="false"
-                                class="emotion-9"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-1"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-3"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-1"
-                                    data-cy="flexItem"
-                                  >
-                                    Thermosphere
-                                  </div>
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                aria-selected="false"
-                                class="emotion-14"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-2"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-3"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-1"
-                                    data-cy="flexItem"
-                                  >
-                                    Stratosphere
-                                  </div>
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      data-cy="textInput-hintContent"
+                    />
                   </div>
-                </body>
-              }
-            >
-              <Portal
-                containerInfo={
-                  <div>
-                    <div
-                      class="emotion-20"
-                    >
-                      <div
-                        class=""
-                      >
-                        <div
-                          data-cy="typeahead-dropdown"
-                          direction="bottom-left"
-                        >
-                          <div
-                            class="emotion-19"
-                          >
-                            <div
-                              aria-labelledby="downshift-0-label"
-                              class="emotion-18"
-                              data-cy="popover"
-                              id="downshift-0-menu"
-                              role="listbox"
-                              style="max-height: 300px;"
-                            >
-                              <div
-                                aria-selected="false"
-                                class="emotion-7"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-0"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-6"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-4"
-                                    data-cy="flexItem"
-                                  >
-                                    Exosphere
-                                  </div>
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                aria-selected="false"
-                                class="emotion-12"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-1"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-6"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-4"
-                                    data-cy="flexItem"
-                                  >
-                                    Thermosphere
-                                  </div>
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                aria-selected="false"
-                                class="emotion-17"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-2"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-6"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-4"
-                                    data-cy="flexItem"
-                                  >
-                                    Stratosphere
-                                  </div>
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                }
-              >
-                <div
-                  className="emotion-20"
-                >
-                  <div
-                    className=""
-                  >
-                    <clickOutside(DropdownContents)
-                      open={false}
-                    >
-                      <DropdownContents
-                        open={false}
-                      >
-                        <div
-                          data-cy="typeahead-dropdown"
-                          direction="bottom-left"
-                        >
-                          <div
-                            className="emotion-19"
-                          >
-                            <Popover
-                              aria-labelledby="downshift-0-label"
-                              id="downshift-0-menu"
-                              maxHeight={300}
-                              menuRef={[Function]}
-                              role="listbox"
-                              width={null}
-                            >
-                              <div
-                                aria-labelledby="downshift-0-label"
-                                className="emotion-18"
-                                data-cy="popover"
-                                id="downshift-0-menu"
-                                role="listbox"
-                                style={
-                                  Object {
-                                    "maxHeight": 300,
-                                    "maxWidth": undefined,
-                                    "width": null,
-                                  }
-                                }
-                              >
-                                <PopoverListItem
-                                  aria-selected={false}
-                                  id="downshift-0-item-0"
-                                  index={0}
-                                  isActive={false}
-                                  isSelected={null}
-                                  key="Exosphere"
-                                  listLength={3}
-                                  onClick={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseMove={[Function]}
-                                  role="option"
-                                >
-                                  <div
-                                    aria-selected={false}
-                                    className="emotion-7"
-                                    data-cy="PopoverListItem"
-                                    id="downshift-0-item-0"
-                                    onClick={[Function]}
-                                    onMouseDown={[Function]}
-                                    onMouseMove={[Function]}
-                                    role="option"
-                                  >
-                                    <Flex
-                                      align="center"
-                                      direction="row"
-                                      gutterSize="xs"
-                                      justify="flex-start"
-                                      wrap="nowrap"
-                                    >
-                                      <div
-                                        className="emotion-6"
-                                        data-cy="flex"
-                                      >
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="grow"
-                                        >
-                                          <div
-                                            className="emotion-4"
-                                            data-cy="flexItem"
-                                          >
-                                            Exosphere
-                                          </div>
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                      </div>
-                                    </Flex>
-                                  </div>
-                                </PopoverListItem>
-                                <PopoverListItem
-                                  aria-selected={false}
-                                  id="downshift-0-item-1"
-                                  index={1}
-                                  isActive={false}
-                                  isSelected={null}
-                                  key="Thermosphere"
-                                  listLength={3}
-                                  onClick={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseMove={[Function]}
-                                  role="option"
-                                >
-                                  <div
-                                    aria-selected={false}
-                                    className="emotion-12"
-                                    data-cy="PopoverListItem"
-                                    id="downshift-0-item-1"
-                                    onClick={[Function]}
-                                    onMouseDown={[Function]}
-                                    onMouseMove={[Function]}
-                                    role="option"
-                                  >
-                                    <Flex
-                                      align="center"
-                                      direction="row"
-                                      gutterSize="xs"
-                                      justify="flex-start"
-                                      wrap="nowrap"
-                                    >
-                                      <div
-                                        className="emotion-6"
-                                        data-cy="flex"
-                                      >
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="grow"
-                                        >
-                                          <div
-                                            className="emotion-4"
-                                            data-cy="flexItem"
-                                          >
-                                            Thermosphere
-                                          </div>
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                      </div>
-                                    </Flex>
-                                  </div>
-                                </PopoverListItem>
-                                <PopoverListItem
-                                  aria-selected={false}
-                                  id="downshift-0-item-2"
-                                  index={2}
-                                  isActive={false}
-                                  isSelected={null}
-                                  key="Stratosphere"
-                                  listLength={3}
-                                  onClick={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseMove={[Function]}
-                                  role="option"
-                                >
-                                  <div
-                                    aria-selected={false}
-                                    className="emotion-17"
-                                    data-cy="PopoverListItem"
-                                    id="downshift-0-item-2"
-                                    onClick={[Function]}
-                                    onMouseDown={[Function]}
-                                    onMouseMove={[Function]}
-                                    role="option"
-                                  >
-                                    <Flex
-                                      align="center"
-                                      direction="row"
-                                      gutterSize="xs"
-                                      justify="flex-start"
-                                      wrap="nowrap"
-                                    >
-                                      <div
-                                        className="emotion-6"
-                                        data-cy="flex"
-                                      >
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="grow"
-                                        >
-                                          <div
-                                            className="emotion-4"
-                                            data-cy="flexItem"
-                                          >
-                                            Stratosphere
-                                          </div>
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                      </div>
-                                    </Flex>
-                                  </div>
-                                </PopoverListItem>
-                              </div>
-                            </Popover>
-                          </div>
-                        </div>
-                      </DropdownContents>
-                    </clickOutside(DropdownContents)>
-                  </div>
-                </div>
-              </Portal>
-            </Overlay>
+                </FormFieldWrapper>
+              </div>
+            </TextInput>
           </div>
         </Dropdownable>
       </div>
@@ -1049,10 +315,6 @@ exports[`Typeahead renders 1`] = `
 `;
 
 exports[`Typeahead renders a menu with a max height 1`] = `
-.emotion-22 {
-  position: relative;
-}
-
 .emotion-2 {
   -webkit-align-items: flex;
   -webkit-box-align: flex;
@@ -1079,21 +341,6 @@ exports[`Typeahead renders a menu with a max height 1`] = `
 
 .emotion-2 > div {
   width: auto;
-}
-
-.emotion-19 {
-  margin-top: 4px;
-}
-
-.emotion-20 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
 }
 
 .emotion-0 {
@@ -1186,114 +433,6 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
-.emotion-18 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-  overflow-x: hidden;
-}
-
-.emotion-7 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-top: 8px;
-}
-
-.emotion-6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-6 > div {
-  width: auto;
-}
-
-.emotion-6 > *:not(:first-child) {
-  padding-left: 8px;
-  padding-top: 0;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-}
-
-.emotion-12 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-}
-
-.emotion-17 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-bottom: 8px;
-}
-
 <Typeahead
   items={
     Array [
@@ -1356,7 +495,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
               data-cy="typeahead-dropdown"
             >
               <div
-                className="emotion-19"
+                className="css-1432z9w"
               >
                 <Popover
                   aria-labelledby="downshift-1-label"
@@ -1413,790 +552,74 @@ exports[`Typeahead renders a menu with a max height 1`] = `
             </div>
           }
           open={false}
-          preferredDirections={
-            Array [
-              "bottom-left",
-              "bottom-right",
-              "top-right",
-              "top-left",
-            ]
-          }
         >
-          <div
-            className="emotion-22"
-          >
-            <div>
-              <TextInput
-                appearance="standard"
-                aria-activedescendant={null}
-                aria-autocomplete="list"
-                aria-controls={null}
-                aria-labelledby="downshift-1-label"
-                autoComplete="off"
-                downshiftReset={[Function]}
-                id="standard.input"
-                inputLabel="Standard"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                placeholder="Placeholder"
-                showInputLabel={true}
-                type="text"
-                value=""
+          <div>
+            <TextInput
+              appearance="standard"
+              aria-activedescendant={null}
+              aria-autocomplete="list"
+              aria-controls={null}
+              aria-labelledby="downshift-1-label"
+              autoComplete="off"
+              downshiftReset={[Function]}
+              id="standard.input"
+              inputLabel="Standard"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Placeholder"
+              showInputLabel={true}
+              type="text"
+              value=""
+            >
+              <div
+                data-cy="textInput"
               >
-                <div
-                  data-cy="textInput"
+                <label
+                  className="emotion-0"
+                  data-cy="textInput-label"
+                  htmlFor="standard.input"
                 >
-                  <label
-                    className="emotion-0"
-                    data-cy="textInput-label"
-                    htmlFor="standard.input"
-                  >
-                    Standard
-                  </label>
-                  <FormFieldWrapper
-                    id="standard.input"
-                  >
-                    <div>
-                      <div
-                        className="emotion-2"
-                      >
-                        <input
-                          aria-activedescendant={null}
-                          aria-autocomplete="list"
-                          aria-controls={null}
-                          aria-describedby=""
-                          aria-invalid={false}
-                          aria-labelledby="downshift-1-label"
-                          autoComplete="off"
-                          className="emotion-1"
-                          data-cy="textInput-input"
-                          downshiftReset={[Function]}
-                          id="standard.input"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Placeholder"
-                          type="text"
-                          value=""
-                        />
-                      </div>
-                      <div
-                        data-cy="textInput-hintContent"
+                  Standard
+                </label>
+                <FormFieldWrapper
+                  id="standard.input"
+                >
+                  <div>
+                    <div
+                      className="emotion-2"
+                    >
+                      <input
+                        aria-activedescendant={null}
+                        aria-autocomplete="list"
+                        aria-controls={null}
+                        aria-describedby=""
+                        aria-invalid={false}
+                        aria-labelledby="downshift-1-label"
+                        autoComplete="off"
+                        className="emotion-1"
+                        data-cy="textInput-input"
+                        downshiftReset={[Function]}
+                        id="standard.input"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Placeholder"
+                        type="text"
+                        value=""
                       />
                     </div>
-                  </FormFieldWrapper>
-                </div>
-              </TextInput>
-            </div>
-            <Overlay
-              className="emotion-20"
-              overlayRoot={
-                <body>
-                  <div>
                     <div
-                      class="emotion-20"
-                    >
-                      <div
-                        class=""
-                      >
-                        <div
-                          data-cy="typeahead-dropdown"
-                          direction="bottom-left"
-                        >
-                          <div
-                            class="emotion-19"
-                          >
-                            <div
-                              aria-labelledby="downshift-0-label"
-                              class="emotion-18"
-                              data-cy="popover"
-                              id="downshift-0-menu"
-                              role="listbox"
-                              style="max-height: 300px;"
-                            >
-                              <div
-                                aria-selected="false"
-                                class="emotion-7"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-0"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-6"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-4"
-                                    data-cy="flexItem"
-                                  >
-                                    Exosphere
-                                  </div>
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                aria-selected="false"
-                                class="emotion-12"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-1"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-6"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-4"
-                                    data-cy="flexItem"
-                                  >
-                                    Thermosphere
-                                  </div>
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                aria-selected="false"
-                                class="emotion-17"
-                                data-cy="PopoverListItem"
-                                id="downshift-0-item-2"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-6"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-4"
-                                    data-cy="flexItem"
-                                  >
-                                    Stratosphere
-                                  </div>
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      data-cy="textInput-hintContent"
+                    />
                   </div>
-                  .emotion-16 {
-  margin-top: 4px;
-}
-
-.emotion-17 {
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  z-index: 2;
-  top: 0px;
-  left: 0px;
-}
-
-.emotion-15 {
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border-width: 1px;
-  border-color: var(--themeBorder,#DADDE2);
-  border-style: solid;
-  overflow-x: hidden;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-top: 8px;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-3 > div {
-  width: auto;
-}
-
-.emotion-3 > *:not(:first-child) {
-  padding-left: 8px;
-  padding-top: 0;
-}
-
-.emotion-0 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-}
-
-.emotion-9 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-}
-
-.emotion-14 {
-  box-sizing: border-box;
-  cursor: pointer;
-  min-width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: table;
-  margin-bottom: 8px;
-}
-
-<div>
-                    <div
-                      class="emotion-17"
-                    >
-                      <div
-                        class=""
-                      >
-                        <div
-                          data-cy="typeahead-dropdown"
-                          direction="bottom-left"
-                        >
-                          <div
-                            class="emotion-16"
-                          >
-                            <div
-                              aria-labelledby="downshift-1-label"
-                              class="emotion-15"
-                              data-cy="popover"
-                              id="downshift-1-menu"
-                              role="listbox"
-                              style="max-height: 100px;"
-                            >
-                              <div
-                                aria-selected="false"
-                                class="emotion-4"
-                                data-cy="PopoverListItem"
-                                id="downshift-1-item-0"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-3"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-1"
-                                    data-cy="flexItem"
-                                  >
-                                    Exosphere
-                                  </div>
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                aria-selected="false"
-                                class="emotion-9"
-                                data-cy="PopoverListItem"
-                                id="downshift-1-item-1"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-3"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-1"
-                                    data-cy="flexItem"
-                                  >
-                                    Thermosphere
-                                  </div>
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                aria-selected="false"
-                                class="emotion-14"
-                                data-cy="PopoverListItem"
-                                id="downshift-1-item-2"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-3"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-1"
-                                    data-cy="flexItem"
-                                  >
-                                    Stratosphere
-                                  </div>
-                                  <div
-                                    class="emotion-0"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </body>
-              }
-            >
-              <Portal
-                containerInfo={
-                  <div>
-                    <div
-                      class="emotion-20"
-                    >
-                      <div
-                        class=""
-                      >
-                        <div
-                          data-cy="typeahead-dropdown"
-                          direction="bottom-left"
-                        >
-                          <div
-                            class="emotion-19"
-                          >
-                            <div
-                              aria-labelledby="downshift-1-label"
-                              class="emotion-18"
-                              data-cy="popover"
-                              id="downshift-1-menu"
-                              role="listbox"
-                              style="max-height: 100px;"
-                            >
-                              <div
-                                aria-selected="false"
-                                class="emotion-7"
-                                data-cy="PopoverListItem"
-                                id="downshift-1-item-0"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-6"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-4"
-                                    data-cy="flexItem"
-                                  >
-                                    Exosphere
-                                  </div>
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                aria-selected="false"
-                                class="emotion-12"
-                                data-cy="PopoverListItem"
-                                id="downshift-1-item-1"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-6"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-4"
-                                    data-cy="flexItem"
-                                  >
-                                    Thermosphere
-                                  </div>
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                aria-selected="false"
-                                class="emotion-17"
-                                data-cy="PopoverListItem"
-                                id="downshift-1-item-2"
-                                role="option"
-                              >
-                                <div
-                                  class="emotion-6"
-                                  data-cy="flex"
-                                >
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                  <div
-                                    class="emotion-4"
-                                    data-cy="flexItem"
-                                  >
-                                    Stratosphere
-                                  </div>
-                                  <div
-                                    class="emotion-3"
-                                    data-cy="flexItem"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                }
-              >
-                <div
-                  className="emotion-20"
-                >
-                  <div
-                    className=""
-                  >
-                    <clickOutside(DropdownContents)
-                      open={false}
-                    >
-                      <DropdownContents
-                        open={false}
-                      >
-                        <div
-                          data-cy="typeahead-dropdown"
-                          direction="bottom-left"
-                        >
-                          <div
-                            className="emotion-19"
-                          >
-                            <Popover
-                              aria-labelledby="downshift-1-label"
-                              id="downshift-1-menu"
-                              maxHeight={100}
-                              menuRef={[Function]}
-                              role="listbox"
-                              width={null}
-                            >
-                              <div
-                                aria-labelledby="downshift-1-label"
-                                className="emotion-18"
-                                data-cy="popover"
-                                id="downshift-1-menu"
-                                role="listbox"
-                                style={
-                                  Object {
-                                    "maxHeight": 100,
-                                    "maxWidth": undefined,
-                                    "width": null,
-                                  }
-                                }
-                              >
-                                <PopoverListItem
-                                  aria-selected={false}
-                                  id="downshift-1-item-0"
-                                  index={0}
-                                  isActive={false}
-                                  isSelected={null}
-                                  key="Exosphere"
-                                  listLength={3}
-                                  onClick={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseMove={[Function]}
-                                  role="option"
-                                >
-                                  <div
-                                    aria-selected={false}
-                                    className="emotion-7"
-                                    data-cy="PopoverListItem"
-                                    id="downshift-1-item-0"
-                                    onClick={[Function]}
-                                    onMouseDown={[Function]}
-                                    onMouseMove={[Function]}
-                                    role="option"
-                                  >
-                                    <Flex
-                                      align="center"
-                                      direction="row"
-                                      gutterSize="xs"
-                                      justify="flex-start"
-                                      wrap="nowrap"
-                                    >
-                                      <div
-                                        className="emotion-6"
-                                        data-cy="flex"
-                                      >
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="grow"
-                                        >
-                                          <div
-                                            className="emotion-4"
-                                            data-cy="flexItem"
-                                          >
-                                            Exosphere
-                                          </div>
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                      </div>
-                                    </Flex>
-                                  </div>
-                                </PopoverListItem>
-                                <PopoverListItem
-                                  aria-selected={false}
-                                  id="downshift-1-item-1"
-                                  index={1}
-                                  isActive={false}
-                                  isSelected={null}
-                                  key="Thermosphere"
-                                  listLength={3}
-                                  onClick={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseMove={[Function]}
-                                  role="option"
-                                >
-                                  <div
-                                    aria-selected={false}
-                                    className="emotion-12"
-                                    data-cy="PopoverListItem"
-                                    id="downshift-1-item-1"
-                                    onClick={[Function]}
-                                    onMouseDown={[Function]}
-                                    onMouseMove={[Function]}
-                                    role="option"
-                                  >
-                                    <Flex
-                                      align="center"
-                                      direction="row"
-                                      gutterSize="xs"
-                                      justify="flex-start"
-                                      wrap="nowrap"
-                                    >
-                                      <div
-                                        className="emotion-6"
-                                        data-cy="flex"
-                                      >
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="grow"
-                                        >
-                                          <div
-                                            className="emotion-4"
-                                            data-cy="flexItem"
-                                          >
-                                            Thermosphere
-                                          </div>
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                      </div>
-                                    </Flex>
-                                  </div>
-                                </PopoverListItem>
-                                <PopoverListItem
-                                  aria-selected={false}
-                                  id="downshift-1-item-2"
-                                  index={2}
-                                  isActive={false}
-                                  isSelected={null}
-                                  key="Stratosphere"
-                                  listLength={3}
-                                  onClick={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseMove={[Function]}
-                                  role="option"
-                                >
-                                  <div
-                                    aria-selected={false}
-                                    className="emotion-17"
-                                    data-cy="PopoverListItem"
-                                    id="downshift-1-item-2"
-                                    onClick={[Function]}
-                                    onMouseDown={[Function]}
-                                    onMouseMove={[Function]}
-                                    role="option"
-                                  >
-                                    <Flex
-                                      align="center"
-                                      direction="row"
-                                      gutterSize="xs"
-                                      justify="flex-start"
-                                      wrap="nowrap"
-                                    >
-                                      <div
-                                        className="emotion-6"
-                                        data-cy="flex"
-                                      >
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="grow"
-                                        >
-                                          <div
-                                            className="emotion-4"
-                                            data-cy="flexItem"
-                                          >
-                                            Stratosphere
-                                          </div>
-                                        </FlexItem>
-                                        <FlexItem
-                                          flex="shrink"
-                                        >
-                                          <div
-                                            className="emotion-3"
-                                            data-cy="flexItem"
-                                          />
-                                        </FlexItem>
-                                      </div>
-                                    </Flex>
-                                  </div>
-                                </PopoverListItem>
-                              </div>
-                            </Popover>
-                          </div>
-                        </div>
-                      </DropdownContents>
-                    </clickOutside(DropdownContents)>
-                  </div>
-                </div>
-              </Portal>
-            </Overlay>
+                </FormFieldWrapper>
+              </div>
+            </TextInput>
           </div>
         </Dropdownable>
       </div>

@@ -1,13 +1,15 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import ReactDOM from "react-dom";
 
 interface OverlayProps {
+  innerRef?: React.Ref<HTMLDivElement>;
   overlayRoot?: HTMLElement;
-  className?: string;
 }
 
-class Overlay extends React.Component<OverlayProps> {
-  public static defaultProps: Partial<OverlayProps> = {
+type AllOverlayProps = OverlayProps & HTMLAttributes<HTMLDivElement>;
+
+class Overlay extends React.Component<AllOverlayProps> {
+  public static defaultProps: Partial<AllOverlayProps> = {
     overlayRoot: document.body
   };
 
@@ -31,9 +33,13 @@ class Overlay extends React.Component<OverlayProps> {
   }
 
   getContents() {
-    const { className, children } = this.props;
+    const { children, overlayRoot, innerRef, ...other } = this.props;
 
-    return <div className={className}>{children}</div>;
+    return (
+      <div ref={innerRef} {...other}>
+        {children}
+      </div>
+    );
   }
 
   render() {
@@ -41,4 +47,6 @@ class Overlay extends React.Component<OverlayProps> {
   }
 }
 
-export default Overlay;
+export default React.forwardRef<HTMLDivElement, AllOverlayProps>(
+  (props, ref) => <Overlay innerRef={ref} {...props} />
+);

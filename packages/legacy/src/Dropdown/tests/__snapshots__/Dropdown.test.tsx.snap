@@ -82,333 +82,336 @@ exports[`Dropdown renders an open menu 1`] = `
         Bar
       </button>
     </DropdownListTrigger>
-    <Overlay
-      overlayRoot={
-        <body>
-          <div>
+    <ForwardRef>
+      <Overlay
+        innerRef={null}
+        overlayRoot={
+          <body>
             <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  <ul
-                    class="dropdown-menu-items"
+                  <div
+                    class="dropdown-menu-list"
                   >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
+                    <ul
+                      class="dropdown-menu-items"
                     >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  <ul
-                    class="dropdown-menu-items"
+                  <div
+                    class="dropdown-menu-list"
                   >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
+                    <ul
+                      class="dropdown-menu-items"
                     >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <div />
+              <div>
+                <div />
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  <ul
-                    class="dropdown-menu-items"
+                  <div
+                    class="dropdown-menu-list"
                   >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
+                    <ul
+                      class="dropdown-menu-items"
                     >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
-        </body>
-      }
-    >
-      <Portal
-        containerInfo={
-          <div>
-            <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
-                >
-                  <ul
-                    class="dropdown-menu-items"
-                  >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
-            </div>
-          </div>
+          </body>
         }
       >
-        <div>
-          <span
-            className="down dropdown-menu"
-            key="dropdown-menu-key"
-            role="menu"
-            style={
-              Object {
-                "bottom": "auto",
-                "left": 0,
-                "right": "auto",
-                "top": 0,
-              }
-            }
-          >
-            <div
-              className="dropdown-menu-list"
-            >
-              <ul
-                className="dropdown-menu-items"
-              >
-                <li
-                  className="dropdown-menu-header"
-                  key="foo"
-                  onClick={null}
-                  role="button"
+        <Portal
+          containerInfo={
+            <div>
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  Foo
-                </li>
-                <li
-                  className="is-selectable is-selected"
-                  key="bar"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  Bar
-                </li>
-                <li
-                  className="is-selectable"
-                  key="baz"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  Baz
-                </li>
-                <li
-                  className="is-selectable"
-                  key="quz"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  Quz
-                </li>
-                <li
-                  className="dropdown-menu-divider"
-                  key="divider-a"
-                  onClick={null}
-                  role="button"
-                />
-                <li
-                  className="dropdown-menu-header"
-                  key="corge"
-                  onClick={null}
-                  role="button"
-                >
-                  Corge
-                </li>
-                <li
-                  className="is-selectable"
-                  key="grault"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  Grault
-                </li>
-              </ul>
+                  <div
+                    class="dropdown-menu-list"
+                  >
+                    <ul
+                      class="dropdown-menu-items"
+                    >
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </span>
-        </div>
-      </Portal>
-    </Overlay>
+          }
+        >
+          <div>
+            <span
+              className="down dropdown-menu"
+              key="dropdown-menu-key"
+              role="menu"
+              style={
+                Object {
+                  "bottom": "auto",
+                  "left": 0,
+                  "right": "auto",
+                  "top": 0,
+                }
+              }
+            >
+              <div
+                className="dropdown-menu-list"
+              >
+                <ul
+                  className="dropdown-menu-items"
+                >
+                  <li
+                    className="dropdown-menu-header"
+                    key="foo"
+                    onClick={null}
+                    role="button"
+                  >
+                    Foo
+                  </li>
+                  <li
+                    className="is-selectable is-selected"
+                    key="bar"
+                    onClick={[Function]}
+                    role="button"
+                  >
+                    Bar
+                  </li>
+                  <li
+                    className="is-selectable"
+                    key="baz"
+                    onClick={[Function]}
+                    role="button"
+                  >
+                    Baz
+                  </li>
+                  <li
+                    className="is-selectable"
+                    key="quz"
+                    onClick={[Function]}
+                    role="button"
+                  >
+                    Quz
+                  </li>
+                  <li
+                    className="dropdown-menu-divider"
+                    key="divider-a"
+                    onClick={null}
+                    role="button"
+                  />
+                  <li
+                    className="dropdown-menu-header"
+                    key="corge"
+                    onClick={null}
+                    role="button"
+                  >
+                    Corge
+                  </li>
+                  <li
+                    className="is-selectable"
+                    key="grault"
+                    onClick={[Function]}
+                    role="button"
+                  >
+                    Grault
+                  </li>
+                </ul>
+              </div>
+            </span>
+          </div>
+        </Portal>
+      </Overlay>
+    </ForwardRef>
   </span>
 </Dropdown>
 `;
@@ -498,217 +501,220 @@ exports[`Dropdown renders disabled 1`] = `
         Bar
       </button>
     </DropdownListTrigger>
-    <Overlay
-      overlayRoot={
-        <body>
-          <div>
+    <ForwardRef>
+      <Overlay
+        innerRef={null}
+        overlayRoot={
+          <body>
             <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  <ul
-                    class="dropdown-menu-items"
+                  <div
+                    class="dropdown-menu-list"
                   >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
+                    <ul
+                      class="dropdown-menu-items"
                     >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  <ul
-                    class="dropdown-menu-items"
+                  <div
+                    class="dropdown-menu-list"
                   >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
+                    <ul
+                      class="dropdown-menu-items"
                     >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <div />
+              <div>
+                <div />
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  <ul
-                    class="dropdown-menu-items"
+                  <div
+                    class="dropdown-menu-list"
                   >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
+                    <ul
+                      class="dropdown-menu-items"
                     >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <div />
+              <div>
+                <div />
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <div />
+              <div>
+                <div />
+              </div>
             </div>
-          </div>
-        </body>
-      }
-    >
-      <Portal
-        containerInfo={
-          <div>
-            <div>
-              <div />
-            </div>
-          </div>
+          </body>
         }
       >
-        <div>
-          <div
-            key="placeholder-element"
-          />
-        </div>
-      </Portal>
-    </Overlay>
+        <Portal
+          containerInfo={
+            <div>
+              <div>
+                <div />
+              </div>
+            </div>
+          }
+        >
+          <div>
+            <div
+              key="placeholder-element"
+            />
+          </div>
+        </Portal>
+      </Overlay>
+    </ForwardRef>
   </span>
 </Dropdown>
 `;
@@ -796,212 +802,215 @@ exports[`Dropdown renders trigger button with a persistentId 1`] = `
         Quz
       </button>
     </DropdownListTrigger>
-    <Overlay
-      overlayRoot={
-        <body>
-          <div>
+    <ForwardRef>
+      <Overlay
+        innerRef={null}
+        overlayRoot={
+          <body>
             <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  <ul
-                    class="dropdown-menu-items"
+                  <div
+                    class="dropdown-menu-list"
                   >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
+                    <ul
+                      class="dropdown-menu-items"
                     >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  <ul
-                    class="dropdown-menu-items"
+                  <div
+                    class="dropdown-menu-list"
                   >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
+                    <ul
+                      class="dropdown-menu-items"
                     >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <div />
+              <div>
+                <div />
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  <ul
-                    class="dropdown-menu-items"
+                  <div
+                    class="dropdown-menu-list"
                   >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
+                    <ul
+                      class="dropdown-menu-items"
                     >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <div />
+              <div>
+                <div />
+              </div>
             </div>
-          </div>
-        </body>
-      }
-    >
-      <Portal
-        containerInfo={
-          <div>
-            <div>
-              <div />
-            </div>
-          </div>
+          </body>
         }
       >
-        <div>
-          <div
-            key="placeholder-element"
-          />
-        </div>
-      </Portal>
-    </Overlay>
+        <Portal
+          containerInfo={
+            <div>
+              <div>
+                <div />
+              </div>
+            </div>
+          }
+        >
+          <div>
+            <div
+              key="placeholder-element"
+            />
+          </div>
+        </Portal>
+      </Overlay>
+    </ForwardRef>
   </span>
 </Dropdown>
 `;
@@ -1088,212 +1097,215 @@ exports[`Dropdown should display a dropdown menu when the button is clicked 1`] 
         Bar
       </button>
     </DropdownListTrigger>
-    <Overlay
-      overlayRoot={
-        <body>
-          <div>
+    <ForwardRef>
+      <Overlay
+        innerRef={null}
+        overlayRoot={
+          <body>
             <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  <ul
-                    class="dropdown-menu-items"
+                  <div
+                    class="dropdown-menu-list"
                   >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
+                    <ul
+                      class="dropdown-menu-items"
                     >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
-        </body>
-      }
-    >
-      <Portal
-        containerInfo={
-          <div>
-            <div>
-              <span
-                class="down dropdown-menu"
-                role="menu"
-                style="top: 0px; left: 0px;"
-              >
-                <div
-                  class="dropdown-menu-list"
-                >
-                  <ul
-                    class="dropdown-menu-items"
-                  >
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Foo
-                    </li>
-                    <li
-                      class="is-selectable is-selected"
-                      role="button"
-                    >
-                      Bar
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Baz
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Quz
-                    </li>
-                    <li
-                      class="dropdown-menu-divider"
-                      role="button"
-                    />
-                    <li
-                      class="dropdown-menu-header"
-                      role="button"
-                    >
-                      Corge
-                    </li>
-                    <li
-                      class="is-selectable"
-                      role="button"
-                    >
-                      Grault
-                    </li>
-                  </ul>
-                </div>
-              </span>
-            </div>
-          </div>
+          </body>
         }
       >
-        <div>
-          <span
-            className="down dropdown-menu"
-            key="dropdown-menu-key"
-            role="menu"
-            style={
-              Object {
-                "bottom": "auto",
-                "left": 0,
-                "right": "auto",
-                "top": 0,
-              }
-            }
-          >
-            <div
-              className="dropdown-menu-list"
-            >
-              <ul
-                className="dropdown-menu-items"
-              >
-                <li
-                  className="dropdown-menu-header"
-                  key="foo"
-                  onClick={null}
-                  role="button"
+        <Portal
+          containerInfo={
+            <div>
+              <div>
+                <span
+                  class="down dropdown-menu"
+                  role="menu"
+                  style="top: 0px; left: 0px;"
                 >
-                  Foo
-                </li>
-                <li
-                  className="is-selectable is-selected"
-                  key="bar"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  Bar
-                </li>
-                <li
-                  className="is-selectable"
-                  key="baz"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  Baz
-                </li>
-                <li
-                  className="is-selectable"
-                  key="quz"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  Quz
-                </li>
-                <li
-                  className="dropdown-menu-divider"
-                  key="divider-a"
-                  onClick={null}
-                  role="button"
-                />
-                <li
-                  className="dropdown-menu-header"
-                  key="corge"
-                  onClick={null}
-                  role="button"
-                >
-                  Corge
-                </li>
-                <li
-                  className="is-selectable"
-                  key="grault"
-                  onClick={[Function]}
-                  role="button"
-                >
-                  Grault
-                </li>
-              </ul>
+                  <div
+                    class="dropdown-menu-list"
+                  >
+                    <ul
+                      class="dropdown-menu-items"
+                    >
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Foo
+                      </li>
+                      <li
+                        class="is-selectable is-selected"
+                        role="button"
+                      >
+                        Bar
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Baz
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Quz
+                      </li>
+                      <li
+                        class="dropdown-menu-divider"
+                        role="button"
+                      />
+                      <li
+                        class="dropdown-menu-header"
+                        role="button"
+                      >
+                        Corge
+                      </li>
+                      <li
+                        class="is-selectable"
+                        role="button"
+                      >
+                        Grault
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
             </div>
-          </span>
-        </div>
-      </Portal>
-    </Overlay>
+          }
+        >
+          <div>
+            <span
+              className="down dropdown-menu"
+              key="dropdown-menu-key"
+              role="menu"
+              style={
+                Object {
+                  "bottom": "auto",
+                  "left": 0,
+                  "right": "auto",
+                  "top": 0,
+                }
+              }
+            >
+              <div
+                className="dropdown-menu-list"
+              >
+                <ul
+                  className="dropdown-menu-items"
+                >
+                  <li
+                    className="dropdown-menu-header"
+                    key="foo"
+                    onClick={null}
+                    role="button"
+                  >
+                    Foo
+                  </li>
+                  <li
+                    className="is-selectable is-selected"
+                    key="bar"
+                    onClick={[Function]}
+                    role="button"
+                  >
+                    Bar
+                  </li>
+                  <li
+                    className="is-selectable"
+                    key="baz"
+                    onClick={[Function]}
+                    role="button"
+                  >
+                    Baz
+                  </li>
+                  <li
+                    className="is-selectable"
+                    key="quz"
+                    onClick={[Function]}
+                    role="button"
+                  >
+                    Quz
+                  </li>
+                  <li
+                    className="dropdown-menu-divider"
+                    key="divider-a"
+                    onClick={null}
+                    role="button"
+                  />
+                  <li
+                    className="dropdown-menu-header"
+                    key="corge"
+                    onClick={null}
+                    role="button"
+                  >
+                    Corge
+                  </li>
+                  <li
+                    className="is-selectable"
+                    key="grault"
+                    onClick={[Function]}
+                    role="button"
+                  >
+                    Grault
+                  </li>
+                </ul>
+              </div>
+            </span>
+          </div>
+        </Portal>
+      </Overlay>
+    </ForwardRef>
   </span>
 </Dropdown>
 `;

@@ -142,7 +142,12 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
               <PopoverBox
                 maxHeight={menuMaxHeight}
                 maxWidth={menuMaxWidth}
-                {...getMenuProps({ refKey: "menuRef" })}
+                {...getMenuProps(
+                  { refKey: "menuRef" },
+                  // The menu is not mounted when `isOpen` is false, so Downshift's ref check fails incorrectly
+                  // The menu behaves as expected, and has all the correct attributes
+                  { suppressRefError: true }
+                )}
               >
                 {getDropdownContents(
                   highlightedIndex,
