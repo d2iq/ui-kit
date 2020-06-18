@@ -26,6 +26,8 @@ Each page will likely have one primary button. Any remaining calls-to-action are
 
 **Processing**: When user clicks or taps a button and an API request is initiated we should provide feedback so they know their action was received.
 
+**Hidden:** Hide a button when there is no way a user can interact with the button.
+
 ## Using buttons as links
 
 Sometimes there is a button that is actually a link to somewhere else. If the appropriate props are set, the button is rendered as an anchor tag, but it is styled like a button.
