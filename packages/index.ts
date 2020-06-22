@@ -96,7 +96,13 @@ export {
   NumberCell
 } from "./table_deprecated";
 export { TableView, TableViewHeader, TableViewBody } from "./tableView";
-export { Table, DropdownMenuCell, EmptyCell, Sorter } from "./tablev2";
+export {
+  Table,
+  DropdownMenuCell,
+  EmptyCell,
+  Sorter,
+  TooltipHeaderCell
+} from "./tablev2";
 export { TabItem, TabTitle, Tabs } from "./tabs";
 export {
   TextInput,
