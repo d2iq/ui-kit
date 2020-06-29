@@ -44,24 +44,6 @@ const getMarkdownTable = properties =>
     }))
   );
 
-const colorsForStyleguide = {
-  name: "javascript/colorsForStyleguide",
-  formatter: dictionary =>
-    `/**
-    ${dateHeader}
-    */
-    export const coreColors = () => (
-      ${JSON.stringify(
-        dictionary.allProperties.reduce((acc, curr) => {
-          acc[curr.name] = curr.value;
-          return acc;
-        }, {}),
-        null,
-        3
-      )}
-    );`
-};
-
 const commonJS = {
   name: "typescript/es6",
   formatter: dictionary =>
@@ -126,10 +108,4 @@ const markdownColor = {
   }
 };
 
-module.exports = [
-  colorsForStyleguide,
-  commonJS,
-  markdown,
-  markdownLayout,
-  markdownColor
-];
+module.exports = [commonJS, markdown, markdownLayout, markdownColor];
