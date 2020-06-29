@@ -2,12 +2,16 @@
   "source": ["./packages/design-tokens/properties/**/*.json"],
   "platforms": {
     "colorDocs": {
-      "transforms": ["attribute/cti", "name/cti/jsConstant"],
+      "transforms": [
+        "attribute/cti",
+        "name/cti/jsConstant",
+        "attribute/cti/JS_originalFromAlias"
+      ],
       "buildPath": "design-guidelines/design-tokens/",
       "files": [
         {
           "destination": "color.md",
-          "format": "markdown",
+          "format": "markdownColor",
           "filter": {
             "attributes": {
               "category": "color"

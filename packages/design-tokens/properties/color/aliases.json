@@ -1,6 +1,6 @@
 {
   "color": {
-    "base": {
+    "aliases": {
       "accent": {
         "base": {
           "value": "{color.base.purple.base.value}",

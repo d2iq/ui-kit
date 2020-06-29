@@ -24,17 +24,25 @@ const getSwatch = prop => {
   return {};
 };
 
-const getMarkdownTable = properties => {
-  return tablemark(
-    properties
-      .filter(prop => !prop.isAlias)
-      .map(prop => ({
-        ...getSwatch(prop),
-        "JS Variable Name": prop.name,
-        Value: prop.value
-      }))
-  );
+const getAliasOriginal = prop => {
+  if (prop.attributes.originalFromAlias) {
+    return {
+      "Alias for": prop.attributes.originalFromAlias
+    };
+  }
+
+  return {};
 };
+
+const getMarkdownTable = properties =>
+  tablemark(
+    properties.map(prop => ({
+      ...getSwatch(prop),
+      "JS Variable Name": prop.name,
+      Value: prop.value,
+      ...getAliasOriginal(prop)
+    }))
+  );
 
 const colorsForStyleguide = {
   name: "javascript/colorsForStyleguide",
@@ -68,6 +76,29 @@ const markdown = {
     `<!--\n${dateHeader}\n-->\n${getMarkdownTable(dictionary.allProperties)}`
 };
 
+const getMarkdownTablesByType = (dictionary, typeDisplayNameMap) => {
+  const unMappedTypes = dictionary.allProperties.filter(
+    prop => !Object.keys(typeDisplayNameMap).includes(prop.attributes.type)
+  );
+
+  const layoutTokensByType = {
+    ...Object.keys(typeDisplayNameMap).reduce((acc, type) => {
+      const typeDisplayName = typeDisplayNameMap[type];
+
+      acc[typeDisplayName] = dictionary.allProperties.filter(
+        prop => prop.attributes.type === type
+      );
+
+      return acc;
+    }, {}),
+    ...(unMappedTypes.length ? { Other: unMappedTypes } : {})
+  };
+
+  return `<!--\n${dateHeader}\n-->\n${Object.keys(layoutTokensByType)
+    .map(type => `## ${type}\n\n${getMarkdownTable(layoutTokensByType[type])}`)
+    .join("\n---\n\n")}`;
+};
+
 const markdownLayout = {
   name: "markdownLayout",
   formatter: dictionary => {
@@ -78,26 +109,27 @@ const markdownLayout = {
       space: "Spacing"
     };
 
-    const layoutTokensByType = {
-      ...Object.keys(typeDisplayNameMap).reduce((acc, type) => {
-        const typeDisplayName = typeDisplayNameMap[type];
-
-        acc[typeDisplayName] = dictionary.allProperties.filter(
-          prop => prop.attributes.type === type
-        );
-
-        return acc;
-      }, {}),
-      Other: dictionary.allProperties.filter(
-        prop => !Object.keys(typeDisplayNameMap).includes(prop.attributes.type)
-      )
-    };
-    return `<!--\n${dateHeader}\n-->\n${Object.keys(layoutTokensByType)
-      .map(
-        type => `## ${type}\n\n${getMarkdownTable(layoutTokensByType[type])}`
-      )
-      .join("\n---\n\n")}`;
+    return getMarkdownTablesByType(dictionary, typeDisplayNameMap);
   }
 };
 
-module.exports = [colorsForStyleguide, commonJS, markdown, markdownLayout];
+const markdownColor = {
+  name: "markdownColor",
+  formatter: dictionary => {
+    const typeDisplayNameMap = {
+      base: "All Colors",
+      text: "Text",
+      border: "Borders",
+      aliases: "Other Aliases"
+    };
+    return getMarkdownTablesByType(dictionary, typeDisplayNameMap);
+  }
+};
+
+module.exports = [
+  colorsForStyleguide,
+  commonJS,
+  markdown,
+  markdownLayout,
+  markdownColor
+];
