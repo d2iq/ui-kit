@@ -2,32 +2,12 @@
   "source": ["./packages/design-tokens/properties/**/*.json"],
   "platforms": {
     "js": {
-      "transforms": [
-        "attribute/cti",
-        "name/cti/jsConstant",
-        "value/cssVarJS"
-      ],
+      "transforms": ["attribute/cti", "name/cti/jsConstant", "value/cssVarJS"],
       "buildPath": "packages/design-tokens/build/js/",
       "files": [
         {
           "format": "typescript/es6",
           "destination": "designTokens.ts"
-        }
-      ]
-    },
-    "colorsForStyleguide": {
-      "transforms": ["attribute/cti", "name/cti/jsConstant"],
-      "buildPath": "packages/design-tokens/build/js/",
-      "files": [
-        {
-          "format": "javascript/colorsForStyleguide",
-          "destination": "colorsForStyleguide.js",
-          "filter": {
-            "attributes": {
-              "category": "color",
-              "type": "base"
-            }
-          }
         }
       ]
     }

@@ -33,7 +33,9 @@ const getFormattedName = (prop, namePatterns) => {
 
   switch (category) {
     case "color":
-      return type !== "base" ? namePatterns.t_c_i_si : namePatterns.i_si_s;
+      return type !== "base" && type !== "aliases"
+        ? namePatterns.t_c_i_si
+        : namePatterns.i_si_s;
     case "layout":
       return namePatterns.t_i;
     case "font":
@@ -80,4 +82,23 @@ const lessVar = {
     )
 };
 
-module.exports = [jsConstant, lessVar, cssVarJS];
+const JS_originalFromAlias = {
+  name: "attribute/cti/JS_originalFromAlias",
+  type: "attribute",
+  matcher: prop => prop.isAlias,
+  transformer: prop => {
+    const propAttributes = prop.value.replace(/[{}]/g, "").split(".");
+    const originalProp = {
+      attributes: {
+        category: propAttributes[0],
+        type: propAttributes[1],
+        item: propAttributes[2],
+        subitem: propAttributes[3],
+        state: propAttributes[4] !== "value" ? propAttributes[4] : ""
+      }
+    };
+    return { originalFromAlias: jsConstant.transformer(originalProp) };
+  }
+};
+
+module.exports = [jsConstant, lessVar, cssVarJS, JS_originalFromAlias];

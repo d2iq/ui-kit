@@ -1,14 +1,22 @@
 const transforms = require("./transforms");
 const formats = require("./formats");
+const formatCategory = process.env.FORMAT || "default";
 
-// Because we export non-Typescript files (only `.less` at the time of comment), we need
-// to build two versions: one that will be compiled by Typescript, and one that's manually
-// published in the `dist/` directory.
+// Because we export non-Typescript files, we have three configurations to build with:
 
+// for JavaScript and Typescript
 const CONFIG = "./packages/design-tokens/config.tsCompiled.json";
+
+// for LESS
 const DIST_CONFIG = "./packages/design-tokens/config.manualPublish.json";
 
-[CONFIG, DIST_CONFIG].forEach(path => {
+// for Markdown docs
+const DOCS_CONFIG = "./packages/design-tokens/config.designGuidelines.json";
+
+const configs =
+  formatCategory === "docs" ? [DOCS_CONFIG] : [CONFIG, DIST_CONFIG];
+
+configs.forEach(path => {
   const StyleDictionary = require("style-dictionary").extend(path);
 
   transforms.forEach(t => {
