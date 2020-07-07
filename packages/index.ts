@@ -61,11 +61,6 @@ export {
   DropdownMenuItemAvatar,
   DropdownMenuItemAppearances
 } from "./dropdownMenu";
-export {
-  EmptyState,
-  EmptyStateWithGraphic,
-  EmptyStateWrapper
-} from "./emptyState";
 export { Expandable } from "./expandable";
 export * from "./formStructure";
 export { FullscreenView } from "./fullscreenView";
@@ -79,6 +74,11 @@ export {
   InlineLoadingIndicator,
   SectionLoadingIndicator
 } from "./loadingIndicator";
+export {
+  MessagePanel,
+  MessagePanelWithGraphic,
+  MessagePanelWrapper
+} from "./messagePanel";
 export {
   DialogModal,
   SmallDialogModal,

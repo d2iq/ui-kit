@@ -1,23 +1,25 @@
 import React from "react";
 
-import { EmptyState } from "..";
+import { MessagePanel } from "..";
 import { render } from "enzyme";
 import toJSON from "enzyme-to-json";
 import { PrimaryButton, SecondaryButton } from "../../button";
 
-describe("EmptyState", () => {
+describe("MessagePanel", () => {
   it("default", () => {
     expect(
-      toJSON(render(<EmptyState heading="Heading">Body content</EmptyState>))
+      toJSON(
+        render(<MessagePanel heading="Heading">Body content</MessagePanel>)
+      )
     ).toMatchSnapshot();
   });
   it("appearance='error'", () => {
     expect(
       toJSON(
         render(
-          <EmptyState heading="Heading" appearance="error">
+          <MessagePanel heading="Heading" appearance="error">
             Body content
-          </EmptyState>
+          </MessagePanel>
         )
       )
     ).toMatchSnapshot();
@@ -26,13 +28,13 @@ describe("EmptyState", () => {
     expect(
       toJSON(
         render(
-          <EmptyState
+          <MessagePanel
             heading="Heading"
             primaryAction={<PrimaryButton>Primary</PrimaryButton>}
             secondaryAction={<SecondaryButton>Secondary</SecondaryButton>}
           >
             Body content
-          </EmptyState>
+          </MessagePanel>
         )
       )
     ).toMatchSnapshot();
