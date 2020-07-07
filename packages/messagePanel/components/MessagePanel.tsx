@@ -1,10 +1,10 @@
 import * as React from "react";
-import { emptyStateContainer, vertAlignHeading } from "../style";
+import { messagePanelContainer, vertAlignHeading } from "../style";
 import { Card } from "../../card";
 import { SpacingBox } from "../../styleUtils/modifiers";
 import { HeadingText2 } from "../../styleUtils/typography";
 import { breakWord } from "../../shared/styles/styleUtils";
-import EmptyStateActions from "./EmptyStateActions";
+import MessagePanelActions from "./MessagePanelActions";
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import {
@@ -12,7 +12,7 @@ import {
   iconSizeXs
 } from "../../design-tokens/build/js/designTokens";
 
-export interface EmptyStateProps {
+export interface MessagePanelProps {
   /**
    * The tone of the message
    */
@@ -31,7 +31,7 @@ export interface EmptyStateProps {
   secondaryAction?: React.ReactNode;
 }
 
-const EmptyState: React.FC<EmptyStateProps> = ({
+const MessagePanel: React.FC<MessagePanelProps> = ({
   appearance,
   heading,
   children,
@@ -41,7 +41,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
   const hasActions = primaryAction || secondaryAction;
 
   return (
-    <div className={emptyStateContainer} data-cy="emptyState">
+    <div className={messagePanelContainer} data-cy="messagePanel">
       <Card paddingSize="xxl">
         <SpacingBox side="bottom" spacingSize="xs">
           <HeadingText2 align="center">
@@ -77,7 +77,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
           </SpacingBox>
         )}
         {(primaryAction || secondaryAction) && (
-          <EmptyStateActions
+          <MessagePanelActions
             primaryAction={primaryAction}
             secondaryAction={secondaryAction}
           />
@@ -87,8 +87,8 @@ const EmptyState: React.FC<EmptyStateProps> = ({
   );
 };
 
-EmptyState.defaultProps = {
+MessagePanel.defaultProps = {
   appearance: "standard"
 };
 
-export default EmptyState;
+export default MessagePanel;

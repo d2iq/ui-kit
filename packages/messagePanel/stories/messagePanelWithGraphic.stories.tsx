@@ -1,57 +1,57 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { EmptyStateWithGraphic, EmptyStateWrapper } from "..";
+import { MessagePanelWithGraphic, MessagePanelWrapper } from "..";
 import { PrimaryButton, SecondaryButton } from "../../button";
 import { PageHeader } from "../../pageheader";
 
 const readme = require("../README.md");
 
-storiesOf("Feedback|EmptyStateWithGraphic", module)
+storiesOf("Feedback|MessagePanelWithGraphic", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {
-      propTablesExclude: [PageHeader, React.Fragment, EmptyStateWrapper]
+      propTablesExclude: [PageHeader, React.Fragment, MessagePanelWrapper]
     }
   })
   .add("default", () => (
-    <EmptyStateWithGraphic
+    <MessagePanelWithGraphic
       graphicSrc="http://placehold.it/350x150"
       heading="No projects exist to view catalogs"
     >
       A catalog of services is available per project. A project must first be
       created before its catalog can be viewed. Projects empower teams to deploy
       their configurations and services to clusters.
-    </EmptyStateWithGraphic>
+    </MessagePanelWithGraphic>
   ))
   .add(
-    "wrapped with EmptyStateWrapper",
+    "wrapped with MessagePanelWrapper",
     () => (
       <React.Fragment>
         <PageHeader breadcrumbElements={[<div key="catalog">Catalog</div>]} />
-        <EmptyStateWrapper>
-          <EmptyStateWithGraphic
+        <MessagePanelWrapper>
+          <MessagePanelWithGraphic
             graphicSrc="http://placehold.it/350x150"
             heading="No projects exist to view catalogs"
           >
             A catalog of services is available per project. A project must first
             be created before its catalog can be viewed. Projects empower teams
             to deploy their configurations and services to clusters.
-          </EmptyStateWithGraphic>
-        </EmptyStateWrapper>
+          </MessagePanelWithGraphic>
+        </MessagePanelWrapper>
       </React.Fragment>
     ),
     {
       info: {
         text:
-          "When an empty state is being rendered in parent element that does not have it's own spacing, the EmptyStateWrapper component provides standard spacing around the empty state component."
+          "When an empty state is being rendered in parent element that does not have it's own spacing, the MessagePanelWrapper component provides standard spacing around the empty state component."
       }
     }
   )
   .add(
     "w/ graphic dimensions",
     () => (
-      <EmptyStateWithGraphic
+      <MessagePanelWithGraphic
         graphicSrc="http://placehold.it/600x350"
         heading="No projects exist to view catalogs"
         graphicDimensions={{ height: 200 }}
@@ -59,7 +59,7 @@ storiesOf("Feedback|EmptyStateWithGraphic", module)
         A catalog of services is available per project. A project must first be
         created before its catalog can be viewed. Projects empower teams to
         deploy their configurations and services to clusters.
-      </EmptyStateWithGraphic>
+      </MessagePanelWithGraphic>
     ),
     {
       info: {
@@ -69,7 +69,7 @@ storiesOf("Feedback|EmptyStateWithGraphic", module)
     }
   )
   .add("w/ primary action", () => (
-    <EmptyStateWithGraphic
+    <MessagePanelWithGraphic
       graphicSrc="http://placehold.it/350x150"
       heading="No projects exist to view catalogs"
       primaryAction={<PrimaryButton>Create Project</PrimaryButton>}
@@ -77,10 +77,10 @@ storiesOf("Feedback|EmptyStateWithGraphic", module)
       A catalog of services is available per project. A project must first be
       created before its catalog can be viewed. Projects empower teams to deploy
       their configurations and services to clusters.
-    </EmptyStateWithGraphic>
+    </MessagePanelWithGraphic>
   ))
   .add("w/ primary and secondary actions", () => (
-    <EmptyStateWithGraphic
+    <MessagePanelWithGraphic
       graphicSrc="http://placehold.it/350x150"
       heading="No projects exist to view catalogs"
       primaryAction={<PrimaryButton>Create Project</PrimaryButton>}
@@ -89,5 +89,5 @@ storiesOf("Feedback|EmptyStateWithGraphic", module)
       A catalog of services is available per project. A project must first be
       created before its catalog can be viewed. Projects empower teams to deploy
       their configurations and services to clusters.
-    </EmptyStateWithGraphic>
+    </MessagePanelWithGraphic>
   ));
