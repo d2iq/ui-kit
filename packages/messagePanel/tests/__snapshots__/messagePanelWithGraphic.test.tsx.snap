@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmptyStateWithGraphic default 1`] = `
+exports[`MessagePanelWithGraphic default 1`] = `
 <div
-  data-cy="emptyStateWithGraphic"
+  data-cy="messagePanelWithGraphic"
 >
   <div
     class="css-1534o5d"
@@ -39,9 +39,9 @@ exports[`EmptyStateWithGraphic default 1`] = `
 </div>
 `;
 
-exports[`EmptyStateWithGraphic renders with primary and secondary actions 1`] = `
+exports[`MessagePanelWithGraphic renders with primary and secondary actions 1`] = `
 <div
-  data-cy="emptyStateWithGraphic"
+  data-cy="messagePanelWithGraphic"
 >
   <div
     class="css-1534o5d"

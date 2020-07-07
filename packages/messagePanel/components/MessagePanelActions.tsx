@@ -1,12 +1,12 @@
 import * as React from "react";
 import { Flex, FlexItem } from "../../styleUtils/layout";
 
-export interface EmptyStateActionsProps {
+export interface MessagePanelActionsProps {
   primaryAction: React.ReactNode;
   secondaryAction?: React.ReactNode;
 }
 
-const EmptyStateActions: React.SFC<EmptyStateActionsProps> = ({
+const MessagePanelActions: React.SFC<MessagePanelActionsProps> = ({
   primaryAction,
   secondaryAction
 }) => (
@@ -18,4 +18,4 @@ const EmptyStateActions: React.SFC<EmptyStateActionsProps> = ({
   </Flex>
 );
 
-export default EmptyStateActions;
+export default MessagePanelActions;

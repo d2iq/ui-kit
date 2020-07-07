@@ -1,12 +1,12 @@
 import * as React from "react";
-import { emptyStateContainer } from "../style";
+import { messagePanelContainer } from "../style";
 import { Card } from "../../card";
 import { SpacingBox } from "../../styleUtils/modifiers";
 import { HeadingText2 } from "../../styleUtils/typography";
 import { breakWord } from "../../shared/styles/styleUtils";
-import EmptyStateActions from "./EmptyStateActions";
+import MessagePanelActions from "./MessagePanelActions";
 
-export interface EmptyStateProps {
+export interface MessagePanelProps {
   children?: React.ReactNode;
   /**
    * A heading to provide a brief overview of why an empty state is appearing
@@ -22,16 +22,16 @@ export interface EmptyStateProps {
   secondaryAction?: React.ReactNode;
 }
 
-const EmptyState: React.SFC<EmptyStateProps> = ({
+const MessagePanel: React.SFC<MessagePanelProps> = ({
   heading,
   children,
   primaryAction,
   secondaryAction
-}: EmptyStateProps) => {
+}: MessagePanelProps) => {
   const hasActions = primaryAction || secondaryAction;
 
   return (
-    <div className={emptyStateContainer} data-cy="emptyState">
+    <div className={messagePanelContainer} data-cy="messagePanel">
       <Card paddingSize="xxl">
         <SpacingBox side="bottom" spacingSize="xs">
           <HeadingText2 align="center">{heading}</HeadingText2>
@@ -47,7 +47,7 @@ const EmptyState: React.SFC<EmptyStateProps> = ({
           </SpacingBox>
         )}
         {(primaryAction || secondaryAction) && (
-          <EmptyStateActions
+          <MessagePanelActions
             primaryAction={primaryAction}
             secondaryAction={secondaryAction}
           />
@@ -57,4 +57,4 @@ const EmptyState: React.SFC<EmptyStateProps> = ({
   );
 };
 
-export default EmptyState;
+export default MessagePanel;

@@ -1,22 +1,15 @@
 import React from "react";
 
-import { EmptyStateWithGraphic } from "..";
+import { MessagePanel } from "..";
 import { render } from "enzyme";
 import toJSON from "enzyme-to-json";
 import { PrimaryButton, SecondaryButton } from "../../button";
 
-describe("EmptyStateWithGraphic", () => {
+describe("MessagePanel", () => {
   it("default", () => {
     expect(
       toJSON(
-        render(
-          <EmptyStateWithGraphic
-            graphicSrc="http://placehold.it/350x150"
-            heading="Heading"
-          >
-            Body content
-          </EmptyStateWithGraphic>
-        )
+        render(<MessagePanel heading="Heading">Body content</MessagePanel>)
       )
     ).toMatchSnapshot();
   });
@@ -24,14 +17,13 @@ describe("EmptyStateWithGraphic", () => {
     expect(
       toJSON(
         render(
-          <EmptyStateWithGraphic
-            graphicSrc="http://placehold.it/350x150"
+          <MessagePanel
             heading="Heading"
             primaryAction={<PrimaryButton>Primary</PrimaryButton>}
             secondaryAction={<SecondaryButton>Secondary</SecondaryButton>}
           >
             Body content
-          </EmptyStateWithGraphic>
+          </MessagePanel>
         )
       )
     ).toMatchSnapshot();

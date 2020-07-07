@@ -1,16 +1,16 @@
 import * as React from "react";
 import { SpacingBox } from "../../styleUtils/modifiers";
 import { HeadingText2 } from "../../styleUtils/typography";
-import { EmptyStateProps } from "./EmptyState";
-import EmptyStateActions from "./EmptyStateActions";
-import { emptyStateGraphic, emptyStateWithGraphicBody } from "../style";
+import { MessagePanelProps } from "./MessagePanel";
+import MessagePanelActions from "./MessagePanelActions";
+import { messagePanelGraphic, messagePanelWithGraphicBody } from "../style";
 
 interface GraphicDimensions {
   width?: number;
   height?: number;
 }
 
-interface EmptyStateWithGraphicProps extends EmptyStateProps {
+interface MessagePanelWithGraphicProps extends MessagePanelProps {
   /**
    * The source of the image that appears in the empty state
    */
@@ -21,7 +21,7 @@ interface EmptyStateWithGraphicProps extends EmptyStateProps {
   graphicDimensions?: GraphicDimensions;
 }
 
-const EmptyStateWithGraphic: React.SFC<EmptyStateWithGraphicProps> = ({
+const MessagePanelWithGraphic: React.SFC<MessagePanelWithGraphicProps> = ({
   graphicSrc,
   graphicDimensions,
   heading,
@@ -31,13 +31,13 @@ const EmptyStateWithGraphic: React.SFC<EmptyStateWithGraphicProps> = ({
 }) => {
   const hasActions = primaryAction || secondaryAction;
   return (
-    <div data-cy="emptyStateWithGraphic">
+    <div data-cy="messagePanelWithGraphic">
       <SpacingBox spacingSize="xl" side="bottom">
         <img
           src={graphicSrc}
           height={graphicDimensions && graphicDimensions.height}
           width={graphicDimensions && graphicDimensions.width}
-          className={emptyStateGraphic}
+          className={messagePanelGraphic}
           //
           // this graphic is just decorative, so screenreaders should ignore it
           role="presentation"
@@ -48,10 +48,10 @@ const EmptyStateWithGraphic: React.SFC<EmptyStateWithGraphicProps> = ({
         <SpacingBox spacingSize="m" side="bottom">
           <HeadingText2 align="center">{heading}</HeadingText2>
         </SpacingBox>
-        <div className={emptyStateWithGraphicBody}>{children}</div>
+        <div className={messagePanelWithGraphicBody}>{children}</div>
       </SpacingBox>
       {(primaryAction || secondaryAction) && (
-        <EmptyStateActions
+        <MessagePanelActions
           primaryAction={primaryAction}
           secondaryAction={secondaryAction}
         />
@@ -60,4 +60,4 @@ const EmptyStateWithGraphic: React.SFC<EmptyStateWithGraphicProps> = ({
   );
 };
 
-export default EmptyStateWithGraphic;
+export default MessagePanelWithGraphic;

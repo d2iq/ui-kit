@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmptyState default 1`] = `
+exports[`MessagePanel default 1`] = `
 <div
   class="css-1b4ui7p"
-  data-cy="emptyState"
+  data-cy="messagePanel"
 >
   <div
     class="css-1whabpp"
@@ -34,10 +34,10 @@ exports[`EmptyState default 1`] = `
 </div>
 `;
 
-exports[`EmptyState renders with primary and secondary actions 1`] = `
+exports[`MessagePanel renders with primary and secondary actions 1`] = `
 <div
   class="css-1b4ui7p"
-  data-cy="emptyState"
+  data-cy="messagePanel"
 >
   <div
     class="css-1whabpp"
