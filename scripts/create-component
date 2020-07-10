@@ -34,7 +34,7 @@ function readDir(dirPath) {
           contents.replace(/\$\{Component\}/g, componentName),
           function(error) {
             if (!error) {
-              console.log(`File writen ${target}`);
+              console.log(`File written ${target}`);
               return;
             }
             throw error;
