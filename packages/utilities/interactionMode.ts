@@ -8,7 +8,8 @@ import classNames from "classnames";
 const TAB_KEY_CODE = 9;
 
 export class InteractionModeEngine {
-  private previousClassName: string;
+  private readonly previousClassName: string;
+
   constructor(
     private readonly container: Element,
     private readonly className: string,

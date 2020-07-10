@@ -1,9 +1,9 @@
 import React from "react";
 import { ExpandedLinkProps } from "../types";
-import { LinkContext } from "../../appProvider/link/context";
+import { LinkComponentContext } from "../../uiKitProvider/link/context";
 
 class UnstyledLink extends React.Component<ExpandedLinkProps> {
-  static contextType = LinkContext;
+  static contextType = LinkComponentContext;
   render() {
     const LinkComponent = this.context;
 

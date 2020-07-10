@@ -1,27 +1,27 @@
 import * as React from "react";
 import { LinkComponent } from "../../link/types";
-import { LinkContext } from "../link/context";
+import { LinkComponentContext } from "../link/context";
 import { UIKitThemeProvider } from "../../themes";
 import { Theme } from "../../themes/types/appTheme";
 
-export interface AppProviderProps {
+export interface UIKitProviderProps {
   children?: React.ReactNode;
   linkComponent?: LinkComponent;
   theme?: Theme;
 }
 
-class AppProvider extends React.Component<AppProviderProps, {}> {
+class UIKitProvider extends React.Component<UIKitProviderProps, {}> {
   public render() {
     const { children, theme, linkComponent } = this.props;
 
     return (
       <UIKitThemeProvider appTheme={theme || ({} as Theme)}>
-        <LinkContext.Provider value={linkComponent}>
+        <LinkComponentContext.Provider value={linkComponent}>
           {children}
-        </LinkContext.Provider>
+        </LinkComponentContext.Provider>
       </UIKitThemeProvider>
     );
   }
 }
 
-export default AppProvider;
+export default UIKitProvider;

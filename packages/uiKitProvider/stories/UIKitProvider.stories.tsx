@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
-import { AppProvider } from "../index";
+import { UIKitProvider } from "../index";
 import CustomLinkComponent from "./helpers/customLink";
 import SecondardButton from "../../button/components/SecondaryButton";
 
@@ -9,10 +9,10 @@ const readme = require("../README.md");
 
 import { red } from "../../design-tokens/build/js/designTokens";
 
-storiesOf("Utils|AppProvider", module)
+storiesOf("Utils|UIKitProvider", module)
   .addDecorator(withReadme([readme]))
   .add("link delegate", () => (
-    <AppProvider
+    <UIKitProvider
       theme={{
         colors: {
           textColorInteractive: red
@@ -26,5 +26,5 @@ storiesOf("Utils|AppProvider", module)
         specified by the linkComponent
       </p>
       <SecondardButton url="http://unused.example">Hello World</SecondardButton>
-    </AppProvider>
+    </UIKitProvider>
   ));
