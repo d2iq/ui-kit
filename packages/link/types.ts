@@ -1,4 +1,6 @@
-export interface SharedLinkProps {
+import React from "react";
+
+export interface LinkProps {
   /**
    * a url the user will be navigated to when clicking the button. This also changes the tag to `<a>`
    */
@@ -9,4 +11,7 @@ export interface SharedLinkProps {
   openInNewTab?: boolean;
 }
 
-export type LinkProps = SharedLinkProps & React.HTMLProps<HTMLAnchorElement>;
+export type ExpandedLinkProps = LinkProps &
+  Omit<React.HTMLProps<HTMLAnchorElement>, "ref">;
+
+export type LinkComponent = React.ComponentType<ExpandedLinkProps>;

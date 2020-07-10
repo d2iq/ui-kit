@@ -22,7 +22,8 @@ import {
   getMutedButtonStyles,
   processingTextStyle
 } from "../style";
-import { SharedLinkProps } from "../../link/types";
+import { LinkProps } from "../../link/types";
+import UnstyledLink from "../../link/components/UnstyledLink";
 
 export enum ButtonAppearances {
   Primary = "primary",
@@ -32,7 +33,7 @@ export enum ButtonAppearances {
   Success = "success"
 }
 
-export interface ButtonProps extends SharedLinkProps {
+export interface ButtonProps extends LinkProps {
   /**
    * if the button triggers new content to appear (e.g.: modals and dropdowns)
    */
@@ -112,7 +113,6 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
       onClick,
       type = "button",
       url,
-      openInNewTab,
       ...other
     } = this.props;
 
@@ -134,30 +134,24 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
     const getButtonNode = () => {
       if (url) {
         return !disabled && !isProcessing ? (
-          <a
+          <UnstyledLink
             href={url}
             className={buttonClassName}
             onClick={this.onClick}
             tabIndex={0}
-            target={openInNewTab ? "_blank" : "_self"}
             {...other}
           >
             {this.getButtonContent()}
-          </a>
+          </UnstyledLink>
         ) : (
-          // tslint:disable react-a11y-anchors
-          //
-          // this rule was erroring because the anchor had no href, but in this
-          // case that is intentional beacuse it's disabled
-          <a
+          <UnstyledLink
             className={buttonClassName}
             aria-disabled="true"
             tabIndex={-1}
             {...other}
           >
             {this.getButtonContent()}
-          </a>
-          // tslint:enable react-a11y-anchors
+          </UnstyledLink>
         );
       }
 

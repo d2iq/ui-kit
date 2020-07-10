@@ -3,7 +3,7 @@ import { cx } from "emotion";
 import { Box } from "../../styleUtils/modifiers";
 import Card, { CardProps } from "./Card";
 import { buttonCard, cardLink, cardWithLink } from "../style";
-import { SharedLinkProps } from "../../link/types";
+import { LinkProps } from "../../link/types";
 
 export interface ButtonCardProps extends CardProps {
   /**
@@ -12,7 +12,7 @@ export interface ButtonCardProps extends CardProps {
   linkDescription: string;
 }
 
-class LinkCard extends Card<ButtonCardProps & SharedLinkProps, {}> {
+class LinkCard extends Card<ButtonCardProps & LinkProps, {}> {
   public render() {
     const {
       openInNewTab,
