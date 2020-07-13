@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar renders 1`] = `
-.emotion-0 {
+.emotion-5 {
+  display: block;
+  width: 100%;
+}
+
+.emotion-4 {
   background: none;
   border: 0;
   color: inherit;
@@ -10,16 +15,49 @@ exports[`Sidebar renders 1`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
+  display: block;
   width: 100%;
+  cursor: pointer;
+}
+
+.emotion-4::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-4 > div:focus {
+  outline: none;
+}
+
+.emotion-4:focus > div {
+  outline-color: Highlight;
+  outline-width: thin;
+}
+
+@media (-webkit-min-device-pixel-ratio:0) {
+  .emotion-4:focus > div {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: unset;
+  }
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -28,31 +66,49 @@ exports[`Sidebar renders 1`] = `
   min-height: 0;
 }
 
-.emotion-0::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+.emotion-3 > div {
+  width: auto;
 }
 
-.emotion-0:after {
-  border-style: solid;
-  border-color: transparent;
-  content: "";
-  display: inline-block;
-  height: 0;
-  line-height: 0;
-  width: 0;
-  border-top-color: inherit;
-  border-left-width: 5px;
-  border-right-width: 5px;
-  border-bottom-width: 0;
-  border-top-width: 6px;
+.emotion-3 > *:not(:first-child) {
+  padding-left: 0;
+  padding-top: 0;
 }
 
-.emotion-0:focus {
-  outline: 0;
+.emotion-1 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
 }
 
-.emotion-0 > div {
+.emotion-0 {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-0 use {
+  pointer-events: none;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
   width: auto;
 }
 
@@ -65,14 +121,76 @@ exports[`Sidebar renders 1`] = `
     onToggle={[Function]}
   >
     <div>
-      <button
+      <ResetButton
         aria-expanded={true}
-        className="emotion-0"
+        className="emotion-5"
         onClick={[Function]}
         tabIndex={0}
       >
-        Label
-      </button>
+        <button
+          aria-expanded={true}
+          className="emotion-4"
+          onClick={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <div
+            tabIndex={-1}
+          >
+            <Flex
+              align="center"
+              direction="row"
+              gutterSize="none"
+              justify="flex-start"
+              wrap="nowrap"
+            >
+              <div
+                className="emotion-3"
+                data-cy="flex"
+              >
+                <FlexItem
+                  flex="shrink"
+                >
+                  <div
+                    className="emotion-1"
+                    data-cy="flexItem"
+                  >
+                    <Icon
+                      shape="system-triangle-down"
+                      size="16px"
+                    >
+                      <svg
+                        aria-label="system-triangle-down icon"
+                        className="emotion-0"
+                        data-cy="icon"
+                        height={16}
+                        preserveAspectRatio="xMinYMin meet"
+                        role="img"
+                        viewBox="0 0 16 16"
+                        width={16}
+                      >
+                        <use
+                          xlinkHref="#system-triangle-down"
+                        />
+                      </svg>
+                    </Icon>
+                  </div>
+                </FlexItem>
+                <FlexItem
+                  flex="grow"
+                >
+                  <div
+                    className="emotion-2"
+                    data-cy="flexItem"
+                  >
+                    Label
+                  </div>
+                </FlexItem>
+              </div>
+            </Flex>
+          </div>
+        </button>
+      </ResetButton>
       <div
         className=""
       >
