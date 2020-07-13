@@ -4,6 +4,7 @@ import { Box } from "../../styleUtils/modifiers";
 import Card, { CardProps } from "./Card";
 import { buttonCard, cardLink, cardWithLink } from "../style";
 import { LinkProps } from "../../link/types";
+import UnstyledLink from "../../link/components/UnstyledLink";
 
 export interface ButtonCardProps extends CardProps {
   /**
@@ -25,15 +26,15 @@ class LinkCard extends Card<ButtonCardProps & LinkProps, {}> {
     const buttonCardProps = {
       children: (
         <>
-          <a
-            href={url}
+          <UnstyledLink
+            url={url}
             className={cardLink}
-            target={openInNewTab ? "_blank" : undefined}
+            openInNewTab={openInNewTab}
           >
             <Box tag="span" isVisuallyHidden={true}>
               {linkDescription}
             </Box>
-          </a>
+          </UnstyledLink>
           {children}
         </>
       ),
