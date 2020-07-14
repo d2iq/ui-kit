@@ -8,7 +8,7 @@ function noOp() {}
  */
 function navigateToStory(category, name, cb) {
   cy.visit("/");
-  cy.get("#explorerpage-structure-appchrome").click(); // make sure everything is closed
+  cy.get("#explorernavigation-accordion").click(); // make sure everything is closed
 
   // Navigate to story with the name
   cy.get(
