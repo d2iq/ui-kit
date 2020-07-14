@@ -4,9 +4,8 @@ import {
   ButtonProps,
   ButtonAppearances
 } from "./ButtonBase";
-import { SharedLinkProps } from "../../link/types";
 
-const DangerButton = (props: ButtonProps & SharedLinkProps) => (
+const DangerButton = (props: ButtonProps) => (
   <ButtonBase
     appearance={ButtonAppearances.Danger}
     data-cy="dangerButton"

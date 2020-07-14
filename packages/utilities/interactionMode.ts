@@ -3,22 +3,31 @@
     https://blueprintjs.com/docs/#core/accessibility.focus-management
 */
 
+import classNames from "classnames";
+
 const TAB_KEY_CODE = 9;
 
 export class InteractionModeEngine {
+  private readonly previousClassName: string;
+
   constructor(
     private readonly container: Element,
     private readonly className: string,
     private readonly docEl: Element
-  ) {}
+  ) {
+    this.previousClassName = container.className;
+  }
 
   public start() {
-    this.container.classList.add(this.className);
+    this.container.className = classNames(
+      this.container.className,
+      this.className
+    );
     this.docEl.addEventListener("mousedown", this.handleMouseDown);
   }
 
   private reset() {
-    this.container.classList.add(this.className);
+    this.container.className = this.previousClassName;
     this.docEl.removeEventListener("keydown", this.handleKeyDown);
     this.docEl.removeEventListener("mousedown", this.handleMouseDown);
   }
@@ -33,7 +42,12 @@ export class InteractionModeEngine {
 
   private readonly handleMouseDown = () => {
     this.reset();
-    this.container.classList.remove(this.className);
+    this.container.className = classNames(
+      {
+        [this.className]: false
+      },
+      this.previousClassName
+    );
     this.docEl.addEventListener("keydown", this.handleKeyDown);
   };
   /*tslint:disable:semicolon*/

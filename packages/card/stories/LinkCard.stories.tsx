@@ -37,6 +37,7 @@ storiesOf("Navigation|LinkCard", module)
       <LinkCard
         paddingSize={size as SpaceSize}
         url="http://google.com"
+        openInNewTab={true}
         linkDescription="Google"
       >
         Use the Knobs panel to change the padding
@@ -53,6 +54,7 @@ storiesOf("Navigation|LinkCard", module)
         jumbo: "xxl"
       }}
       url="http://google.com"
+      openInNewTab={true}
       linkDescription="Google"
     >
       Resize the viewport to see the padding change
@@ -63,6 +65,7 @@ storiesOf("Navigation|LinkCard", module)
       <LinkCard
         aspectRatio={[2, 1]}
         url="http://google.com"
+        openInNewTab={true}
         linkDescription="Google"
       >
         I stay at a 2:1 aspect ratio

@@ -120,6 +120,7 @@ export { ToggleBox, ToggleBoxGroup } from "./toggleBox";
 export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
+export { UIKitProvider } from "./uiKitProvider";
 export { Legacy };
 export { CodeSnippet } from "./codesnippet";
 

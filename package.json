@@ -84,6 +84,7 @@
     "@storybook/react": "5.0.5",
     "@storybook/storybook-deployer": "2.8.1",
     "@types/chartist": "^0.9.46",
+    "@types/classnames": "^2.2.10",
     "@types/enzyme": "3.1.14",
     "@types/faker": "^4.1.10",
     "@types/jest": "23.3.5",
