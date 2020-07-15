@@ -1,8 +1,13 @@
 import * as React from "react";
 import { cx } from "emotion";
 import Toggle from "react-toggled";
-import { buttonReset, display, flex } from "../../shared/styles/styleUtils";
+import { display } from "../../shared/styles/styleUtils";
 import { toggler } from "../style";
+import { ResetButton } from "../../button";
+import { Icon } from "../../icon";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
+import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
+import { Flex, FlexItem } from "../../styleUtils/layout";
 
 export interface ExpandableProps {
   children: React.ReactElement<HTMLElement> | string;
@@ -26,18 +31,23 @@ class Expandable extends React.PureComponent<ExpandableProps, {}> {
       <Toggle defaultOn={Boolean(isOpen)} on={controlledIsOpen}>
         {({ on, getTogglerProps }) => (
           <div>
-            <button
+            <ResetButton
               {...getTogglerProps({
-                className: cx(
-                  buttonReset,
-                  labelClassName,
-                  toggler(on),
-                  flex({ align: "center", justify: "space-between" })
-                )
+                className: cx(labelClassName, toggler)
               })}
             >
-              {label}
-            </button>
+              <Flex align="center">
+                <FlexItem flex="shrink">
+                  <Icon
+                    shape={
+                      on ? SystemIcons.TriangleDown : SystemIcons.TriangleRight
+                    }
+                    size={iconSizeXs}
+                  />
+                </FlexItem>
+                <FlexItem>{label}</FlexItem>
+              </Flex>
+            </ResetButton>
             {/* TODO: investigate whether display: none is a11y-friendly in this situation */}
             <div className={cx({ [display("none")]: !on })}>{children}</div>
           </div>
