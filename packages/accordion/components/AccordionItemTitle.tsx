@@ -63,6 +63,7 @@ const AccordionItemTitle: React.FC<AccordionItemTitleProps> = ({
           : []),
         ...(disabled ? [`${dataCy}.disabled`] : [])
       ].join(" ")}
+      isExpanded={accordionItemContext!.isExpanded}
     >
       <HeadingTag
         id={accordionItemContext?.headingId || ""}

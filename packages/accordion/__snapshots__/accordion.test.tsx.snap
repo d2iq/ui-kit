@@ -36,22 +36,23 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                 <AccordionItemTitleOuter
                   appearance="danger"
                   data-cy="accordionItemTitle accordionItemTitle.danger"
+                  isExpanded={false}
                 >
                   <div
-                    className="css-bbt76n"
+                    className="css-1k62x56"
                     data-cy="accordionItemTitle accordionItemTitle.danger"
                   >
                     <ResetButton
                       aria-controls="customId-content"
                       aria-expanded={false}
-                      className="css-kwnv8y"
+                      className="css-3bwp7q"
                       data-cy="accordionItemTitle-button"
                       onClick={[Function]}
                     >
                       <button
                         aria-controls="customId-content"
                         aria-expanded={false}
-                        className="css-15g0dtk"
+                        className="css-8x73u2"
                         data-cy="accordionItemTitle-button"
                         onClick={[Function]}
                         type="button"
@@ -114,10 +115,11 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
               </AccordionItemTitleInteractive>
               <AccordionItemContent
                 data-cy="accordionItemContent"
+                paddingSize="m"
               >
                 <div
                   aria-labelledby="customId-heading"
-                  className="css-epge75"
+                  className="css-16wkd0c"
                   data-cy="accordionItemContent"
                   hidden={true}
                   id="customId-content"
@@ -146,22 +148,23 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                 <AccordionItemTitleOuter
                   appearance="danger"
                   data-cy="accordionItemTitle accordionItemTitle.danger"
+                  isExpanded={false}
                 >
                   <div
-                    className="css-bbt76n"
+                    className="css-1k62x56"
                     data-cy="accordionItemTitle accordionItemTitle.danger"
                   >
                     <ResetButton
                       aria-controls="accordionItem5-content"
                       aria-expanded={false}
-                      className="css-kwnv8y"
+                      className="css-3bwp7q"
                       data-cy="accordionItemTitle-button"
                       onClick={[Function]}
                     >
                       <button
                         aria-controls="accordionItem5-content"
                         aria-expanded={false}
-                        className="css-15g0dtk"
+                        className="css-8x73u2"
                         data-cy="accordionItemTitle-button"
                         onClick={[Function]}
                         type="button"
@@ -230,10 +233,11 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
               </AccordionItemTitleInteractive>
               <AccordionItemContent
                 data-cy="accordionItemContent"
+                paddingSize="m"
               >
                 <div
                   aria-labelledby="accordionItem5-heading"
-                  className="css-epge75"
+                  className="css-16wkd0c"
                   data-cy="accordionItemContent"
                   hidden={true}
                   id="accordionItem5-content"
@@ -261,15 +265,16 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
               >
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle accordionItemTitle.disabled"
+                  isExpanded={false}
                 >
                   <div
-                    className="css-16ixq2h"
+                    className="css-49v3w5"
                     data-cy="accordionItemTitle accordionItemTitle.disabled"
                   >
                     <ResetButton
                       aria-controls="accordionItem6-content"
                       aria-expanded={false}
-                      className="css-kwnv8y"
+                      className="css-3bwp7q"
                       data-cy="accordionItemTitle-button"
                       disabled={true}
                       onClick={[Function]}
@@ -277,7 +282,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                       <button
                         aria-controls="accordionItem6-content"
                         aria-expanded={false}
-                        className="css-1bjp46q"
+                        className="css-1urm9n8"
                         data-cy="accordionItemTitle-button"
                         disabled={true}
                         onClick={[Function]}
@@ -341,10 +346,11 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
               </AccordionItemTitleInteractive>
               <AccordionItemContent
                 data-cy="accordionItemContent"
+                paddingSize="m"
               >
                 <div
                   aria-labelledby="accordionItem6-heading"
-                  className="css-epge75"
+                  className="css-16wkd0c"
                   data-cy="accordionItemContent"
                   hidden={true}
                   id="accordionItem6-content"
@@ -415,9 +421,10 @@ exports[`Accordion rendering renders with expanded items 1`] = `
               >
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle"
+                  isExpanded={true}
                 >
                   <div
-                    className="css-16ixq2h"
+                    className="css-1spvuwg"
                     data-cy="accordionItemTitle"
                   >
                     <h3
@@ -488,10 +495,11 @@ exports[`Accordion rendering renders with expanded items 1`] = `
               </AccordionItemTitle>
               <AccordionItemContent
                 data-cy="accordionItemContent"
+                paddingSize="m"
               >
                 <div
                   aria-labelledby="panel1-heading"
-                  className=""
+                  className="css-hv2xnk"
                   data-cy="accordionItemContent"
                   hidden={false}
                   id="panel1-content"
@@ -525,9 +533,10 @@ exports[`Accordion rendering renders with expanded items 1`] = `
               >
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle"
+                  isExpanded={true}
                 >
                   <div
-                    className="css-16ixq2h"
+                    className="css-1spvuwg"
                     data-cy="accordionItemTitle"
                   >
                     <h3
@@ -598,10 +607,11 @@ exports[`Accordion rendering renders with expanded items 1`] = `
               </AccordionItemTitle>
               <AccordionItemContent
                 data-cy="accordionItemContent"
+                paddingSize="m"
               >
                 <div
                   aria-labelledby="panel2-heading"
-                  className=""
+                  className="css-hv2xnk"
                   data-cy="accordionItemContent"
                   hidden={false}
                   id="panel2-content"
@@ -635,9 +645,10 @@ exports[`Accordion rendering renders with expanded items 1`] = `
               >
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle"
+                  isExpanded={true}
                 >
                   <div
-                    className="css-16ixq2h"
+                    className="css-1spvuwg"
                     data-cy="accordionItemTitle"
                   >
                     <h3
@@ -708,10 +719,11 @@ exports[`Accordion rendering renders with expanded items 1`] = `
               </AccordionItemTitle>
               <AccordionItemContent
                 data-cy="accordionItemContent"
+                paddingSize="m"
               >
                 <div
                   aria-labelledby="panel3-heading"
-                  className=""
+                  className="css-hv2xnk"
                   data-cy="accordionItemContent"
                   hidden={false}
                   id="panel3-content"
@@ -764,9 +776,10 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                 <AccordionItemTitleOuter
                   appearance="danger"
                   data-cy="accordionItemTitle accordionItemTitle.danger"
+                  isExpanded={false}
                 >
                   <div
-                    className="css-bbt76n"
+                    className="css-1k62x56"
                     data-cy="accordionItemTitle accordionItemTitle.danger"
                   >
                     <h3
@@ -837,10 +850,11 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
               </AccordionItemTitle>
               <AccordionItemContent
                 data-cy="accordionItemContent"
+                paddingSize="m"
               >
                 <div
                   aria-labelledby="customId-heading"
-                  className="css-epge75"
+                  className="css-16wkd0c"
                   data-cy="accordionItemContent"
                   hidden={true}
                   id="customId-content"
@@ -868,9 +882,10 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
               >
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle accordionItemTitle.disabled"
+                  isExpanded={false}
                 >
                   <div
-                    className="css-16ixq2h"
+                    className="css-49v3w5"
                     data-cy="accordionItemTitle accordionItemTitle.disabled"
                   >
                     <h3
@@ -943,10 +958,11 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
               </AccordionItemTitle>
               <AccordionItemContent
                 data-cy="accordionItemContent"
+                paddingSize="m"
               >
                 <div
                   aria-labelledby="accordionItem2-heading"
-                  className="css-epge75"
+                  className="css-16wkd0c"
                   data-cy="accordionItemContent"
                   hidden={true}
                   id="accordionItem2-content"
@@ -973,9 +989,10 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
               >
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle"
+                  isExpanded={false}
                 >
                   <div
-                    className="css-16ixq2h"
+                    className="css-49v3w5"
                     data-cy="accordionItemTitle"
                   >
                     <h2
@@ -1046,10 +1063,11 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
               </AccordionItemTitle>
               <AccordionItemContent
                 data-cy="accordionItemContent"
+                paddingSize="m"
               >
                 <div
                   aria-labelledby="accordionItem3-heading"
-                  className="css-epge75"
+                  className="css-16wkd0c"
                   data-cy="accordionItemContent"
                   hidden={true}
                   id="accordionItem3-content"

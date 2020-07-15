@@ -164,4 +164,26 @@ storiesOf("Navigation|Accordion", module)
         <AccordionItemContent>Content 3</AccordionItemContent>
       </AccordionItem>
     </Accordion>
+  ))
+  .add("with a custom paddingSize on AccordionItemContent", () => (
+    <Accordion>
+      <AccordionItem>
+        <AccordionItemTitle>Panel 1</AccordionItemTitle>
+        <AccordionItemContent paddingSize="xxl">
+          Content 1 has paddingSize="xxl"
+        </AccordionItemContent>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionItemTitle>Panel 2</AccordionItemTitle>
+        <AccordionItemContent>
+          Content 2 has paddingSize="xxl"
+        </AccordionItemContent>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionItemTitle>Panel 3</AccordionItemTitle>
+        <AccordionItemContent>
+          Content 3 has paddingSize="xxl"
+        </AccordionItemContent>
+      </AccordionItem>
+    </Accordion>
   ));

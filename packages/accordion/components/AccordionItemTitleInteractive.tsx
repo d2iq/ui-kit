@@ -67,6 +67,7 @@ const AccordionItemTitleInteractive: React.FC<Exclude<
           : []),
         ...(disabled ? [`${dataCy}.disabled`] : [])
       ].join(" ")}
+      isExpanded={accordionItemContext?.isExpanded}
     >
       <ResetButton
         disabled={disabled}

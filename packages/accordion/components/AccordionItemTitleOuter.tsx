@@ -1,22 +1,29 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { borderRadius, border } from "../../shared/styles/styleUtils";
+import { border } from "../../shared/styles/styleUtils";
 import { AccordionTitleAppearances } from "../types";
-import { accordionTitle, accordionTitleDanger } from "../style";
+import {
+  accordionTitle,
+  accordionTitleDanger,
+  accordionTitleExpanded
+} from "../style";
 
 interface AccordionItemTitleOuterProps {
   appearance?: AccordionTitleAppearances;
+  isExpanded?: boolean;
   ["data-cy"]?: string;
 }
 
 const AccordionItemTitleOuter: React.FC<AccordionItemTitleOuterProps> = ({
   appearance,
   children,
-  "data-cy": dataCy
+  "data-cy": dataCy,
+  isExpanded
 }) => (
   <div
-    className={cx(borderRadius("small"), border("all"), accordionTitle, {
-      [accordionTitleDanger]: appearance === "danger"
+    className={cx(border("all"), accordionTitle, {
+      [accordionTitleDanger]: appearance === "danger",
+      [accordionTitleExpanded]: isExpanded
     })}
     data-cy={dataCy}
   >
