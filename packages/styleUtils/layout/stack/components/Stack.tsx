@@ -2,7 +2,8 @@ import * as React from "react";
 import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifierUtils";
 import { stack } from "../style";
 import { cx } from "emotion";
-import { listReset, flex } from "../../../../shared/styles/styleUtils";
+import { listReset } from "../../../../shared/styles/styleUtils";
+import { flex } from "../../../../shared/styles/styleUtils/layout/flexbox";
 
 interface StackProps {
   className?: string;

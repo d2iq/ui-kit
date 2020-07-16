@@ -14,6 +14,13 @@ export {
   SidebarSubMenuItem
 } from "./appChrome";
 export { Avatar } from "./avatar";
+export {
+  Accordion,
+  AccordionItem,
+  AccordionItemTitle,
+  AccordionItemContent,
+  AccordionItemTitleInteractive
+} from "./accordion";
 export { Badge, BadgeButton } from "./badge";
 export { Breadcrumb } from "./breadcrumb";
 export {
