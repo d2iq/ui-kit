@@ -65,6 +65,7 @@ export {
   EmptyStateWithGraphic,
   EmptyStateWrapper
 } from "./emptyState";
+export { Expandable } from "./expandable";
 export * from "./formStructure";
 export { FullscreenView } from "./fullscreenView";
 export { Icon } from "./icon";
