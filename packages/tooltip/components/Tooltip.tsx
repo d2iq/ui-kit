@@ -3,7 +3,7 @@ import Dropdownable, {
   Direction
 } from "../../dropdownable/components/Dropdownable";
 import TooltipContent from "./TooltipContent";
-import getFirstFocusableChildNode from "../../utilities/getFirstFocusableChildNode";
+import { getFirstFocusableChildNode } from "../../utilities/getFocusableChildNodes";
 
 export interface BaseTooltipProps {
   children: React.ReactNode | string;

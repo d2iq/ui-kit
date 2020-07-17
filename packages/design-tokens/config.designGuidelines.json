@@ -1,0 +1,54 @@
+{
+  "source": ["./packages/design-tokens/properties/**/*.json"],
+  "platforms": {
+    "colorDocs": {
+      "transforms": [
+        "attribute/cti",
+        "name/cti/jsConstant",
+        "attribute/cti/JS_originalFromAlias"
+      ],
+      "buildPath": "design-guidelines/design-tokens/",
+      "files": [
+        {
+          "destination": "color.md",
+          "format": "markdownColor",
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
+        }
+      ]
+    },
+    "layoutDocs": {
+      "transforms": ["attribute/cti", "name/cti/jsConstant"],
+      "buildPath": "design-guidelines/design-tokens/",
+      "files": [
+        {
+          "destination": "layout.md",
+          "format": "markdownLayout",
+          "filter": {
+            "attributes": {
+              "category": "layout"
+            }
+          }
+        }
+      ]
+    },
+    "fontDocs": {
+      "transforms": ["attribute/cti", "name/cti/jsConstant"],
+      "buildPath": "design-guidelines/design-tokens/",
+      "files": [
+        {
+          "destination": "font.md",
+          "format": "markdown",
+          "filter": {
+            "attributes": {
+              "category": "font"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

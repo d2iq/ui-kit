@@ -4,9 +4,9 @@ import {
   ButtonProps,
   ButtonAppearances
 } from "./ButtonBase";
-import { SharedLinkProps } from "../../link/types";
+import { LinkProps } from "../../link/types";
 
-const StandardButton = (props: ButtonProps & SharedLinkProps) => (
+const StandardButton = (props: ButtonProps & LinkProps) => (
   <ButtonBase
     appearance={ButtonAppearances.Standard}
     data-cy="standardButton"

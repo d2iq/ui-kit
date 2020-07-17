@@ -2,8 +2,14 @@
   "color": {
     "border": {
       "default": {
-        "base": { "value": "{color.base.greyLight.base.value}" },
-        "inverted": { "value": "{color.base.greyDark.lighten.2.value}" }
+        "base": {
+          "value": "{color.base.greyLight.base.value}",
+          "isAlias": true
+        },
+        "inverted": {
+          "value": "{color.base.greyDark.lighten.2.value}",
+          "isAlias": true
+        }
       }
     }
   }

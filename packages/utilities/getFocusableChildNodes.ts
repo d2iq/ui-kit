@@ -17,7 +17,7 @@ const focusableNodeSelectors = [
   "[autofocus]"
 ].join(",");
 
-const getFirstFocusableChildNode = (
+export const getFirstFocusableChildNode = (
   element: HTMLElement
 ): HTMLElement | null => {
   if (element.matches(focusableNodeSelectors)) {
@@ -26,4 +26,10 @@ const getFirstFocusableChildNode = (
   return element.querySelector(focusableNodeSelectors);
 };
 
-export default getFirstFocusableChildNode;
+export const getAllFocusableChildNodes = (
+  element: HTMLElement
+): HTMLElement[] => {
+  const focusableNodeList =
+    element.querySelectorAll(focusableNodeSelectors) || [];
+  return [].slice.call(focusableNodeList);
+};

@@ -1,9 +1,9 @@
 import React from "react";
 import ResetLink from "./ResetLink";
-import { LinkProps } from "../types";
+import { ExpandedLinkProps } from "../types";
 import { defaultLink } from "../style";
 
-const Link: React.StatelessComponent<LinkProps> = ({
+const Link: React.StatelessComponent<ExpandedLinkProps> = ({
   children,
   className,
   ...other

@@ -14,6 +14,13 @@ export {
   SidebarSubMenuItem
 } from "./appChrome";
 export { Avatar } from "./avatar";
+export {
+  Accordion,
+  AccordionItem,
+  AccordionItemTitle,
+  AccordionItemContent,
+  AccordionItemTitleInteractive
+} from "./accordion";
 export { Badge, BadgeButton } from "./badge";
 export { Breadcrumb } from "./breadcrumb";
 export {
@@ -58,6 +65,7 @@ export {
   EmptyStateWithGraphic,
   EmptyStateWrapper
 } from "./emptyState";
+export { Expandable } from "./expandable";
 export * from "./formStructure";
 export { FullscreenView } from "./fullscreenView";
 export { Icon } from "./icon";
@@ -120,6 +128,7 @@ export { ToggleBox, ToggleBoxGroup } from "./toggleBox";
 export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
+export { UIKitProvider } from "./uiKitProvider";
 export { Legacy };
 export { CodeSnippet } from "./codesnippet";
 

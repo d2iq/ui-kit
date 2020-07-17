@@ -1,27 +1,17 @@
 import React from "react";
 import { cx } from "emotion";
-import { LinkProps } from "../types";
+import { ExpandedLinkProps } from "../types";
 import { linkReset } from "../../shared/styles/styleUtils/resets/linkReset";
+import UnstyledLink from "./UnstyledLink";
 
-const ResetLink: React.StatelessComponent<LinkProps> = ({
-  children,
+const ResetLink: React.FunctionComponent<ExpandedLinkProps> = ({
   className,
-  href,
-  openInNewTab,
-  target,
-  url,
+  children,
   ...other
 }) => (
-  <a
-    href={href || url}
-    target={!target && openInNewTab ? "_blank" : target}
-    className={cx(linkReset, className)}
-    // https://web.dev/external-anchors-use-rel-noopener/
-    rel={target === "_blank" || openInNewTab ? "noopener" : undefined}
-    {...other}
-  >
+  <UnstyledLink className={cx(linkReset, className)} {...other}>
     {children}
-  </a>
+  </UnstyledLink>
 );
 
-export default ResetLink;
+export { ResetLink as default };

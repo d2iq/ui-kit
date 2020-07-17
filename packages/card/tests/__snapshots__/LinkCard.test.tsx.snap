@@ -35,6 +35,7 @@ exports[`LinkCard renders with external link 1`] = `
     <a
       class="css-gsqxnx"
       href="http://google.com"
+      rel="noopener"
       target="_blank"
     >
       <span
