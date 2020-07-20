@@ -15,6 +15,7 @@ export interface ExpandableProps {
   isOpen?: boolean;
   label: React.ReactElement<HTMLElement> | string;
   labelClassName?: string;
+  onChange?: (open: boolean) => void;
 }
 
 class Expandable extends React.PureComponent<ExpandableProps, {}> {
@@ -24,11 +25,16 @@ class Expandable extends React.PureComponent<ExpandableProps, {}> {
       children,
       label,
       isOpen,
-      controlledIsOpen
+      controlledIsOpen,
+      onChange
     } = this.props;
 
     return (
-      <Toggle defaultOn={Boolean(isOpen)} on={controlledIsOpen}>
+      <Toggle
+        defaultOn={Boolean(isOpen)}
+        on={controlledIsOpen}
+        onToggle={onChange}
+      >
         {({ on, getTogglerProps }) => (
           <div>
             <ResetButton
