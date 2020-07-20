@@ -52,6 +52,7 @@ exports[`Popover renders a closed dropdown 1`] = `
           data-cy="popover"
           id="dropdown1"
           role="dialog"
+          showPointerCaret={true}
         >
           <FocusLockCombination
             disabled={true}
@@ -74,6 +75,16 @@ exports[`Popover renders a closed dropdown 1`] = `
         </Popover>
       }
       open={false}
+      preferredDirections={
+        Array [
+          "bottom",
+          "top",
+          "top-start",
+          "top-end",
+          "bottom-start",
+          "bottom-end",
+        ]
+      }
     >
       <div>
         <ResetButton
@@ -161,6 +172,7 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
           maxHeight={50}
           maxWidth={50}
           role="dialog"
+          showPointerCaret={true}
         >
           <FocusLockCombination
             disabled={true}
@@ -183,6 +195,16 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
         </Popover>
       }
       open={false}
+      preferredDirections={
+        Array [
+          "bottom",
+          "top",
+          "top-start",
+          "top-end",
+          "bottom-start",
+          "bottom-end",
+        ]
+      }
     >
       <div>
         <ResetButton
@@ -215,7 +237,7 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
 `;
 
 exports[`Popover renders an open dropdown 1`] = `
-.emotion-5 {
+.emotion-6 {
   display: inline-block;
 }
 
@@ -266,7 +288,25 @@ exports[`Popover renders an open dropdown 1`] = `
   border-width: 1px;
   border-color: var(--themeBorder,#DADDE2);
   border-style: solid;
+  -webkit-transform: translateY( -9px );
+  -ms-transform: translateY( -9px );
+  transform: translateY( -9px );
   overflow-x: hidden;
+}
+
+.emotion-5 {
+  position: absolute;
+  bottom: 4px;
+  left: calc(50% - 5px);
+  border-right: 1px solid var(--themeBorder,#DADDE2);
+  border-bottom: 1px solid var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 10px;
+  width: 10px;
 }
 
 .emotion-2 {
@@ -284,7 +324,7 @@ exports[`Popover renders an open dropdown 1`] = `
   trigger="Dropdown trigger"
 >
   <div
-    className="emotion-5"
+    className="emotion-6"
   >
     <Dropdownable
       dropdown={
@@ -292,6 +332,7 @@ exports[`Popover renders an open dropdown 1`] = `
           data-cy="popover"
           id="dropdown2"
           role="dialog"
+          showPointerCaret={true}
         >
           <FocusLockCombination
             disabled={false}
@@ -314,6 +355,16 @@ exports[`Popover renders an open dropdown 1`] = `
         </Popover>
       }
       open={true}
+      preferredDirections={
+        Array [
+          "bottom",
+          "top",
+          "top-start",
+          "top-end",
+          "bottom-start",
+          "bottom-end",
+        ]
+      }
     >
       <div>
         <ResetButton
@@ -372,7 +423,25 @@ exports[`Popover renders an open dropdown 1`] = `
   border-width: 1px;
   border-color: var(--themeBorder,#DADDE2);
   border-style: solid;
+  -webkit-transform: translateY( -9px );
+  -ms-transform: translateY( -9px );
+  transform: translateY( -9px );
   overflow-x: hidden;
+}
+
+.emotion-3 {
+  position: absolute;
+  bottom: 4px;
+  left: calc(50% - 5px);
+  border-right: 1px solid var(--themeBorder,#DADDE2);
+  border-bottom: 1px solid var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 10px;
+  width: 10px;
 }
 
 .emotion-0 {
@@ -424,6 +493,9 @@ exports[`Popover renders an open dropdown 1`] = `
                           tabindex="0"
                         />
                       </div>
+                      <div
+                        class="emotion-3"
+                      />
                     </div>
                   </div>
                 </body>
@@ -482,6 +554,9 @@ exports[`Popover renders an open dropdown 1`] = `
                           tabindex="0"
                         />
                       </div>
+                      <div
+                        class="emotion-5"
+                      />
                     </div>
                   </div>
                 }
@@ -500,6 +575,7 @@ exports[`Popover renders an open dropdown 1`] = `
                     data-cy="popover"
                     id="dropdown2"
                     role="dialog"
+                    showPointerCaret={true}
                   >
                     <div
                       className="emotion-4"
@@ -696,6 +772,9 @@ exports[`Popover renders an open dropdown 1`] = `
                         </FocusLock>
                       </FocusLockCombination>
                     </div>
+                    <div
+                      className="emotion-5"
+                    />
                   </Popover>
                 </div>
               </Portal>
