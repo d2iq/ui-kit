@@ -42,20 +42,31 @@ exports[`Tooltip renders 1`] = `
 `;
 
 exports[`Tooltip renders open tooltip 1`] = `
-.emotion-2 {
+.emotion-0 {
   background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
   font-size: 12px;
-  position: relative;
+  -webkit-transform: translateY( -9px );
+  -ms-transform: translateY( -9px );
+  transform: translateY( -9px );
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-.emotion-2:after {
+.emotion-1 {
   position: absolute;
+  bottom: 4px;
+  left: calc(50% - 5px);
+  background-color: var(--themeBgPrimaryInverted,#1B2029);
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 10px;
+  width: 10px;
 }
 
 <Tooltip
@@ -113,20 +124,31 @@ exports[`Tooltip renders open tooltip 1`] = `
             <Overlay
               innerRef={[Function]}
               overlayRoot={
-                .emotion-2 {
+                .emotion-0 {
   background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
   font-size: 12px;
-  position: relative;
+  -webkit-transform: translateY( -9px );
+  -ms-transform: translateY( -9px );
+  transform: translateY( -9px );
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-.emotion-2:after {
+.emotion-1 {
   position: absolute;
+  bottom: 4px;
+  left: calc(50% - 5px);
+  background-color: var(--themeBgPrimaryInverted,#1B2029);
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 10px;
+  width: 10px;
 }
 
 <body>
@@ -136,14 +158,16 @@ exports[`Tooltip renders open tooltip 1`] = `
                     >
                       <div
                         aria-hidden="false"
-                        class="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
+                        class="inverseColorMode emotion-0"
                         data-cy="tooltipContent"
                         id="opened"
                         role="tooltip"
                       >
                         content
                       </div>
+                      <div
+                        class="emotion-1"
+                      />
                     </div>
                   </div>
                 </body>
@@ -165,14 +189,16 @@ exports[`Tooltip renders open tooltip 1`] = `
                     >
                       <div
                         aria-hidden="false"
-                        class="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
+                        class="inverseColorMode emotion-0"
                         data-cy="tooltipContent"
                         id="opened"
                         role="tooltip"
                       >
                         content
                       </div>
+                      <div
+                        class="emotion-1"
+                      />
                     </div>
                   </div>
                 }
@@ -193,8 +219,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                   >
                     <div
                       aria-hidden={false}
-                      className="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
+                      className="inverseColorMode emotion-0"
                       data-cy="tooltipContent"
                       id="opened"
                       role="tooltip"
@@ -207,6 +232,9 @@ exports[`Tooltip renders open tooltip 1`] = `
                     >
                       content
                     </div>
+                    <div
+                      className="emotion-1"
+                    />
                   </TooltipContent>
                 </div>
               </Portal>
@@ -220,20 +248,31 @@ exports[`Tooltip renders open tooltip 1`] = `
 `;
 
 exports[`Tooltip renders with preferred directions 1`] = `
-.emotion-2 {
+.emotion-0 {
   background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
   font-size: 12px;
-  position: relative;
+  -webkit-transform: translateY( -9px );
+  -ms-transform: translateY( -9px );
+  transform: translateY( -9px );
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-.emotion-2:after {
+.emotion-1 {
   position: absolute;
+  bottom: 4px;
+  left: calc(50% - 5px);
+  background-color: var(--themeBgPrimaryInverted,#1B2029);
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 10px;
+  width: 10px;
 }
 
 <Tooltip
@@ -301,30 +340,43 @@ exports[`Tooltip renders with preferred directions 1`] = `
                     >
                       <div
                         aria-hidden="false"
-                        class="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
+                        class="inverseColorMode emotion-0"
                         data-cy="tooltipContent"
                         id="opened"
                         role="tooltip"
                       >
                         content
                       </div>
+                      <div
+                        class="emotion-1"
+                      />
                     </div>
                   </div>
-                  .emotion-2 {
+                  .emotion-0 {
   background-color: var(--themeBgPrimaryInverted,#1B2029);
   border-radius: 2px;
   box-sizing: border-box;
   font-size: 12px;
-  position: relative;
+  -webkit-transform: translateY( -9px );
+  -ms-transform: translateY( -9px );
+  transform: translateY( -9px );
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-.emotion-2:after {
+.emotion-1 {
   position: absolute;
+  bottom: 4px;
+  left: calc(50% - 5px);
+  background-color: var(--themeBgPrimaryInverted,#1B2029);
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 10px;
+  width: 10px;
 }
 
 <div>
@@ -333,14 +385,16 @@ exports[`Tooltip renders with preferred directions 1`] = `
                     >
                       <div
                         aria-hidden="false"
-                        class="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
+                        class="inverseColorMode emotion-0"
                         data-cy="tooltipContent"
                         id="customDir"
                         role="tooltip"
                       >
                         content
                       </div>
+                      <div
+                        class="emotion-1"
+                      />
                     </div>
                   </div>
                 </body>
@@ -362,14 +416,16 @@ exports[`Tooltip renders with preferred directions 1`] = `
                     >
                       <div
                         aria-hidden="false"
-                        class="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
+                        class="inverseColorMode emotion-0"
                         data-cy="tooltipContent"
                         id="customDir"
                         role="tooltip"
                       >
                         content
                       </div>
+                      <div
+                        class="emotion-1"
+                      />
                     </div>
                   </div>
                 }
@@ -390,8 +446,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                   >
                     <div
                       aria-hidden={false}
-                      className="
-    emotion-0    emotion-1   inverseColorMode emotion-2"
+                      className="inverseColorMode emotion-0"
                       data-cy="tooltipContent"
                       id="customDir"
                       role="tooltip"
@@ -404,6 +459,9 @@ exports[`Tooltip renders with preferred directions 1`] = `
                     >
                       content
                     </div>
+                    <div
+                      className="emotion-1"
+                    />
                   </TooltipContent>
                 </div>
               </Portal>

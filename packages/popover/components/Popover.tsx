@@ -5,7 +5,10 @@ import { css } from "emotion";
 import { Dropdownable } from "../../dropdownable";
 import PopoverBox from "./PopoverBox";
 import { SpacingBox } from "../../styleUtils/modifiers";
-import { DropdownableProps } from "../../dropdownable/components/Dropdownable";
+import {
+  DropdownableProps,
+  Direction
+} from "../../dropdownable/components/Dropdownable";
 import { ResetButton } from "../../button";
 import { display } from "../../shared/styles/styleUtils";
 
@@ -111,7 +114,16 @@ const Popover: React.StatelessComponent<PopoverProps> = ({
     <div className={display("inline-block")} ref={triggerRef}>
       <Dropdownable
         open={open}
-        preferredDirections={preferredDirections}
+        preferredDirections={
+          preferredDirections || [
+            Direction.BottomCenter,
+            Direction.TopCenter,
+            Direction.TopLeft,
+            Direction.TopRight,
+            Direction.BottomLeft,
+            Direction.BottomRight
+          ]
+        }
         dropdown={
           <PopoverBox
             role="dialog"
@@ -119,6 +131,7 @@ const Popover: React.StatelessComponent<PopoverProps> = ({
             maxHeight={maxHeight}
             maxWidth={maxWidth}
             data-cy={dataCy}
+            showPointerCaret={true}
           >
             <FocusLock disabled={!open}>
               <div
