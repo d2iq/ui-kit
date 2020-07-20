@@ -7,7 +7,7 @@ import {
   staticKeyboardFocusClassname,
   segmentedControlButtonInner
 } from "../style";
-import { visuallyHidden, display } from "../../shared/styles/styleUtils";
+import { visuallyHidden } from "../../shared/styles/styleUtils";
 import FocusStyleManager from "../../shared/components/FocusStyleManager";
 import { Tooltip } from "../../tooltip";
 
@@ -73,7 +73,7 @@ class SegmentedControlButton extends React.PureComponent<
       */}
         <FocusStyleManager focusEnabledClass={staticKeyboardFocusClassname}>
           <label
-            className={cx(display("inline-block"), segmentedControlButton, {
+            className={cx(segmentedControlButton, {
               [segmentedControlButtonActive]: this.props.isActive
             })}
             data-cy="segmentedControlButton"

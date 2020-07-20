@@ -13,16 +13,19 @@ import { buttonPadding } from "../button/style";
 export const staticKeyboardFocusClassname = "static_segmentKeyboardFocus";
 
 export const segmentedControlContainer = css`
+  display: flex;
   overflow: hidden;
   white-space: nowrap;
 `;
 
 export const segmentedControlButton = css`
+  align-items: center;
   border-color: ${themeBorder};
   border-width: 1px;
   border-style: solid;
   border-right-width: 0;
   cursor: pointer;
+  display: inline-flex;
 
   &:first-child {
     border-radius: ${borderRadiusDefault} 0 0 ${borderRadiusDefault};
