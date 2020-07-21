@@ -95,7 +95,7 @@ exports[`Typography InteractiveText renders all props 1`] = `
 
 exports[`Typography MonospaceText renders all props 1`] = `
 .emotion-0 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
 }
 
 <Text
@@ -393,7 +393,7 @@ exports[`Typography renders all default 7`] = `
 
 exports[`Typography renders all default 8`] = `
 .emotion-0 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
 }
 
 <Text
