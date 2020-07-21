@@ -34,4 +34,9 @@ storiesOf("Actions|Expandable", module)
     >
       <div>Check out this exciting blue content</div>
     </Expandable>
+  ))
+  .add("indicator icon on theright", () => (
+    <Expandable label="Expand for content" indicatorPosition="right">
+      <div>Check out this exciting content</div>
+    </Expandable>
   ));

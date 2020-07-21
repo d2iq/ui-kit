@@ -70,6 +70,7 @@ export class SidebarSubMenuComponent extends React.PureComponent<
             disabled !== undefined && disabled === true ? false : undefined
           }
           label={<div>{label}</div>}
+          indicatorPosition="right"
         >
           {this.getSubItemList(children)}
         </Expandable>

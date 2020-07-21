@@ -171,6 +171,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
   data-cy="sidebarSubMenu"
 >
   <Expandable
+    indicatorPosition="right"
     label={
       <div>
         <SidebarItemLabel
