@@ -67,11 +67,11 @@ exports[`CodeSnippet renders default 1`] = `
 }
 
 .emotion-1 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
 }
 
 .emotion-0 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
   line-height: 1.4;
   font-weight: 500;
   font-size: 14px;
@@ -230,11 +230,11 @@ exports[`CodeSnippet renders with copy button 1`] = `
 }
 
 .emotion-1 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
 }
 
 .emotion-0 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
   line-height: 1.4;
   font-weight: 500;
   font-size: 14px;
