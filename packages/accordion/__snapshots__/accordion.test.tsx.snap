@@ -39,7 +39,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                   isExpanded={false}
                 >
                   <div
-                    className="css-1k62x56"
+                    className="css-1khdlw2"
                     data-cy="accordionItemTitle accordionItemTitle.danger"
                   >
                     <ResetButton
@@ -151,7 +151,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                   isExpanded={false}
                 >
                   <div
-                    className="css-1k62x56"
+                    className="css-1khdlw2"
                     data-cy="accordionItemTitle accordionItemTitle.danger"
                   >
                     <ResetButton
@@ -779,7 +779,7 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                   isExpanded={false}
                 >
                   <div
-                    className="css-1k62x56"
+                    className="css-1khdlw2"
                     data-cy="accordionItemTitle accordionItemTitle.danger"
                   >
                     <h3

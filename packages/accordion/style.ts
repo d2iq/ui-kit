@@ -37,12 +37,12 @@ export const accordionTitleDisabled = css`
 `;
 
 export const accordionTitleDanger = css`
-  background-color: ${lighten(getCSSVarValue(themeError), 4)};
+  background-color: ${lighten(getCSSVarValue(themeError), 5)};
   border-color: ${themeError};
 
   &:hover,
   &:focus-within {
-    background-color: ${lighten(getCSSVarValue(themeError), 5)};
+    background-color: ${lighten(getCSSVarValue(themeError), 4)};
   }
 `;
 
