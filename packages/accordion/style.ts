@@ -34,6 +34,11 @@ export const accordionTitleExpanded = css`
 export const accordionTitleDisabled = css`
   background-color: ${themeBgDisabled};
   color: ${themeTextColorDisabled};
+
+  &:hover,
+  &:focus-within {
+    background-color: ${themeBgDisabled};
+  }
 `;
 
 export const accordionTitleDanger = css`

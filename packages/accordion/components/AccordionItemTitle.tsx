@@ -4,7 +4,7 @@ import { Context as AccordionItemContext } from "./AccordionItemContext";
 import { Context as AccordionContext } from "./AccordionContext";
 import { textWeight } from "../../shared/styles/styleUtils";
 import { cx } from "emotion";
-import { fillWidth, accordionTitleDisabled } from "../style";
+import { fillWidth } from "../style";
 import { HeadingLevel, AccordionTitleAppearances } from "../types";
 import { headingReset } from "../../shared/styles/styleUtils/resets/headingReset";
 import AccordionItemTitleOuter from "./AccordionItemTitleOuter";
@@ -64,12 +64,11 @@ const AccordionItemTitle: React.FC<AccordionItemTitleProps> = ({
         ...(disabled ? [`${dataCy}.disabled`] : [])
       ].join(" ")}
       isExpanded={accordionItemContext!.isExpanded}
+      disabled={disabled}
     >
       <HeadingTag
         id={accordionItemContext?.headingId || ""}
-        className={cx(headingReset, textWeight("medium"), {
-          [accordionTitleDisabled]: disabled
-        })}
+        className={cx(headingReset, textWeight("medium"))}
         data-cy={`${dataCy}-heading`}
       >
         <ResetButton

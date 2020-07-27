@@ -5,11 +5,13 @@ import { AccordionTitleAppearances } from "../types";
 import {
   accordionTitle,
   accordionTitleDanger,
-  accordionTitleExpanded
+  accordionTitleExpanded,
+  accordionTitleDisabled
 } from "../style";
 
 interface AccordionItemTitleOuterProps {
   appearance?: AccordionTitleAppearances;
+  disabled?: boolean;
   isExpanded?: boolean;
   ["data-cy"]?: string;
 }
@@ -18,12 +20,14 @@ const AccordionItemTitleOuter: React.FC<AccordionItemTitleOuterProps> = ({
   appearance,
   children,
   "data-cy": dataCy,
+  disabled,
   isExpanded
 }) => (
   <div
     className={cx(border("all"), accordionTitle, {
       [accordionTitleDanger]: appearance === "danger",
-      [accordionTitleExpanded]: isExpanded
+      [accordionTitleExpanded]: isExpanded,
+      [accordionTitleDisabled]: disabled
     })}
     data-cy={dataCy}
   >

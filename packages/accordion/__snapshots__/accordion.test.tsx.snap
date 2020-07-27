@@ -265,10 +265,11 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
               >
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle accordionItemTitle.disabled"
+                  disabled={true}
                   isExpanded={false}
                 >
                   <div
-                    className="css-49v3w5"
+                    className="css-1tnc4bw"
                     data-cy="accordionItemTitle accordionItemTitle.disabled"
                   >
                     <ResetButton
@@ -882,14 +883,15 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
               >
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle accordionItemTitle.disabled"
+                  disabled={true}
                   isExpanded={false}
                 >
                   <div
-                    className="css-49v3w5"
+                    className="css-1tnc4bw"
                     data-cy="accordionItemTitle accordionItemTitle.disabled"
                   >
                     <h3
-                      className="css-139pajm"
+                      className="css-n00hzg"
                       data-cy="accordionItemTitle-heading"
                       id="accordionItem2-heading"
                     >
