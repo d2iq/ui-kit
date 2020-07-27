@@ -11,7 +11,33 @@ States communicate the different statuses of UI components to the user, includin
 - Data inputs
   - For example: a text input
 
-## States
+## States: Ready to receive input
+
+### Hover
+
+Styling a component when it is hovered by a cursor indicates that a component can be interacted with. If a component is normally interactive but is currently disabled, it should not be styled on hover. Do not remove the browser's default hover styles unless you're overriding them with custom hover styles.
+
+In addition to updating a component's style when it is hovered, it is also a good idea to update the cursor style to match the purpose of the component. For example: showing a resize cursor when hovering a drag handle that is used to resize a table column.
+
+### Focus
+
+Styling a component when it receives focus indicates that a component is active and ready to receive input. If a component is normally interactive but is currently disabled, it should not receive focus. Do not remove the browser's default focus styles unless you're overriding them with custom focus styles.
+
+Focus styles can match the hover styles, but it's also okay to have different styles to indicate hover and focus. It's also acceptable to have different focus styles for different input devices. For example: our button components have focus styles that only appear when the button is focused using the keyboard.
+
+### Active
+
+A component can be styled to indicate it is actively receiving input such as a mouse click. If a component is normally interactive but is currently disabled, it should not receive active styles. Do not remove the browser's default active styles unless you're overriding them with custom active styles.
+
+### Selected
+
+If a component has been toggled to an "on" state, or picked from a list of options, it should be styled to visually indicate its selected state. If there is another affordance to indicate the selected state, such as a checkmark or a text label, additional styles are optional.
+
+## States: Not ready to receive input
+
+### Loading
+
+If an action will not be completed immediately, the user should be reassured that their action has not failed but it is still in progress. The component that triggers the action should be disabled to avoid re-starting the process. If the action has a label, the label may be updated to communicate what's happening. For example: changing a button's label from "Save" to "Saving". Loading states should not block interaction with unrelated components.
 
 ### Disabled
 
@@ -43,21 +69,11 @@ Suggested patterns:
 - displaying an explanation as caption text near the disabled component
 - displaying tooltip when hovering or focusing the disabled component
 
-### Hovered/Focused
-
-TBD
-
-### Active/Selected
-
-TBD
-
-### Loading
-
-TBD
-
 ### Read-only
 
-TBD
+A read-only state is similar to a disabled state, except the content of a read-only input is relevant to completing the current task. Use a read-only state when the value of an input is going to be used, but the input cannot be changed directly. For example: if we automatically generate a token based on other input values, but the token value cannot be directly edited by the user.
+
+To help users understand what they can edit and what they cannot edit, read-only components should not be styled like their interactive counterparts. For example: a read-only text input should not simply look like a regular text input that doesn't respond to interaction.
 
 ### Hidden
 
