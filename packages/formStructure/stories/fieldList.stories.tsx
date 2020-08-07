@@ -37,7 +37,7 @@ const testFieldUpdateHandler = (rowIndex, pathToValue) => () =>
     `update row ${rowIndex} with the property that has the key ${pathToValue}`
   );
 
-storiesOf("Forms|Form layout/Grouped fields/FieldList", module)
+storiesOf("Forms|Form structure/Grouped fields/FieldList", module)
   .add(
     "editable fields (controlled inputs)",
     () => (
