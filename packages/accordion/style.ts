@@ -27,7 +27,6 @@ export const accordionTitle = css`
 `;
 
 export const accordionTitleExpanded = css`
-  border-bottom-width: 0;
   border-radius: ${borderRadiusSmall} ${borderRadiusSmall} 0 0;
 `;
 

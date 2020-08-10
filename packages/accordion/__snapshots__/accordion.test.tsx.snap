@@ -425,7 +425,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                   isExpanded={true}
                 >
                   <div
-                    className="css-1spvuwg"
+                    className="css-3n1jto"
                     data-cy="accordionItemTitle"
                   >
                     <h3
@@ -537,7 +537,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                   isExpanded={true}
                 >
                   <div
-                    className="css-1spvuwg"
+                    className="css-3n1jto"
                     data-cy="accordionItemTitle"
                   >
                     <h3
@@ -649,7 +649,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                   isExpanded={true}
                 >
                   <div
-                    className="css-1spvuwg"
+                    className="css-3n1jto"
                     data-cy="accordionItemTitle"
                   >
                     <h3
