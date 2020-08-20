@@ -54,6 +54,16 @@ storiesOf("Forms|Textarea", module)
       hintContent="Enter a body of text here"
     />
   ))
+  .add("hint text and error", () => (
+    <Textarea
+      id="hint"
+      appearance={InputAppearance.Error}
+      inputLabel="Standard"
+      placeholder="Placeholder"
+      hintContent="Enter a body of text here"
+      errors={["Something is wrong here"]}
+    />
+  ))
   .add("required", () => (
     <React.Fragment>
       <Textarea
