@@ -15,29 +15,37 @@ States communicate the different statuses of UI components to the user, includin
 
 ### Hover
 
-Styling a component when it is hovered by a cursor indicates that a component can be interacted with. If a component is normally interactive but is currently disabled, it should not be styled on hover. Do not remove the browser's default hover styles unless you're overriding them with custom hover styles.
+Styling a component when it is hovered by a cursor indicates that a component can be interacted with. If a component is normally interactive but is currently disabled, it should not be styled on hover. For example: a dropdown menu item gets a different background color when it is hovered unless it is disabled.
 
 In addition to updating a component's style when it is hovered, it is also a good idea to update the cursor style to match the purpose of the component. For example: showing a resize cursor when hovering a drag handle that is used to resize a table column.
 
+Do not remove the browser's default hover styles unless you're overriding them with custom hover styles.
+
 ### Focus
 
-Styling a component when it receives focus indicates that a component is active and ready to receive input. If a component is normally interactive but is currently disabled, it should not receive focus. Do not remove the browser's default focus styles unless you're overriding them with custom focus styles.
+Styling a component when it receives focus indicates that a component is active and ready to receive input. If a component is normally interactive but is currently disabled, it should not receive focus. For example: a text input gets a new border color when it receives focus.
 
 Focus styles can match the hover styles, but it's also okay to have different styles to indicate hover and focus. It's also acceptable to have different focus styles for different input devices. For example: our button components have focus styles that only appear when the button is focused using the keyboard.
 
+Do not remove the browser's default focus styles unless you're overriding them with custom focus styles.
+
 ### Active
 
-A component can be styled to indicate it is actively receiving input such as a mouse click. If a component is normally interactive but is currently disabled, it should not receive active styles. Do not remove the browser's default active styles unless you're overriding them with custom active styles.
+A component can be styled to indicate it is actively receiving input such as a mouse click or pressing the Tab key to focus the input. If a component is normally interactive but is currently disabled, it should not receive active styles. For example: when a button is clicked, the background color is changed while the mouse is pressed down.
+
+Do not remove the browser's default active styles unless you're overriding them with custom active styles.
 
 ### Selected
 
-If a component has been toggled to an "on" state, or picked from a list of options, it should be styled to visually indicate its selected state. If there is another affordance to indicate the selected state, such as a checkmark or a text label, additional styles are optional.
+If a component has been toggled to an "on" state, or picked from a list of options, it should be styled to visually indicate its selected state. For example: a selected dropdown menu item gets a different background color when it is selected.
+
+If there is another affordance to indicate the selected state, such as a checkmark or a text label, additional styles are optional. For example: a checkbox label does not need any visual design changes because there is a checkmark that indicates whether or not it is selected.
 
 ## States: Not ready to receive input
 
 ### Loading
 
-If an action will not be completed immediately, the user should be reassured that their action has not failed but it is still in progress. The component that triggers the action should be disabled to avoid re-starting the process. If the action has a label, the label may be updated to communicate what's happening. For example: changing a button's label from "Save" to "Saving". Loading states should not block interaction with unrelated components.
+If an action will not be completed immediately, the user should be reassured that their action has not failed but it is still in progress. The component that triggers the action should be disabled to avoid re-starting the process. If the action has a label, the label may be updated to communicate what's happening. For example: changing a button's label from "Save" to "Saving...". Loading states should not block interaction with unrelated components.
 
 ### Disabled
 
@@ -65,7 +73,7 @@ If a component is disabled but still visible, don't force users to interpret why
 
 Suggested patterns:
 
-- displaying instruction text below the section's nearest header
+- displaying instruction text below the affected section's nearest header
 - displaying an explanation as caption text near the disabled component
 - displaying tooltip when hovering or focusing the disabled component
 
