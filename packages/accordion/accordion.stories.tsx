@@ -1,5 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
+import { withReadme } from "storybook-readme";
 import { Flex, FlexItem } from "../styleUtils/layout";
 import { SecondaryButton } from "../button";
 import {
@@ -9,8 +10,10 @@ import {
   AccordionItemContent,
   AccordionItemTitleInteractive
 } from "./";
+const readme = require("./README.md");
 
 storiesOf("Navigation|Accordion", module)
+  .addDecorator(withReadme([readme]))
   .add("default", () => (
     <Accordion>
       <AccordionItem>
