@@ -30,7 +30,8 @@ const Popover = (props: PopoverProps) => {
       <div
         className={cx(menuList, border("all"), {
           [alignContainerWithCaretStyles(direction)]: showPointerCaret,
-          [hideHoriztonalScroll]: !width && !maxWidth
+          [hideHoriztonalScroll]:
+            !width && !maxWidth && !other.style?.maxWidth && !other.style?.width
         })}
         ref={menuRef}
         style={{ width, maxHeight, maxWidth }}
