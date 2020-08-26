@@ -261,7 +261,7 @@ exports[`Typeahead renders 1`] = `
               value=""
             >
               <div
-                data-cy="textInput"
+                data-cy="textInput textInput.standard"
               >
                 <label
                   className="emotion-0"
@@ -575,7 +575,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
               value=""
             >
               <div
-                data-cy="textInput"
+                data-cy="textInput textInput.standard"
               >
                 <label
                   className="emotion-0"
