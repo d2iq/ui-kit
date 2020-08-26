@@ -291,7 +291,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   type="text"
 >
   <div
-    data-cy="textInput"
+    data-cy="textInput textInput.standard"
   >
     <label
       className="emotion-0"
@@ -720,7 +720,7 @@ exports[`TextInputWithBadges renders empty 1`] = `
   type="text"
 >
   <div
-    data-cy="textInput"
+    data-cy="textInput textInput.standard"
   >
     <label
       className="emotion-0"
@@ -1045,7 +1045,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   type="text"
 >
   <div
-    data-cy="textInput"
+    data-cy="textInput textInput.standard"
   >
     <label
       className="emotion-0"

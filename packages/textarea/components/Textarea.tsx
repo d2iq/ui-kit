@@ -2,18 +2,14 @@ import * as React from "react";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { cx } from "emotion";
-import {
-  inputReset,
-  tintText,
-  visuallyHidden
-} from "../../shared/styles/styleUtils";
+import { inputReset } from "../../shared/styles/styleUtils";
 import {
   getInputAppearanceStyle,
-  inputContainer,
-  getLabelStyle
+  inputContainer
 } from "../../shared/styles/formStyles";
 import { textarea } from "../style";
-import { themeError } from "../../design-tokens/build/js/designTokens";
+import nextId from "react-id-generator";
+import { renderLabel } from "../../utilities/label";
 
 export interface TextareaProps extends React.HTMLProps<HTMLTextAreaElement> {
   /**
@@ -40,6 +36,10 @@ export interface TextareaProps extends React.HTMLProps<HTMLTextAreaElement> {
    * Sets the contents for validation errors. This will be displayed below the textarea element. Errors are only visible when the `Textarea` appearance is also set to `InputAppearance.Error`.
    */
   errors?: React.ReactNode[];
+  /**
+   * Sets the text content for the tooltip that can be displayed above the input.
+   */
+  tooltipContent?: React.ReactNode;
 }
 
 class Textarea extends React.PureComponent<TextareaProps, {}> {
@@ -49,18 +49,10 @@ class Textarea extends React.PureComponent<TextareaProps, {}> {
     rows: 3
   };
 
+  id = this.props.id ?? nextId("textarea-");
+
   public render() {
-    const {
-      appearance,
-      errors,
-      hintContent,
-      id,
-      inputLabel,
-      required,
-      showInputLabel,
-      value,
-      ...other
-    } = this.props;
+    const { appearance, errors, hintContent, id, value, ...other } = this.props;
     const hasError = appearance === InputAppearance.Error;
     let { onChange } = other;
     const inputAppearance = this.getInputAppearance();
@@ -69,34 +61,22 @@ class Textarea extends React.PureComponent<TextareaProps, {}> {
         event: React.FormEvent<HTMLTextAreaElement>
       ) => void;
     }
-    const parentDataCy = [
-      "textarea",
-      ...(inputAppearance !== InputAppearance.Standard
-        ? [`textarea.${this.getInputAppearance()}`]
-        : [])
-    ].join(" ");
-    const textareaDataCy = [
-      "textarea-textarea",
-      ...(inputAppearance !== InputAppearance.Standard
-        ? [`textarea-textarea.${this.getInputAppearance()}`]
-        : [])
-    ].join(" ");
+    const parentDataCy = `textarea textarea.${inputAppearance}`;
+    const textareaDataCy = `textarea-textarea textarea-textarea.${inputAppearance}`;
 
     return (
       <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
         {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
           <div data-cy={parentDataCy}>
-            <label
-              className={cx(getLabelStyle(hasError), {
-                [visuallyHidden]: !showInputLabel
-              })}
-              htmlFor={id}
-            >
-              {inputLabel}
-              {required ? (
-                <span className={cx(tintText(themeError))}> *</span>
-              ) : null}
-            </label>
+            {renderLabel({
+              appearance,
+              hidden: !this.props.showInputLabel,
+              id: this.id,
+              label: this.props.inputLabel,
+              required: this.props.required,
+              tooltipContent: this.props.tooltipContent
+            })}
+
             <textarea
               aria-invalid={!isValid}
               aria-describedby={describedByIds}
@@ -108,7 +88,7 @@ class Textarea extends React.PureComponent<TextareaProps, {}> {
                 getInputAppearanceStyle(this.getInputAppearance()),
                 textarea
               )}
-              required={required}
+              required={this.props.required}
               data-cy="textarea-textarea"
               {...{ ...other, onChange }}
             />
