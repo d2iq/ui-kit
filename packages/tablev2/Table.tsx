@@ -206,7 +206,7 @@ export function Table<Entry, ColIDs extends string, Sort extends ColIDs>({
   toId,
   children,
   ...divProps
-}: { data: Entry[] } & DivProps & TableProps<Entry, ColIDs, Sort>) {
+}: { data: readonly Entry[] } & DivProps & TableProps<Entry, ColIDs, Sort>) {
   const [state, setState] = React.useState<State>({
     columns: columns.map(c => ({ id: c.id, width: c.initialWidth || null })),
     order: initialSorter?.order ?? "asc",
@@ -222,7 +222,7 @@ export function Table<Entry, ColIDs extends string, Sort extends ColIDs>({
   const col = columns.find(c => c.id === state.sortBy);
   const sort =
     col?.sorter?.(state.order, state.order === "asc" ? 1 : -1) ?? (() => 0);
-  const sortedData = data.sort(sort);
+  const sortedData = [...data].sort(sort);
   const internalColumns: Array<InternalColumn<Entry>> = columns.map(c => {
     return { ...c, width: getWidth(c, state.columns) };
   });
