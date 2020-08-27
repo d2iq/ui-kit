@@ -1,6 +1,7 @@
 import React, { CSSProperties } from "react";
 import { usePopper } from "react-popper";
-import { Placement, Modifier } from "@popperjs/core";
+import { ModifierPhases } from "@popperjs/core";
+import maxSize from "popper-max-size-modifier";
 import Overlay from "../../shared/components/Overlay";
 import DropdownContents from "./DropdownContents";
 import { zIndexDropdownable } from "../../design-tokens/build/js/designTokens";
@@ -29,43 +30,49 @@ export interface DropdownableProps {
   disablePortal?: boolean;
 }
 
-const getPlacementConfig = (
+const getPreferredDirection = (
   preferredDirections?: Direction | Direction[]
-): {
-  placement: Placement;
-  modifiers?: Array<
-    Pick<
-      Modifier<"flip", { fallbackPlacements: Direction[] }>,
-      "name" | "options"
-    >
-  >;
-} => {
+) => {
   if (!preferredDirections || !preferredDirections.length) {
-    return { placement: Direction.BottomLeft };
+    return Direction.BottomLeft;
   }
   if (typeof preferredDirections === "string") {
-    return {
-      placement: preferredDirections
-    };
+    return preferredDirections;
   }
 
-  if (preferredDirections.length === 1) {
-    return {
-      placement: preferredDirections[0]
-    };
-  }
+  return preferredDirections[0];
+};
 
-  return {
-    placement: preferredDirections[0],
-    modifiers: [
-      {
-        name: "flip",
-        options: {
-          fallbackPlacements: preferredDirections.slice(1)
-        }
+const getFlipModifier = (preferredDirections?: Direction | Direction[]) => {
+  if (!preferredDirections || !preferredDirections.length) {
+    return {};
+  }
+  if (preferredDirections.length > 1) {
+    return {
+      name: "flip",
+      options: {
+        fallbackPlacements: preferredDirections.slice(1)
       }
-    ]
-  };
+    };
+  }
+  return {};
+};
+
+const applyMaxSize = {
+  name: "applyMaxSize",
+  enabled: true,
+  phase: "beforeWrite" as ModifierPhases,
+  requires: ["maxSize"],
+  fn({ state }) {
+    // The `maxSize` modifier provides this data
+    const { width, height } = state.modifiersData.maxSize;
+
+    state.styles.popper = {
+      ...state.styles.popper,
+      maxWidth: `${width}px`,
+      maxHeight: `${height}px`
+    };
+  }
 };
 
 const Dropdownable: React.FC<DropdownableProps> = ({
@@ -86,8 +93,10 @@ const Dropdownable: React.FC<DropdownableProps> = ({
     setPopperElement
   ] = React.useState<HTMLDivElement | null>(null);
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
-    ...getPlacementConfig(preferredDirections)
+    placement: getPreferredDirection(preferredDirections),
+    modifiers: [maxSize, applyMaxSize, getFlipModifier(preferredDirections)]
   });
+  const { maxHeight, maxWidth, ...popperStyles } = styles.popper;
   const popperAttributes = {
     ref: setPopperElement,
     style: {
@@ -97,14 +106,19 @@ const Dropdownable: React.FC<DropdownableProps> = ({
           visibility: "hidden",
           pointerEvents: "none"
         }),
-      ...styles.popper
+      ...popperStyles
     } as CSSProperties,
     ...attributes.popper
   };
   const getDropdown = () => {
     if (attributes.popper) {
       return React.cloneElement(dropdown, {
-        direction: attributes.popper["data-popper-placement"]
+        direction: attributes.popper["data-popper-placement"],
+        style: {
+          overflow: "auto",
+          maxHeight: dropdown.props.maxHeight || maxHeight,
+          maxWidth: dropdown.props.maxWidth || maxWidth
+        }
       });
     }
     return dropdown;
