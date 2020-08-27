@@ -1193,10 +1193,11 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                       >
                         <div
                           aria-labelledby="downshift-1-label"
-                          class="emotion-9"
+                          class="css-jcddh3"
                           data-cy="popover"
                           id="downshift-1-menu"
                           role="listbox"
+                          style="overflow: auto; max-height: 768px; max-width: 0px;"
                         >
                           <div
                             class=""
