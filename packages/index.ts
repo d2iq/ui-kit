@@ -21,7 +21,7 @@ export {
   AccordionItemContent,
   AccordionItemTitleInteractive
 } from "./accordion";
-export { Badge, BadgeButton } from "./badge";
+export { Badge, BadgeButton, ColorCodedBadge } from "./badge";
 export { Breadcrumb } from "./breadcrumb";
 export {
   PrimaryButton,
