@@ -4,25 +4,16 @@ import { optionalIcon, select, selectIcon, selectContainer } from "../style";
 import {
   inputContainer,
   getInputAppearanceStyle,
-  getLabelStyle,
   getIconAppearanceStyle
 } from "../../shared/styles/formStyles";
-import {
-  inputReset,
-  padding,
-  visuallyHidden,
-  display,
-  tintText
-} from "../../shared/styles/styleUtils";
+import { inputReset, padding, display } from "../../shared/styles/styleUtils";
 import Icon, { IconShapes } from "../../icon/components/Icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import {
-  iconSizeXs,
-  themeError
-} from "../../design-tokens/build/js/designTokens";
+import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import IconPropAdapter from "../../icon/components/IconPropAdapter";
+import { renderLabel } from "../../utilities/label";
 
 export interface SelectOption {
   disabled?: boolean;
@@ -63,6 +54,10 @@ export interface SelectInputProps extends React.HTMLProps<HTMLSelectElement> {
    * Defaults to `true`, but can be set to `false` to visibly hide the `TextInput`'s label. The `inputLabel` should still be set even when hidden for accessibility support.
    */
   showInputLabel?: boolean;
+  /**
+   * Sets the text content for the tooltip that can be displayed above the input.
+   */
+  tooltipContent?: React.ReactNode;
 }
 
 export interface SelectInputState {
@@ -90,50 +85,31 @@ class SelectInput extends React.PureComponent<
   }
 
   public render() {
-    const {
-      appearance,
-      errors,
-      hintContent,
-      iconStart,
-      id,
-      inputLabel,
-      options,
-      showInputLabel,
-      required,
-      ...other
-    } = this.props;
+    const { appearance, errors, iconStart, id, options, ...other } = this.props;
     delete other.onFocus;
     delete other.onBlur;
 
     const hasError = appearance === InputAppearance.Error;
-    const parentDataCy = [
-      "selectInput",
-      ...(appearance && appearance !== InputAppearance.Standard
-        ? [`selectInput.${appearance}`]
-        : [])
-    ].join(" ");
-    const selectDataCy = [
-      "selectInput-select",
-      ...(appearance && appearance !== InputAppearance.Standard
-        ? [`selectInput-select.${appearance}`]
-        : [])
-    ].join(" ");
+    const parentDataCy = `selectInput selectInput.${appearance}`;
+    const selectDataCy = `selectInput-select selectInput-select.${appearance}`;
 
     return (
-      <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
+      <FormFieldWrapper
+        id={id}
+        errors={errors}
+        hintContent={this.props.hintContent}
+      >
         {({ getValidationErrors, isValid, getHintContent, describedByIds }) => (
           <div data-cy={parentDataCy}>
-            <label
-              className={cx(getLabelStyle(hasError), {
-                [visuallyHidden]: !showInputLabel
-              })}
-              htmlFor={id}
-            >
-              {inputLabel}
-              {required ? (
-                <span className={cx(tintText(themeError))}> *</span>
-              ) : null}
-            </label>
+            {renderLabel({
+              appearance,
+              hidden: !this.props.showInputLabel,
+              id,
+              label: this.props.inputLabel,
+              required: this.props.required,
+              tooltipContent: this.props.tooltipContent
+            })}
+
             <span
               className={cx(
                 selectContainer,
