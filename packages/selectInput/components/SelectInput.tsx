@@ -85,7 +85,17 @@ class SelectInput extends React.PureComponent<
   }
 
   public render() {
-    const { appearance, errors, iconStart, id, options, ...other } = this.props;
+    const {
+      appearance,
+      errors,
+      iconStart,
+      id,
+      options,
+      showInputLabel,
+      inputLabel,
+      tooltipContent,
+      ...other
+    } = this.props;
     delete other.onFocus;
     delete other.onBlur;
 
@@ -103,11 +113,11 @@ class SelectInput extends React.PureComponent<
           <div data-cy={parentDataCy}>
             {renderLabel({
               appearance,
-              hidden: !this.props.showInputLabel,
+              hidden: !showInputLabel,
               id,
-              label: this.props.inputLabel,
+              label: inputLabel,
               required: this.props.required,
-              tooltipContent: this.props.tooltipContent
+              tooltipContent
             })}
 
             <span
