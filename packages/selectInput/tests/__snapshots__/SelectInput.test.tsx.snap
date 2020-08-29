@@ -235,10 +235,8 @@ exports[`SelectInput should render all appearances focus 1`] = `
           className="emotion-1"
           data-cy="selectInput-select selectInput-select.[object Object]"
           id="layers"
-          inputLabel="Atmosphere layer"
           onBlur={[Function]}
           onFocus={[Function]}
-          showInputLabel={true}
         >
           <option
             key="0"
