@@ -1,5 +1,381 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ToggleInputList renders as a radio group 1`] = `
+.emotion-22 {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.emotion-23 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-7 {
+  padding-top: 8px;
+}
+
+.emotion-0 {
+  padding: 0;
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 0 !important;
+}
+
+.emotion-5 > div {
+  width: auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  display: inherit;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding-left: 12px;
+}
+
+.emotion-2 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 999px;
+  position: relative;
+}
+
+<ToggleInputList
+  id="radio"
+  isRadioGroup={true}
+  items={
+    Array [
+      Object {
+        "id": "id.1",
+        "inputLabel": "Sample label",
+        "value": "value.1",
+      },
+      Object {
+        "id": "id.2",
+        "inputLabel": "Sample label",
+        "value": "value.2",
+      },
+      Object {
+        "id": "id.3",
+        "inputLabel": "Sample label",
+        "value": "value.3",
+      },
+    ]
+  }
+  labelAppearance="standard"
+  listLabel="Sample legend"
+  selectedItems={Array []}
+  showListLabel={true}
+  vertAlign="center"
+>
+  <FormFieldWrapper
+    id="radio"
+  >
+    <fieldset
+      aria-describedby=""
+      aria-invalid={false}
+      className="emotion-23"
+      role="listbox"
+    >
+      <legend
+        className="emotion-0"
+      >
+        Sample legend
+      </legend>
+      <ul
+        className="emotion-22"
+      >
+        <li
+          className="emotion-7"
+          key="id.1"
+        >
+          <RadioInput
+            checked={false}
+            id="id.1"
+            inputLabel="Sample label"
+            name="radio"
+            onChange={[Function]}
+            value="value.1"
+            vertAlign="center"
+          >
+            <ForwardRef
+              appearance="standard"
+              checked={false}
+              id="id.1"
+              inputLabel="Sample label"
+              inputType="radio"
+              name="radio"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.1"
+              vertAlign="center"
+            >
+              <FormFieldWrapper
+                id="id.1"
+              >
+                <div
+                  className="emotion-6"
+                  data-cy="radioInput"
+                >
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.1"
+                  >
+                    <div
+                      className="emotion-3"
+                    >
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedby=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="radioInput-input"
+                          id="id.1"
+                          name="radio"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="radio"
+                          value="value.1"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </FormFieldWrapper>
+            </ForwardRef>
+          </RadioInput>
+        </li>
+        <li
+          className="emotion-7"
+          key="id.2"
+        >
+          <RadioInput
+            checked={false}
+            id="id.2"
+            inputLabel="Sample label"
+            name="radio"
+            onChange={[Function]}
+            value="value.2"
+            vertAlign="center"
+          >
+            <ForwardRef
+              appearance="standard"
+              checked={false}
+              id="id.2"
+              inputLabel="Sample label"
+              inputType="radio"
+              name="radio"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.2"
+              vertAlign="center"
+            >
+              <FormFieldWrapper
+                id="id.2"
+              >
+                <div
+                  className="emotion-6"
+                  data-cy="radioInput"
+                >
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.2"
+                  >
+                    <div
+                      className="emotion-3"
+                    >
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedby=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="radioInput-input"
+                          id="id.2"
+                          name="radio"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="radio"
+                          value="value.2"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </FormFieldWrapper>
+            </ForwardRef>
+          </RadioInput>
+        </li>
+        <li
+          className="emotion-7"
+          key="id.3"
+        >
+          <RadioInput
+            checked={false}
+            id="id.3"
+            inputLabel="Sample label"
+            name="radio"
+            onChange={[Function]}
+            value="value.3"
+            vertAlign="center"
+          >
+            <ForwardRef
+              appearance="standard"
+              checked={false}
+              id="id.3"
+              inputLabel="Sample label"
+              inputType="radio"
+              name="radio"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.3"
+              vertAlign="center"
+            >
+              <FormFieldWrapper
+                id="id.3"
+              >
+                <div
+                  className="emotion-6"
+                  data-cy="radioInput"
+                >
+                  <label
+                    className="emotion-5"
+                    htmlFor="id.3"
+                  >
+                    <div
+                      className="emotion-3"
+                    >
+                      <div
+                        className="emotion-2"
+                      >
+                        <input
+                          aria-describedby=""
+                          aria-invalid={false}
+                          checked={false}
+                          className="emotion-1"
+                          data-cy="radioInput-input"
+                          id="id.3"
+                          name="radio"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="radio"
+                          value="value.3"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-4"
+                    >
+                      Sample label
+                    </div>
+                  </label>
+                </div>
+              </FormFieldWrapper>
+            </ForwardRef>
+          </RadioInput>
+        </li>
+      </ul>
+    </fieldset>
+  </FormFieldWrapper>
+</ToggleInputList>
+`;
+
 exports[`ToggleInputList renders default 1`] = `
 .emotion-22 {
   list-style: none;
@@ -54,17 +430,6 @@ exports[`ToggleInputList renders default 1`] = `
   font-weight: 500;
 }
 
-.emotion-2 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
-}
-
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -102,6 +467,17 @@ exports[`ToggleInputList renders default 1`] = `
   flex-shrink: 0;
   width: initial;
   display: inherit;
+}
+
+.emotion-2 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 4px;
+  position: relative;
 }
 
 .emotion-4 {
@@ -167,26 +543,28 @@ exports[`ToggleInputList renders default 1`] = `
           key="id.1"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.1"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.1"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.1"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.1"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.1"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -209,6 +587,7 @@ exports[`ToggleInputList renders default 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.1"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -224,8 +603,8 @@ exports[`ToggleInputList renders default 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -233,26 +612,28 @@ exports[`ToggleInputList renders default 1`] = `
           key="id.2"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.2"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.2"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.2"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.2"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.2"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -275,6 +656,7 @@ exports[`ToggleInputList renders default 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.2"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -290,8 +672,8 @@ exports[`ToggleInputList renders default 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -299,26 +681,28 @@ exports[`ToggleInputList renders default 1`] = `
           key="id.3"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.3"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.3"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.3"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.3"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.3"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -341,6 +725,7 @@ exports[`ToggleInputList renders default 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.3"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -356,8 +741,8 @@ exports[`ToggleInputList renders default 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
       </ul>
@@ -411,17 +796,6 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
   padding-top: 8px;
 }
 
-.emotion-2 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
-}
-
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -459,6 +833,17 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
   flex-shrink: 0;
   width: initial;
   display: inherit;
+}
+
+.emotion-2 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 4px;
+  position: relative;
 }
 
 .emotion-4 {
@@ -561,26 +946,28 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
           key="id.1"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.1"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.1"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.1"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.1"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.1"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -603,6 +990,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.1"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -618,8 +1006,8 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -627,26 +1015,28 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
           key="id.2"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.2"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.2"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.2"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.2"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.2"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -669,6 +1059,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.2"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -684,8 +1075,8 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -693,26 +1084,28 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
           key="id.3"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.3"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.3"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.3"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.3"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.3"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -735,6 +1128,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.3"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -750,8 +1144,8 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
       </ul>
@@ -832,17 +1226,6 @@ exports[`ToggleInputList renders with errors 1`] = `
   font-weight: 500;
 }
 
-.emotion-2 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
-}
-
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -880,6 +1263,17 @@ exports[`ToggleInputList renders with errors 1`] = `
   flex-shrink: 0;
   width: initial;
   display: inherit;
+}
+
+.emotion-2 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 4px;
+  position: relative;
 }
 
 .emotion-4 {
@@ -971,26 +1365,28 @@ exports[`ToggleInputList renders with errors 1`] = `
           key="id.1"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.1"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.1"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.1"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.1"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.1"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -1013,6 +1409,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.1"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1028,8 +1425,8 @@ exports[`ToggleInputList renders with errors 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -1037,26 +1434,28 @@ exports[`ToggleInputList renders with errors 1`] = `
           key="id.2"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.2"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.2"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.2"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.2"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.2"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -1079,6 +1478,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.2"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1094,8 +1494,8 @@ exports[`ToggleInputList renders with errors 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -1103,26 +1503,28 @@ exports[`ToggleInputList renders with errors 1`] = `
           key="id.3"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.3"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.3"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.3"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.3"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.3"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -1145,6 +1547,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.3"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1160,8 +1563,8 @@ exports[`ToggleInputList renders with errors 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
       </ul>
@@ -1233,17 +1636,6 @@ exports[`ToggleInputList renders with hidden label 1`] = `
   padding-top: 8px;
 }
 
-.emotion-2 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
-}
-
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1281,6 +1673,17 @@ exports[`ToggleInputList renders with hidden label 1`] = `
   flex-shrink: 0;
   width: initial;
   display: inherit;
+}
+
+.emotion-2 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 4px;
+  position: relative;
 }
 
 .emotion-4 {
@@ -1359,26 +1762,28 @@ exports[`ToggleInputList renders with hidden label 1`] = `
           key="id.1"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.1"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.1"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.1"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.1"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.1"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -1401,6 +1806,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.1"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1416,8 +1822,8 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -1425,26 +1831,28 @@ exports[`ToggleInputList renders with hidden label 1`] = `
           key="id.2"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.2"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.2"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.2"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.2"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.2"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -1467,6 +1875,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.2"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1482,8 +1891,8 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -1491,26 +1900,28 @@ exports[`ToggleInputList renders with hidden label 1`] = `
           key="id.3"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.3"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.3"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.3"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.3"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.3"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-6"
@@ -1533,6 +1944,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.3"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1548,8 +1960,8 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
       </ul>
@@ -1612,17 +2024,6 @@ exports[`ToggleInputList renders with required 1`] = `
   font-weight: 500;
 }
 
-.emotion-3 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
-}
-
 .emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1660,6 +2061,17 @@ exports[`ToggleInputList renders with required 1`] = `
   flex-shrink: 0;
   width: initial;
   display: inherit;
+}
+
+.emotion-3 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 4px;
+  position: relative;
 }
 
 .emotion-5 {
@@ -1760,26 +2172,28 @@ exports[`ToggleInputList renders with required 1`] = `
           key="id.1"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.1"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.1"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.1"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.1"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.1"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-7"
@@ -1802,6 +2216,7 @@ exports[`ToggleInputList renders with required 1`] = `
                           className="emotion-2"
                           data-cy="checkboxInput-input"
                           id="id.1"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1817,8 +2232,8 @@ exports[`ToggleInputList renders with required 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -1826,26 +2241,28 @@ exports[`ToggleInputList renders with required 1`] = `
           key="id.2"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.2"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.2"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.2"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.2"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.2"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-7"
@@ -1868,6 +2285,7 @@ exports[`ToggleInputList renders with required 1`] = `
                           className="emotion-2"
                           data-cy="checkboxInput-input"
                           id="id.2"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1883,8 +2301,8 @@ exports[`ToggleInputList renders with required 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -1892,26 +2310,28 @@ exports[`ToggleInputList renders with required 1`] = `
           key="id.3"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.3"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.3"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.3"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.3"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.3"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-7"
@@ -1934,6 +2354,7 @@ exports[`ToggleInputList renders with required 1`] = `
                           className="emotion-2"
                           data-cy="checkboxInput-input"
                           id="id.3"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1949,8 +2370,8 @@ exports[`ToggleInputList renders with required 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
       </ul>
@@ -2013,17 +2434,6 @@ exports[`ToggleInputList renders with selected items 1`] = `
   font-weight: 500;
 }
 
-.emotion-20 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
-}
-
 .emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2063,6 +2473,17 @@ exports[`ToggleInputList renders with selected items 1`] = `
   display: inherit;
 }
 
+.emotion-20 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 4px;
+  position: relative;
+}
+
 .emotion-6 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
@@ -2075,19 +2496,6 @@ exports[`ToggleInputList renders with selected items 1`] = `
   min-width: 0;
   width: auto;
   padding-left: 12px;
-}
-
-.emotion-4 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
-  background-color: var(--themeBrandPrimary,#7D58FF);
-  border-color: var(--themeBrandPrimary,#7D58FF);
 }
 
 .emotion-3 {
@@ -2107,9 +2515,22 @@ exports[`ToggleInputList renders with selected items 1`] = `
   width: 100%;
 }
 
+.emotion-4 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  background-color: var(--themeBrandPrimary,#7D58FF);
+  border-color: var(--themeBrandPrimary,#7D58FF);
+  border-radius: 4px;
+  position: relative;
+}
+
 .emotion-2 {
   vertical-align: middle;
-  fill: #FFF;
+  fill: var(--themeBgPrimary,#FFFFFF);
 }
 
 .emotion-2 use {
@@ -2170,26 +2591,28 @@ exports[`ToggleInputList renders with selected items 1`] = `
           key="id.1"
         >
           <CheckboxInput
-            appearance="standard"
             checked={true}
             id="id.1"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.1"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={true}
               id="id.1"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.1"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput checkboxInput.checked"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.1"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-8"
@@ -2212,6 +2635,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input checkboxInput-input.checked"
                           id="id.1"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -2222,7 +2646,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                           className="emotion-3"
                         >
                           <Icon
-                            color="#FFF"
+                            color="var(--themeBgPrimary, #FFFFFF)"
                             shape="system-check"
                             size="16px"
                           >
@@ -2251,8 +2675,8 @@ exports[`ToggleInputList renders with selected items 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -2260,26 +2684,28 @@ exports[`ToggleInputList renders with selected items 1`] = `
           key="id.2"
         >
           <CheckboxInput
-            appearance="standard"
             checked={true}
             id="id.2"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.2"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={true}
               id="id.2"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.2"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput checkboxInput.checked"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.2"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-8"
@@ -2302,6 +2728,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input checkboxInput-input.checked"
                           id="id.2"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -2312,7 +2739,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                           className="emotion-3"
                         >
                           <Icon
-                            color="#FFF"
+                            color="var(--themeBgPrimary, #FFFFFF)"
                             shape="system-check"
                             size="16px"
                           >
@@ -2341,8 +2768,8 @@ exports[`ToggleInputList renders with selected items 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
         <li
@@ -2350,26 +2777,28 @@ exports[`ToggleInputList renders with selected items 1`] = `
           key="id.3"
         >
           <CheckboxInput
-            appearance="standard"
             checked={false}
             id="id.3"
             inputLabel="Sample label"
+            name="checkbox"
             onChange={[Function]}
             value="value.3"
             vertAlign="center"
           >
-            <FormFieldWrapper
+            <ForwardRef
+              appearance="standard"
+              checked={false}
               id="id.3"
+              inputLabel="Sample label"
+              inputType="checkbox"
+              name="checkbox"
+              onChange={[Function]}
+              showInputLabel={true}
+              value="value.3"
+              vertAlign="center"
             >
-              <ToggleInput
-                appearance="standard"
-                dataCy="checkboxInput"
-                errorContent={null}
-                hintContent={null}
+              <FormFieldWrapper
                 id="id.3"
-                inputLabel="Sample label"
-                showInputLabel={true}
-                vertAlign="center"
               >
                 <div
                   className="emotion-8"
@@ -2392,6 +2821,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                           className="emotion-1"
                           data-cy="checkboxInput-input"
                           id="id.3"
+                          name="checkbox"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -2407,8 +2837,8 @@ exports[`ToggleInputList renders with selected items 1`] = `
                     </div>
                   </label>
                 </div>
-              </ToggleInput>
-            </FormFieldWrapper>
+              </FormFieldWrapper>
+            </ForwardRef>
           </CheckboxInput>
         </li>
       </ul>

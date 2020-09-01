@@ -178,10 +178,10 @@ storiesOf("Forms|CheckboxInput", module)
       <CheckboxStoryHelper isChecked={true}>
         {({ changeHandler, isChecked }) => (
           <CheckboxInput
-            id="hiddenLabel"
-            inputLabel="You can't see me"
+            id="hintText"
+            inputLabel="Some label"
             hintContent="Here's a hint"
-            value="hiddenLabelValue"
+            value="hintTextValue"
             checked={isChecked}
             onChange={changeHandler}
           />

@@ -1,42 +1,32 @@
 import * as React from "react";
 
-interface ToggleInputListStoryHelperState {
-  selectedItems: string[];
-}
-
 interface RenderProps {
   changeHandler: (selectedItems: string[]) => void;
   selectedItems: string[];
 }
 interface ToggleInputListStoryHelperProps {
-  children: (renderProps: RenderProps) => React.ReactNode;
+  children: (renderProps: RenderProps) => React.ReactElement;
   selectedItems?: string[];
 }
 
-class ToggleInputListStoryHelper extends React.PureComponent<
-  ToggleInputListStoryHelperProps,
-  ToggleInputListStoryHelperState
-> {
-  constructor(props) {
-    super(props);
-
-    this.handleChange = this.handleChange.bind(this);
-
-    this.state = {
-      selectedItems: props.selectedItems || []
-    };
-  }
-
-  public render() {
-    return this.props.children({
-      changeHandler: this.handleChange,
-      selectedItems: this.state.selectedItems
-    });
-  }
-
-  private handleChange(value) {
-    this.setState({ selectedItems: value });
-  }
-}
+const ToggleInputListStoryHelper = (props: ToggleInputListStoryHelperProps) => {
+  const [selectedItems, setSelectedItems] = React.useState<string[]>(
+    props.selectedItems || []
+  );
+  const changeHandler = value => {
+    setSelectedItems(value);
+  };
+  return (
+    <>
+      <p>
+        Use the Knobs panel to toggle between radio inputs and checkbox inputs
+      </p>
+      {props.children({
+        changeHandler,
+        selectedItems
+      })}
+    </>
+  );
+};
 
 export default ToggleInputListStoryHelper;
