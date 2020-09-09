@@ -1,9 +1,13 @@
 import { css } from "emotion";
 
 export const emptyStateContainer = css`
-  margin: 0 auto;
-  max-width: 450px;
-  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(min(450px, 100%), min-content);
+  justify-content: center;
+`;
+
+export const vertAlignHeading = css`
+  vertical-align: middle;
 `;
 
 export const emptyStateWithGraphicBody = css`
