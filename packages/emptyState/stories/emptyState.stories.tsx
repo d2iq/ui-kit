@@ -19,6 +19,11 @@ storiesOf("Feedback|EmptyState", module)
       Define policy to start allowing groups and roles access to your clusters.
     </EmptyState>
   ))
+  .add("appearance='error'", () => (
+    <EmptyState heading="No policy set" appearance="error">
+      Define policy to start allowing groups and roles access to your clusters.
+    </EmptyState>
+  ))
   .add(
     "wrapped with EmptyStateWrapper",
     () => (
