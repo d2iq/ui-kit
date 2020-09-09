@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CheckboxInput renders all appearances 1`] = `
+exports[`RadioInput renders all appearances 1`] = `
 .emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -73,7 +73,7 @@ exports[`CheckboxInput renders all appearances 1`] = `
   border-width: 1px;
   height: 14px;
   width: 14px;
-  border-radius: 4px;
+  border-radius: 999px;
   position: relative;
 }
 
@@ -91,17 +91,19 @@ exports[`CheckboxInput renders all appearances 1`] = `
   padding-left: 12px;
 }
 
-<CheckboxInput
+<RadioInput
   appearance="standard"
   id="defaultId"
   inputLabel="Sample label"
+  name="appearanceTest"
   value="default"
 >
   <ForwardRef
     appearance="standard"
     id="defaultId"
     inputLabel="Sample label"
-    inputType="checkbox"
+    inputType="radio"
+    name="appearanceTest"
     showInputLabel={true}
     value="default"
     vertAlign="center"
@@ -111,7 +113,7 @@ exports[`CheckboxInput renders all appearances 1`] = `
     >
       <div
         className="emotion-5"
-        data-cy="checkboxInput"
+        data-cy="radioInput"
       >
         <label
           className="emotion-4"
@@ -127,11 +129,12 @@ exports[`CheckboxInput renders all appearances 1`] = `
                 aria-describedby=""
                 aria-invalid={false}
                 className="emotion-0"
-                data-cy="checkboxInput-input"
+                data-cy="radioInput-input"
                 id="defaultId"
+                name="appearanceTest"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                type="checkbox"
+                type="radio"
                 value="default"
               />
             </div>
@@ -145,10 +148,10 @@ exports[`CheckboxInput renders all appearances 1`] = `
       </div>
     </FormFieldWrapper>
   </ForwardRef>
-</CheckboxInput>
+</RadioInput>
 `;
 
-exports[`CheckboxInput renders all appearances 2`] = `
+exports[`RadioInput renders all appearances 2`] = `
 .emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -221,7 +224,7 @@ exports[`CheckboxInput renders all appearances 2`] = `
   border-width: 1px;
   height: 14px;
   width: 14px;
-  border-radius: 4px;
+  border-radius: 999px;
   position: relative;
 }
 
@@ -241,17 +244,19 @@ exports[`CheckboxInput renders all appearances 2`] = `
   fill: var(--themeError,#EB293A);
 }
 
-<CheckboxInput
+<RadioInput
   appearance="error"
   id="defaultId"
   inputLabel="Sample label"
+  name="appearanceTest"
   value="default"
 >
   <ForwardRef
     appearance="error"
     id="defaultId"
     inputLabel="Sample label"
-    inputType="checkbox"
+    inputType="radio"
+    name="appearanceTest"
     showInputLabel={true}
     value="default"
     vertAlign="center"
@@ -261,7 +266,7 @@ exports[`CheckboxInput renders all appearances 2`] = `
     >
       <div
         className="emotion-5"
-        data-cy="checkboxInput checkboxInput.error"
+        data-cy="radioInput radioInput.error"
       >
         <label
           className="emotion-4"
@@ -277,11 +282,12 @@ exports[`CheckboxInput renders all appearances 2`] = `
                 aria-describedby=""
                 aria-invalid={false}
                 className="emotion-0"
-                data-cy="checkboxInput-input checkboxInput-input.error"
+                data-cy="radioInput-input radioInput-input.error"
                 id="defaultId"
+                name="appearanceTest"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                type="checkbox"
+                type="radio"
                 value="default"
               />
             </div>
@@ -295,10 +301,10 @@ exports[`CheckboxInput renders all appearances 2`] = `
       </div>
     </FormFieldWrapper>
   </ForwardRef>
-</CheckboxInput>
+</RadioInput>
 `;
 
-exports[`CheckboxInput renders all appearances 3`] = `
+exports[`RadioInput renders all appearances 3`] = `
 .emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -371,7 +377,7 @@ exports[`CheckboxInput renders all appearances 3`] = `
   border-width: 1px;
   height: 14px;
   width: 14px;
-  border-radius: 4px;
+  border-radius: 999px;
   position: relative;
 }
 
@@ -391,17 +397,19 @@ exports[`CheckboxInput renders all appearances 3`] = `
   fill: var(--themeSuccess,#14C684);
 }
 
-<CheckboxInput
+<RadioInput
   appearance="success"
   id="defaultId"
   inputLabel="Sample label"
+  name="appearanceTest"
   value="default"
 >
   <ForwardRef
     appearance="success"
     id="defaultId"
     inputLabel="Sample label"
-    inputType="checkbox"
+    inputType="radio"
+    name="appearanceTest"
     showInputLabel={true}
     value="default"
     vertAlign="center"
@@ -411,7 +419,7 @@ exports[`CheckboxInput renders all appearances 3`] = `
     >
       <div
         className="emotion-5"
-        data-cy="checkboxInput checkboxInput.success"
+        data-cy="radioInput radioInput.success"
       >
         <label
           className="emotion-4"
@@ -427,11 +435,12 @@ exports[`CheckboxInput renders all appearances 3`] = `
                 aria-describedby=""
                 aria-invalid={false}
                 className="emotion-0"
-                data-cy="checkboxInput-input checkboxInput-input.success"
+                data-cy="radioInput-input radioInput-input.success"
                 id="defaultId"
+                name="appearanceTest"
                 onBlur={[Function]}
                 onFocus={[Function]}
-                type="checkbox"
+                type="radio"
                 value="default"
               />
             </div>
@@ -445,363 +454,5 @@ exports[`CheckboxInput renders all appearances 3`] = `
       </div>
     </FormFieldWrapper>
   </ForwardRef>
-</CheckboxInput>
-`;
-
-exports[`CheckboxInput renders indeterminate 1`] = `
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-0 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  position: absolute;
-  overflow: hidden;
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-}
-
-.emotion-6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-bottom: 0 !important;
-}
-
-.emotion-6 > div {
-  width: auto;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  display: inherit;
-}
-
-.emotion-5 {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding-left: 12px;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  height: 100%;
-  padding: 2px;
-  position: absolute;
-  width: 100%;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.emotion-2 svg {
-  height: 100%;
-  width: 100%;
-}
-
-.emotion-3 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  background-color: var(--themeBrandPrimary,#7D58FF);
-  border-color: var(--themeBrandPrimary,#7D58FF);
-  border-radius: 4px;
-  position: relative;
-}
-
-.emotion-1 {
-  vertical-align: middle;
-  fill: var(--themeBgPrimary,#FFFFFF);
-}
-
-.emotion-1 use {
-  pointer-events: none;
-}
-
-<CheckboxInput
-  id="indeterminateId"
-  indeterminate={true}
-  inputLabel="Sample Label"
-  value="indeterminate"
->
-  <ForwardRef
-    appearance="standard"
-    id="indeterminateId"
-    inputLabel="Sample Label"
-    inputType="checkbox"
-    isIndeterminate={true}
-    showInputLabel={true}
-    value="indeterminate"
-    vertAlign="center"
-  >
-    <FormFieldWrapper
-      id="indeterminateId"
-    >
-      <div
-        className="emotion-7"
-        data-cy="checkboxInput checkboxInput.indeterminate"
-      >
-        <label
-          className="emotion-6"
-          htmlFor="indeterminateId"
-        >
-          <div
-            className="emotion-4"
-          >
-            <div
-              className="emotion-3"
-            >
-              <input
-                aria-describedby=""
-                aria-invalid={false}
-                className="emotion-0"
-                data-cy="checkboxInput-input checkboxInput-input.indeterminate"
-                id="indeterminateId"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                type="checkbox"
-                value="indeterminate"
-              />
-              <span
-                className="emotion-2"
-              >
-                <Icon
-                  color="var(--themeBgPrimary, #FFFFFF)"
-                  shape="system-minus"
-                  size="16px"
-                >
-                  <svg
-                    aria-label="system-minus icon"
-                    className="emotion-1"
-                    data-cy="icon"
-                    height={16}
-                    preserveAspectRatio="xMinYMin meet"
-                    role="img"
-                    viewBox="0 0 16 16"
-                    width={16}
-                  >
-                    <use
-                      xlinkHref="#system-minus"
-                    />
-                  </svg>
-                </Icon>
-              </span>
-            </div>
-          </div>
-          <div
-            className="emotion-5"
-          >
-            Sample Label
-          </div>
-        </label>
-      </div>
-    </FormFieldWrapper>
-  </ForwardRef>
-</CheckboxInput>
-`;
-
-exports[`CheckboxInput renders with a hidden label 1`] = `
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-0 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  position: absolute;
-  overflow: hidden;
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-bottom: 0 !important;
-}
-
-.emotion-4 > div {
-  width: auto;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  display: inherit;
-}
-
-.emotion-1 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-  padding-left: 12px;
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  position: absolute;
-  overflow: hidden;
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-}
-
-<CheckboxInput
-  id="hiddenLabel"
-  inputLabel="Sample Label"
-  showInputLabel={false}
-  value="default"
->
-  <ForwardRef
-    appearance="standard"
-    id="hiddenLabel"
-    inputLabel="Sample Label"
-    inputType="checkbox"
-    showInputLabel={false}
-    value="default"
-    vertAlign="center"
-  >
-    <FormFieldWrapper
-      id="hiddenLabel"
-    >
-      <div
-        className="emotion-5"
-        data-cy="checkboxInput"
-      >
-        <label
-          className="emotion-4"
-          htmlFor="hiddenLabel"
-        >
-          <div
-            className="emotion-2"
-          >
-            <div
-              className="emotion-1"
-            >
-              <input
-                aria-describedby=""
-                aria-invalid={false}
-                className="emotion-0"
-                data-cy="checkboxInput-input"
-                id="hiddenLabel"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                type="checkbox"
-                value="default"
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-3"
-          >
-            Sample Label
-          </div>
-        </label>
-      </div>
-    </FormFieldWrapper>
-  </ForwardRef>
-</CheckboxInput>
+</RadioInput>
 `;
