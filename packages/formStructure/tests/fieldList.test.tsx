@@ -86,6 +86,53 @@ describe("FieldList", () => {
     ).toMatchSnapshot();
   });
 
+  it("calls onAddItem when clicking the add button", () => {
+    const newItem = { id: 42 };
+    const testAddHandlerInner = jest.fn();
+    const testAddHandler = jest.fn(itemToAdd => () => {
+      testAddHandlerInner(itemToAdd);
+    });
+    const testFieldUpdateHandler = jest.fn((_rowIndex, _pathToValue) => _e => {
+      jest.fn();
+    });
+    const fieldListComponent = mount(
+      <FieldList
+        data={mockItems}
+        onAddItem={testAddHandler(newItem)}
+        pathToUniqueKey="id"
+      >
+        <FieldListColumn
+          key="name"
+          header="Name"
+          pathToValue="name"
+          onChange={testFieldUpdateHandler}
+        >
+          {({ defaultProps, onChange, value }) => (
+            <TextInput value={value} onChange={onChange} {...defaultProps} />
+          )}
+        </FieldListColumn>
+        <FieldListColumn
+          key="role"
+          header="Role"
+          pathToValue="role"
+          onChange={testFieldUpdateHandler}
+        >
+          {({ defaultProps, onChange, value }) => (
+            <TextInput value={value} onChange={onChange} {...defaultProps} />
+          )}
+        </FieldListColumn>
+        <FieldListAddButton>Add Item</FieldListAddButton>
+      </FieldList>
+    );
+    const addButton = fieldListComponent
+      .find('button[data-cy="secondaryButton"]')
+      .first();
+
+    expect(testAddHandlerInner).not.toHaveBeenCalled();
+    addButton.simulate("click");
+    expect(testAddHandlerInner).toHaveBeenCalledWith(newItem);
+  });
+
   it("calls onRemoveItem when clicking the remove button", () => {
     const testRemoveHandlerInner = jest.fn();
     const testRemoveHandler = jest.fn(rowIndex => () => {
