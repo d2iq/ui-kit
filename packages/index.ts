@@ -132,6 +132,7 @@ export { UIKitThemeProvider } from "./themes";
 export { UIKitProvider } from "./uiKitProvider";
 export { Legacy };
 export { CodeSnippet } from "./codesnippet";
+export { ClickToCopyButton } from "./clicktocopybutton";
 
 // Style utility components
 export {
