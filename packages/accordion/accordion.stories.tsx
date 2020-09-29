@@ -8,8 +8,11 @@ import {
   AccordionItem,
   AccordionItemTitle,
   AccordionItemContent,
-  AccordionItemTitleInteractive
+  AccordionItemTitleInteractive,
+  StatelessAccordion
 } from "./";
+import ToggleInputListStoryHelper from "../toggleInputList/stories/helpers/ToggleInputListStoryHelper";
+import { ToggleInputList } from "..";
 const readme = require("./README.md");
 
 storiesOf("Navigation|Accordion", module)
@@ -178,15 +181,53 @@ storiesOf("Navigation|Accordion", module)
       </AccordionItem>
       <AccordionItem>
         <AccordionItemTitle>Panel 2</AccordionItemTitle>
-        <AccordionItemContent>
-          Content 2 has paddingSize="xxl"
-        </AccordionItemContent>
+        <AccordionItemContent>Content 2</AccordionItemContent>
       </AccordionItem>
       <AccordionItem>
         <AccordionItemTitle>Panel 3</AccordionItemTitle>
-        <AccordionItemContent>
-          Content 3 has paddingSize="xxl"
-        </AccordionItemContent>
+        <AccordionItemContent>Content 3</AccordionItemContent>
       </AccordionItem>
     </Accordion>
+  ))
+  .add("controlled (using StatelessAccordion)", () => (
+    <ToggleInputListStoryHelper>
+      {({ changeHandler, selectedItems }) => {
+        return (
+          <Flex gutterSize="m">
+            <FlexItem>
+              <StatelessAccordion
+                onChange={changeHandler}
+                expandedItems={selectedItems}
+              >
+                <AccordionItem id="first">
+                  <AccordionItemTitle>Panel 1</AccordionItemTitle>
+                  <AccordionItemContent>Content 1</AccordionItemContent>
+                </AccordionItem>
+                <AccordionItem id="second">
+                  <AccordionItemTitle>Panel 2</AccordionItemTitle>
+                  <AccordionItemContent>Content 2</AccordionItemContent>
+                </AccordionItem>
+                <AccordionItem id="third">
+                  <AccordionItemTitle>Panel 3</AccordionItemTitle>
+                  <AccordionItemContent>Content 3</AccordionItemContent>
+                </AccordionItem>
+              </StatelessAccordion>
+            </FlexItem>
+            <FlexItem>
+              <ToggleInputList
+                id="checkbox"
+                items={[
+                  { inputLabel: "Panel 1", id: "id.1", value: "first" },
+                  { inputLabel: "Panel 2", id: "id.2", value: "second" },
+                  { inputLabel: "Panel 3", id: "id.3", value: "third" }
+                ]}
+                listLabel="Open panels"
+                onChange={changeHandler}
+                selectedItems={selectedItems}
+              />
+            </FlexItem>
+          </Flex>
+        );
+      }}
+    </ToggleInputListStoryHelper>
   ));

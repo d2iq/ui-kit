@@ -1,8 +1,9 @@
 import React, { createContext, useState } from "react";
 
 interface AccordionProviderProps {
-  initialExpandedItems?: string[];
   allowMultipleExpanded?: boolean;
+  controlledExpandedItems?: string[];
+  initialExpandedItems?: string[];
   onChange?: (expandedItems: string[]) => void;
 }
 
@@ -16,21 +17,34 @@ export const Context = createContext<AccordionContext | null>(null);
 export const Provider: React.FC<AccordionProviderProps> = ({
   allowMultipleExpanded,
   children,
+  controlledExpandedItems,
   initialExpandedItems = [],
   onChange
 }) => {
-  const [expandedItems, setExpanded] = useState(initialExpandedItems);
+  const [expandedItems, setExpanded] = useState<string[]>(
+    controlledExpandedItems ? controlledExpandedItems : initialExpandedItems
+  );
   const setExpandedItems = (toggledItem, isExpanded) => {
-    if (!isExpanded) {
-      allowMultipleExpanded
-        ? setExpanded([...expandedItems, toggledItem])
-        : setExpanded([toggledItem]);
+    const setExpandedItemHandler = (
+      handler: (expandedItems: string[]) => void,
+      items: string[] = []
+    ) => {
+      if (!isExpanded) {
+        allowMultipleExpanded
+          ? handler([...items, toggledItem])
+          : handler([toggledItem]);
+        return;
+      }
+
+      handler(items.filter(expandedItem => expandedItem !== toggledItem));
+    };
+
+    if (controlledExpandedItems && onChange) {
+      setExpandedItemHandler(onChange, controlledExpandedItems);
       return;
     }
 
-    setExpanded(
-      expandedItems.filter(expandedItem => expandedItem !== toggledItem)
-    );
+    setExpandedItemHandler(setExpanded, expandedItems);
   };
 
   React.useEffect(() => {
@@ -42,7 +56,9 @@ export const Provider: React.FC<AccordionProviderProps> = ({
   return (
     <Context.Provider
       value={{
-        expandedItems,
+        expandedItems: controlledExpandedItems
+          ? controlledExpandedItems
+          : expandedItems,
         setExpandedItems
       }}
     >

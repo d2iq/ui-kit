@@ -16,6 +16,7 @@ export {
 export { Avatar } from "./avatar";
 export {
   Accordion,
+  StatelessAccordion,
   AccordionItem,
   AccordionItemTitle,
   AccordionItemContent,
