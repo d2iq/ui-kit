@@ -16,17 +16,10 @@ const ToggleInputListStoryHelper = (props: ToggleInputListStoryHelperProps) => {
   const changeHandler = value => {
     setSelectedItems(value);
   };
-  return (
-    <>
-      <p>
-        Use the Knobs panel to toggle between radio inputs and checkbox inputs
-      </p>
-      {props.children({
-        changeHandler,
-        selectedItems
-      })}
-    </>
-  );
+  return props.children({
+    changeHandler,
+    selectedItems
+  });
 };
 
 export default ToggleInputListStoryHelper;

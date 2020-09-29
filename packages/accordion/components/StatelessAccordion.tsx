@@ -17,12 +17,6 @@ const Accordion: React.FC<AccordionProps> = ({
   expandedItems = [],
   onChange
 }) => {
-  //   React.useEffect(() => {
-  //     if (onChange) {
-  //       onChange(expandedItems);
-  //     }
-  //   }, [expandedItems]);
-  //   console.log("expandedItems", expandedItems);
   return (
     <AccordionProvider
       allowMultipleExpanded={allowMultipleExpanded}

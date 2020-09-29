@@ -5,6 +5,7 @@ import { select, withKnobs } from "@storybook/addon-knobs";
 import ToggleInputListStoryHelper from "./helpers/ToggleInputListStoryHelper";
 import ToggleInputList from "../components/ToggleInputList";
 import { InputAppearance } from "../../shared/types/inputAppearance";
+import { toggleInputDecorator } from "./helpers/toggleInputDecorator";
 
 const readme = require("../README.md");
 const options = [
@@ -21,6 +22,7 @@ const inputTypes = {
 storiesOf("Forms|ToggleInputList", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
+  .addDecorator(toggleInputDecorator)
   .add(
     "default",
     () => {
