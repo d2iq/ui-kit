@@ -15,19 +15,24 @@ import {
   themeError,
   themeSuccess
 } from "../../design-tokens/build/js/designTokens";
-import { bruteForceKillLabelMargin } from "../style";
-import { CheckboxInputProps } from "../../checkboxInput/components/CheckboxInput";
-import { InputAppearance } from "../../shared/types/inputAppearance";
 import {
+  bruteForceKillLabelMargin,
+  checkboxInput,
+  radioInput,
+  radioInputChecked,
   toggleInputFeedbackText,
-  toggleInputLabel
-} from "../../shared/styles/formStyles";
+  toggleInputLabel,
+  toggleInput,
+  toggleInputApperances
+} from "../style";
+import { InputAppearance } from "../../shared/types/inputAppearance";
+import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 
 export interface ToggleInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
    * Sets the current appearance of the input component. This defaults to InputAppearance.Standard, but supports `InputAppearance.Error` & `InputAppearance.Success` appearances as well.
    */
-  appearance: InputAppearance;
+  appearance?: InputAppearance;
   /**
    * Whether or not the input is checked
    */
@@ -45,17 +50,13 @@ export interface ToggleInputProps extends React.HTMLProps<HTMLInputElement> {
    */
   showInputLabel?: boolean;
   /**
-   * The value of the input
+   * The value being toggled
    */
-  value: string;
+  value?: string;
   /**
    * How the text content vertically aligns with the input
    */
   vertAlign?: "center" | "top";
-  /**
-   * human-readable selector used for writing tests
-   */
-  dataCy?: string;
   /**
    * hintContent is text or a ReactNode that is displayed directly under the input with additional information about the expected input.
    */
@@ -67,67 +68,153 @@ export interface ToggleInputProps extends React.HTMLProps<HTMLInputElement> {
 }
 
 interface LocalToggleInputProps extends ToggleInputProps {
-  children: React.ReactElement<CheckboxInputProps>; // TODO: accept radio and toggle switch components when we have them
-  errorContent: React.ReactNode | string;
-  hintContent: React.ReactNode | string;
+  children?: React.ReactNode;
+  /**
+   * Tells the ToggleInput to render
+   */
+  inputType?: "checkbox" | "radio";
+  /**
+   * Only used for the checkbox. Sets whether the checkbox is neither checked or unchecked
+   */
+  isIndeterminate?: boolean;
 }
 
-class ToggleInput extends React.PureComponent<LocalToggleInputProps, {}> {
-  public static defaultProps: Partial<LocalToggleInputProps> = {
-    showInputLabel: true,
-    vertAlign: "center"
-  };
-
-  public render() {
+const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
+  (props, forwardedRef) => {
     const {
       appearance,
       children,
       disabled,
-      errorContent,
       hintContent,
       id,
       inputLabel,
       showInputLabel,
-      dataCy,
-      vertAlign
-    } = this.props;
+      vertAlign,
+      inputType,
+      checked,
+      value,
+      errors,
+      isIndeterminate,
+      onBlur,
+      onFocus,
+      ...other
+    } = props;
+    const inputDataCy = [
+      `${inputType}Input-input`,
+      ...(checked ? [`${inputType}Input-input.checked`] : []),
+      ...(isIndeterminate ? [`${inputType}Input-input.indeterminate`] : []),
+      ...(appearance && appearance !== InputAppearance.Standard
+        ? [`${inputType}Input-input.${appearance}`]
+        : [])
+    ].join(" ");
+    const parentDataCy = [
+      `${inputType}Input`,
+      ...(checked ? [`${inputType}Input.checked`] : []),
+      ...(isIndeterminate ? [`${inputType}Input.indeterminate`] : []),
+      ...(appearance && appearance !== InputAppearance.Standard
+        ? [`${inputType}Input.${appearance}`]
+        : [])
+    ].join(" ");
+    const [hasFocus, setHasFocus] = React.useState<boolean>(false);
+    const handleFocus = e => {
+      setHasFocus(true);
+
+      if (onFocus) {
+        onFocus(e);
+      }
+    };
+
+    const handleBlur = e => {
+      setHasFocus(false);
+
+      if (onBlur) {
+        onBlur(e);
+      }
+    };
 
     return (
-      <div className={vAlignChildren} data-cy={dataCy}>
-        <label
-          className={cx(
-            flex({
-              align: vertAlign === "top" ? "flex-start" : "center"
-            }),
-            display("inline-flex"),
-            bruteForceKillLabelMargin // to override CNVS bottom margin on <label>
-          )}
-          htmlFor={id}
-        >
-          <div className={cx(flexItem("shrink"), display("inherit"))}>
-            {children}
-          </div>
-          <div
-            className={cx(flexItem("grow"), toggleInputLabel, {
-              [visuallyHidden]: !showInputLabel,
-              [tintContent(themeError)]: appearance === InputAppearance.Error,
-              [tintContent(themeSuccess)]:
-                appearance === InputAppearance.Success,
-              [tintContentSecondary]: disabled
-            })}
-          >
-            {inputLabel}
-          </div>
-        </label>
-        {hintContent && (
-          <div className={toggleInputFeedbackText}>
-            {hintContent}
-            {appearance === InputAppearance.Error && errorContent}
+      <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
+        {({ getValidationErrors, isValid, describedByIds, getHintContent }) => (
+          <div className={vAlignChildren} data-cy={parentDataCy}>
+            <label
+              className={cx(
+                flex({
+                  align: vertAlign === "top" ? "flex-start" : "center"
+                }),
+                display("inline-flex"),
+                bruteForceKillLabelMargin // to override CNVS bottom margin on <label>
+              )}
+              htmlFor={id}
+            >
+              <div className={cx(flexItem("shrink"), display("inherit"))}>
+                <>
+                  <div
+                    className={cx(toggleInput, {
+                      [toggleInputApperances[`${appearance}-focus`]]: hasFocus,
+                      [toggleInputApperances[`${appearance}-active`]]:
+                        checked || isIndeterminate,
+                      [toggleInputApperances["focus-active"]]:
+                        checked && hasFocus,
+                      [toggleInputApperances.disabled]: disabled,
+                      [toggleInputApperances["disabled-active"]]:
+                        disabled && checked,
+                      [checkboxInput]: inputType === "checkbox",
+                      [radioInput]: inputType === "radio",
+                      [radioInputChecked]: inputType === "radio" && checked
+                    })}
+                  >
+                    {/* tslint:disable react-a11y-role-has-required-aria-props */}
+                    <input
+                      type={inputType}
+                      id={id}
+                      className={visuallyHidden}
+                      checked={checked}
+                      disabled={disabled}
+                      value={value}
+                      aria-invalid={!isValid}
+                      aria-describedby={describedByIds}
+                      onFocus={handleFocus}
+                      onBlur={handleBlur}
+                      data-cy={inputDataCy}
+                      ref={forwardedRef}
+                      {...other}
+                    />
+                    {/* tslint:enable */}
+                    {children}
+                  </div>
+                </>
+              </div>
+              <div
+                className={cx(flexItem("grow"), toggleInputLabel, {
+                  [visuallyHidden]: !showInputLabel,
+                  [tintContent(themeError)]:
+                    appearance === InputAppearance.Error,
+                  [tintContent(themeSuccess)]:
+                    appearance === InputAppearance.Success,
+                  [tintContentSecondary]: disabled
+                })}
+              >
+                {inputLabel}
+              </div>
+            </label>
+            {(getHintContent || getValidationErrors) && (
+              <div className={toggleInputFeedbackText}>
+                {getHintContent}
+                {appearance === InputAppearance.Error && getValidationErrors}
+              </div>
+            )}
           </div>
         )}
-      </div>
+      </FormFieldWrapper>
     );
   }
-}
+);
+
+ToggleInput.defaultProps = {
+  appearance: InputAppearance.Standard,
+  showInputLabel: true,
+  vertAlign: "center",
+  inputType: "checkbox"
+};
 
 export default ToggleInput;

@@ -11,7 +11,7 @@ export type BadgeAppearance =
 
 export interface BadgeProps {
   appearance?: BadgeAppearance;
-  children: JSX.Element | string;
+  children: React.ReactNode;
 }
 
 export class Badge extends React.PureComponent<BadgeProps, {}> {

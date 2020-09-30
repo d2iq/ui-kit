@@ -250,7 +250,7 @@ exports[`TextInputWithIcon renders 1`] = `
   type="text"
 >
   <div
-    data-cy="textInput"
+    data-cy="textInput textInput.standard"
   >
     <label
       className="emotion-0"
@@ -574,7 +574,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
   type="text"
 >
   <div
-    data-cy="textInput"
+    data-cy="textInput textInput.standard"
   >
     <label
       className="emotion-0"

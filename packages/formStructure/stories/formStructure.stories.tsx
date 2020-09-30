@@ -6,6 +6,7 @@ import {
   FormMessage,
   FormSection,
   FormSectionBody,
+  FormSectionFooter,
   FormSectionHeader,
   FormSubSection,
   FormTitle
@@ -17,6 +18,7 @@ import { ToggleInputList } from "../../toggleInputList";
 import { SelectInput } from "../../selectInput";
 import { SecondaryButton } from "../../button";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
+import { CaptionText } from "../../styleUtils/typography";
 
 const readme = require("../README.md");
 
@@ -27,7 +29,7 @@ const onRemoveSubSection = () => {
   alert("the box would be removed");
 };
 
-storiesOf("Forms|Form layout", module)
+storiesOf("Forms|Form structure", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .addParameters({
@@ -82,7 +84,7 @@ storiesOf("Forms|Form layout", module)
       </FormSection>
     </Container>
   ))
-  .add("FormSection w/ header", () => (
+  .add("FormSection w/ header and footer", () => (
     <Container>
       <FormSection>
         <FormSectionHeader
@@ -94,6 +96,12 @@ storiesOf("Forms|Form layout", module)
           <TextInput inputLabel="Role" id="role" />
           <TextInput inputLabel="City" id="city" />
         </FormSectionBody>
+        <FormSectionFooter>
+          <CaptionText>
+            Here is a caption with supporting info about this section of the
+            form
+          </CaptionText>
+        </FormSectionFooter>
       </FormSection>
     </Container>
   ))
