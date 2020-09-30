@@ -36,6 +36,7 @@ storiesOf("Forms|SelectInput", module)
         appearance={InputAppearance.Error}
         id="error"
         inputLabel="Error"
+        tooltipContent="I can have a tooltip!"
       />
       <SelectInput
         options={defaultOptions}

@@ -91,6 +91,7 @@ export { PageHeader, PageHeaderTabs } from "./pageheader";
 export { Popover } from "./popover";
 export { ProgressBar } from "./progressbar";
 export { PromoBanner, PromoInline } from "./promo";
+export { RadioInput } from "./radioInput";
 export { SegmentedControl, SegmentedControlButton } from "./segmentedControl";
 export { SelectInput } from "./selectInput";
 export {
@@ -131,6 +132,7 @@ export { UIKitThemeProvider } from "./themes";
 export { UIKitProvider } from "./uiKitProvider";
 export { Legacy };
 export { CodeSnippet } from "./codesnippet";
+export { ClickToCopyButton } from "./clicktocopybutton";
 
 // Style utility components
 export {

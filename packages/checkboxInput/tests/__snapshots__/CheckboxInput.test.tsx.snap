@@ -27,17 +27,6 @@ exports[`CheckboxInput renders all appearances 1`] = `
   height: 1px;
 }
 
-.emotion-1 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
-}
-
 .emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -77,6 +66,17 @@ exports[`CheckboxInput renders all appearances 1`] = `
   display: inherit;
 }
 
+.emotion-1 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 4px;
+  position: relative;
+}
+
 .emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
@@ -97,18 +97,17 @@ exports[`CheckboxInput renders all appearances 1`] = `
   inputLabel="Sample label"
   value="default"
 >
-  <FormFieldWrapper
+  <ForwardRef
+    appearance="standard"
     id="defaultId"
+    inputLabel="Sample label"
+    inputType="checkbox"
+    showInputLabel={true}
+    value="default"
+    vertAlign="center"
   >
-    <ToggleInput
-      appearance="standard"
-      dataCy="checkboxInput"
-      errorContent={null}
-      hintContent={null}
+    <FormFieldWrapper
       id="defaultId"
-      inputLabel="Sample label"
-      showInputLabel={true}
-      vertAlign="center"
     >
       <div
         className="emotion-5"
@@ -144,8 +143,8 @@ exports[`CheckboxInput renders all appearances 1`] = `
           </div>
         </label>
       </div>
-    </ToggleInput>
-  </FormFieldWrapper>
+    </FormFieldWrapper>
+  </ForwardRef>
 </CheckboxInput>
 `;
 
@@ -174,17 +173,6 @@ exports[`CheckboxInput renders all appearances 2`] = `
   padding: 0;
   width: 1px;
   height: 1px;
-}
-
-.emotion-1 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
 }
 
 .emotion-4 {
@@ -226,6 +214,17 @@ exports[`CheckboxInput renders all appearances 2`] = `
   display: inherit;
 }
 
+.emotion-1 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 4px;
+  position: relative;
+}
+
 .emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
@@ -248,18 +247,17 @@ exports[`CheckboxInput renders all appearances 2`] = `
   inputLabel="Sample label"
   value="default"
 >
-  <FormFieldWrapper
+  <ForwardRef
+    appearance="error"
     id="defaultId"
+    inputLabel="Sample label"
+    inputType="checkbox"
+    showInputLabel={true}
+    value="default"
+    vertAlign="center"
   >
-    <ToggleInput
-      appearance="error"
-      dataCy="checkboxInput checkboxInput.error"
-      errorContent={null}
-      hintContent={null}
+    <FormFieldWrapper
       id="defaultId"
-      inputLabel="Sample label"
-      showInputLabel={true}
-      vertAlign="center"
     >
       <div
         className="emotion-5"
@@ -295,8 +293,8 @@ exports[`CheckboxInput renders all appearances 2`] = `
           </div>
         </label>
       </div>
-    </ToggleInput>
-  </FormFieldWrapper>
+    </FormFieldWrapper>
+  </ForwardRef>
 </CheckboxInput>
 `;
 
@@ -325,17 +323,6 @@ exports[`CheckboxInput renders all appearances 3`] = `
   padding: 0;
   width: 1px;
   height: 1px;
-}
-
-.emotion-1 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
 }
 
 .emotion-4 {
@@ -377,6 +364,17 @@ exports[`CheckboxInput renders all appearances 3`] = `
   display: inherit;
 }
 
+.emotion-1 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 4px;
+  position: relative;
+}
+
 .emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
@@ -399,18 +397,17 @@ exports[`CheckboxInput renders all appearances 3`] = `
   inputLabel="Sample label"
   value="default"
 >
-  <FormFieldWrapper
+  <ForwardRef
+    appearance="success"
     id="defaultId"
+    inputLabel="Sample label"
+    inputType="checkbox"
+    showInputLabel={true}
+    value="default"
+    vertAlign="center"
   >
-    <ToggleInput
-      appearance="success"
-      dataCy="checkboxInput checkboxInput.success"
-      errorContent={null}
-      hintContent={null}
+    <FormFieldWrapper
       id="defaultId"
-      inputLabel="Sample label"
-      showInputLabel={true}
-      vertAlign="center"
     >
       <div
         className="emotion-5"
@@ -446,8 +443,8 @@ exports[`CheckboxInput renders all appearances 3`] = `
           </div>
         </label>
       </div>
-    </ToggleInput>
-  </FormFieldWrapper>
+    </FormFieldWrapper>
+  </ForwardRef>
 </CheckboxInput>
 `;
 
@@ -531,19 +528,6 @@ exports[`CheckboxInput renders indeterminate 1`] = `
   padding-left: 12px;
 }
 
-.emotion-3 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
-  background-color: var(--themeBrandPrimary,#7D58FF);
-  border-color: var(--themeBrandPrimary,#7D58FF);
-}
-
 .emotion-2 {
   box-sizing: border-box;
   height: 100%;
@@ -561,9 +545,22 @@ exports[`CheckboxInput renders indeterminate 1`] = `
   width: 100%;
 }
 
+.emotion-3 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  background-color: var(--themeBrandPrimary,#7D58FF);
+  border-color: var(--themeBrandPrimary,#7D58FF);
+  border-radius: 4px;
+  position: relative;
+}
+
 .emotion-1 {
   vertical-align: middle;
-  fill: #FFF;
+  fill: var(--themeBgPrimary,#FFFFFF);
 }
 
 .emotion-1 use {
@@ -571,24 +568,23 @@ exports[`CheckboxInput renders indeterminate 1`] = `
 }
 
 <CheckboxInput
-  appearance="standard"
   id="indeterminateId"
   indeterminate={true}
   inputLabel="Sample Label"
   value="indeterminate"
 >
-  <FormFieldWrapper
+  <ForwardRef
+    appearance="standard"
     id="indeterminateId"
+    inputLabel="Sample Label"
+    inputType="checkbox"
+    isIndeterminate={true}
+    showInputLabel={true}
+    value="indeterminate"
+    vertAlign="center"
   >
-    <ToggleInput
-      appearance="standard"
-      dataCy="checkboxInput checkboxInput.indeterminate"
-      errorContent={null}
-      hintContent={null}
+    <FormFieldWrapper
       id="indeterminateId"
-      inputLabel="Sample Label"
-      showInputLabel={true}
-      vertAlign="center"
     >
       <div
         className="emotion-7"
@@ -619,7 +615,7 @@ exports[`CheckboxInput renders indeterminate 1`] = `
                 className="emotion-2"
               >
                 <Icon
-                  color="#FFF"
+                  color="var(--themeBgPrimary, #FFFFFF)"
                   shape="system-minus"
                   size="16px"
                 >
@@ -648,8 +644,8 @@ exports[`CheckboxInput renders indeterminate 1`] = `
           </div>
         </label>
       </div>
-    </ToggleInput>
-  </FormFieldWrapper>
+    </FormFieldWrapper>
+  </ForwardRef>
 </CheckboxInput>
 `;
 
@@ -678,17 +674,6 @@ exports[`CheckboxInput renders with a hidden label 1`] = `
   padding: 0;
   width: 1px;
   height: 1px;
-}
-
-.emotion-1 {
-  border-color: var(--themeBorder,#DADDE2);
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  border-style: solid;
-  border-width: 1px;
-  height: 14px;
-  width: 14px;
-  border-radius: 4px;
-  position: relative;
 }
 
 .emotion-4 {
@@ -730,6 +715,17 @@ exports[`CheckboxInput renders with a hidden label 1`] = `
   display: inherit;
 }
 
+.emotion-1 {
+  border-color: var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-style: solid;
+  border-width: 1px;
+  height: 14px;
+  width: 14px;
+  border-radius: 4px;
+  position: relative;
+}
+
 .emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
@@ -754,24 +750,22 @@ exports[`CheckboxInput renders with a hidden label 1`] = `
 }
 
 <CheckboxInput
-  appearance="standard"
   id="hiddenLabel"
   inputLabel="Sample Label"
   showInputLabel={false}
   value="default"
 >
-  <FormFieldWrapper
+  <ForwardRef
+    appearance="standard"
     id="hiddenLabel"
+    inputLabel="Sample Label"
+    inputType="checkbox"
+    showInputLabel={false}
+    value="default"
+    vertAlign="center"
   >
-    <ToggleInput
-      appearance="standard"
-      dataCy="checkboxInput"
-      errorContent={null}
-      hintContent={null}
+    <FormFieldWrapper
       id="hiddenLabel"
-      inputLabel="Sample Label"
-      showInputLabel={false}
-      vertAlign="center"
     >
       <div
         className="emotion-5"
@@ -807,7 +801,7 @@ exports[`CheckboxInput renders with a hidden label 1`] = `
           </div>
         </label>
       </div>
-    </ToggleInput>
-  </FormFieldWrapper>
+    </FormFieldWrapper>
+  </ForwardRef>
 </CheckboxInput>
 `;
