@@ -1,13 +1,22 @@
 import * as React from "react";
-import { emptyStateContainer } from "../style";
+import { emptyStateContainer, vertAlignHeading } from "../style";
 import { Card } from "../../card";
 import { SpacingBox } from "../../styleUtils/modifiers";
 import { HeadingText2 } from "../../styleUtils/typography";
 import { breakWord } from "../../shared/styles/styleUtils";
 import EmptyStateActions from "./EmptyStateActions";
+import { Icon } from "../../icon";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
+import {
+  themeError,
+  iconSizeXs
+} from "../../design-tokens/build/js/designTokens";
 
 export interface EmptyStateProps {
-  children?: React.ReactNode;
+  /**
+   * The tone of the message
+   */
+  appearance?: "error" | "standard";
   /**
    * A heading to provide a brief overview of why an empty state is appearing
    */
@@ -22,19 +31,40 @@ export interface EmptyStateProps {
   secondaryAction?: React.ReactNode;
 }
 
-const EmptyState: React.SFC<EmptyStateProps> = ({
+const EmptyState: React.FC<EmptyStateProps> = ({
+  appearance,
   heading,
   children,
   primaryAction,
   secondaryAction
-}: EmptyStateProps) => {
+}) => {
   const hasActions = primaryAction || secondaryAction;
 
   return (
     <div className={emptyStateContainer} data-cy="emptyState">
       <Card paddingSize="xxl">
         <SpacingBox side="bottom" spacingSize="xs">
-          <HeadingText2 align="center">{heading}</HeadingText2>
+          <HeadingText2 align="center">
+            {appearance === "error" ? (
+              <>
+                <Icon
+                  shape={SystemIcons.CircleClose}
+                  color={themeError}
+                  size={iconSizeXs}
+                />
+                <SpacingBox
+                  tag="span"
+                  side="left"
+                  spacingSize="xs"
+                  className={vertAlignHeading}
+                >
+                  {heading}
+                </SpacingBox>
+              </>
+            ) : (
+              heading
+            )}
+          </HeadingText2>
         </SpacingBox>
         {children && (
           <SpacingBox
@@ -55,6 +85,10 @@ const EmptyState: React.SFC<EmptyStateProps> = ({
       </Card>
     </div>
   );
+};
+
+EmptyState.defaultProps = {
+  appearance: "standard"
 };
 
 export default EmptyState;
