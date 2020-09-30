@@ -20,57 +20,11 @@ import {
   display,
   tintContent
 } from "./styleUtils";
-import getCSSVarValue from "../../utilities/components/getCSSVarValue";
+import getCSSVarValue from "../../utilities/getCSSVarValue";
 import { hexToRgbA } from "./color";
 const getFocusFieldBg = color => hexToRgbA(color, 0.05);
 
-const toggleInputHeight = 16;
-const toggleInputBorderWidth = 1;
 export const textInputHeight = 36;
-
-export const toggleInput = css`
-  border-color: ${themeBorder};
-  background-color: ${themeBgPrimary};
-  border-style: solid;
-  border-width: ${toggleInputBorderWidth}px;
-  height: ${toggleInputHeight - toggleInputBorderWidth}px;
-  width: ${toggleInputHeight - toggleInputBorderWidth}px;
-`;
-
-export const toggleInputApperances = {
-  disabled: css`
-    background-color: ${themeBgDisabled};
-    border-color: ${themeBgDisabled};
-  `,
-  "standard-focus": css`
-    border-color: ${themeBrandPrimary};
-  `,
-  "error-focus": css`
-    border-color: ${themeError};
-  `,
-  "success-focus": css`
-    border-color: ${themeSuccess};
-  `,
-  "standard-active": css`
-    background-color: ${themeBrandPrimary};
-    border-color: ${themeBrandPrimary};
-  `,
-  "error-active": css`
-    background-color: ${themeError};
-    border-color: ${themeError};
-  `,
-  "success-active": css`
-    background-color: ${themeSuccess};
-    border-color: ${themeSuccess};
-  `,
-  "disabled-active": css`
-    background-color: ${themeTextColorDisabled};
-    border-color: ${themeTextColorDisabled};
-  `,
-  "focus-active": css`
-    box-shadow: inset 0px 0px 0px 1px ${themeBgPrimary};
-  `
-};
 
 export const inputIconWrapper = css`
   svg {

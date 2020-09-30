@@ -165,6 +165,12 @@ exports[`FullscreenView renders FullscreenView 1`] = `
   fill: #6446cc;
 }
 
+.emotion-0[href],
+.emotion-0[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
 .emotion-5 {
   background: none;
   border: 0;
@@ -190,6 +196,12 @@ exports[`FullscreenView renders FullscreenView 1`] = `
 .emotion-5::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.emotion-5[href],
+.emotion-5[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
 }
 
 .emotion-5:hover {

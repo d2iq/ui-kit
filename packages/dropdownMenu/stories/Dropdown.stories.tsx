@@ -15,7 +15,7 @@ import PrimaryDropdownButton from "../../button/components/PrimaryDropdownButton
 
 const readme = require("../README.md");
 
-storiesOf("DropdownMenu", module)
+storiesOf("Overlays|DropdownMenu", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <DropdownMenu trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}>

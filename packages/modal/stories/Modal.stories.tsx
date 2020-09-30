@@ -28,7 +28,7 @@ import { fullscreenModalTitle } from "../../fullscreenView/style";
 
 const readme = require("../README.md");
 
-storiesOf("Modal", module)
+storiesOf("Overlays|Modal", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {

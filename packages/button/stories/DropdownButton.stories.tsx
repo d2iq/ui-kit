@@ -9,11 +9,11 @@ import {
   DangerDropdownButton
 } from "../../index";
 import ButtonAppearanceSample from "./helpers/ButtonAppearanceSample";
-import { CloseIcon } from "../../shared/icons";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const readme = require("../README.md");
 
-storiesOf("Buttons/Dropdown", module)
+storiesOf("Actions|Dropdown button", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {
@@ -189,7 +189,7 @@ storiesOf("Buttons/Dropdown", module)
   .add(
     "full-width dropdown with icon",
     () => (
-      <StandardDropdownButton iconStart={<CloseIcon />} isFullWidth={true}>
+      <StandardDropdownButton iconStart={SystemIcons.Close} isFullWidth={true}>
         Full-width
       </StandardDropdownButton>
     ),
@@ -202,7 +202,7 @@ storiesOf("Buttons/Dropdown", module)
   .add(
     "dropdown with icon",
     () => (
-      <StandardDropdownButton iconStart={<CloseIcon />}>
+      <StandardDropdownButton iconStart={SystemIcons.Close}>
         Icon dropdown
       </StandardDropdownButton>
     ),
@@ -214,7 +214,7 @@ storiesOf("Buttons/Dropdown", module)
   )
   .add(
     "dropdown with only an icon",
-    () => <StandardDropdownButton iconStart={<CloseIcon />} />,
+    () => <StandardDropdownButton iconStart={SystemIcons.Close} />,
     {
       info: {
         propTables: [StandardDropdownButton]

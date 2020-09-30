@@ -51,16 +51,15 @@ export const getStringAsBadgeDatum = (
 });
 
 export class TextInputWithBadges extends TextInputWithIcon<
-  TextInputWithBadgesProps,
-  {}
+  TextInputWithBadgesProps
 > {
-  public static defaultProps: Partial<TextInputWithBadgesProps> = {
+  public static defaultProps = {
     type: "text",
     appearance: InputAppearance.Standard,
     showInputLabel: true,
     addBadgeOnBlur: true
   };
-  private inputRef = React.createRef<HTMLInputElement>();
+  private readonly inputRef = React.createRef<HTMLInputElement>();
 
   constructor(props) {
     super(props);
@@ -73,7 +72,7 @@ export class TextInputWithBadges extends TextInputWithIcon<
   }
 
   protected getInputElementProps() {
-    let baseProps = super.getInputElementProps();
+    const baseProps = super.getInputElementProps();
     const {
       badges,
       onBadgeChange,
@@ -83,6 +82,14 @@ export class TextInputWithBadges extends TextInputWithIcon<
     } = baseProps as TextInputWithBadgesProps;
     inputProps.onKeyDown = this.handleKeyDown;
     inputProps.onKeyUp = this.handleKeyUp;
+    inputProps.onKeyPress = e => {
+      if (this.props.onKeyPress) {
+        this.props.onKeyPress(e);
+      }
+      if (e.key === "Enter") {
+        e.preventDefault();
+      }
+    };
     inputProps.onBlur = this.handleBlur.bind(this, inputProps.onBlur);
     inputProps.type = "text";
     inputProps.ref = this.inputRef;
@@ -94,7 +101,10 @@ export class TextInputWithBadges extends TextInputWithIcon<
     const { badgeAppearance = "primary" } = this.props;
     return (
       <FormFieldWrapper
-        id={this.props.id}
+        // TODO: figure out how to get rid of this non-null assertion
+        // If we stop generating an `id` prop in the TextInput component,
+        // it would be possible for `this.props.id` to be undefined
+        id={this.props.id!}
         errors={this.props.errors}
         hintContent={this.props.hintContent}
       >
@@ -198,6 +208,7 @@ export class TextInputWithBadges extends TextInputWithIcon<
 
   private handleKeyUp(e) {
     if (e.key === "Enter") {
+      e.preventDefault();
       this.handleTagAdd(getStringAsBadgeDatum(e.target.value));
     }
 

@@ -7,7 +7,7 @@ import { sidebarNavItem, appChromeInsetContent, spaceMenuIcon } from "../style";
 import { listReset } from "../../shared/styles/styleUtils";
 import { iconSizeS } from "../../design-tokens/build/js/designTokens";
 import { withTheme } from "emotion-theming";
-import { AppChromeTheme } from "../types/appChromeTheme";
+import { AppChromeTheme } from "../types";
 
 export interface SidebarSubMenuProps {
   children: Array<React.ReactElement<SidebarSubMenuItemProps>>;
@@ -56,7 +56,7 @@ export class SidebarSubMenuComponent extends React.PureComponent<
     const dataCy = [
       "sidebarSubMenu",
       ...(isOpen ? ["sidebarSubMenu.open"] : [])
-    ];
+    ].join(" ");
 
     return (
       <li data-cy={dataCy}>
@@ -70,6 +70,7 @@ export class SidebarSubMenuComponent extends React.PureComponent<
             disabled !== undefined && disabled === true ? false : undefined
           }
           label={<div>{label}</div>}
+          indicatorPosition="right"
         >
           {this.getSubItemList(children)}
         </Expandable>

@@ -7,7 +7,7 @@ import InfoBoxStoryContainer from "./helpers/InfoBoxStoryContainer";
 
 const readme = require("../README.md");
 
-storiesOf("InfoBox/Inline", module)
+storiesOf("Feedback|InfoBoxInline", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {

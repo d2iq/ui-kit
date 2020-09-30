@@ -95,7 +95,7 @@ exports[`Typography InteractiveText renders all props 1`] = `
 
 exports[`Typography MonospaceText renders all props 1`] = `
 .emotion-0 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
 }
 
 <Text
@@ -147,13 +147,12 @@ exports[`Typography Text renders all props 1`] = `
   font-size: 12px;
   color: black;
   fill: black;
-  margin: 0;
   text-align: center;
   white-space: nowrap;
 }
 
 <span
-  className="test emotion-0"
+  className="rmTextMargins test emotion-0"
   data-cy="text"
 >
   content
@@ -167,7 +166,6 @@ exports[`Typography Text renders all wrap variants 1`] = `
   font-size: 14px;
   color: black;
   fill: black;
-  margin: 0;
   text-align: left;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
@@ -176,7 +174,7 @@ exports[`Typography Text renders all wrap variants 1`] = `
 }
 
 <p
-  className="emotion-0"
+  className="rmTextMargins emotion-0"
   data-cy="text"
 >
   content
@@ -190,13 +188,12 @@ exports[`Typography Text renders all wrap variants 2`] = `
   font-size: 14px;
   color: black;
   fill: black;
-  margin: 0;
   text-align: left;
   white-space: nowrap;
 }
 
 <p
-  className="emotion-0"
+  className="rmTextMargins emotion-0"
   data-cy="text"
 >
   content
@@ -210,16 +207,63 @@ exports[`Typography Text renders all wrap variants 3`] = `
   font-size: 14px;
   color: black;
   fill: black;
-  margin: 0;
   text-align: left;
 }
 
 <p
-  className="emotion-0"
+  className="rmTextMargins emotion-0"
   data-cy="text"
 >
   content
 </p>
+`;
+
+exports[`Typography TextBlock renders all props 1`] = `
+.emotion-0 {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.emotion-0 p {
+  max-width: 65ch;
+}
+
+.emotion-0 img {
+  max-width: 100%;
+}
+
+.emotion-0 > img {
+  display: block;
+  margin-right: auto;
+}
+
+.emotion-0 ul,
+.emotion-0 ol {
+  padding-left: inherit;
+  list-style-position: outside;
+}
+
+<Stack
+  className="emotion-0"
+  data-cy="stack"
+  spacingSize="l"
+  tag="div"
+>
+  <p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  </p>
+  <p>
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>
+  <p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  </p>
+  <p>
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>
+</Stack>
 `;
 
 exports[`Typography WarningText renders all props 1`] = `
@@ -243,12 +287,11 @@ exports[`Typography renders all default 1`] = `
   font-size: 14px;
   color: var(--themeTextColorPrimary,#1B2029);
   fill: var(--themeTextColorPrimary,#1B2029);
-  margin: 0;
   text-align: left;
 }
 
 <p
-  className="emotion-0"
+  className="rmTextMargins emotion-0"
   data-cy="text"
 >
   content
@@ -350,7 +393,7 @@ exports[`Typography renders all default 7`] = `
 
 exports[`Typography renders all default 8`] = `
 .emotion-0 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
 }
 
 <Text

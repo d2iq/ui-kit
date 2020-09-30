@@ -21,7 +21,7 @@ const defaultOptions = [
   { value: "disabled", label: "Can't touch this", disabled: true }
 ];
 
-storiesOf("Forms/SelectInput", module)
+storiesOf("Forms|SelectInput", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(inputStoryWrapper)
   .add("default", () => (
@@ -36,6 +36,7 @@ storiesOf("Forms/SelectInput", module)
         appearance={InputAppearance.Error}
         id="error"
         inputLabel="Error"
+        tooltipContent="I can have a tooltip!"
       />
       <SelectInput
         options={defaultOptions}

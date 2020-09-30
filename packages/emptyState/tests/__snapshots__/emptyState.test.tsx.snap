@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmptyState default 1`] = `
+exports[`EmptyState appearance='error' 1`] = `
 <div
-  class="css-1b4ui7p"
+  class="css-3qkzfp"
   data-cy="emptyState"
 >
   <div
@@ -10,21 +10,74 @@ exports[`EmptyState default 1`] = `
     data-cy="card"
   >
     <div
-      class="css-boqfyw"
+      class="css-yy1d4r"
     >
       <div
-        class="css-olgrgd"
+        class="css-1c71uxj"
         data-cy="spacingBox"
       >
         <h2
-          class="css-zf0nd2"
+          class="rmTextMargins css-1rl5bwh"
+          data-cy="headingText2"
+        >
+          <svg
+            aria-label="system-circle-close icon"
+            class="css-pgwe9l"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              href="#system-circle-close"
+            />
+          </svg>
+          <span
+            class="css-93yxf5"
+            data-cy="spacingBox"
+          >
+            Heading
+          </span>
+        </h2>
+      </div>
+      <div
+        class="css-dbyz3d"
+        data-cy="spacingBox"
+      >
+        Body content
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EmptyState default 1`] = `
+<div
+  class="css-3qkzfp"
+  data-cy="emptyState"
+>
+  <div
+    class="css-1whabpp"
+    data-cy="card"
+  >
+    <div
+      class="css-yy1d4r"
+    >
+      <div
+        class="css-1c71uxj"
+        data-cy="spacingBox"
+      >
+        <h2
+          class="rmTextMargins css-1rl5bwh"
           data-cy="headingText2"
         >
           Heading
         </h2>
       </div>
       <div
-        class="css-59c18o"
+        class="css-dbyz3d"
         data-cy="spacingBox"
       >
         Body content
@@ -36,7 +89,7 @@ exports[`EmptyState default 1`] = `
 
 exports[`EmptyState renders with primary and secondary actions 1`] = `
 <div
-  class="css-1b4ui7p"
+  class="css-3qkzfp"
   data-cy="emptyState"
 >
   <div
@@ -44,27 +97,27 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
     data-cy="card"
   >
     <div
-      class="css-boqfyw"
+      class="css-yy1d4r"
     >
       <div
-        class="css-olgrgd"
+        class="css-1c71uxj"
         data-cy="spacingBox"
       >
         <h2
-          class="css-zf0nd2"
+          class="rmTextMargins css-1rl5bwh"
           data-cy="headingText2"
         >
           Heading
         </h2>
       </div>
       <div
-        class="css-z1a2ho"
+        class="css-1tq4izn"
         data-cy="spacingBox"
       >
         Body content
       </div>
       <div
-        class="css-8h0s7x"
+        class="css-1m9h7kz"
         data-cy="flex"
       >
         <div
@@ -72,7 +125,7 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
           data-cy="flexItem"
         >
           <button
-            class="css-67j5fi"
+            class="css-8g34zf"
             data-cy="secondaryButton"
             tabindex="0"
             type="button"
@@ -89,7 +142,7 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
           data-cy="flexItem"
         >
           <button
-            class="css-s9tdxz"
+            class="css-1jip74i"
             data-cy="primaryButton"
             tabindex="0"
             type="button"

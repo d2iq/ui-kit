@@ -6,7 +6,7 @@ import { configurationMapStoryWrapper } from "./helpers/ConfigurationMapStoryWra
 
 const readme = require("../README.md");
 
-storiesOf("ConfigurationMap/HashMap", module)
+storiesOf("Data listing|HashMap", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(configurationMapStoryWrapper)
   .add("default", () => (

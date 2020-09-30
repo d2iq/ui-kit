@@ -27,42 +27,38 @@ export const SidebarContent = ({ sidebarData }) =>
       }
       key={`section-${i}`}
     >
-      {section.items.map(
-        item =>
-          item.subItems ? (
-            <SidebarSubMenu
-              iconWidth="24px"
-              label={
-                <div style={alignToLogoStyles.outer}>
-                  <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
-                    <div>{item.label}</div>
-                  </SidebarItemLabel>
-                </div>
-              }
-              menuHasIcon={true}
-              key={item.label}
-            >
-              {item.subItems.map(subItem => (
-                <SidebarSubMenuItem
-                  onClick={action(`go to ${subItem.label}`)}
-                  key={subItem.label}
-                >
-                  <div style={alignToLogoStyles.outer}>{subItem.label}</div>
-                </SidebarSubMenuItem>
-              ))}
-            </SidebarSubMenu>
-          ) : (
-            <SidebarItem
-              onClick={action(`go to ${item.label}`)}
-              key={item.label}
-            >
+      {section.items.map(item =>
+        item.subItems ? (
+          <SidebarSubMenu
+            iconWidth="24px"
+            label={
               <div style={alignToLogoStyles.outer}>
                 <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
                   <div>{item.label}</div>
                 </SidebarItemLabel>
               </div>
-            </SidebarItem>
-          )
+            }
+            menuHasIcon={true}
+            key={item.label}
+          >
+            {item.subItems.map(subItem => (
+              <SidebarSubMenuItem
+                onClick={action(`go to ${subItem.label}`)}
+                key={subItem.label}
+              >
+                <div style={alignToLogoStyles.outer}>{subItem.label}</div>
+              </SidebarSubMenuItem>
+            ))}
+          </SidebarSubMenu>
+        ) : (
+          <SidebarItem onClick={action(`go to ${item.label}`)} key={item.label}>
+            <div style={alignToLogoStyles.outer}>
+              <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
+                <div>{item.label}</div>
+              </SidebarItemLabel>
+            </div>
+          </SidebarItem>
+        )
       )}
     </SidebarSection>
   ));

@@ -1,15 +1,24 @@
 {
-    "color": {
+  "color": {
+    "aliases": {
+      "accent": {
         "base": {
-            "accent": {
-                "base": {"value": "{color.base.purple.base.value}"}
-            },
-            "error": {
-                "base": {"value": "{color.base.red.base.value}"}
-            },
-            "success": {
-                "base": {"value": "{color.base.green.base.value}"}
-            }
+          "value": "{color.base.purple.base.value}",
+          "isAlias": true
         }
+      },
+      "error": {
+        "base": {
+          "value": "{color.base.red.base.value}",
+          "isAlias": true
+        }
+      },
+      "success": {
+        "base": {
+          "value": "{color.base.green.base.value}",
+          "isAlias": true
+        }
+      }
     }
+  }
 }

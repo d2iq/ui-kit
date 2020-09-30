@@ -3,7 +3,7 @@ import { cx } from "emotion";
 import Downshift, { ControllerStateAndHelpers } from "downshift";
 import { Dropdownable } from "../../dropdownable";
 import { border, buttonReset, display } from "../../shared/styles/styleUtils";
-import Popover from "../../popover/components/Popover";
+import PopoverBox from "../../popover/components/PopoverBox";
 import PopoverListItem from "../../popover/components/PopoverListItem";
 import { DropdownSectionProps } from "./DropdownSection";
 import { DropdownMenuItemProps } from "./DropdownMenuItem";
@@ -49,11 +49,16 @@ export interface DropdownMenuProps {
    * The node that opens the menu when clicked
    */
   trigger: React.ReactNode;
+  /**
+   * Whether the dropdown node should be portalled to document.body, or open in it's parent DOM node
+   */
+  disablePortal?: boolean;
 }
 
 const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
   const {
     children,
+    disablePortal,
     initialIsOpen,
     menuMaxHeight,
     menuMaxWidth,
@@ -86,9 +91,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
       (acc, item, sectionIndex) => {
         const { sections = [] } = acc;
         const { children } = item.props;
-        const menuItems = React.Children.toArray(children) as Array<
-          React.ReactElement<DropdownMenuItemProps>
-        >;
+        const menuItems = React.Children.toArray(children);
         const childrenWithKeys = menuItems.map((child, i) => {
           acc.menuItemIndex++;
 
@@ -136,10 +139,15 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
             overlayRoot={overlayRoot}
             preferredDirections={preferredDirections}
             dropdown={
-              <Popover
+              <PopoverBox
                 maxHeight={menuMaxHeight}
                 maxWidth={menuMaxWidth}
-                {...getMenuProps({ refKey: "menuRef" })}
+                {...getMenuProps(
+                  { refKey: "menuRef" },
+                  // The menu is not mounted when `isOpen` is false, so Downshift's ref check fails incorrectly
+                  // The menu behaves as expected, and has all the correct attributes
+                  { suppressRefError: true }
+                )}
               >
                 {getDropdownContents(
                   highlightedIndex,
@@ -152,8 +160,9 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
                     {sectionContent}
                   </div>
                 ))}
-              </Popover>
+              </PopoverBox>
             }
+            disablePortal={disablePortal}
           >
             {React.isValidElement(trigger) ? (
               React.cloneElement(trigger, {

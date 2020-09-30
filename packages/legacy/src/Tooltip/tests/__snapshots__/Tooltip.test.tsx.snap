@@ -23,72 +23,75 @@ exports[`Tooltip renders 1`] = `
     <span>
       Tooltip Trigger
     </span>
-    <Overlay
-      overlayRoot={
-        <body>
-          <div>
+    <ForwardRef>
+      <Overlay
+        innerRef={null}
+        overlayRoot={
+          <body>
             <div>
-              <div
-                class="foo anchor-start position-bottom no-wrap"
-                style="left: 0px; top: 0px;"
-              >
+              <div>
                 <div
-                  class="tooltip-content"
+                  class="foo anchor-start position-bottom no-wrap"
+                  style="left: 0px; top: 0px;"
                 >
-                  I'm a tooltip!
+                  <div
+                    class="tooltip-content"
+                  >
+                    I'm a tooltip!
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
             <div>
-              <div
-                class="foo anchor-start position-bottom no-wrap"
-              >
+              <div>
                 <div
-                  class="tooltip-content"
+                  class="foo anchor-start position-bottom no-wrap"
                 >
-                  I'm a tooltip!
+                  <div
+                    class="tooltip-content"
+                  >
+                    I'm a tooltip!
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </body>
-      }
-    >
-      <Portal
-        containerInfo={
-          <div>
-            <div>
-              <div
-                class="foo anchor-start position-bottom no-wrap"
-              >
-                <div
-                  class="tooltip-content"
-                >
-                  I'm a tooltip!
-                </div>
-              </div>
-            </div>
-          </div>
+          </body>
         }
       >
-        <div>
-          <div
-            className="foo anchor-start position-bottom no-wrap"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={Object {}}
-          >
+        <Portal
+          containerInfo={
+            <div>
+              <div>
+                <div
+                  class="foo anchor-start position-bottom no-wrap"
+                >
+                  <div
+                    class="tooltip-content"
+                  >
+                    I'm a tooltip!
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+        >
+          <div>
             <div
-              className="tooltip-content"
+              className="foo anchor-start position-bottom no-wrap"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={Object {}}
             >
-              I'm a tooltip!
+              <div
+                className="tooltip-content"
+              >
+                I'm a tooltip!
+              </div>
             </div>
           </div>
-        </div>
-      </Portal>
-    </Overlay>
+        </Portal>
+      </Overlay>
+    </ForwardRef>
   </div>
 </Tooltip>
 `;

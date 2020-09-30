@@ -1,7 +1,7 @@
 import * as React from "react";
 import Downshift from "downshift";
 import Dropdownable from "../../dropdownable/components/Dropdownable";
-import Popover from "../../popover/components/Popover";
+import PopoverBox from "../../popover/components/PopoverBox";
 import PopoverListItem from "../../popover/components/PopoverListItem";
 import { margin } from "../../shared/styles/styleUtils";
 import resizeEventManager from "../../utilities/resizeEventManager";
@@ -53,6 +53,10 @@ export interface TypeaheadProps {
    * whether the selected item's value is set as the input's value
    */
   resetInputOnSelect?: boolean;
+  /**
+   * Whether the dropdown node should be portalled to document.body, or open in it's parent DOM node
+   */
+  disablePortal?: boolean;
 }
 
 interface TypeaheadState {
@@ -63,7 +67,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   public static defaultProps: Partial<TypeaheadProps> = {
     menuMaxHeight: 300
   };
-  private containerRef = React.createRef<HTMLDivElement>();
+  private readonly containerRef = React.createRef<HTMLDivElement>();
 
   constructor(props) {
     super(props);
@@ -80,6 +84,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
   public render() {
     const {
+      disablePortal,
       items,
       menuEmptyState,
       menuMaxHeight,
@@ -119,10 +124,15 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                     <div data-cy="typeahead-dropdown">
                       {!items.length && !menuEmptyState ? null : (
                         <div className={margin("top", "xxs")}>
-                          <Popover
+                          <PopoverBox
                             width={this.state.menuWidth}
                             maxHeight={menuMaxHeight}
-                            {...getMenuProps({ refKey: "menuRef" })}
+                            {...getMenuProps(
+                              { refKey: "menuRef" },
+                              // The menu is not mounted when `isOpen` is false, so Downshift's ref check fails incorrectly
+                              // The menu behaves as expected, and has all the correct attributes
+                              { suppressRefError: true }
+                            )}
                           >
                             {items.length ? (
                               items.map((item, index) => (
@@ -146,11 +156,12 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                             ) : (
                               <div>{menuEmptyState}</div>
                             )}
-                          </Popover>
+                          </PopoverBox>
                         </div>
                       )}
                     </div>
                   }
+                  disablePortal={disablePortal}
                 >
                   {React.cloneElement(
                     textField,

@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { FieldGroup } from "..";
 import { TextInput } from "../../textInput";
 
-storiesOf("Form structure/Grouped fields/FieldGroup", module)
+storiesOf("Forms|Form structure/Grouped fields/FieldGroup", module)
   .addParameters({
     info: {
       propTablesExclude: [TextInput]

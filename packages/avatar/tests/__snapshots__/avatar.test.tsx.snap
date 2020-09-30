@@ -3,6 +3,7 @@
 exports[`Avatar renders default 1`] = `
 .emotion-0 {
   border: 0;
+  display: block;
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -10,12 +11,23 @@ exports[`Avatar renders default 1`] = `
 
 .emotion-1 {
   background-color: var(--themeBgSecondary,#F7F8F9);
-  border: 1px solid #F7F8F9;
   border-radius: 25%;
   overflow: hidden;
-  vertical-align: middle;
+  position: relative;
   height: 32px;
   width: 32px;
+}
+
+.emotion-1:after {
+  border-radius: inherit;
+  bottom: 0;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 <div
@@ -34,6 +46,7 @@ exports[`Avatar renders default 1`] = `
 exports[`Avatar renders with a src, size, and label 1`] = `
 .emotion-0 {
   border: 0;
+  display: block;
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -41,12 +54,23 @@ exports[`Avatar renders with a src, size, and label 1`] = `
 
 .emotion-1 {
   background-color: var(--themeBgSecondary,#F7F8F9);
-  border: 1px solid #F7F8F9;
   border-radius: 25%;
   overflow: hidden;
-  vertical-align: middle;
+  position: relative;
   height: 64px;
   width: 64px;
+}
+
+.emotion-1:after {
+  border-radius: inherit;
+  bottom: 0;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 <div

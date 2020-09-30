@@ -13,12 +13,12 @@ import {
   flex,
   flexItem,
   margin,
-  padding,
-  tintSVG
+  padding
 } from "../../shared/styles/styleUtils";
 import Clickable from "../../clickable/components/clickable";
-import { green, red, yellow } from "../../design-tokens/build/js/designTokens";
-import { CloseIcon } from "../../shared/icons";
+import * as dt from "../../design-tokens/build/js/designTokens";
+import { Icon } from "../../icon";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 export type ToastId = React.ReactText | undefined;
 
@@ -26,7 +26,7 @@ export interface ToastProps {
   title: React.ReactElement<HTMLElement> | string;
   description?: React.ReactElement<HTMLElement> | string;
   id: ToastId;
-  appearance?: "default" | "success" | "warning" | "danger";
+  appearance: "default" | "success" | "warning" | "danger";
   autodismiss?: boolean;
   onDismiss?: (event?: React.SyntheticEvent<HTMLElement>) => void;
   dismissToast?: (dismissedToastId: ToastId) => void;
@@ -34,50 +34,25 @@ export interface ToastProps {
   secondaryAction?: React.ReactElement<HTMLElement>;
 }
 
-const SuccessIcon = props => (
-  <svg
-    width="16"
-    height="16"
-    viewBox="0 0 16 16"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM6.5 9.263L4.619 7.38 3.38 8.62 6.5 11.737l6.119-6.118L11.38 4.38 6.5 9.263z"
-      fill-rule="evenodd"
-    />
-  </svg>
+const SuccessIcon = (
+  <Icon shape={SystemIcons.CircleCheck} color={dt.green} size={dt.iconSizeXs} />
 );
-
-const DangerIcon = props => (
-  <svg
-    width="16"
-    height="16"
-    viewBox="0 0 16 16"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zm-2.5-4.5L8 9l2.5 2.5 1-1L9 8l2.5-2.5-1-1L8 7 5.5 4.5l-1 1L7 8l-2.5 2.5 1 1z"
-      fill-rule="evenodd"
-    />
-  </svg>
+const WarningIcon = (
+  <Icon shape={SystemIcons.Yield} color={dt.yellow} size={dt.iconSizeXs} />
 );
-
-const WarningIcon = props => (
-  <svg
-    width="16"
-    height="16"
-    viewBox="0 0 16 16"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path
-      d="M6.44 2.048c.782-1.398 2.339-1.396 3.12 0l5.133 9.17c.781 1.396.003 2.782-1.56 2.782H2.867c-1.566 0-2.34-1.388-1.56-2.783l5.133-9.17zM8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-.53-3.238A.282.282 0 0 0 7.752 9h.496c.139 0 .266-.115.282-.238l.346-2.773C8.945 5.443 8.556 5 8 5a.86.86 0 0 0-.876.989l.346 2.773z"
-      fill-rule="nonzero"
-    />
-  </svg>
+const DangerIcon = (
+  <Icon shape={SystemIcons.CircleClose} color={dt.red} size={dt.iconSizeXs} />
 );
+const getIconForAppearance = (appearance: ToastProps["appearance"]) => {
+  switch (appearance) {
+    case "danger":
+      return DangerIcon;
+    case "success":
+      return SuccessIcon;
+    case "warning":
+      return WarningIcon;
+  }
+};
 
 class Toast extends React.PureComponent<ToastProps, {}> {
   public static defaultProps: Partial<ToastProps> = {
@@ -100,20 +75,7 @@ class Toast extends React.PureComponent<ToastProps, {}> {
       secondaryAction
     } = this.props;
     const isUrgentMessage = appearance === "danger" || appearance === "warning";
-    const getStatusIcon = status => {
-      switch (status) {
-        case "danger":
-          return <DangerIcon className={tintSVG(red)} />;
-        case "success":
-          return <SuccessIcon className={tintSVG(green)} />;
-        case "warning":
-          return <WarningIcon className={tintSVG(yellow)} />;
-      }
-    };
-    const dataCy = [
-      "toast",
-      ...(appearance && appearance !== "default" ? [`toast.${appearance}`] : [])
-    ];
+    const dataCy = `toast toast.${appearance}`;
 
     return (
       <div
@@ -146,7 +108,7 @@ class Toast extends React.PureComponent<ToastProps, {}> {
                 padding("right", "s")
               )}
             >
-              {getStatusIcon(appearance)}
+              {getIconForAppearance(appearance)}
             </div>
           )}
           <div className={flexItem("grow")}>{title}</div>
@@ -176,7 +138,11 @@ class Toast extends React.PureComponent<ToastProps, {}> {
         )}
         <Clickable tabIndex={0} action={this.handleDismiss}>
           <span className={toastDismiss}>
-            <CloseIcon />
+            <Icon
+              shape={SystemIcons.Close}
+              color="inherit"
+              size={dt.iconSizeXs}
+            />
           </span>
         </Clickable>
       </div>

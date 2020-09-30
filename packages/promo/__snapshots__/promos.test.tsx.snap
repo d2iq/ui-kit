@@ -1,0 +1,586 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Promos renders PromoBanner 1`] = `
+<div
+  class="css-1l9o2e0"
+  data-cy="spacingBox"
+>
+  <div
+    class="css-1fe32n8"
+    data-cy="promoContent"
+  >
+    <button
+      class="css-1ylfqc6"
+      type="button"
+    >
+      <div
+        tabindex="-1"
+      >
+        <svg
+          aria-label="system-close icon"
+          class="css-zgvqkl"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            href="#system-close"
+          />
+        </svg>
+      </div>
+    </button>
+    <div
+      class="css-138vlob"
+      data-cy="flex"
+    >
+      <div
+        class="css-14eehpp"
+        data-cy="flexItem"
+      >
+        <div
+          class="css-18axn3y"
+          data-cy="spacingBox"
+        >
+          <div
+            class="css-ilu7d6"
+            data-cy="spacingBox"
+          >
+            <h3
+              class="rmTextMargins css-178l9ir"
+              data-cy="headingText1"
+            >
+              Promo Banner
+            </h3>
+          </div>
+          <div
+            class="css-fpj0jb"
+            data-cy="spacingBox"
+          >
+            Some promo details
+          </div>
+          <div
+            class="css-1yaruh1"
+            data-cy="flex"
+          >
+            <div
+              class="css-149ndna"
+              data-cy="flexItem"
+            >
+              <button>
+                Primary Action
+              </button>
+            </div>
+            <div
+              class="css-149ndna"
+              data-cy="flexItem"
+            >
+              <button>
+                Secondary Action
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-c5uz38"
+        data-cy="flexItem"
+      >
+        <div
+          class="css-111p8uk"
+          data-cy="spacingBox"
+        >
+          <div
+            class="css-7j3xjb"
+            data-cy="box"
+          />
+        </div>
+      </div>
+      <div
+        class="css-1v61zfx"
+        data-cy="flexItem"
+      >
+        <div
+          class="css-1jnujn3"
+          data-cy="spacingBox"
+        >
+          <div
+            class="css-deizzc"
+            data-cy="checkboxInput"
+          >
+            <label
+              class="css-14bj381"
+              for="dismissPromoCheckbox1"
+            >
+              <div
+                class="css-ew6x4b"
+              >
+                <div
+                  class="css-1iuiyz2"
+                >
+                  <input
+                    aria-describedby=""
+                    aria-invalid="false"
+                    class="css-epge75"
+                    data-cy="checkboxInput-input"
+                    id="dismissPromoCheckbox1"
+                    type="checkbox"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-19gm8iw"
+              >
+                Do not show again
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Promos renders PromoBanner with a custom background color 1`] = `
+<div
+  class="css-13jwadp"
+  data-cy="spacingBox"
+>
+  <div
+    class="css-1fe32n8"
+    data-cy="promoContent"
+  >
+    <button
+      class="css-1ylfqc6"
+      type="button"
+    >
+      <div
+        tabindex="-1"
+      >
+        <svg
+          aria-label="system-close icon"
+          class="css-zgvqkl"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            href="#system-close"
+          />
+        </svg>
+      </div>
+    </button>
+    <div
+      class="css-138vlob"
+      data-cy="flex"
+    >
+      <div
+        class="css-14eehpp"
+        data-cy="flexItem"
+      >
+        <div
+          class="css-18axn3y"
+          data-cy="spacingBox"
+        >
+          <div
+            class="css-ilu7d6"
+            data-cy="spacingBox"
+          >
+            <h3
+              class="rmTextMargins css-178l9ir"
+              data-cy="headingText1"
+            >
+              Promo Banner
+            </h3>
+          </div>
+          <div
+            class="css-fpj0jb"
+            data-cy="spacingBox"
+          >
+            Some promo details
+          </div>
+          <div
+            class="css-1yaruh1"
+            data-cy="flex"
+          >
+            <div
+              class="css-149ndna"
+              data-cy="flexItem"
+            >
+              <button>
+                Primary Action
+              </button>
+            </div>
+            <div
+              class="css-149ndna"
+              data-cy="flexItem"
+            >
+              <button>
+                Secondary Action
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-c5uz38"
+        data-cy="flexItem"
+      >
+        <div
+          class="css-111p8uk"
+          data-cy="spacingBox"
+        >
+          <div
+            class="css-7j3xjb"
+            data-cy="box"
+          />
+        </div>
+      </div>
+      <div
+        class="css-1v61zfx"
+        data-cy="flexItem"
+      >
+        <div
+          class="css-1jnujn3"
+          data-cy="spacingBox"
+        >
+          <div
+            class="css-deizzc"
+            data-cy="checkboxInput"
+          >
+            <label
+              class="css-14bj381"
+              for="dismissPromoCheckbox3"
+            >
+              <div
+                class="css-ew6x4b"
+              >
+                <div
+                  class="css-1iuiyz2"
+                >
+                  <input
+                    aria-describedby=""
+                    aria-invalid="false"
+                    class="css-epge75"
+                    data-cy="checkboxInput-input"
+                    id="dismissPromoCheckbox3"
+                    type="checkbox"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-19gm8iw"
+              >
+                Do not show again
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
+<div
+  class="css-cht2m7"
+  data-cy="spacingBox"
+>
+  <div
+    class="css-1fe32n8"
+    data-cy="promoContent"
+  >
+    <button
+      class="css-1ylfqc6"
+      type="button"
+    >
+      <div
+        tabindex="-1"
+      >
+        <svg
+          aria-label="system-close icon"
+          class="css-zgvqkl"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            href="#system-close"
+          />
+        </svg>
+      </div>
+    </button>
+    <div
+      class="css-138vlob"
+      data-cy="flex"
+    >
+      <div
+        class="css-14eehpp"
+        data-cy="flexItem"
+      >
+        <div
+          class="css-18axn3y"
+          data-cy="spacingBox"
+        >
+          <div
+            class="css-ilu7d6"
+            data-cy="spacingBox"
+          >
+            <h3
+              class="rmTextMargins css-178l9ir"
+              data-cy="headingText1"
+            >
+              Promo Banner
+            </h3>
+          </div>
+          <div
+            class="css-fpj0jb"
+            data-cy="spacingBox"
+          >
+            Some promo details
+          </div>
+          <div
+            class="css-1yaruh1"
+            data-cy="flex"
+          >
+            <div
+              class="css-149ndna"
+              data-cy="flexItem"
+            >
+              <button>
+                Primary Action
+              </button>
+            </div>
+            <div
+              class="css-149ndna"
+              data-cy="flexItem"
+            >
+              <button>
+                Secondary Action
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-c5uz38"
+        data-cy="flexItem"
+      >
+        <div
+          class="css-111p8uk"
+          data-cy="spacingBox"
+        >
+          <div
+            class="css-7j3xjb"
+            data-cy="box"
+          />
+        </div>
+      </div>
+      <div
+        class="css-1v61zfx"
+        data-cy="flexItem"
+      >
+        <div
+          class="css-1jnujn3"
+          data-cy="spacingBox"
+        >
+          <div
+            class="css-deizzc"
+            data-cy="checkboxInput"
+          >
+            <label
+              class="css-14bj381"
+              for="dismissPromoCheckbox2"
+            >
+              <div
+                class="css-ew6x4b"
+              >
+                <div
+                  class="css-1iuiyz2"
+                >
+                  <input
+                    aria-describedby=""
+                    aria-invalid="false"
+                    class="css-epge75"
+                    data-cy="checkboxInput-input"
+                    id="dismissPromoCheckbox2"
+                    type="checkbox"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-19gm8iw"
+              >
+                Do not show again
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Promos renders PromoInline 1`] = `
+<div
+  class="css-1whabpp"
+  data-cy="card"
+>
+  <div
+    class="css-1xsu0i2"
+  >
+    <div
+      class="css-1o6stfp"
+      data-cy="spacingBox"
+    >
+      <div
+        class="css-1fe32n8"
+        data-cy="promoContent"
+      >
+        <button
+          class="css-1ylfqc6"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          >
+            <svg
+              aria-label="system-close icon"
+              class="css-zgvqkl"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <use
+                href="#system-close"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          class="css-138vlob"
+          data-cy="flex"
+        >
+          <div
+            class="css-14eehpp"
+            data-cy="flexItem"
+          >
+            <div
+              class="css-18axn3y"
+              data-cy="spacingBox"
+            >
+              <div
+                class="css-ilu7d6"
+                data-cy="spacingBox"
+              >
+                <h3
+                  class="rmTextMargins css-178l9ir"
+                  data-cy="headingText1"
+                >
+                  Promo Inline
+                </h3>
+              </div>
+              <div
+                class="css-fpj0jb"
+                data-cy="spacingBox"
+              >
+                Some promo details
+              </div>
+              <div
+                class="css-1yaruh1"
+                data-cy="flex"
+              >
+                <div
+                  class="css-149ndna"
+                  data-cy="flexItem"
+                >
+                  <button>
+                    Primary Action
+                  </button>
+                </div>
+                <div
+                  class="css-149ndna"
+                  data-cy="flexItem"
+                >
+                  <button>
+                    Secondary Action
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-c5uz38"
+            data-cy="flexItem"
+          >
+            <div
+              class="css-111p8uk"
+              data-cy="spacingBox"
+            >
+              <div
+                class="css-7j3xjb"
+                data-cy="box"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1v61zfx"
+            data-cy="flexItem"
+          >
+            <div
+              class="css-1jnujn3"
+              data-cy="spacingBox"
+            >
+              <div
+                class="css-deizzc"
+                data-cy="checkboxInput"
+              >
+                <label
+                  class="css-14bj381"
+                  for="dismissPromoCheckbox4"
+                >
+                  <div
+                    class="css-ew6x4b"
+                  >
+                    <div
+                      class="css-1iuiyz2"
+                    >
+                      <input
+                        aria-describedby=""
+                        aria-invalid="false"
+                        class="css-epge75"
+                        data-cy="checkboxInput-input"
+                        id="dismissPromoCheckbox4"
+                        type="checkbox"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="css-19gm8iw"
+                  >
+                    Do not show again
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

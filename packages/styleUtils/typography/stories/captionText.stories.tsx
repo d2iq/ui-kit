@@ -5,7 +5,7 @@ import { CaptionText } from "../index";
 
 const readme = require("../README.md");
 
-storiesOf("Style utilities/Typography/CaptionText", module)
+storiesOf("Typography|CaptionText", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <CaptionText>

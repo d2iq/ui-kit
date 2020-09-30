@@ -2,8 +2,11 @@ import { css } from "emotion";
 import {
   borderRadiusDefault,
   themeBgPrimary,
-  themeBgHover
+  themeBgHover,
+  themeBorder
 } from "../design-tokens/build/js/designTokens";
+import { Direction } from "../dropdownable/components/Dropdownable";
+import { getContainerCaret } from "../shared/styles/containerWithCaret";
 
 export const menuList = css`
   background-color: ${themeBgPrimary};
@@ -26,4 +29,8 @@ export const menuListItem = css`
 
 export const menuListItemActive = css`
   background-color: ${themeBgHover};
+`;
+
+export const getPopoverBoxArrow = (direction: Direction) => css`
+  ${getContainerCaret(direction, themeBgPrimary, themeBorder)};
 `;

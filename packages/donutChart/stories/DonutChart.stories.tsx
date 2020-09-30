@@ -11,7 +11,7 @@ const chartWrapper = css`
   max-width: 150px;
 `;
 
-storiesOf("Charts/DonutChart", module)
+storiesOf("Charts|DonutChart", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <div className={chartWrapper}>

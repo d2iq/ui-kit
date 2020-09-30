@@ -6,3 +6,8 @@ Sometimes we want a card's size to obey a specific aspect ratio. When an aspect 
 
 ## ButtonCard
 A `ButtonCard` component is used to render a card that a user can interact with. It has all of the same properties as a `Card` component, but can also appear in an "on", "off", or "disabled" state.
+
+The `ButtonCard` should not contain other interactive content such as links or buttons.
+
+## LinkCard
+A `LinkCard` component is interactive like a `ButtonCard`, except it's intended to be used when clicking the card links to somewhere.

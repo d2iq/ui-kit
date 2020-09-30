@@ -9,17 +9,22 @@ exports[`TextInput should display icon with tooltip if tooltipText is set 1`] = 
   font-weight: 500;
 }
 
-.emotion-1 {
-  margin-left: 8px;
-  margin-bottom: 4px;
-}
-
 .emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
   height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -32,8 +37,13 @@ exports[`TextInput should display icon with tooltip if tooltipText is set 1`] = 
   width: auto;
 }
 
+.emotion-1 {
+  margin-left: 8px;
+  margin-bottom: 4px;
+}
+
 <div
-  data-cy="textInput"
+  data-cy="textInput textInput.standard"
 >
   <div
     className="emotion-2"
@@ -120,15 +130,18 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
 }
 
 <div
-  data-cy="textInput"
+  data-cy="textInput textInput.standard"
 >
   <label
     className="emotion-0"
     data-cy="textInput-label"
+    htmlFor="input.with.hidden.label"
   >
     I'm not displayed
   </label>
-  <FormFieldWrapper>
+  <FormFieldWrapper
+    id="input.with.hidden.label"
+  >
     <Component />
   </FormFieldWrapper>
 </div>
@@ -292,7 +305,7 @@ exports[`TextInput should render all appearances focus 1`] = `
   type="text"
 >
   <div
-    data-cy="textInput"
+    data-cy="textInput textInput.standard"
   >
     <label
       className="emotion-0"
@@ -650,7 +663,7 @@ exports[`TextInput should render all appearances with props 1`] = `
 }
 
 <div
-  data-cy="textInput"
+  data-cy="textInput textInput.standard"
 >
   <label
     className="emotion-0"
@@ -733,7 +746,7 @@ exports[`TextInput should render node as inputLabel 1`] = `
 }
 
 <div
-  data-cy="textInput"
+  data-cy="textInput textInput.standard"
 >
   <label
     className="emotion-0"
@@ -762,7 +775,7 @@ exports[`TextInput should render string inputLabel 1`] = `
 }
 
 <div
-  data-cy="textInput"
+  data-cy="textInput textInput.standard"
 >
   <label
     className="emotion-0"

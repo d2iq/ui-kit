@@ -1,30 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FieldList renders 1`] = `
-Array [
+<div>
   <div
-    class="css-1xeyz59"
+    class="css-m7nb2t"
     data-cy="spacingBox"
   >
     <div
-      class="css-4km9oy"
+      class="rmTextMargins css-1xq9107"
       data-cy="fieldList-columnHeader"
     >
       Name
     </div>
     <div
-      class="css-x79tld"
+      class="rmTextMargins css-6pwokj"
       data-cy="fieldList-columnHeader"
     >
       :
     </div>
     <div
-      class="css-4km9oy"
+      class="rmTextMargins css-1xq9107"
       data-cy="fieldList-columnHeader"
     >
       Role
     </div>
-  </div>,
+  </div>
   <div
     class="css-jq21gt"
   >
@@ -36,10 +36,10 @@ Array [
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="name-0"
           >
@@ -47,12 +47,12 @@ Array [
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="name-0"
                 type="text"
@@ -76,10 +76,10 @@ Array [
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="role-0"
           >
@@ -87,12 +87,12 @@ Array [
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="role-0"
                 type="text"
@@ -141,10 +141,10 @@ Array [
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="name-1"
           >
@@ -152,12 +152,12 @@ Array [
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="name-1"
                 type="text"
@@ -181,10 +181,10 @@ Array [
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="role-1"
           >
@@ -192,12 +192,12 @@ Array [
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="role-1"
                 type="text"
@@ -245,10 +245,10 @@ Array [
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="name-2"
           >
@@ -256,12 +256,12 @@ Array [
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="name-2"
                 type="text"
@@ -285,10 +285,10 @@ Array [
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
-            class="css-fvq1si"
+            class="css-1lrhbps"
             data-cy="textInput-label"
             for="role-2"
           >
@@ -296,12 +296,12 @@ Array [
           </label>
           <div>
             <div
-              class="css-ox6cpm"
+              class="css-865tln"
             >
               <input
                 aria-describedby=""
                 aria-invalid="false"
-                class="css-kl82z9"
+                class="css-p0cbyv"
                 data-cy="textInput-input"
                 id="role-2"
                 type="text"
@@ -342,13 +342,13 @@ Array [
       </div>
     </div>
     <button
-      class="css-67j5fi"
+      class="css-8g34zf"
       data-cy="secondaryButton"
       tabindex="0"
       type="button"
     >
       <span
-        class="css-cdylxf"
+        class="css-1hesotu"
       >
         <span
           class="css-ew6x4b"
@@ -369,12 +369,12 @@ Array [
           </svg>
         </span>
         <span
-          class="css-q27fe3"
+          class="css-1tbd6ha"
         >
           Add row
         </span>
       </span>
     </button>
-  </div>,
-]
+  </div>
+</div>
 `;

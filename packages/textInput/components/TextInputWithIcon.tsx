@@ -29,27 +29,17 @@ export interface TextInputWithIconState {
 }
 
 export class TextInputWithIcon<
-  P extends TextInputWithIconProps,
-  S extends TextInputWithIconState
-> extends TextInput<P, S> {
-  public static defaultProps: Partial<TextInputWithIconProps> = {
+  P extends TextInputWithIconProps
+> extends TextInput<P> {
+  public static defaultProps = {
     type: "text",
     appearance: InputAppearance.Standard,
     showInputLabel: true
   };
-  constructor(props) {
-    super(props);
 
-    this.inputOnFocus = this.inputOnFocus.bind(this);
-    this.inputOnBlur = this.inputOnBlur.bind(this);
-
-    // I can't find a workaround for this issue:
-    // https://stackoverflow.com/questions/51074355/cannot-assign-to-state-because-it-is-a-constant-or-a-read-only-property
-    // @ts-ignore
-    this.state = {
-      hasFocus: false
-    };
-  }
+  state = {
+    hasFocus: false
+  };
 
   protected getInputAppearance(): string {
     if (this.props.disabled) {
@@ -62,7 +52,7 @@ export class TextInputWithIcon<
   }
 
   protected getInputElementProps() {
-    let baseProps = super.getInputElementProps();
+    const baseProps = super.getInputElementProps();
     const {
       iconStart,
       iconEnd,
@@ -115,7 +105,10 @@ export class TextInputWithIcon<
     const inputAppearance = this.getInputAppearance();
     return (
       <FormFieldWrapper
-        id={this.props.id}
+        // TODO: figure out how to get rid of this non-null assertion
+        // If we stop generating an `id` prop in the TextInput component,
+        // it would be possible for `this.props.id` to be undefined
+        id={this.props.id!}
         errors={this.props.errors}
         hintContent={this.props.hintContent}
       >
@@ -146,21 +139,21 @@ export class TextInputWithIcon<
     );
   }
 
-  protected inputOnFocus(e) {
+  protected inputOnFocus = e => {
     this.setState({ hasFocus: true });
 
     if (this.props.onFocus) {
       this.props.onFocus(e);
     }
-  }
+  };
 
-  protected inputOnBlur(e) {
+  protected inputOnBlur = e => {
     this.setState({ hasFocus: false });
 
     if (this.props.onBlur) {
       this.props.onBlur(e);
     }
-  }
+  };
 }
 
 export default TextInputWithIcon;

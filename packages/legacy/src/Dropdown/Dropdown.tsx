@@ -63,8 +63,8 @@ export class Dropdown extends React.Component<DropdownProps, any> {
 
   private container;
   private currentBlurTimeout;
-  private dropdownMenuRef = React.createRef<any>();
-  private dropdownWrapperRef = React.createRef<any>();
+  private readonly dropdownMenuRef = React.createRef<any>();
+  private readonly dropdownWrapperRef = React.createRef<any>();
 
   constructor(props) {
     super(props);
@@ -366,9 +366,7 @@ export class Dropdown extends React.Component<DropdownProps, any> {
       this.props.dropdownMenuClassName
     );
     const { items, trigger = <DropdownListTrigger /> } = this.props;
-    const transitionName = `${this.props.transitionName}-${
-      this.state.menuDirection
-    }`;
+    const transitionName = `${this.props.transitionName}-${this.state.menuDirection}`;
     const wrapperClassSet = classNames(
       this.state.menuDirection,
       this.props.wrapperClassName,

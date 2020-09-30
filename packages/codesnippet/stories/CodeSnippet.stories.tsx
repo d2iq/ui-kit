@@ -9,7 +9,7 @@ const readme = require("../README.md");
 
 const snippetContent = `cd ui-kit && npm start`;
 
-storiesOf("CodeSnippet", module)
+storiesOf("Typography|Containers/CodeSnippet", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => <CodeSnippet>{snippetContent}</CodeSnippet>)
   .add("with textToCopy", () => (

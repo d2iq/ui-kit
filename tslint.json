@@ -1,6 +1,56 @@
 {
-  "extends": ["@dcos/tslint-config", "./tslint-a11y.js"],
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-consistent-codestyle",
+    "tslint-react",
+    "tslint-react-hooks",
+    "./tslint-a11y.js",
+
+    "tslint-config-prettier"
+  ],
+  "jsRules": {
+    "object-literal-sort-keys": false
+  },
   "linterOptions": {
     "exclude": ["./scripts/templates/*", "./packages/design-tokens/build/**/*"]
-  }
+  },
+  "rules": {
+    "arrow-return-shorthand": true,
+    "cyclomatic-complexity": [true, 20],
+    "interface-name": false,
+    "interface-over-type-literal": false,
+    "jsx-no-multiline-js": false,
+    "jsx-wrap-multiline": false,
+    "member-access": [false],
+    "no-any": {
+      "severity": "off"
+    },
+    "no-console": false,
+    "no-empty": [true, "allow-empty-functions"],
+    "no-shadowed-variable": {
+      "severity": "off"
+    },
+    "no-unnecessary-else": true,
+    "no-unnecessary-type-assertion": true,
+    "no-unsafe-any": {
+      "severity": "off"
+    },
+    "no-var-before-return": true,
+    "no-var-requires": true,
+    "object-literal-sort-keys": {
+      "severity": "off"
+    },
+    "one-variable-per-declaration": false,
+    "ordered-imports": false,
+    "prefer-conditional-expression": true,
+    "prefer-const": [true, { "destructuring": "all" }],
+    "prefer-object-spread": true,
+    "prefer-readonly": true,
+    "react-hooks-nesting": "error",
+    "unnecessary-bind": true,
+    "unnecessary-else": true,
+    "variable-name": false
+  },
+  "rulesDirectory": []
 }

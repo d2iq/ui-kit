@@ -2,6 +2,7 @@ import * as React from "react";
 import { cx } from "emotion";
 import { tooltip, getTooltipArrow } from "../style";
 import { inverseColorMode, padding } from "../../shared/styles/styleUtils";
+import { alignContainerWithCaretStyles } from "../../shared/styles/containerWithCaret";
 import { BaseTooltipProps } from "./Tooltip";
 import { Direction } from "../../dropdownable/components/Dropdownable";
 
@@ -22,25 +23,28 @@ class TooltipContent extends React.PureComponent<TooltipContentProps, {}> {
     } = this.props;
 
     return (
-      <div
-        aria-hidden={!open}
-        id={id}
-        className={cx(
-          tooltip,
-          getTooltipArrow(direction),
-          inverseColorMode,
-          padding("horiz", "s"),
-          padding("vert", "xs")
-        )}
-        role="tooltip"
-        style={{
-          minWidth,
-          maxWidth
-        }}
-        data-cy="tooltipContent"
-      >
-        {children}
-      </div>
+      <>
+        <div
+          aria-hidden={!open}
+          id={id}
+          className={cx(
+            tooltip,
+            alignContainerWithCaretStyles(direction),
+            inverseColorMode,
+            padding("horiz", "s"),
+            padding("vert", "xs")
+          )}
+          role="tooltip"
+          style={{
+            minWidth,
+            maxWidth
+          }}
+          data-cy="tooltipContent"
+        >
+          {children}
+        </div>
+        <div className={getTooltipArrow(direction)} />
+      </>
     );
   }
 }

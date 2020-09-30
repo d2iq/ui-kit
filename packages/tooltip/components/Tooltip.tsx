@@ -3,6 +3,7 @@ import Dropdownable, {
   Direction
 } from "../../dropdownable/components/Dropdownable";
 import TooltipContent from "./TooltipContent";
+import { getFirstFocusableChildNode } from "../../utilities/getFocusableChildNodes";
 
 export interface BaseTooltipProps {
   children: React.ReactNode | string;
@@ -17,113 +18,119 @@ export interface TooltipProps extends BaseTooltipProps {
   suppress?: boolean;
   trigger: React.ReactNode;
   onClose?: () => void;
+  disablePortal?: boolean;
 }
 
 export interface TooltipState {
   open: boolean;
+  triggerNode: HTMLElement | null;
 }
 
-class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
-  static getDerivedStateFromProps(props: TooltipProps, state: TooltipState) {
-    if (props.suppress && props.open !== state.open) {
-      return {
-        open: props.open
-      };
+const Tooltip = ({
+  ariaLabel,
+  children,
+  disablePortal,
+  id,
+  maxWidth,
+  minWidth,
+  onClose,
+  open = false,
+  preferredDirections,
+  suppress,
+  trigger
+}: TooltipProps) => {
+  const triggerRef: React.MutableRefObject<HTMLElement | null> = React.useRef<
+    HTMLElement
+  >(null);
+  const [isOpen, setIsOpen] = React.useState<boolean>(open);
+
+  if (suppress && open !== isOpen) {
+    setIsOpen(open);
+  }
+
+  const setTriggerNode = (node: HTMLElement | null) => {
+    if (node == null) {
+      triggerRef.current = null;
+      return;
     }
 
-    return null;
-  }
+    triggerRef.current = node;
+  };
 
-  constructor(props) {
-    super(props);
+  const handleOpen = () => {
+    if (suppress) {
+      return;
+    }
 
-    this.state = {
-      open: props.open || false
-    };
+    setIsOpen(true);
+  };
 
-    this.handleClose = this.handleClose.bind(this);
-    this.handleOpen = this.handleOpen.bind(this);
-    this.handleDropdownableClose = this.handleDropdownableClose.bind(this);
-  }
+  const handleClose = () => {
+    if (suppress) {
+      return;
+    }
 
-  public render() {
-    const {
-      ariaLabel,
-      children,
-      id,
-      maxWidth,
-      minWidth,
-      preferredDirections,
-      trigger
-    } = this.props;
+    setIsOpen(false);
 
-    return (
-      /* tslint:disable:react-a11y-event-has-role */
-      /* disabled because there is no appropriate role */
-      <span
-        aria-label={ariaLabel}
-        aria-describedby={id}
-        onMouseOver={this.handleOpen}
-        onMouseLeave={this.handleClose}
-        onFocus={this.handleOpen}
-        onBlur={this.handleClose}
-        tabIndex={0}
-        data-cy="tooltip"
+    if (onClose) {
+      onClose();
+    }
+  };
+
+  React.useEffect(() => {
+    const firstFocusable = triggerRef.current
+      ? getFirstFocusableChildNode(triggerRef.current)
+      : null;
+    const nodeToFocus = firstFocusable || triggerRef.current;
+
+    if (!nodeToFocus) {
+      return;
+    }
+
+    nodeToFocus.setAttribute("tabindex", "0");
+    nodeToFocus.setAttribute("aria-describedby", id);
+  });
+
+  const triggerProps = {
+    ["aria-label"]: ariaLabel,
+    onMouseOver: handleOpen,
+    onMouseLeave: handleClose,
+    onFocus: handleOpen,
+    onBlur: handleClose,
+    ["data-cy"]: "tooltip",
+    ref: setTriggerNode
+  };
+
+  return (
+    <span {...(!disablePortal ? triggerProps : {})}>
+      <Dropdownable
+        open={isOpen}
+        dropdown={
+          <TooltipContent
+            id={id}
+            open={isOpen}
+            minWidth={minWidth}
+            maxWidth={maxWidth}
+          >
+            {children}
+          </TooltipContent>
+        }
+        preferredDirections={
+          preferredDirections || [
+            Direction.TopCenter,
+            Direction.TopLeft,
+            Direction.TopRight,
+            Direction.BottomCenter,
+            Direction.BottomLeft,
+            Direction.BottomRight
+          ]
+        }
+        disablePortal={disablePortal}
       >
-        <Dropdownable
-          open={this.state.open}
-          onClose={this.handleDropdownableClose}
-          dropdown={
-            <TooltipContent
-              id={id}
-              open={this.state.open}
-              minWidth={minWidth}
-              maxWidth={maxWidth}
-            >
-              {children}
-            </TooltipContent>
-          }
-          preferredDirections={
-            preferredDirections || [
-              Direction.TopCenter,
-              Direction.TopLeft,
-              Direction.TopRight,
-              Direction.BottomCenter,
-              Direction.BottomLeft,
-              Direction.BottomRight
-            ]
-          }
-        >
-          {trigger}
-        </Dropdownable>
-      </span>
-      /* tslint:enable:react-a11y-event-has-role */
-    );
-  }
-
-  private handleDropdownableClose() {
-    // No need for inner component to close using "on click outside" since
-    // the parent is handling onMouseLeave already
-  }
-
-  private handleOpen() {
-    if (this.props.suppress) {
-      return;
-    }
-    this.setState({ open: true });
-  }
-
-  private handleClose() {
-    if (this.props.suppress) {
-      return;
-    }
-
-    this.setState({ open: false }, () => {
-      if (this.props.onClose) {
-        this.props.onClose();
-      }
-    });
-  }
-}
+        {disablePortal ? <span {...triggerProps}>{trigger}</span> : trigger}
+      </Dropdownable>
+    </span>
+  );
+};
 
 export default Tooltip;

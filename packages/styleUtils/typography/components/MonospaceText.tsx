@@ -2,7 +2,10 @@ import * as React from "react";
 import Text from "./Text";
 import { BasicTextProps } from "../textTypes";
 import { css } from "emotion";
-import { themeTextColorPrimary } from "../../../design-tokens/build/js/designTokens";
+import {
+  themeTextColorPrimary,
+  fontFamilyMonospace
+} from "../../../design-tokens/build/js/designTokens";
 
 export interface MonospaceTextProps extends BasicTextProps {
   /**
@@ -14,7 +17,7 @@ export interface MonospaceTextProps extends BasicTextProps {
 const MonospaceText = (props: MonospaceTextProps) => (
   <Text
     className={css`
-      font-family: monospace;
+      font-family: ${fontFamilyMonospace};
     `}
     dataCy="monospaceText"
     {...props}

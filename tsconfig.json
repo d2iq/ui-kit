@@ -5,22 +5,20 @@
     "rootDir": "./",
     "sourceMap": true,
     "noImplicitAny": false,
+    "incremental": true,
     "target": "es5",
     "module": "commonjs",
     "jsx": "react",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "strict": true,
     "moduleResolution": "node",
-    "typeRoots": [
-      "node_modules/@types",
-      "node_modules/emotion/types",
-      "node_modules/create-emotion-styled/types",
-      "node_modules/create-emotion-styled/types/react"
-    ],
+    "skipLibCheck": true,
+    "tsBuildInfoFile": ".tsbuildinfo",
     "lib": ["es6", "dom", "es2017"]
   },
-  "include": ["./packages/index.ts"],
+  "include": ["./packages/index.ts", "./typings/*"],
   "exclude": ["**/*.test.*", "**/*.stories.*"]
 }

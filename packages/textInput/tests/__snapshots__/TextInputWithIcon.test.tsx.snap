@@ -10,7 +10,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
 }
 
 <div
-  data-cy="textInput"
+  data-cy="textInput textInput.standard"
 >
   <label
     className="emotion-0"
@@ -93,7 +93,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
 }
 
 <div
-  data-cy="textInput"
+  data-cy="textInput textInput.standard"
 >
   <label
     className="emotion-0"
@@ -176,7 +176,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
 }
 
 <div
-  data-cy="textInput"
+  data-cy="textInput textInput.standard"
 >
   <label
     className="emotion-0"

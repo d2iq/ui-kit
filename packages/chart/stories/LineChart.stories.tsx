@@ -6,7 +6,7 @@ import { LineChart } from "../index";
 
 const readme = require("../README.md");
 
-storiesOf("Charts/LineChart", module)
+storiesOf("Charts|LineChart", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <LineChart

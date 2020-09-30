@@ -8,7 +8,7 @@ import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 
 const readme = require("../README.md");
 
-storiesOf("Forms/Textarea", module)
+storiesOf("Forms|Textarea", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(inputStoryWrapper)
   .add("default", () => (
@@ -19,12 +19,14 @@ storiesOf("Forms/Textarea", module)
         id="error"
         inputLabel="Error"
         placeholder="Placeholder"
+        tooltipContent={<div>I'm a very informative tooltip!</div>}
       />
       <Textarea
         appearance={InputAppearance.Success}
         id="success"
         inputLabel="Success"
         placeholder="Placeholder"
+        tooltipContent={<div>I'm also a tooltip!</div>}
       />
       <Textarea
         id="value"
@@ -52,6 +54,16 @@ storiesOf("Forms/Textarea", module)
       inputLabel="Standard"
       placeholder="Placeholder"
       hintContent="Enter a body of text here"
+    />
+  ))
+  .add("hint text and error", () => (
+    <Textarea
+      id="hint"
+      appearance={InputAppearance.Error}
+      inputLabel="Standard"
+      placeholder="Placeholder"
+      hintContent="Enter a body of text here"
+      errors={["Something is wrong here"]}
     />
   ))
   .add("required", () => (

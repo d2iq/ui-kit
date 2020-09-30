@@ -7,7 +7,7 @@ import { green, yellow } from "../../design-tokens/build/js/designTokens";
 
 const readme = require("../README.md");
 
-storiesOf("Charts/ProgressBar", module)
+storiesOf("Charts| ProgressBar", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => <ProgressBar data={[{ percentage: 40 }]} />)
   .add("custom fill color", () => (
@@ -18,6 +18,13 @@ storiesOf("Charts/ProgressBar", module)
   ))
   .add("isProcessing", () => (
     <ProgressBar isProcessing={true} data={[{ percentage: 40 }]} />
+  ))
+  .add("using condensed layout", () => (
+    <ProgressBar
+      isCondensedLayout={true}
+      data={[{ percentage: 40 }]}
+      value="40%"
+    />
   ))
   .add("with value text", () => (
     <ProgressBar data={[{ percentage: 40 }]} value="40%" />

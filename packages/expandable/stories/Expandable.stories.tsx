@@ -6,7 +6,7 @@ import { tintText } from "../../shared/styles/styleUtils";
 
 const readme = require("../README.md");
 
-storiesOf("Expandable", module)
+storiesOf("Actions|Expandable", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <Expandable label="Expand for content">
@@ -33,5 +33,10 @@ storiesOf("Expandable", module)
       labelClassName={tintText("blue")}
     >
       <div>Check out this exciting blue content</div>
+    </Expandable>
+  ))
+  .add("indicator icon on theright", () => (
+    <Expandable label="Expand for content" indicatorPosition="right">
+      <div>Check out this exciting content</div>
     </Expandable>
   ));

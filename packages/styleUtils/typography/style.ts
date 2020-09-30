@@ -2,7 +2,8 @@ import { css } from "emotion";
 import {
   fontLineHeightS,
   fontLineHeightM,
-  fontLineHeightDefault
+  fontLineHeightDefault,
+  textBlockWidth
 } from "../../design-tokens/build/js/designTokens";
 
 export const textBase = css`
@@ -15,4 +16,27 @@ export const heading1 = css`
 
 export const heading2 = css`
   line-height: ${fontLineHeightM};
+`;
+
+export const textBlock = css`
+  hyphens: auto;
+
+  p {
+    max-width: ${textBlockWidth};
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  > img {
+    display: block;
+    margin-right: auto;
+  }
+
+  ul,
+  ol {
+    padding-left: inherit;
+    list-style-position: outside;
+  }
 `;

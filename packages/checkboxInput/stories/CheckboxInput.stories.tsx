@@ -8,7 +8,7 @@ import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 
 const readme = require("../README.md");
 
-storiesOf("Forms/CheckboxInput", module)
+storiesOf("Forms|CheckboxInput", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(inputStoryWrapper)
   .add("default", () => (
@@ -160,6 +160,28 @@ storiesOf("Forms/CheckboxInput", module)
             inputLabel="I'm neither true or false"
             value="indeterminate"
             indeterminate={isChecked === undefined}
+            checked={isChecked}
+            onChange={changeHandler}
+          />
+        )}
+      </CheckboxStoryHelper>
+    ),
+    {
+      info: {
+        propTables: [CheckboxInput]
+      }
+    }
+  )
+  .add(
+    "hint text",
+    () => (
+      <CheckboxStoryHelper isChecked={true}>
+        {({ changeHandler, isChecked }) => (
+          <CheckboxInput
+            id="hintText"
+            inputLabel="Some label"
+            hintContent="Here's a hint"
+            value="hintTextValue"
             checked={isChecked}
             onChange={changeHandler}
           />

@@ -1,16 +1,14 @@
 import * as React from "react";
-import { css } from "emotion";
-import styled from "react-emotion";
+import { withTheme } from "emotion-theming";
 import { sidebarNavItem } from "../style";
 import Clickable from "../../clickable/components/clickable";
-import { spaceSizes } from "../../../packages/shared/styles/styleUtils/modifiers/modifierUtils";
-import { ThemeProvider } from "emotion-theming";
+import ResetLink from "../../link/components/ResetLink";
+import { AppChromeTheme, SidebarNavItemProps } from "../types";
+import { display } from "../../shared/styles/styleUtils";
 
-export interface SidebarItemProps {
+export interface SidebarItemProps extends SidebarNavItemProps {
   icon?: React.ReactElement<HTMLElement> | string;
-  isActive?: boolean;
-  onClick?: (event?: React.SyntheticEvent<HTMLElement>) => void;
-  disabled?: boolean;
+  theme?: AppChromeTheme;
 }
 
 export const defaultSidebarItemHorizPaddingSize = "l";
@@ -18,44 +16,63 @@ export const defaultSidebarItemVertPaddingSize = "none";
 
 class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
   public render() {
-    const { children, isActive, onClick, disabled } = this.props;
+    const {
+      children,
+      disabled,
+      isActive,
+      onClick,
+      openInNewTab,
+      theme,
+      url
+    } = this.props;
     const dataCy = [
       "sidebarItem",
       ...(isActive ? ["sidebarItem.active"] : [])
     ].join(" ");
 
-    const Item = styled("li")`
-      ${props => {
-        return css`
-          ${sidebarNavItem(Boolean(isActive), Boolean(disabled), props.theme)};
-          padding: ${spaceSizes[props.theme.sidebarItemPaddingVert]}
-            ${spaceSizes[props.theme.sidebarItemPaddingHor]};
-        `;
-      }};
-    `;
-
-    const adjustedTheme = ancestorTheme => {
-      return {
-        sidebarItemPaddingHor: defaultSidebarItemHorizPaddingSize,
-        sidebarItemPaddingVert: defaultSidebarItemVertPaddingSize,
-        ...ancestorTheme
-      };
-    };
-
     return (
-      <ThemeProvider theme={adjustedTheme}>
-        <Clickable
-          action={onClick}
-          tabIndex={0}
-          role="link"
-          disableFocusOutline={true}
-          dataCy={dataCy}
-        >
-          <Item>{children}</Item>
-        </Clickable>
-      </ThemeProvider>
+      <>
+        {url ? (
+          <li
+            data-cy={dataCy}
+            className={sidebarNavItem(
+              Boolean(isActive),
+              Boolean(disabled),
+              theme
+            )}
+          >
+            <ResetLink
+              url={!disabled ? url : undefined}
+              openInNewTab={openInNewTab}
+              onClick={onClick}
+              className={display("block")}
+              aria-disabled={disabled}
+              tabIndex={disabled ? -1 : undefined}
+            >
+              {children}
+            </ResetLink>
+          </li>
+        ) : (
+          <Clickable
+            action={onClick}
+            tabIndex={0}
+            disableFocusOutline={true}
+            dataCy={dataCy}
+          >
+            <li
+              className={sidebarNavItem(
+                Boolean(isActive),
+                Boolean(disabled),
+                theme
+              )}
+            >
+              {children}
+            </li>
+          </Clickable>
+        )}
+      </>
     );
   }
 }
 
-export default SidebarItemComponent;
+export default withTheme(SidebarItemComponent);

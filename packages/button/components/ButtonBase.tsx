@@ -4,7 +4,6 @@ import FocusStyleManager from "../../shared/components/FocusStyleManager";
 import { IconShapes } from "../../icon/components/Icon";
 import IconPropAdapter from "../../icon/components/IconPropAdapter";
 import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
-
 import {
   buttonReset,
   textWeight,
@@ -23,6 +22,8 @@ import {
   getMutedButtonStyles,
   processingTextStyle
 } from "../style";
+import { LinkProps } from "../../link/types";
+import UnstyledLink from "../../link/components/UnstyledLink";
 
 export enum ButtonAppearances {
   Primary = "primary",
@@ -32,11 +33,15 @@ export enum ButtonAppearances {
   Success = "success"
 }
 
-export interface ButtonProps {
+export interface ButtonProps extends LinkProps {
   /**
    * if the button triggers new content to appear (e.g.: modals and dropdowns)
    */
   ariaHaspopup?: boolean;
+  /**
+   * should be used if the button does not contain text children. For example: a button that is just an icon
+   */
+  ariaLabel?: string;
   children?: React.ReactNode | string;
   /**
    * whether or not the button is enabled
@@ -65,17 +70,21 @@ export interface ButtonProps {
    */
   isInverse?: boolean;
   /**
-   * the function the button calls
+   * the funtion that is called when the button loses focus
+   */
+  onBlur?: (e?: React.SyntheticEvent<HTMLElement>) => void;
+  /**
+   * the funtion that is called when the button gets focus
+   */
+  onFocus?: (e?: React.SyntheticEvent<HTMLElement>) => void;
+  /**
+   * the funtion that is called when the button is "clicked" via cursor, touch, or keyboard
    */
   onClick?: (e?: React.SyntheticEvent<HTMLElement>) => void;
   /**
    * the type of button - same as HTML "type" attribute on the <button> tag
    */
   type?: "button" | "reset" | "submit";
-  /**
-   * a url the user will be navigated to when clicking the button. This also changes the tag to `<a>`
-   */
-  url?: string;
 }
 
 export interface ButtonBaseProps extends ButtonProps {
@@ -125,7 +134,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
     const getButtonNode = () => {
       if (url) {
         return !disabled && !isProcessing ? (
-          <a
+          <UnstyledLink
             href={url}
             className={buttonClassName}
             onClick={this.onClick}
@@ -133,21 +142,16 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
             {...other}
           >
             {this.getButtonContent()}
-          </a>
+          </UnstyledLink>
         ) : (
-          // tslint:disable react-a11y-anchors
-          //
-          // this rule was erroring because the anchor had no href, but in this
-          // case that is intentional beacuse it's disabled
-          <a
+          <UnstyledLink
             className={buttonClassName}
             aria-disabled="true"
             tabIndex={-1}
             {...other}
           >
             {this.getButtonContent()}
-          </a>
-          // tslint:enable react-a11y-anchors
+          </UnstyledLink>
         );
       }
 

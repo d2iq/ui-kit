@@ -13,9 +13,9 @@ import {
 import { themeError } from "../../design-tokens/build/js/designTokens";
 
 interface RenderProps {
+  describedByIds: string;
   getValidationErrors: React.ReactNode;
   getHintContent: React.ReactNode;
-  describedByIds: string;
   isValid: boolean;
 }
 
@@ -99,9 +99,8 @@ class FormFieldWrapper extends React.PureComponent<FormFieldWrapperProps, {}> {
   private getDescribedBy(hintContent, errors) {
     if (hintContent && errors) {
       return `${hintContent} ${errors}`;
-    } else {
-      return errors || hintContent;
     }
+    return errors || hintContent;
   }
 }
 

@@ -14,7 +14,14 @@ export {
   SidebarSubMenuItem
 } from "./appChrome";
 export { Avatar } from "./avatar";
-export { Badge, BadgeButton } from "./badge";
+export {
+  Accordion,
+  AccordionItem,
+  AccordionItemTitle,
+  AccordionItemContent,
+  AccordionItemTitleInteractive
+} from "./accordion";
+export { Badge, BadgeButton, ColorCodedBadge } from "./badge";
 export { Breadcrumb } from "./breadcrumb";
 export {
   PrimaryButton,
@@ -29,7 +36,7 @@ export {
   DangerDropdownButton,
   ResetButton
 } from "./button";
-export { ButtonCard, Card } from "./card";
+export { ButtonCard, Card, LinkCard } from "./card";
 export { LineChart } from "./chart";
 export { CheckboxInput } from "./checkboxInput";
 export {
@@ -58,12 +65,14 @@ export {
   EmptyStateWithGraphic,
   EmptyStateWrapper
 } from "./emptyState";
+export { Expandable } from "./expandable";
 export * from "./formStructure";
 export { FullscreenView } from "./fullscreenView";
 export { Icon } from "./icon";
 export { InfoBoxInline, InfoBoxBanner } from "./infobox";
 export { InlineBorderedItems } from "./inlineBorderedItems";
 export { InputAppearance } from "./shared/types/inputAppearance";
+export { Link, ResetLink } from "./link";
 export { List, BorderedList } from "./list";
 export {
   InlineLoadingIndicator,
@@ -79,20 +88,30 @@ export {
   FullscreenModal
 } from "./modal";
 export { PageHeader, PageHeaderTabs } from "./pageheader";
+export { Popover } from "./popover";
 export { ProgressBar } from "./progressbar";
+export { PromoBanner, PromoInline } from "./promo";
+export { RadioInput } from "./radioInput";
 export { SegmentedControl, SegmentedControlButton } from "./segmentedControl";
 export { SelectInput } from "./selectInput";
 export {
   Column,
-  Table,
-  CheckboxTable,
+  Table_Deprecated,
+  CheckboxTable_Deprecated,
   Cell,
   TextCell,
   HeaderCell,
   SortableHeaderCell,
   NumberCell
-} from "./table";
+} from "./table_deprecated";
 export { TableView, TableViewHeader, TableViewBody } from "./tableView";
+export {
+  Table,
+  DropdownMenuCell,
+  EmptyCell,
+  Sorter,
+  TooltipHeaderCell
+} from "./tablev2";
 export { TabItem, TabTitle, Tabs } from "./tabs";
 export {
   TextInput,
@@ -110,14 +129,21 @@ export { ToggleBox, ToggleBoxGroup } from "./toggleBox";
 export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
+export { UIKitProvider } from "./uiKitProvider";
 export { Legacy };
 export { CodeSnippet } from "./codesnippet";
+export { ClickToCopyButton } from "./clicktocopybutton";
 
 // Style utility components
-export { Container, Flex, FlexItem, GridList } from "./styleUtils/layout";
+export {
+  Container,
+  Flex,
+  FlexItem,
+  GridList,
+  Stack
+} from "./styleUtils/layout";
 export { Box, BorderedBox, SpacingBox } from "./styleUtils/modifiers";
 export {
-  Text,
   CaptionText,
   DangerText,
   HeadingText1,
@@ -127,6 +153,8 @@ export {
   MonospaceText,
   SmallText,
   SuccessText,
+  Text,
+  TextBlock,
   WarningText
 } from "./styleUtils/typography";
 

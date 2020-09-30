@@ -6,12 +6,14 @@ function noOp() {}
  * @param {String} name name of the story to test
  * @param {Function} cb callback to run assertions in
  */
-function navigateToStory(name, cb) {
+function navigateToStory(category, name, cb) {
   cy.visit("/");
-  cy.get("#explorerappchrome").click(); // make sure everything is closed
+  cy.get("#explorernavigation-accordion").click(); // make sure everything is closed
 
   // Navigate to story with the name
-  cy.get("#explorer" + name.toLowerCase()).click();
+  cy.get(
+    "#" + category.replace(/\s+/g, "-").toLowerCase() + name.toLowerCase()
+  ).click();
   cy.get("nav section .css-0 a")
     .first()
     .click();

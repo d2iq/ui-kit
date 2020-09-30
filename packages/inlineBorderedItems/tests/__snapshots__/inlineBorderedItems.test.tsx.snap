@@ -2,7 +2,7 @@
 
 exports[`Card renders default 1`] = `
 <div
-  class="css-1o7qkf0"
+  class="css-4z0fcg"
 >
   <span>
     Example Content
@@ -12,7 +12,7 @@ exports[`Card renders default 1`] = `
 
 exports[`Card renders with gutterSize set 1`] = `
 <div
-  class="css-9hrf71"
+  class="css-1vxpdor"
 >
   <span>
     Example Content

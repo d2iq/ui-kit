@@ -7,7 +7,7 @@ import { PageHeader } from "../../pageheader";
 
 const readme = require("../README.md");
 
-storiesOf("EmptyState", module)
+storiesOf("Feedback|EmptyState", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {
@@ -16,6 +16,11 @@ storiesOf("EmptyState", module)
   })
   .add("default", () => (
     <EmptyState heading="No policy set">
+      Define policy to start allowing groups and roles access to your clusters.
+    </EmptyState>
+  ))
+  .add("appearance='error'", () => (
+    <EmptyState heading="No policy set" appearance="error">
       Define policy to start allowing groups and roles access to your clusters.
     </EmptyState>
   ))

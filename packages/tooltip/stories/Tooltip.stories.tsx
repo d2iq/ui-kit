@@ -4,8 +4,11 @@ import { withReadme } from "storybook-readme";
 import { select } from "@storybook/addon-knobs";
 
 import { Tooltip } from "../../index";
-import { Direction } from "../../dropdownable/components/Dropdownable";
+import Dropdownable, {
+  Direction
+} from "../../dropdownable/components/Dropdownable";
 import { Box } from "../../styleUtils/modifiers";
+import { Card } from "../../card";
 
 const readme = require("../README.md");
 
@@ -15,7 +18,7 @@ const tooltipStoryDecorator = storyFn => (
   </div>
 );
 
-storiesOf("Tooltip", module)
+storiesOf("Overlays|Tooltip", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(tooltipStoryDecorator)
   .add("default", () => (
@@ -23,14 +26,28 @@ storiesOf("Tooltip", module)
       content
     </Tooltip>
   ))
+  .add("mounted inside dropdown (does not portal to document.body)", () => (
+    <Dropdownable
+      open={true}
+      dropdown={
+        <Card>
+          <Tooltip trigger="hover me" id="default" disablePortal={true}>
+            content
+          </Tooltip>
+        </Card>
+      }
+    >
+      Dropdown trigger
+    </Dropdownable>
+  ))
   .add("with custom direction", () => {
     const options = {
-      BottomLeft: "bottom-left",
-      BottomRight: "bottom-right",
-      BottomCenter: "bottom-center",
-      TopLeft: "top-left",
-      TopRight: "top-right",
-      TopCenter: "top-center"
+      BottomLeft: "bottom-start",
+      BottomRight: "bottom-end",
+      BottomCenter: "bottom",
+      TopLeft: "top-start",
+      TopRight: "top-end",
+      TopCenter: "top"
     };
 
     const knobDirection = select("Direction", options, "BottomLeft");
@@ -45,7 +62,7 @@ storiesOf("Tooltip", module)
       <Tooltip
         trigger="hover me"
         id="customDir"
-        preferredDirections={[Direction[getKeyByValue(knobDirection)]]}
+        preferredDirections={Direction[getKeyByValue(knobDirection)]}
       >
         Use the knobs to change tooltip alignment
       </Tooltip>

@@ -1,36 +1,22 @@
 import { cx } from "emotion";
 import * as React from "react";
+import nextId from "react-id-generator";
 
-import {
-  greyLightDarken2,
-  iconSizeXs,
-  themeError
-} from "../../design-tokens/build/js/designTokens";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import {
   getInputAppearanceStyle,
-  inputContainer,
-  getLabelStyle
+  inputContainer
 } from "../../shared/styles/formStyles";
 import {
   flex,
   flexItem,
   inputReset,
-  margin,
-  padding,
-  tintText,
-  visuallyHidden
+  padding
 } from "../../shared/styles/styleUtils";
 import { InputAppearance } from "../../shared/types/inputAppearance";
-import Icon from "../../icon/components/Icon";
-import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import Tooltip from "../../tooltip/components/Tooltip";
+import { renderLabel } from "../../utilities/label";
 
 export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
-  /**
-   * Unique identifier used for the form input component
-   */
-  id: string;
   /**
    * The HTML input type for this component.
    */
@@ -42,7 +28,7 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
    * Sets the contents of the input label. This can be a `string` or any `ReactNode`.
    */
-  inputLabel: React.ReactNode;
+  inputLabel?: React.ReactNode;
   /**
    * Defaults to `true`, but can be set to `false` to visibly hide the `TextInput`'s label. The `inputLabel` should still be set even when hidden for accessibility support.
    */
@@ -61,41 +47,32 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   tooltipContent?: React.ReactNode;
 }
 
-export class TextInput<
-  P extends TextInputProps,
-  S extends {}
-> extends React.PureComponent<P, S> {
-  public static defaultProps: Partial<TextInputProps> = {
+export class TextInput<P extends TextInputProps> extends React.Component<P> {
+  public static defaultProps = {
     type: "text",
     appearance: InputAppearance.Standard,
     showInputLabel: true
   };
+  placeholderId = nextId("textInput-");
 
   public render() {
-    const labelContent = this.getLabelContent();
-    const tooltipContent = this.getTooltipContent();
     const containerProps: { className?: string } = {};
     const appearance = this.getInputAppearance();
-    const dataCy = [
-      "textInput",
-      ...(appearance && appearance !== InputAppearance.Standard
-        ? [`textInput.${appearance}`]
-        : [])
-    ].join(" ");
+    const dataCy = `textInput textInput.${appearance}`;
 
     if (this.props.className) {
       containerProps.className = this.props.className;
     }
     return (
       <div {...containerProps} data-cy={dataCy}>
-        {tooltipContent ? (
-          <div className={flex({ align: "center" })}>
-            {labelContent}
-            {tooltipContent}
-          </div>
-        ) : (
-          labelContent
-        )}
+        {renderLabel({
+          appearance,
+          hidden: !this.props.showInputLabel,
+          id: this.getId(),
+          label: this.props.inputLabel,
+          required: this.props.required,
+          tooltipContent: this.props.tooltipContent
+        })}
         {this.getInputContent()}
       </div>
     );
@@ -105,32 +82,12 @@ export class TextInput<
     return this.props.disabled ? "disabled" : this.props.appearance;
   }
 
-  protected getLabelContent() {
-    const requiredContent = this.props.required ? (
-      <span className={cx(tintText(themeError))}> *</span>
-    ) : null;
-    const hasError = this.props.appearance === InputAppearance.Error;
-    const labelClassName = this.props.showInputLabel
-      ? getLabelStyle(hasError)
-      : cx(visuallyHidden);
-    return (
-      <label
-        className={labelClassName}
-        htmlFor={this.props.id}
-        data-cy="textInput-label"
-      >
-        {this.props.inputLabel}
-        {requiredContent}
-      </label>
-    );
-  }
-
   protected getInputContent(): React.ReactNode {
     const appearance = this.getInputAppearance();
 
     return (
       <FormFieldWrapper
-        id={this.props.id}
+        id={this.getId()}
         errors={this.props.errors}
         hintContent={this.props.hintContent}
       >
@@ -157,34 +114,38 @@ export class TextInput<
       </FormFieldWrapper>
     );
   }
-  protected getInputElementProps() {
+  protected getInputElementProps(): TextInputProps {
     // omit props for container and that we override, otherwise pass through
     // TextInput props to input element
     const {
-      appearance,
       className,
       hintContent,
       inputLabel,
-      showInputLabel,
-      type,
       errors,
+      id = this.placeholderId,
       ...inputElementProps
-    } = this.props as TextInputProps;
+    } = this.props;
 
-    return inputElementProps;
+    return { ...inputElementProps, id };
   }
 
   protected getInputElement(
     additionalClasses: string[] = [],
-    isValid,
-    describedBy
+    isValid: boolean,
+    describedBy: string
   ) {
-    const { value, ...inputElementProps } = this.getInputElementProps();
-    const appearance = this.getInputAppearance();
+    const {
+      value,
+      showInputLabel,
+      appearance,
+      ...inputElementProps
+    } = this.getInputElementProps();
+    const textInputAppearance = this.getInputAppearance();
     const dataCy = [
       "textInput-input",
-      ...(appearance && appearance !== InputAppearance.Standard
-        ? [`textInput-input.${appearance}`]
+      ...(textInputAppearance &&
+      textInputAppearance !== InputAppearance.Standard
+        ? [`textInput-input.${textInputAppearance}`]
         : [])
     ].join(" ");
     let { onChange } = inputElementProps;
@@ -206,28 +167,12 @@ export class TextInput<
     );
   }
 
-  protected getTooltipContent(): React.ReactNode {
-    if (!this.props.tooltipContent) {
-      return null;
+  private getId(): string {
+    if (typeof this.props.id === "string") {
+      return this.props.id;
     }
 
-    return (
-      <span className={cx(margin("left", "xs"), margin("bottom", "xxs"))}>
-        <Tooltip
-          trigger={
-            <Icon
-              color={greyLightDarken2}
-              shape={SystemIcons.CircleQuestion}
-              size={iconSizeXs}
-            />
-          }
-          id={`labelTooltip-${this.props.id}`}
-          maxWidth={200}
-        >
-          {this.props.tooltipContent}
-        </Tooltip>
-      </span>
-    );
+    return this.placeholderId;
   }
 }
 

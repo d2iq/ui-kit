@@ -9,7 +9,7 @@ import Dropdownable, { Direction } from "../components/Dropdownable";
 import DropdownStory from "./helpers/DropdownStory";
 import DropdownStoryFit from "./helpers/DropdownStoryFit";
 
-storiesOf("Dropdownable", module)
+storiesOf("Utils|Dropdownable", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {
@@ -20,10 +20,10 @@ storiesOf("Dropdownable", module)
     "with custom direction",
     () => {
       const options = {
-        BottomLeft: "bottom-left",
-        BottomRight: "bottom-right",
-        TopLeft: "top-left",
-        TopRight: "top-right"
+        BottomLeft: "bottom-start",
+        BottomRight: "bottom-end",
+        TopLeft: "top-start",
+        TopRight: "top-end"
       };
 
       const knobDirection = select("Direction", options, "BottomLeft");

@@ -6,7 +6,7 @@ import ToggleBoxStoryHelper from "./helpers/ToggleBoxStoryHelper";
 
 const readme = require("../README.md");
 
-storiesOf("Forms/ToggleBox", module)
+storiesOf("Forms|ToggleBox", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <ToggleBoxStoryHelper>

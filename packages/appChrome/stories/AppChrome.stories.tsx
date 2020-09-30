@@ -41,7 +41,7 @@ import { Icon } from "../../icon";
 
 const readme = require("../README.md");
 
-storiesOf("AppChrome", module)
+storiesOf("Page structure|AppChrome", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .addParameters({
@@ -76,6 +76,27 @@ storiesOf("AppChrome", module)
   .add("Sidebar w/ items", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
+        <SidebarItem url="http://google.com" key="one">
+          <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
+        </SidebarItem>
+        <SidebarItem url="http://google.com" key="two">
+          <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
+        </SidebarItem>
+        <SidebarItem url="http://google.com" key="three">
+          <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
+        </SidebarItem>
+        <SidebarItem url="http://google.com" key="four">
+          <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
+        </SidebarItem>
+        <SidebarItem url="http://google.com" key="five">
+          <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
+        </SidebarItem>
+      </SidebarSection>
+    </Sidebar>
+  ))
+  .add("Sidebar w/ items (w/ onClick)", () => (
+    <Sidebar isOpen={true}>
+      <SidebarSection label="Section header">
         <SidebarItem onClick={action("clicked a nav item")} key="one">
           <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
         </SidebarItem>
@@ -97,23 +118,19 @@ storiesOf("AppChrome", module)
   .add("Sidebar w/ items (1 active)", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
-        <SidebarItem
-          onClick={action("clicked a nav item")}
-          isActive={true}
-          key="one"
-        >
+        <SidebarItem url="http://google.com" isActive={true} key="one">
           <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")} key="two">
+        <SidebarItem url="http://google.com" key="two">
           <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")} key="three">
+        <SidebarItem url="http://google.com" key="three">
           <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")} key="four">
+        <SidebarItem url="http://google.com" key="four">
           <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
         </SidebarItem>
-        <SidebarItem onClick={action("clicked a nav item")} key="five">
+        <SidebarItem url="http://google.com" key="five">
           <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
         </SidebarItem>
       </SidebarSection>
@@ -122,14 +139,14 @@ storiesOf("AppChrome", module)
   .add("Sidebar w/ items (w/ icons)", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
-        <SidebarItem onClick={action("clicked a nav item")} key="one">
+        <SidebarItem url="http://google.com" key="one">
           <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Lorem Ipsum
           </SidebarItemLabel>
         </SidebarItem>
         <SidebarItem
           icon={ProductIcons.ServicesInverse}
-          onClick={action("clicked a nav item")}
+          url="http://google.com"
           key="two"
         >
           <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
@@ -138,7 +155,7 @@ storiesOf("AppChrome", module)
         </SidebarItem>
         <SidebarItem
           icon={ProductIcons.ServicesInverse}
-          onClick={action("clicked a nav item")}
+          url="http://google.com"
           key="three"
         >
           <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
@@ -147,7 +164,7 @@ storiesOf("AppChrome", module)
         </SidebarItem>
         <SidebarItem
           icon={ProductIcons.ServicesInverse}
-          onClick={action("clicked a nav item")}
+          url="http://google.com"
           key="four"
         >
           <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
@@ -156,7 +173,7 @@ storiesOf("AppChrome", module)
         </SidebarItem>
         <SidebarItem
           icon={ProductIcons.ServicesInverse}
-          onClick={action("clicked a nav item")}
+          url="http://google.com"
           key="five"
         >
           <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
@@ -167,6 +184,72 @@ storiesOf("AppChrome", module)
     </Sidebar>
   ))
   .add("Sidebar w/ submenus", () => (
+    <Sidebar isOpen={true}>
+      <SidebarSection label="Section header">
+        <SidebarSubMenu
+          iconWidth="24px"
+          label={<SidebarItemLabel>Lorem ipsum</SidebarItemLabel>}
+          key="subOne"
+        >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
+            Lorem Ipsum
+          </SidebarSubMenuItem>
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
+            Dolor Sit
+          </SidebarSubMenuItem>
+        </SidebarSubMenu>
+        <SidebarSubMenu
+          iconWidth="24px"
+          label={<SidebarItemLabel>Dolor Sit</SidebarItemLabel>}
+          key="subTwo"
+        >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
+            Lorem Ipsum
+          </SidebarSubMenuItem>
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
+            Dolor Sit
+          </SidebarSubMenuItem>
+        </SidebarSubMenu>
+        <SidebarSubMenu
+          iconWidth="24px"
+          label={<SidebarItemLabel>Amet Consecutor</SidebarItemLabel>}
+          key="subThree"
+        >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
+            Lorem Ipsum
+          </SidebarSubMenuItem>
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
+            Dolor Sit
+          </SidebarSubMenuItem>
+        </SidebarSubMenu>
+        <SidebarSubMenu
+          iconWidth="24px"
+          label={<SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>}
+          key="subFour"
+        >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
+            Lorem Ipsum
+          </SidebarSubMenuItem>
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
+            Dolor Sit
+          </SidebarSubMenuItem>
+        </SidebarSubMenu>
+        <SidebarSubMenu
+          iconWidth="24px"
+          label={<SidebarItemLabel>Praesent Massa</SidebarItemLabel>}
+          key="subFive"
+        >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
+            Lorem Ipsum
+          </SidebarSubMenuItem>
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
+            Dolor Sit
+          </SidebarSubMenuItem>
+        </SidebarSubMenu>
+      </SidebarSection>
+    </Sidebar>
+  ))
+  .add("Sidebar w/ submenus (w/onClick)", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarSubMenu
@@ -271,16 +354,10 @@ storiesOf("AppChrome", module)
           isOpen={true}
           key="subOne"
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemTwo"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -289,16 +366,10 @@ storiesOf("AppChrome", module)
           label={<SidebarItemLabel>Dolor Sit</SidebarItemLabel>}
           key="subTwo"
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemTwo"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -307,16 +378,10 @@ storiesOf("AppChrome", module)
           label={<SidebarItemLabel>Amet Consecutor</SidebarItemLabel>}
           key="subThree"
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemTwo"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -325,16 +390,10 @@ storiesOf("AppChrome", module)
           label={<SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>}
           key="subFour"
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemTwo"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -343,16 +402,10 @@ storiesOf("AppChrome", module)
           label={<SidebarItemLabel>Praesent Massa</SidebarItemLabel>}
           key="subFive"
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemTwo"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -371,16 +424,10 @@ storiesOf("AppChrome", module)
           menuHasIcon={true}
           key="subOne"
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemTwo"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -393,16 +440,10 @@ storiesOf("AppChrome", module)
           menuHasIcon={true}
           key="subTwo"
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemTwo"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -415,16 +456,10 @@ storiesOf("AppChrome", module)
           menuHasIcon={true}
           key="subThree"
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemTwo"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -437,16 +472,10 @@ storiesOf("AppChrome", module)
           menuHasIcon={true}
           key="subFour"
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemTwo"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -459,16 +488,10 @@ storiesOf("AppChrome", module)
           menuHasIcon={true}
           key="subFive"
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemTwo"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -478,11 +501,7 @@ storiesOf("AppChrome", module)
   .add("Sidebar w/ disabled items", () => (
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
-        <SidebarItem
-          disabled={true}
-          onClick={action("clicked a nav item")}
-          key="one"
-        >
+        <SidebarItem disabled={true} url="http://google.com" key="one">
           <SidebarItemLabel icon={ProductIcons.ServicesInverse}>
             Disabled Sidebar Item
           </SidebarItemLabel>
@@ -498,16 +517,10 @@ storiesOf("AppChrome", module)
           disabled={true}
           isOpen={false}
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemTwo"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemTwo">
             Dolor Sit
           </SidebarSubMenuItem>
         </SidebarSubMenu>
@@ -521,14 +534,11 @@ storiesOf("AppChrome", module)
           key="subTwo"
           isOpen={true}
         >
-          <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
-            key="subItemOne"
-          >
+          <SidebarSubMenuItem url="http://google.com" key="subItemOne">
             Lorem Ipsum
           </SidebarSubMenuItem>
           <SidebarSubMenuItem
-            onClick={action("clicked a nav item")}
+            url="http://google.com"
             key="subItemTwo"
             disabled={true}
           >
@@ -643,23 +653,19 @@ storiesOf("AppChrome", module)
       <ThemeProvider theme={CustomTheme}>
         <Sidebar isOpen={sidebarIsOpen}>
           <SidebarSection label={sectionHeader}>
-            <SidebarItem
-              isActive={true}
-              onClick={action("clicked a nav item")}
-              key="one"
-            >
+            <SidebarItem isActive={true} url="http://google.com" key="one">
               <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
             </SidebarItem>
-            <SidebarItem onClick={action("clicked a nav item")} key="two">
+            <SidebarItem url="http://google.com" key="two">
               <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
             </SidebarItem>
-            <SidebarItem onClick={action("clicked a nav item")} key="three">
+            <SidebarItem url="http://google.com" key="three">
               <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
             </SidebarItem>
-            <SidebarItem onClick={action("clicked a nav item")} key="four">
+            <SidebarItem url="http://google.com" key="four">
               <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
             </SidebarItem>
-            <SidebarItem onClick={action("clicked a nav item")} key="five">
+            <SidebarItem url="http://google.com" key="five">
               <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
             </SidebarItem>
           </SidebarSection>
@@ -684,19 +690,19 @@ storiesOf("AppChrome", module)
       <ThemeProvider theme={CustomTheme}>
         <Sidebar isOpen={sidebarIsOpen}>
           <SidebarSection label="Section header">
-            <SidebarItem isActive={true} onClick={action("clicked a nav item")}>
+            <SidebarItem isActive={true} url="http://google.com">
               <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
             </SidebarItem>
-            <SidebarItem onClick={action("clicked a nav item")}>
+            <SidebarItem url="http://google.com">
               <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
             </SidebarItem>
-            <SidebarItem onClick={action("clicked a nav item")}>
+            <SidebarItem url="http://google.com">
               <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
             </SidebarItem>
-            <SidebarItem onClick={action("clicked a nav item")}>
+            <SidebarItem url="http://google.com">
               <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
             </SidebarItem>
-            <SidebarItem onClick={action("clicked a nav item")}>
+            <SidebarItem url="http://google.com">
               <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
             </SidebarItem>
           </SidebarSection>
@@ -757,7 +763,7 @@ storiesOf("AppChrome", module)
       <ThemeProvider theme={CustomTheme}>
         <Sidebar isOpen={true}>
           <SidebarSection label={sectionHeader}>
-            <SidebarItem onClick={action("clicked a nav item")}>
+            <SidebarItem url="http://google.com">
               <SidebarItemLabel
                 icon={
                   <Icon
@@ -769,7 +775,7 @@ storiesOf("AppChrome", module)
                 {content}
               </SidebarItemLabel>
             </SidebarItem>
-            <SidebarItem onClick={action("clicked a nav item")} isActive={true}>
+            <SidebarItem url="http://google.com" isActive={true}>
               <SidebarItemLabel
                 icon={
                   <Icon
@@ -839,14 +845,11 @@ storiesOf("AppChrome", module)
               isOpen={true}
               menuHasIcon={true}
             >
-              <SidebarSubMenuItem
-                onClick={action("clicked a nav item")}
-                key="subItemOne"
-              >
+              <SidebarSubMenuItem url="http://google.com" key="subItemOne">
                 Lorem Ipsum
               </SidebarSubMenuItem>
               <SidebarSubMenuItem
-                onClick={action("clicked a nav item")}
+                url="http://google.com"
                 isActive={true}
                 key="subItemTwo"
               >

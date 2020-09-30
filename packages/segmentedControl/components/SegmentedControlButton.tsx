@@ -1,13 +1,13 @@
 import * as React from "react";
 import { cx } from "emotion";
-import shortid from "shortid";
+import nextId from "react-id-generator";
 import {
   segmentedControlButton,
   segmentedControlButtonActive,
   staticKeyboardFocusClassname,
   segmentedControlButtonInner
 } from "../style";
-import { visuallyHidden, display } from "../../shared/styles/styleUtils";
+import { visuallyHidden } from "../../shared/styles/styleUtils";
 import FocusStyleManager from "../../shared/components/FocusStyleManager";
 import { Tooltip } from "../../tooltip";
 
@@ -38,58 +38,62 @@ export interface SegmentedControlButtonProps {
   tooltipContent?: React.ReactNode;
 }
 
-const SegmentedControlButton: React.SFC<
+class SegmentedControlButton extends React.PureComponent<
   SegmentedControlButtonProps
-> = props => {
-  const {
-    id = shortid.generate(),
-    isActive,
-    onChange,
-    name,
-    value,
-    tooltipContent,
-    children
-  } = props;
-  const segmentChildren = tooltipContent ? (
-    <Tooltip
-      id={`${id}-tooltip`}
-      trigger={<div className={segmentedControlButtonInner}>{children}</div>}
-    >
-      {tooltipContent}
-    </Tooltip>
-  ) : (
-    <div className={segmentedControlButtonInner}>{children}</div>
-  );
+> {
+  placeholderId = nextId("segmentedControlButton-");
 
-  return (
-    <React.Fragment>
-      {/*
+  render() {
+    const {
+      id = this.placeholderId,
+      isActive,
+      onChange,
+      name,
+      value,
+      tooltipContent,
+      children
+    } = this.props;
+    const segmentChildren = tooltipContent ? (
+      <Tooltip
+        id={`${id}-tooltip`}
+        trigger={<div className={segmentedControlButtonInner}>{children}</div>}
+      >
+        {tooltipContent}
+      </Tooltip>
+    ) : (
+      <div className={segmentedControlButtonInner}>{children}</div>
+    );
+
+    return (
+      <React.Fragment>
+        {/*
         tslint:disable react-a11y-role-has-required-aria-props
         This rule is asking for a `aria-checked` attribute on the input element.
         We're already setting `checked`, so this is redundant and unnecessary.
       */}
-      <FocusStyleManager focusEnabledClass={staticKeyboardFocusClassname}>
-        <label
-          className={cx(display("inline-block"), segmentedControlButton, {
-            [segmentedControlButtonActive]: props.isActive
-          })}
-          data-cy="segmentedControlButton"
-          htmlFor={id}
-        >
-          <input
-            className={visuallyHidden}
-            id={id}
-            type="radio"
-            name={name}
-            value={value}
-            checked={isActive}
-            onChange={onChange}
-          />
-          {segmentChildren}
-        </label>
-      </FocusStyleManager>
-    </React.Fragment>
-  );
-};
+        <FocusStyleManager focusEnabledClass={staticKeyboardFocusClassname}>
+          <label
+            className={cx(segmentedControlButton, {
+              [segmentedControlButtonActive]: this.props.isActive
+            })}
+            data-cy="segmentedControlButton"
+            htmlFor={id}
+          >
+            <input
+              className={visuallyHidden}
+              id={id}
+              type="radio"
+              name={name}
+              value={value}
+              checked={isActive}
+              onChange={onChange}
+            />
+            {segmentChildren}
+          </label>
+        </FocusStyleManager>
+      </React.Fragment>
+    );
+  }
+}
 
 export default SegmentedControlButton;

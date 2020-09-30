@@ -4,8 +4,6 @@ import { withReadme } from "storybook-readme";
 import { select, withKnobs } from "@storybook/addon-knobs";
 import { Icon } from "../index";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { ProductIcons } from "../../icons/dist/product-icons-enum";
-import IconGrid from "./helpers/IconPreviewGrid";
 import {
   blue,
   green,
@@ -54,7 +52,7 @@ const shapes = {
   ["SystemIcons.Users"]: SystemIcons.Users
 };
 
-storiesOf("Icon", module)
+storiesOf("Graphic elements|Icon", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => {
@@ -66,14 +64,4 @@ storiesOf("Icon", module)
     return (
       <Icon shape={shape} color={color} size={size} ariaLabel="Sample icon" />
     );
-  })
-  .add("system icons preview", () => (
-    <IconGrid iconEnum={SystemIcons} iconEnumTitle="SystemIcons" />
-  ))
-  .add("product icons preview", () => (
-    <IconGrid
-      iconEnum={ProductIcons}
-      iconEnumTitle="ProductIcons"
-      darkMode={true}
-    />
-  ));
+  });

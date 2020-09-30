@@ -2,20 +2,28 @@ import { injectGlobal } from "emotion";
 import { textSize, tintContent, inverseColorMode } from "./styleUtils";
 import {
   fontFamilySansSerif,
-  themeTextColorPrimaryInverted,
-  themeTextColorPrimary,
-  themeBgPrimary
+  themeTextColorPrimaryInverted
 } from "../../design-tokens/build/js/designTokens";
+import { normalize } from "./normalize";
+
+// this is used to remove top and bottom margins for <p> and <h1-6> tags
+//
+// removing the margin directly in the <Text> component styles makes it impossible to use
+// child selectors to change the margins.
+// e.g.: using the Stack or TextBlock components.
+export const staticClass_resetTextMargin = "rmTextMargins";
 
 export const injectGlobalCss = () => {
   return injectGlobal`
-    .ReactVirtualized__Grid {
-      outline: none;
+    ${normalize};
+
+    .${staticClass_resetTextMargin} {
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
-    :root {
-      ${tintContent(themeTextColorPrimary)};
-      background-color: ${themeBgPrimary};
+    .ReactVirtualized__Grid {
+      outline: none;
     }
 
     .${inverseColorMode} {

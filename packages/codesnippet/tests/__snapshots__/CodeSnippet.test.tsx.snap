@@ -67,17 +67,16 @@ exports[`CodeSnippet renders default 1`] = `
 }
 
 .emotion-1 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
 }
 
 .emotion-0 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
   line-height: 1.4;
   font-weight: 500;
   font-size: 14px;
   color: var(--themeTextColorPrimaryInverted,#FFFFFF);
   fill: var(--themeTextColorPrimaryInverted,#FFFFFF);
-  margin: 0;
   text-align: inherit;
 }
 
@@ -143,7 +142,7 @@ exports[`CodeSnippet renders default 1`] = `
                     wrap="wrap"
                   >
                     <code
-                      className="emotion-0"
+                      className="rmTextMargins emotion-0"
                       data-cy="monospaceText"
                     >
                       snippet content
@@ -231,17 +230,16 @@ exports[`CodeSnippet renders with copy button 1`] = `
 }
 
 .emotion-1 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
 }
 
 .emotion-0 {
-  font-family: monospace;
+  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
   line-height: 1.4;
   font-weight: 500;
   font-size: 14px;
   color: var(--themeTextColorPrimaryInverted,#FFFFFF);
   fill: var(--themeTextColorPrimaryInverted,#FFFFFF);
-  margin: 0;
   text-align: inherit;
 }
 
@@ -339,7 +337,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                     wrap="wrap"
                   >
                     <code
-                      className="emotion-0"
+                      className="rmTextMargins emotion-0"
                       data-cy="monospaceText"
                     >
                       snippet content

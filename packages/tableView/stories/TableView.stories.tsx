@@ -6,7 +6,7 @@ import DemoTable from "./helpers/DemoTable";
 
 const readme = require("../README.md");
 
-storiesOf("TableView", module)
+storiesOf("Page structure|TableView", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {

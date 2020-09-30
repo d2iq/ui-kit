@@ -1,6 +1,7 @@
 import * as React from "react";
 import { cx } from "emotion";
 import CheckboxInput from "../../checkboxInput/components/CheckboxInput";
+import RadioInput from "../../radioInput/RadioInput";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import {
   listReset,
@@ -19,6 +20,8 @@ export interface ToggleInputProperties {
   id: string;
   value: string;
   disabled?: boolean;
+  errors?: React.ReactNode[];
+  hintContent?: React.ReactNode;
 }
 
 export interface ToggleInputListProps {
@@ -66,6 +69,10 @@ export interface ToggleInputListProps {
    * Sets the current appearance of the label component. This defaults to InputAppearance.Standard, but supports `InputAppearance.Error` & `InputAppearance.Success` appearances as well.
    */
   labelAppearance: InputAppearance;
+  /**
+   * Whether the inputs are radio buttons
+   */
+  isRadioGroup?: boolean;
 }
 
 class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
@@ -128,9 +135,22 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
     const { items } = this.props;
 
     return items.map(item => {
-      const { id, value, inputLabel, appearance, disabled } = item;
-      const { vertAlign, onChange } = this.props;
-      const selectedItems = this.props.selectedItems || [];
+      const {
+        id,
+        value,
+        inputLabel,
+        appearance,
+        disabled,
+        errors,
+        hintContent
+      } = item;
+      const {
+        vertAlign,
+        onChange,
+        isRadioGroup,
+        selectedItems = [],
+        id: inputListId
+      } = this.props;
 
       const handleChange = e => {
         if (onChange) {
@@ -138,30 +158,35 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
         }
       };
 
+      const InputComponent = isRadioGroup ? RadioInput : CheckboxInput;
+
+      const inputProps = {
+        appearance,
+        checked: selectedItems.includes(value),
+        disabled,
+        errors,
+        hintContent,
+        id,
+        inputLabel,
+        name: inputListId,
+        onChange: handleChange,
+        value,
+        vertAlign
+      };
+
       return (
         <li className={padding("top", "xs")} key={id}>
-          {/* TODO: When we have radio inputs and/or toggle switches,
-              update this function to return a component dynamically */}
-          <CheckboxInput
-            appearance={appearance}
-            disabled={disabled}
-            id={id}
-            inputLabel={inputLabel}
-            onChange={handleChange}
-            value={value}
-            vertAlign={vertAlign}
-            checked={selectedItems.includes(value)}
-          />
+          <InputComponent {...inputProps} />
         </li>
       );
     });
   }
 
   private getSelectedItems(value, checked) {
-    const selectedItems = this.props.selectedItems || [];
+    const { selectedItems = [], isRadioGroup } = this.props;
 
     if (checked) {
-      return [...selectedItems, value];
+      return isRadioGroup ? [value] : [...selectedItems, value];
     }
 
     return selectedItems.filter(selectedItem => selectedItem !== value);

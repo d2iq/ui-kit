@@ -89,9 +89,7 @@ class Tabs extends React.PureComponent<TabsProps, {}> {
       direction = defaultTabDirection
     } = this.props;
 
-    const { tabs, tabsContent } = (React.Children.toArray(children) as Array<
-      React.ReactElement<TabItemProps>
-    >)
+    const { tabs, tabsContent } = React.Children.toArray(children)
       .filter(item => React.isValidElement<TabItemProps>(item))
       .reduce<{
         tabs: React.ReactNodeArray;
@@ -101,11 +99,10 @@ class Tabs extends React.PureComponent<TabsProps, {}> {
           const { tabs = [], tabsContent = [] } = acc;
           const { children } = item.props;
           const key = item.key ? item.key : undefined;
-          const childrenWithKeys = React.Children.toArray(children).map(
-            child =>
-              React.isValidElement<TabTitle>(child)
-                ? React.cloneElement(child, { key })
-                : child
+          const childrenWithKeys = React.Children.toArray(children).map(child =>
+            React.isValidElement<TabTitle>(child)
+              ? React.cloneElement(child, { key })
+              : child
           );
 
           const title = childrenWithKeys.find(

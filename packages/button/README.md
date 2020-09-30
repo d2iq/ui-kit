@@ -26,15 +26,23 @@ Each page will likely have one primary button. Any remaining calls-to-action are
 
 **Processing**: When user clicks or taps a button and an API request is initiated we should provide feedback so they know their action was received.
 
+**Hidden:** Hide a button when there is no way a user can interact with the button.
+
+## Using buttons as links
+
+Sometimes there is a button that is actually a link to somewhere else. If the appropriate props are set, the button is rendered as an anchor tag, but it is styled like a button.
+
+It is not recommended to use a button as a link when it triggers a dropdown. It would be frustrating if a user clicked a button and expected to see a dropdown appear, but they are taken to a new page.
+
 ## Button content
 
 Button labels tell users what will happen when they click the button. Use verbs that describe the action. Acceptable labels include:
 
-- New $object
-- Create $object
-- Edit $object
-- Save $object
-- Delete $object
+- New \$object
+- Create \$object
+- Edit \$object
+- Save \$object
+- Delete \$object
 - Deploy, Scale, Restart
 
 Use sentence-style capitalization (only the first word in a phrase and any proper nouns capitalized) and no more than three words for button labels.
@@ -42,6 +50,7 @@ Use sentence-style capitalization (only the first word in a phrase and any prope
 For Sets of Buttons, use specific labels, such as Save or Cancel, instead of using Yes and No. This is particularly helpful when the user is confirming an action.
 
 ## ResetButton
+
 A `ResetButton` component is essentially an unstyled HTML `<button>` element. It can be used for an element that is semantically a button, but is not intended to look like a button.
 
 ## Feedback

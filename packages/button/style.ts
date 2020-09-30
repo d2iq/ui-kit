@@ -22,7 +22,7 @@ import {
 import { darken, pickReadableTextColor } from "../shared/styles/color";
 import { ButtonAppearances } from "./components/ButtonBase";
 import { tintContent } from "../shared/styles/styleUtils";
-import getCSSVarValue from "../utilities/components/getCSSVarValue";
+import getCSSVarValue from "../utilities/getCSSVarValue";
 
 export const buttonPadding = {
   vert: "10px",
@@ -51,6 +51,11 @@ export const filledButton = (
     background-color: ${baseColor};
     border-radius: ${borderRadiusSmall};
     padding: ${buttonPadding.vert} ${buttonPadding.horiz};
+
+    &[href],
+    &[href]:visited {
+      ${tintContent(contentColor)};
+    }
 
     &:hover {
       background-color: ${hoverColor};
@@ -212,6 +217,10 @@ export const button = appearance => {
             getActiveColor(getCSSVarValue(themeTextColorInteractive))
           )};
         }
+        &[href],
+        &[href]:visited {
+          ${tintContent(themeTextColorInteractive)};
+        }
       `;
     case "standard":
       return filledButton(
@@ -256,6 +265,10 @@ export const buttonInverse = appearance => {
           ${tintContent(
             getActiveColor(getCSSVarValue(themeTextColorInteractiveInverted))
           )};
+        }
+        &[href],
+        &[href]:visited {
+          ${tintContent(themeTextColorInteractiveInverted)};
         }
       `;
     case "standard":

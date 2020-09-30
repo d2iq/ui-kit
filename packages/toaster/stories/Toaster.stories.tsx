@@ -22,64 +22,42 @@ const fakeButtonStyles = {
   padding: 0
 };
 
-export interface ToastContainerProps {
-  children: Array<React.ReactElement<ToastProps>>;
-}
-
-export interface ToastContainerState {
-  toasts: Array<React.ReactElement<ToastProps>>;
-}
-
 class ToasterContainer extends React.PureComponent<
-  ToastContainerProps,
-  ToastContainerState
+  { children: Array<React.ReactElement<ToastProps>> },
+  { toasts: Array<React.ReactElement<ToastProps>> }
 > {
   constructor(props) {
     super(props);
 
-    this.state = {
-      toasts: this.props.children
-    };
-
     this.addToast = this.addToast.bind(this);
     this.removeToast = this.removeToast.bind(this);
+
+    this.state = { toasts: this.props.children };
   }
 
   addToast(toast: Array<React.ReactElement<ToastProps>>) {
-    this.setState({
-      toasts: this.state.toasts.concat(toast)
-    });
+    this.setState({ toasts: this.state.toasts.concat(toast) });
   }
 
-  removeToast(toastId: string) {
-    const newToasts = this.state.toasts.filter(
-      toast => toast.props.id !== toastId
-    );
-    this.setState({
-      toasts: newToasts
-    });
+  removeToast(id: string) {
+    this.setState({ toasts: this.state.toasts.filter(t => t.props.id !== id) });
   }
 
   render() {
     const handleToastAdd = () => {
       const newToastId = addedToastId++;
       const toastId = `toast-${newToastId + 1}`;
-      const dismissToast = dismissedToastId => {
-        this.removeToast(dismissedToastId);
-      };
-      const newToast = [
-        // tslint:disable:jsx-wrap-multiline
+      const dismissToast = () => this.removeToast(toastId);
+
+      this.addToast([
         <Toast
           autodismiss={true}
           id={toastId}
           key={newToastId + 1}
           title={`New message ${newToastId + 1}`}
-          onDismiss={dismissToast.bind(this, toastId)}
+          onDismiss={dismissToast}
         />
-        // tslint:enable
-      ];
-
-      this.addToast(newToast);
+      ]);
     };
 
     return (
@@ -91,7 +69,7 @@ class ToasterContainer extends React.PureComponent<
   }
 }
 
-storiesOf("Toaster", module)
+storiesOf("Feedback|Toaster", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {

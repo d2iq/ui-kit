@@ -1,16 +1,24 @@
 import { css } from "emotion";
 import { AvatarSizes } from "./components/Avatar";
-import {
-  themeBgSecondary,
-  greyLightLighten5
-} from "../design-tokens/build/js/designTokens";
+import { themeBgSecondary } from "../design-tokens/build/js/designTokens";
 
 export const avatarContainer = css`
   background-color: ${themeBgSecondary};
-  border: 1px solid ${greyLightLighten5};
   border-radius: 25%;
   overflow: hidden;
-  vertical-align: middle;
+  position: relative;
+
+  &:after {
+    border-radius: inherit;
+    bottom: 0;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 `;
 
 export const avatarSize = (size: AvatarSizes) => css`
@@ -20,6 +28,7 @@ export const avatarSize = (size: AvatarSizes) => css`
 
 export const avatarImg = css`
   border: 0;
+  display: block;
   height: 100%;
   object-fit: cover;
   width: 100%;

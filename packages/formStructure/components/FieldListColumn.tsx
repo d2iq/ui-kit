@@ -9,7 +9,7 @@ interface RenderProps<T> {
   /** Whether field is disabled */
   disabled?: boolean;
   /** The data to populate a the field */
-  fieldData: Array<{ [key: string]: any }>;
+  fieldData: Record<string, any>;
   /** The callback for when an input value is changed */
   onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
   /** The index of the row of the current field */
@@ -44,6 +44,6 @@ export const FieldListColumn: <T = string>(
   FieldListColumnProps<T> & FieldListColumnWidthProps
 > = () => <React.Fragment />;
 
-export const FieldListColumnSeparator: React.SFC<
-  FieldListColumnWidthProps
-> = () => <React.Fragment />;
+export const FieldListColumnSeparator: React.SFC<FieldListColumnWidthProps> = () => (
+  <React.Fragment />
+);

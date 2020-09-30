@@ -35,6 +35,12 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   padding: 0;
 }
 
+.emotion-4[href],
+.emotion-4[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
 .emotion-4:hover {
   background-color: #704fe5;
 }
@@ -289,6 +295,12 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   fill: #6446cc;
 }
 
+.emotion-4[href],
+.emotion-4[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
 .emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
@@ -446,6 +458,12 @@ exports[`ButtonBase renders all appearances with props 3`] = `
 .emotion-4::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.emotion-4[href],
+.emotion-4[href]:visited {
+  color: #1B2029;
+  fill: #1B2029;
 }
 
 .emotion-4:hover {
@@ -621,6 +639,12 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   padding: 0;
 }
 
+.emotion-4[href],
+.emotion-4[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
 .emotion-4:hover {
   background-color: #d32434;
 }
@@ -792,6 +816,12 @@ exports[`ButtonBase renders all appearances with props 5`] = `
 .emotion-4::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.emotion-4[href],
+.emotion-4[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
 }
 
 .emotion-4:hover {

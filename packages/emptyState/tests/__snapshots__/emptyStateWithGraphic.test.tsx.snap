@@ -5,7 +5,7 @@ exports[`EmptyStateWithGraphic default 1`] = `
   data-cy="emptyStateWithGraphic"
 >
   <div
-    class="css-1gikt66"
+    class="css-1534o5d"
     data-cy="spacingBox"
   >
     <img
@@ -16,15 +16,15 @@ exports[`EmptyStateWithGraphic default 1`] = `
     />
   </div>
   <div
-    class="css-so2jx9"
+    class="css-v5n8zn"
     data-cy="spacingBox"
   >
     <div
-      class="css-e463k1"
+      class="css-ilu7d6"
       data-cy="spacingBox"
     >
       <h2
-        class="css-zf0nd2"
+        class="rmTextMargins css-1rl5bwh"
         data-cy="headingText2"
       >
         Heading
@@ -44,7 +44,7 @@ exports[`EmptyStateWithGraphic renders with primary and secondary actions 1`] = 
   data-cy="emptyStateWithGraphic"
 >
   <div
-    class="css-1gikt66"
+    class="css-1534o5d"
     data-cy="spacingBox"
   >
     <img
@@ -55,15 +55,15 @@ exports[`EmptyStateWithGraphic renders with primary and secondary actions 1`] = 
     />
   </div>
   <div
-    class="css-1gikt66"
+    class="css-1534o5d"
     data-cy="spacingBox"
   >
     <div
-      class="css-e463k1"
+      class="css-ilu7d6"
       data-cy="spacingBox"
     >
       <h2
-        class="css-zf0nd2"
+        class="rmTextMargins css-1rl5bwh"
         data-cy="headingText2"
       >
         Heading
@@ -76,7 +76,7 @@ exports[`EmptyStateWithGraphic renders with primary and secondary actions 1`] = 
     </div>
   </div>
   <div
-    class="css-8h0s7x"
+    class="css-1m9h7kz"
     data-cy="flex"
   >
     <div
@@ -84,7 +84,7 @@ exports[`EmptyStateWithGraphic renders with primary and secondary actions 1`] = 
       data-cy="flexItem"
     >
       <button
-        class="css-67j5fi"
+        class="css-8g34zf"
         data-cy="secondaryButton"
         tabindex="0"
         type="button"
@@ -101,7 +101,7 @@ exports[`EmptyStateWithGraphic renders with primary and secondary actions 1`] = 
       data-cy="flexItem"
     >
       <button
-        class="css-s9tdxz"
+        class="css-1jip74i"
         data-cy="primaryButton"
         tabindex="0"
         type="button"

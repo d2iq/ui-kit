@@ -9,6 +9,7 @@ import {
 } from "..";
 import { TextInput } from "../../textInput";
 import FieldListHelper from "./helpers/FieldListStoryHelper";
+import { MonospaceText } from "../../styleUtils/typography";
 
 const mockItems = [
   {
@@ -31,73 +32,84 @@ const mockItems = [
   }
 ];
 
-const testRemoveHandler = rowIndex => () => {
-  alert(`remove row ${rowIndex}`);
-};
 const testFieldUpdateHandler = (rowIndex, pathToValue) => () =>
   action(
     `update row ${rowIndex} with the property that has the key ${pathToValue}`
   );
 
-storiesOf("Form structure/Grouped fields/FieldList", module)
+storiesOf("Forms|Form structure/Grouped fields/FieldList", module)
   .add(
-    "interactive example",
+    "editable fields (controlled inputs)",
     () => (
       <FieldListHelper items={mockItems}>
-        {({ removeItemHander, addItemHandler, fieldUpdateHandler, items }) => (
-          <FieldList
-            data={items}
-            onRemoveItem={removeItemHander}
-            pathToUniqueKey="id"
-          >
-            <FieldListColumn
-              key="name"
-              header="Name"
-              pathToValue="name"
-              onChange={fieldUpdateHandler}
+        {({ removeItemHander, onAddItem, fieldUpdateHandler, items }) => (
+          <>
+            <FieldList
+              data={items}
+              onRemoveItem={removeItemHander}
+              onAddItem={() =>
+                onAddItem({
+                  name: "",
+                  role: "",
+                  city: "",
+                  id: Math.random()
+                })
+              }
+              pathToUniqueKey="id"
             >
-              {({ defaultProps, onChange, value }) => (
-                <TextInput
-                  value={value}
-                  onChange={onChange}
-                  {...defaultProps}
-                />
-              )}
-            </FieldListColumn>
-            <FieldListColumn
-              key="role"
-              header="Role"
-              pathToValue="role"
-              onChange={fieldUpdateHandler}
-            >
-              {({ defaultProps, onChange, value }) => (
-                <TextInput
-                  value={value}
-                  onChange={onChange}
-                  {...defaultProps}
-                />
-              )}
-            </FieldListColumn>
-            <FieldListColumn
-              key="city"
-              header="City"
-              pathToValue="city"
-              onChange={fieldUpdateHandler}
-            >
-              {({ defaultProps, onChange, value }) => (
-                <TextInput
-                  value={value}
-                  onChange={onChange}
-                  {...defaultProps}
-                />
-              )}
-            </FieldListColumn>
-            <FieldListAddButton
-              onClick={() => addItemHandler({ name: "", role: "", city: "" })}
-            >
-              Add Field
-            </FieldListAddButton>
-          </FieldList>
+              <FieldListColumn
+                key="name"
+                header="Name"
+                pathToValue="name"
+                onChange={fieldUpdateHandler}
+              >
+                {({ defaultProps, onChange, value }) => (
+                  <TextInput
+                    value={value}
+                    onChange={onChange}
+                    {...defaultProps}
+                  />
+                )}
+              </FieldListColumn>
+              <FieldListColumn
+                key="role"
+                header="Role"
+                pathToValue="role"
+                onChange={fieldUpdateHandler}
+              >
+                {({ defaultProps, onChange, value }) => (
+                  <TextInput
+                    value={value}
+                    onChange={onChange}
+                    {...defaultProps}
+                  />
+                )}
+              </FieldListColumn>
+              <FieldListColumn
+                key="city"
+                header="City"
+                pathToValue="city"
+                onChange={fieldUpdateHandler}
+              >
+                {({ defaultProps, onChange, value }) => (
+                  <TextInput
+                    value={value}
+                    onChange={onChange}
+                    {...defaultProps}
+                  />
+                )}
+              </FieldListColumn>
+              <FieldListAddButton>Add Field</FieldListAddButton>
+            </FieldList>
+            <div style={{ marginTop: "1em" }}>
+              <div>FieldList data:</div>
+              <div style={{ background: "#eee", padding: "0.5em" }}>
+                <MonospaceText tag="pre">
+                  {JSON.stringify(items, null, 2)}
+                </MonospaceText>
+              </div>
+            </div>
+          </>
         )}
       </FieldListHelper>
     ),
@@ -108,12 +120,34 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
       }
     }
   )
+  .add("default (uncontrolled inputs)", () => {
+    return (
+      <FieldList data={mockItems} pathToUniqueKey="id">
+        <FieldListColumn
+          key="name"
+          header="Name"
+          pathToValue="name"
+          onChange={testFieldUpdateHandler}
+        >
+          {({ defaultProps, onChange, value }) => (
+            <TextInput value={value} onChange={onChange} {...defaultProps} />
+          )}
+        </FieldListColumn>
+        <FieldListColumn key="role" header="Role" pathToValue="role">
+          {({ defaultProps, onChange, value }) => (
+            <TextInput value={value} onChange={onChange} {...defaultProps} />
+          )}
+        </FieldListColumn>
+        <FieldListColumn key="city" header="City" pathToValue="city">
+          {({ defaultProps, onChange, value }) => (
+            <TextInput value={value} onChange={onChange} {...defaultProps} />
+          )}
+        </FieldListColumn>
+      </FieldList>
+    );
+  })
   .add("varied column widths", () => (
-    <FieldList
-      data={mockItems}
-      onRemoveItem={testRemoveHandler}
-      pathToUniqueKey="id"
-    >
+    <FieldList data={mockItems} pathToUniqueKey="id">
       <FieldListColumn
         key="name"
         header="Name"
@@ -149,12 +183,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
     </FieldList>
   ))
   .add("disabled rows", () => (
-    <FieldList
-      data={mockItems}
-      onRemoveItem={testRemoveHandler}
-      disabledRows={[1]}
-      pathToUniqueKey="id"
-    >
+    <FieldList data={mockItems} disabledRows={[1]} pathToUniqueKey="id">
       <FieldListColumn
         key="name"
         header="Name"
@@ -203,11 +232,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
     </FieldList>
   ))
   .add("w/ add button", () => (
-    <FieldList
-      data={mockItems}
-      onRemoveItem={testRemoveHandler}
-      pathToUniqueKey="id"
-    >
+    <FieldList data={mockItems} pathToUniqueKey="id">
       <FieldListColumn
         key="name"
         header="Name"
@@ -242,11 +267,7 @@ storiesOf("Form structure/Grouped fields/FieldList", module)
     </FieldList>
   ))
   .add("w/ column separators", () => (
-    <FieldList
-      data={mockItems}
-      onRemoveItem={testRemoveHandler}
-      pathToUniqueKey="id"
-    >
+    <FieldList data={mockItems} pathToUniqueKey="id">
       <FieldListColumn
         key="name"
         header="Name"

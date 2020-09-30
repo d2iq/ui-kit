@@ -18,7 +18,7 @@ const contentBg = css`
   background-color: ${themeBgPrimary};
 `;
 
-storiesOf("Style utilities/Layout/Container", module)
+storiesOf("Layout|Container", module)
   .addDecorator(withReadme([readme]))
   .add("default", () => (
     <div className={baseBg}>

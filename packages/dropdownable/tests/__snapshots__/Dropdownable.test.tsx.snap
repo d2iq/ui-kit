@@ -1,21 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdownable is visible after opening 1`] = `
-.emotion-1 {
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  opacity: 0;
-  z-index: 2;
-}
-
-.emotion-3 {
-  position: relative;
-}
-
 .emotion-0 {
   background: none;
   border: 0;
@@ -41,6 +26,12 @@ exports[`Dropdownable is visible after opening 1`] = `
 .emotion-0::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+.emotion-0[href],
+.emotion-0[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
 }
 
 .emotion-0:hover {
@@ -58,124 +49,37 @@ exports[`Dropdownable is visible after opening 1`] = `
     </p>
   }
   open={false}
-  preferredDirections={
-    Array [
-      "bottom-left",
-      "bottom-right",
-      "top-right",
-      "top-left",
-    ]
-  }
 >
-  <Styled(div)>
-    <div
-      className="emotion-3"
-    >
-      <div>
-        <PrimaryButton>
-          <ButtonBase
-            appearance="primary"
-            data-cy="primaryButton"
-          >
-            <FocusStyleManager
-              focusEnabledClass="css-xcotv6"
-            >
-              <button
-                className="emotion-0"
-                data-cy="primaryButton"
-                onClick={[Function]}
-                tabIndex={0}
-                type="button"
-              >
-                <span
-                  className=""
-                >
-                  Click me
-                </span>
-              </button>
-            </FocusStyleManager>
-          </ButtonBase>
-        </PrimaryButton>
-      </div>
-      <Overlay
-        className="emotion-1"
-        overlayRoot={
-          .emotion-0 {
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  opacity: 0;
-  z-index: 2;
-}
-
-<body>
-            <div>
-              <div
-                class="emotion-0"
-              >
-                <div>
-                  <p
-                    direction="bottom-left"
-                  >
-                    I'm a touchdown
-                  </p>
-                </div>
-              </div>
-            </div>
-          </body>
-        }
+  <div>
+    <PrimaryButton>
+      <ButtonBase
+        appearance="primary"
+        data-cy="primaryButton"
       >
-        <Portal
-          containerInfo={
-            <div>
-              <div
-                class="emotion-1"
-              >
-                <div>
-                  <p
-                    direction="bottom-left"
-                  >
-                    I'm a touchdown
-                  </p>
-                </div>
-              </div>
-            </div>
-          }
+        <FocusStyleManager
+          focusEnabledClass="css-xcotv6"
         >
-          <div
-            className="emotion-1"
+          <button
+            className="emotion-0"
+            data-cy="primaryButton"
+            onClick={[Function]}
+            tabIndex={0}
+            type="button"
           >
-            <div>
-              <clickOutside(DropdownContents)
-                open={false}
-              >
-                <DropdownContents
-                  open={false}
-                >
-                  <p
-                    direction="bottom-left"
-                  >
-                    I'm a touchdown
-                  </p>
-                </DropdownContents>
-              </clickOutside(DropdownContents)>
-            </div>
-          </div>
-        </Portal>
-      </Overlay>
-    </div>
-  </Styled(div)>
+            <span
+              className=""
+            >
+              Click me
+            </span>
+          </button>
+        </FocusStyleManager>
+      </ButtonBase>
+    </PrimaryButton>
+  </div>
 </Dropdownable>
 `;
 
 exports[`Dropdownable is visible after opening 2`] = `
-.emotion-3 {
-  position: relative;
-}
-
 .emotion-0 {
   background: none;
   border: 0;
@@ -203,23 +107,18 @@ exports[`Dropdownable is visible after opening 2`] = `
   padding: 0;
 }
 
+.emotion-0[href],
+.emotion-0[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
 .emotion-0:hover {
   background-color: #704fe5;
 }
 
 .emotion-0:active {
   background-color: #6446cc;
-}
-
-.emotion-1 {
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  opacity: 1;
-  z-index: 2;
 }
 
 <Dropdownable
@@ -229,104 +128,104 @@ exports[`Dropdownable is visible after opening 2`] = `
     </p>
   }
   open={true}
-  preferredDirections={
-    Array [
-      "bottom-left",
-      "bottom-right",
-      "top-right",
-      "top-left",
-    ]
-  }
 >
-  <Styled(div)>
-    <div
-      className="emotion-3"
-    >
-      <div>
-        <PrimaryButton>
-          <ButtonBase
-            appearance="primary"
+  <div>
+    <PrimaryButton>
+      <ButtonBase
+        appearance="primary"
+        data-cy="primaryButton"
+      >
+        <FocusStyleManager
+          focusEnabledClass="css-xcotv6"
+        >
+          <button
+            className="emotion-0"
             data-cy="primaryButton"
+            onClick={[Function]}
+            tabIndex={0}
+            type="button"
           >
-            <FocusStyleManager
-              focusEnabledClass="css-xcotv6"
+            <span
+              className=""
             >
-              <button
-                className="emotion-0"
-                data-cy="primaryButton"
-                onClick={[Function]}
-                tabIndex={0}
-                type="button"
-              >
-                <span
-                  className=""
-                >
-                  Click me
-                </span>
-              </button>
-            </FocusStyleManager>
-          </ButtonBase>
-        </PrimaryButton>
-      </div>
-      <Overlay
-        className="emotion-1"
-        overlayRoot={
-          <body>
-            <div>
-              <div
-                class="emotion-1"
-              >
-                <div>
-                  <p
-                    direction="bottom-left"
-                  >
-                    I'm a touchdown
-                  </p>
-                </div>
-              </div>
-            </div>
-          </body>
+              Click me
+            </span>
+          </button>
+        </FocusStyleManager>
+      </ButtonBase>
+    </PrimaryButton>
+  </div>
+  <clickOutside(DropdownContents)
+    open={true}
+  >
+    <DropdownContents
+      open={true}
+    >
+      <ForwardRef
+        style={
+          Object {
+            "left": "0",
+            "position": "absolute",
+            "top": "0",
+            "zIndex": 2,
+          }
         }
       >
-        <Portal
-          containerInfo={
-            <div>
-              <div
-                class="emotion-1"
-              >
-                <div>
-                  <p
-                    direction="bottom-left"
-                  >
+        <Overlay
+          innerRef={[Function]}
+          overlayRoot={
+            <body>
+              <div>
+                <div
+                  style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+                >
+                  <p>
                     I'm a touchdown
                   </p>
                 </div>
               </div>
-            </div>
+            </body>
+          }
+          style={
+            Object {
+              "left": "0",
+              "position": "absolute",
+              "top": "0",
+              "zIndex": 2,
+            }
           }
         >
-          <div
-            className="emotion-1"
-          >
-            <div>
-              <clickOutside(DropdownContents)
-                open={true}
-              >
-                <DropdownContents
-                  open={true}
+          <Portal
+            containerInfo={
+              <div>
+                <div
+                  style="z-index: 2; position: absolute; left: 0px; top: 0px;"
                 >
-                  <p
-                    direction="bottom-left"
-                  >
+                  <p>
                     I'm a touchdown
                   </p>
-                </DropdownContents>
-              </clickOutside(DropdownContents)>
+                </div>
+              </div>
+            }
+          >
+            <div
+              style={
+                Object {
+                  "left": "0",
+                  "position": "absolute",
+                  "top": "0",
+                  "zIndex": 2,
+                }
+              }
+            >
+              <p>
+                I'm a touchdown
+              </p>
             </div>
-          </div>
-        </Portal>
-      </Overlay>
-    </div>
-  </Styled(div)>
+          </Portal>
+        </Overlay>
+      </ForwardRef>
+    </DropdownContents>
+  </clickOutside(DropdownContents)>
 </Dropdownable>
 `;

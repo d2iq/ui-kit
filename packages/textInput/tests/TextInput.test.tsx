@@ -1,7 +1,7 @@
-import React from "react";
+import * as React from "react";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
-import { shallow, mount } from "enzyme";
+import { shallow, mount, render } from "enzyme";
 import toJson from "enzyme-to-json";
 // tslint:disable:no-duplicate-imports
 import { css, cx } from "emotion";
@@ -98,7 +98,7 @@ describe("TextInput", () => {
     const widthTest = css`
       width: 200px;
     `;
-    const component = shallow(<TextInput className={cx(widthTest)} />);
+    const component = shallow(<TextInput id="1" className={cx(widthTest)} />);
     expect(
       component
         .find("div")
@@ -109,7 +109,11 @@ describe("TextInput", () => {
 
   it("should hide label if `showInputLabel` set to false", () => {
     const component = shallow(
-      <TextInput inputLabel="I'm not displayed" showInputLabel={false} />
+      <TextInput
+        id="input.with.hidden.label"
+        inputLabel="I'm not displayed"
+        showInputLabel={false}
+      />
     );
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -147,5 +151,12 @@ describe("TextInput", () => {
       />
     );
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it("should generate an ID if one is not passed", () => {
+    const component = render(<TextInput inputLabel="Test Input" />);
+    // const textInputId = component.find("input").prop("id");
+    // console.log(`textInputId: ${textInputId}`);
+    expect(component.find("input").prop("id")).toBeDefined();
   });
 });

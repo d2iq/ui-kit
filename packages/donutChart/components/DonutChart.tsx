@@ -5,7 +5,7 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 import { tintContentSecondary } from "../../shared/styles/styleUtils/typography/color";
 import { hexToRgbA } from "../../shared/styles/color";
-import getCSSVarValue from "../../utilities/components/getCSSVarValue";
+import getCSSVarValue from "../../utilities/getCSSVarValue";
 
 interface DonutChartDatum {
   percentage: number;

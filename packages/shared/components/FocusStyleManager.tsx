@@ -1,24 +1,18 @@
 import * as React from "react";
 
-import { InteractionModeEngine } from "../../utilities/components/interactionMode";
+import { InteractionModeEngine } from "../../utilities/interactionMode";
 
-class FocusStyleManager extends React.PureComponent<
-  { focusEnabledClass: string; children: string | React.ReactNode },
-  {}
-> {
-  public focusWrapperRef = {};
-
-  constructor(props) {
-    super(props);
-
-    this.setRef = this.setRef.bind(this);
-  }
+class FocusStyleManager extends React.PureComponent<{
+  focusEnabledClass: string;
+  children: React.ReactElement;
+}> {
+  focusWrapperRef: Element | undefined;
 
   public componentDidMount() {
     const focusEngine = new InteractionModeEngine(
       this.focusWrapperRef as Element,
       this.props.focusEnabledClass || "focus-enabled",
-      document.documentElement as Element
+      document.documentElement
     );
     focusEngine.start();
   }
@@ -29,9 +23,9 @@ class FocusStyleManager extends React.PureComponent<
     });
   }
 
-  private setRef(ref: any) {
+  private readonly setRef = ref => {
     this.focusWrapperRef = ref;
-  }
+  };
 }
 
 export default FocusStyleManager;

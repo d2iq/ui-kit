@@ -17,7 +17,7 @@ import { configurationMapStoryWrapper } from "./helpers/ConfigurationMapStoryWra
 const readme = require("../README.md");
 const rowAction = action("row action");
 
-storiesOf("ConfigurationMap/ConfigurationMap", module)
+storiesOf("Data listing|ConfigurationMap", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(configurationMapStoryWrapper)
   .add("default", () => (
@@ -176,6 +176,32 @@ storiesOf("ConfigurationMap/ConfigurationMap", module)
           <ConfigurationMapRowAction onClick={rowAction}>
             Action
           </ConfigurationMapRowAction>
+        </ConfigurationMapRow>
+      </ConfigurationMapSection>
+    </ConfigurationMap>
+  ))
+  .add("with long value", () => (
+    <ConfigurationMap>
+      <ConfigurationMapSection>
+        <ConfigurationMapRow>
+          <ConfigurationMapLabel>Name</ConfigurationMapLabel>
+          <ConfigurationMapValue>Jane Doe</ConfigurationMapValue>
+        </ConfigurationMapRow>
+        <ConfigurationMapRow>
+          <ConfigurationMapLabel>Role</ConfigurationMapLabel>
+          <ConfigurationMapValue>UX Designer</ConfigurationMapValue>
+        </ConfigurationMapRow>
+        <ConfigurationMapRow>
+          <ConfigurationMapLabel>
+            {Array(100)
+              .fill("VeryLongWord")
+              .join("")}
+          </ConfigurationMapLabel>
+          <ConfigurationMapValue>
+            {Array(100)
+              .fill("VeryLongWord")
+              .join("")}
+          </ConfigurationMapValue>
         </ConfigurationMapRow>
       </ConfigurationMapSection>
     </ConfigurationMap>

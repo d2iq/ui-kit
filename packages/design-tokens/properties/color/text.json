@@ -1,14 +1,26 @@
 {
-    "color": {
-        "text": {
-            "primary": {
-                "base": {"value": "{color.base.greyDark.base.value}"},
-                "inverted": {"value": "{color.base.greyLight.base.value}"}
-            },
-            "secondary": {
-                "base": {"value": "{color.base.greyDark.lighten.4.value}"},
-                "inverted": {"value": "{color.base.greyLight.darken.2.value}"}
-            }
+  "color": {
+    "text": {
+      "primary": {
+        "base": {
+          "value": "{color.base.greyDark.base.value}",
+          "isAlias": true
+        },
+        "inverted": {
+          "value": "{color.base.greyLight.base.value}",
+          "isAlias": true
         }
+      },
+      "secondary": {
+        "base": {
+          "value": "{color.base.greyDark.lighten.4.value}",
+          "isAlias": true
+        },
+        "inverted": {
+          "value": "{color.base.greyLight.darken.2.value}",
+          "isAlias": true
+        }
+      }
     }
+  }
 }

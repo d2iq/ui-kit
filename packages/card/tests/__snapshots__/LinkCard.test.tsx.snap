@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkCard renders default 1`] = `
+<div
+  class="css-1lhkzzs"
+  data-cy="linkCard"
+>
+  <div
+    class="css-1hc6qpp"
+  >
+    <a
+      class="css-gsqxnx"
+      href="http://google.com"
+    >
+      <span
+        class="css-1uecx0y"
+        data-cy="box"
+      >
+        Google
+      </span>
+    </a>
+    Example Content
+  </div>
+</div>
+`;
+
+exports[`LinkCard renders with external link 1`] = `
+<div
+  class="css-1lhkzzs"
+  data-cy="linkCard"
+>
+  <div
+    class="css-1hc6qpp"
+  >
+    <a
+      class="css-gsqxnx"
+      href="http://google.com"
+      rel="noopener"
+      target="_blank"
+    >
+      <span
+        class="css-1uecx0y"
+        data-cy="box"
+      >
+        Google
+      </span>
+    </a>
+    Example Content
+  </div>
+</div>
+`;

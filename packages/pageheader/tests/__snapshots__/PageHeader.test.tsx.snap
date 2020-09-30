@@ -2,20 +2,20 @@
 
 exports[`PageHeader default 1`] = `
 <div
-  class="css-1ik9ay"
+  class="css-1vblxpj"
 >
   <div
-    class="css-1s0dtwu"
+    class="css-f1o908"
     data-cy="pageHeader"
   >
     <div
       class="css-qi8t7c"
     >
       <nav
-        class="css-td03f2"
+        class="css-cldwuj"
       >
         <div
-          class="css-1ixtlzk"
+          class="css-1x1yem1"
           data-cy="breadcrumb"
         >
           <span>
@@ -23,7 +23,7 @@ exports[`PageHeader default 1`] = `
           </span>
         </div>
         <div
-          class="css-19hcarb"
+          class="css-1v7r6e"
           data-cy="breadcrumb"
         >
           <svg
@@ -42,7 +42,7 @@ exports[`PageHeader default 1`] = `
           </svg>
         </div>
         <div
-          class="css-19hcarb"
+          class="css-1v7r6e"
           data-cy="breadcrumb"
         >
           <span>
@@ -55,11 +55,11 @@ exports[`PageHeader default 1`] = `
       class="css-48ylac"
     >
       <ul
-        class="css-cdxrln"
+        class="css-1vuklpo"
         data-cy="pageHeader-actions"
       >
         <li
-          class="css-1skqmzz"
+          class="css-13925l2"
         >
           <div
             class="css-1h5x3dy"

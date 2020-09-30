@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorCodedBadge renders with a color 1`] = `
+.emotion-0 {
+  color: #f00f00;
+  fill: #f00f00;
+}
+
+<Badge
+  appearance="outline"
+>
+  <svg
+    className="emotion-0"
+    height={12}
+    viewBox="0 0 12 12"
+    width={12}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx={6}
+      cy={6}
+      r={6}
+    />
+  </svg>
+  <SpacingBox
+    display="inline-block"
+    side="left"
+    spacingSize="xxs"
+    tag="div"
+  />
+</Badge>
+`;
+
+exports[`ColorCodedBadge renders with an icon and color 1`] = `
+<Badge
+  appearance="outline"
+>
+  <Icon
+    color="#f00f00"
+    shape="system-circle-check"
+    size="12px"
+  />
+  <SpacingBox
+    display="inline-block"
+    side="left"
+    spacingSize="xxs"
+    tag="div"
+  />
+</Badge>
+`;

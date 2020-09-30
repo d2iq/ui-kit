@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-41.426" y1="-42.495" x2="-41.426" y2="-41.949" gradientTransform="matrix(10.051 0 0 8.058 432.371 356.716)">
+            <stop offset="0" stop-color="#fff" stop-opacity=".6"/>
+            <stop offset="1" stop-color="#fff" stop-opacity=".4"/>
+        </linearGradient>
+        <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="16" y1="2" x2="16" y2="14" gradientTransform="matrix(1 0 0 -1 0 24)">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="1" stop-color="#fff" stop-opacity=".8"/>
+        </linearGradient>
+        <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="6.5" y1="13" x2="6.5" y2="22" gradientTransform="matrix(1 0 0 -1 0 24)">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="1" stop-color="#fff" stop-opacity=".8"/>
+        </linearGradient>
+    </defs>
+    <path d="M15.4 14.3v2l-2.2 1.6c.3.2.6.5.8.8l2-1.5 2 1.5c.2-.3.5-.6.8-.8l-2.2-1.6v-2c-.4.1-.8.1-1.2 0z" fill="url(#a)"/>
+    <path d="M12.2 22C11 22 10 21 10 19.8s1-2.2 2.2-2.2 2.2 1 2.2 2.2-1 2.2-2.2 2.2zm7.6 0c-1.2 0-2.2-1-2.2-2.2s1-2.2 2.2-2.2 2.2 1 2.2 2.2-1 2.2-2.2 2.2zM16 14.4c-1.2 0-2.2-1-2.2-2.2s1-2.2 2.2-2.2 2.2 1 2.2 2.2-1 2.2-2.2 2.2z" fill="url(#b)"/>
+    <path d="M2 3c0-.5.5-1 1-1h7c.6 0 1 .5 1 1v7c0 .6-.4 1-1 1H3c-.5 0-1-.4-1-1V3zm5.2 2.7V3.1H5.7v2.6H3.2v1.4h2.5v2.8h1.5V7.1h2.6V5.7H7.2z" fill="url(#c)"/>
+</svg>

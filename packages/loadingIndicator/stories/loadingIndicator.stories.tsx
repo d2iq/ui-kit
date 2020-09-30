@@ -13,7 +13,7 @@ import { InlineLoadingIndicator, SectionLoadingIndicator } from "../";
 
 const readme = require("../README.md");
 
-storiesOf("Loading indicators", module)
+storiesOf("Feedback|Loading indicators", module)
   .addDecorator(withReadme([readme]))
   .add(
     "SectionLoadingIndicator in place of page content",

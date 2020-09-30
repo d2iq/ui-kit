@@ -6,15 +6,20 @@ import {
   SecondaryButton,
   StandardButton,
   SuccessButton,
-  DangerButton
-} from "../../index";
+  DangerButton,
+  SpacingBox
+} from "../../";
+import {
+  SpaceSize,
+  BoxSides
+} from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 import ButtonAppearanceSample from "./helpers/ButtonAppearanceSample";
-import { CloseIcon } from "../../shared/icons";
 import { action } from "@storybook/addon-actions";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const readme = require("../README.md");
 
-storiesOf("Buttons/Default", module)
+storiesOf("Actions|Default button", module)
   .addDecorator(withReadme([readme]))
   .addParameters({
     info: {
@@ -152,9 +157,9 @@ storiesOf("Buttons/Default", module)
     }
   )
   .add(
-    "with icon",
+    "with icon before button text",
     () => (
-      <StandardButton iconStart={<CloseIcon />}>Icon button</StandardButton>
+      <StandardButton iconStart={SystemIcons.Close}>Icon button</StandardButton>
     ),
     {
       info: {
@@ -162,11 +167,26 @@ storiesOf("Buttons/Default", module)
       }
     }
   )
-  .add("only an icon", () => <StandardButton iconStart={<CloseIcon />} />, {
-    info: {
-      propTables: [StandardButton]
+  .add(
+    "with icon before button text",
+    () => (
+      <StandardButton iconStart={SystemIcons.Close}>Icon button</StandardButton>
+    ),
+    {
+      info: {
+        propTables: [StandardButton]
+      }
     }
-  })
+  )
+  .add(
+    "only an icon",
+    () => <StandardButton ariaLabel="Close" iconStart={SystemIcons.Close} />,
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
+  )
   .add(
     "full-width",
     () => <StandardButton isFullWidth={true}>Full-width</StandardButton>,
@@ -179,7 +199,7 @@ storiesOf("Buttons/Default", module)
   .add(
     "full-width with icon",
     () => (
-      <StandardButton isFullWidth={true} iconStart={<CloseIcon />}>
+      <StandardButton isFullWidth={true} iconStart={SystemIcons.Close}>
         Full-width
       </StandardButton>
     ),
@@ -203,24 +223,223 @@ storiesOf("Buttons/Default", module)
     }
   )
   .add(
+    "with onFocus and onBlur",
+    () => (
+      <StandardButton
+        onFocus={action("Button focused")}
+        onBlur={action("Button blured")}
+      >
+        Focus me
+      </StandardButton>
+    ),
+    {
+      info: {
+        propTables: [StandardButton]
+      }
+    }
+  )
+  .add(
     "used as a link",
+    () => {
+      const spacingBoxProps = {
+        spacingSize: "xxl" as SpaceSize,
+        side: "bottom" as BoxSides
+      };
+      return (
+        <React.Fragment>
+          <SpacingBox {...spacingBoxProps}>
+            <ButtonAppearanceSample>
+              <PrimaryButton url="http://google.com">Button</PrimaryButton>
+              <PrimaryButton url="http://google.com" disabled={true}>
+                Button
+              </PrimaryButton>
+              <PrimaryButton url="http://google.com" isProcessing={true}>
+                Button
+              </PrimaryButton>
+            </ButtonAppearanceSample>
+            <ButtonAppearanceSample isInverse={true}>
+              <PrimaryButton url="http://google.com" isInverse={true}>
+                Button
+              </PrimaryButton>
+              <PrimaryButton
+                url="http://google.com"
+                disabled={true}
+                isInverse={true}
+              >
+                Button
+              </PrimaryButton>
+              <PrimaryButton
+                url="http://google.com"
+                isProcessing={true}
+                isInverse={true}
+              >
+                Button
+              </PrimaryButton>
+            </ButtonAppearanceSample>
+          </SpacingBox>
+          <SpacingBox {...spacingBoxProps}>
+            <ButtonAppearanceSample>
+              <SecondaryButton url="http://google.com">Button</SecondaryButton>
+              <SecondaryButton url="http://google.com" disabled={true}>
+                Button
+              </SecondaryButton>
+              <SecondaryButton url="http://google.com" isProcessing={true}>
+                Button
+              </SecondaryButton>
+            </ButtonAppearanceSample>
+            <ButtonAppearanceSample isInverse={true}>
+              <SecondaryButton url="http://google.com" isInverse={true}>
+                Button
+              </SecondaryButton>
+              <SecondaryButton
+                url="http://google.com"
+                disabled={true}
+                isInverse={true}
+              >
+                Button
+              </SecondaryButton>
+              <SecondaryButton
+                url="http://google.com"
+                isProcessing={true}
+                isInverse={true}
+              >
+                Button
+              </SecondaryButton>
+            </ButtonAppearanceSample>
+          </SpacingBox>
+          <SpacingBox {...spacingBoxProps}>
+            <ButtonAppearanceSample>
+              <StandardButton url="http://google.com">Button</StandardButton>
+              <StandardButton url="http://google.com" disabled={true}>
+                Button
+              </StandardButton>
+              <StandardButton url="http://google.com" isProcessing={true}>
+                Button
+              </StandardButton>
+            </ButtonAppearanceSample>
+            <ButtonAppearanceSample isInverse={true}>
+              <StandardButton url="http://google.com" isInverse={true}>
+                Button
+              </StandardButton>
+              <StandardButton
+                url="http://google.com"
+                disabled={true}
+                isInverse={true}
+              >
+                Button
+              </StandardButton>
+              <StandardButton
+                url="http://google.com"
+                isProcessing={true}
+                isInverse={true}
+              >
+                Button
+              </StandardButton>
+            </ButtonAppearanceSample>
+          </SpacingBox>
+          <SpacingBox {...spacingBoxProps}>
+            <ButtonAppearanceSample>
+              <SuccessButton url="http://google.com">Button</SuccessButton>
+              <SuccessButton url="http://google.com" disabled={true}>
+                Button
+              </SuccessButton>
+              <SuccessButton url="http://google.com" isProcessing={true}>
+                Button
+              </SuccessButton>
+            </ButtonAppearanceSample>
+            <ButtonAppearanceSample isInverse={true}>
+              <SuccessButton url="http://google.com" isInverse={true}>
+                Button
+              </SuccessButton>
+              <SuccessButton
+                url="http://google.com"
+                disabled={true}
+                isInverse={true}
+              >
+                Button
+              </SuccessButton>
+              <SuccessButton
+                url="http://google.com"
+                isProcessing={true}
+                isInverse={true}
+              >
+                Button
+              </SuccessButton>
+            </ButtonAppearanceSample>
+          </SpacingBox>
+          <SpacingBox {...spacingBoxProps}>
+            <ButtonAppearanceSample>
+              <DangerButton url="http://google.com">Button</DangerButton>
+              <DangerButton url="http://google.com" disabled={true}>
+                Button
+              </DangerButton>
+              <DangerButton url="http://google.com" isProcessing={true}>
+                Button
+              </DangerButton>
+            </ButtonAppearanceSample>
+            <ButtonAppearanceSample isInverse={true}>
+              <DangerButton url="http://google.com" isInverse={true}>
+                Button
+              </DangerButton>
+              <DangerButton
+                url="http://google.com"
+                disabled={true}
+                isInverse={true}
+              >
+                Button
+              </DangerButton>
+              <DangerButton
+                url="http://google.com"
+                isProcessing={true}
+                isInverse={true}
+              >
+                Button
+              </DangerButton>
+            </ButtonAppearanceSample>
+          </SpacingBox>
+        </React.Fragment>
+      );
+    },
+    {
+      info: {
+        propTablesExclude: [SpacingBox, React.Fragment]
+      }
+    }
+  )
+  .add(
+    "used as a link that opens in a new tab",
     () => (
       <React.Fragment>
         <ButtonAppearanceSample>
-          <StandardButton url="http://google.com">Button</StandardButton>
-          <StandardButton url="http://google.com" disabled={true}>
-            Button
-          </StandardButton>
-          <StandardButton url="http://google.com" isProcessing={true}>
-            Button
-          </StandardButton>
-        </ButtonAppearanceSample>
-        <ButtonAppearanceSample isInverse={true}>
-          <StandardButton url="http://google.com" isInverse={true}>
+          <StandardButton url="http://google.com" openInNewTab={true}>
             Button
           </StandardButton>
           <StandardButton
             url="http://google.com"
+            openInNewTab={true}
+            disabled={true}
+          >
+            Button
+          </StandardButton>
+          <StandardButton
+            url="http://google.com"
+            openInNewTab={true}
+            isProcessing={true}
+          >
+            Button
+          </StandardButton>
+        </ButtonAppearanceSample>
+        <ButtonAppearanceSample isInverse={true}>
+          <StandardButton
+            url="http://google.com"
+            openInNewTab={true}
+            isInverse={true}
+          >
+            Button
+          </StandardButton>
+          <StandardButton
+            url="http://google.com"
+            openInNewTab={true}
             disabled={true}
             isInverse={true}
           >
@@ -228,6 +447,7 @@ storiesOf("Buttons/Default", module)
           </StandardButton>
           <StandardButton
             url="http://google.com"
+            openInNewTab={true}
             isProcessing={true}
             isInverse={true}
           >

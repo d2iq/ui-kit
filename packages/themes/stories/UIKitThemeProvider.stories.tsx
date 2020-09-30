@@ -18,7 +18,7 @@ import {
 
 const readme = require("../README.md");
 
-storiesOf("UIKitThemeProvider", module)
+storiesOf("Utils|UIKitThemeProvider", module)
   .addDecorator(withReadme([readme]))
   .add("dark mode", () => (
     <UIKitThemeProvider

@@ -45,8 +45,8 @@ export class Tooltip extends React.Component<TooltipProps, any> {
     position: "top",
     wrapperClassName: `${tooltipWrapper} tooltip-wrapper text-align-center`
   };
-  private tooltipNode = React.createRef<any>();
-  private triggerNode = React.createRef<any>();
+  private readonly tooltipNode = React.createRef<any>();
+  private readonly triggerNode = React.createRef<any>();
 
   constructor(props) {
     super(props);
@@ -139,12 +139,14 @@ export class Tooltip extends React.Component<TooltipProps, any> {
         left: clearance.boundingRect.left + clearance.boundingRect.width / 2,
         top: clearance.boundingRect.top - tooltipHeight + ARROW_SIZE
       };
-    } else if (position === "right") {
+    }
+    if (position === "right") {
       return {
         left: clearance.boundingRect.right,
         top: clearance.boundingRect.top + clearance.boundingRect.height / 2
       };
-    } else if (position === "bottom") {
+    }
+    if (position === "bottom") {
       return {
         left: clearance.boundingRect.left + clearance.boundingRect.width / 2,
         top: clearance.boundingRect.bottom
