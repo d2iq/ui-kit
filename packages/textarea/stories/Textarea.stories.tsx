@@ -19,12 +19,14 @@ storiesOf("Forms|Textarea", module)
         id="error"
         inputLabel="Error"
         placeholder="Placeholder"
+        tooltipContent={<div>I'm a very informative tooltip!</div>}
       />
       <Textarea
         appearance={InputAppearance.Success}
         id="success"
         inputLabel="Success"
         placeholder="Placeholder"
+        tooltipContent={<div>I'm also a tooltip!</div>}
       />
       <Textarea
         id="value"

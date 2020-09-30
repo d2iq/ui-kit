@@ -36,7 +36,7 @@ exports[`FieldList renders 1`] = `
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
             class="css-1lrhbps"
@@ -76,7 +76,7 @@ exports[`FieldList renders 1`] = `
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
             class="css-1lrhbps"
@@ -141,7 +141,7 @@ exports[`FieldList renders 1`] = `
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
             class="css-1lrhbps"
@@ -181,7 +181,7 @@ exports[`FieldList renders 1`] = `
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
             class="css-1lrhbps"
@@ -245,7 +245,7 @@ exports[`FieldList renders 1`] = `
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
             class="css-1lrhbps"
@@ -285,7 +285,7 @@ exports[`FieldList renders 1`] = `
         data-cy="fieldList-cell"
       >
         <div
-          data-cy="textInput"
+          data-cy="textInput textInput.standard"
         >
           <label
             class="css-1lrhbps"

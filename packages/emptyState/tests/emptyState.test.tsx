@@ -11,6 +11,17 @@ describe("EmptyState", () => {
       toJSON(render(<EmptyState heading="Heading">Body content</EmptyState>))
     ).toMatchSnapshot();
   });
+  it("appearance='error'", () => {
+    expect(
+      toJSON(
+        render(
+          <EmptyState heading="Heading" appearance="error">
+            Body content
+          </EmptyState>
+        )
+      )
+    ).toMatchSnapshot();
+  });
   it("renders with primary and secondary actions", () => {
     expect(
       toJSON(
