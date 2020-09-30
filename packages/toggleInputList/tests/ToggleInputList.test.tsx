@@ -26,6 +26,18 @@ describe("ToggleInputList", () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it("renders as a radio group", () => {
+    const component = mount(
+      <ToggleInputList
+        id="radio"
+        items={options}
+        listLabel="Sample legend"
+        isRadioGroup={true}
+      />
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it("renders with selected items", () => {
     const component = mount(
       <ToggleInputList

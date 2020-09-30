@@ -52,7 +52,17 @@ class Textarea extends React.PureComponent<TextareaProps, {}> {
   id = this.props.id ?? nextId("textarea-");
 
   public render() {
-    const { appearance, errors, hintContent, id, value, ...other } = this.props;
+    const {
+      appearance,
+      errors,
+      hintContent,
+      id,
+      inputLabel,
+      showInputLabel,
+      tooltipContent,
+      value,
+      ...other
+    } = this.props;
     const hasError = appearance === InputAppearance.Error;
     let { onChange } = other;
     const inputAppearance = this.getInputAppearance();
@@ -70,11 +80,11 @@ class Textarea extends React.PureComponent<TextareaProps, {}> {
           <div data-cy={parentDataCy}>
             {renderLabel({
               appearance,
-              hidden: !this.props.showInputLabel,
+              hidden: !showInputLabel,
               id: this.id,
-              label: this.props.inputLabel,
+              label: inputLabel,
               required: this.props.required,
-              tooltipContent: this.props.tooltipContent
+              tooltipContent
             })}
 
             <textarea
