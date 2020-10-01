@@ -117,7 +117,7 @@
     "jest-emotion": "9.2.11",
     "jest-runner-prettier": "0.2.6",
     "node": "10.15.1",
-    "npm": "6.4.1",
+    "npm": "6.14.6",
     "prettier": "1.19.1",
     "prop-types": "15.6.2",
     "react": "16.8.6",
