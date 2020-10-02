@@ -1,13 +1,12 @@
 import React from "react";
 import { mount, shallow } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 
 import { Textarea } from "../";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("Textarea", () => {
   describe("should render", () => {

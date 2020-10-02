@@ -4,7 +4,7 @@ import { withKnobs, select } from "@storybook/addon-knobs";
 import { withReadme } from "storybook-readme";
 import Flex from "../components/Flex";
 import FlexItem from "../components/FlexItem";
-import styled from "react-emotion";
+import styled from "@emotion/styled";
 import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifierUtils";
 
 const readme = require("../README.md");

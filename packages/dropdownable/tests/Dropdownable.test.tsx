@@ -1,7 +1,6 @@
 import React from "react";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import { mount } from "enzyme";
-import * as emotion from "emotion";
 import toJson from "enzyme-to-json";
 
 const mockEventManager = {
@@ -16,7 +15,7 @@ jest.doMock("../../utilities/resizeEventManager", () => {
 import Dropdownable from "../components/Dropdownable";
 import { PrimaryButton } from "../../button";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("Dropdownable", () => {
   it("is visible after opening", () => {

@@ -1,37 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar SidebarItem renders 1`] = `
-.emotion-0 {
-  height: 100%;
-}
-
-.emotion-1 {
-  height: 100%;
-  overflow-x: hidden;
-  -webkit-transition: width 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
-  -webkit-transition: width 150ms ease-in-out,transform 150ms ease-in-out;
-  transition: width 150ms ease-in-out,transform 150ms ease-in-out;
-}
-
 <ThemeProvider
   theme={[Function]}
 >
-  <Styled(div)
-    className="emotion-1"
+  <StyledSidebar
+    isOpen={true}
   >
-    <Styled(nav)
-      className="emotion-0"
+    <SidebarItemComponent
+      icon="product-components-inverse"
+      onClick={[MockFunction]}
+      openInNewTab={true}
+      url="http://google.com"
     >
-      <WithTheme(SidebarItemComponent)
-        icon="product-components-inverse"
-        onClick={[MockFunction]}
-        openInNewTab={true}
-        url="http://google.com"
-      >
-        Item label
-      </WithTheme(SidebarItemComponent)>
-    </Styled(nav)>
-  </Styled(div)>
+      Item label
+    </SidebarItemComponent>
+  </StyledSidebar>
 </ThemeProvider>
 `;
 
@@ -109,6 +93,10 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
 exports[`Sidebar SidebarSection renders 1`] = `
 .emotion-0 {
   text-transform: capitalize;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  padding-top: 12px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -143,11 +131,11 @@ exports[`Sidebar SidebarSection renders 1`] = `
 <div
   data-cy="sidebarSection"
 >
-  <Styled(h3)
+  <h3
     className="emotion-0"
   >
     Label
-  </Styled(h3)>
+  </h3>
   <ul
     className="emotion-1"
   >
@@ -167,55 +155,57 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
   padding-left: 0;
 }
 
-<li
-  data-cy="sidebarSubMenu"
+<ThemeProvider
+  theme={[Function]}
 >
-  <Expandable
-    indicatorPosition="right"
-    label={
-      <div>
-        <SidebarItemLabel
-          icon="product-components-inverse"
-          iconWidth="24px"
-        >
-          Item label
-        </SidebarItemLabel>
-      </div>
-    }
-    labelClassName="css-1opfzkn"
+  <li
+    data-cy="sidebarSubMenu"
   >
-    <ul
-      className="emotion-0"
+    <Expandable
+      indicatorPosition="right"
+      label={
+        <div>
+          <SidebarItemLabel
+            icon="product-components-inverse"
+            iconWidth="24px"
+          >
+            Item label
+          </SidebarItemLabel>
+        </div>
+      }
+      labelClassName="css-1opfzkn"
     >
-      <li
-        className=""
-        key="0"
+      <ul
+        className="emotion-0"
       >
-        <WithTheme(SidebarSubMenuItem)
+        <li
           key="0"
-          onClick={[MockFunction]}
-          openInNewTab={true}
-          url="http://google.com"
         >
-          Item label
-        </WithTheme(SidebarSubMenuItem)>
-      </li>
-      <li
-        className=""
-        key="1"
-      >
-        <WithTheme(SidebarSubMenuItem)
+          <SidebarSubMenuItem
+            key=".$0"
+            onClick={[MockFunction]}
+            openInNewTab={true}
+            url="http://google.com"
+          >
+            Item label
+          </SidebarSubMenuItem>
+        </li>
+        <li
           key="1"
-          onClick={[MockFunction]}
-          openInNewTab={true}
-          url="http://google.com"
         >
-          Item label
-        </WithTheme(SidebarSubMenuItem)>
-      </li>
-    </ul>
-  </Expandable>
-</li>
+          <SidebarSubMenuItem
+            key=".$1"
+            onClick={[MockFunction]}
+            openInNewTab={true}
+            url="http://google.com"
+          >
+            Item label
+          </SidebarSubMenuItem>
+        </li>
+      </ul>
+    </Expandable>
+  </li>
+</ThemeProvider>
 `;
 
 exports[`Sidebar SidebarSubMenuItem renders 1`] = `
@@ -290,29 +280,13 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
 `;
 
 exports[`Sidebar renders 1`] = `
-.emotion-0 {
-  height: 100%;
-}
-
-.emotion-1 {
-  height: 100%;
-  overflow-x: hidden;
-  -webkit-transition: width 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
-  -webkit-transition: width 150ms ease-in-out,transform 150ms ease-in-out;
-  transition: width 150ms ease-in-out,transform 150ms ease-in-out;
-}
-
 <ThemeProvider
   theme={[Function]}
 >
-  <Styled(div)
-    className="emotion-1"
+  <StyledSidebar
+    isOpen={true}
   >
-    <Styled(nav)
-      className="emotion-0"
-    >
-      Sidebar content
-    </Styled(nav)>
-  </Styled(div)>
+    Sidebar content
+  </StyledSidebar>
 </ThemeProvider>
 `;

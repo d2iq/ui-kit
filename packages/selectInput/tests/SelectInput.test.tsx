@@ -1,12 +1,11 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { SelectInput } from "../";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 const defaultOptions = [
   { value: "exosphere", label: "Exosphere" },

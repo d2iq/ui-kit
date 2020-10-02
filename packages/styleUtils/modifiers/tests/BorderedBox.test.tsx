@@ -1,11 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { BorderedBox } from "../";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("BorderedBox", () => {
   it("renders default", () => {

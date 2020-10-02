@@ -1,6 +1,5 @@
 import * as React from "react";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import { shallow, mount, render } from "enzyme";
 import toJson from "enzyme-to-json";
 // tslint:disable:no-duplicate-imports
@@ -9,7 +8,7 @@ import { css, cx } from "emotion";
 import TextInput from "../components/TextInput";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("TextInput", () => {
   it("should render all appearances with props", () => {

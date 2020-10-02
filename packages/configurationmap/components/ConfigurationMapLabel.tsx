@@ -1,7 +1,7 @@
 import * as React from "react";
 import { breakWord, textWeight, padding } from "../../shared/styles/styleUtils";
 import { configurationMapLabel } from "../style";
-import styled from "react-emotion";
+import styled from "@emotion/styled";
 
 const ConfigurationMapLabel = styled("dt")`
   ${configurationMapLabel};

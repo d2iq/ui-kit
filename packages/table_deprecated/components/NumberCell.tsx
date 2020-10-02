@@ -1,10 +1,10 @@
 import * as React from "react";
 import { default as Cell, CellProps } from "./Cell";
-import styled from "react-emotion";
 import { textTruncate } from "../../shared/styles/styleUtils";
+import { cx } from "emotion";
 
-const NumberCell = (props: CellProps) => <Cell textAlign="right" {...props} />;
+const NumberCell = ({ className, ...other }: CellProps) => (
+  <Cell textAlign="right" className={cx(className, textTruncate)} {...other} />
+);
 
-export default styled(NumberCell)`
-  ${textTruncate};
-`;
+export default NumberCell;

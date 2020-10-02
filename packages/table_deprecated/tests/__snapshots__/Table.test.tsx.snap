@@ -2,11 +2,11 @@
 
 exports[`Table renders a table with resizable columns 1`] = `
 Array [
-  .emotion-40 {
+  .emotion-48 {
   font-weight: normal;
 }
 
-.emotion-40::after {
+.emotion-48::after {
   content: "";
   height: 100%;
   left: 0;
@@ -16,15 +16,15 @@ Array [
   width: 100%;
 }
 
-.emotion-39 .ReactVirtualized__Grid__innerScrollContainer {
+.emotion-47 .ReactVirtualized__Grid__innerScrollContainer {
   overflow: unset !important;
 }
 
-.emotion-32 {
+.emotion-34 {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.emotion-32::-webkit-scrollbar {
+.emotion-34::-webkit-scrollbar {
   display: none;
 }
 
@@ -186,7 +186,7 @@ Array [
 }
 
 <div
-    class="emotion-40"
+    class="emotion-48"
     style="overflow:visible;height:0;width:0"
   >
     <div
@@ -407,7 +407,7 @@ Array [
           <div
             aria-label="grid"
             aria-readonly="true"
-            class="ReactVirtualized__Grid emotion-32"
+            class="ReactVirtualized__Grid emotion-34"
             role="grid"
             style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:307.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
           >
@@ -417,7 +417,7 @@ Array [
               style="width:307.2px;height:70px;max-width:307.2px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
             >
               <div
-                class="emotion-30"
+                class="emotion-30 emotion-31"
                 data-cy="table-contentCell table-contentCell.col0 table-contentCell.row1"
                 data-rowindex="1"
                 style="height:35px;left:0;position:absolute;top:0;width:307.2px"
@@ -427,7 +427,7 @@ Array [
                 </strong>
               </div>
               <div
-                class="emotion-30"
+                class="emotion-30 emotion-31"
                 data-cy="table-contentCell table-contentCell.col0 table-contentCell.row2"
                 data-rowindex="2"
                 style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
@@ -442,7 +442,7 @@ Array [
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-39"
+          class="ReactVirtualized__Grid emotion-47"
           role="grid"
           style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:716.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:307.2px"
           tabindex="0"
@@ -453,7 +453,7 @@ Array [
             style="width:1021.5999999999999px;height:70px;max-width:1021.5999999999999px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-cy="table-contentCell table-contentCell.col1 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:307.2px"
@@ -463,7 +463,7 @@ Array [
               </em>
             </div>
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-cy="table-contentCell table-contentCell.col2 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:307.2px;position:absolute;top:0;width:307.2px"
@@ -473,7 +473,7 @@ Array [
               </span>
             </div>
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-cy="table-contentCell table-contentCell.col3 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:614.4px;position:absolute;top:0;width:307.2px"
@@ -483,7 +483,7 @@ Array [
               </span>
             </div>
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-cy="table-contentCell table-contentCell.col1 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
@@ -493,7 +493,7 @@ Array [
               </em>
             </div>
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-cy="table-contentCell table-contentCell.col2 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:307.2px;position:absolute;top:35px;width:307.2px"
@@ -503,7 +503,7 @@ Array [
               </span>
             </div>
             <div
-              class="emotion-30"
+              class="emotion-30 emotion-31"
               data-cy="table-contentCell table-contentCell.col3 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:614.4px;position:absolute;top:35px;width:307.2px"
@@ -730,11 +730,11 @@ exports[`Table renders again with new data 2`] = `
 
 exports[`Table renders default 1`] = `
 Array [
-  .emotion-28 {
+  .emotion-36 {
   font-weight: normal;
 }
 
-.emotion-28::after {
+.emotion-36::after {
   content: "";
   height: 100%;
   left: 0;
@@ -744,15 +744,15 @@ Array [
   width: 100%;
 }
 
-.emotion-27 .ReactVirtualized__Grid__innerScrollContainer {
+.emotion-35 .ReactVirtualized__Grid__innerScrollContainer {
   overflow: unset !important;
 }
 
-.emotion-20 {
+.emotion-22 {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.emotion-20::-webkit-scrollbar {
+.emotion-22::-webkit-scrollbar {
   display: none;
 }
 
@@ -875,7 +875,7 @@ Array [
 }
 
 <div
-    class="emotion-28"
+    class="emotion-36"
     style="overflow:visible;height:0;width:0"
   >
     <div
@@ -1000,7 +1000,7 @@ Array [
           <div
             aria-label="grid"
             aria-readonly="true"
-            class="ReactVirtualized__Grid emotion-20"
+            class="ReactVirtualized__Grid emotion-22"
             role="grid"
             style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:307.2px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
           >
@@ -1010,7 +1010,7 @@ Array [
               style="width:307.2px;height:70px;max-width:307.2px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
             >
               <div
-                class="emotion-18"
+                class="emotion-18 emotion-19"
                 data-cy="table-contentCell table-contentCell.col0 table-contentCell.row1"
                 data-rowindex="1"
                 style="height:35px;left:0;position:absolute;top:0;width:307.2px"
@@ -1020,7 +1020,7 @@ Array [
                 </strong>
               </div>
               <div
-                class="emotion-18"
+                class="emotion-18 emotion-19"
                 data-cy="table-contentCell table-contentCell.col0 table-contentCell.row2"
                 data-rowindex="2"
                 style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
@@ -1035,7 +1035,7 @@ Array [
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-27"
+          class="ReactVirtualized__Grid emotion-35"
           role="grid"
           style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:716.8px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:307.2px"
           tabindex="0"
@@ -1046,7 +1046,7 @@ Array [
             style="width:1021.5999999999999px;height:70px;max-width:1021.5999999999999px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-cy="table-contentCell table-contentCell.col1 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:307.2px"
@@ -1056,7 +1056,7 @@ Array [
               </em>
             </div>
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-cy="table-contentCell table-contentCell.col2 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:307.2px;position:absolute;top:0;width:307.2px"
@@ -1066,7 +1066,7 @@ Array [
               </span>
             </div>
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-cy="table-contentCell table-contentCell.col3 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:614.4px;position:absolute;top:0;width:307.2px"
@@ -1076,7 +1076,7 @@ Array [
               </span>
             </div>
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-cy="table-contentCell table-contentCell.col1 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:307.2px"
@@ -1086,7 +1086,7 @@ Array [
               </em>
             </div>
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-cy="table-contentCell table-contentCell.col2 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:307.2px;position:absolute;top:35px;width:307.2px"
@@ -1096,7 +1096,7 @@ Array [
               </span>
             </div>
             <div
-              class="emotion-18"
+              class="emotion-18 emotion-19"
               data-cy="table-contentCell table-contentCell.col3 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:614.4px;position:absolute;top:35px;width:307.2px"
@@ -1129,11 +1129,11 @@ Array [
 
 exports[`Table renders with growToFill cols 1`] = `
 Array [
-  .emotion-34 {
+  .emotion-44 {
   font-weight: normal;
 }
 
-.emotion-34::after {
+.emotion-44::after {
   content: "";
   height: 100%;
   left: 0;
@@ -1143,15 +1143,15 @@ Array [
   width: 100%;
 }
 
-.emotion-33 .ReactVirtualized__Grid__innerScrollContainer {
+.emotion-43 .ReactVirtualized__Grid__innerScrollContainer {
   overflow: unset !important;
 }
 
-.emotion-24 {
+.emotion-26 {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.emotion-24::-webkit-scrollbar {
+.emotion-26::-webkit-scrollbar {
   display: none;
 }
 
@@ -1274,7 +1274,7 @@ Array [
 }
 
 <div
-    class="emotion-34"
+    class="emotion-44"
     style="overflow:visible;height:0;width:0"
   >
     <div
@@ -1417,7 +1417,7 @@ Array [
           <div
             aria-label="grid"
             aria-readonly="true"
-            class="ReactVirtualized__Grid emotion-24"
+            class="ReactVirtualized__Grid emotion-26"
             role="grid"
             style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:204px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:hidden;overflow-y:auto;left:0"
           >
@@ -1427,7 +1427,7 @@ Array [
               style="width:204px;height:70px;max-width:204px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
             >
               <div
-                class="emotion-22"
+                class="emotion-22 emotion-23"
                 data-cy="table-contentCell table-contentCell.col0 table-contentCell.row1"
                 data-rowindex="1"
                 style="height:35px;left:0;position:absolute;top:0;width:204px"
@@ -1437,7 +1437,7 @@ Array [
                 </strong>
               </div>
               <div
-                class="emotion-22"
+                class="emotion-22 emotion-23"
                 data-cy="table-contentCell table-contentCell.col0 table-contentCell.row2"
                 data-rowindex="2"
                 style="height:35px;left:0;position:absolute;top:35px;width:204px"
@@ -1452,7 +1452,7 @@ Array [
         <div
           aria-label="grid"
           aria-readonly="true"
-          class="ReactVirtualized__Grid emotion-33"
+          class="ReactVirtualized__Grid emotion-43"
           role="grid"
           style="box-sizing:border-box;direction:ltr;height:733px;position:absolute;width:820px;-webkit-overflow-scrolling:touch;will-change:transform;overflow-x:auto;overflow-y:hidden;left:204px"
           tabindex="0"
@@ -1463,7 +1463,7 @@ Array [
             style="width:1022.4000000000001px;height:70px;max-width:1022.4000000000001px;max-height:70px;overflow:hidden;pointer-events:;position:relative"
           >
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-cy="table-contentCell table-contentCell.col1 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:0;position:absolute;top:0;width:204px"
@@ -1473,7 +1473,7 @@ Array [
               </em>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-cy="table-contentCell table-contentCell.col2 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:204px;position:absolute;top:0;width:204px"
@@ -1483,7 +1483,7 @@ Array [
               </span>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-cy="table-contentCell table-contentCell.col3 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:408px;position:absolute;top:0;width:307.2px"
@@ -1493,7 +1493,7 @@ Array [
               </span>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-cy="table-contentCell table-contentCell.col4 table-contentCell.row1"
               data-rowindex="1"
               style="height:35px;left:715.2px;position:absolute;top:0;width:307.2px"
@@ -1503,7 +1503,7 @@ Array [
               </strong>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-cy="table-contentCell table-contentCell.col1 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:0;position:absolute;top:35px;width:204px"
@@ -1513,7 +1513,7 @@ Array [
               </em>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-cy="table-contentCell table-contentCell.col2 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:204px;position:absolute;top:35px;width:204px"
@@ -1523,7 +1523,7 @@ Array [
               </span>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-cy="table-contentCell table-contentCell.col3 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:408px;position:absolute;top:35px;width:307.2px"
@@ -1533,7 +1533,7 @@ Array [
               </span>
             </div>
             <div
-              class="emotion-22"
+              class="emotion-22 emotion-23"
               data-cy="table-contentCell table-contentCell.col4 table-contentCell.row2"
               data-rowindex="2"
               style="height:35px;left:715.2px;position:absolute;top:35px;width:307.2px"

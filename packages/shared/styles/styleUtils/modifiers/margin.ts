@@ -1,4 +1,4 @@
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { boxSpacing, BoxSides, SpaceSizes } from "./modifierUtils";
 import { atMediaUp, breakpoints } from "../../breakpoints";
 
@@ -8,7 +8,7 @@ export const margin = (side: BoxSides, spaceSize?: SpaceSizes) => {
   `;
 };
 
-// TODO: write better types
+// TODO: you still need to write better types
 export const marginAt = Object.keys(breakpoints).reduce(
   (acc: any, curr: string) => {
     acc[curr] = (side: BoxSides, spaceSize: SpaceSizes) => css`

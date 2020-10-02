@@ -1,5 +1,5 @@
 import * as React from "react";
-import { withTheme } from "emotion-theming";
+import { useTheme } from "emotion-theming";
 import { sidebarNavItem } from "../style";
 import Clickable from "../../clickable/components/clickable";
 import ResetLink from "../../link/components/ResetLink";
@@ -14,65 +14,62 @@ export interface SidebarItemProps extends SidebarNavItemProps {
 export const defaultSidebarItemHorizPaddingSize = "l";
 export const defaultSidebarItemVertPaddingSize = "none";
 
-class SidebarItemComponent extends React.PureComponent<SidebarItemProps, {}> {
-  public render() {
-    const {
-      children,
-      disabled,
-      isActive,
-      onClick,
-      openInNewTab,
-      theme,
-      url
-    } = this.props;
-    const dataCy = [
-      "sidebarItem",
-      ...(isActive ? ["sidebarItem.active"] : [])
-    ].join(" ");
+const SidebarItemComponent: React.FC<SidebarItemProps> = ({
+  children,
+  disabled,
+  isActive,
+  onClick,
+  openInNewTab,
+  url
+}) => {
+  const theme: AppChromeTheme = useTheme();
+  const dataCy = [
+    "sidebarItem",
+    ...(isActive ? ["sidebarItem.active"] : [])
+  ].join(" ");
 
-    return (
-      <>
-        {url ? (
+  return (
+    <>
+      {url ? (
+        <li
+          data-cy={dataCy}
+          className={sidebarNavItem(
+            Boolean(isActive),
+            Boolean(disabled),
+            theme
+          )}
+        >
+          <ResetLink
+            url={!disabled ? url : undefined}
+            openInNewTab={openInNewTab}
+            onClick={onClick}
+            className={display("block")}
+            aria-disabled={disabled}
+            tabIndex={disabled ? -1 : undefined}
+          >
+            {children}
+          </ResetLink>
+        </li>
+      ) : (
+        <Clickable
+          action={onClick}
+          tabIndex={0}
+          disableFocusOutline={true}
+          dataCy={dataCy}
+        >
           <li
-            data-cy={dataCy}
             className={sidebarNavItem(
               Boolean(isActive),
               Boolean(disabled),
               theme
             )}
           >
-            <ResetLink
-              url={!disabled ? url : undefined}
-              openInNewTab={openInNewTab}
-              onClick={onClick}
-              className={display("block")}
-              aria-disabled={disabled}
-              tabIndex={disabled ? -1 : undefined}
-            >
-              {children}
-            </ResetLink>
+            {children}
           </li>
-        ) : (
-          <Clickable
-            action={onClick}
-            tabIndex={0}
-            disableFocusOutline={true}
-            dataCy={dataCy}
-          >
-            <li
-              className={sidebarNavItem(
-                Boolean(isActive),
-                Boolean(disabled),
-                theme
-              )}
-            >
-              {children}
-            </li>
-          </Clickable>
-        )}
-      </>
-    );
-  }
-}
+        </Clickable>
+      )}
+    </>
+  );
+};
 
-export default withTheme(SidebarItemComponent);
+export default SidebarItemComponent;

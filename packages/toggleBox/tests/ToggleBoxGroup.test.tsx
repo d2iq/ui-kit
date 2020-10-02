@@ -1,12 +1,11 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 
 import { ToggleBox, ToggleBoxGroup } from "..";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("ToggleBoxGroup", () => {
   it("renders default", () => {

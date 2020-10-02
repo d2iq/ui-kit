@@ -13,35 +13,29 @@ export interface SidebarItemLabelProps {
   iconWidth?: string;
 }
 
-class SidebarItemLabel extends React.PureComponent<SidebarItemLabelProps, {}> {
-  public static defaultProps: Partial<SidebarItemLabelProps> = {
-    iconWidth: iconSizeS
-  };
-
-  public render() {
-    const { children, icon } = this.props;
-
-    return (
-      <div className={cx(flex({ align: "center" }), sidebarItemHeight)}>
-        {icon && (
-          <div
-            className={cx(
-              flexItem("shrink"),
-              padding("right", "m"),
-              sidebarNavItemIconWrap
-            )}
-          >
-            <IconPropAdapter
-              icon={icon}
-              size={this.props.iconWidth}
-              color="inherit"
-            />
-          </div>
+const SidebarItemLabel: React.FC<SidebarItemLabelProps> = ({
+  children,
+  icon,
+  iconWidth
+}) => (
+  <div className={cx(flex({ align: "center" }), sidebarItemHeight)}>
+    {icon && (
+      <div
+        className={cx(
+          flexItem("shrink"),
+          padding("right", "m"),
+          sidebarNavItemIconWrap
         )}
-        <div className={flexItem("grow")}>{children}</div>
+      >
+        <IconPropAdapter icon={icon} size={iconWidth} color="inherit" />
       </div>
-    );
-  }
-}
+    )}
+    <div className={flexItem("grow")}>{children}</div>
+  </div>
+);
+
+SidebarItemLabel.defaultProps = {
+  iconWidth: iconSizeS
+};
 
 export default SidebarItemLabel;

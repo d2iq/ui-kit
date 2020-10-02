@@ -391,7 +391,376 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
           <Overlay
             innerRef={null}
             overlayRoot={
-              <body>
+              .emotion-3 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-0 {
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  opacity: 0;
+  opacity: 1;
+}
+
+.emotion-2 {
+  border-radius: 6px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  outline: none;
+  overflow: auto;
+  z-index: 1;
+  width: 350px;
+  -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  opacity: 0;
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+@media (min-width:600px) {
+  .emotion-2 {
+    width: 450px;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-2 {
+    width: 500px;
+  }
+}
+
+@media (min-width:1200px) {
+  .emotion-2 {
+    width: 550px;
+  }
+}
+
+.emotion-1 {
+  height: 100%;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: 100%;
+}
+
+.emotion-26 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-26 > div {
+  width: auto;
+}
+
+.emotion-22 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-17 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding: 24px;
+}
+
+.emotion-17 > div {
+  width: auto;
+}
+
+.emotion-13 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  font-size: 18px;
+}
+
+.emotion-16 {
+  cursor: pointer;
+  display: inherit;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 24px;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding: 24px;
+}
+
+.emotion-15 {
+  display: inherit;
+  cursor: pointer;
+}
+
+.emotion-14 {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-14 use {
+  pointer-events: none;
+}
+
+.emotion-21 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-21::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-21:hover {
+  color: #704fe5;
+  fill: #704fe5;
+}
+
+.emotion-21:active {
+  color: #6446cc;
+  fill: #6446cc;
+}
+
+.emotion-21[href],
+.emotion-21[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
+.emotion-20 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-20:focus {
+  background-color: transparent;
+}
+
+.emotion-20:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-20:focus:after {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+}
+
+.emotion-24 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  background-color: #7D58FF;
+  border-radius: 4px;
+  padding: 10px 18px;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-24::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-24[href],
+.emotion-24[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+.emotion-24:hover {
+  background-color: #704fe5;
+}
+
+.emotion-24:active {
+  background-color: #6446cc;
+}
+
+.emotion-23 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-23:focus {
+  background-color: #704fe5;
+}
+
+.emotion-23:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+<body>
                 <div>
                   <div>
                     <div
@@ -413,15 +782,15 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                         tabindex="-1"
                       />
                       <div
-                        class="emotion-16"
+                        class="emotion-3"
                       >
                         <div
-                          class="emotion-15"
+                          class="emotion-2"
                           role="dialog"
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-14"
+                            class="emotion-1"
                           >
                             <div
                               tabindex="0"
@@ -439,108 +808,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                     />
                   </div>
                 </div>
-                .emotion-3 {
-  position: fixed;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.emotion-0 {
-  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
-  opacity: 0;
-  opacity: 1;
-}
-
-.emotion-2 {
-  border-radius: 6px;
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: calc(100vh - 48px);
-  outline: none;
-  overflow: auto;
-  z-index: 1;
-  width: 350px;
-  -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-  opacity: 0;
-  -webkit-transform: translate(0,calc(-50px));
-  -ms-transform: translate(0,calc(-50px));
-  transform: translate(0,calc(-50px));
-  opacity: 1;
-  -webkit-transform: translate(0,0);
-  -ms-transform: translate(0,0);
-  transform: translate(0,0);
-}
-
-@media (min-width:600px) {
-  .emotion-2 {
-    width: 450px;
-  }
-}
-
-@media (min-width:900px) {
-  .emotion-2 {
-    width: 500px;
-  }
-}
-
-@media (min-width:1200px) {
-  .emotion-2 {
-    width: 550px;
-  }
-}
-
-.emotion-1 {
-  height: 100%;
-  height: 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: 100%;
-}
-
-<div>
+                <div>
                   <div>
                     <div
                       data-focus-guard="true"
@@ -587,108 +855,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                     />
                   </div>
                 </div>
-                .emotion-3 {
-  position: fixed;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.emotion-0 {
-  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
-  opacity: 0;
-  opacity: 1;
-}
-
-.emotion-2 {
-  border-radius: 6px;
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: calc(100vh - 48px);
-  outline: none;
-  overflow: auto;
-  z-index: 1;
-  width: 350px;
-  -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-  opacity: 0;
-  -webkit-transform: translate(0,calc(-50px));
-  -ms-transform: translate(0,calc(-50px));
-  transform: translate(0,calc(-50px));
-  opacity: 1;
-  -webkit-transform: translate(0,0);
-  -ms-transform: translate(0,0);
-  transform: translate(0,0);
-}
-
-@media (min-width:600px) {
-  .emotion-2 {
-    width: 450px;
-  }
-}
-
-@media (min-width:900px) {
-  .emotion-2 {
-    width: 500px;
-  }
-}
-
-@media (min-width:1200px) {
-  .emotion-2 {
-    width: 550px;
-  }
-}
-
-.emotion-1 {
-  height: 100%;
-  height: 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-}
-
-.emotion-1 > div {
-  width: 100%;
-}
-
-<div>
+                <div>
                   <div>
                     <div
                       data-focus-guard="true"
@@ -735,6 +902,143 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                     />
                   </div>
                 </div>
+                <div>
+                  <div>
+                    <div
+                      data-focus-guard="true"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                      tabindex="0"
+                    />
+                    <div
+                      data-focus-guard="true"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                      tabindex="1"
+                    />
+                    <div
+                      data-focus-lock-disabled="false"
+                    >
+                      <div
+                        class="emotion-0"
+                        role="button"
+                        tabindex="-1"
+                      />
+                      <div
+                        class="emotion-3"
+                      >
+                        <div
+                          class="emotion-2"
+                          role="dialog"
+                          tabindex="-1"
+                        >
+                          <div
+                            class="emotion-1"
+                            data-cy="dialogModal"
+                          >
+                            <div
+                              class="emotion-18"
+                              data-cy="dialogModal-header"
+                            >
+                              <div
+                                class="emotion-17"
+                              >
+                                <div
+                                  class="emotion-13"
+                                >
+                                  Title
+                                </div>
+                                <div
+                                  class="emotion-16"
+                                >
+                                  <span
+                                    class="emotion-15"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-label="system-close icon"
+                                      class="emotion-14"
+                                      data-cy="icon"
+                                      height="16"
+                                      preserveAspectRatio="xMinYMin meet"
+                                      role="img"
+                                      viewBox="0 0 16 16"
+                                      width="16"
+                                    >
+                                      <use
+                                        xlink:href="#system-close"
+                                      />
+                                    </svg>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="emotion-19"
+                              data-cy="dialogModal-content"
+                            >
+                              <div
+                                tabindex="0"
+                              >
+                                I am modal content
+                              </div>
+                            </div>
+                            <div
+                              class="emotion-27"
+                              data-cy="dialogModal-footer"
+                            >
+                              <div
+                                class="emotion-26"
+                              >
+                                <div
+                                  class="emotion-22"
+                                >
+                                  <button
+                                    class="emotion-20 emotion-21"
+                                    data-cy="secondaryButton"
+                                    tabindex="0"
+                                    type="button"
+                                  >
+                                    <span
+                                      class=""
+                                    >
+                                      Close
+                                    </span>
+                                  </button>
+                                </div>
+                                <div
+                                  class="emotion-22"
+                                >
+                                  <button
+                                    class="emotion-23 emotion-24"
+                                    data-cy="primaryButton"
+                                    tabindex="0"
+                                    type="button"
+                                  >
+                                    <span
+                                      class=""
+                                    >
+                                      CTA
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-focus-guard="true"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                      tabindex="0"
+                    />
+                  </div>
+                </div>
+              </body>
+            }
+          >
+            <Portal
+              containerInfo={
                 .emotion-18 {
   position: fixed;
   display: -webkit-box;
@@ -1236,143 +1540,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                     />
                   </div>
                 </div>
-              </body>
-            }
-          >
-            <Portal
-              containerInfo={
-                <div>
-                  <div>
-                    <div
-                      data-focus-guard="true"
-                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                      tabindex="0"
-                    />
-                    <div
-                      data-focus-guard="true"
-                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                      tabindex="1"
-                    />
-                    <div
-                      data-focus-lock-disabled="false"
-                    >
-                      <div
-                        class="emotion-0"
-                        role="button"
-                        tabindex="-1"
-                      />
-                      <div
-                        class="emotion-16"
-                      >
-                        <div
-                          class="emotion-15"
-                          role="dialog"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="emotion-14"
-                            data-cy="dialogModal"
-                          >
-                            <div
-                              class="emotion-6"
-                              data-cy="dialogModal-header"
-                            >
-                              <div
-                                class="emotion-5"
-                              >
-                                <div
-                                  class="emotion-1"
-                                >
-                                  Title
-                                </div>
-                                <div
-                                  class="emotion-4"
-                                >
-                                  <span
-                                    class="emotion-3"
-                                    role="button"
-                                    tabindex="0"
-                                  >
-                                    <svg
-                                      aria-label="system-close icon"
-                                      class="emotion-2"
-                                      data-cy="icon"
-                                      height="16"
-                                      preserveAspectRatio="xMinYMin meet"
-                                      role="img"
-                                      viewBox="0 0 16 16"
-                                      width="16"
-                                    >
-                                      <use
-                                        xlink:href="#system-close"
-                                      />
-                                    </svg>
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              class="emotion-7"
-                              data-cy="dialogModal-content"
-                            >
-                              <div
-                                tabindex="0"
-                              >
-                                I am modal content
-                              </div>
-                            </div>
-                            <div
-                              class="emotion-13"
-                              data-cy="dialogModal-footer"
-                            >
-                              <div
-                                class="emotion-12"
-                              >
-                                <div
-                                  class="emotion-9"
-                                >
-                                  <button
-                                    class="css-1h85cd2 emotion-8"
-                                    data-cy="secondaryButton"
-                                    tabindex="0"
-                                    type="button"
-                                  >
-                                    <span
-                                      class=""
-                                    >
-                                      Close
-                                    </span>
-                                  </button>
-                                </div>
-                                <div
-                                  class="emotion-9"
-                                >
-                                  <button
-                                    class="css-xcotv6 emotion-10"
-                                    data-cy="primaryButton"
-                                    tabindex="0"
-                                    type="button"
-                                  >
-                                    <span
-                                      class=""
-                                    >
-                                      CTA
-                                    </span>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      data-focus-guard="true"
-                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                      tabindex="0"
-                    />
-                  </div>
-                </div>
               }
             >
               <div>
@@ -1428,7 +1595,376 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                         autoFocus={true}
                         disabled={false}
                         observed={
-                          <div
+                          .emotion-18 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-0 {
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  opacity: 0;
+  opacity: 1;
+}
+
+.emotion-17 {
+  border-radius: 6px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  outline: none;
+  overflow: auto;
+  z-index: 1;
+  width: 350px;
+  -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  opacity: 0;
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+@media (min-width:600px) {
+  .emotion-17 {
+    width: 450px;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-17 {
+    width: 500px;
+  }
+}
+
+@media (min-width:1200px) {
+  .emotion-17 {
+    width: 550px;
+  }
+}
+
+.emotion-16 {
+  height: 100%;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-16 > div {
+  width: 100%;
+}
+
+.emotion-14 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-14 > div {
+  width: auto;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding: 24px;
+}
+
+.emotion-5 > div {
+  width: auto;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  font-size: 18px;
+}
+
+.emotion-4 {
+  cursor: pointer;
+  display: inherit;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 24px;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding: 24px;
+}
+
+.emotion-3 {
+  display: inherit;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-9 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-9::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-9:hover {
+  color: #704fe5;
+  fill: #704fe5;
+}
+
+.emotion-9:active {
+  color: #6446cc;
+  fill: #6446cc;
+}
+
+.emotion-9[href],
+.emotion-9[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
+.emotion-8 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-8:focus {
+  background-color: transparent;
+}
+
+.emotion-8:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-8:focus:after {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+}
+
+.emotion-12 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  background-color: #7D58FF;
+  border-radius: 4px;
+  padding: 10px 18px;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-12::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-12[href],
+.emotion-12[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+.emotion-12:hover {
+  background-color: #704fe5;
+}
+
+.emotion-12:active {
+  background-color: #6446cc;
+}
+
+.emotion-11 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-11:focus {
+  background-color: #704fe5;
+}
+
+.emotion-11:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+<div
                             data-focus-lock-disabled="false"
                           >
                             <div
@@ -1437,15 +1973,15 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                               tabindex="-1"
                             />
                             <div
-                              class="emotion-16"
+                              class="emotion-18"
                             >
                               <div
-                                class="emotion-15"
+                                class="emotion-17"
                                 role="dialog"
                                 tabindex="-1"
                               >
                                 <div
-                                  class="emotion-14"
+                                  class="emotion-16"
                                   data-cy="dialogModal"
                                 >
                                   <div
@@ -1497,17 +2033,17 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                     </div>
                                   </div>
                                   <div
-                                    class="emotion-13"
+                                    class="emotion-15"
                                     data-cy="dialogModal-footer"
                                   >
                                     <div
-                                      class="emotion-12"
+                                      class="emotion-14"
                                     >
                                       <div
-                                        class="emotion-9"
+                                        class="emotion-10"
                                       >
                                         <button
-                                          class="css-1h85cd2 emotion-8"
+                                          class="emotion-8 emotion-9"
                                           data-cy="secondaryButton"
                                           tabindex="0"
                                           type="button"
@@ -1520,10 +2056,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                         </button>
                                       </div>
                                       <div
-                                        class="emotion-9"
+                                        class="emotion-10"
                                       >
                                         <button
-                                          class="css-xcotv6 emotion-10"
+                                          class="emotion-11 emotion-12"
                                           data-cy="primaryButton"
                                           tabindex="0"
                                           type="button"
@@ -1564,7 +2100,376 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                           autoFocus={true}
                           disabled={false}
                           observed={
-                            <div
+                            .emotion-18 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-0 {
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  opacity: 0;
+  opacity: 1;
+}
+
+.emotion-17 {
+  border-radius: 6px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  outline: none;
+  overflow: auto;
+  z-index: 1;
+  width: 350px;
+  -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  opacity: 0;
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+@media (min-width:600px) {
+  .emotion-17 {
+    width: 450px;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-17 {
+    width: 500px;
+  }
+}
+
+@media (min-width:1200px) {
+  .emotion-17 {
+    width: 550px;
+  }
+}
+
+.emotion-16 {
+  height: 100%;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-16 > div {
+  width: 100%;
+}
+
+.emotion-14 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-14 > div {
+  width: auto;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding: 24px;
+}
+
+.emotion-5 > div {
+  width: auto;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  font-size: 18px;
+}
+
+.emotion-4 {
+  cursor: pointer;
+  display: inherit;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 24px;
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding: 24px;
+}
+
+.emotion-3 {
+  display: inherit;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-9 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-9::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-9:hover {
+  color: #704fe5;
+  fill: #704fe5;
+}
+
+.emotion-9:active {
+  color: #6446cc;
+  fill: #6446cc;
+}
+
+.emotion-9[href],
+.emotion-9[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
+.emotion-8 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-8:focus {
+  background-color: transparent;
+}
+
+.emotion-8:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-8:focus:after {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+}
+
+.emotion-12 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  background-color: #7D58FF;
+  border-radius: 4px;
+  padding: 10px 18px;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-12::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-12[href],
+.emotion-12[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+.emotion-12:hover {
+  background-color: #704fe5;
+}
+
+.emotion-12:active {
+  background-color: #6446cc;
+}
+
+.emotion-11 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-11:focus {
+  background-color: #704fe5;
+}
+
+.emotion-11:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+<div
                               data-focus-lock-disabled="false"
                             >
                               <div
@@ -1573,15 +2478,15 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                 tabindex="-1"
                               />
                               <div
-                                class="emotion-16"
+                                class="emotion-18"
                               >
                                 <div
-                                  class="emotion-15"
+                                  class="emotion-17"
                                   role="dialog"
                                   tabindex="-1"
                                 >
                                   <div
-                                    class="emotion-14"
+                                    class="emotion-16"
                                     data-cy="dialogModal"
                                   >
                                     <div
@@ -1633,17 +2538,17 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                       </div>
                                     </div>
                                     <div
-                                      class="emotion-13"
+                                      class="emotion-15"
                                       data-cy="dialogModal-footer"
                                     >
                                       <div
-                                        class="emotion-12"
+                                        class="emotion-14"
                                       >
                                         <div
-                                          class="emotion-9"
+                                          class="emotion-10"
                                         >
                                           <button
-                                            class="css-1h85cd2 emotion-8"
+                                            class="emotion-8 emotion-9"
                                             data-cy="secondaryButton"
                                             tabindex="0"
                                             type="button"
@@ -1656,10 +2561,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                           </button>
                                         </div>
                                         <div
-                                          class="emotion-9"
+                                          class="emotion-10"
                                         >
                                           <button
-                                            class="css-xcotv6 emotion-10"
+                                            class="emotion-11 emotion-12"
                                             data-cy="primaryButton"
                                             tabindex="0"
                                             type="button"
@@ -2208,281 +3113,17 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
         <Overlay
           innerRef={null}
           overlayRoot={
-            <body>
-              <div>
-                <div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
-                  />
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      class="css-9hdker"
-                      role="button"
-                      tabindex="-1"
-                    />
-                    <div
-                      class="emotion-14"
-                    >
-                      <div
-                        class="css-ozp89p"
-                        role="dialog"
-                        tabindex="-1"
-                      >
-                        <div
-                          class="emotion-12"
-                        >
-                          <div
-                            tabindex="0"
-                          >
-                            I am modal content
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
-                  />
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      class="css-9hdker"
-                      role="button"
-                      tabindex="-1"
-                    />
-                    <div
-                      class="emotion-14"
-                    >
-                      <div
-                        class="css-ozp89p"
-                        role="dialog"
-                        tabindex="-1"
-                      >
-                        <div
-                          class="emotion-12"
-                        >
-                          <div
-                            tabindex="0"
-                          >
-                            I am modal content
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
-                  />
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      class="css-9hdker"
-                      role="button"
-                      tabindex="-1"
-                    />
-                    <div
-                      class="emotion-14"
-                    >
-                      <div
-                        class="css-ozp89p"
-                        role="dialog"
-                        tabindex="-1"
-                      >
-                        <div
-                          class="emotion-12"
-                        >
-                          <div
-                            tabindex="0"
-                          >
-                            I am modal content
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
-                  />
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      class="css-9hdker"
-                      role="button"
-                      tabindex="-1"
-                    />
-                    <div
-                      class="emotion-14"
-                    >
-                      <div
-                        class="css-ozp89p"
-                        role="dialog"
-                        tabindex="-1"
-                      >
-                        <div
-                          class="emotion-12"
-                          data-cy="dialogModal"
-                        >
-                          <div
-                            class="css-ard01v"
-                            data-cy="dialogModal-header"
-                          >
-                            <div
-                              class="css-1a5xokz"
-                            >
-                              <div
-                                class="css-9yi0we"
-                              >
-                                Title
-                              </div>
-                              <div
-                                class="css-tqlthn"
-                              >
-                                <span
-                                  class="css-6wyq6k"
-                                  role="button"
-                                  tabindex="0"
-                                >
-                                  <svg
-                                    aria-label="system-close icon"
-                                    class="css-zgvqkl"
-                                    data-cy="icon"
-                                    height="16"
-                                    preserveAspectRatio="xMinYMin meet"
-                                    role="img"
-                                    viewBox="0 0 16 16"
-                                    width="16"
-                                  >
-                                    <use
-                                      xlink:href="#system-close"
-                                    />
-                                  </svg>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="css-1600ex7"
-                            data-cy="dialogModal-content"
-                          >
-                            <div
-                              tabindex="0"
-                            >
-                              I am modal content
-                            </div>
-                          </div>
-                          <div
-                            class="css-qhrtbg"
-                            data-cy="dialogModal-footer"
-                          >
-                            <div
-                              class="css-1ej6tgc"
-                            >
-                              <div
-                                class="css-48ylac"
-                              >
-                                <button
-                                  class="css-1h85cd2 emotion-1"
-                                  data-cy="secondaryButton"
-                                  tabindex="0"
-                                  type="button"
-                                >
-                                  <span
-                                    class=""
-                                  >
-                                    Close
-                                  </span>
-                                </button>
-                              </div>
-                              <div
-                                class="css-48ylac"
-                              >
-                                <button
-                                  class="css-xcotv6 emotion-6"
-                                  data-cy="primaryButton"
-                                  tabindex="0"
-                                  type="button"
-                                >
-                                  <span
-                                    class=""
-                                  >
-                                    CTA
-                                  </span>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                </div>
-              </div>
-              .emotion-18 {
+            .emotion-50 {
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.emotion-3 {
   position: fixed;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2519,7 +3160,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   opacity: 1;
 }
 
-.emotion-17 {
+.emotion-2 {
   border-radius: 6px;
   background-color: var(--themeBgPrimary,#FFFFFF);
   display: -webkit-box;
@@ -2548,24 +3189,41 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
 }
 
 @media (min-width:600px) {
-  .emotion-17 {
+  .emotion-2 {
     width: 450px;
   }
 }
 
 @media (min-width:900px) {
-  .emotion-17 {
+  .emotion-2 {
     width: 500px;
   }
 }
 
 @media (min-width:1200px) {
-  .emotion-17 {
+  .emotion-2 {
     width: 550px;
   }
 }
 
-.emotion-16 {
+.emotion-63 {
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-63 > div {
+  width: 100%;
+}
+
+.emotion-1 {
   height: 100%;
   height: 100%;
   -webkit-flex-direction: column;
@@ -2579,11 +3237,11 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   min-height: 0;
 }
 
-.emotion-16 > div {
+.emotion-1 > div {
   width: 100%;
 }
 
-.emotion-14 {
+.emotion-26 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2601,11 +3259,11 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   min-height: 0;
 }
 
-.emotion-14 > div {
+.emotion-26 > div {
   width: auto;
 }
 
-.emotion-10 {
+.emotion-22 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -2620,7 +3278,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   width: initial;
 }
 
-.emotion-6 {
+.emotion-18 {
   box-sizing: border-box;
   border-bottom: 1px solid #DADDE2;
   box-sizing: border-box;
@@ -2637,7 +3295,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   width: initial;
 }
 
-.emotion-5 {
+.emotion-17 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2652,11 +3310,24 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 24px;
 }
 
-.emotion-5 > div {
+.emotion-17 > div {
   width: auto;
 }
 
-.emotion-1 {
+.emotion-56 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-13 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -2670,7 +3341,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-size: 18px;
 }
 
-.emotion-4 {
+.emotion-16 {
   cursor: pointer;
   display: inherit;
   box-sizing: border-box;
@@ -2687,13 +3358,13 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   width: initial;
 }
 
-.emotion-7 {
+.emotion-19 {
   box-sizing: border-box;
   overflow: auto;
   padding: 24px;
 }
 
-.emotion-15 {
+.emotion-27 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -2709,21 +3380,21 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 24px;
 }
 
-.emotion-3 {
+.emotion-15 {
   display: inherit;
   cursor: pointer;
 }
 
-.emotion-2 {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
 }
 
-.emotion-2 use {
+.emotion-14 use {
   pointer-events: none;
 }
 
-.emotion-9 {
+.emotion-21 {
   background: none;
   border: 0;
   color: inherit;
@@ -2742,37 +3413,37 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-weight: 500;
 }
 
-.emotion-9::-moz-focus-inner {
+.emotion-21::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-9:hover {
+.emotion-21:hover {
   color: #704fe5;
   fill: #704fe5;
 }
 
-.emotion-9:active {
+.emotion-21:active {
   color: #6446cc;
   fill: #6446cc;
 }
 
-.emotion-9[href],
-.emotion-9[href]:visited {
+.emotion-21[href],
+.emotion-21[href]:visited {
   color: var(--themeTextColorInteractive,#7D58FF);
   fill: var(--themeTextColorInteractive,#7D58FF);
 }
 
-.emotion-8 {
+.emotion-20 {
   outline: none;
   position: relative;
 }
 
-.emotion-8:focus {
+.emotion-20:focus {
   background-color: transparent;
 }
 
-.emotion-8:focus:after {
+.emotion-20:focus:after {
   border: 2px solid #704fe5;
   border-radius: 6px;
   bottom: -3px;
@@ -2783,14 +3454,14 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   top: -3px;
 }
 
-.emotion-8:focus:after {
+.emotion-20:focus:after {
   border-radius: 0;
   border-left-width: 0;
   border-right-width: 0;
   border-top-width: 0;
 }
 
-.emotion-12 {
+.emotion-24 {
   background: none;
   border: 0;
   color: inherit;
@@ -2812,35 +3483,35 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   font-weight: 500;
 }
 
-.emotion-12::-moz-focus-inner {
+.emotion-24::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-12[href],
-.emotion-12[href]:visited {
+.emotion-24[href],
+.emotion-24[href]:visited {
   color: #FFFFFF;
   fill: #FFFFFF;
 }
 
-.emotion-12:hover {
+.emotion-24:hover {
   background-color: #704fe5;
 }
 
-.emotion-12:active {
+.emotion-24:active {
   background-color: #6446cc;
 }
 
-.emotion-11 {
+.emotion-23 {
   outline: none;
   position: relative;
 }
 
-.emotion-11:focus {
+.emotion-23:focus {
   background-color: #704fe5;
 }
 
-.emotion-11:focus:after {
+.emotion-23:focus:after {
   border: 2px solid #704fe5;
   border-radius: 6px;
   bottom: -3px;
@@ -2851,7 +3522,128 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   top: -3px;
 }
 
-<div>
+.emotion-65 {
+  border-radius: 6px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  outline: none;
+  overflow: auto;
+  z-index: 1;
+  border-radius: 0;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+}
+
+.emotion-61 {
+  background-color: var(--themeBgSecondary,#F7F8F9);
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  padding: 32px;
+}
+
+.emotion-62 {
+  box-sizing: border-box;
+  overflow: auto;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 32px;
+}
+
+.emotion-60 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-60 > div {
+  width: auto;
+}
+
+.emotion-53 {
+  text-align: left;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-54 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.emotion-55 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #76797E;
+  fill: #76797E;
+}
+
+.emotion-59 {
+  text-align: right;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+<body>
+              <div>
                 <div>
                   <div
                     data-focus-guard="true"
@@ -2872,40 +3664,181 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       tabindex="-1"
                     />
                     <div
-                      class="emotion-18"
+                      class="emotion-3"
                     >
                       <div
-                        class="emotion-17"
+                        class="emotion-2"
                         role="dialog"
                         tabindex="-1"
                       >
                         <div
-                          class="emotion-16"
+                          class="emotion-1"
+                        >
+                          <div
+                            tabindex="0"
+                          >
+                            I am modal content
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="0"
+                  />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="0"
+                  />
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="1"
+                  />
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      class="emotion-0"
+                      role="button"
+                      tabindex="-1"
+                    />
+                    <div
+                      class="emotion-3"
+                    >
+                      <div
+                        class="emotion-2"
+                        role="dialog"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="emotion-1"
+                        >
+                          <div
+                            tabindex="0"
+                          >
+                            I am modal content
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="0"
+                  />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="0"
+                  />
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="1"
+                  />
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      class="emotion-0"
+                      role="button"
+                      tabindex="-1"
+                    />
+                    <div
+                      class="emotion-3"
+                    >
+                      <div
+                        class="emotion-2"
+                        role="dialog"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="emotion-1"
+                        >
+                          <div
+                            tabindex="0"
+                          >
+                            I am modal content
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="0"
+                  />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="0"
+                  />
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="1"
+                  />
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      class="emotion-0"
+                      role="button"
+                      tabindex="-1"
+                    />
+                    <div
+                      class="emotion-3"
+                    >
+                      <div
+                        class="emotion-2"
+                        role="dialog"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="emotion-1"
                           data-cy="dialogModal"
                         >
                           <div
-                            class="emotion-6"
+                            class="emotion-18"
                             data-cy="dialogModal-header"
                           >
                             <div
-                              class="emotion-5"
+                              class="emotion-17"
                             >
                               <div
-                                class="emotion-1"
+                                class="emotion-13"
                               >
                                 Title
                               </div>
                               <div
-                                class="emotion-4"
+                                class="emotion-16"
                               >
                                 <span
-                                  class="emotion-3"
+                                  class="emotion-15"
                                   role="button"
                                   tabindex="0"
                                 >
                                   <svg
                                     aria-label="system-close icon"
-                                    class="emotion-2"
+                                    class="emotion-14"
                                     data-cy="icon"
                                     height="16"
                                     preserveAspectRatio="xMinYMin meet"
@@ -2922,7 +3855,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-7"
+                            class="emotion-19"
                             data-cy="dialogModal-content"
                           >
                             <div
@@ -2932,17 +3865,17 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-15"
+                            class="emotion-27"
                             data-cy="dialogModal-footer"
                           >
                             <div
-                              class="emotion-14"
+                              class="emotion-26"
                             >
                               <div
-                                class="emotion-10"
+                                class="emotion-22"
                               >
                                 <button
-                                  class="emotion-8 emotion-9"
+                                  class="emotion-20 emotion-21"
                                   data-cy="secondaryButton"
                                   tabindex="0"
                                   type="button"
@@ -2955,10 +3888,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                 </button>
                               </div>
                               <div
-                                class="emotion-10"
+                                class="emotion-22"
                               >
                                 <button
-                                  class="emotion-11 emotion-12"
+                                  class="emotion-23 emotion-24"
                                   data-cy="primaryButton"
                                   tabindex="0"
                                   type="button"
@@ -2983,6 +3916,253 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                   />
                 </div>
               </div>
+              <div>
+                <div>
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="0"
+                  />
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="1"
+                  />
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      class="emotion-0"
+                      role="button"
+                      tabindex="-1"
+                    />
+                    <div
+                      class="emotion-3"
+                    >
+                      <div
+                        class="emotion-2"
+                        role="dialog"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="emotion-1"
+                          data-cy="dialogModal"
+                        >
+                          <div
+                            class="emotion-18"
+                            data-cy="dialogModal-header"
+                          >
+                            <div
+                              class="emotion-17"
+                            >
+                              <div
+                                class="emotion-13"
+                              >
+                                Title
+                              </div>
+                              <div
+                                class="emotion-16"
+                              >
+                                <span
+                                  class="emotion-15"
+                                  role="button"
+                                  tabindex="0"
+                                >
+                                  <svg
+                                    aria-label="system-close icon"
+                                    class="emotion-14"
+                                    data-cy="icon"
+                                    height="16"
+                                    preserveAspectRatio="xMinYMin meet"
+                                    role="img"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                  >
+                                    <use
+                                      xlink:href="#system-close"
+                                    />
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-19"
+                            data-cy="dialogModal-content"
+                          >
+                            <div
+                              tabindex="0"
+                            >
+                              I am modal content
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-27"
+                            data-cy="dialogModal-footer"
+                          >
+                            <div
+                              class="emotion-26"
+                            >
+                              <div
+                                class="emotion-22"
+                              >
+                                <button
+                                  class="emotion-20 emotion-21"
+                                  data-cy="secondaryButton"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    class=""
+                                  >
+                                    Close
+                                  </span>
+                                </button>
+                              </div>
+                              <div
+                                class="emotion-22"
+                              >
+                                <button
+                                  class="emotion-23 emotion-24"
+                                  data-cy="primaryButton"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  <span
+                                    class=""
+                                  >
+                                    CTA
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="0"
+                  />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="0"
+                  />
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="1"
+                  />
+                  <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      class="emotion-50"
+                      role="button"
+                      tabindex="-1"
+                    />
+                    <div
+                      class="emotion-3"
+                    >
+                      <div
+                        class="emotion-65"
+                        role="dialog"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="emotion-1"
+                          data-cy="fullscreenModal"
+                        >
+                          <div
+                            class="emotion-63"
+                          >
+                            <div
+                              class="emotion-61"
+                              data-cy="fullscreenModal-header"
+                            >
+                              <div
+                                class="emotion-60"
+                              >
+                                <div
+                                  class="emotion-53"
+                                >
+                                  <button
+                                    class="emotion-20 emotion-21"
+                                    data-cy="secondaryButton"
+                                    tabindex="0"
+                                    type="button"
+                                  >
+                                    <span
+                                      class=""
+                                    >
+                                      Close
+                                    </span>
+                                  </button>
+                                </div>
+                                <div
+                                  class="emotion-56"
+                                >
+                                  <h2
+                                    class="emotion-54"
+                                  >
+                                    Title
+                                  </h2>
+                                  <h3
+                                    class="emotion-55"
+                                  />
+                                </div>
+                                <div
+                                  class="emotion-59"
+                                >
+                                  <button
+                                    class="emotion-23 emotion-24"
+                                    data-cy="primaryButton"
+                                    tabindex="0"
+                                    type="button"
+                                  >
+                                    <span
+                                      class=""
+                                    >
+                                      CTA
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="emotion-62"
+                              data-cy="fullscreenModal-content"
+                            >
+                              <div
+                                tabindex="0"
+                              >
+                                I am modal content
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="0"
+                  />
+                </div>
+              </div>
+            </body>
+          }
+        >
+          <Portal
+            containerInfo={
               .emotion-0 {
   background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
   bottom: 0;
@@ -3422,121 +4602,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                   />
                 </div>
               </div>
-            </body>
-          }
-        >
-          <Portal
-            containerInfo={
-              <div>
-                <div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
-                  />
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      class="emotion-0"
-                      role="button"
-                      tabindex="-1"
-                    />
-                    <div
-                      class="emotion-14"
-                    >
-                      <div
-                        class="emotion-13"
-                        role="dialog"
-                        tabindex="-1"
-                      >
-                        <div
-                          class="emotion-12"
-                          data-cy="fullscreenModal"
-                        >
-                          <div
-                            class="emotion-11"
-                          >
-                            <div
-                              class="emotion-9"
-                              data-cy="fullscreenModal-header"
-                            >
-                              <div
-                                class="emotion-8"
-                              >
-                                <div
-                                  class="emotion-2"
-                                >
-                                  <button
-                                    class="css-1h85cd2 emotion-1"
-                                    data-cy="secondaryButton"
-                                    tabindex="0"
-                                    type="button"
-                                  >
-                                    <span
-                                      class=""
-                                    >
-                                      Close
-                                    </span>
-                                  </button>
-                                </div>
-                                <div
-                                  class="emotion-5"
-                                >
-                                  <h2
-                                    class="emotion-3"
-                                  >
-                                    Title
-                                  </h2>
-                                  <h3
-                                    class="emotion-4"
-                                  />
-                                </div>
-                                <div
-                                  class="emotion-7"
-                                >
-                                  <button
-                                    class="css-xcotv6 emotion-6"
-                                    data-cy="primaryButton"
-                                    tabindex="0"
-                                    type="button"
-                                  >
-                                    <span
-                                      class=""
-                                    >
-                                      CTA
-                                    </span>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              class="emotion-10"
-                              data-cy="fullscreenModal-content"
-                            >
-                              <div
-                                tabindex="0"
-                              >
-                                I am modal content
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                </div>
-              </div>
             }
           >
             <div>
@@ -3592,7 +4657,336 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       autoFocus={true}
                       disabled={false}
                       observed={
-                        <div
+                        .emotion-0 {
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.emotion-16 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-13 {
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-13 > div {
+  width: 100%;
+}
+
+.emotion-14 {
+  height: 100%;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-14 > div {
+  width: 100%;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-2::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-2:hover {
+  color: #704fe5;
+  fill: #704fe5;
+}
+
+.emotion-2:active {
+  color: #6446cc;
+  fill: #6446cc;
+}
+
+.emotion-2[href],
+.emotion-2[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
+.emotion-1 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-1:focus {
+  background-color: transparent;
+}
+
+.emotion-1:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-1:focus:after {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+}
+
+.emotion-8 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  background-color: #7D58FF;
+  border-radius: 4px;
+  padding: 10px 18px;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-8::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-8[href],
+.emotion-8[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+.emotion-8:hover {
+  background-color: #704fe5;
+}
+
+.emotion-8:active {
+  background-color: #6446cc;
+}
+
+.emotion-7 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-7:focus {
+  background-color: #704fe5;
+}
+
+.emotion-7:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-15 {
+  border-radius: 6px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  outline: none;
+  overflow: auto;
+  z-index: 1;
+  border-radius: 0;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+}
+
+.emotion-11 {
+  background-color: var(--themeBgSecondary,#F7F8F9);
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  padding: 32px;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  overflow: auto;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 32px;
+}
+
+.emotion-10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-10 > div {
+  width: auto;
+}
+
+.emotion-3 {
+  text-align: left;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-4 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.emotion-5 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #76797E;
+  fill: #76797E;
+}
+
+.emotion-9 {
+  text-align: right;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+<div
                           data-focus-lock-disabled="false"
                         >
                           <div
@@ -3601,32 +4995,32 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                             tabindex="-1"
                           />
                           <div
-                            class="emotion-14"
+                            class="emotion-16"
                           >
                             <div
-                              class="emotion-13"
+                              class="emotion-15"
                               role="dialog"
                               tabindex="-1"
                             >
                               <div
-                                class="emotion-12"
+                                class="emotion-14"
                                 data-cy="fullscreenModal"
                               >
                                 <div
-                                  class="emotion-11"
+                                  class="emotion-13"
                                 >
                                   <div
-                                    class="emotion-9"
+                                    class="emotion-11"
                                     data-cy="fullscreenModal-header"
                                   >
                                     <div
-                                      class="emotion-8"
+                                      class="emotion-10"
                                     >
                                       <div
-                                        class="emotion-2"
+                                        class="emotion-3"
                                       >
                                         <button
-                                          class="css-1h85cd2 emotion-1"
+                                          class="emotion-1 emotion-2"
                                           data-cy="secondaryButton"
                                           tabindex="0"
                                           type="button"
@@ -3639,22 +5033,22 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                         </button>
                                       </div>
                                       <div
-                                        class="emotion-5"
+                                        class="emotion-6"
                                       >
                                         <h2
-                                          class="emotion-3"
+                                          class="emotion-4"
                                         >
                                           Title
                                         </h2>
                                         <h3
-                                          class="emotion-4"
+                                          class="emotion-5"
                                         />
                                       </div>
                                       <div
-                                        class="emotion-7"
+                                        class="emotion-9"
                                       >
                                         <button
-                                          class="css-xcotv6 emotion-6"
+                                          class="emotion-7 emotion-8"
                                           data-cy="primaryButton"
                                           tabindex="0"
                                           type="button"
@@ -3669,7 +5063,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                     </div>
                                   </div>
                                   <div
-                                    class="emotion-10"
+                                    class="emotion-12"
                                     data-cy="fullscreenModal-content"
                                   >
                                     <div
@@ -3706,7 +5100,336 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                         autoFocus={true}
                         disabled={false}
                         observed={
-                          <div
+                          .emotion-0 {
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.emotion-16 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-13 {
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-13 > div {
+  width: 100%;
+}
+
+.emotion-14 {
+  height: 100%;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-14 > div {
+  width: 100%;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-2::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-2:hover {
+  color: #704fe5;
+  fill: #704fe5;
+}
+
+.emotion-2:active {
+  color: #6446cc;
+  fill: #6446cc;
+}
+
+.emotion-2[href],
+.emotion-2[href]:visited {
+  color: var(--themeTextColorInteractive,#7D58FF);
+  fill: var(--themeTextColorInteractive,#7D58FF);
+}
+
+.emotion-1 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-1:focus {
+  background-color: transparent;
+}
+
+.emotion-1:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-1:focus:after {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+}
+
+.emotion-8 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  background-color: #7D58FF;
+  border-radius: 4px;
+  padding: 10px 18px;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-8::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-8[href],
+.emotion-8[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+.emotion-8:hover {
+  background-color: #704fe5;
+}
+
+.emotion-8:active {
+  background-color: #6446cc;
+}
+
+.emotion-7 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-7:focus {
+  background-color: #704fe5;
+}
+
+.emotion-7:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-15 {
+  border-radius: 6px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  outline: none;
+  overflow: auto;
+  z-index: 1;
+  border-radius: 0;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+}
+
+.emotion-11 {
+  background-color: var(--themeBgSecondary,#F7F8F9);
+  box-sizing: border-box;
+  border-bottom: 1px solid #DADDE2;
+  padding: 32px;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  overflow: auto;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 32px;
+}
+
+.emotion-10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-10 > div {
+  width: auto;
+}
+
+.emotion-3 {
+  text-align: left;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-4 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.emotion-5 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #76797E;
+  fill: #76797E;
+}
+
+.emotion-9 {
+  text-align: right;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+<div
                             data-focus-lock-disabled="false"
                           >
                             <div
@@ -3715,32 +5438,32 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                               tabindex="-1"
                             />
                             <div
-                              class="emotion-14"
+                              class="emotion-16"
                             >
                               <div
-                                class="emotion-13"
+                                class="emotion-15"
                                 role="dialog"
                                 tabindex="-1"
                               >
                                 <div
-                                  class="emotion-12"
+                                  class="emotion-14"
                                   data-cy="fullscreenModal"
                                 >
                                   <div
-                                    class="emotion-11"
+                                    class="emotion-13"
                                   >
                                     <div
-                                      class="emotion-9"
+                                      class="emotion-11"
                                       data-cy="fullscreenModal-header"
                                     >
                                       <div
-                                        class="emotion-8"
+                                        class="emotion-10"
                                       >
                                         <div
-                                          class="emotion-2"
+                                          class="emotion-3"
                                         >
                                           <button
-                                            class="css-1h85cd2 emotion-1"
+                                            class="emotion-1 emotion-2"
                                             data-cy="secondaryButton"
                                             tabindex="0"
                                             type="button"
@@ -3753,22 +5476,22 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                           </button>
                                         </div>
                                         <div
-                                          class="emotion-5"
+                                          class="emotion-6"
                                         >
                                           <h2
-                                            class="emotion-3"
+                                            class="emotion-4"
                                           >
                                             Title
                                           </h2>
                                           <h3
-                                            class="emotion-4"
+                                            class="emotion-5"
                                           />
                                         </div>
                                         <div
-                                          class="emotion-7"
+                                          class="emotion-9"
                                         >
                                           <button
-                                            class="css-xcotv6 emotion-6"
+                                            class="emotion-7 emotion-8"
                                             data-cy="primaryButton"
                                             tabindex="0"
                                             type="button"
@@ -3783,7 +5506,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                       </div>
                                     </div>
                                     <div
-                                      class="emotion-10"
+                                      class="emotion-12"
                                       data-cy="fullscreenModal-content"
                                     >
                                       <div
@@ -4290,7 +6013,108 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
       >
         <Portal
           containerInfo={
-            <div>
+            .emotion-3 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-0 {
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  opacity: 0;
+  opacity: 1;
+}
+
+.emotion-2 {
+  border-radius: 6px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  outline: none;
+  overflow: auto;
+  z-index: 1;
+  width: 350px;
+  -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  opacity: 0;
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+@media (min-width:600px) {
+  .emotion-2 {
+    width: 450px;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-2 {
+    width: 500px;
+  }
+}
+
+@media (min-width:1200px) {
+  .emotion-2 {
+    width: 550px;
+  }
+}
+
+.emotion-1 {
+  height: 100%;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: 100%;
+}
+
+<div>
               <div>
                 <div
                   data-focus-guard="true"
@@ -4392,7 +6216,108 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                     autoFocus={true}
                     disabled={false}
                     observed={
-                      <div
+                      .emotion-3 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-0 {
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  opacity: 0;
+  opacity: 1;
+}
+
+.emotion-2 {
+  border-radius: 6px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  outline: none;
+  overflow: auto;
+  z-index: 1;
+  width: 350px;
+  -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  opacity: 0;
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+@media (min-width:600px) {
+  .emotion-2 {
+    width: 450px;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-2 {
+    width: 500px;
+  }
+}
+
+@media (min-width:1200px) {
+  .emotion-2 {
+    width: 550px;
+  }
+}
+
+.emotion-1 {
+  height: 100%;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: 100%;
+}
+
+<div
                         data-focus-lock-disabled="false"
                       >
                         <div
@@ -4443,7 +6368,108 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                       autoFocus={true}
                       disabled={false}
                       observed={
-                        <div
+                        .emotion-3 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-0 {
+  background-color: var(--themeBgScrim,rgba(0,0,0,0.2));
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  opacity: 0;
+  opacity: 1;
+}
+
+.emotion-2 {
+  border-radius: 6px;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  outline: none;
+  overflow: auto;
+  z-index: 1;
+  width: 350px;
+  -webkit-transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  opacity: 0;
+  -webkit-transform: translate(0,calc(-50px));
+  -ms-transform: translate(0,calc(-50px));
+  transform: translate(0,calc(-50px));
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+@media (min-width:600px) {
+  .emotion-2 {
+    width: 450px;
+  }
+}
+
+@media (min-width:900px) {
+  .emotion-2 {
+    width: 500px;
+  }
+}
+
+@media (min-width:1200px) {
+  .emotion-2 {
+    width: 550px;
+  }
+}
+
+.emotion-1 {
+  height: 100%;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-1 > div {
+  width: 100%;
+}
+
+<div
                           data-focus-lock-disabled="false"
                         >
                           <div

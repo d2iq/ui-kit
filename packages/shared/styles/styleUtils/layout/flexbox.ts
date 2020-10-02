@@ -1,4 +1,4 @@
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { getResponsiveStyle } from "../";
 import { BreakpointConfig } from "../../breakpoints";
 import { getResponsiveSpacingStyle } from "./handleResponsiveStyle";

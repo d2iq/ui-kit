@@ -5,55 +5,55 @@ exports[`ConfigurationMap renders default 1`] = `
   data-cy="configurationMap"
 >
   <dl
-    class="css-yjq8nq"
+    class="css-n7t6tv"
     data-cy="configurationMapSection"
   >
     <div
-      class="css-1afpcs7"
+      class="css-azki39"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         Name
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         Jane Doe
       </dd>
     </div>
     <div
-      class="css-1afpcs7"
+      class="css-azki39"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         Role
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         UX Designer
       </dd>
     </div>
     <div
-      class="css-1afpcs7"
+      class="css-azki39"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         City
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         San Francisco
@@ -68,21 +68,21 @@ exports[`ConfigurationMap renders with actions 1`] = `
   data-cy="configurationMap"
 >
   <dl
-    class="css-yjq8nq"
+    class="css-n7t6tv"
     data-cy="configurationMapSection"
   >
     <div
-      class="css-1efprzz"
+      class="css-f05u7u"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         Name
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         Jane Doe
@@ -106,17 +106,17 @@ exports[`ConfigurationMap renders with actions 1`] = `
       </span>
     </div>
     <div
-      class="css-1efprzz"
+      class="css-f05u7u"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         Role
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         UX Designer
@@ -140,17 +140,17 @@ exports[`ConfigurationMap renders with actions 1`] = `
       </span>
     </div>
     <div
-      class="css-1efprzz"
+      class="css-f05u7u"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         City
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         San Francisco
@@ -182,55 +182,55 @@ exports[`ConfigurationMap renders with default value 1`] = `
   data-cy="configurationMap"
 >
   <dl
-    class="css-yjq8nq"
+    class="css-n7t6tv"
     data-cy="configurationMapSection"
   >
     <div
-      class="css-1afpcs7"
+      class="css-azki39"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         Name
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         Jane Doe
       </dd>
     </div>
     <div
-      class="css-1afpcs7"
+      class="css-azki39"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         Role
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         —
       </dd>
     </div>
     <div
-      class="css-1afpcs7"
+      class="css-azki39"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         City
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         —
@@ -245,7 +245,7 @@ exports[`ConfigurationMap renders with headline 1`] = `
   data-cy="configurationMap"
 >
   <dl
-    class="css-yjq8nq"
+    class="css-n7t6tv"
     data-cy="configurationMapSection"
   >
     <div
@@ -260,51 +260,51 @@ exports[`ConfigurationMap renders with headline 1`] = `
       </h1>
     </div>
     <div
-      class="css-1afpcs7"
+      class="css-azki39"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         Name
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         Jane Doe
       </dd>
     </div>
     <div
-      class="css-1afpcs7"
+      class="css-azki39"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         Role
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         UX Designer
       </dd>
     </div>
     <div
-      class="css-1afpcs7"
+      class="css-azki39"
       data-cy="configurationMapRow"
     >
       <dt
-        class="css-n8bfbv"
+        class="css-rs2f7e"
         data-cy="configurationMapLabel"
       >
         City
       </dt>
       <dd
-        class="css-rhtsr1"
+        class="css-gvvllw"
         data-cy="configurationMapValue"
       >
         San Francisco

@@ -1,14 +1,13 @@
 import * as React from "react";
+import serializer from "jest-emotion";
+import { render } from "enzyme";
+import toJson from "enzyme-to-json";
 
 import Cell from "../components/Cell";
 import HeaderCell from "../components/HeaderCell";
 import TextCell from "../components/TextCell";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
-import { render } from "enzyme";
-import toJson from "enzyme-to-json";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("Cell", () => {
   it("renders correctly", () => {
