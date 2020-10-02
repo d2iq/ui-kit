@@ -1,9 +1,9 @@
 import * as React from "react";
+import { cx } from "emotion";
 import ResetButton from "../../button/components/ResetButton";
 import { Context as AccordionItemContext } from "./AccordionItemContext";
 import { Context as AccordionContext } from "./AccordionContext";
 import { textWeight } from "../../shared/styles/styleUtils";
-import { cx } from "emotion";
 import { fillWidth } from "../style";
 import { HeadingLevel, AccordionTitleAppearances } from "../types";
 import { headingReset } from "../../shared/styles/styleUtils/resets/headingReset";
@@ -46,7 +46,7 @@ const AccordionItemTitle: React.FC<AccordionItemTitleProps> = ({
   const accordionContext = React.useContext(AccordionContext);
   const handleToggle = () => {
     if (accordionContext !== null) {
-      accordionContext?.setExpandedItems(
+      accordionContext.setExpandedItems(
         accordionItemContext!.baseId,
         accordionItemContext!.isExpanded
       );
