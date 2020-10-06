@@ -8,6 +8,7 @@ import { Table } from "./";
 import { DropdownMenuCell } from "./DropdownMenuCell";
 import { TooltipHeaderCell } from "./TooltipHeaderCell";
 import { EmptyCell } from "./EmptyCell";
+import { MutedCell } from "./MutedCell";
 import { DropdownMenuItem, DropdownSection } from "../dropdownMenu";
 import { Sorter } from "./Util";
 
@@ -68,6 +69,7 @@ const mockData = [
 // - <Column initialWidth>
 // - <Column sorter>
 // - Cells rendered using <EmptyCell>
+// - Cells rendered using <MutedCell>
 // - Cells rendered using <DropdownMenuCell>
 // - Cells rendered using <TooltipHeaderCell>
 const featureRichColumns = [
@@ -117,6 +119,11 @@ const featureRichColumns = [
     id: "empty",
     header: "Empty",
     render: () => <EmptyCell />
+  },
+  {
+    id: "muted",
+    header: "Muted",
+    render: () => <MutedCell>No data is available.</MutedCell>
   },
   {
     id: "dropdown",

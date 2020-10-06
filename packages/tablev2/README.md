@@ -16,9 +16,9 @@ Organize columns and rows based on the needs of the users. For collection tables
 
 2. Long text: Truncate long text to fit in the row and add an ellipses with a tooltip on hover to show the full text.
 
-3. Table Headings: These should describe the content in the column. Try to stick to one word. Table heading should be in sentence case.
+3. Table headings: These should describe the content in the column. Try to stick to one word. Table heading should be in sentence case.
 
-4. Empty values: Empty values should be expressed in the table as “N/A”.
+4. Empty values: Empty values can be rendered in the table as “–” by using the `EmptyCell` component. If there is some explanation for why the value is empty, the `MutedCell` component may be used to show a message that explans why there is no value.
 
 5. Row hover state: On mouse over of a row on the table, the row should be highlighted to help the user focus in on the row details and match data they are seeing within that row.
 

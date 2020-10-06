@@ -8,7 +8,7 @@ exports[`Table v2 rendering renders default 1`] = `
   white-space: nowrap;
 }
 
-.emotion-43 {
+.emotion-48 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,7 +19,7 @@ exports[`Table v2 rendering renders default 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-99 {
+.emotion-112 {
   display: grid;
   grid-auto-rows: max-content;
   position: relative;
@@ -39,7 +39,7 @@ exports[`Table v2 rendering renders default 1`] = `
   max-width: 100%;
 }
 
-.emotion-98 {
+.emotion-111 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -71,12 +71,12 @@ exports[`Table v2 rendering renders default 1`] = `
   background-color: var(--themeBgHover,#F7F8F9);
 }
 
-.emotion-32 {
+.emotion-35 {
   border-width: 1px;
   border-color: var(--themeBorder,#DADDE2);
   border-bottom-style: solid;
   display: grid;
-  grid-template-columns: 300px minmax(300px,1fr) 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 300px minmax(300px,1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   border-width: 1px;
   border-color: var(--themeBorderHeavy,#1B2029);
   border-bottom-style: solid;
@@ -87,8 +87,8 @@ exports[`Table v2 rendering renders default 1`] = `
   z-index: 2;
 }
 
-.emotion-32 > [role="gridcell"]:first-child,
-.emotion-32 > [role="columnheader"]:first-child {
+.emotion-35 > [role="gridcell"]:first-child,
+.emotion-35 > [role="columnheader"]:first-child {
   position: -webkit-sticky;
   position: sticky;
   left: 0;
@@ -439,133 +439,25 @@ exports[`Table v2 rendering renders default 1`] = `
   clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
 }
 
-.emotion-45 {
+.emotion-50 {
   border-width: 1px;
   border-color: var(--themeBorder,#DADDE2);
   border-bottom-style: solid;
   display: grid;
-  grid-template-columns: 300px minmax(300px,1fr) 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 300px minmax(300px,1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.emotion-45 > [role="gridcell"]:first-child,
-.emotion-45 > [role="columnheader"]:first-child {
+.emotion-50 > [role="gridcell"]:first-child,
+.emotion-50 > [role="columnheader"]:first-child {
   position: -webkit-sticky;
   position: sticky;
   left: 0;
   z-index: 1;
 }
 
-.emotion-45:hover,
-.emotion-45:hover > [role="gridcell"] {
+.emotion-50:hover,
+.emotion-50:hover > [role="gridcell"] {
   background-color: var(--themeBgHover,#F7F8F9);
-}
-
-.emotion-33 {
-  padding: 8px;
-  overflow: hidden;
-  overflow: -moz-hidden-unscrollable;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  min-width: 0;
-  padding-right: calc(8px + 12px);
-  position: relative;
-  text-align: left;
-}
-
-.emotion-33:first-child {
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-}
-
-.emotion-33:first-child a {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.emotion-33:first-child a:visited {
-  color: inherit;
-}
-
-.emotion-33:first-child {
-  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
-  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
-  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
-}
-
-.emotion-34 {
-  padding: 8px;
-  overflow: hidden;
-  overflow: -moz-hidden-unscrollable;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  min-width: 0;
-  padding-right: calc(8px + 12px);
-  position: relative;
-  text-align: center;
-}
-
-.emotion-34:first-child {
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-}
-
-.emotion-34:first-child a {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.emotion-34:first-child a:visited {
-  color: inherit;
-}
-
-.emotion-34:first-child {
-  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
-  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
-  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
-}
-
-.emotion-35 {
-  padding: 8px;
-  overflow: hidden;
-  overflow: -moz-hidden-unscrollable;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: var(--themeBgPrimary,#FFFFFF);
-  min-width: 0;
-  padding-right: calc(8px + 12px);
-  position: relative;
-  text-align: right;
-}
-
-.emotion-35:first-child {
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-}
-
-.emotion-35:first-child a {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.emotion-35:first-child a:visited {
-  color: inherit;
-}
-
-.emotion-35:first-child {
-  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
-  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
-  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
 }
 
 .emotion-36 {
@@ -578,6 +470,7 @@ exports[`Table v2 rendering renders default 1`] = `
   min-width: 0;
   padding-right: calc(8px + 12px);
   position: relative;
+  text-align: left;
 }
 
 .emotion-36:first-child {
@@ -603,11 +496,131 @@ exports[`Table v2 rendering renders default 1`] = `
   clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
 }
 
-.emotion-42 {
+.emotion-37 {
+  padding: 8px;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  min-width: 0;
+  padding-right: calc(8px + 12px);
+  position: relative;
+  text-align: center;
+}
+
+.emotion-37:first-child {
+  -webkit-transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.emotion-37:first-child a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-37:first-child a:visited {
+  color: inherit;
+}
+
+.emotion-37:first-child {
+  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
+  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+}
+
+.emotion-38 {
+  padding: 8px;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  min-width: 0;
+  padding-right: calc(8px + 12px);
+  position: relative;
+  text-align: right;
+}
+
+.emotion-38:first-child {
+  -webkit-transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.emotion-38:first-child a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-38:first-child a:visited {
+  color: inherit;
+}
+
+.emotion-38:first-child {
+  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
+  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+}
+
+.emotion-39 {
+  padding: 8px;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  min-width: 0;
+  padding-right: calc(8px + 12px);
+  position: relative;
+}
+
+.emotion-39:first-child {
+  -webkit-transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.emotion-39:first-child a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emotion-39:first-child a:visited {
+  color: inherit;
+}
+
+.emotion-39:first-child {
+  box-shadow: 4px 0px 6px 0 rgba(0,0,0,0.12), 2px 0px 2px 0 rgba(0,0,0,0.06);
+  -webkit-clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+  clip-path: polygon(120% 0%,0% 0%,0% 100%,120% 100%);
+}
+
+.emotion-43 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--themeTextColorSecondary,#76797E);
+  fill: var(--themeTextColorSecondary,#76797E);
+  text-align: inherit;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-47 {
   display: inline-block;
 }
 
-.emotion-41 {
+.emotion-46 {
   background: none;
   border: 0;
   color: inherit;
@@ -619,34 +632,34 @@ exports[`Table v2 rendering renders default 1`] = `
   cursor: pointer;
 }
 
-.emotion-41::-moz-focus-inner {
+.emotion-46::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-41 > div:focus {
+.emotion-46 > div:focus {
   outline: none;
 }
 
-.emotion-41:focus > div {
+.emotion-46:focus > div {
   outline-color: Highlight;
   outline-width: thin;
 }
 
 @media (-webkit-min-device-pixel-ratio:0) {
-  .emotion-41:focus > div {
+  .emotion-46:focus > div {
     outline-color: -webkit-focus-ring-color;
     outline-style: auto;
     outline-width: unset;
   }
 }
 
-.emotion-40 {
+.emotion-45 {
   vertical-align: middle;
   fill: currentColor;
 }
 
-.emotion-40 use {
+.emotion-45 use {
   pointer-events: none;
 }
 
@@ -698,6 +711,11 @@ exports[`Table v2 rendering renders default 1`] = `
       Object {
         "header": "Empty",
         "id": "empty",
+        "render": [Function],
+      },
+      Object {
+        "header": "Muted",
+        "id": "muted",
         "render": [Function],
       },
       Object {
@@ -759,7 +777,7 @@ exports[`Table v2 rendering renders default 1`] = `
   toId={[Function]}
 >
   <div
-    className="emotion-99"
+    className="emotion-112"
     role="grid"
   >
     <HeaderRow
@@ -820,6 +838,12 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -860,6 +884,10 @@ exports[`Table v2 rendering renders default 1`] = `
               "width": null,
             },
             Object {
+              "id": "muted",
+              "width": null,
+            },
+            Object {
               "id": "dropdown",
               "width": null,
             },
@@ -872,7 +900,7 @@ exports[`Table v2 rendering renders default 1`] = `
       update={[Function]}
     >
       <div
-        className="emotion-32"
+        className="emotion-35"
         key="headerRow"
         role="row"
       >
@@ -922,6 +950,10 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
                   "width": null,
                 },
                 Object {
@@ -1045,6 +1077,10 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
                   "width": null,
                 },
                 Object {
@@ -1252,6 +1288,10 @@ exports[`Table v2 rendering renders default 1`] = `
                   "width": null,
                 },
                 Object {
+                  "id": "muted",
+                  "width": null,
+                },
+                Object {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -1349,6 +1389,10 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
                   "width": null,
                 },
                 Object {
@@ -1452,6 +1496,10 @@ exports[`Table v2 rendering renders default 1`] = `
                   "width": null,
                 },
                 Object {
+                  "id": "muted",
+                  "width": null,
+                },
+                Object {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -1549,6 +1597,10 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
                   "width": null,
                 },
                 Object {
@@ -1652,6 +1704,10 @@ exports[`Table v2 rendering renders default 1`] = `
                   "width": null,
                 },
                 Object {
+                  "id": "muted",
+                  "width": null,
+                },
+                Object {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -1669,6 +1725,110 @@ exports[`Table v2 rendering renders default 1`] = `
             role="columnheader"
           >
             Empty
+            <Component
+              onRelativeXChange={[Function]}
+            >
+              <div
+                className="emotion-3"
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "transform": "translate(0px, 0)",
+                  }
+                }
+              >
+                <div>
+                  <Icon
+                    color="#76797E"
+                    shape="system-resize-horizontal"
+                    size="12px"
+                  >
+                    <svg
+                      aria-label="system-resize-horizontal icon"
+                      className="emotion-2"
+                      data-cy="icon"
+                      height={12}
+                      preserveAspectRatio="xMinYMin meet"
+                      role="img"
+                      viewBox="0 0 12 12"
+                      width={12}
+                    >
+                      <use
+                        xlinkHref="#system-resize-horizontal"
+                      />
+                    </svg>
+                  </Icon>
+                </div>
+              </div>
+            </Component>
+          </div>
+        </HeaderCell>
+        <HeaderCell
+          column={
+            Object {
+              "header": "Muted",
+              "id": "muted",
+              "render": [Function],
+              "width": "1fr",
+            }
+          }
+          id="muted"
+          key="muted"
+          showScrollShadow={true}
+          state={
+            Object {
+              "columns": Array [
+                Object {
+                  "id": "name",
+                  "width": "300px",
+                },
+                Object {
+                  "id": "username",
+                  "width": "minmax(300px, 1fr)",
+                },
+                Object {
+                  "id": "email",
+                  "width": null,
+                },
+                Object {
+                  "id": "phone",
+                  "width": null,
+                },
+                Object {
+                  "id": "company",
+                  "width": null,
+                },
+                Object {
+                  "id": "website",
+                  "width": null,
+                },
+                Object {
+                  "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
+                  "width": null,
+                },
+                Object {
+                  "id": "dropdown",
+                  "width": null,
+                },
+              ],
+              "order": "asc",
+              "sortBy": null,
+            }
+          }
+          update={[Function]}
+        >
+          <div
+            aria-sort="none"
+            className="emotion-19"
+            id="muted"
+            role="columnheader"
+          >
+            Muted
             <Component
               onRelativeXChange={[Function]}
             >
@@ -1749,6 +1909,10 @@ exports[`Table v2 rendering renders default 1`] = `
                 },
                 Object {
                   "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
                   "width": null,
                 },
                 Object {
@@ -1867,6 +2031,12 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -1891,13 +2061,13 @@ exports[`Table v2 rendering renders default 1`] = `
       toId={[Function]}
     >
       <div
-        className="emotion-45"
+        className="emotion-50"
         key="row-0"
         role="row"
       >
         <div
           aria-describedby="name"
-          className="emotion-33"
+          className="emotion-36"
           key="0name"
           role="gridcell"
         >
@@ -1909,7 +2079,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="emotion-34"
+          className="emotion-37"
           key="0username"
           role="gridcell"
         >
@@ -1917,7 +2087,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="emotion-35"
+          className="emotion-38"
           key="0email"
           role="gridcell"
         >
@@ -1925,7 +2095,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="emotion-36"
+          className="emotion-39"
           key="0phone"
           role="gridcell"
         >
@@ -1933,7 +2103,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="emotion-36"
+          className="emotion-39"
           key="0company"
           role="gridcell"
         >
@@ -1941,7 +2111,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="emotion-36"
+          className="emotion-39"
           key="0website"
           role="gridcell"
         >
@@ -1953,7 +2123,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="emotion-36"
+          className="emotion-39"
           key="0empty"
           role="gridcell"
         >
@@ -1962,14 +2132,39 @@ exports[`Table v2 rendering renders default 1`] = `
           </Component>
         </div>
         <div
+          aria-describedby="muted"
+          className="emotion-39"
+          key="0muted"
+          role="gridcell"
+        >
+          <Component>
+            <Text
+              align="inherit"
+              color="var(--themeTextColorSecondary, #76797E)"
+              dataCy="text"
+              size="m"
+              tag="div"
+              weight="normal"
+              wrap="truncate"
+            >
+              <div
+                className="rmTextMargins emotion-43"
+                data-cy="text"
+              >
+                No data is available.
+              </div>
+            </Text>
+          </Component>
+        </div>
+        <div
           aria-describedby="dropdown"
-          className="emotion-36"
+          className="emotion-39"
           key="0dropdown"
           role="gridcell"
         >
           <Component>
             <div
-              className="emotion-43"
+              className="emotion-48"
             >
               <DropdownMenu
                 preferredDirections={
@@ -2013,7 +2208,7 @@ exports[`Table v2 rendering renders default 1`] = `
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-0-label"
                     aria-owns={null}
-                    className="emotion-42"
+                    className="emotion-47"
                     role="combobox"
                   >
                     <Dropdownable
@@ -2126,7 +2321,7 @@ exports[`Table v2 rendering renders default 1`] = `
                           <button
                             aria-haspopup={true}
                             aria-label="open menu"
-                            className="emotion-41"
+                            className="emotion-46"
                             data-toggle={true}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -2145,7 +2340,7 @@ exports[`Table v2 rendering renders default 1`] = `
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
-                                  className="emotion-40"
+                                  className="emotion-45"
                                   data-cy="icon"
                                   height={16}
                                   preserveAspectRatio="xMinYMin meet"
@@ -2229,6 +2424,12 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -2253,13 +2454,13 @@ exports[`Table v2 rendering renders default 1`] = `
       toId={[Function]}
     >
       <div
-        className="emotion-45"
+        className="emotion-50"
         key="row-1"
         role="row"
       >
         <div
           aria-describedby="name"
-          className="emotion-33"
+          className="emotion-36"
           key="1name"
           role="gridcell"
         >
@@ -2271,7 +2472,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="emotion-34"
+          className="emotion-37"
           key="1username"
           role="gridcell"
         >
@@ -2279,7 +2480,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="emotion-35"
+          className="emotion-38"
           key="1email"
           role="gridcell"
         >
@@ -2287,7 +2488,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="emotion-36"
+          className="emotion-39"
           key="1phone"
           role="gridcell"
         >
@@ -2295,7 +2496,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="emotion-36"
+          className="emotion-39"
           key="1company"
           role="gridcell"
         >
@@ -2303,7 +2504,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="emotion-36"
+          className="emotion-39"
           key="1website"
           role="gridcell"
         >
@@ -2315,7 +2516,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="emotion-36"
+          className="emotion-39"
           key="1empty"
           role="gridcell"
         >
@@ -2324,14 +2525,39 @@ exports[`Table v2 rendering renders default 1`] = `
           </Component>
         </div>
         <div
+          aria-describedby="muted"
+          className="emotion-39"
+          key="1muted"
+          role="gridcell"
+        >
+          <Component>
+            <Text
+              align="inherit"
+              color="var(--themeTextColorSecondary, #76797E)"
+              dataCy="text"
+              size="m"
+              tag="div"
+              weight="normal"
+              wrap="truncate"
+            >
+              <div
+                className="rmTextMargins emotion-43"
+                data-cy="text"
+              >
+                No data is available.
+              </div>
+            </Text>
+          </Component>
+        </div>
+        <div
           aria-describedby="dropdown"
-          className="emotion-36"
+          className="emotion-39"
           key="1dropdown"
           role="gridcell"
         >
           <Component>
             <div
-              className="emotion-43"
+              className="emotion-48"
             >
               <DropdownMenu
                 preferredDirections={
@@ -2375,7 +2601,7 @@ exports[`Table v2 rendering renders default 1`] = `
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-1-label"
                     aria-owns={null}
-                    className="emotion-42"
+                    className="emotion-47"
                     role="combobox"
                   >
                     <Dropdownable
@@ -2488,7 +2714,7 @@ exports[`Table v2 rendering renders default 1`] = `
                           <button
                             aria-haspopup={true}
                             aria-label="open menu"
-                            className="emotion-41"
+                            className="emotion-46"
                             data-toggle={true}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -2507,7 +2733,7 @@ exports[`Table v2 rendering renders default 1`] = `
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
-                                  className="emotion-40"
+                                  className="emotion-45"
                                   data-cy="icon"
                                   height={16}
                                   preserveAspectRatio="xMinYMin meet"
@@ -2591,6 +2817,12 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -2615,13 +2847,13 @@ exports[`Table v2 rendering renders default 1`] = `
       toId={[Function]}
     >
       <div
-        className="emotion-45"
+        className="emotion-50"
         key="row-2"
         role="row"
       >
         <div
           aria-describedby="name"
-          className="emotion-33"
+          className="emotion-36"
           key="2name"
           role="gridcell"
         >
@@ -2633,7 +2865,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="emotion-34"
+          className="emotion-37"
           key="2username"
           role="gridcell"
         >
@@ -2641,7 +2873,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="emotion-35"
+          className="emotion-38"
           key="2email"
           role="gridcell"
         >
@@ -2649,7 +2881,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="emotion-36"
+          className="emotion-39"
           key="2phone"
           role="gridcell"
         >
@@ -2657,7 +2889,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="emotion-36"
+          className="emotion-39"
           key="2company"
           role="gridcell"
         >
@@ -2665,7 +2897,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="emotion-36"
+          className="emotion-39"
           key="2website"
           role="gridcell"
         >
@@ -2677,7 +2909,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="emotion-36"
+          className="emotion-39"
           key="2empty"
           role="gridcell"
         >
@@ -2686,14 +2918,39 @@ exports[`Table v2 rendering renders default 1`] = `
           </Component>
         </div>
         <div
+          aria-describedby="muted"
+          className="emotion-39"
+          key="2muted"
+          role="gridcell"
+        >
+          <Component>
+            <Text
+              align="inherit"
+              color="var(--themeTextColorSecondary, #76797E)"
+              dataCy="text"
+              size="m"
+              tag="div"
+              weight="normal"
+              wrap="truncate"
+            >
+              <div
+                className="rmTextMargins emotion-43"
+                data-cy="text"
+              >
+                No data is available.
+              </div>
+            </Text>
+          </Component>
+        </div>
+        <div
           aria-describedby="dropdown"
-          className="emotion-36"
+          className="emotion-39"
           key="2dropdown"
           role="gridcell"
         >
           <Component>
             <div
-              className="emotion-43"
+              className="emotion-48"
             >
               <DropdownMenu
                 preferredDirections={
@@ -2737,7 +2994,7 @@ exports[`Table v2 rendering renders default 1`] = `
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-2-label"
                     aria-owns={null}
-                    className="emotion-42"
+                    className="emotion-47"
                     role="combobox"
                   >
                     <Dropdownable
@@ -2850,7 +3107,7 @@ exports[`Table v2 rendering renders default 1`] = `
                           <button
                             aria-haspopup={true}
                             aria-label="open menu"
-                            className="emotion-41"
+                            className="emotion-46"
                             data-toggle={true}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -2869,7 +3126,7 @@ exports[`Table v2 rendering renders default 1`] = `
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
-                                  className="emotion-40"
+                                  className="emotion-45"
                                   data-cy="icon"
                                   height={16}
                                   preserveAspectRatio="xMinYMin meet"
@@ -2953,6 +3210,12 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -2977,13 +3240,13 @@ exports[`Table v2 rendering renders default 1`] = `
       toId={[Function]}
     >
       <div
-        className="emotion-45"
+        className="emotion-50"
         key="row-3"
         role="row"
       >
         <div
           aria-describedby="name"
-          className="emotion-33"
+          className="emotion-36"
           key="3name"
           role="gridcell"
         >
@@ -2995,7 +3258,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="emotion-34"
+          className="emotion-37"
           key="3username"
           role="gridcell"
         >
@@ -3003,7 +3266,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="emotion-35"
+          className="emotion-38"
           key="3email"
           role="gridcell"
         >
@@ -3011,7 +3274,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="emotion-36"
+          className="emotion-39"
           key="3phone"
           role="gridcell"
         >
@@ -3019,7 +3282,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="emotion-36"
+          className="emotion-39"
           key="3company"
           role="gridcell"
         >
@@ -3027,7 +3290,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="emotion-36"
+          className="emotion-39"
           key="3website"
           role="gridcell"
         >
@@ -3039,7 +3302,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="emotion-36"
+          className="emotion-39"
           key="3empty"
           role="gridcell"
         >
@@ -3048,14 +3311,39 @@ exports[`Table v2 rendering renders default 1`] = `
           </Component>
         </div>
         <div
+          aria-describedby="muted"
+          className="emotion-39"
+          key="3muted"
+          role="gridcell"
+        >
+          <Component>
+            <Text
+              align="inherit"
+              color="var(--themeTextColorSecondary, #76797E)"
+              dataCy="text"
+              size="m"
+              tag="div"
+              weight="normal"
+              wrap="truncate"
+            >
+              <div
+                className="rmTextMargins emotion-43"
+                data-cy="text"
+              >
+                No data is available.
+              </div>
+            </Text>
+          </Component>
+        </div>
+        <div
           aria-describedby="dropdown"
-          className="emotion-36"
+          className="emotion-39"
           key="3dropdown"
           role="gridcell"
         >
           <Component>
             <div
-              className="emotion-43"
+              className="emotion-48"
             >
               <DropdownMenu
                 preferredDirections={
@@ -3099,7 +3387,7 @@ exports[`Table v2 rendering renders default 1`] = `
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-3-label"
                     aria-owns={null}
-                    className="emotion-42"
+                    className="emotion-47"
                     role="combobox"
                   >
                     <Dropdownable
@@ -3212,7 +3500,7 @@ exports[`Table v2 rendering renders default 1`] = `
                           <button
                             aria-haspopup={true}
                             aria-label="open menu"
-                            className="emotion-41"
+                            className="emotion-46"
                             data-toggle={true}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -3231,7 +3519,7 @@ exports[`Table v2 rendering renders default 1`] = `
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
-                                  className="emotion-40"
+                                  className="emotion-45"
                                   data-cy="icon"
                                   height={16}
                                   preserveAspectRatio="xMinYMin meet"
@@ -3315,6 +3603,12 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -3339,13 +3633,13 @@ exports[`Table v2 rendering renders default 1`] = `
       toId={[Function]}
     >
       <div
-        className="emotion-45"
+        className="emotion-50"
         key="row-4"
         role="row"
       >
         <div
           aria-describedby="name"
-          className="emotion-33"
+          className="emotion-36"
           key="4name"
           role="gridcell"
         >
@@ -3357,7 +3651,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="emotion-34"
+          className="emotion-37"
           key="4username"
           role="gridcell"
         >
@@ -3365,7 +3659,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="emotion-35"
+          className="emotion-38"
           key="4email"
           role="gridcell"
         >
@@ -3373,7 +3667,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="emotion-36"
+          className="emotion-39"
           key="4phone"
           role="gridcell"
         >
@@ -3381,7 +3675,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="emotion-36"
+          className="emotion-39"
           key="4company"
           role="gridcell"
         >
@@ -3389,7 +3683,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="emotion-36"
+          className="emotion-39"
           key="4website"
           role="gridcell"
         >
@@ -3401,7 +3695,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="emotion-36"
+          className="emotion-39"
           key="4empty"
           role="gridcell"
         >
@@ -3410,14 +3704,39 @@ exports[`Table v2 rendering renders default 1`] = `
           </Component>
         </div>
         <div
+          aria-describedby="muted"
+          className="emotion-39"
+          key="4muted"
+          role="gridcell"
+        >
+          <Component>
+            <Text
+              align="inherit"
+              color="var(--themeTextColorSecondary, #76797E)"
+              dataCy="text"
+              size="m"
+              tag="div"
+              weight="normal"
+              wrap="truncate"
+            >
+              <div
+                className="rmTextMargins emotion-43"
+                data-cy="text"
+              >
+                No data is available.
+              </div>
+            </Text>
+          </Component>
+        </div>
+        <div
           aria-describedby="dropdown"
-          className="emotion-36"
+          className="emotion-39"
           key="4dropdown"
           role="gridcell"
         >
           <Component>
             <div
-              className="emotion-43"
+              className="emotion-48"
             >
               <DropdownMenu
                 preferredDirections={
@@ -3461,7 +3780,7 @@ exports[`Table v2 rendering renders default 1`] = `
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-4-label"
                     aria-owns={null}
-                    className="emotion-42"
+                    className="emotion-47"
                     role="combobox"
                   >
                     <Dropdownable
@@ -3574,7 +3893,7 @@ exports[`Table v2 rendering renders default 1`] = `
                           <button
                             aria-haspopup={true}
                             aria-label="open menu"
-                            className="emotion-41"
+                            className="emotion-46"
                             data-toggle={true}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -3593,7 +3912,7 @@ exports[`Table v2 rendering renders default 1`] = `
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
-                                  className="emotion-40"
+                                  className="emotion-45"
                                   data-cy="icon"
                                   height={16}
                                   preserveAspectRatio="xMinYMin meet"
@@ -3620,7 +3939,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
     </Memo(Row)>
     <div
-      className="emotion-98"
+      className="emotion-111"
     />
   </div>
 </Table>
@@ -3634,7 +3953,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   white-space: nowrap;
 }
 
-.emotion-43 {
+.emotion-48 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3645,7 +3964,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-99 {
+.emotion-112 {
   display: grid;
   grid-auto-rows: max-content;
   position: relative;
@@ -3665,7 +3984,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   max-width: 100%;
 }
 
-.emotion-98 {
+.emotion-111 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -3697,7 +4016,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   background-color: var(--themeBgHover,#F7F8F9);
 }
 
-.emotion-33 {
+.emotion-36 {
   padding: 8px;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
@@ -3710,20 +4029,20 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   text-align: left;
 }
 
-.emotion-33:first-child {
+.emotion-36:first-child {
   -webkit-transition: box-shadow 200ms ease-out;
   transition: box-shadow 200ms ease-out;
   box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
-.emotion-33:first-child a {
+.emotion-36:first-child a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 500;
 }
 
-.emotion-33:first-child a:visited {
+.emotion-36:first-child a:visited {
   color: inherit;
 }
 
@@ -3771,7 +4090,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   pointer-events: none;
 }
 
-.emotion-34 {
+.emotion-37 {
   padding: 8px;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
@@ -3784,20 +4103,20 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   text-align: center;
 }
 
-.emotion-34:first-child {
+.emotion-37:first-child {
   -webkit-transition: box-shadow 200ms ease-out;
   transition: box-shadow 200ms ease-out;
   box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
-.emotion-34:first-child a {
+.emotion-37:first-child a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 500;
 }
 
-.emotion-34:first-child a:visited {
+.emotion-37:first-child a:visited {
   color: inherit;
 }
 
@@ -3921,7 +4240,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   pointer-events: none;
 }
 
-.emotion-35 {
+.emotion-38 {
   padding: 8px;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
@@ -3934,20 +4253,20 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   text-align: right;
 }
 
-.emotion-35:first-child {
+.emotion-38:first-child {
   -webkit-transition: box-shadow 200ms ease-out;
   transition: box-shadow 200ms ease-out;
   box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
-.emotion-35:first-child a {
+.emotion-38:first-child a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 500;
 }
 
-.emotion-35:first-child a:visited {
+.emotion-38:first-child a:visited {
   color: inherit;
 }
 
@@ -3996,7 +4315,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   user-select: none;
 }
 
-.emotion-36 {
+.emotion-39 {
   padding: 8px;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
@@ -4008,20 +4327,20 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   position: relative;
 }
 
-.emotion-36:first-child {
+.emotion-39:first-child {
   -webkit-transition: box-shadow 200ms ease-out;
   transition: box-shadow 200ms ease-out;
   box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
-.emotion-36:first-child a {
+.emotion-39:first-child a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 500;
 }
 
-.emotion-36:first-child a:visited {
+.emotion-39:first-child a:visited {
   color: inherit;
 }
 
@@ -4069,11 +4388,24 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   user-select: none;
 }
 
-.emotion-42 {
+.emotion-43 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--themeTextColorSecondary,#76797E);
+  fill: var(--themeTextColorSecondary,#76797E);
+  text-align: inherit;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-47 {
   display: inline-block;
 }
 
-.emotion-41 {
+.emotion-46 {
   background: none;
   border: 0;
   color: inherit;
@@ -4085,43 +4417,43 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   cursor: pointer;
 }
 
-.emotion-41::-moz-focus-inner {
+.emotion-46::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-41 > div:focus {
+.emotion-46 > div:focus {
   outline: none;
 }
 
-.emotion-41:focus > div {
+.emotion-46:focus > div {
   outline-color: Highlight;
   outline-width: thin;
 }
 
 @media (-webkit-min-device-pixel-ratio:0) {
-  .emotion-41:focus > div {
+  .emotion-46:focus > div {
     outline-color: -webkit-focus-ring-color;
     outline-style: auto;
     outline-width: unset;
   }
 }
 
-.emotion-40 {
+.emotion-45 {
   vertical-align: middle;
   fill: currentColor;
 }
 
-.emotion-40 use {
+.emotion-45 use {
   pointer-events: none;
 }
 
-.emotion-32 {
+.emotion-35 {
   border-width: 1px;
   border-color: var(--themeBorder,#DADDE2);
   border-bottom-style: solid;
   display: grid;
-  grid-template-columns: 300px minmax(300px,1fr) 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 300px minmax(300px,1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   border-width: 1px;
   border-color: var(--themeBorderHeavy,#1B2029);
   border-bottom-style: solid;
@@ -4199,16 +4531,16 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   display: inline-block;
 }
 
-.emotion-45 {
+.emotion-50 {
   border-width: 1px;
   border-color: var(--themeBorder,#DADDE2);
   border-bottom-style: solid;
   display: grid;
-  grid-template-columns: 300px minmax(300px,1fr) 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 300px minmax(300px,1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.emotion-45:hover,
-.emotion-45:hover > [role="gridcell"] {
+.emotion-50:hover,
+.emotion-50:hover > [role="gridcell"] {
   background-color: var(--themeBgHover,#F7F8F9);
 }
 
@@ -4260,6 +4592,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       Object {
         "header": "Empty",
         "id": "empty",
+        "render": [Function],
+      },
+      Object {
+        "header": "Muted",
+        "id": "muted",
         "render": [Function],
       },
       Object {
@@ -4322,7 +4659,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   toId={[Function]}
 >
   <div
-    className="emotion-99"
+    className="emotion-112"
     role="grid"
   >
     <HeaderRow
@@ -4383,6 +4720,12 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -4423,6 +4766,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               "width": null,
             },
             Object {
+              "id": "muted",
+              "width": null,
+            },
+            Object {
               "id": "dropdown",
               "width": null,
             },
@@ -4435,7 +4782,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       update={[Function]}
     >
       <div
-        className="emotion-32"
+        className="emotion-35"
         key="headerRow"
         role="row"
       >
@@ -4485,6 +4832,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
                   "width": null,
                 },
                 Object {
@@ -4608,6 +4959,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
                   "width": null,
                 },
                 Object {
@@ -4815,6 +5170,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   "width": null,
                 },
                 Object {
+                  "id": "muted",
+                  "width": null,
+                },
+                Object {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -4912,6 +5271,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
                   "width": null,
                 },
                 Object {
@@ -5015,6 +5378,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   "width": null,
                 },
                 Object {
+                  "id": "muted",
+                  "width": null,
+                },
+                Object {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -5112,6 +5479,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
                   "width": null,
                 },
                 Object {
@@ -5215,6 +5586,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   "width": null,
                 },
                 Object {
+                  "id": "muted",
+                  "width": null,
+                },
+                Object {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -5232,6 +5607,110 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             role="columnheader"
           >
             Empty
+            <Component
+              onRelativeXChange={[Function]}
+            >
+              <div
+                className="emotion-3"
+                onMouseDown={[Function]}
+                role="button"
+                style={
+                  Object {
+                    "transform": "translate(0px, 0)",
+                  }
+                }
+              >
+                <div>
+                  <Icon
+                    color="#76797E"
+                    shape="system-resize-horizontal"
+                    size="12px"
+                  >
+                    <svg
+                      aria-label="system-resize-horizontal icon"
+                      className="emotion-2"
+                      data-cy="icon"
+                      height={12}
+                      preserveAspectRatio="xMinYMin meet"
+                      role="img"
+                      viewBox="0 0 12 12"
+                      width={12}
+                    >
+                      <use
+                        xlinkHref="#system-resize-horizontal"
+                      />
+                    </svg>
+                  </Icon>
+                </div>
+              </div>
+            </Component>
+          </div>
+        </HeaderCell>
+        <HeaderCell
+          column={
+            Object {
+              "header": "Muted",
+              "id": "muted",
+              "render": [Function],
+              "width": "1fr",
+            }
+          }
+          id="muted"
+          key="muted"
+          showScrollShadow={false}
+          state={
+            Object {
+              "columns": Array [
+                Object {
+                  "id": "name",
+                  "width": "300px",
+                },
+                Object {
+                  "id": "username",
+                  "width": "minmax(300px, 1fr)",
+                },
+                Object {
+                  "id": "email",
+                  "width": null,
+                },
+                Object {
+                  "id": "phone",
+                  "width": null,
+                },
+                Object {
+                  "id": "company",
+                  "width": null,
+                },
+                Object {
+                  "id": "website",
+                  "width": null,
+                },
+                Object {
+                  "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
+                  "width": null,
+                },
+                Object {
+                  "id": "dropdown",
+                  "width": null,
+                },
+              ],
+              "order": "asc",
+              "sortBy": null,
+            }
+          }
+          update={[Function]}
+        >
+          <div
+            aria-sort="none"
+            className="emotion-19"
+            id="muted"
+            role="columnheader"
+          >
+            Muted
             <Component
               onRelativeXChange={[Function]}
             >
@@ -5312,6 +5791,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 },
                 Object {
                   "id": "empty",
+                  "width": null,
+                },
+                Object {
+                  "id": "muted",
                   "width": null,
                 },
                 Object {
@@ -5430,6 +5913,12 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -5454,13 +5943,13 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       toId={[Function]}
     >
       <div
-        className="emotion-45"
+        className="emotion-50"
         key="row-0"
         role="row"
       >
         <div
           aria-describedby="name"
-          className="emotion-33"
+          className="emotion-36"
           key="0name"
           role="gridcell"
         >
@@ -5472,7 +5961,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="emotion-34"
+          className="emotion-37"
           key="0username"
           role="gridcell"
         >
@@ -5480,7 +5969,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="emotion-35"
+          className="emotion-38"
           key="0email"
           role="gridcell"
         >
@@ -5488,7 +5977,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="emotion-36"
+          className="emotion-39"
           key="0phone"
           role="gridcell"
         >
@@ -5496,7 +5985,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="emotion-36"
+          className="emotion-39"
           key="0company"
           role="gridcell"
         >
@@ -5504,7 +5993,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="emotion-36"
+          className="emotion-39"
           key="0website"
           role="gridcell"
         >
@@ -5516,7 +6005,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="emotion-36"
+          className="emotion-39"
           key="0empty"
           role="gridcell"
         >
@@ -5525,14 +6014,39 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           </Component>
         </div>
         <div
+          aria-describedby="muted"
+          className="emotion-39"
+          key="0muted"
+          role="gridcell"
+        >
+          <Component>
+            <Text
+              align="inherit"
+              color="var(--themeTextColorSecondary, #76797E)"
+              dataCy="text"
+              size="m"
+              tag="div"
+              weight="normal"
+              wrap="truncate"
+            >
+              <div
+                className="rmTextMargins emotion-43"
+                data-cy="text"
+              >
+                No data is available.
+              </div>
+            </Text>
+          </Component>
+        </div>
+        <div
           aria-describedby="dropdown"
-          className="emotion-36"
+          className="emotion-39"
           key="0dropdown"
           role="gridcell"
         >
           <Component>
             <div
-              className="emotion-43"
+              className="emotion-48"
             >
               <DropdownMenu
                 preferredDirections={
@@ -5576,7 +6090,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-5-label"
                     aria-owns={null}
-                    className="emotion-42"
+                    className="emotion-47"
                     role="combobox"
                   >
                     <Dropdownable
@@ -5689,7 +6203,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           <button
                             aria-haspopup={true}
                             aria-label="open menu"
-                            className="emotion-41"
+                            className="emotion-46"
                             data-toggle={true}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -5708,7 +6222,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
-                                  className="emotion-40"
+                                  className="emotion-45"
                                   data-cy="icon"
                                   height={16}
                                   preserveAspectRatio="xMinYMin meet"
@@ -5792,6 +6306,12 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -5816,13 +6336,13 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       toId={[Function]}
     >
       <div
-        className="emotion-45"
+        className="emotion-50"
         key="row-1"
         role="row"
       >
         <div
           aria-describedby="name"
-          className="emotion-33"
+          className="emotion-36"
           key="1name"
           role="gridcell"
         >
@@ -5834,7 +6354,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="emotion-34"
+          className="emotion-37"
           key="1username"
           role="gridcell"
         >
@@ -5842,7 +6362,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="emotion-35"
+          className="emotion-38"
           key="1email"
           role="gridcell"
         >
@@ -5850,7 +6370,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="emotion-36"
+          className="emotion-39"
           key="1phone"
           role="gridcell"
         >
@@ -5858,7 +6378,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="emotion-36"
+          className="emotion-39"
           key="1company"
           role="gridcell"
         >
@@ -5866,7 +6386,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="emotion-36"
+          className="emotion-39"
           key="1website"
           role="gridcell"
         >
@@ -5878,7 +6398,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="emotion-36"
+          className="emotion-39"
           key="1empty"
           role="gridcell"
         >
@@ -5887,14 +6407,39 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           </Component>
         </div>
         <div
+          aria-describedby="muted"
+          className="emotion-39"
+          key="1muted"
+          role="gridcell"
+        >
+          <Component>
+            <Text
+              align="inherit"
+              color="var(--themeTextColorSecondary, #76797E)"
+              dataCy="text"
+              size="m"
+              tag="div"
+              weight="normal"
+              wrap="truncate"
+            >
+              <div
+                className="rmTextMargins emotion-43"
+                data-cy="text"
+              >
+                No data is available.
+              </div>
+            </Text>
+          </Component>
+        </div>
+        <div
           aria-describedby="dropdown"
-          className="emotion-36"
+          className="emotion-39"
           key="1dropdown"
           role="gridcell"
         >
           <Component>
             <div
-              className="emotion-43"
+              className="emotion-48"
             >
               <DropdownMenu
                 preferredDirections={
@@ -5938,7 +6483,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-6-label"
                     aria-owns={null}
-                    className="emotion-42"
+                    className="emotion-47"
                     role="combobox"
                   >
                     <Dropdownable
@@ -6051,7 +6596,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           <button
                             aria-haspopup={true}
                             aria-label="open menu"
-                            className="emotion-41"
+                            className="emotion-46"
                             data-toggle={true}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -6070,7 +6615,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
-                                  className="emotion-40"
+                                  className="emotion-45"
                                   data-cy="icon"
                                   height={16}
                                   preserveAspectRatio="xMinYMin meet"
@@ -6154,6 +6699,12 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -6178,13 +6729,13 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       toId={[Function]}
     >
       <div
-        className="emotion-45"
+        className="emotion-50"
         key="row-2"
         role="row"
       >
         <div
           aria-describedby="name"
-          className="emotion-33"
+          className="emotion-36"
           key="2name"
           role="gridcell"
         >
@@ -6196,7 +6747,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="emotion-34"
+          className="emotion-37"
           key="2username"
           role="gridcell"
         >
@@ -6204,7 +6755,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="emotion-35"
+          className="emotion-38"
           key="2email"
           role="gridcell"
         >
@@ -6212,7 +6763,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="emotion-36"
+          className="emotion-39"
           key="2phone"
           role="gridcell"
         >
@@ -6220,7 +6771,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="emotion-36"
+          className="emotion-39"
           key="2company"
           role="gridcell"
         >
@@ -6228,7 +6779,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="emotion-36"
+          className="emotion-39"
           key="2website"
           role="gridcell"
         >
@@ -6240,7 +6791,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="emotion-36"
+          className="emotion-39"
           key="2empty"
           role="gridcell"
         >
@@ -6249,14 +6800,39 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           </Component>
         </div>
         <div
+          aria-describedby="muted"
+          className="emotion-39"
+          key="2muted"
+          role="gridcell"
+        >
+          <Component>
+            <Text
+              align="inherit"
+              color="var(--themeTextColorSecondary, #76797E)"
+              dataCy="text"
+              size="m"
+              tag="div"
+              weight="normal"
+              wrap="truncate"
+            >
+              <div
+                className="rmTextMargins emotion-43"
+                data-cy="text"
+              >
+                No data is available.
+              </div>
+            </Text>
+          </Component>
+        </div>
+        <div
           aria-describedby="dropdown"
-          className="emotion-36"
+          className="emotion-39"
           key="2dropdown"
           role="gridcell"
         >
           <Component>
             <div
-              className="emotion-43"
+              className="emotion-48"
             >
               <DropdownMenu
                 preferredDirections={
@@ -6300,7 +6876,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-7-label"
                     aria-owns={null}
-                    className="emotion-42"
+                    className="emotion-47"
                     role="combobox"
                   >
                     <Dropdownable
@@ -6413,7 +6989,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           <button
                             aria-haspopup={true}
                             aria-label="open menu"
-                            className="emotion-41"
+                            className="emotion-46"
                             data-toggle={true}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -6432,7 +7008,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
-                                  className="emotion-40"
+                                  className="emotion-45"
                                   data-cy="icon"
                                   height={16}
                                   preserveAspectRatio="xMinYMin meet"
@@ -6516,6 +7092,12 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -6540,13 +7122,13 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       toId={[Function]}
     >
       <div
-        className="emotion-45"
+        className="emotion-50"
         key="row-3"
         role="row"
       >
         <div
           aria-describedby="name"
-          className="emotion-33"
+          className="emotion-36"
           key="3name"
           role="gridcell"
         >
@@ -6558,7 +7140,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="emotion-34"
+          className="emotion-37"
           key="3username"
           role="gridcell"
         >
@@ -6566,7 +7148,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="emotion-35"
+          className="emotion-38"
           key="3email"
           role="gridcell"
         >
@@ -6574,7 +7156,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="emotion-36"
+          className="emotion-39"
           key="3phone"
           role="gridcell"
         >
@@ -6582,7 +7164,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="emotion-36"
+          className="emotion-39"
           key="3company"
           role="gridcell"
         >
@@ -6590,7 +7172,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="emotion-36"
+          className="emotion-39"
           key="3website"
           role="gridcell"
         >
@@ -6602,7 +7184,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="emotion-36"
+          className="emotion-39"
           key="3empty"
           role="gridcell"
         >
@@ -6611,14 +7193,39 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           </Component>
         </div>
         <div
+          aria-describedby="muted"
+          className="emotion-39"
+          key="3muted"
+          role="gridcell"
+        >
+          <Component>
+            <Text
+              align="inherit"
+              color="var(--themeTextColorSecondary, #76797E)"
+              dataCy="text"
+              size="m"
+              tag="div"
+              weight="normal"
+              wrap="truncate"
+            >
+              <div
+                className="rmTextMargins emotion-43"
+                data-cy="text"
+              >
+                No data is available.
+              </div>
+            </Text>
+          </Component>
+        </div>
+        <div
           aria-describedby="dropdown"
-          className="emotion-36"
+          className="emotion-39"
           key="3dropdown"
           role="gridcell"
         >
           <Component>
             <div
-              className="emotion-43"
+              className="emotion-48"
             >
               <DropdownMenu
                 preferredDirections={
@@ -6662,7 +7269,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-8-label"
                     aria-owns={null}
-                    className="emotion-42"
+                    className="emotion-47"
                     role="combobox"
                   >
                     <Dropdownable
@@ -6775,7 +7382,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           <button
                             aria-haspopup={true}
                             aria-label="open menu"
-                            className="emotion-41"
+                            className="emotion-46"
                             data-toggle={true}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -6794,7 +7401,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
-                                  className="emotion-40"
+                                  className="emotion-45"
                                   data-cy="icon"
                                   height={16}
                                   preserveAspectRatio="xMinYMin meet"
@@ -6878,6 +7485,12 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "1fr",
           },
           Object {
+            "header": "Muted",
+            "id": "muted",
+            "render": [Function],
+            "width": "1fr",
+          },
+          Object {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -6902,13 +7515,13 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       toId={[Function]}
     >
       <div
-        className="emotion-45"
+        className="emotion-50"
         key="row-4"
         role="row"
       >
         <div
           aria-describedby="name"
-          className="emotion-33"
+          className="emotion-36"
           key="4name"
           role="gridcell"
         >
@@ -6920,7 +7533,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="emotion-34"
+          className="emotion-37"
           key="4username"
           role="gridcell"
         >
@@ -6928,7 +7541,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="emotion-35"
+          className="emotion-38"
           key="4email"
           role="gridcell"
         >
@@ -6936,7 +7549,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="emotion-36"
+          className="emotion-39"
           key="4phone"
           role="gridcell"
         >
@@ -6944,7 +7557,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="emotion-36"
+          className="emotion-39"
           key="4company"
           role="gridcell"
         >
@@ -6952,7 +7565,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="emotion-36"
+          className="emotion-39"
           key="4website"
           role="gridcell"
         >
@@ -6964,7 +7577,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="emotion-36"
+          className="emotion-39"
           key="4empty"
           role="gridcell"
         >
@@ -6973,14 +7586,39 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           </Component>
         </div>
         <div
+          aria-describedby="muted"
+          className="emotion-39"
+          key="4muted"
+          role="gridcell"
+        >
+          <Component>
+            <Text
+              align="inherit"
+              color="var(--themeTextColorSecondary, #76797E)"
+              dataCy="text"
+              size="m"
+              tag="div"
+              weight="normal"
+              wrap="truncate"
+            >
+              <div
+                className="rmTextMargins emotion-43"
+                data-cy="text"
+              >
+                No data is available.
+              </div>
+            </Text>
+          </Component>
+        </div>
+        <div
           aria-describedby="dropdown"
-          className="emotion-36"
+          className="emotion-39"
           key="4dropdown"
           role="gridcell"
         >
           <Component>
             <div
-              className="emotion-43"
+              className="emotion-48"
             >
               <DropdownMenu
                 preferredDirections={
@@ -7024,7 +7662,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                     aria-haspopup="listbox"
                     aria-labelledby="downshift-9-label"
                     aria-owns={null}
-                    className="emotion-42"
+                    className="emotion-47"
                     role="combobox"
                   >
                     <Dropdownable
@@ -7137,7 +7775,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           <button
                             aria-haspopup={true}
                             aria-label="open menu"
-                            className="emotion-41"
+                            className="emotion-46"
                             data-toggle={true}
                             onBlur={[Function]}
                             onClick={[Function]}
@@ -7156,7 +7794,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
-                                  className="emotion-40"
+                                  className="emotion-45"
                                   data-cy="icon"
                                   height={16}
                                   preserveAspectRatio="xMinYMin meet"
@@ -7183,7 +7821,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
     </Memo(Row)>
     <div
-      className="emotion-98"
+      className="emotion-111"
     />
   </div>
 </Table>

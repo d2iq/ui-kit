@@ -13,7 +13,8 @@ import {
   Sorter,
   DropdownMenuCell,
   EmptyCell,
-  TooltipHeaderCell
+  TooltipHeaderCell,
+  MutedCell
 } from ".";
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -274,6 +275,25 @@ storiesOf("Data listing|Table", module)
         { id: "name", header: "Name", render: x => x.name },
         { id: "username", header: "Username", render: () => <EmptyCell /> },
         { id: "email", header: "Email", render: x => x.email },
+        { id: "phone", header: "Phone", render: x => x.phone },
+        { id: "website", header: "Website", render: x => x.website },
+        { id: "company", header: "Company", render: x => x.company.name }
+      ]}
+    />
+  ))
+  .add("muted cells", () => (
+    <Table
+      data={initialData}
+      // toId fn needed to make react render stuff fast.
+      toId={el => el.id.toString()}
+      columns={[
+        { id: "name", header: "Name", render: x => x.name },
+        { id: "username", header: "Username", render: x => x.username },
+        {
+          id: "email",
+          header: "Email",
+          render: x => <MutedCell>No email provided</MutedCell>
+        },
         { id: "phone", header: "Phone", render: x => x.phone },
         { id: "website", header: "Website", render: x => x.website },
         { id: "company", header: "Company", render: x => x.company.name }
