@@ -1,5 +1,5 @@
 import * as React from "react";
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { spaceSizes } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 import { pageHeaderPaddingSize } from "./PageHeader";
 

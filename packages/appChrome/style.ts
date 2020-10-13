@@ -1,13 +1,15 @@
 import { css } from "emotion";
 import {
   spaceM,
+  themeBgAppHeader,
   themeBgSelected,
   themeBgHover,
   themeBgHoverInverted,
   themeTextColorPrimary,
-  themeTextColorPrimaryInverted
+  themeTextColorPrimaryInverted,
+  themeBgPrimaryInverted
 } from "../design-tokens/build/js/designTokens";
-import { padding } from "../shared/styles/styleUtils";
+import { padding, tintContent } from "../shared/styles/styleUtils";
 import { pickHoverBg, pickReadableTextColor } from "../shared/styles/color";
 import getCSSVarValue from "../utilities/getCSSVarValue";
 import { AppChromeTheme } from "./types";
@@ -19,8 +21,6 @@ import {
   defaultSidebarItemHorizPaddingSize,
   defaultSidebarItemVertPaddingSize
 } from "./components/SidebarItem";
-
-const iconSize = "24px";
 
 export const appChrome = css`
   height: 100%;
@@ -41,9 +41,51 @@ export const appWrapper = css`
   overflow: auto;
 `;
 
+export const headerBar = (theme: AppChromeTheme) => {
+  const bgColor =
+    theme.headerBackgroundColor || getCSSVarValue(themeBgAppHeader);
+  const textColor = pickReadableTextColor(
+    bgColor,
+    getCSSVarValue(themeTextColorPrimary),
+    getCSSVarValue(themeTextColorPrimaryInverted)
+  );
+  return css`
+    background-color: ${bgColor};
+    padding-left: ${theme.headerPaddingHor
+      ? spaceSizes[theme.headerPaddingHor]
+      : spaceSizes.l};
+    padding-right: ${theme.headerPaddingHor
+      ? spaceSizes[theme.headerPaddingHor]
+      : spaceSizes.l};
+    padding-bottom: ${theme.headerPaddingVert
+      ? spaceSizes[theme.headerPaddingVert]
+      : spaceSizes.xs};
+    padding-top: ${theme.headerPaddingVert
+      ? spaceSizes[theme.headerPaddingVert]
+      : spaceSizes.xs};
+    ${tintContent(textColor)};
+  `;
+};
+
 export const sidebar = css`
   height: 100%;
 `;
+
+export const sidebarContainer = (theme: AppChromeTheme, isOpen?: boolean) => {
+  const bgColor =
+    theme.sidebarBackgroundColor || getCSSVarValue(themeBgPrimaryInverted);
+  const textColor = pickReadableTextColor(
+    bgColor,
+    getCSSVarValue(themeTextColorPrimary),
+    getCSSVarValue(themeTextColorPrimaryInverted)
+  );
+
+  return css`
+    background-color: ${bgColor};
+    transform: ${`translateX(${isOpen ? 0 : "-100%"})`};
+    ${tintContent(textColor)};
+  `;
+};
 
 // TODO: replace animation duration/easing with design tokens
 // once design has agreed on animation
@@ -58,8 +100,20 @@ export const sidebarItemHeight = css`
   ${padding("bottom", "s")};
 `;
 
-export const sidebarSectionHeader = css`
+export const sidebarSectionHeader = (theme: AppChromeTheme) => css`
   text-transform: capitalize;
+  padding-left: ${theme.sidebarHeaderPaddingHor
+    ? spaceSizes[theme.sidebarHeaderPaddingHor]
+    : spaceSizes.l};
+  padding-right: ${theme.sidebarHeaderPaddingHor
+    ? spaceSizes[theme.sidebarHeaderPaddingHor]
+    : spaceSizes.l};
+  padding-bottom: ${theme.sidebarHeaderPaddingVert
+    ? spaceSizes[theme.sidebarHeaderPaddingVert]
+    : spaceSizes.s};
+  padding-top: ${theme.sidebarHeaderPaddingVert
+    ? spaceSizes[theme.sidebarHeaderPaddingVert]
+    : spaceSizes.s};
 `;
 
 export const sidebarSectionList = css`
@@ -130,14 +184,8 @@ export const subMenuItem = css`
 
 export const subMenuItemText = css`
   text-transform: capitalize;
-
-  .menuHasIcon & {
-    padding-left: ${parseInt(iconSize, 10) + parseInt(spaceM, 10)}px;
-  }
 `;
 
 export const spaceMenuIcon = (iconWidth: string) => css`
-  .${subMenuItemText} {
-    padding-left: ${parseInt(iconWidth, 10) + parseInt(spaceM, 10)}px;
-  }
+  padding-left: ${parseInt(iconWidth, 10) + parseInt(spaceM, 10)}px;
 `;

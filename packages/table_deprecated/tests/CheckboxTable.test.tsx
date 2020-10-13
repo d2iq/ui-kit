@@ -1,12 +1,11 @@
 import React from "react";
-
-import { CheckboxTable_Deprecated, Column } from "../";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import { shallow, render, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+import { CheckboxTable_Deprecated, Column } from "../";
+
+expect.addSnapshotSerializer(serializer);
 
 describe("CheckboxTable", () => {
   const items = [

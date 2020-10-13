@@ -1,8 +1,8 @@
 import React from "react";
+import { cx } from "emotion";
+import { useId } from "react-id-generator";
 
 import Cell, { CellProps } from "./Cell";
-import styled, { cx } from "react-emotion";
-import { useId } from "react-id-generator";
 import { headerCellCss, headerCellInner } from "../style";
 import {
   textTruncate,
@@ -28,9 +28,14 @@ const HeaderCell = ({
   children,
   tooltipContent,
   tooltipId = useId(1, "columnHeaderTooltip-")[0],
+  className,
   ...other
 }: HeaderCellProps) => (
-  <Cell capitalize={capitalize} {...other}>
+  <Cell
+    capitalize={capitalize}
+    className={cx(className, headerCellCss)}
+    {...other}
+  >
     <div className={cx(display("inline-flex"), headerCellInner)}>
       <div
         className={cx(textTruncate, flexItem("grow"), padding("right", "xxs"))}
@@ -55,6 +60,4 @@ const HeaderCell = ({
   </Cell>
 );
 
-export default styled(HeaderCell)`
-  ${headerCellCss};
-`;
+export default HeaderCell;

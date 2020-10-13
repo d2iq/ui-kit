@@ -1,12 +1,11 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { PrimaryAction, SecondaryAction } from "../stories/helpers/actions";
 import { InfoBox, InfoBoxBanner, InfoBoxInline } from "../";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 const MessageComponent = (): JSX.Element => {
   return <span>message</span>;

@@ -1,19 +1,11 @@
 import * as React from "react";
-import { css } from "emotion";
-import styled from "react-emotion";
-import { ThemeProvider } from "emotion-theming";
-import { sidebar, sidebarAnimator } from "../style";
-import {
-  themeTextColorPrimary,
-  themeTextColorPrimaryInverted,
-  themeBgPrimaryInverted
-} from "../../design-tokens/build/js/designTokens";
+import { cx } from "emotion";
+import { ThemeProvider, useTheme } from "emotion-theming";
+import { sidebar, sidebarAnimator, sidebarContainer } from "../style";
+import { themeBgPrimaryInverted } from "../../design-tokens/build/js/designTokens";
 import getCSSVarValue from "../../utilities/getCSSVarValue";
-import { pickReadableTextColor } from "../../shared/styles/color";
-import {
-  tintContent,
-  getResponsiveStyle
-} from "../../shared/styles/styleUtils";
+import { getResponsiveStyle } from "../../shared/styles/styleUtils";
+import { AppChromeTheme } from "../types";
 export interface SidebarProps {
   isOpen: boolean;
   onOpen?: () => void;
@@ -25,63 +17,66 @@ const defaultSidebarWidths = {
   large: "280px"
 };
 
-const StyledSidebar = styled("div")`
-  ${props => {
-    const bgColor =
-      props.theme.sidebarBackgroundColor ||
-      getCSSVarValue(themeBgPrimaryInverted);
-    const textColor = pickReadableTextColor(
-      bgColor,
-      getCSSVarValue(themeTextColorPrimary),
-      getCSSVarValue(themeTextColorPrimaryInverted)
-    );
-    return css`
-      background-color: ${bgColor};
-      transform: ${`translateX(${props.theme.isOpen ? 0 : "-100%"})`};
-      ${tintContent(textColor)};
-      ${getResponsiveStyle(
-        "width",
-        props.theme.isOpen ? props.theme.sidebarWidth : 0
-      )};
-    `;
-  }};
-`;
+const StyledSidebar: React.FC<{ isOpen?: boolean }> = ({
+  children,
+  isOpen
+}) => {
+  const theme: AppChromeTheme = useTheme();
 
-const StyledNav = styled("nav")`
-  ${props => getResponsiveStyle("min-width", props.theme.sidebarWidth)};
-`;
+  return (
+    <div
+      className={cx(
+        sidebarContainer(theme, isOpen),
+        getResponsiveStyle("width", isOpen ? theme.sidebarWidth : 0),
+        sidebarAnimator
+      )}
+    >
+      <nav
+        className={cx(
+          getResponsiveStyle("min-width", theme.sidebarWidth),
+          sidebar
+        )}
+      >
+        {children}
+      </nav>
+    </div>
+  );
+};
 
-class Sidebar extends React.PureComponent<SidebarProps, {}> {
-  public componentWillReceiveProps(nextProps: SidebarProps) {
-    const { onOpen, onClose } = this.props;
-
-    if (nextProps.isOpen && onOpen) {
-      onOpen();
-    } else if (!nextProps.isOpen && onClose) {
-      onClose();
+const Sidebar: React.FC<SidebarProps> = ({
+  children,
+  isOpen,
+  onClose,
+  onOpen
+}) => {
+  // Used to only call `onOpen`/`onClose` when the `isOpen` prop changes.
+  // Source: https://dev.to/savagepixie/how-to-mimic-componentdidupdate-with-react-hooks-3j8c
+  const didMountRef = React.useRef(false);
+  React.useEffect(() => {
+    if (didMountRef.current) {
+      if (isOpen && onOpen) {
+        onOpen();
+      } else if (!isOpen && onClose) {
+        onClose();
+      }
+    } else {
+      didMountRef.current = true;
     }
-  }
+  }, [isOpen]);
 
-  public render() {
-    const { children, isOpen } = this.props;
-
-    const adjustedTheme = ancestorTheme => {
-      return {
-        sidebarBackgroundColor: getCSSVarValue(themeBgPrimaryInverted),
-        sidebarWidth: defaultSidebarWidths,
-        isOpen,
-        ...ancestorTheme
-      };
+  const adjustedTheme = ancestorTheme => {
+    return {
+      sidebarBackgroundColor: getCSSVarValue(themeBgPrimaryInverted),
+      sidebarWidth: defaultSidebarWidths,
+      ...ancestorTheme
     };
+  };
 
-    return (
-      <ThemeProvider theme={adjustedTheme}>
-        <StyledSidebar className={sidebarAnimator}>
-          <StyledNav className={sidebar}>{children}</StyledNav>
-        </StyledSidebar>
-      </ThemeProvider>
-    );
-  }
-}
+  return (
+    <ThemeProvider theme={adjustedTheme}>
+      <StyledSidebar isOpen={isOpen}>{children}</StyledSidebar>
+    </ThemeProvider>
+  );
+};
 
 export default Sidebar;

@@ -2,7 +2,7 @@ import * as React from "react";
 import Draggable from "react-draggable";
 import { cx, css } from "emotion";
 import memoizeOne from "memoize-one";
-import styled from "react-emotion";
+import styled from "@emotion/styled";
 import {
   AutoSizer,
   MultiGrid,
@@ -141,7 +141,15 @@ export const fillColumns = (
   return copiedColWidths;
 };
 
-const ContentCell = styled("div")`
+const ContentCell = styled<
+  "div",
+  {
+    theme: {
+      coloredRows: Pick<TableProps, "data">;
+      mutedRows: Pick<TableProps, "data">;
+    };
+  }
+>("div")`
   ${props => {
     return `${
       props.theme.coloredRows &&
@@ -156,6 +164,8 @@ const ContentCell = styled("div")`
   }`;
   }};
 `;
+
+// const ContentCell = props => <div {...props} />;
 
 export class Table<T> extends React.PureComponent<TableProps, TableState> {
   public multiGridRef: {

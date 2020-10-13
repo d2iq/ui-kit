@@ -1,12 +1,11 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { Typeahead, TextInput } from "../../index";
 import DropdownContents from "../../dropdownable/components/DropdownContents";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 const items = [
   { label: "Exosphere", value: "Exosphere" },

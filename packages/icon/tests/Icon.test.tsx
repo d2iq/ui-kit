@@ -1,13 +1,12 @@
 import React from "react";
 import { shallow } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { Icon } from "../";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { iconSizeL } from "../../design-tokens/build/js/designTokens";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("Icon", () => {
   it("renders", () => {

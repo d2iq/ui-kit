@@ -1,7 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import { shallow, mount } from "enzyme";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 
 import {
@@ -11,10 +10,13 @@ import {
   SidebarSection,
   SidebarSubMenuItem
 } from "../";
-import { SidebarSubMenuComponent } from "../components/SidebarSubMenu";
+import {
+  SidebarSubMenuComponent,
+  getSubItemList
+} from "../components/SidebarSubMenu";
 import { ProductIcons } from "../../icons/dist/product-icons-enum";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("Sidebar", () => {
   it("renders", () => {
@@ -23,7 +25,7 @@ describe("Sidebar", () => {
   });
   it("calls onOpen callback", () => {
     const onOpenFn = jest.fn();
-    const component = shallow(
+    const component = mount(
       <Sidebar isOpen={false} onOpen={onOpenFn}>
         Sidebar content
       </Sidebar>
@@ -34,7 +36,7 @@ describe("Sidebar", () => {
   });
   it("calls onClose callback", () => {
     const onCloseFn = jest.fn();
-    const component = shallow(
+    const component = mount(
       <Sidebar isOpen={true} onClose={onCloseFn}>
         Sidebar content
       </Sidebar>
@@ -122,8 +124,7 @@ describe("Sidebar", () => {
       expect(toJson(component)).toMatchSnapshot();
     });
     it("makes a list of submenu items", () => {
-      const instance = component.instance() as SidebarSubMenuComponent;
-      const subItemResult = instance.getSubItemList(subMenuItems);
+      const subItemResult = getSubItemList(subMenuItems);
       expect(subItemResult.props.children.length).toBe(2);
     });
   });

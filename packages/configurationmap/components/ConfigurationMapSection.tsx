@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "react-emotion";
+import styled from "@emotion/styled";
 import { margin } from "../../shared/styles/styleUtils";
 import { dlReset } from "../../shared/styles/styleUtils/resets/definitionListReset";
 

@@ -43,7 +43,7 @@ class Cell extends React.PureComponent<CellProps, CellState> {
         className={cx(
           innerCellCss,
           cellAlignmentCss(textAlign || "left"),
-          capitalize ? textCapitalize : null,
+          { [textCapitalize]: capitalize },
           className
         )}
         {...other}

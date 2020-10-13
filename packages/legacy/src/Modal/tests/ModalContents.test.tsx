@@ -1,11 +1,10 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import ModalContents from "../ModalContents";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("ModalContents", () => {
   it("renders", () => {

@@ -1,6 +1,5 @@
 import React from "react";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import { mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
@@ -8,7 +7,7 @@ import TextInputWithBadges, {
   getStringAsBadgeDatum
 } from "../components/TextInputWithBadges";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 const defaultBadges = [
   {

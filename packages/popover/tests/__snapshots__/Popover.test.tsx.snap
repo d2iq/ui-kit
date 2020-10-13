@@ -511,12 +511,51 @@ exports[`Popover renders an open dropdown 1`] = `
             >
               <Portal
                 containerInfo={
-                  <div>
+                  .emotion-1:focus {
+  outline: none;
+}
+
+.emotion-2 {
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  border-width: 1px;
+  border-color: var(--themeBorder,#DADDE2);
+  border-style: solid;
+  -webkit-transform: translateY( -9px );
+  -ms-transform: translateY( -9px );
+  transform: translateY( -9px );
+  overflow-x: hidden;
+}
+
+.emotion-3 {
+  position: absolute;
+  bottom: 4px;
+  left: calc(50% - 5px);
+  border-right: 1px solid var(--themeBorder,#DADDE2);
+  border-bottom: 1px solid var(--themeBorder,#DADDE2);
+  background-color: var(--themeBgPrimary,#FFFFFF);
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 10px;
+  width: 10px;
+}
+
+.emotion-0 {
+  background-repeat: no-repeat;
+  padding: 16px;
+}
+
+<div>
                     <div
                       style="z-index: 2; position: absolute; left: 0px; top: 0px;"
                     >
                       <div
-                        class="emotion-4"
+                        class="emotion-2"
                         data-cy="popover"
                         id="dropdown2"
                         role="dialog"
@@ -535,11 +574,11 @@ exports[`Popover renders an open dropdown 1`] = `
                           data-focus-lock-disabled="false"
                         >
                           <div
-                            class="emotion-3"
+                            class="emotion-1"
                             tabindex="-1"
                           >
                             <div
-                              class="emotion-1"
+                              class="emotion-0"
                               data-cy="spacingBox"
                             >
                               <div>
@@ -555,7 +594,7 @@ exports[`Popover renders an open dropdown 1`] = `
                         />
                       </div>
                       <div
-                        class="emotion-5"
+                        class="emotion-3"
                       />
                     </div>
                   </div>
@@ -644,15 +683,24 @@ exports[`Popover renders an open dropdown 1`] = `
                               autoFocus={true}
                               disabled={false}
                               observed={
-                                <div
+                                .emotion-1:focus {
+  outline: none;
+}
+
+.emotion-0 {
+  background-repeat: no-repeat;
+  padding: 16px;
+}
+
+<div
                                   data-focus-lock-disabled="false"
                                 >
                                   <div
-                                    class="emotion-3"
+                                    class="emotion-1"
                                     tabindex="-1"
                                   >
                                     <div
-                                      class="emotion-1"
+                                      class="emotion-0"
                                       data-cy="spacingBox"
                                     >
                                       <div>
@@ -684,15 +732,24 @@ exports[`Popover renders an open dropdown 1`] = `
                                 autoFocus={true}
                                 disabled={false}
                                 observed={
-                                  <div
+                                  .emotion-1:focus {
+  outline: none;
+}
+
+.emotion-0 {
+  background-repeat: no-repeat;
+  padding: 16px;
+}
+
+<div
                                     data-focus-lock-disabled="false"
                                   >
                                     <div
-                                      class="emotion-3"
+                                      class="emotion-1"
                                       tabindex="-1"
                                     >
                                       <div
-                                        class="emotion-1"
+                                        class="emotion-0"
                                         data-cy="spacingBox"
                                       >
                                         <div>

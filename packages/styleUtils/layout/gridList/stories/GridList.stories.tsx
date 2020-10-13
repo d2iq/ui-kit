@@ -1,6 +1,6 @@
 import * as React from "react";
 import { withKnobs, number, select } from "@storybook/addon-knobs";
-import styled from "react-emotion";
+import styled from "@emotion/styled";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import GridList from "../components/GridList";

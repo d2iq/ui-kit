@@ -1,12 +1,11 @@
 import React from "react";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import { mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
 import { CodeSnippet } from "../";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 const snippetContent = "snippet content";
 

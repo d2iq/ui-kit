@@ -1,12 +1,11 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as emotion from "emotion";
-import { createSerializer } from "jest-emotion";
+import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { Dropdown } from "../Dropdown";
 import { MockDropdownList } from "./fixtures/MockDropdownList";
 
-expect.addSnapshotSerializer(createSerializer(emotion));
+expect.addSnapshotSerializer(serializer);
 
 describe("Dropdown", () => {
   it("should display a dropdown menu when the button is clicked", () => {

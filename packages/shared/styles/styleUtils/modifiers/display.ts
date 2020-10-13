@@ -1,21 +1,6 @@
-import { css } from "react-emotion";
+import { css } from "emotion";
 
-export const display = (
-  displayType:
-    | "block"
-    | "contents"
-    | "flex"
-    | "grid"
-    | "inline"
-    | "inherit"
-    | "inline-block"
-    | "inline-flex"
-    | "inline-grid"
-    | "inline-table"
-    | "none"
-    | "table"
-    | "table-cell"
-) => {
+export const display = (displayType: React.CSSProperties["display"]) => {
   return css`
     display: ${displayType};
   `;

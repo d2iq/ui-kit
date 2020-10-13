@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProgressBar renders all sizes 1`] = `
+@keyframes animation-0 {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 12px 0;
+  }
+}
+
 .emotion-0 {
   fill: var(--themeBrandPrimary,#7D58FF);
 }
@@ -11,8 +21,8 @@ exports[`ProgressBar renders all sizes 1`] = `
   display: block;
   height: 12px;
   width: 100%;
-  -webkit-animation: animation-8il3bs 0.6s linear infinite;
-  animation: animation-8il3bs 0.6s linear infinite;
+  -webkit-animation: animation-0 0.6s linear infinite;
+  animation: animation-0 0.6s linear infinite;
   background-image: linear-gradient( 45deg, transparent 25%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.1) 50%, transparent 50%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1) 100% );
   background-size: 12px 12px;
 }
@@ -48,6 +58,16 @@ exports[`ProgressBar renders all sizes 1`] = `
 `;
 
 exports[`ProgressBar renders all sizes 2`] = `
+@keyframes animation-0 {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 12px 0;
+  }
+}
+
 .emotion-0 {
   fill: var(--themeBrandPrimary,#7D58FF);
 }
@@ -58,8 +78,8 @@ exports[`ProgressBar renders all sizes 2`] = `
   display: block;
   height: 6px;
   width: 100%;
-  -webkit-animation: animation-8il3bs 0.6s linear infinite;
-  animation: animation-8il3bs 0.6s linear infinite;
+  -webkit-animation: animation-0 0.6s linear infinite;
+  animation: animation-0 0.6s linear infinite;
   background-image: linear-gradient( 45deg, transparent 25%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.1) 50%, transparent 50%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1) 100% );
   background-size: 12px 12px;
 }
@@ -95,6 +115,16 @@ exports[`ProgressBar renders all sizes 2`] = `
 `;
 
 exports[`ProgressBar renders isProcessing 1`] = `
+@keyframes animation-0 {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 12px 0;
+  }
+}
+
 .emotion-0 {
   fill: var(--themeBrandPrimary,#7D58FF);
 }
@@ -105,8 +135,8 @@ exports[`ProgressBar renders isProcessing 1`] = `
   display: block;
   height: 6px;
   width: 100%;
-  -webkit-animation: animation-8il3bs 0.6s linear infinite;
-  animation: animation-8il3bs 0.6s linear infinite;
+  -webkit-animation: animation-0 0.6s linear infinite;
+  animation: animation-0 0.6s linear infinite;
   background-image: linear-gradient( 45deg, transparent 25%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.1) 50%, transparent 50%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1) 100% );
   background-size: 12px 12px;
 }

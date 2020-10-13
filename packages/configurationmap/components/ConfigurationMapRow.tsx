@@ -1,6 +1,6 @@
 import * as React from "react";
+import styled from "@emotion/styled";
 import { configurationMapRow, showActionOnHoverStyle } from "../style";
-import styled from "react-emotion";
 import { flex, padding, border } from "../../shared/styles/styleUtils";
 
 interface ConfigurationMapRowProps {
