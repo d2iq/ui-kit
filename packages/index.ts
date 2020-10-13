@@ -110,6 +110,7 @@ export {
   Table,
   DropdownMenuCell,
   EmptyCell,
+  MutedCell,
   Sorter,
   TooltipHeaderCell
 } from "./tablev2";
