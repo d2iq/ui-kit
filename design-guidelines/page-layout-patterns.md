@@ -4,6 +4,8 @@ The following patterns are provided as guidelines for how to structure app conte
 
 ## App structure
 
+![appStructureDiagram](./img/page-layout-patterns/appStructureDiagram.png)
+
 ### App sidebar
 
 The app sidebar is the top-level navigation menu for the app. The links in the sidebar may be arranged in a flat structure, or nested by category. The sidebar may also contain information that would normally appear in a footer.
@@ -57,6 +59,8 @@ Action buttons are placed flushed to the right edge of the primary content area,
 If there are more than three actions, the two most important actions are placed to the left of an overflow menu.
 
 ![contentAction-overflow](./img/page-layout-patterns/contentAction-overflow.png)
+
+A content filter typically appears when the primary content area contains a collection of objects of the same type. For example: a table that lists clusters.
 
 If there are filters, they are flushed to the left edge of the primary content area.
 
@@ -118,7 +122,7 @@ The app header bar and app sidebar are hidden when users need to focus on choosi
 
 ### Tabbed form layout
 
-The tabbed form layout is used to display forms with multiple complex sections.
+The tabbed form layout is used to display forms with multiple complex sections. Users are free to navigate the tabs in any order they want. However, the order of the tabs may be interpretted by users as the suggested order to navigate the form tabs.
 
 The app header bar and app sidebar are hidden when using this layout to allow users to focus on the complex form. A simple header may be used to show: very basic info (e.g.: page title), a button to cancel out of the form, and a button to submit the form.
 
@@ -140,6 +144,4 @@ An optional header or footer may be shown to give users more context for complet
 
 #### Examples
 
-![simpleFocused](./img/page-layout-patterns/simpleFocused.png)
-
-![simpleFocused-withHeaderAndFooter](./img/page-layout-patterns/simpleFocused-withHeaderAndFooter.png)
+![simpleFocused](./img/page-layout-patterns/simpleFocused-example.png)

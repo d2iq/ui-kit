@@ -52,15 +52,15 @@ Pages that have multiple sections of content use tabs to organize content. Page 
 
 ![pageHeader-example-withTabs+action](https://raw.githubusercontent.com/dcos-labs/ui-kit/master/packages/pageheader/readmeImg/pageHeader-example-withTabs+action.png)
 
-## Page header with subheader
+## Page header with body content
 
 Some page headers contain information that is relevant to the primary page content. For example: promotional banners, or a summary of complex primary page content.
 
 Contextual info should be displayed after the title/breadcrumb area, but before tabs.
 
-![pageHeader-withSubheader](https://raw.githubusercontent.com/dcos-labs/ui-kit/master/packages/pageheader/readmeImg/pageHeader-withSubheader.png)
+![pageHeader-withSubheader](https://raw.githubusercontent.com/dcos-labs/ui-kit/master/packages/pageheader/readmeImg/pageHeader-withBody.png)
 
-![pageHeader-withSubheader+tabs](https://raw.githubusercontent.com/dcos-labs/ui-kit/master/packages/pageheader/readmeImg/pageHeader-withSubheader+tabs.png)
+![pageHeader-withSubheader+tabs](https://raw.githubusercontent.com/dcos-labs/ui-kit/master/packages/pageheader/readmeImg/pageHeader-withBody+tabs.png)
 
 ### Examples
 
