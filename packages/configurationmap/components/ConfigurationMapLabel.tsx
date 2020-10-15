@@ -1,18 +1,20 @@
 import * as React from "react";
+import { cx } from "emotion";
 import { breakWord, textWeight, padding } from "../../shared/styles/styleUtils";
 import { configurationMapLabel } from "../style";
-import styled from "@emotion/styled";
 
-const ConfigurationMapLabel = styled("dt")`
-  ${configurationMapLabel};
-  ${padding("right", "s")};
-  ${textWeight("medium")};
-  ${breakWord};
-  overflow: hidden;
-`;
-
-export default ({ children }) => (
-  <ConfigurationMapLabel data-cy="configurationMapLabel">
+const ConfigurationMapLabel: React.FC = ({ children }) => (
+  <div
+    className={cx(
+      configurationMapLabel,
+      padding("right", "s"),
+      textWeight("medium"),
+      breakWord
+    )}
+    data-cy="configurationMapLabel"
+  >
     {children}
-  </ConfigurationMapLabel>
+  </div>
 );
+
+export default ConfigurationMapLabel;

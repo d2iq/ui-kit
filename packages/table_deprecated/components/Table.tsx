@@ -165,8 +165,6 @@ const ContentCell = styled<
   }};
 `;
 
-// const ContentCell = props => <div {...props} />;
-
 export class Table<T> extends React.PureComponent<TableProps, TableState> {
   public multiGridRef: {
     recomputeGridSize?: any;
