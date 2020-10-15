@@ -1,4 +1,7 @@
 import React from "react";
+import serializer from "jest-emotion";
+import { render, mount } from "enzyme";
+import toJSON from "enzyme-to-json";
 
 import {
   ConfigurationMap,
@@ -10,8 +13,8 @@ import {
   ConfigurationMapValueWithDefault,
   ConfigurationMapRowAction
 } from "../";
-import { render, mount } from "enzyme";
-import toJSON from "enzyme-to-json";
+
+expect.addSnapshotSerializer(serializer);
 
 describe("ConfigurationMap", () => {
   it("renders default", () => {

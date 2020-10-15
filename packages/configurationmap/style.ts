@@ -17,6 +17,7 @@ export const configurationMapHeadingStyle = css`
 
 export const configurationMapLabel = css`
   flex-basis: 15em;
+  overflow: hidden;
 
   &,
   & > * {
@@ -25,16 +26,12 @@ export const configurationMapLabel = css`
   }
 `;
 
-export const showActionOnHoverStyle = (onlyShowActionOnHover?: boolean) => {
-  if (onlyShowActionOnHover) {
-    return css`
-      .${rowActionStaticClassname} {
-        ${visuallyHidden};
-      }
-
-      &:hover .${rowActionStaticClassname} {
-        ${undoVisuallyHidden};
-      }
-    `;
+export const showActionOnHoverStyle = css`
+  .${rowActionStaticClassname} {
+    ${visuallyHidden};
   }
-};
+
+  &:hover .${rowActionStaticClassname} {
+    ${undoVisuallyHidden};
+  }
+`;

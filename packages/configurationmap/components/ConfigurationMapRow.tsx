@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "@emotion/styled";
+import { cx } from "emotion";
 import { configurationMapRow, showActionOnHoverStyle } from "../style";
 import { flex, padding, border } from "../../shared/styles/styleUtils";
 
@@ -8,19 +8,19 @@ interface ConfigurationMapRowProps {
   onlyShowActionOnHover?: boolean;
 }
 
-const ConfigurationMapRow = styled("div")<ConfigurationMapRowProps>`
-  ${props => showActionOnHoverStyle(props.onlyShowActionOnHover)};
-  ${configurationMapRow};
-  ${border("bottom")};
-  ${flex()};
-  ${padding("vert", "xs")};
-`;
-
-export default (props: ConfigurationMapRowProps) => (
-  <ConfigurationMapRow
-    onlyShowActionOnHover={props.onlyShowActionOnHover}
+const ConfigurationMapRow: React.FC<ConfigurationMapRowProps> = props => (
+  <div
+    className={cx(
+      { [showActionOnHoverStyle]: props.onlyShowActionOnHover },
+      configurationMapRow,
+      border("bottom"),
+      flex(),
+      padding("vert", "xs")
+    )}
     data-cy="configurationMapRow"
   >
     {props.children}
-  </ConfigurationMapRow>
+  </div>
 );
+
+export default ConfigurationMapRow;

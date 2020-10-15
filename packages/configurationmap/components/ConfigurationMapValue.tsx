@@ -1,16 +1,15 @@
 import * as React from "react";
-import styled from "@emotion/styled";
+import { cx } from "emotion";
 import { flexItem, breakWord } from "../../shared/styles/styleUtils";
 import { ddReset } from "../../shared/styles/styleUtils/resets/definitionListReset";
 
-const ConfigurationMapValue = styled("dd")`
-  ${ddReset};
-  ${flexItem("grow")};
-  ${breakWord};
-`;
-
-export default ({ children }) => (
-  <ConfigurationMapValue data-cy="configurationMapValue">
+const ConfigurationMapValue = ({ children }) => (
+  <div
+    className={cx(ddReset, flexItem("grow"), breakWord)}
+    data-cy="configurationMapValue"
+  >
     {children}
-  </ConfigurationMapValue>
+  </div>
 );
+
+export default ConfigurationMapValue;
