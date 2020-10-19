@@ -9,8 +9,7 @@ import { flexItem } from "../../../../shared/styles/styleUtils/layout/flexbox";
 
 type FlexStrategy = "shrink" | "grow";
 
-export interface FlexItemProps {
-  children: React.ReactNode;
+interface FlexItemProps {
   className?: string;
   /**
    * Whether the flex item should grow or shrinkwrap to it's children. Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints
@@ -24,6 +23,10 @@ export interface FlexItemProps {
    * The position at which a flex item should be visually rendered. Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints
    */
   order?: BreakpointConfig<React.CSSProperties["order"]>;
+  /**
+   * Which HTML tag to render the component with
+   */
+  tag?: keyof React.ReactHTML;
 }
 
 const getResponsiveFlexItemStyles = flexVal =>
@@ -33,19 +36,28 @@ const getResponsiveFlexItemStyles = flexVal =>
         atMediaUp[breakpoint](flexItem(flexVal[breakpoint]))
       );
 
-const FlexItem = (props: FlexItemProps) => {
+const FlexItem: React.FC<FlexItemProps> = ({
+  children,
+  className,
+  flex,
+  growFactor,
+  order,
+  tag = "div"
+}) => {
+  const FlexItemEl = tag;
+
   return (
-    <div
+    <FlexItemEl
       className={css`
-        ${getResponsiveFlexItemStyles(props.flex)};
-        ${getResponsiveStyle("flex-grow", props.growFactor)};
-        ${getResponsiveStyle("order", props.order)};
-        ${props.className};
+        ${getResponsiveFlexItemStyles(flex)};
+        ${getResponsiveStyle("flex-grow", growFactor)};
+        ${getResponsiveStyle("order", order)};
+        ${className};
       `}
       data-cy="flexItem"
     >
-      {props.children}
-    </div>
+      {children}
+    </FlexItemEl>
   );
 };
 
