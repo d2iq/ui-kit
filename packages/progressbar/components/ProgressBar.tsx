@@ -88,7 +88,7 @@ const ProgressBar: React.StatelessComponent<ProgressBarProps> = ({
       ) : null}
       {value ? (
         <FlexItem flex="shrink">
-          <Text>{value}</Text>
+          <Text tag="div">{value}</Text>
         </FlexItem>
       ) : null}
     </Flex>
@@ -98,12 +98,16 @@ const ProgressBar: React.StatelessComponent<ProgressBarProps> = ({
         <Flex align="center" justify="flex-end" gutterSize="s">
           {caption ? (
             <FlexItem>
-              <CaptionText wrap="truncate">{caption}</CaptionText>
+              <CaptionText wrap="truncate" tag="div">
+                {caption}
+              </CaptionText>
             </FlexItem>
           ) : null}
           {value ? (
             <FlexItem flex="shrink">
-              <Text weight="medium">{value}</Text>
+              <Text weight="medium" tag="div">
+                {value}
+              </Text>
             </FlexItem>
           ) : null}
         </Flex>
