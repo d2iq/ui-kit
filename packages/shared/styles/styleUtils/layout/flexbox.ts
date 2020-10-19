@@ -132,29 +132,26 @@ export const applyFlexItemGutters = (direction, gutterSize) => {
     return;
   }
 
-  const columnPaddingTop = getResponsiveColumnStyles(
-    direction,
-    gutterSize,
-    "none"
-  );
-  const columnPaddingLeft = getResponsiveColumnStyles(
-    direction,
-    "none",
-    gutterSize
-  );
-  const paddingTop =
-    typeof columnPaddingTop === "object"
-      ? getGutterPaddingValues(columnPaddingTop, gutterSize)
-      : columnPaddingTop;
-  const paddingLeft =
-    typeof columnPaddingLeft === "object"
-      ? getGutterPaddingValues(columnPaddingLeft, gutterSize)
-      : columnPaddingLeft;
+  const rowGuttter = getResponsiveColumnStyles(direction, gutterSize, "none");
+  const columnGutter = getResponsiveColumnStyles(direction, "none", gutterSize);
+  const rowGap =
+    typeof rowGuttter === "object"
+      ? getGutterPaddingValues(rowGuttter, gutterSize)
+      : rowGuttter;
+  const columnGap =
+    typeof columnGutter === "object"
+      ? getGutterPaddingValues(columnGutter, gutterSize)
+      : columnGutter;
 
   return css`
-    > *:not(:first-child) {
-      ${getResponsiveSpacingStyle("padding-left", paddingLeft)};
-      ${getResponsiveSpacingStyle("padding-top", paddingTop)};
+    ${getResponsiveSpacingStyle("column-gap", columnGap)};
+    ${getResponsiveSpacingStyle("row-gap", rowGap)};
+
+    @supports (column-gap: 1px) and (row-gap: 1px) {
+      > *:not(:last-child) {
+        ${getResponsiveSpacingStyle("padding-right", columnGap)};
+        ${getResponsiveSpacingStyle("padding-bottom", rowGap)};
+      }
     }
   `;
 };
