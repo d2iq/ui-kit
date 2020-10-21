@@ -2,9 +2,8 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 
-import { PageHeader, PageHeaderTabs } from "../index";
+import { PageHeader, PageHeaderBody, PageHeaderTabs } from "../index";
 import { PrimaryButton, SecondaryButton, ResetButton } from "../../button";
-import { SpacingBox } from "../../styleUtils/modifiers";
 import { Tabs, TabItem, TabTitle } from "../../tabs";
 import {
   DropdownMenu,
@@ -82,7 +81,7 @@ storiesOf("Page structure|PageHeader", module)
       ]}
     />
   ))
-  .add("with children", () => (
+  .add("with PageHeaderBody", () => (
     <PageHeader
       breadcrumbElements={[
         <div key="Universe">Universe</div>,
@@ -90,9 +89,9 @@ storiesOf("Page structure|PageHeader", module)
         <div key="Earth">Earth</div>
       ]}
     >
-      <SpacingBox side="top" spacingSize="l">
-        This content is PageHeader children
-      </SpacingBox>
+      <PageHeaderBody>
+        This content is rendered in the PageHeaderBody component
+      </PageHeaderBody>
     </PageHeader>
   ))
   .add("with PageHeaderTabs", () => {
