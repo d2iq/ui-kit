@@ -64,15 +64,20 @@ exports[`Sidebar renders 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+  row-gap: 0;
 }
 
 .emotion-3 > div {
   width: auto;
 }
 
-.emotion-3 > *:not(:first-child) {
-  padding-left: 0;
-  padding-top: 0;
+@supports (-webkit-column-gap:1px) and (row-gap:1px) or (column-gap:1px) and (row-gap:1px) {
+  .emotion-3 > *:not(:last-child) {
+    padding-right: 0;
+    padding-bottom: 0;
+  }
 }
 
 .emotion-1 {

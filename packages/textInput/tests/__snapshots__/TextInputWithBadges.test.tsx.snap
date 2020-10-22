@@ -218,15 +218,20 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+  -webkit-column-gap: 4px;
+  column-gap: 4px;
+  row-gap: 0;
 }
 
 .emotion-6 > div {
   width: auto;
 }
 
-.emotion-6 > *:not(:first-child) {
-  padding-left: 4px;
-  padding-top: 0;
+@supports (-webkit-column-gap:1px) and (row-gap:1px) or (column-gap:1px) and (row-gap:1px) {
+  .emotion-6 > *:not(:last-child) {
+    padding-right: 4px;
+    padding-bottom: 0;
+  }
 }
 
 .emotion-2 {
@@ -972,15 +977,20 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+  -webkit-column-gap: 4px;
+  column-gap: 4px;
+  row-gap: 0;
 }
 
 .emotion-6 > div {
   width: auto;
 }
 
-.emotion-6 > *:not(:first-child) {
-  padding-left: 4px;
-  padding-top: 0;
+@supports (-webkit-column-gap:1px) and (row-gap:1px) or (column-gap:1px) and (row-gap:1px) {
+  .emotion-6 > *:not(:last-child) {
+    padding-right: 4px;
+    padding-bottom: 0;
+  }
 }
 
 .emotion-2 {

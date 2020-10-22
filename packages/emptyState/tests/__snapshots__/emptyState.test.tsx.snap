@@ -117,7 +117,7 @@ exports[`EmptyState renders with primary and secondary actions 1`] = `
         Body content
       </div>
       <div
-        class="css-1m9h7kz"
+        class="css-mofsq3"
         data-cy="flex"
       >
         <div
