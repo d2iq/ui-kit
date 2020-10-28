@@ -89,6 +89,7 @@ export {
   FullscreenModal
 } from "./modal";
 export { PageHeader, PageHeaderBody, PageHeaderTabs } from "./pageheader";
+export { Pagination, PaginationContainer, usePageChange } from "./pagination";
 export { Popover } from "./popover";
 export { ProgressBar } from "./progressbar";
 export { PromoBanner, PromoInline } from "./promo";
