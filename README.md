@@ -1,6 +1,11 @@
-# DCOS UI Kit
+# D2iQ UI Kit
 
-Mesosphere DCOS resusable UI Kit components
+UI Kit is a collaboration between D2iQ's product design team and engineering team. UI Kit provides tools for engineers to build apps that follow the guidelines defined by the design team.
+
+- [Components](/packages)
+- [Design tokens](/packages/design-tokens)
+- [Icon library](/packages/icons)
+- [Design guidelines (WIP)](/design-guidelines)
 
 ## Getting started
 
@@ -9,8 +14,6 @@ Install dependencies (Node v8+, NPM 5+)
 ```bash
 npm i
 ```
-
-## Development
 
 Start storybook server locally then visit `http://localhost:6006/`
 
@@ -39,6 +42,8 @@ If you use vscode you can change your workspace settings as following
   "tslint.run": "onType"
 }
 ```
+
+For more detailed information, see [CONTRIBUTING.md](CONTRIBUTING.md#getting-started)
 
 ## New component
 
@@ -127,7 +132,7 @@ These Guidelines got written based on [AngularJS Git Commit Message Conventions]
 
 ## Release / Publishing
 
-After your PR gets merged to `master`, `semantic-release` will automatically cut a release.
+After your PR gets merged to `master`, `semantic-release` will automatically cut a release if one of your commits is of type `feat`, `fix`, or `perf`.
 
 ## Pre-release Teating in a Host Project
 
