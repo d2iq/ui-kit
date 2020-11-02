@@ -285,6 +285,9 @@ exports[`Table v2 rendering renders default 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+  -webkit-column-gap: 4px;
+  column-gap: 4px;
+  row-gap: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -296,9 +299,11 @@ exports[`Table v2 rendering renders default 1`] = `
   width: auto;
 }
 
-.emotion-9 > *:not(:first-child) {
-  padding-left: 4px;
-  padding-top: 0;
+@supports (-webkit-column-gap:1px) and (row-gap:1px) or (column-gap:1px) and (row-gap:1px) {
+  .emotion-9 > *:not(:last-child) {
+    padding-right: 4px;
+    padding-bottom: 0;
+  }
 }
 
 .emotion-6 {
@@ -4187,6 +4192,9 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+  -webkit-column-gap: 4px;
+  column-gap: 4px;
+  row-gap: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4198,9 +4206,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   width: auto;
 }
 
-.emotion-9 > *:not(:first-child) {
-  padding-left: 4px;
-  padding-top: 0;
+@supports (-webkit-column-gap:1px) and (row-gap:1px) or (column-gap:1px) and (row-gap:1px) {
+  .emotion-9 > *:not(:last-child) {
+    padding-right: 4px;
+    padding-bottom: 0;
+  }
 }
 
 .emotion-6 {

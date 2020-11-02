@@ -2,20 +2,16 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, select } from "@storybook/addon-knobs";
 import { withReadme } from "storybook-readme";
+import { themeBgSecondary } from "../../../../design-tokens/build/js/designTokens";
+import { SpacingBox } from "../../../modifiers";
 import Flex from "../components/Flex";
 import FlexItem from "../components/FlexItem";
 import styled from "@emotion/styled";
 import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifierUtils";
+import { css } from "emotion";
 
 const readme = require("../README.md");
 
-const SampleContainer = styled("div")`
-  background-color: #f5f5f5;
-
-  > * {
-    height: 80px;
-  }
-`;
 const DemoChild = styled("div")`
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -29,7 +25,7 @@ storiesOf("Layout|Flex", module)
   .addDecorator(withReadme([readme]))
   .addDecorator(withKnobs)
   .add("default", () => (
-    <SampleContainer>
+    <SpacingBox spacingSize="m" bgColor={themeBgSecondary}>
       <Flex>
         <FlexItem>
           <DemoChild>1</DemoChild>
@@ -44,7 +40,7 @@ storiesOf("Layout|Flex", module)
           <DemoChild>4</DemoChild>
         </FlexItem>
       </Flex>
-    </SampleContainer>
+    </SpacingBox>
   ))
   .add("align", () => {
     const alignments = {
@@ -58,7 +54,15 @@ storiesOf("Layout|Flex", module)
     return (
       <div>
         <p>Use the Knobs panel to change the alignment of the flex items</p>
-        <SampleContainer>
+        <SpacingBox
+          spacingSize="m"
+          bgColor={themeBgSecondary}
+          className={css`
+            > * {
+              min-height: 100px;
+            }
+          `}
+        >
           <Flex align={align}>
             <FlexItem>
               <DemoChild>1</DemoChild>
@@ -73,14 +77,22 @@ storiesOf("Layout|Flex", module)
               <DemoChild>4</DemoChild>
             </FlexItem>
           </Flex>
-        </SampleContainer>
+        </SpacingBox>
       </div>
     );
   })
   .add("responsive align", () => (
     <div>
       <p>Change the width of your viewport to see the alignment change</p>
-      <SampleContainer>
+      <SpacingBox
+        spacingSize="m"
+        bgColor={themeBgSecondary}
+        className={css`
+          > * {
+            min-height: 100px;
+          }
+        `}
+      >
         <Flex
           align={{
             default: "flex-start",
@@ -100,7 +112,7 @@ storiesOf("Layout|Flex", module)
             <DemoChild>4</DemoChild>
           </FlexItem>
         </Flex>
-      </SampleContainer>
+      </SpacingBox>
     </div>
   ))
   .add("directions", () => {
@@ -118,7 +130,7 @@ storiesOf("Layout|Flex", module)
           Use the Knobs panel to change the direction the flex items get layed
           out
         </p>
-        <SampleContainer>
+        <SpacingBox spacingSize="m" bgColor={themeBgSecondary}>
           <Flex direction={direction as React.CSSProperties["flexDirection"]}>
             <FlexItem>
               <DemoChild>1</DemoChild>
@@ -133,7 +145,7 @@ storiesOf("Layout|Flex", module)
               <DemoChild>4</DemoChild>
             </FlexItem>
           </Flex>
-        </SampleContainer>
+        </SpacingBox>
       </div>
     );
   })
@@ -273,7 +285,7 @@ storiesOf("Layout|Flex", module)
           Use the Knobs panel to change the justification alignment of the flex
           items
         </p>
-        <SampleContainer>
+        <SpacingBox spacingSize="m" bgColor={themeBgSecondary}>
           <Flex justify={justify as React.CSSProperties["justifyContent"]}>
             <FlexItem flex="shrink">
               <DemoChild>1</DemoChild>
@@ -288,7 +300,7 @@ storiesOf("Layout|Flex", module)
               <DemoChild>4</DemoChild>
             </FlexItem>
           </Flex>
-        </SampleContainer>
+        </SpacingBox>
       </div>
     );
   })
@@ -298,7 +310,7 @@ storiesOf("Layout|Flex", module)
         Change the width of your viewport to see the justification alignment
         change
       </p>
-      <SampleContainer>
+      <SpacingBox spacingSize="m" bgColor={themeBgSecondary}>
         <Flex
           justify={{
             default: "flex-start",
@@ -318,7 +330,7 @@ storiesOf("Layout|Flex", module)
             <DemoChild>4</DemoChild>
           </FlexItem>
         </Flex>
-      </SampleContainer>
+      </SpacingBox>
     </div>
   ))
   .add("wrap", () => {
@@ -333,8 +345,8 @@ storiesOf("Layout|Flex", module)
       <div>
         <p>Use the Knobs panel to change the style of wrapping</p>
         <div style={{ maxWidth: "800px", width: "100%" }}>
-          <SampleContainer>
-            <Flex wrap={wrap as React.CSSProperties["flexWrap"]}>
+          <SpacingBox spacingSize="m" bgColor={themeBgSecondary}>
+            <Flex wrap={wrap as React.CSSProperties["flexWrap"]} gutterSize="m">
               <FlexItem flex="shrink">
                 <DemoChild>Flex child 1</DemoChild>
               </FlexItem>
@@ -372,7 +384,7 @@ storiesOf("Layout|Flex", module)
                 <DemoChild>Flex child 12</DemoChild>
               </FlexItem>
             </Flex>
-          </SampleContainer>
+          </SpacingBox>
         </div>
       </div>
     );

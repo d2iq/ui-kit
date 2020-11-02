@@ -44,15 +44,20 @@ exports[`ToggleBoxGroup renders default 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+  row-gap: 0;
 }
 
 .emotion-21 > div {
   width: auto;
 }
 
-.emotion-21 > *:not(:first-child) {
-  padding-left: 16px;
-  padding-top: 0;
+@supports (-webkit-column-gap:1px) and (row-gap:1px) or (column-gap:1px) and (row-gap:1px) {
+  .emotion-21 > *:not(:last-child) {
+    padding-right: 16px;
+    padding-bottom: 0;
+  }
 }
 
 .emotion-5 {
@@ -387,15 +392,20 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+  row-gap: 0;
 }
 
 .emotion-22 > div {
   width: auto;
 }
 
-.emotion-22 > *:not(:first-child) {
-  padding-left: 16px;
-  padding-top: 0;
+@supports (-webkit-column-gap:1px) and (row-gap:1px) or (column-gap:1px) and (row-gap:1px) {
+  .emotion-22 > *:not(:last-child) {
+    padding-right: 16px;
+    padding-bottom: 0;
+  }
 }
 
 .emotion-6 {
@@ -743,15 +753,20 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+  row-gap: 0;
 }
 
 .emotion-21 > div {
   width: auto;
 }
 
-.emotion-21 > *:not(:first-child) {
-  padding-left: 16px;
-  padding-top: 0;
+@supports (-webkit-column-gap:1px) and (row-gap:1px) or (column-gap:1px) and (row-gap:1px) {
+  .emotion-21 > *:not(:last-child) {
+    padding-right: 16px;
+    padding-bottom: 0;
+  }
 }
 
 .emotion-5 {
@@ -1164,15 +1179,20 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+  row-gap: 48px;
 }
 
 .emotion-21 > div {
   width: 100%;
 }
 
-.emotion-21 > *:not(:first-child) {
-  padding-left: 0;
-  padding-top: 48px;
+@supports (-webkit-column-gap:1px) and (row-gap:1px) or (column-gap:1px) and (row-gap:1px) {
+  .emotion-21 > *:not(:last-child) {
+    padding-right: 0;
+    padding-bottom: 48px;
+  }
 }
 
 <ToggleBoxGroup
