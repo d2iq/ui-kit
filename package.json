@@ -66,8 +66,7 @@
   },
   "peerDependencies": {
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0",
-    "react-gemini-scrollbar": "^2.1.5 || ^2.3.0"
+    "react-dom": ">=16.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

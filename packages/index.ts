@@ -1,5 +1,4 @@
 import { injectGlobalCss } from "./shared/styles/global";
-import * as Legacy from "./legacy";
 import * as designTokens from "./design-tokens/build/js/designTokens";
 
 // Components
@@ -133,7 +132,6 @@ export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { UIKitProvider } from "./uiKitProvider";
-export { Legacy };
 export { CodeSnippet } from "./codesnippet";
 export { ClickToCopyButton } from "./clicktocopybutton";
 
