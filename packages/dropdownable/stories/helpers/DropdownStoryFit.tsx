@@ -7,14 +7,14 @@ import { PrimaryButton, SecondaryButton } from "../../../button";
 
 class DropdownStoryFit extends React.PureComponent<
   {},
-  { open: boolean; expanded: boolean }
+  { isOpen: boolean; expanded: boolean }
 > {
   constructor(props) {
     super(props);
 
     this.state = {
       expanded: false,
-      open: false
+      isOpen: false
     };
 
     this.toggleExpand = this.toggleExpand.bind(this);
@@ -28,12 +28,12 @@ class DropdownStoryFit extends React.PureComponent<
 
   handleClose() {
     this.setState({
-      open: false
+      isOpen: false
     });
   }
 
   handleOpen() {
-    this.setState({ open: true });
+    this.setState({ isOpen: true });
   }
 
   render() {
@@ -50,7 +50,7 @@ class DropdownStoryFit extends React.PureComponent<
       <div>
         <div className={containerStyle}>
           <Dropdownable
-            open={this.state.open}
+            isOpen={this.state.isOpen}
             onClose={this.handleClose}
             preferredDirections={[Direction.TopRight, Direction.BottomRight]}
             dropdown={

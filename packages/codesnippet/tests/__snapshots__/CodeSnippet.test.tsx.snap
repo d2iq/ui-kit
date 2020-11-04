@@ -395,7 +395,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                       >
                         <Tooltip
                           id="copyTooltip1"
-                          open={false}
+                          isOpen={false}
                           suppress={true}
                           trigger={
                             <Clickable
@@ -435,12 +435,12 @@ exports[`CodeSnippet renders with copy button 1`] = `
                               dropdown={
                                 <TooltipContent
                                   id="copyTooltip1"
-                                  open={false}
+                                  isOpen={false}
                                 >
                                   Copied to clipboard
                                 </TooltipContent>
                               }
-                              open={false}
+                              isOpen={false}
                               preferredDirections={
                                 Array [
                                   "top",

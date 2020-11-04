@@ -28,7 +28,7 @@ storiesOf("Overlays|Tooltip", module)
   ))
   .add("mounted inside dropdown (does not portal to document.body)", () => (
     <Dropdownable
-      open={true}
+      isOpen={true}
       dropdown={
         <Card>
           <Tooltip trigger="hover me" id="default" disablePortal={true}>
@@ -86,7 +86,7 @@ storiesOf("Overlays|Tooltip", module)
     </React.Fragment>
   ))
   .add("suppress toggle", () => (
-    <Tooltip trigger="hover me" id="suppress" open={true} suppress={true}>
+    <Tooltip trigger="hover me" id="suppress" isOpen={true} suppress={true}>
       I won't toggle open and closed
     </Tooltip>
   ));

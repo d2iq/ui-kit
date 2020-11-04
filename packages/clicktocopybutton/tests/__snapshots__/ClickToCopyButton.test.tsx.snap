@@ -51,7 +51,7 @@ exports[`ClickToCopyButton renders default 1`] = `
       >
         <Tooltip
           id="copyTooltip1"
-          open={false}
+          isOpen={false}
           suppress={true}
           trigger={
             <Clickable
@@ -90,12 +90,12 @@ exports[`ClickToCopyButton renders default 1`] = `
               dropdown={
                 <TooltipContent
                   id="copyTooltip1"
-                  open={false}
+                  isOpen={false}
                 >
                   Copied to clipboard
                 </TooltipContent>
               }
-              open={false}
+              isOpen={false}
               preferredDirections={
                 Array [
                   "top",
@@ -205,7 +205,7 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
       >
         <Tooltip
           id="copyTooltip2"
-          open={false}
+          isOpen={false}
           suppress={true}
           trigger={
             <Clickable
@@ -233,12 +233,12 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
               dropdown={
                 <TooltipContent
                   id="copyTooltip2"
-                  open={false}
+                  isOpen={false}
                 >
                   Copied to clipboard
                 </TooltipContent>
               }
-              open={false}
+              isOpen={false}
               preferredDirections={
                 Array [
                   "top",

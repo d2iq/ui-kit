@@ -44,9 +44,7 @@ const sizes = {
 
 storiesOf("Actions|ClickToCopyButton", module)
   .addDecorator(withReadme([readme]))
-  .add("default", () => (
-    <ClickToCopyButton textToCopy={textToCopy} tooltipId="copyTooltip" />
-  ))
+  .add("default", () => <ClickToCopyButton textToCopy={textToCopy} />)
   .add("w/ onCopy callback", () => {
     const onCopyFn = () => {
       alert("oncopy");

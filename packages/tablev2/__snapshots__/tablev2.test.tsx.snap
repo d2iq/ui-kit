@@ -1162,12 +1162,12 @@ exports[`Table v2 rendering renders default 1`] = `
                             dropdown={
                               <TooltipContent
                                 id="colTooltip1-tooltip"
-                                open={false}
+                                isOpen={false}
                               >
                                 test
                               </TooltipContent>
                             }
-                            open={false}
+                            isOpen={false}
                             preferredDirections={
                               Array [
                                 "top",
@@ -2298,7 +2298,7 @@ exports[`Table v2 rendering renders default 1`] = `
                           </div>
                         </Popover>
                       }
-                      open={false}
+                      isOpen={false}
                       preferredDirections={
                         Array [
                           "bottom-end",
@@ -2691,7 +2691,7 @@ exports[`Table v2 rendering renders default 1`] = `
                           </div>
                         </Popover>
                       }
-                      open={false}
+                      isOpen={false}
                       preferredDirections={
                         Array [
                           "bottom-end",
@@ -3084,7 +3084,7 @@ exports[`Table v2 rendering renders default 1`] = `
                           </div>
                         </Popover>
                       }
-                      open={false}
+                      isOpen={false}
                       preferredDirections={
                         Array [
                           "bottom-end",
@@ -3477,7 +3477,7 @@ exports[`Table v2 rendering renders default 1`] = `
                           </div>
                         </Popover>
                       }
-                      open={false}
+                      isOpen={false}
                       preferredDirections={
                         Array [
                           "bottom-end",
@@ -3870,7 +3870,7 @@ exports[`Table v2 rendering renders default 1`] = `
                           </div>
                         </Popover>
                       }
-                      open={false}
+                      isOpen={false}
                       preferredDirections={
                         Array [
                           "bottom-end",
@@ -5049,12 +5049,12 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                             dropdown={
                               <TooltipContent
                                 id="colTooltip2-tooltip"
-                                open={false}
+                                isOpen={false}
                               >
                                 test
                               </TooltipContent>
                             }
-                            open={false}
+                            isOpen={false}
                             preferredDirections={
                               Array [
                                 "top",
@@ -6185,7 +6185,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           </div>
                         </Popover>
                       }
-                      open={false}
+                      isOpen={false}
                       preferredDirections={
                         Array [
                           "bottom-end",
@@ -6578,7 +6578,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           </div>
                         </Popover>
                       }
-                      open={false}
+                      isOpen={false}
                       preferredDirections={
                         Array [
                           "bottom-end",
@@ -6971,7 +6971,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           </div>
                         </Popover>
                       }
-                      open={false}
+                      isOpen={false}
                       preferredDirections={
                         Array [
                           "bottom-end",
@@ -7364,7 +7364,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           </div>
                         </Popover>
                       }
-                      open={false}
+                      isOpen={false}
                       preferredDirections={
                         Array [
                           "bottom-end",
@@ -7757,7 +7757,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           </div>
                         </Popover>
                       }
-                      open={false}
+                      isOpen={false}
                       preferredDirections={
                         Array [
                           "bottom-end",

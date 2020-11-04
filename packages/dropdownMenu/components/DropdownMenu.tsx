@@ -135,7 +135,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
       }) => (
         <div className={display("inline-block")}>
           <Dropdownable
-            open={isOpen}
+            isOpen={isOpen}
             overlayRoot={overlayRoot}
             preferredDirections={preferredDirections}
             dropdown={

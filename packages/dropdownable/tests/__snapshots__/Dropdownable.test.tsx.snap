@@ -48,7 +48,7 @@ exports[`Dropdownable is visible after opening 1`] = `
       I'm a touchdown
     </p>
   }
-  open={false}
+  isOpen={false}
 >
   <div>
     <PrimaryButton>
@@ -127,7 +127,7 @@ exports[`Dropdownable is visible after opening 2`] = `
       I'm a touchdown
     </p>
   }
-  open={true}
+  isOpen={true}
 >
   <div>
     <PrimaryButton>
@@ -156,10 +156,10 @@ exports[`Dropdownable is visible after opening 2`] = `
     </PrimaryButton>
   </div>
   <clickOutside(DropdownContents)
-    open={true}
+    isOpen={true}
   >
     <DropdownContents
-      open={true}
+      isOpen={true}
     >
       <ForwardRef
         style={

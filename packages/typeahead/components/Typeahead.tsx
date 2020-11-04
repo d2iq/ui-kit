@@ -118,7 +118,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
             return (
               <div>
                 <Dropdownable
-                  open={isOpen}
+                  isOpen={isOpen}
                   overlayRoot={overlayRoot}
                   dropdown={
                     <div data-cy="typeahead-dropdown">

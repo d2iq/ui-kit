@@ -13,7 +13,7 @@ import { ResetButton } from "../../button";
 import { display } from "../../shared/styles/styleUtils";
 
 interface PopoverProps
-  extends Omit<DropdownableProps, "open" | "dropdown" | "onClose"> {
+  extends Omit<DropdownableProps, "isOpen" | "dropdown" | "onClose"> {
   /**
    * A unique identifier to help screenreaders or UI testing tools associate the dropdown content with it's trigger button. If an ID prop is not provided, an arbitrary ID will be generated.
    */
@@ -50,13 +50,13 @@ const Popover: React.StatelessComponent<PopoverProps> = ({
   const [generatedDropdownId] = useId(1, "dropdown");
   const containerRef = React.useRef<HTMLDivElement>(null);
   const triggerRef = React.useRef<HTMLDivElement>(null);
-  const [open, setOpen] = React.useState<boolean>(Boolean(initialIsOpen));
+  const [isOpen, setIsOpen] = React.useState<boolean>(Boolean(initialIsOpen));
   const handleTriggerBlur = () => {
     setTimeout(() => {
       if (containerRef?.current?.contains(document.activeElement)) {
         return;
       }
-      setOpen(false);
+      setIsOpen(false);
     }, 0);
   };
   const handleClickOutside = e => {
@@ -68,12 +68,12 @@ const Popover: React.StatelessComponent<PopoverProps> = ({
       return;
     }
 
-    setOpen(false);
+    setIsOpen(false);
   };
 
   const handleEscKey = e => {
     if (e.key === "Escape") {
-      setOpen(false);
+      setIsOpen(false);
     }
   };
 
@@ -81,22 +81,22 @@ const Popover: React.StatelessComponent<PopoverProps> = ({
     if (["ArrowDown", " ", "Enter"].includes(e.key)) {
       // prevents page from scrolling when using down arrow or spacebar
       e.preventDefault();
-      setOpen(true);
+      setIsOpen(true);
     }
   };
 
   const sharedTriggerProps = {
     onClick: () => {
-      setOpen(!open);
+      setIsOpen(!isOpen);
     },
     onKeyDown: handleTriggerKeyDown,
     onBlur: handleTriggerBlur,
     "aria-owns": id || generatedDropdownId,
-    "aria-expanded": open
+    "aria-expanded": isOpen
   };
 
   React.useEffect(() => {
-    if (open) {
+    if (isOpen) {
       document.addEventListener("mouseup", handleClickOutside);
       document.addEventListener("keyup", handleEscKey);
     } else {
@@ -108,12 +108,12 @@ const Popover: React.StatelessComponent<PopoverProps> = ({
       document.removeEventListener("mouseup", handleClickOutside);
       document.removeEventListener("keyup", handleEscKey);
     };
-  }, [open]);
+  }, [isOpen]);
 
   return (
     <div className={display("inline-block")} ref={triggerRef}>
       <Dropdownable
-        open={open}
+        isOpen={isOpen}
         preferredDirections={
           preferredDirections || [
             Direction.BottomCenter,
@@ -133,7 +133,7 @@ const Popover: React.StatelessComponent<PopoverProps> = ({
             data-cy={dataCy}
             showPointerCaret={true}
           >
-            <FocusLock disabled={!open}>
+            <FocusLock disabled={!isOpen}>
               <div
                 tabIndex={-1}
                 ref={containerRef}

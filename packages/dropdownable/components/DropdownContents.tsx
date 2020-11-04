@@ -2,7 +2,7 @@ import React from "react";
 import wrapWithClickOutside from "react-click-outside";
 
 interface DropdownContentsProps {
-  open: boolean;
+  isOpen: boolean;
   onClose: () => void;
 }
 
@@ -17,7 +17,7 @@ class DropdownContents extends React.Component<DropdownContentsProps, {}> {
   }
 
   handleClickOutside() {
-    if (this.props.open && this.props.onClose) {
+    if (this.props.isOpen && this.props.onClose) {
       this.props.onClose();
     }
   }

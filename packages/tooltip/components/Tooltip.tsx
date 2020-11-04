@@ -14,7 +14,7 @@ export interface BaseTooltipProps {
 export interface TooltipProps extends BaseTooltipProps {
   ariaLabel?: string;
   preferredDirections?: Direction[];
-  open?: boolean;
+  isOpen?: boolean;
   suppress?: boolean;
   trigger: React.ReactNode;
   onClose?: () => void;
@@ -22,7 +22,7 @@ export interface TooltipProps extends BaseTooltipProps {
 }
 
 export interface TooltipState {
-  open: boolean;
+  isOpen: boolean;
   triggerNode: HTMLElement | null;
 }
 
@@ -34,7 +34,7 @@ const Tooltip = ({
   maxWidth,
   minWidth,
   onClose,
-  open = false,
+  isOpen: isOpenProp = false,
   preferredDirections,
   suppress,
   trigger
@@ -42,10 +42,10 @@ const Tooltip = ({
   const triggerRef: React.MutableRefObject<HTMLElement | null> = React.useRef<
     HTMLElement
   >(null);
-  const [isOpen, setIsOpen] = React.useState<boolean>(open);
+  const [isOpen, setIsOpen] = React.useState<boolean>(isOpenProp);
 
-  if (suppress && open !== isOpen) {
-    setIsOpen(open);
+  if (suppress && isOpenProp !== isOpen) {
+    setIsOpen(isOpenProp);
   }
 
   const setTriggerNode = (node: HTMLElement | null) => {
@@ -104,11 +104,11 @@ const Tooltip = ({
   return (
     <span {...(!disablePortal ? triggerProps : {})}>
       <Dropdownable
-        open={isOpen}
+        isOpen={isOpen}
         dropdown={
           <TooltipContent
             id={id}
-            open={isOpen}
+            isOpen={isOpen}
             minWidth={minWidth}
             maxWidth={maxWidth}
           >

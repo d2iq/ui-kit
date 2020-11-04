@@ -70,7 +70,7 @@ const ClickToCopy: React.FC<ClickToCopyProps> = ({
         id={tooltipId || generatedTooltipId}
         trigger={children({ onClick })}
         suppress={true}
-        open={isTooltipShown}
+        isOpen={isTooltipShown}
       >
         {tooltipContent}
       </Tooltip>
