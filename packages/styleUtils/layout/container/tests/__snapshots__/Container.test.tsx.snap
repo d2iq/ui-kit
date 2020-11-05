@@ -28,7 +28,7 @@ exports[`Container renders default 1`] = `
 
 <div
   className="emotion-0"
-  data-cy="conntainer"
+  data-cy="container"
 >
   <div>
     content

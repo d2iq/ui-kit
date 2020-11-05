@@ -30,7 +30,7 @@ const BorderedBox = (props: BorderedBoxProps) => {
   return (
     <Box
       className={cx(className, border(side, variant), borderRadius(radius))}
-      dataCy="borderedBox"
+      data-cy="borderedBox"
       {...other}
     />
   );

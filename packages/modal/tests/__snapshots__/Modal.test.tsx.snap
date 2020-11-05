@@ -362,7 +362,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
     title="Title"
   >
     <ModalBase
-      dataCy="dialogModal"
+      data-cy="dialogModal"
       isAnimated={true}
       isOpen={true}
       onClose={[MockFunction]}
@@ -2618,7 +2618,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                           tabIndex={-1}
                         >
                           <ModalContents
-                            dataCy="dialogModal"
+                            data-cy="dialogModal"
                             isOpen={true}
                             onClose={[MockFunction]}
                           >
@@ -3083,7 +3083,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   title="Title"
 >
   <ModalBase
-    dataCy="fullscreenModal"
+    data-cy="fullscreenModal"
     isAnimated={false}
     isOpen={true}
     onClose={[MockFunction]}
@@ -5556,7 +5556,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                         tabIndex={-1}
                       >
                         <ModalContents
-                          dataCy="fullscreenModal"
+                          data-cy="fullscreenModal"
                           isOpen={true}
                           onClose={[MockFunction]}
                         >

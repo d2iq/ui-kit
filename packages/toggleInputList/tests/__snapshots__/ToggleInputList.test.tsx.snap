@@ -2149,7 +2149,7 @@ exports[`ToggleInputList renders with required 1`] = `
           <Text
             align="inherit"
             color="var(--themeError, #EB293A)"
-            dataCy="dangerText"
+            data-cy="dangerText"
             size="m"
             tag="span"
             weight="normal"

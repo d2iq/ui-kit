@@ -4,7 +4,7 @@ import { BasicTextProps } from "../textTypes";
 import { themeError } from "../../../design-tokens/build/js/designTokens";
 
 const DangerText = (props: BasicTextProps) => (
-  <Text color={themeError} dataCy="dangerText" {...props} />
+  <Text color={themeError} data-cy="dangerText" {...props} />
 );
 
 DangerText.defaultProps = {

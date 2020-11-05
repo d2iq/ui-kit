@@ -160,7 +160,7 @@ const FieldListHeader: React.FC<FieldListHeaderProps> = ({ columns }) => (
         className={cx({
           [invisibleColHeader]: col.type === FieldListColumnSeparator
         })}
-        dataCy="fieldList-columnHeader"
+        data-cy="fieldList-columnHeader"
         key={col.key || `columnHeader.${i}`}
       >
         {col.type === FieldListColumn && col.props.header}

@@ -20,7 +20,7 @@ export interface IconProps {
   /** Which icon size to use for the width and height of the icon */
   size?: IconSize;
   /** human-readable selector used for writing tests */
-  dataCy?: string;
+  ["data-cy"]?: string;
 }
 
 const Icon: React.FC<IconProps> = ({
@@ -28,7 +28,7 @@ const Icon: React.FC<IconProps> = ({
   size = DEFAULT_ICON_SIZE,
   shape,
   ariaLabel,
-  dataCy
+  "data-cy": dataCy
 }) => {
   const svgColor = color || "currentColor";
   const iconSize = iconSizes[size];

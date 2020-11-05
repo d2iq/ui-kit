@@ -796,7 +796,7 @@ exports[`Popover renders an open dropdown 1`] = `
                                     }
                                   }
                                   className="emotion-2"
-                                  dataCy="spacingBox"
+                                  data-cy="spacingBox"
                                   tag="div"
                                 >
                                   <div

@@ -41,7 +41,7 @@ exports[`ClickToCopyButton renders default 1`] = `
           "size": undefined,
         }
       }
-      dataCy="box"
+      data-cy="box"
       display="inline-block"
       tag="div"
     >
@@ -68,7 +68,7 @@ exports[`ClickToCopyButton renders default 1`] = `
                     "size": undefined,
                   }
                 }
-                dataCy="box"
+                data-cy="box"
                 display="inline-block"
                 tag="span"
               >
@@ -124,7 +124,7 @@ exports[`ClickToCopyButton renders default 1`] = `
                       }
                     }
                     className="emotion-2"
-                    dataCy="box"
+                    data-cy="box"
                     display="inline-block"
                     onClick={[Function]}
                     onKeyPress={[Function]}
@@ -134,6 +134,7 @@ exports[`ClickToCopyButton renders default 1`] = `
                   >
                     <span
                       className="emotion-1"
+                      data-cy="box"
                       onClick={[Function]}
                       onKeyPress={[Function]}
                       role="button"
@@ -197,7 +198,7 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
           "size": undefined,
         }
       }
-      dataCy="box"
+      data-cy="box"
       display="inline-block"
       tag="div"
     >

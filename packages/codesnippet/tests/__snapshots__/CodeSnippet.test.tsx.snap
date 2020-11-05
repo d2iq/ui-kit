@@ -103,7 +103,7 @@ exports[`CodeSnippet renders default 1`] = `
         }
       }
       className="emotion-5"
-      dataCy="spacingBox"
+      data-cy="spacingBox"
       tag="div"
     >
       <div
@@ -140,7 +140,7 @@ exports[`CodeSnippet renders default 1`] = `
                     align="inherit"
                     className="emotion-1"
                     color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
-                    dataCy="monospaceText"
+                    data-cy="monospaceText"
                     size="m"
                     tag="code"
                     weight="medium"
@@ -308,7 +308,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
         }
       }
       className="emotion-10"
-      dataCy="spacingBox"
+      data-cy="spacingBox"
       tag="div"
     >
       <div
@@ -345,7 +345,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                     align="inherit"
                     className="emotion-1"
                     color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
-                    dataCy="monospaceText"
+                    data-cy="monospaceText"
                     size="m"
                     tag="code"
                     weight="medium"
@@ -385,7 +385,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                           "size": undefined,
                         }
                       }
-                      dataCy="box"
+                      data-cy="box"
                       display="inline-block"
                       tag="div"
                     >
@@ -412,7 +412,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                                     "size": undefined,
                                   }
                                 }
-                                dataCy="box"
+                                data-cy="box"
                                 display="inline-block"
                                 tag="span"
                               >
@@ -469,7 +469,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                                       }
                                     }
                                     className="emotion-5"
-                                    dataCy="box"
+                                    data-cy="box"
                                     display="inline-block"
                                     onClick={[Function]}
                                     onKeyPress={[Function]}
@@ -479,6 +479,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                                   >
                                     <span
                                       className="emotion-4"
+                                      data-cy="box"
                                       onClick={[Function]}
                                       onKeyPress={[Function]}
                                       role="button"

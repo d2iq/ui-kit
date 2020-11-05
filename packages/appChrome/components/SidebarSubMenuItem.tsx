@@ -102,7 +102,7 @@ const SidebarSubMenuItem: React.FC<SidebarNavItemProps> = ({
     <Clickable
       action={onClick}
       tabIndex={0}
-      dataCy={dataCy}
+      data-cy={dataCy}
       disableFocusOutline={true}
     >
       <div className={classNames}>

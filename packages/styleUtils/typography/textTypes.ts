@@ -17,7 +17,7 @@ export interface SharedTextProps {
   /**
    * human-readable selector used for writing tests
    */
-  dataCy?: string;
+  ["data-cy"]?: string;
   children: React.ReactNode;
 }
 

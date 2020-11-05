@@ -33,7 +33,7 @@ class DialogModal extends React.PureComponent<DialogModalProps, {}> {
     } = this.props;
 
     return (
-      <ModalBase dataCy="dialogModal" {...other}>
+      <ModalBase data-cy="dialogModal" {...other}>
         <div
           className={cx(modalHeader, flexItem("shrink"))}
           data-cy="dialogModal-header"

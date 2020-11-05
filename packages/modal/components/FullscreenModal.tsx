@@ -38,7 +38,7 @@ class FullscreenModal extends React.PureComponent<FullscreenModalProps, {}> {
         size={ModalSizes.Fullscreen}
         onClose={onClose}
         isAnimated={false}
-        dataCy="fullscreenModal"
+        data-cy="fullscreenModal"
         {...other}
       >
         <FullscreenView

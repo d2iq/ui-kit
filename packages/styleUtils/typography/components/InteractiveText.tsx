@@ -10,7 +10,7 @@ const InteractiveText = (props: BasicTextProps) => (
       cursor: pointer;
     `}
     color={themeTextColorInteractive}
-    dataCy="interactiveText"
+    data-cy="interactiveText"
     {...props}
   />
 );

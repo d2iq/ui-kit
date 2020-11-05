@@ -5,24 +5,19 @@ import { flex } from "../../shared/styles/styleUtils";
 export interface ModalContentsProps {
   isOpen: boolean;
   onClose: () => void;
-  /**
-   * human-readable selector used for writing tests
-   */
-  dataCy?: string;
+  ["data-cy"]?: string;
 }
-export class ModalContents extends React.Component<ModalContentsProps, {}> {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div
-        className={cx(modalWrapper, flex({ direction: "column" }))}
-        data-cy={this.props.dataCy}
-      >
-        {this.props.children}
-      </div>
-    );
-  }
-}
+
+const ModalContents: React.FC<ModalContentsProps> = ({
+  children,
+  "data-cy": dataCy
+}) => (
+  <div
+    className={cx(modalWrapper, flex({ direction: "column" }))}
+    data-cy={dataCy}
+  >
+    {children}
+  </div>
+);
+
 export default ModalContents;
