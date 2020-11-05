@@ -1,6 +1,8 @@
-# Page Layout Patterns
+# Page Layout
 
 The following patterns are provided as guidelines for how to structure app content and navigation. These layout patterns work for most content, but there will be rare cases that require a custom layout.
+
+This is a new sentence.
 
 ## App structure
 
@@ -8,7 +10,7 @@ The following patterns are provided as guidelines for how to structure app conte
 
 ### App sidebar
 
-The app sidebar is the top-level navigation menu for the app. The links in the sidebar may be arranged in a flat structure, or nested by category. The sidebar may also contain information that would normally appear in a footer.
+I don't like this sentence, so I replaced it.
 
 ### App header bar
 
