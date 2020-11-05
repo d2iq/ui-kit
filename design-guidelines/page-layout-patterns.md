@@ -7,6 +7,7 @@ This is a new sentence.
 ## App structure
 
 ![appStructureDiagram](./img/page-layout-patterns/appStructureDiagram.png)
+![test image](./img/page-layout-patterns/testimage.png)
 
 ### App sidebar
 
