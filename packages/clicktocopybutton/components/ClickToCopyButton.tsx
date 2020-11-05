@@ -2,9 +2,10 @@ import * as React from "react";
 import ClickToCopy, { ClickToCopyBaseProps } from "./ClickToCopy";
 import { Box } from "../../styleUtils/modifiers";
 import Clickable from "../../clickable/components/clickable";
-import Icon, { IconSizes } from "../../icon/components/Icon";
+import Icon from "../../icon/components/Icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { tintContent } from "../../shared/styles/styleUtils";
+import { IconSize } from "../../shared/types/iconSize";
 
 interface ClickToCopyButtonProps extends ClickToCopyBaseProps {
   /**
@@ -14,7 +15,7 @@ interface ClickToCopyButtonProps extends ClickToCopyBaseProps {
   /**
    * Color of the clipboard icon or button content
    */
-  iconSize?: IconSizes;
+  iconSize?: IconSize;
   /**
    * Content to show
    */

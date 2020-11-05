@@ -65,7 +65,7 @@ exports[`TextInput should display icon with tooltip if tooltipText is set 1`] = 
           <Icon
             color="#AEB0B4"
             shape="system-circle-question"
-            size="16px"
+            size="xs"
           />
         }
       >

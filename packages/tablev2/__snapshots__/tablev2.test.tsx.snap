@@ -103,7 +103,7 @@ exports[`Table v2 rendering renders default 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: left;
   font-weight: 500;
@@ -220,7 +220,7 @@ exports[`Table v2 rendering renders default 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: center;
   font-weight: 500;
@@ -351,7 +351,7 @@ exports[`Table v2 rendering renders default 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: right;
   font-weight: 500;
@@ -402,7 +402,7 @@ exports[`Table v2 rendering renders default 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   font-weight: 500;
   overflow: visible;
@@ -473,7 +473,7 @@ exports[`Table v2 rendering renders default 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: left;
 }
@@ -509,7 +509,7 @@ exports[`Table v2 rendering renders default 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: center;
 }
@@ -545,7 +545,7 @@ exports[`Table v2 rendering renders default 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: right;
 }
@@ -581,7 +581,7 @@ exports[`Table v2 rendering renders default 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
 }
 
@@ -1013,7 +1013,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -1147,7 +1147,7 @@ exports[`Table v2 rendering renders default 1`] = `
                           <Icon
                             color="#AEB0B4"
                             shape="system-circle-information"
-                            size="16px"
+                            size="xs"
                           />
                         }
                       >
@@ -1183,7 +1183,7 @@ exports[`Table v2 rendering renders default 1`] = `
                               <Icon
                                 color="#AEB0B4"
                                 shape="system-circle-information"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-circle-information icon"
@@ -1226,7 +1226,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -1331,7 +1331,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -1435,7 +1435,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -1539,7 +1539,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -1643,7 +1643,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -1747,7 +1747,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -1851,7 +1851,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -1954,7 +1954,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -2186,7 +2186,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <ResetButton>
                     <Icon
                       shape="system-ellipsis-vertical"
-                      size="16px"
+                      size="xs"
                     />
                   </ResetButton>
                 }
@@ -2341,7 +2341,7 @@ exports[`Table v2 rendering renders default 1`] = `
                             >
                               <Icon
                                 shape="system-ellipsis-vertical"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
@@ -2579,7 +2579,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <ResetButton>
                     <Icon
                       shape="system-ellipsis-vertical"
-                      size="16px"
+                      size="xs"
                     />
                   </ResetButton>
                 }
@@ -2734,7 +2734,7 @@ exports[`Table v2 rendering renders default 1`] = `
                             >
                               <Icon
                                 shape="system-ellipsis-vertical"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
@@ -2972,7 +2972,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <ResetButton>
                     <Icon
                       shape="system-ellipsis-vertical"
-                      size="16px"
+                      size="xs"
                     />
                   </ResetButton>
                 }
@@ -3127,7 +3127,7 @@ exports[`Table v2 rendering renders default 1`] = `
                             >
                               <Icon
                                 shape="system-ellipsis-vertical"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
@@ -3365,7 +3365,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <ResetButton>
                     <Icon
                       shape="system-ellipsis-vertical"
-                      size="16px"
+                      size="xs"
                     />
                   </ResetButton>
                 }
@@ -3520,7 +3520,7 @@ exports[`Table v2 rendering renders default 1`] = `
                             >
                               <Icon
                                 shape="system-ellipsis-vertical"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
@@ -3758,7 +3758,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   <ResetButton>
                     <Icon
                       shape="system-ellipsis-vertical"
-                      size="16px"
+                      size="xs"
                     />
                   </ResetButton>
                 }
@@ -3913,7 +3913,7 @@ exports[`Table v2 rendering renders default 1`] = `
                             >
                               <Icon
                                 shape="system-ellipsis-vertical"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
@@ -4029,7 +4029,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: left;
 }
@@ -4103,7 +4103,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: center;
 }
@@ -4133,7 +4133,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: center;
   font-weight: 500;
@@ -4258,7 +4258,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: right;
 }
@@ -4288,7 +4288,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: right;
   font-weight: 500;
@@ -4333,7 +4333,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
 }
 
@@ -4362,7 +4362,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   font-weight: 500;
   overflow: visible;
@@ -4482,7 +4482,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   white-space: nowrap;
   background-color: var(--themeBgPrimary,#FFFFFF);
   min-width: 0;
-  padding-right: calc(8px + 12px);
+  padding-right: calc( 8px + 12px );
   position: relative;
   text-align: left;
   font-weight: 500;
@@ -4900,7 +4900,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -5034,7 +5034,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           <Icon
                             color="#AEB0B4"
                             shape="system-circle-information"
-                            size="16px"
+                            size="xs"
                           />
                         }
                       >
@@ -5070,7 +5070,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               <Icon
                                 color="#AEB0B4"
                                 shape="system-circle-information"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-circle-information icon"
@@ -5113,7 +5113,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -5218,7 +5218,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -5322,7 +5322,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -5426,7 +5426,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -5530,7 +5530,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -5634,7 +5634,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -5738,7 +5738,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -5841,7 +5841,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <Icon
                     color="#76797E"
                     shape="system-resize-horizontal"
-                    size="12px"
+                    size="xxs"
                   >
                     <svg
                       aria-label="system-resize-horizontal icon"
@@ -6073,7 +6073,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <ResetButton>
                     <Icon
                       shape="system-ellipsis-vertical"
-                      size="16px"
+                      size="xs"
                     />
                   </ResetButton>
                 }
@@ -6228,7 +6228,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                             >
                               <Icon
                                 shape="system-ellipsis-vertical"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
@@ -6466,7 +6466,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <ResetButton>
                     <Icon
                       shape="system-ellipsis-vertical"
-                      size="16px"
+                      size="xs"
                     />
                   </ResetButton>
                 }
@@ -6621,7 +6621,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                             >
                               <Icon
                                 shape="system-ellipsis-vertical"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
@@ -6859,7 +6859,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <ResetButton>
                     <Icon
                       shape="system-ellipsis-vertical"
-                      size="16px"
+                      size="xs"
                     />
                   </ResetButton>
                 }
@@ -7014,7 +7014,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                             >
                               <Icon
                                 shape="system-ellipsis-vertical"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
@@ -7252,7 +7252,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <ResetButton>
                     <Icon
                       shape="system-ellipsis-vertical"
-                      size="16px"
+                      size="xs"
                     />
                   </ResetButton>
                 }
@@ -7407,7 +7407,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                             >
                               <Icon
                                 shape="system-ellipsis-vertical"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"
@@ -7645,7 +7645,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   <ResetButton>
                     <Icon
                       shape="system-ellipsis-vertical"
-                      size="16px"
+                      size="xs"
                     />
                   </ResetButton>
                 }
@@ -7800,7 +7800,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                             >
                               <Icon
                                 shape="system-ellipsis-vertical"
-                                size="16px"
+                                size="xs"
                               >
                                 <svg
                                   aria-label="system-ellipsis-vertical icon"

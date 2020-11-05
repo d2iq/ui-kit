@@ -12,10 +12,7 @@ import {
 } from "../../shared/styles/styleUtils";
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import {
-  iconSizeXs,
-  greyLightDarken2
-} from "../../design-tokens/build/js/designTokens";
+import { greyLightDarken2 } from "../../design-tokens/build/js/designTokens";
 import { Tooltip } from "../../tooltip";
 
 export interface HeaderCellProps extends CellProps {
@@ -48,7 +45,7 @@ const HeaderCell = ({
           trigger={
             <Icon
               shape={SystemIcons.CircleQuestion}
-              size={iconSizeXs}
+              size="xs"
               color={greyLightDarken2}
             />
           }

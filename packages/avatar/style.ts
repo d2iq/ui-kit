@@ -1,5 +1,5 @@
+import * as React from "react";
 import { css } from "emotion";
-import { AvatarSizes } from "./components/Avatar";
 import { themeBgSecondary } from "../design-tokens/build/js/designTokens";
 
 export const avatarContainer = css`
@@ -21,7 +21,9 @@ export const avatarContainer = css`
   }
 `;
 
-export const avatarSize = (size: AvatarSizes) => css`
+export const avatarSize = (
+  size: React.CSSProperties["width"] | React.CSSProperties["height"]
+) => css`
   height: ${size};
   width: ${size};
 `;

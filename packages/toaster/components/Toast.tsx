@@ -35,13 +35,13 @@ export interface ToastProps {
 }
 
 const SuccessIcon = (
-  <Icon shape={SystemIcons.CircleCheck} color={dt.green} size={dt.iconSizeXs} />
+  <Icon shape={SystemIcons.CircleCheck} color={dt.green} size="xs" />
 );
 const WarningIcon = (
-  <Icon shape={SystemIcons.Yield} color={dt.yellow} size={dt.iconSizeXs} />
+  <Icon shape={SystemIcons.Yield} color={dt.yellow} size="xs" />
 );
 const DangerIcon = (
-  <Icon shape={SystemIcons.CircleClose} color={dt.red} size={dt.iconSizeXs} />
+  <Icon shape={SystemIcons.CircleClose} color={dt.red} size="xs" />
 );
 const getIconForAppearance = (appearance: ToastProps["appearance"]) => {
   switch (appearance) {
@@ -138,11 +138,7 @@ class Toast extends React.PureComponent<ToastProps, {}> {
         )}
         <Clickable tabIndex={0} action={this.handleDismiss}>
           <span className={toastDismiss}>
-            <Icon
-              shape={SystemIcons.Close}
-              color="inherit"
-              size={dt.iconSizeXs}
-            />
+            <Icon shape={SystemIcons.Close} color="inherit" size="xs" />
           </span>
         </Clickable>
       </div>

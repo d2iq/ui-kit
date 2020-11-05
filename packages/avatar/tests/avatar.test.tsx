@@ -7,7 +7,6 @@ expect.addSnapshotSerializer(serializer);
 
 import { Avatar } from "..";
 import { serviceImg } from "../stories/helpers/serviceImg";
-import { iconSizeXl } from "../../design-tokens/build/js/designTokens";
 
 describe("Avatar", () => {
   it("renders default", () => {
@@ -16,7 +15,7 @@ describe("Avatar", () => {
   });
   it("renders with a src, size, and label", () => {
     const component = shallow(
-      <Avatar src={serviceImg} label="Kubernetes" size={iconSizeXl} />
+      <Avatar src={serviceImg} label="Kubernetes" size="xl" />
     );
     expect(toJson(component)).toMatchSnapshot();
   });

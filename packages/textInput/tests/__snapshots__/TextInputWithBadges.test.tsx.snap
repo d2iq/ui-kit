@@ -369,7 +369,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                         >
                           <Icon
                             shape="system-close"
-                            size="12px"
+                            size="xxs"
                           >
                             <svg
                               aria-label="system-close icon"
@@ -453,7 +453,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                         >
                           <Icon
                             shape="system-close"
-                            size="12px"
+                            size="xxs"
                           >
                             <svg
                               aria-label="system-close icon"
@@ -537,7 +537,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                         >
                           <Icon
                             shape="system-close"
-                            size="12px"
+                            size="xxs"
                           >
                             <svg
                               aria-label="system-close icon"
@@ -1128,7 +1128,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                         >
                           <Icon
                             shape="system-close"
-                            size="12px"
+                            size="xxs"
                           >
                             <svg
                               aria-label="system-close icon"
@@ -1212,7 +1212,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                         >
                           <Icon
                             shape="system-close"
-                            size="12px"
+                            size="xxs"
                           >
                             <svg
                               aria-label="system-close icon"
@@ -1296,7 +1296,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                         >
                           <Icon
                             shape="system-close"
-                            size="12px"
+                            size="xxs"
                           >
                             <svg
                               aria-label="system-close icon"

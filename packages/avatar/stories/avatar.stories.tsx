@@ -26,13 +26,11 @@ storiesOf("Graphic elements|Avatar", module)
         gridGap: "1rem"
       }}
     >
-      <Avatar src={serviceImg} label="Kubernetes" size={iconSizeXs} />
-      <Avatar src={serviceImg} label="Kubernetes" size={iconSizeS} />
-      <Avatar src={serviceImg} label="Kubernetes" size={iconSizeM} />
-      <Avatar src={serviceImg} label="Kubernetes" size={iconSizeL} />
-      <Avatar src={serviceImg} label="Kubernetes" size={iconSizeXl} />
+      <Avatar src={serviceImg} label="Kubernetes" size="xs" />
+      <Avatar src={serviceImg} label="Kubernetes" size="s" />
+      <Avatar src={serviceImg} label="Kubernetes" size="m" />
+      <Avatar src={serviceImg} label="Kubernetes" size="l" />
+      <Avatar src={serviceImg} label="Kubernetes" size="xl" />
     </div>
   ))
-  .add("empty src", () => (
-    <Avatar src="" label="Kubernetes" size={iconSizeXl} />
-  ));
+  .add("empty src", () => <Avatar src="" label="Kubernetes" size="xl" />);

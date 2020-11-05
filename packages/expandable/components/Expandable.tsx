@@ -6,7 +6,6 @@ import { toggler } from "../style";
 import { ResetButton } from "../../button";
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 import { Flex, FlexItem } from "../../styleUtils/layout";
 
 export interface ExpandableProps {
@@ -49,7 +48,7 @@ const Expandable: React.FC<ExpandableProps> = ({
                 shape={
                   on ? SystemIcons.TriangleDown : SystemIcons.TriangleRight
                 }
-                size={iconSizeXs}
+                size="xs"
               />
             </FlexItem>
             <FlexItem>{label}</FlexItem>

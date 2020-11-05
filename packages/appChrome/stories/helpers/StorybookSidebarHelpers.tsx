@@ -30,7 +30,7 @@ export const SidebarContent = ({ sidebarData }) =>
       {section.items.map(item =>
         item.subItems ? (
           <SidebarSubMenu
-            iconWidth="24px"
+            iconWidth="s"
             label={
               <div style={alignToLogoStyles.outer}>
                 <SidebarItemLabel icon={ProductIcons.ServicesInverse}>

@@ -1,9 +1,8 @@
 import * as React from "react";
+import { cx } from "emotion";
 
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
-import { cx } from "emotion";
 import {
   textWeight,
   flex,
@@ -22,7 +21,7 @@ function intersperse<A>(list: A[], sep: JSX.Element) {
 class Breadcrumb extends React.PureComponent<BreadcrumbProps, {}> {
   public render() {
     const breadcrumbSeparator = (
-      <Icon shape={SystemIcons.CaretRight} size={iconSizeXs} />
+      <Icon shape={SystemIcons.CaretRight} size="xs" />
     );
     const crumbsArr = intersperse(
       React.Children.toArray(this.props.children),

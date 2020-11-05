@@ -1,10 +1,12 @@
 import { css } from "emotion";
 import {
-  iconSizeXs,
   spaceM,
   spaceXs,
   themeTextColorPrimary
 } from "../design-tokens/build/js/designTokens";
+import { iconSizes } from "../shared/styles/styleUtils/layout/iconSizes";
+
+export const DROPDOWN_ARROW_ICON_SIZE = "xs";
 
 export const selectContainer = css`
   position: relative;
@@ -14,7 +16,8 @@ export const select = css`
   appearance: none;
   color: inherit;
   font-size: inherit;
-  padding-right: ${parseInt(iconSizeXs, 10) + parseInt(spaceM, 10)}px;
+  padding-right: ${parseInt(iconSizes[DROPDOWN_ARROW_ICON_SIZE], 10) +
+    parseInt(spaceM, 10)}px;
   width: 100%;
 
   /*

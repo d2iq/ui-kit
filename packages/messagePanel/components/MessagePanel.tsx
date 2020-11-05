@@ -7,10 +7,7 @@ import { breakWord } from "../../shared/styles/styleUtils";
 import MessagePanelActions from "./MessagePanelActions";
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import {
-  themeError,
-  iconSizeXs
-} from "../../design-tokens/build/js/designTokens";
+import { themeError } from "../../design-tokens/build/js/designTokens";
 
 export interface MessagePanelProps {
   /**
@@ -50,7 +47,7 @@ const MessagePanel: React.FC<MessagePanelProps> = ({
                 <Icon
                   shape={SystemIcons.CircleClose}
                   color={themeError}
-                  size={iconSizeXs}
+                  size="xs"
                 />
                 <SpacingBox
                   tag="span"

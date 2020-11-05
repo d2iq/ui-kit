@@ -5,10 +5,7 @@ import { ToggleInput } from "../../toggleInput";
 import { Icon } from "../../icon";
 import { display } from "../../shared/styles/styleUtils";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import {
-  iconSizeXs,
-  themeBgPrimary
-} from "../../design-tokens/build/js/designTokens";
+import { themeBgPrimary } from "../../design-tokens/build/js/designTokens";
 import { ToggleInputProps } from "../../toggleInput/components/ToggleInput";
 
 export interface CheckboxInputProps extends ToggleInputProps {
@@ -38,7 +35,7 @@ const CheckboxInput: React.FC<React.PropsWithRef<CheckboxInputProps>> = ({
         <span className={cx(checkboxIconContainer, display("inline-flex"))}>
           <Icon
             shape={indeterminate ? SystemIcons.Minus : SystemIcons.Check}
-            size={iconSizeXs}
+            size="xs"
             color={themeBgPrimary}
           />
         </span>

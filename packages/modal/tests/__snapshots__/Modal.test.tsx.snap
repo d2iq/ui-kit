@@ -2656,7 +2656,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                       >
                                         <Icon
                                           shape="system-close"
-                                          size="16px"
+                                          size="xs"
                                         >
                                           <svg
                                             aria-label="system-close icon"
