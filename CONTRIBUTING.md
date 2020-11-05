@@ -17,7 +17,7 @@
     - [Single Responsibility Principle](#single-responsibility-principle)
     - [Keep Components Simple](#keep-components-simple)
     - [Directory Structure](#directory-structure)
-  - [Conventional Commits](#contenvtional-commits)
+  - [Conventional Commits](#conventional-commits)
     - [Commit types](#commit-types)
     - [JIRA Integration](#jira-integration)
 
