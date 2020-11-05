@@ -82,10 +82,6 @@ If there is a text filter and an additional filter (e.g.: dropdown or segmented 
 
 ![standard-example-withActions](./img/page-layout-patterns/standard-example-withActions.png)
 
-![standard-example-subheaderSummary](./img/page-layout-patterns/standard-example-subheaderSummary.png)
-
-![standard-example-subheaderPromobanner](./img/page-layout-patterns/standard-example-subheaderPromobanner.png)
-
 ![standard-example-tabs](./img/page-layout-patterns/standard-example-tabs.png)
 
 ##### Primary content actions
@@ -144,4 +140,4 @@ An optional header or footer may be shown to give users more context for complet
 
 #### Examples
 
-![simpleFocused](./img/page-layout-patterns/simpleFocused-example.png)
+![simpleFocused](./img/page-layout-patterns/simpleFocusedScreen-example.png)
