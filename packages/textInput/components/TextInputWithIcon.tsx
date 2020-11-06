@@ -12,16 +12,18 @@ import {
 import { flex, flexItem, flush, padding } from "../../shared/styles/styleUtils";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
+import { IconShapes } from "../../icon/components/Icon";
+import IconPropAdapter from "../../icon/components/IconPropAdapter";
 
 export interface TextInputWithIconProps extends TextInputProps {
   /**
    * icon to display at the start of this TextInput.
    */
-  iconStart?: React.ReactNode;
+  iconStart?: IconShapes | React.ReactElement<HTMLElement>;
   /**
    * icon to display at the end of this TextInput.
    */
-  iconEnd?: React.ReactNode;
+  iconEnd?: IconShapes | React.ReactElement<HTMLElement>;
 }
 
 export interface TextInputWithIconState {
@@ -77,7 +79,11 @@ export class TextInputWithIcon<
           inputIconWrapper
         )}
       >
-        {this.props.iconStart}
+        <IconPropAdapter
+          icon={this.props.iconStart!}
+          size="xs"
+          color="inherit"
+        />
       </span>
     );
   }
@@ -96,7 +102,7 @@ export class TextInputWithIcon<
           inputIconWrapper
         )}
       >
-        {this.props.iconEnd}
+        <IconPropAdapter icon={this.props.iconEnd!} size="xs" color="inherit" />
       </span>
     );
   }
