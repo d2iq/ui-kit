@@ -7,12 +7,8 @@ import {
   getInputAppearanceStyle,
   inputContainer
 } from "../../shared/styles/formStyles";
-import {
-  flex,
-  flexItem,
-  inputReset,
-  padding
-} from "../../shared/styles/styleUtils";
+import { inputReset, padding } from "../../shared/styles/styleUtils";
+import { flex, flexItem } from "../../shared/styles/styleUtils/layout/flexbox";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import { renderLabel } from "../../utilities/label";
 
@@ -93,7 +89,7 @@ export class TextInput<P extends TextInputProps> extends React.Component<P> {
       >
         {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
           <div>
-            <div className={cx(flex())}>
+            <div className={flex()}>
               {this.getInputElement(
                 [
                   padding("horiz", "m"),

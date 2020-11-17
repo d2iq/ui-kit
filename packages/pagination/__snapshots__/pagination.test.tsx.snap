@@ -1,0 +1,518 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination rendering renders default 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-color: var(--themeBorder,#DADDE2);
+  border-right-style: solid;
+  padding-right: 16px;
+  margin-right: 16px;
+}
+
+.emotion-1 {
+  display: inline-block;
+  max-width: 80px;
+}
+
+<Flex
+  align="center"
+  direction="row"
+  gutterSize="none"
+  justify="flex-start"
+  wrap="nowrap"
+>
+  <div
+    className="emotion-0"
+  >
+    61–80
+  </div>
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="s"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="prev"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <form
+        className="emotion-1"
+        onSubmit={[Function]}
+      >
+        <TextInput
+          appearance="standard"
+          label="Page number"
+          min={1}
+          onChange={[Function]}
+          showInputLabel={false}
+          type="number"
+          value={4}
+        />
+      </form>
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="next"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </FlexItem>
+  </Flex>
+</Flex>
+`;
+
+exports[`Pagination rendering renders prev and next buttons as links 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-color: var(--themeBorder,#DADDE2);
+  border-right-style: solid;
+  padding-right: 16px;
+  margin-right: 16px;
+}
+
+.emotion-1 {
+  display: inline-block;
+  max-width: 80px;
+}
+
+<Flex
+  align="center"
+  direction="row"
+  gutterSize="none"
+  justify="flex-start"
+  wrap="nowrap"
+>
+  <div
+    className="emotion-0"
+  >
+    61–80
+  </div>
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="s"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="prev"
+        disabled={false}
+        onClick={[Function]}
+        url="prev"
+      />
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <form
+        className="emotion-1"
+        onSubmit={[Function]}
+      >
+        <TextInput
+          appearance="standard"
+          label="Page number"
+          min={1}
+          onChange={[Function]}
+          showInputLabel={false}
+          type="number"
+          value={4}
+        />
+      </form>
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="next"
+        disabled={false}
+        onClick={[Function]}
+        url="next"
+      />
+    </FlexItem>
+  </Flex>
+</Flex>
+`;
+
+exports[`Pagination rendering renders w/ custom item label 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-color: var(--themeBorder,#DADDE2);
+  border-right-style: solid;
+  padding-right: 16px;
+  margin-right: 16px;
+}
+
+.emotion-1 {
+  display: inline-block;
+  max-width: 80px;
+}
+
+<Flex
+  align="center"
+  direction="row"
+  gutterSize="none"
+  justify="flex-start"
+  wrap="nowrap"
+>
+  <div
+    className="emotion-0"
+  >
+    61–80
+  </div>
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="s"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="prev"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <form
+        className="emotion-1"
+        onSubmit={[Function]}
+      >
+        <TextInput
+          appearance="standard"
+          label="Page number"
+          min={1}
+          onChange={[Function]}
+          showInputLabel={false}
+          type="number"
+          value={4}
+        />
+      </form>
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="next"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </FlexItem>
+  </Flex>
+</Flex>
+`;
+
+exports[`Pagination rendering renders w/ page length menu 1`] = `
+.emotion-1 {
+  display: inline-block;
+  max-width: 80px;
+}
+
+.emotion-0 {
+  border-width: 1px;
+  border-color: var(--themeBorder,#DADDE2);
+  border-left-style: solid;
+  border-right-style: solid;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+<Flex
+  align="center"
+  direction="row"
+  gutterSize="none"
+  justify="flex-start"
+  wrap="nowrap"
+>
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="xs"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    >
+      <span
+        aria-hidden="true"
+        tabIndex={-1}
+      >
+        Items
+         per page
+      </span>
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <SelectInput
+        appearance="standard"
+        id="pageLengthMenu6"
+        inputLabel="Items per page"
+        onChange={[Function]}
+        options={
+          Array [
+            Object {
+              "label": "10",
+              "value": "10",
+            },
+            Object {
+              "label": "30",
+              "value": "30",
+            },
+            Object {
+              "label": "50",
+              "value": "50",
+            },
+            Object {
+              "label": "100",
+              "value": "100",
+            },
+          ]
+        }
+        showInputLabel={false}
+        value={100}
+      />
+    </FlexItem>
+  </Flex>
+  <div
+    className="emotion-0"
+  >
+    301–400
+  </div>
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="s"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="prev"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <form
+        className="emotion-1"
+        onSubmit={[Function]}
+      >
+        <TextInput
+          appearance="standard"
+          label="Page number"
+          min={1}
+          onChange={[Function]}
+          showInputLabel={false}
+          type="number"
+          value={4}
+        />
+      </form>
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="next"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </FlexItem>
+  </Flex>
+</Flex>
+`;
+
+exports[`Pagination rendering renders w/ totalItems set 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-color: var(--themeBorder,#DADDE2);
+  border-right-style: solid;
+  padding-right: 16px;
+  margin-right: 16px;
+}
+
+.emotion-1 {
+  display: inline-block;
+}
+
+<Flex
+  align="center"
+  direction="row"
+  gutterSize="none"
+  justify="flex-start"
+  wrap="nowrap"
+>
+  <div
+    className="emotion-0"
+  >
+    61–80 of 200 Items
+  </div>
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="s"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="prev"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <form
+        className="emotion-1"
+        onSubmit={[Function]}
+      >
+        <TextInput
+          appearance="standard"
+          label="Page number"
+          max={10}
+          min={1}
+          onChange={[Function]}
+          showInputLabel={false}
+          type="number"
+          value={4}
+        />
+      </form>
+       / 10
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="next"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </FlexItem>
+  </Flex>
+</Flex>
+`;
+
+exports[`Pagination rendering renders w/ totalPages, pageLength, and totalItems set 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-color: var(--themeBorder,#DADDE2);
+  border-right-style: solid;
+  padding-right: 16px;
+  margin-right: 16px;
+}
+
+.emotion-1 {
+  display: inline-block;
+}
+
+<Flex
+  align="center"
+  direction="row"
+  gutterSize="none"
+  justify="flex-start"
+  wrap="nowrap"
+>
+  <div
+    className="emotion-0"
+  >
+    31–40 of 200 Items
+  </div>
+  <Flex
+    align="center"
+    direction="row"
+    gutterSize="s"
+    justify="flex-start"
+    wrap="nowrap"
+  >
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="prev"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <form
+        className="emotion-1"
+        onSubmit={[Function]}
+      >
+        <TextInput
+          appearance="standard"
+          label="Page number"
+          max={20}
+          min={1}
+          onChange={[Function]}
+          showInputLabel={false}
+          type="number"
+          value={4}
+        />
+      </form>
+       / 20
+    </FlexItem>
+    <FlexItem
+      flex="shrink"
+    >
+      <NavButton
+        direction="next"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </FlexItem>
+  </Flex>
+</Flex>
+`;
+
+exports[`Pagination rendering renders wrapped in a PaginationContainer 1`] = `
+<Flex
+  align="flex-end"
+  direction="row"
+  gutterSize="none"
+  justify="flex-end"
+  wrap="wrap"
+>
+  <FlexItem
+    flex="shrink"
+  >
+    <Pagination
+      initialActivePage={4}
+      initialPageLength={20}
+      itemsLabel="Items"
+      key=".0"
+    />
+  </FlexItem>
+</Flex>
+`;
