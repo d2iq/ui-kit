@@ -16,12 +16,12 @@ exports[`Tooltip renders 1`] = `
       dropdown={
         <TooltipContent
           id="renders"
-          open={false}
+          isOpen={false}
         >
           content
         </TooltipContent>
       }
-      open={false}
+      isOpen={false}
       preferredDirections={
         Array [
           "top",
@@ -71,7 +71,7 @@ exports[`Tooltip renders open tooltip 1`] = `
 
 <Tooltip
   id="opened"
-  open={true}
+  isOpen={true}
   trigger="trigger"
 >
   <span
@@ -85,12 +85,12 @@ exports[`Tooltip renders open tooltip 1`] = `
       dropdown={
         <TooltipContent
           id="opened"
-          open={true}
+          isOpen={true}
         >
           content
         </TooltipContent>
       }
-      open={true}
+      isOpen={true}
       preferredDirections={
         Array [
           "top",
@@ -106,10 +106,10 @@ exports[`Tooltip renders open tooltip 1`] = `
         trigger
       </div>
       <clickOutside(DropdownContents)
-        open={true}
+        isOpen={true}
       >
         <DropdownContents
-          open={true}
+          isOpen={true}
         >
           <ForwardRef
             style={
@@ -242,7 +242,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                 >
                   <TooltipContent
                     id="opened"
-                    open={true}
+                    isOpen={true}
                   >
                     <div
                       aria-hidden={false}
@@ -304,7 +304,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
 
 <Tooltip
   id="customDir"
-  open={true}
+  isOpen={true}
   preferredDirections={
     Array [
       "bottom-start",
@@ -323,12 +323,12 @@ exports[`Tooltip renders with preferred directions 1`] = `
       dropdown={
         <TooltipContent
           id="customDir"
-          open={true}
+          isOpen={true}
         >
           content
         </TooltipContent>
       }
-      open={true}
+      isOpen={true}
       preferredDirections={
         Array [
           "bottom-start",
@@ -339,10 +339,10 @@ exports[`Tooltip renders with preferred directions 1`] = `
         trigger
       </div>
       <clickOutside(DropdownContents)
-        open={true}
+        isOpen={true}
       >
         <DropdownContents
-          open={true}
+          isOpen={true}
         >
           <ForwardRef
             style={
@@ -496,7 +496,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                 >
                   <TooltipContent
                     id="customDir"
-                    open={true}
+                    isOpen={true}
                   >
                     <div
                       aria-hidden={false}

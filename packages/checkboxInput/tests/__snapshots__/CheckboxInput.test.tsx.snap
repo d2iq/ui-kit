@@ -617,7 +617,7 @@ exports[`CheckboxInput renders indeterminate 1`] = `
                 <Icon
                   color="var(--themeBgPrimary, #FFFFFF)"
                   shape="system-minus"
-                  size="16px"
+                  size="xs"
                 >
                   <svg
                     aria-label="system-minus icon"

@@ -65,7 +65,7 @@ describe("Typeahead", () => {
 
     expect(component.find(DropdownContents).length).toBe(0);
     component.find("input").simulate("focus");
-    expect(component.find(DropdownContents).prop("open")).toBe(true);
+    expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
   });
 
   it("opens the menu on click even if it's focused", () => {
@@ -92,7 +92,7 @@ describe("Typeahead", () => {
     });
     expect(component.find(DropdownContents).length).toBe(0);
     component.find("input").simulate("click");
-    expect(component.find(DropdownContents).prop("open")).toBe(true);
+    expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
   });
 
   it("renders an empty state if no items are passed", () => {
@@ -252,7 +252,7 @@ describe("Typeahead", () => {
     component.find("input").simulate("keyDown", {
       key: "Enter"
     });
-    expect(component.find(DropdownContents).prop("open")).toBe(true);
+    expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
   });
 
   it("hides the dropdown when selecting an item if keepOpenOnSelect is false", () => {

@@ -9,7 +9,6 @@ import ResetButton from "../../button/components/ResetButton";
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import {
-  iconSizeXs,
   themeTextColorDisabled,
   themeTextColorPrimary
 } from "../../design-tokens/build/js/designTokens";
@@ -28,8 +27,9 @@ import {
   FieldListProvider,
   Context as FieldListContext
 } from "./FieldListContext";
+import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
 
-const REMOVE_ICON_SIZE = iconSizeXs;
+const REMOVE_ICON_SIZE = "xs";
 
 export interface FieldListProps {
   /** The data to populate the field values with */
@@ -92,7 +92,7 @@ const FieldListRow: React.FC<FieldListRowProps> = React.memo(
     };
 
     return (
-      <div className={getFieldRowGrid(columns, REMOVE_ICON_SIZE)}>
+      <div className={getFieldRowGrid(columns, iconSizes[REMOVE_ICON_SIZE])}>
         {columns.map((col, i) => {
           return (
             <div data-cy="fieldList-cell" key={i} className={fieldWrapper}>
@@ -151,7 +151,7 @@ const FieldListHeader: React.FC<FieldListHeaderProps> = ({ columns }) => (
   <SpacingBox
     side="bottom"
     spacingSize="xxs"
-    className={getFieldRowGrid(columns, REMOVE_ICON_SIZE)}
+    className={getFieldRowGrid(columns, iconSizes[REMOVE_ICON_SIZE])}
   >
     {columns.map((col, i) => (
       <Text
@@ -160,7 +160,7 @@ const FieldListHeader: React.FC<FieldListHeaderProps> = ({ columns }) => (
         className={cx({
           [invisibleColHeader]: col.type === FieldListColumnSeparator
         })}
-        dataCy="fieldList-columnHeader"
+        data-cy="fieldList-columnHeader"
         key={col.key || `columnHeader.${i}`}
       >
         {col.type === FieldListColumn && col.props.header}

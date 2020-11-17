@@ -11,11 +11,11 @@ const FormSectionHeader: React.SFC<FormSectionHeaderProps> = ({
   title,
   subtitle
 }) => (
-  <SpacingBox side="bottom" spacingSize="m" dataCy="formSectionHeader">
-    <HeadingText2 dataCy="formSectionHeader-title">{title}</HeadingText2>
+  <SpacingBox side="bottom" spacingSize="m" data-cy="formSectionHeader">
+    <HeadingText2 data-cy="formSectionHeader-title">{title}</HeadingText2>
     {subtitle && (
       <SpacingBox side="top" spacingSize="xs">
-        <Text tag="div" dataCy="formSectionHeader-subtitle">
+        <Text tag="div" data-cy="formSectionHeader-subtitle">
           {subtitle}
         </Text>
       </SpacingBox>

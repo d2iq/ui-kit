@@ -157,7 +157,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
         <IconPropAdapter
           color="inherit"
           icon="system-check"
-          size="16px"
+          size="xs"
         />
       </span>
       <span
@@ -171,7 +171,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
         <IconPropAdapter
           color="inherit"
           icon="system-check"
-          size="16px"
+          size="xs"
         />
       </span>
     </span>
@@ -328,7 +328,7 @@ exports[`ButtonBase renders all appearances with props 2`] = `
         <IconPropAdapter
           color="inherit"
           icon="system-check"
-          size="16px"
+          size="xs"
         />
       </span>
       <span
@@ -342,7 +342,7 @@ exports[`ButtonBase renders all appearances with props 2`] = `
         <IconPropAdapter
           color="inherit"
           icon="system-check"
-          size="16px"
+          size="xs"
         />
       </span>
     </span>
@@ -507,7 +507,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
         <IconPropAdapter
           color="inherit"
           icon="system-check"
-          size="16px"
+          size="xs"
         />
       </span>
       <span
@@ -521,7 +521,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
         <IconPropAdapter
           color="inherit"
           icon="system-check"
-          size="16px"
+          size="xs"
         />
       </span>
     </span>
@@ -686,7 +686,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
         <IconPropAdapter
           color="inherit"
           icon="system-check"
-          size="16px"
+          size="xs"
         />
       </span>
       <span
@@ -700,7 +700,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
         <IconPropAdapter
           color="inherit"
           icon="system-check"
-          size="16px"
+          size="xs"
         />
       </span>
     </span>
@@ -865,7 +865,7 @@ exports[`ButtonBase renders all appearances with props 5`] = `
         <IconPropAdapter
           color="inherit"
           icon="system-check"
-          size="16px"
+          size="xs"
         />
       </span>
       <span
@@ -879,7 +879,7 @@ exports[`ButtonBase renders all appearances with props 5`] = `
         <IconPropAdapter
           color="inherit"
           icon="system-check"
-          size="16px"
+          size="xs"
         />
       </span>
     </span>

@@ -6,6 +6,7 @@ import { sidebarNavItem, appChromeInsetContent } from "../style";
 import { listReset } from "../../shared/styles/styleUtils";
 import { useTheme, ThemeProvider } from "emotion-theming";
 import { AppChromeTheme } from "../types";
+import { IconSize } from "../../shared/types/iconSize";
 
 export interface SidebarSubMenuProps {
   isOpen?: boolean;
@@ -13,7 +14,7 @@ export interface SidebarSubMenuProps {
   onClose?: () => void;
   label: React.ReactElement<SidebarItemLabelProps>;
   menuHasIcon?: boolean;
-  iconWidth?: string;
+  iconWidth?: IconSize;
   theme?: AppChromeTheme;
   disabled?: boolean;
 }

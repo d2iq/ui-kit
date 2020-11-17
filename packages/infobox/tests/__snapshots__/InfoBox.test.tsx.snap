@@ -82,7 +82,7 @@ exports[`InfoBox renders default 1`] = `
       <Icon
         color="#1B2029"
         shape="system-close"
-        size="16px"
+        size="xs"
       />
     </span>
   </Clickable>
@@ -144,7 +144,7 @@ exports[`InfoBox renders with JSX message 1`] = `
       <Icon
         color="#1B2029"
         shape="system-close"
-        size="16px"
+        size="xs"
       />
     </span>
   </Clickable>
@@ -255,7 +255,7 @@ exports[`InfoBox renders with actions 1`] = `
       <Icon
         color="#1B2029"
         shape="system-close"
-        size="16px"
+        size="xs"
       />
     </span>
   </Clickable>

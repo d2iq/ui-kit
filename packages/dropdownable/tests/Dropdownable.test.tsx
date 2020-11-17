@@ -20,13 +20,13 @@ expect.addSnapshotSerializer(serializer);
 describe("Dropdownable", () => {
   it("is visible after opening", () => {
     const component = mount(
-      <Dropdownable open={false} dropdown={<p>I'm a touchdown</p>}>
+      <Dropdownable isOpen={false} dropdown={<p>I'm a touchdown</p>}>
         <PrimaryButton>Click me</PrimaryButton>
       </Dropdownable>
     );
 
     expect(toJson(component)).toMatchSnapshot();
-    component.setProps({ open: true });
+    component.setProps({ isOpen: true });
     expect(toJson(component)).toMatchSnapshot();
   });
 });

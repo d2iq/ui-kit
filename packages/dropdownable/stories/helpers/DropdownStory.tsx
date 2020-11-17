@@ -7,13 +7,13 @@ import { PrimaryButton } from "../../../button";
 
 class DropdownStory extends React.PureComponent<
   { preferredDirections: Direction[] },
-  { open: boolean }
+  { isOpen: boolean }
 > {
   constructor(props) {
     super(props);
 
     this.state = {
-      open: false
+      isOpen: false
     };
 
     this.handleClose = this.handleClose.bind(this);
@@ -22,12 +22,12 @@ class DropdownStory extends React.PureComponent<
 
   handleClose() {
     this.setState({
-      open: false
+      isOpen: false
     });
   }
 
   handleOpen() {
-    this.setState({ open: true });
+    this.setState({ isOpen: true });
   }
 
   render() {
@@ -43,7 +43,7 @@ class DropdownStory extends React.PureComponent<
     return (
       <div className={containerStyle}>
         <Dropdownable
-          open={this.state.open}
+          isOpen={this.state.isOpen}
           onClose={this.handleClose}
           preferredDirections={preferredDirections}
           dropdown={

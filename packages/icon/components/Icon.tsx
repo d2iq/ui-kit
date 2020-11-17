@@ -1,27 +1,13 @@
 import * as React from "react";
 import { cx } from "emotion";
 import { tintSVG } from "../../shared/styles/styleUtils";
-import {
-  iconSizeXxs,
-  iconSizeXs,
-  iconSizeS,
-  iconSizeM,
-  iconSizeL,
-  iconSizeXl,
-  iconSizeXxl
-} from "../../design-tokens/build/js/designTokens";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { ProductIcons } from "../../icons/dist/product-icons-enum";
+import { IconSize } from "../../shared/types/iconSize";
+import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
 import { icon } from "../style";
 
-export type IconSizes =
-  | typeof iconSizeXxs
-  | typeof iconSizeXs
-  | typeof iconSizeS
-  | typeof iconSizeM
-  | typeof iconSizeL
-  | typeof iconSizeXl
-  | typeof iconSizeXxl;
+const DEFAULT_ICON_SIZE: IconSize = "s";
 
 export type IconShapes = SystemIcons | ProductIcons;
 export interface IconProps {
@@ -31,16 +17,21 @@ export interface IconProps {
   color?: string;
   /** The id of the SVG symbol we're rendering from a generated sprite */
   shape: SystemIcons | ProductIcons;
-  /** The width and height of the icon */
-  size?: IconSizes;
+  /** Which icon size to use for the width and height of the icon */
+  size?: IconSize;
   /** human-readable selector used for writing tests */
-  dataCy?: string;
+  ["data-cy"]?: string;
 }
 
-const Icon = (props: IconProps) => {
-  const { color, size, shape, ariaLabel, dataCy } = props;
+const Icon: React.FC<IconProps> = ({
+  color,
+  size = DEFAULT_ICON_SIZE,
+  shape,
+  ariaLabel,
+  "data-cy": dataCy
+}) => {
   const svgColor = color || "currentColor";
-  const iconSize = size || iconSizeS;
+  const iconSize = iconSizes[size];
 
   return (
     <svg
@@ -56,6 +47,10 @@ const Icon = (props: IconProps) => {
       <use xlinkHref={`#${shape}`} />
     </svg>
   );
+};
+
+Icon.defaultProps = {
+  size: DEFAULT_ICON_SIZE
 };
 
 export default Icon;

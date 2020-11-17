@@ -17,7 +17,7 @@ export enum Direction {
 
 export interface DropdownableProps {
   /** Whether the Dropdownable overlay is visible */
-  open: boolean;
+  isOpen: boolean;
   /** Element to render in the Dropdownable overlay */
   dropdown: React.ReactElement<any>;
   /** Which direction the Dropdownable should open in relation to the Dropdownable children */
@@ -76,7 +76,7 @@ const applyMaxSize = {
 };
 
 const Dropdownable: React.FC<DropdownableProps> = ({
-  open,
+  isOpen,
   dropdown,
   preferredDirections,
   onClose,
@@ -128,8 +128,8 @@ const Dropdownable: React.FC<DropdownableProps> = ({
     <>
       <div ref={setReferenceElement}>{children}</div>
 
-      {open && (
-        <DropdownContents open={open} onClose={onClose}>
+      {isOpen && (
+        <DropdownContents isOpen={isOpen} onClose={onClose}>
           {!disablePortal ? (
             <Overlay overlayRoot={overlayRoot} {...popperAttributes}>
               {getDropdown()}

@@ -55,7 +55,7 @@ const SidebarItemComponent: React.FC<SidebarItemProps> = ({
           action={onClick}
           tabIndex={0}
           disableFocusOutline={true}
-          dataCy={dataCy}
+          data-cy={dataCy}
         >
           <li
             className={sidebarNavItem(

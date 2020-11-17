@@ -4,7 +4,6 @@ import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import { Icon } from "../";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { iconSizeL } from "../../design-tokens/build/js/designTokens";
 
 expect.addSnapshotSerializer(serializer);
 
@@ -14,7 +13,7 @@ describe("Icon", () => {
       <Icon
         shape={SystemIcons.ArrowDown}
         color="blue"
-        size={iconSizeL}
+        size="l"
         ariaLabel="test icon"
       />
     );

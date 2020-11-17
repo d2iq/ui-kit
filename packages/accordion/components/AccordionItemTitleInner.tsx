@@ -5,7 +5,6 @@ import { padding } from "../../shared/styles/styleUtils";
 import { flex } from "../../shared/styles/styleUtils/layout/flexbox";
 import Icon from "../../icon/components/Icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 import { fillWidth, accordionTitleInteractive } from "../style";
 
 const AccordionItemTitleInner: React.FC<{
@@ -38,7 +37,7 @@ const AccordionItemTitleInner: React.FC<{
           shape={
             isExpanded ? SystemIcons.TriangleDown : SystemIcons.TriangleRight
           }
-          size={iconSizeXs}
+          size="xs"
         />
       </span>
       <span className={fillWidth} ref={contentRef}>

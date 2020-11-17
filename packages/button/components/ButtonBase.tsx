@@ -3,7 +3,6 @@ import { cx } from "emotion";
 import FocusStyleManager from "../../shared/components/FocusStyleManager";
 import { IconShapes } from "../../icon/components/Icon";
 import IconPropAdapter from "../../icon/components/IconPropAdapter";
-import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 import {
   buttonReset,
   textWeight,
@@ -187,7 +186,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
   private getIconStart(icon) {
     return (
       <span className={cx(flexItem("shrink"), display("inherit"))}>
-        <IconPropAdapter icon={icon} size={iconSizeXs} color="inherit" />
+        <IconPropAdapter icon={icon} size="xs" color="inherit" />
       </span>
     );
   }
@@ -202,7 +201,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
             padding("left", "xxs")
           )}
         >
-          <IconPropAdapter icon={icon} size={iconSizeXs} color="inherit" />
+          <IconPropAdapter icon={icon} size="xs" color="inherit" />
         </span>
       )
     );

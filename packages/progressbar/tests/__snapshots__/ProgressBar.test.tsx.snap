@@ -214,7 +214,7 @@ exports[`ProgressBar renders with caption text and value text 1`] = `
         <Text
           align="inherit"
           color="var(--themeTextColorPrimary, #1B2029)"
-          dataCy="text"
+          data-cy="text"
           size="m"
           tag="div"
           weight="medium"

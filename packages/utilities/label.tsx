@@ -1,6 +1,6 @@
 import * as React from "react";
-import { InputAppearance } from "../shared/types/inputAppearance";
 import { cx } from "emotion";
+import { InputAppearance } from "../shared/types/inputAppearance";
 import {
   tintText,
   visuallyHidden,
@@ -10,15 +10,14 @@ import {
 import { getLabelStyle } from "../shared/styles/formStyles";
 import {
   themeError,
-  greyLightDarken2,
-  iconSizeXs
+  greyLightDarken2
 } from "../design-tokens/build/js/designTokens";
 import Tooltip from "../tooltip/components/Tooltip";
 import { Icon } from "../icon";
 import { SystemIcons as SI } from "../icons/dist/system-icons-enum";
 
 const trigger = (
-  <Icon color={greyLightDarken2} shape={SI.CircleQuestion} size={iconSizeXs} />
+  <Icon color={greyLightDarken2} shape={SI.CircleQuestion} size="xs" />
 );
 const reqStar = <span className={cx(tintText(themeError))}> *</span>;
 

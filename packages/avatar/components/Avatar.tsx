@@ -1,20 +1,10 @@
 import * as React from "react";
-import { avatarContainer, avatarSize, avatarImg } from "../style";
-import {
-  iconSizeXs,
-  iconSizeS,
-  iconSizeM,
-  iconSizeL,
-  iconSizeXl
-} from "../../design-tokens/build/js/designTokens";
 import { cx } from "emotion";
+import { IconSize } from "../../shared/types/iconSize";
+import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
+import { avatarContainer, avatarSize, avatarImg } from "../style";
 
-export type AvatarSizes =
-  | typeof iconSizeXs
-  | typeof iconSizeS
-  | typeof iconSizeM
-  | typeof iconSizeL
-  | typeof iconSizeXl;
+const DEFAULT_AVATAR_SIZE: IconSize = "m";
 
 export interface AvatarProps {
   /**
@@ -26,29 +16,33 @@ export interface AvatarProps {
    */
   label?: string;
   /**
-   * The width and height of the avatar
+   * Which icon size to use for the width and height
    */
-  size?: AvatarSizes;
+  size?: IconSize;
 }
 
-const Avatar: React.StatelessComponent<AvatarProps> = (props: AvatarProps) => {
-  const { label, src, size = iconSizeM } = props;
-
-  return (
-    <div
-      className={cx(avatarContainer, avatarSize(size))}
-      role="img"
-      aria-label={label}
-      data-cy="avatar"
-    >
-      {/*
+const Avatar: React.FC<AvatarProps> = ({
+  label,
+  src,
+  size = DEFAULT_AVATAR_SIZE
+}: AvatarProps) => (
+  <div
+    className={cx(avatarContainer, avatarSize(iconSizes[size]))}
+    role="img"
+    aria-label={label}
+    data-cy="avatar"
+  >
+    {/*
           tslint:disable react-a11y-img-has-alt
           intententionally not setting "alt" so it doesn't appear in the avatar
           box when/if src is empty or a broken URL
         */}
-      <img className={avatarImg} src={src} alt="" />
-    </div>
-  );
+    <img className={avatarImg} src={src} alt="" />
+  </div>
+);
+
+Avatar.defaultProps = {
+  size: DEFAULT_AVATAR_SIZE
 };
 
 export default Avatar;

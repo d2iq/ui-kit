@@ -3,7 +3,6 @@ import { useId } from "react-id-generator";
 import {
   Box,
   CheckboxInput,
-  designTokens as dt,
   Flex,
   FlexItem,
   HeadingText1,
@@ -22,7 +21,7 @@ import {
   heroImg
 } from "../style";
 
-const PromoContent: React.StatelessComponent<PromoProps> = props => {
+const PromoContent: React.FC<PromoProps> = props => {
   const {
     bodyContent,
     dismissHandler,
@@ -42,7 +41,7 @@ const PromoContent: React.StatelessComponent<PromoProps> = props => {
     >
       {dismissHandler && (
         <ResetButton className={dismissButton} onClick={dismissHandler}>
-          <Icon shape={SystemIcons.Close} size={dt.iconSizeXs} />
+          <Icon shape={SystemIcons.Close} size="xs" />
         </ResetButton>
       )}
       <Flex direction={{ default: "column", medium: "row" }} align="stretch">

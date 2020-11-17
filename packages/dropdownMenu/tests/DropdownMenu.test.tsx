@@ -155,7 +155,7 @@ describe("Dropdown", () => {
 
     expect(component.find(DropdownContents).length).toBe(0);
     component.find(`#${triggerId}`).simulate("click");
-    expect(component.find(DropdownContents).prop("open")).toBe(true);
+    expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
     component.find(`#${triggerId}`).simulate("click");
     expect(component.find(DropdownContents).length).toBe(0);
   });
@@ -188,7 +188,7 @@ describe("Dropdown", () => {
     });
     trigger.simulate("blur");
 
-    expect(component.find(DropdownContents).prop("open")).toBe(true);
+    expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
 
     trigger.simulate("focus");
     trigger.simulate("keyDown", {

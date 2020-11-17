@@ -1,5 +1,4 @@
 import * as React from "react";
-import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 import Avatar, { AvatarProps } from "../../avatar/components/Avatar";
 
 interface PopoverListItemAvatarProps extends AvatarProps {
@@ -14,7 +13,7 @@ const PopoverListItemAvatar: React.SFC<PopoverListItemAvatarProps> = props => (
 );
 
 PopoverListItemAvatar.defaultProps = {
-  size: iconSizeXs,
+  size: "xs",
   position: "start"
 };
 

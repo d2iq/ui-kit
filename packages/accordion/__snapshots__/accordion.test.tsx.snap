@@ -74,7 +74,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                         >
                           <Icon
                             shape="system-triangle-right"
-                            size="16px"
+                            size="xs"
                           >
                             <svg
                               aria-label="system-triangle-right icon"
@@ -186,7 +186,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                         >
                           <Icon
                             shape="system-triangle-right"
-                            size="16px"
+                            size="xs"
                           >
                             <svg
                               aria-label="system-triangle-right icon"
@@ -306,7 +306,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                         >
                           <Icon
                             shape="system-triangle-right"
-                            size="16px"
+                            size="xs"
                           >
                             <svg
                               aria-label="system-triangle-right icon"
@@ -462,7 +462,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                                 >
                                   <Icon
                                     shape="system-triangle-down"
-                                    size="16px"
+                                    size="xs"
                                   >
                                     <svg
                                       aria-label="system-triangle-down icon"
@@ -574,7 +574,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                                 >
                                   <Icon
                                     shape="system-triangle-down"
-                                    size="16px"
+                                    size="xs"
                                   >
                                     <svg
                                       aria-label="system-triangle-down icon"
@@ -686,7 +686,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                                 >
                                   <Icon
                                     shape="system-triangle-down"
-                                    size="16px"
+                                    size="xs"
                                   >
                                     <svg
                                       aria-label="system-triangle-down icon"
@@ -817,7 +817,7 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                                 >
                                   <Icon
                                     shape="system-triangle-right"
-                                    size="16px"
+                                    size="xs"
                                   >
                                     <svg
                                       aria-label="system-triangle-right icon"
@@ -926,7 +926,7 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                                 >
                                   <Icon
                                     shape="system-triangle-right"
-                                    size="16px"
+                                    size="xs"
                                   >
                                     <svg
                                       aria-label="system-triangle-right icon"
@@ -1031,7 +1031,7 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                                 >
                                   <Icon
                                     shape="system-triangle-right"
-                                    size="16px"
+                                    size="xs"
                                   >
                                     <svg
                                       aria-label="system-triangle-right icon"

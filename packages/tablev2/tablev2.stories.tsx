@@ -6,7 +6,6 @@ import { Flex, FlexItem } from "../styleUtils/layout";
 import { Text } from "../styleUtils/typography";
 import { Icon } from "../icon";
 import { SystemIcons } from "../icons/dist/system-icons-enum";
-import * as dt from "../design-tokens/build/js/designTokens";
 
 import {
   Table,
@@ -321,7 +320,7 @@ storiesOf("Data listing|Table", module)
           render: x => (
             <Flex gutterSize="xs" align="center">
               <FlexItem flex="shrink">
-                <Icon shape={SystemIcons.User} size={dt.iconSizeXs} />
+                <Icon shape={SystemIcons.User} size="xs" />
               </FlexItem>
               <FlexItem>
                 <Text wrap="truncate">{x.username}</Text>
@@ -354,7 +353,7 @@ storiesOf("Data listing|Table", module)
           render: x => (
             <Flex gutterSize="xs" align="center">
               <FlexItem flex="shrink">
-                <Icon shape={SystemIcons.Folder} size={dt.iconSizeXs} />
+                <Icon shape={SystemIcons.Folder} size="xs" />
               </FlexItem>
               <FlexItem>
                 <Text wrap="truncate">{x.company.name}</Text>

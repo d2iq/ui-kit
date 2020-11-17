@@ -16,10 +16,6 @@ export interface TextProps extends BasicTextProps {
    * The color of the text
    */
   color?: React.CSSProperties["color"];
-  /**
-   * human-readable selector used for writing tests
-   */
-  dataCy?: string;
   className?: string;
 }
 
@@ -35,7 +31,7 @@ const Text = (props: TextProps) => {
     color,
     size,
     className,
-    dataCy
+    "data-cy": dataCy
   } = props;
   const TextTag = tag || defaultTag;
 
@@ -72,7 +68,7 @@ Text.defaultProps = {
   weight: "normal",
   color: themeTextColorPrimary,
   size: "m",
-  dataCy: "text"
+  ["data-cy"]: "text"
 };
 
 export default Text;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as style from "./style";
 import { useId } from "react-id-generator";
-import * as dt from "../design-tokens/build/js/designTokens";
+import { greyLightDarken2 } from "../design-tokens/build/js/designTokens";
 import { Flex, FlexItem } from "../styleUtils/layout";
 import { Tooltip } from "../tooltip";
 import { Icon } from "../icon";
@@ -26,8 +26,8 @@ export const TooltipHeaderCell: React.StatelessComponent<{
           trigger={
             <Icon
               shape={SystemIcons.CircleInformation}
-              size={dt.iconSizeXs}
-              color={dt.greyLightDarken2}
+              size="xs"
+              color={greyLightDarken2}
             />
           }
         >

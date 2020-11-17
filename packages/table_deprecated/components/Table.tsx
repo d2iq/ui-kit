@@ -39,7 +39,6 @@ import {
 } from "../../shared/styles/styleUtils";
 import {
   textColorSecondary,
-  iconSizeXxs,
   themeTextColorSecondary
 } from "../../design-tokens/build/js/designTokens";
 import { Icon } from "../../icon";
@@ -48,6 +47,7 @@ import SortableHeaderCell, {
   SortableHeaderCellProps
 } from "./SortableHeaderCell";
 import { CellProps } from "./Cell";
+import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
 
 export interface TableProps {
   /**
@@ -82,7 +82,7 @@ const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 768;
 const COL_RESIZE_MIN_WIDTH = 80;
 const COL_RESIZE_MAX_WIDTH = 0.8; // max proportion of table container width
-const RESIZE_ICON_SIZE = iconSizeXxs;
+const RESIZE_ICON_SIZE = "xxs";
 
 let colSizeCache: number[] = [];
 
@@ -451,7 +451,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
           <div
             className={cx(flexItem("grow"), {
               [preventSortOverlap(
-                parseInt(RESIZE_ICON_SIZE, 10)
+                parseInt(iconSizes[RESIZE_ICON_SIZE], 10)
               )]: this.cellNeedsPreventIconOverlap(header, column)
             })}
           >
@@ -604,7 +604,7 @@ export class Table<T> extends React.PureComponent<TableProps, TableState> {
             ${rowHoverStyles};
           `]: rowIndex === this.state.hoveredRowIndex,
           [preventSortOverlap(
-            parseInt(RESIZE_ICON_SIZE, 10)
+            parseInt(iconSizes[RESIZE_ICON_SIZE], 10)
           )]: this.cellNeedsPreventIconOverlap(header, column)
         })}
         style={style}

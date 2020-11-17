@@ -237,7 +237,7 @@ exports[`Typeahead renders 1`] = `
               </div>
             </div>
           }
-          open={false}
+          isOpen={false}
         >
           <div>
             <TextInput
@@ -551,7 +551,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
               </div>
             </div>
           }
-          open={false}
+          isOpen={false}
         >
           <div>
             <TextInput

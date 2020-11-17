@@ -19,7 +19,7 @@ const MonospaceText = (props: MonospaceTextProps) => (
     className={css`
       font-family: ${fontFamilyMonospace};
     `}
-    dataCy="monospaceText"
+    data-cy="monospaceText"
     {...props}
   />
 );

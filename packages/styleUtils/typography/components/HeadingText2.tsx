@@ -9,7 +9,7 @@ const HeadingText2 = (props: HeadingTextProps) => (
     weight="medium"
     size="l"
     className={heading2}
-    dataCy="headingText2"
+    data-cy="headingText2"
     {...props}
   />
 );

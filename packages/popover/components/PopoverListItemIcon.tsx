@@ -1,5 +1,4 @@
 import * as React from "react";
-import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 import Icon, { IconProps } from "../../icon/components/Icon";
 
 interface PopoverListItemProps extends IconProps {
@@ -14,7 +13,7 @@ const PopoverListItemIcon: React.SFC<PopoverListItemProps> = props => (
 );
 
 PopoverListItemIcon.defaultProps = {
-  size: iconSizeXs,
+  size: "xs",
   position: "start"
 };
 

@@ -1,5 +1,5 @@
-import * as dt from "../design-tokens/build/js/designTokens";
 import { css } from "emotion";
+import * as dt from "../design-tokens/build/js/designTokens";
 import {
   border,
   padding,
@@ -7,10 +7,12 @@ import {
   textTruncate,
   textWeight
 } from "../shared/styles/styleUtils";
+import { iconSizes } from "../shared/styles/styleUtils/layout/iconSizes";
 import { spaceSizes } from "../shared/styles/styleUtils/modifiers/modifierUtils";
 import { linkReset } from "../shared/styles/styleUtils/resets/linkReset";
 
-export const RESIZE_ICON_SIZE = dt.iconSizeXxs;
+export const RESIZE_ICON_SIZE = "xxs";
+const RESIZE_ICON_SIZE_WITH_UNIT = iconSizes[RESIZE_ICON_SIZE];
 
 // Note: using `display: grid` to ensure row widths are always as wide as their cells. Using the default `display: block` cuts the row width where the scroll begins.
 // Note: `z-index: ${dt.zIndexContent}` is used to create a new stacking context, ensuring the table content is below any overlays such as a modal
@@ -96,7 +98,9 @@ export const cell = (textAlign: React.CSSProperties["textAlign"]) => css`
   ${textTruncate};
   background-color: ${dt.themeBgPrimary};
   min-width: 0;
-  padding-right: calc(${spaceSizes[cellPaddingSize]} + ${RESIZE_ICON_SIZE});
+  padding-right: calc(
+    ${spaceSizes[cellPaddingSize]} + ${RESIZE_ICON_SIZE_WITH_UNIT}
+  );
   position: relative;
   text-align: ${textAlign};
 
@@ -112,7 +116,7 @@ export const cell = (textAlign: React.CSSProperties["textAlign"]) => css`
 
 export const makeSpaceForSortIndicator = css`
   padding-right: calc(
-    ${spaceSizes[cellPaddingSize]} + ${RESIZE_ICON_SIZE} +
+    ${spaceSizes[cellPaddingSize]} + ${RESIZE_ICON_SIZE_WITH_UNIT} +
       ${sortTriangleWidthPx + sortTriangleMarginPx}px
   );
 `;

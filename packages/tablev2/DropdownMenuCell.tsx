@@ -5,7 +5,6 @@ import DropdownMenu, {
 import { ResetButton } from "../button";
 import { Icon } from "../icon";
 import { SystemIcons } from "../icons/dist/system-icons-enum";
-import * as dt from "../design-tokens/build/js/designTokens";
 import { css } from "emotion";
 
 const style = css`
@@ -15,7 +14,7 @@ const style = css`
 
 const trigger = (
   <ResetButton>
-    <Icon shape={SystemIcons.EllipsisVertical} size={dt.iconSizeXs} />
+    <Icon shape={SystemIcons.EllipsisVertical} size="xs" />
   </ResetButton>
 );
 

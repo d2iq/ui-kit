@@ -1,6 +1,12 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { optionalIcon, select, selectIcon, selectContainer } from "../style";
+import {
+  optionalIcon,
+  select,
+  selectIcon,
+  selectContainer,
+  DROPDOWN_ARROW_ICON_SIZE
+} from "../style";
 import {
   inputContainer,
   getInputAppearanceStyle,
@@ -9,7 +15,6 @@ import {
 import { inputReset, padding, display } from "../../shared/styles/styleUtils";
 import Icon, { IconShapes } from "../../icon/components/Icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import IconPropAdapter from "../../icon/components/IconPropAdapter";
@@ -132,7 +137,7 @@ class SelectInput extends React.PureComponent<
                 <span className={cx(optionalIcon)}>
                   <IconPropAdapter
                     icon={iconStart}
-                    size={iconSizeXs}
+                    size={DROPDOWN_ARROW_ICON_SIZE}
                     color="inherit"
                   />
                 </span>
@@ -169,7 +174,7 @@ class SelectInput extends React.PureComponent<
               >
                 <Icon
                   shape={SystemIcons.TriangleDown}
-                  size={iconSizeXs}
+                  size={DROPDOWN_ARROW_ICON_SIZE}
                   color="inherit"
                 />
               </span>

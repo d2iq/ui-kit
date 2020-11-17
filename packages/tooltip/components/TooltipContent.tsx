@@ -8,7 +8,7 @@ import { Direction } from "../../dropdownable/components/Dropdownable";
 
 export interface TooltipContentProps extends BaseTooltipProps {
   direction?: Direction;
-  open: boolean;
+  isOpen: boolean;
 }
 
 class TooltipContent extends React.PureComponent<TooltipContentProps, {}> {
@@ -19,13 +19,13 @@ class TooltipContent extends React.PureComponent<TooltipContentProps, {}> {
       id,
       maxWidth,
       minWidth,
-      open
+      isOpen
     } = this.props;
 
     return (
       <>
         <div
-          aria-hidden={!open}
+          aria-hidden={!isOpen}
           id={id}
           className={cx(
             tooltip,
