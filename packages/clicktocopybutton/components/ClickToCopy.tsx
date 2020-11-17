@@ -52,8 +52,8 @@ const ClickToCopy: React.FC<ClickToCopyProps> = ({
   const [generatedTooltipId] = useId(1, "copyTooltip");
   const [isTooltipShown, setIsTooltipShown] = React.useState<boolean>(false);
   const onClick = () => {
-    copy(textToCopy);    
-    if (onCopy && typeof onCopy === "function") {      
+    copy(textToCopy);
+    if (onCopy && typeof onCopy === "function") {
       onCopy();
     }
     setIsTooltipShown(true);
