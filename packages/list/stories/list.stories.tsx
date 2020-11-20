@@ -4,10 +4,14 @@ import { withKnobs, select } from "@storybook/addon-knobs";
 import { withReadme } from "storybook-readme";
 import { List } from "../index";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Data listing|List", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(withKnobs)
   .add("default", () => (
     <List>

@@ -22,10 +22,14 @@ const onClose = () => {
   alert("calling onClose");
 };
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Page structure|FullscreenView", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => (
     <div style={{ height: "500px" }}>
       <FullscreenView closeText="Close" title="Title" onClose={onClose}>

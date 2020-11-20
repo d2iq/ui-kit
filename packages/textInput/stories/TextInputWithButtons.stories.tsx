@@ -7,14 +7,18 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { TextInputButton } from "../../textInputButton";
 import { Icon } from "../../icon";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const btnClickFn = () => {
   alert("button one clicked");
 };
 
 storiesOf("Forms|TextInputWithButtons", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(inputStoryWrapper)
   .addParameters({
     info: {

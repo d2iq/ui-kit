@@ -11,10 +11,14 @@ import {
   blue
 } from "../../../design-tokens/build/js/designTokens";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Typography|MonospaceText", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(withKnobs)
   .add("default", () => (
     <MonospaceText>

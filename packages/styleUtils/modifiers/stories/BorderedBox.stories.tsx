@@ -7,10 +7,14 @@ import { BoxSides } from "../../../shared/styles/styleUtils/modifiers/modifierUt
 import { BorderRadii } from "../../../shared/styles/styleUtils/modifiers/border";
 import SpacingBox from "../components/SpacingBox";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Style utilities|BorderedBox", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(withKnobs)
   .add("side", () => {
     const sides = {

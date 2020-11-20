@@ -12,7 +12,7 @@ import SortableCheckboxTable from "./helpers/SortableCheckboxTable";
 import { items } from "./helpers/mocks";
 import CheckboxTableHelper from "./helpers/CheckboxTableHelper";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const nameCellRenderer = ({ name }: { name?: string }) => (
   <TextCell>
@@ -50,7 +50,11 @@ const veryLongRenderer = () => (
 );
 
 storiesOf("Data listing|Table_Deprecated/CheckboxTable", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addParameters({
     info: {
       propTablesExclude: [CheckboxTableHelper],

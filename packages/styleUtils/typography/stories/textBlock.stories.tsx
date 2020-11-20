@@ -11,10 +11,14 @@ import {
   Text
 } from "../";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Typography|Containers/TextBlock", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => (
     <Container>
       <TextBlock>

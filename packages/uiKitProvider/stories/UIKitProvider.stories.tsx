@@ -5,12 +5,16 @@ import { UIKitProvider } from "../index";
 import CustomLinkComponent from "./helpers/customLink";
 import SecondardButton from "../../button/components/SecondaryButton";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 import { red } from "../../design-tokens/build/js/designTokens";
 
 storiesOf("Utils|UIKitProvider", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("link delegate", () => (
     <UIKitProvider
       theme={{

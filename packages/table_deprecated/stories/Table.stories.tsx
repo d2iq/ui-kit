@@ -16,7 +16,7 @@ import ResizableTableOnResizeDemo from "./helpers/ResizableTableOnResizeDemo";
 import { items, width } from "./helpers/mocks";
 import { StandardButton } from "../../button";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const nameCellRenderer = ({ name }: { name?: string }) => (
   <TextCell>
@@ -56,7 +56,11 @@ const veryLongRenderer = () => (
 const empty = () => <Cell>empty</Cell>;
 
 storiesOf("Data listing|Table_Deprecated", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("collection table", () => (
     <div
       style={{

@@ -3,10 +3,14 @@ import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { BorderedList } from "../index";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Data listing|BorderedList", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => (
     <BorderedList>
       <li>List item</li>

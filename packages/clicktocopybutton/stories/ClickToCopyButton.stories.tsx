@@ -21,7 +21,7 @@ import {
   iconSizeXxl
 } from "../../design-tokens/build/js/designTokens";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 const textToCopy = "Nobody likes a copycat";
 const colors = {
   textColorPrimary,
@@ -43,7 +43,11 @@ const sizes = {
 };
 
 storiesOf("Actions|ClickToCopyButton", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => <ClickToCopyButton textToCopy={textToCopy} />)
   .add("w/ onCopy callback", () => {
     const onCopyFn = () => {

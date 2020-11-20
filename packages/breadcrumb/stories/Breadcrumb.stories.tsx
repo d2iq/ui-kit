@@ -4,10 +4,14 @@ import { withReadme } from "storybook-readme";
 
 import { Breadcrumb } from "../index";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Navigation|Breadcrumb", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => (
     <Breadcrumb>
       <span>One</span>

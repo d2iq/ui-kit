@@ -26,10 +26,14 @@ import { SecondaryButton } from "../../button";
 import { TextInput } from "../../textInput";
 import { fullscreenModalTitle } from "../../fullscreenView/style";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Overlays|Modal", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addParameters({
     info: {
       propTablesExclude: [ModalStoryContainer]

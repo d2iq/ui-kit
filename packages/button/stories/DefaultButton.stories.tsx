@@ -1,6 +1,5 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import {
   PrimaryButton,
   SecondaryButton,
@@ -17,14 +16,13 @@ import ButtonAppearanceSample from "./helpers/ButtonAppearanceSample";
 import { action } from "@storybook/addon-actions";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
-storiesOf("Actions|Default button", module)
-  .addDecorator(withReadme([readme]))
+storiesOf("Actions|Default button", module)  
   .addParameters({
-    info: {
-      propTablesExclude: [ButtonAppearanceSample, React.Fragment]
-    }
+    readme: {
+      sidebar: readme,
+    },
   })
   .add(
     "PrimaryButton",

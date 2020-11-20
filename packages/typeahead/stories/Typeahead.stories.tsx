@@ -8,14 +8,18 @@ import { padding } from "../../shared/styles/styleUtils";
 import { complexItems, items } from "./helpers/itemMocks";
 import { css } from "emotion";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const storyWrapper = css`
   width: 300px;
 `;
 
 storiesOf("Forms|Typeahead", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => (
     <div className={storyWrapper}>
       <Typeahead

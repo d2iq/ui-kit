@@ -1,13 +1,16 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { TableView, TableViewHeader, TableViewBody } from "..";
 import DemoTable from "./helpers/DemoTable";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Page structure|TableView", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addParameters({
     info: {
       propTablesExclude: [DemoTable, TableView, TableViewHeader]

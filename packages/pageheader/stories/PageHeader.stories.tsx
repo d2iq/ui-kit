@@ -13,11 +13,15 @@ import {
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 const action = () => alert("Action triggered");
 
 storiesOf("Page structure|PageHeader", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => (
     <PageHeader
       breadcrumbElements={[

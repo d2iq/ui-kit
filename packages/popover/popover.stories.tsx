@@ -7,14 +7,18 @@ import { Direction } from "../dropdownable/components/Dropdownable";
 import { PrimaryDropdownButton } from "../button";
 import { Box } from "../styleUtils/modifiers";
 
-const readme = require("./README.md");
+import readme from "./README.md";
 
 const popoverStoryDecorator = storyFn => (
   <Box textAlign="center">{storyFn()}</Box>
 );
 
 storiesOf("Overlays|Popover", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(popoverStoryDecorator)
   .add("default", () => (
     <Popover

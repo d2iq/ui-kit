@@ -7,10 +7,14 @@ import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 import { TextInput } from "..";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Forms|TextInput", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(inputStoryWrapper)
   .add("default", () => (
     <React.Fragment>

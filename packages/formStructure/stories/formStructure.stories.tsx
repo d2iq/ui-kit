@@ -20,7 +20,7 @@ import { SecondaryButton } from "../../button";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { CaptionText } from "../../styleUtils/typography";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const onAddSubSection = () => {
   alert("another box would be added");
@@ -30,7 +30,11 @@ const onRemoveSubSection = () => {
 };
 
 storiesOf("Forms|Form structure", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(withKnobs)
   .addParameters({
     info: {

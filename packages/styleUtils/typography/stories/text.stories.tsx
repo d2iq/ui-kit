@@ -12,11 +12,15 @@ import { FontSizes } from "../../../shared/styles/styleUtils/typography/textSize
 
 import { Text } from "../";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 type WrapVals = "truncate" | "nowrap" | "wrap";
 
 storiesOf("Typography|Text", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(withKnobs)
   .add("default", () => (
     <Text>

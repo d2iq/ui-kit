@@ -6,10 +6,14 @@ import { InputAppearance } from "../shared/types/inputAppearance";
 import { inputStoryWrapper } from "../../decorators/inputStoryWrapper";
 import RadioInputStoryHelper from "./RadioInputStoryHelper";
 
-const readme = require("./README.md");
+import readme from "./README.md";
 
 storiesOf("Forms|RadioInput", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(inputStoryWrapper)
   .add("default", () => (
     <RadioInputStoryHelper>

@@ -6,10 +6,14 @@ import CheckboxStoryHelper from "../stories/helpers/CheckboxStoryHelper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Forms|CheckboxInput", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(inputStoryWrapper)
   .add("default", () => (
     <React.Fragment>

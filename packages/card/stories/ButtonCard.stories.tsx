@@ -7,11 +7,15 @@ import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtil
 import ButtonCard from "../components/ButtonCard";
 import { SpacingBox } from "../../styleUtils/modifiers";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Actions|ButtonCard", module)
   .addDecorator(withKnobs)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => <ButtonCard>default</ButtonCard>)
   .add("active", () => <ButtonCard isActive={true}>isActive</ButtonCard>)
   .add("disabled", () => (

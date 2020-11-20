@@ -4,10 +4,14 @@ import { withReadme } from "storybook-readme";
 import { HashMap } from "../index";
 import { configurationMapStoryWrapper } from "./helpers/ConfigurationMapStoryWrapper";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Data listing|HashMap", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(configurationMapStoryWrapper)
   .add("default", () => (
     <HashMap

@@ -10,7 +10,7 @@ import styled from "@emotion/styled";
 import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifierUtils";
 import { css } from "emotion";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const DemoChild = styled("div")`
   background-color: white;
@@ -22,7 +22,11 @@ const DemoChild = styled("div")`
 `;
 
 storiesOf("Layout|Flex", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(withKnobs)
   .add("default", () => (
     <SpacingBox spacingSize="m" bgColor={themeBgSecondary}>

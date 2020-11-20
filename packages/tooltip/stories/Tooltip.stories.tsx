@@ -10,7 +10,7 @@ import Dropdownable, {
 import { Box } from "../../styleUtils/modifiers";
 import { Card } from "../../card";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const tooltipStoryDecorator = storyFn => (
   <div style={{ textAlign: "center" }}>
@@ -19,7 +19,11 @@ const tooltipStoryDecorator = storyFn => (
 );
 
 storiesOf("Overlays|Tooltip", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(tooltipStoryDecorator)
   .add("default", () => (
     <Tooltip trigger="hover me" id="default">

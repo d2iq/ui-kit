@@ -13,10 +13,14 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { grafanaLogo, kibanaLogo, kubernetesLogo } from "./avatarImgs";
 import PrimaryDropdownButton from "../../button/components/PrimaryDropdownButton";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Overlays|DropdownMenu", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => (
     <DropdownMenu trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}>
       <DropdownSection>

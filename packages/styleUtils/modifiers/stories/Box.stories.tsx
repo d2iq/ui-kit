@@ -16,10 +16,14 @@ import Box from "../components/Box";
 import { css } from "emotion";
 type VerticalAlignments = "top" | "bottom" | "center";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Style utilities|Box", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(withKnobs)
   .add("bgColor", () => {
     const colors = {

@@ -19,6 +19,14 @@ const webpackBase = {
         ]
       },
       {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'markdown-loader',
+          }
+        ]
+      },
+      {
         test: /\.(eot|ttf|woff|woff2|svg|png|gif|jpe?g)$/,
         exclude: /(node_modules)/,
         use: ["file-loader"]

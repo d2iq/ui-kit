@@ -4,10 +4,14 @@ import { withReadme } from "storybook-readme";
 import { withKnobs } from "@storybook/addon-knobs";
 import { HeadingText3 } from "../index";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Typography|HeadingText3", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .addDecorator(withKnobs)
   .add("default", () => <HeadingText3>Tertiary Heading</HeadingText3>)
   .add("custom HTML tag", () => (

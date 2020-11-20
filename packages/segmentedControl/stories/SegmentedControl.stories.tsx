@@ -7,10 +7,14 @@ import SegmentedControlStoryHelper from "./helpers/SegmentedControlStoryHelper";
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Forms|SegmentedControl", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => (
     <SegmentedControlStoryHelper>
       {({ changeHandler, selectedSegment }) => (

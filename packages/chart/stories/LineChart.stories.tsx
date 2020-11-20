@@ -4,10 +4,14 @@ import { withReadme } from "storybook-readme";
 
 import { LineChart } from "../index";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Charts|LineChart", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => (
     <LineChart
       data={{

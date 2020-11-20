@@ -5,10 +5,14 @@ import { ProgressBar, ProgressBarSegmentLegend } from "../index";
 import { ProgressBarSizes } from "../components/ProgressBar";
 import { green, yellow } from "../../design-tokens/build/js/designTokens";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Charts| ProgressBar", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => <ProgressBar data={[{ percentage: 40 }]} />)
   .add("custom fill color", () => (
     <ProgressBar data={[{ color: green, percentage: 40 }]} />

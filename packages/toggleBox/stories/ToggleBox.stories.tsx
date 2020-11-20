@@ -4,10 +4,14 @@ import { withReadme } from "storybook-readme";
 import { ToggleBox } from "../index";
 import ToggleBoxStoryHelper from "./helpers/ToggleBoxStoryHelper";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Forms|ToggleBox", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => (
     <ToggleBoxStoryHelper>
       {({ isActive, changeHandler }) => (
