@@ -44,8 +44,8 @@ const shapes = {
 storiesOf("Graphic elements|Icon", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("default", () => {

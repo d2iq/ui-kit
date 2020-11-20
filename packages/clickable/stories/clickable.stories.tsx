@@ -9,8 +9,8 @@ import readme from "../README.md";
 storiesOf("Utils|Clickable", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <Clickable action={action("action trigger")} tabIndex="0">

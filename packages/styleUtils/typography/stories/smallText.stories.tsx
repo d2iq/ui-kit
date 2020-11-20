@@ -15,8 +15,8 @@ import readme from "../README.md";
 storiesOf("Typography|SmallText", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("default", () => (

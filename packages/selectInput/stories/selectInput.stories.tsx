@@ -24,8 +24,8 @@ const defaultOptions = [
 storiesOf("Forms|SelectInput", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(inputStoryWrapper)
   .add("default", () => (

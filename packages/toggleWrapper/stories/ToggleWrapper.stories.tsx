@@ -8,8 +8,8 @@ import readme from "../README.md";
 storiesOf("Utils|ToggleWrapper", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <ToggleWrapper>

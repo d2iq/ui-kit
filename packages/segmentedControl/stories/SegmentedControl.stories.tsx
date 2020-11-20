@@ -12,8 +12,8 @@ import readme from "../README.md";
 storiesOf("Forms|SegmentedControl", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <SegmentedControlStoryHelper>

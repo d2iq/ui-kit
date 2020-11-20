@@ -9,8 +9,8 @@ import readme from "../README.md";
 storiesOf("Data listing|List", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("default", () => (

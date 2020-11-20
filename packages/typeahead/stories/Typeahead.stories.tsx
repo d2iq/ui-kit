@@ -17,8 +17,8 @@ const storyWrapper = css`
 storiesOf("Forms|Typeahead", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <div className={storyWrapper}>

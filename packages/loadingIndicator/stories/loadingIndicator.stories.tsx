@@ -16,8 +16,8 @@ import readme from "../README.md";
 storiesOf("Feedback|Loading indicators", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add(
     "SectionLoadingIndicator in place of page content",

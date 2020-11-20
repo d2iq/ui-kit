@@ -10,8 +10,8 @@ import readme from "../README.md";
 storiesOf("Charts| ProgressBar", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => <ProgressBar data={[{ percentage: 40 }]} />)
   .add("custom fill color", () => (

@@ -26,8 +26,8 @@ const DemoChild = styled("div")`
 storiesOf("Layout|FlexItem", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("default", () => (

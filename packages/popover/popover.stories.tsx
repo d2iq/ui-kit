@@ -16,8 +16,8 @@ const popoverStoryDecorator = storyFn => (
 storiesOf("Overlays|Popover", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(popoverStoryDecorator)
   .add("default", () => (

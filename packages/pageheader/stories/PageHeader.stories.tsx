@@ -19,8 +19,8 @@ const action = () => alert("Action triggered");
 storiesOf("Page structure|PageHeader", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <PageHeader

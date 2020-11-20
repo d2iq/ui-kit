@@ -10,8 +10,8 @@ import readme from "../README.md";
 storiesOf("Feedback|InfoBoxInline", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addParameters({
     info: {

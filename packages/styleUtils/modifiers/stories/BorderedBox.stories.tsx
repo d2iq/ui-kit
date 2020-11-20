@@ -12,8 +12,8 @@ import readme from "../README.md";
 storiesOf("Style utilities|BorderedBox", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("side", () => {

@@ -9,8 +9,8 @@ import readme from "../README.md";
 storiesOf("Typography|HeadingText2", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("default", () => <HeadingText2>Secondary Heading</HeadingText2>)

@@ -21,8 +21,8 @@ const tooltipStoryDecorator = storyFn => (
 storiesOf("Overlays|Tooltip", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(tooltipStoryDecorator)
   .add("default", () => (

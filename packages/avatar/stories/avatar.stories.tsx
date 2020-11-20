@@ -17,8 +17,8 @@ const iconSizes = [iconSizeXs, iconSizeS, iconSizeM, iconSizeL, iconSizeXl];
 storiesOf("Graphic elements|Avatar", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => <Avatar src={serviceImg} label="Kubernetes" />)
   .add("all sizes", () => (

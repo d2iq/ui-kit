@@ -9,8 +9,8 @@ import readme from "../README.md";
 storiesOf("Navigation|Link", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addParameters({
     info: {

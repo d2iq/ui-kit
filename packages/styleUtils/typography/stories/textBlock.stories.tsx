@@ -16,8 +16,8 @@ import readme from "../README.md";
 storiesOf("Typography|Containers/TextBlock", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <Container>

@@ -72,8 +72,8 @@ class ToasterContainer extends React.PureComponent<
 storiesOf("Feedback|Toaster", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addParameters({
     info: {

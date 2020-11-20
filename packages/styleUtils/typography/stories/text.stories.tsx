@@ -18,8 +18,8 @@ type WrapVals = "truncate" | "nowrap" | "wrap";
 storiesOf("Typography|Text", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("default", () => (

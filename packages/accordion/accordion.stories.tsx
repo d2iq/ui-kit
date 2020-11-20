@@ -18,8 +18,8 @@ import readme from "./README.md";
 storiesOf("Navigation|Accordion", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <Accordion>

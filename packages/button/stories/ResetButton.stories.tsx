@@ -9,8 +9,8 @@ import readme from "../README.md";
 storiesOf("Actions|ResetButton", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <div>

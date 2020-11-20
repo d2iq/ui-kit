@@ -11,8 +11,8 @@ import readme from "./README.md";
 storiesOf("Forms|RadioInput", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(inputStoryWrapper)
   .add("default", () => (

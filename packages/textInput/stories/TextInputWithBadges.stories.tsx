@@ -36,8 +36,8 @@ const defaultBadges = [
 storiesOf("Forms|TextInputWithBadges", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(inputStoryWrapper)
   .add("default", () => (

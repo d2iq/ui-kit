@@ -39,8 +39,8 @@ class Example extends React.Component<
 storiesOf("Navigation|Tabs", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => <Example />)
   .add("vertical", () => <Example direction="vert" />)

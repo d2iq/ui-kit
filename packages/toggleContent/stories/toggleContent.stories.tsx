@@ -11,8 +11,8 @@ const secondary = () => <div>secondary component</div>;
 storiesOf("Utils|Toggle", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("string", () => <ToggleContent contentOn="Hello" contentOff="Bye" />)
   .add("component", () => (

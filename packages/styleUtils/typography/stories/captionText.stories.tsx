@@ -8,8 +8,8 @@ import readme from "../README.md";
 storiesOf("Typography|CaptionText", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <CaptionText>

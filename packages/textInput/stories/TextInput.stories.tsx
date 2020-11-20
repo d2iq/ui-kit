@@ -12,8 +12,8 @@ import readme from "../README.md";
 storiesOf("Forms|TextInput", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(inputStoryWrapper)
   .add("default", () => (

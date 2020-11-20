@@ -8,8 +8,8 @@ import readme from "../README.md";
 storiesOf("Page structure|TableView", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addParameters({
     info: {

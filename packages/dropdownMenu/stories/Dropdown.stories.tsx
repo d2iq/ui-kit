@@ -18,8 +18,8 @@ import readme from "../README.md";
 storiesOf("Overlays|DropdownMenu", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <DropdownMenu trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}>

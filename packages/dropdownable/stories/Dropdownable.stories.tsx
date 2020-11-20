@@ -12,8 +12,8 @@ import DropdownStoryFit from "./helpers/DropdownStoryFit";
 storiesOf("Utils|Dropdownable", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addParameters({
     info: {

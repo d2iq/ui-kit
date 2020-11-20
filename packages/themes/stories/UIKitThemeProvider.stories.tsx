@@ -21,8 +21,8 @@ import readme from "../README.md";
 storiesOf("Utils|UIKitThemeProvider", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("dark mode", () => (
     <UIKitThemeProvider

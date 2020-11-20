@@ -11,8 +11,8 @@ import readme from "../README.md";
 storiesOf("Forms|ToggleBoxGroup", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("default", () => (

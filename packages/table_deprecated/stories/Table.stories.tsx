@@ -58,8 +58,8 @@ const empty = () => <Cell>empty</Cell>;
 storiesOf("Data listing|Table_Deprecated", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("collection table", () => (
     <div

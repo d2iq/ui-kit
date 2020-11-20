@@ -22,8 +22,8 @@ const inputTypes = {
 storiesOf("Forms|ToggleInputList", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .addDecorator(toggleInputDecorator)

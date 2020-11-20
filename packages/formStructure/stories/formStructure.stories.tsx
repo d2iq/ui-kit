@@ -32,8 +32,8 @@ const onRemoveSubSection = () => {
 storiesOf("Forms|Form structure", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .addParameters({

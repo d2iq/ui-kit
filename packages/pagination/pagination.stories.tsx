@@ -17,8 +17,8 @@ const initialData = Array.from(
 storiesOf("Navigation|Pagination", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <PaginationContainer>

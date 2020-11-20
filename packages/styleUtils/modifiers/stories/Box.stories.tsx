@@ -21,8 +21,8 @@ import readme from "../README.md";
 storiesOf("Style utilities|Box", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("bgColor", () => {

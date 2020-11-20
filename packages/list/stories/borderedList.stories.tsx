@@ -8,8 +8,8 @@ import readme from "../README.md";
 storiesOf("Data listing|BorderedList", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <BorderedList>

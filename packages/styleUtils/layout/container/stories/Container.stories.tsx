@@ -21,8 +21,8 @@ const contentBg = css`
 storiesOf("Layout|Container", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <div className={baseBg}>

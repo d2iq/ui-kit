@@ -10,8 +10,8 @@ const snippetContent = `cd ui-kit && npm start`;
 storiesOf("Typography|Containers/CodeSnippet", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => <CodeSnippet>{snippetContent}</CodeSnippet>)
   .add("w/ textToCopy", () => (

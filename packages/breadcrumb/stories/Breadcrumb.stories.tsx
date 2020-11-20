@@ -9,8 +9,8 @@ import readme from "../README.md";
 storiesOf("Navigation|Breadcrumb", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <Breadcrumb>

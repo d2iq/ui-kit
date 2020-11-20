@@ -45,8 +45,8 @@ const sizes = {
 storiesOf("Actions|ClickToCopyButton", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => <ClickToCopyButton textToCopy={textToCopy} />)
   .add("w/ onCopy callback", () => {

@@ -12,8 +12,8 @@ import { red } from "../../design-tokens/build/js/designTokens";
 storiesOf("Utils|UIKitProvider", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("link delegate", () => (
     <UIKitProvider

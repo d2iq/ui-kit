@@ -16,8 +16,8 @@ const btnClickFn = () => {
 storiesOf("Forms|TextInputWithButtons", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(inputStoryWrapper)
   .addParameters({

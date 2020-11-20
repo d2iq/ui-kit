@@ -42,8 +42,8 @@ const shapes = {
 storiesOf("Graphic elements|Badge", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("Default", () => <Badge>Default</Badge>)

@@ -20,8 +20,8 @@ const rowAction = action("row action");
 storiesOf("Data listing|ConfigurationMap", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(configurationMapStoryWrapper)
   .add("default", () => (

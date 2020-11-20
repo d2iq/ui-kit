@@ -18,11 +18,11 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 import readme from "../README.md";
 
-storiesOf("Actions|Default button", module)  
+storiesOf("Actions|Default button", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add(
     "PrimaryButton",

@@ -14,8 +14,8 @@ import readme from "../README.md";
 storiesOf("Style utilities|SpacingBox", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .addDecorator(outlineDecorator)

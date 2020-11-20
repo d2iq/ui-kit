@@ -9,8 +9,8 @@ import readme from "../README.md";
 storiesOf("Data listing|HashMap", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(configurationMapStoryWrapper)
   .add("default", () => (

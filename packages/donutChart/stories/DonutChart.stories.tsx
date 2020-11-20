@@ -14,8 +14,8 @@ const chartWrapper = css`
 storiesOf("Charts|DonutChart", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <div className={chartWrapper}>

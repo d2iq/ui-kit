@@ -21,8 +21,8 @@ const gridChildren = new Array(12).fill(0).map((_, i) => (
 storiesOf("Layout|GridList", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("columnCount", () => {

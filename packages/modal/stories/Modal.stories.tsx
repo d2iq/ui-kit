@@ -31,8 +31,8 @@ import readme from "../README.md";
 storiesOf("Overlays|Modal", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addParameters({
     info: {

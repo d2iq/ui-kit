@@ -9,8 +9,8 @@ import readme from "../README.md";
 storiesOf("Actions|Expandable", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <Expandable label="Expand for content">

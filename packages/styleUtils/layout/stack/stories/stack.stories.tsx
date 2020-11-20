@@ -10,8 +10,8 @@ import readme from "../README.md";
 storiesOf("Layout|Stack", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("default", () => (

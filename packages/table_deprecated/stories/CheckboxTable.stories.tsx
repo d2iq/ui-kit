@@ -52,8 +52,8 @@ const veryLongRenderer = () => (
 storiesOf("Data listing|Table_Deprecated/CheckboxTable", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addParameters({
     info: {

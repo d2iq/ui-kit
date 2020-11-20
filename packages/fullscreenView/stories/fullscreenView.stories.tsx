@@ -27,8 +27,8 @@ import readme from "../README.md";
 storiesOf("Page structure|FullscreenView", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <div style={{ height: "500px" }}>

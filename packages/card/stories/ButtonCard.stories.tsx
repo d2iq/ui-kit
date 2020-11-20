@@ -13,8 +13,8 @@ storiesOf("Actions|ButtonCard", module)
   .addDecorator(withKnobs)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => <ButtonCard>default</ButtonCard>)
   .add("active", () => <ButtonCard isActive={true}>isActive</ButtonCard>)

@@ -49,8 +49,8 @@ const iconWidths = Object.keys(iconSizes).reduce((acc, curr) => {
 storiesOf("Page structure|AppChrome", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .addParameters({

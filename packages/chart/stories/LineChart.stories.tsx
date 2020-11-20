@@ -9,8 +9,8 @@ import readme from "../README.md";
 storiesOf("Charts|LineChart", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .add("default", () => (
     <LineChart

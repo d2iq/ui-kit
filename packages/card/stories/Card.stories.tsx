@@ -10,8 +10,8 @@ import readme from "../README.md";
 storiesOf("Layout|Card", module)
   .addParameters({
     readme: {
-      sidebar: readme,
-    },
+      sidebar: readme
+    }
   })
   .addDecorator(withKnobs)
   .add("default", () => <Card>default</Card>)
