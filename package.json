@@ -96,8 +96,6 @@
     "@types/react-tabs": "^2.3.1",
     "@types/react-test-renderer": "16.0.3",
     "@types/react-virtualized": "9.18.7",
-    "@types/storybook__addon-info": "4.1.2",
-    "@types/storybook__addon-knobs": "5.0.4",
     "acorn": "^6.0.5",
     "babel-loader": "^8.0.5",
     "cache-loader": "2.0.1",
