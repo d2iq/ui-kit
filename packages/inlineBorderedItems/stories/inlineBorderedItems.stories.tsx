@@ -5,10 +5,14 @@ import { withKnobs, select } from "@storybook/addon-knobs";
 import InlineBorderedItems from "../components/InlineBorderedItems";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Layout|InlineBorderedItems", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .add("default", () => (
     <InlineBorderedItems>

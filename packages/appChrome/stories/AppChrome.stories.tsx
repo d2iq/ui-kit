@@ -40,14 +40,18 @@ import { ProductIcons } from "../../icons/dist/product-icons-enum";
 import { Icon } from "../../icon";
 import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 const iconWidths = Object.keys(iconSizes).reduce((acc, curr) => {
   acc[curr] = curr;
   return acc;
 }, {});
 
 storiesOf("Page structure|AppChrome", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .addParameters({
     info: {

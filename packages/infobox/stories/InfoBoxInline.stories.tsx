@@ -5,10 +5,14 @@ import { InfoBoxInline } from "../index";
 import { PrimaryAction, SecondaryAction } from "./helpers/actions";
 import InfoBoxStoryContainer from "./helpers/InfoBoxStoryContainer";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Feedback|InfoBoxInline", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addParameters({
     info: {
       propTablesExclude: [InfoBoxStoryContainer]

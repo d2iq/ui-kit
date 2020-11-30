@@ -7,7 +7,7 @@ import { ToastProps } from "../components/Toast";
 import { fontSizes } from "../../shared/styles/typography";
 import { purple } from "../../design-tokens/build/js/designTokens";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 let addedToastId = 0;
 const toastTitle = "I have a message for you";
@@ -70,7 +70,11 @@ class ToasterContainer extends React.PureComponent<
 }
 
 storiesOf("Feedback|Toaster", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addParameters({
     info: {
       propTablesExclude: [Toaster]

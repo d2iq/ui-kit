@@ -8,7 +8,7 @@ import {
 } from "../../../../design-tokens/build/js/designTokens";
 import { css } from "emotion";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const baseBg = css`
   background-color: ${themeBgSecondary};
@@ -19,7 +19,11 @@ const contentBg = css`
 `;
 
 storiesOf("Layout|Container", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("default", () => (
     <div className={baseBg}>
       <Container>

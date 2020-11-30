@@ -9,10 +9,14 @@ import {
   SpaceSize
 } from "../../../shared/styles/styleUtils/modifiers/modifierUtils";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Style utilities|SpacingBox", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .addDecorator(outlineDecorator)
   .add("default", () => <SpacingBox>Default spacing</SpacingBox>)

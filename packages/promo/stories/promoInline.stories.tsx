@@ -5,7 +5,7 @@ import { PageHeader, SpacingBox, PrimaryButton, SecondaryButton } from "../../";
 import { PromoInline } from "../";
 import PromoContent from "../components/PromoContent";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Feedback|PromoInline", module)
   .addParameters({

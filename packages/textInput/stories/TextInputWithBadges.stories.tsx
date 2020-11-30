@@ -7,7 +7,7 @@ import TextInputWithBadgesStoryHelper from "./helpers/TextInputWithBadgesStoryHe
 import { Typeahead } from "../../typeahead";
 import TextInputWithBadgesTypeaheadStoryHelper from "./helpers/TextInputWithBadgesTypeaheadStoryHelper";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const typeaheadItems = [
   { value: "exosphere", label: "Exosphere" },
@@ -34,7 +34,11 @@ const defaultBadges = [
 ];
 
 storiesOf("Forms|TextInputWithBadges", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(inputStoryWrapper)
   .add("default", () => (
     <TextInputWithBadgesStoryHelper>

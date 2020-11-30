@@ -3,8 +3,12 @@ import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { ${Component} } from "../index";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("${Component}", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme,
+    },
+  })
   .add("default", () => <${Component}>default</${Component}>)

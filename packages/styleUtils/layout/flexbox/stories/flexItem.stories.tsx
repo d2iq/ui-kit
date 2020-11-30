@@ -6,7 +6,7 @@ import { withReadme } from "storybook-readme";
 import Flex from "../components/Flex";
 import FlexItem from "../components/FlexItem";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const SampleContainer = styled("div")`
   background-color: #f5f5f5;
@@ -24,7 +24,11 @@ const DemoChild = styled("div")`
 `;
 
 storiesOf("Layout|FlexItem", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .add("default", () => (
     <SampleContainer>

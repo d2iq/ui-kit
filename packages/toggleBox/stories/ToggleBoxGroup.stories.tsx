@@ -6,10 +6,14 @@ import { ToggleBox, ToggleBoxGroup } from "../index";
 import ToggleBoxGroupStoryHelper from "./helpers/ToggleBoxGroupStoryHelper";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Forms|ToggleBoxGroup", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .add("default", () => (
     <ToggleBoxGroupStoryHelper>

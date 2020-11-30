@@ -5,10 +5,14 @@ import { MessagePanelWithGraphic, MessagePanelWrapper } from "..";
 import { PrimaryButton, SecondaryButton } from "../../button";
 import { PageHeader } from "../../pageheader";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Feedback|MessagePanelWithGraphic", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addParameters({
     info: {
       propTablesExclude: [PageHeader, React.Fragment, MessagePanelWrapper]

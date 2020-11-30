@@ -4,10 +4,14 @@ import { withReadme } from "storybook-readme";
 import { Link, ResetLink } from "..";
 import { Text } from "../../styleUtils/typography";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Navigation|Link", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addParameters({
     info: {
       propTablesExclude: [Text]

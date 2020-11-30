@@ -11,11 +11,15 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 import { serviceImg } from "./helpers/serviceImg";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 const iconSizes = [iconSizeXs, iconSizeS, iconSizeM, iconSizeL, iconSizeXl];
 
 storiesOf("Graphic elements|Avatar", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("default", () => <Avatar src={serviceImg} label="Kubernetes" />)
   .add("all sizes", () => (
     <div
