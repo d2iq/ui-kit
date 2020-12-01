@@ -3,10 +3,14 @@ import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { ToggleWrapper } from "../index";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Utils|ToggleWrapper", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("default", () => (
     <ToggleWrapper>
       {({ isActive }) => (

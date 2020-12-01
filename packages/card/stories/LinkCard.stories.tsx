@@ -5,10 +5,14 @@ import { withKnobs, select } from "@storybook/addon-knobs";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 import LinkCard from "../components/LinkCard";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Navigation|LinkCard", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .add("default", () => (
     <LinkCard url="http://google.com" linkDescription="Google">

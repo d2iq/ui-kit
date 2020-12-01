@@ -19,6 +19,14 @@ const webpackBase = {
         ]
       },
       {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'markdown-loader',
+          }
+        ]
+      },
+      {
         test: /\.(eot|ttf|woff|woff2|svg|png|gif|jpe?g)$/,
         exclude: /(node_modules)/,
         use: ["file-loader"]
@@ -27,7 +35,7 @@ const webpackBase = {
         test: /\.stories\.tsx?$/,
         loaders: [
           {
-            loader: require.resolve("@storybook/addon-storysource/loader"),
+            loader: require.resolve("@storybook/source-loader"),
             options: {
               parser: "typescript"
             }

@@ -8,7 +8,7 @@ import PromoContent from "../components/PromoContent";
 import { gradientStyles } from "../style";
 import { PromoBackgroundColor } from "../types";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Feedback|PromoBanner", module)
   .addDecorator(withKnobs)

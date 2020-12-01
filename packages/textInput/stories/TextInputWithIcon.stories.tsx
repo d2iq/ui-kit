@@ -6,10 +6,14 @@ import { InputAppearance } from "../../shared/types/inputAppearance";
 import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Forms|TextInputWithIcon", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(inputStoryWrapper)
   .add("iconStart", () => (
     <React.Fragment>

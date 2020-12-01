@@ -3,14 +3,18 @@ import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { select } from "@storybook/addon-knobs";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 import Dropdownable, { Direction } from "../components/Dropdownable";
 import DropdownStory from "./helpers/DropdownStory";
 import DropdownStoryFit from "./helpers/DropdownStoryFit";
 
 storiesOf("Utils|Dropdownable", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addParameters({
     info: {
       propTablesExclude: [DropdownStory, DropdownStoryFit]

@@ -7,7 +7,7 @@ import PaginationContainer from "./PaginationContainer";
 import { BorderedList } from "../list";
 import usePageChange from "./usePageChange";
 
-const readme = require("./README.md");
+import readme from "./README.md";
 
 const initialData = Array.from(
   { length: 200 },
@@ -15,7 +15,11 @@ const initialData = Array.from(
 );
 
 storiesOf("Navigation|Pagination", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("default", () => (
     <PaginationContainer>
       <Pagination totalItems={200} />

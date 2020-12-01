@@ -11,7 +11,7 @@ const BorderedBox = styled("div")`
   border: 1px solid ${themeBorder};
 `;
 
-const readme = require("../README.md");
+import readme from "../README.md";
 const gridChildren = new Array(12).fill(0).map((_, i) => (
   <li key={i}>
     <BorderedBox>item</BorderedBox>
@@ -19,7 +19,11 @@ const gridChildren = new Array(12).fill(0).map((_, i) => (
 ));
 
 storiesOf("Layout|GridList", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .add("columnCount", () => {
     const columnCount = number("columnCount", 3);

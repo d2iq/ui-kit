@@ -7,7 +7,7 @@ import ToggleInputList from "../components/ToggleInputList";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import { toggleInputDecorator } from "./helpers/toggleInputDecorator";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 const options = [
   { inputLabel: "Exosphere", id: "id.1", value: "exosphere" },
   { inputLabel: "Thermosphere", id: "id.2", value: "thermosphere" },
@@ -20,7 +20,11 @@ const inputTypes = {
 };
 
 storiesOf("Forms|ToggleInputList", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .addDecorator(toggleInputDecorator)
   .add(

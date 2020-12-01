@@ -11,10 +11,14 @@ import {
 import ButtonAppearanceSample from "./helpers/ButtonAppearanceSample";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Actions|Dropdown button", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addParameters({
     info: {
       propTablesExclude: [ButtonAppearanceSample, React.Fragment]

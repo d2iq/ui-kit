@@ -15,7 +15,7 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 // used for Storybook knobs
 const colors = {
@@ -42,7 +42,11 @@ const shapes = {
 };
 
 storiesOf("Graphic elements|Icon", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .add("default", () => {
     // used for Storybook knobs

@@ -11,10 +11,14 @@ import {
 import { PageHeader } from "../../pageheader";
 import { InlineLoadingIndicator, SectionLoadingIndicator } from "../";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Feedback|Loading indicators", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add(
     "SectionLoadingIndicator in place of page content",
     () => (
