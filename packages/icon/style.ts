@@ -7,3 +7,7 @@ export const icon = css`
     pointer-events: none;
   }
 `;
+
+export const blockIcon = css`
+  display: block;
+`;

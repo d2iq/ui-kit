@@ -26,6 +26,33 @@ exports[`Icon renders 1`] = `
 </svg>
 `;
 
+exports[`Icon renders display block 1`] = `
+.emotion-0 {
+  vertical-align: middle;
+  fill: currentColor;
+  display: block;
+}
+
+.emotion-0 use {
+  pointer-events: none;
+}
+
+<svg
+  aria-label="system-arrow-down icon"
+  className="emotion-0"
+  data-cy="icon"
+  height={24}
+  preserveAspectRatio="xMinYMin meet"
+  role="img"
+  viewBox="0 0 24 24"
+  width={24}
+>
+  <use
+    xlinkHref="#system-arrow-down"
+  />
+</svg>
+`;
+
 exports[`Icon renders with defaults 1`] = `
 .emotion-0 {
   vertical-align: middle;

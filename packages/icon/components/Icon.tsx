@@ -5,7 +5,7 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { ProductIcons } from "../../icons/dist/product-icons-enum";
 import { IconSize } from "../../shared/types/iconSize";
 import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
-import { icon } from "../style";
+import { icon, blockIcon } from "../style";
 
 const DEFAULT_ICON_SIZE: IconSize = "s";
 
@@ -21,6 +21,8 @@ export interface IconProps {
   size?: IconSize;
   /** human-readable selector used for writing tests */
   ["data-cy"]?: string;
+  /** Sets display to block if true */
+  block?: boolean;
 }
 
 const Icon: React.FC<IconProps> = ({
@@ -28,7 +30,8 @@ const Icon: React.FC<IconProps> = ({
   size = DEFAULT_ICON_SIZE,
   shape,
   ariaLabel,
-  "data-cy": dataCy
+  "data-cy": dataCy,
+  block
 }) => {
   const svgColor = color || "currentColor";
   const iconSize = iconSizes[size];
@@ -41,7 +44,7 @@ const Icon: React.FC<IconProps> = ({
       viewBox={`0 0 ${parseInt(iconSize, 10)} ${parseInt(iconSize, 10)}`}
       role="img"
       aria-label={ariaLabel || `${shape} icon`}
-      className={cx(icon, tintSVG(svgColor))}
+      className={cx(icon, tintSVG(svgColor), block ? blockIcon : "")}
       data-cy={["icon", dataCy].filter(Boolean).join(" ")}
     >
       <use xlinkHref={`#${shape}`} />
