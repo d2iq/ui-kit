@@ -25,4 +25,9 @@ describe("Icon", () => {
 
     expect(toJson(component)).toMatchSnapshot();
   });
+  it("renders display block", () => {
+    const component = shallow(<Icon shape={SystemIcons.ArrowDown} block />);
+
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });
