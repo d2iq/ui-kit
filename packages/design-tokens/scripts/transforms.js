@@ -1,27 +1,43 @@
 const transformStringCase = (s, isCamelCase) =>
   s ? (isCamelCase ? s.charAt(0).toUpperCase() + s.slice(1) : s) : "";
 
+// Design token naming patterns use the "Category / Type / Item" structure
+// https://amzn.github.io/style-dictionary/#/properties?id=category-type-item
 const getPropNamePatterns = (prop, opts) => {
   let { category, type, item, subitem, state } = prop.attributes;
   const { delimiter, isCamelCase } = opts;
   subitem = subitem === "base" ? "" : subitem;
 
   return {
+    // Category / Type / Item
+    // example: fontSizeM
     c_t_i: `${category}${delimiter}${transformStringCase(
       type,
       isCamelCase
     )}${delimiter}${transformStringCase(item, isCamelCase)}`,
+
+    // Item / Subitem / State
+    // example: purpleDarken1
     i_si_s: `${item}${subitem ? delimiter : ""}${transformStringCase(
       subitem,
       isCamelCase
     )}${state ? delimiter : ""}${transformStringCase(state)}`,
+
+    // Type / Item
+    // example: spaceL
     t_i: `${type}${delimiter}${transformStringCase(item, isCamelCase)}`,
+
+    // Type / Category / Item / Subitem
+    // example: textColorPrimaryInverted
     t_c_i_si: `${type}${delimiter}${transformStringCase(
       category,
       isCamelCase
     )}${delimiter}${transformStringCase(item, isCamelCase)}${
       subitem ? delimiter : ""
     }${transformStringCase(subitem, isCamelCase)}`,
+
+    // Category / Item / Subitem
+    // example: themeBorderInverted
     c_i_si: `${category}${delimiter}${transformStringCase(item, isCamelCase)}${
       subitem ? delimiter : ""
     }${transformStringCase(subitem, isCamelCase)}`
