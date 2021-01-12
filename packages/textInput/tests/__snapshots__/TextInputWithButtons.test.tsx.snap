@@ -293,7 +293,7 @@ exports[`TextInputWithIcon renders 1`] = `
                 >
                   <Icon
                     shape="system-close"
-                    size="16px"
+                    size="xs"
                   >
                     <svg
                       aria-label="system-close icon"
@@ -333,7 +333,7 @@ exports[`TextInputWithIcon renders 1`] = `
                 >
                   <Icon
                     shape="system-funnel"
-                    size="16px"
+                    size="xs"
                   >
                     <svg
                       aria-label="system-funnel icon"
@@ -619,7 +619,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
                   <Icon
                     color="red"
                     shape="system-close"
-                    size="16px"
+                    size="xs"
                   >
                     <svg
                       aria-label="system-close icon"

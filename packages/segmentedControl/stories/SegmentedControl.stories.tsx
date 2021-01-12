@@ -6,12 +6,15 @@ import SegmentedControlButton from "../components/SegmentedControlButton";
 import SegmentedControlStoryHelper from "./helpers/SegmentedControlStoryHelper";
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Forms|SegmentedControl", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("default", () => (
     <SegmentedControlStoryHelper>
       {({ changeHandler, selectedSegment }) => (
@@ -69,18 +72,10 @@ storiesOf("Forms|SegmentedControl", module)
           onSelect={changeHandler}
         >
           <SegmentedControlButton value="list">
-            <Icon
-              ariaLabel="list view"
-              shape={SystemIcons.List}
-              size={iconSizeXs}
-            />
+            <Icon ariaLabel="list view" shape={SystemIcons.List} size="xs" />
           </SegmentedControlButton>
           <SegmentedControlButton value="charts">
-            <Icon
-              ariaLabel="chart view"
-              shape={SystemIcons.Donut}
-              size={iconSizeXs}
-            />
+            <Icon ariaLabel="chart view" shape={SystemIcons.Donut} size="xs" />
           </SegmentedControlButton>
         </SegmentedControl>
       )}
@@ -98,21 +93,13 @@ storiesOf("Forms|SegmentedControl", module)
             value="list"
             tooltipContent="Turn on the list"
           >
-            <Icon
-              ariaLabel="list view"
-              shape={SystemIcons.List}
-              size={iconSizeXs}
-            />
+            <Icon ariaLabel="list view" shape={SystemIcons.List} size="xs" />
           </SegmentedControlButton>
           <SegmentedControlButton
             value="charts"
             tooltipContent="Turn on the charts"
           >
-            <Icon
-              ariaLabel="chart view"
-              shape={SystemIcons.Donut}
-              size={iconSizeXs}
-            />
+            <Icon ariaLabel="chart view" shape={SystemIcons.Donut} size="xs" />
           </SegmentedControlButton>
         </SegmentedControl>
       )}

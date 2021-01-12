@@ -3,10 +3,14 @@ import { storiesOf } from "@storybook/react";
 import { withReadme } from "storybook-readme";
 import { CaptionText } from "../index";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Typography|CaptionText", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("default", () => (
     <CaptionText>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.

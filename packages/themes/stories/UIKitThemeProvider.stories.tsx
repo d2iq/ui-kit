@@ -16,10 +16,14 @@ import {
   purple
 } from "../../design-tokens/build/js/designTokens";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Utils|UIKitThemeProvider", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("dark mode", () => (
     <UIKitThemeProvider
       appTheme={{

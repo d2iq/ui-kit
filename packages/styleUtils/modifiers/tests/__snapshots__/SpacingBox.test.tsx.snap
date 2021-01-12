@@ -14,7 +14,7 @@ exports[`SpacingBox renders default 1`] = `
     }
   }
   className="emotion-0"
-  dataCy="spacingBox"
+  data-cy="spacingBox"
   tag="div"
 >
   content
@@ -35,7 +35,7 @@ exports[`SpacingBox renders with all props 1`] = `
     }
   }
   className="emotion-0"
-  dataCy="spacingBox"
+  data-cy="spacingBox"
   tag="div"
 >
   content
@@ -59,7 +59,7 @@ exports[`SpacingBox renders with different spacing on each side 1`] = `
     }
   }
   className="emotion-0"
-  dataCy="spacingBox"
+  data-cy="spacingBox"
   tag="div"
 >
   content
@@ -124,7 +124,7 @@ exports[`SpacingBox renders with responsive spacing on each side 1`] = `
     }
   }
   className="emotion-0"
-  dataCy="spacingBox"
+  data-cy="spacingBox"
   tag="div"
 >
   content
@@ -153,7 +153,7 @@ exports[`SpacingBox renders with responsive spacingSize 1`] = `
     }
   }
   className="emotion-0"
-  dataCy="spacingBox"
+  data-cy="spacingBox"
   tag="div"
 >
   content

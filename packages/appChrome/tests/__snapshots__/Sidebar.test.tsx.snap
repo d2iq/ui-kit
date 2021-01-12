@@ -79,7 +79,7 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
     <IconPropAdapter
       color="inherit"
       icon="product-components-inverse"
-      size="24px"
+      size="s"
     />
   </div>
   <div
@@ -167,7 +167,7 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         <div>
           <SidebarItemLabel
             icon="product-components-inverse"
-            iconWidth="24px"
+            iconWidth="s"
           >
             Item label
           </SidebarItemLabel>
@@ -268,7 +268,7 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
     <IconPropAdapter
       color="inherit"
       icon="product-components-inverse"
-      size="24px"
+      size="s"
     />
   </div>
   <div

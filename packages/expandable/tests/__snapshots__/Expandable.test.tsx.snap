@@ -163,7 +163,7 @@ exports[`Sidebar renders 1`] = `
                   >
                     <Icon
                       shape="system-triangle-down"
-                      size="16px"
+                      size="xs"
                     >
                       <svg
                         aria-label="system-triangle-down icon"

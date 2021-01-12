@@ -7,7 +7,7 @@ const CaptionText = (props: SharedTextProps) => (
   <SmallText
     weight="normal"
     color={themeTextColorSecondary}
-    dataCy="captionText"
+    data-cy="captionText"
     {...props}
   />
 );

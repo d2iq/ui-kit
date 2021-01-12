@@ -26,7 +26,7 @@ function readDir(dirPath) {
           path
             .join(dirPath, location)
             .replace(templatePath, "")
-            .replace(/Component/g, componentName)
+            .replace(/Component/ig, path.join(dirPath, location).includes(".stories") || path.join(dirPath, location).includes(".test") ? componentName.toLowerCase() : componentName)
         );
 
         fs.outputFile(

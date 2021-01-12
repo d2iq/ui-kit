@@ -4,10 +4,14 @@ import { withReadme } from "storybook-readme";
 import { ResetButton } from "../../";
 import { Text } from "../../styleUtils/typography";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Actions|ResetButton", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("default", () => (
     <div>
       The{" "}

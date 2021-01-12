@@ -4,10 +4,14 @@ import { withReadme } from "storybook-readme";
 import Expandable from "../components/Expandable";
 import { tintText } from "../../shared/styles/styleUtils";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Actions|Expandable", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("default", () => (
     <Expandable label="Expand for content">
       <div>Check out this exciting content</div>

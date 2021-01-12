@@ -38,7 +38,7 @@ export interface ModalBaseProps {
   /**
    * human-readable selector used for writing tests
    */
-  dataCy?: string;
+  ["data-cy"]?: string;
   /**
    * which DOM node the modal will attach to
    */
@@ -82,7 +82,7 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
       isAnimated,
       size,
       isOpen,
-      dataCy,
+      "data-cy": dataCy,
       overlayRoot,
       id
     } = this.props;
@@ -121,7 +121,7 @@ class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
                     <ModalContents
                       isOpen={isOpen}
                       onClose={this.props.onClose}
-                      dataCy={dataCy}
+                      data-cy={dataCy}
                     >
                       {children}
                     </ModalContents>

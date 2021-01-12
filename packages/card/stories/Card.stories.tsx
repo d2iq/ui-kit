@@ -5,10 +5,14 @@ import { withKnobs, select } from "@storybook/addon-knobs";
 import { ButtonCard, Card, LinkCard } from "../index";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Layout|Card", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .add("default", () => <Card>default</Card>)
   .add("paddingSize", () => {

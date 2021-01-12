@@ -38,11 +38,20 @@ import {
 } from "../../design-tokens/build/js/designTokens";
 import { ProductIcons } from "../../icons/dist/product-icons-enum";
 import { Icon } from "../../icon";
+import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
 
-const readme = require("../README.md");
+import readme from "../README.md";
+const iconWidths = Object.keys(iconSizes).reduce((acc, curr) => {
+  acc[curr] = curr;
+  return acc;
+}, {});
 
 storiesOf("Page structure|AppChrome", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .addParameters({
     info: {
@@ -187,7 +196,7 @@ storiesOf("Page structure|AppChrome", module)
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Lorem ipsum</SidebarItemLabel>}
           key="subOne"
         >
@@ -199,7 +208,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Dolor Sit</SidebarItemLabel>}
           key="subTwo"
         >
@@ -211,7 +220,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Amet Consecutor</SidebarItemLabel>}
           key="subThree"
         >
@@ -223,7 +232,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>}
           key="subFour"
         >
@@ -235,7 +244,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Praesent Massa</SidebarItemLabel>}
           key="subFive"
         >
@@ -253,7 +262,7 @@ storiesOf("Page structure|AppChrome", module)
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Lorem ipsum</SidebarItemLabel>}
           key="subOne"
         >
@@ -271,7 +280,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Dolor Sit</SidebarItemLabel>}
           key="subTwo"
         >
@@ -289,7 +298,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Amet Consecutor</SidebarItemLabel>}
           key="subThree"
         >
@@ -307,7 +316,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>}
           key="subFour"
         >
@@ -325,7 +334,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Praesent Massa</SidebarItemLabel>}
           key="subFive"
         >
@@ -349,7 +358,7 @@ storiesOf("Page structure|AppChrome", module)
     <Sidebar isOpen={true}>
       <SidebarSection label="Section header">
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Lorem ipsum</SidebarItemLabel>}
           isOpen={true}
           key="subOne"
@@ -362,7 +371,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Dolor Sit</SidebarItemLabel>}
           key="subTwo"
         >
@@ -374,7 +383,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Amet Consecutor</SidebarItemLabel>}
           key="subThree"
         >
@@ -386,7 +395,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>}
           key="subFour"
         >
@@ -398,7 +407,7 @@ storiesOf("Page structure|AppChrome", module)
           </SidebarSubMenuItem>
         </SidebarSubMenu>
         <SidebarSubMenu
-          iconWidth="24px"
+          iconWidth="s"
           label={<SidebarItemLabel>Praesent Massa</SidebarItemLabel>}
           key="subFive"
         >
@@ -727,13 +736,7 @@ storiesOf("Page structure|AppChrome", module)
 
     const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
     const paddingVertSize = select("Vertical Padding", paddingSizes, "xs");
-
-    const iconWidth = number("Icon Width (Min: 10px, Max: 100px)", 24, {
-      range: true,
-      min: 10,
-      max: 100,
-      step: 1
-    });
+    const iconWidth = select("Size", iconWidths, "s");
 
     const colors = {
       greyDarkLighten2,
@@ -766,10 +769,7 @@ storiesOf("Page structure|AppChrome", module)
             <SidebarItem url="http://google.com">
               <SidebarItemLabel
                 icon={
-                  <Icon
-                    shape={ProductIcons.ServicesInverse}
-                    size={`${iconWidth}px`}
-                  />
+                  <Icon shape={ProductIcons.ServicesInverse} size={iconWidth} />
                 }
               >
                 {content}
@@ -778,10 +778,7 @@ storiesOf("Page structure|AppChrome", module)
             <SidebarItem url="http://google.com" isActive={true}>
               <SidebarItemLabel
                 icon={
-                  <Icon
-                    shape={ProductIcons.ServicesInverse}
-                    size={`${iconWidth}px`}
-                  />
+                  <Icon shape={ProductIcons.ServicesInverse} size={iconWidth} />
                 }
               >
                 {content}
@@ -795,12 +792,7 @@ storiesOf("Page structure|AppChrome", module)
 
   .add("SidebarSubMenu Customizable w/ Knobs", () => {
     const sectionHeader = text("Section Header", "Section Header");
-    const iconWidth = number("Icon Width (Min: 10px, Max: 100px)", 24, {
-      range: true,
-      min: 10,
-      max: 100,
-      step: 1
-    });
+    const iconWidth = select("Size", iconWidths, "s");
 
     const colors = {
       greyDarkLighten2,
@@ -834,14 +826,14 @@ storiesOf("Page structure|AppChrome", module)
                   icon={
                     <Icon
                       shape={ProductIcons.ServicesInverse}
-                      size={`${iconWidth}px`}
+                      size={iconWidth}
                     />
                   }
                 >
                   Praesent Massa
                 </SidebarItemLabel>
               }
-              iconWidth={iconWidth + "px"}
+              iconWidth={iconWidth}
               isOpen={true}
               menuHasIcon={true}
             >

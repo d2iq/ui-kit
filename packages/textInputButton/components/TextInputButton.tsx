@@ -2,7 +2,6 @@ import * as React from "react";
 import ResetButton from "../../button/components/ResetButton";
 import { Icon } from "../../icon";
 import { IconShapes } from "../../icon/components/Icon";
-import { iconSizeXs } from "../../design-tokens/build/js/designTokens";
 
 export interface TextInputButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -26,7 +25,7 @@ const TextInputButton: React.SFC<TextInputButtonProps> = ({
 
   return (
     <ResetButton {...other}>
-      <Icon size={iconSizeXs} shape={shape} color={color} />
+      <Icon size="xs" shape={shape} color={color} />
     </ResetButton>
   );
 };

@@ -15,7 +15,6 @@ import {
 } from "../style";
 import { Flex, FlexItem } from "../../styleUtils/layout";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { iconSizeXxs } from "../../design-tokens/build/js/designTokens";
 import { Icon } from "../../icon";
 import Clickable from "../../clickable/components/clickable";
 import { TextInputWithIconProps } from "./TextInputWithIcon";
@@ -139,10 +138,7 @@ export class TextInputWithBadges extends TextInputWithIcon<
                             action={this.onBadgeClose.bind(this, badge)}
                           >
                             <span>
-                              <Icon
-                                shape={SystemIcons.Close}
-                                size={iconSizeXxs}
-                              />
+                              <Icon shape={SystemIcons.Close} size="xxs" />
                             </span>
                           </Clickable>
                         </FlexItem>

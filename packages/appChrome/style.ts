@@ -21,6 +21,8 @@ import {
   defaultSidebarItemHorizPaddingSize,
   defaultSidebarItemVertPaddingSize
 } from "./components/SidebarItem";
+import { IconSize } from "../shared/types/iconSize";
+import { iconSizes } from "../shared/styles/styleUtils/layout/iconSizes";
 
 export const appChrome = css`
   height: 100%;
@@ -186,6 +188,6 @@ export const subMenuItemText = css`
   text-transform: capitalize;
 `;
 
-export const spaceMenuIcon = (iconWidth: string) => css`
-  padding-left: ${parseInt(iconWidth, 10) + parseInt(spaceM, 10)}px;
+export const spaceMenuIcon = (iconWidth: IconSize) => css`
+  padding-left: ${parseInt(iconSizes[iconWidth], 10) + parseInt(spaceM, 10)}px;
 `;

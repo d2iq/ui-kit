@@ -8,15 +8,11 @@ function noOp() {}
  */
 function navigateToStory(category, name, cb) {
   cy.visit("/");
-  cy.get("#explorernavigation-accordion").click(); // make sure everything is closed
-
   // Navigate to story with the name
-  cy.get(
-    "#" + category.replace(/\s+/g, "-").toLowerCase() + name.toLowerCase()
-  ).click();
-  cy.get("nav section .css-0 a")
-    .first()
-    .click();
+  const storySideBar =  "#" + category.replace(/\s+/g, "-").toLowerCase() + name.toLowerCase();
+  cy.log(`Open story ${category} ${name} - ${storySideBar}`);
+  cy.get(storySideBar).click();
+  cy.get(".tabbutton").contains("Readme").click();
   cy.get("#storybook-panel-root").contains(name);
 
   // Get story ID to visit iframe directly

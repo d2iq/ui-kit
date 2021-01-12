@@ -17,15 +17,15 @@ import {
   themeTextColorPrimaryInverted,
   themeTextColorSecondaryInverted,
   themeBgPrimaryInverted,
-  themeBgSelected,
-  iconSizeS
+  themeBgSelected
 } from "../../design-tokens/build/js/designTokens";
 import { pickReadableTextColor } from "../../shared/styles/color";
 import { AppChromeTheme, SidebarNavItemProps } from "../types";
+import { IconSize } from "../../shared/types/iconSize";
 
 const SidebarSubMenuItemText: React.FC<{
   menuHasIcon: boolean;
-  iconContainerWidth: string;
+  iconContainerWidth: IconSize;
 }> = ({ children, menuHasIcon, iconContainerWidth }) => (
   <span
     className={cx(subMenuItemText, {
@@ -45,9 +45,7 @@ const SidebarSubMenuItem: React.FC<SidebarNavItemProps> = ({
   url
 }) => {
   const theme: AppChromeTheme & { menuHasIcon: boolean } = useTheme();
-  const iconContainerWidth = theme.iconWidth
-    ? `${theme.iconWidth}px`
-    : iconSizeS;
+  const iconContainerWidth = theme.iconWidth || "s";
   const sidebarBgColor = theme?.sidebarBackgroundColor
     ? theme.sidebarBackgroundColor
     : getCSSVarValue(themeBgPrimaryInverted);
@@ -104,7 +102,7 @@ const SidebarSubMenuItem: React.FC<SidebarNavItemProps> = ({
     <Clickable
       action={onClick}
       tabIndex={0}
-      dataCy={dataCy}
+      data-cy={dataCy}
       disableFocusOutline={true}
     >
       <div className={classNames}>

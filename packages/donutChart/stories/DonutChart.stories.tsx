@@ -5,14 +5,18 @@ import { DonutChart } from "../index";
 import { purple, pink, blue } from "../../design-tokens/build/js/designTokens";
 import { css } from "emotion";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const chartWrapper = css`
   max-width: 150px;
 `;
 
 storiesOf("Charts|DonutChart", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("default", () => (
     <div className={chartWrapper}>
       <DonutChart

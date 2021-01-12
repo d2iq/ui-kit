@@ -3,14 +3,13 @@ import { cx } from "emotion";
 import { flex, flexItem, padding } from "../../shared/styles/styleUtils";
 import { sidebarItemHeight, sidebarNavItemIconWrap } from "../style";
 import { IconShapes } from "../../icon/components/Icon";
-import { iconSizeS } from "../../design-tokens/build/js/designTokens";
 import IconPropAdapter from "../../icon/components/IconPropAdapter";
+import { IconSize } from "../../shared/types/iconSize";
 
 export interface SidebarItemLabelProps {
   children?: React.ReactElement<HTMLElement> | string;
-  // TODO: only accept IconShapes when we make a big breaking change
   icon?: IconShapes | React.ReactElement<HTMLElement>;
-  iconWidth?: string;
+  iconWidth?: IconSize;
 }
 
 const SidebarItemLabel: React.FC<SidebarItemLabelProps> = ({
@@ -35,7 +34,7 @@ const SidebarItemLabel: React.FC<SidebarItemLabelProps> = ({
 );
 
 SidebarItemLabel.defaultProps = {
-  iconWidth: iconSizeS
+  iconWidth: "s"
 };
 
 export default SidebarItemLabel;

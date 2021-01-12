@@ -44,11 +44,11 @@ class PageHeader extends React.PureComponent<PageHeaderProps, {}> {
               className={cx(listReset, flex({ align: "center" }))}
               data-cy="pageHeader-actions"
             >
-              {actions.map(action => {
+              {actions.map((action, i) => {
                 return (
                   <li
+                    key={action.key ? `${action.key}` : `action-${i}`}
                     className={cx(padding("left", "s"), display("inherit"))}
-                    key={`${action.key}`}
                   >
                     {action}
                   </li>

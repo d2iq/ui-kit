@@ -26,7 +26,7 @@ export interface ClickableProps {
   /**
    * human-readable selector used for writing tests
    */
-  dataCy?: string;
+  ["data-cy"]?: string;
 }
 
 export class Clickable extends React.PureComponent<ClickableProps, {}> {
@@ -48,7 +48,7 @@ export class Clickable extends React.PureComponent<ClickableProps, {}> {
       tabIndex,
       role,
       disableFocusOutline,
-      dataCy
+      "data-cy": dataCy
     } = this.props;
     const { className = "" } = children.props;
 

@@ -38,7 +38,7 @@ exports[`ColorCodedBadge renders with an icon and color 1`] = `
   <Icon
     color="#f00f00"
     shape="system-circle-check"
-    size="12px"
+    size="xxs"
   />
   <SpacingBox
     display="inline-block"

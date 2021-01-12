@@ -44,7 +44,7 @@ export interface BoxProps {
   /**
    * human-readable selector used for writing tests
    */
-  dataCy?: string;
+  ["data-cy"]?: string;
   children?: React.ReactNode;
   className?: string;
 }
@@ -60,7 +60,7 @@ const Box = (props: BoxProps) => {
     textAlign,
     tag,
     className,
-    dataCy,
+    "data-cy": dataCy,
     ...other
   } = props;
   const getBgImageOptionVal = (option: "size" | "position" | "repeat") =>
@@ -101,7 +101,7 @@ const Box = (props: BoxProps) => {
 Box.defaultProps = {
   bgImageOptions: { size: undefined, position: undefined, repeat: undefined },
   tag: "div" as keyof React.ReactHTML,
-  dataCy: "box"
+  "data-cy": "box"
 };
 
 export default Box;

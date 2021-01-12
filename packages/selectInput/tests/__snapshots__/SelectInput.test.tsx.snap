@@ -282,7 +282,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
           <Icon
             color="inherit"
             shape="system-triangle-down"
-            size="16px"
+            size="xs"
           >
             <svg
               aria-label="system-triangle-down icon"

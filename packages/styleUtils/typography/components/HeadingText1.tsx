@@ -4,7 +4,7 @@ import { HeadingTextProps } from "../textTypes";
 import { themeTextColorPrimary } from "../../../design-tokens/build/js/designTokens";
 
 const HeadingText1 = (props: HeadingTextProps) => (
-  <Text weight="medium" size="xl" dataCy="headingText1" {...props} />
+  <Text weight="medium" size="xl" data-cy="headingText1" {...props} />
 );
 
 HeadingText1.defaultProps = {

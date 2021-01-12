@@ -5,10 +5,14 @@ import { withReadme } from "storybook-readme";
 import Stack from "../components/Stack";
 import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifierUtils";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Layout|Stack", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .add("default", () => (
     <Stack>

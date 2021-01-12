@@ -20,7 +20,7 @@ export interface SmallTextProps extends SharedTextProps {
   /**
    * human-readable selector used for writing tests
    */
-  dataCy?: string;
+  ["data-cy"]?: string;
 }
 
 const SmallText = (props: SmallTextProps) => <Text size="s" {...props} />;
@@ -31,7 +31,7 @@ SmallText.defaultProps = {
   wrap: "wrap",
   weight: "normal",
   tag: "p",
-  dataCy: "smallText"
+  ["data-cy"]: "smallText"
 };
 
 export default SmallText;

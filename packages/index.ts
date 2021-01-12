@@ -1,5 +1,4 @@
 import { injectGlobalCss } from "./shared/styles/global";
-import * as Legacy from "./legacy";
 import * as designTokens from "./design-tokens/build/js/designTokens";
 
 // Components
@@ -61,11 +60,6 @@ export {
   DropdownMenuItemAvatar,
   DropdownMenuItemAppearances
 } from "./dropdownMenu";
-export {
-  EmptyState,
-  EmptyStateWithGraphic,
-  EmptyStateWrapper
-} from "./emptyState";
 export { Expandable } from "./expandable";
 export * from "./formStructure";
 export { FullscreenView } from "./fullscreenView";
@@ -80,6 +74,11 @@ export {
   SectionLoadingIndicator
 } from "./loadingIndicator";
 export {
+  MessagePanel,
+  MessagePanelWithGraphic,
+  MessagePanelWrapper
+} from "./messagePanel";
+export {
   DialogModal,
   SmallDialogModal,
   LargeDialogModal,
@@ -89,6 +88,7 @@ export {
   FullscreenModal
 } from "./modal";
 export { PageHeader, PageHeaderBody, PageHeaderTabs } from "./pageheader";
+export { Pagination, PaginationContainer, usePageChange } from "./pagination";
 export { Popover } from "./popover";
 export { ProgressBar } from "./progressbar";
 export { PromoBanner, PromoInline } from "./promo";
@@ -132,7 +132,6 @@ export { Tooltip } from "./tooltip";
 export { Typeahead } from "./typeahead";
 export { UIKitThemeProvider } from "./themes";
 export { UIKitProvider } from "./uiKitProvider";
-export { Legacy };
 export { CodeSnippet } from "./codesnippet";
 export { ClickToCopyButton } from "./clicktocopybutton";
 

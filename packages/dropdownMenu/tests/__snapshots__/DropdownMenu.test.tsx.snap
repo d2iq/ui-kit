@@ -141,7 +141,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
             </div>
           </Popover>
         }
-        open={false}
+        isOpen={false}
         preferredDirections={
           Array [
             "bottom-end",
@@ -318,7 +318,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
             </div>
           </Popover>
         }
-        open={false}
+        isOpen={false}
         preferredDirections={
           Array [
             "bottom-end",
@@ -542,7 +542,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
             </div>
           </Popover>
         }
-        open={true}
+        isOpen={true}
         preferredDirections={
           Array [
             "bottom-end",
@@ -571,10 +571,10 @@ exports[`Dropdown renders an open dropdown 1`] = `
           </button>
         </div>
         <clickOutside(DropdownContents)
-          open={true}
+          isOpen={true}
         >
           <DropdownContents
-            open={true}
+            isOpen={true}
           >
             <ForwardRef
               style={
@@ -1183,7 +1183,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
             </div>
           </Popover>
         }
-        open={true}
+        isOpen={true}
         preferredDirections={
           Array [
             "bottom-end",
@@ -1212,10 +1212,10 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
           </button>
         </div>
         <clickOutside(DropdownContents)
-          open={true}
+          isOpen={true}
         >
           <DropdownContents
-            open={true}
+            isOpen={true}
           >
             <ForwardRef
               style={

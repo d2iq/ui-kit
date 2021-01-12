@@ -40,7 +40,7 @@ export class BadgeButton extends React.PureComponent<BadgeButtonProps, {}> {
       ${badgeButton(appearance)};
     `;
     return (
-      <Clickable {...props} dataCy="badgeButton">
+      <Clickable {...props} data-cy="badgeButton">
         <span className={className}>{children}</span>
       </Clickable>
     );

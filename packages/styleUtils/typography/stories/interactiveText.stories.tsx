@@ -5,10 +5,14 @@ import { withKnobs, select } from "@storybook/addon-knobs";
 import { InteractiveText } from "../index";
 import { FontSize } from "../../../shared/styles/styleUtils/typography/textSize";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 storiesOf("Typography|InteractiveText", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .add("default", () => <InteractiveText>Click me</InteractiveText>)
   .add("size", () => {

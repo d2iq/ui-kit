@@ -4,7 +4,7 @@ import { BasicTextProps } from "../textTypes";
 import { themeWarning } from "../../../design-tokens/build/js/designTokens";
 
 const SuccessText = (props: BasicTextProps) => (
-  <Text color={themeWarning} dataCy="warningText" {...props} />
+  <Text color={themeWarning} data-cy="warningText" {...props} />
 );
 
 SuccessText.defaultProps = {

@@ -4,7 +4,7 @@ import { withReadme } from "storybook-readme";
 import { TabTitle, Tabs, TabItem } from "../index";
 import { TabDirection } from "../components/Tabs";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 class Example extends React.Component<
   { direction?: TabDirection },
@@ -37,7 +37,11 @@ class Example extends React.Component<
 }
 
 storiesOf("Navigation|Tabs", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("default", () => <Example />)
   .add("vertical", () => <Example direction="vert" />)
   .add("responsive", () => (

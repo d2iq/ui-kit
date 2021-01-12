@@ -13,10 +13,14 @@ import {
 } from "./";
 import ToggleInputListStoryHelper from "../toggleInputList/stories/helpers/ToggleInputListStoryHelper";
 import { ToggleInputList } from "..";
-const readme = require("./README.md");
+import readme from "./README.md";
 
 storiesOf("Navigation|Accordion", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .add("default", () => (
     <Accordion>
       <AccordionItem>

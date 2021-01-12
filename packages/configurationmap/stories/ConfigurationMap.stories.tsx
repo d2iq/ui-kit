@@ -14,11 +14,15 @@ import {
 } from "../index";
 import { configurationMapStoryWrapper } from "./helpers/ConfigurationMapStoryWrapper";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 const rowAction = action("row action");
 
 storiesOf("Data listing|ConfigurationMap", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(configurationMapStoryWrapper)
   .add("default", () => (
     <ConfigurationMap>

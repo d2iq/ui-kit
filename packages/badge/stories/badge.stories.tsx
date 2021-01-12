@@ -17,7 +17,7 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 import { Badge, BadgeButton } from "../../index";
 
-const readme = require("../README.md");
+import readme from "../README.md";
 
 const colors = {
   textColorPrimary,
@@ -40,7 +40,11 @@ const shapes = {
 };
 
 storiesOf("Graphic elements|Badge", module)
-  .addDecorator(withReadme([readme]))
+  .addParameters({
+    readme: {
+      sidebar: readme
+    }
+  })
   .addDecorator(withKnobs)
   .add("Default", () => <Badge>Default</Badge>)
   .add("Success", () => <Badge appearance="success">Success</Badge>, {
