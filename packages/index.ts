@@ -134,6 +134,7 @@ export { UIKitThemeProvider } from "./themes";
 export { UIKitProvider } from "./uiKitProvider";
 export { CodeSnippet } from "./codesnippet";
 export { ClickToCopyButton } from "./clicktocopybutton";
+export { SlideToggle } from "./slideToggle";
 
 // Style utility components
 export {
