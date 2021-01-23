@@ -9,10 +9,10 @@ require("../packages/shared/styles/global").injectStorybookResetCss();
 addDecorator(iconDecorator);
 addDecorator(withKnobs);
 addDecorator(withA11y);
-addDecorator(addReadme);
 addDecorator(
   withInfo({
     inline: true,
-    source: false
+    source: true
   })
 );
+addDecorator(addReadme);
