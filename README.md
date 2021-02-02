@@ -5,7 +5,7 @@ UI Kit is a collaboration between D2iQ's product design team and engineering tea
 - [Components](/packages)
 - [Design tokens](/packages/design-tokens)
 - [Icon library](/packages/icons)
-- [Design guidelines (WIP)](/design-guidelines)
+- [Design guidelines](/design-guidelines)
 
 ## Getting started
 
