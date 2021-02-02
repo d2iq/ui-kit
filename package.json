@@ -51,7 +51,7 @@
     "emotion-theming": "10.0.27",
     "memoize-one": "4.0.2",
     "popper-max-size-modifier": "0.2.0",
-    "react-chartist": "^0.13.3",
+    "react-chartist": "0.14.4",
     "react-click-outside": "3.0.1",
     "react-delegate-component": "1.0.0",
     "react-draggable": "3.3.2",
@@ -65,8 +65,8 @@
     "relative-luminance": "2.0.1"
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": ">=16.8.0 || >=17.0.0",
+    "react-dom": ">=16.8.0 || >=17.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
