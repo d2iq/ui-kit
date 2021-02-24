@@ -96,17 +96,6 @@ export { RadioInput } from "./radioInput";
 export { SegmentedControl, SegmentedControlButton } from "./segmentedControl";
 export { SelectInput } from "./selectInput";
 export {
-  Column,
-  Table_Deprecated,
-  CheckboxTable_Deprecated,
-  Cell,
-  TextCell,
-  HeaderCell,
-  SortableHeaderCell,
-  NumberCell
-} from "./table_deprecated";
-export { TableView, TableViewHeader, TableViewBody } from "./tableView";
-export {
   Table,
   DropdownMenuCell,
   EmptyCell,

@@ -22,10 +22,6 @@ export const injectGlobalCss = () => {
       margin-bottom: 0;
     }
 
-    .ReactVirtualized__Grid {
-      outline: none;
-    }
-
     .${inverseColorMode} {
       ${tintContent(themeTextColorPrimaryInverted)};
     }
