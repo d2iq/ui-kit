@@ -1,13 +1,5 @@
 import * as React from "react";
 import { InfoBoxInline } from "../../../infobox";
-import {
-  Table_Deprecated,
-  Column,
-  HeaderCell,
-  TextCell,
-  NumberCell
-} from "../../../table_deprecated";
-import { items, width } from "../../../table_deprecated/stories/helpers/mocks";
 import { css } from "emotion";
 import { TextInput } from "../../../textInput";
 import { InputAppearance } from "../../../shared/types/inputAppearance";
@@ -16,32 +8,6 @@ import {
   themeBgPrimary,
   themeTextColorPrimary
 } from "../../../design-tokens/build/js/designTokens";
-
-const nameCellRenderer = ({ name }: { name?: string }) => (
-  <TextCell>
-    <strong>{name}</strong>
-  </TextCell>
-);
-const cityCellRenderer = ({ city }: { city?: string }) => (
-  <TextCell>
-    <strong>{city}</strong>
-  </TextCell>
-);
-const roleCellRenderer = ({ role }: { role?: string }) => (
-  <TextCell>
-    <span>{role}</span>
-  </TextCell>
-);
-const stateCellRenderer = ({ state }: { state?: string }) => (
-  <TextCell>
-    <span>{state}</span>
-  </TextCell>
-);
-const zipcodeCellRenderer = ({ zipcode }: { zipcode?: string }) => (
-  <NumberCell>
-    <span>{zipcode}</span>
-  </NumberCell>
-);
 
 const inputGrid = css`
   display: grid;
@@ -132,36 +98,6 @@ const StyleTile = () => (
           Disabled button
         </PrimaryButton>
       </div>
-    </div>
-
-    <div style={{ height: "300px" }}>
-      <Table_Deprecated data={items}>
-        <Column
-          header={<HeaderCell>name</HeaderCell>}
-          cellRenderer={nameCellRenderer}
-          width={width}
-        />
-        <Column
-          header={<HeaderCell>role</HeaderCell>}
-          cellRenderer={roleCellRenderer}
-          width={width}
-        />
-        <Column
-          header={<HeaderCell>state</HeaderCell>}
-          cellRenderer={stateCellRenderer}
-          width={width}
-        />
-        <Column
-          header={<HeaderCell textAlign="right">zip code</HeaderCell>}
-          cellRenderer={zipcodeCellRenderer}
-          width={width}
-        />
-        <Column
-          header={<HeaderCell>city</HeaderCell>}
-          cellRenderer={cityCellRenderer}
-          width={width}
-        />
-      </Table_Deprecated>
     </div>
   </div>
 );

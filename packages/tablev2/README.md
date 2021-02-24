@@ -2,8 +2,6 @@
 
 A new Table component was created to improve performance issues that were impossible to get around without eliminating core features and design specifications. For example: column sizing features, row hover styles, and horizontal scrolling styles.
 
-Our goal is to gradually replace the first Table component (`<Table_Deprecated>`) usage with this Table, deprecate the first Table component, and eventually remove the first Table component and it's dependencies from ui-kit.
-
 ## Usage guidelines
 
 Use tables to display information in a way that’s easy to scan, so that user can look for patterns and insights. Users will use tables to troubleshoot, manage and monitor their systems.
@@ -50,14 +48,6 @@ In the details table, the primary column is also the first column (on the left) 
 
 ## Table Actions
 
-### Group Actions (applies to `Table_Deprecated` only)
-
-Group actions remain hidden until the user selects a checkbox. Use this component when there is at least one common action among the majority of your table rows.
-
-- If 2 actions, show them separately. If more than 2 actions, show them all in a dropdown.
-- Must provide feedback to the user when action button is pressed to indicate if they action was successful or if there was a error.
-- Sometimes, a specific group action cannot be applied to a certain item on the table (ex: a service is in a deleting state and cannot be touched). In these instances, we should disable that action when the user selects the item in the table.
-
 ### Global Actions
 
 Global actions are actions that pertain to the whole table (i.e. Download, Logs).
@@ -73,12 +63,6 @@ Global actions are actions that pertain to the whole table (i.e. Download, Logs)
 Collection tables should span the full width of the screen. In cases where there are too few columns to span the whole screen, the table should still span the whole screen.
 
 Detail tables shouldn’t span the full width of the screen.
-
-### Height (applies to `Table_Deprecated` only)
-
-The Table expands to fill its parent but it will not stretch the parent. This means a table's parent node must have a height in order for the table to be visible.
-
-The `TableView` component is helpful when creating layouts that include the `Table` component.
 
 ## Iterating on this Table component
 
