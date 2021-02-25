@@ -72,6 +72,12 @@ storiesOf("Overlays|Tooltip", module)
       </Tooltip>
     );
   })
+  .add("default max width", () => (
+    <Tooltip trigger="if not provided, maxWidth defaults to 300" id="maxWidth">
+      since my content is wider than 300px, it will wrap so that tooltip does
+      not exceed a width of 300px by default
+    </Tooltip>
+  ))
   .add("min or max width", () => (
     <React.Fragment>
       <div style={{ marginBottom: "1em" }}>
@@ -88,6 +94,16 @@ storiesOf("Overlays|Tooltip", module)
         content
       </Tooltip>
     </React.Fragment>
+  ))
+  .add("content width", () => (
+    <Tooltip
+      trigger="if maxWidth is null, tooltip width will expand to fit content"
+      id="maxWidth"
+      maxWidth={null}
+    >
+      sometimes I may want my tooltip to take up as much width as the content
+      needs without having the default maxWidth
+    </Tooltip>
   ))
   .add("suppress toggle", () => (
     <Tooltip trigger="hover me" id="suppress" isOpen={true} suppress={true}>
