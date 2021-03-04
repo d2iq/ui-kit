@@ -8,7 +8,7 @@ import { getFirstFocusableChildNode } from "../../utilities/getFocusableChildNod
 export interface BaseTooltipProps {
   children: React.ReactNode | string;
   id: string;
-  maxWidth?: number;
+  maxWidth?: number | null;
   minWidth?: number;
 }
 export interface TooltipProps extends BaseTooltipProps {
@@ -31,7 +31,7 @@ const Tooltip = ({
   children,
   disablePortal,
   id,
-  maxWidth,
+  maxWidth = 300,
   minWidth,
   onClose,
   isOpen: isOpenProp = false,

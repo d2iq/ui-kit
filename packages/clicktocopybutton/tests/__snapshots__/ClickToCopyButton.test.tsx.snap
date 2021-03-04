@@ -92,6 +92,7 @@ exports[`ClickToCopyButton renders default 1`] = `
                 <TooltipContent
                   id="copyTooltip1"
                   isOpen={false}
+                  maxWidth={300}
                 >
                   Copied to clipboard
                 </TooltipContent>
@@ -237,6 +238,7 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
                 <TooltipContent
                   id="copyTooltip2"
                   isOpen={false}
+                  maxWidth={300}
                 >
                   Copied to clipboard
                 </TooltipContent>

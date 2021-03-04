@@ -17,6 +17,7 @@ exports[`Tooltip renders 1`] = `
         <TooltipContent
           id="renders"
           isOpen={false}
+          maxWidth={300}
         >
           content
         </TooltipContent>
@@ -86,6 +87,7 @@ exports[`Tooltip renders open tooltip 1`] = `
         <TooltipContent
           id="opened"
           isOpen={true}
+          maxWidth={300}
         >
           content
         </TooltipContent>
@@ -162,6 +164,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                         data-cy="tooltipContent"
                         id="opened"
                         role="tooltip"
+                        style="max-width: 300px;"
                       >
                         content
                       </div>
@@ -220,6 +223,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                         data-cy="tooltipContent"
                         id="opened"
                         role="tooltip"
+                        style="max-width: 300px;"
                       >
                         content
                       </div>
@@ -243,6 +247,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                   <TooltipContent
                     id="opened"
                     isOpen={true}
+                    maxWidth={300}
                   >
                     <div
                       aria-hidden={false}
@@ -252,7 +257,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                       role="tooltip"
                       style={
                         Object {
-                          "maxWidth": undefined,
+                          "maxWidth": 300,
                           "minWidth": undefined,
                         }
                       }
@@ -324,6 +329,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
         <TooltipContent
           id="customDir"
           isOpen={true}
+          maxWidth={300}
         >
           content
         </TooltipContent>
@@ -398,6 +404,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                         data-cy="tooltipContent"
                         id="opened"
                         role="tooltip"
+                        style="max-width: 300px;"
                       >
                         content
                       </div>
@@ -416,6 +423,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                         data-cy="tooltipContent"
                         id="customDir"
                         role="tooltip"
+                        style="max-width: 300px;"
                       >
                         content
                       </div>
@@ -474,6 +482,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                         data-cy="tooltipContent"
                         id="customDir"
                         role="tooltip"
+                        style="max-width: 300px;"
                       >
                         content
                       </div>
@@ -497,6 +506,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                   <TooltipContent
                     id="customDir"
                     isOpen={true}
+                    maxWidth={300}
                   >
                     <div
                       aria-hidden={false}
@@ -506,7 +516,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                       role="tooltip"
                       style={
                         Object {
-                          "maxWidth": undefined,
+                          "maxWidth": 300,
                           "minWidth": undefined,
                         }
                       }

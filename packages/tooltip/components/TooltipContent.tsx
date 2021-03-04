@@ -37,7 +37,7 @@ class TooltipContent extends React.PureComponent<TooltipContentProps, {}> {
           role="tooltip"
           style={{
             minWidth,
-            maxWidth
+            maxWidth: maxWidth || undefined
           }}
           data-cy="tooltipContent"
         >
