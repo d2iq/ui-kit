@@ -59,7 +59,7 @@
     "react-id-generator": "3.0.0",
     "react-popper": "2.2.3",
     "react-tabs": "^3.0.0",
-    "react-toggled": "1.2.7",
+    "react-toggled": "git+https://github.com/mstruebing/react-toggled.git",
     "react-transition-group": "2.5.0",
     "relative-luminance": "2.0.1"
   },
