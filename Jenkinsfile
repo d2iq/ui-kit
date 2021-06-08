@@ -31,6 +31,7 @@ pipeline {
         ansiColor('xterm') {
           retry(2) {
             sh '''npm install'''
+            sh '''npm install -g typescript@3.8.2'''
           }
         }
       }
