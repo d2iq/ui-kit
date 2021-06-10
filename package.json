@@ -16,7 +16,7 @@
   "scripts": {
     "build:storybook": "build-storybook -c .storybook -o storybook_static",
     "prebuild:storybook": "npm run build:design-tokens && npm run build:svg",
-    "build:design-tokens": "node ./packages/design-tokens/scripts/build.js && tsc -p tsconfig.designTokens.json",
+    "build:design-tokens": "node ./packages/design-tokens/scripts/build.js && npx tsc -p tsconfig.designTokens.json",
     "build:design-token-docs": "FORMAT=docs npm run build:design-tokens",
     "build:svg": "node ./packages/icons/scripts/build.js",
     "clean": "rimraf dist",
