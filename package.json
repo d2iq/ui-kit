@@ -123,7 +123,7 @@
     "react-gemini-scrollbar": "2.3.x",
     "react-test-renderer": "16.8.6",
     "rimraf": "2.6.2",
-    "semantic-release": "15.13.3",
+    "semantic-release": "17.2.3",
     "semantic-release-jira": "1.2.3",
     "storybook-readme": "5.0.9",
     "style-dictionary": "^2.4.0",
