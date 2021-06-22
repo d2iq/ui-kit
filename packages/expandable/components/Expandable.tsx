@@ -1,7 +1,6 @@
 import * as React from "react";
 import { cx } from "emotion";
-import Toggle from "react-toggled";
-import { display } from "../../shared/styles/styleUtils";
+import { visuallyHidden } from "../../shared/styles/styleUtils";
 import { toggler } from "../style";
 import { ResetButton } from "../../button";
 import { Icon } from "../../icon";
@@ -26,40 +25,59 @@ const Expandable: React.FC<ExpandableProps> = ({
   controlledIsOpen,
   onChange,
   indicatorPosition
-}) => (
-  <Toggle defaultOn={Boolean(isOpen)} on={controlledIsOpen} onToggle={onChange}>
-    {({ on, getTogglerProps }) => (
-      <div>
-        <ResetButton
-          {...getTogglerProps({
-            className: cx(labelClassName, toggler)
-          })}
+}) => {
+  const [open, setOpen] = React.useState(Boolean(isOpen));
+
+  React.useEffect(() => {
+    if (typeof controlledIsOpen !== "undefined") {
+      setOpen(controlledIsOpen);
+    }
+  }, [controlledIsOpen]);
+
+  const handleToggle = () => {
+    const newOpen = !open;
+
+    if (typeof controlledIsOpen === "undefined") {
+      setOpen(newOpen);
+    }
+
+    if (onChange) {
+      onChange(newOpen);
+    }
+  };
+
+  return (
+    <div>
+      <ResetButton
+        className={cx(labelClassName, toggler)}
+        aria-expanded={open}
+        onClick={handleToggle}
+      >
+        <Flex
+          align="center"
+          direction={
+            indicatorPosition && indicatorPosition === "left"
+              ? "row"
+              : "row-reverse"
+          }
         >
-          <Flex
-            align="center"
-            direction={
-              indicatorPosition && indicatorPosition === "left"
-                ? "row"
-                : "row-reverse"
-            }
-          >
-            <FlexItem flex="shrink">
-              <Icon
-                shape={
-                  on ? SystemIcons.TriangleDown : SystemIcons.TriangleRight
-                }
-                size="xs"
-              />
-            </FlexItem>
-            <FlexItem>{label}</FlexItem>
-          </Flex>
-        </ResetButton>
-        {/* TODO: investigate whether display: none is a11y-friendly in this situation */}
-        <div className={cx({ [display("none")]: !on })}>{children}</div>
+          <FlexItem flex="shrink">
+            <Icon
+              shape={
+                open ? SystemIcons.TriangleDown : SystemIcons.TriangleRight
+              }
+              size="xs"
+            />
+          </FlexItem>
+          <FlexItem>{label}</FlexItem>
+        </Flex>
+      </ResetButton>
+      <div className={cx(!open && visuallyHidden)} aria-hidden={!open}>
+        {children}
       </div>
-    )}
-  </Toggle>
-);
+    </div>
+  );
+};
 
 Expandable.defaultProps = {
   indicatorPosition: "left"
