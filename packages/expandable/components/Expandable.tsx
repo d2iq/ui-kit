@@ -29,7 +29,7 @@ const Expandable: React.FC<ExpandableProps> = ({
   const [open, setOpen] = React.useState(Boolean(isOpen));
 
   React.useEffect(() => {
-    if (typeof controlledIsOpen !== "undefined") {
+    if (controlledIsOpen !== undefined) {
       setOpen(controlledIsOpen);
     }
   }, [controlledIsOpen]);
@@ -37,7 +37,7 @@ const Expandable: React.FC<ExpandableProps> = ({
   const handleToggle = () => {
     const newOpen = !open;
 
-    if (typeof controlledIsOpen === "undefined") {
+    if (controlledIsOpen === undefined) {
       setOpen(newOpen);
     }
 
@@ -72,7 +72,7 @@ const Expandable: React.FC<ExpandableProps> = ({
           <FlexItem>{label}</FlexItem>
         </Flex>
       </ResetButton>
-      <div className={cx(!open && visuallyHidden)} aria-hidden={!open}>
+      <div className={cx({ [visuallyHidden]: !open })} aria-hidden={!open}>
         {children}
       </div>
     </div>
