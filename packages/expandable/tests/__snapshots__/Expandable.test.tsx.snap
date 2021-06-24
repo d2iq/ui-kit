@@ -122,87 +122,81 @@ exports[`Sidebar renders 1`] = `
   isOpen={true}
   label="Label"
 >
-  <Toggle
-    defaultOn={true}
-    onToggle={[Function]}
-  >
-    <div>
-      <ResetButton
+  <div>
+    <ResetButton
+      aria-expanded={true}
+      className="emotion-5"
+      onClick={[Function]}
+    >
+      <button
         aria-expanded={true}
-        className="emotion-5"
+        className="emotion-4"
         onClick={[Function]}
-        tabIndex={0}
+        type="button"
       >
-        <button
-          aria-expanded={true}
-          className="emotion-4"
-          onClick={[Function]}
-          tabIndex={0}
-          type="button"
+        <div
+          tabIndex={-1}
         >
-          <div
-            tabIndex={-1}
+          <Flex
+            align="center"
+            direction="row"
+            gutterSize="none"
+            justify="flex-start"
+            wrap="nowrap"
           >
-            <Flex
-              align="center"
-              direction="row"
-              gutterSize="none"
-              justify="flex-start"
-              wrap="nowrap"
+            <div
+              className="emotion-3"
+              data-cy="flex"
             >
-              <div
-                className="emotion-3"
-                data-cy="flex"
+              <FlexItem
+                flex="shrink"
               >
-                <FlexItem
-                  flex="shrink"
+                <div
+                  className="emotion-1"
+                  data-cy="flexItem"
                 >
-                  <div
-                    className="emotion-1"
-                    data-cy="flexItem"
+                  <Icon
+                    shape="system-triangle-down"
+                    size="xs"
                   >
-                    <Icon
-                      shape="system-triangle-down"
-                      size="xs"
+                    <svg
+                      aria-label="system-triangle-down icon"
+                      className="emotion-0"
+                      data-cy="icon"
+                      height={16}
+                      preserveAspectRatio="xMinYMin meet"
+                      role="img"
+                      viewBox="0 0 16 16"
+                      width={16}
                     >
-                      <svg
-                        aria-label="system-triangle-down icon"
-                        className="emotion-0"
-                        data-cy="icon"
-                        height={16}
-                        preserveAspectRatio="xMinYMin meet"
-                        role="img"
-                        viewBox="0 0 16 16"
-                        width={16}
-                      >
-                        <use
-                          xlinkHref="#system-triangle-down"
-                        />
-                      </svg>
-                    </Icon>
-                  </div>
-                </FlexItem>
-                <FlexItem
-                  flex="grow"
+                      <use
+                        xlinkHref="#system-triangle-down"
+                      />
+                    </svg>
+                  </Icon>
+                </div>
+              </FlexItem>
+              <FlexItem
+                flex="grow"
+              >
+                <div
+                  className="emotion-2"
+                  data-cy="flexItem"
                 >
-                  <div
-                    className="emotion-2"
-                    data-cy="flexItem"
-                  >
-                    Label
-                  </div>
-                </FlexItem>
-              </div>
-            </Flex>
-          </div>
-        </button>
-      </ResetButton>
-      <div
-        className=""
-      >
-        Content
-      </div>
+                  Label
+                </div>
+              </FlexItem>
+            </div>
+          </Flex>
+        </div>
+      </button>
+    </ResetButton>
+    <div
+      aria-hidden={false}
+      className=""
+    >
+      Content
     </div>
-  </Toggle>
+  </div>
 </Expandable>
 `;

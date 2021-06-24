@@ -19,7 +19,7 @@ storiesOf("Actions|Expandable", module)
   ))
   .add("opened", () => (
     <Expandable label="Expand for content" isOpen={true}>
-      <div>Check out this exciting content</div>
+      <div>Check out this other exciting content</div>
     </Expandable>
   ))
   .add("opened w/ control prop", () => (
@@ -41,6 +41,6 @@ storiesOf("Actions|Expandable", module)
   ))
   .add("indicator icon on theright", () => (
     <Expandable label="Expand for content" indicatorPosition="right">
-      <div>Check out this exciting content</div>
+      <div>Check out this exciting content with that right indicator</div>
     </Expandable>
   ));
