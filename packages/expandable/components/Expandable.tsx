@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { visuallyHidden } from "../../shared/styles/styleUtils";
+import { display } from "../../shared/styles/styleUtils";
 import { toggler } from "../style";
 import { ResetButton } from "../../button";
 import { Icon } from "../../icon";
@@ -72,7 +72,7 @@ const Expandable: React.FC<ExpandableProps> = ({
           <FlexItem>{label}</FlexItem>
         </Flex>
       </ResetButton>
-      <div className={cx({ [visuallyHidden]: !open })} aria-hidden={!open}>
+      <div className={cx({ [display("none")]: !open })} aria-hidden={!open}>
         {children}
       </div>
     </div>
