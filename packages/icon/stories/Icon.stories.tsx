@@ -1,6 +1,5 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { select, withKnobs } from "@storybook/addon-knobs";
 import { Icon } from "../index";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
@@ -11,7 +10,8 @@ import {
   red,
   textColorPrimary,
   textColorSecondary,
-  yellow
+  yellow,
+  blueDarken3
 } from "../../design-tokens/build/js/designTokens";
 import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
 
@@ -21,6 +21,7 @@ import readme from "../README.md";
 const colors = {
   textColorPrimary,
   textColorSecondary,
+  blueDarken3,
   red,
   yellow,
   green,
@@ -38,7 +39,8 @@ const shapes = {
   ["SystemIcons.Folder"]: SystemIcons.Folder,
   ["SystemIcons.Gear"]: SystemIcons.Gear,
   ["SystemIcons.Services"]: SystemIcons.Services,
-  ["SystemIcons.Users"]: SystemIcons.Users
+  ["SystemIcons.Users"]: SystemIcons.Users,
+  ["SystemIcons.LockData"]: SystemIcons.LockData
 };
 
 storiesOf("Graphic elements|Icon", module)
