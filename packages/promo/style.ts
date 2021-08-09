@@ -1,7 +1,9 @@
 import { css } from "emotion";
 import { GradientColors, GradientStyle } from "./types";
 import {
+  blueLighten3,
   blueLighten4,
+  blueLighten5,
   spaceS,
   textBlockWidth,
   themeBgSecondary,
@@ -42,17 +44,30 @@ export const graphicContainer = css`
 
 export const gradientStyles: Record<GradientStyle, GradientColors> = {
   lightBlue: [themeBgSecondary, blueLighten4],
+  oceanBlue: [blueLighten5, blueLighten4, blueLighten3],
   // these colors are not in ui-kit, but this is what was spec'd by the design team
   purple: ["#440099", "#36007A"]
 };
 
-export const getBackgroundGradient = (gradientStyle?: GradientStyle) =>
-  gradientStyle
-    ? css`
-        background-image: linear-gradient(
-          90deg,
-          ${gradientStyles[gradientStyle][0]} 0%,
-          ${gradientStyles[gradientStyle][1]} 100%
-        );
-      `
-    : "";
+export const getBackgroundGradient = (gradientStyle?: GradientStyle) => {
+  if (!gradientStyle) {
+    return "";
+  }
+
+  const stops = gradientStyles[gradientStyle];
+
+  if (gradientStyle === "oceanBlue") {
+    return css`
+      background-image: linear-gradient(
+        90deg,
+        ${stops[0]} 0%,
+        ${stops[1]} 60.84%,
+        ${stops[2]} 100%
+      );
+    `;
+  }
+
+  return css`
+    background-image: linear-gradient(90deg, ${stops[0]} 0%, ${stops[1]} 100%);
+  `;
+};
