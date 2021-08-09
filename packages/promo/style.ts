@@ -61,7 +61,7 @@ export const getBackgroundGradient = (gradientStyle?: GradientStyle) => {
       background-image: linear-gradient(
         90deg,
         ${stops[0]} 0%,
-        ${stops[1]} 60.84%,
+        ${stops[1]} 45%,
         ${stops[2]} 100%
       );
     `;
