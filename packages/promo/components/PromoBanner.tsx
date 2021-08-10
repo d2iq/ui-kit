@@ -12,7 +12,7 @@ interface PromoBannerProps extends PromoProps {
 
 const darkGradientStyles: GradientStyle[] = ["purple"];
 
-const PromoBanner: React.StatelessComponent<PromoBannerProps> = ({
+const PromoBanner: React.FunctionComponent<PromoBannerProps> = ({
   bgColor = "",
   gradientStyle,
   isDarkBackground,

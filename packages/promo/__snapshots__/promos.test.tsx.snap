@@ -290,7 +290,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
 
 exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
 <div
-  class="css-cht2m7"
+  class="css-dhevp"
   data-cy="spacingBox"
 >
   <div

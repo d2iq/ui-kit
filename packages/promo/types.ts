@@ -21,6 +21,6 @@ export interface PromoProps {
   ["data-cy"]?: string;
 }
 
-export type GradientStyle = "lightBlue" | "purple";
-export type GradientColors = [string, string];
+export type GradientStyle = "lightBlue" | "purple" | "oceanBlue";
+export type GradientColors = [string, string, string?];
 export type PromoBackgroundColor = "themeBgSecondary" | "purpleLighten5";
