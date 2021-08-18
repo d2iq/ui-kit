@@ -42,13 +42,13 @@ storiesOf("Forms|Form structure/Grouped fields/FieldList", module)
     "editable fields (controlled inputs)",
     () => (
       <FieldListHelper items={mockItems}>
-        {({ removeItemHander, onAddItem, fieldUpdateHandler, items }) => (
+        {({ removeItemHander, addItemHandler, fieldUpdateHandler, items }) => (
           <>
             <FieldList
               data={items}
               onRemoveItem={removeItemHander}
               onAddItem={() =>
-                onAddItem({
+                addItemHandler({
                   name: "",
                   role: "",
                   city: "",
@@ -63,13 +63,18 @@ storiesOf("Forms|Form structure/Grouped fields/FieldList", module)
                 pathToValue="name"
                 onChange={fieldUpdateHandler}
               >
-                {({ defaultProps, onChange, value }) => (
-                  <TextInput
-                    value={value}
-                    onChange={onChange}
-                    {...defaultProps}
-                  />
-                )}
+                {({ defaultProps, onChange, value, rowIndex }) => {
+                  console.log("items:", items);
+                  console.log("rowIndex:", rowIndex);
+                  console.log("CRASH: ", items[rowIndex].name);
+                  return (
+                    <TextInput
+                      value={value}
+                      onChange={onChange}
+                      {...defaultProps}
+                    />
+                  );
+                }}
               </FieldListColumn>
               <FieldListColumn
                 key="role"
