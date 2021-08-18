@@ -306,4 +306,27 @@ storiesOf("Forms|Form structure/Grouped fields/FieldList", module)
         )}
       </FieldListColumn>
     </FieldList>
-  ));
+  ))
+  .add("break!!!!", () => {
+    const [items, setItems] = React.useState(mockItems);
+    const removeItem = rowIndex => () => {
+      setItems(prev => {
+        prev.splice(rowIndex, 1);
+        return [...prev];
+      });
+    };
+
+    return (
+      <FieldList onRemoveItem={removeItem} data={items} pathToUniqueKey="id">
+        <FieldListColumn key="name" header="name" pathToValue="name">
+          {({ defaultProps, onChange, value, rowIndex }) => {
+            console.log(items[rowIndex]);
+
+            return (
+              <TextInput value={value} onChange={onChange} {...defaultProps} />
+            );
+          }}
+        </FieldListColumn>
+      </FieldList>
+    );
+  });
