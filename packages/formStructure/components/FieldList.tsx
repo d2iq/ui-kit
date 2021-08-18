@@ -91,6 +91,10 @@ const FieldListRow: React.FC<FieldListRowProps> = React.memo(
       }
     };
 
+    const handleRowClick = () => {
+      fieldListContext?.removeListItem(rowIndex);
+    };
+
     return (
       <div className={getFieldRowGrid(columns, iconSizes[REMOVE_ICON_SIZE])}>
         {columns.map((col, i) => {
@@ -126,7 +130,7 @@ const FieldListRow: React.FC<FieldListRowProps> = React.memo(
         {/* this wrapper div is needed to fix a vertical centering bug in Firefox with <button> elements that are children of display: grid */}
         <div>
           <ResetButton
-            onClick={fieldListContext?.removeListItem(rowIndex)}
+            onClick={handleRowClick}
             disabled={isRowDisabled(rowIndex, disabledRows)}
             onKeyUp={addEmptyRow}
             data-cy="fieldList-removeButton"

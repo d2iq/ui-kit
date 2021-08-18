@@ -10,7 +10,7 @@ type FieldListContext = {
     rowId?: string | number,
     itemToAdd?: Record<string, any>
   ) => void;
-  removeListItem: (rowIndex: number) => () => void;
+  removeListItem: (rowIndex: number) => void;
 };
 
 export const Context = React.createContext<FieldListContext | null>(null);
@@ -46,12 +46,11 @@ export const FieldListProvider: React.FC<FieldListProviderProps> = ({
 
   const removeListItem = (rowIndex: number) => {
     if (onRemoveItem) {
-      return onRemoveItem(rowIndex);
+      const handleRemove = onRemoveItem(rowIndex);
+      handleRemove();
     }
 
-    return () => {
-      setData(data.filter((_, i) => rowIndex !== i));
-    };
+    setData(data.filter((_, i) => rowIndex !== i));
   };
 
   return (
