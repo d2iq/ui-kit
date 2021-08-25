@@ -22,7 +22,7 @@ const webpackBase = {
         test: /\.md$/,
         use: [
           {
-            loader: 'markdown-loader',
+            loader: "markdown-loader"
           }
         ]
       },

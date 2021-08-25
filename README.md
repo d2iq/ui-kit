@@ -134,7 +134,7 @@ These Guidelines got written based on [AngularJS Git Commit Message Conventions]
 
 After your PR gets merged to `master`, `semantic-release` will automatically cut a release if one of your commits is of type `feat`, `fix`, or `perf`.
 
-## Pre-release Teating in a Host Project
+## Pre-release Testing in a Host Project
 
 Build:
 
