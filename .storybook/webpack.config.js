@@ -11,20 +11,5 @@ module.exports = ({ config, mode }) => {
   config.resolve.alias["core-js"] = path.dirname(require.resolve("core-js"));
   config.module.rules[0].use[0].options.sourceType = "unambiguous";
 
-  // Add SVGR Loader - Required for logo to render
-  // ========================================================
-  // Remove svg rules from existing webpack rule
-  const assetRule = config.module.rules.find(({ test }) => test.test(".svg"));
-
-  const assetLoader = {
-    loader: assetRule.loader,
-    options: assetRule.options || assetRule.query
-  };
-
-  config.module.rules.unshift({
-    test: /\.svg$/,
-    use: ["@svgr/webpack", assetLoader]
-  });
-
   return config;
 };

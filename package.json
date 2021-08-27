@@ -82,7 +82,6 @@
     "@storybook/source-loader": "5.3.21",
     "@storybook/storybook-deployer": "2.8.1",
     "@storybook/theming": "5.3.21",
-    "@svgr/webpack": "^5.5.0",
     "@types/chartist": "^0.9.46",
     "@types/classnames": "^2.2.10",
     "@types/enzyme": "3.1.14",

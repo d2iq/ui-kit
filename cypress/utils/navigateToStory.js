@@ -9,10 +9,10 @@ function noOp() {}
 function navigateToStory(category, name, cb) {
   cy.visit("/");
   // Navigate to story with the name
-  const storySideBar =  "#" + category.replace(/\s+/g, "-").toLowerCase() + name.toLowerCase();
+  const storySideBar =
+    "#" + category.replace(/\s+/g, "-").toLowerCase() + name.toLowerCase();
   cy.log(`Open story ${category} ${name} - ${storySideBar}`);
   cy.get(storySideBar).click();
-  cy.get(".tabbutton").contains("Readme").click();
   cy.get("#storybook-panel-root").contains(name);
 
   // Get story ID to visit iframe directly

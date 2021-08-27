@@ -13,7 +13,7 @@ export interface BadgeButtonProps {
     | "outline";
   onClick: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /**
-   * Tab index indicates if an element can be focuesed for more information see
+   * Tab index indicates if an element can be focused for more information see
    * https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
    * browser default value for this is -1
    */
@@ -21,30 +21,23 @@ export interface BadgeButtonProps {
   children: JSX.Element | string;
 }
 
-export class BadgeButton extends React.PureComponent<BadgeButtonProps, {}> {
-  public static defaultProps: Partial<BadgeButtonProps> = {
-    appearance: "default",
-    tabIndex: -1
-  };
+const BadgeButton = ({
+  appearance = "default",
+  children,
+  onClick,
+  tabIndex = -1
+}: BadgeButtonProps) => {
+  const className = css`
+    outline: none;
+    cursor: pointer;
+    ${badgeButton(appearance)};
+  `;
 
-  public render() {
-    const { appearance, children, onClick, tabIndex } = this.props;
-    const props = {
-      action: onClick,
-      tabIndex
-    };
+  return (
+    <Clickable action={onClick} tabIndex={tabIndex} data-cy="badgeButton">
+      <span className={className}>{children}</span>
+    </Clickable>
+  );
+};
 
-    const className = css`
-      outline: none;
-      cursor: pointer;
-      ${badgeButton(appearance)};
-    `;
-    return (
-      <Clickable {...props} data-cy="badgeButton">
-        <span className={className}>{children}</span>
-      </Clickable>
-    );
-  }
-}
-
-export default BadgeButton;
+export default React.memo(BadgeButton);

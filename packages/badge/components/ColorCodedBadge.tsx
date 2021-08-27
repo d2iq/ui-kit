@@ -9,15 +9,16 @@ import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
 interface ColorCodedBadgeProps {
   color?: React.CSSProperties["color"];
   iconShape?: SystemIcons;
+  children?: JSX.Element | string;
 }
 
 const ICON_SIZE = "xxs";
 
-const ColorCodedBadge: React.FC<ColorCodedBadgeProps> = ({
+const ColorCodedBadge = ({
   children,
   color,
   iconShape
-}) => {
+}: ColorCodedBadgeProps) => {
   const iconSize = parseInt(iconSizes[ICON_SIZE], 10);
 
   return (
