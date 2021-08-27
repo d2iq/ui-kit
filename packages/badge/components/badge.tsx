@@ -11,23 +11,14 @@ export type BadgeAppearance =
 
 export interface BadgeProps {
   appearance?: BadgeAppearance;
-  children: React.ReactNode;
+  children: React.ReactNode | string;
 }
 
-export class Badge extends React.PureComponent<BadgeProps, {}> {
-  public static defaultProps: Partial<BadgeProps> = {
-    appearance: "default"
-  };
-
-  public render() {
-    const { appearance, children } = this.props;
-
-    return (
-      <span className={badge(appearance)} data-cy="badge">
-        {children}
-      </span>
-    );
-  }
-}
-
-export default Badge;
+export const Badge = ({ appearance = "default", children }: BadgeProps) => {
+  return (
+    <span className={badge(appearance)} data-cy="badge">
+      {children}
+    </span>
+  );
+};
+export default React.memo(Badge);

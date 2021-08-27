@@ -9,13 +9,21 @@ import { ColorCodedBadge } from "..";
 expect.addSnapshotSerializer(serializer);
 
 describe("ColorCodedBadge", () => {
-  it("renders with a color", () => {
+  it("renders without children", () => {
     const component = shallow(<ColorCodedBadge color="#f00f00" />);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+  it("renders with a color", () => {
+    const component = shallow(
+      <ColorCodedBadge color="#f00f00">Color Coded Badge</ColorCodedBadge>
+    );
     expect(toJson(component)).toMatchSnapshot();
   });
   it("renders with an icon and color", () => {
     const component = shallow(
-      <ColorCodedBadge color="#f00f00" iconShape={SystemIcons.CircleCheck} />
+      <ColorCodedBadge color="#f00f00" iconShape={SystemIcons.CircleCheck}>
+        Color Coded Badge with icon
+      </ColorCodedBadge>
     );
     expect(toJson(component)).toMatchSnapshot();
   });

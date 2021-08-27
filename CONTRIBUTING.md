@@ -76,7 +76,7 @@ npm run create:component -- ${Component Name}
 
 ### Does It Belong in UI Kit?
 
-Before adding a new component to UI Kit, we need to carefully consider whether it belongs in UI Kit. If we're too quick to add new components to UI Kit, we will end up bloating our component library and spend too much time maintaining reuasble components.
+Before adding a new component to UI Kit, we need to carefully consider whether it belongs in UI Kit. If we're too quick to add new components to UI Kit, we will end up bloating our component library and spend too much time maintaining reusable components.
 
 When a new component is being created, work with the design team to document design and usage guidelines in the component folder's README.md file.
 

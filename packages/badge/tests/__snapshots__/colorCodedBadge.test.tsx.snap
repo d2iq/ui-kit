@@ -6,7 +6,60 @@ exports[`ColorCodedBadge renders with a color 1`] = `
   fill: #f00f00;
 }
 
-<Badge
+<Memo()
+  appearance="outline"
+>
+  <svg
+    className="emotion-0"
+    height={12}
+    viewBox="0 0 12 12"
+    width={12}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx={6}
+      cy={6}
+      r={6}
+    />
+  </svg>
+  <SpacingBox
+    display="inline-block"
+    side="left"
+    spacingSize="xxs"
+    tag="div"
+  >
+    Color Coded Badge
+  </SpacingBox>
+</Memo()>
+`;
+
+exports[`ColorCodedBadge renders with an icon and color 1`] = `
+<Memo()
+  appearance="outline"
+>
+  <Icon
+    color="#f00f00"
+    shape="system-circle-check"
+    size="xxs"
+  />
+  <SpacingBox
+    display="inline-block"
+    side="left"
+    spacingSize="xxs"
+    tag="div"
+  >
+    Color Coded Badge with icon
+  </SpacingBox>
+</Memo()>
+`;
+
+exports[`ColorCodedBadge renders without children 1`] = `
+.emotion-0 {
+  color: #f00f00;
+  fill: #f00f00;
+}
+
+<Memo()
   appearance="outline"
 >
   <svg
@@ -28,23 +81,5 @@ exports[`ColorCodedBadge renders with a color 1`] = `
     spacingSize="xxs"
     tag="div"
   />
-</Badge>
-`;
-
-exports[`ColorCodedBadge renders with an icon and color 1`] = `
-<Badge
-  appearance="outline"
->
-  <Icon
-    color="#f00f00"
-    shape="system-circle-check"
-    size="xxs"
-  />
-  <SpacingBox
-    display="inline-block"
-    side="left"
-    spacingSize="xxs"
-    tag="div"
-  />
-</Badge>
+</Memo()>
 `;
