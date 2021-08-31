@@ -1,14 +1,9 @@
-import { addons } from '@storybook/addons';
-import { create } from '@storybook/theming/create';
+import { addons } from "@storybook/addons";
+import Theme from "./theme";
 
-const theme = create({
-  brandTitle: "Mesosphere UI Kit",
-  brandUrl: "#",
-});
 addons.setConfig({
   isFullscreen: false,
   showPanel: true,
   panelPosition: "bottom",
-  theme,
+  theme: Theme
 });
-
