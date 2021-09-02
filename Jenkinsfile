@@ -36,61 +36,70 @@ pipeline {
       }
     }
 
-    stage('Lint') {
-      steps {
-        ansiColor('xterm') {
-          sh '''npm run lint'''
+    stage('Validate') {
+      failFast true
+      parallel {
+
+        stage('Lint') {
+          steps {
+            ansiColor('xterm') {
+              sh '''npm run lint'''
+            }
+          }
         }
+
+        stage('Unit Test') {
+          steps {
+            ansiColor('xterm') {
+              sh '''npm run test -- --collectCoverage'''
+            }
+          }
+        }
+
+        stage('Build') {
+          steps {
+            ansiColor('xterm') {
+              sh '''npm run dist'''
+            }
+          }
+
+          post {
+            always {
+              archiveArtifacts 'dist/**/*'
+            }
+          }
+        }
+
+        stage('Run integration tests') {
+          steps {
+            ansiColor('xterm') {
+              sh '''npm run test:integration'''
+            }
+          }
+        }
+
+        stage('Build Storybook') {
+          steps {
+            ansiColor('xterm') {
+              sh '''npm run build:storybook'''
+            }
+          }
+
+          post {
+            always {
+              archiveArtifacts 'storybook_static/**/*'
+            }
+          }
+        }
+
       }
     }
-
-    stage('Unit Test') {
-      steps {
-        ansiColor('xterm') {
-          sh '''npm run test -- --collectCoverage'''
-        }
-      }
-    }
-
-    stage('Build') {
-      steps {
-        ansiColor('xterm') {
-          sh '''npm run dist'''
-        }
-      }
-
-      post {
-        always {
-          archiveArtifacts 'dist/**/*'
-        }
-      }
-    }
-
-    stage('Run integration tests') {
-      steps {
-        ansiColor('xterm') {
-          sh '''npm run test:integration'''
-        }
-      }
-    }
-
-    stage('Build Storybook') {
-      steps {
-        ansiColor('xterm') {
-          sh '''npm run build:storybook'''
-        }
-      }
-
-      post {
-        always {
-          archiveArtifacts 'storybook_static/**/*'
-        }
-      }
-    }
-
-
 
     stage("Release") {
+      when {
+        branch 'master'
+      }
+
       steps {
         withCredentials([
           string(credentialsId: 'd146870f-03b0-4f6a-ab70-1d09757a51fc', variable: 'GH_TOKEN'),
@@ -104,7 +113,7 @@ pipeline {
 
     stage('Deploy'){
       when {
-        expression { env.BRANCH_NAME == 'master' }
+        branch 'master'
       }
 
       steps {
