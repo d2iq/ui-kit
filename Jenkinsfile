@@ -78,20 +78,6 @@ pipeline {
           }
         }
 
-        stage('Build Storybook') {
-          steps {
-            ansiColor('xterm') {
-              sh '''npm run build:storybook'''
-            }
-          }
-
-          post {
-            always {
-              archiveArtifacts 'storybook_static/**/*'
-            }
-          }
-        }
-
       }
     }
 
