@@ -1,13 +1,9 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { action } from "@storybook/addon-actions";
 import { Toaster, Toast } from "..";
 import { ToastProps } from "../components/Toast";
 import { fontSizes } from "../../shared/styles/typography";
 import { purple } from "../../design-tokens/build/js/designTokens";
-
-import readme from "../README.md";
 
 let addedToastId = 0;
 const toastTitle = "I have a message for you";
@@ -69,103 +65,105 @@ class ToasterContainer extends React.PureComponent<
   }
 }
 
-storiesOf("Feedback|Toaster", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .addParameters({
-    info: {
-      propTablesExclude: [Toaster]
-    }
-  })
-  .add("default", () => (
-    <Toaster>{[<Toast title={toastTitle} key={0} id="default" />]}</Toaster>
-  ))
-  .add("danger", () => (
-    <Toaster>
-      {[<Toast title={toastTitle} key={0} id="danger" appearance="danger" />]}
-    </Toaster>
-  ))
-  .add("success", () => (
-    <Toaster>
-      {[<Toast title={toastTitle} key={0} id="success" appearance="success" />]}
-    </Toaster>
-  ))
-  .add("warning", () => (
-    <Toaster>
-      {[<Toast title={toastTitle} key={0} id="warning" appearance="warning" />]}
-    </Toaster>
-  ))
-  .add("description", () => (
-    <Toaster>
-      {[
-        <Toast
-          title={toastTitle}
-          description="And this is a short description to provide more info about the message"
-          key={0}
-          id="description"
-        />
-      ]}
-    </Toaster>
-  ))
-  .add("autodismiss", () => <ToasterContainer>{[]}</ToasterContainer>)
-  .add("with dismiss callback", () => (
-    <Toaster>
-      {[
-        <Toast
-          title={toastTitle}
-          key={0}
-          onDismiss={action("The toast has been dismissed")}
-          id="dismissCallback"
-        />
-      ]}
-    </Toaster>
-  ))
-  .add("with 1 action", () => (
-    <Toaster>
-      {[
-        <Toast
-          title={toastTitle}
-          key={0}
-          primaryAction={
-            <button
-              onClick={action("primary action clicked")}
-              style={fakeButtonStyles}
-            >
-              primaryAction
-            </button>
-          }
-          id="oneAction"
-        />
-      ]}
-    </Toaster>
-  ))
-  .add("with 2 actions", () => (
-    <Toaster>
-      {[
-        <Toast
-          title={toastTitle}
-          key={0}
-          primaryAction={
-            <button
-              onClick={action("primaryAction triggered")}
-              style={fakeButtonStyles}
-            >
-              primaryAction
-            </button>
-          }
-          secondaryAction={
-            <button
-              onClick={action("secondaryAction triggered")}
-              style={fakeButtonStyles}
-            >
-              secondaryAction
-            </button>
-          }
-          id="twoActions"
-        />
-      ]}
-    </Toaster>
-  ));
+export default {
+  title: "Feedback/Toaster",
+  component: Toaster
+};
+
+export const Default = () => (
+  <Toaster>{[<Toast title={toastTitle} key={0} id="default" />]}</Toaster>
+);
+
+export const Danger = () => (
+  <Toaster>
+    {[<Toast title={toastTitle} key={0} id="danger" appearance="danger" />]}
+  </Toaster>
+);
+
+export const Success = () => (
+  <Toaster>
+    {[<Toast title={toastTitle} key={0} id="success" appearance="success" />]}
+  </Toaster>
+);
+
+export const Warning = () => (
+  <Toaster>
+    {[<Toast title={toastTitle} key={0} id="warning" appearance="warning" />]}
+  </Toaster>
+);
+
+export const Description = () => (
+  <Toaster>
+    {[
+      <Toast
+        title={toastTitle}
+        description="And this is a short description to provide more info about the message"
+        key={0}
+        id="description"
+      />
+    ]}
+  </Toaster>
+);
+
+export const AutoDismiss = () => <ToasterContainer>{[]}</ToasterContainer>;
+
+export const WithDismissCallback = () => (
+  <Toaster>
+    {[
+      <Toast
+        title={toastTitle}
+        key={0}
+        onDismiss={action("The toast has been dismissed")}
+        id="dismissCallback"
+      />
+    ]}
+  </Toaster>
+);
+
+export const With1Action = () => (
+  <Toaster>
+    {[
+      <Toast
+        title={toastTitle}
+        key={0}
+        primaryAction={
+          <button
+            onClick={action("primary action clicked")}
+            style={fakeButtonStyles}
+          >
+            primaryAction
+          </button>
+        }
+        id="oneAction"
+      />
+    ]}
+  </Toaster>
+);
+
+export const With2Actions = () => (
+  <Toaster>
+    {[
+      <Toast
+        title={toastTitle}
+        key={0}
+        primaryAction={
+          <button
+            onClick={action("primaryAction triggered")}
+            style={fakeButtonStyles}
+          >
+            primaryAction
+          </button>
+        }
+        secondaryAction={
+          <button
+            onClick={action("secondaryAction triggered")}
+            style={fakeButtonStyles}
+          >
+            secondaryAction
+          </button>
+        }
+        id="twoActions"
+      />
+    ]}
+  </Toaster>
+);

@@ -1,19 +1,15 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { withKnobs } from "@storybook/addon-knobs";
 import { HeadingText1 } from "../index";
 
-import readme from "../README.md";
+export default {
+  title: "Typography/HeadingText1",
+  decorators: [withKnobs],
+  component: HeadingText1
+};
 
-storiesOf("Typography|HeadingText1", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .addDecorator(withKnobs)
-  .add("default", () => <HeadingText1>Primary Heading</HeadingText1>)
-  .add("custom HTML tag", () => (
-    <HeadingText1 tag="h2">{`Using a <h2> tag`}</HeadingText1>
-  ));
+export const Default = () => <HeadingText1>Primary Heading</HeadingText1>;
+
+export const CustomTag = () => (
+  <HeadingText1 tag="h2">{`Using a <h2> tag`}</HeadingText1>
+);

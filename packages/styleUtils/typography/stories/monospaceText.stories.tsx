@@ -1,6 +1,4 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { withKnobs, select } from "@storybook/addon-knobs";
 import { MonospaceText } from "../index";
 import { FontSize } from "../../../shared/styles/styleUtils/typography/textSize";
@@ -11,52 +9,51 @@ import {
   blue
 } from "../../../design-tokens/build/js/designTokens";
 
-import readme from "../README.md";
+export default {
+  title: "Typography/MonospaceText",
+  decorators: [withKnobs],
+  component: MonospaceText
+};
 
-storiesOf("Typography|MonospaceText", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .addDecorator(withKnobs)
-  .add("default", () => (
-    <MonospaceText>
+export const Default = () => (
+  <MonospaceText>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  </MonospaceText>
+);
+
+export const Size = () => {
+  const sizes = {
+    s: "s",
+    m: "m",
+    l: "l",
+    xl: "xl"
+  };
+  const size = select("size", sizes, "m");
+  return (
+    <MonospaceText size={size as FontSize}>
+      Use the knobs to change the size
+    </MonospaceText>
+  );
+};
+
+export const Color = () => {
+  const colors = {
+    themeTextColorPrimary,
+    themeTextColorSecondary,
+    themeTextColorDisabled,
+    blue
+  };
+  const color = select("color", colors, themeTextColorPrimary);
+
+  return (
+    <MonospaceText color={color}>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     </MonospaceText>
-  ))
-  .add("size", () => {
-    const sizes = {
-      s: "s",
-      m: "m",
-      l: "l",
-      xl: "xl"
-    };
-    const size = select("size", sizes, "m");
-    return (
-      <MonospaceText size={size as FontSize}>
-        Use the knobs to change the size
-      </MonospaceText>
-    );
-  })
-  .add("color", () => {
-    const colors = {
-      themeTextColorPrimary,
-      themeTextColorSecondary,
-      themeTextColorDisabled,
-      blue
-    };
-    const color = select("color", colors, themeTextColorPrimary);
+  );
+};
 
-    return (
-      <MonospaceText color={color}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </MonospaceText>
-    );
-  })
-  .add("medium weight", () => (
-    <MonospaceText weight="medium">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    </MonospaceText>
-  ));
+export const MediumWeight = () => (
+  <MonospaceText weight="medium">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  </MonospaceText>
+);

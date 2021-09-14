@@ -1,66 +1,71 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, select } from "@storybook/addon-knobs";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 import ButtonCard from "../components/ButtonCard";
 import { SpacingBox } from "../../styleUtils/modifiers";
 
-import readme from "../README.md";
+export default {
+  title: "Actions/ButtonCard",
+  decorators: [withKnobs],
+  component: ButtonCard
+};
 
-storiesOf("Actions|ButtonCard", module)
-  .addDecorator(withKnobs)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .add("default", () => <ButtonCard>default</ButtonCard>)
-  .add("active", () => <ButtonCard isActive={true}>isActive</ButtonCard>)
-  .add("disabled", () => (
-    <React.Fragment>
-      <SpacingBox side="bottom">
-        <ButtonCard disabled={true}>disabled</ButtonCard>
-      </SpacingBox>
-      <ButtonCard disabled={true} isActive={true}>
-        disabled + isActive
-      </ButtonCard>
-    </React.Fragment>
-  ))
-  .add("with onClick", () => (
-    <ButtonCard onClick={action("button clicked")}>default</ButtonCard>
-  ))
-  .add("paddingSize", () => {
-    const sizes = {
-      s: "s",
-      m: "m",
-      l: "l",
-      xl: "xl"
-    };
-    const size = select("paddingSize", sizes, "m");
+export const Default = () => <ButtonCard>default</ButtonCard>;
 
-    return (
-      <ButtonCard paddingSize={size as SpaceSize}>
-        Use the Knobs panel to change the padding
-      </ButtonCard>
-    );
-  })
-  .add("responsive paddingSize", () => (
-    <ButtonCard
-      paddingSize={{
-        default: "s",
-        small: "m",
-        medium: "l",
-        large: "xl",
-        jumbo: "xxl"
-      }}
-    >
-      Resize the viewport to see the padding change
+export const Active = () => <ButtonCard isActive={true}>isActive</ButtonCard>;
+
+export const Disabled = () => (
+  <>
+    <SpacingBox side="bottom">
+      <ButtonCard disabled={true}>disabled</ButtonCard>
+    </SpacingBox>
+    <ButtonCard disabled={true} isActive={true}>
+      disabled + isActive
     </ButtonCard>
-  ))
-  .add("2:1 aspect ratio", () => (
-    <div style={{ maxWidth: "400px" }}>
-      <ButtonCard aspectRatio={[2, 1]}>I stay at a 2:1 aspect ratio</ButtonCard>
-    </div>
-  ));
+  </>
+);
+
+export const WithOnClick = () => (
+  <ButtonCard onClick={action("button clicked")}>default</ButtonCard>
+);
+
+export const PaddingSize = () => {
+  const sizes = {
+    s: "s",
+    m: "m",
+    l: "l",
+    xl: "xl"
+  };
+  const size = select("paddingSize", sizes, "m");
+
+  return (
+    <ButtonCard paddingSize={size as SpaceSize}>
+      Use the Knobs panel to change the padding
+    </ButtonCard>
+  );
+};
+
+export const ResponsivePaddingSize = () => (
+  <ButtonCard
+    paddingSize={{
+      default: "s",
+      small: "m",
+      medium: "l",
+      large: "xl",
+      jumbo: "xxl"
+    }}
+  >
+    Resize the viewport to see the padding change
+  </ButtonCard>
+);
+
+export const AspectRatio = () => (
+  <div style={{ maxWidth: "400px" }}>
+    <ButtonCard aspectRatio={[2, 1]}>I stay at a 2:1 aspect ratio</ButtonCard>
+  </div>
+);
+
+AspectRatio.storyName = {
+  name: "2:1 Aspect Ratio"
+};

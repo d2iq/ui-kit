@@ -1,6 +1,4 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { select } from "@storybook/addon-knobs";
 
 import { Tooltip } from "../../index";
@@ -10,27 +8,33 @@ import Dropdownable, {
 import { Box } from "../../styleUtils/modifiers";
 import { Card } from "../../card";
 
-import readme from "../README.md";
-
 const tooltipStoryDecorator = storyFn => (
   <div style={{ textAlign: "center" }}>
     <Box display="inline-block">{storyFn()}</Box>
   </div>
 );
 
-storiesOf("Overlays|Tooltip", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .addDecorator(tooltipStoryDecorator)
-  .add("default", () => (
-    <Tooltip trigger="hover me" id="default">
-      content
-    </Tooltip>
-  ))
-  .add("mounted inside dropdown (does not portal to document.body)", () => (
+export default {
+  title: "Overlays/Tooltip",
+  decorators: [
+    tooltipStoryDecorator,
+    Story => (
+      <div style={{ margin: "4em" }}>
+        <Story />
+      </div>
+    )
+  ],
+  component: Tooltip
+};
+
+export const Default = () => (
+  <Tooltip trigger="hover me" id="default">
+    content
+  </Tooltip>
+);
+
+export const MountedInsideDropdown = () => (
+  <div>
     <Dropdownable
       isOpen={true}
       dropdown={
@@ -43,70 +47,79 @@ storiesOf("Overlays|Tooltip", module)
     >
       Dropdown trigger
     </Dropdownable>
-  ))
-  .add("with custom direction", () => {
-    const options = {
-      BottomLeft: "bottom-start",
-      BottomRight: "bottom-end",
-      BottomCenter: "bottom",
-      TopLeft: "top-start",
-      TopRight: "top-end",
-      TopCenter: "top"
-    };
+  </div>
+);
 
-    const knobDirection = select("Direction", options, "BottomLeft");
+MountedInsideDropdown.storyName =
+  "Mounted inside dropdown (does not portal to document.body)";
 
-    function getKeyByValue(value): string {
-      return (
-        Object.keys(options).find(key => options[key] === value) || "BottomLeft"
-      );
-    }
+export const WithCustomDirection = () => {
+  const options = {
+    BottomLeft: "bottom-start",
+    BottomRight: "bottom-end",
+    BottomCenter: "bottom",
+    TopLeft: "top-start",
+    TopRight: "top-end",
+    TopCenter: "top"
+  };
 
+  const knobDirection = select("Direction", options, "BottomLeft");
+
+  function getKeyByValue(value): string {
     return (
-      <Tooltip
-        trigger="hover me"
-        id="customDir"
-        preferredDirections={Direction[getKeyByValue(knobDirection)]}
-      >
-        Use the knobs to change tooltip alignment
-      </Tooltip>
+      Object.keys(options).find(key => options[key] === value) || "BottomLeft"
     );
-  })
-  .add("default max width", () => (
-    <Tooltip trigger="if not provided, maxWidth defaults to 300" id="maxWidth">
-      since my content is wider than 300px, it will wrap so that tooltip does
-      not exceed a width of 300px by default
-    </Tooltip>
-  ))
-  .add("min or max width", () => (
-    <React.Fragment>
-      <div style={{ marginBottom: "1em" }}>
-        <Tooltip trigger="maxWidth 100px" id="maxWidth" maxWidth={100}>
-          content that is greater than 100px
-        </Tooltip>
-      </div>
-      <Tooltip
-        trigger="minWidth 200px"
-        id="minWidth"
-        minWidth={200}
-        preferredDirections={[Direction.BottomCenter]}
-      >
-        content
-      </Tooltip>
-    </React.Fragment>
-  ))
-  .add("content width", () => (
+  }
+
+  return (
     <Tooltip
-      trigger="if maxWidth is null, tooltip width will expand to fit content"
-      id="maxWidth"
-      maxWidth={null}
+      trigger="hover me"
+      id="customDir"
+      preferredDirections={Direction[getKeyByValue(knobDirection)]}
     >
-      sometimes I may want my tooltip to take up as much width as the content
-      needs without having the default maxWidth
+      Use the knobs to change tooltip alignment
     </Tooltip>
-  ))
-  .add("suppress toggle", () => (
-    <Tooltip trigger="hover me" id="suppress" isOpen={true} suppress={true}>
-      I won't toggle open and closed
+  );
+};
+
+export const DefaultMaxWidth = () => (
+  <Tooltip trigger="if not provided, maxWidth defaults to 300" id="maxWidth">
+    since my content is wider than 300px, it will wrap so that tooltip does not
+    exceed a width of 300px by default
+  </Tooltip>
+);
+
+export const MinOrMaxWidth = () => (
+  <>
+    <div style={{ marginBottom: "1em" }}>
+      <Tooltip trigger="maxWidth 100px" id="maxWidth" maxWidth={100}>
+        content that is greater than 100px
+      </Tooltip>
+    </div>
+    <Tooltip
+      trigger="minWidth 200px"
+      id="minWidth"
+      minWidth={200}
+      preferredDirections={[Direction.BottomCenter]}
+    >
+      content
     </Tooltip>
-  ));
+  </>
+);
+
+export const ContentWidth = () => (
+  <Tooltip
+    trigger="if maxWidth is null, tooltip width will expand to fit content"
+    id="maxWidth"
+    maxWidth={null}
+  >
+    sometimes I may want my tooltip to take up as much width as the content
+    needs without having the default maxWidth
+  </Tooltip>
+);
+
+export const SuppressToggle = () => (
+  <Tooltip trigger="hover me" id="suppress" isOpen={true} suppress={true}>
+    I won't toggle open and closed
+  </Tooltip>
+);

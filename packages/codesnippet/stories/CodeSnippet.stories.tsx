@@ -1,37 +1,35 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { CodeSnippet } from "../index";
-
-import readme from "../README.md";
 
 const snippetContent = `cd ui-kit && npm start`;
 
-storiesOf("Typography|Containers/CodeSnippet", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .add("default", () => <CodeSnippet>{snippetContent}</CodeSnippet>)
-  .add("w/ textToCopy", () => (
-    <CodeSnippet textToCopy={snippetContent}>{snippetContent}</CodeSnippet>
-  ))
-  .add("w/ textToCopy + onCopy callback", () => {
-    const onCopyFn = () => {
-      alert("oncopy");
-    };
-    return (
-      <CodeSnippet textToCopy={snippetContent} onCopy={onCopyFn}>
-        {snippetContent}
-      </CodeSnippet>
-    );
-  })
-  .add("w/ textToCopy + custom tooltip content on copy", () => (
-    <CodeSnippet
-      textToCopy={snippetContent}
-      copyTooltipContent={`"${snippetContent}" copied`}
-    >
+export default {
+  title: "Typography/Containers/CodeSnippet",
+  component: CodeSnippet
+};
+
+export const Default = () => <CodeSnippet>{snippetContent}</CodeSnippet>;
+
+export const TextToCopy = () => (
+  <CodeSnippet textToCopy={snippetContent}>{snippetContent}</CodeSnippet>
+);
+
+export const TextToCopyWithOnCopyCallback = () => {
+  const onCopyFn = () => {
+    alert("oncopy");
+  };
+  return (
+    <CodeSnippet textToCopy={snippetContent} onCopy={onCopyFn}>
       {snippetContent}
     </CodeSnippet>
-  ));
+  );
+};
+
+export const TextToCopyAndCustomTooltipContentOnCopy = () => (
+  <CodeSnippet
+    textToCopy={snippetContent}
+    copyTooltipContent={`"${snippetContent}" copied`}
+  >
+    {snippetContent}
+  </CodeSnippet>
+);

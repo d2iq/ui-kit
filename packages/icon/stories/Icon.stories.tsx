@@ -1,5 +1,4 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
 import { select, withKnobs } from "@storybook/addon-knobs";
 import { Icon } from "../index";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
@@ -14,8 +13,6 @@ import {
   blueDarken3
 } from "../../design-tokens/build/js/designTokens";
 import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
-
-import readme from "../README.md";
 
 // used for Storybook knobs
 const colors = {
@@ -43,20 +40,18 @@ const shapes = {
   ["SystemIcons.LockData"]: SystemIcons.LockData
 };
 
-storiesOf("Graphic elements|Icon", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .addDecorator(withKnobs)
-  .add("default", () => {
-    // used for Storybook knobs
-    const color = select("Color", colors, textColorPrimary);
-    const size = select("Size", sizes, "s");
-    const shape = select("Shape", shapes, SystemIcons.ArrowRight);
+export default {
+  title: "Graphic Elements/Icon",
+  decorators: [withKnobs],
+  component: Icon
+};
 
-    return (
-      <Icon shape={shape} color={color} size={size} ariaLabel="Sample icon" />
-    );
-  });
+export const Default = () => {
+  const color = select("Color", colors, textColorPrimary);
+  const size = select("Size", sizes, "s");
+  const shape = select("Shape", shapes, SystemIcons.ArrowRight);
+
+  return (
+    <Icon shape={shape} color={color} size={size} ariaLabel="Sample icon" />
+  );
+};

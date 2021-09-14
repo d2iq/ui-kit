@@ -1,10 +1,6 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { TabTitle, Tabs, TabItem } from "../index";
 import { TabDirection } from "../components/Tabs";
-
-import readme from "../README.md";
 
 class Example extends React.Component<
   { direction?: TabDirection },
@@ -13,7 +9,6 @@ class Example extends React.Component<
   state = { selectedIndex: 0 };
   handleSelect = selectedIndex => {
     this.setState({ selectedIndex });
-    // tslint:disable-next-line:semicolon
   };
   render() {
     const { selectedIndex } = this.state;
@@ -36,17 +31,19 @@ class Example extends React.Component<
   }
 }
 
-storiesOf("Navigation|Tabs", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .add("default", () => <Example />)
-  .add("vertical", () => <Example direction="vert" />)
-  .add("responsive", () => (
-    <>
-      <p>Resize your viewport width to see the tab direction change</p>
-      <Example direction={{ medium: "vert" }} />
-    </>
-  ));
+export default {
+  title: "Navigation/Tabs",
+  component: Tabs,
+  subcomponents: { Tabs, TabTitle, TabItem }
+};
+
+export const Default = () => <Example />;
+
+export const Vertical = () => <Example direction="vert" />;
+
+export const Responsive = () => (
+  <>
+    <p>Resize your viewport width to see the tab direction change</p>
+    <Example direction={{ medium: "vert" }} />
+  </>
+);

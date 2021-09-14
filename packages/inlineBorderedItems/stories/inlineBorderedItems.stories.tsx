@@ -1,48 +1,36 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { withKnobs, select } from "@storybook/addon-knobs";
 import InlineBorderedItems from "../components/InlineBorderedItems";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 
-import readme from "../README.md";
+export default {
+  title: "Layout/InlineBorderedItems",
+  decorators: [withKnobs],
+  component: InlineBorderedItems
+};
 
-storiesOf("Layout|InlineBorderedItems", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .addDecorator(withKnobs)
-  .add("default", () => (
-    <InlineBorderedItems>
+export const Default = () => (
+  <InlineBorderedItems>
+    <span>3 Clusters</span>
+    <span>+2 Added</span>
+    <span>-1 Removed</span>
+  </InlineBorderedItems>
+);
+
+export const WithCustomGutterSize = () => {
+  const gutterSizes: { [key: string]: SpaceSize } = {
+    s: "s",
+    m: "m",
+    l: "l",
+    xl: "xl"
+  };
+  const gutterSize = select("paddingSize", gutterSizes, "m");
+
+  return (
+    <InlineBorderedItems gutterSize={gutterSize}>
       <span>3 Clusters</span>
       <span>+2 Added</span>
       <span>-1 Removed</span>
     </InlineBorderedItems>
-  ))
-  .add(
-    "with custom gutterSize",
-    () => {
-      const gutterSizes: { [key: string]: SpaceSize } = {
-        s: "s",
-        m: "m",
-        l: "l",
-        xl: "xl"
-      };
-      const gutterSize = select("paddingSize", gutterSizes, "m");
-
-      return (
-        <InlineBorderedItems gutterSize={gutterSize}>
-          <span>3 Clusters</span>
-          <span>+2 Added</span>
-          <span>-1 Removed</span>
-        </InlineBorderedItems>
-      );
-    },
-    {
-      info: {
-        text: "Use the knobs panel to customize the spacing between the items"
-      }
-    }
   );
+};
