@@ -1,30 +1,29 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
 import { FieldGroup } from "..";
 import { TextInput } from "../../textInput";
 
-storiesOf("Forms|Form structure/Grouped fields/FieldGroup", module)
-  .addParameters({
-    info: {
-      propTablesExclude: [TextInput]
-    }
-  })
-  .add("default", () => (
-    <FieldGroup>
-      <TextInput inputLabel="Name" id="name" key="name" />
-      <TextInput inputLabel="Role" id="role" key="role" />
-      <TextInput inputLabel="City" id="city" key="city" />
-    </FieldGroup>
-  ))
-  .add("responsive - switch to vertical layout on small screens", () => (
-    <FieldGroup
-      direction={{
-        default: "column",
-        small: "row"
-      }}
-    >
-      <TextInput inputLabel="Name" id="name" key="name" />
-      <TextInput inputLabel="Role" id="role" key="role" />
-      <TextInput inputLabel="City" id="city" key="city" />
-    </FieldGroup>
-  ));
+export default {
+  title: "Forms/Form structure/Grouped fields/FieldGroup",
+  component: FieldGroup
+};
+
+export const Default = () => (
+  <FieldGroup>
+    <TextInput inputLabel="Name" id="name" key="name" />
+    <TextInput inputLabel="Role" id="role" key="role" />
+    <TextInput inputLabel="City" id="city" key="city" />
+  </FieldGroup>
+);
+
+export const ResponsiveSwitchToVerticalLayoutOnSmallScreens = () => (
+  <FieldGroup
+    direction={{
+      default: "column",
+      small: "row"
+    }}
+  >
+    <TextInput inputLabel="Name" id="name" key="name" />
+    <TextInput inputLabel="Role" id="role" key="role" />
+    <TextInput inputLabel="City" id="city" key="city" />
+  </FieldGroup>
+);

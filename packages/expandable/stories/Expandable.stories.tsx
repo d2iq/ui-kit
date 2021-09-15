@@ -1,46 +1,38 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import Expandable from "../components/Expandable";
 import { tintText } from "../../shared/styles/styleUtils";
 
-import readme from "../README.md";
+export default {
+  title: "Actions/Expandable",
+  component: Expandable
+};
 
-storiesOf("Actions|Expandable", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .add("default", () => (
-    <Expandable label="Expand for content">
-      <div>Check out this exciting content</div>
-    </Expandable>
-  ))
-  .add("opened", () => (
-    <Expandable label="Expand for content" isOpen={true}>
-      <div>Check out this other exciting content</div>
-    </Expandable>
-  ))
-  .add("opened w/ control prop", () => (
-    <Expandable
-      label="Expand for content"
-      isOpen={true}
-      controlledIsOpen={true}
-    >
-      <div>You have to pass a boolean to `controlledIsOpen` to toggle this</div>
-    </Expandable>
-  ))
-  .add("with custom label classname", () => (
-    <Expandable
-      label="Expand for blue content"
-      labelClassName={tintText("blue")}
-    >
-      <div>Check out this exciting blue content</div>
-    </Expandable>
-  ))
-  .add("indicator icon on theright", () => (
-    <Expandable label="Expand for content" indicatorPosition="right">
-      <div>Check out this exciting content with that right indicator</div>
-    </Expandable>
-  ));
+export const Default = () => (
+  <Expandable label="Expand for content">
+    <div>Check out this exciting content</div>
+  </Expandable>
+);
+
+export const Opened = () => (
+  <Expandable label="Expand for content" isOpen={true}>
+    <div>Check out this other exciting content</div>
+  </Expandable>
+);
+
+export const OpenedWithControlProp = () => (
+  <Expandable label="Expand for content" isOpen={true} controlledIsOpen={true}>
+    <div>You have to pass a boolean to `controlledIsOpen` to toggle this</div>
+  </Expandable>
+);
+
+export const WithCustomLabelClassname = () => (
+  <Expandable label="Expand for blue content" labelClassName={tintText("blue")}>
+    <div>Check out this exciting blue content</div>
+  </Expandable>
+);
+
+export const IndicatorIconOnRight = () => (
+  <Expandable label="Expand for content" indicatorPosition="right">
+    <div>Check out this exciting content with that right indicator</div>
+  </Expandable>
+);

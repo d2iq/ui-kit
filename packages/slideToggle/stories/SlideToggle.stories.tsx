@@ -3,6 +3,11 @@ import SlideToggle from "../components/SlideToggle";
 import { GridList, Text } from "../..";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
+export default {
+  title: "Forms/SlideToggle",
+  component: SlideToggle
+};
+
 export const Primary = () => {
   const [checked, setChecked] = React.useState(false);
   const handleClick = () => {
@@ -123,8 +128,3 @@ export const HintTextAndErrors = () => (
     errors={["this is an error.", "this is another."]}
   />
 );
-
-export default {
-  title: "Forms|SlideToggle",
-  component: SlideToggle
-};

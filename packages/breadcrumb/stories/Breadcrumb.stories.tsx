@@ -1,27 +1,23 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 
 import { Breadcrumb } from "../index";
 
-import readme from "../README.md";
+export default {
+  title: "Navigation/Breadcrumb",
+  component: Breadcrumb
+};
 
-storiesOf("Navigation|Breadcrumb", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .add("default", () => (
-    <Breadcrumb>
-      <span>One</span>
-      <span>
-        T<em>wo</em>
-      </span>
-    </Breadcrumb>
-  ))
-  .add("at top-level", () => (
-    <Breadcrumb>
-      <span>One</span>
-    </Breadcrumb>
-  ));
+export const Default = () => (
+  <Breadcrumb>
+    <span>One</span>
+    <span>
+      T<em>wo</em>
+    </span>
+  </Breadcrumb>
+);
+
+export const TopLevelBreadcrumb = () => (
+  <Breadcrumb>
+    <span>One</span>
+  </Breadcrumb>
+);

@@ -1,6 +1,4 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import {
   PrimaryDropdownButton,
   SecondaryDropdownButton,
@@ -11,217 +9,131 @@ import {
 import ButtonAppearanceSample from "./helpers/ButtonAppearanceSample";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
-import readme from "../README.md";
+export default {
+  title: "Actions/Dropdown Button",
+  component: StandardDropdownButton
+};
 
-storiesOf("Actions|Dropdown button", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .addParameters({
-    info: {
-      propTablesExclude: [ButtonAppearanceSample, React.Fragment]
-    }
-  })
-  .add(
-    "PrimaryDropdownButton",
-    () => (
-      <React.Fragment>
-        <ButtonAppearanceSample>
-          <PrimaryDropdownButton>Button</PrimaryDropdownButton>
-          <PrimaryDropdownButton disabled={true}>Button</PrimaryDropdownButton>
-          <PrimaryDropdownButton isProcessing={true}>
-            Button
-          </PrimaryDropdownButton>
-        </ButtonAppearanceSample>
+export const _PrimaryDropdownButton = () => (
+  <>
+    <ButtonAppearanceSample>
+      <PrimaryDropdownButton>Button</PrimaryDropdownButton>
+      <PrimaryDropdownButton disabled={true}>Button</PrimaryDropdownButton>
+      <PrimaryDropdownButton isProcessing={true}>Button</PrimaryDropdownButton>
+    </ButtonAppearanceSample>
 
-        <ButtonAppearanceSample isInverse={true}>
-          <PrimaryDropdownButton isInverse={true}>Button</PrimaryDropdownButton>
-          <PrimaryDropdownButton isInverse={true} disabled={true}>
-            Button
-          </PrimaryDropdownButton>
-          <PrimaryDropdownButton isInverse={true} isProcessing={true}>
-            Button
-          </PrimaryDropdownButton>
-        </ButtonAppearanceSample>
-      </React.Fragment>
-    ),
-    {
-      info: {
-        propTables: [PrimaryDropdownButton]
-      }
-    }
-  )
-  .add(
-    "SecondaryDropdownButton",
-    () => (
-      <React.Fragment>
-        <ButtonAppearanceSample>
-          <SecondaryDropdownButton>Button</SecondaryDropdownButton>
-          <SecondaryDropdownButton disabled={true}>
-            Button
-          </SecondaryDropdownButton>
-          <SecondaryDropdownButton isProcessing={true}>
-            Button
-          </SecondaryDropdownButton>
-        </ButtonAppearanceSample>
+    <ButtonAppearanceSample isInverse={true}>
+      <PrimaryDropdownButton isInverse={true}>Button</PrimaryDropdownButton>
+      <PrimaryDropdownButton isInverse={true} disabled={true}>
+        Button
+      </PrimaryDropdownButton>
+      <PrimaryDropdownButton isInverse={true} isProcessing={true}>
+        Button
+      </PrimaryDropdownButton>
+    </ButtonAppearanceSample>
+  </>
+);
 
-        <ButtonAppearanceSample isInverse={true}>
-          <SecondaryDropdownButton isInverse={true}>
-            Button
-          </SecondaryDropdownButton>
-          <SecondaryDropdownButton isInverse={true} disabled={true}>
-            Button
-          </SecondaryDropdownButton>
-          <SecondaryDropdownButton isInverse={true} isProcessing={true}>
-            Button
-          </SecondaryDropdownButton>
-        </ButtonAppearanceSample>
-      </React.Fragment>
-    ),
-    {
-      info: {
-        propTables: [SecondaryDropdownButton]
-      }
-    }
-  )
-  .add(
-    "StandardDropdownButton",
-    () => (
-      <React.Fragment>
-        <ButtonAppearanceSample>
-          <StandardDropdownButton>Button</StandardDropdownButton>
-          <StandardDropdownButton disabled={true}>
-            Button
-          </StandardDropdownButton>
-          <StandardDropdownButton isProcessing={true}>
-            Button
-          </StandardDropdownButton>
-        </ButtonAppearanceSample>
+export const _SecondaryDropdownButton = () => (
+  <>
+    <ButtonAppearanceSample>
+      <SecondaryDropdownButton>Button</SecondaryDropdownButton>
+      <SecondaryDropdownButton disabled={true}>Button</SecondaryDropdownButton>
+      <SecondaryDropdownButton isProcessing={true}>
+        Button
+      </SecondaryDropdownButton>
+    </ButtonAppearanceSample>
 
-        <ButtonAppearanceSample isInverse={true}>
-          <StandardDropdownButton isInverse={true}>
-            Button
-          </StandardDropdownButton>
-          <StandardDropdownButton isInverse={true} disabled={true}>
-            Button
-          </StandardDropdownButton>
-          <StandardDropdownButton isInverse={true} isProcessing={true}>
-            Button
-          </StandardDropdownButton>
-        </ButtonAppearanceSample>
-      </React.Fragment>
-    ),
-    {
-      info: {
-        propTables: [StandardDropdownButton]
-      }
-    }
-  )
-  .add(
-    "SuccessDropdownButton",
-    () => (
-      <React.Fragment>
-        <ButtonAppearanceSample>
-          <SuccessDropdownButton>Button</SuccessDropdownButton>
-          <SuccessDropdownButton disabled={true}>Button</SuccessDropdownButton>
-          <SuccessDropdownButton isProcessing={true}>
-            Button
-          </SuccessDropdownButton>
-        </ButtonAppearanceSample>
+    <ButtonAppearanceSample isInverse={true}>
+      <SecondaryDropdownButton isInverse={true}>Button</SecondaryDropdownButton>
+      <SecondaryDropdownButton isInverse={true} disabled={true}>
+        Button
+      </SecondaryDropdownButton>
+      <SecondaryDropdownButton isInverse={true} isProcessing={true}>
+        Button
+      </SecondaryDropdownButton>
+    </ButtonAppearanceSample>
+  </>
+);
 
-        <ButtonAppearanceSample isInverse={true}>
-          <SuccessDropdownButton isInverse={true}>Button</SuccessDropdownButton>
-          <SuccessDropdownButton isInverse={true} disabled={true}>
-            Button
-          </SuccessDropdownButton>
-          <SuccessDropdownButton isInverse={true} isProcessing={true}>
-            Button
-          </SuccessDropdownButton>
-        </ButtonAppearanceSample>
-      </React.Fragment>
-    ),
-    {
-      info: {
-        propTables: [SuccessDropdownButton]
-      }
-    }
-  )
-  .add(
-    "DangerDropdownButton",
-    () => (
-      <React.Fragment>
-        <ButtonAppearanceSample>
-          <DangerDropdownButton>Button</DangerDropdownButton>
-          <DangerDropdownButton disabled={true}>Button</DangerDropdownButton>
-          <DangerDropdownButton isProcessing={true}>
-            Button
-          </DangerDropdownButton>
-        </ButtonAppearanceSample>
-
-        <ButtonAppearanceSample isInverse={true}>
-          <DangerDropdownButton isInverse={true}>Button</DangerDropdownButton>
-          <DangerDropdownButton isInverse={true} disabled={true}>
-            Button
-          </DangerDropdownButton>
-          <DangerDropdownButton isInverse={true} isProcessing={true}>
-            Button
-          </DangerDropdownButton>
-        </ButtonAppearanceSample>
-      </React.Fragment>
-    ),
-    {
-      info: {
-        propTables: [DangerDropdownButton]
-      }
-    }
-  )
-  .add(
-    "full-width dropdown",
-    () => (
-      <StandardDropdownButton isFullWidth={true}>
-        Full-width
+export const _StandardDropdownButton = () => (
+  <>
+    <ButtonAppearanceSample>
+      <StandardDropdownButton>Button</StandardDropdownButton>
+      <StandardDropdownButton disabled={true}>Button</StandardDropdownButton>
+      <StandardDropdownButton isProcessing={true}>
+        Button
       </StandardDropdownButton>
-    ),
-    {
-      info: {
-        propTables: [StandardDropdownButton]
-      }
-    }
-  )
-  .add(
-    "full-width dropdown with icon",
-    () => (
-      <StandardDropdownButton iconStart={SystemIcons.Close} isFullWidth={true}>
-        Full-width
+    </ButtonAppearanceSample>
+
+    <ButtonAppearanceSample isInverse={true}>
+      <StandardDropdownButton isInverse={true}>Button</StandardDropdownButton>
+      <StandardDropdownButton isInverse={true} disabled={true}>
+        Button
       </StandardDropdownButton>
-    ),
-    {
-      info: {
-        propTables: [StandardDropdownButton]
-      }
-    }
-  )
-  .add(
-    "dropdown with icon",
-    () => (
-      <StandardDropdownButton iconStart={SystemIcons.Close}>
-        Icon dropdown
+      <StandardDropdownButton isInverse={true} isProcessing={true}>
+        Button
       </StandardDropdownButton>
-    ),
-    {
-      info: {
-        propTables: [StandardDropdownButton]
-      }
-    }
-  )
-  .add(
-    "dropdown with only an icon",
-    () => <StandardDropdownButton iconStart={SystemIcons.Close} />,
-    {
-      info: {
-        propTables: [StandardDropdownButton]
-      }
-    }
-  );
+    </ButtonAppearanceSample>
+  </>
+);
+
+export const _SuccessDropdownButton = () => (
+  <>
+    <ButtonAppearanceSample>
+      <SuccessDropdownButton>Button</SuccessDropdownButton>
+      <SuccessDropdownButton disabled={true}>Button</SuccessDropdownButton>
+      <SuccessDropdownButton isProcessing={true}>Button</SuccessDropdownButton>
+    </ButtonAppearanceSample>
+
+    <ButtonAppearanceSample isInverse={true}>
+      <SuccessDropdownButton isInverse={true}>Button</SuccessDropdownButton>
+      <SuccessDropdownButton isInverse={true} disabled={true}>
+        Button
+      </SuccessDropdownButton>
+      <SuccessDropdownButton isInverse={true} isProcessing={true}>
+        Button
+      </SuccessDropdownButton>
+    </ButtonAppearanceSample>
+  </>
+);
+
+export const _DangerDropdownButton = () => (
+  <>
+    <ButtonAppearanceSample>
+      <DangerDropdownButton>Button</DangerDropdownButton>
+      <DangerDropdownButton disabled={true}>Button</DangerDropdownButton>
+      <DangerDropdownButton isProcessing={true}>Button</DangerDropdownButton>
+    </ButtonAppearanceSample>
+
+    <ButtonAppearanceSample isInverse={true}>
+      <DangerDropdownButton isInverse={true}>Button</DangerDropdownButton>
+      <DangerDropdownButton isInverse={true} disabled={true}>
+        Button
+      </DangerDropdownButton>
+      <DangerDropdownButton isInverse={true} isProcessing={true}>
+        Button
+      </DangerDropdownButton>
+    </ButtonAppearanceSample>
+  </>
+);
+
+export const FullWidthDropdown = () => (
+  <StandardDropdownButton isFullWidth={true}>Full-width</StandardDropdownButton>
+);
+
+export const FullWidthDropdownWithIcon = () => (
+  <StandardDropdownButton iconStart={SystemIcons.Close} isFullWidth={true}>
+    Full-width
+  </StandardDropdownButton>
+);
+
+export const DropdownWithIcon = () => (
+  <StandardDropdownButton iconStart={SystemIcons.Close}>
+    Icon dropdown
+  </StandardDropdownButton>
+);
+
+export const DropdownWithOnlyAnIcon = () => (
+  <StandardDropdownButton iconStart={SystemIcons.Close} />
+);

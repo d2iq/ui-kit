@@ -1,20 +1,15 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { BorderedList } from "../index";
 
-import readme from "../README.md";
+export default {
+  title: "Data Listing/BorderedList",
+  component: BorderedList
+};
 
-storiesOf("Data listing|BorderedList", module)
-  .addParameters({
-    readme: {
-      sidebar: readme
-    }
-  })
-  .add("default", () => (
-    <BorderedList>
-      <li>List item</li>
-      <li>List item</li>
-      <li>List item</li>
-    </BorderedList>
-  ));
+export const Default = () => (
+  <BorderedList tag="ul">
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+  </BorderedList>
+);

@@ -35,7 +35,7 @@ const shapes = {
 };
 
 export default {
-  title: "Graphic Elements|Badge",
+  title: "Graphic Elements/Badge",
   component: Badge.type,
   subcomponents: { BadgeButton, ColorCodedBadge },
   decorators: [

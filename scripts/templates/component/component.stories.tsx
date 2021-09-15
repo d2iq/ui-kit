@@ -1,14 +1,9 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import { withReadme } from "storybook-readme";
 import { ${Component} } from "../index";
 
-import readme from "../README.md";
+export default {
+  title: `Component Section/${Component}`,
+  component: ${Component}
+};
 
-storiesOf("${Component}", module)
-  .addParameters({
-    readme: {
-      sidebar: readme,
-    },
-  })
-  .add("default", () => <${Component}>default</${Component}>)
+export const Default = () => <${Component}>default</${Component}>)
