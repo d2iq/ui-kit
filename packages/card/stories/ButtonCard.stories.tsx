@@ -66,6 +66,4 @@ export const AspectRatio = () => (
   </div>
 );
 
-AspectRatio.storyName = {
-  name: "2:1 Aspect Ratio"
-};
+AspectRatio.storyName = "2:1 Aspect Ratio";

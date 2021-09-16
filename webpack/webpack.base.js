@@ -14,16 +14,13 @@ const webpackBase = {
         exclude: /node_modules/,
         use: [
           "cache-loader",
-          { loader: "ts-loader", options: { transpileOnly: true } },
-          "react-docgen-typescript-loader"
-        ]
-      },
-      {
-        test: /\.md$/,
-        use: [
           {
-            loader: "markdown-loader"
-          }
+            loader: "ts-loader",
+            options: {
+              transpileOnly: true
+            }
+          },
+          "react-docgen-typescript-loader"
         ]
       },
       {

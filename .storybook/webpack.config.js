@@ -1,7 +1,7 @@
 const webpackBase = require("./../webpack/webpack.base");
 const path = require("path");
 
-module.exports = ({ config, mode }) => {
+module.exports = ({ config }) => {
   config.devtool = webpackBase.getDevTool();
   config.module.rules = config.module.rules.concat(webpackBase.getRules());
   config.plugins = config.plugins.concat(webpackBase.getPlugins());

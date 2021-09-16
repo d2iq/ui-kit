@@ -69,15 +69,15 @@ export interface ButtonProps extends LinkProps {
    */
   isInverse?: boolean;
   /**
-   * the funtion that is called when the button loses focus
+   * the function that is called when the button loses focus
    */
   onBlur?: (e?: React.SyntheticEvent<HTMLElement>) => void;
   /**
-   * the funtion that is called when the button gets focus
+   * the function that is called when the button gets focus
    */
   onFocus?: (e?: React.SyntheticEvent<HTMLElement>) => void;
   /**
-   * the funtion that is called when the button is "clicked" via cursor, touch, or keyboard
+   * the function that is called when the button is "clicked" via cursor, touch, or keyboard
    */
   onClick?: (e?: React.SyntheticEvent<HTMLElement>) => void;
   /**
