@@ -1,6 +1,6 @@
 import * as React from "react";
 import { InfoBoxInline } from "../../../infobox";
-import { css } from "emotion";
+import { css } from "@emotion/css";
 import { TextInput } from "../../../textInput";
 import { InputAppearance } from "../../../shared/types/inputAppearance";
 import { PrimaryButton, DangerButton, SuccessButton } from "../../../button";

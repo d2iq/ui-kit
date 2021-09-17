@@ -1,7 +1,7 @@
 import * as React from "react";
 import { DonutChart } from "../index";
 import { purple, pink, blue } from "../../design-tokens/build/js/designTokens";
-import { css } from "emotion";
+import { css } from "@emotion/css";
 
 const chartWrapper = css`
   max-width: 150px;
