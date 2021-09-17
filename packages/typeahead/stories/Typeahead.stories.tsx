@@ -4,7 +4,7 @@ import MultiselectTypeahead from "./helpers/MultiselectTypeahead";
 import FilteredListTypeahead from "./helpers/FilteredListTypeahead";
 import { padding } from "../../shared/styles/styleUtils";
 import { complexItems, items } from "./helpers/itemMocks";
-import { css } from "emotion";
+import { css } from "@emotion/css";
 
 const storyWrapper = css`
   width: 300px;

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "emotion";
+import { cx } from "@emotion/css";
 // TODO: This component contains `willReceiveProps`
 import Delegate from "react-delegate-component";
 import { ButtonProps } from "../../button/components/ButtonBase";

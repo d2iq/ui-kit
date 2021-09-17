@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClickToCopyButton renders default 1`] = `
-.emotion-2 {
-  cursor: pointer;
-}
-
-.emotion-3 {
+.emotion-0 {
   background-repeat: no-repeat;
   display: inline-block;
 }
 
 .emotion-1 {
+  cursor: pointer;
+}
+
+.emotion-2 {
   background-repeat: no-repeat;
   display: inline-block;
   cursor: pointer;
 }
 
-.emotion-0 {
+.emotion-3 {
   vertical-align: middle;
   fill: currentColor;
 }
 
-.emotion-0 use {
+.emotion-3 use {
   pointer-events: none;
 }
 
@@ -46,7 +46,7 @@ exports[`ClickToCopyButton renders default 1`] = `
       tag="div"
     >
       <div
-        className="emotion-3"
+        className="emotion-0"
         data-cy="box"
       >
         <Tooltip
@@ -124,7 +124,7 @@ exports[`ClickToCopyButton renders default 1`] = `
                         "size": undefined,
                       }
                     }
-                    className="emotion-2"
+                    className="emotion-1"
                     data-cy="box"
                     display="inline-block"
                     onClick={[Function]}
@@ -134,7 +134,7 @@ exports[`ClickToCopyButton renders default 1`] = `
                     tag="span"
                   >
                     <span
-                      className="emotion-1"
+                      className="emotion-2"
                       data-cy="box"
                       onClick={[Function]}
                       onKeyPress={[Function]}
@@ -147,7 +147,7 @@ exports[`ClickToCopyButton renders default 1`] = `
                       >
                         <svg
                           aria-label="system-clipboard icon"
-                          className="emotion-0"
+                          className="emotion-3"
                           data-cy="icon"
                           height={24}
                           preserveAspectRatio="xMinYMin meet"
@@ -174,12 +174,12 @@ exports[`ClickToCopyButton renders default 1`] = `
 `;
 
 exports[`ClickToCopyButton renders with custom children 1`] = `
-.emotion-1 {
+.emotion-0 {
   background-repeat: no-repeat;
   display: inline-block;
 }
 
-.emotion-0 {
+.emotion-1 {
   cursor: pointer;
 }
 
@@ -204,7 +204,7 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
       tag="div"
     >
       <div
-        className="emotion-1"
+        className="emotion-0"
         data-cy="box"
       >
         <Tooltip
@@ -219,7 +219,7 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
               tabIndex={0}
             >
               <div
-                className="css-1ae7568"
+                className="emotion-0"
               >
                 custom children
               </div>
@@ -263,7 +263,7 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
                   tabIndex={0}
                 >
                   <div
-                    className="emotion-0"
+                    className="emotion-1"
                     onClick={[Function]}
                     onKeyPress={[Function]}
                     role="button"

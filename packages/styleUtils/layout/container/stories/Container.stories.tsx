@@ -4,7 +4,7 @@ import {
   themeBgPrimary,
   themeBgSecondary
 } from "../../../../design-tokens/build/js/designTokens";
-import { css } from "emotion";
+import { css } from "@emotion/css";
 
 const baseBg = css`
   background-color: ${themeBgSecondary};
