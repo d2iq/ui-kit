@@ -1,6 +1,5 @@
 import React from "react";
 import { mount } from "enzyme";
-import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 
 import { Table } from "./";
@@ -10,8 +9,6 @@ import { EmptyCell } from "./EmptyCell";
 import { MutedCell } from "./MutedCell";
 import { DropdownMenuItem, DropdownSection } from "../dropdownMenu";
 import { Sorter } from "./Util";
-
-expect.addSnapshotSerializer(serializer);
 
 const mockData = [
   {

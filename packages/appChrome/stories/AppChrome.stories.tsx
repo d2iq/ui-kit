@@ -1,6 +1,6 @@
 import * as React from "react";
 import { action } from "@storybook/addon-actions";
-import { ThemeProvider } from "emotion-theming";
+import { ThemeProvider } from "@emotion/react";
 import {
   number,
   select,

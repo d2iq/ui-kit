@@ -11,7 +11,7 @@ import {
   greyLight
 } from "../../../design-tokens/build/js/designTokens";
 import Box from "../components/Box";
-import { css } from "emotion";
+import { css } from "@emotion/css";
 type VerticalAlignments = "top" | "bottom" | "center";
 
 export default {

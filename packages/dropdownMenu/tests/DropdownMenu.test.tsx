@@ -1,12 +1,9 @@
 import React from "react";
 import { mount } from "enzyme";
-import serializer from "jest-emotion";
 import toJson from "enzyme-to-json";
 import DropdownContents from "../../dropdownable/components/DropdownContents";
 
 import { DropdownMenu, DropdownSection, DropdownMenuItem } from "..";
-
-expect.addSnapshotSerializer(serializer);
 
 const triggerId = "trigger";
 
