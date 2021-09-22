@@ -62,7 +62,7 @@ info
 
 After this there is a web server started at the address http://localhost:6006 which is hosting storybook. This is our documentation from the local repository. Anything you change will reflect there directly.
 
-After you're happy with your channges, create a commit by using `git commit` or using [git cz](http://commitizen.github.io/cz-cli/).
+After you're happy with your changes, create a commit by using `git commit` or using [git cz](http://commitizen.github.io/cz-cli/).
 
 Finally, push and create a pull request 🎉
 
@@ -83,13 +83,13 @@ When a new component is being created, work with the design team to document des
 #### Consider the Following Before Adding a New Component
 
 **Is it likely this component be used in more than 1 app?**
-For example, a component for a card that may contain any content would be a good candidate for ui-kit. A card that specifically renders data specific to an object in an napp is not.
+For example, a component for a card that may contain any content would be a good candidate for ui-kit. A card that specifically renders data specific to an object in an app is not.
 
 **Does it fit in with a "theme" of other components in the UI Kit?**
-For example, if we have a toast and an inline alert box, a page banner would make sense to exist in the ui-kit
+For example, if we have a toast and an inline alert box, a page banner would make sense to exist in the ui-kit.
 
 **Is the effort that goes into building and maintaining it as a reusable component worth the payoff?**
-For example, Table and it's related components are complex components to properly maintain, but it's such a heavily used pattern in our apps, that it's worth the effort
+For example, Table and it's related components are complex components to properly maintain, but it's such a heavily used pattern in our apps, that it's worth the effort.
 
 **Will side effects of adding this component help us move the design system forward?**
 For example, adding a toast component forces us to think about visual indication of alert status (error, success, warning, etc.), z-index stacking context, accessibility guidelines, and how we animate a piece of UI in and out of the viewport.
@@ -176,7 +176,7 @@ We can't assume how our customers use their computer. We need to consider human 
 | ----------------------------- | -------------------------- |
 | - Use a mouse                 | - Keyboard support         |
 | - See low-contrast text       | - Highly readable text     |
-| - See a screen at all         | - Screenreader support     |
+| - See a screen at all         | - Screen reader support    |
 | - Hear sounds                 | - Captions and transcripts |
 | - Understand complex language | - Plain language           |
 
@@ -184,7 +184,7 @@ Accessibility and universal design are huge topics. If you want to learn more, [
 
 #### Configuration Objects
 
-Please consider using configuration objects as they will provide the user a lot of value by
+Please consider using configuration objects as they will provide the user a lot of value by:
 
 - consistency
 - less typing needed
@@ -253,9 +253,9 @@ We are supporting the conventional commit types as follows:
 
 ### JIRA Integration
 
-`semantic-release-jira` plugin automaticallly can update your Mesosphere JIRA issues labels with UI-Kit release version, if you add it as footer to your commit message.
+`semantic-release-jira` plugin automatically can update your Mesosphere JIRA issues labels with UI-Kit release version, if you add it as footer to your commit message.
 
-You can use `Updates`, `Closes` or `Resolves` statements (they all have the same effect tho) and add multiple JIRAs by seprarating them by comma.
+You can use `Updates`, `Closes` or `Resolves` statements (they all have the same effect tho) and add multiple JIRAs by separating them by comma.
 
 Examples Commit message:
 
@@ -265,7 +265,7 @@ fix(Table): fix lorem so that it enables foo
 this commit body message describes the commit
 
 BREAKING CHANGE
-Before this fix foo wasnt enabled at all, behavior changes from <old> to <new>
+Before this fix foo wasn't enabled at all, behavior changes from <old> to <new>
 
 Closes DCOS_OSS-12345, Closes DCOS-23456
 ```
