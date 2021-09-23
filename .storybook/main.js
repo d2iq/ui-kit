@@ -18,6 +18,15 @@ module.exports = {
   addons: [
     "@storybook/addon-knobs",
     "@storybook/addon-essentials",
-    "@storybook/addon-a11y"
+    "@storybook/addon-a11y",
+    {
+      name: "@storybook/addon-docs",
+      options: {
+        configureJSX: true,
+        babelOptions: {},
+        sourceLoaderOptions: null,
+        transcludeMarkdown: true
+      }
+    }
   ]
 };
