@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ToggleBoxGroup renders default 1`] = `
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
 .emotion-0 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
@@ -33,14 +39,17 @@ exports[`ToggleBoxGroup renders default 1`] = `
   width: auto;
 }
 
-@supports (column-gap: 1px) and (row-gap: 1px) {
+@supports not (column-gap: 1px) {
   .emotion-0>*:not(:last-child) {
     padding-right: 16px;
-    padding-bottom: 0;
   }
 }
 
 .emotion-1>* {
+  height: 100%;
+}
+
+.emotion-2>* {
   height: 100%;
 }
 
@@ -55,10 +64,6 @@ exports[`ToggleBoxGroup renders default 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-}
-
-.emotion-2>* {
-  height: 100%;
 }
 
 .emotion-3 {
@@ -358,6 +363,12 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
   font-weight: 500;
 }
 
+@supports not (row-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
 .emotion-2 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
@@ -390,18 +401,13 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
   width: auto;
 }
 
-@supports (column-gap: 1px) and (row-gap: 1px) {
+@supports not (column-gap: 1px) {
   .emotion-2>*:not(:last-child) {
     padding-right: 16px;
-    padding-bottom: 0;
   }
 }
 
 .emotion-3>* {
-  height: 100%;
-}
-
-.emotion-4>* {
   height: 100%;
 }
 
@@ -416,6 +422,10 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
+}
+
+.emotion-4>* {
+  height: 100%;
 }
 
 .emotion-5 {
@@ -710,10 +720,6 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
 `;
 
 exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
-.emotion-0>div {
-  width: auto;
-}
-
 .emotion-0 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
@@ -742,14 +748,27 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   row-gap: 0;
 }
 
-@supports (column-gap: 1px) and (row-gap: 1px) {
+.emotion-0>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
   .emotion-0>*:not(:last-child) {
     padding-right: 16px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
     padding-bottom: 0;
   }
 }
 
 .emotion-1>* {
+  height: 100%;
+}
+
+.emotion-2>* {
   height: 100%;
 }
 
@@ -764,10 +783,6 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
-}
-
-.emotion-2>* {
-  height: 100%;
 }
 
 .emotion-3 {
@@ -1089,10 +1104,15 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
 `;
 
 exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
-@supports (column-gap: 1px) and (row-gap: 1px) {
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-bottom: 48px;
+  }
+}
+
+@supports not (column-gap: 1px) {
   .emotion-0>*:not(:last-child) {
     padding-right: 0;
-    padding-bottom: 48px;
   }
 }
 
@@ -1169,10 +1189,6 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   height: 100%;
 }
 
-.emotion-6>div {
-  height: 100%;
-}
-
 .emotion-6:hover,
 .emotion-6:focus,
 .emotion-6:focus-within {
@@ -1182,6 +1198,10 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
 
 .emotion-6:active {
   box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
+}
+
+.emotion-6>div {
+  height: 100%;
 }
 
 .emotion-6 {

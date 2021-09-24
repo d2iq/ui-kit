@@ -52,9 +52,14 @@ exports[`CodeSnippet renders default 1`] = `
   width: auto;
 }
 
-@supports (column-gap: 1px) and (row-gap: 1px) {
+@supports not (column-gap: 1px) {
   .emotion-3>*:not(:last-child) {
     padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-3>*:not(:last-child) {
     padding-bottom: 0;
   }
 }
@@ -185,9 +190,8 @@ exports[`CodeSnippet renders with copy button 1`] = `
   padding: 16px;
 }
 
-@supports (column-gap: 1px) and (row-gap: 1px) {
+@supports not (row-gap: 1px) {
   .emotion-3>*:not(:last-child) {
-    padding-right: 0;
     padding-bottom: 0;
   }
 }
@@ -222,6 +226,12 @@ exports[`CodeSnippet renders with copy button 1`] = `
 
 .emotion-3>div {
   width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-3>*:not(:last-child) {
+    padding-right: 0;
+  }
 }
 
 .emotion-4 {

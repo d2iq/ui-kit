@@ -140,9 +140,8 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   justify-content: center;
 }
 
-@supports (column-gap: 1px) and (row-gap: 1px) {
+@supports not (row-gap: 1px) {
   .emotion-4>*:not(:last-child) {
-    padding-right: 4px;
     padding-bottom: 0;
   }
 }
@@ -177,6 +176,12 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
 
 .emotion-4>div {
   width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-4>*:not(:last-child) {
+    padding-right: 4px;
+  }
 }
 
 .emotion-5 {
@@ -902,9 +907,8 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   justify-content: center;
 }
 
-@supports (column-gap: 1px) and (row-gap: 1px) {
+@supports not (row-gap: 1px) {
   .emotion-4>*:not(:last-child) {
-    padding-right: 4px;
     padding-bottom: 0;
   }
 }
@@ -939,6 +943,12 @@ exports[`TextInputWithBadges renders with badges 1`] = `
 
 .emotion-4>div {
   width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-4>*:not(:last-child) {
+    padding-right: 4px;
+  }
 }
 
 .emotion-5 {
