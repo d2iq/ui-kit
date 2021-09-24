@@ -74,9 +74,14 @@ exports[`Sidebar renders 1`] = `
   width: auto;
 }
 
-@supports (column-gap: 1px) and (row-gap: 1px) {
+@supports not (column-gap: 1px) {
   .emotion-2>*:not(:last-child) {
     padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
     padding-bottom: 0;
   }
 }

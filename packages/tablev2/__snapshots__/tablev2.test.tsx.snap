@@ -450,7 +450,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 wrap="nowrap"
               >
                 <div
-                  className="css-1tn66z7"
+                  className="css-mxutz3"
                   data-cy="flex"
                 >
                   <FlexItem
@@ -3740,7 +3740,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 wrap="nowrap"
               >
                 <div
-                  className="css-1tn66z7"
+                  className="css-mxutz3"
                   data-cy="flex"
                 >
                   <FlexItem

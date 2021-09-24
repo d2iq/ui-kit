@@ -73,7 +73,7 @@ const getGutterPaddingValues = (responsivePaddingConfig, gutterSize) => {
     }, {});
 
   // override gutter values that need to be set to "none"
-  const overideGutters = spacingSize => ({
+  const overrideGutters = spacingSize => ({
     ...gutterSize,
     ...breakpointsToRemovePadding(spacingSize)
   });
@@ -81,8 +81,8 @@ const getGutterPaddingValues = (responsivePaddingConfig, gutterSize) => {
   // remove any properties for breakpoints that did not have a responsive `direction` prop
   Object.keys(responsivePaddingConfig).forEach(
     key =>
-      (paddingValues[key] = (key in overideGutters(responsivePaddingConfig)
-        ? overideGutters(responsivePaddingConfig)
+      (paddingValues[key] = (key in overrideGutters(responsivePaddingConfig)
+        ? overrideGutters(responsivePaddingConfig)
         : responsivePaddingConfig)[key])
   );
 
@@ -132,12 +132,12 @@ export const applyFlexItemGutters = (direction, gutterSize) => {
     return;
   }
 
-  const rowGuttter = getResponsiveColumnStyles(direction, gutterSize, "none");
+  const rowGutter = getResponsiveColumnStyles(direction, gutterSize, "none");
   const columnGutter = getResponsiveColumnStyles(direction, "none", gutterSize);
   const rowGap =
-    typeof rowGuttter === "object"
-      ? getGutterPaddingValues(rowGuttter, gutterSize)
-      : rowGuttter;
+    typeof rowGutter === "object"
+      ? getGutterPaddingValues(rowGutter, gutterSize)
+      : rowGutter;
   const columnGap =
     typeof columnGutter === "object"
       ? getGutterPaddingValues(columnGutter, gutterSize)
@@ -147,9 +147,15 @@ export const applyFlexItemGutters = (direction, gutterSize) => {
     ${getResponsiveSpacingStyle("column-gap", columnGap)};
     ${getResponsiveSpacingStyle("row-gap", rowGap)};
 
-    @supports (column-gap: 1px) and (row-gap: 1px) {
+    // If column-gap or row-gap are not supported by the browser utilize padding for spacing
+    @supports not (column-gap: 1px) {
       > *:not(:last-child) {
         ${getResponsiveSpacingStyle("padding-right", columnGap)};
+      }
+    }
+
+    @supports not (row-gap: 1px) {
+      > *:not(:last-child) {
         ${getResponsiveSpacingStyle("padding-bottom", rowGap)};
       }
     }

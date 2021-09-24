@@ -7,6 +7,7 @@ import FlexItem from "../components/FlexItem";
 import styled from "@emotion/styled";
 import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifierUtils";
 import { css } from "@emotion/css";
+import { DangerButton, SecondaryButton } from "../../../../button";
 
 const DemoChild = styled("div")`
   background-color: white;
@@ -393,5 +394,16 @@ export const Wrap = () => {
         </SpacingBox>
       </div>
     </div>
+  );
+};
+
+export const WithButtons = () => {
+  return (
+    <SpacingBox spacingSize="m">
+      <Flex gutterSize="s" align="center">
+        <DangerButton>Delete License</DangerButton>
+        <SecondaryButton>Go to Support Portal</SecondaryButton>
+      </Flex>
+    </SpacingBox>
   );
 };

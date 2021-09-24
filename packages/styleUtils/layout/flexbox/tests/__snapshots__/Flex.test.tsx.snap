@@ -33,9 +33,14 @@ exports[`Flex renders default 1`] = `
   width: auto;
 }
 
-@supports (column-gap: 1px) and (row-gap: 1px) {
+@supports not (column-gap: 1px) {
   .emotion-0>*:not(:last-child) {
     padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
     padding-bottom: 0;
   }
 }
@@ -90,9 +95,14 @@ exports[`Flex renders with all props 1`] = `
   width: 100%;
 }
 
-@supports (column-gap: 1px) and (row-gap: 1px) {
+@supports not (column-gap: 1px) {
   .emotion-0>*:not(:last-child) {
     padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
     padding-bottom: 24px;
   }
 }
@@ -115,12 +125,12 @@ exports[`Flex renders with all props 1`] = `
 `;
 
 exports[`Flex renders with responsive props 1`] = `
-@media (min-width: 0) {
+@media (min-width: 900px) {
   .emotion-0 {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -190,19 +200,19 @@ exports[`Flex renders with responsive props 1`] = `
 
 @media (min-width: 0) {
   .emotion-0 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 0) {
+  .emotion-0 {
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
     align-items: flex-start;
-  }
-}
-
-@media (min-width: 900px) {
-  .emotion-0 {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
   }
 }
 
@@ -244,7 +254,7 @@ exports[`Flex renders with responsive props 1`] = `
   }
 }
 
-@supports (column-gap: 1px) and (row-gap: 1px) {
+@supports not (column-gap: 1px) {
   @media (min-width: 0) {
     .emotion-0>*:not(:last-child) {
       padding-right: 0;
@@ -256,7 +266,9 @@ exports[`Flex renders with responsive props 1`] = `
       padding-right: 16px;
     }
   }
+}
 
+@supports not (row-gap: 1px) {
   @media (min-width: 0) {
     .emotion-0>*:not(:last-child) {
       padding-bottom: 12px;
