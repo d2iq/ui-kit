@@ -17,7 +17,12 @@ module.exports = {
   },
   addons: [
     "@storybook/addon-knobs",
-    "@storybook/addon-essentials",
+    {
+      name: "@storybook/addon-essentials",
+      options: {
+        actions: false
+      }
+    },
     "@storybook/addon-a11y",
     {
       name: "@storybook/addon-docs",
