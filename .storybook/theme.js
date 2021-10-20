@@ -1,5 +1,5 @@
 import { create } from "@storybook/theming";
-import logo from "./static/logo.svg";
+import logo from "./static/logo.png";
 
 export default create({
   base: "light",
@@ -35,6 +35,6 @@ export default create({
   inputBorderRadius: 6,
 
   brandTitle: "D2iQ UI Kit",
-  brandUrl: "https://github.com/dcos-labs/ui-kit",
+  brandUrl: "./",
   brandImage: logo
 });
