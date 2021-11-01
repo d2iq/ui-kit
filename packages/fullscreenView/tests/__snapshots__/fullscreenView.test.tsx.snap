@@ -69,27 +69,6 @@ exports[`FullscreenView renders FullscreenView 1`] = `
   width: auto;
 }
 
-.emotion-4[href],
-.emotion-4[href]:visited {
-  color: var(--themeTextColorInteractive, #7D58FF);
-  fill: var(--themeTextColorInteractive, #7D58FF);
-}
-
-.emotion-4:active {
-  color: #6446cc;
-  fill: #6446cc;
-}
-
-.emotion-4::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-.emotion-4:hover {
-  color: #704fe5;
-  fill: #704fe5;
-}
-
 .emotion-4 {
   background: none;
   border: 0;
@@ -107,6 +86,27 @@ exports[`FullscreenView renders FullscreenView 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 500;
+}
+
+.emotion-4::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-4:hover {
+  color: #704fe5;
+  fill: #704fe5;
+}
+
+.emotion-4:active {
+  color: #6446cc;
+  fill: #6446cc;
+}
+
+.emotion-4[href],
+.emotion-4[href]:visited {
+  color: var(--themeTextColorInteractive, #7D58FF);
+  fill: var(--themeTextColorInteractive, #7D58FF);
 }
 
 .emotion-5 {

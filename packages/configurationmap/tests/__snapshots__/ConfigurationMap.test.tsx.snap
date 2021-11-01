@@ -153,23 +153,6 @@ exports[`ConfigurationMap renders with actions 1`] = `
   margin-bottom: 24px;
 }
 
-.emotion-1:last-of-type {
-  border-bottom-width: 0;
-}
-
-.emotion-1>div {
-  width: auto;
-}
-
-.emotion-1:hover .static_configurationMapRowAction {
-  clip: initial;
-  position: static;
-  overflow: visible;
-  margin: 0;
-  width: auto;
-  height: auto;
-}
-
 .emotion-1 {
   border-width: 1px;
   border-color: var(--themeBorder, #DADDE2);
@@ -209,6 +192,23 @@ exports[`ConfigurationMap renders with actions 1`] = `
   padding: 0;
   width: 1px;
   height: 1px;
+}
+
+.emotion-1:hover .static_configurationMapRowAction {
+  clip: initial;
+  position: static;
+  overflow: visible;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
+.emotion-1:last-of-type {
+  border-bottom-width: 0;
+}
+
+.emotion-1>div {
+  width: auto;
 }
 
 .emotion-2 {

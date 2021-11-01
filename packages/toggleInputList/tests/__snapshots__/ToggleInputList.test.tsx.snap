@@ -1211,10 +1211,6 @@ exports[`ToggleInputList renders with errors 1`] = `
   justify-content: center;
 }
 
-.emotion-5>div {
-  width: auto;
-}
-
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1232,6 +1228,10 @@ exports[`ToggleInputList renders with errors 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-bottom: 0!important;
+}
+
+.emotion-5>div {
+  width: auto;
 }
 
 .emotion-6 {
@@ -1632,10 +1632,6 @@ exports[`ToggleInputList renders with hidden label 1`] = `
   justify-content: center;
 }
 
-.emotion-5>div {
-  width: auto;
-}
-
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1653,6 +1649,10 @@ exports[`ToggleInputList renders with hidden label 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-bottom: 0!important;
+}
+
+.emotion-5>div {
+  width: auto;
 }
 
 .emotion-6 {
@@ -2015,10 +2015,6 @@ exports[`ToggleInputList renders with required 1`] = `
   justify-content: center;
 }
 
-.emotion-6>div {
-  width: auto;
-}
-
 .emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2036,6 +2032,10 @@ exports[`ToggleInputList renders with required 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-bottom: 0!important;
+}
+
+.emotion-6>div {
+  width: auto;
 }
 
 .emotion-7 {

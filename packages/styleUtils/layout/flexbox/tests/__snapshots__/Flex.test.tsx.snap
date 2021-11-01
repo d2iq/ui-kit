@@ -125,15 +125,6 @@ exports[`Flex renders with all props 1`] = `
 `;
 
 exports[`Flex renders with responsive props 1`] = `
-@media (min-width: 900px) {
-  .emotion-0 {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-  }
-}
-
 .emotion-0 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -141,6 +132,15 @@ exports[`Flex renders with responsive props 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+@media (min-width: 0) {
+  .emotion-0 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
 }
 
 @media (min-width: 900px) {
@@ -207,12 +207,12 @@ exports[`Flex renders with responsive props 1`] = `
   }
 }
 
-@media (min-width: 0) {
+@media (min-width: 900px) {
   .emotion-0 {
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
   }
 }
 

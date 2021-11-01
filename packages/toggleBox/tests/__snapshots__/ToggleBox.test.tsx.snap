@@ -21,14 +21,11 @@ exports[`ToggleBox renders active 1`] = `
   height: 100%;
 }
 
-.emotion-3,
-.emotion-3:hover,
-.emotion-3:focus {
-  box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
-}
-
-.emotion-3:focus {
-  background-color: var(--themeBgHover, #F7F8F9);
+.emotion-3 {
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .emotion-3>div {
@@ -46,11 +43,14 @@ exports[`ToggleBox renders active 1`] = `
   box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
 }
 
-.emotion-3 {
-  background-color: var(--themeBgPrimary, #FFFFFF);
-  box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
-  border-radius: 6px;
-  cursor: pointer;
+.emotion-3,
+.emotion-3:hover,
+.emotion-3:focus {
+  box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
+}
+
+.emotion-3:focus {
+  background-color: var(--themeBgHover, #F7F8F9);
 }
 
 .emotion-4 {
