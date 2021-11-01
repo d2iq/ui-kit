@@ -10,6 +10,7 @@ import { PopoverListItemAppearances } from "../../shared/types/popoverListItemAp
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { grafanaLogo, kibanaLogo, kubernetesLogo } from "./avatarImgs";
 import PrimaryDropdownButton from "../../button/components/PrimaryDropdownButton";
+import { ProductIcons } from "../../icons/dist/product-icons-enum";
 
 export default {
   title: "Overlays/DropdownMenu",
@@ -216,6 +217,102 @@ export const WithSections = () => (
       </DropdownMenuItem>
       <DropdownMenuItem key="stop" value="stop">
         Stop
+      </DropdownMenuItem>
+    </DropdownSection>
+  </DropdownMenu>
+);
+
+export const WithFooterSection = () => (
+  <DropdownMenu
+    menuMaxHeight={420}
+    trigger={<PrimaryDropdownButton>Workspaces</PrimaryDropdownButton>}
+  >
+    <DropdownSection>
+      <DropdownMenuItem key="workspace1" value="workspace1">
+        <DropdownMenuItemIcon shape={ProductIcons.Global} />
+        Global
+      </DropdownMenuItem>
+    </DropdownSection>
+    <DropdownSection>
+      <DropdownMenuItem key="default-workspace" value="default-workspace">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Default Workspace
+      </DropdownMenuItem>
+      <DropdownMenuItem
+        key="management-cluster-workspace"
+        value="management-cluster-workspace"
+      >
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Management Cluster Workspace
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace1" value="workspace1">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 1
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace2" value="workspace2">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 2
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace3" value="workspace3">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 3
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace4" value="workspace4">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 4
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace5" value="workspace5">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 5
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace6" value="workspace6">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 6
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace7" value="workspace7">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 7
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace8" value="workspace8">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 8
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace9" value="workspace9">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 9
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace10" value="workspace10">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 10
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace11" value="workspace11">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 11
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace12" value="workspace12">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 12
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace13" value="workspace13">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 13
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace14" value="workspace14">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 14
+      </DropdownMenuItem>
+      <DropdownMenuItem key="workspace15" value="workspace15">
+        <DropdownMenuItemIcon shape={ProductIcons.Components} />
+        Workspace 15
+      </DropdownMenuItem>
+    </DropdownSection>
+
+    <DropdownSection footer>
+      <DropdownMenuItem key="create-workspace" value="create-workspace">
+        Create Workspace
+      </DropdownMenuItem>
+      <DropdownMenuItem key="manage-workspaces" value="manage-workspaces">
+        Manage Workspaces
       </DropdownMenuItem>
     </DropdownSection>
   </DropdownMenu>
