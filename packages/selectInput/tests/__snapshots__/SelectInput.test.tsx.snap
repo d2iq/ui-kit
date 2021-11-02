@@ -63,9 +63,19 @@ exports[`SelectInput should render all appearances focus 1`] = `
   font-weight: 500;
 }
 
-.emotion-1 input:-ms-input-placeholder {
-  color: var(--themeTextColorPrimary, #1B2029);
-  opacity: 0.4;
+.emotion-1 {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-1::-webkit-input-placeholder {
@@ -103,19 +113,9 @@ exports[`SelectInput should render all appearances focus 1`] = `
   opacity: 0.4;
 }
 
-.emotion-1 {
-  position: relative;
-  border: 1px solid;
-  border-radius: 4px;
-  color: inherit;
-  height: 36px;
-  font-size: inherit;
-  padding-left: 16px;
-  padding-right: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
 }
 
 .emotion-1 input::placeholder {

@@ -1,12 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ToggleBoxGroup renders default 1`] = `
-@supports not (row-gap: 1px) {
-  .emotion-0>*:not(:last-child) {
-    padding-bottom: 0;
-  }
-}
-
 .emotion-0 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
@@ -45,11 +39,13 @@ exports[`ToggleBoxGroup renders default 1`] = `
   }
 }
 
-.emotion-1>* {
-  height: 100%;
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-bottom: 0;
+  }
 }
 
-.emotion-2>* {
+.emotion-1>* {
   height: 100%;
 }
 
@@ -64,6 +60,10 @@ exports[`ToggleBoxGroup renders default 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
+}
+
+.emotion-2>* {
+  height: 100%;
 }
 
 .emotion-3 {
@@ -363,12 +363,6 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
   font-weight: 500;
 }
 
-@supports not (row-gap: 1px) {
-  .emotion-2>*:not(:last-child) {
-    padding-bottom: 0;
-  }
-}
-
 .emotion-2 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
@@ -404,6 +398,12 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
 @supports not (column-gap: 1px) {
   .emotion-2>*:not(:last-child) {
     padding-right: 16px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-bottom: 0;
   }
 }
 
@@ -768,10 +768,6 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   height: 100%;
 }
 
-.emotion-2>* {
-  height: 100%;
-}
-
 .emotion-2 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
@@ -783,6 +779,10 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
+}
+
+.emotion-2>* {
+  height: 100%;
 }
 
 .emotion-3 {
@@ -1104,22 +1104,6 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
 `;
 
 exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
-@supports not (row-gap: 1px) {
-  .emotion-0>*:not(:last-child) {
-    padding-bottom: 48px;
-  }
-}
-
-@supports not (column-gap: 1px) {
-  .emotion-0>*:not(:last-child) {
-    padding-right: 0;
-  }
-}
-
-.emotion-0>div {
-  width: 100%;
-}
-
 .emotion-0 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
@@ -1146,6 +1130,22 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   -webkit-column-gap: 0;
   column-gap: 0;
   row-gap: 48px;
+}
+
+.emotion-0>div {
+  width: 100%;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-bottom: 48px;
+  }
 }
 
 .emotion-1>* {
@@ -1189,6 +1189,17 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   height: 100%;
 }
 
+.emotion-6 {
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.emotion-6>div {
+  height: 100%;
+}
+
 .emotion-6:hover,
 .emotion-6:focus,
 .emotion-6:focus-within {
@@ -1198,17 +1209,6 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
 
 .emotion-6:active {
   box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
-}
-
-.emotion-6>div {
-  height: 100%;
-}
-
-.emotion-6 {
-  background-color: var(--themeBgPrimary, #FFFFFF);
-  box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
-  border-radius: 6px;
-  cursor: pointer;
 }
 
 .emotion-7 {

@@ -190,12 +190,6 @@ exports[`CodeSnippet renders with copy button 1`] = `
   padding: 16px;
 }
 
-@supports not (row-gap: 1px) {
-  .emotion-3>*:not(:last-child) {
-    padding-bottom: 0;
-  }
-}
-
 .emotion-3 {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -231,6 +225,12 @@ exports[`CodeSnippet renders with copy button 1`] = `
 @supports not (column-gap: 1px) {
   .emotion-3>*:not(:last-child) {
     padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-3>*:not(:last-child) {
+    padding-bottom: 0;
   }
 }
 

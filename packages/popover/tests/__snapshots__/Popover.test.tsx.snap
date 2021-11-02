@@ -249,19 +249,6 @@ exports[`Popover renders an open dropdown 1`] = `
   display: inline-block;
 }
 
-.emotion-1:focus>div {
-  outline-color: Highlight;
-  outline-width: thin;
-}
-
-@media (-webkit-min-device-pixel-ratio: 0) {
-  .emotion-1:focus>div {
-    outline-color: -webkit-focus-ring-color;
-    outline-style: auto;
-    outline-width: unset;
-  }
-}
-
 .emotion-1 {
   background: none;
   border: 0;
@@ -281,6 +268,19 @@ exports[`Popover renders an open dropdown 1`] = `
 
 .emotion-1>div:focus {
   outline: none;
+}
+
+.emotion-1:focus>div {
+  outline-color: Highlight;
+  outline-width: thin;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .emotion-1:focus>div {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: unset;
+  }
 }
 
 .emotion-2 {

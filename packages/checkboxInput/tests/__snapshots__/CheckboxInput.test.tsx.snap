@@ -540,13 +540,13 @@ exports[`CheckboxInput renders indeterminate 1`] = `
   width: 100%;
 }
 
-.emotion-6 use {
-  pointer-events: none;
-}
-
 .emotion-6 {
   vertical-align: middle;
   fill: var(--themeBgPrimary, #FFFFFF);
+}
+
+.emotion-6 use {
+  pointer-events: none;
 }
 
 .emotion-7 {

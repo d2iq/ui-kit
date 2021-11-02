@@ -1,12 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonBase renders all appearances with props 1`] = `
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
-  background-color: var(--themeBgDisabled, #E8EAED);
-}
-
 .emotion-0 {
   background: none;
   border: 0;
@@ -36,6 +30,11 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
+.emotion-0::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
 .emotion-0[href],
 .emotion-0[href]:visited {
   color: #FFFFFF;
@@ -57,9 +56,10 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   fill: var(--themeTextColorDisabled, #AEB0B4);
 }
 
-.emotion-0::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0:active {
+  background-color: var(--themeBgDisabled, #E8EAED);
 }
 
 .emotion-1 {
@@ -205,11 +205,19 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   pointer-events: none;
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
+.emotion-0::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-0:hover {
+  color: #704fe5;
+  fill: #704fe5;
+}
+
 .emotion-0:active {
-  color: var(--themeTextColorDisabled, #AEB0B4);
-  fill: var(--themeTextColorDisabled, #AEB0B4);
+  color: #6446cc;
+  fill: #6446cc;
 }
 
 .emotion-0[href],
@@ -218,23 +226,11 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   fill: var(--themeTextColorInteractive, #7D58FF);
 }
 
+.emotion-0:hover,
+.emotion-0:focus,
 .emotion-0:active {
-  color: #6446cc;
-  fill: #6446cc;
-}
-
-.emotion-0:hover {
-  color: #704fe5;
-  fill: #704fe5;
-}
-
-.emotion-0::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-.emotion-1>div {
-  width: auto;
+  color: var(--themeTextColorDisabled, #AEB0B4);
+  fill: var(--themeTextColorDisabled, #AEB0B4);
 }
 
 .emotion-1 {
@@ -255,6 +251,10 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   min-height: 0;
 }
 
+.emotion-1>div {
+  width: auto;
+}
+
 .emotion-2 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -271,10 +271,6 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   display: inherit;
 }
 
-.emotion-3:after {
-  content: "...";
-}
-
 .emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -289,6 +285,10 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   flex-shrink: 0;
   width: initial;
   padding-left: 8px;
+}
+
+.emotion-3:after {
+  content: "...";
 }
 
 .emotion-4 {
@@ -380,10 +380,23 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
+.emotion-0::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-0[href],
+.emotion-0[href]:visited {
+  color: #1B2029;
+  fill: #1B2029;
+}
+
+.emotion-0:hover {
+  background-color: #c4c6cb;
+}
+
 .emotion-0:active {
-  background-color: var(--themeBgDisabled, #E8EAED);
+  background-color: #aeb0b4;
 }
 
 .emotion-0:hover,
@@ -393,27 +406,10 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   fill: var(--themeTextColorDisabled, #AEB0B4);
 }
 
+.emotion-0:hover,
+.emotion-0:focus,
 .emotion-0:active {
-  background-color: #aeb0b4;
-}
-
-.emotion-0:hover {
-  background-color: #c4c6cb;
-}
-
-.emotion-0[href],
-.emotion-0[href]:visited {
-  color: #1B2029;
-  fill: #1B2029;
-}
-
-.emotion-0::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-.emotion-1>div {
-  width: auto;
+  background-color: var(--themeBgDisabled, #E8EAED);
 }
 
 .emotion-1 {
@@ -434,6 +430,10 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   min-height: 0;
 }
 
+.emotion-1>div {
+  width: auto;
+}
+
 .emotion-2 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -450,10 +450,6 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   display: inherit;
 }
 
-.emotion-3:after {
-  content: "...";
-}
-
 .emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -468,6 +464,10 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   flex-shrink: 0;
   width: initial;
   padding-left: 8px;
+}
+
+.emotion-3:after {
+  content: "...";
 }
 
 .emotion-4 {
@@ -559,10 +559,23 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
+.emotion-0::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-0[href],
+.emotion-0[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+.emotion-0:hover {
+  background-color: #d32434;
+}
+
 .emotion-0:active {
-  background-color: var(--themeBgDisabled, #E8EAED);
+  background-color: #bc202e;
 }
 
 .emotion-0:hover,
@@ -572,27 +585,10 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   fill: var(--themeTextColorDisabled, #AEB0B4);
 }
 
+.emotion-0:hover,
+.emotion-0:focus,
 .emotion-0:active {
-  background-color: #bc202e;
-}
-
-.emotion-0:hover {
-  background-color: #d32434;
-}
-
-.emotion-0[href],
-.emotion-0[href]:visited {
-  color: #FFFFFF;
-  fill: #FFFFFF;
-}
-
-.emotion-0::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-.emotion-1>div {
-  width: auto;
+  background-color: var(--themeBgDisabled, #E8EAED);
 }
 
 .emotion-1 {
@@ -613,6 +609,10 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   min-height: 0;
 }
 
+.emotion-1>div {
+  width: auto;
+}
+
 .emotion-2 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -629,10 +629,6 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   display: inherit;
 }
 
-.emotion-3:after {
-  content: "...";
-}
-
 .emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -647,6 +643,10 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   flex-shrink: 0;
   width: initial;
   padding-left: 8px;
+}
+
+.emotion-3:after {
+  content: "...";
 }
 
 .emotion-4 {
@@ -738,10 +738,23 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
+.emotion-0::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-0[href],
+.emotion-0[href]:visited {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+.emotion-0:hover {
+  background-color: #12b276;
+}
+
 .emotion-0:active {
-  background-color: var(--themeBgDisabled, #E8EAED);
+  background-color: #109e69;
 }
 
 .emotion-0:hover,
@@ -751,27 +764,10 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   fill: var(--themeTextColorDisabled, #AEB0B4);
 }
 
+.emotion-0:hover,
+.emotion-0:focus,
 .emotion-0:active {
-  background-color: #109e69;
-}
-
-.emotion-0:hover {
-  background-color: #12b276;
-}
-
-.emotion-0[href],
-.emotion-0[href]:visited {
-  color: #FFFFFF;
-  fill: #FFFFFF;
-}
-
-.emotion-0::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-.emotion-1>div {
-  width: auto;
+  background-color: var(--themeBgDisabled, #E8EAED);
 }
 
 .emotion-1 {
@@ -792,6 +788,10 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   min-height: 0;
 }
 
+.emotion-1>div {
+  width: auto;
+}
+
 .emotion-2 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -808,10 +808,6 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   display: inherit;
 }
 
-.emotion-3:after {
-  content: "...";
-}
-
 .emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
@@ -826,6 +822,10 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   flex-shrink: 0;
   width: initial;
   padding-left: 8px;
+}
+
+.emotion-3:after {
+  content: "...";
 }
 
 .emotion-4 {

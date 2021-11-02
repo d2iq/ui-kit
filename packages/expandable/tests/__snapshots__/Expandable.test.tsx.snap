@@ -6,6 +6,20 @@ exports[`Sidebar renders 1`] = `
   width: 100%;
 }
 
+.emotion-1 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
 .emotion-1::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -26,20 +40,6 @@ exports[`Sidebar renders 1`] = `
     outline-style: auto;
     outline-width: unset;
   }
-}
-
-.emotion-1 {
-  background: none;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  overflow: visible;
-  padding: 0;
-  text-align: inherit;
-  display: block;
-  width: 100%;
-  cursor: pointer;
 }
 
 .emotion-2 {
