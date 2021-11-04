@@ -77,6 +77,7 @@ export class TextInputWithBadges extends TextInputWithIcon<
       onBadgeChange,
       downshiftReset,
       addBadgeOnBlur,
+      badgeAppearance,
       ...inputProps
     } = baseProps as TextInputWithBadgesProps;
     inputProps.onKeyDown = this.handleKeyDown;
@@ -97,7 +98,8 @@ export class TextInputWithBadges extends TextInputWithIcon<
 
   protected getInputContent() {
     const inputAppearance = this.getInputAppearance();
-    const { badgeAppearance = "primary" } = this.props;
+    const { hintContent, badgeAppearance = "primary" } = this.props;
+
     return (
       <FormFieldWrapper
         // TODO: figure out how to get rid of this non-null assertion
@@ -105,10 +107,10 @@ export class TextInputWithBadges extends TextInputWithIcon<
         // it would be possible for `this.props.id` to be undefined
         id={this.props.id!}
         errors={this.props.errors}
-        hintContent={this.props.hintContent}
+        hintContent={hintContent}
       >
         {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
-          <React.Fragment>
+          <>
             <div
               className={cx(
                 flex({ wrap: "wrap" }),
@@ -119,33 +121,35 @@ export class TextInputWithBadges extends TextInputWithIcon<
             >
               {this.getIconStartContent()}
               {this.props.badges &&
-                this.props.badges.map(badge => (
-                  <span
-                    className={badgeInputContents}
-                    key={`${badge.value}-badgeWrapper`}
-                  >
-                    <Badge appearance={badgeAppearance}>
-                      <Flex align="center" gutterSize="xxs">
-                        <FlexItem>
-                          <div className={cx(textTruncate, badgeText)}>
-                            {typeof badge.label === "string"
-                              ? badge.label.replace(/\s/g, "\u00a0")
-                              : badge.label}
-                          </div>
-                        </FlexItem>
-                        <FlexItem flex="shrink">
-                          <Clickable
-                            action={this.onBadgeClose.bind(this, badge)}
-                          >
-                            <span>
-                              <Icon shape={SystemIcons.Close} size="xxs" />
-                            </span>
-                          </Clickable>
-                        </FlexItem>
-                      </Flex>
-                    </Badge>
-                  </span>
-                ))}
+                this.props.badges.map(badge => {
+                  return (
+                    <span
+                      className={badgeInputContents}
+                      key={`${badge.value}-badgeWrapper`}
+                    >
+                      <Badge appearance={badgeAppearance}>
+                        <Flex align="center" gutterSize="xxs">
+                          <FlexItem>
+                            <div className={cx(textTruncate, badgeText)}>
+                              {typeof badge.label === "string"
+                                ? badge.label.replace(/\s/g, "\u00a0")
+                                : badge.label}
+                            </div>
+                          </FlexItem>
+                          <FlexItem flex="shrink">
+                            <Clickable
+                              action={this.onBadgeClose.bind(this, badge)}
+                            >
+                              <span>
+                                <Icon shape={SystemIcons.Close} size="xxs" />
+                              </span>
+                            </Clickable>
+                          </FlexItem>
+                        </Flex>
+                      </Badge>
+                    </span>
+                  );
+                })}
               {this.getInputElement(
                 [badgeInput, badgeInputContents, flexItem("grow")],
                 isValid,
@@ -155,7 +159,7 @@ export class TextInputWithBadges extends TextInputWithIcon<
             </div>
             {getHintContent}
             {getValidationErrors}
-          </React.Fragment>
+          </>
         )}
       </FormFieldWrapper>
     );
@@ -173,11 +177,11 @@ export class TextInputWithBadges extends TextInputWithIcon<
   }
 
   private handleTagAdd(tagToAdd: BadgeDatum) {
-    const { onBadgeChange, badges = [] } = this.props;
+    const { onBadgeChange, badges = [], downshiftReset } = this.props;
     const badgeValues = badges.map(badge => badge.value);
 
-    if (this.props.downshiftReset) {
-      this.props.downshiftReset();
+    if (downshiftReset) {
+      downshiftReset();
     }
 
     if (
