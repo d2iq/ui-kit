@@ -1,49 +1,62 @@
 import * as React from "react";
 import { TabTitle, Tabs, TabItem } from "../index";
-import { TabDirection } from "../components/Tabs";
+import { TabsProps } from "../components/Tabs";
+import { Story, Meta } from "@storybook/react";
 
-class Example extends React.Component<
-  { direction?: TabDirection },
-  Partial<{ selectedIndex: number }>
-> {
-  state = { selectedIndex: 0 };
-  handleSelect = selectedIndex => {
-    this.setState({ selectedIndex });
-  };
-  render() {
-    const { selectedIndex } = this.state;
-    return (
-      <Tabs
-        selectedIndex={selectedIndex}
-        onSelect={this.handleSelect}
-        direction={this.props.direction}
-      >
-        <TabItem>
-          <TabTitle>Tab 1 Name</TabTitle>
-          <div>First tab Content</div>
-        </TabItem>
-        <TabItem>
-          <TabTitle>Tab 2 Name</TabTitle>
-          Second Tab Content
-        </TabItem>
-      </Tabs>
-    );
-  }
-}
+const TabsStory = ({ direction }: TabsProps) => {
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
+
+  return (
+    <Tabs
+      selectedIndex={selectedIndex}
+      onSelect={setSelectedIndex}
+      direction={direction}
+    >
+      <TabItem>
+        <TabTitle>Tab 1</TabTitle>
+        Tab content.
+      </TabItem>
+      <TabItem>
+        <TabTitle>Tab 2</TabTitle>
+        Tab content.
+      </TabItem>
+    </Tabs>
+  );
+};
 
 export default {
   title: "Navigation/Tabs",
   component: Tabs,
-  subcomponents: { Tabs, TabTitle, TabItem }
-};
+  subcomponents: { Tabs, TabTitle, TabItem },
+  argTypes: {
+    direction: {
+      options: ["horiz", "vert"],
+      control: { type: "radio" }
+    },
+    onSelect: {
+      table: {
+        disable: true
+      }
+    },
+    selectedIndex: {
+      table: {
+        disable: true
+      }
+    }
+  }
+} as Meta;
 
-export const Default = () => <Example />;
+const Template: Story<TabsProps> = args => <TabsStory {...args} />;
 
-export const Vertical = () => <Example direction="vert" />;
+export const Default = Template.bind({});
+Default.args = { direction: "horiz" };
 
-export const Responsive = () => (
+export const Responsive = args => (
   <>
-    <p>Resize your viewport width to see the tab direction change</p>
-    <Example direction={{ medium: "vert" }} />
+    <p>Resize the viewport width to see the tab direction change 👇</p>
+    <TabsStory direction={{ medium: "vert" }} {...args} />
   </>
 );
+Responsive.args = {
+  direction: { medium: "vert" }
+};

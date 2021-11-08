@@ -15,7 +15,7 @@ const spacingSizeConfig: { [key: string]: SpaceSizes } = {
   inset: "l",
   tabPanel: "xl",
   tabList: "s",
-  betweenTabs: "m",
+  betweenTabs: "l",
   withinTab: "s"
 };
 
