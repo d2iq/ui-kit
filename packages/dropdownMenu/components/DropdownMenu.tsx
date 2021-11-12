@@ -1,5 +1,5 @@
 import * as React from "react";
-import { css, cx } from "@emotion/css";
+import { cx } from "@emotion/css";
 import Downshift, { ControllerStateAndHelpers } from "downshift";
 import { Dropdownable } from "../../dropdownable";
 import { border, buttonReset, display } from "../../shared/styles/styleUtils";
@@ -8,10 +8,6 @@ import PopoverListItem from "../../popover/components/PopoverListItem";
 import { DropdownSectionProps } from "./DropdownSection";
 import { DropdownMenuItemProps } from "./DropdownMenuItem";
 import { Direction } from "../../dropdownable/components/Dropdownable";
-import {
-  spaceM,
-  themeBgPrimary
-} from "../../design-tokens/build/js/designTokens";
 
 export interface DropdownMenuProps {
   /**
@@ -85,39 +81,6 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
     }
   };
 
-  const stickyFooter = css`
-    background-color: ${themeBgPrimary};
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2px 0;
-    width: 100%;
-
-    &::before {
-      content: " ";
-      top: -17px;
-      width: inherit;
-      height: ${spaceM};
-      position: absolute;
-      background: linear-gradient(transparent, ${themeBgPrimary});
-    }
-  `;
-
-  const SectionWrapper = ({ children, footer = false, sectionIndex }) => {
-    return (
-      <div
-        key={`dropdown-${sectionIndex}`}
-        className={cx(
-          { [border("top")]: sectionIndex !== 0 },
-          { [stickyFooter]: footer }
-        )}
-      >
-        {children}
-      </div>
-    );
-  };
-
   const getDropdownContents = (highlightedIndex, getItemProps) =>
     (React.Children.toArray(children) as Array<
       React.ReactElement<DropdownSectionProps>
@@ -127,7 +90,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
     }>(
       (acc, item, sectionIndex) => {
         const { sections = [] } = acc;
-        const { children, footer } = item.props;
+        const { children } = item.props;
         const menuItems = React.Children.toArray(children);
         const childrenWithKeys = menuItems.map((child, i) => {
           acc.menuItemIndex++;
@@ -150,16 +113,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
         });
 
         return {
-          sections: [
-            ...sections,
-            <SectionWrapper
-              footer={footer}
-              key={`dropdown-${sectionIndex}`}
-              sectionIndex={sectionIndex}
-            >
-              {childrenWithKeys}
-            </SectionWrapper>
-          ],
+          sections: [...sections, childrenWithKeys],
           menuItemIndex: acc.menuItemIndex
         };
       },
@@ -195,7 +149,17 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
                   { suppressRefError: true }
                 )}
               >
-                {getDropdownContents(highlightedIndex, getItemProps).sections}
+                {getDropdownContents(
+                  highlightedIndex,
+                  getItemProps
+                ).sections.map((sectionContent, i) => (
+                  <div
+                    key={`dropdown-${i}`}
+                    className={cx({ [border("top")]: i !== 0 })}
+                  >
+                    {sectionContent}
+                  </div>
+                ))}
               </PopoverBox>
             }
             disablePortal={disablePortal}
