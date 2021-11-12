@@ -34,11 +34,12 @@ injectGlobal`
   cursor: pointer;
   font-weight: ${fontWeightMedium};
   color: ${themeTextColorPrimary};
+
   &:after{
     content: "";
     position: absolute;
     background: ${themeBrandPrimary};
-    display:none;
+    display: none;
   }
 }
 
@@ -80,66 +81,62 @@ export interface TabsProps {
   direction?: TabDirection;
 }
 
-class Tabs extends React.PureComponent<TabsProps, {}> {
-  public render() {
-    const {
-      children,
-      selectedIndex,
-      onSelect,
-      direction = defaultTabDirection
-    } = this.props;
+const Tabs = ({
+  children,
+  selectedIndex,
+  onSelect,
+  direction = defaultTabDirection
+}: TabsProps) => {
+  const { tabs, tabsContent } = React.Children.toArray(children)
+    .filter(item => React.isValidElement<TabItemProps>(item))
+    .reduce<{
+      tabs: React.ReactNodeArray;
+      tabsContent: React.ReactNodeArray;
+    }>(
+      (acc, item) => {
+        const { tabs = [], tabsContent = [] } = acc;
+        const { children } = item.props;
+        const key = item.key ? item.key : undefined;
+        const childrenWithKeys = React.Children.toArray(children).map(child =>
+          React.isValidElement<TabTitle>(child)
+            ? React.cloneElement(child, { key })
+            : child
+        );
 
-    const { tabs, tabsContent } = React.Children.toArray(children)
-      .filter(item => React.isValidElement<TabItemProps>(item))
-      .reduce<{
-        tabs: React.ReactNodeArray;
-        tabsContent: React.ReactNodeArray;
-      }>(
-        (acc, item) => {
-          const { tabs = [], tabsContent = [] } = acc;
-          const { children } = item.props;
-          const key = item.key ? item.key : undefined;
-          const childrenWithKeys = React.Children.toArray(children).map(child =>
-            React.isValidElement<TabTitle>(child)
-              ? React.cloneElement(child, { key })
-              : child
-          );
-
-          const title = childrenWithKeys.find(
-            child =>
-              React.isValidElement<TabTitle>(child) && child.type === TabTitle
-          );
-          const tabChildren = childrenWithKeys.filter(
-            child => !(React.isValidElement(child) && child.type === TabTitle)
-          );
-          return {
-            tabs: [...tabs, title],
-            tabsContent: [
-              ...tabsContent,
-              ...(tabChildren.length
-                ? [<TabPanel key={key}>{tabChildren}</TabPanel>]
-                : [])
-            ]
-          };
-        },
-        { tabs: [], tabsContent: [] }
-      );
-
-    return (
-      <ReactTabs
-        className={cx("react-tabs", {
-          [fullHeightTabs]: Boolean(tabsContent.length),
-          [getTabLayout(direction)]: Boolean(direction)
-        })}
-        selectedIndex={selectedIndex}
-        onSelect={onSelect}
-        data-cy="tabs"
-      >
-        <TabList>{tabs}</TabList>
-        {tabsContent}
-      </ReactTabs>
+        const title = childrenWithKeys.find(
+          child =>
+            React.isValidElement<TabTitle>(child) && child.type === TabTitle
+        );
+        const tabChildren = childrenWithKeys.filter(
+          child => !(React.isValidElement(child) && child.type === TabTitle)
+        );
+        return {
+          tabs: [...tabs, title],
+          tabsContent: [
+            ...tabsContent,
+            ...(tabChildren.length
+              ? [<TabPanel key={key}>{tabChildren}</TabPanel>]
+              : [])
+          ]
+        };
+      },
+      { tabs: [], tabsContent: [] }
     );
-  }
-}
 
-export default Tabs;
+  return (
+    <ReactTabs
+      className={cx("react-tabs", {
+        [fullHeightTabs]: Boolean(tabsContent.length),
+        [getTabLayout(direction)]: Boolean(direction)
+      })}
+      selectedIndex={selectedIndex}
+      onSelect={onSelect}
+      data-cy="tabs"
+    >
+      <TabList>{tabs}</TabList>
+      {tabsContent}
+    </ReactTabs>
+  );
+};
+
+export default React.memo(Tabs);
