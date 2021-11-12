@@ -126,6 +126,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -567,6 +571,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1215,6 +1223,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1771,6 +1783,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2276,6 +2292,10 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3285,6 +3305,10 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
