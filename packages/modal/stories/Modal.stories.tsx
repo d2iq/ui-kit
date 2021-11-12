@@ -23,6 +23,8 @@ import {
 import { SecondaryButton } from "../../button";
 import { TextInput } from "../../textInput";
 import { fullscreenModalTitle } from "../../fullscreenView/style";
+import { blue } from "../../design-tokens/build/js/designTokens";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 export default {
   title: "Overlays/Modal",
@@ -41,6 +43,26 @@ export const _DialogModal = () => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
       <DialogModal isOpen={isOpen} onClose={onClose} title="I am modal">
+        <ModalContent />
+      </DialogModal>
+    )}
+  </ModalStoryContainer>
+);
+
+const confirmIcon = {
+  shape: SystemIcons.CircleInformation,
+  color: blue
+};
+
+export const DialogModalWithIcon = () => (
+  <ModalStoryContainer>
+    {({ isOpen, onClose }) => (
+      <DialogModal
+        isOpen={isOpen}
+        onClose={onClose}
+        title="Info: Lorem Ipsum"
+        icon={confirmIcon}
+      >
         <ModalContent />
       </DialogModal>
     )}

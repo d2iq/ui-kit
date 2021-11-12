@@ -10,8 +10,9 @@ import {
   textSize
 } from "../../shared/styles/styleUtils";
 import Clickable from "../../clickable/components/clickable";
-import Icon from "../../icon/components/Icon";
+import Icon, { IconProps } from "../../icon/components/Icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
+import { Flex, FlexItem } from "../../styleUtils/layout";
 
 export interface DialogModalProps extends ModalBaseProps {
   /** Content that gets anchored to the button of the footer. Currently, this is just primary and secondary actions. ⚠️Do not use this directly⚠️ */
@@ -20,6 +21,8 @@ export interface DialogModalProps extends ModalBaseProps {
   isContentFlush?: boolean;
   /** The text displayed in the header of the modal. */
   title: React.ReactNode;
+  /** Controls the icon displayed next to the title, here we can customize color, size, and shape. */
+  icon?: IconProps;
 }
 
 class DialogModal extends React.PureComponent<DialogModalProps, {}> {
@@ -29,6 +32,7 @@ class DialogModal extends React.PureComponent<DialogModalProps, {}> {
       footerContent,
       isContentFlush,
       title,
+      icon,
       ...other
     } = this.props;
 
@@ -38,8 +42,28 @@ class DialogModal extends React.PureComponent<DialogModalProps, {}> {
           className={cx(modalHeader, flexItem("shrink"))}
           data-cy="dialogModal-header"
         >
-          <div className={cx(flex({ align: "center" }), padding("all", "l"))}>
-            <div className={cx(flexItem("grow"), textSize("l"))}>{title}</div>
+          <div
+            className={cx(
+              flex({ align: "center", justify: "center" }),
+              padding("all", "l")
+            )}
+          >
+            <div className={cx(flexItem("grow"), textSize("l"))}>
+              {icon ? (
+                <Flex gutterSize="xxs" justify="center" align="center">
+                  <FlexItem flex="shrink">
+                    <Icon
+                      shape={icon.shape}
+                      size={icon.size ? icon.size : "xs"}
+                      color={icon.color ? icon.color : "inherit"}
+                    />
+                  </FlexItem>
+                  <FlexItem flex="grow">{title}</FlexItem>
+                </Flex>
+              ) : (
+                <>{title}</>
+              )}
+            </div>
             <div
               className={cx(
                 modalCloseWrapper,

@@ -5,50 +5,21 @@ export interface ModalStoryContainerProps {
   children: any;
 }
 
-export interface ModalStoryContainerState {
-  modalIsShown: boolean;
-}
+const ModalStoryContainer = ({ children }: ModalStoryContainerProps) => {
+  const [isShowing, setIsShowing] = React.useState(false);
 
-class ModalStoryContainer extends React.PureComponent<
-  ModalStoryContainerProps,
-  ModalStoryContainerState
-> {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      modalIsShown: false
-    };
-
-    this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
+  function toggle() {
+    setIsShowing(!isShowing);
   }
 
-  showModal() {
-    this.setState({
-      modalIsShown: true
-    });
-  }
-
-  hideModal() {
-    this.setState({
-      modalIsShown: false
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        {this.props.children({
-          isOpen: this.state.modalIsShown,
-          onClose: this.hideModal
-        })}
-        <div style={{ textAlign: "center" }}>
-          <PrimaryButton onClick={this.showModal}>Show my modal</PrimaryButton>
-        </div>
+  return (
+    <div>
+      {children({ isOpen: isShowing, onClose: toggle })}
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={toggle}>Open Modal</PrimaryButton>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default ModalStoryContainer;
