@@ -1559,8 +1559,8 @@ exports[`Table v2 rendering renders default 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <SectionWrapper
-                            sectionIndex={0}
+                          <div
+                            className=""
                           >
                             <PopoverListItem
                               aria-selected={false}
@@ -1630,7 +1630,7 @@ exports[`Table v2 rendering renders default 1`] = `
                                 Stop
                               </DropdownMenuItem>
                             </PopoverListItem>
-                          </SectionWrapper>
+                          </div>
                         </Popover>
                       }
                       isOpen={false}
@@ -1953,8 +1953,8 @@ exports[`Table v2 rendering renders default 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <SectionWrapper
-                            sectionIndex={0}
+                          <div
+                            className=""
                           >
                             <PopoverListItem
                               aria-selected={false}
@@ -2024,7 +2024,7 @@ exports[`Table v2 rendering renders default 1`] = `
                                 Stop
                               </DropdownMenuItem>
                             </PopoverListItem>
-                          </SectionWrapper>
+                          </div>
                         </Popover>
                       }
                       isOpen={false}
@@ -2347,8 +2347,8 @@ exports[`Table v2 rendering renders default 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <SectionWrapper
-                            sectionIndex={0}
+                          <div
+                            className=""
                           >
                             <PopoverListItem
                               aria-selected={false}
@@ -2418,7 +2418,7 @@ exports[`Table v2 rendering renders default 1`] = `
                                 Stop
                               </DropdownMenuItem>
                             </PopoverListItem>
-                          </SectionWrapper>
+                          </div>
                         </Popover>
                       }
                       isOpen={false}
@@ -2741,8 +2741,8 @@ exports[`Table v2 rendering renders default 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <SectionWrapper
-                            sectionIndex={0}
+                          <div
+                            className=""
                           >
                             <PopoverListItem
                               aria-selected={false}
@@ -2812,7 +2812,7 @@ exports[`Table v2 rendering renders default 1`] = `
                                 Stop
                               </DropdownMenuItem>
                             </PopoverListItem>
-                          </SectionWrapper>
+                          </div>
                         </Popover>
                       }
                       isOpen={false}
@@ -3135,8 +3135,8 @@ exports[`Table v2 rendering renders default 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <SectionWrapper
-                            sectionIndex={0}
+                          <div
+                            className=""
                           >
                             <PopoverListItem
                               aria-selected={false}
@@ -3206,7 +3206,7 @@ exports[`Table v2 rendering renders default 1`] = `
                                 Stop
                               </DropdownMenuItem>
                             </PopoverListItem>
-                          </SectionWrapper>
+                          </div>
                         </Popover>
                       }
                       isOpen={false}
@@ -4849,8 +4849,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <SectionWrapper
-                            sectionIndex={0}
+                          <div
+                            className=""
                           >
                             <PopoverListItem
                               aria-selected={false}
@@ -4920,7 +4920,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                                 Stop
                               </DropdownMenuItem>
                             </PopoverListItem>
-                          </SectionWrapper>
+                          </div>
                         </Popover>
                       }
                       isOpen={false}
@@ -5243,8 +5243,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <SectionWrapper
-                            sectionIndex={0}
+                          <div
+                            className=""
                           >
                             <PopoverListItem
                               aria-selected={false}
@@ -5314,7 +5314,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                                 Stop
                               </DropdownMenuItem>
                             </PopoverListItem>
-                          </SectionWrapper>
+                          </div>
                         </Popover>
                       }
                       isOpen={false}
@@ -5637,8 +5637,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <SectionWrapper
-                            sectionIndex={0}
+                          <div
+                            className=""
                           >
                             <PopoverListItem
                               aria-selected={false}
@@ -5708,7 +5708,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                                 Stop
                               </DropdownMenuItem>
                             </PopoverListItem>
-                          </SectionWrapper>
+                          </div>
                         </Popover>
                       }
                       isOpen={false}
@@ -6031,8 +6031,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <SectionWrapper
-                            sectionIndex={0}
+                          <div
+                            className=""
                           >
                             <PopoverListItem
                               aria-selected={false}
@@ -6102,7 +6102,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                                 Stop
                               </DropdownMenuItem>
                             </PopoverListItem>
-                          </SectionWrapper>
+                          </div>
                         </Popover>
                       }
                       isOpen={false}
@@ -6425,8 +6425,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <SectionWrapper
-                            sectionIndex={0}
+                          <div
+                            className=""
                           >
                             <PopoverListItem
                               aria-selected={false}
@@ -6496,7 +6496,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                                 Stop
                               </DropdownMenuItem>
                             </PopoverListItem>
-                          </SectionWrapper>
+                          </div>
                         </Popover>
                       }
                       isOpen={false}
