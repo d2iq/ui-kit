@@ -3,10 +3,18 @@ import { cx } from "@emotion/css";
 import { flexItem, breakWord } from "../../shared/styles/styleUtils";
 import { ddReset } from "../../shared/styles/styleUtils/resets/definitionListReset";
 
-const ConfigurationMapValue = ({ children }) => (
+interface ConfigurationMapValueProps {
+  children: React.ReactNode;
+  dataCy?: string;
+}
+
+const ConfigurationMapValue = ({
+  children,
+  dataCy
+}: ConfigurationMapValueProps) => (
   <div
     className={cx(ddReset, flexItem("grow"), breakWord)}
-    data-cy="configurationMapValue"
+    data-cy={dataCy ?? "configurationMapValue"}
   >
     {children}
   </div>
