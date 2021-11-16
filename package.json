@@ -120,7 +120,6 @@
     "react-test-renderer": "16.8.6",
     "rimraf": "3.0.2",
     "semantic-release": "18.0.0",
-    "semantic-release-jira": "3.0.0",
     "style-dictionary": "3.0.3",
     "svg-inline-loader": "0.8.0",
     "svgo": "1.1.1",

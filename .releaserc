@@ -1,11 +1,3 @@
 {
-  "branches": "master",
-  "verifyConditions": ["semantic-release-jira"],
-  "success": [
-    {
-      "path": "semantic-release-jira",
-      "apiURL": "https://jira.d2iq.com/rest/api/2/issue/${issueKey}",
-      "apiJSON": "{ \"update\": { \"labels\": [ { \"add\": \"ui-kit:v${version}\" } ] } }"
-    }
-  ]
+  "branches": "master"
 }
