@@ -6,9 +6,10 @@ import { flex, padding, border } from "../../shared/styles/styleUtils";
 interface ConfigurationMapRowProps {
   children: React.ReactNode;
   onlyShowActionOnHover?: boolean;
+  dataCy?: string;
 }
 
-const ConfigurationMapRow: React.FC<ConfigurationMapRowProps> = props => (
+const ConfigurationMapRow = (props: ConfigurationMapRowProps) => (
   <div
     className={cx(
       { [showActionOnHoverStyle]: props.onlyShowActionOnHover },
@@ -17,7 +18,7 @@ const ConfigurationMapRow: React.FC<ConfigurationMapRowProps> = props => (
       flex(),
       padding("vert", "xs")
     )}
-    data-cy="configurationMapRow"
+    data-cy={props.dataCy ?? "configurationMapRow"}
   >
     {props.children}
   </div>

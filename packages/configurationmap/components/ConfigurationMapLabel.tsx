@@ -3,7 +3,15 @@ import { cx } from "@emotion/css";
 import { breakWord, textWeight, padding } from "../../shared/styles/styleUtils";
 import { configurationMapLabel } from "../style";
 
-const ConfigurationMapLabel: React.FC = ({ children }) => (
+interface ConfigurationMapLabelProps {
+  children: React.ReactNode;
+  dataCy?: string;
+}
+
+const ConfigurationMapLabel = ({
+  children,
+  dataCy
+}: ConfigurationMapLabelProps) => (
   <div
     className={cx(
       configurationMapLabel,
@@ -11,7 +19,7 @@ const ConfigurationMapLabel: React.FC = ({ children }) => (
       textWeight("medium"),
       breakWord
     )}
-    data-cy="configurationMapLabel"
+    data-cy={dataCy ?? "configurationMapLabel"}
   >
     {children}
   </div>
