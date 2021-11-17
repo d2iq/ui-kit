@@ -109,7 +109,6 @@
     "fs-extra": "10.0.0",
     "jest": "23.6.0",
     "jest-runner-prettier": "0.2.6",
-    "node": "16.13.0",
     "npm": "7.24.0",
     "prettier": "1.19.1",
     "prop-types": "15.6.2",
