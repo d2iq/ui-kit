@@ -10,6 +10,7 @@ exports[`GridList renders default 1`] = `
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  place-items: normal;
 }
 
 <ul
@@ -35,6 +36,7 @@ exports[`GridList renders with all props 1`] = `
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  place-items: normal;
 }
 
 <ol
@@ -58,6 +60,7 @@ exports[`GridList renders with responsive props 1`] = `
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  place-items: normal;
 }
 
 @media (min-width: 0) {
