@@ -1,75 +1,60 @@
 import * as React from "react";
-import { withKnobs, number, select } from "@storybook/addon-knobs";
+import { GridListProps } from "../components/GridList";
 import styled from "@emotion/styled";
 import GridList from "../components/GridList";
-import { themeBorder } from "../../../../design-tokens/build/js/designTokens";
-import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifierUtils";
+import {
+  spaceL,
+  themeBrandPrimary
+} from "../../../../design-tokens/build/js/designTokens";
+import { Story, Meta } from "@storybook/react";
 
-const BorderedBox = styled("div")`
-  border: 1px solid ${themeBorder};
+const GridChild = styled.div`
+  border: 2px solid ${themeBrandPrimary};
+  padding: ${spaceL};
 `;
 
 const gridChildren = new Array(12).fill(0).map((_, i) => (
   <li key={i}>
-    <BorderedBox>item</BorderedBox>
+    <GridChild>Child</GridChild>
   </li>
 ));
 
 export default {
   title: "Layout/GridList",
-  decorators: [withKnobs],
-  component: GridList
-};
+  component: GridList,
+  argTypes: {
+    columnCount: {
+      control: { type: "number" }
+    },
+    gutterSize: {
+      options: ["none", "xxs", "xs", "s", "m", "l", "xl", "xxl"],
+      control: { type: "select" }
+    },
+    centerItems: {
+      options: [true, false],
+      control: { type: "boolean" }
+    },
+    tag: {
+      options: ["ol", "ul"],
+      control: { type: "inline-radio" }
+    },
+    className: {
+      control: { disable: true }
+    },
+    "data-cy": {
+      control: { disable: true }
+    }
+  }
+} as Meta;
 
-export const ColumnCount = () => {
-  const columnCount = number("columnCount", 3);
-  return (
-    <div>
-      <p>Use the Knobs panel to adjust the number of columns per row</p>
-      <GridList columnCount={columnCount}>{gridChildren}</GridList>
-    </div>
-  );
-};
-
-export const ResponsiveColumnCount = () => (
-  <div>
-    <p>Change the width of the viewport to see the column count change</p>
-    <GridList columnCount={{ small: 1, medium: 2, large: 3 }}>
-      {gridChildren}
-    </GridList>
-  </div>
+const Template: Story<GridListProps> = args => (
+  <GridList {...args}>{gridChildren}</GridList>
 );
 
-export const GutterSize = () => {
-  const gutterSizes = {
-    xxs: "xxs",
-    xs: "xs",
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl",
-    xxl: "xxl",
-    none: "none"
-  };
-  const gutterSize = select("gutterSizes", gutterSizes, "m");
-  return (
-    <div>
-      <p>Use the Knobs panel to adjust the gutter size</p>
-      <GridList gutterSize={gutterSize as SpaceSize} columnCount={3}>
-        {gridChildren}
-      </GridList>
-    </div>
-  );
-};
+export const DynamicExample = Template.bind({});
 
-export const ResponsiveGutterSize = () => (
-  <div>
-    <p>Change the width of the viewport to see the gutter size change</p>
-    <GridList
-      gutterSize={{ small: "m", medium: "l", large: "xl" }}
-      columnCount={3}
-    >
-      {gridChildren}
-    </GridList>
-  </div>
-);
+export const ResponsiveGridSizing = Template.bind({});
+ResponsiveGridSizing.args = {
+  gutterSize: { small: "m", medium: "l", large: "xl" },
+  columnCount: { small: 1, medium: 2, large: 3 }
+};
