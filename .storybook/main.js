@@ -16,14 +16,6 @@ module.exports = {
     return { ...config, ...customWebpack };
   },
   addons: [
-    "@storybook/addon-knobs",
-    {
-      name: "@storybook/addon-essentials",
-      options: {
-        actions: false
-      }
-    },
-    "@storybook/addon-a11y",
     {
       name: "@storybook/addon-docs",
       options: {
@@ -32,6 +24,14 @@ module.exports = {
         sourceLoaderOptions: null,
         transcludeMarkdown: true
       }
-    }
+    },
+    {
+      name: "@storybook/addon-essentials",
+      options: {
+        actions: false
+      }
+    },
+    "@storybook/addon-knobs",
+    "@storybook/addon-a11y"
   ]
 };
