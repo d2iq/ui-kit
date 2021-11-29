@@ -54,7 +54,7 @@ exports[`Popover renders a closed dropdown 1`] = `
           role="dialog"
           showPointerCaret={true}
         >
-          <FocusLockCombination
+          <ForwardRef(FocusLockUICombination)
             disabled={true}
           >
             .emotion-0:focus {
@@ -75,7 +75,7 @@ exports[`Popover renders a closed dropdown 1`] = `
                 </div>
               </SpacingBox>
             </div>
-          </FocusLockCombination>
+          </ForwardRef(FocusLockUICombination)>
         </Popover>
       }
       isOpen={false}
@@ -178,7 +178,7 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
           role="dialog"
           showPointerCaret={true}
         >
-          <FocusLockCombination
+          <ForwardRef(FocusLockUICombination)
             disabled={true}
           >
             .emotion-0:focus {
@@ -199,7 +199,7 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
                 </div>
               </SpacingBox>
             </div>
-          </FocusLockCombination>
+          </ForwardRef(FocusLockUICombination)>
         </Popover>
       }
       isOpen={false}
@@ -352,7 +352,7 @@ exports[`Popover renders an open dropdown 1`] = `
           role="dialog"
           showPointerCaret={true}
         >
-          <FocusLockCombination
+          <ForwardRef(FocusLockUICombination)
             disabled={false}
           >
             .emotion-0:focus {
@@ -373,7 +373,7 @@ exports[`Popover renders an open dropdown 1`] = `
                 </div>
               </SpacingBox>
             </div>
-          </FocusLockCombination>
+          </ForwardRef(FocusLockUICombination)>
         </Popover>
       }
       isOpen={true}
@@ -671,12 +671,13 @@ exports[`Popover renders an open dropdown 1`] = `
                         }
                       }
                     >
-                      <FocusLockCombination
+                      <ForwardRef(FocusLockUICombination)
                         disabled={false}
                       >
-                        <FocusLock
+                        <ForwardRef(FocusLockUI)
                           as="div"
                           autoFocus={true}
+                          crossFrame={true}
                           disabled={false}
                           lockProps={Object {}}
                           noFocusGuards={false}
@@ -716,14 +717,62 @@ exports[`Popover renders an open dropdown 1`] = `
                             }
                             tabIndex={1}
                           />
-                          <div
-                            data-focus-lock-disabled={false}
-                            onBlur={[Function]}
-                            onFocus={[Function]}
+                          <SideEffect(FocusWatcher)
+                            autoFocus={true}
+                            crossFrame={true}
+                            disabled={false}
+                            id={Object {}}
+                            observed={
+                              .emotion-0:focus {
+  outline: none;
+}
+
+.emotion-1 {
+  background-repeat: no-repeat;
+  padding: 16px;
+}
+
+<div
+                                data-focus-lock-disabled="false"
+                              >
+                                <div
+                                  class="emotion-0"
+                                  tabindex="-1"
+                                >
+                                  <div
+                                    class="emotion-1"
+                                    data-cy="spacingBox"
+                                  >
+                                    <div>
+                                      dropdown content
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            }
+                            onActivation={[Function]}
+                            onDeactivation={[Function]}
+                            persistentFocus={false}
+                            returnFocus={[Function]}
+                            shards={Array []}
+                            sideCar={
+                              Object {
+                                "assignMedium": [Function],
+                                "assignSyncMedium": [Function],
+                                "options": Object {
+                                  "async": true,
+                                  "ssr": false,
+                                },
+                                "read": [Function],
+                                "useMedium": [Function],
+                              }
+                            }
                           >
-                            <SideEffect(FocusWatcher)
+                            <FocusWatcher
                               autoFocus={true}
+                              crossFrame={true}
                               disabled={false}
+                              id={Object {}}
                               observed={
                                 .emotion-0:focus {
   outline: none;
@@ -769,57 +818,13 @@ exports[`Popover renders an open dropdown 1`] = `
                                   "useMedium": [Function],
                                 }
                               }
-                            >
-                              <FocusWatcher
-                                autoFocus={true}
-                                disabled={false}
-                                observed={
-                                  .emotion-0:focus {
-  outline: none;
-}
-
-.emotion-1 {
-  background-repeat: no-repeat;
-  padding: 16px;
-}
-
-<div
-                                    data-focus-lock-disabled="false"
-                                  >
-                                    <div
-                                      class="emotion-0"
-                                      tabindex="-1"
-                                    >
-                                      <div
-                                        class="emotion-1"
-                                        data-cy="spacingBox"
-                                      >
-                                        <div>
-                                          dropdown content
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                }
-                                onActivation={[Function]}
-                                onDeactivation={[Function]}
-                                persistentFocus={false}
-                                returnFocus={[Function]}
-                                shards={Array []}
-                                sideCar={
-                                  Object {
-                                    "assignMedium": [Function],
-                                    "assignSyncMedium": [Function],
-                                    "options": Object {
-                                      "async": true,
-                                      "ssr": false,
-                                    },
-                                    "read": [Function],
-                                    "useMedium": [Function],
-                                  }
-                                }
-                              />
-                            </SideEffect(FocusWatcher)>
+                            />
+                          </SideEffect(FocusWatcher)>
+                          <div
+                            data-focus-lock-disabled={false}
+                            onBlur={[Function]}
+                            onFocus={[Function]}
+                          >
                             <div
                               className="emotion-3"
                               tabIndex={-1}
@@ -868,8 +873,8 @@ exports[`Popover renders an open dropdown 1`] = `
                             }
                             tabIndex={0}
                           />
-                        </FocusLock>
-                      </FocusLockCombination>
+                        </ForwardRef(FocusLockUI)>
+                      </ForwardRef(FocusLockUICombination)>
                     </div>
                     <div
                       className="emotion-6"
