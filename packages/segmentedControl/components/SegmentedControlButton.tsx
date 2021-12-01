@@ -66,11 +66,10 @@ class SegmentedControlButton extends React.PureComponent<
 
     return (
       <React.Fragment>
-        {/*
-        tslint:disable react-a11y-role-has-required-aria-props
-        This rule is asking for a `aria-checked` attribute on the input element.
+        {/* eslint-disable jsx-a11y/role-has-required-aria-props */
+        /* This rule is asking for a `aria-checked` attribute on the input element.
         We're already setting `checked`, so this is redundant and unnecessary.
-      */}
+        */}
         <FocusStyleManager focusEnabledClass={staticKeyboardFocusClassname}>
           <label
             className={cx(segmentedControlButton, {

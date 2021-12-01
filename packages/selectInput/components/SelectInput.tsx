@@ -153,7 +153,7 @@ class SelectInput extends React.PureComponent<
                 {...other}
               >
                 {options.map((option, key) => (
-                  /* tslint:disable react-a11y-role-has-required-aria-props */
+                  /* eslint-disable jsx-a11y/role-has-required-aria-props */
                   /* <option> tag doesn't need additional aria markup */
                   <option
                     key={key}
@@ -162,7 +162,7 @@ class SelectInput extends React.PureComponent<
                   >
                     {option.label}
                   </option>
-                  /* tslint:enable */
+                  /* eslint-enable jsx-a11y/role-has-required-aria-props */
                 ))}
               </select>
               <span

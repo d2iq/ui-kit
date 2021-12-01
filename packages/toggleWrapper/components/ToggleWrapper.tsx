@@ -61,10 +61,10 @@ class ToggleWrapper extends React.PureComponent<
     delete other.onBlur;
 
     return (
-      // tslint is giving an error because it can't tell that the value of `type`
+      // eslint is giving an error because it can't tell that the value of `type`
       // will be "radio" or "checkbox".
       // Passing either string directly makes the error go away
-      // tslint:disable react-a11y-role-supports-aria-props
+      /* eslint-disable jsx-a11y/role-supports-aria-props */
       <label htmlFor={id} className={display("block")}>
         <input
           id={id}
@@ -78,7 +78,7 @@ class ToggleWrapper extends React.PureComponent<
         />
         {children({ isActive, hasFocus })}
       </label>
-      // tslint:enable
+      /* eslint-enable jsx-a11y/role-supports-aria-props */
     );
   }
 

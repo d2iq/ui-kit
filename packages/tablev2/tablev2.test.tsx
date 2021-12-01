@@ -58,7 +58,6 @@ const mockData = [
   }
 ];
 
-/* tslint:disable:jsx-no-lambda */
 // This set of columns is meant to cover as many features as possible.
 // It uses the following features:
 // - <Column textAlign>
@@ -231,6 +230,7 @@ describe("Table v2", () => {
       );
     });
     // TODO: figure out how we could simulate resizing
+    /* eslint-disable @typescript-eslint/no-empty-function */
     it.skip("calls onStateChange when a column is resized", () => {});
   });
 
@@ -281,4 +281,3 @@ describe("Table v2", () => {
     });
   });
 });
-/* tslint:enable */

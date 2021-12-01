@@ -22,8 +22,9 @@ module.exports = {
       testPathIgnorePatterns: ["design-tokens"],
       testMatch: [
         "<rootDir>/packages/**/*.{ts|tsx}",
-        "tslint.json",
+        "eslint.json",
         "tsconfig.json",
+        "tsconfig.lint.json",
         "tsconfig.dist.json"
       ]
     }

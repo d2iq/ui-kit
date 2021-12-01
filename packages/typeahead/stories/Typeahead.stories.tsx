@@ -56,7 +56,7 @@ const onSelectHandler = selectedItems => {
 export const WithOnSelectCallback = Template.bind({});
 WithOnSelectCallback.args = {
   onSelect: onSelectHandler,
-  items: items
+  items
 };
 
 export const ComplexListItems = Template.bind({});

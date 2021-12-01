@@ -168,7 +168,7 @@ const onSelect = selectedItem => {
 
 export const WithOnSelectCallback = Template.bind({});
 WithOnSelectCallback.args = {
-  onSelect: onSelect
+  onSelect
 };
 
 export const WithSections = args => (
