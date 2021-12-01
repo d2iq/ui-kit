@@ -32,11 +32,10 @@ const Avatar: React.FC<AvatarProps> = ({
     aria-label={label}
     data-cy="avatar"
   >
-    {/*
-          tslint:disable react-a11y-img-has-alt
-          intententionally not setting "alt" so it doesn't appear in the avatar
-          box when/if src is empty or a broken URL
-        */}
+    {/* eslint-disable jsx-a11y/alt-text */
+    /* intententionally not setting "alt" so it doesn't appear in the avatar
+      box when/if src is empty or a broken URL
+      */}
     <img className={avatarImg} src={src} alt="" />
   </div>
 );

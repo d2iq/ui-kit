@@ -129,7 +129,7 @@ const SlideToggle: React.FC<React.PropsWithRef<SlideToggleProps>> = props => {
             <div className={cx(flexItem("shrink"), display("inherit"))}>
               <>
                 <div className={cx(toggleContainer)}>
-                  {/* tslint:disable react-a11y-role-has-required-aria-props */}
+                  {/* eslint-disable jsx-a11y/role-has-required-aria-props */}
                   <input
                     type={inputType}
                     id={id}

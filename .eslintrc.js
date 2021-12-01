@@ -12,9 +12,18 @@ https://github.com/typescript-eslint/tslint-to-eslint-config/blob/master/docs/FA
 Happy linting! 💖
 */
 module.exports = {
+    "root": true,
     "env": {
         "browser": true,
-        "node": true
+        "node": true,
+        "es6": true,
+        "jest": true
+    },
+    "globals": {
+        "React": true,
+        "JSX": true,
+        "Faker": true,
+        "NodeJS": true
     },
     "settings": {
         "react": {
@@ -22,32 +31,32 @@ module.exports = {
         },
     },
     "extends": [
+        "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "eslint:recommended",
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
-        "prettier",
+        "prettier"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "project": "tsconfig.json",
+        "project": "./tsconfig.lint.json",
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
-          }
+        }
     },
     "plugins": [
-        "eslint-plugin-react",
+        "@typescript-eslint",
         "eslint-plugin-import",
-        "eslint-plugin-unicorn",
         "eslint-plugin-jsdoc",
         "eslint-plugin-prefer-arrow",
-        "jsx-a11y",
-        "@typescript-eslint",
-        "@typescript-eslint/tslint",
-        "react"
+        "eslint-plugin-react",
+        "eslint-plugin-unicorn",
+        "jest",
+        "jsx-a11y"
     ],
+    "ignorePatterns": ["**/*.d.*"],
     "rules": {
         "@typescript-eslint/adjacent-overload-signatures": "error",
         "@typescript-eslint/array-type": [
@@ -57,9 +66,9 @@ module.exports = {
             }
         ],
         "@typescript-eslint/await-thenable": "error",
-        "@typescript-eslint/ban-ts-comment": "error",
+        "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/ban-types": [
-            "error",
+            "off",
             {
                 "types": {
                     "Object": {
@@ -108,22 +117,21 @@ module.exports = {
         ],
         "@typescript-eslint/member-ordering": "error",
         "@typescript-eslint/naming-convention": "off",
-        "@typescript-eslint/no-array-constructor": "error",
+        "@typescript-eslint/no-array-constructor": "off",
         "@typescript-eslint/no-empty-function": "error",
         "@typescript-eslint/no-empty-interface": "error",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-extra-non-null-assertion": "error",
-        "@typescript-eslint/no-extra-semi": "error",
         "@typescript-eslint/no-floating-promises": "error",
         "@typescript-eslint/no-for-in-array": "error",
         "@typescript-eslint/no-implied-eval": "error",
-        "@typescript-eslint/no-inferrable-types": "error",
+        "@typescript-eslint/no-inferrable-types": "off",
         "@typescript-eslint/no-loss-of-precision": "error",
         "@typescript-eslint/no-misused-new": "error",
         "@typescript-eslint/no-misused-promises": "error",
         "@typescript-eslint/no-namespace": "error",
         "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
-        "@typescript-eslint/no-non-null-assertion": "warn",
+        "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/no-parameter-properties": "off",
         "@typescript-eslint/no-shadow": [
             "off",
@@ -133,14 +141,14 @@ module.exports = {
         ],
         "@typescript-eslint/no-this-alias": "error",
         "@typescript-eslint/no-unnecessary-type-assertion": "error",
-        "@typescript-eslint/no-unnecessary-type-constraint": "error",
+        "@typescript-eslint/no-unnecessary-type-constraint": "off",
         "@typescript-eslint/no-unsafe-argument": "off",
-        "@typescript-eslint/no-unsafe-assignment": "error",
-        "@typescript-eslint/no-unsafe-call": "error",
-        "@typescript-eslint/no-unsafe-member-access": "error",
-        "@typescript-eslint/no-unsafe-return": "error",
-        "@typescript-eslint/no-unused-expressions": "error",
-        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unused-expressions": "off",
+        "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/no-use-before-define": "off",
         "@typescript-eslint/no-var-requires": "error",
         "@typescript-eslint/prefer-as-const": "error",
@@ -150,8 +158,8 @@ module.exports = {
         "@typescript-eslint/prefer-readonly": "error",
         "@typescript-eslint/quotes": "off",
         "@typescript-eslint/require-await": "error",
-        "@typescript-eslint/restrict-plus-operands": "error",
-        "@typescript-eslint/restrict-template-expressions": "error",
+        "@typescript-eslint/restrict-plus-operands": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
         "@typescript-eslint/semi": [
             "off",
             null
@@ -167,7 +175,7 @@ module.exports = {
         "@typescript-eslint/type-annotation-spacing": "off",
         "@typescript-eslint/unbound-method": "off",
         "@typescript-eslint/unified-signatures": "error",
-        "arrow-body-style": "error",
+        "arrow-body-style": "off",
         "arrow-parens": [
             "off",
             "always"
@@ -196,19 +204,19 @@ module.exports = {
         "id-match": "off",
         "import/order": "off",
         "indent": "off",
-        "jsdoc/check-alignment": "error",
+        "jsdoc/check-alignment": "off",
         "jsdoc/check-indentation": "error",
         "jsdoc/newline-after-description": "error",
         "jsx-a11y/alt-text": "error",
         "jsx-a11y/anchor-is-valid": "error",
         "jsx-a11y/aria-props": "error",
-        "jsx-a11y/aria-proptypes": "error",
+        "jsx-a11y/aria-proptypes": "off",
         "jsx-a11y/aria-role": "error",
         "jsx-a11y/lang": "error",
         "jsx-a11y/no-static-element-interactions": "error",
         "jsx-a11y/role-has-required-aria-props": "error",
         "jsx-a11y/role-supports-aria-props": "error",
-        "jsx-a11y/tabindex-no-positive": "error",
+        "jsx-a11y/tabindex-no-positive": "off",
         "linebreak-style": "off",
         "max-classes-per-file": [
             "error",
@@ -217,7 +225,6 @@ module.exports = {
         "max-len": "off",
         "new-parens": "off",
         "newline-per-chained-call": "off",
-        "no-array-constructor": "off",
         "no-bitwise": "error",
         "no-caller": "error",
         "no-cond-assign": "error",
@@ -229,7 +236,7 @@ module.exports = {
         "no-empty-function": "off",
         "no-eval": "error",
         "no-extra-bind": "error",
-        "no-extra-semi": "off",
+        "no-extra-boolean-cast": "off",
         "no-fallthrough": "off",
         "no-implied-eval": "off",
         "no-invalid-this": "off",
@@ -237,13 +244,13 @@ module.exports = {
         "no-loss-of-precision": "off",
         "no-multiple-empty-lines": "off",
         "no-new-wrappers": "error",
+        "no-redeclare": "off",
         "no-shadow": "off",
         "no-throw-literal": "error",
         "no-trailing-spaces": "off",
         "no-undef-init": "error",
         "no-underscore-dangle": "off",
         "no-unsafe-finally": "error",
-        "no-unused-expressions": "error",
         "no-unused-labels": "error",
         "no-unused-vars": "off",
         "no-use-before-define": "off",
@@ -262,7 +269,7 @@ module.exports = {
                 "allowSingleLineBlocks": true
             }
         ],
-        "prefer-arrow/prefer-arrow-functions": "error",
+        "prefer-arrow/prefer-arrow-functions": "off",
         "prefer-const": [
             "error",
             {
@@ -273,14 +280,14 @@ module.exports = {
         "quote-props": "off",
         "quotes": "off",
         "radix": "error",
-        "react/display-name": "error",
+        "react/display-name": "off",
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
-        "react/jsx-boolean-value": "error",
+        "react-hooks/exhaustive-deps": "off",
+        "react/jsx-boolean-value": "off",
         "react/jsx-curly-spacing": "off",
         "react/jsx-equals-spacing": "off",
         "react/jsx-key": "error",
-        "react/jsx-no-bind": "error",
+        "react/jsx-no-bind": "off",
         "react/jsx-no-comment-textnodes": "error",
         "react/jsx-no-duplicate-props": "error",
         "react/jsx-no-target-blank": "error",
@@ -295,18 +302,18 @@ module.exports = {
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "react/jsx-wrap-multilines": "off",
-        "react/no-children-prop": "error",
+        "react/no-children-prop": "off",
         "react/no-danger-with-children": "error",
         "react/no-deprecated": "error",
         "react/no-direct-mutation-state": "error",
-        "react/no-find-dom-node": "error",
+        "react/no-find-dom-node": "off",
         "react/no-is-mounted": "error",
         "react/no-render-return-value": "error",
         "react/no-string-refs": "error",
-        "react/no-unescaped-entities": "error",
+        "react/no-unescaped-entities": "off",
         "react/no-unknown-property": "error",
         "react/no-unsafe": "off",
-        "react/prop-types": "error",
+        "react/prop-types": "off",
         "react/react-in-jsx-scope": "error",
         "react/require-render-return": "error",
         "react/self-closing-comp": "error",
@@ -318,7 +325,7 @@ module.exports = {
             "never"
         ],
         "spaced-comment": [
-            "error",
+            "off",
             "always",
             {
                 "markers": [
@@ -326,7 +333,7 @@ module.exports = {
                 ]
             }
         ],
-        "unicorn/prefer-ternary": "error",
+        "unicorn/prefer-ternary": "off",
         "use-isnan": "error",
         "valid-typeof": "off"
     }

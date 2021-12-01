@@ -19,7 +19,7 @@ export const defaultTabDirection = "horiz";
 // Copy & paste from node_modules/react-tabs/style/react-tabs.css
 // Also changed to better fit the ui kit styles.
 // This is needed to give the tabs a style
-/* tslint:disable */
+/* eslint-disable */
 injectGlobal`
 .react-tabs {
   -webkit-tap-highlight-color: transparent;
@@ -69,7 +69,7 @@ injectGlobal`
   display: block;
 }
 `;
-/* tslint:enable */
+/* eslint-enable */
 
 export type TabDirections = "horiz" | "vert";
 export type TabDirection = BreakpointConfig<TabDirections>;

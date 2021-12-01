@@ -1,10 +1,10 @@
 import * as React from "react";
 import { css } from "@emotion/css";
 
-/* tslint:disable */
+/* eslint-disable */
 const productIconSprite = require("!svg-inline-loader!../packages/icons/dist/product-icons-sprite.svg");
 const systemIconSprite = require("!svg-inline-loader!../packages/icons/dist/system-icons-sprite.svg");
-/* tslint:enable */
+/* eslint-enable */
 
 const fauxDisplayNone = css`
   visibility: hidden;

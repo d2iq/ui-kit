@@ -1,7 +1,6 @@
 import * as React from "react";
-import { GridListProps } from "../components/GridList";
+import GridList, { GridListProps } from "../components/GridList";
 import styled from "@emotion/styled";
-import GridList from "../components/GridList";
 import {
   spaceL,
   themeBrandPrimary

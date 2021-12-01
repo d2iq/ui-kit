@@ -22,7 +22,7 @@ const IconGrid = props => {
     <div style={{ backgroundColor: darkMode ? greyDark : "" }}>
       <div className={iconGrid}>
         {Object.keys(iconEnum).map(name => (
-          <div>
+          <div key={name}>
             <svg
               preserveAspectRatio="xMinYMin meet"
               width={48}

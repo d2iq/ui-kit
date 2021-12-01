@@ -344,7 +344,7 @@ export const CellsRenderedWithReactComponents = () => (
         id: "email",
         header: "Email",
         render: x => (
-          <a href={`mailto:${x.email}`} target="_blank">
+          <a href={`mailto:${x.email}`} target="_blank" rel="noreferrer">
             {x.email}
           </a>
         )
@@ -354,7 +354,7 @@ export const CellsRenderedWithReactComponents = () => (
         id: "website",
         header: "Website",
         render: x => (
-          <a href={x.website} target="_blank">
+          <a href={x.website} target="_blank" rel="noreferrer">
             {x.website}
           </a>
         )
@@ -440,6 +440,7 @@ export const UsingOnStateChange = () => (
   </>
 );
 
+/* eslint-disable react-hooks/rules-of-hooks */
 const everySecond = fn => {
   const [i, setI] = React.useState(0);
   let intervalId = null;
