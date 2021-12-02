@@ -19,8 +19,7 @@ const webpackBase = {
             options: {
               transpileOnly: true
             }
-          },
-          "react-docgen-typescript-loader"
+          }
         ]
       },
       {
