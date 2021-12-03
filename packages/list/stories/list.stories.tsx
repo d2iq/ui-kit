@@ -1,54 +1,35 @@
 import * as React from "react";
-import { withKnobs, select } from "@storybook/addon-knobs";
+import { SharedListProps } from "../components/List";
 import { List } from "../index";
+import { Story, Meta } from "@storybook/react";
 
+const markerStyles = {
+  disc: "disc",
+  circle: "circle",
+  upperRoman: "upper-roman",
+  lowerRoman: "lower-roman",
+  upperLatin: "upper-latin",
+  lowerLatin: "lower-latin"
+};
 export default {
   title: "Data Listing/List",
-  decorators: [withKnobs],
-  component: List
-};
+  component: List,
+  argTypes: {
+    markerStyle: {
+      options: Object.values(markerStyles),
+      control: {
+        type: "select"
+      }
+    }
+  }
+} as Meta;
 
-export const Default = () => (
-  <List>
-    <li>List item</li>
-    <li>List item</li>
-    <li>List item</li>
+const Template: Story<SharedListProps> = args => (
+  <List {...args}>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
   </List>
 );
 
-export const MarkerStyle = () => {
-  const markerStyles = {
-    disc: "disc",
-    circle: "circle",
-    upperRoman: "upper-roman",
-    lowerRoman: "lower-roman",
-    upperLatin: "upper-latin",
-    lowerLatin: "lower-latin"
-  };
-  const markerStyle = select("align", markerStyles, "disc");
-
-  return (
-    <List markerStyle={markerStyle}>
-      <li>List item</li>
-      <li>List item</li>
-      <li>List item</li>
-    </List>
-  );
-};
-
-export const NestedWithItemMarkers = () => (
-  <List markerStyle="disc">
-    <li>List item</li>
-    <li>List item</li>
-    <li>
-      Nested List
-      <List markerStyle="circle">
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-      </List>
-    </li>
-    <li>List item</li>
-    <li>List item</li>
-  </List>
-);
+export const Default = Template.bind({});

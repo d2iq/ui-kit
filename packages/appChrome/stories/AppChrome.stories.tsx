@@ -1,16 +1,8 @@
 import * as React from "react";
 import { action } from "@storybook/addon-actions";
-import { ThemeProvider } from "@emotion/react";
-import {
-  number,
-  select,
-  text,
-  object,
-  boolean,
-  withKnobs
-} from "@storybook/addon-knobs";
+import { Story, Meta } from "@storybook/react";
+
 import { SidebarBareContent } from "./helpers/StorybookSidebarHelpers";
-import DCOSAppChrome from "./helpers/DCOSAppChrome";
 import AppChrome from "../components/AppChrome";
 import Sidebar from "../components/Sidebar";
 import SidebarSection from "../components/SidebarSection";
@@ -20,38 +12,14 @@ import SidebarSubMenu from "../components/SidebarSubMenu";
 import SidebarSubMenuItem from "../components/SidebarSubMenuItem";
 import HeaderBar from "../components/HeaderBar";
 import { padding } from "../../shared/styles/styleUtils";
-import {
-  white,
-  black,
-  cyan,
-  greyLight,
-  greyDark,
-  greyDarkLighten2,
-  red,
-  yellow,
-  green,
-  blue,
-  pink,
-  purple
-} from "../../design-tokens/build/js/designTokens";
 import { ProductIcons } from "../../icons/dist/product-icons-enum";
-import { Icon } from "../../icon";
-import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
-
-const iconWidths = Object.keys(iconSizes).reduce((acc, curr) => {
-  acc[curr] = curr;
-  return acc;
-}, {});
 
 export default {
   title: "Page Structure/App Chrome",
-  decorators: [withKnobs],
   component: AppChrome
-};
+} as Meta;
 
-export const AppChromeDcosClone = () => <DCOSAppChrome sidebarIsOpen={true} />;
-
-export const AppChromeBare = () => (
+export const AppChromeBare = args => (
   <AppChrome
     sidebar={
       <Sidebar isOpen={true}>
@@ -65,13 +33,13 @@ export const AppChromeBare = () => (
   />
 );
 
-export const SidebarBare = () => (
+export const SidebarBare = args => (
   <Sidebar isOpen={true}>
     <SidebarBareContent />
   </Sidebar>
 );
 
-export const SidebarWItems = () => (
+export const SidebarWItems = args => (
   <Sidebar isOpen={true}>
     <SidebarSection label="Section header">
       <SidebarItem url="http://google.com" key="one">
@@ -93,7 +61,7 @@ export const SidebarWItems = () => (
   </Sidebar>
 );
 
-export const SidebarWithItemsWithOnClick = () => (
+export const SidebarWithItemsWithOnClick = args => (
   <Sidebar isOpen={true}>
     <SidebarSection label="Section header">
       <SidebarItem onClick={action("clicked a nav item")} key="one">
@@ -115,7 +83,7 @@ export const SidebarWithItemsWithOnClick = () => (
   </Sidebar>
 );
 
-export const SidebarWithItemsActive = () => (
+export const SidebarWithItemsActive = args => (
   <Sidebar isOpen={true}>
     <SidebarSection label="Section header">
       <SidebarItem url="http://google.com" isActive={true} key="one">
@@ -137,7 +105,7 @@ export const SidebarWithItemsActive = () => (
   </Sidebar>
 );
 
-export const SidebarItemsWithIcons = () => (
+export const SidebarItemsWithIcons = args => (
   <Sidebar isOpen={true}>
     <SidebarSection label="Section header">
       <SidebarItem url="http://google.com" key="one">
@@ -185,7 +153,7 @@ export const SidebarItemsWithIcons = () => (
   </Sidebar>
 );
 
-export const SidebarWithSubmenus = () => (
+export const SidebarWithSubmenus = args => (
   <Sidebar isOpen={true}>
     <SidebarSection label="Section header">
       <SidebarSubMenu
@@ -252,7 +220,7 @@ export const SidebarWithSubmenus = () => (
   </Sidebar>
 );
 
-export const SidebarSubmenusWithOnClick = () => (
+export const SidebarSubmenusWithOnClick = args => (
   <Sidebar isOpen={true}>
     <SidebarSection label="Section header">
       <SidebarSubMenu
@@ -349,7 +317,7 @@ export const SidebarSubmenusWithOnClick = () => (
   </Sidebar>
 );
 
-export const SidebarSubmenusActive = () => (
+export const SidebarSubmenusActive = args => (
   <Sidebar isOpen={true}>
     <SidebarSection label="Section header">
       <SidebarSubMenu
@@ -417,7 +385,7 @@ export const SidebarSubmenusActive = () => (
   </Sidebar>
 );
 
-export const SidebarWSubmenusWIcons = () => (
+export const SidebarWSubmenusWIcons = args => (
   <Sidebar isOpen={true}>
     <SidebarSection label="Section header">
       <SidebarSubMenu
@@ -504,7 +472,7 @@ export const SidebarWSubmenusWIcons = () => (
   </Sidebar>
 );
 
-export const SidebarWDisabledItems = () => (
+export const SidebarWDisabledItems = args => (
   <Sidebar isOpen={true}>
     <SidebarSection label="Section header">
       <SidebarItem disabled={true} url="http://google.com" key="one">
@@ -558,286 +526,3 @@ export const SidebarWDisabledItems = () => (
 export const HeaderBarBare = () => (
   <HeaderBar>HeaderBar content goes here</HeaderBar>
 );
-
-export const HeaderBarCustomizableWKnobs = () => {
-  const content = text("Content", "HeaderBar content goes here");
-  const colors = {
-    black,
-    white,
-    cyan,
-    greyLight,
-    greyDark,
-    red,
-    yellow,
-    green,
-    blue,
-    pink,
-    purple
-  };
-  const color = select("Color", colors, black);
-
-  const paddingSizes = {
-    xs: "xs",
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl",
-    xxl: "xxl",
-    none: "none"
-  };
-
-  const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
-  const paddingVertSize = select("Vertical Padding", paddingSizes, "xs");
-
-  const CustomTheme = {
-    headerBackgroundColor: color,
-    headerPaddingHor: paddingHorSize,
-    headerPaddingVert: paddingVertSize
-  };
-
-  return (
-    <ThemeProvider theme={CustomTheme}>
-      <HeaderBar>{content}</HeaderBar>
-    </ThemeProvider>
-  );
-};
-
-export const SidebarCustomizableKnobs = () => {
-  const sectionHeader = text("Section Header", "Section Header");
-
-  const colors = {
-    black,
-    white,
-    cyan,
-    greyLight,
-    greyDark,
-    red,
-    yellow,
-    green,
-    blue,
-    pink,
-    purple
-  };
-  const color = select("Color", colors, black);
-
-  const paddingSizes = {
-    xs: "xs",
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl",
-    xxl: "xxl",
-    none: "none"
-  };
-
-  const paddingHorSize = select(
-    "Sidebar Header Horizontal Padding",
-    paddingSizes,
-    "l"
-  );
-  const paddingVertSize = select(
-    "Sidebar Header Vertical Padding",
-    paddingSizes,
-    "xs"
-  );
-
-  const sidebarWidth = number("Width (Min: 200px, Max: 800px)", 240, {
-    range: true,
-    min: 200,
-    max: 800,
-    step: 1
-  });
-
-  const sidebarIsOpen = boolean("isOpen", true);
-
-  const CustomTheme = {
-    sidebarBackgroundColor: color,
-    sidebarHeaderPaddingHor: paddingHorSize,
-    sidebarHeaderPaddingVert: paddingVertSize,
-    sidebarWidth: `${sidebarWidth}px`
-  };
-
-  return (
-    <ThemeProvider theme={CustomTheme}>
-      <Sidebar isOpen={sidebarIsOpen}>
-        <SidebarSection label={sectionHeader}>
-          <SidebarItem isActive={true} url="http://google.com" key="one">
-            <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem url="http://google.com" key="two">
-            <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem url="http://google.com" key="three">
-            <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem url="http://google.com" key="four">
-            <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem url="http://google.com" key="five">
-            <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
-          </SidebarItem>
-        </SidebarSection>
-      </Sidebar>
-    </ThemeProvider>
-  );
-};
-
-export const SidebarResponsiveWidthWithKnobs = () => {
-  const responsiveWidthsValue = object(
-    "Responsive widths",
-    { default: "200px", large: "300px" },
-    "responsiveWidths"
-  );
-  const sidebarIsOpen = boolean("isOpen", true);
-
-  const CustomTheme = {
-    sidebarWidth: responsiveWidthsValue
-  };
-
-  return (
-    <ThemeProvider theme={CustomTheme}>
-      <Sidebar isOpen={sidebarIsOpen}>
-        <SidebarSection label="Section header">
-          <SidebarItem isActive={true} url="http://google.com">
-            <SidebarItemLabel>Lorem Ipsum</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem url="http://google.com">
-            <SidebarItemLabel>Dolor Sit</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem url="http://google.com">
-            <SidebarItemLabel>Amet Consecutor</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem url="http://google.com">
-            <SidebarItemLabel>Adipiscing Edit</SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem url="http://google.com">
-            <SidebarItemLabel>Praesent Massa</SidebarItemLabel>
-          </SidebarItem>
-        </SidebarSection>
-      </Sidebar>
-    </ThemeProvider>
-  );
-};
-
-export const SidebarItemCustomizableWithKnobs = () => {
-  const sectionHeader = text("Section Header", "Section Header");
-  const content = text("Text", "Lorem Ipsum");
-
-  const paddingSizes = {
-    xs: "xs",
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl",
-    xxl: "xxl",
-    none: "none"
-  };
-
-  const paddingHorSize = select("Horizontal Padding", paddingSizes, "l");
-  const paddingVertSize = select("Vertical Padding", paddingSizes, "xs");
-  const iconWidth = select("Size", iconWidths, "s");
-
-  const colors = {
-    greyDarkLighten2,
-    black,
-    cyan,
-    red,
-    green,
-    blue,
-    purple
-  };
-  const hoverColor = select("Hover background color", colors, greyDarkLighten2);
-  const activeColor = select("Selected background color", colors, purple);
-
-  const CustomTheme = {
-    itemActiveBackgroundColor: activeColor,
-    itemHoverBackgroundColor: hoverColor,
-    sidebarItemPaddingHor: paddingHorSize,
-    sidebarItemPaddingVert: paddingVertSize,
-    iconWidth
-  };
-
-  return (
-    <ThemeProvider theme={CustomTheme}>
-      <Sidebar isOpen={true}>
-        <SidebarSection label={sectionHeader}>
-          <SidebarItem url="http://google.com">
-            <SidebarItemLabel
-              icon={
-                <Icon shape={ProductIcons.ServicesInverse} size={iconWidth} />
-              }
-            >
-              {content}
-            </SidebarItemLabel>
-          </SidebarItem>
-          <SidebarItem url="http://google.com" isActive={true}>
-            <SidebarItemLabel
-              icon={
-                <Icon shape={ProductIcons.ServicesInverse} size={iconWidth} />
-              }
-            >
-              {content}
-            </SidebarItemLabel>
-          </SidebarItem>
-        </SidebarSection>
-      </Sidebar>
-    </ThemeProvider>
-  );
-};
-
-export const SidebarSubMenuCustomizableWithKnobs = () => {
-  const sectionHeader = text("Section Header", "Section Header");
-  const iconWidth = select("Size", iconWidths, "s");
-
-  const colors = {
-    greyDarkLighten2,
-    black,
-    cyan,
-    red,
-    green,
-    blue,
-    purple
-  };
-  const hoverColor = select("Hover background color", colors, greyDarkLighten2);
-  const activeColor = select("Active background color", colors, purple);
-
-  const CustomTheme = {
-    itemActiveBackgroundColor: activeColor,
-    itemHoverBackgroundColor: hoverColor,
-    iconWidth
-  };
-
-  return (
-    <Sidebar isOpen={true}>
-      <SidebarSection label={sectionHeader}>
-        <ThemeProvider theme={CustomTheme}>
-          <SidebarSubMenu
-            label={
-              <SidebarItemLabel
-                icon={
-                  <Icon shape={ProductIcons.ServicesInverse} size={iconWidth} />
-                }
-              >
-                Praesent Massa
-              </SidebarItemLabel>
-            }
-            iconWidth={iconWidth}
-            isOpen={true}
-            menuHasIcon={true}
-          >
-            <SidebarSubMenuItem url="http://google.com" key="subItemOne">
-              Lorem Ipsum
-            </SidebarSubMenuItem>
-            <SidebarSubMenuItem
-              url="http://google.com"
-              isActive={true}
-              key="subItemTwo"
-            >
-              Dolor Sit
-            </SidebarSubMenuItem>
-          </SidebarSubMenu>
-        </ThemeProvider>
-      </SidebarSection>
-    </Sidebar>
-  );
-};

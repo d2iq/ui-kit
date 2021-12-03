@@ -2,8 +2,8 @@ import React from "react";
 import { css } from "@emotion/css";
 
 import Dropdownable, { Direction } from "../../components/Dropdownable";
-import DropdownStuffContainer from "./DropdownStuffContainer";
 import { PrimaryButton, SecondaryButton } from "../../../button";
+import { DropdownContentContainer } from "./DropdownStory";
 
 class DropdownStoryFit extends React.PureComponent<
   {},
@@ -54,7 +54,7 @@ class DropdownStoryFit extends React.PureComponent<
             onClose={this.handleClose}
             preferredDirections={[Direction.TopRight, Direction.BottomRight]}
             dropdown={
-              <DropdownStuffContainer>
+              <DropdownContentContainer>
                 <p>I prefer to be positioned on the top</p>
                 <p>Click outside to dismiss</p>
                 <p>Also try resizing</p>
@@ -63,7 +63,7 @@ class DropdownStoryFit extends React.PureComponent<
                 <p>Click the other button to make more vertical space</p>
                 <p>Click the other button to make more vertical space</p>
                 <p>Click the other button to make more vertical space</p>
-              </DropdownStuffContainer>
+              </DropdownContentContainer>
             }
           >
             <PrimaryButton onClick={this.handleOpen}>{children}</PrimaryButton>

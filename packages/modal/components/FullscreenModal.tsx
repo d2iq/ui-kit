@@ -2,7 +2,7 @@ import * as React from "react";
 import ModalBase from "../components/ModalBase";
 import { ModalBaseProps, ModalSizes } from "./ModalBase";
 import { ButtonProps } from "../../button/components/ButtonBase";
-import FullscreenView from "../../fullscreenView/components/FullscrenView";
+import FullscreenView from "../../fullscreenView/components/FullscreenView";
 
 interface FullscreenModalProps extends ModalBaseProps {
   /** The primary button */

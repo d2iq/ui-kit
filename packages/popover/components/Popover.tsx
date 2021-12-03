@@ -12,7 +12,7 @@ import {
 import { ResetButton } from "../../button";
 import { display } from "../../shared/styles/styleUtils";
 
-interface PopoverProps
+export interface PopoverProps
   extends Omit<DropdownableProps, "isOpen" | "dropdown" | "onClose"> {
   /**
    * A unique identifier to help screenreaders or UI testing tools associate the dropdown content with it's trigger button. If an ID prop is not provided, an arbitrary ID will be generated.

@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { Story, Meta } from "@storybook/react";
 import { PageHeader, PageHeaderBody, PageHeaderTabs } from "../index";
 import { PrimaryButton, SecondaryButton, ResetButton } from "../../button";
 import { Tabs, TabItem, TabTitle } from "../../tabs";
@@ -10,15 +10,16 @@ import {
 } from "../../dropdownMenu";
 import { Icon } from "../../icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
+import { PageHeaderProps } from "../components/PageHeader";
 
 const action = () => alert("Action triggered");
 
 export default {
   title: "Page Structure/Page Header",
   component: PageHeader
-};
+} as Meta;
 
-export const Default = () => (
+const Template: Story<PageHeaderProps> = args => (
   <PageHeader
     breadcrumbElements={[
       <div key="Universe">Universe</div>,
@@ -33,10 +34,13 @@ export const Default = () => (
         Primary
       </PrimaryButton>
     ]}
+    {...args}
   />
 );
 
-export const WithOverflowMenu = () => (
+export const Default = Template.bind({});
+
+export const WithOverflowMenu = args => (
   <PageHeader
     breadcrumbElements={[
       <div key="Universe">Universe</div>,
@@ -57,6 +61,7 @@ export const WithOverflowMenu = () => (
             <Icon shape={SystemIcons.EllipsisVertical} />
           </ResetButton>
         }
+        {...args}
       >
         <DropdownSection>
           <DropdownMenuItem key="overflowone" value="overflowone">
@@ -74,23 +79,25 @@ export const WithOverflowMenu = () => (
   />
 );
 
-export const WithoutActions = () => (
+export const WithoutActions = args => (
   <PageHeader
     breadcrumbElements={[
       <div key="Universe">Universe</div>,
       <div key="MilkyWay">Milky Way</div>,
       <div key="Earth">Earth</div>
     ]}
+    {...args}
   />
 );
 
-export const WithPageHeaderBody = () => (
+export const WithPageHeaderBody = args => (
   <PageHeader
     breadcrumbElements={[
       <div key="Universe">Universe</div>,
       <div key="MilkyWay">Milky Way</div>,
       <div key="Earth">Earth</div>
     ]}
+    {...args}
   >
     <PageHeaderBody>
       This content is rendered in the PageHeaderBody component
@@ -98,13 +105,14 @@ export const WithPageHeaderBody = () => (
   </PageHeader>
 );
 
-export const WithPageHeaderTabs = () => {
+export const WithPageHeaderTabs = args => {
   const tabOnSelect = selectedTab => {
     alert(`${selectedTab} clicked`);
   };
 
   return (
     <PageHeader
+      {...args}
       breadcrumbElements={[
         <div key="Universe">Universe</div>,
         <div key="MilkyWay">Milky Way</div>,
