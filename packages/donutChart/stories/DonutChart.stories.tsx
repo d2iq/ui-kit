@@ -1,5 +1,6 @@
 import * as React from "react";
 import { DonutChart } from "../index";
+import { Story, Meta } from "@storybook/react";
 import { purple, pink, blue } from "../../design-tokens/build/js/designTokens";
 import { css } from "@emotion/css";
 
@@ -10,53 +11,44 @@ const chartWrapper = css`
 export default {
   title: "Charts/DonutChart",
   component: DonutChart
+} as Meta;
+
+const Template = args => (
+  <div className={chartWrapper}>
+    <DonutChart
+      data={[
+        {
+          percentage: 25,
+          color: purple
+        }
+      ]}
+      {...args}
+    />
+  </div>
+);
+
+export const Default = Template.bind({});
+
+export const WithCenterLabelText = Template.bind({});
+WithCenterLabelText.args = {
+  label: "25%",
+  text: "1 of 4"
 };
 
-export const Default = () => (
-  <div className={chartWrapper}>
-    <DonutChart
-      data={[
-        {
-          percentage: 25,
-          color: purple
-        }
-      ]}
-    />
-  </div>
-);
-
-export const WithCenterLabelText = () => (
-  <div className={chartWrapper}>
-    <DonutChart
-      data={[
-        {
-          percentage: 25,
-          color: purple
-        }
-      ]}
-      label="25%"
-      text="1 of 4"
-    />
-  </div>
-);
-
-export const MultipleSegments = () => (
-  <div className={chartWrapper}>
-    <DonutChart
-      data={[
-        {
-          percentage: 10,
-          color: purple
-        },
-        {
-          percentage: 30,
-          color: pink
-        },
-        {
-          percentage: 20,
-          color: blue
-        }
-      ]}
-    />
-  </div>
-);
+export const MultipleSegments = Template.bind({});
+MultipleSegments.args = {
+  data: [
+    {
+      percentage: 10,
+      color: purple
+    },
+    {
+      percentage: 30,
+      color: pink
+    },
+    {
+      percentage: 20,
+      color: blue
+    }
+  ]
+};
