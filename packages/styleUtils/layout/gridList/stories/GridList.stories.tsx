@@ -28,15 +28,18 @@ export default {
     },
     gutterSize: {
       options: ["none", "xxs", "xs", "s", "m", "l", "xl", "xxl"],
-      control: { type: "select" }
+      control: { type: "select" },
+      defaultValue: "m"
     },
     centerItems: {
       options: [true, false],
-      control: { type: "boolean" }
+      control: { type: "boolean" },
+      defaultValue: false
     },
     tag: {
       options: ["ol", "ul"],
-      control: { type: "inline-radio" }
+      control: { type: "inline-radio" },
+      defaultValue: "ul"
     },
     className: {
       control: { disable: true }

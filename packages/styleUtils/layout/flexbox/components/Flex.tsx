@@ -7,7 +7,7 @@ import {
   applyFlexItemGutters
 } from "../../../../shared/styles/styleUtils/layout/flexbox";
 
-interface FlexProps extends FlexboxProperties {
+export interface FlexProps extends FlexboxProperties {
   className?: string;
   /**
    * The size of the space between each `FlexItem` child. Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints

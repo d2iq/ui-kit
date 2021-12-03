@@ -5,7 +5,7 @@ import { cx } from "@emotion/css";
 import { listReset } from "../../../../shared/styles/styleUtils";
 import { flex } from "../../../../shared/styles/styleUtils/layout/flexbox";
 
-interface StackProps {
+export interface StackProps {
   className?: string;
   /**
    * human-readable selector used for writing tests

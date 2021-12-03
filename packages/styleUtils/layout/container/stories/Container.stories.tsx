@@ -1,5 +1,6 @@
 import * as React from "react";
-import Container from "../components/Container";
+import Container, { ContainerProps } from "../components/Container";
+import { Story, Meta } from "@storybook/react";
 import {
   themeBgPrimary,
   themeBgSecondary
@@ -17,11 +18,11 @@ const contentBg = css`
 export default {
   title: "Layout/Container",
   component: Container
-};
+} as Meta;
 
-export const Default = () => (
+const Template: Story<ContainerProps> = args => (
   <div className={baseBg}>
-    <Container>
+    <Container {...args}>
       <div className={contentBg}>
         <p>Content is centered and the width is kept to a reasonable size</p>
         <p>
@@ -39,3 +40,5 @@ export const Default = () => (
     </Container>
   </div>
 );
+
+export const Default = Template.bind({});

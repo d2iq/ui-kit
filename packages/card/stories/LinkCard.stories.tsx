@@ -1,78 +1,45 @@
 import * as React from "react";
-import { withKnobs, select } from "@storybook/addon-knobs";
-import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 import LinkCard from "../components/LinkCard";
+import { Story, Meta } from "@storybook/react";
 
 export default {
   title: "Navigation/LinkCard",
-  decorators: [withKnobs],
-  component: LinkCard
-};
+  component: LinkCard,
+  argTypes: {
+    paddingSize: {
+      options: ["s", "m", "l", "xl"],
+      control: {
+        type: "select"
+      }
+    }
+  }
+} as Meta;
 
-export const Default = () => (
-  <LinkCard url="http://google.com" linkDescription="Google">
-    default
-  </LinkCard>
-);
-
-export const External = () => (
+const Template: Story = args => (
   <LinkCard
     url="http://google.com"
     linkDescription="Google"
+    {...args}
     openInNewTab={true}
   >
     default
   </LinkCard>
 );
-export const PaddingSize = () => {
-  const sizes = {
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl"
-  };
-  const size = select("paddingSize", sizes, "m");
 
-  return (
-    <LinkCard
-      paddingSize={size as SpaceSize}
-      url="http://google.com"
-      openInNewTab={true}
-      linkDescription="Google"
-    >
-      Use the Knobs panel to change the padding
-    </LinkCard>
-  );
+export const Default = Template.bind({});
+
+export const ResponsivePaddingSize = Template.bind({});
+ResponsivePaddingSize.args = {
+  paddingSize: {
+    default: "s",
+    small: "m",
+    medium: "l",
+    large: "xl",
+    jumbo: "xxl"
+  }
 };
 
-export const ResponsivePaddingSize = () => (
-  <LinkCard
-    paddingSize={{
-      default: "s",
-      small: "m",
-      medium: "l",
-      large: "xl",
-      jumbo: "xxl"
-    }}
-    url="http://google.com"
-    openInNewTab={true}
-    linkDescription="Google"
-  >
-    Resize the viewport to see the padding change
-  </LinkCard>
-);
-
-export const AspectRatio = () => (
-  <div style={{ maxWidth: "400px" }}>
-    <LinkCard
-      aspectRatio={[2, 1]}
-      url="http://google.com"
-      openInNewTab={true}
-      linkDescription="Google"
-    >
-      I stay at a 2:1 aspect ratio
-    </LinkCard>
-  </div>
-);
-
-AspectRatio.storyName = "2:1 Aspect Ratio";
+export const AspectRatio = Template.bind({});
+AspectRatio.args = {
+  aspectRatio: [2, 1]
+};
