@@ -1,58 +1,44 @@
 import * as React from "react";
-import { withKnobs, select } from "@storybook/addon-knobs";
-import BorderedBox from "../components/BorderedBox";
-import { BoxSides } from "../../../shared/styles/styleUtils/modifiers/modifierUtils";
-import { BorderRadii } from "../../../shared/styles/styleUtils/modifiers/border";
-import SpacingBox from "../components/SpacingBox";
+import BorderedBox, { BorderedBoxProps } from "../components/BorderedBox";
+import { Story, Meta } from "@storybook/react";
 
 export default {
   title: "Style Utilities/BorderedBox",
-  decorators: [withKnobs],
-  component: BorderedBox
-};
+  component: BorderedBox,
+  argTypes: {
+    side: {
+      options: ["all", "top", "right", "bottom", "left", "horiz", "vert"],
+      control: {
+        type: "select"
+      },
+      defaultValue: "all"
+    },
+    variant: {
+      options: ["normal", "heavy"],
+      defaultValue: "normal"
+    },
+    radius: {
+      options: ["none", "small", "default"],
+      control: {
+        type: "select"
+      }
+    },
+    bgColor: {
+      control: { type: "color" }
+    },
+    className: {
+      control: { disable: true }
+    },
+    "data-cy": {
+      control: { disable: true }
+    }
+  }
+} as Meta;
 
-export const Side = () => {
-  const sides = {
-    all: "all",
-    top: "top",
-    right: "right",
-    bottom: "bottom",
-    left: "left",
-    horiz: "horiz",
-    vert: "vert"
-  };
-  const side = select("side", sides, "all");
+const Template: Story<BorderedBoxProps> = args => (
+  <BorderedBox side="all" {...args}>
+    BorderedBox Content
+  </BorderedBox>
+);
 
-  return (
-    <BorderedBox side={side as BoxSides}>
-      <SpacingBox spacingSize="s">
-        Use the Knobs panel to change which sides the border appears on
-      </SpacingBox>
-    </BorderedBox>
-  );
-};
-
-export const HeavyVariant = () => {
-  return (
-    <BorderedBox side="all" variant="heavy">
-      <SpacingBox spacingSize="s">
-        Bordered with the "heavy" border variant
-      </SpacingBox>
-    </BorderedBox>
-  );
-};
-
-export const Radius = () => {
-  const radii = {
-    none: "none",
-    small: "small",
-    default: "default"
-  };
-  const radius = select("radius", radii, "default");
-
-  return (
-    <BorderedBox side="all" radius={radius as BorderRadii}>
-      <SpacingBox>Use the Knobs panel to change the border radius</SpacingBox>
-    </BorderedBox>
-  );
-};
+export const Default = Template.bind({});

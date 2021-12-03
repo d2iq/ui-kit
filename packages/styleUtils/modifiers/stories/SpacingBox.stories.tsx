@@ -1,112 +1,73 @@
 import * as React from "react";
-import { withKnobs, select, object } from "@storybook/addon-knobs";
-import SpacingBox from "../components/SpacingBox";
-import { outlineDecorator } from "./helpers/outlineDecorator";
-import {
-  BoxSides,
-  SpaceSize
-} from "../../../shared/styles/styleUtils/modifiers/modifierUtils";
+import SpacingBox, { SpacingBoxProps } from "../components/SpacingBox";
+import { Story, Meta } from "@storybook/react";
+import styled from "@emotion/styled";
+import { themeBrandPrimary } from "../../../design-tokens/build/js/designTokens";
+
+const StoryWrapper = styled.div`
+  border: 2px solid ${themeBrandPrimary};
+`;
 
 export default {
   title: "Style Utilities/SpacingBox",
-  decorators: [withKnobs, outlineDecorator],
-  component: SpacingBox
-};
-
-export const Default = () => <SpacingBox>Default spacing</SpacingBox>;
-
-export const Side = () => {
-  const sides = {
-    all: "all",
-    top: "top",
-    right: "right",
-    bottom: "bottom",
-    left: "left",
-    horiz: "horiz",
-    vert: "vert"
-  };
-  const side = select("side", sides, "all");
-
-  return (
-    <SpacingBox side={side as BoxSides}>
-      Use the Knobs panel to change which sides the spacing appears on
-    </SpacingBox>
-  );
-};
-
-export const SpacingSize = () => {
-  const sizes = {
-    xxs: "xxs",
-    xs: "xs",
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl",
-    xxl: "xxl",
-    none: "none"
-  };
-  const size = select("side", sizes, "m");
-
-  return (
-    <SpacingBox spacingSize={size as SpaceSize}>
-      Use the Knobs panel to change the size of the spacing
-    </SpacingBox>
-  );
-};
-
-export const ResponsiveSpacingSize = () => {
-  return (
-    <SpacingBox
-      spacingSize={{
-        default: "none",
-        small: "m",
-        medium: "l",
-        jumbo: "xl"
-      }}
-    >
-      Resize your viewport width to see the spacing change
-    </SpacingBox>
-  );
-};
-
-export const SpacingSizePerSide = () => {
-  const defaultValue = {
-    top: "m",
-    bottom: "xs",
-    horiz: "xl"
-  };
-  const spacingSizePerSide = object(
-    "spacingSizePerSide",
-    defaultValue,
-    "spacingSizePerSide"
-  );
-
-  return (
-    <SpacingBox
-      spacingSizePerSide={
-        spacingSizePerSide as { [Side in BoxSides]?: SpaceSize }
+  component: SpacingBox,
+  argTypes: {
+    spacingSize: {
+      options: ["xxs", "xs", "s", "m", "l", "xl", "xxl", "none"],
+      control: {
+        type: "select"
       }
-    >
-      Use the Knobs panel to change the sizes of the spacing per side
-    </SpacingBox>
-  );
+    },
+    side: {
+      options: ["all", "top", "right", "bottom", "left", "horiz", "vert"],
+      control: {
+        type: "select"
+      }
+    },
+    tag: {
+      options: ["ol", "ul"],
+      control: { type: "inline-radio" }
+    },
+    bgColor: {
+      control: { type: "color" }
+    },
+    className: {
+      control: { disable: true }
+    },
+    "data-cy": {
+      control: { disable: true }
+    }
+  }
+} as Meta;
+
+const Template: Story<SpacingBoxProps> = args => (
+  <StoryWrapper>
+    <SpacingBox {...args}>Spacing Box Content</SpacingBox>
+  </StoryWrapper>
+);
+
+export const Default = Template.bind({});
+
+export const ResponsiveSpacingSize = Template.bind({});
+ResponsiveSpacingSize.args = {
+  spacingSize: {
+    default: "none",
+    small: "m",
+    medium: "l",
+    jumbo: "xl"
+  }
 };
 
-export const ResponsiveSpacingSizePerSide = () => {
-  return (
-    <SpacingBox
-      spacingSizePerSide={{
-        vert: {
-          default: "none",
-          medium: "l"
-        },
-        horiz: {
-          default: "none",
-          medium: "xl"
-        }
-      }}
-    >
-      Resize your viewport width to see the spacing change
-    </SpacingBox>
-  );
+export const ResponsiveSpacingSizePerSide = Template.bind({});
+ResponsiveSpacingSizePerSide.args = {
+  spacingSizePerSide: {
+    vert: {
+      default: "none",
+      medium: "l"
+    },
+    horiz: {
+      default: "none",
+      medium: "xl"
+    }
+  }
 };

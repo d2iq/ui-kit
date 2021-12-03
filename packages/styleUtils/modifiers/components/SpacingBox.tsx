@@ -7,7 +7,7 @@ import {
 } from "../../../shared/styles/styleUtils/modifiers/modifierUtils";
 import { padding } from "../../../shared/styles/styleUtils";
 
-interface SpacingBoxProps extends BoxProps {
+export interface SpacingBoxProps extends BoxProps {
   /**
    * Which side (or sides) the spacing should be on
    */

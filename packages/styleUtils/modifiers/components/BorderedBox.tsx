@@ -9,7 +9,7 @@ import {
   borderRadius
 } from "../../../shared/styles/styleUtils/modifiers/border";
 
-interface BorderedBoxProps extends BoxProps {
+export interface BorderedBoxProps extends BoxProps {
   /**
    * Which side (or sides) the border should be on
    */

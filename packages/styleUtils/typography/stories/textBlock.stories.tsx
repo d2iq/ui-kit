@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { Container } from "../../layout";
 import { TextBlock } from "../";
 import {
@@ -12,11 +13,11 @@ import {
 export default {
   title: "Typography/Containers/TextBlock",
   component: TextBlock
-};
+} as Meta;
 
-export const Default = () => (
+const Template: Story = args => (
   <Container>
-    <TextBlock>
+    <TextBlock {...args}>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -47,27 +48,17 @@ export const Default = () => (
   </Container>
 );
 
-export const UsingTypographyComponents = () => (
+export const Default = Template.bind({});
+
+export const UsingTypographyComponents = args => (
   <Container>
-    <TextBlock>
+    <TextBlock {...args}>
       <div>
-        <HeadingText1>Lorem Ipsum</HeadingText1>
-        <CaptionText>Simple dummy text</CaptionText>
+        <HeadingText1>Heading Level 1</HeadingText1>
+        <CaptionText>Sample Caption Text</CaptionText>
       </div>
 
-      <Text>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
-      </Text>
-      <Text>
-        It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged. It was
-        popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software
-        like Aldus PageMaker including versions of Lorem Ipsum.
-      </Text>
+      <Text>This is a Text component.</Text>
 
       <div>
         <HeadingText2>Heading Level Two</HeadingText2>
@@ -94,9 +85,9 @@ export const UsingTypographyComponents = () => (
   </Container>
 );
 
-export const ContainingAList = () => (
+export const ContainingAList = args => (
   <Container>
-    <TextBlock>
+    <TextBlock {...args}>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -134,9 +125,9 @@ export const ContainingAList = () => (
   </Container>
 );
 
-export const ContainingImages = () => (
+export const ContainingImages = args => (
   <Container>
-    <TextBlock>
+    <TextBlock {...args}>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
