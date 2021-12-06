@@ -26,61 +26,6 @@ pipeline {
       }
     }
 
-    stage('Initialization') {
-      steps {
-        ansiColor('xterm') {
-          retry(2) {
-            sh '''npm install'''
-          }
-        }
-      }
-    }
-
-    stage('Validate') {
-      failFast true
-      parallel {
-
-        stage('Lint') {
-          steps {
-            ansiColor('xterm') {
-              sh '''npm run lint'''
-            }
-          }
-        }
-
-        stage('Unit Test') {
-          steps {
-            ansiColor('xterm') {
-              sh '''npm run test -- --collectCoverage'''
-            }
-          }
-        }
-
-        stage('Build') {
-          steps {
-            ansiColor('xterm') {
-              sh '''npm run dist'''
-            }
-          }
-
-          post {
-            always {
-              archiveArtifacts 'dist/**/*'
-            }
-          }
-        }
-
-        stage('Run integration tests') {
-          steps {
-            ansiColor('xterm') {
-              sh '''npm run test:integration'''
-            }
-          }
-        }
-
-      }
-    }
-
     stage("Release") {
       when {
         branch 'master'
