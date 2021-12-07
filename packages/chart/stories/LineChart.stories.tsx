@@ -1,12 +1,14 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { LineChart } from "../index";
+import { LineChartProps } from "../components/LineChart";
 
 export default {
   title: "Charts/LineChart",
   component: LineChart
-};
+} as Meta;
 
-export const Default = () => (
+const Template: Story<LineChartProps> = args => (
   <LineChart
     data={{
       2006: 1,
@@ -25,3 +27,4 @@ export const Default = () => (
     }}
   />
 );
+export const Default = Template.bind({});

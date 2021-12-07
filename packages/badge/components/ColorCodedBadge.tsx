@@ -6,7 +6,7 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { SpacingBox } from "../../styleUtils/modifiers";
 import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
 
-interface ColorCodedBadgeProps {
+export interface ColorCodedBadgeProps {
   color?: React.CSSProperties["color"];
   iconShape?: SystemIcons;
   children?: JSX.Element | string;

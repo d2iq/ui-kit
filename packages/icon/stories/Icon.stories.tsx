@@ -1,5 +1,5 @@
 import * as React from "react";
-import { select, withKnobs } from "@storybook/addon-knobs";
+import { Story, Meta } from "@storybook/react";
 import { Icon } from "../index";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import {
@@ -12,9 +12,8 @@ import {
   yellow,
   blueDarken3
 } from "../../design-tokens/build/js/designTokens";
-import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
+import { IconProps } from "../components/Icon";
 
-// used for Storybook knobs
 const colors = {
   textColorPrimary,
   textColorSecondary,
@@ -25,10 +24,9 @@ const colors = {
   blue,
   purple
 };
-const sizes = Object.keys(iconSizes).reduce((acc, curr) => {
-  acc[curr] = curr;
-  return acc;
-}, {});
+
+const sizes = ["xxs", "xs", "s", "m", "l", "xl", "xxl"];
+
 const shapes = {
   ["SystemIcons.ArrowRight"]: SystemIcons.ArrowRight,
   ["SystemIcons.Check"]: SystemIcons.Check,
@@ -42,16 +40,52 @@ const shapes = {
 
 export default {
   title: "Graphic Elements/Icon",
-  decorators: [withKnobs],
-  component: Icon
-};
+  component: Icon,
+  argTypes: {
+    color: {
+      options: colors,
+      control: {
+        type: "select"
+      }
+    },
+    shape: {
+      options: shapes,
+      control: {
+        type: "select",
+        labels: Object.keys(shapes)
+      },
+      defaultValue: SystemIcons.ArrowRight
+    },
+    size: {
+      options: sizes,
+      control: {
+        type: "select"
+      },
+      defaultValue: "s"
+    },
+    block: {
+      options: [true, false],
+      control: {
+        type: "boolean"
+      }
+    },
+    ariaLabel: {
+      control: { disable: true }
+    },
+    "data-cy": {
+      control: { disable: true }
+    }
+  }
+} as Meta;
 
-export const Default = () => {
-  const color = select("Color", colors, textColorPrimary);
-  const size = select("Size", sizes, "s");
-  const shape = select("Shape", shapes, SystemIcons.ArrowRight);
+const Template: Story<IconProps> = args => (
+  <Icon
+    shape={SystemIcons.ArrowRight}
+    color={textColorPrimary}
+    size="s"
+    ariaLabel="Sample icon"
+    {...args}
+  />
+);
 
-  return (
-    <Icon shape={shape} color={color} size={size} ariaLabel="Sample icon" />
-  );
-};
+export const Default = Template.bind({});
