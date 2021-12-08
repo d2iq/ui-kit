@@ -140,7 +140,7 @@ module.exports = {
             }
         ],
         "@typescript-eslint/no-this-alias": "error",
-        "@typescript-eslint/no-unnecessary-type-assertion": "error",
+        "@typescript-eslint/no-unnecessary-type-assertion": "off",
         "@typescript-eslint/no-unnecessary-type-constraint": "off",
         "@typescript-eslint/no-unsafe-argument": "off",
         "@typescript-eslint/no-unsafe-assignment": "off",
