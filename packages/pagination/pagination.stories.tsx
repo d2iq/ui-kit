@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as faker from "faker";
-import Pagination from "./Pagination";
+import { Story, Meta } from "@storybook/react";
+import Pagination, { PaginationProps } from "./Pagination";
 import PaginationContainer from "./PaginationContainer";
 import { BorderedList } from "../list";
 import usePageChange from "./usePageChange";
@@ -13,15 +14,17 @@ const initialData = Array.from(
 export default {
   title: "Navigation/Pagination",
   component: Pagination
-};
+} as Meta;
 
-export const Default = () => (
+const Template: Story<PaginationProps> = args => (
   <PaginationContainer>
-    <Pagination totalItems={200} />
+    <Pagination totalItems={200} {...args} />
   </PaginationContainer>
 );
 
-export const ExampleWPagedListControlledComponent = () => {
+export const Default = Template.bind({});
+
+export const ExampleWPagedListControlledComponent = args => {
   const ControlledPaginationWrapper: React.FC<{
     children: (renderProps: {
       activePage: number;
@@ -49,6 +52,7 @@ export const ExampleWPagedListControlledComponent = () => {
               pageLength={pageLength}
               showPageLengthMenu={true}
               totalItems={200}
+              {...args}
             />
           </PaginationContainer>
         </>
@@ -57,11 +61,8 @@ export const ExampleWPagedListControlledComponent = () => {
   );
 };
 
-export const StartOnPageBeyond1 = () => (
-  <PaginationContainer>
-    <Pagination initialActivePage={3} totalItems={200} />
-  </PaginationContainer>
-);
+export const StartOnPageBeyond1 = Template.bind({});
+Default.args = { initialActivePage: 3, totalItems: 200 };
 
 export const PreviousAndNextButtonsAsLinks = () => (
   <PaginationContainer>

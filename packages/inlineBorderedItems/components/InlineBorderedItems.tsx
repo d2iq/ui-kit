@@ -2,7 +2,7 @@ import * as React from "react";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 import { inlineBorderedItems } from "../style";
 
-interface InlineBorderedItemsProps {
+export interface InlineBorderedItemsProps {
   children:
     | Array<React.ReactElement<HTMLElement>>
     | React.ReactElement<HTMLElement>;

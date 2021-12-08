@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Flex, FlexItem } from "../styleUtils/layout";
+import { Story, Meta } from "@storybook/react";
 import { SecondaryButton } from "../button";
 import {
   Accordion,
@@ -11,6 +12,7 @@ import {
 } from "./";
 import ToggleInputListStoryHelper from "../toggleInputList/stories/helpers/ToggleInputListStoryHelper";
 import { ToggleInputList } from "..";
+import { AccordionBaseProps } from "./types";
 
 export default {
   title: "Navigation/Accordion",
@@ -21,68 +23,43 @@ export default {
     AccordionItemContent,
     AccordionItemTitleInteractive,
     StatelessAccordion
+  },
+  argTypes: {
+    "data-cy": {
+      control: { disable: true }
+    }
   }
-};
+} as Meta;
 
-export const Default = () => (
-  <Accordion>
-    <AccordionItem>
-      <AccordionItemTitle>Panel 1</AccordionItemTitle>
-      <AccordionItemContent>
-        Content 1 <a href="google.com">has focusable content</a>
-      </AccordionItemContent>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionItemTitle>Panel 2</AccordionItemTitle>
-      <AccordionItemContent>Content 2</AccordionItemContent>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionItemTitle>Panel 3</AccordionItemTitle>
-      <AccordionItemContent>Content 3</AccordionItemContent>
-    </AccordionItem>
-  </Accordion>
-);
-
-export const AccordionItemExpandedOnRender = () => (
-  <Accordion initialExpandedItems={["panel1"]}>
+const Template: Story<AccordionBaseProps> = args => (
+  <Accordion {...args}>
     <AccordionItem id="panel1">
       <AccordionItemTitle>Panel 1</AccordionItemTitle>
       <AccordionItemContent>
         Content 1 <a href="google.com">has focusable content</a>
       </AccordionItemContent>
     </AccordionItem>
-    <AccordionItem>
+    <AccordionItem id="panel2">
       <AccordionItemTitle>Panel 2</AccordionItemTitle>
       <AccordionItemContent>Content 2</AccordionItemContent>
     </AccordionItem>
-    <AccordionItem>
+    <AccordionItem id="panel3">
       <AccordionItemTitle>Panel 3</AccordionItemTitle>
       <AccordionItemContent>Content 3</AccordionItemContent>
     </AccordionItem>
   </Accordion>
 );
 
-export const AllowingMultipleAccordionItemsOpen = () => (
-  <Accordion allowMultipleExpanded={true}>
-    <AccordionItem>
-      <AccordionItemTitle>Panel 1</AccordionItemTitle>
-      <AccordionItemContent>
-        Content 1 <a href="google.com">has focusable content</a>
-      </AccordionItemContent>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionItemTitle>Panel 2</AccordionItemTitle>
-      <AccordionItemContent>Content 2</AccordionItemContent>
-    </AccordionItem>
-    <AccordionItem>
-      <AccordionItemTitle>Panel 3</AccordionItemTitle>
-      <AccordionItemContent>Content 3</AccordionItemContent>
-    </AccordionItem>
-  </Accordion>
-);
+export const Default = Template.bind({});
 
-export const InteractiveElementsInTitle = () => (
-  <Accordion>
+export const AccordionItemExpandedOnRender = Template.bind({});
+AccordionItemExpandedOnRender.args = { initialExpandedItems: ["panel1"] };
+
+export const AllowingMultipleAccordionItemsOpen = Template.bind({});
+AllowingMultipleAccordionItemsOpen.args = { allowMultipleExpanded: true };
+
+export const InteractiveElementsInTitle = args => (
+  <Accordion {...args}>
     <AccordionItem>
       <AccordionItemTitleInteractive>
         {({ getHeading }) => (
@@ -135,8 +112,8 @@ export const WithChangeHandler = () => {
   );
 };
 
-export const WithDisabledAccordionItem = () => (
-  <Accordion>
+export const WithDisabledAccordionItem = args => (
+  <Accordion {...args}>
     <AccordionItem>
       <AccordionItemTitle disabled={true}>Panel 1</AccordionItemTitle>
       <AccordionItemContent>Content 1</AccordionItemContent>
@@ -152,9 +129,9 @@ export const WithDisabledAccordionItem = () => (
   </Accordion>
 );
 
-export const WithAccordionItemThatHasAppearanceDanger = () => (
+export const WithAccordionItemThatHasAppearanceDanger = args => (
   <Accordion>
-    <AccordionItem>
+    <AccordionItem {...args}>
       <AccordionItemTitle appearance="danger">Panel 1</AccordionItemTitle>
       <AccordionItemContent>Content 1</AccordionItemContent>
     </AccordionItem>
@@ -169,25 +146,8 @@ export const WithAccordionItemThatHasAppearanceDanger = () => (
   </Accordion>
 );
 
-export const AccordionItemsWithCustomId = () => (
-  <Accordion>
-    <AccordionItem id="panel-1">
-      <AccordionItemTitle>Panel 1 (id: panel-1)</AccordionItemTitle>
-      <AccordionItemContent>Content 1</AccordionItemContent>
-    </AccordionItem>
-    <AccordionItem id="panel-2">
-      <AccordionItemTitle>Panel 2 (id: panel-2)</AccordionItemTitle>
-      <AccordionItemContent>Content 2</AccordionItemContent>
-    </AccordionItem>
-    <AccordionItem id="panel-3">
-      <AccordionItemTitle>Panel 3 (id: panel-3)</AccordionItemTitle>
-      <AccordionItemContent>Content 3</AccordionItemContent>
-    </AccordionItem>
-  </Accordion>
-);
-
-export const CustomPaddingSizeOnAccordionItemContent = () => (
-  <Accordion>
+export const CustomPaddingSizeOnAccordionItemContent = args => (
+  <Accordion {...args}>
     <AccordionItem>
       <AccordionItemTitle>Panel 1</AccordionItemTitle>
       <AccordionItemContent paddingSize="xxl">
@@ -205,7 +165,7 @@ export const CustomPaddingSizeOnAccordionItemContent = () => (
   </Accordion>
 );
 
-export const ControlledUsingStatelessAccordion = () => (
+export const ControlledUsingStatelessAccordion = args => (
   <ToggleInputListStoryHelper>
     {({ changeHandler, selectedItems }) => {
       return (
@@ -214,6 +174,7 @@ export const ControlledUsingStatelessAccordion = () => (
             <StatelessAccordion
               onChange={changeHandler}
               expandedItems={selectedItems}
+              {...args}
             >
               <AccordionItem id="first">
                 <AccordionItemTitle>Panel 1</AccordionItemTitle>

@@ -1,28 +1,28 @@
 import * as React from "react";
-
+import { Story, Meta } from "@storybook/react";
 import { Breadcrumb, BreadcrumbItem } from "../index";
-
 import { action } from "@storybook/addon-actions";
 import { ProductIcons } from "../../icons/dist/product-icons-enum";
+import { BreadcrumbProps } from "../components/Breadcrumb";
 
 export default {
   title: "Navigation/Breadcrumb",
-  component: Breadcrumb,
-  subcomponents: { BreadcrumbItem }
+  component: BreadcrumbItem,
+  subcomponents: { Breadcrumb },
+  argTypes: {
+    icon: {
+      options: [ProductIcons.Gear, ProductIcons.Cluster, ProductIcons.Users],
+      type: "select"
+    }
+  }
 };
 
-export const Default = () => (
-  <Breadcrumb>
-    <span>One</span>
-    <span>Two</span>
-  </Breadcrumb>
-);
-
-export const WithBreadcrumbItems = () => (
+const Template: Story<BreadcrumbProps> = args => (
   <Breadcrumb>
     <BreadcrumbItem
       icon={ProductIcons.Gear}
       onClick={action("clicked breadcrumb item one")}
+      {...args}
     >
       One
     </BreadcrumbItem>
@@ -35,4 +35,4 @@ export const WithBreadcrumbItems = () => (
   </Breadcrumb>
 );
 
-WithBreadcrumbItems.storyName = "With BreadcrumbItem";
+export const Default = Template.bind({});

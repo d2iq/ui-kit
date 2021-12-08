@@ -14,7 +14,7 @@ import { ExpandedLinkProps } from "../link/types";
 import { defaultInputWidth } from "./style";
 import { border, display, margin, padding } from "../shared/styles/styleUtils";
 
-interface PaginationProps {
+export interface PaginationProps {
   /** Prop used to control which page the user is currently navigated to */
   activePage?: number;
   /** The default page the user starts on before the user navigates using the text input or the prev/next buttons. For use when the component is uncontrolled. */

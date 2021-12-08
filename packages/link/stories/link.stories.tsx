@@ -1,6 +1,8 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { Link, ResetLink } from "..";
 import { Text } from "../../styleUtils/typography";
+import { LinkProps } from "../types";
 
 export default {
   title: "Navigation/Link",
@@ -8,20 +10,21 @@ export default {
   subcomponents: { ResetLink }
 };
 
-export const Default = () => <Link url="http://google.com/">Go to Google</Link>;
-
-export const OpenLinkInNewTab = () => (
-  <Link url="http://google.com/" openInNewTab={true}>
-    Go to Google in a new tab
+const Template: Story<LinkProps> = args => (
+  <Link url="http://google.com/" openInNewTab={true} {...args}>
+    Go to Google
   </Link>
 );
+export const Default = Template.bind({});
 
-export const _ResetLink = () => (
+export const _ResetLink = args => (
   <div>
     The{" "}
     <Text tag="span" color="red">
-      <ResetLink url="http://google.com">red text</ResetLink>
+      <ResetLink {...args} url="http://google.com">
+        red text
+      </ResetLink>
     </Text>{" "}
-    is a link, but it is not styled like one
+    is a link, but it is not styled like one.
   </div>
 );

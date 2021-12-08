@@ -1,59 +1,53 @@
 import * as React from "react";
-import { withKnobs, select } from "@storybook/addon-knobs";
 import { ButtonCard, Card, LinkCard } from "../index";
-import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
+import { Story, Meta } from "@storybook/react";
+
+const sizes = ["xxs", "xs", "s", "m", "l", "xl", "xxl"];
 
 export default {
   title: "Layout/Card",
-  decorators: [withKnobs],
   component: Card,
-  subcomponents: { ButtonCard, LinkCard }
+  subcomponents: { ButtonCard, LinkCard },
+  argTypes: {
+    paddingSize: {
+      options: sizes,
+      control: {
+        type: "select"
+      },
+      defaultValue: "m"
+    }
+  }
+} as Meta;
+
+const Template: Story = args => <Card {...args}>Card Content</Card>;
+
+export const Default = Template.bind({});
+
+export const ResponsivePaddingSize = Template.bind({});
+ResponsivePaddingSize.args = {
+  paddingSize: {
+    default: "s",
+    small: "m",
+    medium: "l",
+    large: "xl",
+    jumbo: "xxl"
+  }
 };
 
-export const Default = () => <Card>default</Card>;
-
-export const PaddingSize = () => {
-  const sizes = {
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl"
-  };
-  const size = select("paddingSize", sizes, "m");
-
-  return (
-    <Card paddingSize={size as SpaceSize}>
-      Use the Knobs panel to change the padding
-    </Card>
-  );
-};
-
-export const ResponsivePaddingSize = () => (
-  <Card
-    paddingSize={{
-      default: "s",
-      small: "m",
-      medium: "l",
-      large: "xl",
-      jumbo: "xxl"
-    }}
-  >
-    Resize the viewport to see the padding change
-  </Card>
-);
-
-export const AspectRatio = () => (
+export const AspectRatio = args => (
   <div style={{ maxWidth: "400px" }}>
-    <Card aspectRatio={[2, 1]}>I stay at a 2:1 aspect ratio</Card>
+    <Card {...args} aspectRatio={[2, 1]}>
+      I stay at a 2:1 aspect ratio
+    </Card>
   </div>
 );
 
-AspectRatio.storyName = "2:1 aspect ratio";
-
-export const DefaultLinkCard = () => (
-  <LinkCard url="http://google.com" linkDescription="Google">
-    default
+export const DefaultLinkCard = args => (
+  <LinkCard {...args} url="http://google.com" linkDescription="Google">
+    Default Link Card
   </LinkCard>
 );
 
-export const DefaultButtonCard = () => <ButtonCard>default</ButtonCard>;
+export const DefaultButtonCard = args => (
+  <ButtonCard {...args}>Default Button Card</ButtonCard>
+);
