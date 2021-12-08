@@ -1,7 +1,6 @@
 import * as React from "react";
-import { SharedListProps } from "../components/List";
-import { List } from "../index";
 import { Story, Meta } from "@storybook/react";
+import { List } from "../index";
 
 const markerStyles = {
   disc: "disc",
@@ -13,23 +12,32 @@ const markerStyles = {
 };
 export default {
   title: "Data Listing/List",
-  component: List,
-  argTypes: {
-    markerStyle: {
-      options: Object.values(markerStyles),
-      control: {
-        type: "select"
-      }
-    }
-  }
+  component: List
 } as Meta;
 
-const Template: Story<SharedListProps> = args => (
+const Template: Story = args => (
   <List {...args}>
-    <li>List Item</li>
-    <li>List Item</li>
-    <li>List Item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
   </List>
 );
 
 export const Default = Template.bind({});
+
+export const NestedWithItemMarkers = args => (
+  <List markerStyle="disc">
+    <li>List item</li>
+    <li>List item</li>
+    <li>
+      Nested List
+      <List markerStyle="circle" {...args}>
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+      </List>
+    </li>
+    <li>List item</li>
+    <li>List item</li>
+  </List>
+);

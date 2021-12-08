@@ -1,14 +1,28 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { HashMap } from "../index";
 import { configurationMapStoryWrapper } from "./helpers/ConfigurationMapStoryWrapper";
 
 export default {
   title: "Data Listing/HashMap",
   decorators: [configurationMapStoryWrapper],
-  component: HashMap
-};
+  component: HashMap,
+  argTypes: {
+    headline: {
+      control: {
+        type: "text"
+      }
+    },
+    hash: {
+      control: { disable: true }
+    },
+    renderKeys: {
+      control: { disable: true }
+    }
+  }
+} as Meta;
 
-export const Default = () => (
+const Template: Story = args => (
   <HashMap
     hash={{
       name: "Jane Doe",
@@ -17,23 +31,13 @@ export const Default = () => (
       state: "CA",
       zipcode: 95125
     }}
+    {...args}
   />
 );
 
-export const WithHeadline = () => (
-  <HashMap
-    hash={{
-      name: "Jane Doe",
-      role: "UX Designer",
-      city: "San Francisco",
-      state: "CA",
-      zipcode: 95125
-    }}
-    headline="Jane Doe Info"
-  />
-);
+export const Default = Template.bind({});
 
-export const WithNestedObjects = () => (
+export const WithNestedObjects = args => (
   <HashMap
     hash={{
       name: "Jane Doe",
@@ -59,10 +63,11 @@ export const WithNestedObjects = () => (
       }
     }}
     headline="Jane Doe Info"
+    {...args}
   />
 );
 
-export const WithRenderKeys = () => (
+export const WithRenderKeys = args => (
   <HashMap
     hash={{
       name: "Jane Doe",
@@ -78,18 +83,6 @@ export const WithRenderKeys = () => (
       state: "Home state",
       zipcode: "ZIP"
     }}
-  />
-);
-
-export const WithEmptyValue = () => (
-  <HashMap
-    hash={{
-      name: "Jane Doe",
-      role: "UX Designer",
-      city: "San Francisco",
-      state: "CA",
-      zipcode: ""
-    }}
-    defaultValue="(empty)"
+    {...args}
   />
 );

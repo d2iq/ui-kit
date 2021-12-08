@@ -1,5 +1,6 @@
 import * as React from "react";
 import { action } from "@storybook/addon-actions";
+import { Story, Meta } from "@storybook/react";
 import {
   ConfigurationMap,
   ConfigurationMapSection,
@@ -27,10 +28,10 @@ export default {
     ConfigurationMapValueWithDefault,
     ConfigurationMapRowAction
   }
-};
+} as Meta;
 
-export const Default = () => (
-  <ConfigurationMap>
+const Template: Story = args => (
+  <ConfigurationMap {...args}>
     <ConfigurationMapSection>
       <ConfigurationMapRow>
         <ConfigurationMapLabel>Name</ConfigurationMapLabel>
@@ -48,27 +49,10 @@ export const Default = () => (
   </ConfigurationMap>
 );
 
-export const WithDefaultValue = () => (
-  <ConfigurationMap>
-    <ConfigurationMapSection>
-      <ConfigurationMapRow>
-        <ConfigurationMapLabel>Name</ConfigurationMapLabel>
-        <ConfigurationMapValueWithDefault value="Jane Doe" />
-      </ConfigurationMapRow>
-      <ConfigurationMapRow>
-        <ConfigurationMapLabel>Role</ConfigurationMapLabel>
-        <ConfigurationMapValueWithDefault />
-      </ConfigurationMapRow>
-      <ConfigurationMapRow>
-        <ConfigurationMapLabel>City</ConfigurationMapLabel>
-        <ConfigurationMapValueWithDefault />
-      </ConfigurationMapRow>
-    </ConfigurationMapSection>
-  </ConfigurationMap>
-);
+export const Default = Template.bind({});
 
-export const WithHeading = () => (
-  <ConfigurationMap>
+export const WithDefaultValue = args => (
+  <ConfigurationMap {...args}>
     <ConfigurationMapSection>
       <ConfigurationMapHeading>Heading</ConfigurationMapHeading>
       <ConfigurationMapRow>
@@ -86,7 +70,6 @@ export const WithHeading = () => (
     </ConfigurationMapSection>
   </ConfigurationMap>
 );
-
 export const MultipleSections = () => (
   <ConfigurationMap>
     <ConfigurationMapSection>
@@ -139,41 +122,13 @@ export const MultipleSections = () => (
   </ConfigurationMap>
 );
 
-export const WithRowAction = () => (
-  <ConfigurationMap>
-    <ConfigurationMapSection>
-      <ConfigurationMapRow>
-        <ConfigurationMapLabel>Name</ConfigurationMapLabel>
-        <ConfigurationMapValue>Jane Doe</ConfigurationMapValue>
-        <ConfigurationMapRowAction onClick={rowAction}>
-          Action
-        </ConfigurationMapRowAction>
-      </ConfigurationMapRow>
-      <ConfigurationMapRow>
-        <ConfigurationMapLabel>Role</ConfigurationMapLabel>
-        <ConfigurationMapValue>UX Designer</ConfigurationMapValue>
-        <ConfigurationMapRowAction onClick={rowAction}>
-          Action
-        </ConfigurationMapRowAction>
-      </ConfigurationMapRow>
-      <ConfigurationMapRow>
-        <ConfigurationMapLabel>City</ConfigurationMapLabel>
-        <ConfigurationMapValue>San Francisco</ConfigurationMapValue>
-        <ConfigurationMapRowAction onClick={rowAction}>
-          Action
-        </ConfigurationMapRowAction>
-      </ConfigurationMapRow>
-    </ConfigurationMapSection>
-  </ConfigurationMap>
-);
-
-export const WithRowActionShownOnHover = () => (
+export const WithRowActionShownOnHover = args => (
   <ConfigurationMap>
     <ConfigurationMapSection>
       <ConfigurationMapRow onlyShowActionOnHover={true}>
         <ConfigurationMapLabel>Name</ConfigurationMapLabel>
         <ConfigurationMapValue>Jane Doe</ConfigurationMapValue>
-        <ConfigurationMapRowAction onClick={rowAction}>
+        <ConfigurationMapRowAction onClick={rowAction} {...args}>
           Action
         </ConfigurationMapRowAction>
       </ConfigurationMapRow>
@@ -195,8 +150,8 @@ export const WithRowActionShownOnHover = () => (
   </ConfigurationMap>
 );
 
-export const WithLongValue = () => (
-  <ConfigurationMap>
+export const WithLongValue = args => (
+  <ConfigurationMap {...args}>
     <ConfigurationMapSection>
       <ConfigurationMapRow>
         <ConfigurationMapLabel>Name</ConfigurationMapLabel>

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import {
   PrimaryDropdownButton,
   SecondaryDropdownButton,
@@ -6,134 +7,52 @@ import {
   SuccessDropdownButton,
   DangerDropdownButton
 } from "../../index";
-import ButtonAppearanceSample from "./helpers/ButtonAppearanceSample";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
+
+const shapes = [
+  SystemIcons.CircleCheck,
+  SystemIcons.Check,
+  SystemIcons.Close,
+  SystemIcons.Folder,
+  SystemIcons.Gear,
+  SystemIcons.Services,
+  SystemIcons.Users
+];
 
 export default {
   title: "Actions/Dropdown Button",
-  component: StandardDropdownButton
-};
+  component: StandardDropdownButton,
+  argTypes: {
+    children: {
+      defaultValue: "Dropdown Button",
+      control: {
+        type: "text"
+      }
+    },
+    iconStart: {
+      options: shapes
+    }
+  }
+} as Meta;
 
-export const _PrimaryDropdownButton = () => (
-  <>
-    <ButtonAppearanceSample>
-      <PrimaryDropdownButton>Button</PrimaryDropdownButton>
-      <PrimaryDropdownButton disabled={true}>Button</PrimaryDropdownButton>
-      <PrimaryDropdownButton isProcessing={true}>Button</PrimaryDropdownButton>
-    </ButtonAppearanceSample>
-
-    <ButtonAppearanceSample isInverse={true}>
-      <PrimaryDropdownButton isInverse={true}>Button</PrimaryDropdownButton>
-      <PrimaryDropdownButton isInverse={true} disabled={true}>
-        Button
-      </PrimaryDropdownButton>
-      <PrimaryDropdownButton isInverse={true} isProcessing={true}>
-        Button
-      </PrimaryDropdownButton>
-    </ButtonAppearanceSample>
-  </>
+const Template: Story = args => (
+  <StandardDropdownButton {...args}>{args.children}</StandardDropdownButton>
 );
 
-export const _SecondaryDropdownButton = () => (
-  <>
-    <ButtonAppearanceSample>
-      <SecondaryDropdownButton>Button</SecondaryDropdownButton>
-      <SecondaryDropdownButton disabled={true}>Button</SecondaryDropdownButton>
-      <SecondaryDropdownButton isProcessing={true}>
-        Button
-      </SecondaryDropdownButton>
-    </ButtonAppearanceSample>
+export const _StandardDropdownButton = Template.bind({});
 
-    <ButtonAppearanceSample isInverse={true}>
-      <SecondaryDropdownButton isInverse={true}>Button</SecondaryDropdownButton>
-      <SecondaryDropdownButton isInverse={true} disabled={true}>
-        Button
-      </SecondaryDropdownButton>
-      <SecondaryDropdownButton isInverse={true} isProcessing={true}>
-        Button
-      </SecondaryDropdownButton>
-    </ButtonAppearanceSample>
-  </>
+export const _PrimaryDropdownButton = args => (
+  <PrimaryDropdownButton {...args}>{args.children}</PrimaryDropdownButton>
 );
 
-export const _StandardDropdownButton = () => (
-  <>
-    <ButtonAppearanceSample>
-      <StandardDropdownButton>Button</StandardDropdownButton>
-      <StandardDropdownButton disabled={true}>Button</StandardDropdownButton>
-      <StandardDropdownButton isProcessing={true}>
-        Button
-      </StandardDropdownButton>
-    </ButtonAppearanceSample>
-
-    <ButtonAppearanceSample isInverse={true}>
-      <StandardDropdownButton isInverse={true}>Button</StandardDropdownButton>
-      <StandardDropdownButton isInverse={true} disabled={true}>
-        Button
-      </StandardDropdownButton>
-      <StandardDropdownButton isInverse={true} isProcessing={true}>
-        Button
-      </StandardDropdownButton>
-    </ButtonAppearanceSample>
-  </>
+export const _SecondaryDropdownButton = args => (
+  <SecondaryDropdownButton {...args}>{args.children}</SecondaryDropdownButton>
 );
 
-export const _SuccessDropdownButton = () => (
-  <>
-    <ButtonAppearanceSample>
-      <SuccessDropdownButton>Button</SuccessDropdownButton>
-      <SuccessDropdownButton disabled={true}>Button</SuccessDropdownButton>
-      <SuccessDropdownButton isProcessing={true}>Button</SuccessDropdownButton>
-    </ButtonAppearanceSample>
-
-    <ButtonAppearanceSample isInverse={true}>
-      <SuccessDropdownButton isInverse={true}>Button</SuccessDropdownButton>
-      <SuccessDropdownButton isInverse={true} disabled={true}>
-        Button
-      </SuccessDropdownButton>
-      <SuccessDropdownButton isInverse={true} isProcessing={true}>
-        Button
-      </SuccessDropdownButton>
-    </ButtonAppearanceSample>
-  </>
+export const _SuccessDropdownButton = args => (
+  <SuccessDropdownButton {...args}>{args.children}</SuccessDropdownButton>
 );
 
-export const _DangerDropdownButton = () => (
-  <>
-    <ButtonAppearanceSample>
-      <DangerDropdownButton>Button</DangerDropdownButton>
-      <DangerDropdownButton disabled={true}>Button</DangerDropdownButton>
-      <DangerDropdownButton isProcessing={true}>Button</DangerDropdownButton>
-    </ButtonAppearanceSample>
-
-    <ButtonAppearanceSample isInverse={true}>
-      <DangerDropdownButton isInverse={true}>Button</DangerDropdownButton>
-      <DangerDropdownButton isInverse={true} disabled={true}>
-        Button
-      </DangerDropdownButton>
-      <DangerDropdownButton isInverse={true} isProcessing={true}>
-        Button
-      </DangerDropdownButton>
-    </ButtonAppearanceSample>
-  </>
-);
-
-export const FullWidthDropdown = () => (
-  <StandardDropdownButton isFullWidth={true}>Full-width</StandardDropdownButton>
-);
-
-export const FullWidthDropdownWithIcon = () => (
-  <StandardDropdownButton iconStart={SystemIcons.Close} isFullWidth={true}>
-    Full-width
-  </StandardDropdownButton>
-);
-
-export const DropdownWithIcon = () => (
-  <StandardDropdownButton iconStart={SystemIcons.Close}>
-    Icon dropdown
-  </StandardDropdownButton>
-);
-
-export const DropdownWithOnlyAnIcon = () => (
-  <StandardDropdownButton iconStart={SystemIcons.Close} />
+export const _DangerDropdownButton = args => (
+  <DangerDropdownButton {...args}>{args.children}</DangerDropdownButton>
 );
