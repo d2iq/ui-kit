@@ -1,1 +1,1 @@
-export { default as FullscreenView } from "./components/FullscrenView";
+export { default as FullscreenView } from "./components/FullscreenView";

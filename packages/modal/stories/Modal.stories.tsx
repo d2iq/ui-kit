@@ -1,6 +1,7 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
 import { action } from "@storybook/addon-actions";
+import { Meta } from "@storybook/react";
 import {
   DialogModal,
   SmallDialogModal,
@@ -36,13 +37,44 @@ export default {
     SmallDialogModalWithFooter,
     LargeDialogModalWithFooter,
     FullscreenModal
+  },
+  argTypes: {
+    footerContent: {
+      control: { disable: true }
+    },
+    title: {
+      control: { disable: true }
+    },
+    icon: {
+      control: { disable: true }
+    },
+    initialFocus: {
+      control: { disable: true }
+    },
+    id: {
+      control: { disable: true }
+    },
+    overlayRoot: {
+      control: { disable: true }
+    },
+    className: {
+      control: { disable: true }
+    },
+    "data-cy": {
+      control: { disable: true }
+    }
   }
-};
+} as Meta;
 
-export const _DialogModal = () => (
+export const _DialogModal = args => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
-      <DialogModal isOpen={isOpen} onClose={onClose} title="I am modal">
+      <DialogModal
+        isOpen={isOpen}
+        onClose={onClose}
+        title="I am modal"
+        {...args}
+      >
         <ModalContent />
       </DialogModal>
     )}
@@ -54,7 +86,7 @@ const confirmIcon = {
   color: blue
 };
 
-export const DialogModalWithIcon = () => (
+export const DialogModalWithIcon = args => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
       <DialogModal
@@ -62,6 +94,7 @@ export const DialogModalWithIcon = () => (
         onClose={onClose}
         title="Info: Lorem Ipsum"
         icon={confirmIcon}
+        {...args}
       >
         <ModalContent />
       </DialogModal>
@@ -69,27 +102,37 @@ export const DialogModalWithIcon = () => (
   </ModalStoryContainer>
 );
 
-export const _SmallDialogModal = () => (
+export const _SmallDialogModal = args => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
-      <SmallDialogModal isOpen={isOpen} onClose={onClose} title="I am modal">
+      <SmallDialogModal
+        isOpen={isOpen}
+        onClose={onClose}
+        title="I am modal"
+        {...args}
+      >
         <ModalContent />
       </SmallDialogModal>
     )}
   </ModalStoryContainer>
 );
 
-export const _LargeDialogModal = () => (
+export const _LargeDialogModal = args => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
-      <LargeDialogModal isOpen={isOpen} onClose={onClose} title="I am modal">
+      <LargeDialogModal
+        isOpen={isOpen}
+        onClose={onClose}
+        title="I am modal"
+        {...args}
+      >
         <ModalContent />
       </LargeDialogModal>
     )}
   </ModalStoryContainer>
 );
 
-export const DialogModalWithFlushedContent = () => (
+export const DialogModalWithFlushedContent = args => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
       <DialogModal
@@ -97,6 +140,7 @@ export const DialogModalWithFlushedContent = () => (
         onClose={onClose}
         title="I am modal"
         isContentFlush={true}
+        {...args}
       >
         <BorderedModalContent horizPadding="24px" />
       </DialogModal>
@@ -104,7 +148,7 @@ export const DialogModalWithFlushedContent = () => (
   </ModalStoryContainer>
 );
 
-export const _DialogModalWithFooter = () => (
+export const _DialogModalWithFooter = args => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
       <DialogModalWithFooter
@@ -117,6 +161,7 @@ export const _DialogModalWithFooter = () => (
           </PrimaryButton>
         }
         closeText="Dismiss"
+        {...args}
       >
         <ModalContent />
       </DialogModalWithFooter>
@@ -124,7 +169,7 @@ export const _DialogModalWithFooter = () => (
   </ModalStoryContainer>
 );
 
-export const _SmallDialogModalWithFooter = () => (
+export const _SmallDialogModalWithFooter = args => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
       <SmallDialogModalWithFooter
@@ -137,6 +182,7 @@ export const _SmallDialogModalWithFooter = () => (
           </PrimaryButton>
         }
         closeText="Dismiss"
+        {...args}
       >
         <ModalContent />
       </SmallDialogModalWithFooter>
@@ -144,7 +190,7 @@ export const _SmallDialogModalWithFooter = () => (
   </ModalStoryContainer>
 );
 
-export const _LargeDialogModalWithFooter = () => (
+export const _LargeDialogModalWithFooter = args => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
       <LargeDialogModalWithFooter
@@ -157,6 +203,7 @@ export const _LargeDialogModalWithFooter = () => (
           </PrimaryButton>
         }
         closeText="Dismiss"
+        {...args}
       >
         <ModalContent />
       </LargeDialogModalWithFooter>
@@ -164,7 +211,7 @@ export const _LargeDialogModalWithFooter = () => (
   </ModalStoryContainer>
 );
 
-export const _FullscreenModal = () => (
+export const _FullscreenModal = args => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
       <FullscreenModal
@@ -178,6 +225,7 @@ export const _FullscreenModal = () => (
             Continue
           </PrimaryButton>
         }
+        {...args}
       >
         <ModalContent />
       </FullscreenModal>
@@ -185,7 +233,7 @@ export const _FullscreenModal = () => (
   </ModalStoryContainer>
 );
 
-export const FullscreenModalWithAdditionalHeaderContent = () => {
+export const FullscreenModalWithAdditionalHeaderContent = args => {
   const HeaderContent = ({ ctaButton, closeText, title, onClose }) => (
     <div className={cx(flex({ align: "center" }), flexItem("shrink"))}>
       <div className={flexItem("grow")}>
@@ -227,6 +275,7 @@ export const FullscreenModalWithAdditionalHeaderContent = () => {
             </PrimaryButton>
           }
           headerComponent={HeaderContent}
+          {...args}
         >
           <ModalContent />
         </FullscreenModal>
@@ -235,7 +284,7 @@ export const FullscreenModalWithAdditionalHeaderContent = () => {
   );
 };
 
-export const FullscreenModalWithFlushedContent = () => (
+export const FullscreenModalWithFlushedContent = args => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
       <FullscreenModal
@@ -249,6 +298,7 @@ export const FullscreenModalWithFlushedContent = () => (
             Continue
           </PrimaryButton>
         }
+        {...args}
       >
         <BorderedModalContent horizPadding="32px" />
       </FullscreenModal>
@@ -256,7 +306,7 @@ export const FullscreenModalWithFlushedContent = () => (
   </ModalStoryContainer>
 );
 
-export const FullscreenModalWithDialogModal = () => {
+export const FullscreenModalWithDialogModal = args => {
   return (
     <ModalStoryContainer>
       {({ isOpen, onClose }) => (
@@ -275,6 +325,7 @@ export const FullscreenModalWithDialogModal = () => {
             </PrimaryButton>
           }
           id="testId"
+          {...args}
         >
           <ModalStoryContainer>
             {({ isOpen, onClose }) => (
@@ -294,7 +345,7 @@ export const FullscreenModalWithDialogModal = () => {
   );
 };
 
-export const CustomFocusedElement = () => (
+export const CustomFocusedElement = args => (
   <ModalStoryContainer>
     {({ isOpen, onClose }) => (
       <DialogModal
@@ -302,6 +353,7 @@ export const CustomFocusedElement = () => (
         onClose={onClose}
         title="I am modal"
         initialFocus="#focus-input"
+        {...args}
       >
         <div>
           <ModalContent />

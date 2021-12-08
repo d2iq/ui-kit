@@ -1,85 +1,64 @@
 import * as React from "react";
-import { select } from "@storybook/addon-knobs";
-import { Popover } from "../";
-import { Direction } from "../dropdownable/components/Dropdownable";
-import { PrimaryDropdownButton } from "../button";
-import { Box } from "../styleUtils/modifiers";
+import { Story, Meta } from "@storybook/react";
 
-const popoverStoryDecorator = storyFn => (
-  <Box textAlign="center">{storyFn()}</Box>
-);
+import { Popover } from "../";
+import { PrimaryDropdownButton } from "../button";
+import { PopoverProps } from "./components/PopoverBox";
+import { Direction } from "../dropdownable/components/Dropdownable";
+
+const directions = [
+  Direction.BottomLeft,
+  Direction.BottomRight,
+  Direction.BottomCenter,
+  Direction.TopLeft,
+  Direction.TopRight,
+  Direction.TopCenter
+];
 
 export default {
   title: "Overlays/Popover",
-  decorators: [popoverStoryDecorator],
-  component: Popover
-};
-
-export const Default = () => (
-  <Popover
-    trigger={<PrimaryDropdownButton>open popover</PrimaryDropdownButton>}
-  >
-    <div>dropdown content</div>
-  </Popover>
-);
-
-export const WithFocusableContent = () => (
-  <Popover
-    trigger={<PrimaryDropdownButton>open popover</PrimaryDropdownButton>}
-    maxWidth={300}
-  >
-    <div>
-      <p>
-        If the dropdown is opened via keyboard navigation,{" "}
-        <a href="http://google.com/">this link</a> should get focus first, then{" "}
-        <a href="http://google.com/">this link</a> should get focus.
-      </p>
-      <p>Focus should not leave the dropdown until it is closed</p>
-    </div>
-  </Popover>
-);
-
-export const InitialIsOpen = () => (
-  <Popover
-    initialIsOpen={true}
-    trigger={<PrimaryDropdownButton>open popover</PrimaryDropdownButton>}
-  >
-    <div>dropdown content</div>
-  </Popover>
-);
-
-export const WithCustomDirection = () => {
-  const options = {
-    BottomLeft: "bottom-left",
-    BottomRight: "bottom-right",
-    BottomCenter: "bottom-center",
-    TopLeft: "top-left",
-    TopRight: "top-right",
-    TopCenter: "top-center"
-  };
-
-  const knobDirection = select("Direction", options, "BottomLeft");
-
-  function getKeyByValue(value): string {
-    return (
-      Object.keys(options).find(key => options[key] === value) || "BottomLeft"
-    );
+  decorators: [Story => <div style={{ padding: "4em" }}>{Story()}</div>],
+  component: Popover,
+  argTypes: {
+    preferredDirections: {
+      options: directions
+    },
+    trigger: {
+      control: { disable: true }
+    },
+    ariaLabel: {
+      control: { disable: true }
+    },
+    id: {
+      control: { disable: true }
+    },
+    "data-cy": {
+      control: { disable: true }
+    }
   }
+} as Meta;
 
-  return (
-    <Popover
-      trigger={<PrimaryDropdownButton>open popover</PrimaryDropdownButton>}
-      preferredDirections={[Direction[getKeyByValue(knobDirection)]]}
-    >
-      Use the knobs to change dropdown alignment
-    </Popover>
-  );
+const Template: Story<PopoverProps> = args => (
+  <Popover
+    trigger={<PrimaryDropdownButton>Open Popover</PrimaryDropdownButton>}
+    {...args}
+  >
+    <div>Dropdown Content</div>
+  </Popover>
+);
+
+export const Default = Template.bind({});
+
+export const InitialIsOpen = Template.bind({});
+InitialIsOpen.args = {
+  initialIsOpen: true
 };
 
-export const WithMaxHeight = () => (
+export const WithMaxHeight = args => (
   <Popover
     maxHeight={80}
     trigger={<PrimaryDropdownButton>open popover</PrimaryDropdownButton>}
+    {...args}
   >
     <div>dropdown content</div>
     <p>
@@ -93,10 +72,11 @@ export const WithMaxHeight = () => (
   </Popover>
 );
 
-export const WithMaxWidth = () => (
+export const WithMaxWidth = args => (
   <Popover
     maxWidth={300}
     trigger={<PrimaryDropdownButton>open popover</PrimaryDropdownButton>}
+    {...args}
   >
     <div>dropdown content</div>
     <p>

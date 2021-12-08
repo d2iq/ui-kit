@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import {
   DropdownMenu,
   DropdownSection,
@@ -10,6 +11,8 @@ import { PopoverListItemAppearances } from "../../shared/types/popoverListItemAp
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { grafanaLogo, kibanaLogo, kubernetesLogo } from "./avatarImgs";
 import PrimaryDropdownButton from "../../button/components/PrimaryDropdownButton";
+import { DropdownMenuProps } from "../components/DropdownMenu";
+import { Direction } from "../../dropdownable/components/Dropdownable";
 
 export default {
   title: "Overlays/DropdownMenu",
@@ -19,11 +22,33 @@ export default {
     DropdownMenuItem,
     DropdownMenuItemIcon,
     DropdownMenuItemAvatar
+  },
+  decorators: [Story => <div style={{ padding: "5em 10em" }}>{Story()}</div>],
+  argTypes: {
+    preferredDirections: {
+      options: [
+        Direction.BottomLeft,
+        Direction.BottomRight,
+        Direction.BottomCenter
+      ]
+    },
+    children: {
+      control: { disable: true }
+    },
+    overlayRoot: {
+      control: { disable: true }
+    },
+    trigger: {
+      control: { disable: true }
+    }
   }
-};
+} as Meta;
 
-export const Default = () => (
-  <DropdownMenu trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}>
+const Template: Story<DropdownMenuProps> = args => (
+  <DropdownMenu
+    trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}
+    {...args}
+  >
     <DropdownSection>
       <DropdownMenuItem key="edit" value="edit">
         Edit
@@ -41,8 +66,13 @@ export const Default = () => (
   </DropdownMenu>
 );
 
-export const WithDangerousAction = () => (
-  <DropdownMenu trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}>
+export const Default = Template.bind({});
+
+export const WithDangerousAction = args => (
+  <DropdownMenu
+    trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}
+    {...args}
+  >
     <DropdownSection>
       <DropdownMenuItem key="edit" value="edit">
         Edit
@@ -67,8 +97,11 @@ export const WithDangerousAction = () => (
   </DropdownMenu>
 );
 
-export const WithDisabledAction = () => (
-  <DropdownMenu trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}>
+export const WithDisabledAction = args => (
+  <DropdownMenu
+    trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}
+    {...args}
+  >
     <DropdownSection>
       <DropdownMenuItem key="edit" value="edit">
         Edit
@@ -89,54 +122,21 @@ export const WithDisabledAction = () => (
   </DropdownMenu>
 );
 
-export const InitialIsOpen = () => (
-  <DropdownMenu
-    initialIsOpen={true}
-    trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}
-  >
-    <DropdownSection>
-      <DropdownMenuItem key="edit" value="edit">
-        Edit
-      </DropdownMenuItem>
-      <DropdownMenuItem key="scale" value="scale">
-        Scale
-      </DropdownMenuItem>
-      <DropdownMenuItem key="restart" value="restart">
-        Restart
-      </DropdownMenuItem>
-      <DropdownMenuItem key="stop" value="stop">
-        Stop
-      </DropdownMenuItem>
-    </DropdownSection>
-  </DropdownMenu>
-);
+export const InitialIsOpen = Template.bind({});
+InitialIsOpen.args = {
+  initialIsOpen: true
+};
 
-export const MenuHasMaxHeight = () => (
-  <DropdownMenu
-    menuMaxHeight={90}
-    trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}
-  >
-    <DropdownSection>
-      <DropdownMenuItem key="edit" value="edit">
-        Edit
-      </DropdownMenuItem>
-      <DropdownMenuItem key="scale" value="scale">
-        Scale
-      </DropdownMenuItem>
-      <DropdownMenuItem key="restart" value="restart">
-        Restart
-      </DropdownMenuItem>
-      <DropdownMenuItem key="stop" value="stop">
-        Stop
-      </DropdownMenuItem>
-    </DropdownSection>
-  </DropdownMenu>
-);
+export const MenuHasMaxHeight = Template.bind({});
+MenuHasMaxHeight.args = {
+  menuMaxHeight: 90
+};
 
-export const MenuHasMaxWidth = () => (
+export const MenuHasMaxWidth = args => (
   <DropdownMenu
     menuMaxWidth={200}
     trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}
+    {...args}
   >
     <DropdownSection>
       <DropdownMenuItem key="longWord" value="longWord">
@@ -158,40 +158,24 @@ export const MenuHasMaxWidth = () => (
   </DropdownMenu>
 );
 
-export const WithOnSelectCallback = () => {
-  const onSelect = selectedItem => {
-    alert(`onSelect called with:
+const onSelect = selectedItem => {
+  alert(`onSelect called with:
 
-      • selectedItem: "${selectedItem}"
-      • stateAndHelpers: Downshift state and helper fns
-      `);
-  };
-
-  return (
-    <DropdownMenu
-      onSelect={onSelect}
-      trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}
-    >
-      <DropdownSection>
-        <DropdownMenuItem key="edit" value="edit">
-          Edit
-        </DropdownMenuItem>
-        <DropdownMenuItem key="scale" value="scale">
-          Scale
-        </DropdownMenuItem>
-        <DropdownMenuItem key="restart" value="restart">
-          Restart
-        </DropdownMenuItem>
-        <DropdownMenuItem key="stop" value="stop">
-          Stop
-        </DropdownMenuItem>
-      </DropdownSection>
-    </DropdownMenu>
-  );
+    • selectedItem: "${selectedItem}"
+    • stateAndHelpers: Downshift state and helper fns
+    `);
 };
 
-export const WithSections = () => (
-  <DropdownMenu trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}>
+export const WithOnSelectCallback = Template.bind({});
+WithOnSelectCallback.args = {
+  onSelect: onSelect
+};
+
+export const WithSections = args => (
+  <DropdownMenu
+    trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}
+    {...args}
+  >
     <DropdownSection>
       <DropdownMenuItem key="edit" value="edit">
         Edit
@@ -221,8 +205,11 @@ export const WithSections = () => (
   </DropdownMenu>
 );
 
-export const WithIconsAndAvatarsPositionStart = () => (
-  <DropdownMenu trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}>
+export const WithIconsAndAvatarsPositionStart = args => (
+  <DropdownMenu
+    trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}
+    {...args}
+  >
     <DropdownSection>
       <DropdownMenuItem key="edit" value="edit">
         <DropdownMenuItemIcon shape={SystemIcons.Pencil} />
@@ -259,8 +246,11 @@ export const WithIconsAndAvatarsPositionStart = () => (
   </DropdownMenu>
 );
 
-export const WithIconsAndAvatarsPositionEnd = () => (
-  <DropdownMenu trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}>
+export const WithIconsAndAvatarsPositionEnd = args => (
+  <DropdownMenu
+    trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}
+    {...args}
+  >
     <DropdownSection>
       <DropdownMenuItem key="edit" value="edit">
         <DropdownMenuItemIcon position="end" shape={SystemIcons.Pencil} />
@@ -292,75 +282,6 @@ export const WithIconsAndAvatarsPositionEnd = () => (
       <DropdownMenuItem key="kubernetes" value="kubernetes">
         <DropdownMenuItemAvatar position="end" src={kubernetesLogo} />
         Kubernetes
-      </DropdownMenuItem>
-    </DropdownSection>
-  </DropdownMenu>
-);
-
-export const WithIconsAndAvatarsPositionStartAndEnd = () => (
-  <DropdownMenu trigger={<PrimaryDropdownButton>Menu</PrimaryDropdownButton>}>
-    <DropdownSection>
-      <DropdownMenuItem key="edit" value="edit">
-        <DropdownMenuItemIcon position="start" shape={SystemIcons.Pencil} />
-        Edit
-        <DropdownMenuItemIcon
-          position="end"
-          shape={SystemIcons.TriangleRight}
-        />
-      </DropdownMenuItem>
-      <DropdownMenuItem key="scale" value="scale">
-        <DropdownMenuItemIcon position="start" shape={SystemIcons.ArrowUp} />
-        Scale
-        <DropdownMenuItemIcon
-          position="end"
-          shape={SystemIcons.TriangleRight}
-        />
-      </DropdownMenuItem>
-      <DropdownMenuItem key="restart" value="restart">
-        <DropdownMenuItemIcon position="start" shape={SystemIcons.Repeat} />
-        Restart
-        <DropdownMenuItemIcon
-          position="end"
-          shape={SystemIcons.TriangleRight}
-        />
-      </DropdownMenuItem>
-      <DropdownMenuItem key="stop" value="stop">
-        <DropdownMenuItemIcon
-          position="start"
-          shape={SystemIcons.CircleMinus}
-        />
-        Stop
-        <DropdownMenuItemIcon
-          position="end"
-          shape={SystemIcons.TriangleRight}
-        />
-      </DropdownMenuItem>
-    </DropdownSection>
-
-    <DropdownSection>
-      <DropdownMenuItem key="grafana" value="grafana">
-        <DropdownMenuItemAvatar position="start" src={grafanaLogo} />
-        Grafana
-        <DropdownMenuItemIcon
-          position="end"
-          shape={SystemIcons.TriangleRight}
-        />
-      </DropdownMenuItem>
-      <DropdownMenuItem key="kibana" value="kibana">
-        <DropdownMenuItemAvatar position="start" src={kibanaLogo} />
-        Kibana
-        <DropdownMenuItemIcon
-          position="end"
-          shape={SystemIcons.TriangleRight}
-        />
-      </DropdownMenuItem>
-      <DropdownMenuItem key="kubernetes" value="kubernetes">
-        <DropdownMenuItemAvatar position="start" src={kubernetesLogo} />
-        Kubernetes
-        <DropdownMenuItemIcon
-          position="end"
-          shape={SystemIcons.TriangleRight}
-        />
       </DropdownMenuItem>
     </DropdownSection>
   </DropdownMenu>

@@ -2,7 +2,7 @@ import React from "react";
 import { mount } from "enzyme";
 import { createSerializer } from "@emotion/jest";
 import toJson from "enzyme-to-json";
-import FullscreenView from "../components/FullscrenView";
+import FullscreenView from "../components/FullscreenView";
 import { PrimaryButton } from "../../button";
 
 expect.addSnapshotSerializer(createSerializer());

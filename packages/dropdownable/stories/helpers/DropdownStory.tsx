@@ -1,64 +1,52 @@
 import React from "react";
 import { css } from "@emotion/css";
+import styled from "@emotion/styled";
 
-import Dropdownable, { Direction } from "../../components/Dropdownable";
-import DropdownStuffContainer from "./DropdownStuffContainer";
+import Dropdownable from "../../components/Dropdownable";
 import { PrimaryButton } from "../../../button";
+import {
+  themeBgPrimary,
+  themeBorder
+} from "../../../design-tokens/build/js/designTokens";
 
-class DropdownStory extends React.PureComponent<
-  { preferredDirections: Direction[] },
-  { isOpen: boolean }
-> {
-  constructor(props) {
-    super(props);
+export const DropdownContentContainer = styled.div`
+  min-width: 250px;
+  border: 1px solid ${themeBorder};
+  background-color: ${themeBgPrimary};
+  padding: 5px;
+`;
 
-    this.state = {
-      isOpen: false
-    };
+const DropdownStory = ({ children, preferredDirections }) => {
+  const [isShowing, setIsShowing] = React.useState(false);
 
-    this.handleClose = this.handleClose.bind(this);
-    this.handleOpen = this.handleOpen.bind(this);
+  function toggle() {
+    setIsShowing(!isShowing);
   }
 
-  handleClose() {
-    this.setState({
-      isOpen: false
-    });
-  }
+  const containerStyle = css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  `;
 
-  handleOpen() {
-    this.setState({ isOpen: true });
-  }
-
-  render() {
-    const { preferredDirections, children } = this.props;
-
-    const containerStyle = css`
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 400px;
-    `;
-
-    return (
-      <div className={containerStyle}>
-        <Dropdownable
-          isOpen={this.state.isOpen}
-          onClose={this.handleClose}
-          preferredDirections={preferredDirections}
-          dropdown={
-            <DropdownStuffContainer>
-              <p>Positioned relative to children</p>
-              <p>Click outside to dismiss</p>
-              <p>Also try resizing</p>
-            </DropdownStuffContainer>
-          }
-        >
-          <PrimaryButton onClick={this.handleOpen}>{children}</PrimaryButton>
-        </Dropdownable>
-      </div>
-    );
-  }
-}
+  return (
+    <div className={containerStyle}>
+      <Dropdownable
+        isOpen={isShowing}
+        onClose={toggle}
+        preferredDirections={preferredDirections}
+        dropdown={
+          <DropdownContentContainer>
+            <p>Positioned relative to children.</p>
+            <p>Click outside to dismiss.</p>
+          </DropdownContentContainer>
+        }
+      >
+        <PrimaryButton onClick={toggle}>{children}</PrimaryButton>
+      </Dropdownable>
+    </div>
+  );
+};
 
 export default DropdownStory;

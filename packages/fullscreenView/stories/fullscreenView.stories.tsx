@@ -1,5 +1,6 @@
 import * as React from "react";
-import FullscreenView from "../components/FullscrenView";
+import FullscreenView from "../components/FullscreenView";
+import { Meta } from "@storybook/react";
 import {
   flex,
   flexItem,
@@ -23,7 +24,7 @@ const onClose = () => {
 export default {
   title: "Page Structure/Fullscreen View",
   component: FullscreenView
-};
+} as Meta;
 
 export const Default = () => (
   <div style={{ height: "500px" }}>

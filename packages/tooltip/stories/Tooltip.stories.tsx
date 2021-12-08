@@ -1,12 +1,12 @@
 import * as React from "react";
-import { select } from "@storybook/addon-knobs";
-
 import { Tooltip } from "../../index";
 import Dropdownable, {
   Direction
 } from "../../dropdownable/components/Dropdownable";
 import { Box } from "../../styleUtils/modifiers";
 import { Card } from "../../card";
+import { Story, Meta } from "@storybook/react";
+import { TooltipProps } from "../components/Tooltip";
 
 const tooltipStoryDecorator = storyFn => (
   <div style={{ textAlign: "center" }}>
@@ -14,85 +14,86 @@ const tooltipStoryDecorator = storyFn => (
   </div>
 );
 
+const directions = [
+  Direction.BottomLeft,
+  Direction.BottomRight,
+  Direction.BottomCenter,
+  Direction.TopLeft,
+  Direction.TopRight,
+  Direction.TopCenter
+];
+
 export default {
   title: "Overlays/Tooltip",
+  component: Tooltip,
   decorators: [
     tooltipStoryDecorator,
-    Story => (
-      <div style={{ margin: "4em" }}>
-        <Story />
-      </div>
-    )
+    Story => <div style={{ margin: "4em" }}>{Story()}</div>
   ],
-  component: Tooltip
-};
+  argTypes: {
+    preferredDirections: {
+      options: directions
+    },
+    className: {
+      control: { disable: true }
+    },
+    trigger: {
+      control: { disable: true }
+    },
+    ariaLabel: {
+      control: { disable: true }
+    },
+    "data-cy": {
+      control: { disable: true }
+    }
+  }
+} as Meta;
 
-export const Default = () => (
-  <Tooltip trigger="hover me" id="default">
-    content
+const Template: Story<TooltipProps> = args => (
+  <Tooltip trigger="Hover Me" id="default" {...args}>
+    Tooltip Content
   </Tooltip>
 );
 
-export const MountedInsideDropdown = () => (
+export const Default = Template.bind({});
+
+export const MountedInsideDropdown = args => (
   <div>
     <Dropdownable
       isOpen={true}
       dropdown={
         <Card>
-          <Tooltip trigger="hover me" id="default" disablePortal={true}>
-            content
+          <Tooltip
+            trigger="Hover Me"
+            id="default"
+            disablePortal={true}
+            {...args}
+          >
+            Tooltip Content
           </Tooltip>
         </Card>
       }
     >
-      Dropdown trigger
+      Dropdown Trigger
     </Dropdownable>
   </div>
 );
 
-MountedInsideDropdown.storyName =
-  "Mounted inside dropdown (does not portal to document.body)";
-
-export const WithCustomDirection = () => {
-  const options = {
-    BottomLeft: "bottom-start",
-    BottomRight: "bottom-end",
-    BottomCenter: "bottom",
-    TopLeft: "top-start",
-    TopRight: "top-end",
-    TopCenter: "top"
-  };
-
-  const knobDirection = select("Direction", options, "BottomLeft");
-
-  function getKeyByValue(value): string {
-    return (
-      Object.keys(options).find(key => options[key] === value) || "BottomLeft"
-    );
-  }
-
-  return (
-    <Tooltip
-      trigger="hover me"
-      id="customDir"
-      preferredDirections={Direction[getKeyByValue(knobDirection)]}
-    >
-      Use the knobs to change tooltip alignment
-    </Tooltip>
-  );
-};
-
-export const DefaultMaxWidth = () => (
-  <Tooltip trigger="if not provided, maxWidth defaults to 300" id="maxWidth">
+export const DefaultMaxWidth = args => (
+  <Tooltip
+    trigger="If not provided, maxWidth defaults to 300."
+    id="maxWidth"
+    {...args}
+  >
     since my content is wider than 300px, it will wrap so that tooltip does not
     exceed a width of 300px by default
   </Tooltip>
 );
 
-export const MinOrMaxWidth = () => (
+export const MinOrMaxWidth = args => (
   <>
     <div style={{ marginBottom: "1em" }}>
-      <Tooltip trigger="maxWidth 100px" id="maxWidth" maxWidth={100}>
+      <Tooltip trigger="maxWidth 100px" id="maxWidth" maxWidth={100} {...args}>
         content that is greater than 100px
       </Tooltip>
     </div>
@@ -107,19 +108,14 @@ export const MinOrMaxWidth = () => (
   </>
 );
 
-export const ContentWidth = () => (
+export const ContentWidth = args => (
   <Tooltip
     trigger="if maxWidth is null, tooltip width will expand to fit content"
     id="maxWidth"
     maxWidth={null}
+    {...args}
   >
     sometimes I may want my tooltip to take up as much width as the content
     needs without having the default maxWidth
-  </Tooltip>
-);
-
-export const SuppressToggle = () => (
-  <Tooltip trigger="hover me" id="suppress" isOpen={true} suppress={true}>
-    I won't toggle open and closed
   </Tooltip>
 );
