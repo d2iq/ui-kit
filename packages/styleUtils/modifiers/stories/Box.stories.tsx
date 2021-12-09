@@ -1,43 +1,41 @@
 import * as React from "react";
-import { pickReadableTextColor } from "../../../shared/styles/color";
 import {
-  greyLightLighten5,
-  red,
-  yellow,
-  green,
-  blue,
-  purple,
   greyLight,
   themeBrandPrimary
 } from "../../../design-tokens/build/js/designTokens";
 import Box, { BoxProps } from "../components/Box";
 import { css } from "@emotion/css";
 import { Story, Meta } from "@storybook/react";
+import {
+  cssDisplayPropertyValues,
+  textAlignValues,
+  vertAlignValues
+} from "../../../storybookHelpers/controlContants";
 
 export default {
   title: "Style Utilities/Box",
   component: Box,
   argTypes: {
     bgColor: {
-      options: [greyLightLighten5, red, yellow, green, blue, purple],
-      control: {
-        type: "select"
-      }
+      control: { type: "color" }
     },
     bgImageUrl: {
-      defaultValue: "",
       control: {
         type: "text"
       }
     },
-    textAlign: {
-      options: ["left", "right", "center"],
+    display: {
+      options: cssDisplayPropertyValues,
       control: {
-        type: "radio"
+        type: "select"
       }
     },
+    textAlign: {
+      options: textAlignValues,
+      control: { type: "select" }
+    },
     vertAlignChildren: {
-      options: ["top", "center", "bottom"],
+      options: vertAlignValues,
       control: {
         type: "radio"
       }
@@ -54,91 +52,101 @@ export default {
     "data-cy": {
       control: { disable: true }
     }
+  },
+  args: {
+    bgImageUrl: "",
+    bgImageOptions: {},
+    isVisuallyHidden: false
   }
 } as Meta;
 
-const Template: Story<BoxProps> = args => (
-  <Box {...args}>
-    <div
-      style={{
-        border: `2px solid ${themeBrandPrimary}`,
-        height: "300px",
-        textAlign: "center"
-      }}
-    >
-      Box
+const setHeight = css`
+  > * {
+    height: 200px;
+  }
+`;
+
+const Template: Story<BoxProps> = args => {
+  const setBorder = css`
+    border: 2px solid ${themeBrandPrimary};
+  `;
+  return (
+    <div className={css([setHeight, setBorder])}>
+      <Box {...args}>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
+      </Box>
     </div>
-  </Box>
-);
+  );
+};
 
 export const Default = Template.bind({});
-Default.args = { bgColor: greyLightLighten5 };
+Default.args = { bgColor: greyLight, textAlign: "center" };
 
 export const BackgroundImage = Template.bind({});
 BackgroundImage.args = { bgImageUrl: "https://via.placeholder.com/150" };
 
-export const BackgroundImageWithOptions = args => {
+export const BackgroundImageWithOptions: Story<BoxProps> = args => {
   const bgOptions = `{\n\t"position": "top-left",\n\t"repeat": "repeat-x",\n\t"size": "contain"\n}`;
 
   return (
     <div>
       <p>Options:</p>
       <pre>{bgOptions}</pre>
-      <Box
-        {...args}
-        bgImageUrl="https://via.placeholder.com/150"
-        bgImageOptions={{
-          size: "contain",
-          repeat: "repeat-x",
-          position: "top-left"
-        }}
-      >
+      <Box {...args}>
         <div style={{ height: "300px" }} />
       </Box>
     </div>
   );
 };
 
-export const DisplayInline = args => (
+BackgroundImageWithOptions.args = {
+  bgImageUrl: "https://via.placeholder.com/150",
+  bgImageOptions: {
+    size: "contain",
+    repeat: "repeat-x",
+    position: "top-left"
+  }
+};
+BackgroundImageWithOptions.parameters = {
+  controls: {
+    exclude: ["vertAlignChildren", "textAlign", "bgColor", "display"]
+  }
+};
+
+export const DisplayInline: Story<BoxProps> = args => (
   <>
-    <Box display="inline" {...args}>
-      Box 1
-    </Box>
-    <Box display="inline" {...args}>
-      Box 2
-    </Box>
-    <Box display="inline" {...args}>
-      Box 3
-    </Box>
+    <Box {...args}>Box 1</Box>
+    <Box {...args}>Box 2</Box>
+    <Box {...args}>Box 3</Box>
   </>
 );
 
-export const VerticalAlignChildren = args => {
-  const setHeight = css`
-    > * {
-      height: 200px;
-    }
-  `;
+DisplayInline.args = { display: "inline" };
+DisplayInline.parameters = {
+  controls: { exclude: ["vertAlignChildren", "textAlign"] }
+};
 
-  return (
-    <div>
-      <p>Use the Control panel to try other alignments.</p>
-      <div className={setHeight}>
-        <Box bgColor={greyLight} {...args}>
-          <div>Child 1</div>
-          <div>Child 2</div>
-          <div>Child 3</div>
-        </Box>
-      </div>
+export const VerticalAlignChildren: Story<BoxProps> = args => (
+  <div>
+    <p>Use the Control panel to try other alignments.</p>
+    <div className={setHeight}>
+      <Box bgColor={greyLight} {...args}>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div>Child 3</div>
+      </Box>
     </div>
-  );
-};
+  </div>
+);
 
-export const CustomTag = args => {
-  return (
-    <Box
-      {...args}
-      tag="section"
-    >{`This is rendered using a <section> tag`}</Box>
-  );
-};
+VerticalAlignChildren.parameters = { controls: { exclude: ["display"] } };
+
+export const CustomTag = args => (
+  <div className={setHeight}>
+    <Box tag="section" {...args}>
+      {`This is rendered using a <section> tag`}
+    </Box>
+  </div>
+);

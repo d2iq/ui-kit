@@ -9,7 +9,14 @@ export default {
   title: "Typography/Containers/CodeSnippet",
   component: CodeSnippet,
   argTypes: {
-    children: { defaultValue: snippet }
+    children: {
+      control: {
+        type: "text"
+      }
+    }
+  },
+  args: {
+    children: snippet
   }
 } as Meta;
 
@@ -18,16 +25,25 @@ const Template: Story<CodeSnippetProps> = args => (
 );
 
 export const Default = Template.bind({});
+Default.parameters = {
+  controls: { exclude: ["textToCopy", "onCopy", "copyTooltipContent"] }
+};
 
 export const TextToCopy = Template.bind({});
 TextToCopy.args = {
   textToCopy: snippet
+};
+TextToCopy.parameters = {
+  controls: { exclude: ["copyTooltipContent", "onCopy"] }
 };
 
 export const TextToCopyWithOnCopyCallback = Template.bind({});
 TextToCopyWithOnCopyCallback.args = {
   textToCopy: snippet,
   onCopy: () => alert("oncopy")
+};
+TextToCopyWithOnCopyCallback.parameters = {
+  controls: { exclude: ["copyTooltipContent"] }
 };
 
 export const TextToCopyAndCustomTooltipContentOnCopy = Template.bind({});
