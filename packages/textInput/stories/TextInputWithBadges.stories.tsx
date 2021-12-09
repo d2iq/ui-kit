@@ -1,6 +1,7 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { TextInputWithBadges } from "../index";
-import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
+import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 import TextInputWithBadgesStoryHelper from "./helpers/TextInputWithBadgesStoryHelper";
 import { Typeahead } from "../../typeahead";
 import TextInputWithBadgesTypeaheadStoryHelper from "./helpers/TextInputWithBadgesTypeaheadStoryHelper";
@@ -31,51 +32,51 @@ const defaultBadges = [
 
 export default {
   title: "Forms/TextInputWithBadges",
-  decorators: [inputStoryWrapper],
-  component: TextInputWithBadges
-};
+  decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
+  component: TextInputWithBadges,
+  argTypes: {
+    appearance: {
+      defaultValue: "standard"
+    },
+    hintContent: {
+      inputLabel: {
+        control: {
+          type: "text"
+        },
+        defaultValue: "Input Label"
+      },
+      control: {
+        type: "text"
+      }
+    },
+    tooltipContent: {
+      control: {
+        type: "text"
+      }
+    },
+    errors: {
+      control: { disable: true }
+    }
+  }
+} as Meta;
 
-export const Default = () => (
+const Template: Story = args => (
   <TextInputWithBadgesStoryHelper>
     {({ badges, badgeChangeHandler }) => (
       <TextInputWithBadges
         id="default"
-        inputLabel="Default"
+        inputLabel="Default Input Label"
         onBadgeChange={badgeChangeHandler}
-        badges={badges}
+        badges={defaultBadges}
+        {...args}
       />
     )}
   </TextInputWithBadgesStoryHelper>
 );
 
-export const PreFilledWithBadges = () => (
-  <TextInputWithBadgesStoryHelper badges={defaultBadges}>
-    {({ badges, badgeChangeHandler }) => (
-      <TextInputWithBadges
-        id="prefilled"
-        inputLabel="Pre-filled"
-        badges={badges}
-        onBadgeChange={badgeChangeHandler}
-      />
-    )}
-  </TextInputWithBadgesStoryHelper>
-);
+export const Default = Template.bind({});
 
-export const CustomBadgeAppearance = () => (
-  <TextInputWithBadgesStoryHelper badges={defaultBadges}>
-    {({ badges, badgeChangeHandler }) => (
-      <TextInputWithBadges
-        id="appearance"
-        inputLabel="Success badges"
-        badges={badges}
-        onBadgeChange={badgeChangeHandler}
-        badgeAppearance="success"
-      />
-    )}
-  </TextInputWithBadgesStoryHelper>
-);
-
-export const DontAddBadgeOnBlur = () => (
+export const DontAddBadgeOnBlur = args => (
   <TextInputWithBadgesStoryHelper>
     {({ badges, badgeChangeHandler }) => (
       <TextInputWithBadges
@@ -84,40 +85,13 @@ export const DontAddBadgeOnBlur = () => (
         onBadgeChange={badgeChangeHandler}
         badges={badges}
         addBadgeOnBlur={false}
+        {...args}
       />
     )}
   </TextInputWithBadgesStoryHelper>
 );
 
-export const UsedWithTypeahead = () => (
-  <TextInputWithBadgesTypeaheadStoryHelper items={typeaheadItems}>
-    {({ items, selectHandler, selectedItems, badgeChangeHandler, badges }) => {
-      return (
-        <Typeahead
-          // removes items from the Typeahead that already exist in the badge input
-          items={items.filter(
-            item => !badges.map(badge => badge.value).includes(item.value)
-          )}
-          selectedItems={selectedItems}
-          keepOpenOnSelect={false}
-          resetInputOnSelect={true}
-          textField={
-            <TextInputWithBadges
-              id="typeahead.default"
-              inputLabel="Typeahead"
-              placeholder={badges.length ? "" : "Placeholder"}
-              badges={badges}
-              onBadgeChange={badgeChangeHandler}
-            />
-          }
-          onSelect={selectHandler}
-        />
-      );
-    }}
-  </TextInputWithBadgesTypeaheadStoryHelper>
-);
-
-export const UsedWithTypeaheadPrefilledWBadges = () => (
+export const UsedWithTypeaheadPrefilledWBadges = args => (
   <TextInputWithBadgesTypeaheadStoryHelper
     items={typeaheadItems}
     badges={[typeaheadItems[0], typeaheadItems[1], typeaheadItems[2]]}
@@ -139,6 +113,7 @@ export const UsedWithTypeaheadPrefilledWBadges = () => (
               placeholder={badges.length ? "" : "Placeholder"}
               badges={badges}
               onBadgeChange={badgeChangeHandler}
+              {...args}
             />
           }
           onSelect={selectHandler}

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { SegmentedControl } from "../index";
 import SegmentedControlButton from "../components/SegmentedControlButton";
 import SegmentedControlStoryHelper from "./helpers/SegmentedControlStoryHelper";
@@ -8,9 +9,9 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 export default {
   title: "Forms/SegmentedControl",
   component: SegmentedControl
-};
+} as Meta;
 
-export const Default = () => (
+const Template: Story = args => (
   <SegmentedControlStoryHelper>
     {({ changeHandler, selectedSegment }) => (
       <SegmentedControl
@@ -34,6 +35,8 @@ export const Default = () => (
     )}
   </SegmentedControlStoryHelper>
 );
+
+export const Default = Template.bind({});
 
 export const WithASelectedSegment = () => (
   <SegmentedControlStoryHelper selectedSegment="exosphere">

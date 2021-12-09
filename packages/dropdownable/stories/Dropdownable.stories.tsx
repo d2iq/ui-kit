@@ -1,43 +1,45 @@
 import * as React from "react";
-import { select } from "@storybook/addon-knobs";
+import { Story, Meta } from "@storybook/react";
 
-import Dropdownable, { Direction } from "../components/Dropdownable";
+import Dropdownable from "../components/Dropdownable";
 import DropdownStory from "./helpers/DropdownStory";
 import DropdownStoryFit from "./helpers/DropdownStoryFit";
 
 export default {
   title: "Utils/Dropdownable",
-  component: Dropdownable
-};
-
-export const WithCustomDirection = () => {
-  const options = {
-    BottomLeft: "bottom-start",
-    BottomRight: "bottom-end",
-    TopLeft: "top-start",
-    TopRight: "top-end"
-  };
-
-  const knobDirection = select("Direction", options, "BottomLeft");
-
-  function getKeyByValue(value): string {
-    return (
-      Object.keys(options).find(key => options[key] === value) || "BottomLeft"
-    );
+  component: Dropdownable,
+  argTypes: {
+    preferredDirections: {
+      options: ["bottom-start", "bottom-end", "top-start", "top-end"],
+      control: {
+        type: "select"
+      }
+    },
+    dropdown: {
+      control: { disable: true }
+    },
+    overlayRoot: {
+      control: { disable: true }
+    },
+    className: {
+      control: { disable: true }
+    },
+    "data-cy": {
+      control: { disable: true }
+    }
   }
+} as Meta;
 
-  return (
-    <DropdownStory
-      preferredDirections={[Direction[getKeyByValue(knobDirection)]]}
-    >
-      Change dropdown orientation using knobs
-    </DropdownStory>
-  );
-};
+const Template: Story = args => (
+  <DropdownStory {...args}>
+    Change dropdown orientation using Controls
+  </DropdownStory>
+);
 
-export const WithMultipleDirectionPreferences = () => {
+export const Default = Template.bind({});
+export const WithMultipleDirectionPreferences = args => {
   return (
-    <DropdownStoryFit>
+    <DropdownStoryFit {...args}>
       Open the dropdown before and after expanding the height
     </DropdownStoryFit>
   );

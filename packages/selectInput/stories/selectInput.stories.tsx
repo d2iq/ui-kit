@@ -1,8 +1,9 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { SelectInput } from "../../index";
 import { InputAppearance } from "../../shared/types/inputAppearance";
-import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
+import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 const defaultOptions = [
@@ -20,143 +21,43 @@ const defaultOptions = [
 
 export default {
   title: "Forms/SelectInput",
-  decorators: [inputStoryWrapper],
-  component: SelectInput
+  decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
+  component: SelectInput,
+  argTypes: {
+    appearance: {
+      defaultValue: "standard"
+    },
+    iconStart: {
+      options: [SystemIcons.Donut, SystemIcons.Gear, SystemIcons.Check],
+      defaultValue: SystemIcons.TriangleDown
+    },
+    inputLabel: {
+      control: {
+        type: "text"
+      },
+      defaultValue: "Input Label"
+    },
+    hintContent: {
+      control: {
+        type: "text"
+      }
+    },
+    options: {
+      defaultValue: defaultOptions
+    },
+    errors: {
+      defaultValue: ["Example Error Message", "Other Error Message"]
+    }
+  }
 };
 
-export const Default = () => (
-  <>
-    <SelectInput
-      options={defaultOptions}
-      id="default"
-      inputLabel="Atmosphere Layer"
-    />
-    <SelectInput
-      options={defaultOptions}
-      appearance={InputAppearance.Error}
-      id="error"
-      inputLabel="Error"
-      tooltipContent="I can have a tooltip!"
-    />
-    <SelectInput
-      options={defaultOptions}
-      appearance={InputAppearance.Success}
-      id="success"
-      inputLabel="Success"
-    />
-    <SelectInput
-      options={defaultOptions}
-      id="disabled"
-      inputLabel="Disabled"
-      disabled={true}
-    />
-  </>
-);
-
-export const WithPlaceholder = () => (
-  <SelectInput
-    options={[
-      { value: "placeholder", label: "Pick a layer", disabled: true },
-      ...defaultOptions
-    ]}
-    id="layers"
-    inputLabel="Atmosphere Layer"
-    value="placeholder"
-  />
-);
-
-export const HintText = () => (
-  <>
-    <SelectInput
-      options={defaultOptions}
-      id="hintOnly"
-      inputLabel="Atmosphere Layer"
-      hintContent="We suggest the Mesosphere"
-    />
-    <SelectInput
-      appearance={InputAppearance.Error}
-      options={defaultOptions}
-      id="hintAndError"
-      inputLabel="Atmosphere Layer"
-      hintContent="We suggest the Mesosphere"
-      errors={["Something is wrong here"]}
-    />
-  </>
-);
-
-export const HiddenLabel = () => (
+const Template: Story = args => (
   <SelectInput
     options={defaultOptions}
-    id="layers"
+    id="default"
     inputLabel="Atmosphere Layer"
-    showInputLabel={false}
+    {...args}
   />
 );
 
-export const Required = () => (
-  <>
-    <SelectInput
-      options={defaultOptions}
-      id="required"
-      inputLabel="Atmosphere Layer"
-      required={true}
-    />
-    <SelectInput
-      appearance={InputAppearance.Error}
-      options={defaultOptions}
-      id="required.input.with.errors"
-      inputLabel="Atmosphere Layer"
-      errors={["Please enter a value."]}
-      required={true}
-    />
-  </>
-);
-
-export const ErrorWithMessage = () => (
-  <SelectInput
-    appearance={InputAppearance.Error}
-    options={defaultOptions}
-    id="layers"
-    inputLabel="Atmosphere Layer"
-    errors={["Something is wrong here"]}
-  />
-);
-
-export const ErrorWithMessages = () => (
-  <SelectInput
-    appearance={InputAppearance.Error}
-    options={defaultOptions}
-    id="layers"
-    inputLabel="Atmosphere Layer"
-    errors={["Something is wrong here", "Another thing is wrong too"]}
-  />
-);
-
-export const WithOnChange = () => (
-  <SelectInput
-    options={defaultOptions}
-    id="layers"
-    inputLabel="Atmosphere Layer"
-    onChange={action("onChange happened")}
-    hintContent="Check the Action Logger tab on the right"
-  />
-);
-
-export const WithValue = () => (
-  <SelectInput
-    options={defaultOptions}
-    id="layers"
-    inputLabel="Atmosphere Layer"
-    value="thermosphere"
-  />
-);
-
-export const WithIcon = () => (
-  <SelectInput
-    options={defaultOptions}
-    id="layers"
-    inputLabel="Atmosphere Layer"
-    value="thermosphere"
-    iconStart={SystemIcons.Donut}
-  />
-);
+export const Default = Template.bind({});
