@@ -1,25 +1,84 @@
 import * as React from "react";
-import { withKnobs, select } from "@storybook/addon-knobs";
 import {
   themeTextColorDisabled,
   themeTextColorPrimary,
   themeTextColorSecondary,
   blue
 } from "../../../design-tokens/build/js/designTokens";
-import { FontSize } from "../../../shared/styles/styleUtils/typography/textSize";
+import { Story, Meta } from "@storybook/react";
 
-import { Text } from "../";
+import {
+  DangerText,
+  InteractiveText,
+  MonospaceText,
+  SmallText,
+  SuccessText,
+  Text,
+  WarningText
+} from "../";
 
-type WrapVals = "truncate" | "nowrap" | "wrap";
+const colors = [
+  themeTextColorPrimary,
+  themeTextColorSecondary,
+  themeTextColorDisabled,
+  blue
+];
+
+const textAlign = [
+  "center",
+  "end",
+  "justify",
+  "left",
+  "match-parent",
+  "right",
+  "start"
+];
 
 export default {
   title: "Typography/Text",
-  decorators: [withKnobs],
-  component: Text
-};
+  component: Text,
+  subComponents: {
+    SuccessText,
+    WarningText,
+    DangerText,
+    SmallText,
+    MonospaceText,
+    InteractiveText
+  },
+  argTypes: {
+    size: {
+      options: ["s", "m", "l", "xl"],
+      control: { type: "select" }
+    },
+    weight: {
+      options: ["normal", "medium"],
+      control: { type: "inline-radio" },
+      defaultValue: "normal"
+    },
+    align: {
+      options: textAlign,
+      control: { type: "select" },
+      defaultValue: "inherit"
+    },
+    wrap: {
+      options: ["truncate", "nowrap", "wrap"],
+      control: { type: "inline-radio" }
+    },
+    tag: {
+      options: ["p", "span"],
+      control: { type: "inline-radio" }
+    },
+    className: {
+      control: { disable: true }
+    },
+    "data-cy": {
+      control: { disable: true }
+    }
+  }
+} as Meta;
 
-export const Default = () => (
-  <Text>
+const Template: Story = args => (
+  <Text {...args}>
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since the
     1500s, when an unknown printer took a galley of type and scrambled it to
@@ -31,114 +90,36 @@ export const Default = () => (
   </Text>
 );
 
-export const Align = () => {
-  const textAlignments = {
-    left: "left",
-    right: "right",
-    center: "center"
-  };
-  const align = select("align", textAlignments, "center");
+export const DefaultText = Template.bind({});
 
-  return (
-    <Text align={align as React.CSSProperties["textAlign"]}>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book. It has survived not only five centuries, but
-      also the leap into electronic typesetting, remaining essentially
-      unchanged. It was popularised in the 1960s with the release of Letraset
-      sheets containing Lorem Ipsum passages, and more recently with desktop
-      publishing software like Aldus PageMaker including versions of Lorem
-      Ipsum.
-    </Text>
-  );
+export const ResponsiveSize = Template.bind({});
+ResponsiveSize.args = {
+  size: {
+    default: "s",
+    medium: "m",
+    large: "l",
+    jumbo: "xl"
+  }
 };
 
-export const Wrap = () => {
-  const wrapVals = {
-    wrap: "wrap",
-    nowrap: "nowrap",
-    truncate: "truncate"
-  };
-  const wrap = select("wrap", wrapVals, "wrap");
-
-  return (
-    <div>
-      <p>Use the Knobs panel to change how text wraps</p>
-      <div style={{ width: "300px" }}>
-        <Text wrap={wrap as WrapVals}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </Text>
-      </div>
-    </div>
-  );
-};
-
-export const Size = () => {
-  const sizes = {
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl"
-  };
-  const size = select("size", sizes, "m");
-
-  return (
-    <Text size={size as FontSize}>
-      Use the Knobs panel to change the font size
-    </Text>
-  );
-};
-
-export const ResponsiveSize = () => {
-  return (
-    <Text
-      size={{
-        default: "s",
-        medium: "m",
-        large: "l",
-        jumbo: "xl"
-      }}
-    >
-      Change the width of your viewport to see the font size change
-    </Text>
-  );
-};
-
-export const Color = () => {
-  const colors = {
-    themeTextColorPrimary,
-    themeTextColorSecondary,
-    themeTextColorDisabled,
-    blue
-  };
-  const color = select("color", colors, themeTextColorPrimary);
-
-  return (
-    <Text color={color}>Use the Knobs panel to change the text color</Text>
-  );
-};
-
-export const MediumWeight = () => (
-  <Text weight="medium">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  </Text>
+export const _SuccessText = args => (
+  <SuccessText {...args}>Success Text</SuccessText>
 );
 
-export const CustomTag = () => (
-  <Text tag="span">{`This text is in a <span> tag`}</Text>
+export const _WarningText = args => (
+  <WarningText {...args}>Warning Text</WarningText>
 );
 
-export const NestedTag = () => (
-  <Text>
-    <span>{`This text is in a <span> tag passed as a child`}</span>
-  </Text>
+export const _DangerText = args => (
+  <DangerText {...args}>Danger Text</DangerText>
+);
+
+export const _SmallText = args => <SmallText {...args}>Small Text</SmallText>;
+
+export const _MonospaceText = args => (
+  <MonospaceText {...args}>Monospace Text</MonospaceText>
+);
+
+export const _InteractiveText = args => (
+  <InteractiveText {...args}>Interactive Text</InteractiveText>
 );
