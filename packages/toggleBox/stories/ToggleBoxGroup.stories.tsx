@@ -2,8 +2,8 @@ import * as React from "react";
 import { Story, Meta } from "@storybook/react";
 import { ToggleBox, ToggleBoxGroup } from "../index";
 import ToggleBoxGroupStoryHelper from "./helpers/ToggleBoxGroupStoryHelper";
-import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 import { ToggleBoxGroupProps } from "../components/ToggleBoxGroup";
+import { spacingSizeValues } from "../../storybookHelpers/controlConstants";
 
 const directions = {
   column: "column",
@@ -16,7 +16,7 @@ export default {
   component: ToggleBoxGroup,
   argTypes: {
     gutterSize: {
-      options: ["xxs", "xs", "s", "m", "l", "xl", "xxl", "none"],
+      options: spacingSizeValues,
       control: {
         type: "select"
       }

@@ -10,7 +10,7 @@ import {
   Text,
   WarningText
 } from "../";
-import { textAlignValues } from "../../../storybookHelpers/controlContants";
+import { textAlignValues } from "../../../storybookHelpers/controlConstants";
 import { css } from "@emotion/css";
 
 export default {

@@ -2,7 +2,7 @@ import * as React from "react";
 import { HeadingText1, HeadingText2, HeadingText3 } from "../index";
 import { Story, Meta } from "@storybook/react";
 import { HeadingTextProps } from "../textTypes";
-import { textAlignValues } from "../../../storybookHelpers/controlContants";
+import { textAlignValues } from "../../../storybookHelpers/controlConstants";
 
 export default {
   title: "Typography/HeadingText",

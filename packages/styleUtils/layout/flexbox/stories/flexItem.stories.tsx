@@ -26,8 +26,7 @@ export default {
   component: FlexItem,
   argTypes: {
     flex: {
-      options: ["shrink", "grow"],
-      defaultValue: "grow"
+      options: ["shrink", "grow"]
     },
     growFactor: {
       options: [1, 2]

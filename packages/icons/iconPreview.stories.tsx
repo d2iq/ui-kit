@@ -4,7 +4,8 @@ import { ProductIcons } from "./dist/product-icons-enum";
 import IconGrid from "../icon/stories/helpers/IconPreviewGrid";
 
 export default {
-  title: "Visual Design Core/Icons"
+  title: "Visual Design Core/Icons",
+  parameters: { controls: { disable: true } }
 };
 
 export const _SystemIcons = () => (

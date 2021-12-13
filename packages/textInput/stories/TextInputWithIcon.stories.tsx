@@ -3,27 +3,28 @@ import { Story, Meta } from "@storybook/react";
 import { TextInputWithIcon } from "../index";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
+import {
+  systemIconLabels,
+  systemIcons
+} from "../../storybookHelpers/controlConstants";
 
 export default {
   title: "Forms/TextInputWithIcon",
   decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
   component: TextInputWithIcon,
   argTypes: {
-    appearance: {
-      defaultValue: "standard"
-    },
     inputLabel: {
       control: {
         type: "text"
-      },
-      defaultValue: "Input Label"
+      }
     },
     iconStart: {
-      options: [SystemIcons.TriangleDown, SystemIcons.Funnel],
-      defaultValue: SystemIcons.TriangleDown
+      options: systemIcons,
+      mapping: systemIconLabels
     },
     iconEnd: {
-      options: [SystemIcons.TriangleDown, SystemIcons.Close, SystemIcons.Funnel]
+      options: systemIcons,
+      mapping: systemIconLabels
     },
     hintContent: {
       control: {
@@ -38,6 +39,11 @@ export default {
     errors: {
       control: { disable: true }
     }
+  },
+  args: {
+    appearance: "standard",
+    inputLabel: "Default Input Label",
+    iconStart: SystemIcons.TriangleDown
   }
 } as Meta;
 

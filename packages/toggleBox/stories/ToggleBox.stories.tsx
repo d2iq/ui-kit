@@ -6,11 +6,8 @@ import ToggleBoxStoryHelper from "./helpers/ToggleBoxStoryHelper";
 export default {
   title: "Forms/ToggleBox",
   component: ToggleBox,
-  argTypes: {
-    isActive: {
-      control: "boolean",
-      defaultValue: false
-    }
+  args: {
+    isActive: false
   }
 };
 

@@ -8,18 +8,16 @@ export default {
   title: "Feedback/MessagePanel",
   component: MessagePanel,
   argTypes: {
-    appearance: {
-      defaultValue: "standard"
-    },
-    heading: {
-      defaultValue: "No Policy Set"
-    },
     primaryAction: {
       control: { disable: true }
     },
     secondaryAction: {
       control: { disable: true }
     }
+  },
+  args: {
+    appearance: "standard",
+    heading: "No Policy Set"
   }
 } as Meta;
 

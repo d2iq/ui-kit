@@ -1,39 +1,22 @@
 import * as React from "react";
 import { ClickToCopyButton } from "../";
 import { Story, Meta } from "@storybook/react";
-
-import {
-  blue,
-  green,
-  purple,
-  red,
-  textColorPrimary,
-  textColorSecondary,
-  yellow
-} from "../../design-tokens/build/js/designTokens";
+import { textColorPrimary } from "../../design-tokens/build/js/designTokens";
+import { spacingSizeValues } from "../../storybookHelpers/controlConstants";
 
 export default {
   title: "Actions/ClickToCopyButton",
   component: ClickToCopyButton,
   argTypes: {
     color: {
-      options: [
-        textColorPrimary,
-        textColorSecondary,
-        red,
-        yellow,
-        green,
-        blue,
-        purple
-      ],
-      defaultValue: textColorPrimary
+      control: { type: "color" }
     },
     iconSize: {
-      options: ["none", "xxs", "xs", "s", "m", "l", "xl", "xxl"],
-      control: {
-        type: "select"
-      }
+      options: spacingSizeValues
     }
+  },
+  args: {
+    color: textColorPrimary
   }
 } as Meta;
 

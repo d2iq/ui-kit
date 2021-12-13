@@ -1,8 +1,7 @@
 import * as React from "react";
 import { ButtonCard, Card, LinkCard } from "../index";
 import { Story, Meta } from "@storybook/react";
-
-const sizes = ["xxs", "xs", "s", "m", "l", "xl", "xxl"];
+import { spacingSizeValues } from "../../storybookHelpers/controlConstants";
 
 export default {
   title: "Layout/Card",
@@ -10,11 +9,14 @@ export default {
   subcomponents: { ButtonCard, LinkCard },
   argTypes: {
     paddingSize: {
-      options: sizes,
+      options: spacingSizeValues,
       control: {
         type: "select"
-      },
-      defaultValue: "m"
+      }
+    },
+    aspectRatio: {
+      options: ["none", "2:1"],
+      mapping: { "2:1": [2, 1] }
     }
   }
 } as Meta;

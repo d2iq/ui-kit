@@ -12,8 +12,7 @@ export default {
   argTypes: {
     appearance: {
       options: ["default", "info", "success", "warning", "danger", "outline"],
-      control: { type: "select" },
-      defaultValue: "default"
+      control: { type: "select" }
     },
     message: {
       control: { type: "text" }
@@ -27,6 +26,9 @@ export default {
     className: {
       control: { disable: true }
     }
+  },
+  args: {
+    appearance: "default"
   }
 } as Meta;
 

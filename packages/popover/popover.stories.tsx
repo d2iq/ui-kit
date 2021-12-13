@@ -4,16 +4,10 @@ import { Story, Meta } from "@storybook/react";
 import { Popover } from "../";
 import { PrimaryDropdownButton } from "../button";
 import { PopoverProps } from "./components/PopoverBox";
-import { Direction } from "../dropdownable/components/Dropdownable";
-
-const directions = [
-  Direction.BottomLeft,
-  Direction.BottomRight,
-  Direction.BottomCenter,
-  Direction.TopLeft,
-  Direction.TopRight,
-  Direction.TopCenter
-];
+import {
+  directionsValues,
+  directionsValuesLabels
+} from "../storybookHelpers/controlConstants";
 
 export default {
   title: "Overlays/Popover",
@@ -21,7 +15,8 @@ export default {
   component: Popover,
   argTypes: {
     preferredDirections: {
-      options: directions
+      options: directionsValues,
+      mapping: directionsValuesLabels
     },
     trigger: {
       control: { disable: true }

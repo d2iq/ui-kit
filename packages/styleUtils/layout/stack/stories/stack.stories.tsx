@@ -1,8 +1,7 @@
 import * as React from "react";
 import Stack, { StackProps } from "../components/Stack";
-import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifierUtils";
 import { Story, Meta } from "@storybook/react";
-import { spacingSizeValues } from "../../../../storybookHelpers/controlContants";
+import { spacingSizeValues } from "../../../../storybookHelpers/controlConstants";
 
 export default {
   title: "Layout/Stack",
@@ -12,8 +11,7 @@ export default {
       options: spacingSizeValues,
       control: {
         type: "select"
-      },
-      defaultValue: "m"
+      }
     },
     className: {
       control: { disable: true }

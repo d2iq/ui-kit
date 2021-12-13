@@ -6,6 +6,7 @@ import {
   themeBrandPrimary
 } from "../../../../design-tokens/build/js/designTokens";
 import { Story, Meta } from "@storybook/react";
+import { spacingSizeValues } from "../../../../storybookHelpers/controlConstants";
 
 const GridChild = styled.div`
   border: 2px solid ${themeBrandPrimary};
@@ -26,19 +27,16 @@ export default {
       control: { type: "number" }
     },
     gutterSize: {
-      options: ["none", "xxs", "xs", "s", "m", "l", "xl", "xxl"],
-      control: { type: "select" },
-      defaultValue: "m"
+      options: spacingSizeValues,
+      control: { type: "select" }
     },
     centerItems: {
       options: [true, false],
-      control: { type: "boolean" },
-      defaultValue: false
+      control: { type: "boolean" }
     },
     tag: {
       options: ["ol", "ul"],
-      control: { type: "inline-radio" },
-      defaultValue: "ul"
+      control: { type: "inline-radio" }
     },
     className: {
       control: { disable: true }

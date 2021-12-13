@@ -12,8 +12,7 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: {
         type: "select"
-      },
-      defaultValue: "s"
+      }
     }
   }
 } as Meta;

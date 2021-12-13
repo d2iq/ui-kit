@@ -10,14 +10,10 @@ export default {
   decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
   component: RadioInput,
   argTypes: {
-    appearance: {
-      defaultValue: "standard"
-    },
     inputLabel: {
       control: {
         type: "text"
-      },
-      defaultValue: "Default"
+      }
     },
     hintContent: {
       control: {
@@ -27,6 +23,10 @@ export default {
     errors: {
       control: { disable: true }
     }
+  },
+  args: {
+    appearance: "standard",
+    inputLabel: "Default Input Label"
   }
 } as Meta;
 

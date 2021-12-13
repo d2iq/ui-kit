@@ -1,10 +1,12 @@
 import * as React from "react";
 import { Story, Meta } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
 import { SelectInput } from "../../index";
-import { InputAppearance } from "../../shared/types/inputAppearance";
 import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
+import {
+  systemIconLabels,
+  systemIcons
+} from "../../storybookHelpers/controlConstants";
 
 const defaultOptions = [
   { value: "exosphere", label: "Exosphere" },
@@ -24,32 +26,29 @@ export default {
   decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
   component: SelectInput,
   argTypes: {
-    appearance: {
-      defaultValue: "standard"
-    },
     iconStart: {
-      options: [SystemIcons.Donut, SystemIcons.Gear, SystemIcons.Check],
-      defaultValue: SystemIcons.TriangleDown
+      options: systemIcons,
+      mapping: systemIconLabels
     },
     inputLabel: {
       control: {
         type: "text"
-      },
-      defaultValue: "Input Label"
+      }
     },
     hintContent: {
       control: {
         type: "text"
       }
-    },
-    options: {
-      defaultValue: defaultOptions
-    },
-    errors: {
-      defaultValue: ["Example Error Message", "Other Error Message"]
     }
+  },
+  args: {
+    appearance: "standard",
+    inputLabel: "Default Input Label",
+    iconStart: SystemIcons.TriangleDown,
+    options: defaultOptions,
+    errors: ["Example Error Message", "Other Error Message"]
   }
-};
+} as Meta;
 
 const Template: Story = args => (
   <SelectInput

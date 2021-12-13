@@ -18,12 +18,8 @@ import {
 export default {
   title: "Utils/UIKitThemeProvider",
   component: UIKitThemeProvider,
-  argTypes: {
-    appTheme: {
-      control: { disable: true }
-    }
-  }
-} as Meta;
+  parameters: { controls: { disable: true } }
+};
 
 const Template: Story = args => (
   <UIKitThemeProvider

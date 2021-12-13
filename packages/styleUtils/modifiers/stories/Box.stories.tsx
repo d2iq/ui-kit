@@ -10,7 +10,7 @@ import {
   cssDisplayPropertyValues,
   textAlignValues,
   vertAlignValues
-} from "../../../storybookHelpers/controlContants";
+} from "../../../storybookHelpers/controlConstants";
 
 export default {
   title: "Style Utilities/Box",

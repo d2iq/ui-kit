@@ -14,10 +14,8 @@ export default {
   title: "Forms/TextInputWithButtons",
   decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
   component: TextInputWithButtons,
-  argTypes: {
-    appearance: {
-      defaultValue: "standard"
-    }
+  args: {
+    appearance: "standard"
   }
 };
 

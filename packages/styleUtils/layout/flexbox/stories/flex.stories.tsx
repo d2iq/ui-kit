@@ -4,6 +4,7 @@ import Flex from "../components/Flex";
 import FlexItem from "../components/FlexItem";
 import styled from "@emotion/styled";
 import { themeBrandPrimary } from "../../../../design-tokens/build/js/designTokens";
+import { spacingSizeValues } from "../../../../storybookHelpers/controlConstants";
 
 const DemoChild = styled.div`
   border: 2px solid ${themeBrandPrimary};
@@ -18,8 +19,7 @@ export default {
   component: Flex,
   argTypes: {
     align: {
-      options: ["flex-start", "flex-end", "center", "stretch"],
-      defaultValue: "flex-start"
+      options: ["flex-start", "flex-end", "center", "stretch"]
     },
     justify: {
       options: [
@@ -30,20 +30,16 @@ export default {
         "space-around",
         "space-evenly",
         "stretch"
-      ],
-      defaultValue: "flex-start"
+      ]
     },
     direction: {
-      options: ["column", "row", "column-reverse", "row-reverse"],
-      defaultValue: "row"
+      options: ["column", "row", "column-reverse", "row-reverse"]
     },
     wrap: {
-      options: ["wrap", "nowrap", "wrap-reverse"],
-      defaultValue: "nowrap"
+      options: ["wrap", "nowrap", "wrap-reverse"]
     },
     gutterSize: {
-      options: ["none", "xxs", "xs", "s", "m", "l", "xl", "xxl"],
-      defaultValue: "none"
+      options: spacingSizeValues
     },
     className: {
       control: { disable: true }
