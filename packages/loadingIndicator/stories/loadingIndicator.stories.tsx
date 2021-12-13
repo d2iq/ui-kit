@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import {
   ConfigurationMap,
   ConfigurationMapSection,
@@ -15,20 +16,22 @@ export default {
   subcomponents: { InlineLoadingIndicator }
 };
 
-export const SectionLoadingIndicatorInPlaceOfPageContent = () => (
+export const Template: Story = args => (
   <>
     <PageHeader breadcrumbElements={[<div key="pageTitle">Page Title</div>]} />
-    <SectionLoadingIndicator />
+    <SectionLoadingIndicator {...args} />
   </>
 );
 
-export const InlineLoadingIndicatorInPlaceOfTextContent = () => (
+export const _SectionLoadingIndicator = Template.bind({});
+
+export const _InlineLoadingIndicator = args => (
   <ConfigurationMap>
     <ConfigurationMapSection>
       <ConfigurationMapRow>
         <ConfigurationMapLabel>Name</ConfigurationMapLabel>
         <ConfigurationMapValue>
-          <InlineLoadingIndicator />
+          <InlineLoadingIndicator {...args} />
         </ConfigurationMapValue>
       </ConfigurationMapRow>
       <ConfigurationMapRow>

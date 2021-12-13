@@ -1,69 +1,53 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { withKnobs, select } from "@storybook/addon-knobs";
-import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
-import ButtonCard from "../components/ButtonCard";
-import { SpacingBox } from "../../styleUtils/modifiers";
+import ButtonCard, { ButtonCardProps } from "../components/ButtonCard";
 
 export default {
   title: "Actions/ButtonCard",
-  decorators: [withKnobs],
-  component: ButtonCard
+  component: ButtonCard,
+  argTypes: {
+    paddingSize: {
+      options: ["s", "m", "l", "xl"],
+      defaultValue: "m"
+    }
+  }
+} as Meta;
+
+const Template: Story = args => <ButtonCard {...args}>default</ButtonCard>;
+
+export const Default = Template.bind({});
+
+export const Active = Template.bind({});
+Active.args = {
+  isActive: true
 };
 
-export const Default = () => <ButtonCard>default</ButtonCard>;
-
-export const Active = () => <ButtonCard isActive={true}>isActive</ButtonCard>;
-
-export const Disabled = () => (
-  <>
-    <SpacingBox side="bottom">
-      <ButtonCard disabled={true}>disabled</ButtonCard>
-    </SpacingBox>
-    <ButtonCard disabled={true} isActive={true}>
-      disabled + isActive
-    </ButtonCard>
-  </>
-);
-
-export const WithOnClick = () => (
-  <ButtonCard onClick={action("button clicked")}>default</ButtonCard>
-);
-
-export const PaddingSize = () => {
-  const sizes = {
-    s: "s",
-    m: "m",
-    l: "l",
-    xl: "xl"
-  };
-  const size = select("paddingSize", sizes, "m");
-
-  return (
-    <ButtonCard paddingSize={size as SpaceSize}>
-      Use the Knobs panel to change the padding
-    </ButtonCard>
-  );
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true
 };
 
-export const ResponsivePaddingSize = () => (
-  <ButtonCard
-    paddingSize={{
-      default: "s",
-      small: "m",
-      medium: "l",
-      large: "xl",
-      jumbo: "xxl"
-    }}
-  >
-    Resize the viewport to see the padding change
-  </ButtonCard>
-);
+export const WithOnClick = Template.bind({});
+WithOnClick.args = {
+  onClick: action("button clicked")
+};
 
-export const AspectRatio = () => (
+export const ResponsivePaddingSize = Template.bind({});
+ResponsivePaddingSize.args = {
+  paddingSize: {
+    default: "s",
+    small: "m",
+    medium: "l",
+    large: "xl",
+    jumbo: "xxl"
+  }
+};
+
+export const AspectRatio = args => (
   <div style={{ maxWidth: "400px" }}>
-    <ButtonCard aspectRatio={[2, 1]}>I stay at a 2:1 aspect ratio</ButtonCard>
+    <ButtonCard aspectRatio={[2, 1]} {...args}>
+      I stay at a 2:1 aspect ratio
+    </ButtonCard>
   </div>
 );
-
-AspectRatio.storyName = "2:1 Aspect Ratio";

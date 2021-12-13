@@ -1,370 +1,99 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import {
   PrimaryButton,
   SecondaryButton,
   StandardButton,
   SuccessButton,
-  DangerButton,
-  SpacingBox
+  DangerButton
 } from "../../";
-import {
-  SpaceSize,
-  BoxSides
-} from "../../shared/styles/styleUtils/modifiers/modifierUtils";
-import ButtonAppearanceSample from "./helpers/ButtonAppearanceSample";
 import { action } from "@storybook/addon-actions";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { withKnobs } from "@storybook/addon-knobs";
+import { ButtonProps } from "../components/ButtonBase";
+
+const shapes = [
+  SystemIcons.CircleCheck,
+  SystemIcons.Check,
+  SystemIcons.Close,
+  SystemIcons.Folder,
+  SystemIcons.Gear,
+  SystemIcons.Services,
+  SystemIcons.Users
+];
 
 export default {
   title: "Actions/Button",
   component: StandardButton,
-  decorators: [
-    withKnobs,
-    Story => (
-      <div style={{ margin: "0 3em" }}>
-        <Story />
-      </div>
-    )
-  ]
-};
+  subComponents: {
+    PrimaryButton,
+    SecondaryButton,
+    SuccessButton,
+    DangerButton
+  },
+  decorators: [Story => <div style={{ margin: "0 3em" }}>{Story()}</div>],
+  argTypes: {
+    children: {
+      defaultValue: "Button",
+      control: {
+        type: "text"
+      }
+    },
+    iconStart: {
+      options: shapes
+    },
+    iconEnd: {
+      options: shapes
+    }
+  }
+} as Meta;
 
-export const _PrimaryButton = () => (
-  <>
-    <ButtonAppearanceSample>
-      <PrimaryButton>Button</PrimaryButton>
-      <PrimaryButton disabled={true}>Button</PrimaryButton>
-      <PrimaryButton isProcessing={true}>Button</PrimaryButton>
-    </ButtonAppearanceSample>
-    <ButtonAppearanceSample isInverse={true}>
-      <PrimaryButton isInverse={true}>Button</PrimaryButton>
-      <PrimaryButton disabled={true} isInverse={true}>
-        Button
-      </PrimaryButton>
-      <PrimaryButton isProcessing={true} isInverse={true}>
-        Button
-      </PrimaryButton>
-    </ButtonAppearanceSample>
-  </>
+const Template: Story<ButtonProps> = args => (
+  <StandardButton {...args}>{args.children}</StandardButton>
 );
 
-export const _SecondaryButton = () => (
-  <>
-    <ButtonAppearanceSample>
-      <SecondaryButton>Button</SecondaryButton>
-      <SecondaryButton disabled={true}>Button</SecondaryButton>
-      <SecondaryButton isProcessing={true}>Button</SecondaryButton>
-    </ButtonAppearanceSample>
-    <ButtonAppearanceSample isInverse={true}>
-      <SecondaryButton isInverse={true}>Button</SecondaryButton>
-      <SecondaryButton disabled={true} isInverse={true}>
-        Button
-      </SecondaryButton>
-      <SecondaryButton isProcessing={true} isInverse={true}>
-        Button
-      </SecondaryButton>
-    </ButtonAppearanceSample>
-  </>
+export const Standard = Template.bind({});
+
+export const _PrimaryButton = args => (
+  <PrimaryButton {...args}>{args.children}</PrimaryButton>
 );
 
-export const _StandardButton = () => (
-  <>
-    <ButtonAppearanceSample>
-      <StandardButton>Button</StandardButton>
-      <StandardButton disabled={true}>Button</StandardButton>
-      <StandardButton isProcessing={true}>Button</StandardButton>
-    </ButtonAppearanceSample>
-    <ButtonAppearanceSample isInverse={true}>
-      <StandardButton isInverse={true}>Button</StandardButton>
-      <StandardButton disabled={true} isInverse={true}>
-        Button
-      </StandardButton>
-      <StandardButton isProcessing={true} isInverse={true}>
-        Button
-      </StandardButton>
-    </ButtonAppearanceSample>
-  </>
+export const _SecondaryButton = args => (
+  <SecondaryButton {...args}>{args.children}</SecondaryButton>
 );
 
-export const _SuccessButton = () => (
-  <>
-    <ButtonAppearanceSample>
-      <SuccessButton>Button</SuccessButton>
-      <SuccessButton disabled={true}>Button</SuccessButton>
-      <SuccessButton isProcessing={true}>Button</SuccessButton>
-    </ButtonAppearanceSample>
-    <ButtonAppearanceSample isInverse={true}>
-      <SuccessButton isInverse={true}>Button</SuccessButton>
-      <SuccessButton disabled={true} isInverse={true}>
-        Button
-      </SuccessButton>
-      <SuccessButton isProcessing={true} isInverse={true}>
-        Button
-      </SuccessButton>
-    </ButtonAppearanceSample>
-  </>
+export const _SuccessButton = args => (
+  <SuccessButton {...args}>{args.children}</SuccessButton>
 );
 
-export const _DangerButton = () => (
-  <>
-    <ButtonAppearanceSample>
-      <DangerButton>Button</DangerButton>
-      <DangerButton disabled={true}>Button</DangerButton>
-      <DangerButton isProcessing={true}>Button</DangerButton>
-    </ButtonAppearanceSample>
-    <ButtonAppearanceSample isInverse={true}>
-      <DangerButton isInverse={true}>Button</DangerButton>
-      <DangerButton disabled={true} isInverse={true}>
-        Button
-      </DangerButton>
-      <DangerButton isProcessing={true} isInverse={true}>
-        Button
-      </DangerButton>
-    </ButtonAppearanceSample>
-  </>
+export const _DangerButton = args => (
+  <DangerButton {...args}>{args.children}</DangerButton>
 );
 
-export const WithIconBeforeButtonText = () => (
-  <StandardButton iconStart={SystemIcons.Close}>Icon button</StandardButton>
-);
-
-export const _WithIconBeforeButtonText = () => (
-  <StandardButton iconStart={SystemIcons.Close}>Icon button</StandardButton>
-);
-
-export const OnlyAnIcon = () => (
-  <StandardButton ariaLabel="Close" iconStart={SystemIcons.Close} />
-);
-
-export const FullWidth = () => (
-  <StandardButton isFullWidth={true}>Full-width</StandardButton>
-);
-
-export const FullWidthWithIcon = () => (
-  <StandardButton isFullWidth={true} iconStart={SystemIcons.Close}>
-    Full-width
+export const WithIconBeforeButtonText = args => (
+  <StandardButton iconStart={SystemIcons.Close} {...args}>
+    Icon button
   </StandardButton>
 );
 
-export const WithOnClick = () => (
-  <StandardButton onClick={action("Button pressed")}>Click me</StandardButton>
-);
-
-export const WithOnFocusAndOnBlur = () => (
-  <StandardButton
-    onFocus={action("Button focused")}
-    onBlur={action("Button blurred")}
-  >
-    Focus me
-  </StandardButton>
-);
-
-export const UsedAsALink = () => {
-  const spacingBoxProps = {
-    spacingSize: "xxl" as SpaceSize,
-    side: "bottom" as BoxSides
-  };
-  return (
-    <>
-      <SpacingBox {...spacingBoxProps}>
-        <ButtonAppearanceSample>
-          <PrimaryButton url="http://google.com">Button</PrimaryButton>
-          <PrimaryButton url="http://google.com" disabled={true}>
-            Button
-          </PrimaryButton>
-          <PrimaryButton url="http://google.com" isProcessing={true}>
-            Button
-          </PrimaryButton>
-        </ButtonAppearanceSample>
-        <ButtonAppearanceSample isInverse={true}>
-          <PrimaryButton url="http://google.com" isInverse={true}>
-            Button
-          </PrimaryButton>
-          <PrimaryButton
-            url="http://google.com"
-            disabled={true}
-            isInverse={true}
-          >
-            Button
-          </PrimaryButton>
-          <PrimaryButton
-            url="http://google.com"
-            isProcessing={true}
-            isInverse={true}
-          >
-            Button
-          </PrimaryButton>
-        </ButtonAppearanceSample>
-      </SpacingBox>
-      <SpacingBox {...spacingBoxProps}>
-        <ButtonAppearanceSample>
-          <SecondaryButton url="http://google.com">Button</SecondaryButton>
-          <SecondaryButton url="http://google.com" disabled={true}>
-            Button
-          </SecondaryButton>
-          <SecondaryButton url="http://google.com" isProcessing={true}>
-            Button
-          </SecondaryButton>
-        </ButtonAppearanceSample>
-        <ButtonAppearanceSample isInverse={true}>
-          <SecondaryButton url="http://google.com" isInverse={true}>
-            Button
-          </SecondaryButton>
-          <SecondaryButton
-            url="http://google.com"
-            disabled={true}
-            isInverse={true}
-          >
-            Button
-          </SecondaryButton>
-          <SecondaryButton
-            url="http://google.com"
-            isProcessing={true}
-            isInverse={true}
-          >
-            Button
-          </SecondaryButton>
-        </ButtonAppearanceSample>
-      </SpacingBox>
-      <SpacingBox {...spacingBoxProps}>
-        <ButtonAppearanceSample>
-          <StandardButton url="http://google.com">Button</StandardButton>
-          <StandardButton url="http://google.com" disabled={true}>
-            Button
-          </StandardButton>
-          <StandardButton url="http://google.com" isProcessing={true}>
-            Button
-          </StandardButton>
-        </ButtonAppearanceSample>
-        <ButtonAppearanceSample isInverse={true}>
-          <StandardButton url="http://google.com" isInverse={true}>
-            Button
-          </StandardButton>
-          <StandardButton
-            url="http://google.com"
-            disabled={true}
-            isInverse={true}
-          >
-            Button
-          </StandardButton>
-          <StandardButton
-            url="http://google.com"
-            isProcessing={true}
-            isInverse={true}
-          >
-            Button
-          </StandardButton>
-        </ButtonAppearanceSample>
-      </SpacingBox>
-      <SpacingBox {...spacingBoxProps}>
-        <ButtonAppearanceSample>
-          <SuccessButton url="http://google.com">Button</SuccessButton>
-          <SuccessButton url="http://google.com" disabled={true}>
-            Button
-          </SuccessButton>
-          <SuccessButton url="http://google.com" isProcessing={true}>
-            Button
-          </SuccessButton>
-        </ButtonAppearanceSample>
-        <ButtonAppearanceSample isInverse={true}>
-          <SuccessButton url="http://google.com" isInverse={true}>
-            Button
-          </SuccessButton>
-          <SuccessButton
-            url="http://google.com"
-            disabled={true}
-            isInverse={true}
-          >
-            Button
-          </SuccessButton>
-          <SuccessButton
-            url="http://google.com"
-            isProcessing={true}
-            isInverse={true}
-          >
-            Button
-          </SuccessButton>
-        </ButtonAppearanceSample>
-      </SpacingBox>
-      <SpacingBox {...spacingBoxProps}>
-        <ButtonAppearanceSample>
-          <DangerButton url="http://google.com">Button</DangerButton>
-          <DangerButton url="http://google.com" disabled={true}>
-            Button
-          </DangerButton>
-          <DangerButton url="http://google.com" isProcessing={true}>
-            Button
-          </DangerButton>
-        </ButtonAppearanceSample>
-        <ButtonAppearanceSample isInverse={true}>
-          <DangerButton url="http://google.com" isInverse={true}>
-            Button
-          </DangerButton>
-          <DangerButton
-            url="http://google.com"
-            disabled={true}
-            isInverse={true}
-          >
-            Button
-          </DangerButton>
-          <DangerButton
-            url="http://google.com"
-            isProcessing={true}
-            isInverse={true}
-          >
-            Button
-          </DangerButton>
-        </ButtonAppearanceSample>
-      </SpacingBox>
-    </>
-  );
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  iconStart: SystemIcons.Close
 };
 
-export const UsedAsALinkThatOpensInANewTab = () => (
-  <>
-    <ButtonAppearanceSample>
-      <StandardButton url="http://google.com" openInNewTab={true}>
-        Button
-      </StandardButton>
-      <StandardButton
-        url="http://google.com"
-        openInNewTab={true}
-        disabled={true}
-      >
-        Button
-      </StandardButton>
-      <StandardButton
-        url="http://google.com"
-        openInNewTab={true}
-        isProcessing={true}
-      >
-        Button
-      </StandardButton>
-    </ButtonAppearanceSample>
-    <ButtonAppearanceSample isInverse={true}>
-      <StandardButton
-        url="http://google.com"
-        openInNewTab={true}
-        isInverse={true}
-      >
-        Button
-      </StandardButton>
-      <StandardButton
-        url="http://google.com"
-        openInNewTab={true}
-        disabled={true}
-        isInverse={true}
-      >
-        Button
-      </StandardButton>
-      <StandardButton
-        url="http://google.com"
-        openInNewTab={true}
-        isProcessing={true}
-        isInverse={true}
-      >
-        Button
-      </StandardButton>
-    </ButtonAppearanceSample>
-  </>
-);
+export const IconOnly = Template.bind({});
+IconOnly.args = {
+  iconStart: SystemIcons.Close,
+  ariaLabel: "Close",
+  children: ""
+};
+
+export const WithOnFocusAndOnBlur = Template.bind({});
+WithOnFocusAndOnBlur.args = {
+  onFocus: action("Button focused"),
+  onBlur: action("Button blurred")
+};
+
+export const UsedAsALink = Template.bind({});
+UsedAsALink.args = {
+  url: "www.d2iq.com"
+};
