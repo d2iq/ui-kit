@@ -12,7 +12,6 @@ module.exports = {
         actions: false
       }
     },
-    "@storybook/addon-knobs",
     "@storybook/addon-a11y"
   ]
 };
