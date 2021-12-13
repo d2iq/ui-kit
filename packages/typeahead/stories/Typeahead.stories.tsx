@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { Typeahead, TextInput } from "../../index";
 import MultiselectTypeahead from "./helpers/MultiselectTypeahead";
 import FilteredListTypeahead from "./helpers/FilteredListTypeahead";
@@ -12,145 +13,60 @@ const storyWrapper = css`
 
 export default {
   title: "Forms/Typeahead",
-  component: Typeahead
+  component: Typeahead,
+  decorators: [Story => <div className={storyWrapper}>{Story()}</div>]
+} as Meta;
+
+const Template: Story = args => (
+  <Typeahead
+    items={items}
+    textField={
+      <TextInput id="default" inputLabel="Default" placeholder="Placeholder" />
+    }
+  />
+);
+
+export const Default = Template.bind({});
+
+export const MenuHasMaxHeight = Template.bind({});
+MenuHasMaxHeight.args = {
+  menuMaxHeight: 100
 };
 
-export const Default = () => (
-  <div className={storyWrapper}>
-    <Typeahead
-      items={items}
-      textField={
-        <TextInput
-          id="default"
-          inputLabel="Default"
-          placeholder="Placeholder"
-        />
-      }
-    />
-  </div>
-);
-
-export const MenuHasMaxHeight = () => (
-  <div className={storyWrapper}>
-    <Typeahead
-      items={items}
-      textField={
-        <TextInput
-          id="maxHeight"
-          inputLabel="Menu max height"
-          placeholder="Placeholder"
-        />
-      }
-      menuMaxHeight={100}
-    />
-  </div>
-);
-
-export const PreFilledSelectedItem = () => (
-  <div className={storyWrapper}>
-    <Typeahead
-      items={items}
-      selectedItems={[items[1].value]}
-      textField={
-        <TextInput
-          id="prefilled"
-          inputLabel="Pre-filled"
-          placeholder="Placeholder"
-          hintContent="This is acting as a controlled input, so the value won't change"
-          value={items[1].value}
-        />
-      }
-    />
-  </div>
-);
-
-export const WithOnSelectCallback = () => {
-  const onSelectHandler = selectedItems => {
-    alert(`${selectedItems[0]} selected`);
-  };
-  return (
-    <div className={storyWrapper}>
-      <Typeahead
-        items={items}
-        onSelect={onSelectHandler}
-        textField={
-          <TextInput
-            id="onselect"
-            inputLabel="onSelect"
-            placeholder="Placeholder"
-          />
-        }
+export const PreFilledSelectedItem = args => (
+  <Typeahead
+    items={items}
+    selectedItems={[items[1].value]}
+    textField={
+      <TextInput
+        id="prefilled"
+        inputLabel="Pre-filled"
+        placeholder="Placeholder"
+        hintContent="This is acting as a controlled input, so the value won't change"
+        value={items[1].value}
       />
-    </div>
-  );
+    }
+    {...args}
+  />
+);
+
+const onSelectHandler = selectedItems => {
+  alert(`${selectedItems[0]} selected`);
+};
+export const WithOnSelectCallback = Template.bind({});
+WithOnSelectCallback.args = {
+  onSelect: onSelectHandler,
+  items: items
 };
 
-export const Multiselect = () => (
-  <div className={storyWrapper}>
-    <MultiselectTypeahead>
-      {({ items, selectHandler, selectedItems }) => (
-        <Typeahead
-          items={items}
-          selectedItems={selectedItems}
-          multiSelect={true}
-          textField={
-            <TextInput
-              id="multiselect"
-              inputLabel="Multiselectable"
-              placeholder="Placeholder"
-            />
-          }
-          onSelect={selectHandler}
-        />
-      )}
-    </MultiselectTypeahead>
-  </div>
-);
+export const ComplexListItems = Template.bind({});
+ComplexListItems.args = {
+  items: complexItems
+};
 
-export const ComplexListItems = () => (
-  <div className={storyWrapper}>
-    <Typeahead
-      items={complexItems}
-      textField={
-        <TextInput
-          id="complex"
-          inputLabel="Elements as items"
-          placeholder="Placeholder"
-        />
-      }
-    />
-  </div>
-);
+export const WithDisabledItem = Template.bind({});
+WithDisabledItem.args = {
+  items: [...items, { label: "K8sphere", value: "K8sphere", disabled: true }]
+};
 
-export const WithADisabledItem = () => (
-  <div className={storyWrapper}>
-    <Typeahead
-      items={[
-        ...items,
-        { label: "K8sphere", value: "K8sphere", disabled: true }
-      ]}
-      textField={
-        <TextInput
-          id="default"
-          inputLabel="With a disabled item"
-          placeholder="Placeholder"
-        />
-      }
-    />
-  </div>
-);
-
-export const FilterWhileTyping = () => (
-  <div className={storyWrapper}>
-    <FilteredListTypeahead items={items} />
-  </div>
-);
-
-export const CustomMenuEmptyState = () => (
-  <div className={storyWrapper}>
-    <FilteredListTypeahead
-      menuEmptyState={<div className={padding("all")}>Nothing to show</div>}
-      items={items}
-    />
-  </div>
-);
+export const FilterWhileTyping = () => <FilteredListTypeahead items={items} />;

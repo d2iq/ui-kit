@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import {
   FieldList,
@@ -37,16 +38,16 @@ const testFieldUpdateHandler = (rowIndex, pathToValue) => () =>
   );
 
 export default {
-  title: "Forms/Form structure/Grouped fields/FieldList",
+  title: "Forms/Form structure/FieldList",
   component: FieldList,
   subcomponents: {
     FieldListColumn,
     FieldListColumnSeparator,
     FieldListAddButton
   }
-};
+} as Meta;
 
-export const EditableFieldsControlledInputs = () => (
+const Template: Story = args => (
   <FieldListHelper items={mockItems}>
     {({ removeItemHander, onAddItem, fieldUpdateHandler, items }) => (
       <>
@@ -62,6 +63,7 @@ export const EditableFieldsControlledInputs = () => (
             })
           }
           pathToUniqueKey="id"
+          {...args}
         >
           <FieldListColumn
             key="name"
@@ -108,9 +110,11 @@ export const EditableFieldsControlledInputs = () => (
   </FieldListHelper>
 );
 
-export const DefaultUncontrolledInputs = () => {
+export const EditableFieldsControlledInputs = Template.bind({});
+
+export const DefaultUncontrolledInputs = args => {
   return (
-    <FieldList data={mockItems} pathToUniqueKey="id">
+    <FieldList data={mockItems} pathToUniqueKey="id" {...args}>
       <FieldListColumn
         key="name"
         header="Name"
@@ -135,8 +139,8 @@ export const DefaultUncontrolledInputs = () => {
   );
 };
 
-export const VariedColumnWidths = () => (
-  <FieldList data={mockItems} pathToUniqueKey="id">
+export const VariedColumnWidths = args => (
+  <FieldList data={mockItems} pathToUniqueKey="id" {...args}>
     <FieldListColumn
       key="name"
       header="Name"
@@ -172,13 +176,14 @@ export const VariedColumnWidths = () => (
   </FieldList>
 );
 
-export const DisabledRows = () => (
+export const DisabledRows = args => (
   <FieldList data={mockItems} disabledRows={[1]} pathToUniqueKey="id">
     <FieldListColumn
       key="name"
       header="Name"
       pathToValue="name"
       onChange={testFieldUpdateHandler}
+      {...args}
     >
       {({ disabled, defaultProps, onChange, value }) => (
         <TextInput
@@ -258,8 +263,8 @@ export const WAddButton = () => (
   </FieldList>
 );
 
-export const WithColumnSeparators = () => (
-  <FieldList data={mockItems} pathToUniqueKey="id">
+export const WithColumnSeparators = args => (
+  <FieldList data={mockItems} pathToUniqueKey="id" {...args}>
     <FieldListColumn
       key="name"
       header="Name"

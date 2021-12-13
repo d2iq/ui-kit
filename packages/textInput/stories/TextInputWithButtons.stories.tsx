@@ -1,6 +1,7 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { TextInputWithButtons } from "../index";
-import { inputStoryWrapper } from "../../../decorators/inputStoryWrapper";
+import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { TextInputButton } from "../../textInputButton";
 import { Icon } from "../../icon";
@@ -11,14 +12,19 @@ const btnClickFn = () => {
 
 export default {
   title: "Forms/TextInputWithButtons",
-  decorators: [inputStoryWrapper],
-  component: TextInputWithButtons
+  decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
+  component: TextInputWithButtons,
+  argTypes: {
+    appearance: {
+      defaultValue: "standard"
+    }
+  }
 };
 
-export const OneButton = () => (
+const Template: Story = args => (
   <TextInputWithButtons
     id="oneBtn"
-    inputLabel="One button"
+    inputLabel="Input Label"
     buttons={[
       <TextInputButton
         key={0}
@@ -27,47 +33,13 @@ export const OneButton = () => (
         aria-label="Clear input"
       />
     ]}
+    {...args}
   />
 );
 
-export const TwoButtons = () => (
-  <TextInputWithButtons
-    id="twoBtn"
-    inputLabel="Two buttons"
-    buttons={[
-      <TextInputButton
-        key={0}
-        shape={SystemIcons.Close}
-        onClick={btnClickFn}
-        aria-label="Clear input"
-      />,
-      <TextInputButton
-        key={1}
-        shape={SystemIcons.Funnel}
-        onClick={btnClickFn}
-        aria-label="Activate filter"
-      />
-    ]}
-  />
-);
+export const Default = Template.bind({});
 
-export const WithAnIcon = () => (
-  <TextInputWithButtons
-    id="withIcon"
-    inputLabel="With icon"
-    iconStart={<Icon shape={SystemIcons.Search} />}
-    buttons={[
-      <TextInputButton
-        key={0}
-        shape={SystemIcons.Close}
-        onClick={btnClickFn}
-        aria-label="Clear input"
-      />
-    ]}
-  />
-);
-
-export const WithACustomColoredIcon = () => (
+export const WithCustomIcons = args => (
   <TextInputWithButtons
     id="withIcon.colored"
     inputLabel="With colored icon"
@@ -81,5 +53,6 @@ export const WithACustomColoredIcon = () => (
         aria-label="Clear input"
       />
     ]}
+    {...args}
   />
 );

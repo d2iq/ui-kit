@@ -1,29 +1,26 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import { ToggleWrapper } from "../index";
 
 export default {
   title: "Utils/ToggleWrapper",
-  component: ToggleWrapper
-};
+  component: ToggleWrapper,
+  argTypes: {
+    isActive: {
+      defaultValue: false
+    }
+  }
+} as Meta;
 
-export const Default = () => (
-  <ToggleWrapper>
+const Template: Story = args => (
+  <ToggleWrapper {...args}>
     {({ isActive }) => (
-      <div>
-        the isActive render prop returns:
-        <pre>{`${isActive}`}</pre>
-      </div>
+      <span>
+        The isActive render prop returns:
+        <code>{` ${isActive}`}</code>
+      </span>
     )}
   </ToggleWrapper>
 );
 
-export const IsActive = () => (
-  <ToggleWrapper isActive={true}>
-    {({ isActive }) => (
-      <div>
-        the isActive render prop returns:
-        <pre>{`${isActive}`}</pre>
-      </div>
-    )}
-  </ToggleWrapper>
-);
+export const Default = Template.bind({});

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { withKnobs, select } from "@storybook/addon-knobs";
+import { Story, Meta } from "@storybook/react";
 import {
   FormMessage,
   FormSection,
@@ -27,7 +27,6 @@ const onRemoveSubSection = () => {
 
 export default {
   title: "Forms/Form structure",
-  decorators: [withKnobs],
   subcomponents: {
     FormMessage,
     FormSection,
@@ -37,40 +36,30 @@ export default {
     FormSubSection,
     FormTitle
   }
-};
+} as Meta;
 
-export const _FormTitle = () => (
+const Template: Story = args => (
   <Container>
-    <FormTitle>Form Title</FormTitle>
+    <FormTitle {...args}>Form Title</FormTitle>
     <div>Form sections go here</div>
   </Container>
 );
 
-export const _FormMessage = () => {
-  const appearances: {
-    [key: string]: "danger" | "default" | "info" | "success" | "warning";
-  } = {
-    danger: "danger",
-    default: "default",
-    info: "info",
-    success: "success",
-    warning: "warning"
-  };
-  const appearance = select("appearance", appearances, "default");
+export const Default = Template.bind({});
 
+export const _FormMessage = args => {
   return (
     <Container>
-      <FormMessage appearance={appearance}>
-        Use the knobs to change the appearance (danger, success, etc...) of this
-        message
+      <FormMessage {...args}>
+        Use the Control panel to change the appearance of the message.
       </FormMessage>
-      <FormTitle>Form Title</FormTitle>
+      <FormTitle {...args}>Form Title</FormTitle>
       <div>Form sections go here</div>
     </Container>
   );
 };
 
-export const _FormSection = () => (
+export const _FormSection = args => (
   <Container>
     <FormSection>
       <FormSectionBody>
@@ -82,7 +71,7 @@ export const _FormSection = () => (
   </Container>
 );
 
-export const FormSectionWithHeaderAndFooter = () => (
+export const FormSectionWithHeaderAndFooter = args => (
   <Container>
     <FormSection>
       <FormSectionHeader
@@ -103,7 +92,7 @@ export const FormSectionWithHeaderAndFooter = () => (
   </Container>
 );
 
-export const _FormSubSection = () => (
+export const _FormSubSection = args => (
   <Container>
     <FormSubSection>
       <TextInput inputLabel="Name" id="name" />
@@ -113,7 +102,7 @@ export const _FormSubSection = () => (
   </Container>
 );
 
-export const RelatedFormSubSectionsGroupedInAFormSection = () => (
+export const RelatedFormSubSectionsGroupedInAFormSection = args => (
   <Container>
     <FormSection>
       <FormSectionHeader
@@ -136,7 +125,7 @@ export const RelatedFormSubSectionsGroupedInAFormSection = () => (
   </Container>
 );
 
-export const KitchenSinkExampleFormLayout = () => (
+export const ExampleFormLayout = args => (
   <Container>
     <FormMessage appearance="warning">
       There are already a bunch of teams. Are you sure you want another one?

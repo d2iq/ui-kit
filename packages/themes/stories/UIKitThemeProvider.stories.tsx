@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Story, Meta } from "@storybook/react";
 import UIKitThemeProvider from "../components/UIKitThemeProvider";
 
 import StyleTile from "./helpers/StyleTile";
@@ -16,10 +17,15 @@ import {
 
 export default {
   title: "Utils/UIKitThemeProvider",
-  component: UIKitThemeProvider
-};
+  component: UIKitThemeProvider,
+  argTypes: {
+    appTheme: {
+      control: { disable: true }
+    }
+  }
+} as Meta;
 
-export const DarkMode = () => (
+const Template: Story = args => (
   <UIKitThemeProvider
     appTheme={{
       colors: {
@@ -46,7 +52,10 @@ export const DarkMode = () => (
         borderHeavy: white
       }
     }}
+    {...args}
   >
     <StyleTile />
   </UIKitThemeProvider>
 );
+
+export const DarkMode = Template.bind({});

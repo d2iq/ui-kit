@@ -7,13 +7,7 @@ export default {
   title: "Navigation/Tabs",
   component: Tabs,
   subcomponents: { Tabs, TabTitle, TabItem },
-  decorators: [
-    Story => (
-      <div style={{ maxWidth: "400px" }}>
-        <Story />
-      </div>
-    )
-  ],
+  decorators: [Story => <div style={{ maxWidth: "400px" }}>{Story()}</div>],
   argTypes: {
     direction: {
       options: ["horiz", "vert"],
