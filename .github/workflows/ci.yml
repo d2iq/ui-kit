@@ -27,8 +27,6 @@ jobs:
           cache: "npm"
       - name: Continuous Integration
         run: npm ci
-      - name: Install Dependencies
-        run: npm install
       - name: Lint
         run: npm run lint
       - name: Build
