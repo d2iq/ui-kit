@@ -163,7 +163,7 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
                       [radioInputChecked]: inputType === "radio" && checked
                     })}
                   >
-                    {/* tslint:disable react-a11y-role-has-required-aria-props */}
+                    {/* eslint-disable jsx-a11y/role-has-required-aria-props */}
                     <input
                       type={inputType}
                       id={id}
@@ -179,7 +179,7 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
                       ref={forwardedRef}
                       {...other}
                     />
-                    {/* tslint:enable */}
+                    {/* eslint-enable */}
                     {children}
                   </div>
                 </>

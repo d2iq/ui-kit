@@ -42,7 +42,7 @@ export const ExampleWPagedListControlledComponent = args => {
         <>
           <BorderedList tag="ul">
             {initialData.slice(itemStartIndex, itemEndIndex).map(name => (
-              <li>{name}</li>
+              <li key={name}>{name}</li>
             ))}
           </BorderedList>
           <PaginationContainer>

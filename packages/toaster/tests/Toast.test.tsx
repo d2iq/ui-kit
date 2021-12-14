@@ -64,7 +64,7 @@ describe("Toast", () => {
   });
 
   it("calls dismissToast when the dismiss button is clicked", () => {
-    const dismissToastSpy = spyOn(Toaster.prototype, "dismissToast");
+    const dismissToastSpy = jest.spyOn(Toaster.prototype, "dismissToast");
     const component = mount(
       <Toaster children={[<Toast title="I Am Toast" key={0} id={0} />]} />
     );

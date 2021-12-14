@@ -12,9 +12,9 @@ export const hexToRgbArr = (hex: string): number[] => {
     }
     color = "0x" + color.join("");
     return (
-      // tslint:disable
+      /* eslint-disable */
       [(color >> 16) & 255, (color >> 8) & 255, color & 255]
-      // tslint:enable
+      /* eslint-enable */
     );
   }
   return [0, 0, 0];

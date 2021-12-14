@@ -137,6 +137,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                             {items.length ? (
                               items.map((item, index) => (
                                 <PopoverListItem
+                                  key={item.value}
                                   listLength={items.length}
                                   isActive={highlightedIndex === index}
                                   isSelected={
@@ -145,7 +146,6 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                                   }
                                   index={index}
                                   {...getItemProps({
-                                    key: item.value,
                                     item,
                                     disabled: item.disabled
                                   })}

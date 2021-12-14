@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Story, Meta } from "@storybook/react";
 import { Container } from "../../layout";
-import { TextBlock } from "../";
 import {
+  TextBlock,
   CaptionText,
   HeadingText1,
   HeadingText2,

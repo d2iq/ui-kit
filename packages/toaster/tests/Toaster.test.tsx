@@ -14,8 +14,8 @@ describe("Toaster", () => {
   });
 
   it("clears timers on mouseEnter and sets timers on mouseLeave", () => {
-    const clearTimeoutsSpy = spyOn(Toaster.prototype, "clearTimeouts");
-    const setTimerSpy = spyOn(Toaster.prototype, "setTimer");
+    const clearTimeoutsSpy = jest.spyOn(Toaster.prototype, "clearTimeouts");
+    const setTimerSpy = jest.spyOn(Toaster.prototype, "setTimer");
     const component = shallow(
       <Toaster>
         <Toast id={0} title="I Am Toast" key={0} />

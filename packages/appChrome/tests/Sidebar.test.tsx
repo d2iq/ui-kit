@@ -89,7 +89,7 @@ describe("Sidebar", () => {
 
   describe("SidebarSubMenu", () => {
     const onClickFn = jest.fn();
-    // tslint:disable:jsx-wrap-multiline
+    /* eslint-disable react/jsx-wrap-multilines */
     const subMenuItems = [
       <SidebarSubMenuItem
         key={0}
@@ -108,7 +108,7 @@ describe("Sidebar", () => {
         Item label
       </SidebarSubMenuItem>
     ];
-    // tslint:enable
+    /* eslint-enable react/jsx-wrap-multilines */
     const component = shallow(
       <SidebarSubMenuComponent
         label={

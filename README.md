@@ -30,18 +30,7 @@ npm run setup:git-hooks
 ```
 
 **Linting** <br>
-For linting, use your favorite code editor to enable tslint.
-If you use vscode you can change your workspace settings as following
-
-```
-{
-  "eslint.enable": false,
-  "jshint.enable": false,
-  "tslint.enable": true,
-  "tslint.jsEnable": false,
-  "tslint.run": "onType"
-}
-```
+ESLint is used for linting within the project. We suggest installing the ESLint extension in your preferred code editor.
 
 For more detailed information, see [CONTRIBUTING.md](CONTRIBUTING.md#getting-started)
 
