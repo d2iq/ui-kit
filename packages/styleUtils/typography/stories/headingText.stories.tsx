@@ -2,16 +2,7 @@ import * as React from "react";
 import { HeadingText1, HeadingText2, HeadingText3 } from "../index";
 import { Story, Meta } from "@storybook/react";
 import { HeadingTextProps } from "../textTypes";
-
-const textAlign = [
-  "center",
-  "end",
-  "justify",
-  "left",
-  "match-parent",
-  "right",
-  "start"
-];
+import { textAlignValues } from "../../../storybookHelpers/controlContants";
 
 export default {
   title: "Typography/HeadingText",
@@ -22,9 +13,8 @@ export default {
       control: { type: "color" }
     },
     align: {
-      options: textAlign,
-      control: { type: "select" },
-      defaultValue: "inherit"
+      options: textAlignValues,
+      control: { type: "select" }
     },
     tag: {
       options: ["h1", "h2", "h3", "h4", "h5", "h6"],
@@ -33,6 +23,9 @@ export default {
     "data-cy": {
       control: { disable: true }
     }
+  },
+  args: {
+    align: "inherit"
   }
 } as Meta;
 

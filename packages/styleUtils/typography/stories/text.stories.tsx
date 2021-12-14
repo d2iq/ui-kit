@@ -1,10 +1,4 @@
 import * as React from "react";
-import {
-  themeTextColorDisabled,
-  themeTextColorPrimary,
-  themeTextColorSecondary,
-  blue
-} from "../../../design-tokens/build/js/designTokens";
 import { Story, Meta } from "@storybook/react";
 
 import {
@@ -16,23 +10,8 @@ import {
   Text,
   WarningText
 } from "../";
-
-const colors = [
-  themeTextColorPrimary,
-  themeTextColorSecondary,
-  themeTextColorDisabled,
-  blue
-];
-
-const textAlign = [
-  "center",
-  "end",
-  "justify",
-  "left",
-  "match-parent",
-  "right",
-  "start"
-];
+import { textAlignValues } from "../../../storybookHelpers/controlContants";
+import { css } from "@emotion/css";
 
 export default {
   title: "Typography/Text",
@@ -46,19 +25,20 @@ export default {
     InteractiveText
   },
   argTypes: {
+    color: {
+      control: { type: "color" }
+    },
     size: {
       options: ["s", "m", "l", "xl"],
       control: { type: "select" }
     },
     weight: {
       options: ["normal", "medium"],
-      control: { type: "inline-radio" },
-      defaultValue: "normal"
+      control: { type: "inline-radio" }
     },
     align: {
-      options: textAlign,
-      control: { type: "select" },
-      defaultValue: "inherit"
+      options: textAlignValues,
+      control: { type: "select" }
     },
     wrap: {
       options: ["truncate", "nowrap", "wrap"],
@@ -74,25 +54,41 @@ export default {
     "data-cy": {
       control: { disable: true }
     }
+  },
+  args: {
+    weight: "normal",
+    align: "inherit"
   }
 } as Meta;
 
-const Template: Story = args => (
-  <Text {...args}>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the
-    1500s, when an unknown printer took a galley of type and scrambled it to
-    make a type specimen book. It has survived not only five centuries, but also
-    the leap into electronic typesetting, remaining essentially unchanged. It
-    was popularised in the 1960s with the release of Letraset sheets containing
-    Lorem Ipsum passages, and more recently with desktop publishing software
-    like Aldus PageMaker including versions of Lorem Ipsum.
-  </Text>
-);
+const loremIpsum = `
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the
+  1500s, when an unknown printer took a galley of type and scrambled it to
+  make a type specimen book. It has survived not only five centuries, but also
+  the leap into electronic typesetting, remaining essentially unchanged. It
+  was popularised in the 1960s with the release of Letraset sheets containing
+  Lorem Ipsum passages, and more recently with desktop publishing software
+  like Aldus PageMaker including versions of Lorem Ipsum.
+`;
+
+const Template: Story = args => <Text {...args}>{loremIpsum}</Text>;
 
 export const DefaultText = Template.bind({});
 
-export const ResponsiveSize = Template.bind({});
+export const ResponsiveSize: Story = args => (
+  <>
+    <p
+      className={css`
+        font-weight: 500;
+      `}
+    >
+      Resize your viewport width to see the text below change size responsively.
+    </p>
+    <Text {...args}>{loremIpsum}</Text>
+  </>
+);
+
 ResponsiveSize.args = {
   size: {
     default: "s",
@@ -106,13 +102,31 @@ export const _SuccessText = args => (
   <SuccessText {...args}>Success Text</SuccessText>
 );
 
+_SuccessText.parameters = {
+  controls: {
+    exclude: ["color"]
+  }
+};
+
 export const _WarningText = args => (
   <WarningText {...args}>Warning Text</WarningText>
 );
 
+_WarningText.parameters = {
+  controls: {
+    exclude: ["color"]
+  }
+};
+
 export const _DangerText = args => (
   <DangerText {...args}>Danger Text</DangerText>
 );
+
+_DangerText.parameters = {
+  controls: {
+    exclude: ["color"]
+  }
+};
 
 export const _SmallText = args => <SmallText {...args}>Small Text</SmallText>;
 
@@ -123,3 +137,9 @@ export const _MonospaceText = args => (
 export const _InteractiveText = args => (
   <InteractiveText {...args}>Interactive Text</InteractiveText>
 );
+
+_InteractiveText.parameters = {
+  controls: {
+    exclude: ["color"]
+  }
+};

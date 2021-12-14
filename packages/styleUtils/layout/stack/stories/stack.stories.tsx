@@ -2,15 +2,14 @@ import * as React from "react";
 import Stack, { StackProps } from "../components/Stack";
 import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifierUtils";
 import { Story, Meta } from "@storybook/react";
-
-const sizes = ["xxs", "xs", "s", "m", "l", "xl", "xxl"];
+import { spacingSizeValues } from "../../../../storybookHelpers/controlContants";
 
 export default {
   title: "Layout/Stack",
   component: Stack,
   argTypes: {
     spacingSize: {
-      options: sizes,
+      options: spacingSizeValues,
       control: {
         type: "select"
       },
