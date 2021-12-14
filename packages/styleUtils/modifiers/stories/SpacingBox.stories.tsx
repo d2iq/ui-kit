@@ -3,6 +3,11 @@ import SpacingBox, { SpacingBoxProps } from "../components/SpacingBox";
 import { Story, Meta } from "@storybook/react";
 import styled from "@emotion/styled";
 import { themeBrandPrimary } from "../../../design-tokens/build/js/designTokens";
+import {
+  cssDisplayPropertyValues,
+  sideValues,
+  spacingSizeValues
+} from "../../../storybookHelpers/controlContants";
 
 const StoryWrapper = styled.div`
   border: 2px solid ${themeBrandPrimary};
@@ -13,13 +18,19 @@ export default {
   component: SpacingBox,
   argTypes: {
     spacingSize: {
-      options: ["xxs", "xs", "s", "m", "l", "xl", "xxl", "none"],
+      options: spacingSizeValues,
       control: {
         type: "select"
       }
     },
     side: {
-      options: ["all", "top", "right", "bottom", "left", "horiz", "vert"],
+      options: sideValues,
+      control: {
+        type: "select"
+      }
+    },
+    display: {
+      options: cssDisplayPropertyValues,
       control: {
         type: "select"
       }
@@ -48,7 +59,16 @@ const Template: Story<SpacingBoxProps> = args => (
 
 export const Default = Template.bind({});
 
-export const ResponsiveSpacingSize = Template.bind({});
+const ResponsiveTemplate: Story<SpacingBoxProps> = args => (
+  <>
+    <p>Resize your viewport width to see the spacing change</p>
+    <StoryWrapper>
+      <SpacingBox {...args}>Spacing Box Content</SpacingBox>
+    </StoryWrapper>
+  </>
+);
+
+export const ResponsiveSpacingSize = ResponsiveTemplate.bind({});
 ResponsiveSpacingSize.args = {
   spacingSize: {
     default: "none",
@@ -58,7 +78,7 @@ ResponsiveSpacingSize.args = {
   }
 };
 
-export const ResponsiveSpacingSizePerSide = Template.bind({});
+export const ResponsiveSpacingSizePerSide = ResponsiveTemplate.bind({});
 ResponsiveSpacingSizePerSide.args = {
   spacingSizePerSide: {
     vert: {
@@ -70,4 +90,8 @@ ResponsiveSpacingSizePerSide.args = {
       medium: "xl"
     }
   }
+};
+
+ResponsiveSpacingSizePerSide.parameters = {
+  controls: { exclude: ["side", "spacingSize"] }
 };
