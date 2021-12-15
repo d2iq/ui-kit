@@ -7,21 +7,16 @@ import { Box } from "../../styleUtils/modifiers";
 import { Card } from "../../card";
 import { Story, Meta } from "@storybook/react";
 import { TooltipProps } from "../components/Tooltip";
+import {
+  directionsValues,
+  directionsValuesLabels
+} from "../../storybookHelpers/controlConstants";
 
 const tooltipStoryDecorator = storyFn => (
   <div style={{ textAlign: "center" }}>
     <Box display="inline-block">{storyFn()}</Box>
   </div>
 );
-
-const directions = [
-  Direction.BottomLeft,
-  Direction.BottomRight,
-  Direction.BottomCenter,
-  Direction.TopLeft,
-  Direction.TopRight,
-  Direction.TopCenter
-];
 
 export default {
   title: "Overlays/Tooltip",
@@ -32,7 +27,8 @@ export default {
   ],
   argTypes: {
     preferredDirections: {
-      options: directions
+      options: directionsValues,
+      mapping: directionsValuesLabels
     },
     className: {
       control: { disable: true }

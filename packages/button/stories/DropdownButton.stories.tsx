@@ -8,30 +8,30 @@ import {
   DangerDropdownButton
 } from "../../index";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-
-const shapes = [
-  SystemIcons.CircleCheck,
-  SystemIcons.Check,
-  SystemIcons.Close,
-  SystemIcons.Folder,
-  SystemIcons.Gear,
-  SystemIcons.Services,
-  SystemIcons.Users
-];
+import {
+  systemIconLabels,
+  systemIcons
+} from "../../storybookHelpers/controlConstants";
 
 export default {
   title: "Actions/Dropdown Button",
   component: StandardDropdownButton,
   argTypes: {
     children: {
-      defaultValue: "Dropdown Button",
       control: {
         type: "text"
       }
     },
     iconStart: {
-      options: shapes
+      options: systemIcons,
+      control: {
+        type: "select"
+      },
+      mapping: systemIconLabels
     }
+  },
+  args: {
+    children: "Dropdown Button"
   }
 } as Meta;
 

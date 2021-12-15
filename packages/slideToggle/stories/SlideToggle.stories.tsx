@@ -7,14 +7,10 @@ export default {
   title: "Forms/SlideToggle",
   component: SlideToggle,
   argTypes: {
-    appearance: {
-      defaultValue: "standard"
-    },
     inputLabel: {
       control: {
         type: "text"
-      },
-      defaultValue: "Default"
+      }
     },
     hintContent: {
       control: {
@@ -24,6 +20,10 @@ export default {
     errors: {
       control: { disable: true }
     }
+  },
+  args: {
+    apperance: "standard",
+    inputLabel: "Default"
   }
 };
 

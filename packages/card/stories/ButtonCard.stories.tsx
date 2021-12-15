@@ -8,9 +8,15 @@ export default {
   component: ButtonCard,
   argTypes: {
     paddingSize: {
-      options: ["s", "m", "l", "xl"],
-      defaultValue: "m"
+      options: ["s", "m", "l", "xl"]
     }
+  },
+  aspectRatio: {
+    options: ["none", "2:1"],
+    mapping: { "2:1": [2, 1] }
+  },
+  args: {
+    paddingSize: "m"
   }
 } as Meta;
 

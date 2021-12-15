@@ -5,7 +5,7 @@ import {
   cssDisplayPropertyValues,
   sideValues,
   textAlignValues
-} from "../../../storybookHelpers/controlContants";
+} from "../../../storybookHelpers/controlConstants";
 import { css } from "@emotion/css";
 
 export default {

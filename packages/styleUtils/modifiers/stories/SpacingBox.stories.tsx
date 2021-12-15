@@ -7,7 +7,7 @@ import {
   cssDisplayPropertyValues,
   sideValues,
   spacingSizeValues
-} from "../../../storybookHelpers/controlContants";
+} from "../../../storybookHelpers/controlConstants";
 
 const StoryWrapper = styled.div`
   border: 2px solid ${themeBrandPrimary};

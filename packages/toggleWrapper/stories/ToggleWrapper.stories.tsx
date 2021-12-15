@@ -5,10 +5,8 @@ import { ToggleWrapper } from "../index";
 export default {
   title: "Utils/ToggleWrapper",
   component: ToggleWrapper,
-  argTypes: {
-    isActive: {
-      defaultValue: false
-    }
+  args: {
+    isActive: false
   }
 } as Meta;
 

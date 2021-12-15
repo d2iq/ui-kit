@@ -14,8 +14,7 @@ export default {
     inputLabel: {
       control: {
         type: "text"
-      },
-      defaultValue: "Default"
+      }
     },
     hintContent: {
       control: {
@@ -25,6 +24,9 @@ export default {
     errors: {
       control: { disable: true }
     }
+  },
+  args: {
+    inputLabel: "Default Input Label"
   }
 } as Meta;
 

@@ -35,15 +35,11 @@ export default {
   decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
   component: TextInputWithBadges,
   argTypes: {
-    appearance: {
-      defaultValue: "standard"
-    },
     hintContent: {
       inputLabel: {
         control: {
           type: "text"
-        },
-        defaultValue: "Input Label"
+        }
       },
       control: {
         type: "text"
@@ -57,6 +53,10 @@ export default {
     errors: {
       control: { disable: true }
     }
+  },
+  args: {
+    appearance: "standard",
+    inputLabel: "Default Input Label"
   }
 } as Meta;
 

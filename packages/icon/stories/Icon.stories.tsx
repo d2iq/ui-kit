@@ -2,66 +2,35 @@ import * as React from "react";
 import { Story, Meta } from "@storybook/react";
 import { Icon } from "../index";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import {
-  blue,
-  green,
-  purple,
-  red,
-  textColorPrimary,
-  textColorSecondary,
-  yellow,
-  blueDarken3
-} from "../../design-tokens/build/js/designTokens";
+import { textColorPrimary } from "../../design-tokens/build/js/designTokens";
 import { IconProps } from "../components/Icon";
-
-const colors = {
-  textColorPrimary,
-  textColorSecondary,
-  blueDarken3,
-  red,
-  yellow,
-  green,
-  blue,
-  purple
-};
-
-const sizes = ["xxs", "xs", "s", "m", "l", "xl", "xxl"];
-
-const shapes = {
-  ["SystemIcons.ArrowRight"]: SystemIcons.ArrowRight,
-  ["SystemIcons.Check"]: SystemIcons.Check,
-  ["SystemIcons.Close"]: SystemIcons.Close,
-  ["SystemIcons.Folder"]: SystemIcons.Folder,
-  ["SystemIcons.Gear"]: SystemIcons.Gear,
-  ["SystemIcons.Services"]: SystemIcons.Services,
-  ["SystemIcons.Users"]: SystemIcons.Users,
-  ["SystemIcons.LockData"]: SystemIcons.LockData
-};
+import {
+  spacingSizeValues,
+  systemIconLabels,
+  systemIcons
+} from "../../storybookHelpers/controlConstants";
 
 export default {
   title: "Graphic Elements/Icon",
   component: Icon,
   argTypes: {
     color: {
-      options: colors,
       control: {
-        type: "select"
+        type: "color"
       }
     },
     shape: {
-      options: shapes,
-      control: {
-        type: "select",
-        labels: Object.keys(shapes)
-      },
-      defaultValue: SystemIcons.ArrowRight
-    },
-    size: {
-      options: sizes,
+      options: systemIcons,
       control: {
         type: "select"
       },
-      defaultValue: "s"
+      mapping: systemIconLabels
+    },
+    size: {
+      options: spacingSizeValues,
+      control: {
+        type: "select"
+      }
     },
     block: {
       options: [true, false],
@@ -75,6 +44,9 @@ export default {
     "data-cy": {
       control: { disable: true }
     }
+  },
+  args: {
+    shape: SystemIcons.ArrowRight
   }
 } as Meta;
 

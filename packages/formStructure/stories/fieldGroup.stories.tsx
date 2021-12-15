@@ -8,9 +8,11 @@ export default {
   component: FieldGroup,
   argTypes: {
     direction: {
-      options: ["row", "column"],
-      defaultValue: "row"
+      options: ["row", "column"]
     }
+  },
+  args: {
+    direction: "row"
   }
 } as Meta;
 

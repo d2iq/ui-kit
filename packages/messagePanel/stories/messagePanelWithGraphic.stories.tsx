@@ -7,9 +7,6 @@ export default {
   title: "Feedback/MessagePanelWithGraphic",
   component: MessagePanelWithGraphic,
   argTypes: {
-    heading: {
-      defaultValue: "No projects exist to view catalogs"
-    },
     appearance: {
       control: { disable: true }
     },
@@ -19,6 +16,9 @@ export default {
     secondaryAction: {
       control: { disable: true }
     }
+  },
+  args: {
+    heading: "No projects exist to view catalogs"
   }
 } as Meta;
 

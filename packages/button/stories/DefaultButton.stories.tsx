@@ -10,17 +10,10 @@ import {
 import { action } from "@storybook/addon-actions";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { ButtonProps } from "../components/ButtonBase";
-
-const shapes = [
-  SystemIcons.CircleCheck,
-  SystemIcons.Check,
-  SystemIcons.Close,
-  SystemIcons.Folder,
-  SystemIcons.Gear,
-  SystemIcons.Services,
-  SystemIcons.Users
-];
-
+import {
+  systemIconLabels,
+  systemIcons
+} from "../../storybookHelpers/controlConstants";
 export default {
   title: "Actions/Button",
   component: StandardButton,
@@ -33,17 +26,21 @@ export default {
   decorators: [Story => <div style={{ margin: "0 3em" }}>{Story()}</div>],
   argTypes: {
     children: {
-      defaultValue: "Button",
       control: {
         type: "text"
       }
     },
     iconStart: {
-      options: shapes
+      options: systemIcons,
+      mapping: systemIconLabels
     },
     iconEnd: {
-      options: shapes
+      options: systemIcons,
+      mapping: systemIconLabels
     }
+  },
+  args: {
+    children: "Button"
   }
 } as Meta;
 

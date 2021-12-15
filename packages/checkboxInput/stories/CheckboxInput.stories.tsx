@@ -9,14 +9,10 @@ export default {
   decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
   component: CheckboxInput,
   argTypes: {
-    appearance: {
-      defaultValue: "standard"
-    },
     inputLabel: {
       control: {
         type: "text"
-      },
-      defaultValue: "Default"
+      }
     },
     hintContent: {
       control: {
@@ -32,6 +28,10 @@ export default {
     errors: {
       control: { disable: true }
     }
+  },
+  args: {
+    appearance: "standard",
+    inputLabel: "Default"
   }
 } as Meta;
 

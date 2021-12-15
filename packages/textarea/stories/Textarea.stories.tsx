@@ -10,18 +10,6 @@ export default {
   decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
   component: Textarea,
   argTypes: {
-    inputLabel: {
-      control: {
-        type: "text"
-      },
-      defaultValue: "Default Label"
-    },
-    placeholder: {
-      control: {
-        type: "text"
-      },
-      defaultValue: "Placeholder"
-    },
     hintContent: {
       control: {
         type: "text"
@@ -30,6 +18,10 @@ export default {
     errors: {
       control: { disable: true }
     }
+  },
+  args: {
+    inputLabel: "Default Input Label",
+    placeholder: "Placeholder"
   }
 } as Meta;
 
