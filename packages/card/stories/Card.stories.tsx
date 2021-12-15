@@ -38,11 +38,11 @@ ResponsivePaddingSize.args = {
 
 export const AspectRatio = args => (
   <div style={{ maxWidth: "400px" }}>
-    <Card {...args} aspectRatio={[2, 1]}>
-      I stay at a 2:1 aspect ratio
-    </Card>
+    <Card {...args}>I stay at a 2:1 aspect ratio</Card>
   </div>
 );
+
+AspectRatio.args = { aspectRatio: "2:1" };
 
 export const DefaultLinkCard = args => (
   <LinkCard {...args} url="http://google.com" linkDescription="Google">
