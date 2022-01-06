@@ -1,8 +1,14 @@
 import * as React from "react";
-import { cardBase } from "../style";
+import { cardBase, cardHeaderImage, headerHeight } from "../style";
 import { cx } from "@emotion/css";
 import { preserveAspectRatio, padding } from "../../shared/styles/styleUtils";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
+
+export enum HeaderSizes {
+  S = "s",
+  M = "m",
+  L = "l"
+}
 
 export interface CardProps extends React.HTMLProps<HTMLDivElement> {
   /**
@@ -14,6 +20,23 @@ export interface CardProps extends React.HTMLProps<HTMLDivElement> {
    */
   paddingSize?: SpaceSize;
   children?: React.ReactNode | string;
+  /**
+   * The card header will be set to the top section of the card optionally. Set a header image along with corresponding alt text. Size can be set to "s", "m", or "l" to increase the header height.
+   */
+  header?: {
+    /**
+     * The header image will appear as a background image.
+     */
+    headerImg: string;
+    /**
+     * Alt text can provide additional context for the image for screen readers, if it is not provided it will default to an empty string indicating to the screen reader to not announce the image.
+     */
+    headerImgAltText?: string | undefined;
+    /**
+     * Size can be set to "s", "m", or "l" to increase the header height. If not specified, size will default to medium.
+     */
+    size?: HeaderSizes;
+  };
 }
 
 class Card<P extends CardProps, S extends {}> extends React.PureComponent<
@@ -29,7 +52,9 @@ class Card<P extends CardProps, S extends {}> extends React.PureComponent<
   }
 
   protected getCardElement(cardProps: CardProps, additionalClasses?: string) {
-    const { children, aspectRatio, paddingSize, ...other } = cardProps;
+    const { children, aspectRatio, paddingSize, header, ...other } = cardProps;
+    const headerSize = header?.size || HeaderSizes.M;
+
     const aspectRatioStyle = aspectRatio
       ? preserveAspectRatio(aspectRatio[0], aspectRatio[1])
       : null;
@@ -40,6 +65,11 @@ class Card<P extends CardProps, S extends {}> extends React.PureComponent<
         data-cy="card"
         {...other}
       >
+        {header?.headerImg && (
+          <div className={cx(cardHeaderImage, headerHeight[headerSize])}>
+            <img src={header.headerImg} alt={header.headerImgAltText ?? ""} />
+          </div>
+        )}
         <div className={padding("all", paddingSize)}>{children}</div>
       </div>
     );
