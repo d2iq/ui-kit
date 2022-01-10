@@ -14,18 +14,27 @@ export default {
         type: "select"
       }
     },
+    children: {
+      control: {
+        type: "text"
+      }
+    },
     aspectRatio: {
       options: ["none", "2:1"],
       mapping: { "2:1": [2, 1] }
-    }
+    },
+    header: { table: { expanded: true } }
   }
 } as Meta;
 
-const Template: Story = args => <Card {...args}>Card Content</Card>;
+const Template: Story = args => <Card {...args}>{args.children}</Card>;
 
 export const Default = Template.bind({});
+Default.args = {
+  children: "Card Content"
+};
 
-export const ResponsivePaddingSize = Template.bind({});
+export const ResponsivePaddingSize = Default.bind({});
 ResponsivePaddingSize.args = {
   paddingSize: {
     default: "s",
@@ -33,7 +42,8 @@ ResponsivePaddingSize.args = {
     medium: "l",
     large: "xl",
     jumbo: "xxl"
-  }
+  },
+  children: "Responsive Card Content"
 };
 
 export const AspectRatio = args => (
@@ -49,6 +59,16 @@ export const DefaultLinkCard = args => (
     Default Link Card
   </LinkCard>
 );
+
+export const WithHeaderImage = Template.bind({});
+WithHeaderImage.args = {
+  header: {
+    headerImg: "https://via.placeholder.com/1000",
+    headerImgAltText: "placeholder image",
+    size: "m"
+  },
+  children: "Card Content"
+};
 
 export const DefaultButtonCard = args => (
   <ButtonCard {...args}>Default Button Card</ButtonCard>

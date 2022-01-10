@@ -6,8 +6,10 @@ import {
   themeBrandPrimary,
   themeBgDisabled,
   themeTextColorDisabled,
-  themeBgHover
+  themeBgHover,
+  borderRadiusDefault
 } from "../design-tokens/build/js/designTokens";
+import { atMediaUp } from "../shared/styles/breakpoints";
 
 export const cardBase = css`
   background-color: ${themeBgPrimary};
@@ -16,6 +18,70 @@ export const cardBase = css`
 
   > div {
     height: 100%;
+  }
+`;
+
+const headerSizes = {
+  s: {
+    default: "50px"
+  },
+  m: {
+    default: "50px",
+    atMedium: "100px",
+    atLarge: "150px",
+    atJumbo: "200px"
+  },
+  l: {
+    default: "200px",
+    atMedium: "250px",
+    atLarge: "300px",
+    atJumbo: "350px"
+  }
+};
+
+export const headerHeight = {
+  s: css`
+    > img {
+      max-height: ${headerSizes.s.default};
+    }
+  `,
+  m: css`
+    > img {
+      max-height: ${headerSizes.m.default};
+
+      ${atMediaUp.small(css`
+        max-height: ${headerSizes.m.atMedium};
+      `)};
+      ${atMediaUp.medium(css`
+        max-height: ${headerSizes.m.atLarge};
+      `)};
+      ${atMediaUp.large(css`
+        max-height: ${headerSizes.m.atJumbo};
+      `)};
+    }
+  `,
+  l: css`
+    > img {
+      max-height: ${headerSizes.m.default};
+
+      ${atMediaUp.small(css`
+        max-height: ${headerSizes.l.atMedium};
+      `)};
+      ${atMediaUp.medium(css`
+        max-height: ${headerSizes.l.atLarge};
+      `)};
+      ${atMediaUp.large(css`
+        max-height: ${headerSizes.l.atJumbo};
+      `)};
+    }
+  `
+};
+
+export const cardHeaderImage = css`
+  > img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: ${borderRadiusDefault} ${borderRadiusDefault} 0 0;
   }
 `;
 
