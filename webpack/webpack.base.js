@@ -23,11 +23,6 @@ const webpackBase = {
         ]
       },
       {
-        test: /\.(eot|ttf|woff|woff2|svg|png|gif|jpe?g)$/,
-        exclude: /(node_modules)/,
-        use: ["file-loader"]
-      },
-      {
         test: /\.stories\.tsx?$/,
         loaders: [
           {

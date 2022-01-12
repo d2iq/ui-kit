@@ -13,6 +13,11 @@ module.exports = {
       transform: {
         "^.+\\.tsx?$": "ts-jest",
         "^.+\\.mdx$": "@storybook/addon-docs/jest-transform-mdx"
+      },
+      // Below is required for Jest + Webpack handling static assets: https://jestjs.io/docs/webpack
+      moduleNameMapper: {
+        "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+        "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/__mocks__/fileMock.js"
       }
     },
     {

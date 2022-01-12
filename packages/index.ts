@@ -148,6 +148,7 @@ export {
   TextBlock,
   WarningText
 } from "./styleUtils/typography";
+export { WelcomeBanner, WelcomeCards, WelcomeFooter } from "./docs/";
 
 // Design Tokens
 export { designTokens };
