@@ -15,10 +15,10 @@ export const cardBase = css`
   background-color: ${themeBgPrimary};
   box-shadow: 0 0 0 1px ${themeBorder};
   ${borderRadius("default")};
+`;
 
-  > div {
-    height: 100%;
-  }
+export const cardContent = css`
+  height: 100%;
 `;
 
 const headerSizes = {

@@ -6,11 +6,11 @@ exports[`MessagePanel appearance='error' 1`] = `
   data-cy="messagePanel"
 >
   <div
-    class="css-1whabpp"
+    class="css-1dauq5a"
     data-cy="card"
   >
     <div
-      class="css-yy1d4r"
+      class="css-1dmb3p1"
     >
       <div
         class="css-rgkn38"
@@ -59,11 +59,11 @@ exports[`MessagePanel default 1`] = `
   data-cy="messagePanel"
 >
   <div
-    class="css-1whabpp"
+    class="css-1dauq5a"
     data-cy="card"
   >
     <div
-      class="css-yy1d4r"
+      class="css-1dmb3p1"
     >
       <div
         class="css-rgkn38"
@@ -93,11 +93,11 @@ exports[`MessagePanel renders with primary and secondary actions 1`] = `
   data-cy="messagePanel"
 >
   <div
-    class="css-1whabpp"
+    class="css-1dauq5a"
     data-cy="card"
   >
     <div
-      class="css-yy1d4r"
+      class="css-1dmb3p1"
     >
       <div
         class="css-rgkn38"

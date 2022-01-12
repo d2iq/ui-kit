@@ -28,10 +28,6 @@ exports[`ToggleBox renders active 1`] = `
   cursor: pointer;
 }
 
-.emotion-3>div {
-  height: 100%;
-}
-
 .emotion-3:hover,
 .emotion-3:focus,
 .emotion-3:focus-within {
@@ -55,6 +51,7 @@ exports[`ToggleBox renders active 1`] = `
 
 .emotion-4 {
   padding: 16px;
+  height: 100%;
 }
 
 <ToggleBox
@@ -140,10 +137,6 @@ exports[`ToggleBox renders default 1`] = `
   cursor: pointer;
 }
 
-.emotion-3>div {
-  height: 100%;
-}
-
 .emotion-3:hover,
 .emotion-3:focus,
 .emotion-3:focus-within {
@@ -157,6 +150,7 @@ exports[`ToggleBox renders default 1`] = `
 
 .emotion-4 {
   padding: 16px;
+  height: 100%;
 }
 
 <ToggleBox
@@ -240,10 +234,6 @@ exports[`ToggleBox renders disabled 1`] = `
   cursor: auto;
 }
 
-.emotion-3>div {
-  height: 100%;
-}
-
 .emotion-3:hover,
 .emotion-3:focus,
 .emotion-3:focus-within {
@@ -263,6 +253,7 @@ exports[`ToggleBox renders disabled 1`] = `
 
 .emotion-4 {
   padding: 16px;
+  height: 100%;
 }
 
 <ToggleBox

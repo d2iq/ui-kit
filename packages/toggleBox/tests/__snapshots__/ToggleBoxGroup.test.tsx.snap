@@ -93,10 +93,6 @@ exports[`ToggleBoxGroup renders default 1`] = `
   cursor: pointer;
 }
 
-.emotion-6>div {
-  height: 100%;
-}
-
 .emotion-6:hover,
 .emotion-6:focus,
 .emotion-6:focus-within {
@@ -110,6 +106,7 @@ exports[`ToggleBoxGroup renders default 1`] = `
 
 .emotion-7 {
   padding: 16px;
+  height: 100%;
 }
 
 <ToggleBoxGroup
@@ -455,10 +452,6 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
   cursor: pointer;
 }
 
-.emotion-8>div {
-  height: 100%;
-}
-
 .emotion-8:hover,
 .emotion-8:focus,
 .emotion-8:focus-within {
@@ -472,6 +465,7 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
 
 .emotion-9 {
   padding: 16px;
+  height: 100%;
 }
 
 <ToggleBoxGroup
@@ -812,10 +806,6 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   cursor: pointer;
 }
 
-.emotion-6>div {
-  height: 100%;
-}
-
 .emotion-6:hover,
 .emotion-6:focus,
 .emotion-6:focus-within {
@@ -829,6 +819,7 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
 
 .emotion-7 {
   padding: 16px;
+  height: 100%;
 }
 
 .emotion-20 {
@@ -836,10 +827,6 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
   border-radius: 6px;
   cursor: pointer;
-}
-
-.emotion-20>div {
-  height: 100%;
 }
 
 .emotion-20:hover,
@@ -1196,10 +1183,6 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   cursor: pointer;
 }
 
-.emotion-6>div {
-  height: 100%;
-}
-
 .emotion-6:hover,
 .emotion-6:focus,
 .emotion-6:focus-within {
@@ -1213,6 +1196,7 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
 
 .emotion-7 {
   padding: 16px;
+  height: 100%;
 }
 
 <ToggleBoxGroup

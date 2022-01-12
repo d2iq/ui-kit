@@ -434,11 +434,11 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
 
 exports[`Promos renders PromoInline 1`] = `
 <div
-  class="css-1whabpp"
+  class="css-1dauq5a"
   data-cy="card"
 >
   <div
-    class="css-1xsu0i2"
+    class="css-fnx3pv"
   >
     <div
       class="css-1bmvt7c"
