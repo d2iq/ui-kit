@@ -2,11 +2,11 @@
 
 exports[`LinkCard renders default 1`] = `
 <div
-  class="css-ix5gb9"
+  class="css-e82819"
   data-cy="linkCard"
 >
   <div
-    class="css-1hc6qpp"
+    class="css-ysit7j"
   >
     <a
       class="css-gsqxnx"
@@ -26,11 +26,11 @@ exports[`LinkCard renders default 1`] = `
 
 exports[`LinkCard renders with external link 1`] = `
 <div
-  class="css-ix5gb9"
+  class="css-e82819"
   data-cy="linkCard"
 >
   <div
-    class="css-1hc6qpp"
+    class="css-ysit7j"
   >
     <a
       class="css-gsqxnx"

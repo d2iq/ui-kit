@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cardBase, cardHeaderImage, headerHeight } from "../style";
+import { cardBase, cardHeaderImage, headerHeight, cardContent } from "../style";
 import { cx } from "@emotion/css";
 import { preserveAspectRatio, padding } from "../../shared/styles/styleUtils";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
@@ -70,7 +70,9 @@ class Card<P extends CardProps, S extends {}> extends React.PureComponent<
             <img src={header.headerImg} alt={header.headerImgAltText ?? ""} />
           </div>
         )}
-        <div className={padding("all", paddingSize)}>{children}</div>
+        <div className={cx(padding("all", paddingSize), cardContent)}>
+          {children}
+        </div>
       </div>
     );
   }
