@@ -12,7 +12,7 @@ By default, this text should appear above the ProgressBar on the right side. Thi
 
 ### Value
 
-If it's important that users knonw the exact value of what's being mesaured, it's best to include text that shows exactly what the value is. For example, if I have a chart that's showing 45% of some total, I should display "45%" near the chart.
+If it's important that users know the exact value of what's being measured, it's best to include text that shows exactly what the value is. For example, if I have a chart that's showing 45% of some total, I should display "45%" near the chart.
 
 By default, this text should appear above the ProgressBar on the right side. This is where the text appears when it's passed to the `value` prop.
 
@@ -40,7 +40,7 @@ When the progress bar is being rendered somewhere with limited vertical space (f
 
 - Use a legend to label segment colors when there is more than one piece of data being displayed
 - Use captions and labels for clarity when the chart data lacks context
-- Try to keep the color of the progress bar consistent with any colors used to represent that particular piece of data in other parts of the app. For example, DC/OS uses a pink color for infographics representing "Memory" resources
+- Try to keep the color of the progress bar consistent with any colors used to represent that particular piece of data in other parts of the app
 
 ### Don't
 

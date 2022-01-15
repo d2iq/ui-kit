@@ -7,7 +7,7 @@
     - [Does It Belong in UI Kit?](#does-it-belong-in-ui-kit)
     - [Eliminate React Errors and Warnings](#eliminate-react-errors-and-warnings)
   - [Maintaining Reusable Components](#maintaining-reusable-components)
-    - [Rigid vs. Flexible](rigid-vs-flexible)
+    - [Rigid vs. Flexible](#rigid-vs-flexible)
     - [Avoid Weak Elements](#avoid-weak-elements)
     - [Declare Prop Types](#declare-prop-types)
     - [Never Hard Code HTML ID’s](#never-hard-code-html-ids)
@@ -18,49 +18,22 @@
     - [Keep Components Simple](#keep-components-simple)
     - [Directory Structure](#directory-structure)
   - [Conventional Commits](#conventional-commits)
-    - [Commit types](#commit-types)
+    - [Commit Types](#commit-types)
     - [JIRA Integration](#jira-integration)
 
 ## Prerequisites
 
-We expect the user to be able to handle:
+Git, Node (version ^16.0.0), and NPM(version >=7.0.0) should be setup.
 
-- git
-- node
-- npm
-
-We expect a entry level of react knowledge, if you know these terms in a React context you are well prepared:
-
-- Component
-
-Also [here](https://reactjs.org/tutorial/tutorial.html) you can find a thorough introduction to react.
-
-We are using TypeScript which is a superset of JavaScript, you can get introduction [here](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+UI Kit uses [React](https://reactjs.org/tutorial/tutorial.html) and [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html).
 
 ## Getting Started
 
 1.  Clone the repository and enter the directory.
-2.  run `npm install` and `npm run setup:git-hooks`
-3.  Start storybook with `npm start` if everything is good you should see:
+2.  Run `npm install`.
+3.  Start Storybook with `npm start`.
 
-```bash
-> @dcos/ui-kit@0.2.0 start <ui-kit-local-path>
-> NODE_ENV=development npm run storybook --root ./
-
-
-> @dcos/ui-kit@0.2.0 storybook <ui-kit-local-path>
-> start-storybook -p 6006 "./"
-
-info @storybook/react v<version>
-
-info => Loading custom addons config.
-info => Loading custom webpack config (full-control mode).
-webpack built f3681fb30ce3064a6336 in <number>ms
-info Storybook started on => http://localhost:6006/
-info
-```
-
-After this there is a web server started at the address http://localhost:6006 which is hosting storybook. This is our documentation from the local repository. Anything you change will reflect there directly.
+The web server should be started now at the address http://localhost:6006 which is hosting Storybook. This is our documentation from the local repository. Anything you change will reflect there directly.
 
 After you're happy with your changes, create a commit by using `git commit` or using [git cz](http://commitizen.github.io/cz-cli/).
 
@@ -68,7 +41,7 @@ Finally, push and create a pull request 🎉
 
 ## Creating a New Component
 
-To create a new component from within the repository you need to run
+To create a new component from within the repository you need to run:
 
 ```sh
 npm run create:component -- ${Component Name}
@@ -82,10 +55,10 @@ When a new component is being created, work with the design team to document des
 
 #### Consider the Following Before Adding a New Component
 
-**Is it likely this component be used in more than 1 app?**
+**Is it likely this component be used in more than one app?**
 For example, a component for a card that may contain any content would be a good candidate for ui-kit. A card that specifically renders data specific to an object in an app is not.
 
-**Does it fit in with a "theme" of other components in the UI Kit?**
+**Does it fit in with the "theme" of other components in the UI Kit?**
 For example, if we have a toast and an inline alert box, a page banner would make sense to exist in the ui-kit.
 
 **Is the effort that goes into building and maintaining it as a reusable component worth the payoff?**
@@ -112,7 +85,7 @@ Using the Cypress UI:
 
 1. `npm start`
 2. `npx cypress open`
-3. Click "storybook-cy" in the sidebar of the Cypress ui
+3. Click "storybook-cy" in the sidebar of the Cypress UI
 
 In the CLI:
 `npm run test:integration`
@@ -131,20 +104,20 @@ While creating a component think about one single reappearing use-case and creat
 
 #### Avoid Weak Elements
 
-Weak elements are elements which can’t nest block elements, for example, a `p` tag is not able to wrap around a div which will reduce the comparability of a component. This is why we try to rather use a strong element like `section` or `div` instead of `p`.
+Weak elements are elements which can’t nest block elements, for example, a `p` tag is not able to wrap around a div which will reduce the comparability of a component. This is why we try to use strong elements such as `section` or `div` instead of `p`.
 
 #### Declare Prop Types
 
-Since the `ui-kit` is using typescript please make sure to define proper prop types for your components. This will improve the documentation, which creates dynamically and will provide better error messages for the users. And also this will provide auto-completion in some IDE’s. Prop type should be as precise as possible—so also define object shapes or array shapes.
+Since the `ui-kit` is using TypeScript please be sure to define proper prop types for components. This will improve the documentation and will provide better error messages for the users. This will also provide auto-completion in some IDE’s. Prop types should be precise, if possible, define object or array shapes including nested prop types.
 
-In addition to describing props using Typescript types, each prop should be described using a comment block about the prop.
+In addition to describing props using TypeScript types, each prop should be described using a comment block detailing the prop and it's usage.
 
-For example:
+Example:
 
-```jsx
+```
 interface ComponentProps {
   /**
-   * An array of objects that contain the data for each option
+   * An array of objects that contain the data for each option.
    */
   options: Array<{
     disabled?: boolean,
@@ -152,7 +125,7 @@ interface ComponentProps {
     value: string
   }>;
   /**
-   * A function that gets called when a new option is selected
+   * A function that gets called when a new option is selected.
    */
   onChange?: (selectedOption: string) => void;
 }
@@ -160,17 +133,17 @@ interface ComponentProps {
 
 #### Never Hard Code HTML ID’s
 
-This might conflict at some point. If you need an id on the element expose a prop for that so the user can define it based on the application.
+If you need an id on an element, expose a prop for that so the user can define it based on the application.
 
 #### Use Logical Defaults
 
-Use prop defaults which make sense this will reduce the efforts needed to adopt this component.
+Use prop defaults where reasonable, this will reduce the efforts required to adopt the component.
 
 #### Accessibility
 
 UI Kit components should be usable by as many users as possible.
 
-We can't assume how our customers use their computer. We need to consider human factors when designing and building our apps.
+We need to consider human factors when designing and building our apps.
 
 | Some people can’t:            | ...so they'll need:        |
 | ----------------------------- | -------------------------- |
@@ -186,25 +159,25 @@ Accessibility and universal design are huge topics. If you want to learn more, [
 
 Please consider using configuration objects as they will provide the user a lot of value by:
 
-- consistency
+- improving consistency
 - less typing needed
 - less error prone
 
-But please avoid using configuration Objects if you have 3 or fewer properties.
+However, avoid using configuration Objects if you have 3 or fewer properties.
 
 #### Single Responsibility Principle
 
-Keep the components simple by applying them to a single responsibility. In that way, the component will stay simple in most cases. Try not to introduce unnecessary props. Each prop is a configuration which will automatically increase the complexity. Before adding a property to an existing component ask yourself if this could be a new component.
+Keep the components simple by applying them to a single responsibility. Avoid introducing unnecessary props. Each prop is a configuration that increases the complexity. Before adding a property to an existing component, ask yourself if this should be a new component instead.
 
 #### Keep Components Simple
 
-It's important to keep components as simple as possible, add logic to a component if it improves performance or quality of that component. For example, paginating a list if the number of items is exceeding a certain amount or having a show toggle to show more content like a dropout.
+It's important to keep components as simple as possible, add logic to a component if it improves performance or quality of that component. For example, paginating a list if the number of items is exceeding a certain amount or having a show toggle to show more content like a dropdown.
 
 #### Directory Structure
 
 Each component has a directory in `packages/`.
 
-Start with a flat directory. Then, if a component gets complex and has a lot of files, add directories like `components`, `tests`, and `stories` if they add clarity.
+Start with a flat directory. If a component becomes complex and has a lot of files, add directories like `components`, `tests`, and `stories` if they add clarity.
 
 ```
 packages
@@ -224,48 +197,42 @@ packages
 
 We use conventional commits with Angular preset.
 
-### Commit types
+### Commit Types
 
-We are supporting the conventional commit types as follows:
+#### Conventional Commit Types
 
 - **Features**
-  `feat` - A new feature (triggers a release)
+  `feat` - A new feature (triggers a major release).
 - **Bug Fixes**
-  `fix` - A bug fix (triggers a release)
+  `fix` - A bug fix (triggers a minor release).
 - **Documentation**
-  `docs` - Documentation only changes
+  `docs` - Documentation only changes.
 - **Styles**
-  `style` - Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+  `style` - Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc.)
 - **Code Refactoring**
-  `refactor` - A code change that neither fixes a bug nor adds a feature
+  `refactor` - A code change that neither fixes a bug nor adds a feature.
 - **Performance Improvements**
-  `perf` - A code change that improves performance (triggers a release)
+  `perf` - A code change that improves performance (triggers a release).
 - **Tests**
-  `test` - Adding missing tests or correcting existing tests
+  `test` - Adding missing tests or correcting existing tests.
 - **Builds**
-  `build` - Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+  `build` - Changes that affect the build system or external dependencies.
 - **Continuous Integrations**
-  `ci` - Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+  `ci` - Changes to our CI configuration files and scripts.
 - **Chores**
-  `chore` - Other changes that don't modify src or test files
+  `chore` - Changes that don't modify src or test files.
 - **Reverts**
-  `revert` - Reverts a previous commit
-
-### JIRA Integration
-
-`semantic-release-jira` plugin automatically can update your Mesosphere JIRA issues labels with UI-Kit release version, if you add it as footer to your commit message.
-
-You can use `Updates`, `Closes` or `Resolves` statements (they all have the same effect tho) and add multiple JIRAs by separating them by comma.
+  `revert` - When reverting a previous commit.
 
 Examples Commit message:
 
 ```
-fix(Table): fix lorem so that it enables foo
+fix: fix foo to enable bar
 
-this commit body message describes the commit
+The commit body can be used to further detail changes.
 
-BREAKING CHANGE
+BREAKING CHANGE:
 Before this fix foo wasn't enabled at all, behavior changes from <old> to <new>
 
-Closes DCOS_OSS-12345, Closes DCOS-23456
+Closes D2IQ-12345
 ```

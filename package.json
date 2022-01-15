@@ -1,7 +1,7 @@
 {
   "name": "@dcos/ui-kit",
   "version": "0.0.0-dev+semantically-released",
-  "description": "DCOS UI Kit",
+  "description": "D2iQ UI Kit",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
