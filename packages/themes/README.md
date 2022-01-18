@@ -1,8 +1,6 @@
 # Theming
 
-ui-kit components currently support theming with different color schemes. You can theme your app by wrapping it in the `UIKitThemeProvider` component, and passing a theme to the `appTheme` prop.
-
-By default, the component color scheme adheres to the branding used in [DC/OS UI](https://github.com/dcos/dcos-ui). Any theme properties you don't define in `appTheme` will fall back to the defaults.
+ui-kit components currently support theming with different color schemes. You can theme your app by wrapping it in the `UIKitThemeProvider` component, and passing a theme to the `appTheme` prop. Any theme properties you don't define in `appTheme` will fall back to the defaults.
 
 ## Theming interface
 
@@ -75,7 +73,7 @@ For example, we want the `Toast` and the `Tooltip` component to stand out agains
 
 ### CSS Variables (preferred usage)
 
-`UIKitThemeProvider` also injects theme properties as CSS variables on the document root (`<html>`). ui-kit also generates [design tokens]() that can be used to style CSS-in-JS with fallback values built in. The fallback values adhere to the branding used in DC/OS UI.
+`UIKitThemeProvider` also injects theme properties as CSS variables on the document root (`<html>`). ui-kit also generates [design tokens]() that can be used to style CSS-in-JS with fallback values built in. The fallback values adhere to the branding used in the D2DS Design System.
 
 The custom properties follow this naming pattern: `--theme{PropertyName}`.
 The design tokens follow a similar naming pattern: `theme{PropertyName}`.
