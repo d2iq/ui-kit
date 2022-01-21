@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#9779FF" offset="0%"></stop>
+            <stop stop-color="#7D58FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#9779FF" offset="0%"></stop>
+            <stop stop-color="#7D58FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-269.000000, -714.000000)"></g>
+        <g id="Artboard">
+            <rect id="shape-secondary" fill="url(#linearGradient-1)" x="13" y="13" width="9" height="9" rx="1"></rect>
+            <rect id="Rectangle-71" fill="url(#linearGradient-2)" opacity="0.4" x="2" y="2" width="9" height="20" rx="1"></rect>
+            <rect id="Rectangle-71" fill="url(#linearGradient-1)" opacity="0.4" x="13" y="2" width="9" height="9" rx="1"></rect>
+        </g>
+    </g>
+</svg>
