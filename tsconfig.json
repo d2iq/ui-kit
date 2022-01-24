@@ -19,6 +19,10 @@
     "tsBuildInfoFile": ".tsbuildinfo",
     "lib": ["es6", "dom", "es2017"]
   },
-  "include": ["./packages/index.ts", "./typings/*"],
+  "include": [
+    "./packages/index.ts",
+    "./typings/*",
+    "./.storybook/docs/components/*.tsx"
+  ],
   "exclude": ["**/*.test.*", "**/*.stories.*"]
 }

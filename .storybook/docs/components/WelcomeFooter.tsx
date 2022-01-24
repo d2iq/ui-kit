@@ -1,15 +1,14 @@
 import * as React from "react";
 
-import { PrimaryButton, SecondaryButton, SpacingBox } from "../..";
-import { Flex } from "../../styleUtils/layout";
-import { purpleDarken4 } from "../../design-tokens/build/js/designTokens";
+import { PrimaryButton, SecondaryButton, SpacingBox } from "../../../packages";
+import { Flex } from "../../../packages/styleUtils/layout";
+import { purpleDarken4 } from "../../../packages/design-tokens/build/js/designTokens";
 
-import { HeadingText2 } from "../../styleUtils/typography";
-
+import { HeadingText2 } from "../../../packages/styleUtils/typography";
 import footer from "../assets/footer.png";
 import { FooterImg, GradientContainer } from "../styles";
 
-const WelcomeFooter = () => {
+export const WelcomeFooter = () => {
   return (
     <SpacingBox spacingSize="xxl" side="top">
       <GradientContainer>
@@ -41,5 +40,3 @@ const WelcomeFooter = () => {
     </SpacingBox>
   );
 };
-
-export default WelcomeFooter;

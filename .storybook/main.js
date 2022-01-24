@@ -2,7 +2,7 @@ const customWebpack = require("./webpack.config.js");
 
 module.exports = {
   stories: [
-    "../packages/docs/stories/Welcome.stories.mdx",
+    "./docs/stories/Welcome.stories.mdx",
     "../packages/**/*.stories.@(tsx|mdx)"
   ],
   webpackFinal: config => {
