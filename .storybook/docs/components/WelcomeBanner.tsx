@@ -1,10 +1,16 @@
 import * as React from "react";
-import { HeadingText1, HeadingText2, Text, SpacingBox } from "../..";
-import { purpleLighten4 } from "../../design-tokens/build/js/designTokens";
+import {
+  HeadingText1,
+  HeadingText2,
+  Text,
+  SpacingBox
+} from "../../../packages";
+import { purpleLighten4 } from "../../../packages/design-tokens/build/js/designTokens";
 import { BannerContainer, ImgWrapper, TextWrapper } from "../styles";
+
 import { ReactComponent as BannerImg } from "../assets/welcome-banner.svg";
 
-const WelcomeBanner = () => {
+export const WelcomeBanner = () => {
   return (
     <BannerContainer>
       <SpacingBox textAlign="center" spacingSize="xxl" side="vert">
@@ -31,5 +37,3 @@ const WelcomeBanner = () => {
     </BannerContainer>
   );
 };
-
-export default WelcomeBanner;

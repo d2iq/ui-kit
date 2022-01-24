@@ -4,7 +4,7 @@ import {
   spaceXxl,
   yellowLighten4,
   yellowLighten5
-} from "../design-tokens/build/js/designTokens";
+} from "../../packages/design-tokens/build/js/designTokens";
 
 export const ImgWrapper = styled.div`
   > svg {

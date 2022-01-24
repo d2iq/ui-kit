@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import { Card } from "../../card";
-import { Link } from "../../link";
-import { Text } from "../../styleUtils/typography";
-import { GridList, SpacingBox } from "../..";
-import { purpleDarken4 } from "../../design-tokens/build/js/designTokens";
+import { Card } from "../../../packages/card";
+import { Link } from "../../../packages/link";
+import { Text } from "../../../packages/styleUtils/typography";
+import { GridList, SpacingBox } from "../../../packages";
+import { purpleDarken4 } from "../../../packages/design-tokens/build/js/designTokens";
 
 import headerUrlOne from "../assets/banner-one.png";
 import headerUrlTwo from "../assets/banner-two.png";
@@ -20,7 +20,7 @@ const welcomeHeaderThree = {
   headerImg: headerUrlThree
 };
 
-const WelcomeCards = () => {
+export const WelcomeCards = () => {
   return (
     <>
       <SpacingBox spacingSizePerSide={{ vert: "xxl", horiz: "xl" }}>
@@ -80,5 +80,3 @@ const WelcomeCards = () => {
     </>
   );
 };
-
-export default WelcomeCards;
