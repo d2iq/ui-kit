@@ -154,6 +154,54 @@ export const ColumnsWithCustomWidths = () => (
   />
 );
 
+export const ColumnsWithWrappingContent = () => (
+  <Table
+    data={initialData}
+    // toId fn needed to make react render stuff fast.
+    toId={el => el.id.toString()}
+    columns={[
+      {
+        id: "name",
+        header: "Name",
+        render: x => x.name,
+        initialWidth: "100px",
+        contentNoWrap: false
+      },
+      {
+        id: "username",
+        header: "Username",
+        render: x => x.username,
+        contentNoWrap: false
+      },
+      {
+        id: "email",
+        header: "E-mail",
+        render: x => x.email,
+        contentNoWrap: false
+      },
+      {
+        id: "phone",
+        header: "Phone",
+        render: x => x.phone,
+        contentNoWrap: false
+      },
+      {
+        id: "website",
+        header: "Website",
+        render: x => x.website,
+        contentNoWrap: false
+      },
+      {
+        id: "company",
+        header: "Company",
+        render: x => x.company.name,
+        initialWidth: "200px",
+        contentNoWrap: false
+      }
+    ]}
+  />
+);
+
 export const SortableColumns = () => (
   <Table
     data={initialData}
