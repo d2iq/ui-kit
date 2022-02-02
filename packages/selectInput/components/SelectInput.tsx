@@ -99,6 +99,7 @@ class SelectInput extends React.PureComponent<
       showInputLabel,
       inputLabel,
       tooltipContent,
+      hintContent,
       ...other
     } = this.props;
     delete other.onFocus;
@@ -109,11 +110,7 @@ class SelectInput extends React.PureComponent<
     const selectDataCy = `selectInput-select selectInput-select.${appearance}`;
 
     return (
-      <FormFieldWrapper
-        id={id}
-        errors={errors}
-        hintContent={this.props.hintContent}
-      >
+      <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
         {({ getValidationErrors, isValid, getHintContent, describedByIds }) => (
           <div data-cy={parentDataCy}>
             {renderLabel({

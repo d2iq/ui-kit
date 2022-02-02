@@ -134,6 +134,7 @@ export class TextInput<P extends TextInputProps> extends React.Component<P> {
       value,
       showInputLabel,
       appearance,
+      tooltipContent,
       ...inputElementProps
     } = this.getInputElementProps();
     const textInputAppearance = this.getInputAppearance();

@@ -5,6 +5,7 @@ import PopoverBox from "../../popover/components/PopoverBox";
 import PopoverListItem from "../../popover/components/PopoverListItem";
 import { margin } from "../../shared/styles/styleUtils";
 import resizeEventManager from "../../utilities/resizeEventManager";
+import TextInputWithBadges from "../../textInput/components/TextInputWithBadges";
 
 export interface Item {
   value: string;
@@ -181,7 +182,9 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                         );
                       },
                       value: value === undefined ? inputValue : value,
-                      downshiftReset: other.reset,
+                      ...(textField.type === TextInputWithBadges && {
+                        downshiftReset: other.reset
+                      }),
                       ...textFieldProps
                     })
                   )}
