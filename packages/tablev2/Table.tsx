@@ -45,6 +45,11 @@ export type Column<A, B = string> = {
    * Text alignment for cells in the column
    */
   textAlign?: React.CSSProperties["textAlign"];
+
+  /**
+   * The contentNoWrap prop sets the `whitespace` to `nowrap` which prevents content from wrapping within the cell. The default is set to true to preserve truncation backwards compatibility.
+   */
+  contentNoWrap?: boolean;
 };
 
 // we internally use a different type than we expose in the API.
@@ -272,20 +277,23 @@ const Row = React.memo(function Row<A>({
 
   return (
     <div role="row" className={className} key={`row-${rowId}`}>
-      {columns.map(({ id: colID, render, textAlign, sorter }) => (
-        <div
-          key={rowId + colID}
-          aria-describedby={colID}
-          className={cx(style.cell(textAlign), {
-            [style.makeSpaceForSortIndicator]:
-              Boolean(sorter) && textAlign === "right",
-            [style.rowScrollShadow]: showScrollShadow
-          })}
-          role="gridcell"
-        >
-          {render(el)}
-        </div>
-      ))}
+      {columns.map(
+        ({ id: colID, render, textAlign, sorter, contentNoWrap = true }) => (
+          <div
+            key={rowId + colID}
+            aria-describedby={colID}
+            className={cx(style.cell(textAlign), {
+              [style.makeSpaceForSortIndicator]:
+                Boolean(sorter) && textAlign === "right",
+              [style.rowScrollShadow]: showScrollShadow,
+              [style.nowrap]: contentNoWrap
+            })}
+            role="gridcell"
+          >
+            {render(el)}
+          </div>
+        )
+      )}
     </div>
   );
 });

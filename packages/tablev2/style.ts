@@ -4,7 +4,6 @@ import {
   border,
   padding,
   pseudoElTriangle,
-  textTruncate,
   textWeight
 } from "../shared/styles/styleUtils";
 import { iconSizes } from "../shared/styles/styleUtils/layout/iconSizes";
@@ -91,11 +90,17 @@ export const sortableButton = css`
   max-width: 100%;
 `;
 
+export const nowrap = css`
+  white-space: nowrap;
+`;
+
 // min-width: 0 is needed to support text truncation in columns that are sized with the `fr` unit
 const cellPaddingSize = "xs";
 export const cell = (textAlign: React.CSSProperties["textAlign"]) => css`
   ${padding("all", cellPaddingSize)};
-  ${textTruncate};
+  text-overflow: ellipsis;
+  overflow: -moz-hidden-unscrollable;
+  overflow: hidden;
   background-color: ${dt.themeBgPrimary};
   min-width: 0;
   padding-right: calc(
@@ -125,8 +130,6 @@ export const headerCell = (textAlign: React.CSSProperties["textAlign"]) =>
   css`
     ${cell(textAlign)};
     ${textWeight("medium")};
-    overflow: visible;
-    white-space: nowrap;
     --draggable-opacity: 0;
     &:hover {
       --draggable-opacity: 1;
