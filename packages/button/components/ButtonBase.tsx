@@ -112,6 +112,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
       onClick,
       type = "button",
       url,
+      openInNewTab,
       ...other
     } = this.props;
 
@@ -138,6 +139,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
             className={buttonClassName}
             onClick={this.onClick}
             tabIndex={0}
+            openInNewTab={openInNewTab}
             {...other}
           >
             {this.getButtonContent()}
@@ -147,6 +149,7 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
             className={buttonClassName}
             aria-disabled="true"
             tabIndex={-1}
+            openInNewTab={openInNewTab}
             {...other}
           >
             {this.getButtonContent()}
