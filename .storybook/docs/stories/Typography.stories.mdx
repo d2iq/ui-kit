@@ -1,0 +1,48 @@
+import { Meta } from "@storybook/addon-docs";
+import { Typeset } from "@storybook/addon-docs/blocks";
+import {
+  fontFamilySansSerif,
+  fontFamilyMonospace,
+  fontSizeS,
+  fontSizeM,
+  fontSizeL,
+  fontSizeXl,
+  fontWeightNormal,
+  fontWeightMedium
+} from "../../../packages/design-tokens/build/js/designTokens";
+import {
+  HeadingText1,
+  HeadingText2,
+  HeadingText3
+} from "../../../packages/styleUtils/typography/index";
+
+<Meta title="DesignTokens/Typography" />
+
+# Typography
+
+<div>
+  <h2>Font Sizes</h2>
+  <Typeset
+    fontSizes={[fontSizeS, fontSizeM, fontSizeL, fontSizeXl]}
+    fontFamily={fontFamilySansSerif}
+    fontWeight={fontWeightNormal}
+    sampleText="The quick brown fox jumps over the lazy dog"
+  />
+  <h2>Medium Font Weight</h2>
+  <Typeset
+    fontSizes={[fontSizeS, fontSizeM, fontSizeL, fontSizeXl]}
+    fontFamily={fontFamilySansSerif}
+    fontWeight={fontWeightMedium}
+    sampleText="The quick brown fox jumps over the lazy dog"
+  />
+  <h2>Monospace Font</h2>
+  <Typeset
+    fontSizes={[fontSizeS, fontSizeM, fontSizeL, fontSizeXl]}
+    fontFamily={fontFamilyMonospace}
+    sampleText="The quick brown fox jumps over the lazy dog"
+  />
+  <h2>Heading Text</h2>
+  <HeadingText1>Heading Text 1</HeadingText1>
+  <HeadingText2>Heading Text 2</HeadingText2>
+  <HeadingText3>Heading Text 3</HeadingText3>
+</div>
