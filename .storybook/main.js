@@ -3,6 +3,8 @@ const customWebpack = require("./webpack.config.js");
 module.exports = {
   stories: [
     "./docs/stories/Welcome.stories.mdx",
+    "./docs/stories/Colors.stories.mdx",
+    "./docs/stories/Typography.stories.mdx",
     "../packages/**/*.stories.@(tsx|mdx)"
   ],
   webpackFinal: config => {
