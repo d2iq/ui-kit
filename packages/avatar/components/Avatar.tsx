@@ -33,7 +33,7 @@ const Avatar: React.FC<AvatarProps> = ({
     data-cy="avatar"
   >
     {/* eslint-disable jsx-a11y/alt-text */
-    /* intententionally not setting "alt" so it doesn't appear in the avatar
+    /* intentionally not setting "alt" so it doesn't appear in the avatar
       box when/if src is empty or a broken URL
       */}
     <img className={avatarImg} src={src} alt="" />
