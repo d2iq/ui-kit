@@ -43,10 +43,7 @@ describe("Modal", () => {
       );
 
       expect(action).not.toHaveBeenCalled();
-      component
-        .find('[role="button"]')
-        .first()
-        .simulate("click");
+      component.find('[role="button"]').first().simulate("click");
       expect(action).toHaveBeenCalled();
     });
   });

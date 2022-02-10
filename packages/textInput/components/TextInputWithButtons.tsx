@@ -17,9 +17,7 @@ export interface TextInputWithButtonsProps
   buttons: Array<React.ReactElement<TextInputButtonProps>>;
 }
 
-class TextInputWithButtons extends TextInputWithIcon<
-  TextInputWithButtonsProps
-> {
+class TextInputWithButtons extends TextInputWithIcon<TextInputWithButtonsProps> {
   protected getInputElementProps() {
     const baseProps = super.getInputElementProps();
     const { buttons, ...inputProps } = baseProps as TextInputWithButtonsProps;

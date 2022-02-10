@@ -55,11 +55,8 @@ export class TextInputWithIcon<
 
   protected getInputElementProps() {
     const baseProps = super.getInputElementProps();
-    const {
-      iconStart,
-      iconEnd,
-      ...inputProps
-    } = baseProps as TextInputWithIconProps;
+    const { iconStart, iconEnd, ...inputProps } =
+      baseProps as TextInputWithIconProps;
     inputProps.onFocus = this.inputOnFocus;
     inputProps.onBlur = this.inputOnBlur;
     return inputProps;

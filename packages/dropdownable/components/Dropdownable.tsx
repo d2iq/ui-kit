@@ -84,14 +84,10 @@ const Dropdownable: React.FC<DropdownableProps> = ({
   disablePortal,
   children
 }) => {
-  const [
-    referenceElement,
-    setReferenceElement
-  ] = React.useState<HTMLDivElement | null>(null);
-  const [
-    popperElement,
-    setPopperElement
-  ] = React.useState<HTMLDivElement | null>(null);
+  const [referenceElement, setReferenceElement] =
+    React.useState<HTMLDivElement | null>(null);
+  const [popperElement, setPopperElement] =
+    React.useState<HTMLDivElement | null>(null);
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement: getPreferredDirection(preferredDirections),
     modifiers: [maxSize, applyMaxSize, getFlipModifier(preferredDirections)]

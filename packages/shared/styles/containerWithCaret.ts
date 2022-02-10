@@ -81,9 +81,9 @@ export const getContainerCaret = (
   return css`
     ${caretAlignmentStyles};
     ${borderColor &&
-      getCaretBorderSides(direction).map(
-        side => `border-${side}: 1px solid ${borderColor};`
-      )};
+    getCaretBorderSides(direction).map(
+      side => `border-${side}: 1px solid ${borderColor};`
+    )};
     background-color: ${bgColor || themeBgPrimary};
     box-sizing: border-box;
     transform: rotate(45deg);

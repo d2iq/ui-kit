@@ -18,10 +18,9 @@ const trigger = (
   </ResetButton>
 );
 
-export const DropdownMenuCell: React.StatelessComponent<Omit<
-  DropdownMenuProps,
-  "trigger"
->> = props => (
+export const DropdownMenuCell: React.StatelessComponent<
+  Omit<DropdownMenuProps, "trigger">
+> = props => (
   <div className={style}>
     <DropdownMenu trigger={trigger} {...props} />
   </div>

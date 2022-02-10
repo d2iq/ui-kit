@@ -32,7 +32,9 @@ const getHeadingTextComponent = (headingLevel: HeadingLevel) => {
   }
 };
 
-const ConfigurationMapHeading: React.StatelessComponent<ConfigurationMapHeadingProps> = props => {
+const ConfigurationMapHeading: React.StatelessComponent<
+  ConfigurationMapHeadingProps
+> = props => {
   const { children, headingLevel = 1, tag } = props;
   const headingTag: keyof React.ReactHTML = `h${headingLevel}` as
     | "h1"

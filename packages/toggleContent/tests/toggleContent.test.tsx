@@ -32,23 +32,11 @@ describe("ToggleContent", () => {
   it("string content", () => {
     const wrapper = mount(<ToggleContent contentOn="Hello" contentOff="Bye" />);
 
-    expect(
-      wrapper
-        .last()
-        .children()
-        .last()
-        .text()
-    ).toEqual("Hello");
+    expect(wrapper.last().children().last().text()).toEqual("Hello");
 
     wrapper.simulate("click");
 
-    expect(
-      wrapper
-        .last()
-        .children()
-        .last()
-        .text()
-    ).toEqual("Bye");
+    expect(wrapper.last().children().last().text()).toEqual("Bye");
   });
 
   it("component content", () => {
@@ -56,22 +44,10 @@ describe("ToggleContent", () => {
       <ToggleContent contentOn={primary()} contentOff={secondary()} />
     );
 
-    expect(
-      wrapper
-        .last()
-        .children()
-        .last()
-        .text()
-    ).toEqual("primary");
+    expect(wrapper.last().children().last().text()).toEqual("primary");
 
     wrapper.simulate("click");
 
-    expect(
-      wrapper
-        .last()
-        .children()
-        .last()
-        .text()
-    ).toEqual("secondary");
+    expect(wrapper.last().children().last().text()).toEqual("secondary");
   });
 });

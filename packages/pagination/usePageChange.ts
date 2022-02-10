@@ -9,9 +9,8 @@ const usePageChange = (): {
   onChange: (newPage: number, newPageLength: number) => void;
 } => {
   const [activePage, setActivePage] = React.useState<number>(1);
-  const [pageLength, setPageLength] = React.useState<number>(
-    INITIAL_PAGE_LENGTH
-  );
+  const [pageLength, setPageLength] =
+    React.useState<number>(INITIAL_PAGE_LENGTH);
 
   const onChange = (newPage, newPageLength) => {
     setActivePage(newPage);

@@ -82,9 +82,11 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
   };
 
   const getDropdownContents = (highlightedIndex, getItemProps) =>
-    (React.Children.toArray(children) as Array<
-      React.ReactElement<DropdownSectionProps>
-    >).reduce<{
+    (
+      React.Children.toArray(children) as Array<
+        React.ReactElement<DropdownSectionProps>
+      >
+    ).reduce<{
       sections: React.ReactNodeArray;
       menuItemIndex: number;
     }>(

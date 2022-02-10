@@ -15,13 +15,8 @@ export interface ButtonCardProps extends CardProps {
 
 class LinkCard extends Card<ButtonCardProps & LinkProps, {}> {
   public render() {
-    const {
-      openInNewTab,
-      linkDescription,
-      url,
-      children,
-      ...other
-    } = this.props;
+    const { openInNewTab, linkDescription, url, children, ...other } =
+      this.props;
 
     const buttonCardProps = {
       children: (

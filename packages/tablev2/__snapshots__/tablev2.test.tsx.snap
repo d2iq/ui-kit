@@ -307,7 +307,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1flfuvq"
+            className="css-1ypgwfm"
             id="name"
             role="columnheader"
           >
@@ -3597,7 +3597,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-17u43ww"
+            className="css-1x3r1w7"
             id="name"
             role="columnheader"
           >

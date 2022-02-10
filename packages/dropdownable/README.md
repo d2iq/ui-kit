@@ -5,4 +5,3 @@ Dropdownable is a component that renders its children and optionally a dropdown 
 ## Display Behavior
 
 Dropdown contents are eagarly added to the DOM off-screen and repositioned relative to the Dropdown children when opened. Dropdown contents are dismissed when the user clicks outside the dropdown.
-

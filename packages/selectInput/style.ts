@@ -17,7 +17,7 @@ export const select = css`
   color: inherit;
   font-size: inherit;
   padding-right: ${parseInt(iconSizes[DROPDOWN_ARROW_ICON_SIZE], 10) +
-    parseInt(spaceM, 10)}px;
+  parseInt(spaceM, 10)}px;
   width: 100%;
 
   /*

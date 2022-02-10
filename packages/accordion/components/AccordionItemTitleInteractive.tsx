@@ -21,12 +21,11 @@ interface RenderProps {
   getHeading: (label: string) => React.ReactNode;
 }
 
-const AccordionItemTitleInteractive: React.FC<Exclude<
-  AccordionItemTitleProps,
-  "children"
-> & {
-  children: (renderProps: RenderProps) => React.ReactNode;
-}> = ({ appearance, children, "data-cy": dataCy, disabled, headingLevel }) => {
+const AccordionItemTitleInteractive: React.FC<
+  Exclude<AccordionItemTitleProps, "children"> & {
+    children: (renderProps: RenderProps) => React.ReactNode;
+  }
+> = ({ appearance, children, "data-cy": dataCy, disabled, headingLevel }) => {
   const HeadingTag: keyof React.ReactHTML = `h${headingLevel}` as
     | "h2"
     | "h3"

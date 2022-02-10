@@ -60,13 +60,9 @@ const PopoverListItem = (props: PopoverListItemProps) => {
     color: ${themeTextColorDisabled};
   `;
 
-  const {
-    itemGraphicStart,
-    itemGraphicEnd,
-    itemContent
-  } = (React.Children.toArray(children) as Array<
-    React.ReactElement<any>
-  >).reduce<{
+  const { itemGraphicStart, itemGraphicEnd, itemContent } = (
+    React.Children.toArray(children) as Array<React.ReactElement<any>>
+  ).reduce<{
     itemGraphicStart: React.ReactNode;
     itemGraphicEnd: React.ReactNode;
     itemContent: React.ReactNode;

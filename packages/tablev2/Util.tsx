@@ -78,33 +78,29 @@ export type SorterFactory<T> = <B extends string, A extends Record<B, T>>(
   prop: B
 ) => Sorter<A>;
 
-const string: SorterFactory<string | null | undefined> = prop => (_, dir) => (
-  a,
-  b
-) => {
-  // null/undefined sort after anything else
-  if (a[prop] == null) {
-    return 1;
-  }
-  if (b[prop] == null) {
-    return -1;
-  }
-  return dir * (a[prop] || "")!.localeCompare((b[prop] || "")!);
-};
+const string: SorterFactory<string | null | undefined> =
+  prop => (_, dir) => (a, b) => {
+    // null/undefined sort after anything else
+    if (a[prop] == null) {
+      return 1;
+    }
+    if (b[prop] == null) {
+      return -1;
+    }
+    return dir * (a[prop] || "")!.localeCompare((b[prop] || "")!);
+  };
 
-const number: SorterFactory<number | null | undefined> = prop => (_, dir) => (
-  a,
-  b
-) => {
-  // null/undefined sort after anything else
-  if (a[prop] == null) {
-    return 1;
-  }
-  if (b[prop] == null) {
-    return -1;
-  }
-  return dir * ((a[prop] || 0)! - (b[prop] || 0)!);
-};
+const number: SorterFactory<number | null | undefined> =
+  prop => (_, dir) => (a, b) => {
+    // null/undefined sort after anything else
+    if (a[prop] == null) {
+      return 1;
+    }
+    if (b[prop] == null) {
+      return -1;
+    }
+    return dir * ((a[prop] || 0)! - (b[prop] || 0)!);
+  };
 
 export type Sorter<A> = (
   dir: "asc" | "desc",

@@ -81,9 +81,11 @@ const getGutterPaddingValues = (responsivePaddingConfig, gutterSize) => {
   // remove any properties for breakpoints that did not have a responsive `direction` prop
   Object.keys(responsivePaddingConfig).forEach(
     key =>
-      (paddingValues[key] = (key in overrideGutters(responsivePaddingConfig)
-        ? overrideGutters(responsivePaddingConfig)
-        : responsivePaddingConfig)[key])
+      (paddingValues[key] = (
+        key in overrideGutters(responsivePaddingConfig)
+          ? overrideGutters(responsivePaddingConfig)
+          : responsivePaddingConfig
+      )[key])
   );
 
   return paddingValues;

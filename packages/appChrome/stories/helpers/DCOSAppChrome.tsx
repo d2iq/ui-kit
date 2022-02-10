@@ -79,13 +79,13 @@ class DCOSAppChrome extends React.Component<
           <Sidebar isOpen={this.state.sidebarIsOpen}>
             <div
               className={css`
-              ${padding("bottom", "l")}
-              ${padding("top", "l")}
+                ${padding("bottom", "l")}
+                ${padding("top", "l")}
 
               ${atMediaUp.large(css`
-                ${padding("bottom", "xl")} ${padding("top", "xl")};
-              `)};
-            `}
+                  ${padding("bottom", "xl")} ${padding("top", "xl")};
+                `)};
+              `}
             >
               <SidebarContent sidebarData={dcosSidebarData} />
             </div>
