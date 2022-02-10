@@ -16,7 +16,7 @@ interface ToasterProps {
 }
 
 class Toaster extends React.PureComponent<ToasterProps, { toasts: Toast[] }> {
-  public timeouts: NodeJS.Timeout[] = [];
+  public timeouts: number[] = [];
 
   constructor(props) {
     super(props);
@@ -119,7 +119,7 @@ class Toaster extends React.PureComponent<ToasterProps, { toasts: Toast[] }> {
     const toastKey = toast.key as number;
     if (toast.props.autodismiss) {
       this.timeouts.push(
-        setTimeout(() => {
+        window.setTimeout(() => {
           this.dismissToast(toast.props.id);
         }, DELAY_TIME + MARGINAL_DELAY * toastKey)
       );

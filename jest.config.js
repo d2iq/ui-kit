@@ -8,7 +8,8 @@ module.exports = {
       displayName: "Jest",
       roots: ["packages"],
       moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
-      setupTestFrameworkScriptFile: "<rootDir>/testHelper/setupTests.ts",
+      testEnvironment: "jsdom",
+      setupFilesAfterEnv: ["<rootDir>/testHelper/setupTests.ts"],
       testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
       transform: {
         "^.+\\.tsx?$": "ts-jest",

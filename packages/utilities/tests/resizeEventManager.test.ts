@@ -3,9 +3,12 @@ import resizeEventManager from "../resizeEventManager";
 describe("resizeEventManager", () => {
   describe("add/remove handlers", () => {
     beforeEach(() => {
-      jest
-        .spyOn(window, "requestAnimationFrame")
-        .mockImplementation(cb => cb());
+      // it's necessary to return 0 for tests to pass
+      // due to expected number return
+      jest.spyOn(window, "requestAnimationFrame").mockImplementation(cb => {
+        cb(0);
+        return 0;
+      });
     });
 
     it("can be triggered globally", () => {
