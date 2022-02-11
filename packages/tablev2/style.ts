@@ -109,7 +109,7 @@ export const cell = (textAlign: React.CSSProperties["textAlign"]) => css`
   position: relative;
   text-align: ${textAlign};
 
-  &:first-child {
+  > &:first-child {
     transition: box-shadow 200ms ease-out;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     a {
@@ -149,7 +149,9 @@ export const rowScrollShadow = css`
 `;
 
 export const cellFlexWrapper = css`
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   max-width: 100%;
 `;
 

@@ -16,10 +16,8 @@ export const TooltipHeaderCell: React.StatelessComponent<{
 }> = ({ children, tooltipContent }) => {
   const [generatedId] = useId(1, "colTooltip");
   return (
-    <Flex gutterSize="xxs" className={style.cellFlexWrapper}>
-      <FlexItem>
-        <div className={textTruncate}>{children}</div>
-      </FlexItem>
+    <Flex gutterSize="xxs" className={style.cellFlexWrapper} align="center">
+      <div className={textTruncate}>{children}</div>
       <FlexItem flex="shrink">
         <Tooltip
           id={`${generatedId}-tooltip`}

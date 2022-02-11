@@ -5,6 +5,7 @@ import { Flex, FlexItem } from "../styleUtils/layout";
 import { Text } from "../styleUtils/typography";
 import { Icon } from "../icon";
 import { SystemIcons } from "../icons/dist/system-icons-enum";
+import { greyLightLighten1 } from "../design-tokens/build/js/designTokens";
 
 import {
   Table,
@@ -268,19 +269,38 @@ export const ColumnHeaderWithTooltip = () => (
     toId={el => el.id.toString()}
     columns={[
       {
+        id: "email",
+        render: x => x.email,
+        header: (
+          <TooltipHeaderCell
+            tooltipContent={
+              <Text color={greyLightLighten1}>Tooltip with Text Component</Text>
+            }
+          >
+            Email
+          </TooltipHeaderCell>
+        )
+      },
+      { id: "phone", header: "Phone", render: x => x.phone },
+      {
         id: "name",
         header: (
-          <TooltipHeaderCell tooltipContent="Fake names">
-            Name
-          </TooltipHeaderCell>
+          <TooltipHeaderCell tooltipContent="Name Data">Name</TooltipHeaderCell>
         ),
-        render: x => x.name
+        render: x => x.name,
+        sorter: Sorter.string("name")
       },
-      { id: "username", header: "Username", render: x => x.username },
-      { id: "email", header: "Email", render: x => x.email },
-      { id: "phone", header: "Phone", render: x => x.phone },
+
       { id: "website", header: "Website", render: x => x.website },
-      { id: "company", header: "Company", render: x => x.company.name }
+      {
+        id: "company",
+        render: x => x.company.name,
+        header: (
+          <TooltipHeaderCell tooltipContent="Company Data">
+            Company
+          </TooltipHeaderCell>
+        )
+      }
     ]}
   />
 );

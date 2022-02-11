@@ -307,7 +307,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1ypgwfm"
+            className="css-16dye1x"
             id="name"
             role="columnheader"
           >
@@ -434,7 +434,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1khggit"
+            className="css-vzbg9b"
             id="username"
             role="columnheader"
           >
@@ -442,31 +442,22 @@ exports[`Table v2 rendering renders default 1`] = `
               tooltipContent="test"
             >
               <Flex
-                align="flex-start"
-                className="css-11sgx7q"
+                align="center"
+                className="css-58o3hk"
                 direction="row"
                 gutterSize="xxs"
                 justify="flex-start"
                 wrap="nowrap"
               >
                 <div
-                  className="css-mxutz3"
+                  className="css-6q82vx"
                   data-cy="flex"
                 >
-                  <FlexItem
-                    flex="grow"
+                  <div
+                    className="css-hdfk0n"
                   >
-                    <div
-                      className="css-11labrq"
-                      data-cy="flexItem"
-                    >
-                      <div
-                        className="css-hdfk0n"
-                      >
-                        Username
-                      </div>
-                    </div>
-                  </FlexItem>
+                    Username
+                  </div>
                   <FlexItem
                     flex="shrink"
                   >
@@ -643,7 +634,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-r8gcxz"
+            className="css-jehs5k"
             id="email"
             role="columnheader"
           >
@@ -747,7 +738,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1c1nlm0"
+            className="css-1kncvw8"
             id="phone"
             role="columnheader"
           >
@@ -851,7 +842,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1c1nlm0"
+            className="css-1kncvw8"
             id="company"
             role="columnheader"
           >
@@ -955,7 +946,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1c1nlm0"
+            className="css-1kncvw8"
             id="website"
             role="columnheader"
           >
@@ -1059,7 +1050,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1c1nlm0"
+            className="css-1kncvw8"
             id="empty"
             role="columnheader"
           >
@@ -1163,7 +1154,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1c1nlm0"
+            className="css-1kncvw8"
             id="muted"
             role="columnheader"
           >
@@ -1267,7 +1258,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1c1nlm0"
+            className="css-1kncvw8"
             id="dropdown"
             role="columnheader"
           >
@@ -1406,7 +1397,7 @@ exports[`Table v2 rendering renders default 1`] = `
       >
         <div
           aria-describedby="name"
-          className="css-18tezmg"
+          className="css-1bgxg8t"
           key="0name"
           role="gridcell"
         >
@@ -1418,7 +1409,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="css-bbdu6u"
+          className="css-1dx5v0r"
           key="0username"
           role="gridcell"
         >
@@ -1426,7 +1417,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="css-146hpp5"
+          className="css-l2a97w"
           key="0email"
           role="gridcell"
         >
@@ -1434,7 +1425,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="0phone"
           role="gridcell"
         >
@@ -1442,7 +1433,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="0company"
           role="gridcell"
         >
@@ -1450,7 +1441,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="0website"
           role="gridcell"
         >
@@ -1462,7 +1453,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="0empty"
           role="gridcell"
         >
@@ -1472,7 +1463,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="muted"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="0muted"
           role="gridcell"
         >
@@ -1498,7 +1489,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="dropdown"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="0dropdown"
           role="gridcell"
         >
@@ -1800,7 +1791,7 @@ exports[`Table v2 rendering renders default 1`] = `
       >
         <div
           aria-describedby="name"
-          className="css-18tezmg"
+          className="css-1bgxg8t"
           key="1name"
           role="gridcell"
         >
@@ -1812,7 +1803,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="css-bbdu6u"
+          className="css-1dx5v0r"
           key="1username"
           role="gridcell"
         >
@@ -1820,7 +1811,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="css-146hpp5"
+          className="css-l2a97w"
           key="1email"
           role="gridcell"
         >
@@ -1828,7 +1819,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="1phone"
           role="gridcell"
         >
@@ -1836,7 +1827,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="1company"
           role="gridcell"
         >
@@ -1844,7 +1835,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="1website"
           role="gridcell"
         >
@@ -1856,7 +1847,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="1empty"
           role="gridcell"
         >
@@ -1866,7 +1857,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="muted"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="1muted"
           role="gridcell"
         >
@@ -1892,7 +1883,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="dropdown"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="1dropdown"
           role="gridcell"
         >
@@ -2194,7 +2185,7 @@ exports[`Table v2 rendering renders default 1`] = `
       >
         <div
           aria-describedby="name"
-          className="css-18tezmg"
+          className="css-1bgxg8t"
           key="2name"
           role="gridcell"
         >
@@ -2206,7 +2197,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="css-bbdu6u"
+          className="css-1dx5v0r"
           key="2username"
           role="gridcell"
         >
@@ -2214,7 +2205,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="css-146hpp5"
+          className="css-l2a97w"
           key="2email"
           role="gridcell"
         >
@@ -2222,7 +2213,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="2phone"
           role="gridcell"
         >
@@ -2230,7 +2221,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="2company"
           role="gridcell"
         >
@@ -2238,7 +2229,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="2website"
           role="gridcell"
         >
@@ -2250,7 +2241,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="2empty"
           role="gridcell"
         >
@@ -2260,7 +2251,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="muted"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="2muted"
           role="gridcell"
         >
@@ -2286,7 +2277,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="dropdown"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="2dropdown"
           role="gridcell"
         >
@@ -2588,7 +2579,7 @@ exports[`Table v2 rendering renders default 1`] = `
       >
         <div
           aria-describedby="name"
-          className="css-18tezmg"
+          className="css-1bgxg8t"
           key="3name"
           role="gridcell"
         >
@@ -2600,7 +2591,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="css-bbdu6u"
+          className="css-1dx5v0r"
           key="3username"
           role="gridcell"
         >
@@ -2608,7 +2599,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="css-146hpp5"
+          className="css-l2a97w"
           key="3email"
           role="gridcell"
         >
@@ -2616,7 +2607,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="3phone"
           role="gridcell"
         >
@@ -2624,7 +2615,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="3company"
           role="gridcell"
         >
@@ -2632,7 +2623,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="3website"
           role="gridcell"
         >
@@ -2644,7 +2635,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="3empty"
           role="gridcell"
         >
@@ -2654,7 +2645,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="muted"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="3muted"
           role="gridcell"
         >
@@ -2680,7 +2671,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="dropdown"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="3dropdown"
           role="gridcell"
         >
@@ -2982,7 +2973,7 @@ exports[`Table v2 rendering renders default 1`] = `
       >
         <div
           aria-describedby="name"
-          className="css-18tezmg"
+          className="css-1bgxg8t"
           key="4name"
           role="gridcell"
         >
@@ -2994,7 +2985,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="css-bbdu6u"
+          className="css-1dx5v0r"
           key="4username"
           role="gridcell"
         >
@@ -3002,7 +2993,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="css-146hpp5"
+          className="css-l2a97w"
           key="4email"
           role="gridcell"
         >
@@ -3010,7 +3001,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="4phone"
           role="gridcell"
         >
@@ -3018,7 +3009,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="4company"
           role="gridcell"
         >
@@ -3026,7 +3017,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="4website"
           role="gridcell"
         >
@@ -3038,7 +3029,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="4empty"
           role="gridcell"
         >
@@ -3048,7 +3039,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="muted"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="4muted"
           role="gridcell"
         >
@@ -3074,7 +3065,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </div>
         <div
           aria-describedby="dropdown"
-          className="css-1nq8pb0"
+          className="css-itnoy9"
           key="4dropdown"
           role="gridcell"
         >
@@ -3597,7 +3588,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1x3r1w7"
+            className="css-1c4bnx6"
             id="name"
             role="columnheader"
           >
@@ -3724,7 +3715,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1uu6o1d"
+            className="css-cpyudu"
             id="username"
             role="columnheader"
           >
@@ -3732,31 +3723,22 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               tooltipContent="test"
             >
               <Flex
-                align="flex-start"
-                className="css-11sgx7q"
+                align="center"
+                className="css-58o3hk"
                 direction="row"
                 gutterSize="xxs"
                 justify="flex-start"
                 wrap="nowrap"
               >
                 <div
-                  className="css-mxutz3"
+                  className="css-6q82vx"
                   data-cy="flex"
                 >
-                  <FlexItem
-                    flex="grow"
+                  <div
+                    className="css-hdfk0n"
                   >
-                    <div
-                      className="css-11labrq"
-                      data-cy="flexItem"
-                    >
-                      <div
-                        className="css-hdfk0n"
-                      >
-                        Username
-                      </div>
-                    </div>
-                  </FlexItem>
+                    Username
+                  </div>
                   <FlexItem
                     flex="shrink"
                   >
@@ -3933,7 +3915,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-78zwz7"
+            className="css-1ewu9s3"
             id="email"
             role="columnheader"
           >
@@ -4037,7 +4019,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-5gz6jn"
+            className="css-1dbnygj"
             id="phone"
             role="columnheader"
           >
@@ -4141,7 +4123,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-5gz6jn"
+            className="css-1dbnygj"
             id="company"
             role="columnheader"
           >
@@ -4245,7 +4227,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-5gz6jn"
+            className="css-1dbnygj"
             id="website"
             role="columnheader"
           >
@@ -4349,7 +4331,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-5gz6jn"
+            className="css-1dbnygj"
             id="empty"
             role="columnheader"
           >
@@ -4453,7 +4435,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-5gz6jn"
+            className="css-1dbnygj"
             id="muted"
             role="columnheader"
           >
@@ -4557,7 +4539,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-5gz6jn"
+            className="css-1dbnygj"
             id="dropdown"
             role="columnheader"
           >
@@ -4696,7 +4678,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       >
         <div
           aria-describedby="name"
-          className="css-qiqfhd"
+          className="css-3gwsam"
           key="0name"
           role="gridcell"
         >
@@ -4708,7 +4690,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="css-1madxjt"
+          className="css-16bsmzj"
           key="0username"
           role="gridcell"
         >
@@ -4716,7 +4698,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="css-1p35xjg"
+          className="css-19id51r"
           key="0email"
           role="gridcell"
         >
@@ -4724,7 +4706,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="0phone"
           role="gridcell"
         >
@@ -4732,7 +4714,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="0company"
           role="gridcell"
         >
@@ -4740,7 +4722,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="0website"
           role="gridcell"
         >
@@ -4752,7 +4734,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="0empty"
           role="gridcell"
         >
@@ -4762,7 +4744,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="muted"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="0muted"
           role="gridcell"
         >
@@ -4788,7 +4770,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="dropdown"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="0dropdown"
           role="gridcell"
         >
@@ -5090,7 +5072,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       >
         <div
           aria-describedby="name"
-          className="css-qiqfhd"
+          className="css-3gwsam"
           key="1name"
           role="gridcell"
         >
@@ -5102,7 +5084,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="css-1madxjt"
+          className="css-16bsmzj"
           key="1username"
           role="gridcell"
         >
@@ -5110,7 +5092,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="css-1p35xjg"
+          className="css-19id51r"
           key="1email"
           role="gridcell"
         >
@@ -5118,7 +5100,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="1phone"
           role="gridcell"
         >
@@ -5126,7 +5108,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="1company"
           role="gridcell"
         >
@@ -5134,7 +5116,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="1website"
           role="gridcell"
         >
@@ -5146,7 +5128,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="1empty"
           role="gridcell"
         >
@@ -5156,7 +5138,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="muted"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="1muted"
           role="gridcell"
         >
@@ -5182,7 +5164,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="dropdown"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="1dropdown"
           role="gridcell"
         >
@@ -5484,7 +5466,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       >
         <div
           aria-describedby="name"
-          className="css-qiqfhd"
+          className="css-3gwsam"
           key="2name"
           role="gridcell"
         >
@@ -5496,7 +5478,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="css-1madxjt"
+          className="css-16bsmzj"
           key="2username"
           role="gridcell"
         >
@@ -5504,7 +5486,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="css-1p35xjg"
+          className="css-19id51r"
           key="2email"
           role="gridcell"
         >
@@ -5512,7 +5494,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="2phone"
           role="gridcell"
         >
@@ -5520,7 +5502,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="2company"
           role="gridcell"
         >
@@ -5528,7 +5510,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="2website"
           role="gridcell"
         >
@@ -5540,7 +5522,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="2empty"
           role="gridcell"
         >
@@ -5550,7 +5532,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="muted"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="2muted"
           role="gridcell"
         >
@@ -5576,7 +5558,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="dropdown"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="2dropdown"
           role="gridcell"
         >
@@ -5878,7 +5860,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       >
         <div
           aria-describedby="name"
-          className="css-qiqfhd"
+          className="css-3gwsam"
           key="3name"
           role="gridcell"
         >
@@ -5890,7 +5872,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="css-1madxjt"
+          className="css-16bsmzj"
           key="3username"
           role="gridcell"
         >
@@ -5898,7 +5880,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="css-1p35xjg"
+          className="css-19id51r"
           key="3email"
           role="gridcell"
         >
@@ -5906,7 +5888,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="3phone"
           role="gridcell"
         >
@@ -5914,7 +5896,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="3company"
           role="gridcell"
         >
@@ -5922,7 +5904,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="3website"
           role="gridcell"
         >
@@ -5934,7 +5916,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="3empty"
           role="gridcell"
         >
@@ -5944,7 +5926,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="muted"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="3muted"
           role="gridcell"
         >
@@ -5970,7 +5952,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="dropdown"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="3dropdown"
           role="gridcell"
         >
@@ -6272,7 +6254,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       >
         <div
           aria-describedby="name"
-          className="css-qiqfhd"
+          className="css-3gwsam"
           key="4name"
           role="gridcell"
         >
@@ -6284,7 +6266,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="username"
-          className="css-1madxjt"
+          className="css-16bsmzj"
           key="4username"
           role="gridcell"
         >
@@ -6292,7 +6274,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="email"
-          className="css-1p35xjg"
+          className="css-19id51r"
           key="4email"
           role="gridcell"
         >
@@ -6300,7 +6282,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="phone"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="4phone"
           role="gridcell"
         >
@@ -6308,7 +6290,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="company"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="4company"
           role="gridcell"
         >
@@ -6316,7 +6298,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="website"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="4website"
           role="gridcell"
         >
@@ -6328,7 +6310,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="empty"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="4empty"
           role="gridcell"
         >
@@ -6338,7 +6320,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="muted"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="4muted"
           role="gridcell"
         >
@@ -6364,7 +6346,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </div>
         <div
           aria-describedby="dropdown"
-          className="css-ml97ay"
+          className="css-155vzl2"
           key="4dropdown"
           role="gridcell"
         >
