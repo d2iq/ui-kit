@@ -307,7 +307,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-16dye1x"
+            className="css-1kf7gto"
             id="name"
             role="columnheader"
           >
@@ -434,7 +434,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-vzbg9b"
+            className="css-khlkcv"
             id="username"
             role="columnheader"
           >
@@ -442,15 +442,15 @@ exports[`Table v2 rendering renders default 1`] = `
               tooltipContent="test"
             >
               <Flex
-                align="center"
-                className="css-58o3hk"
+                align="flex-start"
+                className="css-ukcnvo"
                 direction="row"
                 gutterSize="xxs"
                 justify="flex-start"
                 wrap="nowrap"
               >
                 <div
-                  className="css-6q82vx"
+                  className="css-12zerzy"
                   data-cy="flex"
                 >
                   <div
@@ -468,11 +468,15 @@ exports[`Table v2 rendering renders default 1`] = `
                       <Tooltip
                         id="colTooltip1-tooltip"
                         trigger={
-                          <Icon
-                            color="#AEB0B4"
-                            shape="system-circle-information"
-                            size="xs"
-                          />
+                          <div
+                            className="css-fjw6z9"
+                          >
+                            <Icon
+                              color="#AEB0B4"
+                              shape="system-circle-information"
+                              size="xs"
+                            />
+                          </div>
                         }
                       >
                         <span
@@ -505,26 +509,30 @@ exports[`Table v2 rendering renders default 1`] = `
                             }
                           >
                             <div>
-                              <Icon
-                                color="#AEB0B4"
-                                shape="system-circle-information"
-                                size="xs"
+                              <div
+                                className="css-fjw6z9"
                               >
-                                <svg
-                                  aria-label="system-circle-information icon"
-                                  className="css-qupcim"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
+                                <Icon
+                                  color="#AEB0B4"
+                                  shape="system-circle-information"
+                                  size="xs"
                                 >
-                                  <use
-                                    xlinkHref="#system-circle-information"
-                                  />
-                                </svg>
-                              </Icon>
+                                  <svg
+                                    aria-label="system-circle-information icon"
+                                    className="css-qupcim"
+                                    data-cy="icon"
+                                    height={16}
+                                    preserveAspectRatio="xMinYMin meet"
+                                    role="img"
+                                    viewBox="0 0 16 16"
+                                    width={16}
+                                  >
+                                    <use
+                                      xlinkHref="#system-circle-information"
+                                    />
+                                  </svg>
+                                </Icon>
+                              </div>
                             </div>
                           </Dropdownable>
                         </span>
@@ -634,7 +642,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-jehs5k"
+            className="css-1nowc1d"
             id="email"
             role="columnheader"
           >
@@ -738,7 +746,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1kncvw8"
+            className="css-1ub6p0x"
             id="phone"
             role="columnheader"
           >
@@ -842,7 +850,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1kncvw8"
+            className="css-1ub6p0x"
             id="company"
             role="columnheader"
           >
@@ -946,7 +954,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1kncvw8"
+            className="css-1ub6p0x"
             id="website"
             role="columnheader"
           >
@@ -1050,7 +1058,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1kncvw8"
+            className="css-1ub6p0x"
             id="empty"
             role="columnheader"
           >
@@ -1154,7 +1162,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1kncvw8"
+            className="css-1ub6p0x"
             id="muted"
             role="columnheader"
           >
@@ -1258,7 +1266,7 @@ exports[`Table v2 rendering renders default 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1kncvw8"
+            className="css-1ub6p0x"
             id="dropdown"
             role="columnheader"
           >
@@ -3588,7 +3596,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1c4bnx6"
+            className="css-kzvdt0"
             id="name"
             role="columnheader"
           >
@@ -3715,7 +3723,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-cpyudu"
+            className="css-19ojs1w"
             id="username"
             role="columnheader"
           >
@@ -3723,15 +3731,15 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               tooltipContent="test"
             >
               <Flex
-                align="center"
-                className="css-58o3hk"
+                align="flex-start"
+                className="css-ukcnvo"
                 direction="row"
                 gutterSize="xxs"
                 justify="flex-start"
                 wrap="nowrap"
               >
                 <div
-                  className="css-6q82vx"
+                  className="css-12zerzy"
                   data-cy="flex"
                 >
                   <div
@@ -3749,11 +3757,15 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                       <Tooltip
                         id="colTooltip2-tooltip"
                         trigger={
-                          <Icon
-                            color="#AEB0B4"
-                            shape="system-circle-information"
-                            size="xs"
-                          />
+                          <div
+                            className="css-fjw6z9"
+                          >
+                            <Icon
+                              color="#AEB0B4"
+                              shape="system-circle-information"
+                              size="xs"
+                            />
+                          </div>
                         }
                       >
                         <span
@@ -3786,26 +3798,30 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                             }
                           >
                             <div>
-                              <Icon
-                                color="#AEB0B4"
-                                shape="system-circle-information"
-                                size="xs"
+                              <div
+                                className="css-fjw6z9"
                               >
-                                <svg
-                                  aria-label="system-circle-information icon"
-                                  className="css-qupcim"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
+                                <Icon
+                                  color="#AEB0B4"
+                                  shape="system-circle-information"
+                                  size="xs"
                                 >
-                                  <use
-                                    xlinkHref="#system-circle-information"
-                                  />
-                                </svg>
-                              </Icon>
+                                  <svg
+                                    aria-label="system-circle-information icon"
+                                    className="css-qupcim"
+                                    data-cy="icon"
+                                    height={16}
+                                    preserveAspectRatio="xMinYMin meet"
+                                    role="img"
+                                    viewBox="0 0 16 16"
+                                    width={16}
+                                  >
+                                    <use
+                                      xlinkHref="#system-circle-information"
+                                    />
+                                  </svg>
+                                </Icon>
+                              </div>
                             </div>
                           </Dropdownable>
                         </span>
@@ -3915,7 +3931,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1ewu9s3"
+            className="css-4227vt"
             id="email"
             role="columnheader"
           >
@@ -4019,7 +4035,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1dbnygj"
+            className="css-zl346e"
             id="phone"
             role="columnheader"
           >
@@ -4123,7 +4139,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1dbnygj"
+            className="css-zl346e"
             id="company"
             role="columnheader"
           >
@@ -4227,7 +4243,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1dbnygj"
+            className="css-zl346e"
             id="website"
             role="columnheader"
           >
@@ -4331,7 +4347,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1dbnygj"
+            className="css-zl346e"
             id="empty"
             role="columnheader"
           >
@@ -4435,7 +4451,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1dbnygj"
+            className="css-zl346e"
             id="muted"
             role="columnheader"
           >
@@ -4539,7 +4555,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         >
           <div
             aria-sort="none"
-            className="css-1dbnygj"
+            className="css-zl346e"
             id="dropdown"
             role="columnheader"
           >

@@ -194,7 +194,7 @@ export const ColumnsWithWrappingContent = () => (
       },
       {
         id: "company",
-        header: "Company",
+        header: "Company (With Longer Title)",
         render: x => x.company.name,
         initialWidth: "200px",
         contentNoWrap: false
@@ -271,6 +271,7 @@ export const ColumnHeaderWithTooltip = () => (
       {
         id: "email",
         render: x => x.email,
+        sorter: Sorter.string("email"),
         header: (
           <TooltipHeaderCell
             tooltipContent={
@@ -291,7 +292,16 @@ export const ColumnHeaderWithTooltip = () => (
         sorter: Sorter.string("name")
       },
 
-      { id: "website", header: "Website", render: x => x.website },
+      {
+        id: "website",
+        header: (
+          <TooltipHeaderCell tooltipContent="Website Data">
+            Website
+          </TooltipHeaderCell>
+        ),
+        render: x => x.website,
+        sorter: Sorter.string("website")
+      },
       {
         id: "company",
         render: x => x.company.name,
