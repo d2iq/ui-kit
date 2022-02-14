@@ -40,8 +40,11 @@ export const WelcomeCards = () => {
               Design tokens to ensure branding, spacing, and general UI
               consistency.
             </p>
-            <Link openInNewTab={true} url="https://github.com/dcos-labs/ui-kit">
-              UI Kit Storybook
+            <Link
+              openInNewTab={true}
+              url="https://dcos-labs.github.io/ui-kit/?path=/story/designtokens"
+            >
+              Design Tokens
             </Link>
           </Card>
           <Card header={welcomeHeaderTwo}>

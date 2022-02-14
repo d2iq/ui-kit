@@ -10,7 +10,7 @@ import { red } from "../../design-tokens/build/js/designTokens";
 export default {
   title: "Utils/UIKitProvider",
   component: UIKitProvider
-};
+} as Meta;
 
 const Template: Story = args => (
   <UIKitProvider

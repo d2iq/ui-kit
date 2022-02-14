@@ -122,6 +122,10 @@ Build:
 
 `npm run dist`
 
-To copy UI Kit into an existing project:
+To copy UI Kit into an existing project, run the following:
 
-`cp -r dist/ ../project/node_modules/@dcos/ui-kit/`
+`cp -r dist/ ./<project>/node_modules/@dcos/ui-kit/`
+
+Replace `<project>` with the associated host project name and folder structure.
+
+After running the copy command above, restart the host application.
