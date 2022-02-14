@@ -97,12 +97,7 @@ describe("TextInput", () => {
       width: 200px;
     `;
     const component = shallow(<TextInput id="1" className={cx(widthTest)} />);
-    expect(
-      component
-        .find("div")
-        .first()
-        .props().className
-    ).toEqual(widthTest);
+    expect(component.find("div").first().props().className).toEqual(widthTest);
   });
 
   it("should hide label if `showInputLabel` set to false", () => {

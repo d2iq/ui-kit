@@ -46,14 +46,8 @@ describe("SegmentedControl", () => {
         </SegmentedControlButton>
       </SegmentedControl>
     );
-    const labelForProp = component
-      .find("label")
-      .first()
-      .prop("htmlFor");
-    const inputIdProp = component
-      .find("input")
-      .first()
-      .prop("id");
+    const labelForProp = component.find("label").first().prop("htmlFor");
+    const inputIdProp = component.find("input").first().prop("id");
 
     expect(labelForProp).toBe("btnOne");
     expect(inputIdProp).toBe("btnOne");
@@ -68,14 +62,8 @@ describe("SegmentedControl", () => {
         <SegmentedControlButton value="three">Three</SegmentedControlButton>
       </SegmentedControl>
     );
-    const labelForProp = component
-      .find("label")
-      .first()
-      .prop("htmlFor");
-    const inputIdProp = component
-      .find("input")
-      .first()
-      .prop("id");
+    const labelForProp = component.find("label").first().prop("htmlFor");
+    const inputIdProp = component.find("input").first().prop("id");
 
     expect(typeof labelForProp).toBe("string");
     expect(typeof inputIdProp).toBe("string");

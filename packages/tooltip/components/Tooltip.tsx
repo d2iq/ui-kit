@@ -39,9 +39,8 @@ const Tooltip = ({
   suppress,
   trigger
 }: TooltipProps) => {
-  const triggerRef: React.MutableRefObject<HTMLElement | null> = React.useRef<
-    HTMLElement
-  >(null);
+  const triggerRef: React.MutableRefObject<HTMLElement | null> =
+    React.useRef<HTMLElement>(null);
   const [isOpen, setIsOpen] = React.useState<boolean>(isOpenProp);
 
   if (suppress && isOpenProp !== isOpen) {

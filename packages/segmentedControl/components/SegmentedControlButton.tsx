@@ -38,9 +38,7 @@ export interface SegmentedControlButtonProps {
   tooltipContent?: React.ReactNode;
 }
 
-class SegmentedControlButton extends React.PureComponent<
-  SegmentedControlButtonProps
-> {
+class SegmentedControlButton extends React.PureComponent<SegmentedControlButtonProps> {
   placeholderId = nextId("segmentedControlButton-");
 
   render() {

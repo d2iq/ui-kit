@@ -163,14 +163,10 @@ export const WithLongValue = args => (
       </ConfigurationMapRow>
       <ConfigurationMapRow>
         <ConfigurationMapLabel>
-          {Array(100)
-            .fill("VeryLongWord")
-            .join("")}
+          {Array(100).fill("VeryLongWord").join("")}
         </ConfigurationMapLabel>
         <ConfigurationMapValue>
-          {Array(100)
-            .fill("VeryLongWord")
-            .join("")}
+          {Array(100).fill("VeryLongWord").join("")}
         </ConfigurationMapValue>
       </ConfigurationMapRow>
     </ConfigurationMapSection>

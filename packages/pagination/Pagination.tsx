@@ -73,15 +73,10 @@ const getItemCountClassName = (showPageLengthMenu?: boolean) => {
   return cx(border("right"), padding("right"), margin("right"));
 };
 
-const NavButton: React.FC<Partial<
-  React.ButtonHTMLAttributes<HTMLButtonElement>
-> &
-  Partial<ExpandedLinkProps> & { direction: "prev" | "next" }> = ({
-  direction,
-  disabled,
-  url,
-  ...other
-}) => {
+const NavButton: React.FC<
+  Partial<React.ButtonHTMLAttributes<HTMLButtonElement>> &
+    Partial<ExpandedLinkProps> & { direction: "prev" | "next" }
+> = ({ direction, disabled, url, ...other }) => {
   delete other.children;
 
   const ariaLabel = direction === "prev" ? "previous page" : "next page";
@@ -126,15 +121,12 @@ const Pagination: React.FC<PaginationProps> = ({
   totalPages: totalPagesProp
 }) => {
   const [pageLengthMenuId] = useId(1, "pageLengthMenu");
-  const [activePageState, setActivePageState] = React.useState<number>(
-    initialActivePage
-  );
-  const [pageInputVal, setPageInputVal] = React.useState<number>(
-    initialActivePage
-  );
-  const [pageLengthState, setPageLengthState] = React.useState<number>(
-    initialPageLength
-  );
+  const [activePageState, setActivePageState] =
+    React.useState<number>(initialActivePage);
+  const [pageInputVal, setPageInputVal] =
+    React.useState<number>(initialActivePage);
+  const [pageLengthState, setPageLengthState] =
+    React.useState<number>(initialPageLength);
 
   const activePage = activePageProp || activePageState;
   const pageLength = pageLengthProp || pageLengthState;
@@ -147,10 +139,10 @@ const Pagination: React.FC<PaginationProps> = ({
     !totalPagesProp && isTotalPagesCalculable
       ? calculatedTotalPages
       : totalPagesProp;
-  const pageLengthOptions = (totalItems &&
-  totalItems >= LARGE_PAGE_LENGTH_THRESHOLD
-    ? LARGE_PAGE_LENGTHS
-    : DEFAULT_PAGE_LENGTHS
+  const pageLengthOptions = (
+    totalItems && totalItems >= LARGE_PAGE_LENGTH_THRESHOLD
+      ? LARGE_PAGE_LENGTHS
+      : DEFAULT_PAGE_LENGTHS
   ).map(option => {
     return {
       label: option.toString(),

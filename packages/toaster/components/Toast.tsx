@@ -67,13 +67,8 @@ class Toast extends React.PureComponent<ToastProps, {}> {
   }
 
   public render() {
-    const {
-      title,
-      description,
-      appearance,
-      primaryAction,
-      secondaryAction
-    } = this.props;
+    const { title, description, appearance, primaryAction, secondaryAction } =
+      this.props;
     const isUrgentMessage = appearance === "danger" || appearance === "warning";
     const dataCy = `toast toast.${appearance}`;
 

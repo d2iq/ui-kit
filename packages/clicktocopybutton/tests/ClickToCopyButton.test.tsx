@@ -37,10 +37,7 @@ describe("ClickToCopyButton", () => {
     );
 
     expect(onCopyFn).not.toHaveBeenCalled();
-    component
-      .find('[role="button"]')
-      .first()
-      .simulate("click");
+    component.find('[role="button"]').first().simulate("click");
     expect(onCopyFn).toHaveBeenCalled();
   });
 });

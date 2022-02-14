@@ -5,8 +5,8 @@ export default function uiKitStory(name: string, module: any, readme: any) {
   return storiesOf(name, module)
     .addParameters({
       readme: {
-        sidebar: readme,
-      },
+        sidebar: readme
+      }
     })
     .addDecorator(checkA11y);
 }

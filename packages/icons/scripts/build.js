@@ -15,18 +15,24 @@ const iconSpriteConfig = require("../iconSpriteConfig.js");
 const svgo = new SVGO({
   plugins: [
     {
-      removeDoctype: true,
+      removeDoctype: true
     },
     {
-      cleanupIDs: false,
+      cleanupIDs: false
     }
   ]
 });
 const buildDirPath = path.join(__dirname, "../", "dist");
-const distDirPath = path.join(__dirname, "../../../", "dist", "packages", "icons", "dist");
+const distDirPath = path.join(
+  __dirname,
+  "../../../",
+  "dist",
+  "packages",
+  "icons",
+  "dist"
+);
 
-const getFilePaths = dir =>
-  readdirSync(dir).map(file => `${dir}/${file}`);
+const getFilePaths = dir => readdirSync(dir).map(file => `${dir}/${file}`);
 
 const writeSprite = (srcDir, spritePath, idPrefix) => {
   console.info(`\tgenerating sprite at:\n\t${spritePath}\n`);
@@ -34,8 +40,11 @@ const writeSprite = (srcDir, spritePath, idPrefix) => {
   writeFileSync(
     spritePath,
     getFilePaths(srcDir).reduce((sprites, file) => {
-      return sprites.add(`${idPrefix}-${path.basename(file, ".svg")}`, readFileSync(file, "utf8"));
-    }, svgstore({renameDefs: true}))
+      return sprites.add(
+        `${idPrefix}-${path.basename(file, ".svg")}`,
+        readFileSync(file, "utf8")
+      );
+    }, svgstore({ renameDefs: true }))
   );
 };
 
@@ -47,7 +56,7 @@ const optimizeWithSVGO = spritePath => {
       throw err;
     }
 
-    svgo.optimize(data, { path: spritePath }).then(result => {    
+    svgo.optimize(data, { path: spritePath }).then(result => {
       writeFileSync(spritePath, result.data);
     });
   });
@@ -56,19 +65,23 @@ const optimizeWithSVGO = spritePath => {
 const writeEnum = (srcDir, iconSetName, idPrefix) => {
   console.info("\tcreating icon name enum\n");
 
-  const svgNamesObj =
-    getFilePaths(srcDir)
-      .map(file => path.basename(file, ".svg"))
-      .reduce((prev, curr) => {
-        const nameToPascal = curr.replace(/(\-|^)([a-z])/gi, (match, p1, p2) => p2.toUpperCase());
+  const svgNamesObj = getFilePaths(srcDir)
+    .map(file => path.basename(file, ".svg"))
+    .reduce((prev, curr) => {
+      const nameToPascal = curr.replace(/(\-|^)([a-z])/gi, (match, p1, p2) =>
+        p2.toUpperCase()
+      );
 
-        prev[nameToPascal] = curr;
-        return prev;
-      }, {});
+      prev[nameToPascal] = curr;
+      return prev;
+    }, {});
   const ast = t.tSEnumDeclaration(
     t.identifier(`${iconSetName.replace(/^\w/, c => c.toUpperCase())}Icons`),
     Object.keys(svgNamesObj).map(svgName =>
-      t.tSEnumMember(t.identifier(svgName), t.stringLiteral(`${idPrefix}-${svgNamesObj[svgName]}`))
+      t.tSEnumMember(
+        t.identifier(svgName),
+        t.stringLiteral(`${idPrefix}-${svgNamesObj[svgName]}`)
+      )
     )
   );
   const { code } = generate(ast);
@@ -77,13 +90,13 @@ const writeEnum = (srcDir, iconSetName, idPrefix) => {
     path.join(buildDirPath, `${iconSetName}-icons-enum.ts`),
     // when generate parses the AST, it adds a trailing comma that needs
     // to be removed in order for Prettier to pass
-    `export ${code.replace(/,(?=[^,]*$)/, '')}\n`
+    `export ${code.replace(/,(?=[^,]*$)/, "")}\n`
   );
-}
+};
 
 [buildDirPath, distDirPath].forEach(buildPath => {
   !existsSync(buildPath) && mkdirSync(buildPath, { recursive: true });
-})
+});
 
 Object.keys(iconSpriteConfig).forEach(iconSet => {
   console.info(`🔧 "${iconSet}" icons`);
@@ -93,9 +106,7 @@ Object.keys(iconSpriteConfig).forEach(iconSet => {
       path.join(buildPath, iconSpriteConfig[iconSet].filename),
       iconSpriteConfig[iconSet].idPrefix
     );
-    optimizeWithSVGO(
-      path.join(buildPath, iconSpriteConfig[iconSet].filename)
-    );
+    optimizeWithSVGO(path.join(buildPath, iconSpriteConfig[iconSet].filename));
   });
   writeEnum(
     iconSpriteConfig[iconSet].inDir,

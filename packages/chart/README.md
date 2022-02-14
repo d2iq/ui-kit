@@ -7,6 +7,7 @@ Exposing [react-chartist](https://github.com/fraserxu/react-chartist)
 The Linechart is rendering a single line on a graph based on provided data. the data is build up as a `key: value` object. The `key` is representing the label (e.g. a year) and the `value` is representing the datum (e.g. number of spacex launches) the component will generate a graph out of the information.
 
 The LineChart is exposing the following props
+
 ```TS
 {
   data: {
@@ -17,6 +18,7 @@ The LineChart is exposing the following props
 ```
 
 And an implementation example looks like this:
+
 ```JSX
 <LineChart
   data={{

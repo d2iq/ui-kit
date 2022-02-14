@@ -182,18 +182,19 @@ const FieldList: React.FC<FieldListProps> = ({
   onRemoveItem,
   pathToUniqueKey
 }) => {
-  const columns = (React.Children.toArray(children) as Array<
-    React.ReactElement<FieldListColumnProps & FieldListColumnWidthProps>
-  >).filter(
+  const columns = (
+    React.Children.toArray(children) as Array<
+      React.ReactElement<FieldListColumnProps & FieldListColumnWidthProps>
+    >
+  ).filter(
     item =>
       item.type === FieldListColumn || item.type === FieldListColumnSeparator
   );
-  const addButton = (React.Children.toArray(children) as Array<
-    React.ReactElement<ButtonProps>
-  >).find(child => child.type === FieldListAddButton);
-  const [fieldListData, setFieldListData] = React.useState<
-    Array<Record<string, any>>
-  >(data);
+  const addButton = (
+    React.Children.toArray(children) as Array<React.ReactElement<ButtonProps>>
+  ).find(child => child.type === FieldListAddButton);
+  const [fieldListData, setFieldListData] =
+    React.useState<Array<Record<string, any>>>(data);
 
   React.useEffect(() => {
     setFieldListData(data);

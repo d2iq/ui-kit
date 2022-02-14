@@ -27,14 +27,8 @@ export interface DialogModalProps extends ModalBaseProps {
 
 class DialogModal extends React.PureComponent<DialogModalProps, {}> {
   public render() {
-    const {
-      children,
-      footerContent,
-      isContentFlush,
-      title,
-      icon,
-      ...other
-    } = this.props;
+    const { children, footerContent, isContentFlush, title, icon, ...other } =
+      this.props;
 
     return (
       <ModalBase data-cy="dialogModal" {...other}>
