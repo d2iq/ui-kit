@@ -64,6 +64,7 @@ const sortTriangleWidthPx = 8;
 const sortTriangleMarginPx = 4;
 export const sortable = (dir: "asc" | "desc" | null) => css`
   position: relative;
+
   &:after {
     content: "";
     display: ${dir ? "inline-block" : "none"};
@@ -109,7 +110,7 @@ export const cell = (textAlign: React.CSSProperties["textAlign"]) => css`
   position: relative;
   text-align: ${textAlign};
 
-  &:first-child {
+  > &:first-child {
     transition: box-shadow 200ms ease-out;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     a {
@@ -130,6 +131,10 @@ export const headerCell = (textAlign: React.CSSProperties["textAlign"]) =>
   css`
     ${cell(textAlign)};
     ${textWeight("medium")};
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     --draggable-opacity: 0;
     &:hover {
       --draggable-opacity: 1;
@@ -149,8 +154,11 @@ export const rowScrollShadow = css`
 `;
 
 export const cellFlexWrapper = css`
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   max-width: 100%;
+  line-height: normal;
 `;
 
 export const tableScrollObserver = css`
