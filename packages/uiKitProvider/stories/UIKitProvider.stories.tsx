@@ -6,6 +6,7 @@ import CustomLinkComponent from "./helpers/customLink";
 import SecondaryButton from "../../button/components/SecondaryButton";
 
 import { red } from "../../design-tokens/build/js/designTokens";
+import { LinkComponent } from "../../link/types";
 
 export default {
   title: "Utils/UIKitProvider",
@@ -17,9 +18,12 @@ const Template: Story = args => (
     theme={{
       colors: {
         textColorInteractive: red
-      }
+      },
+      menuHasIcon: false,
+      coloredRows: [],
+      mutedRows: []
     }}
-    linkComponent={CustomLinkComponent}
+    linkComponent={CustomLinkComponent as LinkComponent}
     {...args}
   >
     <h1>Red-Themed Example App</h1>

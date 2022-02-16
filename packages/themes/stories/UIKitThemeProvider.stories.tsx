@@ -29,6 +29,9 @@ export default {
 const Template: Story = args => (
   <UIKitThemeProvider
     appTheme={{
+      menuHasIcon: false,
+      coloredRows: [],
+      mutedRows: [],
       colors: {
         // brand
         brandPrimary: themeBrandPrimary,
