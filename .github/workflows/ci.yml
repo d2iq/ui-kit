@@ -5,9 +5,9 @@ name: UI Kit Actions
 
 on:
   push:
-    branches: [master]
+    branches: [main, master]
   pull_request:
-    branches: [master]
+    branches: [main, master]
 
 jobs:
   ci:
