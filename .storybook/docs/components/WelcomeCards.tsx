@@ -61,7 +61,7 @@ export const WelcomeCards = () => {
             </p>
             <Link
               openInNewTab={true}
-              url="https://github.com/dcos-labs/ui-kit/tree/master/design-guidelines"
+              url="https://github.com/dcos-labs/ui-kit/tree/main/design-guidelines"
             >
               UI Standards and Guidelines
             </Link>
