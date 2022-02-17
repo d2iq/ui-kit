@@ -5,9 +5,9 @@ name: UI Kit Actions
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   pull_request:
-    branches: [main, master]
+    branches: [main]
 
 jobs:
   ci:
@@ -42,7 +42,7 @@ jobs:
           start: npm run test:integration
 
       - name: Semantic Release ⬆️
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         uses: cycjimmy/semantic-release-action@v2.6.0
         with:
           semantic_version: 18
@@ -51,7 +51,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Build Storybook and Deploy 🚀
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: |
           npm run build:storybook
           npm run deploy:storybook -- --ci
