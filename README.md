@@ -1,4 +1,4 @@
-![UI Kit Space Banner](https://raw.githubusercontent.com/dcos-labs/ui-kit/master/.storybook/static/welcome-banner.svg)
+![UI Kit Space Banner](https://raw.githubusercontent.com/dcos-labs/ui-kit/main/.storybook/static/welcome-banner.svg)
 
 # D2iQ UI Kit
 
@@ -114,7 +114,7 @@ These Guidelines got written based on [AngularJS Git Commit Message Conventions]
 
 ## Release / Publishing
 
-After your PR is merged into `master`, `semantic-release` will automatically cut a release if one of your commits is of type `feat`, `fix`, or `perf`.
+After your PR is merged into `main`, `semantic-release` will automatically cut a release if one of your commits is of type `feat`, `fix`, or `perf`.
 
 ## Pre-release Testing in a Host Project
 
