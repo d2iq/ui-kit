@@ -20,6 +20,8 @@ interface FullscreenViewProps {
   isContentFlush?: boolean;
   /** Custom header content component. ⚠️Use rarely and with caution⚠️ */
   headerComponent?: React.ReactNode;
+  /** Custom banner component that will appear above the header. */
+  bannerComponent?: React.ReactNode;
   /** Function that gets called when the modal is closed */
   onClose: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /** The base of the `data-cy` value. This is used for writing selectors in Cypress. */
@@ -36,6 +38,7 @@ class FullscreenView extends React.PureComponent<FullscreenViewProps, {}> {
       onClose,
       title,
       subtitle,
+      bannerComponent,
       headerComponent,
       cypressSelectorBase = "fullscreenView"
     } = this.props;
@@ -43,14 +46,21 @@ class FullscreenView extends React.PureComponent<FullscreenViewProps, {}> {
     return (
       <div className={flex({ direction: "column" })}>
         <div
-          className={cx(fullscreenModalHeader, padding("all", "xl"))}
+          className={cx(fullscreenModalHeader)}
           data-cy={`${cypressSelectorBase}-header`}
         >
-          <Delegate
-            to={headerComponent}
-            default={FullscreenViewHeader}
-            props={{ title, subtitle, ctaButton, closeText, onClose }}
-          />
+          {bannerComponent && (
+            <div data-cy={`${cypressSelectorBase}-banner`}>
+              {bannerComponent}
+            </div>
+          )}
+          <div className={cx(padding("all", "xl"))}>
+            <Delegate
+              to={headerComponent}
+              default={FullscreenViewHeader}
+              props={{ title, subtitle, ctaButton, closeText, onClose }}
+            />
+          </div>
         </div>
         <div
           className={cx(modalContent, flexItem("grow"), {

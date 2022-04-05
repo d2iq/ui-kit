@@ -25,5 +25,6 @@ export const fullscreenModalAction = {
 
 export const modalContent = css`
   box-sizing: border-box;
+  position: relative;
   overflow: auto;
 `;

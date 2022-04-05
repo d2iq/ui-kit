@@ -16,6 +16,7 @@ import {
   ModalContent,
   BorderedModalContent
 } from "../../modal/stories/helpers/modalContents";
+import { InfoBoxBanner } from "../../infobox/index";
 
 const onClose = () => {
   alert("calling onClose");
@@ -28,7 +29,14 @@ export default {
 
 export const Default = () => (
   <div style={{ height: "500px" }}>
-    <FullscreenView closeText="Close" title="Title" onClose={onClose}>
+    <FullscreenView
+      closeText="Close"
+      title="Title"
+      onClose={onClose}
+      bannerComponent={
+        <InfoBoxBanner message="This is a message for the user." />
+      }
+    >
       <ModalContent />
     </FullscreenView>
   </div>
@@ -98,6 +106,29 @@ export const WithFlushedContent = () => (
 export const ScrollingBody = () => (
   <div style={{ height: "500px" }}>
     <FullscreenView closeText="Close" title="Title" onClose={onClose}>
+      <BorderedModalContent horizPadding="32px" />
+      <BorderedModalContent horizPadding="32px" />
+      <BorderedModalContent horizPadding="32px" />
+    </FullscreenView>
+  </div>
+);
+
+export const WithBanner = () => (
+  <div style={{ height: "600px" }}>
+    <FullscreenView
+      closeText="Close"
+      title="Title"
+      onClose={onClose}
+      bannerComponent={
+        <InfoBoxBanner message="This is a message for the user." />
+      }
+    >
+      <BorderedModalContent horizPadding="32px" />
+      <BorderedModalContent horizPadding="32px" />
+      <BorderedModalContent horizPadding="32px" />
+      <BorderedModalContent horizPadding="32px" />
+      <BorderedModalContent horizPadding="32px" />
+      <BorderedModalContent horizPadding="32px" />
       <BorderedModalContent horizPadding="32px" />
       <BorderedModalContent horizPadding="32px" />
       <BorderedModalContent horizPadding="32px" />
