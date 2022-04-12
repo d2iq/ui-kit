@@ -181,7 +181,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                           e
                         );
                       },
-                      value: value === undefined ? inputValue : value,
+                      value: value ?? inputValue ?? "",
                       ...(textField.type === TextInputWithBadges && {
                         downshiftReset: other.reset
                       }),
