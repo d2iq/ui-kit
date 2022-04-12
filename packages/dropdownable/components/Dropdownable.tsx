@@ -1,6 +1,6 @@
 import React, { CSSProperties } from "react";
 import { usePopper } from "react-popper";
-import { ModifierPhases } from "@popperjs/core";
+import { ModifierPhases, Modifier } from "@popperjs/core";
 import maxSize from "popper-max-size-modifier";
 import Overlay from "../../shared/components/Overlay";
 import DropdownContents from "./DropdownContents";
@@ -45,7 +45,7 @@ const getPreferredDirection = (
 
 const getFlipModifier = (preferredDirections?: Direction | Direction[]) => {
   if (!preferredDirections || !preferredDirections.length) {
-    return {};
+    return null;
   }
   if (preferredDirections.length > 1) {
     return {
@@ -55,7 +55,7 @@ const getFlipModifier = (preferredDirections?: Direction | Direction[]) => {
       }
     };
   }
-  return {};
+  return null;
 };
 
 const applyMaxSize = {
@@ -90,7 +90,12 @@ const Dropdownable: React.FC<DropdownableProps> = ({
     React.useState<HTMLDivElement | null>(null);
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement: getPreferredDirection(preferredDirections),
-    modifiers: [maxSize, applyMaxSize, getFlipModifier(preferredDirections)]
+    modifiers: [
+      maxSize,
+      applyMaxSize,
+      getFlipModifier(preferredDirections)
+      // we need valid modifiers here otherwise we get a bunch of console errors
+    ].filter(Boolean) as Array<Partial<Modifier<string, object>>>
   });
   const { maxHeight, maxWidth, ...popperStyles } = styles.popper;
   const popperAttributes = {
