@@ -26,15 +26,16 @@ export interface MessagePanelProps {
    * A secondary action a user can take in the empty state
    */
   secondaryAction?: React.ReactNode;
+  children: React.ReactNode;
 }
 
-const MessagePanel: React.FC<MessagePanelProps> = ({
+const MessagePanel = ({
   appearance,
   heading,
   children,
   primaryAction,
   secondaryAction
-}) => {
+}: MessagePanelProps) => {
   const hasActions = primaryAction || secondaryAction;
 
   return (

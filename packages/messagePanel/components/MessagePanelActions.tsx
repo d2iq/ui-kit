@@ -6,10 +6,10 @@ export interface MessagePanelActionsProps {
   secondaryAction?: React.ReactNode;
 }
 
-const MessagePanelActions: React.SFC<MessagePanelActionsProps> = ({
+const MessagePanelActions = ({
   primaryAction,
   secondaryAction
-}) => (
+}: MessagePanelActionsProps) => (
   <Flex align="center" justify="center" gutterSize="m">
     {secondaryAction ? (
       <FlexItem flex="shrink">{secondaryAction}</FlexItem>

@@ -8,12 +8,10 @@ import { Flex, FlexItem } from "../../styleUtils/layout";
 
 interface FormSubSectionProps {
   onRemove?: (event?: React.SyntheticEvent<HTMLElement>) => void;
+  children: React.ReactNode;
 }
 
-const FormSubSection: React.SFC<FormSubSectionProps> = ({
-  children,
-  onRemove
-}) => {
+const FormSubSection = ({ children, onRemove }: FormSubSectionProps) => {
   const subSectionContent = <div className={formFieldStack}>{children}</div>;
   return (
     <Card data-cy="formSubSection">

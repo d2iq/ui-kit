@@ -8,7 +8,7 @@ interface PopoverListItemAvatarProps extends AvatarProps {
   position?: "start" | "end";
 }
 
-const PopoverListItemAvatar: React.SFC<PopoverListItemAvatarProps> = props => (
+const PopoverListItemAvatar = (props: PopoverListItemAvatarProps) => (
   <Avatar {...props} />
 );
 

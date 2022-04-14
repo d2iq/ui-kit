@@ -6,7 +6,7 @@ import { IconShapes } from "../../icon/components/Icon";
 export interface TextInputButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
-   * The fill color of the icon inside the b utton
+   * The fill color of the icon inside the button
    */
   color?: string;
   /**
@@ -15,11 +15,7 @@ export interface TextInputButtonProps
   shape: IconShapes;
 }
 
-const TextInputButton: React.SFC<TextInputButtonProps> = ({
-  shape,
-  color,
-  ...other
-}) => {
+const TextInputButton = ({ shape, color, ...other }: TextInputButtonProps) => {
   delete other.className;
   delete other.children;
 

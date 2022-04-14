@@ -4,7 +4,7 @@ import { cx } from "@emotion/css";
 import { SharedListProps } from "./List";
 import { listReset } from "../../shared/styles/styleUtils";
 
-const BorderedList: React.SFC<SharedListProps> = props => {
+const BorderedList = (props: SharedListProps) => {
   const { tag, children } = props;
   const BorderedListEl = tag;
 

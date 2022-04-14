@@ -9,7 +9,7 @@ export interface InlineBorderedItemsProps {
   gutterSize?: SpaceSize;
 }
 
-const InlineBorderedItems: React.SFC<InlineBorderedItemsProps> = ({
+const InlineBorderedItems: React.FC<InlineBorderedItemsProps> = ({
   children,
   gutterSize
 }) => <div className={inlineBorderedItems(gutterSize!)}>{children}</div>;
