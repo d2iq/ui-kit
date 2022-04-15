@@ -1,7 +1,7 @@
 import * as React from "react";
 import { sectionLoadingWrapper, sectionLoadingIndicator } from "../style";
 
-const SectionLoadingIndicator: React.SFC = () => (
+const SectionLoadingIndicator = () => (
   <div className={sectionLoadingWrapper}>
     <div
       className={sectionLoadingIndicator}

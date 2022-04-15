@@ -7,7 +7,6 @@ export interface DropdownSectionProps {
     | Array<React.ReactElement<DropdownMenuItemProps>>;
 }
 
-const DropdownSection: React.SFC<DropdownSectionProps> = ({ children }) => (
-  <React.Fragment>{children}</React.Fragment>
-);
+const DropdownSection = ({ children }: DropdownSectionProps) => <>{children}</>;
+
 export default DropdownSection;

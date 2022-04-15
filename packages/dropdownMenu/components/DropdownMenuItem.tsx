@@ -13,8 +13,8 @@ export interface DropdownMenuItemProps {
   children: React.ReactNode;
 }
 
-const DropdownMenuItem: React.SFC<DropdownMenuItemProps> = ({ children }) => (
-  <React.Fragment>{children}</React.Fragment>
+const DropdownMenuItem = ({ children }: DropdownMenuItemProps) => (
+  <>{children}</>
 );
 
 export default DropdownMenuItem;

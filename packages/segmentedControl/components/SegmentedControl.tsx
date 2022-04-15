@@ -21,7 +21,7 @@ export interface SegmentedControlProps {
   selectedSegment?: string;
 }
 
-const SegmentedControl: React.SFC<SegmentedControlProps> = props => {
+const SegmentedControl = (props: SegmentedControlProps) => {
   const { children, id, selectedSegment, onSelect } = props;
   const handleChange = (onChangeFn, e) => {
     if (onSelect) {

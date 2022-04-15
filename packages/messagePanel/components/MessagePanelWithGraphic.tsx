@@ -21,14 +21,14 @@ interface MessagePanelWithGraphicProps extends MessagePanelProps {
   graphicDimensions?: GraphicDimensions;
 }
 
-const MessagePanelWithGraphic: React.SFC<MessagePanelWithGraphicProps> = ({
+const MessagePanelWithGraphic = ({
   graphicSrc,
   graphicDimensions,
   heading,
   children,
   primaryAction,
   secondaryAction
-}) => {
+}: MessagePanelWithGraphicProps) => {
   const hasActions = primaryAction || secondaryAction;
   return (
     <div data-cy="messagePanelWithGraphic">

@@ -55,7 +55,7 @@ export interface DropdownMenuProps {
   disablePortal?: boolean;
 }
 
-const DropdownMenu: React.SFC<DropdownMenuProps> = props => {
+const DropdownMenu = (props: DropdownMenuProps) => {
   const {
     children,
     disablePortal,

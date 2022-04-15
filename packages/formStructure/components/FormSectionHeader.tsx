@@ -7,10 +7,7 @@ interface FormSectionHeaderProps {
   subtitle?: React.ReactNode;
 }
 
-const FormSectionHeader: React.SFC<FormSectionHeaderProps> = ({
-  title,
-  subtitle
-}) => (
+const FormSectionHeader = ({ title, subtitle }: FormSectionHeaderProps) => (
   <SpacingBox side="bottom" spacingSize="m" data-cy="formSectionHeader">
     <HeadingText2 data-cy="formSectionHeader-title">{title}</HeadingText2>
     {subtitle && (
