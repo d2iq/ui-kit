@@ -8,15 +8,16 @@ interface AccordionProps extends AccordionBaseProps {
    * An array of open accordion panel IDs
    */
   initialExpandedItems?: string[];
+  children: React.ReactNode[];
 }
 
-const Accordion: React.FC<AccordionProps> = ({
-  allowMultipleExpanded,
-  "data-cy": dataCy,
+const Accordion = ({
+  allowMultipleExpanded = false,
+  "data-cy": dataCy = "accordion",
   children,
   initialExpandedItems,
   onChange
-}) => {
+}: AccordionProps) => {
   return (
     <AccordionProvider
       allowMultipleExpanded={allowMultipleExpanded}
@@ -26,11 +27,6 @@ const Accordion: React.FC<AccordionProps> = ({
       <Stack data-cy={dataCy}>{children}</Stack>
     </AccordionProvider>
   );
-};
-
-Accordion.defaultProps = {
-  allowMultipleExpanded: false,
-  "data-cy": "accordion"
 };
 
 export default Accordion;

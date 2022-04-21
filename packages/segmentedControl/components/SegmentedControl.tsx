@@ -1,4 +1,5 @@
 import * as React from "react";
+import nextId from "react-id-generator";
 import { segmentedControlContainer } from "../style";
 import { SegmentedControlButtonProps } from "../components/SegmentedControlButton";
 
@@ -10,7 +11,7 @@ export interface SegmentedControlProps {
   /**
    * A unique identifier for the segmented control
    */
-  id: string;
+  id?: string;
   /**
    * Callback for when a user makes a selection. The active segment value is the first parameter
    */
@@ -19,10 +20,20 @@ export interface SegmentedControlProps {
    * The value of the selected segment input
    */
   selectedSegment?: string;
+  /**
+   * human-readable selector used for writing tests
+   */
+  ["data-cy"]?: string;
 }
 
 const SegmentedControl = (props: SegmentedControlProps) => {
-  const { children, id, selectedSegment, onSelect } = props;
+  const {
+    children,
+    id = nextId("segmentedControl-"),
+    selectedSegment,
+    onSelect,
+    "data-cy": dataCy = "segmentedControl"
+  } = props;
   const handleChange = (onChangeFn, e) => {
     if (onSelect) {
       onSelect(e.target.value);
@@ -33,7 +44,7 @@ const SegmentedControl = (props: SegmentedControlProps) => {
   };
 
   return (
-    <div className={segmentedControlContainer} data-cy="segmentedControl">
+    <div className={segmentedControlContainer} data-cy={dataCy}>
       {children.map((segment, i) => {
         return React.cloneElement(segment, {
           isActive: selectedSegment === segment.props.value,

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
+import nextId from "react-id-generator";
 import {
   optionalIcon,
   select,
@@ -46,7 +47,7 @@ export interface SelectInputProps extends React.HTMLProps<HTMLSelectElement> {
   /**
    * Unique identifier used for the form input component
    */
-  id: string;
+  id?: string;
   /**
    * Sets the contents of the input label. This can be a `string` or any `ReactNode`.
    */
@@ -94,7 +95,7 @@ class SelectInput extends React.PureComponent<
       appearance,
       errors,
       iconStart,
-      id,
+      id = nextId("selectInput-"),
       options,
       showInputLabel,
       inputLabel,

@@ -22,12 +22,14 @@ exports[`ToggleWrapper renders 1`] = `
 >
   <label
     className="emotion-0"
+    htmlFor="toggleWrapper-1"
   >
     <input
       aria-checked={true}
       checked={true}
       className="emotion-1"
       data-cy="toggleWrapper-input"
+      id="toggleWrapper-1"
       onBlur={[Function]}
       onFocus={[Function]}
       type="checkbox"
@@ -61,12 +63,14 @@ exports[`ToggleWrapper renders as a radio input 1`] = `
 >
   <label
     className="emotion-0"
+    htmlFor="toggleWrapper-2"
   >
     <input
       aria-checked={true}
       checked={true}
       className="emotion-1"
       data-cy="toggleWrapper-input"
+      id="toggleWrapper-2"
       onBlur={[Function]}
       onFocus={[Function]}
       type="radio"

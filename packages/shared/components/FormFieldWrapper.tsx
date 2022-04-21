@@ -1,4 +1,5 @@
 import * as React from "react";
+import nextId from "react-id-generator";
 import { cx } from "@emotion/css";
 import {
   flush,
@@ -23,12 +24,17 @@ interface FormFieldWrapperProps {
   children: (renderProps: RenderProps) => React.ReactNode;
   errors?: React.ReactNode[];
   hintContent?: React.ReactNode;
-  id: string;
+  id?: string;
 }
 
 class FormFieldWrapper extends React.PureComponent<FormFieldWrapperProps, {}> {
   public render() {
-    const { children, errors, hintContent, id } = this.props;
+    const {
+      children,
+      errors,
+      hintContent,
+      id = nextId("formFieldWrapper-")
+    } = this.props;
 
     return children({
       getValidationErrors: this.getValidationErrors(errors, id),

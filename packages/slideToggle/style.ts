@@ -25,7 +25,7 @@ export const toggleInputFeedbackText = css`
   padding-left: ${toggleInputWidth + parseInt(spaceS, 10)}px;
 `;
 
-export const toggleInputApperances = {
+export const toggleInputAppearances = {
   disabled: css`
     border: solid;
     border-width: ${toggleRoundBorder}px;

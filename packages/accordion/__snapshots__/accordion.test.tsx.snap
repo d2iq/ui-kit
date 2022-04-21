@@ -1,10 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Accordion rendering renders an item with interactive content 1`] = `
-<Accordion
-  allowMultipleExpanded={false}
-  data-cy="accordion"
->
+<Accordion>
   <Component
     allowMultipleExpanded={false}
   >
@@ -18,7 +15,6 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
         data-cy="accordion"
       >
         <AccordionItem
-          data-cy="accordionItem"
           id="customId"
         >
           <Component
@@ -68,6 +64,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                     >
                       <span
                         className="css-1nhhn1w"
+                        data-cy="accordionItemTitleInner"
                       >
                         <span
                           className="css-1321nl5"
@@ -113,10 +110,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                   </div>
                 </AccordionItemTitleOuter>
               </AccordionItemTitleInteractive>
-              <AccordionItemContent
-                data-cy="accordionItemContent"
-                paddingSize="m"
-              >
+              <AccordionItemContent>
                 <div
                   aria-labelledby="customId-heading"
                   className="css-13hugf8"
@@ -130,12 +124,10 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
             </div>
           </Component>
         </AccordionItem>
-        <AccordionItem
-          data-cy="accordionItem"
-        >
+        <AccordionItem>
           <Component
             expandedItems={Array []}
-            id="accordionItem5"
+            id="accordionItem-3"
           >
             <div
               data-cy="accordionItem"
@@ -155,14 +147,14 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                     data-cy="accordionItemTitle accordionItemTitle.danger"
                   >
                     <ResetButton
-                      aria-controls="accordionItem5-content"
+                      aria-controls="accordionItem-3-content"
                       aria-expanded={false}
                       className="css-jd8ubb"
                       data-cy="accordionItemTitle-button"
                       onClick={[Function]}
                     >
                       <button
-                        aria-controls="accordionItem5-content"
+                        aria-controls="accordionItem-3-content"
                         aria-expanded={false}
                         className="css-odh0fh"
                         data-cy="accordionItemTitle-button"
@@ -180,6 +172,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                     >
                       <span
                         className="css-1nhhn1w"
+                        data-cy="accordionItemTitleInner"
                       >
                         <span
                           className="css-1321nl5"
@@ -208,7 +201,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                           className="css-bleycz"
                         >
                           <h3
-                            id="accordionItem5-heading"
+                            id="accordionItem-3-heading"
                           >
                             Panel 1
                           </h3>
@@ -218,7 +211,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                             test
                           </button>
                           <button
-                            aria-controls="accordionItem5-content"
+                            aria-controls="accordionItem-3-content"
                             aria-expanded={false}
                             id="toggle"
                             onClick={[Function]}
@@ -231,16 +224,13 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                   </div>
                 </AccordionItemTitleOuter>
               </AccordionItemTitleInteractive>
-              <AccordionItemContent
-                data-cy="accordionItemContent"
-                paddingSize="m"
-              >
+              <AccordionItemContent>
                 <div
-                  aria-labelledby="accordionItem5-heading"
+                  aria-labelledby="accordionItem-3-heading"
                   className="css-13hugf8"
                   data-cy="accordionItemContent"
                   hidden={true}
-                  id="accordionItem5-content"
+                  id="accordionItem-3-content"
                 >
                   Content 2
                 </div>
@@ -248,12 +238,10 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
             </div>
           </Component>
         </AccordionItem>
-        <AccordionItem
-          data-cy="accordionItem"
-        >
+        <AccordionItem>
           <Component
             expandedItems={Array []}
-            id="accordionItem6"
+            id="accordionItem-4"
           >
             <div
               data-cy="accordionItem"
@@ -273,7 +261,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                     data-cy="accordionItemTitle accordionItemTitle.disabled"
                   >
                     <ResetButton
-                      aria-controls="accordionItem6-content"
+                      aria-controls="accordionItem-4-content"
                       aria-expanded={false}
                       className="css-jd8ubb"
                       data-cy="accordionItemTitle-button"
@@ -281,7 +269,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                       onClick={[Function]}
                     >
                       <button
-                        aria-controls="accordionItem6-content"
+                        aria-controls="accordionItem-4-content"
                         aria-expanded={false}
                         className="css-1tjctub"
                         data-cy="accordionItemTitle-button"
@@ -300,6 +288,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                     >
                       <span
                         className="css-1nhhn1w"
+                        data-cy="accordionItemTitleInner"
                       >
                         <span
                           className="css-1321nl5"
@@ -330,7 +319,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                           <h3
                             className="css-fmvpil"
                             data-cy="accordionItemTitle-heading"
-                            id="accordionItem6-heading"
+                            id="accordionItem-4-heading"
                           >
                             Panel 1
                           </h3>
@@ -345,16 +334,13 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                   </div>
                 </AccordionItemTitleOuter>
               </AccordionItemTitleInteractive>
-              <AccordionItemContent
-                data-cy="accordionItemContent"
-                paddingSize="m"
-              >
+              <AccordionItemContent>
                 <div
-                  aria-labelledby="accordionItem6-heading"
+                  aria-labelledby="accordionItem-4-heading"
                   className="css-13hugf8"
                   data-cy="accordionItemContent"
                   hidden={true}
-                  id="accordionItem6-content"
+                  id="accordionItem-4-content"
                 >
                   Content 1
                 </div>
@@ -370,8 +356,6 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
 
 exports[`Accordion rendering renders with expanded items 1`] = `
 <Accordion
-  allowMultipleExpanded={false}
-  data-cy="accordion"
   initialExpandedItems={
     Array [
       "panel1",
@@ -400,7 +384,6 @@ exports[`Accordion rendering renders with expanded items 1`] = `
         data-cy="accordion"
       >
         <AccordionItem
-          data-cy="accordionItem"
           id="panel1"
         >
           <Component
@@ -416,10 +399,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
             <div
               data-cy="accordionItem accordionItem.expanded"
             >
-              <AccordionItemTitle
-                data-cy="accordionItemTitle"
-                headingLevel={3}
-              >
+              <AccordionItemTitle>
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle"
                   isExpanded={true}
@@ -456,6 +436,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                             >
                               <span
                                 className="css-13atth2"
+                                data-cy="accordionItemTitleInner"
                               >
                                 <span
                                   className="css-1321nl5"
@@ -494,10 +475,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                   </div>
                 </AccordionItemTitleOuter>
               </AccordionItemTitle>
-              <AccordionItemContent
-                data-cy="accordionItemContent"
-                paddingSize="m"
-              >
+              <AccordionItemContent>
                 <div
                   aria-labelledby="panel1-heading"
                   className="css-72kisv"
@@ -512,7 +490,6 @@ exports[`Accordion rendering renders with expanded items 1`] = `
           </Component>
         </AccordionItem>
         <AccordionItem
-          data-cy="accordionItem"
           id="panel2"
         >
           <Component
@@ -528,10 +505,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
             <div
               data-cy="accordionItem accordionItem.expanded"
             >
-              <AccordionItemTitle
-                data-cy="accordionItemTitle"
-                headingLevel={3}
-              >
+              <AccordionItemTitle>
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle"
                   isExpanded={true}
@@ -568,6 +542,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                             >
                               <span
                                 className="css-13atth2"
+                                data-cy="accordionItemTitleInner"
                               >
                                 <span
                                   className="css-1321nl5"
@@ -606,10 +581,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                   </div>
                 </AccordionItemTitleOuter>
               </AccordionItemTitle>
-              <AccordionItemContent
-                data-cy="accordionItemContent"
-                paddingSize="m"
-              >
+              <AccordionItemContent>
                 <div
                   aria-labelledby="panel2-heading"
                   className="css-72kisv"
@@ -624,7 +596,6 @@ exports[`Accordion rendering renders with expanded items 1`] = `
           </Component>
         </AccordionItem>
         <AccordionItem
-          data-cy="accordionItem"
           id="panel3"
         >
           <Component
@@ -640,10 +611,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
             <div
               data-cy="accordionItem accordionItem.expanded"
             >
-              <AccordionItemTitle
-                data-cy="accordionItemTitle"
-                headingLevel={3}
-              >
+              <AccordionItemTitle>
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle"
                   isExpanded={true}
@@ -680,6 +648,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                             >
                               <span
                                 className="css-13atth2"
+                                data-cy="accordionItemTitleInner"
                               >
                                 <span
                                   className="css-1321nl5"
@@ -718,10 +687,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                   </div>
                 </AccordionItemTitleOuter>
               </AccordionItemTitle>
-              <AccordionItemContent
-                data-cy="accordionItemContent"
-                paddingSize="m"
-              >
+              <AccordionItemContent>
                 <div
                   aria-labelledby="panel3-heading"
                   className="css-72kisv"
@@ -742,10 +708,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
 `;
 
 exports[`Accordion rendering renders with no expanded items 1`] = `
-<Accordion
-  allowMultipleExpanded={false}
-  data-cy="accordion"
->
+<Accordion>
   <Component
     allowMultipleExpanded={false}
   >
@@ -759,7 +722,6 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
         data-cy="accordion"
       >
         <AccordionItem
-          data-cy="accordionItem"
           id="customId"
         >
           <Component
@@ -771,8 +733,6 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
             >
               <AccordionItemTitle
                 appearance="danger"
-                data-cy="accordionItemTitle"
-                headingLevel={3}
               >
                 <AccordionItemTitleOuter
                   appearance="danger"
@@ -811,6 +771,7 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                             >
                               <span
                                 className="css-13atth2"
+                                data-cy="accordionItemTitleInner"
                               >
                                 <span
                                   className="css-1321nl5"
@@ -849,10 +810,7 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                   </div>
                 </AccordionItemTitleOuter>
               </AccordionItemTitle>
-              <AccordionItemContent
-                data-cy="accordionItemContent"
-                paddingSize="m"
-              >
+              <AccordionItemContent>
                 <div
                   aria-labelledby="customId-heading"
                   className="css-13hugf8"
@@ -866,20 +824,16 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
             </div>
           </Component>
         </AccordionItem>
-        <AccordionItem
-          data-cy="accordionItem"
-        >
+        <AccordionItem>
           <Component
             expandedItems={Array []}
-            id="accordionItem2"
+            id="accordionItem-1"
           >
             <div
               data-cy="accordionItem"
             >
               <AccordionItemTitle
-                data-cy="accordionItemTitle"
                 disabled={true}
-                headingLevel={3}
               >
                 <AccordionItemTitleOuter
                   data-cy="accordionItemTitle accordionItemTitle.disabled"
@@ -893,10 +847,10 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                     <h3
                       className="css-fmvpil"
                       data-cy="accordionItemTitle-heading"
-                      id="accordionItem2-heading"
+                      id="accordionItem-1-heading"
                     >
                       <ResetButton
-                        aria-controls="accordionItem2-content"
+                        aria-controls="accordionItem-1-content"
                         aria-expanded="false"
                         className="css-bleycz"
                         data-cy="accordionItemTitle-button"
@@ -904,7 +858,7 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                         onClick={[Function]}
                       >
                         <button
-                          aria-controls="accordionItem2-content"
+                          aria-controls="accordionItem-1-content"
                           aria-expanded="false"
                           className="css-1l66126"
                           data-cy="accordionItemTitle-button"
@@ -920,6 +874,7 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                             >
                               <span
                                 className="css-13atth2"
+                                data-cy="accordionItemTitleInner"
                               >
                                 <span
                                   className="css-1321nl5"
@@ -958,16 +913,13 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                   </div>
                 </AccordionItemTitleOuter>
               </AccordionItemTitle>
-              <AccordionItemContent
-                data-cy="accordionItemContent"
-                paddingSize="m"
-              >
+              <AccordionItemContent>
                 <div
-                  aria-labelledby="accordionItem2-heading"
+                  aria-labelledby="accordionItem-1-heading"
                   className="css-13hugf8"
                   data-cy="accordionItemContent"
                   hidden={true}
-                  id="accordionItem2-content"
+                  id="accordionItem-1-content"
                 >
                   Content 2
                 </div>
@@ -975,18 +927,15 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
             </div>
           </Component>
         </AccordionItem>
-        <AccordionItem
-          data-cy="accordionItem"
-        >
+        <AccordionItem>
           <Component
             expandedItems={Array []}
-            id="accordionItem3"
+            id="accordionItem-2"
           >
             <div
               data-cy="accordionItem"
             >
               <AccordionItemTitle
-                data-cy="accordionItemTitle"
                 headingLevel={2}
               >
                 <AccordionItemTitleOuter
@@ -1000,17 +949,17 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                     <h2
                       className="css-fmvpil"
                       data-cy="accordionItemTitle-heading"
-                      id="accordionItem3-heading"
+                      id="accordionItem-2-heading"
                     >
                       <ResetButton
-                        aria-controls="accordionItem3-content"
+                        aria-controls="accordionItem-2-content"
                         aria-expanded="false"
                         className="css-bleycz"
                         data-cy="accordionItemTitle-button"
                         onClick={[Function]}
                       >
                         <button
-                          aria-controls="accordionItem3-content"
+                          aria-controls="accordionItem-2-content"
                           aria-expanded="false"
                           className="css-1gh59q1"
                           data-cy="accordionItemTitle-button"
@@ -1025,6 +974,7 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                             >
                               <span
                                 className="css-13atth2"
+                                data-cy="accordionItemTitleInner"
                               >
                                 <span
                                   className="css-1321nl5"
@@ -1063,16 +1013,13 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                   </div>
                 </AccordionItemTitleOuter>
               </AccordionItemTitle>
-              <AccordionItemContent
-                data-cy="accordionItemContent"
-                paddingSize="m"
-              >
+              <AccordionItemContent>
                 <div
-                  aria-labelledby="accordionItem3-heading"
+                  aria-labelledby="accordionItem-2-heading"
                   className="css-13hugf8"
                   data-cy="accordionItemContent"
                   hidden={true}
-                  id="accordionItem3-content"
+                  id="accordionItem-2-content"
                 >
                   Content 3
                 </div>

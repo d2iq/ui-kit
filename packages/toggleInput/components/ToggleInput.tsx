@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
+import nextId from "react-id-generator";
 
 import {
   flex,
@@ -23,7 +24,7 @@ import {
   toggleInputFeedbackText,
   toggleInputLabel,
   toggleInput,
-  toggleInputApperances
+  toggleInputAppearances
 } from "../style";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
@@ -40,7 +41,7 @@ export interface ToggleInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
    * Unique identifier used for the input element
    */
-  id: string;
+  id?: string;
   /**
    * The text or node content that appears next to the input
    */
@@ -86,7 +87,7 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
       children,
       disabled,
       hintContent,
-      id,
+      id = nextId("toggleInput-"),
       inputLabel,
       showInputLabel,
       vertAlign,
@@ -150,13 +151,13 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
                 <>
                   <div
                     className={cx(toggleInput, {
-                      [toggleInputApperances[`${appearance}-focus`]]: hasFocus,
-                      [toggleInputApperances[`${appearance}-active`]]:
+                      [toggleInputAppearances[`${appearance}-focus`]]: hasFocus,
+                      [toggleInputAppearances[`${appearance}-active`]]:
                         checked || isIndeterminate,
-                      [toggleInputApperances["focus-active"]]:
+                      [toggleInputAppearances["focus-active"]]:
                         checked && hasFocus,
-                      [toggleInputApperances.disabled]: disabled,
-                      [toggleInputApperances["disabled-active"]]:
+                      [toggleInputAppearances.disabled]: disabled,
+                      [toggleInputAppearances["disabled-active"]]:
                         disabled && checked,
                       [checkboxInput]: inputType === "checkbox",
                       [radioInput]: inputType === "radio",

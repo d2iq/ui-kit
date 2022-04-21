@@ -10,7 +10,7 @@ import { getAllFocusableChildNodes } from "../../utilities/getFocusableChildNode
 import { accordionItemContent } from "../style";
 import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtils";
 
-const AccordionItemContent: React.FC<{
+interface AccordionItemContentProps {
   /**
    * human-readable selector used for writing tests
    */
@@ -19,7 +19,14 @@ const AccordionItemContent: React.FC<{
    * the amount of space between the border and the content
    */
   paddingSize?: SpaceSize;
-}> = ({ children, "data-cy": dataCy, paddingSize }) => {
+  children: React.ReactNode;
+}
+
+const AccordionItemContent = ({
+  children,
+  "data-cy": dataCy = "accordionItemContent",
+  paddingSize = "m"
+}: AccordionItemContentProps) => {
   const contentRef = React.useRef<HTMLDivElement>(null);
   const accordionItemContext = React.useContext(AccordionItemContext);
   React.useEffect(() => {
@@ -58,11 +65,6 @@ const AccordionItemContent: React.FC<{
       {children}
     </div>
   );
-};
-
-AccordionItemContent.defaultProps = {
-  paddingSize: "m",
-  "data-cy": "accordionItemContent"
 };
 
 export default AccordionItemContent;

@@ -1,8 +1,10 @@
 import React, { createContext } from "react";
+import nextId from "react-id-generator";
 
 interface AccordionProviderProps {
-  id: string;
+  id?: string;
   expandedItems: string[];
+  children: React.ReactNode;
 }
 
 type AccordionItemContext = {
@@ -14,11 +16,11 @@ type AccordionItemContext = {
 
 export const Context = createContext<AccordionItemContext | null>(null);
 
-export const Provider: React.FC<AccordionProviderProps> = ({
+export const Provider = ({
   children,
   expandedItems,
-  id: baseId
-}) => (
+  id: baseId = nextId("accordionProvider-")
+}: AccordionProviderProps) => (
   <Context.Provider
     value={{
       baseId,

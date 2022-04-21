@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
+import nextId from "react-id-generator";
 import {
   flex,
   flexItem,
@@ -24,7 +25,7 @@ import {
   toggle,
   toggleRound,
   toggleContainer,
-  toggleInputApperances,
+  toggleInputAppearances,
   toggleInputLabel,
   toggleInputFeedbackText
 } from "../style";
@@ -41,7 +42,7 @@ export interface SlideToggleProps extends React.HTMLProps<HTMLInputElement> {
   /**
    * Unique identifier used for the input element
    */
-  id: string;
+  id?: string;
   /**
    * The text or node content that appears next to the input
    */
@@ -74,7 +75,7 @@ const SlideToggle: React.FC<React.PropsWithRef<SlideToggleProps>> = props => {
     children,
     disabled,
     hintContent,
-    id,
+    id = nextId("slideToggle-"),
     inputLabel,
     showInputLabel,
     vertAlign,
@@ -146,12 +147,12 @@ const SlideToggle: React.FC<React.PropsWithRef<SlideToggleProps>> = props => {
                   />
                   <div
                     className={cx(toggle, toggleRound, {
-                      [toggleInputApperances[`${appearance}-focus`]]: hasFocus,
-                      [toggleInputApperances[`${appearance}-active`]]: checked,
-                      [toggleInputApperances["focus-active"]]:
+                      [toggleInputAppearances[`${appearance}-focus`]]: hasFocus,
+                      [toggleInputAppearances[`${appearance}-active`]]: checked,
+                      [toggleInputAppearances["focus-active"]]:
                         checked && hasFocus,
-                      [toggleInputApperances.disabled]: disabled,
-                      [toggleInputApperances["disabled-active"]]:
+                      [toggleInputAppearances.disabled]: disabled,
+                      [toggleInputAppearances["disabled-active"]]:
                         disabled && checked
                     })}
                   >

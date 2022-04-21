@@ -14,15 +14,16 @@ interface AccordionItemTitleOuterProps {
   disabled?: boolean;
   isExpanded?: boolean;
   ["data-cy"]?: string;
+  children?: React.ReactNode;
 }
 
-const AccordionItemTitleOuter: React.FC<AccordionItemTitleOuterProps> = ({
+const AccordionItemTitleOuter = ({
   appearance,
   children,
-  "data-cy": dataCy,
+  "data-cy": dataCy = "accordionItemTitleOuter",
   disabled,
   isExpanded
-}) => (
+}: AccordionItemTitleOuterProps) => (
   <div
     className={cx(border("all"), accordionTitle, {
       [accordionTitleDanger]: appearance === "danger",
