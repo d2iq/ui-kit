@@ -33,7 +33,7 @@ export const toggleInputFeedbackText = css`
   padding-left: ${toggleInputHeight + parseInt(toggleInputTextPadding, 10)}px;
 `;
 
-export const toggleInputApperances = {
+export const toggleInputAppearances = {
   disabled: css`
     background-color: ${themeBgDisabled};
     border-color: ${themeBgDisabled};

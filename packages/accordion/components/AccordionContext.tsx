@@ -5,6 +5,7 @@ interface AccordionProviderProps {
   controlledExpandedItems?: string[];
   initialExpandedItems?: string[];
   onChange?: (expandedItems: string[]) => void;
+  children: React.ReactNode;
 }
 
 type AccordionContext = {
@@ -14,13 +15,13 @@ type AccordionContext = {
 
 export const Context = createContext<AccordionContext | null>(null);
 
-export const Provider: React.FC<AccordionProviderProps> = ({
+export const Provider = ({
   allowMultipleExpanded,
   children,
   controlledExpandedItems,
   initialExpandedItems = [],
   onChange
-}) => {
+}: AccordionProviderProps) => {
   const [expandedItems, setExpanded] = useState<string[]>(
     controlledExpandedItems ? controlledExpandedItems : initialExpandedItems
   );

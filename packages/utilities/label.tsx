@@ -1,4 +1,5 @@
 import * as React from "react";
+import nextId from "react-id-generator";
 import { cx } from "@emotion/css";
 import { InputAppearance } from "../shared/types/inputAppearance";
 import {
@@ -24,11 +25,18 @@ const reqStar = <span className={cx(tintText(themeError))}> *</span>;
 export const renderLabel: React.FC<{
   appearance?: string;
   hidden?: boolean;
-  id: string;
+  id?: string;
   label?: React.ReactNode;
   required?: boolean;
   tooltipContent?: React.ReactNode;
-}> = ({ appearance, hidden, id, label, required, tooltipContent }) => {
+}> = ({
+  appearance,
+  hidden,
+  label,
+  id = nextId(),
+  required,
+  tooltipContent
+}) => {
   const hasError = appearance === InputAppearance.Error;
   const labelClassName = hidden ? cx(visuallyHidden) : getLabelStyle(hasError);
   const labelNode = (

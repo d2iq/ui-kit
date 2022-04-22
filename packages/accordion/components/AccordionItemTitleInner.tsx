@@ -7,10 +7,19 @@ import Icon from "../../icon/components/Icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { fillWidth, accordionTitleInteractive } from "../style";
 
-const AccordionItemTitleInner: React.FC<{
+export interface AccordionItemTitleInnerProps {
   isExpanded?: boolean;
   isInteractive?: boolean;
-}> = ({ children, isExpanded, isInteractive }) => {
+  children: React.ReactNode;
+  ["data-cy"]?: string;
+}
+
+const AccordionItemTitleInner = ({
+  children,
+  isExpanded,
+  isInteractive,
+  "data-cy": dataCy = "accordionItemTitleInner"
+}: AccordionItemTitleInnerProps) => {
   const contentRef = React.useRef<HTMLDivElement>(null);
   React.useEffect(() => {
     const allFocusable: HTMLElement[] = contentRef.current
@@ -31,6 +40,7 @@ const AccordionItemTitleInner: React.FC<{
       className={cx(padding("all"), flex({ align: "center" }), {
         [accordionTitleInteractive]: isInteractive
       })}
+      data-cy={dataCy}
     >
       <span className={padding("right", "xs")}>
         <Icon

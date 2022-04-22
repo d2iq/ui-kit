@@ -15,7 +15,7 @@ export interface TextareaProps extends React.HTMLProps<HTMLTextAreaElement> {
   /**
    * Unique identifier used for the form textarea element
    */
-  id: string;
+  id?: string;
   /**
    * Sets the current appearance of the component. This defaults to InputAppearance.Standard, but supports `InputAppearance.Error` & `InputAppearance.Success` appearances as well.
    */

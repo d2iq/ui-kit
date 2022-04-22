@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useId } from "react-id-generator";
+import nextId from "react-id-generator";
 import { Context as AccordionContext } from "./AccordionContext";
 import { Provider as AccordionItemProvider } from "./AccordionItemContext";
 
@@ -12,22 +12,21 @@ export interface AccordionItemProps {
    * A custom ID for the accordion panel
    */
   id?: string;
+  children?: React.ReactNode;
 }
 
-const AccordionItem: React.FC<AccordionItemProps> = ({
+const AccordionItem = ({
   children,
-  "data-cy": dataCy,
-  id
-}) => {
-  const [generatedId] = useId(1, "accordionItem");
-  const accordionItemId = id || generatedId;
+  "data-cy": dataCy = "accordionItem",
+  id = nextId("accordionItem-")
+}: AccordionItemProps) => {
   const accordionContext = React.useContext(AccordionContext);
-  const isExpanded = accordionContext?.expandedItems.includes(accordionItemId);
+  const isExpanded = accordionContext?.expandedItems.includes(id);
 
   return (
     <AccordionItemProvider
       expandedItems={accordionContext?.expandedItems || []}
-      id={accordionItemId}
+      id={id}
     >
       <div
         data-cy={[dataCy, ...(isExpanded ? [`${dataCy}.expanded`] : [])].join(
@@ -38,10 +37,6 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
       </div>
     </AccordionItemProvider>
   );
-};
-
-AccordionItem.defaultProps = {
-  "data-cy": "accordionItem"
 };
 
 export default AccordionItem;

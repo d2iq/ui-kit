@@ -1,4 +1,5 @@
 import * as React from "react";
+import nextId from "react-id-generator";
 import Dropdownable, {
   Direction
 } from "../../dropdownable/components/Dropdownable";
@@ -7,7 +8,7 @@ import { getFirstFocusableChildNode } from "../../utilities/getFocusableChildNod
 
 export interface BaseTooltipProps {
   children: React.ReactNode | string;
-  id: string;
+  id?: string;
   maxWidth?: number | null;
   minWidth?: number;
 }
@@ -30,7 +31,7 @@ const Tooltip = ({
   ariaLabel,
   children,
   disablePortal,
-  id,
+  id = nextId("tooltip-"),
   maxWidth = 300,
   minWidth,
   onClose,

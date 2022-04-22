@@ -1,4 +1,5 @@
 import * as React from "react";
+import nextId from "react-id-generator";
 import { cx } from "@emotion/css";
 import * as style from "./style";
 import { Draggable, Sorter } from "./Util";
@@ -103,7 +104,7 @@ const rowClassName = <A extends unknown>(
 
 type HeaderCellProps<Entry> = {
   column: Column<Entry>;
-  id: string;
+  id?: string;
   state: State;
   textAlign?: "left" | "right" | "center";
   update: (a: Partial<State>) => void;
@@ -117,7 +118,7 @@ const ariaSortStringMap: { asc: "ascending"; desc: "descending" } = {
 
 function HeaderCell<Entry>({
   column,
-  id,
+  id = nextId("headerCell-"),
   update,
   state,
   showScrollShadow

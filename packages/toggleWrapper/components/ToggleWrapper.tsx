@@ -1,4 +1,5 @@
 import * as React from "react";
+import nextId from "react-id-generator";
 import { visuallyHidden, display } from "../../shared/styles/styleUtils";
 
 interface RenderProps {
@@ -18,11 +19,15 @@ export interface ToggleWrapperProps extends React.HTMLProps<HTMLInputElement> {
   /**
    * The unique identifier for the toggle
    */
-  id: string;
+  id?: string;
   /**
    * The type of boolean input element
    */
   type?: "checkbox" | "radio";
+  /**
+   * human-readable selector used for writing tests
+   */
+  ["data-cy"]?: string;
 }
 
 interface LocalToggleWrapperProps extends ToggleWrapperProps {
@@ -53,7 +58,13 @@ class ToggleWrapper extends React.PureComponent<
   }
 
   public render() {
-    const { children, id, isActive, ...other } = this.props;
+    const {
+      children,
+      id = nextId("toggleWrapper-"),
+      "data-cy": dataCy = "toggleWrapper-input",
+      isActive,
+      ...other
+    } = this.props;
     const { hasFocus } = this.state;
     delete other.checked;
     delete other.className;
@@ -71,7 +82,7 @@ class ToggleWrapper extends React.PureComponent<
           className={visuallyHidden}
           checked={isActive}
           aria-checked={isActive}
-          data-cy="toggleWrapper-input"
+          data-cy={dataCy}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
           {...other}

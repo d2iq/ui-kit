@@ -27,15 +27,16 @@ export interface AccordionItemTitleProps {
    * Priority of the heading. Numbers map to <h1> through <h6>
    */
   headingLevel?: HeadingLevel;
+  children: React.ReactNode;
 }
 
-const AccordionItemTitle: React.FC<AccordionItemTitleProps> = ({
+const AccordionItemTitle = ({
   appearance,
   children,
-  "data-cy": dataCy,
+  "data-cy": dataCy = "accordionItemTitle",
   disabled,
-  headingLevel
-}) => {
+  headingLevel = 3
+}: AccordionItemTitleProps) => {
   const HeadingTag: keyof React.ReactHTML = `h${headingLevel}` as
     | "h2"
     | "h3"
@@ -88,11 +89,6 @@ const AccordionItemTitle: React.FC<AccordionItemTitleProps> = ({
       </HeadingTag>
     </AccordionItemTitleOuter>
   );
-};
-
-AccordionItemTitle.defaultProps = {
-  headingLevel: 3,
-  "data-cy": "accordionItemTitle"
 };
 
 export default AccordionItemTitle;
