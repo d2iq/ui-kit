@@ -7,7 +7,7 @@ import { flex, padding, flexItem } from "../../shared/styles/styleUtils";
 import { modalContent, fullscreenModalHeader } from "../style";
 import FullscreenViewHeader from "./FullscreenViewHeader";
 
-interface FullscreenViewProps {
+export interface FullscreenViewProps {
   /** The primary button */
   ctaButton?: React.ReactElement<ButtonProps>;
   /** The text for the secondary button that closes the view */
