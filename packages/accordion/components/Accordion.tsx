@@ -8,7 +8,7 @@ interface AccordionProps extends AccordionBaseProps {
    * An array of open accordion panel IDs
    */
   initialExpandedItems?: string[];
-  children: React.ReactNode[];
+  children: React.ReactNode | React.ReactNode[];
 }
 
 const Accordion = ({
