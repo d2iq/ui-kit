@@ -828,9 +828,46 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       tabindex="0"
                     />
                     <div
+                      data-focus-lock-disabled="false"
+                    >
+                      <div
+                        class="emotion-0"
+                        role="button"
+                        tabindex="-1"
+                      />
+                      <div
+                        class="emotion-1"
+                      >
+                        <div
+                          class="emotion-2"
+                          role="dialog"
+                          tabindex="-1"
+                        >
+                          <div
+                            class="emotion-3"
+                          >
+                            <div
+                              tabindex="0"
+                            >
+                              I am modal content
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
                       data-focus-guard="true"
                       style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                      tabindex="1"
+                      tabindex="0"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <div
+                      data-focus-guard="true"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                      tabindex="0"
                     />
                     <div
                       data-focus-lock-disabled="false"
@@ -875,11 +912,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       tabindex="0"
                     />
                     <div
-                      data-focus-guard="true"
-                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                      tabindex="1"
-                    />
-                    <div
                       data-focus-lock-disabled="false"
                     >
                       <div
@@ -920,58 +952,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       data-focus-guard="true"
                       style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="0"
-                    />
-                    <div
-                      data-focus-guard="true"
-                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                      tabindex="1"
-                    />
-                    <div
-                      data-focus-lock-disabled="false"
-                    >
-                      <div
-                        class="emotion-0"
-                        role="button"
-                        tabindex="-1"
-                      />
-                      <div
-                        class="emotion-1"
-                      >
-                        <div
-                          class="emotion-2"
-                          role="dialog"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="emotion-3"
-                          >
-                            <div
-                              tabindex="0"
-                            >
-                              I am modal content
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      data-focus-guard="true"
-                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                      tabindex="0"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <div
-                      data-focus-guard="true"
-                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                      tabindex="0"
-                    />
-                    <div
-                      data-focus-guard="true"
-                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                      tabindex="1"
                     />
                     <div
                       data-focus-lock-disabled="false"
@@ -1479,11 +1459,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       tabindex="0"
                     />
                     <div
-                      data-focus-guard="true"
-                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                      tabindex="1"
-                    />
-                    <div
                       data-focus-lock-disabled="false"
                     >
                       <div
@@ -1633,22 +1608,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                         }
                       }
                       tabIndex={0}
-                    />
-                    <div
-                      data-focus-guard={true}
-                      key="guard-nearest"
-                      style={
-                        Object {
-                          "height": "0px",
-                          "left": "1px",
-                          "overflow": "hidden",
-                          "padding": 0,
-                          "position": "fixed",
-                          "top": "1px",
-                          "width": "1px",
-                        }
-                      }
-                      tabIndex={1}
                     />
                     <SideEffect(FocusWatcher)
                       autoFocus={true}
@@ -3735,9 +3694,46 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     tabindex="0"
                   />
                   <div
+                    data-focus-lock-disabled="false"
+                  >
+                    <div
+                      class="emotion-0"
+                      role="button"
+                      tabindex="-1"
+                    />
+                    <div
+                      class="emotion-1"
+                    >
+                      <div
+                        class="emotion-2"
+                        role="dialog"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="emotion-3"
+                        >
+                          <div
+                            tabindex="0"
+                          >
+                            I am modal content
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
                     data-focus-guard="true"
                     style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
+                    tabindex="0"
+                  />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div
+                    data-focus-guard="true"
+                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                    tabindex="0"
                   />
                   <div
                     data-focus-lock-disabled="false"
@@ -3782,11 +3778,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     tabindex="0"
                   />
                   <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
-                  />
-                  <div
                     data-focus-lock-disabled="false"
                   >
                     <div
@@ -3827,58 +3818,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     data-focus-guard="true"
                     style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                     tabindex="0"
-                  />
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
-                  />
-                  <div
-                    data-focus-lock-disabled="false"
-                  >
-                    <div
-                      class="emotion-0"
-                      role="button"
-                      tabindex="-1"
-                    />
-                    <div
-                      class="emotion-1"
-                    >
-                      <div
-                        class="emotion-2"
-                        role="dialog"
-                        tabindex="-1"
-                      >
-                        <div
-                          class="emotion-3"
-                        >
-                          <div
-                            tabindex="0"
-                          >
-                            I am modal content
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="0"
-                  />
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
                   />
                   <div
                     data-focus-lock-disabled="false"
@@ -4008,11 +3947,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     tabindex="0"
                   />
                   <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
-                  />
-                  <div
                     data-focus-lock-disabled="false"
                   >
                     <div
@@ -4138,11 +4072,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     data-focus-guard="true"
                     style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                     tabindex="0"
-                  />
-                  <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
                   />
                   <div
                     data-focus-lock-disabled="false"
@@ -4592,11 +4521,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     tabindex="0"
                   />
                   <div
-                    data-focus-guard="true"
-                    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                    tabindex="1"
-                  />
-                  <div
                     data-focus-lock-disabled="false"
                   >
                     <div
@@ -4728,22 +4652,6 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       }
                     }
                     tabIndex={0}
-                  />
-                  <div
-                    data-focus-guard={true}
-                    key="guard-nearest"
-                    style={
-                      Object {
-                        "height": "0px",
-                        "left": "1px",
-                        "overflow": "hidden",
-                        "padding": 0,
-                        "position": "fixed",
-                        "top": "1px",
-                        "width": "1px",
-                      }
-                    }
-                    tabIndex={1}
                   />
                   <SideEffect(FocusWatcher)
                     autoFocus={true}
@@ -6088,11 +5996,6 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                   tabindex="0"
                 />
                 <div
-                  data-focus-guard="true"
-                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                  tabindex="1"
-                />
-                <div
                   data-focus-lock-disabled="false"
                 >
                   <div
@@ -6242,11 +6145,6 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                   tabindex="0"
                 />
                 <div
-                  data-focus-guard="true"
-                  style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-                  tabindex="1"
-                />
-                <div
                   data-focus-lock-disabled="false"
                 >
                   <div
@@ -6311,22 +6209,6 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                     }
                   }
                   tabIndex={0}
-                />
-                <div
-                  data-focus-guard={true}
-                  key="guard-nearest"
-                  style={
-                    Object {
-                      "height": "0px",
-                      "left": "1px",
-                      "overflow": "hidden",
-                      "padding": 0,
-                      "position": "fixed",
-                      "top": "1px",
-                      "width": "1px",
-                    }
-                  }
-                  tabIndex={1}
                 />
                 <SideEffect(FocusWatcher)
                   autoFocus={true}
