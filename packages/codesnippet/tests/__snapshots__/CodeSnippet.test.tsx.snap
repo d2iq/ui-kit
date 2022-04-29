@@ -26,9 +26,6 @@ exports[`CodeSnippet renders default 1`] = `
   -ms-flex-align: flex-start;
   align-items: flex-start;
   height: auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -116,20 +113,12 @@ exports[`CodeSnippet renders default 1`] = `
         className="emotion-2"
         data-cy="spacingBox"
       >
-        <Flex
-          align="flex-start"
-          direction="row"
-          gutterSize="none"
-          justify="flex-start"
-          wrap="nowrap"
-        >
+        <Flex>
           <div
             className="emotion-3"
             data-cy="flex"
           >
-            <FlexItem
-              flex="grow"
-            >
+            <FlexItem>
               <div
                 className="emotion-4"
                 data-cy="flexItem"
@@ -196,9 +185,6 @@ exports[`CodeSnippet renders with copy button 1`] = `
   -ms-flex-align: flex-start;
   align-items: flex-start;
   height: auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -327,20 +313,12 @@ exports[`CodeSnippet renders with copy button 1`] = `
         className="emotion-2"
         data-cy="spacingBox"
       >
-        <Flex
-          align="flex-start"
-          direction="row"
-          gutterSize="none"
-          justify="flex-start"
-          wrap="nowrap"
-        >
+        <Flex>
           <div
             className="emotion-3"
             data-cy="flex"
           >
-            <FlexItem
-              flex="grow"
-            >
+            <FlexItem>
               <div
                 className="emotion-4"
                 data-cy="flexItem"

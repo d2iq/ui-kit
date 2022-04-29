@@ -146,9 +146,6 @@ exports[`Sidebar renders 1`] = `
           <Flex
             align="center"
             direction="row"
-            gutterSize="none"
-            justify="flex-start"
-            wrap="nowrap"
           >
             <div
               className="emotion-2"
@@ -182,9 +179,7 @@ exports[`Sidebar renders 1`] = `
                   </Icon>
                 </div>
               </FlexItem>
-              <FlexItem
-                flex="grow"
-              >
+              <FlexItem>
                 <div
                   className="emotion-5"
                   data-cy="flexItem"

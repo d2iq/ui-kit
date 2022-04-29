@@ -16,10 +16,6 @@ exports[`Pagination rendering renders default 1`] = `
 
 <Flex
   align="center"
-  direction="row"
-  gutterSize="none"
-  justify="flex-start"
-  wrap="nowrap"
 >
   <div
     className="emotion-0"
@@ -28,10 +24,7 @@ exports[`Pagination rendering renders default 1`] = `
   </div>
   <Flex
     align="center"
-    direction="row"
     gutterSize="s"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
@@ -89,10 +82,6 @@ exports[`Pagination rendering renders prev and next buttons as links 1`] = `
 
 <Flex
   align="center"
-  direction="row"
-  gutterSize="none"
-  justify="flex-start"
-  wrap="nowrap"
 >
   <div
     className="emotion-0"
@@ -101,10 +90,7 @@ exports[`Pagination rendering renders prev and next buttons as links 1`] = `
   </div>
   <Flex
     align="center"
-    direction="row"
     gutterSize="s"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
@@ -164,10 +150,6 @@ exports[`Pagination rendering renders w/ custom item label 1`] = `
 
 <Flex
   align="center"
-  direction="row"
-  gutterSize="none"
-  justify="flex-start"
-  wrap="nowrap"
 >
   <div
     className="emotion-0"
@@ -176,10 +158,7 @@ exports[`Pagination rendering renders w/ custom item label 1`] = `
   </div>
   <Flex
     align="center"
-    direction="row"
     gutterSize="s"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
@@ -240,17 +219,10 @@ exports[`Pagination rendering renders w/ page length menu 1`] = `
 
 <Flex
   align="center"
-  direction="row"
-  gutterSize="none"
-  justify="flex-start"
-  wrap="nowrap"
 >
   <Flex
     align="center"
-    direction="row"
     gutterSize="xs"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
@@ -303,10 +275,7 @@ exports[`Pagination rendering renders w/ page length menu 1`] = `
   </div>
   <Flex
     align="center"
-    direction="row"
     gutterSize="s"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
@@ -363,10 +332,6 @@ exports[`Pagination rendering renders w/ totalItems set 1`] = `
 
 <Flex
   align="center"
-  direction="row"
-  gutterSize="none"
-  justify="flex-start"
-  wrap="nowrap"
 >
   <div
     className="emotion-0"
@@ -375,10 +340,7 @@ exports[`Pagination rendering renders w/ totalItems set 1`] = `
   </div>
   <Flex
     align="center"
-    direction="row"
     gutterSize="s"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
@@ -437,10 +399,6 @@ exports[`Pagination rendering renders w/ totalPages, pageLength, and totalItems 
 
 <Flex
   align="center"
-  direction="row"
-  gutterSize="none"
-  justify="flex-start"
-  wrap="nowrap"
 >
   <div
     className="emotion-0"
@@ -449,10 +407,7 @@ exports[`Pagination rendering renders w/ totalPages, pageLength, and totalItems 
   </div>
   <Flex
     align="center"
-    direction="row"
     gutterSize="s"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
@@ -499,8 +454,6 @@ exports[`Pagination rendering renders w/ totalPages, pageLength, and totalItems 
 exports[`Pagination rendering renders wrapped in a PaginationContainer 1`] = `
 <Flex
   align="flex-end"
-  direction="row"
-  gutterSize="none"
   justify="flex-end"
   wrap="wrap"
 >

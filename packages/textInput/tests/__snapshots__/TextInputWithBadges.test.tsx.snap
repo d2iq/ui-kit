@@ -146,9 +146,6 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -331,18 +328,13 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
             >
               <Flex
                 align="center"
-                direction="row"
                 gutterSize="xxs"
-                justify="flex-start"
-                wrap="nowrap"
               >
                 <div
                   className="emotion-4"
                   data-cy="flex"
                 >
-                  <FlexItem
-                    flex="grow"
-                  >
+                  <FlexItem>
                     <div
                       className="emotion-5"
                       data-cy="flexItem"
@@ -415,18 +407,13 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
             >
               <Flex
                 align="center"
-                direction="row"
                 gutterSize="xxs"
-                justify="flex-start"
-                wrap="nowrap"
               >
                 <div
                   className="emotion-4"
                   data-cy="flex"
                 >
-                  <FlexItem
-                    flex="grow"
-                  >
+                  <FlexItem>
                     <div
                       className="emotion-5"
                       data-cy="flexItem"
@@ -499,18 +486,13 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
             >
               <Flex
                 align="center"
-                direction="row"
                 gutterSize="xxs"
-                justify="flex-start"
-                wrap="nowrap"
               >
                 <div
                   className="emotion-4"
                   data-cy="flex"
                 >
-                  <FlexItem
-                    flex="grow"
-                  >
+                  <FlexItem>
                     <div
                       className="emotion-5"
                       data-cy="flexItem"
@@ -913,9 +895,6 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -1098,18 +1077,13 @@ exports[`TextInputWithBadges renders with badges 1`] = `
             >
               <Flex
                 align="center"
-                direction="row"
                 gutterSize="xxs"
-                justify="flex-start"
-                wrap="nowrap"
               >
                 <div
                   className="emotion-4"
                   data-cy="flex"
                 >
-                  <FlexItem
-                    flex="grow"
-                  >
+                  <FlexItem>
                     <div
                       className="emotion-5"
                       data-cy="flexItem"
@@ -1182,18 +1156,13 @@ exports[`TextInputWithBadges renders with badges 1`] = `
             >
               <Flex
                 align="center"
-                direction="row"
                 gutterSize="xxs"
-                justify="flex-start"
-                wrap="nowrap"
               >
                 <div
                   className="emotion-4"
                   data-cy="flex"
                 >
-                  <FlexItem
-                    flex="grow"
-                  >
+                  <FlexItem>
                     <div
                       className="emotion-5"
                       data-cy="flexItem"
@@ -1266,18 +1235,13 @@ exports[`TextInputWithBadges renders with badges 1`] = `
             >
               <Flex
                 align="center"
-                direction="row"
                 gutterSize="xxs"
-                justify="flex-start"
-                wrap="nowrap"
               >
                 <div
                   className="emotion-4"
                   data-cy="flex"
                 >
-                  <FlexItem
-                    flex="grow"
-                  >
+                  <FlexItem>
                     <div
                       className="emotion-5"
                       data-cy="flexItem"

@@ -116,8 +116,6 @@ exports[`ToggleBoxGroup renders default 1`] = `
     align="stretch"
     direction="row"
     gutterSize="m"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <div
       className="emotion-0"
@@ -125,7 +123,6 @@ exports[`ToggleBoxGroup renders default 1`] = `
     >
       <FlexItem
         className="emotion-1"
-        flex="grow"
         key="buttonWrapper-exosphere"
       >
         <div
@@ -197,7 +194,6 @@ exports[`ToggleBoxGroup renders default 1`] = `
       </FlexItem>
       <FlexItem
         className="emotion-1"
-        flex="grow"
         key="buttonWrapper-thermosphere"
       >
         <div
@@ -269,7 +265,6 @@ exports[`ToggleBoxGroup renders default 1`] = `
       </FlexItem>
       <FlexItem
         className="emotion-1"
-        flex="grow"
         key="buttonWrapper-mesosphere"
       >
         <div
@@ -484,8 +479,6 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
       align="stretch"
       direction="row"
       gutterSize="m"
-      justify="flex-start"
-      wrap="nowrap"
     >
       <div
         className="emotion-2"
@@ -493,7 +486,6 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
       >
         <FlexItem
           className="emotion-3"
-          flex="grow"
           key="buttonWrapper-exosphere"
         >
           <div
@@ -565,7 +557,6 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
         </FlexItem>
         <FlexItem
           className="emotion-3"
-          flex="grow"
           key="buttonWrapper-thermosphere"
         >
           <div
@@ -637,7 +628,6 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
         </FlexItem>
         <FlexItem
           className="emotion-3"
-          flex="grow"
           key="buttonWrapper-mesosphere"
         >
           <div
@@ -862,8 +852,6 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
     align="stretch"
     direction="row"
     gutterSize="m"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <div
       className="emotion-0"
@@ -871,7 +859,6 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
     >
       <FlexItem
         className="emotion-1"
-        flex="grow"
         key="buttonWrapper-exosphere"
       >
         <div
@@ -943,7 +930,6 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
       </FlexItem>
       <FlexItem
         className="emotion-1"
-        flex="grow"
         key="buttonWrapper-thermosphere"
       >
         <div
@@ -1015,7 +1001,6 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
       </FlexItem>
       <FlexItem
         className="emotion-1"
-        flex="grow"
         key="buttonWrapper-mesosphere"
       >
         <div
@@ -1208,8 +1193,6 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
     align="stretch"
     direction="column"
     gutterSize="xxl"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <div
       className="emotion-0"
@@ -1217,7 +1200,6 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
     >
       <FlexItem
         className="emotion-1"
-        flex="grow"
         key="buttonWrapper-exosphere"
       >
         <div
@@ -1289,7 +1271,6 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
       </FlexItem>
       <FlexItem
         className="emotion-1"
-        flex="grow"
         key="buttonWrapper-thermosphere"
       >
         <div
@@ -1361,7 +1342,6 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
       </FlexItem>
       <FlexItem
         className="emotion-1"
-        flex="grow"
         key="buttonWrapper-mesosphere"
       >
         <div

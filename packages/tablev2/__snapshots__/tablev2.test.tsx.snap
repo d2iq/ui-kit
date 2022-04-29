@@ -442,15 +442,11 @@ exports[`Table v2 rendering renders default 1`] = `
               tooltipContent="test"
             >
               <Flex
-                align="flex-start"
                 className="css-ukcnvo"
-                direction="row"
                 gutterSize="xxs"
-                justify="flex-start"
-                wrap="nowrap"
               >
                 <div
-                  className="css-12zerzy"
+                  className="css-4vm7kd"
                   data-cy="flex"
                 >
                   <div
@@ -3731,15 +3727,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               tooltipContent="test"
             >
               <Flex
-                align="flex-start"
                 className="css-ukcnvo"
-                direction="row"
                 gutterSize="xxs"
-                justify="flex-start"
-                wrap="nowrap"
               >
                 <div
-                  className="css-12zerzy"
+                  className="css-4vm7kd"
                   data-cy="flex"
                 >
                   <div
