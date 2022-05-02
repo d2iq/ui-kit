@@ -20,17 +20,12 @@ exports[`PopoverListItem renders 1`] = `
 >
   <Flex
     align="center"
-    direction="row"
     gutterSize="xs"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
     />
-    <FlexItem
-      flex="grow"
-    >
+    <FlexItem>
       item content content
     </FlexItem>
     <FlexItem
@@ -61,17 +56,12 @@ exports[`PopoverListItem renders active 1`] = `
 >
   <Flex
     align="center"
-    direction="row"
     gutterSize="xs"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
     />
-    <FlexItem
-      flex="grow"
-    >
+    <FlexItem>
       item content content
     </FlexItem>
     <FlexItem
@@ -105,17 +95,12 @@ exports[`PopoverListItem renders active and selected 1`] = `
 >
   <Flex
     align="center"
-    direction="row"
     gutterSize="xs"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
     />
-    <FlexItem
-      flex="grow"
-    >
+    <FlexItem>
       item content content
     </FlexItem>
     <FlexItem
@@ -149,17 +134,12 @@ exports[`PopoverListItem renders all appearances 1`] = `
 >
   <Flex
     align="center"
-    direction="row"
     gutterSize="xs"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
     />
-    <FlexItem
-      flex="grow"
-    >
+    <FlexItem>
       item content content
     </FlexItem>
     <FlexItem
@@ -192,17 +172,12 @@ exports[`PopoverListItem renders disabled 1`] = `
 >
   <Flex
     align="center"
-    direction="row"
     gutterSize="xs"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
     />
-    <FlexItem
-      flex="grow"
-    >
+    <FlexItem>
       item content content
     </FlexItem>
     <FlexItem
@@ -234,17 +209,12 @@ exports[`PopoverListItem renders selected 1`] = `
 >
   <Flex
     align="center"
-    direction="row"
     gutterSize="xs"
-    justify="flex-start"
-    wrap="nowrap"
   >
     <FlexItem
       flex="shrink"
     />
-    <FlexItem
-      flex="grow"
-    >
+    <FlexItem>
       item content content
     </FlexItem>
     <FlexItem

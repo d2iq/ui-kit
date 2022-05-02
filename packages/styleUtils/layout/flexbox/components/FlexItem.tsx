@@ -27,6 +27,11 @@ interface FlexItemProps {
    * Which HTML tag to render the component with
    */
   tag?: keyof React.ReactHTML;
+  /**
+   * human-readable selector used for writing tests
+   */
+  ["data-cy"]?: string;
+  children?: React.ReactNode | React.ReactNode[];
 }
 
 const getResponsiveFlexItemStyles = flexVal =>
@@ -36,14 +41,15 @@ const getResponsiveFlexItemStyles = flexVal =>
         atMediaUp[breakpoint](flexItem(flexVal[breakpoint]))
       );
 
-const FlexItem: React.FC<FlexItemProps> = ({
+const FlexItem = ({
   children,
   className,
-  flex,
+  flex = "grow",
   growFactor,
   order,
-  tag = "div"
-}) => {
+  tag = "div",
+  "data-cy": dataCy = "flexItem"
+}: FlexItemProps): JSX.Element => {
   const FlexItemEl = tag;
 
   return (
@@ -54,15 +60,11 @@ const FlexItem: React.FC<FlexItemProps> = ({
         ${getResponsiveStyle("order", order)};
         ${className};
       `}
-      data-cy="flexItem"
+      data-cy={dataCy}
     >
       {children}
     </FlexItemEl>
   );
-};
-
-FlexItem.defaultProps = {
-  flex: "grow"
 };
 
 export default FlexItem;

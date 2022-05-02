@@ -17,37 +17,41 @@ export interface FlexProps extends FlexboxProperties {
    * Which HTML tag to render the component with
    */
   tag?: keyof React.ReactHTML;
+  /**
+   * human-readable selector used for writing tests
+   */
+  ["data-cy"]?: string;
+  children?: React.ReactNode | React.ReactNode[];
 }
 
-const Flex: React.FC<FlexProps> = ({
+const Flex = ({
   children,
   className,
-  gutterSize,
+  gutterSize = "none",
   tag = "div",
+  "data-cy": dataCy = "flex",
   ...flexboxProperties
-}) => {
+}: FlexProps): JSX.Element => {
+  const {
+    direction = "row",
+    align = "flex-start",
+    wrap = "nowrap",
+    justify = "flex-start"
+  } = flexboxProperties;
   const FlexEl = tag;
 
   return (
     <FlexEl
       className={css`
-        ${flex({ ...flexboxProperties })};
-        ${applyFlexItemGutters(flexboxProperties.direction, gutterSize)};
+        ${flex({ align, wrap, justify, ...flexboxProperties })};
+        ${applyFlexItemGutters(direction, gutterSize)};
         ${className};
       `}
-      data-cy="flex"
+      data-cy={dataCy}
     >
       {children}
     </FlexEl>
   );
-};
-
-Flex.defaultProps = {
-  align: "flex-start",
-  direction: "row",
-  wrap: "nowrap",
-  justify: "flex-start",
-  gutterSize: "none"
 };
 
 export default Flex;
