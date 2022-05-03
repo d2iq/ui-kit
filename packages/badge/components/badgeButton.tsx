@@ -18,14 +18,16 @@ export interface BadgeButtonProps {
    * browser default value for this is -1
    */
   tabIndex?: number;
-  children: JSX.Element | string;
+  children: React.ReactNode[] | React.ReactNode;
+  ["data-cy"]?: string;
 }
 
 const BadgeButton = ({
   appearance = "default",
   children,
   onClick,
-  tabIndex = -1
+  tabIndex = -1,
+  "data-cy": dataCy = "badgeButton"
 }: BadgeButtonProps) => {
   const className = css`
     outline: none;
@@ -34,7 +36,7 @@ const BadgeButton = ({
   `;
 
   return (
-    <Clickable action={onClick} tabIndex={tabIndex} data-cy="badgeButton">
+    <Clickable action={onClick} tabIndex={tabIndex} data-cy={dataCy}>
       <span className={className}>{children}</span>
     </Clickable>
   );
