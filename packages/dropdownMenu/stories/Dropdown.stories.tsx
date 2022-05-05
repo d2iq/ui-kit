@@ -161,8 +161,8 @@ export const MenuHasMaxWidth = args => (
 const onSelect = selectedItem => {
   alert(`onSelect called with:
 
-    • selectedItem: "${selectedItem}"
-    • stateAndHelpers: Downshift state and helper fns
+    - selectedItem: "${selectedItem}"
+    - stateAndHelpers: Downshift state and helper fns
     `);
 };
 

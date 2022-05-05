@@ -30,7 +30,7 @@ describe("Toaster", () => {
 
   it("dismisses toasts", () => {
     const testToast = [<Toast id={0} title="I Am Toast" key={0} />];
-    const component = shallow(<Toaster children={testToast} />);
+    const component = shallow(<Toaster>{testToast}</Toaster>);
     const instance = component.instance() as Toaster;
     instance.dismissToast(testToast[0].props.id);
 
@@ -42,7 +42,7 @@ describe("Toaster", () => {
     const testToast = [
       <Toast id={0} title="I Am Toast" key={0} onDismiss={dismissCallback} />
     ];
-    const component = shallow(<Toaster children={testToast} />);
+    const component = shallow(<Toaster>{testToast}</Toaster>);
     const instance = component.instance() as Toaster;
     instance.dismissToast(testToast[0].props.id);
 
@@ -53,7 +53,7 @@ describe("Toaster", () => {
     const testToast = [
       <Toast id={0} autodismiss={true} title="I Am Toast" key={0} />
     ];
-    const component = shallow(<Toaster children={testToast} />);
+    const component = shallow(<Toaster>{testToast}</Toaster>);
 
     expect(Object.keys(component.state("toasts")).length).toBe(1);
     setTimeout(() => {
@@ -73,7 +73,7 @@ describe("Toaster", () => {
         onDismiss={dismissCallback}
       />
     );
-    const component = shallow(<Toaster children={[testToast]} />);
+    const component = shallow(<Toaster>{testToast}</Toaster>);
 
     expect(Object.keys(component.state("toasts")).length).toBe(1);
     setTimeout(() => {
@@ -85,11 +85,9 @@ describe("Toaster", () => {
   it("adds new `toast` with new toast received via props", () => {
     const testToastId = "testToastId";
     const ToastWithProps = passedProps => (
-      <Toaster
-        children={[
-          <Toast {...passedProps} title="I Am Toast" key={1} id={testToastId} />
-        ]}
-      />
+      <Toaster>
+        <Toast {...passedProps} title="I Am Toast" key={1} id={testToastId} />
+      </Toaster>
     );
     const newProps = {
       children: [

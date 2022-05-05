@@ -69,7 +69,7 @@ interface FieldListRowProps
 }
 
 const isRowDisabled = (rowIndex, disabledRows) =>
-  Boolean(disabledRows && disabledRows.includes(rowIndex));
+  disabledRows && disabledRows.includes(rowIndex);
 
 const FieldListRow: React.FC<FieldListRowProps> = React.memo(
   ({
@@ -235,7 +235,7 @@ const FieldList: React.FC<FieldListProps> = ({
               pathToUniqueKey
             );
             const rowKey = `fieldList.row-${
-              Boolean((pathToUniqueKey && rowId) || rowId === 0) ? rowId : i
+              (pathToUniqueKey && rowId) || rowId === 0 ? rowId : i
             }`;
             return (
               <FieldListRow

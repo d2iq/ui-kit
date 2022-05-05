@@ -62,8 +62,8 @@ describe("TextInput", () => {
   });
 
   it("should set tabIndex on input element", () => {
-    const component = mount(<TextInput id="test.input" tabIndex={2} />);
-    expect(component.find("input").prop("tabIndex")).toEqual(2);
+    const component = mount(<TextInput id="test.input" tabIndex={-2} />);
+    expect(component.find("input").prop("tabIndex")).toEqual(-2);
   });
 
   it("should call onFocus when input gains focus", () => {

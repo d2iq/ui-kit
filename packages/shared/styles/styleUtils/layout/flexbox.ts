@@ -130,7 +130,7 @@ export const flexItem = (flexStrategy: "grow" | "shrink") =>
   `;
 
 export const applyFlexItemGutters = (direction, gutterSize) => {
-  if (!Boolean(gutterSize)) {
+  if (!gutterSize) {
     return;
   }
 

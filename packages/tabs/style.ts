@@ -105,6 +105,7 @@ export const fullHeightTabs = css`
 export const getTabLayout = (direction: TabDirection): string => {
   const getHorizOrVertStyle = (direction: TabDirections) =>
     direction === "vert" ? vertTabs : horizTabs;
+  const result: string[] = [];
 
   return typeof direction === "object"
     ? cx(
@@ -117,10 +118,9 @@ export const getTabLayout = (direction: TabDirection): string => {
                 `)};
               `
             );
-
             return acc;
           },
-          Array()
+          result
         )
       )
     : getHorizOrVertStyle(direction);

@@ -80,11 +80,11 @@ describe("Clickable", () => {
     it("takes 10 as a value", () => {
       const action = jest.fn();
       const wrapper = shallow(
-        <Clickable action={action} tabIndex="10">
+        <Clickable action={action} tabIndex="-10">
           <span>default tabIndex</span>
         </Clickable>
       );
-      expect(wrapper.find("span").props().tabIndex || null).toEqual("10");
+      expect(wrapper.find("span").props().tabIndex || null).toEqual("-10");
     });
   });
 });

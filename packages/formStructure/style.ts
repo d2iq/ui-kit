@@ -32,11 +32,13 @@ const getColumnWidth = col => {
 };
 
 const generateGridColumnTemplate = (cols, removeBtnWidth) => {
+  const result: string[] = [];
+
   return cols
     .reduce((acc, curr) => {
       acc = [...acc, getColumnWidth(curr)];
       return acc;
-    }, Array())
+    }, result)
     .concat(removeBtnWidth)
     .join(" ");
 };

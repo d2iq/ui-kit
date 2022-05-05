@@ -58,7 +58,7 @@ export const getItemCountString = (
   const itemRange = `${startItemIndex}–${endItemIndex}`;
   const totalItemsLabel = totalItems ? `${totalItems} ${itemsLabel}` : "";
 
-  if (!Boolean(totalItemsLabel)) {
+  if (!totalItemsLabel) {
     return itemRange;
   }
 
@@ -231,7 +231,7 @@ const Pagination: React.FC<PaginationProps> = ({
           <form
             onSubmit={handleSubmit}
             className={cx(display("inline-block"), {
-              [defaultInputWidth]: !Boolean(totalPages)
+              [defaultInputWidth]: !totalPages
             })}
           >
             <TextInput
