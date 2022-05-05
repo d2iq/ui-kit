@@ -33,7 +33,7 @@ export const FieldListProvider: React.FC<FieldListProviderProps> = ({
         (acc, curr) => ((acc[curr] = ""), acc),
         {}
       );
-    if (pathToUniqueKey && !Boolean(rowToAdd[pathToUniqueKey])) {
+    if (pathToUniqueKey && !rowToAdd[pathToUniqueKey]) {
       rowToAdd[pathToUniqueKey] = rowId || data.length;
     }
 

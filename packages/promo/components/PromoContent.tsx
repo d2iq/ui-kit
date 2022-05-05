@@ -86,7 +86,7 @@ const PromoContent: React.FC<PromoProps> = props => {
             </SpacingBox>
           </FlexItem>
         ) : null}
-        {Boolean(optOutHandler) ? (
+        {optOutHandler ? (
           <FlexItem flex="shrink" order={2}>
             <SpacingBox
               spacingSize="l"

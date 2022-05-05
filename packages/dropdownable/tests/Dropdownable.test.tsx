@@ -20,7 +20,7 @@ expect.addSnapshotSerializer(createSerializer());
 describe("Dropdownable", () => {
   it("is visible after opening", () => {
     const component = mount(
-      <Dropdownable isOpen={false} dropdown={<p>I'm a touchdown</p>}>
+      <Dropdownable isOpen={false} dropdown={<p>I am a touchdown</p>}>
         <PrimaryButton>Click me</PrimaryButton>
       </Dropdownable>
     );

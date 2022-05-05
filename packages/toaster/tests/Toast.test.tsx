@@ -9,35 +9,33 @@ expect.addSnapshotSerializer(createSerializer());
 describe("Toast", () => {
   it("renders default", () => {
     const component = shallow(
-      <Toaster children={[<Toast title="I Am Toast" key={0} id={0} />]} />
+      <Toaster>
+        <Toast title="I Am Toast" key={0} id={0} />
+      </Toaster>
     );
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it("renders with description", () => {
     const component = shallow(
-      <Toaster
-        children={[
-          <Toast title="I Am Toast" description="Description" key={0} id={0} />
-        ]}
-      />
+      <Toaster>
+        <Toast title="I Am Toast" description="Description" key={0} id={0} />
+      </Toaster>
     );
     expect(toJson(component)).toMatchSnapshot();
   });
 
   it("renders with actions", () => {
     const component = shallow(
-      <Toaster
-        children={[
-          <Toast
-            primaryAction={<button>primaryAction</button>}
-            secondaryAction={<button>secondaryAction</button>}
-            title="I Am Toast"
-            key={0}
-            id={0}
-          />
-        ]}
-      />
+      <Toaster>
+        <Toast
+          primaryAction={<button>primaryAction</button>}
+          secondaryAction={<button>secondaryAction</button>}
+          title="I Am Toast"
+          key={0}
+          id={0}
+        />
+      </Toaster>
     );
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -45,16 +43,14 @@ describe("Toast", () => {
   it("should call the function in the action when clicked", () => {
     const action = jest.fn();
     const component = mount(
-      <Toaster
-        children={[
-          <Toast
-            primaryAction={<button onClick={action}>primaryAction</button>}
-            title="I Am Toast"
-            key={0}
-            id={0}
-          />
-        ]}
-      />
+      <Toaster>
+        <Toast
+          primaryAction={<button onClick={action}>primaryAction</button>}
+          title="I Am Toast"
+          key={0}
+          id={0}
+        />
+      </Toaster>
     );
     const primaryActionBtn = component.find(`button`);
 
@@ -66,7 +62,9 @@ describe("Toast", () => {
   it("calls dismissToast when the dismiss button is clicked", () => {
     const dismissToastSpy = jest.spyOn(Toaster.prototype, "dismissToast");
     const component = mount(
-      <Toaster children={[<Toast title="I Am Toast" key={0} id={0} />]} />
+      <Toaster>
+        <Toast title="I Am Toast" key={0} id={0} />
+      </Toaster>
     );
     const dismissBtn = component.find('span[role="button"]');
     expect(dismissToastSpy).not.toHaveBeenCalled();
@@ -76,7 +74,9 @@ describe("Toast", () => {
 
   it("should remove the Toast from the Toaster `toasts` state when the dismiss button is clicked", () => {
     const component = mount(
-      <Toaster children={[<Toast title="I Am Toast" key={0} id={0} />]} />
+      <Toaster>
+        <Toast title="I Am Toast" key={0} id={0} />
+      </Toaster>
     );
     const instance = component.find(Toaster).instance() as Toaster;
     const dismissBtn = component.find('span[role="button"]');

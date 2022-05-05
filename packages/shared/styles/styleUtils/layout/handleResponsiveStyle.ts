@@ -15,6 +15,8 @@ const parseResponsiveStyle = (
   }
 
   if (typeof value === "object") {
+    const result: string[] = [];
+
     return cx(
       Object.keys(value).reduce((acc, breakpoint) => {
         acc.push(
@@ -25,7 +27,7 @@ const parseResponsiveStyle = (
           `
         );
         return acc;
-      }, Array())
+      }, result)
     );
   }
   return css`

@@ -213,10 +213,10 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
   private getButtonContent() {
     const { iconStart, iconEnd, isProcessing, children } = this.props;
 
-    return Boolean(iconStart) || Boolean(iconEnd) ? (
+    return iconStart || iconEnd ? (
       <span className={flex({ align: "center", justify: "center" })}>
         {iconStart && this.getIconStart(iconStart)}
-        {Boolean(children) && (
+        {children && (
           <span
             className={cx(flexItem("shrink"), padding("left", "xs"), {
               [processingTextStyle]: isProcessing

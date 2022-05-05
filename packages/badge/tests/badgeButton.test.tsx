@@ -89,12 +89,12 @@ describe("BadgeButton", () => {
 
   it("contains the right tabindex", () => {
     const wrapper = mount(
-      <BadgeButton onClick={jest.fn()} tabIndex={10}>
+      <BadgeButton onClick={jest.fn()} tabIndex={-10}>
         default
       </BadgeButton>
     );
     const element = wrapper.find("span").props();
-    expect(element.tabIndex).toBe(10);
+    expect(element.tabIndex).toBe(-10);
   });
 
   it("triggers onClick on click", () => {

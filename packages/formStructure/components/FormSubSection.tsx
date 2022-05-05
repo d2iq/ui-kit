@@ -15,7 +15,7 @@ const FormSubSection = ({ children, onRemove }: FormSubSectionProps) => {
   const subSectionContent = <div className={formFieldStack}>{children}</div>;
   return (
     <Card data-cy="formSubSection">
-      {Boolean(onRemove) ? (
+      {onRemove ? (
         <Flex gutterSize="xs">
           <FlexItem>{subSectionContent}</FlexItem>
           <FlexItem flex="shrink">
