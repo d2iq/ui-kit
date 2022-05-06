@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as faker from "faker";
+import { Faker, faker } from "@faker-js/faker";
 import { DropdownSection, DropdownMenuItem } from "../dropdownMenu";
 import { Flex, FlexItem } from "../styleUtils/layout";
 import { Text } from "../styleUtils/typography";
@@ -22,16 +22,30 @@ import {
 // A low row-count as a default. Some Storybook-addon tries to stringify the whole content of the page, which makes for a slow dev-cycle. turn this up to e.g. 200 if you want to test how the table behaves under load. alternatively you could have a look at how to convince that addon to not serialize stuff...
 const ROWS = 20;
 
-type FakerData = { id: number } & Faker.Card;
+interface User {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  phone?: string;
+  website: string;
+  company: {
+    name: string;
+  };
+}
 const { floor, random } = Math;
 const getRandomInt = (max: number) => floor(random() * floor(max));
 const createCard = (_, id: number) => ({
-  ...faker.helpers.createCard(),
   id,
-  phone: Math.random() > 0.8 ? null : faker.phone.phoneNumber()
+  name: faker.name.findName(),
+  phone: Math.random() > 0.8 ? null : faker.phone.phoneNumber(),
+  username: faker.internet.userName(),
+  email: faker.internet.email(),
+  website: faker.internet.domainName(),
+  company: { name: faker.company.companyName() }
 });
 const initialData = Array.from({ length: ROWS }, createCard);
-function update<A extends { id: number } & Faker.Card>(data: A[]) {
+function update<A extends User>(data: A[]) {
   const indexToReplace = getRandomInt(data.length);
   const newEntry = createCard(null, data[indexToReplace].id);
   return data.map(e =>
@@ -42,7 +56,7 @@ const DataUpdateContainer = ({
   children,
   updateRateMs
 }: {
-  children: (_: { items: FakerData[] }) => JSX.Element;
+  children: (_: { items: User[] }) => JSX.Element;
   updateRateMs: number;
 }) => {
   const [items, setItems] = React.useState(initialData);
