@@ -17,6 +17,7 @@ export interface SidebarSubMenuProps {
   iconWidth?: IconSize;
   theme?: AppChromeTheme;
   disabled?: boolean;
+  children?: React.ReactNode | React.ReactNode[];
 }
 
 export const getSubItemList = (items: React.ReactNode[] | React.ReactNode) => (
@@ -27,13 +28,13 @@ export const getSubItemList = (items: React.ReactNode[] | React.ReactNode) => (
   </ul>
 );
 
-export const SidebarSubMenuComponent: React.FC<SidebarSubMenuProps> = ({
+export const SidebarSubMenuComponent = ({
   children,
   label,
   isOpen,
   disabled,
   menuHasIcon
-}) => {
+}: SidebarSubMenuProps) => {
   const theme: AppChromeTheme = useTheme();
 
   const dataCy = [

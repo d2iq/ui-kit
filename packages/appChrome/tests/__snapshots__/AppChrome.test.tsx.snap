@@ -87,7 +87,9 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
 <ThemeProvider
   theme={
     Object {
-      "sidebarBackgroundColor": "#1B2029",
+      "headerBackgroundColor": "#FFFFFF",
+      "headerPaddingHor": "none",
+      "headerPaddingVert": "none",
       "sidebarItemPaddingHor": "l",
       "sidebarItemPaddingVert": "none",
     }
@@ -101,7 +103,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
       data-cy="headerBar"
     >
       <div>
-        HeaderBar content goes here
+        Header content goes here
       </div>
     </div>
     <div

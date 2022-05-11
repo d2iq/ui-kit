@@ -1,13 +1,13 @@
 import { css } from "@emotion/css";
 import {
   spaceM,
-  themeBgAppHeader,
   themeBgSelected,
   themeBgHover,
   themeBgHoverInverted,
   themeTextColorPrimary,
   themeTextColorPrimaryInverted,
-  themeBgPrimaryInverted
+  themeBgDisabled,
+  themeBgPrimary
 } from "../design-tokens/build/js/designTokens";
 import { padding, tintContent } from "../shared/styles/styleUtils";
 import { pickHoverBg, pickReadableTextColor } from "../shared/styles/color";
@@ -44,8 +44,7 @@ export const appWrapper = css`
 `;
 
 export const headerBar = (theme: AppChromeTheme) => {
-  const bgColor =
-    theme.headerBackgroundColor || getCSSVarValue(themeBgAppHeader);
+  const bgColor = theme.headerBackgroundColor || getCSSVarValue(themeBgPrimary);
   const textColor = pickReadableTextColor(
     bgColor,
     getCSSVarValue(themeTextColorPrimary),
@@ -75,7 +74,7 @@ export const sidebar = css`
 
 export const sidebarContainer = (theme: AppChromeTheme, isOpen?: boolean) => {
   const bgColor =
-    theme.sidebarBackgroundColor || getCSSVarValue(themeBgPrimaryInverted);
+    theme.sidebarBackgroundColor || getCSSVarValue(themeBgDisabled);
   const textColor = pickReadableTextColor(
     bgColor,
     getCSSVarValue(themeTextColorPrimary),

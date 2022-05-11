@@ -167,7 +167,6 @@ exports[`Sidebar SidebarSubMenu renders 1`] = `
         <div>
           <SidebarItemLabel
             icon="product-components-inverse"
-            iconWidth="s"
           >
             Item label
           </SidebarItemLabel>

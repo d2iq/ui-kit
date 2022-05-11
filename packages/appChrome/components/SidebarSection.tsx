@@ -14,13 +14,11 @@ import { useTheme } from "@emotion/react";
 import { AppChromeTheme } from "../types";
 
 export interface SidebarSectionProps {
-  children:
-    | React.ReactElement<HTMLElement>
-    | Array<React.ReactElement<HTMLElement>>;
+  children: React.ReactNode | React.ReactNode[];
   label?: React.ReactElement<HTMLElement> | string;
 }
 
-const SidebarSection: React.FC<SidebarSectionProps> = ({ label, children }) => {
+const SidebarSection = ({ label, children }: SidebarSectionProps) => {
   const theme: AppChromeTheme = useTheme();
 
   return (

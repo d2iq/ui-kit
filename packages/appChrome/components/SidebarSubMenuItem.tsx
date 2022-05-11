@@ -23,10 +23,17 @@ import { pickReadableTextColor } from "../../shared/styles/color";
 import { AppChromeTheme, SidebarNavItemProps } from "../types";
 import { IconSize } from "../../shared/types/iconSize";
 
-const SidebarSubMenuItemText: React.FC<{
+export interface SidebarSubMenuItemTextProps {
   menuHasIcon: boolean;
   iconContainerWidth: IconSize;
-}> = ({ children, menuHasIcon, iconContainerWidth }) => (
+  children?: React.ReactNode;
+}
+
+const SidebarSubMenuItemText = ({
+  children,
+  menuHasIcon,
+  iconContainerWidth
+}: SidebarSubMenuItemTextProps) => (
   <span
     className={cx(subMenuItemText, {
       [spaceMenuIcon(iconContainerWidth)]: menuHasIcon
@@ -36,14 +43,14 @@ const SidebarSubMenuItemText: React.FC<{
   </span>
 );
 
-const SidebarSubMenuItem: React.FC<SidebarNavItemProps> = ({
+const SidebarSubMenuItem = ({
   children,
   disabled,
   isActive,
   onClick,
   openInNewTab,
   url
-}) => {
+}: SidebarNavItemProps) => {
   const theme: AppChromeTheme & { menuHasIcon: boolean } = useTheme();
   const iconContainerWidth = theme.iconWidth || "s";
   const sidebarBgColor = theme?.sidebarBackgroundColor

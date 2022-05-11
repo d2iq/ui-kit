@@ -2,14 +2,33 @@ import * as React from "react";
 import { cx } from "@emotion/css";
 import { ThemeProvider, useTheme } from "@emotion/react";
 import { sidebar, sidebarAnimator, sidebarContainer } from "../style";
-import { themeBgPrimaryInverted } from "../../design-tokens/build/js/designTokens";
+import { themeBgDisabled } from "../../design-tokens/build/js/designTokens";
 import getCSSVarValue from "../../utilities/getCSSVarValue";
 import { getResponsiveStyle } from "../../shared/styles/styleUtils";
 import { AppChromeTheme } from "../types";
 export interface SidebarProps {
+  /**
+   * Whether a sidebar items contents are visible
+   */
   isOpen: boolean;
+  /** Function that gets called when a sidebar item opens */
   onOpen?: () => void;
+  /** Function that gets called when a sidebar item closes */
   onClose?: () => void;
+  /** Children to render inside of the sidebar */
+  children?: React.ReactNode;
+  /**
+   * Changes the background color for the entire sidebar
+   */
+  bgColor?: string;
+  /**
+   *  Changes the color for sidebar items on hover
+   */
+  hoverColor?: string;
+  /**
+   * Changes the color for sidebar items in an active selected state
+   */
+  activeColor?: string;
 }
 
 const defaultSidebarWidths = {
@@ -17,10 +36,7 @@ const defaultSidebarWidths = {
   large: "280px"
 };
 
-const StyledSidebar: React.FC<{ isOpen?: boolean }> = ({
-  children,
-  isOpen
-}) => {
+const StyledSidebar = ({ children, isOpen }: SidebarProps) => {
   const theme: AppChromeTheme = useTheme();
 
   return (
@@ -43,12 +59,15 @@ const StyledSidebar: React.FC<{ isOpen?: boolean }> = ({
   );
 };
 
-const Sidebar: React.FC<SidebarProps> = ({
+const Sidebar = ({
   children,
   isOpen,
   onClose,
-  onOpen
-}) => {
+  onOpen,
+  bgColor,
+  activeColor,
+  hoverColor
+}: SidebarProps) => {
   // Used to only call `onOpen`/`onClose` when the `isOpen` prop changes.
   // Source: https://dev.to/savagepixie/how-to-mimic-componentdidupdate-with-react-hooks-3j8c
   const didMountRef = React.useRef(false);
@@ -66,7 +85,10 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   const adjustedTheme = ancestorTheme => {
     return {
-      sidebarBackgroundColor: getCSSVarValue(themeBgPrimaryInverted),
+      sidebarBackgroundColor: bgColor || getCSSVarValue(themeBgDisabled),
+      // TODO update these with design tokens
+      itemActiveBackgroundColor: activeColor || "#D0D4D7",
+      itemHoverBackgroundColor: hoverColor || "#DDDFE2",
       sidebarWidth: defaultSidebarWidths,
       ...ancestorTheme
     };
