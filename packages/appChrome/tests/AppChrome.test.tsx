@@ -12,7 +12,7 @@ describe("AppChrome", () => {
     const component = shallow(
       <AppChrome
         sidebar={<div>Sidebar content</div>}
-        headerBar={<div>HeaderBar content goes here</div>}
+        headerBar={<div>Header content goes here</div>}
         mainContent={<div>Main app content goes here</div>}
       />
     );

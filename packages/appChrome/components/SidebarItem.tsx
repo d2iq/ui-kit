@@ -14,14 +14,14 @@ export interface SidebarItemProps extends SidebarNavItemProps {
 export const defaultSidebarItemHorizPaddingSize = "l";
 export const defaultSidebarItemVertPaddingSize = "none";
 
-const SidebarItemComponent: React.FC<SidebarItemProps> = ({
+const SidebarItemComponent = ({
   children,
   disabled,
   isActive,
   onClick,
   openInNewTab,
   url
-}) => {
+}: SidebarItemProps) => {
   const theme: AppChromeTheme = useTheme();
   const dataCy = [
     "sidebarItem",

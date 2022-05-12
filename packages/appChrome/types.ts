@@ -26,4 +26,5 @@ export interface SidebarNavItemProps extends LinkProps {
   isActive?: boolean;
   onClick?: (event?: React.SyntheticEvent<HTMLElement>) => void;
   disabled?: boolean;
+  children?: React.ReactNode | React.ReactNode[];
 }

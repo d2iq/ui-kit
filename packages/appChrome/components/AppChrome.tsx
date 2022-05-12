@@ -8,12 +8,15 @@ import {
   flush
 } from "../../shared/styles/styleUtils";
 import { ThemeProvider } from "@emotion/react";
-import getCSSVarValue from "../../utilities/getCSSVarValue";
-import { themeBgPrimaryInverted } from "../../design-tokens/build/js/designTokens";
 import {
   defaultSidebarItemHorizPaddingSize,
   defaultSidebarItemVertPaddingSize
 } from "./SidebarItem";
+import {
+  defaultBgColor,
+  defaultHeaderPaddingHor,
+  defaultHeaderPaddingVert
+} from "./HeaderBar";
 
 export interface AppChromeProps {
   sidebar: React.ReactNode;
@@ -21,42 +24,36 @@ export interface AppChromeProps {
   mainContent: React.ReactNode;
 }
 
-class AppChrome extends React.PureComponent<AppChromeProps, {}> {
-  public render() {
-    const { sidebar, headerBar, mainContent } = this.props;
-
-    return (
-      <ThemeProvider
-        theme={{
-          sidebarBackgroundColor: getCSSVarValue(themeBgPrimaryInverted),
-          sidebarItemPaddingHor: defaultSidebarItemHorizPaddingSize,
-          sidebarItemPaddingVert: defaultSidebarItemVertPaddingSize
-        }}
+const AppChrome = ({ sidebar, headerBar, mainContent }: AppChromeProps) => {
+  return (
+    <ThemeProvider
+      theme={{
+        sidebarItemPaddingHor: defaultSidebarItemHorizPaddingSize,
+        sidebarItemPaddingVert: defaultSidebarItemVertPaddingSize,
+        headerPaddingHor: defaultHeaderPaddingHor,
+        headerPaddingVert: defaultHeaderPaddingVert,
+        headerBackgroundColor: defaultBgColor
+      }}
+    >
+      <div
+        className={cx(appChrome, textSize("m"), flex({ direction: "column" }))}
+        data-cy="appChrome"
       >
-        <div
-          className={cx(
-            appChrome,
-            textSize("m"),
-            flex({ direction: "column" })
-          )}
-          data-cy="appChrome"
-        >
-          <div data-cy="headerBar">{headerBar}</div>
-          <div className={cx(flex(), appWrapper)}>
-            <div className={flexItem("shrink")} data-cy="sidebar">
-              {sidebar}
-            </div>
-            <main
-              className={cx(flexItem("grow"), flush("left"), appWrapper)}
-              data-cy="main"
-            >
-              {mainContent}
-            </main>
+        <div data-cy="headerBar">{headerBar}</div>
+        <div className={cx(flex(), appWrapper)}>
+          <div className={flexItem("shrink")} data-cy="sidebar">
+            {sidebar}
           </div>
+          <main
+            className={cx(flexItem("grow"), flush("left"), appWrapper)}
+            data-cy="main"
+          >
+            {mainContent}
+          </main>
         </div>
-      </ThemeProvider>
-    );
-  }
-}
+      </div>
+    </ThemeProvider>
+  );
+};
 
 export default AppChrome;

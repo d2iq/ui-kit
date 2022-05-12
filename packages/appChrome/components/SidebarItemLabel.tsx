@@ -7,34 +7,32 @@ import IconPropAdapter from "../../icon/components/IconPropAdapter";
 import { IconSize } from "../../shared/types/iconSize";
 
 export interface SidebarItemLabelProps {
-  children?: React.ReactElement<HTMLElement> | string;
+  children?: React.ReactNode;
   icon?: IconShapes | React.ReactElement<HTMLElement>;
   iconWidth?: IconSize;
 }
 
-const SidebarItemLabel: React.FC<SidebarItemLabelProps> = ({
+const SidebarItemLabel = ({
   children,
   icon,
-  iconWidth
-}) => (
-  <div className={cx(flex({ align: "center" }), sidebarItemHeight)}>
-    {icon && (
-      <div
-        className={cx(
-          flexItem("shrink"),
-          padding("right", "m"),
-          sidebarNavItemIconWrap
-        )}
-      >
-        <IconPropAdapter icon={icon} size={iconWidth} color="inherit" />
-      </div>
-    )}
-    <div className={flexItem("grow")}>{children}</div>
-  </div>
-);
-
-SidebarItemLabel.defaultProps = {
-  iconWidth: "s"
+  iconWidth = "s"
+}: SidebarItemLabelProps) => {
+  return (
+    <div className={cx(flex({ align: "center" }), sidebarItemHeight)}>
+      {icon && (
+        <div
+          className={cx(
+            flexItem("shrink"),
+            padding("right", "m"),
+            sidebarNavItemIconWrap
+          )}
+        >
+          <IconPropAdapter icon={icon} size={iconWidth} color="inherit" />
+        </div>
+      )}
+      <div className={flexItem("grow")}>{children}</div>
+    </div>
+  );
 };
 
 export default SidebarItemLabel;
