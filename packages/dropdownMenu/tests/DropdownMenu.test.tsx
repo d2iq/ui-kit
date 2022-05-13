@@ -181,17 +181,17 @@ describe("Dropdown", () => {
 
     trigger.simulate("focus");
     trigger.simulate("keyDown", {
-      key: " " // space bar
+      key: " ", // space bar
+      keyCode: 32
     });
-    trigger.simulate("blur");
 
     expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
 
     trigger.simulate("focus");
     trigger.simulate("keyDown", {
-      key: " " // space bar
+      key: " ", // space bar
+      keyCode: 32
     });
-    trigger.simulate("blur");
 
     expect(component.find(DropdownContents).length).toBe(0);
   });
@@ -222,23 +222,23 @@ describe("Dropdown", () => {
 
     trigger.simulate("focus");
     trigger.simulate("keyDown", {
-      key: " " // space bar
+      key: " ", // space bar
+      keyCode: 32
     });
     expect(onSelectFn).not.toHaveBeenCalled();
     trigger.simulate("keyDown", {
-      key: "ArrowDown"
+      key: "ArrowDown",
+      keyCode: 40
     });
     trigger.simulate("keyDown", {
-      key: "Enter"
+      key: "Enter",
+      keyCode: 13
     });
     trigger.simulate("blur");
 
-    // using `expect.anything()` because the second parameter is an object
-    // that comes from Downshift, and there's no good way to know exactly
-    // what to expect
-    expect(onSelectFn).toHaveBeenCalledWith("edit", expect.anything());
+    expect(onSelectFn).toHaveBeenCalledWith("edit");
   });
-  it("calls onSelect prop with the selected value", () => {
+  it("does not call onSelect prop with the selected value on disabled items", () => {
     const onSelectFn = jest.fn();
     const component = mount(
       <DropdownMenu
@@ -246,7 +246,7 @@ describe("Dropdown", () => {
         trigger={<div id={triggerId}>Dropdown trigger</div>}
       >
         <DropdownSection>
-          <DropdownMenuItem disabled={true} key="edit" value="edit">
+          <DropdownMenuItem disabled key="edit" value="edit">
             Edit
           </DropdownMenuItem>
           <DropdownMenuItem key="scale" value="scale">
@@ -265,20 +265,20 @@ describe("Dropdown", () => {
 
     trigger.simulate("focus");
     trigger.simulate("keyDown", {
-      key: " " // space bar
+      key: " ", // space bar
+      keyCode: 32
     });
     expect(onSelectFn).not.toHaveBeenCalled();
     trigger.simulate("keyDown", {
-      key: "ArrowDown"
+      key: "ArrowDown",
+      keyCode: 40
     });
     trigger.simulate("keyDown", {
-      key: "Enter"
+      key: "Enter",
+      keyCode: 13
     });
     trigger.simulate("blur");
 
-    // using `expect.anything()` because the second parameter is an object
-    // that comes from Downshift, and there's no good way to know exactly
-    // what to expect
-    expect(onSelectFn).not.toHaveBeenCalledWith("edit", expect.anything());
+    expect(onSelectFn).not.toHaveBeenCalledWith("edit");
   });
 });

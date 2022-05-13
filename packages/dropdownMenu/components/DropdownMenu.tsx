@@ -1,10 +1,8 @@
 import * as React from "react";
-import { cx } from "@emotion/css";
-import Downshift, { ControllerStateAndHelpers } from "downshift";
+import { useId } from "react-id-generator";
 import { Dropdownable } from "../../dropdownable";
-import { border, buttonReset, display } from "../../shared/styles/styleUtils";
+import { buttonReset, display } from "../../shared/styles/styleUtils";
 import PopoverBox from "../../popover/components/PopoverBox";
-import PopoverListItem from "../../popover/components/PopoverListItem";
 import { DropdownSectionProps } from "./DropdownSection";
 import { DropdownMenuItemProps } from "./DropdownMenuItem";
 import { Direction } from "../../dropdownable/components/Dropdownable";
@@ -31,12 +29,7 @@ export interface DropdownMenuProps {
   /**
    * callback for when a menu item is clicked
    */
-  onSelect?: (
-    selectedItem: string,
-    stateAndHelpers?: ControllerStateAndHelpers<
-      React.ReactElement<DropdownMenuItemProps>
-    >
-  ) => void;
+  onSelect?: (selectedItem: string) => void;
   /**
    * which DOM node the dropdown menu will attach to
    */
@@ -67,120 +60,204 @@ const DropdownMenu = (props: DropdownMenuProps) => {
     preferredDirections,
     trigger
   } = props;
+  const [menuId] = useId(1, "menu");
+  const [isOpen, setIsOpen] = React.useState(initialIsOpen || false);
+  const [highlightedIndex, setHighlightedIndex] = React.useState<number | null>(
+    null
+  );
   const defaultItemToString = (
     item: React.ReactElement<DropdownMenuItemProps>
   ) => (item ? item.props.value : "");
   const handleSelection = (
-    selectedItem: React.ReactElement<DropdownMenuItemProps>,
-    stateAndHelpers?: ControllerStateAndHelpers<
-      React.ReactElement<DropdownMenuItemProps>
-    >
+    selectedItem: React.ReactElement<DropdownMenuItemProps>
   ) => {
     if (onSelect) {
-      onSelect(defaultItemToString(selectedItem), stateAndHelpers);
+      onSelect(defaultItemToString(selectedItem));
     }
   };
 
-  const getDropdownContents = (highlightedIndex, getItemProps) =>
-    (
-      React.Children.toArray(children) as Array<
-        React.ReactElement<DropdownSectionProps>
-      >
-    ).reduce<{
-      sections: React.ReactNodeArray;
-      menuItemIndex: number;
-    }>(
-      (acc, item, sectionIndex) => {
-        const { sections = [] } = acc;
-        const { children } = item.props;
-        const menuItems = React.Children.toArray(children);
-        const childrenWithKeys = menuItems.map((child, i) => {
-          acc.menuItemIndex++;
+  const arrayChildren = React.Children.toArray(children) as Array<
+    React.ReactElement<DropdownSectionProps>
+  >;
+  const flatItems = arrayChildren.flatMap(section => section.props.children);
 
-          return (
-            <PopoverListItem
-              listLength={menuItems.length}
-              isActive={highlightedIndex === acc.menuItemIndex}
-              appearance={child.props.appearance}
-              index={i}
-              key={child.key || `${sectionIndex}-${i}`}
-              {...getItemProps({
-                item: child,
-                disabled: child.props.disabled
-              })}
-            >
-              {child}
-            </PopoverListItem>
-          );
-        });
+  const handleButtonClick = e => {
+    e.preventDefault();
 
-        return {
-          sections: [...sections, childrenWithKeys],
-          menuItemIndex: acc.menuItemIndex
-        };
-      },
-      { sections: [], menuItemIndex: -1 }
-    );
+    setIsOpen(!isOpen);
+    setHighlightedIndex(null);
+  };
+
+  const resetState = () => {
+    setIsOpen(initialIsOpen || false);
+    setHighlightedIndex(null);
+  };
+
+  const handleEnter = event => {
+    if (isOpen && highlightedIndex != null) {
+      event.preventDefault();
+
+      const item = flatItems[highlightedIndex];
+      // do nothing for disabled items
+      if (item == null || item.props.disabled) {
+        return;
+      }
+
+      handleSelection(item);
+    }
+  };
+
+  const handleArrowUp = event => {
+    event.preventDefault();
+    if (isOpen && flatItems.length) {
+      if (highlightedIndex === null || highlightedIndex === 0) {
+        // jump to bottom of menu if on first one
+        setHighlightedIndex(flatItems.length - 1);
+      } else {
+        // decrement index
+        setHighlightedIndex(highlightedIndex - 1);
+      }
+    } else {
+      setIsOpen(true);
+      if (flatItems.length) {
+        // start at bottom if opening with arrow up
+        setHighlightedIndex(flatItems.length - 1);
+      }
+    }
+  };
+
+  const handleArrowDown = event => {
+    event.preventDefault();
+    if (isOpen && flatItems.length) {
+      if (
+        highlightedIndex === null ||
+        highlightedIndex === flatItems.length - 1
+      ) {
+        // jump back to top of menu if at the end
+        setHighlightedIndex(0);
+      } else {
+        // increment index
+        setHighlightedIndex(highlightedIndex + 1);
+      }
+    } else {
+      setIsOpen(true);
+      if (flatItems.length) {
+        // when opening menu, highlight first one
+        setHighlightedIndex(0);
+      }
+    }
+  };
+
+  const handleButtonKeyDown = event => {
+    const { keyCode } = event;
+
+    switch (keyCode) {
+      case 13:
+        // enter key
+        return handleEnter(event);
+      case 27:
+        // escape key
+        event.preventDefault();
+        return resetState();
+      case 32:
+        // spacebar behaves the same as a click
+        return handleButtonClick(event);
+      case 38:
+        // arrow up
+        return handleArrowUp(event);
+      case 40:
+        // arrow down
+        return handleArrowDown(event);
+    }
+  };
+
+  const toggleProps = {
+    "aria-haspopup": true,
+    "aria-label": isOpen ? "close menu" : "open menu",
+    "data-toggle": true,
+    role: "button",
+    onBlur: resetState,
+    onClick: handleButtonClick,
+    onKeyUp: e => e.preventDefault(),
+    onKeyDown: handleButtonKeyDown
+  };
 
   return (
-    <Downshift
-      itemToString={defaultItemToString}
-      onSelect={handleSelection}
-      initialIsOpen={initialIsOpen}
-    >
-      {({
-        getToggleButtonProps,
-        getItemProps,
-        getMenuProps,
-        highlightedIndex,
-        isOpen
-      }) => (
-        <div className={display("inline-block")}>
-          <Dropdownable
-            isOpen={isOpen}
-            overlayRoot={overlayRoot}
-            preferredDirections={preferredDirections}
-            dropdown={
-              <PopoverBox
-                maxHeight={menuMaxHeight}
-                maxWidth={menuMaxWidth}
-                {...getMenuProps(
-                  { refKey: "menuRef" },
-                  // The menu is not mounted when `isOpen` is false, so Downshift's ref check fails incorrectly
-                  // The menu behaves as expected, and has all the correct attributes
-                  { suppressRefError: true }
-                )}
-              >
-                {getDropdownContents(
-                  highlightedIndex,
-                  getItemProps
-                ).sections.map((sectionContent, i) => (
-                  <div
-                    key={`dropdown-${i}`}
-                    className={cx({ [border("top")]: i !== 0 })}
-                  >
-                    {sectionContent}
-                  </div>
-                ))}
-              </PopoverBox>
-            }
-            disablePortal={disablePortal}
+    <div className={display("inline-block")}>
+      <Dropdownable
+        isOpen={isOpen}
+        overlayRoot={overlayRoot}
+        preferredDirections={preferredDirections}
+        dropdown={
+          <PopoverBox
+            maxHeight={menuMaxHeight}
+            maxWidth={menuMaxWidth}
+            role="listbox"
+            id={menuId}
+            aria-labelledby={`${menuId}-label`}
           >
-            {React.isValidElement(trigger) ? (
-              React.cloneElement(trigger, {
-                ...getToggleButtonProps({
-                  tabIndex: 0
-                })
-              })
-            ) : (
-              <button {...getToggleButtonProps()} className={buttonReset}>
-                {trigger}
-              </button>
-            )}
-          </Dropdownable>
-        </div>
-      )}
-    </Downshift>
+            {
+              arrayChildren.reduce<{
+                sections: React.ReactNodeArray;
+                menuItemIndex: number;
+              }>(
+                (acc, section, sectionIndex) => {
+                  const { children: sectionChildren } = section.props;
+                  const menuItems = React.Children.toArray(sectionChildren);
+
+                  // should be DropdownSections
+                  const newSection = React.cloneElement(section, {
+                    sectionIndex,
+                    children: menuItems.map((child, index) => {
+                      acc.menuItemIndex++;
+
+                      // set this as a variable for future reference
+                      const itemIndex = acc.menuItemIndex;
+                      const isActive = highlightedIndex === itemIndex;
+
+                      const handleHighlighted = () => {
+                        if (isActive) {
+                          return;
+                        }
+                        setHighlightedIndex(itemIndex);
+                      };
+
+                      // should be DropdownMenuItems
+                      return React.cloneElement(child, {
+                        listLength: menuItems.length,
+                        index,
+                        isActive,
+                        onMouseMove: handleHighlighted,
+                        onClick: () => handleSelection(child),
+                        id: `${menuId}-item-${itemIndex}`
+                      });
+                    })
+                  });
+
+                  return {
+                    sections: [...acc.sections, newSection],
+                    menuItemIndex: acc.menuItemIndex
+                  };
+                },
+                { sections: [], menuItemIndex: -1 }
+              ).sections
+            }
+          </PopoverBox>
+        }
+        disablePortal={disablePortal}
+      >
+        {React.isValidElement(trigger) ? (
+          React.cloneElement(trigger, {
+            ...toggleProps,
+            tabIndex: 0
+          })
+        ) : (
+          <button type="button" {...toggleProps} className={buttonReset}>
+            {trigger}
+          </button>
+        )}
+      </Dropdownable>
+    </div>
   );
 };
 

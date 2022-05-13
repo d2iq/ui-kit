@@ -8,7 +8,7 @@ interface PopoverListItemProps extends IconProps {
   position?: "start" | "end";
 }
 
-const PopoverListItemIcon: React.SFC<PopoverListItemProps> = props => (
+const PopoverListItemIcon = (props: PopoverListItemProps) => (
   <Icon {...props} />
 );
 

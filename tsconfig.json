@@ -17,7 +17,7 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "tsBuildInfoFile": ".tsbuildinfo",
-    "lib": ["es6", "dom", "es2017"]
+    "lib": ["es6", "dom", "es2017", "es2019"]
   },
   "include": [
     "./packages/index.ts",

@@ -1521,129 +1521,94 @@ exports[`Table v2 rendering renders default 1`] = `
                   </ResetButton>
                 }
               >
-                <Downshift
-                  defaultHighlightedIndex={null}
-                  defaultIsOpen={false}
-                  environment={[Window]}
-                  getA11yStatusMessage={[Function]}
-                  itemToString={[Function]}
-                  onChange={[Function]}
-                  onInputValueChange={[Function]}
-                  onOuterClick={[Function]}
-                  onSelect={[Function]}
-                  onStateChange={[Function]}
-                  onUserAction={[Function]}
-                  scrollIntoView={[Function]}
-                  selectedItemChanged={[Function]}
-                  stateReducer={[Function]}
-                  suppressRefError={false}
+                <div
+                  className="css-b0z14z"
                 >
-                  <div
-                    aria-expanded={false}
-                    aria-haspopup="listbox"
-                    aria-labelledby="downshift-0-label"
-                    aria-owns={null}
-                    className="css-b0z14z"
-                    role="combobox"
-                  >
-                    <Dropdownable
-                      dropdown={
-                        <Popover
-                          aria-labelledby="downshift-0-label"
-                          id="downshift-0-menu"
-                          menuRef={[Function]}
-                          role="listbox"
+                  <Dropdownable
+                    dropdown={
+                      <Popover
+                        aria-labelledby="menu2-label"
+                        id="menu2"
+                        role="listbox"
+                      >
+                        <DropdownSection
+                          sectionIndex={0}
                         >
-                          <div
-                            className=""
+                          <DropdownMenuItem
+                            id="menu2-item-0"
+                            index={0}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="edit"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-0-item-0"
-                              index={0}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-0-item-1"
-                              index={1}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-0-item-2"
-                              index={2}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-0-item-3"
-                              index={3}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
-                        </Popover>
-                      }
-                      isOpen={false}
-                      preferredDirections={
-                        Array [
-                          "bottom-end",
-                          "bottom-start",
-                          "bottom",
-                          "top-end",
-                          "top",
-                          "top-start",
-                        ]
-                      }
-                    >
-                      <div>
-                        <ResetButton
+                            Edit
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu2-item-1"
+                            index={1}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="scale"
+                          >
+                            Scale
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu2-item-2"
+                            index={2}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="restart"
+                          >
+                            Restart
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu2-item-3"
+                            index={3}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="stop"
+                          >
+                            Stop
+                          </DropdownMenuItem>
+                        </DropdownSection>
+                      </Popover>
+                    }
+                    isOpen={false}
+                    preferredDirections={
+                      Array [
+                        "bottom-end",
+                        "bottom-start",
+                        "bottom",
+                        "top-end",
+                        "top",
+                        "top-start",
+                      ]
+                    }
+                  >
+                    <div>
+                      <ResetButton
+                        aria-haspopup={true}
+                        aria-label="open menu"
+                        data-toggle={true}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <button
                           aria-haspopup={true}
                           aria-label="open menu"
+                          className="css-1smnoyq"
                           data-toggle={true}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -1653,48 +1618,34 @@ exports[`Table v2 rendering renders default 1`] = `
                           tabIndex={0}
                           type="button"
                         >
-                          <button
-                            aria-haspopup={true}
-                            aria-label="open menu"
-                            className="css-1smnoyq"
-                            data-toggle={true}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            role="button"
-                            tabIndex={0}
-                            type="button"
+                          <div
+                            tabIndex={-1}
                           >
-                            <div
-                              tabIndex={-1}
+                            <Icon
+                              shape="system-ellipsis-vertical"
+                              size="xs"
                             >
-                              <Icon
-                                shape="system-ellipsis-vertical"
-                                size="xs"
+                              <svg
+                                aria-label="system-ellipsis-vertical icon"
+                                className="css-jbdp75"
+                                data-cy="icon"
+                                height={16}
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
+                                viewBox="0 0 16 16"
+                                width={16}
                               >
-                                <svg
-                                  aria-label="system-ellipsis-vertical icon"
-                                  className="css-jbdp75"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
-                                >
-                                  <use
-                                    xlinkHref="#system-ellipsis-vertical"
-                                  />
-                                </svg>
-                              </Icon>
-                            </div>
-                          </button>
-                        </ResetButton>
-                      </div>
-                    </Dropdownable>
-                  </div>
-                </Downshift>
+                                <use
+                                  xlinkHref="#system-ellipsis-vertical"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                        </button>
+                      </ResetButton>
+                    </div>
+                  </Dropdownable>
+                </div>
               </DropdownMenu>
             </div>
           </Component>
@@ -1915,129 +1866,94 @@ exports[`Table v2 rendering renders default 1`] = `
                   </ResetButton>
                 }
               >
-                <Downshift
-                  defaultHighlightedIndex={null}
-                  defaultIsOpen={false}
-                  environment={[Window]}
-                  getA11yStatusMessage={[Function]}
-                  itemToString={[Function]}
-                  onChange={[Function]}
-                  onInputValueChange={[Function]}
-                  onOuterClick={[Function]}
-                  onSelect={[Function]}
-                  onStateChange={[Function]}
-                  onUserAction={[Function]}
-                  scrollIntoView={[Function]}
-                  selectedItemChanged={[Function]}
-                  stateReducer={[Function]}
-                  suppressRefError={false}
+                <div
+                  className="css-b0z14z"
                 >
-                  <div
-                    aria-expanded={false}
-                    aria-haspopup="listbox"
-                    aria-labelledby="downshift-1-label"
-                    aria-owns={null}
-                    className="css-b0z14z"
-                    role="combobox"
-                  >
-                    <Dropdownable
-                      dropdown={
-                        <Popover
-                          aria-labelledby="downshift-1-label"
-                          id="downshift-1-menu"
-                          menuRef={[Function]}
-                          role="listbox"
+                  <Dropdownable
+                    dropdown={
+                      <Popover
+                        aria-labelledby="menu3-label"
+                        id="menu3"
+                        role="listbox"
+                      >
+                        <DropdownSection
+                          sectionIndex={0}
                         >
-                          <div
-                            className=""
+                          <DropdownMenuItem
+                            id="menu3-item-0"
+                            index={0}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="edit"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-1-item-0"
-                              index={0}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-1-item-1"
-                              index={1}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-1-item-2"
-                              index={2}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-1-item-3"
-                              index={3}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
-                        </Popover>
-                      }
-                      isOpen={false}
-                      preferredDirections={
-                        Array [
-                          "bottom-end",
-                          "bottom-start",
-                          "bottom",
-                          "top-end",
-                          "top",
-                          "top-start",
-                        ]
-                      }
-                    >
-                      <div>
-                        <ResetButton
+                            Edit
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu3-item-1"
+                            index={1}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="scale"
+                          >
+                            Scale
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu3-item-2"
+                            index={2}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="restart"
+                          >
+                            Restart
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu3-item-3"
+                            index={3}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="stop"
+                          >
+                            Stop
+                          </DropdownMenuItem>
+                        </DropdownSection>
+                      </Popover>
+                    }
+                    isOpen={false}
+                    preferredDirections={
+                      Array [
+                        "bottom-end",
+                        "bottom-start",
+                        "bottom",
+                        "top-end",
+                        "top",
+                        "top-start",
+                      ]
+                    }
+                  >
+                    <div>
+                      <ResetButton
+                        aria-haspopup={true}
+                        aria-label="open menu"
+                        data-toggle={true}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <button
                           aria-haspopup={true}
                           aria-label="open menu"
+                          className="css-1smnoyq"
                           data-toggle={true}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -2047,48 +1963,34 @@ exports[`Table v2 rendering renders default 1`] = `
                           tabIndex={0}
                           type="button"
                         >
-                          <button
-                            aria-haspopup={true}
-                            aria-label="open menu"
-                            className="css-1smnoyq"
-                            data-toggle={true}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            role="button"
-                            tabIndex={0}
-                            type="button"
+                          <div
+                            tabIndex={-1}
                           >
-                            <div
-                              tabIndex={-1}
+                            <Icon
+                              shape="system-ellipsis-vertical"
+                              size="xs"
                             >
-                              <Icon
-                                shape="system-ellipsis-vertical"
-                                size="xs"
+                              <svg
+                                aria-label="system-ellipsis-vertical icon"
+                                className="css-jbdp75"
+                                data-cy="icon"
+                                height={16}
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
+                                viewBox="0 0 16 16"
+                                width={16}
                               >
-                                <svg
-                                  aria-label="system-ellipsis-vertical icon"
-                                  className="css-jbdp75"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
-                                >
-                                  <use
-                                    xlinkHref="#system-ellipsis-vertical"
-                                  />
-                                </svg>
-                              </Icon>
-                            </div>
-                          </button>
-                        </ResetButton>
-                      </div>
-                    </Dropdownable>
-                  </div>
-                </Downshift>
+                                <use
+                                  xlinkHref="#system-ellipsis-vertical"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                        </button>
+                      </ResetButton>
+                    </div>
+                  </Dropdownable>
+                </div>
               </DropdownMenu>
             </div>
           </Component>
@@ -2309,129 +2211,94 @@ exports[`Table v2 rendering renders default 1`] = `
                   </ResetButton>
                 }
               >
-                <Downshift
-                  defaultHighlightedIndex={null}
-                  defaultIsOpen={false}
-                  environment={[Window]}
-                  getA11yStatusMessage={[Function]}
-                  itemToString={[Function]}
-                  onChange={[Function]}
-                  onInputValueChange={[Function]}
-                  onOuterClick={[Function]}
-                  onSelect={[Function]}
-                  onStateChange={[Function]}
-                  onUserAction={[Function]}
-                  scrollIntoView={[Function]}
-                  selectedItemChanged={[Function]}
-                  stateReducer={[Function]}
-                  suppressRefError={false}
+                <div
+                  className="css-b0z14z"
                 >
-                  <div
-                    aria-expanded={false}
-                    aria-haspopup="listbox"
-                    aria-labelledby="downshift-2-label"
-                    aria-owns={null}
-                    className="css-b0z14z"
-                    role="combobox"
-                  >
-                    <Dropdownable
-                      dropdown={
-                        <Popover
-                          aria-labelledby="downshift-2-label"
-                          id="downshift-2-menu"
-                          menuRef={[Function]}
-                          role="listbox"
+                  <Dropdownable
+                    dropdown={
+                      <Popover
+                        aria-labelledby="menu4-label"
+                        id="menu4"
+                        role="listbox"
+                      >
+                        <DropdownSection
+                          sectionIndex={0}
                         >
-                          <div
-                            className=""
+                          <DropdownMenuItem
+                            id="menu4-item-0"
+                            index={0}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="edit"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-2-item-0"
-                              index={0}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-2-item-1"
-                              index={1}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-2-item-2"
-                              index={2}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-2-item-3"
-                              index={3}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
-                        </Popover>
-                      }
-                      isOpen={false}
-                      preferredDirections={
-                        Array [
-                          "bottom-end",
-                          "bottom-start",
-                          "bottom",
-                          "top-end",
-                          "top",
-                          "top-start",
-                        ]
-                      }
-                    >
-                      <div>
-                        <ResetButton
+                            Edit
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu4-item-1"
+                            index={1}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="scale"
+                          >
+                            Scale
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu4-item-2"
+                            index={2}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="restart"
+                          >
+                            Restart
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu4-item-3"
+                            index={3}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="stop"
+                          >
+                            Stop
+                          </DropdownMenuItem>
+                        </DropdownSection>
+                      </Popover>
+                    }
+                    isOpen={false}
+                    preferredDirections={
+                      Array [
+                        "bottom-end",
+                        "bottom-start",
+                        "bottom",
+                        "top-end",
+                        "top",
+                        "top-start",
+                      ]
+                    }
+                  >
+                    <div>
+                      <ResetButton
+                        aria-haspopup={true}
+                        aria-label="open menu"
+                        data-toggle={true}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <button
                           aria-haspopup={true}
                           aria-label="open menu"
+                          className="css-1smnoyq"
                           data-toggle={true}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -2441,48 +2308,34 @@ exports[`Table v2 rendering renders default 1`] = `
                           tabIndex={0}
                           type="button"
                         >
-                          <button
-                            aria-haspopup={true}
-                            aria-label="open menu"
-                            className="css-1smnoyq"
-                            data-toggle={true}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            role="button"
-                            tabIndex={0}
-                            type="button"
+                          <div
+                            tabIndex={-1}
                           >
-                            <div
-                              tabIndex={-1}
+                            <Icon
+                              shape="system-ellipsis-vertical"
+                              size="xs"
                             >
-                              <Icon
-                                shape="system-ellipsis-vertical"
-                                size="xs"
+                              <svg
+                                aria-label="system-ellipsis-vertical icon"
+                                className="css-jbdp75"
+                                data-cy="icon"
+                                height={16}
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
+                                viewBox="0 0 16 16"
+                                width={16}
                               >
-                                <svg
-                                  aria-label="system-ellipsis-vertical icon"
-                                  className="css-jbdp75"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
-                                >
-                                  <use
-                                    xlinkHref="#system-ellipsis-vertical"
-                                  />
-                                </svg>
-                              </Icon>
-                            </div>
-                          </button>
-                        </ResetButton>
-                      </div>
-                    </Dropdownable>
-                  </div>
-                </Downshift>
+                                <use
+                                  xlinkHref="#system-ellipsis-vertical"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                        </button>
+                      </ResetButton>
+                    </div>
+                  </Dropdownable>
+                </div>
               </DropdownMenu>
             </div>
           </Component>
@@ -2703,129 +2556,94 @@ exports[`Table v2 rendering renders default 1`] = `
                   </ResetButton>
                 }
               >
-                <Downshift
-                  defaultHighlightedIndex={null}
-                  defaultIsOpen={false}
-                  environment={[Window]}
-                  getA11yStatusMessage={[Function]}
-                  itemToString={[Function]}
-                  onChange={[Function]}
-                  onInputValueChange={[Function]}
-                  onOuterClick={[Function]}
-                  onSelect={[Function]}
-                  onStateChange={[Function]}
-                  onUserAction={[Function]}
-                  scrollIntoView={[Function]}
-                  selectedItemChanged={[Function]}
-                  stateReducer={[Function]}
-                  suppressRefError={false}
+                <div
+                  className="css-b0z14z"
                 >
-                  <div
-                    aria-expanded={false}
-                    aria-haspopup="listbox"
-                    aria-labelledby="downshift-3-label"
-                    aria-owns={null}
-                    className="css-b0z14z"
-                    role="combobox"
-                  >
-                    <Dropdownable
-                      dropdown={
-                        <Popover
-                          aria-labelledby="downshift-3-label"
-                          id="downshift-3-menu"
-                          menuRef={[Function]}
-                          role="listbox"
+                  <Dropdownable
+                    dropdown={
+                      <Popover
+                        aria-labelledby="menu5-label"
+                        id="menu5"
+                        role="listbox"
+                      >
+                        <DropdownSection
+                          sectionIndex={0}
                         >
-                          <div
-                            className=""
+                          <DropdownMenuItem
+                            id="menu5-item-0"
+                            index={0}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="edit"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-3-item-0"
-                              index={0}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-3-item-1"
-                              index={1}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-3-item-2"
-                              index={2}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-3-item-3"
-                              index={3}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
-                        </Popover>
-                      }
-                      isOpen={false}
-                      preferredDirections={
-                        Array [
-                          "bottom-end",
-                          "bottom-start",
-                          "bottom",
-                          "top-end",
-                          "top",
-                          "top-start",
-                        ]
-                      }
-                    >
-                      <div>
-                        <ResetButton
+                            Edit
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu5-item-1"
+                            index={1}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="scale"
+                          >
+                            Scale
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu5-item-2"
+                            index={2}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="restart"
+                          >
+                            Restart
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu5-item-3"
+                            index={3}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="stop"
+                          >
+                            Stop
+                          </DropdownMenuItem>
+                        </DropdownSection>
+                      </Popover>
+                    }
+                    isOpen={false}
+                    preferredDirections={
+                      Array [
+                        "bottom-end",
+                        "bottom-start",
+                        "bottom",
+                        "top-end",
+                        "top",
+                        "top-start",
+                      ]
+                    }
+                  >
+                    <div>
+                      <ResetButton
+                        aria-haspopup={true}
+                        aria-label="open menu"
+                        data-toggle={true}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <button
                           aria-haspopup={true}
                           aria-label="open menu"
+                          className="css-1smnoyq"
                           data-toggle={true}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -2835,48 +2653,34 @@ exports[`Table v2 rendering renders default 1`] = `
                           tabIndex={0}
                           type="button"
                         >
-                          <button
-                            aria-haspopup={true}
-                            aria-label="open menu"
-                            className="css-1smnoyq"
-                            data-toggle={true}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            role="button"
-                            tabIndex={0}
-                            type="button"
+                          <div
+                            tabIndex={-1}
                           >
-                            <div
-                              tabIndex={-1}
+                            <Icon
+                              shape="system-ellipsis-vertical"
+                              size="xs"
                             >
-                              <Icon
-                                shape="system-ellipsis-vertical"
-                                size="xs"
+                              <svg
+                                aria-label="system-ellipsis-vertical icon"
+                                className="css-jbdp75"
+                                data-cy="icon"
+                                height={16}
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
+                                viewBox="0 0 16 16"
+                                width={16}
                               >
-                                <svg
-                                  aria-label="system-ellipsis-vertical icon"
-                                  className="css-jbdp75"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
-                                >
-                                  <use
-                                    xlinkHref="#system-ellipsis-vertical"
-                                  />
-                                </svg>
-                              </Icon>
-                            </div>
-                          </button>
-                        </ResetButton>
-                      </div>
-                    </Dropdownable>
-                  </div>
-                </Downshift>
+                                <use
+                                  xlinkHref="#system-ellipsis-vertical"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                        </button>
+                      </ResetButton>
+                    </div>
+                  </Dropdownable>
+                </div>
               </DropdownMenu>
             </div>
           </Component>
@@ -3097,129 +2901,94 @@ exports[`Table v2 rendering renders default 1`] = `
                   </ResetButton>
                 }
               >
-                <Downshift
-                  defaultHighlightedIndex={null}
-                  defaultIsOpen={false}
-                  environment={[Window]}
-                  getA11yStatusMessage={[Function]}
-                  itemToString={[Function]}
-                  onChange={[Function]}
-                  onInputValueChange={[Function]}
-                  onOuterClick={[Function]}
-                  onSelect={[Function]}
-                  onStateChange={[Function]}
-                  onUserAction={[Function]}
-                  scrollIntoView={[Function]}
-                  selectedItemChanged={[Function]}
-                  stateReducer={[Function]}
-                  suppressRefError={false}
+                <div
+                  className="css-b0z14z"
                 >
-                  <div
-                    aria-expanded={false}
-                    aria-haspopup="listbox"
-                    aria-labelledby="downshift-4-label"
-                    aria-owns={null}
-                    className="css-b0z14z"
-                    role="combobox"
-                  >
-                    <Dropdownable
-                      dropdown={
-                        <Popover
-                          aria-labelledby="downshift-4-label"
-                          id="downshift-4-menu"
-                          menuRef={[Function]}
-                          role="listbox"
+                  <Dropdownable
+                    dropdown={
+                      <Popover
+                        aria-labelledby="menu6-label"
+                        id="menu6"
+                        role="listbox"
+                      >
+                        <DropdownSection
+                          sectionIndex={0}
                         >
-                          <div
-                            className=""
+                          <DropdownMenuItem
+                            id="menu6-item-0"
+                            index={0}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="edit"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-4-item-0"
-                              index={0}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-4-item-1"
-                              index={1}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-4-item-2"
-                              index={2}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-4-item-3"
-                              index={3}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
-                        </Popover>
-                      }
-                      isOpen={false}
-                      preferredDirections={
-                        Array [
-                          "bottom-end",
-                          "bottom-start",
-                          "bottom",
-                          "top-end",
-                          "top",
-                          "top-start",
-                        ]
-                      }
-                    >
-                      <div>
-                        <ResetButton
+                            Edit
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu6-item-1"
+                            index={1}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="scale"
+                          >
+                            Scale
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu6-item-2"
+                            index={2}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="restart"
+                          >
+                            Restart
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu6-item-3"
+                            index={3}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="stop"
+                          >
+                            Stop
+                          </DropdownMenuItem>
+                        </DropdownSection>
+                      </Popover>
+                    }
+                    isOpen={false}
+                    preferredDirections={
+                      Array [
+                        "bottom-end",
+                        "bottom-start",
+                        "bottom",
+                        "top-end",
+                        "top",
+                        "top-start",
+                      ]
+                    }
+                  >
+                    <div>
+                      <ResetButton
+                        aria-haspopup={true}
+                        aria-label="open menu"
+                        data-toggle={true}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <button
                           aria-haspopup={true}
                           aria-label="open menu"
+                          className="css-1smnoyq"
                           data-toggle={true}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -3229,48 +2998,34 @@ exports[`Table v2 rendering renders default 1`] = `
                           tabIndex={0}
                           type="button"
                         >
-                          <button
-                            aria-haspopup={true}
-                            aria-label="open menu"
-                            className="css-1smnoyq"
-                            data-toggle={true}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            role="button"
-                            tabIndex={0}
-                            type="button"
+                          <div
+                            tabIndex={-1}
                           >
-                            <div
-                              tabIndex={-1}
+                            <Icon
+                              shape="system-ellipsis-vertical"
+                              size="xs"
                             >
-                              <Icon
-                                shape="system-ellipsis-vertical"
-                                size="xs"
+                              <svg
+                                aria-label="system-ellipsis-vertical icon"
+                                className="css-jbdp75"
+                                data-cy="icon"
+                                height={16}
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
+                                viewBox="0 0 16 16"
+                                width={16}
                               >
-                                <svg
-                                  aria-label="system-ellipsis-vertical icon"
-                                  className="css-jbdp75"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
-                                >
-                                  <use
-                                    xlinkHref="#system-ellipsis-vertical"
-                                  />
-                                </svg>
-                              </Icon>
-                            </div>
-                          </button>
-                        </ResetButton>
-                      </div>
-                    </Dropdownable>
-                  </div>
-                </Downshift>
+                                <use
+                                  xlinkHref="#system-ellipsis-vertical"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                        </button>
+                      </ResetButton>
+                    </div>
+                  </Dropdownable>
+                </div>
               </DropdownMenu>
             </div>
           </Component>
@@ -3747,7 +3502,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                       data-cy="flexItem"
                     >
                       <Tooltip
-                        id="colTooltip2-tooltip"
+                        id="colTooltip7-tooltip"
                         trigger={
                           <div
                             className="css-fjw6z9"
@@ -3770,7 +3525,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           <Dropdownable
                             dropdown={
                               <TooltipContent
-                                id="colTooltip2-tooltip"
+                                id="colTooltip7-tooltip"
                                 isOpen={false}
                                 maxWidth={300}
                               >
@@ -4806,129 +4561,94 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </ResetButton>
                 }
               >
-                <Downshift
-                  defaultHighlightedIndex={null}
-                  defaultIsOpen={false}
-                  environment={[Window]}
-                  getA11yStatusMessage={[Function]}
-                  itemToString={[Function]}
-                  onChange={[Function]}
-                  onInputValueChange={[Function]}
-                  onOuterClick={[Function]}
-                  onSelect={[Function]}
-                  onStateChange={[Function]}
-                  onUserAction={[Function]}
-                  scrollIntoView={[Function]}
-                  selectedItemChanged={[Function]}
-                  stateReducer={[Function]}
-                  suppressRefError={false}
+                <div
+                  className="css-b0z14z"
                 >
-                  <div
-                    aria-expanded={false}
-                    aria-haspopup="listbox"
-                    aria-labelledby="downshift-5-label"
-                    aria-owns={null}
-                    className="css-b0z14z"
-                    role="combobox"
-                  >
-                    <Dropdownable
-                      dropdown={
-                        <Popover
-                          aria-labelledby="downshift-5-label"
-                          id="downshift-5-menu"
-                          menuRef={[Function]}
-                          role="listbox"
+                  <Dropdownable
+                    dropdown={
+                      <Popover
+                        aria-labelledby="menu8-label"
+                        id="menu8"
+                        role="listbox"
+                      >
+                        <DropdownSection
+                          sectionIndex={0}
                         >
-                          <div
-                            className=""
+                          <DropdownMenuItem
+                            id="menu8-item-0"
+                            index={0}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="edit"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-5-item-0"
-                              index={0}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-5-item-1"
-                              index={1}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-5-item-2"
-                              index={2}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-5-item-3"
-                              index={3}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
-                        </Popover>
-                      }
-                      isOpen={false}
-                      preferredDirections={
-                        Array [
-                          "bottom-end",
-                          "bottom-start",
-                          "bottom",
-                          "top-end",
-                          "top",
-                          "top-start",
-                        ]
-                      }
-                    >
-                      <div>
-                        <ResetButton
+                            Edit
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu8-item-1"
+                            index={1}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="scale"
+                          >
+                            Scale
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu8-item-2"
+                            index={2}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="restart"
+                          >
+                            Restart
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu8-item-3"
+                            index={3}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="stop"
+                          >
+                            Stop
+                          </DropdownMenuItem>
+                        </DropdownSection>
+                      </Popover>
+                    }
+                    isOpen={false}
+                    preferredDirections={
+                      Array [
+                        "bottom-end",
+                        "bottom-start",
+                        "bottom",
+                        "top-end",
+                        "top",
+                        "top-start",
+                      ]
+                    }
+                  >
+                    <div>
+                      <ResetButton
+                        aria-haspopup={true}
+                        aria-label="open menu"
+                        data-toggle={true}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <button
                           aria-haspopup={true}
                           aria-label="open menu"
+                          className="css-1smnoyq"
                           data-toggle={true}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -4938,48 +4658,34 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           tabIndex={0}
                           type="button"
                         >
-                          <button
-                            aria-haspopup={true}
-                            aria-label="open menu"
-                            className="css-1smnoyq"
-                            data-toggle={true}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            role="button"
-                            tabIndex={0}
-                            type="button"
+                          <div
+                            tabIndex={-1}
                           >
-                            <div
-                              tabIndex={-1}
+                            <Icon
+                              shape="system-ellipsis-vertical"
+                              size="xs"
                             >
-                              <Icon
-                                shape="system-ellipsis-vertical"
-                                size="xs"
+                              <svg
+                                aria-label="system-ellipsis-vertical icon"
+                                className="css-jbdp75"
+                                data-cy="icon"
+                                height={16}
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
+                                viewBox="0 0 16 16"
+                                width={16}
                               >
-                                <svg
-                                  aria-label="system-ellipsis-vertical icon"
-                                  className="css-jbdp75"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
-                                >
-                                  <use
-                                    xlinkHref="#system-ellipsis-vertical"
-                                  />
-                                </svg>
-                              </Icon>
-                            </div>
-                          </button>
-                        </ResetButton>
-                      </div>
-                    </Dropdownable>
-                  </div>
-                </Downshift>
+                                <use
+                                  xlinkHref="#system-ellipsis-vertical"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                        </button>
+                      </ResetButton>
+                    </div>
+                  </Dropdownable>
+                </div>
               </DropdownMenu>
             </div>
           </Component>
@@ -5200,129 +4906,94 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </ResetButton>
                 }
               >
-                <Downshift
-                  defaultHighlightedIndex={null}
-                  defaultIsOpen={false}
-                  environment={[Window]}
-                  getA11yStatusMessage={[Function]}
-                  itemToString={[Function]}
-                  onChange={[Function]}
-                  onInputValueChange={[Function]}
-                  onOuterClick={[Function]}
-                  onSelect={[Function]}
-                  onStateChange={[Function]}
-                  onUserAction={[Function]}
-                  scrollIntoView={[Function]}
-                  selectedItemChanged={[Function]}
-                  stateReducer={[Function]}
-                  suppressRefError={false}
+                <div
+                  className="css-b0z14z"
                 >
-                  <div
-                    aria-expanded={false}
-                    aria-haspopup="listbox"
-                    aria-labelledby="downshift-6-label"
-                    aria-owns={null}
-                    className="css-b0z14z"
-                    role="combobox"
-                  >
-                    <Dropdownable
-                      dropdown={
-                        <Popover
-                          aria-labelledby="downshift-6-label"
-                          id="downshift-6-menu"
-                          menuRef={[Function]}
-                          role="listbox"
+                  <Dropdownable
+                    dropdown={
+                      <Popover
+                        aria-labelledby="menu9-label"
+                        id="menu9"
+                        role="listbox"
+                      >
+                        <DropdownSection
+                          sectionIndex={0}
                         >
-                          <div
-                            className=""
+                          <DropdownMenuItem
+                            id="menu9-item-0"
+                            index={0}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="edit"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-6-item-0"
-                              index={0}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-6-item-1"
-                              index={1}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-6-item-2"
-                              index={2}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-6-item-3"
-                              index={3}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
-                        </Popover>
-                      }
-                      isOpen={false}
-                      preferredDirections={
-                        Array [
-                          "bottom-end",
-                          "bottom-start",
-                          "bottom",
-                          "top-end",
-                          "top",
-                          "top-start",
-                        ]
-                      }
-                    >
-                      <div>
-                        <ResetButton
+                            Edit
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu9-item-1"
+                            index={1}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="scale"
+                          >
+                            Scale
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu9-item-2"
+                            index={2}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="restart"
+                          >
+                            Restart
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu9-item-3"
+                            index={3}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="stop"
+                          >
+                            Stop
+                          </DropdownMenuItem>
+                        </DropdownSection>
+                      </Popover>
+                    }
+                    isOpen={false}
+                    preferredDirections={
+                      Array [
+                        "bottom-end",
+                        "bottom-start",
+                        "bottom",
+                        "top-end",
+                        "top",
+                        "top-start",
+                      ]
+                    }
+                  >
+                    <div>
+                      <ResetButton
+                        aria-haspopup={true}
+                        aria-label="open menu"
+                        data-toggle={true}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <button
                           aria-haspopup={true}
                           aria-label="open menu"
+                          className="css-1smnoyq"
                           data-toggle={true}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -5332,48 +5003,34 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           tabIndex={0}
                           type="button"
                         >
-                          <button
-                            aria-haspopup={true}
-                            aria-label="open menu"
-                            className="css-1smnoyq"
-                            data-toggle={true}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            role="button"
-                            tabIndex={0}
-                            type="button"
+                          <div
+                            tabIndex={-1}
                           >
-                            <div
-                              tabIndex={-1}
+                            <Icon
+                              shape="system-ellipsis-vertical"
+                              size="xs"
                             >
-                              <Icon
-                                shape="system-ellipsis-vertical"
-                                size="xs"
+                              <svg
+                                aria-label="system-ellipsis-vertical icon"
+                                className="css-jbdp75"
+                                data-cy="icon"
+                                height={16}
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
+                                viewBox="0 0 16 16"
+                                width={16}
                               >
-                                <svg
-                                  aria-label="system-ellipsis-vertical icon"
-                                  className="css-jbdp75"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
-                                >
-                                  <use
-                                    xlinkHref="#system-ellipsis-vertical"
-                                  />
-                                </svg>
-                              </Icon>
-                            </div>
-                          </button>
-                        </ResetButton>
-                      </div>
-                    </Dropdownable>
-                  </div>
-                </Downshift>
+                                <use
+                                  xlinkHref="#system-ellipsis-vertical"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                        </button>
+                      </ResetButton>
+                    </div>
+                  </Dropdownable>
+                </div>
               </DropdownMenu>
             </div>
           </Component>
@@ -5594,129 +5251,94 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </ResetButton>
                 }
               >
-                <Downshift
-                  defaultHighlightedIndex={null}
-                  defaultIsOpen={false}
-                  environment={[Window]}
-                  getA11yStatusMessage={[Function]}
-                  itemToString={[Function]}
-                  onChange={[Function]}
-                  onInputValueChange={[Function]}
-                  onOuterClick={[Function]}
-                  onSelect={[Function]}
-                  onStateChange={[Function]}
-                  onUserAction={[Function]}
-                  scrollIntoView={[Function]}
-                  selectedItemChanged={[Function]}
-                  stateReducer={[Function]}
-                  suppressRefError={false}
+                <div
+                  className="css-b0z14z"
                 >
-                  <div
-                    aria-expanded={false}
-                    aria-haspopup="listbox"
-                    aria-labelledby="downshift-7-label"
-                    aria-owns={null}
-                    className="css-b0z14z"
-                    role="combobox"
-                  >
-                    <Dropdownable
-                      dropdown={
-                        <Popover
-                          aria-labelledby="downshift-7-label"
-                          id="downshift-7-menu"
-                          menuRef={[Function]}
-                          role="listbox"
+                  <Dropdownable
+                    dropdown={
+                      <Popover
+                        aria-labelledby="menu10-label"
+                        id="menu10"
+                        role="listbox"
+                      >
+                        <DropdownSection
+                          sectionIndex={0}
                         >
-                          <div
-                            className=""
+                          <DropdownMenuItem
+                            id="menu10-item-0"
+                            index={0}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="edit"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-7-item-0"
-                              index={0}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-7-item-1"
-                              index={1}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-7-item-2"
-                              index={2}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-7-item-3"
-                              index={3}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
-                        </Popover>
-                      }
-                      isOpen={false}
-                      preferredDirections={
-                        Array [
-                          "bottom-end",
-                          "bottom-start",
-                          "bottom",
-                          "top-end",
-                          "top",
-                          "top-start",
-                        ]
-                      }
-                    >
-                      <div>
-                        <ResetButton
+                            Edit
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu10-item-1"
+                            index={1}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="scale"
+                          >
+                            Scale
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu10-item-2"
+                            index={2}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="restart"
+                          >
+                            Restart
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu10-item-3"
+                            index={3}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="stop"
+                          >
+                            Stop
+                          </DropdownMenuItem>
+                        </DropdownSection>
+                      </Popover>
+                    }
+                    isOpen={false}
+                    preferredDirections={
+                      Array [
+                        "bottom-end",
+                        "bottom-start",
+                        "bottom",
+                        "top-end",
+                        "top",
+                        "top-start",
+                      ]
+                    }
+                  >
+                    <div>
+                      <ResetButton
+                        aria-haspopup={true}
+                        aria-label="open menu"
+                        data-toggle={true}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <button
                           aria-haspopup={true}
                           aria-label="open menu"
+                          className="css-1smnoyq"
                           data-toggle={true}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -5726,48 +5348,34 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           tabIndex={0}
                           type="button"
                         >
-                          <button
-                            aria-haspopup={true}
-                            aria-label="open menu"
-                            className="css-1smnoyq"
-                            data-toggle={true}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            role="button"
-                            tabIndex={0}
-                            type="button"
+                          <div
+                            tabIndex={-1}
                           >
-                            <div
-                              tabIndex={-1}
+                            <Icon
+                              shape="system-ellipsis-vertical"
+                              size="xs"
                             >
-                              <Icon
-                                shape="system-ellipsis-vertical"
-                                size="xs"
+                              <svg
+                                aria-label="system-ellipsis-vertical icon"
+                                className="css-jbdp75"
+                                data-cy="icon"
+                                height={16}
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
+                                viewBox="0 0 16 16"
+                                width={16}
                               >
-                                <svg
-                                  aria-label="system-ellipsis-vertical icon"
-                                  className="css-jbdp75"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
-                                >
-                                  <use
-                                    xlinkHref="#system-ellipsis-vertical"
-                                  />
-                                </svg>
-                              </Icon>
-                            </div>
-                          </button>
-                        </ResetButton>
-                      </div>
-                    </Dropdownable>
-                  </div>
-                </Downshift>
+                                <use
+                                  xlinkHref="#system-ellipsis-vertical"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                        </button>
+                      </ResetButton>
+                    </div>
+                  </Dropdownable>
+                </div>
               </DropdownMenu>
             </div>
           </Component>
@@ -5988,129 +5596,94 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </ResetButton>
                 }
               >
-                <Downshift
-                  defaultHighlightedIndex={null}
-                  defaultIsOpen={false}
-                  environment={[Window]}
-                  getA11yStatusMessage={[Function]}
-                  itemToString={[Function]}
-                  onChange={[Function]}
-                  onInputValueChange={[Function]}
-                  onOuterClick={[Function]}
-                  onSelect={[Function]}
-                  onStateChange={[Function]}
-                  onUserAction={[Function]}
-                  scrollIntoView={[Function]}
-                  selectedItemChanged={[Function]}
-                  stateReducer={[Function]}
-                  suppressRefError={false}
+                <div
+                  className="css-b0z14z"
                 >
-                  <div
-                    aria-expanded={false}
-                    aria-haspopup="listbox"
-                    aria-labelledby="downshift-8-label"
-                    aria-owns={null}
-                    className="css-b0z14z"
-                    role="combobox"
-                  >
-                    <Dropdownable
-                      dropdown={
-                        <Popover
-                          aria-labelledby="downshift-8-label"
-                          id="downshift-8-menu"
-                          menuRef={[Function]}
-                          role="listbox"
+                  <Dropdownable
+                    dropdown={
+                      <Popover
+                        aria-labelledby="menu11-label"
+                        id="menu11"
+                        role="listbox"
+                      >
+                        <DropdownSection
+                          sectionIndex={0}
                         >
-                          <div
-                            className=""
+                          <DropdownMenuItem
+                            id="menu11-item-0"
+                            index={0}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="edit"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-8-item-0"
-                              index={0}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-8-item-1"
-                              index={1}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-8-item-2"
-                              index={2}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-8-item-3"
-                              index={3}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
-                        </Popover>
-                      }
-                      isOpen={false}
-                      preferredDirections={
-                        Array [
-                          "bottom-end",
-                          "bottom-start",
-                          "bottom",
-                          "top-end",
-                          "top",
-                          "top-start",
-                        ]
-                      }
-                    >
-                      <div>
-                        <ResetButton
+                            Edit
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu11-item-1"
+                            index={1}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="scale"
+                          >
+                            Scale
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu11-item-2"
+                            index={2}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="restart"
+                          >
+                            Restart
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu11-item-3"
+                            index={3}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="stop"
+                          >
+                            Stop
+                          </DropdownMenuItem>
+                        </DropdownSection>
+                      </Popover>
+                    }
+                    isOpen={false}
+                    preferredDirections={
+                      Array [
+                        "bottom-end",
+                        "bottom-start",
+                        "bottom",
+                        "top-end",
+                        "top",
+                        "top-start",
+                      ]
+                    }
+                  >
+                    <div>
+                      <ResetButton
+                        aria-haspopup={true}
+                        aria-label="open menu"
+                        data-toggle={true}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <button
                           aria-haspopup={true}
                           aria-label="open menu"
+                          className="css-1smnoyq"
                           data-toggle={true}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -6120,48 +5693,34 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           tabIndex={0}
                           type="button"
                         >
-                          <button
-                            aria-haspopup={true}
-                            aria-label="open menu"
-                            className="css-1smnoyq"
-                            data-toggle={true}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            role="button"
-                            tabIndex={0}
-                            type="button"
+                          <div
+                            tabIndex={-1}
                           >
-                            <div
-                              tabIndex={-1}
+                            <Icon
+                              shape="system-ellipsis-vertical"
+                              size="xs"
                             >
-                              <Icon
-                                shape="system-ellipsis-vertical"
-                                size="xs"
+                              <svg
+                                aria-label="system-ellipsis-vertical icon"
+                                className="css-jbdp75"
+                                data-cy="icon"
+                                height={16}
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
+                                viewBox="0 0 16 16"
+                                width={16}
                               >
-                                <svg
-                                  aria-label="system-ellipsis-vertical icon"
-                                  className="css-jbdp75"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
-                                >
-                                  <use
-                                    xlinkHref="#system-ellipsis-vertical"
-                                  />
-                                </svg>
-                              </Icon>
-                            </div>
-                          </button>
-                        </ResetButton>
-                      </div>
-                    </Dropdownable>
-                  </div>
-                </Downshift>
+                                <use
+                                  xlinkHref="#system-ellipsis-vertical"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                        </button>
+                      </ResetButton>
+                    </div>
+                  </Dropdownable>
+                </div>
               </DropdownMenu>
             </div>
           </Component>
@@ -6382,129 +5941,94 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </ResetButton>
                 }
               >
-                <Downshift
-                  defaultHighlightedIndex={null}
-                  defaultIsOpen={false}
-                  environment={[Window]}
-                  getA11yStatusMessage={[Function]}
-                  itemToString={[Function]}
-                  onChange={[Function]}
-                  onInputValueChange={[Function]}
-                  onOuterClick={[Function]}
-                  onSelect={[Function]}
-                  onStateChange={[Function]}
-                  onUserAction={[Function]}
-                  scrollIntoView={[Function]}
-                  selectedItemChanged={[Function]}
-                  stateReducer={[Function]}
-                  suppressRefError={false}
+                <div
+                  className="css-b0z14z"
                 >
-                  <div
-                    aria-expanded={false}
-                    aria-haspopup="listbox"
-                    aria-labelledby="downshift-9-label"
-                    aria-owns={null}
-                    className="css-b0z14z"
-                    role="combobox"
-                  >
-                    <Dropdownable
-                      dropdown={
-                        <Popover
-                          aria-labelledby="downshift-9-label"
-                          id="downshift-9-menu"
-                          menuRef={[Function]}
-                          role="listbox"
+                  <Dropdownable
+                    dropdown={
+                      <Popover
+                        aria-labelledby="menu12-label"
+                        id="menu12"
+                        role="listbox"
+                      >
+                        <DropdownSection
+                          sectionIndex={0}
                         >
-                          <div
-                            className=""
+                          <DropdownMenuItem
+                            id="menu12-item-0"
+                            index={0}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="edit"
                           >
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-9-item-0"
-                              index={0}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-9-item-1"
-                              index={1}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-9-item-2"
-                              index={2}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
-                              aria-selected={false}
-                              id="downshift-9-item-3"
-                              index={3}
-                              isActive={false}
-                              listLength={4}
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
-                              onMouseMove={[Function]}
-                              role="option"
-                            >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
-                        </Popover>
-                      }
-                      isOpen={false}
-                      preferredDirections={
-                        Array [
-                          "bottom-end",
-                          "bottom-start",
-                          "bottom",
-                          "top-end",
-                          "top",
-                          "top-start",
-                        ]
-                      }
-                    >
-                      <div>
-                        <ResetButton
+                            Edit
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu12-item-1"
+                            index={1}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="scale"
+                          >
+                            Scale
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu12-item-2"
+                            index={2}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="restart"
+                          >
+                            Restart
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            id="menu12-item-3"
+                            index={3}
+                            isActive={false}
+                            listLength={4}
+                            onClick={[Function]}
+                            onMouseMove={[Function]}
+                            value="stop"
+                          >
+                            Stop
+                          </DropdownMenuItem>
+                        </DropdownSection>
+                      </Popover>
+                    }
+                    isOpen={false}
+                    preferredDirections={
+                      Array [
+                        "bottom-end",
+                        "bottom-start",
+                        "bottom",
+                        "top-end",
+                        "top",
+                        "top-start",
+                      ]
+                    }
+                  >
+                    <div>
+                      <ResetButton
+                        aria-haspopup={true}
+                        aria-label="open menu"
+                        data-toggle={true}
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <button
                           aria-haspopup={true}
                           aria-label="open menu"
+                          className="css-1smnoyq"
                           data-toggle={true}
                           onBlur={[Function]}
                           onClick={[Function]}
@@ -6514,48 +6038,34 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           tabIndex={0}
                           type="button"
                         >
-                          <button
-                            aria-haspopup={true}
-                            aria-label="open menu"
-                            className="css-1smnoyq"
-                            data-toggle={true}
-                            onBlur={[Function]}
-                            onClick={[Function]}
-                            onKeyDown={[Function]}
-                            onKeyUp={[Function]}
-                            role="button"
-                            tabIndex={0}
-                            type="button"
+                          <div
+                            tabIndex={-1}
                           >
-                            <div
-                              tabIndex={-1}
+                            <Icon
+                              shape="system-ellipsis-vertical"
+                              size="xs"
                             >
-                              <Icon
-                                shape="system-ellipsis-vertical"
-                                size="xs"
+                              <svg
+                                aria-label="system-ellipsis-vertical icon"
+                                className="css-jbdp75"
+                                data-cy="icon"
+                                height={16}
+                                preserveAspectRatio="xMinYMin meet"
+                                role="img"
+                                viewBox="0 0 16 16"
+                                width={16}
                               >
-                                <svg
-                                  aria-label="system-ellipsis-vertical icon"
-                                  className="css-jbdp75"
-                                  data-cy="icon"
-                                  height={16}
-                                  preserveAspectRatio="xMinYMin meet"
-                                  role="img"
-                                  viewBox="0 0 16 16"
-                                  width={16}
-                                >
-                                  <use
-                                    xlinkHref="#system-ellipsis-vertical"
-                                  />
-                                </svg>
-                              </Icon>
-                            </div>
-                          </button>
-                        </ResetButton>
-                      </div>
-                    </Dropdownable>
-                  </div>
-                </Downshift>
+                                <use
+                                  xlinkHref="#system-ellipsis-vertical"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                        </button>
+                      </ResetButton>
+                    </div>
+                  </Dropdownable>
+                </div>
               </DropdownMenu>
             </div>
           </Component>

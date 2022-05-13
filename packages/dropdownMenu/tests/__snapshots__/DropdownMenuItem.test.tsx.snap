@@ -1,18 +1,273 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown default 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  cursor: pointer;
+  min-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: table;
+  margin-top: 8px;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 8px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
 <DropdownMenuItem
   value="edit"
 >
-  Edit
+  <PopoverListItem
+    index={0}
+    listLength={0}
+    onMouseDown={[Function]}
+  >
+    <div
+      className="emotion-0"
+      data-cy="PopoverListItem"
+      onMouseDown={[Function]}
+    >
+      <Flex
+        align="center"
+        gutterSize="xs"
+      >
+        <div
+          className="emotion-1"
+          data-cy="flex"
+        >
+          <FlexItem
+            flex="shrink"
+          >
+            <div
+              className="emotion-2"
+              data-cy="flexItem"
+            />
+          </FlexItem>
+          <FlexItem>
+            <div
+              className="emotion-3"
+              data-cy="flexItem"
+            >
+              Edit
+            </div>
+          </FlexItem>
+          <FlexItem
+            flex="shrink"
+          >
+            <div
+              className="emotion-2"
+              data-cy="flexItem"
+            />
+          </FlexItem>
+        </div>
+      </Flex>
+    </div>
+  </PopoverListItem>
 </DropdownMenuItem>
 `;
 
 exports[`Dropdown default 2`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  cursor: pointer;
+  min-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: table;
+  margin-top: 8px;
+  color: var(--themeError, #EB293A);
+  fill: var(--themeError, #EB293A);
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 8px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
 <DropdownMenuItem
   appearance="danger"
   value="edit"
 >
-  Edit
+  <PopoverListItem
+    appearance="danger"
+    index={0}
+    listLength={0}
+    onMouseDown={[Function]}
+  >
+    <div
+      className="emotion-0"
+      data-cy="PopoverListItem"
+      onMouseDown={[Function]}
+    >
+      <Flex
+        align="center"
+        gutterSize="xs"
+      >
+        <div
+          className="emotion-1"
+          data-cy="flex"
+        >
+          <FlexItem
+            flex="shrink"
+          >
+            <div
+              className="emotion-2"
+              data-cy="flexItem"
+            />
+          </FlexItem>
+          <FlexItem>
+            <div
+              className="emotion-3"
+              data-cy="flexItem"
+            >
+              Edit
+            </div>
+          </FlexItem>
+          <FlexItem
+            flex="shrink"
+          >
+            <div
+              className="emotion-2"
+              data-cy="flexItem"
+            />
+          </FlexItem>
+        </div>
+      </Flex>
+    </div>
+  </PopoverListItem>
 </DropdownMenuItem>
 `;
