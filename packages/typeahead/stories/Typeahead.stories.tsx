@@ -50,6 +50,28 @@ export const PreFilledSelectedItem = args => (
   />
 );
 
+export const Multiselect = () => (
+  <div className={storyWrapper}>
+    <MultiselectTypeahead>
+      {({ items, selectHandler, selectedItems }) => (
+        <Typeahead
+          items={items}
+          selectedItems={selectedItems}
+          multiSelect={true}
+          textField={
+            <TextInput
+              id="multiselect"
+              inputLabel="Multiselectable"
+              placeholder="Placeholder"
+            />
+          }
+          onSelect={selectHandler}
+        />
+      )}
+    </MultiselectTypeahead>
+  </div>
+);
+
 const onSelectHandler = selectedItems => {
   alert(`${selectedItems[0]} selected`);
 };
