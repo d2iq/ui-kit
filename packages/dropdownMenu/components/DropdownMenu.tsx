@@ -182,6 +182,8 @@ const DropdownMenu = (props: DropdownMenuProps) => {
     onKeyDown: handleButtonKeyDown
   };
 
+  let menuItemIndex = -1;
+
   return (
     <div className={display("inline-block")}>
       <Dropdownable
@@ -196,52 +198,39 @@ const DropdownMenu = (props: DropdownMenuProps) => {
             id={menuId}
             aria-labelledby={`${menuId}-label`}
           >
-            {
-              arrayChildren.reduce<{
-                sections: React.ReactNodeArray;
-                menuItemIndex: number;
-              }>(
-                (acc, section, sectionIndex) => {
-                  const { children: sectionChildren } = section.props;
-                  const menuItems = React.Children.toArray(sectionChildren);
+            {arrayChildren.map((section, sectionIndex) => {
+              const { children: sectionChildren } = section.props;
+              const menuItems = React.Children.toArray(sectionChildren);
 
-                  // should be DropdownSections
-                  const newSection = React.cloneElement(section, {
-                    sectionIndex,
-                    children: menuItems.map((child, index) => {
-                      acc.menuItemIndex++;
+              // should be DropdownSections
+              return React.cloneElement(section, {
+                sectionIndex,
+                children: menuItems.map((child, index) => {
+                  menuItemIndex++;
 
-                      // set this as a variable for future reference
-                      const itemIndex = acc.menuItemIndex;
-                      const isActive = highlightedIndex === itemIndex;
+                  // set this as a variable for future reference
+                  const itemIndex = menuItemIndex;
+                  const isActive = highlightedIndex === itemIndex;
 
-                      const handleHighlighted = () => {
-                        if (isActive) {
-                          return;
-                        }
-                        setHighlightedIndex(itemIndex);
-                      };
-
-                      // should be DropdownMenuItems
-                      return React.cloneElement(child, {
-                        listLength: menuItems.length,
-                        index,
-                        isActive,
-                        onMouseMove: handleHighlighted,
-                        onClick: () => handleSelection(child),
-                        id: `${menuId}-item-${itemIndex}`
-                      });
-                    })
-                  });
-
-                  return {
-                    sections: [...acc.sections, newSection],
-                    menuItemIndex: acc.menuItemIndex
+                  const handleHighlighted = () => {
+                    if (isActive) {
+                      return;
+                    }
+                    setHighlightedIndex(itemIndex);
                   };
-                },
-                { sections: [], menuItemIndex: -1 }
-              ).sections
-            }
+
+                  // should be DropdownMenuItems
+                  return React.cloneElement(child, {
+                    listLength: menuItems.length,
+                    index,
+                    isActive,
+                    onMouseMove: handleHighlighted,
+                    onClick: () => handleSelection(child),
+                    id: `${menuId}-item-${itemIndex}`
+                  });
+                })
+              });
+            })}
           </PopoverBox>
         }
         disablePortal={disablePortal}
