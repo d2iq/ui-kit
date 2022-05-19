@@ -4,12 +4,20 @@ import { Typeahead, TextInput } from "../../index";
 import MultiselectTypeahead from "./helpers/MultiselectTypeahead";
 import FilteredListTypeahead from "./helpers/FilteredListTypeahead";
 import { padding } from "../../shared/styles/styleUtils";
-import { complexItems, items } from "./helpers/itemMocks";
 import { css } from "@emotion/css";
 
 const storyWrapper = css`
   width: 300px;
 `;
+
+const items = [
+  { label: "Exosphere", value: "Exosphere" },
+  { label: "Thermosphere", value: "Thermosphere" },
+  { label: "Mesosphere", value: "Mesosphere" },
+  { label: "Stratosphere", value: "Stratosphere" },
+  { label: "Ozone Layer", value: "Ozone Layer" },
+  { label: "Troposphere", value: "Troposphere" }
+];
 
 export default {
   title: "Forms/Typeahead",
@@ -23,6 +31,7 @@ const Template: Story = args => (
     textField={
       <TextInput id="default" inputLabel="Default" placeholder="Placeholder" />
     }
+    {...args}
   />
 );
 
@@ -30,7 +39,14 @@ export const Default = Template.bind({});
 
 export const MenuHasMaxHeight = Template.bind({});
 MenuHasMaxHeight.args = {
-  menuMaxHeight: 100
+  menuMaxHeight: 100,
+  textField: (
+    <TextInput
+      id="maxHeight"
+      inputLabel="Menu max height"
+      placeholder="Placeholder"
+    />
+  )
 };
 
 export const PreFilledSelectedItem = args => (
@@ -50,45 +66,55 @@ export const PreFilledSelectedItem = args => (
   />
 );
 
-export const Multiselect = () => (
-  <div className={storyWrapper}>
-    <MultiselectTypeahead>
-      {({ items, selectHandler, selectedItems }) => (
-        <Typeahead
-          items={items}
-          selectedItems={selectedItems}
-          multiSelect={true}
-          textField={
-            <TextInput
-              id="multiselect"
-              inputLabel="Multiselectable"
-              placeholder="Placeholder"
-            />
-          }
-          onSelect={selectHandler}
-        />
-      )}
-    </MultiselectTypeahead>
-  </div>
-);
-
 const onSelectHandler = selectedItems => {
   alert(`${selectedItems[0]} selected`);
 };
+
 export const WithOnSelectCallback = Template.bind({});
 WithOnSelectCallback.args = {
   onSelect: onSelectHandler,
-  items
+  textField: (
+    <TextInput id="onselect" inputLabel="onSelect" placeholder="Placeholder" />
+  )
 };
 
-export const ComplexListItems = Template.bind({});
-ComplexListItems.args = {
-  items: complexItems
-};
+export const Multiselect = () => (
+  <MultiselectTypeahead>
+    {({ onSelect, selectedItems }) => (
+      <Typeahead
+        items={items}
+        selectedItems={selectedItems}
+        multiSelect={true}
+        textField={
+          <TextInput
+            id="multiselect"
+            inputLabel="Multiselectable"
+            placeholder="Placeholder"
+          />
+        }
+        onSelect={onSelect}
+      />
+    )}
+  </MultiselectTypeahead>
+);
 
 export const WithDisabledItem = Template.bind({});
 WithDisabledItem.args = {
-  items: [...items, { label: "K8sphere", value: "K8sphere", disabled: true }]
+  items: [...items, { label: "K8sphere", value: "K8sphere", disabled: true }],
+  textField: (
+    <TextInput
+      id="withdisabled"
+      inputLabel="With a disabled item"
+      placeholder="Placeholder"
+    />
+  )
 };
 
 export const FilterWhileTyping = () => <FilteredListTypeahead items={items} />;
+
+export const CustomMenuEmptyState = () => (
+  <FilteredListTypeahead
+    menuEmptyState={<div className={padding("all")}>Nothing to show</div>}
+    items={items}
+  />
+);
