@@ -9,19 +9,9 @@ const {
 } = require("fs");
 const t = require("@babel/types");
 const generate = require("@babel/generator").default;
-const SVGO = require("svgo");
+const { optimize } = require("svgo");
 const svgstore = require("svgstore");
 const iconSpriteConfig = require("../iconSpriteConfig.js");
-const svgo = new SVGO({
-  plugins: [
-    {
-      removeDoctype: true
-    },
-    {
-      cleanupIDs: false
-    }
-  ]
-});
 const buildDirPath = path.join(__dirname, "../", "dist");
 const distDirPath = path.join(
   __dirname,
@@ -56,9 +46,22 @@ const optimizeWithSVGO = spritePath => {
       throw err;
     }
 
-    svgo.optimize(data, { path: spritePath }).then(result => {
-      writeFileSync(spritePath, result.data);
+    const result = optimize(data, {
+      path: spritePath,
+      multipass: true,
+      plugins: [
+        {
+          name: "removeDoctype",
+          active: true
+        },
+        {
+          name: "cleanupIDs",
+          active: false
+        }
+      ]
     });
+
+    writeFileSync(spritePath, result.data);
   });
 };
 

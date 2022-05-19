@@ -129,7 +129,7 @@
     "semantic-release": "19.0.2",
     "style-dictionary": "3.7.0",
     "svg-inline-loader": "0.8.2",
-    "svgo": "1.1.1",
+    "svgo": "2.8.0",
     "svgstore": "3.0.1",
     "tablemark": "2.0.0",
     "ts-jest": "27.1.3",
