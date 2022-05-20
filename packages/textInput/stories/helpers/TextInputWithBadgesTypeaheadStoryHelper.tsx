@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Item } from "../../../typeahead/components/Typeahead";
 import { BadgeDatum } from "../../components/TextInputWithBadges";
-import { items } from "../../../typeahead/stories/helpers/itemMocks";
 
 interface RenderProps {
   selectedItems: string[];
