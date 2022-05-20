@@ -136,7 +136,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                             )}
                           >
                             {items.length ? (
-                              items.map((item, index) => (
+                              items.map((item: Item, index: number) => (
                                 <PopoverListItem
                                   key={item.value}
                                   listLength={items.length}
@@ -147,7 +147,8 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                                   }
                                   index={index}
                                   {...getItemProps({
-                                    item,
+                                    // results from upstream bug in downshift typings (https://github.com/downshift-js/downshift/pull/1382)
+                                    item: item as any,
                                     disabled: item.disabled
                                   })}
                                 >
