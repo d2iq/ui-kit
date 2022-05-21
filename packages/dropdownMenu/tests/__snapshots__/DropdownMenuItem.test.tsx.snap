@@ -1,18 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown default 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  cursor: pointer;
+  min-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: table;
+  margin-top: 8px;
+}
+
 <DropdownMenuItem
   value="edit"
 >
-  Edit
+  <PopoverListItem
+    index={0}
+    listLength={0}
+    value="edit"
+  >
+    <div
+      className="emotion-0"
+      data-cy="PopoverListItem"
+      value="edit"
+    >
+      Edit
+    </div>
+  </PopoverListItem>
 </DropdownMenuItem>
 `;
 
 exports[`Dropdown default 2`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  cursor: pointer;
+  min-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: table;
+  margin-top: 8px;
+  color: var(--themeError, #EB293A);
+  fill: var(--themeError, #EB293A);
+}
+
 <DropdownMenuItem
   appearance="danger"
   value="edit"
 >
-  Edit
+  <PopoverListItem
+    appearance="danger"
+    index={0}
+    listLength={0}
+    value="edit"
+  >
+    <div
+      className="emotion-0"
+      data-cy="PopoverListItem"
+      value="edit"
+    >
+      Edit
+    </div>
+  </PopoverListItem>
 </DropdownMenuItem>
 `;

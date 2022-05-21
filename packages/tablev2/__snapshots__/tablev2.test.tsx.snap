@@ -1554,10 +1554,10 @@ exports[`Table v2 rendering renders default 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <div
-                            className=""
+                          <DropdownSection
+                            sectionIndex={0}
                           >
-                            <PopoverListItem
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-0-item-0"
                               index={0}
@@ -1567,14 +1567,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="edit"
                             >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Edit
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-0-item-1"
                               index={1}
@@ -1584,14 +1581,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="scale"
                             >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Scale
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-0-item-2"
                               index={2}
@@ -1601,14 +1595,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="restart"
                             >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Restart
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-0-item-3"
                               index={3}
@@ -1618,14 +1609,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="stop"
                             >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
+                              Stop
+                            </DropdownMenuItem>
+                          </DropdownSection>
                         </Popover>
                       }
                       isOpen={false}
@@ -1948,10 +1936,10 @@ exports[`Table v2 rendering renders default 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <div
-                            className=""
+                          <DropdownSection
+                            sectionIndex={0}
                           >
-                            <PopoverListItem
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-1-item-0"
                               index={0}
@@ -1961,14 +1949,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="edit"
                             >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Edit
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-1-item-1"
                               index={1}
@@ -1978,14 +1963,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="scale"
                             >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Scale
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-1-item-2"
                               index={2}
@@ -1995,14 +1977,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="restart"
                             >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Restart
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-1-item-3"
                               index={3}
@@ -2012,14 +1991,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="stop"
                             >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
+                              Stop
+                            </DropdownMenuItem>
+                          </DropdownSection>
                         </Popover>
                       }
                       isOpen={false}
@@ -2342,10 +2318,10 @@ exports[`Table v2 rendering renders default 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <div
-                            className=""
+                          <DropdownSection
+                            sectionIndex={0}
                           >
-                            <PopoverListItem
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-2-item-0"
                               index={0}
@@ -2355,14 +2331,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="edit"
                             >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Edit
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-2-item-1"
                               index={1}
@@ -2372,14 +2345,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="scale"
                             >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Scale
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-2-item-2"
                               index={2}
@@ -2389,14 +2359,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="restart"
                             >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Restart
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-2-item-3"
                               index={3}
@@ -2406,14 +2373,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="stop"
                             >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
+                              Stop
+                            </DropdownMenuItem>
+                          </DropdownSection>
                         </Popover>
                       }
                       isOpen={false}
@@ -2736,10 +2700,10 @@ exports[`Table v2 rendering renders default 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <div
-                            className=""
+                          <DropdownSection
+                            sectionIndex={0}
                           >
-                            <PopoverListItem
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-3-item-0"
                               index={0}
@@ -2749,14 +2713,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="edit"
                             >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Edit
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-3-item-1"
                               index={1}
@@ -2766,14 +2727,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="scale"
                             >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Scale
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-3-item-2"
                               index={2}
@@ -2783,14 +2741,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="restart"
                             >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Restart
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-3-item-3"
                               index={3}
@@ -2800,14 +2755,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="stop"
                             >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
+                              Stop
+                            </DropdownMenuItem>
+                          </DropdownSection>
                         </Popover>
                       }
                       isOpen={false}
@@ -3130,10 +3082,10 @@ exports[`Table v2 rendering renders default 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <div
-                            className=""
+                          <DropdownSection
+                            sectionIndex={0}
                           >
-                            <PopoverListItem
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-4-item-0"
                               index={0}
@@ -3143,14 +3095,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="edit"
                             >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Edit
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-4-item-1"
                               index={1}
@@ -3160,14 +3109,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="scale"
                             >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Scale
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-4-item-2"
                               index={2}
@@ -3177,14 +3123,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="restart"
                             >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Restart
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-4-item-3"
                               index={3}
@@ -3194,14 +3137,11 @@ exports[`Table v2 rendering renders default 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="stop"
                             >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
+                              Stop
+                            </DropdownMenuItem>
+                          </DropdownSection>
                         </Popover>
                       }
                       isOpen={false}
@@ -4839,10 +4779,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <div
-                            className=""
+                          <DropdownSection
+                            sectionIndex={0}
                           >
-                            <PopoverListItem
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-5-item-0"
                               index={0}
@@ -4852,14 +4792,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="edit"
                             >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Edit
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-5-item-1"
                               index={1}
@@ -4869,14 +4806,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="scale"
                             >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Scale
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-5-item-2"
                               index={2}
@@ -4886,14 +4820,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="restart"
                             >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Restart
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-5-item-3"
                               index={3}
@@ -4903,14 +4834,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="stop"
                             >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
+                              Stop
+                            </DropdownMenuItem>
+                          </DropdownSection>
                         </Popover>
                       }
                       isOpen={false}
@@ -5233,10 +5161,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <div
-                            className=""
+                          <DropdownSection
+                            sectionIndex={0}
                           >
-                            <PopoverListItem
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-6-item-0"
                               index={0}
@@ -5246,14 +5174,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="edit"
                             >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Edit
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-6-item-1"
                               index={1}
@@ -5263,14 +5188,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="scale"
                             >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Scale
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-6-item-2"
                               index={2}
@@ -5280,14 +5202,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="restart"
                             >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Restart
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-6-item-3"
                               index={3}
@@ -5297,14 +5216,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="stop"
                             >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
+                              Stop
+                            </DropdownMenuItem>
+                          </DropdownSection>
                         </Popover>
                       }
                       isOpen={false}
@@ -5627,10 +5543,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <div
-                            className=""
+                          <DropdownSection
+                            sectionIndex={0}
                           >
-                            <PopoverListItem
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-7-item-0"
                               index={0}
@@ -5640,14 +5556,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="edit"
                             >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Edit
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-7-item-1"
                               index={1}
@@ -5657,14 +5570,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="scale"
                             >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Scale
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-7-item-2"
                               index={2}
@@ -5674,14 +5584,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="restart"
                             >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Restart
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-7-item-3"
                               index={3}
@@ -5691,14 +5598,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="stop"
                             >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
+                              Stop
+                            </DropdownMenuItem>
+                          </DropdownSection>
                         </Popover>
                       }
                       isOpen={false}
@@ -6021,10 +5925,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <div
-                            className=""
+                          <DropdownSection
+                            sectionIndex={0}
                           >
-                            <PopoverListItem
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-8-item-0"
                               index={0}
@@ -6034,14 +5938,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="edit"
                             >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Edit
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-8-item-1"
                               index={1}
@@ -6051,14 +5952,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="scale"
                             >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Scale
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-8-item-2"
                               index={2}
@@ -6068,14 +5966,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="restart"
                             >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Restart
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-8-item-3"
                               index={3}
@@ -6085,14 +5980,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="stop"
                             >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
+                              Stop
+                            </DropdownMenuItem>
+                          </DropdownSection>
                         </Popover>
                       }
                       isOpen={false}
@@ -6415,10 +6307,10 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                           menuRef={[Function]}
                           role="listbox"
                         >
-                          <div
-                            className=""
+                          <DropdownSection
+                            sectionIndex={0}
                           >
-                            <PopoverListItem
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-9-item-0"
                               index={0}
@@ -6428,14 +6320,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="edit"
                             >
-                              <DropdownMenuItem
-                                value="edit"
-                              >
-                                Edit
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Edit
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-9-item-1"
                               index={1}
@@ -6445,14 +6334,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="scale"
                             >
-                              <DropdownMenuItem
-                                value="scale"
-                              >
-                                Scale
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Scale
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-9-item-2"
                               index={2}
@@ -6462,14 +6348,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="restart"
                             >
-                              <DropdownMenuItem
-                                value="restart"
-                              >
-                                Restart
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                            <PopoverListItem
+                              Restart
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               aria-selected={false}
                               id="downshift-9-item-3"
                               index={3}
@@ -6479,14 +6362,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                               onMouseDown={[Function]}
                               onMouseMove={[Function]}
                               role="option"
+                              value="stop"
                             >
-                              <DropdownMenuItem
-                                value="stop"
-                              >
-                                Stop
-                              </DropdownMenuItem>
-                            </PopoverListItem>
-                          </div>
+                              Stop
+                            </DropdownMenuItem>
+                          </DropdownSection>
                         </Popover>
                       }
                       isOpen={false}
