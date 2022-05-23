@@ -55,6 +55,10 @@ export interface DropdownMenuProps {
   disablePortal?: boolean;
 }
 
+const defaultItemToString = (
+  item: React.ReactElement<DropdownMenuItemProps> | any
+) => (item ? item.props.value : "");
+
 const DropdownMenu = (props: DropdownMenuProps) => {
   const {
     children,
@@ -67,11 +71,9 @@ const DropdownMenu = (props: DropdownMenuProps) => {
     preferredDirections,
     trigger
   } = props;
-  const defaultItemToString = (
-    item: React.ReactElement<DropdownMenuItemProps>
-  ) => (item ? item.props.value : "");
+
   const handleSelection = (
-    selectedItem: React.ReactElement<DropdownMenuItemProps>,
+    selectedItem: React.ReactElement<DropdownMenuItemProps> | null,
     stateAndHelpers?: ControllerStateAndHelpers<
       React.ReactElement<DropdownMenuItemProps>
     >

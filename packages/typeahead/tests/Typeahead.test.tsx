@@ -196,14 +196,15 @@ describe("Typeahead", () => {
     expect(component.find("input").prop("value")).toBe(items[0].value);
   });
 
-  it("does not set the input value to the selected item's value on select", () => {
+  it("skips disabled option on arrow down and select", () => {
     const onSelectFn = jest.fn();
+    const itemsWithDisabledOption = [
+      { label: "K8sphere", value: "K8sphere", disabled: true },
+      ...items
+    ];
     const component = mount(
       <Typeahead
-        items={[
-          { label: "K8sphere", value: "K8sphere", disabled: true },
-          ...items
-        ]}
+        items={itemsWithDisabledOption}
         onSelect={onSelectFn}
         textField={
           <TextInput
@@ -223,7 +224,11 @@ describe("Typeahead", () => {
     component.find("input").simulate("keyDown", {
       key: "Enter"
     });
-    expect(component.find("input").prop("value")).not.toBe(items[0].value);
+
+    // skips over index 0 because it's disabled
+    expect(component.find("input").prop("value")).toBe(
+      itemsWithDisabledOption[1].value
+    );
   });
 
   it("does not hide the dropdown when selecting an item if multiSelect is true", () => {
