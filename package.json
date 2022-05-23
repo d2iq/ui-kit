@@ -55,7 +55,6 @@
     "downshift": "6.1.7",
     "eslint-plugin-prettier": "4.0.0",
     "memoize-one": "6.0.0",
-    "popper-max-size-modifier": "0.2.0",
     "react-chartist": "0.14.4",
     "react-click-outside": "3.0.1",
     "react-delegate-component": "1.0.0",
