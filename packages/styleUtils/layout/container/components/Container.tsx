@@ -1,12 +1,19 @@
 import * as React from "react";
+import { cx } from "@emotion/css";
 import { container } from "../style";
 
 export interface ContainerProps {
   children: React.ReactNode;
+  "data-cy"?: string;
+  className?: string;
 }
 
-const Container: React.FC<ContainerProps> = ({ children }) => (
-  <div className={container} data-cy="container">
+const Container = ({
+  children,
+  "data-cy": dataCy = "container",
+  className
+}: ContainerProps) => (
+  <div className={cx(container, className)} data-cy={dataCy}>
     {children}
   </div>
 );
