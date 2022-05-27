@@ -33,7 +33,7 @@ exports[`Promos renders PromoBanner 1`] = `
       </div>
     </button>
     <div
-      class="css-1qfp4eg"
+      class="css-6cf51q"
       data-cy="flex"
     >
       <div
@@ -62,7 +62,7 @@ exports[`Promos renders PromoBanner 1`] = `
             Some promo details
           </div>
           <div
-            class="css-hs4ndh"
+            class="css-u1cluu"
             data-cy="flex"
           >
             <div
@@ -177,7 +177,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
       </div>
     </button>
     <div
-      class="css-1qfp4eg"
+      class="css-6cf51q"
       data-cy="flex"
     >
       <div
@@ -206,7 +206,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
             Some promo details
           </div>
           <div
-            class="css-hs4ndh"
+            class="css-u1cluu"
             data-cy="flex"
           >
             <div
@@ -321,7 +321,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
       </div>
     </button>
     <div
-      class="css-1qfp4eg"
+      class="css-6cf51q"
       data-cy="flex"
     >
       <div
@@ -350,7 +350,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
             Some promo details
           </div>
           <div
-            class="css-hs4ndh"
+            class="css-u1cluu"
             data-cy="flex"
           >
             <div
@@ -472,7 +472,7 @@ exports[`Promos renders PromoInline 1`] = `
           </div>
         </button>
         <div
-          class="css-1qfp4eg"
+          class="css-6cf51q"
           data-cy="flex"
         >
           <div
@@ -501,7 +501,7 @@ exports[`Promos renders PromoInline 1`] = `
                 Some promo details
               </div>
               <div
-                class="css-hs4ndh"
+                class="css-u1cluu"
                 data-cy="flex"
               >
                 <div

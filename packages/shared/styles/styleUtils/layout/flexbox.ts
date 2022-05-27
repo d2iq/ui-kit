@@ -20,6 +20,10 @@ export interface FlexboxProperties {
    * How `FlexItem` children should handle wrapping. Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints
    */
   wrap?: BreakpointConfig<React.CSSProperties["flexWrap"]>;
+  /**
+   * Specify the gutter size for both column and row in a single value. This will override any value set via the gutterSize property.
+   */
+  gap?: BreakpointConfig<React.CSSProperties["gap"]>;
 }
 
 const flexStrategies = {
@@ -129,7 +133,7 @@ export const flexItem = (flexStrategy: "grow" | "shrink") =>
     ${flexStrategies[flexStrategy]};
   `;
 
-export const applyFlexItemGutters = (direction, gutterSize) => {
+export const applyFlexItemGutters = (direction, gutterSize, gap) => {
   if (!gutterSize) {
     return;
   }
@@ -148,17 +152,20 @@ export const applyFlexItemGutters = (direction, gutterSize) => {
   return css`
     ${getResponsiveSpacingStyle("column-gap", columnGap)};
     ${getResponsiveSpacingStyle("row-gap", rowGap)};
+    ${getResponsiveSpacingStyle("gap", gap)};
 
     // If column-gap or row-gap are not supported by the browser utilize padding for spacing
     @supports not (column-gap: 1px) {
       > *:not(:last-child) {
         ${getResponsiveSpacingStyle("padding-right", columnGap)};
+        ${getResponsiveSpacingStyle("padding-right", gap)};
       }
     }
 
     @supports not (row-gap: 1px) {
       > *:not(:last-child) {
         ${getResponsiveSpacingStyle("padding-bottom", rowGap)};
+        ${getResponsiveSpacingStyle("padding-bottom", gap)};
       }
     }
   `;

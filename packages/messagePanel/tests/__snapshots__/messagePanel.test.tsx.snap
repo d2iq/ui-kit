@@ -117,7 +117,7 @@ exports[`MessagePanel renders with primary and secondary actions 1`] = `
         Body content
       </div>
       <div
-        class="css-bhf0my"
+        class="css-e35dnx"
         data-cy="flex"
       >
         <div

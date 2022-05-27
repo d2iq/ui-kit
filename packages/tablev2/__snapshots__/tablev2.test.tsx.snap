@@ -446,7 +446,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 gutterSize="xxs"
               >
                 <div
-                  className="css-4vm7kd"
+                  className="css-1fz6wig"
                   data-cy="flex"
                 >
                   <div
@@ -3731,7 +3731,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 gutterSize="xxs"
               >
                 <div
-                  className="css-4vm7kd"
+                  className="css-1fz6wig"
                   data-cy="flex"
                 >
                   <div
