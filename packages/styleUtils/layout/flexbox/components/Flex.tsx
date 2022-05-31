@@ -36,7 +36,8 @@ const Flex = ({
     direction = "row",
     align = "flex-start",
     wrap = "nowrap",
-    justify = "flex-start"
+    justify = "flex-start",
+    gap = "inherit"
   } = flexboxProperties;
   const FlexEl = tag;
 
@@ -44,7 +45,7 @@ const Flex = ({
     <FlexEl
       className={css`
         ${flex({ align, wrap, justify, ...flexboxProperties })};
-        ${applyFlexItemGutters(direction, gutterSize)};
+        ${applyFlexItemGutters(direction, gutterSize, gap)};
         ${className};
       `}
       data-cy={dataCy}
