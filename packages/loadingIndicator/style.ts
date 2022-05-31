@@ -1,6 +1,6 @@
 import { css, keyframes } from "@emotion/css";
 import { padding } from "../shared/styles/styleUtils";
-import { iconSizeXl, greyLight } from "../design-tokens/build/js/designTokens";
+import { iconSizeXl } from "../design-tokens/build/js/designTokens";
 
 export const sectionLoadingWrapper = css`
   ${padding("all", "l")};
@@ -36,7 +36,6 @@ export const sectionLoadingIndicator = css`
   animation-iteration-count: infinite;
   animation-name: ${sectionLoadingKeyframes};
   animation-timing-function: ease-in-out;
-  background-color: ${greyLight};
   border-radius: 100%;
   display: inline-block;
   height: ${iconSizeXl};
