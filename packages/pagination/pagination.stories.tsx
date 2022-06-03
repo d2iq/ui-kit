@@ -1,14 +1,10 @@
 import * as React from "react";
-import { faker } from "@faker-js/faker";
 import { Story, Meta } from "@storybook/react";
 import Pagination, { PaginationProps } from "./Pagination";
 import PaginationContainer from "./PaginationContainer";
 import { BorderedList } from "../list";
 import usePageChange from "./usePageChange";
-
-const initialData = Array.from({ length: 200 }, () =>
-  faker.internet.userName()
-);
+import { mockPaginationData as initialData } from "./mockPaginationData.json";
 
 export default {
   title: "Navigation/Pagination",
