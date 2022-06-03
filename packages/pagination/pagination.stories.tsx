@@ -61,7 +61,7 @@ export const ExampleWPagedListControlledComponent = args => {
 };
 
 export const StartOnPageBeyond1 = Template.bind({});
-Default.args = { initialActivePage: 3, totalItems: 200 };
+StartOnPageBeyond1.args = { initialActivePage: 3 };
 
 export const PreviousAndNextButtonsAsLinks = () => (
   <PaginationContainer>
