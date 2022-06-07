@@ -35,7 +35,8 @@
     "storybook": "start-storybook -p 6006",
     "test": "npx jest",
     "test:integration": "./scripts/test-integration",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "chromatic": "chromatic"
   },
   "files": [
     "dist",
@@ -75,7 +76,6 @@
     "@babel/types": "7.16.0",
     "@commitlint/cli": "7.2.0",
     "@commitlint/config-conventional": "7.1.2",
-    "@faker-js/faker": "6.3.1",
     "@storybook/addon-a11y": "6.5.6",
     "@storybook/addon-essentials": "6.5.6",
     "@storybook/addons": "6.5.6",
@@ -100,6 +100,7 @@
     "acorn": "8.7.1",
     "babel-loader": "8.2.3",
     "cache-loader": "4.1.0",
+    "chromatic": "6.5.6",
     "commander": "9.2.0",
     "core-js": "3.19.2",
     "csstype": "3.0.10",

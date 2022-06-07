@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Faker, faker } from "@faker-js/faker";
 import { DropdownSection, DropdownMenuItem } from "../dropdownMenu";
 import { Flex, FlexItem } from "../styleUtils/layout";
 import { Text } from "../styleUtils/typography";
 import { Icon } from "../icon";
 import { SystemIcons } from "../icons/dist/system-icons-enum";
 import { greyLightLighten1 } from "../design-tokens/build/js/designTokens";
+import { mockTableData } from "./mockTableData.json";
 
 import {
   Table,
@@ -35,42 +35,20 @@ interface User {
 }
 const { floor, random } = Math;
 const getRandomInt = (max: number) => floor(random() * floor(max));
-const createCard = (_, id: number) => ({
-  id,
-  name: faker.name.findName(),
-  phone: Math.random() > 0.8 ? null : faker.phone.phoneNumber(),
-  username: faker.internet.userName(),
-  email: faker.internet.email(),
-  website: faker.internet.domainName(),
-  company: { name: faker.company.companyName() }
-});
-const initialData = Array.from({ length: ROWS }, createCard);
-function update<A extends User>(data: A[]) {
+
+const initialData = mockTableData
+  .slice(0, ROWS)
+  .map((card, index) => ({ ...card, id: index }));
+
+function update<A extends User>(data: A[], cursor: number) {
   const indexToReplace = getRandomInt(data.length);
-  const newEntry = createCard(null, data[indexToReplace].id);
+  const newEntry = mockTableData[cursor];
   return data.map(e =>
-    e.id === newEntry.id ? { ...newEntry, name: e.name } : e
+    e.id === indexToReplace
+      ? { ...newEntry, name: e.name, id: indexToReplace }
+      : e
   );
 }
-const DataUpdateContainer = ({
-  children,
-  updateRateMs
-}: {
-  children: (_: { items: User[] }) => JSX.Element;
-  updateRateMs: number;
-}) => {
-  const [items, setItems] = React.useState(initialData);
-  // update data every couple milliseconds
-  React.useEffect(() => {
-    const timeout = setTimeout(
-      () => void setItems(update(items)),
-      updateRateMs
-    );
-    return () => void clearTimeout(timeout);
-  });
-
-  return children({ items });
-};
 
 const defaultColumns = [
   { id: "name", header: "Name", render: x => x.name },
@@ -80,20 +58,6 @@ const defaultColumns = [
   { id: "website", header: "Website", render: x => x.website },
   { id: "company", header: "Company", render: x => x.company.name }
 ];
-
-const StoryWithVariableCols = () => {
-  const [cols, setCols] = React.useState(defaultColumns);
-
-  // every seconds we're changing the columns to show.
-  everySecond(i => {
-    const toRemove = i % 2 ? [] : ["email", "phone"];
-    setCols(defaultColumns.filter(c => !toRemove.includes(c.id)));
-  });
-
-  return (
-    <Table data={initialData} toId={el => el.id.toString()} columns={cols} />
-  );
-};
 
 export default {
   title: "Data Listing/Table",
@@ -108,20 +72,51 @@ export const Default = () => (
   />
 );
 
-export const WithVariableCols = () => <StoryWithVariableCols />;
+export const WithVariableCols = () => {
+  const [cols, setCols] = React.useState(defaultColumns);
 
-export const WithUpdatingData = () => (
-  <DataUpdateContainer updateRateMs={1000}>
-    {({ items }) => (
-      <Table
-        data={items}
-        // toId fn needed to make react render stuff fast.
-        toId={el => el.id.toString()}
-        columns={defaultColumns}
-      />
-    )}
-  </DataUpdateContainer>
-);
+  // every second we're changing the columns to show.
+  React.useEffect(() => {
+    let i = 0;
+    const intervalId = setInterval(() => {
+      const toRemove = i % 2 ? [] : ["email", "phone"];
+      setCols(defaultColumns.filter(c => !toRemove.includes(c.id)));
+      i = i + 1;
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, [setCols]);
+
+  return (
+    <Table data={initialData} toId={el => el.id.toString()} columns={cols} />
+  );
+};
+
+export const WithUpdatingData = () => {
+  const [items, setItems] = React.useState(initialData);
+  const cursor = React.useRef(ROWS);
+  // update data every couple milliseconds
+  React.useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (cursor.current >= mockTableData.length) {
+        clearTimeout(timeout);
+      } else {
+        setItems(update(items, cursor.current));
+
+        cursor.current++;
+      }
+    }, 1000);
+    return () => void clearTimeout(timeout);
+  }, [cursor, items, setItems]);
+
+  return (
+    <Table
+      data={items}
+      // toId fn needed to make react render stuff fast.
+      toId={el => el.id.toString()}
+      columns={defaultColumns}
+    />
+  );
+};
 
 export const ColumnsWithCustomWidths = () => (
   <Table
@@ -518,7 +513,7 @@ export const WithoutStickyFirstColumn = () => (
 
 export const UsingOnStateChange = () => (
   <>
-    <p>Resize a colum and check the browser console.</p>
+    <p>Resize a column and check the browser console.</p>
     <Table
       data={initialData}
       // toId fn needed to make react render stuff fast.
@@ -531,16 +526,3 @@ export const UsingOnStateChange = () => (
     />
   </>
 );
-
-/* eslint-disable react-hooks/rules-of-hooks */
-const everySecond = fn => {
-  const [i, setI] = React.useState(0);
-  let intervalId = null;
-  React.useEffect(() => {
-    intervalId = setInterval(() => {
-      setI(i + 1);
-      fn(i);
-    }, 1000);
-    return () => clearInterval(intervalId);
-  });
-};
