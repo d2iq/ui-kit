@@ -25,7 +25,7 @@ jobs:
           cache: "npm"
 
       - name: Install Dependencies 🔧
-        run: npm ci
+        run: npm install
 
       - name: Lint 🧹
         run: npm run lint
@@ -36,7 +36,7 @@ jobs:
       - name: Unit Tests 🧪
         run: npm test
 
-      - name: Cypress run
+      - name: Cypress run 🔄
         uses: cypress-io/github-action@v2
         with:
           start: npm run test:integration

@@ -1,0 +1,24 @@
+name: Storybook Tests
+on: push
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - name: Install Dependencies 🔧
+        run: npm install
+      - name: Install Playwright 🎭
+        run: npx playwright install --with-deps
+      - name: Run Storybook Tests 📚
+        run: npm run build:storybook --quiet
+      - name: Serve Storybook and Run Tests 📖
+        run: |
+          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "npx http-server storybook_static --port 6006 --silent" \
+            "npx wait-on tcp:6006 && npm run test-storybook"

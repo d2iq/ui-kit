@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Prebuild storybook
         run: npm run prebuild:storybook
         # 👇 Adds Chromatic as a step in the workflow
