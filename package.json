@@ -130,7 +130,7 @@
     "react-docgen-typescript-loader": "3.7.2",
     "react-test-renderer": "17.0.2",
     "rimraf": "3.0.2",
-    "semantic-release": "19.0.2",
+    "semantic-release": "19.0.3",
     "style-dictionary": "3.7.0",
     "svg-inline-loader": "0.8.2",
     "svgo": "2.8.0",
