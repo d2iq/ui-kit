@@ -37,7 +37,6 @@ export {
   ResetButton
 } from "./button";
 export { ButtonCard, Card, LinkCard } from "./card";
-export { LineChart } from "./chart";
 export { CheckboxInput } from "./checkboxInput";
 export {
   ConfigurationMap,
