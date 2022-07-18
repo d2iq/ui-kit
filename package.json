@@ -3,6 +3,7 @@
   "version": "0.0.0-dev+semantically-released",
   "description": "D2iQ UI Kit",
   "license": "Apache-2.0",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/dcos-labs/ui-kit"
@@ -131,7 +132,7 @@
     "svg-inline-loader": "0.8.2",
     "svgo": "2.8.0",
     "svgstore": "3.0.1",
-    "tablemark": "2.0.0",
+    "tablemark": "3.0.0",
     "ts-jest": "27.1.3",
     "ts-loader": "5.3.3",
     "tslib": "1.9.3",

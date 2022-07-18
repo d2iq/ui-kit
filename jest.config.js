@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   restoreMocks: true,
   rootDir: ".",
   testPathIgnorePatterns: ["/node_modules/", "/dist/", "scripts"],

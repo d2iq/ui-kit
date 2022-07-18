@@ -117,4 +117,4 @@ const JS_originalFromAlias = {
   }
 };
 
-module.exports = [jsConstant, lessVar, cssVarJS, JS_originalFromAlias];
+export default [jsConstant, lessVar, cssVarJS, JS_originalFromAlias];
