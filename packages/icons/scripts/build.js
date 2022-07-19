@@ -1,17 +1,21 @@
-const path = require("path");
-const {
+import path from "path";
+import {
   existsSync,
   mkdirSync,
   readdirSync,
   readFile,
   readFileSync,
   writeFileSync
-} = require("fs");
-const t = require("@babel/types");
-const generate = require("@babel/generator").default;
-const { optimize } = require("svgo");
-const svgstore = require("svgstore");
-const iconSpriteConfig = require("../iconSpriteConfig.js");
+} from "fs";
+import t from "@babel/types";
+import babelGenerator from "@babel/generator";
+import { optimize } from "svgo";
+import svgstore from "svgstore";
+import iconSpriteConfig from "../iconSpriteConfig.js";
+import getDirname from "../../utilities/getDirname.js";
+const { __dirname } = getDirname(import.meta.url);
+const generate = babelGenerator.default;
+
 const buildDirPath = path.join(__dirname, "../", "dist");
 const distDirPath = path.join(
   __dirname,
@@ -87,6 +91,7 @@ const writeEnum = (srcDir, iconSetName, idPrefix) => {
       )
     )
   );
+
   const { code } = generate(ast);
 
   writeFileSync(

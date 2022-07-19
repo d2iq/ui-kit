@@ -1,4 +1,6 @@
-const path = require("path");
+import path from "path";
+import getDirname from "../utilities/getDirname.js";
+const { __dirname } = getDirname(import.meta.url);
 const systemIconsPath = path.join(__dirname, "src", "icon-system");
 const productIconsPath = path.join(__dirname, "src", "icon-product");
 
@@ -15,4 +17,4 @@ const iconDistConfigObj = {
   }
 };
 
-module.exports = iconDistConfigObj;
+export default iconDistConfigObj;
