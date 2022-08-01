@@ -1,6 +1,14 @@
 import React, { useState } from "react";
+import { ExpandedLinkProps } from "../../../link/types";
 
-const CustomLinkComponent = ({ children, href, onClick, ...rest }) => {
+const CustomLinkComponent = ({
+  url,
+  href,
+  children,
+  openInNewTab,
+  onClick,
+  ...rest
+}: ExpandedLinkProps) => {
   const [clicked, setClicked] = useState<boolean>(false);
   const handleCustomClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -14,4 +22,4 @@ const CustomLinkComponent = ({ children, href, onClick, ...rest }) => {
   );
 };
 
-export { CustomLinkComponent as default };
+export default CustomLinkComponent;

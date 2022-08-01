@@ -4,11 +4,7 @@ import { ExpandedLinkProps } from "../types";
 import { linkReset } from "../../shared/styles/styleUtils/resets/linkReset";
 import UnstyledLink from "./UnstyledLink";
 
-const ResetLink: React.FunctionComponent<ExpandedLinkProps> = ({
-  className,
-  children,
-  ...other
-}) => (
+const ResetLink = ({ className, children, ...other }: ExpandedLinkProps) => (
   <UnstyledLink className={cx(linkReset, className)} {...other}>
     {children}
   </UnstyledLink>

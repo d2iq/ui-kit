@@ -1,32 +1,24 @@
 import React from "react";
-import { ExpandedLinkProps } from "../types";
 import { LinkComponentContext } from "../../uiKitProvider/link/context";
+import { ExpandedLinkProps } from "../types";
 
-class UnstyledLink extends React.Component<ExpandedLinkProps> {
-  static contextType = LinkComponentContext;
-  render() {
-    const LinkComponent = this.context;
+const UnstyledLink = (props: ExpandedLinkProps) => {
+  const { href, url, target, openInNewTab, children, ...rest } = props;
 
-    if (LinkComponent) {
-      return <LinkComponent {...this.props} />;
-    }
-
-    const { href, url, target, openInNewTab, children, ...rest } = this.props;
-    const rel = target === "_blank" || openInNewTab ? "noopener" : undefined;
-    const blankTargetOrDefault = !target && openInNewTab ? "_blank" : target;
-
-    return (
-      <a
-        href={href || url}
-        target={blankTargetOrDefault}
-        // https://web.dev/external-anchors-use-rel-noopener/
-        rel={rel}
-        {...rest}
-      >
-        {children}
-      </a>
-    );
+  // Context is used for `UIKitProvider` link delegation
+  const LinkComponent = React.useContext(LinkComponentContext);
+  if (LinkComponent) {
+    return <LinkComponent {...props} />;
   }
-}
 
-export { UnstyledLink as default };
+  const rel = target === "_blank" || openInNewTab ? "noopener" : undefined;
+  const blankTargetOrDefault = !target && openInNewTab ? "_blank" : target;
+
+  return (
+    <a href={href || url} target={blankTargetOrDefault} rel={rel} {...rest}>
+      {children}
+    </a>
+  );
+};
+
+export default UnstyledLink;
