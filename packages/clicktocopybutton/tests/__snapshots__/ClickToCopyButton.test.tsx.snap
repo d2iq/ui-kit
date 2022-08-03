@@ -74,7 +74,6 @@ exports[`ClickToCopyButton renders default 1`] = `
               >
                 <Icon
                   shape="system-clipboard"
-                  size="s"
                 />
               </Box>
             </Clickable>
@@ -143,7 +142,6 @@ exports[`ClickToCopyButton renders default 1`] = `
                     >
                       <Icon
                         shape="system-clipboard"
-                        size="s"
                       >
                         <svg
                           aria-label="system-clipboard icon"
