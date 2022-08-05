@@ -9,11 +9,11 @@ export const avatarContainer = css`
   position: relative;
 
   &:after {
-    border-radius: inherit;
-    bottom: 0;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
     content: "";
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
     display: block;
+    bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
@@ -31,7 +31,7 @@ export const avatarSize = (
 export const avatarImg = css`
   border: 0;
   display: block;
-  height: 100%;
   object-fit: cover;
+  height: 100%;
   width: 100%;
 `;

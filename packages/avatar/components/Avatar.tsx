@@ -12,7 +12,7 @@ export interface AvatarProps {
    */
   src: string;
   /**
-   * Text a screenreader will read aloud when it gets to the avatar
+   * Text a screenreader will read aloud to describe the image
    */
   label?: string;
   /**
@@ -21,27 +21,17 @@ export interface AvatarProps {
   size?: IconSize;
 }
 
-const Avatar: React.FC<AvatarProps> = ({
-  label,
-  src,
-  size = DEFAULT_AVATAR_SIZE
-}: AvatarProps) => (
+const Avatar = ({ label, src, size = DEFAULT_AVATAR_SIZE }: AvatarProps) => (
   <div
     className={cx(avatarContainer, avatarSize(iconSizes[size]))}
     role="img"
     aria-label={label}
     data-cy="avatar"
   >
-    {/* eslint-disable jsx-a11y/alt-text */
-    /* intentionally not setting "alt" so it doesn't appear in the avatar
-      box when/if src is empty or a broken URL
-      */}
+    {/* Intentionally not setting "alt" so it doesn't appear in the avatar box
+    when/if src is empty or a broken URL */}
     <img className={avatarImg} src={src} alt="" />
   </div>
 );
-
-Avatar.defaultProps = {
-  size: DEFAULT_AVATAR_SIZE
-};
 
 export default Avatar;

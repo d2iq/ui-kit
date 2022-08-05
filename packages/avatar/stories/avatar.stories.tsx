@@ -11,8 +11,6 @@ import {
 import { serviceImg } from "./helpers/serviceImg";
 import { AvatarProps } from "../components/Avatar";
 
-const iconSizes = [iconSizeXs, iconSizeS, iconSizeM, iconSizeL, iconSizeXl];
-
 export default {
   title: "Graphic Elements/Avatar",
   component: Avatar,

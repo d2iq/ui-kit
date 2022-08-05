@@ -11,7 +11,7 @@ const DEFAULT_ICON_SIZE: IconSize = "s";
 
 export type IconShapes = SystemIcons | ProductIcons;
 export interface IconProps {
-  /** Can be used to give a better description of the icon than just it's name */
+  /** If an icon is more than decorative and requires further context include a description for screen readers */
   ariaLabel?: string;
   /** The fill color of the icon */
   color?: string;
@@ -25,14 +25,14 @@ export interface IconProps {
   block?: boolean;
 }
 
-const Icon: React.FC<IconProps> = ({
+const Icon = ({
   color,
   size = DEFAULT_ICON_SIZE,
   shape,
   ariaLabel,
   "data-cy": dataCy,
   block
-}) => {
+}: IconProps) => {
   const svgColor = color || "currentColor";
   const iconSize = iconSizes[size];
 
@@ -50,10 +50,6 @@ const Icon: React.FC<IconProps> = ({
       <use xlinkHref={`#${shape}`} />
     </svg>
   );
-};
-
-Icon.defaultProps = {
-  size: DEFAULT_ICON_SIZE
 };
 
 export default Icon;

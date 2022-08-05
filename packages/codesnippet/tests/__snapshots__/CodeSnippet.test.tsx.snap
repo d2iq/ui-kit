@@ -409,7 +409,6 @@ exports[`CodeSnippet renders with copy button 1`] = `
                                 <Icon
                                   color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
                                   shape="system-clipboard"
-                                  size="s"
                                 />
                               </Box>
                             </Clickable>
@@ -479,7 +478,6 @@ exports[`CodeSnippet renders with copy button 1`] = `
                                       <Icon
                                         color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
                                         shape="system-clipboard"
-                                        size="s"
                                       >
                                         <svg
                                           aria-label="system-clipboard icon"
