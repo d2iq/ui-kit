@@ -4,7 +4,9 @@
 name: "Chromatic"
 
 # Event for the workflow
-on: push
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 # List of jobs
 jobs:
@@ -20,8 +22,16 @@ jobs:
         run: npm run prebuild:storybook
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
+        id: publish
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      - name: Create PR comment
+        uses: mshick/add-pr-comment@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          message: |
+            [Chromatic Build](${{ steps.publish.outputs.buildUrl }})
+            [Storybook URL](${{ steps.publish.outputs.storybookUrl }})
