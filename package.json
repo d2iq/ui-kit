@@ -21,7 +21,6 @@
     "build:design-token-docs": "FORMAT=docs npm run build:design-tokens",
     "build:svg": "node ./packages/icons/scripts/build.js",
     "clean": "rimraf dist",
-    "commitlint": "commitlint -e",
     "create:component": "./scripts/create-component",
     "deploy:storybook": "storybook-to-ghpages",
     "prestart": "npm run build:design-tokens && npm run build:svg",
@@ -37,7 +36,8 @@
     "test": "npx jest",
     "test:integration": "./scripts/test-integration",
     "test-storybook": "test-storybook",
-    "chromatic": "chromatic"
+    "chromatic": "chromatic",
+    "prepare": "husky install"
   },
   "files": [
     "dist",
@@ -120,6 +120,7 @@
     "fork-ts-checker-webpack-plugin": "6.4.0",
     "fs-extra": "10.1.0",
     "http-server": "14.1.1",
+    "husky": "8.0.1",
     "jest": "27.5.1",
     "jest-runner-prettier": "0.2.6",
     "prettier": "2.7.1",
