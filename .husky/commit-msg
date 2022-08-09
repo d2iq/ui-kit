@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+BASE=$(git rev-parse --show-toplevel)
+export PATH="$BASE/node_modules/.bin:$PATH"
+
+commitlint --edit $1
