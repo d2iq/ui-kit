@@ -5,21 +5,21 @@
   - [Getting Started](#getting-started)
   - [Creating a New Component](#creating-a-new-component)
     - [Does It Belong in UI Kit?](#does-it-belong-in-ui-kit)
-    - [Eliminate React Errors and Warnings](#eliminate-react-errors-and-warnings)
+      - [Consider the Following Before Adding a New Component](#consider-the-following-before-adding-a-new-component)
   - [Maintaining Reusable Components](#maintaining-reusable-components)
     - [Rigid vs. Flexible](#rigid-vs-flexible)
-    - [Avoid Weak Elements](#avoid-weak-elements)
-    - [Declare Prop Types](#declare-prop-types)
-    - [Never Hard Code HTML ID’s](#never-hard-code-html-ids)
-    - [Use Logical Defaults](#use-logical-defaults)
-    - [Accessibility](#accessibility)
-    - [Configuration Objects](#configuration-objects)
-    - [Single Responsibility Principle](#single-responsibility-principle)
-    - [Keep Components Simple](#keep-components-simple)
-    - [Directory Structure](#directory-structure)
+      - [Avoid Weak Elements](#avoid-weak-elements)
+      - [Declare Prop Types](#declare-prop-types)
+      - [Never Hard Code HTML ID’s](#never-hard-code-html-ids)
+      - [Use Logical Defaults](#use-logical-defaults)
+      - [Accessibility](#accessibility)
+      - [Configuration Objects](#configuration-objects)
+      - [Single Responsibility Principle](#single-responsibility-principle)
+      - [Keep Components Simple](#keep-components-simple)
+      - [Directory Structure](#directory-structure)
   - [Conventional Commits](#conventional-commits)
     - [Commit Types](#commit-types)
-    - [JIRA Integration](#jira-integration)
+      - [Conventional Commit Types](#conventional-commit-types)
 
 ## Prerequisites
 
@@ -72,23 +72,6 @@ If adding this component right now prevent us from working on more important wor
 If we can’t get this added to UI Kit in time for it to be used to resolve your feature/task/bug, build in it your app's codebase, and we’ll follow-up about adding to UI Kit at the end of the release iteration.
 
 If you're not sure whether a component belongs in UI Kit, keep it in the app you're building.
-
-### Eliminate React Errors and Warnings
-
-We don't want our components to create noise in the console for other apps that use ui-kit. We've added Cypress to test for React errors/warnings and fail in CI if any are found.
-
-When creating a new component, add a test to `cypress/integration/storybook-cy.js` to check for errors and warnings.
-
-#### Running Cypress
-
-Using the Cypress UI:
-
-1. `npm start`
-2. `npx cypress open`
-3. Click "storybook-cy" in the sidebar of the Cypress UI
-
-In the CLI:
-`npm run test:integration`
 
 ## Maintaining Reusable Components
 
