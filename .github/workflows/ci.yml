@@ -36,11 +36,6 @@ jobs:
       - name: Unit Tests 🧪
         run: npm test
 
-      - name: Cypress run 🔄
-        uses: cypress-io/github-action@v2
-        with:
-          start: npm run test:integration
-
       - name: Semantic Release ⬆️
         if: github.ref == 'refs/heads/main'
         uses: cycjimmy/semantic-release-action@v2.6.0
