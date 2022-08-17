@@ -34,7 +34,6 @@
     "start": "NODE_ENV=development npm run storybook --root ./ ",
     "storybook": "start-storybook -p 6006",
     "test": "npx jest",
-    "test:integration": "./scripts/test-integration",
     "test-storybook": "test-storybook",
     "chromatic": "chromatic",
     "prepare": "husky install"
@@ -94,7 +93,6 @@
     "commander": "9.4.0",
     "concurrently": "7.3.0",
     "csstype": "3.1.0",
-    "cypress": "9.2.1",
     "cz-conventional-changelog": "3.3.0",
     "enzyme": "3.11.0",
     "enzyme-to-json": "3.6.2",
