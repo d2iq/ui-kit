@@ -9,17 +9,13 @@ const webpackBase = {
   getRules: () => {
     return [
       {
-        test: /\.(js|ts|tsx?)$/,
-        exclude: /node_modules/,
-        use: [
-          "cache-loader",
-          {
-            loader: "ts-loader",
-            options: {
-              transpileOnly: true
-            }
-          }
-        ]
+        test: /\.(ts|tsx)$/,
+        loader: "babel-loader",
+        options: {
+          // without additional settings, this will reference .babelrc
+          presets: ["@babel/preset-react", "@babel/preset-typescript"]
+        },
+        exclude: /node_modules/
       },
       {
         test: /\.stories\.tsx?$/,
