@@ -33,6 +33,9 @@ jobs:
       - name: Build 🔨
         run: npm run dist
 
+      - name: Type Checking ⚡
+        run: npm run test:types
+
       - name: Unit Tests 🧪
         run: npm test
 
