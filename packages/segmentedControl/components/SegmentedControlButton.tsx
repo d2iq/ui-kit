@@ -36,61 +36,53 @@ export interface SegmentedControlButtonProps {
    * Content that appears in a Tooltip when a users hovers the button
    */
   tooltipContent?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-class SegmentedControlButton extends React.PureComponent<SegmentedControlButtonProps> {
-  placeholderId = nextId("segmentedControlButton-");
-
-  render() {
-    const {
-      id = this.placeholderId,
-      isActive,
-      onChange,
-      name,
-      value,
-      tooltipContent,
-      children
-    } = this.props;
-    const segmentChildren = tooltipContent ? (
-      <Tooltip
-        id={`${id}-tooltip`}
-        trigger={<div className={segmentedControlButtonInner}>{children}</div>}
-      >
-        {tooltipContent}
-      </Tooltip>
-    ) : (
-      <div className={segmentedControlButtonInner}>{children}</div>
-    );
-
+const SegmentedControlButton = React.memo(
+  ({
+    id = nextId("segmentedControlButton-"),
+    isActive,
+    onChange,
+    name,
+    value,
+    tooltipContent,
+    children
+  }: SegmentedControlButtonProps) => {
     return (
-      <React.Fragment>
-        {/* eslint-disable jsx-a11y/role-has-required-aria-props */
-        /* This rule is asking for a `aria-checked` attribute on the input element.
-        We're already setting `checked`, so this is redundant and unnecessary.
-        */}
-        <FocusStyleManager focusEnabledClass={staticKeyboardFocusClassname}>
-          <label
-            className={cx(segmentedControlButton, {
-              [segmentedControlButtonActive]: this.props.isActive
-            })}
-            data-cy="segmentedControlButton"
-            htmlFor={id}
-          >
-            <input
-              className={visuallyHidden}
-              id={id}
-              type="radio"
-              name={name}
-              value={value}
-              checked={isActive}
-              onChange={onChange}
-            />
-            {segmentChildren}
-          </label>
-        </FocusStyleManager>
-      </React.Fragment>
+      <FocusStyleManager focusEnabledClass={staticKeyboardFocusClassname}>
+        <label
+          className={cx(segmentedControlButton, {
+            [segmentedControlButtonActive]: isActive
+          })}
+          data-cy="segmentedControlButton"
+          htmlFor={id}
+        >
+          <input
+            className={visuallyHidden}
+            id={id}
+            type="radio"
+            name={name}
+            value={value}
+            checked={isActive}
+            onChange={onChange}
+          />
+          {tooltipContent ? (
+            <Tooltip
+              id={`${id}-tooltip`}
+              trigger={
+                <div className={segmentedControlButtonInner}>{children}</div>
+              }
+            >
+              {tooltipContent}
+            </Tooltip>
+          ) : (
+            <div className={segmentedControlButtonInner}>{children}</div>
+          )}
+        </label>
+      </FocusStyleManager>
     );
   }
-}
+);
 
 export default SegmentedControlButton;

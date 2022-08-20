@@ -31,7 +31,7 @@ export interface SelectInputProps extends React.HTMLProps<HTMLSelectElement> {
   /**
    * Sets the current appearance of the select component. This defaults to InputAppearance.Standard, but supports `InputAppearance.Error` & `InputAppearance.Success` appearances as well.
    */
-  appearance: InputAppearance;
+  appearance?: InputAppearance;
   /**
    * Sets the contents for validation errors. This will be displayed below the input element. Errors are only visible when the `SelectInput` appearance is also set to `InputAppearance.Error`.
    */
@@ -66,49 +66,55 @@ export interface SelectInputProps extends React.HTMLProps<HTMLSelectElement> {
   tooltipContent?: React.ReactNode;
 }
 
-export interface SelectInputState {
-  hasFocus: boolean;
+function getInputAppearance(disabled, hasFocus, appearance) {
+  if (disabled) {
+    return "disabled";
+  }
+  if (hasFocus) {
+    return `${appearance}-focus`;
+  }
+  return appearance;
 }
 
-class SelectInput extends React.PureComponent<
-  SelectInputProps,
-  SelectInputState
-> {
-  public static defaultProps: Partial<SelectInputProps> = {
-    appearance: InputAppearance.Standard,
-    showInputLabel: true
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.handleFocus = this.handleFocus.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
-
-    this.state = {
-      hasFocus: false
-    };
-  }
-
-  public render() {
-    const {
-      appearance,
-      errors,
-      iconStart,
-      id = nextId("selectInput-"),
-      options,
-      showInputLabel,
-      inputLabel,
-      tooltipContent,
-      hintContent,
-      ...other
-    } = this.props;
-    delete other.onFocus;
-    delete other.onBlur;
-
+const SelectInput = React.memo(
+  ({
+    appearance = InputAppearance.Standard,
+    errors,
+    iconStart,
+    id = nextId("selectInput-"),
+    options,
+    showInputLabel = true,
+    inputLabel,
+    tooltipContent,
+    hintContent,
+    disabled,
+    required,
+    onFocus,
+    onBlur,
+    ...other
+  }: SelectInputProps) => {
+    const [hasFocus, setHasFocus] = React.useState<boolean>(false);
     const hasError = appearance === InputAppearance.Error;
     const parentDataCy = `selectInput selectInput.${appearance}`;
     const selectDataCy = `selectInput-select selectInput-select.${appearance}`;
+
+    const handleFocus = e => {
+      setHasFocus(true);
+
+      if (onFocus) {
+        onFocus(e);
+      }
+    };
+
+    const handleBlur = e => {
+      setHasFocus(false);
+
+      if (onBlur) {
+        onBlur(e);
+      }
+    };
+
+    const inputAppearance = getInputAppearance(disabled, hasFocus, appearance);
 
     return (
       <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
@@ -119,7 +125,7 @@ class SelectInput extends React.PureComponent<
               hidden: !showInputLabel,
               id,
               label: inputLabel,
-              required: this.props.required,
+              required,
               tooltipContent
             })}
 
@@ -127,7 +133,7 @@ class SelectInput extends React.PureComponent<
               className={cx(
                 selectContainer,
                 inputContainer,
-                getInputAppearanceStyle(this.getInputAppearance()),
+                getInputAppearanceStyle(inputAppearance),
                 display("flex")
               )}
             >
@@ -145,8 +151,8 @@ class SelectInput extends React.PureComponent<
                 aria-invalid={!isValid}
                 aria-describedby={describedByIds}
                 id={id}
-                onFocus={this.handleFocus}
-                onBlur={this.handleBlur}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
                 data-cy={selectDataCy}
                 {...other}
               >
@@ -167,7 +173,7 @@ class SelectInput extends React.PureComponent<
                 className={cx(
                   selectIcon,
                   padding("horiz", "m"),
-                  getIconAppearanceStyle(this.getInputAppearance())
+                  getIconAppearanceStyle(inputAppearance)
                 )}
               >
                 <Icon
@@ -188,32 +194,6 @@ class SelectInput extends React.PureComponent<
       </FormFieldWrapper>
     );
   }
-
-  private handleFocus(e) {
-    this.setState({ hasFocus: true });
-
-    if (this.props.onFocus) {
-      this.props.onFocus(e);
-    }
-  }
-
-  private handleBlur(e) {
-    this.setState({ hasFocus: false });
-
-    if (this.props.onBlur) {
-      this.props.onBlur(e);
-    }
-  }
-
-  private getInputAppearance() {
-    if (this.props.disabled) {
-      return "disabled";
-    }
-    if (this.state.hasFocus) {
-      return `${this.props.appearance}-focus`;
-    }
-    return this.props.appearance;
-  }
-}
+);
 
 export default SelectInput;
