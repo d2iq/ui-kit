@@ -32,10 +32,10 @@ describe("SelectInput", () => {
   });
 
   it("should render all appearances focus", () => {
-    Object.keys(SelectInput).forEach(appearance => {
+    Object.keys(InputAppearance).forEach(appearance => {
       const component = mount(
         <SelectInput
-          appearance={SelectInput[appearance]}
+          appearance={InputAppearance[appearance]}
           options={defaultOptions}
           id="layers"
           inputLabel="Atmosphere layer"

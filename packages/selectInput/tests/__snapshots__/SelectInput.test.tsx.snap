@@ -72,6 +72,8 @@ exports[`SelectInput should render all appearances focus 1`] = `
   font-size: inherit;
   padding-left: 16px;
   padding-right: 16px;
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -166,6 +168,10 @@ exports[`SelectInput should render all appearances focus 1`] = `
   padding-right: 16px;
 }
 
+.emotion-3 svg {
+  fill: var(--themeBrandPrimary, #7D58FF);
+}
+
 .emotion-4 {
   vertical-align: middle;
   fill: inherit;
@@ -175,13 +181,8 @@ exports[`SelectInput should render all appearances focus 1`] = `
   pointer-events: none;
 }
 
-<SelectInput
-  appearance={
-    Object {
-      "appearance": "standard",
-      "showInputLabel": true,
-    }
-  }
+<Memo()
+  appearance="standard"
   id="layers"
   inputLabel="Atmosphere layer"
   options={
@@ -213,13 +214,12 @@ exports[`SelectInput should render all appearances focus 1`] = `
       },
     ]
   }
-  showInputLabel={true}
 >
   <FormFieldWrapper
     id="layers"
   >
     <div
-      data-cy="selectInput selectInput.[object Object]"
+      data-cy="selectInput selectInput.standard"
     >
       <label
         className="emotion-0"
@@ -235,7 +235,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
           aria-describedby=""
           aria-invalid={false}
           className="emotion-2"
-          data-cy="selectInput-select selectInput-select.[object Object]"
+          data-cy="selectInput-select selectInput-select.standard"
           id="layers"
           onBlur={[Function]}
           onFocus={[Function]}
@@ -305,5 +305,518 @@ exports[`SelectInput should render all appearances focus 1`] = `
       </span>
     </div>
   </FormFieldWrapper>
-</SelectInput>
+</Memo()>
+`;
+
+exports[`SelectInput should render all appearances focus 2`] = `
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: var(--themeError, #EB293A);
+  fill: var(--themeError, #EB293A);
+}
+
+.emotion-1 {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: rgba(235,41,58,0.05);
+  border-color: var(--themeError, #EB293A);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  color: inherit;
+  font-size: inherit;
+  padding-right: 32px;
+  width: 100%;
+  display: block;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-2:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 var(--themeTextColorPrimary, #1B2029);
+}
+
+.emotion-2::-ms-expand {
+  display: none;
+}
+
+.emotion-3 {
+  font-size: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-3 svg {
+  fill: var(--themeError, #EB293A);
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
+<Memo()
+  appearance="error"
+  id="layers"
+  inputLabel="Atmosphere layer"
+  options={
+    Array [
+      Object {
+        "label": "Exosphere",
+        "value": "exosphere",
+      },
+      Object {
+        "label": "Thermosphere",
+        "value": "thermosphere",
+      },
+      Object {
+        "label": "Mesosphere",
+        "value": "mesosphere",
+      },
+      Object {
+        "label": "Stratosphere",
+        "value": "stratosphere",
+      },
+      Object {
+        "label": "Troposphere",
+        "value": "troposphere",
+      },
+      Object {
+        "disabled": true,
+        "label": "Can't touch this",
+        "value": "disabled",
+      },
+    ]
+  }
+>
+  <FormFieldWrapper
+    id="layers"
+  >
+    <div
+      data-cy="selectInput selectInput.error"
+    >
+      <label
+        className="emotion-0"
+        data-cy="textInput-label"
+        htmlFor="layers"
+      >
+        Atmosphere layer
+      </label>
+      <span
+        className="emotion-1"
+      >
+        <select
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-2"
+          data-cy="selectInput-select selectInput-select.error"
+          id="layers"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <option
+            key="0"
+            value="exosphere"
+          >
+            Exosphere
+          </option>
+          <option
+            key="1"
+            value="thermosphere"
+          >
+            Thermosphere
+          </option>
+          <option
+            key="2"
+            value="mesosphere"
+          >
+            Mesosphere
+          </option>
+          <option
+            key="3"
+            value="stratosphere"
+          >
+            Stratosphere
+          </option>
+          <option
+            key="4"
+            value="troposphere"
+          >
+            Troposphere
+          </option>
+          <option
+            disabled={true}
+            key="5"
+            value="disabled"
+          >
+            Can't touch this
+          </option>
+        </select>
+        <span
+          className="emotion-3"
+        >
+          <Icon
+            color="inherit"
+            shape="system-triangle-down"
+            size="xs"
+          >
+            <svg
+              aria-label="system-triangle-down icon"
+              className="emotion-4"
+              data-cy="icon"
+              height={16}
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width={16}
+            >
+              <use
+                xlinkHref="#system-triangle-down"
+              />
+            </svg>
+          </Icon>
+        </span>
+      </span>
+      <div
+        data-cy="selectInput-hintContent"
+      />
+    </div>
+  </FormFieldWrapper>
+</Memo()>
+`;
+
+exports[`SelectInput should render all appearances focus 3`] = `
+.emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: rgba(20,198,132,0.05);
+  border-color: var(--themeSuccess, #14C684);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  color: inherit;
+  font-size: inherit;
+  padding-right: 32px;
+  width: 100%;
+  display: block;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-2:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 var(--themeTextColorPrimary, #1B2029);
+}
+
+.emotion-2::-ms-expand {
+  display: none;
+}
+
+.emotion-3 {
+  font-size: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-3 svg {
+  fill: var(--themeSuccess, #14C684);
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
+<Memo()
+  appearance="success"
+  id="layers"
+  inputLabel="Atmosphere layer"
+  options={
+    Array [
+      Object {
+        "label": "Exosphere",
+        "value": "exosphere",
+      },
+      Object {
+        "label": "Thermosphere",
+        "value": "thermosphere",
+      },
+      Object {
+        "label": "Mesosphere",
+        "value": "mesosphere",
+      },
+      Object {
+        "label": "Stratosphere",
+        "value": "stratosphere",
+      },
+      Object {
+        "label": "Troposphere",
+        "value": "troposphere",
+      },
+      Object {
+        "disabled": true,
+        "label": "Can't touch this",
+        "value": "disabled",
+      },
+    ]
+  }
+>
+  <FormFieldWrapper
+    id="layers"
+  >
+    <div
+      data-cy="selectInput selectInput.success"
+    >
+      <label
+        className="emotion-0"
+        data-cy="textInput-label"
+        htmlFor="layers"
+      >
+        Atmosphere layer
+      </label>
+      <span
+        className="emotion-1"
+      >
+        <select
+          aria-describedby=""
+          aria-invalid={false}
+          className="emotion-2"
+          data-cy="selectInput-select selectInput-select.success"
+          id="layers"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <option
+            key="0"
+            value="exosphere"
+          >
+            Exosphere
+          </option>
+          <option
+            key="1"
+            value="thermosphere"
+          >
+            Thermosphere
+          </option>
+          <option
+            key="2"
+            value="mesosphere"
+          >
+            Mesosphere
+          </option>
+          <option
+            key="3"
+            value="stratosphere"
+          >
+            Stratosphere
+          </option>
+          <option
+            key="4"
+            value="troposphere"
+          >
+            Troposphere
+          </option>
+          <option
+            disabled={true}
+            key="5"
+            value="disabled"
+          >
+            Can't touch this
+          </option>
+        </select>
+        <span
+          className="emotion-3"
+        >
+          <Icon
+            color="inherit"
+            shape="system-triangle-down"
+            size="xs"
+          >
+            <svg
+              aria-label="system-triangle-down icon"
+              className="emotion-4"
+              data-cy="icon"
+              height={16}
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width={16}
+            >
+              <use
+                xlinkHref="#system-triangle-down"
+              />
+            </svg>
+          </Icon>
+        </span>
+      </span>
+    </div>
+  </FormFieldWrapper>
+</Memo()>
 `;

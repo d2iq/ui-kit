@@ -238,8 +238,7 @@ exports[`Pagination rendering renders w/ page length menu 1`] = `
     <FlexItem
       flex="shrink"
     >
-      <SelectInput
-        appearance="standard"
+      <Memo()
         id="pageLengthMenu6"
         inputLabel="Items per page"
         onChange={[Function]}
