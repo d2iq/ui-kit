@@ -10,17 +10,17 @@ import { ToggleInputProps } from "../../toggleInput/components/ToggleInput";
 
 export interface CheckboxInputProps extends ToggleInputProps {
   /**
-   * Whether the checkbox is neither checked or unchecked
+   * Whether the checkbox is indeterminate or not. Use an indeterminate checkbox to indicate that there are both selected and unselected checkboxes nested under the indeterminate checkbox.
    */
   indeterminate?: boolean;
 }
 
-const CheckboxInput: React.FC<React.PropsWithRef<CheckboxInputProps>> = ({
+const CheckboxInput = ({
   checked,
   indeterminate,
   ref,
   ...other
-}) => {
+}: React.PropsWithRef<CheckboxInputProps>) => {
   const isIndeterminate = indeterminate && !checked;
 
   return (
