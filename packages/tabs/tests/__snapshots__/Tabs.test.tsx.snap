@@ -1,107 +1,266 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tabs renders default 1`] = `
-<div
-  class="react-tabs css-14ccmid"
-  data-cy="tabs"
-  data-rttabs="true"
+<Memo(Tabs)
+  onSelect={[Function]}
+  selectedIndex={0}
 >
-  <ul
-    class="react-tabs__tab-list"
-    role="tablist"
+  <Tabs
+    className="react-tabs css-14ccmid"
+    data-cy="tabs"
+    defaultFocus={false}
+    defaultIndex={null}
+    disableUpDownKeys={false}
+    environment={null}
+    focusTabOnClick={true}
+    forceRenderTabPanel={false}
+    onSelect={[Function]}
+    selectedIndex={0}
   >
-    <li
-      aria-controls="react-tabs-1"
-      aria-disabled="false"
-      aria-selected="true"
-      class="react-tabs__tab react-tabs__tab--selected"
-      data-rttab="true"
-      id="react-tabs-0"
-      role="tab"
-      tabindex="0"
+    <UncontrolledTabs
+      className="react-tabs css-14ccmid"
+      data-cy="tabs"
+      disableUpDownKeys={false}
+      environment={null}
+      focus={false}
+      forceRenderTabPanel={false}
+      onSelect={[Function]}
+      selectedIndex={0}
     >
-      Tab 1 Name
-    </li>
-    <li
-      aria-controls="react-tabs-3"
-      aria-disabled="false"
-      aria-selected="false"
-      class="react-tabs__tab"
-      data-rttab="true"
-      id="react-tabs-2"
-      role="tab"
-    >
-      Tab 2 Name
-    </li>
-  </ul>
-  <div
-    aria-labelledby="react-tabs-0"
-    class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-    id="react-tabs-1"
-    role="tabpanel"
-  >
-    <div>
-      First tab Content
-    </div>
-  </div>
-  <div
-    aria-labelledby="react-tabs-2"
-    class="react-tabs__tab-panel"
-    id="react-tabs-3"
-    role="tabpanel"
-  />
-</div>
+      <div
+        className="react-tabs css-14ccmid"
+        data-cy="tabs"
+        data-rttabs={true}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <TabList
+          className="react-tabs__tab-list"
+          key=".0"
+        >
+          <ul
+            className="react-tabs__tab-list"
+            role="tablist"
+          >
+            <Tab
+              className="react-tabs__tab"
+              disabledClassName="react-tabs__tab--disabled"
+              focus={false}
+              id=":r0:0"
+              key=".$.0"
+              selected={true}
+              selectedClassName="react-tabs__tab--selected"
+              tabRef={[Function]}
+            >
+              <li
+                aria-controls="panel:r0:0"
+                aria-disabled="false"
+                aria-selected="true"
+                className="react-tabs__tab react-tabs__tab--selected"
+                data-rttab={true}
+                id="tab:r0:0"
+                role="tab"
+                tabIndex="0"
+              >
+                Tab 1 Name
+              </li>
+            </Tab>
+            <Tab
+              className="react-tabs__tab"
+              disabledClassName="react-tabs__tab--disabled"
+              focus={false}
+              id=":r0:1"
+              key=".$.1"
+              selected={false}
+              selectedClassName="react-tabs__tab--selected"
+              tabRef={[Function]}
+            >
+              <li
+                aria-controls="panel:r0:1"
+                aria-disabled="false"
+                aria-selected="false"
+                className="react-tabs__tab"
+                data-rttab={true}
+                id="tab:r0:1"
+                role="tab"
+                tabIndex={null}
+              >
+                Tab 2 Name
+              </li>
+            </Tab>
+          </ul>
+        </TabList>
+        <TabPanel
+          className="react-tabs__tab-panel"
+          forceRender={false}
+          id=":r0:0"
+          key=".1:$.0"
+          selected={true}
+          selectedClassName="react-tabs__tab-panel--selected"
+        >
+          <div
+            aria-labelledby="tab:r0:0"
+            className="react-tabs__tab-panel react-tabs__tab-panel--selected"
+            id="panel:r0:0"
+            role="tabpanel"
+          >
+            <div
+              key=".0"
+            >
+              First tab Content
+            </div>
+          </div>
+        </TabPanel>
+        <TabPanel
+          className="react-tabs__tab-panel"
+          forceRender={false}
+          id=":r0:1"
+          key=".1:$.1"
+          selected={false}
+          selectedClassName="react-tabs__tab-panel--selected"
+        >
+          <div
+            aria-labelledby="tab:r0:1"
+            className="react-tabs__tab-panel"
+            id="panel:r0:1"
+            role="tabpanel"
+          />
+        </TabPanel>
+      </div>
+    </UncontrolledTabs>
+  </Tabs>
+</Memo(Tabs)>
 `;
 
 exports[`Tabs renders vertically 1`] = `
-<div
-  class="react-tabs css-628men"
-  data-cy="tabs"
-  data-rttabs="true"
+<Memo(Tabs)
+  direction="vert"
+  onSelect={[Function]}
+  selectedIndex={0}
 >
-  <ul
-    class="react-tabs__tab-list"
-    role="tablist"
+  <Tabs
+    className="react-tabs css-628men"
+    data-cy="tabs"
+    defaultFocus={false}
+    defaultIndex={null}
+    disableUpDownKeys={false}
+    environment={null}
+    focusTabOnClick={true}
+    forceRenderTabPanel={false}
+    onSelect={[Function]}
+    selectedIndex={0}
   >
-    <li
-      aria-controls="react-tabs-5"
-      aria-disabled="false"
-      aria-selected="true"
-      class="react-tabs__tab react-tabs__tab--selected"
-      data-rttab="true"
-      id="react-tabs-4"
-      role="tab"
-      tabindex="0"
+    <UncontrolledTabs
+      className="react-tabs css-628men"
+      data-cy="tabs"
+      disableUpDownKeys={false}
+      environment={null}
+      focus={false}
+      forceRenderTabPanel={false}
+      onSelect={[Function]}
+      selectedIndex={0}
     >
-      Tab 1 Name
-    </li>
-    <li
-      aria-controls="react-tabs-7"
-      aria-disabled="false"
-      aria-selected="false"
-      class="react-tabs__tab"
-      data-rttab="true"
-      id="react-tabs-6"
-      role="tab"
-    >
-      Tab 2 Name
-    </li>
-  </ul>
-  <div
-    aria-labelledby="react-tabs-4"
-    class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-    id="react-tabs-5"
-    role="tabpanel"
-  >
-    <div>
-      First tab Content
-    </div>
-  </div>
-  <div
-    aria-labelledby="react-tabs-6"
-    class="react-tabs__tab-panel"
-    id="react-tabs-7"
-    role="tabpanel"
-  />
-</div>
+      <div
+        className="react-tabs css-628men"
+        data-cy="tabs"
+        data-rttabs={true}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <TabList
+          className="react-tabs__tab-list"
+          key=".0"
+        >
+          <ul
+            className="react-tabs__tab-list"
+            role="tablist"
+          >
+            <Tab
+              className="react-tabs__tab"
+              disabledClassName="react-tabs__tab--disabled"
+              focus={false}
+              id=":r1:0"
+              key=".$.0"
+              selected={true}
+              selectedClassName="react-tabs__tab--selected"
+              tabRef={[Function]}
+            >
+              <li
+                aria-controls="panel:r1:0"
+                aria-disabled="false"
+                aria-selected="true"
+                className="react-tabs__tab react-tabs__tab--selected"
+                data-rttab={true}
+                id="tab:r1:0"
+                role="tab"
+                tabIndex="0"
+              >
+                Tab 1 Name
+              </li>
+            </Tab>
+            <Tab
+              className="react-tabs__tab"
+              disabledClassName="react-tabs__tab--disabled"
+              focus={false}
+              id=":r1:1"
+              key=".$.1"
+              selected={false}
+              selectedClassName="react-tabs__tab--selected"
+              tabRef={[Function]}
+            >
+              <li
+                aria-controls="panel:r1:1"
+                aria-disabled="false"
+                aria-selected="false"
+                className="react-tabs__tab"
+                data-rttab={true}
+                id="tab:r1:1"
+                role="tab"
+                tabIndex={null}
+              >
+                Tab 2 Name
+              </li>
+            </Tab>
+          </ul>
+        </TabList>
+        <TabPanel
+          className="react-tabs__tab-panel"
+          forceRender={false}
+          id=":r1:0"
+          key=".1:$.0"
+          selected={true}
+          selectedClassName="react-tabs__tab-panel--selected"
+        >
+          <div
+            aria-labelledby="tab:r1:0"
+            className="react-tabs__tab-panel react-tabs__tab-panel--selected"
+            id="panel:r1:0"
+            role="tabpanel"
+          >
+            <div
+              key=".0"
+            >
+              First tab Content
+            </div>
+          </div>
+        </TabPanel>
+        <TabPanel
+          className="react-tabs__tab-panel"
+          forceRender={false}
+          id=":r1:1"
+          key=".1:$.1"
+          selected={false}
+          selectedClassName="react-tabs__tab-panel--selected"
+        >
+          <div
+            aria-labelledby="tab:r1:1"
+            className="react-tabs__tab-panel"
+            id="panel:r1:1"
+            role="tabpanel"
+          />
+        </TabPanel>
+      </div>
+    </UncontrolledTabs>
+  </Tabs>
+</Memo(Tabs)>
 `;

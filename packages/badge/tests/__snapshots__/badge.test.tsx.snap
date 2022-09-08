@@ -1,66 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Badge accept jsx as children 1`] = `
-<span
-  className="css-iu2at0"
-  data-cy="badge"
->
-  <span>
-    string
+<Memo()>
+  <span
+    className="css-iu2at0"
+    data-cy="badge"
+  >
+    <StringComponent>
+      <span>
+        string
+      </span>
+    </StringComponent>
   </span>
-</span>
+</Memo()>
 `;
 
 exports[`Badge danger 1`] = `
-<span
-  className="css-1v2vcel"
-  data-cy="badge"
+<Memo()
+  appearance="danger"
 >
-  danger
-</span>
+  <span
+    className="css-1v2vcel"
+    data-cy="badge"
+  >
+    danger
+  </span>
+</Memo()>
 `;
 
 exports[`Badge default 1`] = `
-<span
-  className="css-iu2at0"
-  data-cy="badge"
->
-  default
-</span>
+<Memo()>
+  <span
+    className="css-iu2at0"
+    data-cy="badge"
+  >
+    default
+  </span>
+</Memo()>
 `;
 
 exports[`Badge outline 1`] = `
-<span
-  className="css-wrizyw"
-  data-cy="badge"
+<Memo()
+  appearance="outline"
 >
-  outline
-</span>
+  <span
+    className="css-wrizyw"
+    data-cy="badge"
+  >
+    outline
+  </span>
+</Memo()>
 `;
 
 exports[`Badge primary 1`] = `
-<span
-  className="css-1bcogwf"
-  data-cy="badge"
+<Memo()
+  appearance="primary"
 >
-  primary
-</span>
+  <span
+    className="css-1bcogwf"
+    data-cy="badge"
+  >
+    primary
+  </span>
+</Memo()>
 `;
 
 exports[`Badge success 1`] = `
-<span
-  className="css-1nxr7gm"
-  data-cy="badge"
+<Memo()
+  appearance="success"
 >
-  success
-</span>
+  <span
+    className="css-1nxr7gm"
+    data-cy="badge"
+  >
+    success
+  </span>
+</Memo()>
 `;
 
 exports[`Badge warning 1`] = `
-<span
-  className="css-dsjkko"
-  data-cy="badge"
+<Memo()
+  appearance="warning"
 >
-  warning
-</span>
+  <span
+    className="css-dsjkko"
+    data-cy="badge"
+  >
+    warning
+  </span>
+</Memo()>
 `;

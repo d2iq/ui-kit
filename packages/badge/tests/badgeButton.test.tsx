@@ -1,6 +1,6 @@
-import { mount } from "enzyme";
 import React from "react";
-import renderer from "react-test-renderer";
+import { mount } from "enzyme";
+import toJson from "enzyme-to-json";
 import { BadgeButton } from "../";
 
 const StringComponent = (): JSX.Element => {
@@ -10,81 +10,68 @@ const fn = () => null;
 
 describe("BadgeButton", () => {
   it("default", () => {
-    expect(
-      renderer.create(<BadgeButton onClick={fn}>default</BadgeButton>).toJSON()
-    ).toMatchSnapshot();
+    const component = mount(<BadgeButton onClick={fn}>default</BadgeButton>);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("success", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn} appearance="success">
-            success
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const component = mount(
+      <BadgeButton onClick={fn} appearance="success">
+        success
+      </BadgeButton>
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("primary", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn} appearance="primary">
-            primary
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const component = mount(
+      <BadgeButton onClick={fn} appearance="primary">
+        primary
+      </BadgeButton>
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("danger", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn} appearance="danger">
-            danger
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const component = mount(
+      <BadgeButton onClick={fn} appearance="danger">
+        danger
+      </BadgeButton>
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("warning", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn} appearance="warning">
-            warning
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const component = mount(
+      <BadgeButton onClick={fn} appearance="warning">
+        warning
+      </BadgeButton>
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("outline", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn} appearance="outline">
-            outline
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const component = mount(
+      <BadgeButton onClick={fn} appearance="outline">
+        outline
+      </BadgeButton>
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("accept jsx as children", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn}>
-            <StringComponent />
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const component = mount(
+      <BadgeButton onClick={fn}>
+        <StringComponent />
+      </BadgeButton>
+    );
+
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("contains the right tabindex", () => {

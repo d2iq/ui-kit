@@ -1,6 +1,8 @@
 import React from "react";
 import { Badge } from "../";
-import renderer from "react-test-renderer";
+
+import { mount } from "enzyme";
+import toJson from "enzyme-to-json";
 
 const StringComponent = (): JSX.Element => {
   return <span>string</span>;
@@ -8,48 +10,41 @@ const StringComponent = (): JSX.Element => {
 
 describe("Badge", () => {
   it("default", () => {
-    expect(renderer.create(<Badge>default</Badge>).toJSON()).toMatchSnapshot();
+    const component = mount(<Badge>default</Badge>);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("success", () => {
-    expect(
-      renderer.create(<Badge appearance="success">success</Badge>).toJSON()
-    ).toMatchSnapshot();
+    const component = mount(<Badge appearance="success">success</Badge>);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("primary", () => {
-    expect(
-      renderer.create(<Badge appearance="primary">primary</Badge>).toJSON()
-    ).toMatchSnapshot();
+    const component = mount(<Badge appearance="primary">primary</Badge>);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("danger", () => {
-    expect(
-      renderer.create(<Badge appearance="danger">danger</Badge>).toJSON()
-    ).toMatchSnapshot();
+    const component = mount(<Badge appearance="danger">danger</Badge>);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("warning", () => {
-    expect(
-      renderer.create(<Badge appearance="warning">warning</Badge>).toJSON()
-    ).toMatchSnapshot();
+    const component = mount(<Badge appearance="warning">warning</Badge>);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("outline", () => {
-    expect(
-      renderer.create(<Badge appearance="outline">outline</Badge>).toJSON()
-    ).toMatchSnapshot();
+    const component = mount(<Badge appearance="outline">outline</Badge>);
+    expect(toJson(component)).toMatchSnapshot();
   });
 
   it("accept jsx as children", () => {
-    expect(
-      renderer
-        .create(
-          <Badge>
-            <StringComponent />
-          </Badge>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const component = mount(
+      <Badge>
+        <StringComponent />
+      </Badge>
+    );
+    expect(toJson(component)).toMatchSnapshot();
   });
 });

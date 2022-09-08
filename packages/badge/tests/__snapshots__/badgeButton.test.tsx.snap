@@ -1,94 +1,185 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BadgeButton accept jsx as children 1`] = `
-<span
-  className="css-1vry5xk"
-  data-cy="badgeButton"
+<Memo(BadgeButton)
   onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
 >
-  <span>
-    string
-  </span>
-</span>
+  <Clickable
+    action={[Function]}
+    data-cy="badgeButton"
+    disableFocusOutline={false}
+    role="button"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1vry5xk"
+      data-cy="badgeButton"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={-1}
+    >
+      <StringComponent>
+        <span>
+          string
+        </span>
+      </StringComponent>
+    </span>
+  </Clickable>
+</Memo(BadgeButton)>
 `;
 
 exports[`BadgeButton danger 1`] = `
-<span
-  className="css-1h0zebo"
-  data-cy="badgeButton"
+<Memo(BadgeButton)
+  appearance="danger"
   onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
 >
-  danger
-</span>
+  <Clickable
+    action={[Function]}
+    data-cy="badgeButton"
+    disableFocusOutline={false}
+    role="button"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1h0zebo"
+      data-cy="badgeButton"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={-1}
+    >
+      danger
+    </span>
+  </Clickable>
+</Memo(BadgeButton)>
 `;
 
 exports[`BadgeButton default 1`] = `
-<span
-  className="css-1vry5xk"
-  data-cy="badgeButton"
+<Memo(BadgeButton)
   onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
 >
-  default
-</span>
+  <Clickable
+    action={[Function]}
+    data-cy="badgeButton"
+    disableFocusOutline={false}
+    role="button"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1vry5xk"
+      data-cy="badgeButton"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={-1}
+    >
+      default
+    </span>
+  </Clickable>
+</Memo(BadgeButton)>
 `;
 
 exports[`BadgeButton outline 1`] = `
-<span
-  className="css-5i8v04"
-  data-cy="badgeButton"
+<Memo(BadgeButton)
+  appearance="outline"
   onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
 >
-  outline
-</span>
+  <Clickable
+    action={[Function]}
+    data-cy="badgeButton"
+    disableFocusOutline={false}
+    role="button"
+    tabIndex={-1}
+  >
+    <span
+      className="css-5i8v04"
+      data-cy="badgeButton"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={-1}
+    >
+      outline
+    </span>
+  </Clickable>
+</Memo(BadgeButton)>
 `;
 
 exports[`BadgeButton primary 1`] = `
-<span
-  className="css-1gfuw42"
-  data-cy="badgeButton"
+<Memo(BadgeButton)
+  appearance="primary"
   onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
 >
-  primary
-</span>
+  <Clickable
+    action={[Function]}
+    data-cy="badgeButton"
+    disableFocusOutline={false}
+    role="button"
+    tabIndex={-1}
+  >
+    <span
+      className="css-1gfuw42"
+      data-cy="badgeButton"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={-1}
+    >
+      primary
+    </span>
+  </Clickable>
+</Memo(BadgeButton)>
 `;
 
 exports[`BadgeButton success 1`] = `
-<span
-  className="css-92fng0"
-  data-cy="badgeButton"
+<Memo(BadgeButton)
+  appearance="success"
   onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
 >
-  success
-</span>
+  <Clickable
+    action={[Function]}
+    data-cy="badgeButton"
+    disableFocusOutline={false}
+    role="button"
+    tabIndex={-1}
+  >
+    <span
+      className="css-92fng0"
+      data-cy="badgeButton"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={-1}
+    >
+      success
+    </span>
+  </Clickable>
+</Memo(BadgeButton)>
 `;
 
 exports[`BadgeButton warning 1`] = `
-<span
-  className="css-wso5n9"
-  data-cy="badgeButton"
+<Memo(BadgeButton)
+  appearance="warning"
   onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
 >
-  warning
-</span>
+  <Clickable
+    action={[Function]}
+    data-cy="badgeButton"
+    disableFocusOutline={false}
+    role="button"
+    tabIndex={-1}
+  >
+    <span
+      className="css-wso5n9"
+      data-cy="badgeButton"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={-1}
+    >
+      warning
+    </span>
+  </Clickable>
+</Memo(BadgeButton)>
 `;
