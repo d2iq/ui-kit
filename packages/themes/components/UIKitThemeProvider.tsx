@@ -8,16 +8,12 @@ interface UIKitThemeProviderProps {
   children: React.ReactNode;
 }
 
-export class UIKitThemeProvider extends React.PureComponent<
-  UIKitThemeProviderProps,
-  {}
-> {
-  public render() {
-    const { children, appTheme } = this.props;
-    injectCustomProperties(appTheme);
+const UIKitThemeProvider = ({
+  children,
+  appTheme
+}: UIKitThemeProviderProps) => {
+  injectCustomProperties(appTheme);
+  return <ThemeProvider theme={appTheme}>{children}</ThemeProvider>;
+};
 
-    return <ThemeProvider theme={appTheme}>{children}</ThemeProvider>;
-  }
-}
-
-export default UIKitThemeProvider;
+export default React.memo(UIKitThemeProvider);
