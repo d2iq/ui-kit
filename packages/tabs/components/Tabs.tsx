@@ -75,16 +75,21 @@ export type TabDirections = "horiz" | "vert";
 export type TabDirection = BreakpointConfig<TabDirections>;
 export type TabSelected = string;
 export interface TabsProps {
-  children: Array<React.ReactElement<TabItemProps>>;
-  selectedIndex: number;
-  onSelect: (tabIndex: number) => void;
+  children:
+    | Array<React.ReactElement<TabItemProps>>
+    | React.ReactElement<TabItemProps>;
+  selectedIndex?: number;
+  onSelect?: (tabIndex: number) => void;
   direction?: TabDirection;
 }
 
 const Tabs = ({
   children,
-  selectedIndex,
-  onSelect,
+  selectedIndex = 0,
+  // react-tabs needs this function but we have a linting rule which forbids
+  // empty arrow functions, so I disable this rule for this line
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  onSelect = () => {},
   direction = defaultTabDirection
 }: TabsProps) => {
   const { tabs, tabsContent } = React.Children.toArray(children)
