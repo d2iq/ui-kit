@@ -85,11 +85,8 @@ export interface TabsProps {
 
 const Tabs = ({
   children,
-  selectedIndex = 0,
-  // react-tabs needs this function but we have a linting rule which forbids
-  // empty arrow functions, so I disable this rule for this line
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onSelect = () => {},
+  selectedIndex,
+  onSelect,
   direction = defaultTabDirection
 }: TabsProps) => {
   const { tabs, tabsContent } = React.Children.toArray(children)
@@ -135,7 +132,10 @@ const Tabs = ({
         [getTabLayout(direction)]: Boolean(direction)
       })}
       selectedIndex={selectedIndex}
-      onSelect={onSelect}
+      // react-tabs needs this function but we have a linting rule which forbids
+      // empty arrow functions, so I disable this rule for this line
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
+      onSelect={onSelect ? onSelect : () => {}}
       data-cy="tabs"
     >
       <TabList>{tabs}</TabList>
