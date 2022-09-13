@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig",
   "compilerOptions": {
-    "declaration": true,
-    "allowJs": false
+    "allowJs": false,
+    "emitDeclarationOnly": false
   }
 }
