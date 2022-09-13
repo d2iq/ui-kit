@@ -1,42 +1,24 @@
 import * as React from "react";
 
-interface CheckboxStoryHelperState {
-  isChecked: boolean;
-}
-
 interface RenderProps {
   changeHandler: (event?: React.SyntheticEvent<HTMLInputElement>) => void;
   isChecked: boolean;
 }
 interface CheckboxStoryHelperProps {
-  children: (renderProps: RenderProps) => React.ReactNode;
-  isChecked?: boolean;
+  children: (renderProps: RenderProps) => JSX.Element;
 }
 
-class CheckboxStoryHelper extends React.PureComponent<
-  CheckboxStoryHelperProps,
-  CheckboxStoryHelperState
-> {
-  constructor(props) {
-    super(props);
+const CheckboxStoryHelper = ({ children }: CheckboxStoryHelperProps) => {
+  const [isChecked, setIsChecked] = React.useState<boolean>(false);
 
-    this.handleChange = this.handleChange.bind(this);
+  const handleChange = e => {
+    setIsChecked(e.target.checked);
+  };
 
-    this.state = {
-      isChecked: props.isChecked
-    };
-  }
-
-  public render() {
-    return this.props.children({
-      changeHandler: this.handleChange,
-      isChecked: this.state.isChecked
-    });
-  }
-
-  private handleChange(e) {
-    this.setState({ isChecked: e.target.checked });
-  }
-}
+  return children({
+    changeHandler: handleChange,
+    isChecked
+  });
+};
 
 export default CheckboxStoryHelper;

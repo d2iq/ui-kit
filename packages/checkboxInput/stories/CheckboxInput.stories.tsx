@@ -36,20 +36,18 @@ export default {
 } as Meta;
 
 const Template: Story = args => (
-  <>
-    <CheckboxStoryHelper>
-      {({ changeHandler, isChecked }) => (
-        <CheckboxInput
-          id="default"
-          inputLabel="Default"
-          value="default"
-          checked={!!isChecked}
-          onChange={changeHandler}
-          {...args}
-        />
-      )}
-    </CheckboxStoryHelper>
-  </>
+  <CheckboxStoryHelper>
+    {({ changeHandler, isChecked }) => (
+      <CheckboxInput
+        id="default"
+        inputLabel="Default"
+        value="default"
+        checked={!!isChecked}
+        onChange={changeHandler}
+        {...args}
+      />
+    )}
+  </CheckboxStoryHelper>
 );
 
 export const Default = Template.bind({});
