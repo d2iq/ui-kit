@@ -51,7 +51,7 @@ export interface SelectInputProps extends React.HTMLProps<HTMLSelectElement> {
   /**
    * Sets the contents of the input label. This can be a `string` or any `ReactNode`.
    */
-  inputLabel: React.ReactNode;
+  inputLabel?: React.ReactNode;
   /**
    * An array of objects that describes the options the select input contains
    */
@@ -84,7 +84,7 @@ const SelectInput = React.memo(
     id = nextId("selectInput-"),
     options,
     showInputLabel = true,
-    inputLabel,
+    inputLabel = "",
     tooltipContent,
     hintContent,
     disabled,
