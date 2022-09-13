@@ -45,11 +45,7 @@ exports[`ToggleBoxGroup renders default 1`] = `
   }
 }
 
-.emotion-1>* {
-  height: 100%;
-}
-
-.emotion-2 {
+.emotion-1 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -62,15 +58,15 @@ exports[`ToggleBoxGroup renders default 1`] = `
   width: auto;
 }
 
-.emotion-2>* {
+.emotion-1>* {
   height: 100%;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: block;
 }
 
-.emotion-4 {
+.emotion-3 {
   border: 0;
   clip: rect(0 0 0 0);
   position: absolute;
@@ -81,262 +77,153 @@ exports[`ToggleBoxGroup renders default 1`] = `
   height: 1px;
 }
 
-.emotion-5,
-.emotion-5>* {
+.emotion-4,
+.emotion-4>* {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
   border-radius: 6px;
   cursor: pointer;
 }
 
-.emotion-6:hover,
-.emotion-6:focus,
-.emotion-6:focus-within {
+.emotion-5:hover,
+.emotion-5:focus,
+.emotion-5:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary, #7D58FF);
   outline: 0;
 }
 
-.emotion-6:active {
+.emotion-5:active {
   box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
 }
 
-.emotion-7 {
+.emotion-6 {
   padding: 16px;
   height: 100%;
 }
 
-<ToggleBoxGroup
-  id="default"
+<div
+  className="emotion-0"
+  data-cy="flex"
 >
-  <Flex
-    align="stretch"
-    direction="row"
-    gutterSize="m"
+  <div
+    className="emotion-1"
+    data-cy="flexItem"
   >
-    <div
-      className="emotion-0"
-      data-cy="flex"
+    <label
+      className="emotion-2"
+      htmlFor="exosphere"
     >
-      <FlexItem
-        className="emotion-1"
-        key="buttonWrapper-exosphere"
+      <input
+        aria-checked={false}
+        checked={false}
+        className="emotion-3"
+        data-cy="toggleWrapper-input"
+        disabled={false}
+        id="exosphere"
+        name="default"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="exosphere"
+      />
+      <div
+        className="emotion-4"
       >
         <div
-          className="emotion-2"
-          data-cy="flexItem"
+          className="emotion-5"
+          data-cy="buttonCard"
         >
-          <ToggleBox
-            id="exosphere"
-            isActive={false}
-            key=".0"
-            name="default"
-            onChange={[Function]}
-            type="radio"
-            value="exosphere"
+          <div
+            className="emotion-6"
           >
-            <ToggleWrapper
-              disabled={false}
-              id="exosphere"
-              isActive={false}
-              name="default"
-              onChange={[Function]}
-              type="radio"
-              value="exosphere"
-            >
-              <label
-                className="emotion-3"
-                htmlFor="exosphere"
-              >
-                <input
-                  aria-checked={false}
-                  checked={false}
-                  className="emotion-4"
-                  data-cy="toggleWrapper-input"
-                  disabled={false}
-                  id="exosphere"
-                  name="default"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  type="radio"
-                  value="exosphere"
-                />
-                <div
-                  className="emotion-5"
-                >
-                  <ButtonCard
-                    disabled={false}
-                    hasFocus={false}
-                    isActive={false}
-                    isInput={true}
-                    paddingSize="m"
-                  >
-                    <div
-                      className="emotion-6"
-                      data-cy="buttonCard"
-                    >
-                      <div
-                        className="emotion-7"
-                      >
-                        Exosphere
-                      </div>
-                    </div>
-                  </ButtonCard>
-                </div>
-              </label>
-            </ToggleWrapper>
-          </ToggleBox>
+            Exosphere
+          </div>
         </div>
-      </FlexItem>
-      <FlexItem
-        className="emotion-1"
-        key="buttonWrapper-thermosphere"
+      </div>
+    </label>
+  </div>
+  <div
+    className="emotion-1"
+    data-cy="flexItem"
+  >
+    <label
+      className="emotion-2"
+      htmlFor="thermosphere"
+    >
+      <input
+        aria-checked={false}
+        checked={false}
+        className="emotion-3"
+        data-cy="toggleWrapper-input"
+        disabled={false}
+        id="thermosphere"
+        name="default"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="thermosphere"
+      />
+      <div
+        className="emotion-4"
       >
         <div
-          className="emotion-2"
-          data-cy="flexItem"
+          className="emotion-5"
+          data-cy="buttonCard"
         >
-          <ToggleBox
-            id="thermosphere"
-            isActive={false}
-            key=".1"
-            name="default"
-            onChange={[Function]}
-            type="radio"
-            value="thermosphere"
+          <div
+            className="emotion-6"
           >
-            <ToggleWrapper
-              disabled={false}
-              id="thermosphere"
-              isActive={false}
-              name="default"
-              onChange={[Function]}
-              type="radio"
-              value="thermosphere"
-            >
-              <label
-                className="emotion-3"
-                htmlFor="thermosphere"
-              >
-                <input
-                  aria-checked={false}
-                  checked={false}
-                  className="emotion-4"
-                  data-cy="toggleWrapper-input"
-                  disabled={false}
-                  id="thermosphere"
-                  name="default"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  type="radio"
-                  value="thermosphere"
-                />
-                <div
-                  className="emotion-5"
-                >
-                  <ButtonCard
-                    disabled={false}
-                    hasFocus={false}
-                    isActive={false}
-                    isInput={true}
-                    paddingSize="m"
-                  >
-                    <div
-                      className="emotion-6"
-                      data-cy="buttonCard"
-                    >
-                      <div
-                        className="emotion-7"
-                      >
-                        Thermosphere
-                      </div>
-                    </div>
-                  </ButtonCard>
-                </div>
-              </label>
-            </ToggleWrapper>
-          </ToggleBox>
+            Thermosphere
+          </div>
         </div>
-      </FlexItem>
-      <FlexItem
-        className="emotion-1"
-        key="buttonWrapper-mesosphere"
+      </div>
+    </label>
+  </div>
+  <div
+    className="emotion-1"
+    data-cy="flexItem"
+  >
+    <label
+      className="emotion-2"
+      htmlFor="mesosphere"
+    >
+      <input
+        aria-checked={false}
+        checked={false}
+        className="emotion-3"
+        data-cy="toggleWrapper-input"
+        disabled={false}
+        id="mesosphere"
+        name="default"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="mesosphere"
+      />
+      <div
+        className="emotion-4"
       >
         <div
-          className="emotion-2"
-          data-cy="flexItem"
+          className="emotion-5"
+          data-cy="buttonCard"
         >
-          <ToggleBox
-            id="mesosphere"
-            isActive={false}
-            key=".2"
-            name="default"
-            onChange={[Function]}
-            type="radio"
-            value="mesosphere"
+          <div
+            className="emotion-6"
           >
-            <ToggleWrapper
-              disabled={false}
-              id="mesosphere"
-              isActive={false}
-              name="default"
-              onChange={[Function]}
-              type="radio"
-              value="mesosphere"
-            >
-              <label
-                className="emotion-3"
-                htmlFor="mesosphere"
-              >
-                <input
-                  aria-checked={false}
-                  checked={false}
-                  className="emotion-4"
-                  data-cy="toggleWrapper-input"
-                  disabled={false}
-                  id="mesosphere"
-                  name="default"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  type="radio"
-                  value="mesosphere"
-                />
-                <div
-                  className="emotion-5"
-                >
-                  <ButtonCard
-                    disabled={false}
-                    hasFocus={false}
-                    isActive={false}
-                    isInput={true}
-                    paddingSize="m"
-                  >
-                    <div
-                      className="emotion-6"
-                      data-cy="buttonCard"
-                    >
-                      <div
-                        className="emotion-7"
-                      >
-                        Mesosphere
-                      </div>
-                    </div>
-                  </ButtonCard>
-                </div>
-              </label>
-            </ToggleWrapper>
-          </ToggleBox>
+            Mesosphere
+          </div>
         </div>
-      </FlexItem>
-    </div>
-  </Flex>
-</ToggleBoxGroup>
+      </div>
+    </label>
+  </div>
+</div>
 `;
 
 exports[`ToggleBoxGroup renders with a label 1`] = `
@@ -399,11 +286,7 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
   }
 }
 
-.emotion-3>* {
-  height: 100%;
-}
-
-.emotion-4 {
+.emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -416,15 +299,15 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
   width: auto;
 }
 
-.emotion-4>* {
+.emotion-3>* {
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-4 {
   display: block;
 }
 
-.emotion-6 {
+.emotion-5 {
   border: 0;
   clip: rect(0 0 0 0);
   position: absolute;
@@ -435,272 +318,162 @@ exports[`ToggleBoxGroup renders with a label 1`] = `
   height: 1px;
 }
 
-.emotion-7,
-.emotion-7>* {
+.emotion-6,
+.emotion-6>* {
   height: 100%;
 }
 
-.emotion-8 {
+.emotion-7 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
   border-radius: 6px;
   cursor: pointer;
 }
 
-.emotion-8:hover,
-.emotion-8:focus,
-.emotion-8:focus-within {
+.emotion-7:hover,
+.emotion-7:focus,
+.emotion-7:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary, #7D58FF);
   outline: 0;
 }
 
-.emotion-8:active {
+.emotion-7:active {
   box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
 }
 
-.emotion-9 {
+.emotion-8 {
   padding: 16px;
   height: 100%;
 }
 
-<ToggleBoxGroup
-  id="default"
-  label="Atmosphere layer"
+<fieldset
+  className="emotion-0"
 >
-  <fieldset
-    className="emotion-0"
+  <legend
+    className="emotion-1"
   >
-    <legend
-      className="emotion-1"
+    Atmosphere layer
+  </legend>
+  <div
+    className="emotion-2"
+    data-cy="flex"
+  >
+    <div
+      className="emotion-3"
+      data-cy="flexItem"
     >
-      Atmosphere layer
-    </legend>
-    <Flex
-      align="stretch"
-      direction="row"
-      gutterSize="m"
-    >
-      <div
-        className="emotion-2"
-        data-cy="flex"
+      <label
+        className="emotion-4"
+        htmlFor="exosphere"
       >
-        <FlexItem
-          className="emotion-3"
-          key="buttonWrapper-exosphere"
+        <input
+          aria-checked={false}
+          checked={false}
+          className="emotion-5"
+          data-cy="toggleWrapper-input"
+          disabled={false}
+          id="exosphere"
+          name="default"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="radio"
+          value="exosphere"
+        />
+        <div
+          className="emotion-6"
         >
           <div
-            className="emotion-4"
-            data-cy="flexItem"
+            className="emotion-7"
+            data-cy="buttonCard"
           >
-            <ToggleBox
-              id="exosphere"
-              isActive={false}
-              key=".0"
-              name="default"
-              onChange={[Function]}
-              type="radio"
-              value="exosphere"
+            <div
+              className="emotion-8"
             >
-              <ToggleWrapper
-                disabled={false}
-                id="exosphere"
-                isActive={false}
-                name="default"
-                onChange={[Function]}
-                type="radio"
-                value="exosphere"
-              >
-                <label
-                  className="emotion-5"
-                  htmlFor="exosphere"
-                >
-                  <input
-                    aria-checked={false}
-                    checked={false}
-                    className="emotion-6"
-                    data-cy="toggleWrapper-input"
-                    disabled={false}
-                    id="exosphere"
-                    name="default"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    type="radio"
-                    value="exosphere"
-                  />
-                  <div
-                    className="emotion-7"
-                  >
-                    <ButtonCard
-                      disabled={false}
-                      hasFocus={false}
-                      isActive={false}
-                      isInput={true}
-                      paddingSize="m"
-                    >
-                      <div
-                        className="emotion-8"
-                        data-cy="buttonCard"
-                      >
-                        <div
-                          className="emotion-9"
-                        >
-                          Exosphere
-                        </div>
-                      </div>
-                    </ButtonCard>
-                  </div>
-                </label>
-              </ToggleWrapper>
-            </ToggleBox>
+              Exosphere
+            </div>
           </div>
-        </FlexItem>
-        <FlexItem
-          className="emotion-3"
-          key="buttonWrapper-thermosphere"
+        </div>
+      </label>
+    </div>
+    <div
+      className="emotion-3"
+      data-cy="flexItem"
+    >
+      <label
+        className="emotion-4"
+        htmlFor="thermosphere"
+      >
+        <input
+          aria-checked={false}
+          checked={false}
+          className="emotion-5"
+          data-cy="toggleWrapper-input"
+          disabled={false}
+          id="thermosphere"
+          name="default"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="radio"
+          value="thermosphere"
+        />
+        <div
+          className="emotion-6"
         >
           <div
-            className="emotion-4"
-            data-cy="flexItem"
+            className="emotion-7"
+            data-cy="buttonCard"
           >
-            <ToggleBox
-              id="thermosphere"
-              isActive={false}
-              key=".1"
-              name="default"
-              onChange={[Function]}
-              type="radio"
-              value="thermosphere"
+            <div
+              className="emotion-8"
             >
-              <ToggleWrapper
-                disabled={false}
-                id="thermosphere"
-                isActive={false}
-                name="default"
-                onChange={[Function]}
-                type="radio"
-                value="thermosphere"
-              >
-                <label
-                  className="emotion-5"
-                  htmlFor="thermosphere"
-                >
-                  <input
-                    aria-checked={false}
-                    checked={false}
-                    className="emotion-6"
-                    data-cy="toggleWrapper-input"
-                    disabled={false}
-                    id="thermosphere"
-                    name="default"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    type="radio"
-                    value="thermosphere"
-                  />
-                  <div
-                    className="emotion-7"
-                  >
-                    <ButtonCard
-                      disabled={false}
-                      hasFocus={false}
-                      isActive={false}
-                      isInput={true}
-                      paddingSize="m"
-                    >
-                      <div
-                        className="emotion-8"
-                        data-cy="buttonCard"
-                      >
-                        <div
-                          className="emotion-9"
-                        >
-                          Thermosphere
-                        </div>
-                      </div>
-                    </ButtonCard>
-                  </div>
-                </label>
-              </ToggleWrapper>
-            </ToggleBox>
+              Thermosphere
+            </div>
           </div>
-        </FlexItem>
-        <FlexItem
-          className="emotion-3"
-          key="buttonWrapper-mesosphere"
+        </div>
+      </label>
+    </div>
+    <div
+      className="emotion-3"
+      data-cy="flexItem"
+    >
+      <label
+        className="emotion-4"
+        htmlFor="mesosphere"
+      >
+        <input
+          aria-checked={false}
+          checked={false}
+          className="emotion-5"
+          data-cy="toggleWrapper-input"
+          disabled={false}
+          id="mesosphere"
+          name="default"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="radio"
+          value="mesosphere"
+        />
+        <div
+          className="emotion-6"
         >
           <div
-            className="emotion-4"
-            data-cy="flexItem"
+            className="emotion-7"
+            data-cy="buttonCard"
           >
-            <ToggleBox
-              id="mesosphere"
-              isActive={false}
-              key=".2"
-              name="default"
-              onChange={[Function]}
-              type="radio"
-              value="mesosphere"
+            <div
+              className="emotion-8"
             >
-              <ToggleWrapper
-                disabled={false}
-                id="mesosphere"
-                isActive={false}
-                name="default"
-                onChange={[Function]}
-                type="radio"
-                value="mesosphere"
-              >
-                <label
-                  className="emotion-5"
-                  htmlFor="mesosphere"
-                >
-                  <input
-                    aria-checked={false}
-                    checked={false}
-                    className="emotion-6"
-                    data-cy="toggleWrapper-input"
-                    disabled={false}
-                    id="mesosphere"
-                    name="default"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    type="radio"
-                    value="mesosphere"
-                  />
-                  <div
-                    className="emotion-7"
-                  >
-                    <ButtonCard
-                      disabled={false}
-                      hasFocus={false}
-                      isActive={false}
-                      isInput={true}
-                      paddingSize="m"
-                    >
-                      <div
-                        className="emotion-8"
-                        data-cy="buttonCard"
-                      >
-                        <div
-                          className="emotion-9"
-                        >
-                          Mesosphere
-                        </div>
-                      </div>
-                    </ButtonCard>
-                  </div>
-                </label>
-              </ToggleWrapper>
-            </ToggleBox>
+              Mesosphere
+            </div>
           </div>
-        </FlexItem>
-      </div>
-    </Flex>
-  </fieldset>
-</ToggleBoxGroup>
+        </div>
+      </label>
+    </div>
+  </div>
+</fieldset>
 `;
 
 exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
@@ -748,11 +521,7 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   }
 }
 
-.emotion-1>* {
-  height: 100%;
-}
-
-.emotion-2 {
+.emotion-1 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -765,15 +534,15 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   width: auto;
 }
 
-.emotion-2>* {
+.emotion-1>* {
   height: 100%;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: block;
 }
 
-.emotion-4 {
+.emotion-3 {
   border: 0;
   clip: rect(0 0 0 0);
   position: absolute;
@@ -784,295 +553,181 @@ exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
   height: 1px;
 }
 
-.emotion-5,
-.emotion-5>* {
+.emotion-4,
+.emotion-4>* {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
   border-radius: 6px;
   cursor: pointer;
 }
 
-.emotion-6:hover,
-.emotion-6:focus,
-.emotion-6:focus-within {
+.emotion-5:hover,
+.emotion-5:focus,
+.emotion-5:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary, #7D58FF);
   outline: 0;
 }
 
-.emotion-6:active {
+.emotion-5:active {
   box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
 }
 
-.emotion-7 {
+.emotion-6 {
   padding: 16px;
   height: 100%;
 }
 
-.emotion-20 {
+.emotion-17 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
   border-radius: 6px;
   cursor: pointer;
 }
 
-.emotion-20:hover,
-.emotion-20:focus,
-.emotion-20:focus-within {
+.emotion-17:hover,
+.emotion-17:focus,
+.emotion-17:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary, #7D58FF);
   outline: 0;
 }
 
-.emotion-20:active {
+.emotion-17:active {
   box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
 }
 
-.emotion-20,
-.emotion-20:hover,
-.emotion-20:focus {
+.emotion-17,
+.emotion-17:hover,
+.emotion-17:focus {
   box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
 }
 
-.emotion-20:focus {
+.emotion-17:focus {
   background-color: var(--themeBgHover, #F7F8F9);
 }
 
-<ToggleBoxGroup
-  id="selectedItems"
-  selectedItems={
-    Array [
-      "mesosphere",
-    ]
-  }
+<div
+  className="emotion-0"
+  data-cy="flex"
 >
-  <Flex
-    align="stretch"
-    direction="row"
-    gutterSize="m"
+  <div
+    className="emotion-1"
+    data-cy="flexItem"
   >
-    <div
-      className="emotion-0"
-      data-cy="flex"
+    <label
+      className="emotion-2"
+      htmlFor="exosphere"
     >
-      <FlexItem
-        className="emotion-1"
-        key="buttonWrapper-exosphere"
+      <input
+        aria-checked={false}
+        checked={false}
+        className="emotion-3"
+        data-cy="toggleWrapper-input"
+        disabled={false}
+        id="exosphere"
+        name="selectedItems"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="exosphere"
+      />
+      <div
+        className="emotion-4"
       >
         <div
-          className="emotion-2"
-          data-cy="flexItem"
+          className="emotion-5"
+          data-cy="buttonCard"
         >
-          <ToggleBox
-            id="exosphere"
-            isActive={false}
-            key=".0"
-            name="selectedItems"
-            onChange={[Function]}
-            type="radio"
-            value="exosphere"
+          <div
+            className="emotion-6"
           >
-            <ToggleWrapper
-              disabled={false}
-              id="exosphere"
-              isActive={false}
-              name="selectedItems"
-              onChange={[Function]}
-              type="radio"
-              value="exosphere"
-            >
-              <label
-                className="emotion-3"
-                htmlFor="exosphere"
-              >
-                <input
-                  aria-checked={false}
-                  checked={false}
-                  className="emotion-4"
-                  data-cy="toggleWrapper-input"
-                  disabled={false}
-                  id="exosphere"
-                  name="selectedItems"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  type="radio"
-                  value="exosphere"
-                />
-                <div
-                  className="emotion-5"
-                >
-                  <ButtonCard
-                    disabled={false}
-                    hasFocus={false}
-                    isActive={false}
-                    isInput={true}
-                    paddingSize="m"
-                  >
-                    <div
-                      className="emotion-6"
-                      data-cy="buttonCard"
-                    >
-                      <div
-                        className="emotion-7"
-                      >
-                        Exosphere
-                      </div>
-                    </div>
-                  </ButtonCard>
-                </div>
-              </label>
-            </ToggleWrapper>
-          </ToggleBox>
+            Exosphere
+          </div>
         </div>
-      </FlexItem>
-      <FlexItem
-        className="emotion-1"
-        key="buttonWrapper-thermosphere"
+      </div>
+    </label>
+  </div>
+  <div
+    className="emotion-1"
+    data-cy="flexItem"
+  >
+    <label
+      className="emotion-2"
+      htmlFor="thermosphere"
+    >
+      <input
+        aria-checked={false}
+        checked={false}
+        className="emotion-3"
+        data-cy="toggleWrapper-input"
+        disabled={false}
+        id="thermosphere"
+        name="selectedItems"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="thermosphere"
+      />
+      <div
+        className="emotion-4"
       >
         <div
-          className="emotion-2"
-          data-cy="flexItem"
+          className="emotion-5"
+          data-cy="buttonCard"
         >
-          <ToggleBox
-            id="thermosphere"
-            isActive={false}
-            key=".1"
-            name="selectedItems"
-            onChange={[Function]}
-            type="radio"
-            value="thermosphere"
+          <div
+            className="emotion-6"
           >
-            <ToggleWrapper
-              disabled={false}
-              id="thermosphere"
-              isActive={false}
-              name="selectedItems"
-              onChange={[Function]}
-              type="radio"
-              value="thermosphere"
-            >
-              <label
-                className="emotion-3"
-                htmlFor="thermosphere"
-              >
-                <input
-                  aria-checked={false}
-                  checked={false}
-                  className="emotion-4"
-                  data-cy="toggleWrapper-input"
-                  disabled={false}
-                  id="thermosphere"
-                  name="selectedItems"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  type="radio"
-                  value="thermosphere"
-                />
-                <div
-                  className="emotion-5"
-                >
-                  <ButtonCard
-                    disabled={false}
-                    hasFocus={false}
-                    isActive={false}
-                    isInput={true}
-                    paddingSize="m"
-                  >
-                    <div
-                      className="emotion-6"
-                      data-cy="buttonCard"
-                    >
-                      <div
-                        className="emotion-7"
-                      >
-                        Thermosphere
-                      </div>
-                    </div>
-                  </ButtonCard>
-                </div>
-              </label>
-            </ToggleWrapper>
-          </ToggleBox>
+            Thermosphere
+          </div>
         </div>
-      </FlexItem>
-      <FlexItem
-        className="emotion-1"
-        key="buttonWrapper-mesosphere"
+      </div>
+    </label>
+  </div>
+  <div
+    className="emotion-1"
+    data-cy="flexItem"
+  >
+    <label
+      className="emotion-2"
+      htmlFor="mesosphere"
+    >
+      <input
+        aria-checked={true}
+        checked={true}
+        className="emotion-3"
+        data-cy="toggleWrapper-input"
+        disabled={false}
+        id="mesosphere"
+        name="selectedItems"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="mesosphere"
+      />
+      <div
+        className="emotion-4"
       >
         <div
-          className="emotion-2"
-          data-cy="flexItem"
+          className="emotion-17"
+          data-cy="buttonCard"
         >
-          <ToggleBox
-            id="mesosphere"
-            isActive={true}
-            key=".2"
-            name="selectedItems"
-            onChange={[Function]}
-            type="radio"
-            value="mesosphere"
+          <div
+            className="emotion-6"
           >
-            <ToggleWrapper
-              disabled={false}
-              id="mesosphere"
-              isActive={true}
-              name="selectedItems"
-              onChange={[Function]}
-              type="radio"
-              value="mesosphere"
-            >
-              <label
-                className="emotion-3"
-                htmlFor="mesosphere"
-              >
-                <input
-                  aria-checked={true}
-                  checked={true}
-                  className="emotion-4"
-                  data-cy="toggleWrapper-input"
-                  disabled={false}
-                  id="mesosphere"
-                  name="selectedItems"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  type="radio"
-                  value="mesosphere"
-                />
-                <div
-                  className="emotion-5"
-                >
-                  <ButtonCard
-                    disabled={false}
-                    hasFocus={false}
-                    isActive={true}
-                    isInput={true}
-                    paddingSize="m"
-                  >
-                    <div
-                      className="emotion-20"
-                      data-cy="buttonCard"
-                    >
-                      <div
-                        className="emotion-7"
-                      >
-                        Mesosphere
-                      </div>
-                    </div>
-                  </ButtonCard>
-                </div>
-              </label>
-            </ToggleWrapper>
-          </ToggleBox>
+            Mesosphere
+          </div>
         </div>
-      </FlexItem>
-    </div>
-  </Flex>
-</ToggleBoxGroup>
+      </div>
+    </label>
+  </div>
+</div>
 `;
 
 exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
@@ -1120,11 +775,7 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   }
 }
 
-.emotion-1>* {
-  height: 100%;
-}
-
-.emotion-2 {
+.emotion-1 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -1137,15 +788,15 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   width: auto;
 }
 
-.emotion-2>* {
+.emotion-1>* {
   height: 100%;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: block;
 }
 
-.emotion-4 {
+.emotion-3 {
   border: 0;
   clip: rect(0 0 0 0);
   position: absolute;
@@ -1156,262 +807,151 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
   height: 1px;
 }
 
-.emotion-5,
-.emotion-5>* {
+.emotion-4,
+.emotion-4>* {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
   border-radius: 6px;
   cursor: pointer;
 }
 
-.emotion-6:hover,
-.emotion-6:focus,
-.emotion-6:focus-within {
+.emotion-5:hover,
+.emotion-5:focus,
+.emotion-5:focus-within {
   box-shadow: 0 0 0 1px var(--themeBrandPrimary, #7D58FF);
   outline: 0;
 }
 
-.emotion-6:active {
+.emotion-5:active {
   box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
 }
 
-.emotion-7 {
+.emotion-6 {
   padding: 16px;
   height: 100%;
 }
 
-<ToggleBoxGroup
-  direction="column"
-  gutterSize="xxl"
-  id="customLayoutProps"
+<div
+  className="emotion-0"
+  data-cy="flex"
 >
-  <Flex
-    align="stretch"
-    direction="column"
-    gutterSize="xxl"
+  <div
+    className="emotion-1"
+    data-cy="flexItem"
   >
-    <div
-      className="emotion-0"
-      data-cy="flex"
+    <label
+      className="emotion-2"
+      htmlFor="exosphere"
     >
-      <FlexItem
-        className="emotion-1"
-        key="buttonWrapper-exosphere"
+      <input
+        aria-checked={false}
+        checked={false}
+        className="emotion-3"
+        data-cy="toggleWrapper-input"
+        disabled={false}
+        id="exosphere"
+        name="customLayoutProps"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="exosphere"
+      />
+      <div
+        className="emotion-4"
       >
         <div
-          className="emotion-2"
-          data-cy="flexItem"
+          className="emotion-5"
+          data-cy="buttonCard"
         >
-          <ToggleBox
-            id="exosphere"
-            isActive={false}
-            key=".0"
-            name="customLayoutProps"
-            onChange={[Function]}
-            type="radio"
-            value="exosphere"
+          <div
+            className="emotion-6"
           >
-            <ToggleWrapper
-              disabled={false}
-              id="exosphere"
-              isActive={false}
-              name="customLayoutProps"
-              onChange={[Function]}
-              type="radio"
-              value="exosphere"
-            >
-              <label
-                className="emotion-3"
-                htmlFor="exosphere"
-              >
-                <input
-                  aria-checked={false}
-                  checked={false}
-                  className="emotion-4"
-                  data-cy="toggleWrapper-input"
-                  disabled={false}
-                  id="exosphere"
-                  name="customLayoutProps"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  type="radio"
-                  value="exosphere"
-                />
-                <div
-                  className="emotion-5"
-                >
-                  <ButtonCard
-                    disabled={false}
-                    hasFocus={false}
-                    isActive={false}
-                    isInput={true}
-                    paddingSize="m"
-                  >
-                    <div
-                      className="emotion-6"
-                      data-cy="buttonCard"
-                    >
-                      <div
-                        className="emotion-7"
-                      >
-                        Exosphere
-                      </div>
-                    </div>
-                  </ButtonCard>
-                </div>
-              </label>
-            </ToggleWrapper>
-          </ToggleBox>
+            Exosphere
+          </div>
         </div>
-      </FlexItem>
-      <FlexItem
-        className="emotion-1"
-        key="buttonWrapper-thermosphere"
+      </div>
+    </label>
+  </div>
+  <div
+    className="emotion-1"
+    data-cy="flexItem"
+  >
+    <label
+      className="emotion-2"
+      htmlFor="thermosphere"
+    >
+      <input
+        aria-checked={false}
+        checked={false}
+        className="emotion-3"
+        data-cy="toggleWrapper-input"
+        disabled={false}
+        id="thermosphere"
+        name="customLayoutProps"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="thermosphere"
+      />
+      <div
+        className="emotion-4"
       >
         <div
-          className="emotion-2"
-          data-cy="flexItem"
+          className="emotion-5"
+          data-cy="buttonCard"
         >
-          <ToggleBox
-            id="thermosphere"
-            isActive={false}
-            key=".1"
-            name="customLayoutProps"
-            onChange={[Function]}
-            type="radio"
-            value="thermosphere"
+          <div
+            className="emotion-6"
           >
-            <ToggleWrapper
-              disabled={false}
-              id="thermosphere"
-              isActive={false}
-              name="customLayoutProps"
-              onChange={[Function]}
-              type="radio"
-              value="thermosphere"
-            >
-              <label
-                className="emotion-3"
-                htmlFor="thermosphere"
-              >
-                <input
-                  aria-checked={false}
-                  checked={false}
-                  className="emotion-4"
-                  data-cy="toggleWrapper-input"
-                  disabled={false}
-                  id="thermosphere"
-                  name="customLayoutProps"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  type="radio"
-                  value="thermosphere"
-                />
-                <div
-                  className="emotion-5"
-                >
-                  <ButtonCard
-                    disabled={false}
-                    hasFocus={false}
-                    isActive={false}
-                    isInput={true}
-                    paddingSize="m"
-                  >
-                    <div
-                      className="emotion-6"
-                      data-cy="buttonCard"
-                    >
-                      <div
-                        className="emotion-7"
-                      >
-                        Thermosphere
-                      </div>
-                    </div>
-                  </ButtonCard>
-                </div>
-              </label>
-            </ToggleWrapper>
-          </ToggleBox>
+            Thermosphere
+          </div>
         </div>
-      </FlexItem>
-      <FlexItem
-        className="emotion-1"
-        key="buttonWrapper-mesosphere"
+      </div>
+    </label>
+  </div>
+  <div
+    className="emotion-1"
+    data-cy="flexItem"
+  >
+    <label
+      className="emotion-2"
+      htmlFor="mesosphere"
+    >
+      <input
+        aria-checked={false}
+        checked={false}
+        className="emotion-3"
+        data-cy="toggleWrapper-input"
+        disabled={false}
+        id="mesosphere"
+        name="customLayoutProps"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="mesosphere"
+      />
+      <div
+        className="emotion-4"
       >
         <div
-          className="emotion-2"
-          data-cy="flexItem"
+          className="emotion-5"
+          data-cy="buttonCard"
         >
-          <ToggleBox
-            id="mesosphere"
-            isActive={false}
-            key=".2"
-            name="customLayoutProps"
-            onChange={[Function]}
-            type="radio"
-            value="mesosphere"
+          <div
+            className="emotion-6"
           >
-            <ToggleWrapper
-              disabled={false}
-              id="mesosphere"
-              isActive={false}
-              name="customLayoutProps"
-              onChange={[Function]}
-              type="radio"
-              value="mesosphere"
-            >
-              <label
-                className="emotion-3"
-                htmlFor="mesosphere"
-              >
-                <input
-                  aria-checked={false}
-                  checked={false}
-                  className="emotion-4"
-                  data-cy="toggleWrapper-input"
-                  disabled={false}
-                  id="mesosphere"
-                  name="customLayoutProps"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  type="radio"
-                  value="mesosphere"
-                />
-                <div
-                  className="emotion-5"
-                >
-                  <ButtonCard
-                    disabled={false}
-                    hasFocus={false}
-                    isActive={false}
-                    isInput={true}
-                    paddingSize="m"
-                  >
-                    <div
-                      className="emotion-6"
-                      data-cy="buttonCard"
-                    >
-                      <div
-                        className="emotion-7"
-                      >
-                        Mesosphere
-                      </div>
-                    </div>
-                  </ButtonCard>
-                </div>
-              </label>
-            </ToggleWrapper>
-          </ToggleBox>
+            Mesosphere
+          </div>
         </div>
-      </FlexItem>
-    </div>
-  </Flex>
-</ToggleBoxGroup>
+      </div>
+    </label>
+  </div>
+</div>
 `;

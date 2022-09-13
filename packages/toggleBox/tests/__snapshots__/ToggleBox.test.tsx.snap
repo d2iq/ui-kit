@@ -54,59 +54,37 @@ exports[`ToggleBox renders active 1`] = `
   height: 100%;
 }
 
-<ToggleBox
-  id="active"
-  isActive={true}
-  value="active"
+<label
+  className="emotion-0"
+  htmlFor="active"
 >
-  <ToggleWrapper
+  <input
+    aria-checked={true}
+    checked={true}
+    className="emotion-1"
+    data-cy="toggleWrapper-input"
     disabled={false}
     id="active"
-    isActive={true}
+    onBlur={[Function]}
+    onFocus={[Function]}
     type="checkbox"
     value="active"
+  />
+  <div
+    className="emotion-2"
   >
-    <label
-      className="emotion-0"
-      htmlFor="active"
+    <div
+      className="emotion-3"
+      data-cy="buttonCard"
     >
-      <input
-        aria-checked={true}
-        checked={true}
-        className="emotion-1"
-        data-cy="toggleWrapper-input"
-        disabled={false}
-        id="active"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        type="checkbox"
-        value="active"
-      />
       <div
-        className="emotion-2"
+        className="emotion-4"
       >
-        <ButtonCard
-          disabled={false}
-          hasFocus={false}
-          isActive={true}
-          isInput={true}
-          paddingSize="m"
-        >
-          <div
-            className="emotion-3"
-            data-cy="buttonCard"
-          >
-            <div
-              className="emotion-4"
-            >
-              isActive
-            </div>
-          </div>
-        </ButtonCard>
+        isActive
       </div>
-    </label>
-  </ToggleWrapper>
-</ToggleBox>
+    </div>
+  </div>
+</label>
 `;
 
 exports[`ToggleBox renders default 1`] = `
@@ -153,54 +131,35 @@ exports[`ToggleBox renders default 1`] = `
   height: 100%;
 }
 
-<ToggleBox
-  id="default"
-  value="default"
+<label
+  className="emotion-0"
+  htmlFor="default"
 >
-  <ToggleWrapper
+  <input
+    className="emotion-1"
+    data-cy="toggleWrapper-input"
     disabled={false}
     id="default"
+    onBlur={[Function]}
+    onFocus={[Function]}
     type="checkbox"
     value="default"
+  />
+  <div
+    className="emotion-2"
   >
-    <label
-      className="emotion-0"
-      htmlFor="default"
+    <div
+      className="emotion-3"
+      data-cy="buttonCard"
     >
-      <input
-        className="emotion-1"
-        data-cy="toggleWrapper-input"
-        disabled={false}
-        id="default"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        type="checkbox"
-        value="default"
-      />
       <div
-        className="emotion-2"
+        className="emotion-4"
       >
-        <ButtonCard
-          disabled={false}
-          hasFocus={false}
-          isInput={true}
-          paddingSize="m"
-        >
-          <div
-            className="emotion-3"
-            data-cy="buttonCard"
-          >
-            <div
-              className="emotion-4"
-            >
-              default
-            </div>
-          </div>
-        </ButtonCard>
+        default
       </div>
-    </label>
-  </ToggleWrapper>
-</ToggleBox>
+    </div>
+  </div>
+</label>
 `;
 
 exports[`ToggleBox renders disabled 1`] = `
@@ -256,53 +215,33 @@ exports[`ToggleBox renders disabled 1`] = `
   height: 100%;
 }
 
-<ToggleBox
-  disabled={true}
-  id="disabled"
-  value="disabled"
+<label
+  className="emotion-0"
+  htmlFor="disabled"
 >
-  <ToggleWrapper
+  <input
+    className="emotion-1"
+    data-cy="toggleWrapper-input"
     disabled={true}
     id="disabled"
+    onBlur={[Function]}
+    onFocus={[Function]}
     type="checkbox"
     value="disabled"
+  />
+  <div
+    className="emotion-2"
   >
-    <label
-      className="emotion-0"
-      htmlFor="disabled"
+    <div
+      className="emotion-3"
+      data-cy="buttonCard"
     >
-      <input
-        className="emotion-1"
-        data-cy="toggleWrapper-input"
-        disabled={true}
-        id="disabled"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        type="checkbox"
-        value="disabled"
-      />
       <div
-        className="emotion-2"
+        className="emotion-4"
       >
-        <ButtonCard
-          disabled={true}
-          hasFocus={false}
-          isInput={true}
-          paddingSize="m"
-        >
-          <div
-            className="emotion-3"
-            data-cy="buttonCard"
-          >
-            <div
-              className="emotion-4"
-            >
-              disabled
-            </div>
-          </div>
-        </ButtonCard>
+        disabled
       </div>
-    </label>
-  </ToggleWrapper>
-</ToggleBox>
+    </div>
+  </div>
+</label>
 `;

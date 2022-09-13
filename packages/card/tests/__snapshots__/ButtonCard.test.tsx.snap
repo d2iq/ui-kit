@@ -33,25 +33,20 @@ exports[`ButtonCard renders as disabled 1`] = `
   height: 100%;
 }
 
-<ButtonCard
-  disabled={true}
-  paddingSize="m"
+<div
+  aria-disabled={true}
+  className="emotion-0"
+  data-cy="buttonCard"
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={-1}
 >
   <div
-    aria-disabled={true}
-    className="emotion-0"
-    data-cy="buttonCard"
-    onKeyPress={[Function]}
-    role="button"
-    tabIndex={-1}
+    className="emotion-1"
   >
-    <div
-      className="emotion-1"
-    >
-      default
-    </div>
+    default
   </div>
-</ButtonCard>
+</div>
 `;
 
 exports[`ButtonCard renders as hasFocus 1`] = `
@@ -80,24 +75,19 @@ exports[`ButtonCard renders as hasFocus 1`] = `
   height: 100%;
 }
 
-<ButtonCard
-  hasFocus={true}
-  paddingSize="m"
+<div
+  className="emotion-0"
+  data-cy="buttonCard"
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
 >
   <div
-    className="emotion-0"
-    data-cy="buttonCard"
-    onKeyPress={[Function]}
-    role="button"
-    tabIndex={0}
+    className="emotion-1"
   >
-    <div
-      className="emotion-1"
-    >
-      default
-    </div>
+    default
   </div>
-</ButtonCard>
+</div>
 `;
 
 exports[`ButtonCard renders as isActive 1`] = `
@@ -134,25 +124,20 @@ exports[`ButtonCard renders as isActive 1`] = `
   height: 100%;
 }
 
-<ButtonCard
-  isActive={true}
-  paddingSize="m"
+<div
+  aria-pressed={true}
+  className="emotion-0"
+  data-cy="buttonCard"
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
 >
   <div
-    aria-pressed={true}
-    className="emotion-0"
-    data-cy="buttonCard"
-    onKeyPress={[Function]}
-    role="button"
-    tabIndex={0}
+    className="emotion-1"
   >
-    <div
-      className="emotion-1"
-    >
-      default
-    </div>
+    default
   </div>
-</ButtonCard>
+</div>
 `;
 
 exports[`ButtonCard renders default 1`] = `
@@ -179,21 +164,17 @@ exports[`ButtonCard renders default 1`] = `
   height: 100%;
 }
 
-<ButtonCard
-  paddingSize="m"
+<div
+  className="emotion-0"
+  data-cy="buttonCard"
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
 >
   <div
-    className="emotion-0"
-    data-cy="buttonCard"
-    onKeyPress={[Function]}
-    role="button"
-    tabIndex={0}
+    className="emotion-1"
   >
-    <div
-      className="emotion-1"
-    >
-      default
-    </div>
+    default
   </div>
-</ButtonCard>
+</div>
 `;

@@ -13,13 +13,20 @@ export interface ButtonCardProps extends CardProps {
   linkDescription: string;
 }
 
-class LinkCard extends Card<ButtonCardProps & LinkProps, {}> {
-  public render() {
-    const { openInNewTab, linkDescription, url, children, ...other } =
-      this.props;
-
-    const buttonCardProps = {
-      children: (
+const LinkCard = React.memo(
+  ({
+    openInNewTab,
+    linkDescription,
+    url,
+    children,
+    ...other
+  }: ButtonCardProps & LinkProps) => {
+    return (
+      <Card
+        className={cx(buttonCard, cardWithLink)}
+        data-cy="linkCard"
+        {...other}
+      >
         <>
           <UnstyledLink
             url={url}
@@ -32,13 +39,9 @@ class LinkCard extends Card<ButtonCardProps & LinkProps, {}> {
           </UnstyledLink>
           {children}
         </>
-      ),
-      ...{ "data-cy": "linkCard" },
-      ...other
-    };
-
-    return this.getCardElement(buttonCardProps, cx(buttonCard, cardWithLink));
+      </Card>
+    );
   }
-}
+);
 
 export default LinkCard;

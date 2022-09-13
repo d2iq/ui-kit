@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Story, Meta } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import ButtonCard, { ButtonCardProps } from "../components/ButtonCard";
+import ButtonCard from "../components/ButtonCard";
 
 export default {
   title: "Actions/ButtonCard",

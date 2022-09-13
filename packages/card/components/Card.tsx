@@ -37,22 +37,19 @@ export interface CardProps extends React.HTMLProps<HTMLDivElement> {
      */
     size?: HeaderSizes;
   };
+
+  className?: string;
 }
 
-class Card<P extends CardProps, S extends {}> extends React.PureComponent<
-  P,
-  S
-> {
-  public static defaultProps: Partial<CardProps> = {
-    paddingSize: "m"
-  };
-
-  public render() {
-    return this.getCardElement(this.props);
-  }
-
-  protected getCardElement(cardProps: CardProps, additionalClasses?: string) {
-    const { children, aspectRatio, paddingSize, header, ...other } = cardProps;
+const Card = React.memo(
+  ({
+    className,
+    children,
+    aspectRatio,
+    paddingSize = "m",
+    header,
+    ...other
+  }: CardProps) => {
     const headerSize = header?.size || HeaderSizes.M;
 
     const aspectRatioStyle = aspectRatio
@@ -61,7 +58,7 @@ class Card<P extends CardProps, S extends {}> extends React.PureComponent<
 
     return (
       <div
-        className={cx(cardBase, aspectRatioStyle, additionalClasses)}
+        className={cx(cardBase, aspectRatioStyle, className)}
         data-cy="card"
         {...other}
       >
@@ -76,6 +73,6 @@ class Card<P extends CardProps, S extends {}> extends React.PureComponent<
       </div>
     );
   }
-}
+);
 
 export default Card;
