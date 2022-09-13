@@ -80,11 +80,10 @@ const PopoverListItem = (props: PopoverListItemProps) => {
           itemContent: children
         };
       }
-      const isItemGraphic = (
-        child
-      ): child is typeof PopoverListItemIcon | typeof PopoverListItemAvatar =>
-        (React.isValidElement(child) && child.type === PopoverListItemIcon) ||
-        child.type === PopoverListItemAvatar;
+      const isItemGraphic = (child): boolean =>
+        React.isValidElement(child) &&
+        (child.type === PopoverListItemIcon ||
+          child.type === PopoverListItemAvatar);
 
       const itemGraphicStart = itemChildren.find(
         child => isItemGraphic(child) && child.props.position === "start"

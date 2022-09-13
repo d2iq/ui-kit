@@ -128,7 +128,7 @@
     "svgstore": "3.0.1",
     "tablemark": "3.0.0",
     "ts-jest": "27.1.3",
-    "typescript": "3.8.2",
+    "typescript": "4.8.3",
     "wait-on": "6.0.1",
     "webpack": "4.46.0"
   },
