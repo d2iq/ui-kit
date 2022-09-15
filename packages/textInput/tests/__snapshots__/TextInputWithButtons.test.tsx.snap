@@ -236,7 +236,7 @@ exports[`TextInputWithIcon renders 1`] = `
 <TextInputWithButtons
   appearance="standard"
   buttons={
-    Array [
+    [
       <TextInputButton
         shape="system-close"
       />,
@@ -563,7 +563,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
 <TextInputWithButtons
   appearance="standard"
   buttons={
-    Array [
+    [
       <TextInputButton
         color="red"
         shape="system-close"

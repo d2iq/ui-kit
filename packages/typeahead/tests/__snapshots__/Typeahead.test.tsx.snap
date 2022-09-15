@@ -122,16 +122,16 @@ exports[`Typeahead renders 1`] = `
 
 <Typeahead
   items={
-    Array [
-      Object {
+    [
+      {
         "label": "Exosphere",
         "value": "Exosphere",
       },
-      Object {
+      {
         "label": "Thermosphere",
         "value": "Thermosphere",
       },
-      Object {
+      {
         "label": "Stratosphere",
         "value": "Stratosphere",
       },
@@ -439,16 +439,16 @@ exports[`Typeahead renders a menu with a max height 1`] = `
 
 <Typeahead
   items={
-    Array [
-      Object {
+    [
+      {
         "label": "Exosphere",
         "value": "Exosphere",
       },
-      Object {
+      {
         "label": "Thermosphere",
         "value": "Thermosphere",
       },
-      Object {
+      {
         "label": "Stratosphere",
         "value": "Stratosphere",
       },

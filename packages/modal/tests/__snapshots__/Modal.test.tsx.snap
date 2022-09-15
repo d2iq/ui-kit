@@ -435,7 +435,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
         onExited={[Function]}
         onExiting={[Function]}
         timeout={
-          Object {
+          {
             "enter": 0,
             "exit": 250,
           }
@@ -1587,7 +1587,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                     autoFocus={true}
                     crossFrame={true}
                     disabled={false}
-                    lockProps={Object {}}
+                    lockProps={{}}
                     noFocusGuards={false}
                     persistentFocus={false}
                     returnFocus={false}
@@ -1597,7 +1597,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       data-focus-guard={true}
                       key="guard-first"
                       style={
-                        Object {
+                        {
                           "height": "0px",
                           "left": "1px",
                           "overflow": "hidden",
@@ -1613,7 +1613,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       autoFocus={true}
                       crossFrame={true}
                       disabled={false}
-                      id={Object {}}
+                      id={{}}
                       observed={
                         .emotion-0 {
   background-color: var(--themeBgScrim, rgba(0, 0, 0, 0.2));
@@ -2106,12 +2106,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                       onDeactivation={[Function]}
                       persistentFocus={false}
                       returnFocus={[Function]}
-                      shards={Array []}
+                      shards={[]}
                       sideCar={
-                        Object {
+                        {
                           "assignMedium": [Function],
                           "assignSyncMedium": [Function],
-                          "options": Object {
+                          "options": {
                             "async": true,
                             "ssr": false,
                           },
@@ -2124,7 +2124,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                         autoFocus={true}
                         crossFrame={true}
                         disabled={false}
-                        id={Object {}}
+                        id={{}}
                         observed={
                           .emotion-0 {
   background-color: var(--themeBgScrim, rgba(0, 0, 0, 0.2));
@@ -2617,12 +2617,12 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                         onDeactivation={[Function]}
                         persistentFocus={false}
                         returnFocus={[Function]}
-                        shards={Array []}
+                        shards={[]}
                         sideCar={
-                          Object {
+                          {
                             "assignMedium": [Function],
                             "assignSyncMedium": [Function],
-                            "options": Object {
+                            "options": {
                               "async": true,
                               "ssr": false,
                             },
@@ -2795,7 +2795,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                     <div
                       data-focus-guard={true}
                       style={
-                        Object {
+                        {
                           "height": "0px",
                           "left": "1px",
                           "overflow": "hidden",
@@ -3137,7 +3137,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
       onExited={[Function]}
       onExiting={[Function]}
       timeout={
-        Object {
+        {
           "enter": 0,
           "exit": 250,
         }
@@ -4631,7 +4631,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                   autoFocus={true}
                   crossFrame={true}
                   disabled={false}
-                  lockProps={Object {}}
+                  lockProps={{}}
                   noFocusGuards={false}
                   persistentFocus={false}
                   returnFocus={false}
@@ -4641,7 +4641,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     data-focus-guard={true}
                     key="guard-first"
                     style={
-                      Object {
+                      {
                         "height": "0px",
                         "left": "1px",
                         "overflow": "hidden",
@@ -4657,7 +4657,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     autoFocus={true}
                     crossFrame={true}
                     disabled={false}
-                    id={Object {}}
+                    id={{}}
                     observed={
                       .emotion-0 {
   background-color: var(--themeBgScrim, rgba(0, 0, 0, 0.2));
@@ -5092,12 +5092,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                     onDeactivation={[Function]}
                     persistentFocus={false}
                     returnFocus={[Function]}
-                    shards={Array []}
+                    shards={[]}
                     sideCar={
-                      Object {
+                      {
                         "assignMedium": [Function],
                         "assignSyncMedium": [Function],
-                        "options": Object {
+                        "options": {
                           "async": true,
                           "ssr": false,
                         },
@@ -5110,7 +5110,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       autoFocus={true}
                       crossFrame={true}
                       disabled={false}
-                      id={Object {}}
+                      id={{}}
                       observed={
                         .emotion-0 {
   background-color: var(--themeBgScrim, rgba(0, 0, 0, 0.2));
@@ -5545,12 +5545,12 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                       onDeactivation={[Function]}
                       persistentFocus={false}
                       returnFocus={[Function]}
-                      shards={Array []}
+                      shards={[]}
                       sideCar={
-                        Object {
+                        {
                           "assignMedium": [Function],
                           "assignSyncMedium": [Function],
-                          "options": Object {
+                          "options": {
                             "async": true,
                             "ssr": false,
                           },
@@ -5614,7 +5614,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                       default={[Function]}
                                       passDefault={true}
                                       props={
-                                        Object {
+                                        {
                                           "closeText": "Close",
                                           "ctaButton": <PrimaryButton>
                                             CTA
@@ -5730,7 +5730,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                   <div
                     data-focus-guard={true}
                     style={
-                      Object {
+                      {
                         "height": "0px",
                         "left": "1px",
                         "overflow": "hidden",
@@ -5874,7 +5874,7 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
     onExited={[Function]}
     onExiting={[Function]}
     timeout={
-      Object {
+      {
         "enter": 0,
         "exit": 250,
       }
@@ -6188,7 +6188,7 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                 autoFocus={true}
                 crossFrame={true}
                 disabled={false}
-                lockProps={Object {}}
+                lockProps={{}}
                 noFocusGuards={false}
                 persistentFocus={false}
                 returnFocus={false}
@@ -6198,7 +6198,7 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                   data-focus-guard={true}
                   key="guard-first"
                   style={
-                    Object {
+                    {
                       "height": "0px",
                       "left": "1px",
                       "overflow": "hidden",
@@ -6214,7 +6214,7 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                   autoFocus={true}
                   crossFrame={true}
                   disabled={false}
-                  id={Object {}}
+                  id={{}}
                   observed={
                     .emotion-0 {
   background-color: var(--themeBgScrim, rgba(0, 0, 0, 0.2));
@@ -6351,12 +6351,12 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                   onDeactivation={[Function]}
                   persistentFocus={false}
                   returnFocus={[Function]}
-                  shards={Array []}
+                  shards={[]}
                   sideCar={
-                    Object {
+                    {
                       "assignMedium": [Function],
                       "assignSyncMedium": [Function],
-                      "options": Object {
+                      "options": {
                         "async": true,
                         "ssr": false,
                       },
@@ -6369,7 +6369,7 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                     autoFocus={true}
                     crossFrame={true}
                     disabled={false}
-                    id={Object {}}
+                    id={{}}
                     observed={
                       .emotion-0 {
   background-color: var(--themeBgScrim, rgba(0, 0, 0, 0.2));
@@ -6506,12 +6506,12 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                     onDeactivation={[Function]}
                     persistentFocus={false}
                     returnFocus={[Function]}
-                    shards={Array []}
+                    shards={[]}
                     sideCar={
-                      Object {
+                      {
                         "assignMedium": [Function],
                         "assignSyncMedium": [Function],
-                        "options": Object {
+                        "options": {
                           "async": true,
                           "ssr": false,
                         },
@@ -6561,7 +6561,7 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
                 <div
                   data-focus-guard={true}
                   style={
-                    Object {
+                    {
                       "height": "0px",
                       "left": "1px",
                       "overflow": "hidden",

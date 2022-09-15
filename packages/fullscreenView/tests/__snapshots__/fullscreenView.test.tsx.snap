@@ -240,7 +240,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
           default={[Function]}
           passDefault={true}
           props={
-            Object {
+            {
               "closeText": "Close",
               "ctaButton": <PrimaryButton>
                 CTA

@@ -35,7 +35,7 @@ exports[`SelectInput renders disabled 1`] = `
 exports[`SelectInput renders with errors 1`] = `
 <FormFieldWrapper
   errors={
-    Array [
+    [
       "error1",
       "error2",
     ]
@@ -186,28 +186,28 @@ exports[`SelectInput should render all appearances focus 1`] = `
   id="layers"
   inputLabel="Atmosphere layer"
   options={
-    Array [
-      Object {
+    [
+      {
         "label": "Exosphere",
         "value": "exosphere",
       },
-      Object {
+      {
         "label": "Thermosphere",
         "value": "thermosphere",
       },
-      Object {
+      {
         "label": "Mesosphere",
         "value": "mesosphere",
       },
-      Object {
+      {
         "label": "Stratosphere",
         "value": "stratosphere",
       },
-      Object {
+      {
         "label": "Troposphere",
         "value": "troposphere",
       },
-      Object {
+      {
         "disabled": true,
         "label": "Can't touch this",
         "value": "disabled",
@@ -442,28 +442,28 @@ exports[`SelectInput should render all appearances focus 2`] = `
   id="layers"
   inputLabel="Atmosphere layer"
   options={
-    Array [
-      Object {
+    [
+      {
         "label": "Exosphere",
         "value": "exosphere",
       },
-      Object {
+      {
         "label": "Thermosphere",
         "value": "thermosphere",
       },
-      Object {
+      {
         "label": "Mesosphere",
         "value": "mesosphere",
       },
-      Object {
+      {
         "label": "Stratosphere",
         "value": "stratosphere",
       },
-      Object {
+      {
         "label": "Troposphere",
         "value": "troposphere",
       },
-      Object {
+      {
         "disabled": true,
         "label": "Can't touch this",
         "value": "disabled",
@@ -699,28 +699,28 @@ exports[`SelectInput should render all appearances focus 3`] = `
   id="layers"
   inputLabel="Atmosphere layer"
   options={
-    Array [
-      Object {
+    [
+      {
         "label": "Exosphere",
         "value": "exosphere",
       },
-      Object {
+      {
         "label": "Thermosphere",
         "value": "thermosphere",
       },
-      Object {
+      {
         "label": "Mesosphere",
         "value": "mesosphere",
       },
-      Object {
+      {
         "label": "Stratosphere",
         "value": "stratosphere",
       },
-      Object {
+      {
         "label": "Troposphere",
         "value": "troposphere",
       },
-      Object {
+      {
         "disabled": true,
         "label": "Can't touch this",
         "value": "disabled",

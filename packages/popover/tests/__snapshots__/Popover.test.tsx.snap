@@ -80,7 +80,7 @@ exports[`Popover renders a closed dropdown 1`] = `
       }
       isOpen={false}
       preferredDirections={
-        Array [
+        [
           "bottom",
           "top",
           "top-start",
@@ -204,7 +204,7 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
       }
       isOpen={false}
       preferredDirections={
-        Array [
+        [
           "bottom",
           "top",
           "top-start",
@@ -378,7 +378,7 @@ exports[`Popover renders an open dropdown 1`] = `
       }
       isOpen={true}
       preferredDirections={
-        Array [
+        [
           "bottom",
           "top",
           "top-start",
@@ -421,7 +421,7 @@ exports[`Popover renders an open dropdown 1`] = `
         >
           <ForwardRef
             style={
-              Object {
+              {
                 "left": "0",
                 "position": "absolute",
                 "top": "0",
@@ -528,7 +528,7 @@ exports[`Popover renders an open dropdown 1`] = `
                 </body>
               }
               style={
-                Object {
+                {
                   "left": "0",
                   "position": "absolute",
                   "top": "0",
@@ -634,7 +634,7 @@ exports[`Popover renders an open dropdown 1`] = `
               >
                 <div
                   style={
-                    Object {
+                    {
                       "left": "0",
                       "position": "absolute",
                       "top": "0",
@@ -654,7 +654,7 @@ exports[`Popover renders an open dropdown 1`] = `
                       id="dropdown2"
                       role="dialog"
                       style={
-                        Object {
+                        {
                           "maxHeight": undefined,
                           "maxWidth": undefined,
                           "width": undefined,
@@ -669,7 +669,7 @@ exports[`Popover renders an open dropdown 1`] = `
                           autoFocus={true}
                           crossFrame={true}
                           disabled={false}
-                          lockProps={Object {}}
+                          lockProps={{}}
                           noFocusGuards={false}
                           persistentFocus={false}
                           returnFocus={false}
@@ -679,7 +679,7 @@ exports[`Popover renders an open dropdown 1`] = `
                             data-focus-guard={true}
                             key="guard-first"
                             style={
-                              Object {
+                              {
                                 "height": "0px",
                                 "left": "1px",
                                 "overflow": "hidden",
@@ -695,7 +695,7 @@ exports[`Popover renders an open dropdown 1`] = `
                             autoFocus={true}
                             crossFrame={true}
                             disabled={false}
-                            id={Object {}}
+                            id={{}}
                             observed={
                               .emotion-0:focus {
   outline: none;
@@ -728,12 +728,12 @@ exports[`Popover renders an open dropdown 1`] = `
                             onDeactivation={[Function]}
                             persistentFocus={false}
                             returnFocus={[Function]}
-                            shards={Array []}
+                            shards={[]}
                             sideCar={
-                              Object {
+                              {
                                 "assignMedium": [Function],
                                 "assignSyncMedium": [Function],
-                                "options": Object {
+                                "options": {
                                   "async": true,
                                   "ssr": false,
                                 },
@@ -746,7 +746,7 @@ exports[`Popover renders an open dropdown 1`] = `
                               autoFocus={true}
                               crossFrame={true}
                               disabled={false}
-                              id={Object {}}
+                              id={{}}
                               observed={
                                 .emotion-0:focus {
   outline: none;
@@ -779,12 +779,12 @@ exports[`Popover renders an open dropdown 1`] = `
                               onDeactivation={[Function]}
                               persistentFocus={false}
                               returnFocus={[Function]}
-                              shards={Array []}
+                              shards={[]}
                               sideCar={
-                                Object {
+                                {
                                   "assignMedium": [Function],
                                   "assignSyncMedium": [Function],
-                                  "options": Object {
+                                  "options": {
                                     "async": true,
                                     "ssr": false,
                                   },
@@ -810,7 +810,7 @@ exports[`Popover renders an open dropdown 1`] = `
                               >
                                 <Box
                                   bgImageOptions={
-                                    Object {
+                                    {
                                       "position": undefined,
                                       "repeat": undefined,
                                       "size": undefined,
@@ -835,7 +835,7 @@ exports[`Popover renders an open dropdown 1`] = `
                           <div
                             data-focus-guard={true}
                             style={
-                              Object {
+                              {
                                 "height": "0px",
                                 "left": "1px",
                                 "overflow": "hidden",

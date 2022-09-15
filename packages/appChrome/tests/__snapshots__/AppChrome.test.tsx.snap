@@ -86,7 +86,7 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
 
 <ThemeProvider
   theme={
-    Object {
+    {
       "headerBackgroundColor": "#FFFFFF",
       "headerPaddingHor": "none",
       "headerPaddingVert": "none",

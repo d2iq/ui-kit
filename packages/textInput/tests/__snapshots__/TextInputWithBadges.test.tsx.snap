@@ -279,16 +279,16 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
   addBadgeOnBlur={true}
   appearance="standard"
   badges={
-    Array [
-      Object {
+    [
+      {
         "label": "Badge one",
         "value": "badge-one",
       },
-      Object {
+      {
         "label": "Badge two",
         "value": "badge-two",
       },
-      Object {
+      {
         "label": "Badge three",
         "value": "badge-three",
       },
@@ -1028,16 +1028,16 @@ exports[`TextInputWithBadges renders with badges 1`] = `
   addBadgeOnBlur={true}
   appearance="standard"
   badges={
-    Array [
-      Object {
+    [
+      {
         "label": "Badge one",
         "value": "badge-one",
       },
-      Object {
+      {
         "label": "Badge two",
         "value": "badge-two",
       },
-      Object {
+      {
         "label": "Badge three",
         "value": "badge-three",
       },
