@@ -27,7 +27,7 @@ exports[`Textarea should render all appearances 3`] = `
 exports[`Textarea should render error messages if appearance set to InputAppearance.Error 1`] = `
 <FormFieldWrapper
   errors={
-    Array [
+    [
       "This is an error message",
       "this is a second error message",
     ]
@@ -41,7 +41,7 @@ exports[`Textarea should render error messages if appearance set to InputAppeara
 exports[`Textarea should render no error messages if appearance set to InputAppearance.Success 1`] = `
 <FormFieldWrapper
   errors={
-    Array [
+    [
       "I'm not displayed",
     ]
   }

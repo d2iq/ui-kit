@@ -3,8 +3,8 @@
 exports[`Table v2 rendering renders default 1`] = `
 <Table
   columns={
-    Array [
-      Object {
+    [
+      {
         "header": <div>
           Name
         </div>,
@@ -14,7 +14,7 @@ exports[`Table v2 rendering renders default 1`] = `
         "sorter": [Function],
         "textAlign": "left",
       },
-      Object {
+      {
         "header": <TooltipHeaderCell
           tooltipContent="test"
         >
@@ -25,38 +25,38 @@ exports[`Table v2 rendering renders default 1`] = `
         "render": [Function],
         "textAlign": "center",
       },
-      Object {
+      {
         "header": "Email",
         "id": "email",
         "render": [Function],
         "textAlign": "right",
       },
-      Object {
+      {
         "header": "Phone",
         "id": "phone",
         "render": [Function],
       },
-      Object {
+      {
         "header": "Company",
         "id": "company",
         "render": [Function],
       },
-      Object {
+      {
         "header": "Website",
         "id": "website",
         "render": [Function],
       },
-      Object {
+      {
         "header": "Empty",
         "id": "empty",
         "render": [Function],
       },
-      Object {
+      {
         "header": "Muted",
         "id": "muted",
         "render": [Function],
       },
-      Object {
+      {
         "header": "",
         "id": "dropdown",
         "render": [Function],
@@ -64,8 +64,8 @@ exports[`Table v2 rendering renders default 1`] = `
     ]
   }
   data={
-    Array [
-      Object {
+    [
+      {
         "company": "Lemke LLC",
         "email": "Brook88@gmail.com",
         "id": 0,
@@ -74,7 +74,7 @@ exports[`Table v2 rendering renders default 1`] = `
         "username": "Edwina.Denesik",
         "website": "aurelia.org",
       },
-      Object {
+      {
         "company": "Daugherty and Sons",
         "email": "Guillermo.Nitzsche19@yahoo.com",
         "id": 1,
@@ -83,7 +83,7 @@ exports[`Table v2 rendering renders default 1`] = `
         "username": "Gracie.Feil23",
         "website": "lulu.info",
       },
-      Object {
+      {
         "company": "Kuhlman and Sons",
         "email": "Freddy.Willms21@yahoo.com",
         "id": 2,
@@ -92,7 +92,7 @@ exports[`Table v2 rendering renders default 1`] = `
         "username": "Adolfo_Morissette",
         "website": "delbert.net",
       },
-      Object {
+      {
         "company": "Romaguera, Walker and Anderson",
         "email": "Sheridan23@gmail.com",
         "id": 3,
@@ -101,7 +101,7 @@ exports[`Table v2 rendering renders default 1`] = `
         "username": "Matt96",
         "website": "serena.net",
       },
-      Object {
+      {
         "company": "Mante - McGlynn",
         "email": "Martin_Metz24@gmail.com",
         "id": 4,
@@ -120,8 +120,8 @@ exports[`Table v2 rendering renders default 1`] = `
   >
     <HeaderRow
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -132,7 +132,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -144,44 +144,44 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -191,41 +191,41 @@ exports[`Table v2 rendering renders default 1`] = `
       }
       showScrollShadow={true}
       state={
-        Object {
-          "columns": Array [
-            Object {
+        {
+          "columns": [
+            {
               "id": "name",
               "width": "300px",
             },
-            Object {
+            {
               "id": "username",
               "width": "minmax(300px, 1fr)",
             },
-            Object {
+            {
               "id": "email",
               "width": null,
             },
-            Object {
+            {
               "id": "phone",
               "width": null,
             },
-            Object {
+            {
               "id": "company",
               "width": null,
             },
-            Object {
+            {
               "id": "website",
               "width": null,
             },
-            Object {
+            {
               "id": "empty",
               "width": null,
             },
-            Object {
+            {
               "id": "muted",
               "width": null,
             },
-            Object {
+            {
               "id": "dropdown",
               "width": null,
             },
@@ -244,7 +244,7 @@ exports[`Table v2 rendering renders default 1`] = `
       >
         <HeaderCell
           column={
-            Object {
+            {
               "header": <div>
                 Name
               </div>,
@@ -260,41 +260,41 @@ exports[`Table v2 rendering renders default 1`] = `
           key="name"
           showScrollShadow={true}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -337,7 +337,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -370,7 +370,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": <TooltipHeaderCell
                 tooltipContent="test"
               >
@@ -387,41 +387,41 @@ exports[`Table v2 rendering renders default 1`] = `
           key="username"
           showScrollShadow={true}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -494,7 +494,7 @@ exports[`Table v2 rendering renders default 1`] = `
                             }
                             isOpen={false}
                             preferredDirections={
-                              Array [
+                              [
                                 "top",
                                 "top-start",
                                 "top-end",
@@ -546,7 +546,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -579,7 +579,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Email",
               "id": "email",
               "render": [Function],
@@ -591,41 +591,41 @@ exports[`Table v2 rendering renders default 1`] = `
           key="email"
           showScrollShadow={true}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -651,7 +651,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -684,7 +684,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Phone",
               "id": "phone",
               "render": [Function],
@@ -695,41 +695,41 @@ exports[`Table v2 rendering renders default 1`] = `
           key="phone"
           showScrollShadow={true}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -755,7 +755,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -788,7 +788,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Company",
               "id": "company",
               "render": [Function],
@@ -799,41 +799,41 @@ exports[`Table v2 rendering renders default 1`] = `
           key="company"
           showScrollShadow={true}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -859,7 +859,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -892,7 +892,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Website",
               "id": "website",
               "render": [Function],
@@ -903,41 +903,41 @@ exports[`Table v2 rendering renders default 1`] = `
           key="website"
           showScrollShadow={true}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -963,7 +963,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -996,7 +996,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Empty",
               "id": "empty",
               "render": [Function],
@@ -1007,41 +1007,41 @@ exports[`Table v2 rendering renders default 1`] = `
           key="empty"
           showScrollShadow={true}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -1067,7 +1067,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -1100,7 +1100,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Muted",
               "id": "muted",
               "render": [Function],
@@ -1111,41 +1111,41 @@ exports[`Table v2 rendering renders default 1`] = `
           key="muted"
           showScrollShadow={true}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -1171,7 +1171,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -1204,7 +1204,7 @@ exports[`Table v2 rendering renders default 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "",
               "id": "dropdown",
               "render": [Function],
@@ -1215,41 +1215,41 @@ exports[`Table v2 rendering renders default 1`] = `
           key="dropdown"
           showScrollShadow={true}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -1274,7 +1274,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -1309,8 +1309,8 @@ exports[`Table v2 rendering renders default 1`] = `
     </HeaderRow>
     <Memo(Row)
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -1321,7 +1321,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -1333,44 +1333,44 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -1379,7 +1379,7 @@ exports[`Table v2 rendering renders default 1`] = `
         ]
       }
       el={
-        Object {
+        {
           "company": "Lemke LLC",
           "email": "Brook88@gmail.com",
           "id": 0,
@@ -1503,7 +1503,7 @@ exports[`Table v2 rendering renders default 1`] = `
             >
               <DropdownMenu
                 preferredDirections={
-                  Array [
+                  [
                     "bottom-end",
                     "bottom-start",
                     "bottom",
@@ -1630,7 +1630,7 @@ exports[`Table v2 rendering renders default 1`] = `
                       }
                       isOpen={false}
                       preferredDirections={
-                        Array [
+                        [
                           "bottom-end",
                           "bottom-start",
                           "bottom",
@@ -1703,8 +1703,8 @@ exports[`Table v2 rendering renders default 1`] = `
     </Memo(Row)>
     <Memo(Row)
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -1715,7 +1715,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -1727,44 +1727,44 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -1773,7 +1773,7 @@ exports[`Table v2 rendering renders default 1`] = `
         ]
       }
       el={
-        Object {
+        {
           "company": "Daugherty and Sons",
           "email": "Guillermo.Nitzsche19@yahoo.com",
           "id": 1,
@@ -1897,7 +1897,7 @@ exports[`Table v2 rendering renders default 1`] = `
             >
               <DropdownMenu
                 preferredDirections={
-                  Array [
+                  [
                     "bottom-end",
                     "bottom-start",
                     "bottom",
@@ -2024,7 +2024,7 @@ exports[`Table v2 rendering renders default 1`] = `
                       }
                       isOpen={false}
                       preferredDirections={
-                        Array [
+                        [
                           "bottom-end",
                           "bottom-start",
                           "bottom",
@@ -2097,8 +2097,8 @@ exports[`Table v2 rendering renders default 1`] = `
     </Memo(Row)>
     <Memo(Row)
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -2109,7 +2109,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -2121,44 +2121,44 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -2167,7 +2167,7 @@ exports[`Table v2 rendering renders default 1`] = `
         ]
       }
       el={
-        Object {
+        {
           "company": "Kuhlman and Sons",
           "email": "Freddy.Willms21@yahoo.com",
           "id": 2,
@@ -2291,7 +2291,7 @@ exports[`Table v2 rendering renders default 1`] = `
             >
               <DropdownMenu
                 preferredDirections={
-                  Array [
+                  [
                     "bottom-end",
                     "bottom-start",
                     "bottom",
@@ -2418,7 +2418,7 @@ exports[`Table v2 rendering renders default 1`] = `
                       }
                       isOpen={false}
                       preferredDirections={
-                        Array [
+                        [
                           "bottom-end",
                           "bottom-start",
                           "bottom",
@@ -2491,8 +2491,8 @@ exports[`Table v2 rendering renders default 1`] = `
     </Memo(Row)>
     <Memo(Row)
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -2503,7 +2503,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -2515,44 +2515,44 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -2561,7 +2561,7 @@ exports[`Table v2 rendering renders default 1`] = `
         ]
       }
       el={
-        Object {
+        {
           "company": "Romaguera, Walker and Anderson",
           "email": "Sheridan23@gmail.com",
           "id": 3,
@@ -2685,7 +2685,7 @@ exports[`Table v2 rendering renders default 1`] = `
             >
               <DropdownMenu
                 preferredDirections={
-                  Array [
+                  [
                     "bottom-end",
                     "bottom-start",
                     "bottom",
@@ -2812,7 +2812,7 @@ exports[`Table v2 rendering renders default 1`] = `
                       }
                       isOpen={false}
                       preferredDirections={
-                        Array [
+                        [
                           "bottom-end",
                           "bottom-start",
                           "bottom",
@@ -2885,8 +2885,8 @@ exports[`Table v2 rendering renders default 1`] = `
     </Memo(Row)>
     <Memo(Row)
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -2897,7 +2897,7 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -2909,44 +2909,44 @@ exports[`Table v2 rendering renders default 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -2955,7 +2955,7 @@ exports[`Table v2 rendering renders default 1`] = `
         ]
       }
       el={
-        Object {
+        {
           "company": "Mante - McGlynn",
           "email": "Martin_Metz24@gmail.com",
           "id": 4,
@@ -3079,7 +3079,7 @@ exports[`Table v2 rendering renders default 1`] = `
             >
               <DropdownMenu
                 preferredDirections={
-                  Array [
+                  [
                     "bottom-end",
                     "bottom-start",
                     "bottom",
@@ -3206,7 +3206,7 @@ exports[`Table v2 rendering renders default 1`] = `
                       }
                       isOpen={false}
                       preferredDirections={
-                        Array [
+                        [
                           "bottom-end",
                           "bottom-start",
                           "bottom",
@@ -3287,8 +3287,8 @@ exports[`Table v2 rendering renders default 1`] = `
 exports[`Table v2 rendering renders without a sticky first column 1`] = `
 <Table
   columns={
-    Array [
-      Object {
+    [
+      {
         "header": <div>
           Name
         </div>,
@@ -3298,7 +3298,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         "sorter": [Function],
         "textAlign": "left",
       },
-      Object {
+      {
         "header": <TooltipHeaderCell
           tooltipContent="test"
         >
@@ -3309,38 +3309,38 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         "render": [Function],
         "textAlign": "center",
       },
-      Object {
+      {
         "header": "Email",
         "id": "email",
         "render": [Function],
         "textAlign": "right",
       },
-      Object {
+      {
         "header": "Phone",
         "id": "phone",
         "render": [Function],
       },
-      Object {
+      {
         "header": "Company",
         "id": "company",
         "render": [Function],
       },
-      Object {
+      {
         "header": "Website",
         "id": "website",
         "render": [Function],
       },
-      Object {
+      {
         "header": "Empty",
         "id": "empty",
         "render": [Function],
       },
-      Object {
+      {
         "header": "Muted",
         "id": "muted",
         "render": [Function],
       },
-      Object {
+      {
         "header": "",
         "id": "dropdown",
         "render": [Function],
@@ -3348,8 +3348,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
     ]
   }
   data={
-    Array [
-      Object {
+    [
+      {
         "company": "Lemke LLC",
         "email": "Brook88@gmail.com",
         "id": 0,
@@ -3358,7 +3358,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         "username": "Edwina.Denesik",
         "website": "aurelia.org",
       },
-      Object {
+      {
         "company": "Daugherty and Sons",
         "email": "Guillermo.Nitzsche19@yahoo.com",
         "id": 1,
@@ -3367,7 +3367,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         "username": "Gracie.Feil23",
         "website": "lulu.info",
       },
-      Object {
+      {
         "company": "Kuhlman and Sons",
         "email": "Freddy.Willms21@yahoo.com",
         "id": 2,
@@ -3376,7 +3376,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         "username": "Adolfo_Morissette",
         "website": "delbert.net",
       },
-      Object {
+      {
         "company": "Romaguera, Walker and Anderson",
         "email": "Sheridan23@gmail.com",
         "id": 3,
@@ -3385,7 +3385,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         "username": "Matt96",
         "website": "serena.net",
       },
-      Object {
+      {
         "company": "Mante - McGlynn",
         "email": "Martin_Metz24@gmail.com",
         "id": 4,
@@ -3405,8 +3405,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
   >
     <HeaderRow
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -3417,7 +3417,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -3429,44 +3429,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -3476,41 +3476,41 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       }
       showScrollShadow={false}
       state={
-        Object {
-          "columns": Array [
-            Object {
+        {
+          "columns": [
+            {
               "id": "name",
               "width": "300px",
             },
-            Object {
+            {
               "id": "username",
               "width": "minmax(300px, 1fr)",
             },
-            Object {
+            {
               "id": "email",
               "width": null,
             },
-            Object {
+            {
               "id": "phone",
               "width": null,
             },
-            Object {
+            {
               "id": "company",
               "width": null,
             },
-            Object {
+            {
               "id": "website",
               "width": null,
             },
-            Object {
+            {
               "id": "empty",
               "width": null,
             },
-            Object {
+            {
               "id": "muted",
               "width": null,
             },
-            Object {
+            {
               "id": "dropdown",
               "width": null,
             },
@@ -3529,7 +3529,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       >
         <HeaderCell
           column={
-            Object {
+            {
               "header": <div>
                 Name
               </div>,
@@ -3545,41 +3545,41 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="name"
           showScrollShadow={false}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -3622,7 +3622,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -3655,7 +3655,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": <TooltipHeaderCell
                 tooltipContent="test"
               >
@@ -3672,41 +3672,41 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="username"
           showScrollShadow={false}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -3779,7 +3779,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                             }
                             isOpen={false}
                             preferredDirections={
-                              Array [
+                              [
                                 "top",
                                 "top-start",
                                 "top-end",
@@ -3831,7 +3831,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -3864,7 +3864,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Email",
               "id": "email",
               "render": [Function],
@@ -3876,41 +3876,41 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="email"
           showScrollShadow={false}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -3936,7 +3936,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -3969,7 +3969,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Phone",
               "id": "phone",
               "render": [Function],
@@ -3980,41 +3980,41 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="phone"
           showScrollShadow={false}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -4040,7 +4040,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -4073,7 +4073,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Company",
               "id": "company",
               "render": [Function],
@@ -4084,41 +4084,41 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="company"
           showScrollShadow={false}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -4144,7 +4144,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -4177,7 +4177,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Website",
               "id": "website",
               "render": [Function],
@@ -4188,41 +4188,41 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="website"
           showScrollShadow={false}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -4248,7 +4248,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -4281,7 +4281,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Empty",
               "id": "empty",
               "render": [Function],
@@ -4292,41 +4292,41 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="empty"
           showScrollShadow={false}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -4352,7 +4352,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -4385,7 +4385,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "Muted",
               "id": "muted",
               "render": [Function],
@@ -4396,41 +4396,41 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="muted"
           showScrollShadow={false}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -4456,7 +4456,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -4489,7 +4489,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         </HeaderCell>
         <HeaderCell
           column={
-            Object {
+            {
               "header": "",
               "id": "dropdown",
               "render": [Function],
@@ -4500,41 +4500,41 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="dropdown"
           showScrollShadow={false}
           state={
-            Object {
-              "columns": Array [
-                Object {
+            {
+              "columns": [
+                {
                   "id": "name",
                   "width": "300px",
                 },
-                Object {
+                {
                   "id": "username",
                   "width": "minmax(300px, 1fr)",
                 },
-                Object {
+                {
                   "id": "email",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "phone",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "company",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "website",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "empty",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "muted",
                   "width": null,
                 },
-                Object {
+                {
                   "id": "dropdown",
                   "width": null,
                 },
@@ -4559,7 +4559,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 onMouseDown={[Function]}
                 role="button"
                 style={
-                  Object {
+                  {
                     "transform": "translate(0px, 0)",
                   }
                 }
@@ -4594,8 +4594,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
     </HeaderRow>
     <Memo(Row)
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -4606,7 +4606,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -4618,44 +4618,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -4664,7 +4664,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         ]
       }
       el={
-        Object {
+        {
           "company": "Lemke LLC",
           "email": "Brook88@gmail.com",
           "id": 0,
@@ -4788,7 +4788,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             >
               <DropdownMenu
                 preferredDirections={
-                  Array [
+                  [
                     "bottom-end",
                     "bottom-start",
                     "bottom",
@@ -4915,7 +4915,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                       }
                       isOpen={false}
                       preferredDirections={
-                        Array [
+                        [
                           "bottom-end",
                           "bottom-start",
                           "bottom",
@@ -4988,8 +4988,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
     </Memo(Row)>
     <Memo(Row)
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -5000,7 +5000,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -5012,44 +5012,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -5058,7 +5058,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         ]
       }
       el={
-        Object {
+        {
           "company": "Daugherty and Sons",
           "email": "Guillermo.Nitzsche19@yahoo.com",
           "id": 1,
@@ -5182,7 +5182,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             >
               <DropdownMenu
                 preferredDirections={
-                  Array [
+                  [
                     "bottom-end",
                     "bottom-start",
                     "bottom",
@@ -5309,7 +5309,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                       }
                       isOpen={false}
                       preferredDirections={
-                        Array [
+                        [
                           "bottom-end",
                           "bottom-start",
                           "bottom",
@@ -5382,8 +5382,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
     </Memo(Row)>
     <Memo(Row)
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -5394,7 +5394,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -5406,44 +5406,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -5452,7 +5452,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         ]
       }
       el={
-        Object {
+        {
           "company": "Kuhlman and Sons",
           "email": "Freddy.Willms21@yahoo.com",
           "id": 2,
@@ -5576,7 +5576,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             >
               <DropdownMenu
                 preferredDirections={
-                  Array [
+                  [
                     "bottom-end",
                     "bottom-start",
                     "bottom",
@@ -5703,7 +5703,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                       }
                       isOpen={false}
                       preferredDirections={
-                        Array [
+                        [
                           "bottom-end",
                           "bottom-start",
                           "bottom",
@@ -5776,8 +5776,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
     </Memo(Row)>
     <Memo(Row)
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -5788,7 +5788,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -5800,44 +5800,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -5846,7 +5846,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         ]
       }
       el={
-        Object {
+        {
           "company": "Romaguera, Walker and Anderson",
           "email": "Sheridan23@gmail.com",
           "id": 3,
@@ -5970,7 +5970,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             >
               <DropdownMenu
                 preferredDirections={
-                  Array [
+                  [
                     "bottom-end",
                     "bottom-start",
                     "bottom",
@@ -6097,7 +6097,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                       }
                       isOpen={false}
                       preferredDirections={
-                        Array [
+                        [
                           "bottom-end",
                           "bottom-start",
                           "bottom",
@@ -6170,8 +6170,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
     </Memo(Row)>
     <Memo(Row)
       columns={
-        Array [
-          Object {
+        [
+          {
             "header": <div>
               Name
             </div>,
@@ -6182,7 +6182,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "left",
             "width": "300px",
           },
-          Object {
+          {
             "header": <TooltipHeaderCell
               tooltipContent="test"
             >
@@ -6194,44 +6194,44 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "textAlign": "center",
             "width": "minmax(300px, 1fr)",
           },
-          Object {
+          {
             "header": "Email",
             "id": "email",
             "render": [Function],
             "textAlign": "right",
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Phone",
             "id": "phone",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Company",
             "id": "company",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Website",
             "id": "website",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Empty",
             "id": "empty",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "Muted",
             "id": "muted",
             "render": [Function],
             "width": "1fr",
           },
-          Object {
+          {
             "header": "",
             "id": "dropdown",
             "render": [Function],
@@ -6240,7 +6240,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         ]
       }
       el={
-        Object {
+        {
           "company": "Mante - McGlynn",
           "email": "Martin_Metz24@gmail.com",
           "id": 4,
@@ -6364,7 +6364,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             >
               <DropdownMenu
                 preferredDirections={
-                  Array [
+                  [
                     "bottom-end",
                     "bottom-start",
                     "bottom",
@@ -6491,7 +6491,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                       }
                       isOpen={false}
                       preferredDirections={
-                        Array [
+                        [
                           "bottom-end",
                           "bottom-start",
                           "bottom",

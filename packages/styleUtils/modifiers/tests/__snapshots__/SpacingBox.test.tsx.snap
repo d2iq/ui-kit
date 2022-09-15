@@ -7,7 +7,7 @@ exports[`SpacingBox renders default 1`] = `
 
 <Box
   bgImageOptions={
-    Object {
+    {
       "position": undefined,
       "repeat": undefined,
       "size": undefined,
@@ -28,7 +28,7 @@ exports[`SpacingBox renders with all props 1`] = `
 
 <Box
   bgImageOptions={
-    Object {
+    {
       "position": undefined,
       "repeat": undefined,
       "size": undefined,
@@ -52,7 +52,7 @@ exports[`SpacingBox renders with different spacing on each side 1`] = `
 
 <Box
   bgImageOptions={
-    Object {
+    {
       "position": undefined,
       "repeat": undefined,
       "size": undefined,
@@ -117,7 +117,7 @@ exports[`SpacingBox renders with responsive spacing on each side 1`] = `
 
 <Box
   bgImageOptions={
-    Object {
+    {
       "position": undefined,
       "repeat": undefined,
       "size": undefined,
@@ -146,7 +146,7 @@ exports[`SpacingBox renders with responsive spacingSize 1`] = `
 
 <Box
   bgImageOptions={
-    Object {
+    {
       "position": undefined,
       "repeat": undefined,
       "size": undefined,

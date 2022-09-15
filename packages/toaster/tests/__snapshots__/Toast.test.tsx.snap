@@ -54,7 +54,7 @@ exports[`Toast renders default 1`] = `
         onExited={[Function]}
         onExiting={[Function]}
         timeout={
-          Object {
+          {
             "enter": 0,
             "exit": 300,
           }
@@ -122,7 +122,7 @@ exports[`Toast renders with actions 1`] = `
         onExited={[Function]}
         onExiting={[Function]}
         timeout={
-          Object {
+          {
             "enter": 0,
             "exit": 300,
           }
@@ -190,7 +190,7 @@ exports[`Toast renders with description 1`] = `
         onExited={[Function]}
         onExiting={[Function]}
         timeout={
-          Object {
+          {
             "enter": 0,
             "exit": 300,
           }
