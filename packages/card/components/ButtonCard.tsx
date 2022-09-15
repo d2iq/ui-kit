@@ -1,3 +1,4 @@
+import * as React from "react";
 import Card, { CardProps } from "./Card";
 import {
   buttonCard,
@@ -28,17 +29,16 @@ export interface ButtonCardProps extends CardProps {
   hasFocus?: boolean;
 }
 
-class ButtonCard extends Card<ButtonCardProps, {}> {
-  public render() {
-    const {
-      isActive,
-      isInput,
-      disabled,
-      hasFocus,
-      onClick,
-      onKeyPress,
-      ...other
-    } = this.props;
+const ButtonCard = React.memo(
+  ({
+    isActive,
+    isInput,
+    disabled,
+    hasFocus,
+    onClick,
+    onKeyPress,
+    ...other
+  }: ButtonCardProps) => {
     const tabIndex = disabled ? -1 : 0;
     // mimic native <button> keyboard behavior without using a <button>
     const keyPressClick = e => {
@@ -62,23 +62,22 @@ class ButtonCard extends Card<ButtonCardProps, {}> {
           "aria-pressed": isActive
         }
       : {};
-    const buttonCardProps = {
-      ...{ "data-cy": "buttonCard" },
-      ...buttonProps,
-      ...other
-    };
 
-    return this.getCardElement(
-      buttonCardProps,
-      cx(buttonCard, {
-        [buttonCardActive]: isActive,
-        [buttonCardDisabled]: disabled,
-        [buttonCardDisabledActive]: disabled && isActive,
-        [buttonCardFocused]: hasFocus,
-        [buttonCardFocusedActive]: hasFocus && isActive
-      })
+    return (
+      <Card
+        className={cx(buttonCard, {
+          [buttonCardActive]: isActive,
+          [buttonCardDisabled]: disabled,
+          [buttonCardDisabledActive]: disabled && isActive,
+          [buttonCardFocused]: hasFocus,
+          [buttonCardFocusedActive]: hasFocus && isActive
+        })}
+        {...buttonProps}
+        data-cy="buttonCard"
+        {...other}
+      />
     );
   }
-}
+);
 
 export default ButtonCard;

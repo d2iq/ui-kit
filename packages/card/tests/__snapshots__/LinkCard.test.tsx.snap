@@ -2,18 +2,18 @@
 
 exports[`LinkCard renders default 1`] = `
 <div
-  class="css-e82819"
+  className="css-e82819"
   data-cy="linkCard"
 >
   <div
-    class="css-ysit7j"
+    className="css-ysit7j"
   >
     <a
-      class="css-gsqxnx"
+      className="css-gsqxnx"
       href="http://google.com"
     >
       <span
-        class="css-1uecx0y"
+        className="css-1uecx0y"
         data-cy="box"
       >
         Google
@@ -26,20 +26,20 @@ exports[`LinkCard renders default 1`] = `
 
 exports[`LinkCard renders with external link 1`] = `
 <div
-  class="css-e82819"
+  className="css-e82819"
   data-cy="linkCard"
 >
   <div
-    class="css-ysit7j"
+    className="css-ysit7j"
   >
     <a
-      class="css-gsqxnx"
+      className="css-gsqxnx"
       href="http://google.com"
       rel="noopener"
       target="_blank"
     >
       <span
-        class="css-1uecx0y"
+        className="css-1uecx0y"
         data-cy="box"
       >
         Google
