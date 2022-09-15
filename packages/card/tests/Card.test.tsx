@@ -1,21 +1,18 @@
 import React from "react";
-
+import { create } from "react-test-renderer";
 import { Card } from "../";
-import { render } from "enzyme";
-import toJSON from "enzyme-to-json";
 
 describe("Card", () => {
   it("default", () => {
-    expect(toJSON(render(<Card>Example Content</Card>))).toMatchSnapshot();
+    const component = create(<Card>Example Content</Card>);
+    expect(component.toJSON()).toMatchSnapshot();
   });
   it("with paddingSize set", () => {
-    expect(
-      toJSON(render(<Card paddingSize="l">Example Content</Card>))
-    ).toMatchSnapshot();
+    const component = create(<Card paddingSize="l">Example Content</Card>);
+    expect(component.toJSON()).toMatchSnapshot();
   });
   it("with aspectRatio set", () => {
-    expect(
-      toJSON(render(<Card aspectRatio={[2, 1]}>Example Content</Card>))
-    ).toMatchSnapshot();
+    const component = create(<Card aspectRatio={[2, 1]}>Example Content</Card>);
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

@@ -1,34 +1,26 @@
 import React from "react";
-
+import { create } from "react-test-renderer";
 import { LinkCard } from "../";
-import { render } from "enzyme";
-import toJSON from "enzyme-to-json";
 
 describe("LinkCard", () => {
   it("renders default", () => {
-    expect(
-      toJSON(
-        render(
-          <LinkCard url="http://google.com" linkDescription="Google">
-            Example Content
-          </LinkCard>
-        )
-      )
-    ).toMatchSnapshot();
+    const component = create(
+      <LinkCard url="http://google.com" linkDescription="Google">
+        Example Content
+      </LinkCard>
+    );
+    expect(component.toJSON()).toMatchSnapshot();
   });
   it("renders with external link", () => {
-    expect(
-      toJSON(
-        render(
-          <LinkCard
-            url="http://google.com"
-            linkDescription="Google"
-            openInNewTab={true}
-          >
-            Example Content
-          </LinkCard>
-        )
-      )
-    ).toMatchSnapshot();
+    const component = create(
+      <LinkCard
+        url="http://google.com"
+        linkDescription="Google"
+        openInNewTab={true}
+      >
+        Example Content
+      </LinkCard>
+    );
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

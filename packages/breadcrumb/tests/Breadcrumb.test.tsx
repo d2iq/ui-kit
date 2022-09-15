@@ -1,20 +1,16 @@
 import React from "react";
-import { render } from "enzyme";
-import toJson from "enzyme-to-json";
+import { create } from "react-test-renderer";
 
 import { Breadcrumb } from "../";
 
 describe("Breadcrumb", () => {
   it("default", () => {
-    expect(
-      toJson(
-        render(
-          <Breadcrumb>
-            <span>One</span>
-            <span>Two</span>
-          </Breadcrumb>
-        )
-      )
-    ).toMatchSnapshot();
+    const component = create(
+      <Breadcrumb>
+        <span>One</span>
+        <span>Two</span>
+      </Breadcrumb>
+    );
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

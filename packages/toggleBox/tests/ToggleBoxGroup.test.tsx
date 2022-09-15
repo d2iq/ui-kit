@@ -1,7 +1,7 @@
 import React from "react";
+import { create } from "react-test-renderer";
 import { mount } from "enzyme";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 
 import { ToggleBox, ToggleBoxGroup } from "..";
 
@@ -9,7 +9,7 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("ToggleBoxGroup", () => {
   it("renders default", () => {
-    const component = mount(
+    const component = create(
       <ToggleBoxGroup id="default">
         <ToggleBox id="exosphere" value="exosphere">
           Exosphere
@@ -23,11 +23,11 @@ describe("ToggleBoxGroup", () => {
       </ToggleBoxGroup>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it("renders with a label", () => {
-    const component = mount(
+    const component = create(
       <ToggleBoxGroup id="default" label="Atmosphere layer">
         <ToggleBox id="exosphere" value="exosphere">
           Exosphere
@@ -41,11 +41,11 @@ describe("ToggleBoxGroup", () => {
       </ToggleBoxGroup>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it("renders with a selected ToggleBox", () => {
-    const component = mount(
+    const component = create(
       <ToggleBoxGroup id="selectedItems" selectedItems={["mesosphere"]}>
         <ToggleBox id="exosphere" value="exosphere">
           Exosphere
@@ -59,11 +59,11 @@ describe("ToggleBoxGroup", () => {
       </ToggleBoxGroup>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it("renders with custom direction and gutter size", () => {
-    const component = mount(
+    const component = create(
       <ToggleBoxGroup
         id="customLayoutProps"
         direction="column"
@@ -81,7 +81,7 @@ describe("ToggleBoxGroup", () => {
       </ToggleBoxGroup>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it("calls onChange prop with the selected values", () => {
