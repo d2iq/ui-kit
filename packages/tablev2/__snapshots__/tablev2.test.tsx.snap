@@ -15,11 +15,11 @@ exports[`Table v2 rendering renders default 1`] = `
         "textAlign": "left",
       },
       Object {
-        "header": <Unknown
+        "header": <TooltipHeaderCell
           tooltipContent="test"
         >
           Username
-        </Unknown>,
+        </TooltipHeaderCell>,
         "id": "username",
         "initialWidth": "minmax(300px, 1fr)",
         "render": [Function],
@@ -133,11 +133,11 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -329,7 +329,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 </div>
               </button>
             </ResetButton>
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -365,17 +365,17 @@ exports[`Table v2 rendering renders default 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
           column={
             Object {
-              "header": <Unknown
+              "header": <TooltipHeaderCell
                 tooltipContent="test"
               >
                 Username
-              </Unknown>,
+              </TooltipHeaderCell>,
               "id": "username",
               "initialWidth": "minmax(300px, 1fr)",
               "render": [Function],
@@ -438,7 +438,7 @@ exports[`Table v2 rendering renders default 1`] = `
             id="username"
             role="columnheader"
           >
-            <Component
+            <TooltipHeaderCell
               tooltipContent="test"
             >
               <Flex
@@ -537,8 +537,8 @@ exports[`Table v2 rendering renders default 1`] = `
                   </FlexItem>
                 </div>
               </Flex>
-            </Component>
-            <Component
+            </TooltipHeaderCell>
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -574,7 +574,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -643,7 +643,7 @@ exports[`Table v2 rendering renders default 1`] = `
             role="columnheader"
           >
             Email
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -679,7 +679,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -747,7 +747,7 @@ exports[`Table v2 rendering renders default 1`] = `
             role="columnheader"
           >
             Phone
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -783,7 +783,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -851,7 +851,7 @@ exports[`Table v2 rendering renders default 1`] = `
             role="columnheader"
           >
             Company
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -887,7 +887,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -955,7 +955,7 @@ exports[`Table v2 rendering renders default 1`] = `
             role="columnheader"
           >
             Website
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -991,7 +991,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -1059,7 +1059,7 @@ exports[`Table v2 rendering renders default 1`] = `
             role="columnheader"
           >
             Empty
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -1095,7 +1095,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -1163,7 +1163,7 @@ exports[`Table v2 rendering renders default 1`] = `
             role="columnheader"
           >
             Muted
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -1199,7 +1199,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -1266,7 +1266,7 @@ exports[`Table v2 rendering renders default 1`] = `
             id="dropdown"
             role="columnheader"
           >
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -1302,7 +1302,7 @@ exports[`Table v2 rendering renders default 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
       </div>
@@ -1322,11 +1322,11 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -1461,9 +1461,9 @@ exports[`Table v2 rendering renders default 1`] = `
           key="0empty"
           role="gridcell"
         >
-          <Component>
+          <EmptyCell>
             –
-          </Component>
+          </EmptyCell>
         </div>
         <div
           aria-describedby="muted"
@@ -1471,7 +1471,7 @@ exports[`Table v2 rendering renders default 1`] = `
           key="0muted"
           role="gridcell"
         >
-          <Component>
+          <MutedCell>
             <Text
               align="inherit"
               color="var(--themeTextColorSecondary, #76797E)"
@@ -1489,7 +1489,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 No data is available.
               </div>
             </Text>
-          </Component>
+          </MutedCell>
         </div>
         <div
           aria-describedby="dropdown"
@@ -1497,7 +1497,7 @@ exports[`Table v2 rendering renders default 1`] = `
           key="0dropdown"
           role="gridcell"
         >
-          <Component>
+          <DropdownMenuCell>
             <div
               className="css-1diyz6t"
             >
@@ -1697,7 +1697,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 </Downshift>
               </DropdownMenu>
             </div>
-          </Component>
+          </DropdownMenuCell>
         </div>
       </div>
     </Memo(Row)>
@@ -1716,11 +1716,11 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -1855,9 +1855,9 @@ exports[`Table v2 rendering renders default 1`] = `
           key="1empty"
           role="gridcell"
         >
-          <Component>
+          <EmptyCell>
             –
-          </Component>
+          </EmptyCell>
         </div>
         <div
           aria-describedby="muted"
@@ -1865,7 +1865,7 @@ exports[`Table v2 rendering renders default 1`] = `
           key="1muted"
           role="gridcell"
         >
-          <Component>
+          <MutedCell>
             <Text
               align="inherit"
               color="var(--themeTextColorSecondary, #76797E)"
@@ -1883,7 +1883,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 No data is available.
               </div>
             </Text>
-          </Component>
+          </MutedCell>
         </div>
         <div
           aria-describedby="dropdown"
@@ -1891,7 +1891,7 @@ exports[`Table v2 rendering renders default 1`] = `
           key="1dropdown"
           role="gridcell"
         >
-          <Component>
+          <DropdownMenuCell>
             <div
               className="css-1diyz6t"
             >
@@ -2091,7 +2091,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 </Downshift>
               </DropdownMenu>
             </div>
-          </Component>
+          </DropdownMenuCell>
         </div>
       </div>
     </Memo(Row)>
@@ -2110,11 +2110,11 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -2249,9 +2249,9 @@ exports[`Table v2 rendering renders default 1`] = `
           key="2empty"
           role="gridcell"
         >
-          <Component>
+          <EmptyCell>
             –
-          </Component>
+          </EmptyCell>
         </div>
         <div
           aria-describedby="muted"
@@ -2259,7 +2259,7 @@ exports[`Table v2 rendering renders default 1`] = `
           key="2muted"
           role="gridcell"
         >
-          <Component>
+          <MutedCell>
             <Text
               align="inherit"
               color="var(--themeTextColorSecondary, #76797E)"
@@ -2277,7 +2277,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 No data is available.
               </div>
             </Text>
-          </Component>
+          </MutedCell>
         </div>
         <div
           aria-describedby="dropdown"
@@ -2285,7 +2285,7 @@ exports[`Table v2 rendering renders default 1`] = `
           key="2dropdown"
           role="gridcell"
         >
-          <Component>
+          <DropdownMenuCell>
             <div
               className="css-1diyz6t"
             >
@@ -2485,7 +2485,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 </Downshift>
               </DropdownMenu>
             </div>
-          </Component>
+          </DropdownMenuCell>
         </div>
       </div>
     </Memo(Row)>
@@ -2504,11 +2504,11 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -2643,9 +2643,9 @@ exports[`Table v2 rendering renders default 1`] = `
           key="3empty"
           role="gridcell"
         >
-          <Component>
+          <EmptyCell>
             –
-          </Component>
+          </EmptyCell>
         </div>
         <div
           aria-describedby="muted"
@@ -2653,7 +2653,7 @@ exports[`Table v2 rendering renders default 1`] = `
           key="3muted"
           role="gridcell"
         >
-          <Component>
+          <MutedCell>
             <Text
               align="inherit"
               color="var(--themeTextColorSecondary, #76797E)"
@@ -2671,7 +2671,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 No data is available.
               </div>
             </Text>
-          </Component>
+          </MutedCell>
         </div>
         <div
           aria-describedby="dropdown"
@@ -2679,7 +2679,7 @@ exports[`Table v2 rendering renders default 1`] = `
           key="3dropdown"
           role="gridcell"
         >
-          <Component>
+          <DropdownMenuCell>
             <div
               className="css-1diyz6t"
             >
@@ -2879,7 +2879,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 </Downshift>
               </DropdownMenu>
             </div>
-          </Component>
+          </DropdownMenuCell>
         </div>
       </div>
     </Memo(Row)>
@@ -2898,11 +2898,11 @@ exports[`Table v2 rendering renders default 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -3037,9 +3037,9 @@ exports[`Table v2 rendering renders default 1`] = `
           key="4empty"
           role="gridcell"
         >
-          <Component>
+          <EmptyCell>
             –
-          </Component>
+          </EmptyCell>
         </div>
         <div
           aria-describedby="muted"
@@ -3047,7 +3047,7 @@ exports[`Table v2 rendering renders default 1`] = `
           key="4muted"
           role="gridcell"
         >
-          <Component>
+          <MutedCell>
             <Text
               align="inherit"
               color="var(--themeTextColorSecondary, #76797E)"
@@ -3065,7 +3065,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 No data is available.
               </div>
             </Text>
-          </Component>
+          </MutedCell>
         </div>
         <div
           aria-describedby="dropdown"
@@ -3073,7 +3073,7 @@ exports[`Table v2 rendering renders default 1`] = `
           key="4dropdown"
           role="gridcell"
         >
-          <Component>
+          <DropdownMenuCell>
             <div
               className="css-1diyz6t"
             >
@@ -3273,7 +3273,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 </Downshift>
               </DropdownMenu>
             </div>
-          </Component>
+          </DropdownMenuCell>
         </div>
       </div>
     </Memo(Row)>
@@ -3299,11 +3299,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         "textAlign": "left",
       },
       Object {
-        "header": <Unknown
+        "header": <TooltipHeaderCell
           tooltipContent="test"
         >
           Username
-        </Unknown>,
+        </TooltipHeaderCell>,
         "id": "username",
         "initialWidth": "minmax(300px, 1fr)",
         "render": [Function],
@@ -3418,11 +3418,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -3614,7 +3614,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 </div>
               </button>
             </ResetButton>
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -3650,17 +3650,17 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
           column={
             Object {
-              "header": <Unknown
+              "header": <TooltipHeaderCell
                 tooltipContent="test"
               >
                 Username
-              </Unknown>,
+              </TooltipHeaderCell>,
               "id": "username",
               "initialWidth": "minmax(300px, 1fr)",
               "render": [Function],
@@ -3723,7 +3723,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             id="username"
             role="columnheader"
           >
-            <Component
+            <TooltipHeaderCell
               tooltipContent="test"
             >
               <Flex
@@ -3822,8 +3822,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </FlexItem>
                 </div>
               </Flex>
-            </Component>
-            <Component
+            </TooltipHeaderCell>
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -3859,7 +3859,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -3928,7 +3928,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             role="columnheader"
           >
             Email
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -3964,7 +3964,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -4032,7 +4032,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             role="columnheader"
           >
             Phone
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -4068,7 +4068,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -4136,7 +4136,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             role="columnheader"
           >
             Company
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -4172,7 +4172,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -4240,7 +4240,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             role="columnheader"
           >
             Website
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -4276,7 +4276,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -4344,7 +4344,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             role="columnheader"
           >
             Empty
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -4380,7 +4380,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -4448,7 +4448,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             role="columnheader"
           >
             Muted
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -4484,7 +4484,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
         <HeaderCell
@@ -4551,7 +4551,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             id="dropdown"
             role="columnheader"
           >
-            <Component
+            <Draggable
               onRelativeXChange={[Function]}
             >
               <div
@@ -4587,7 +4587,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                   </Icon>
                 </div>
               </div>
-            </Component>
+            </Draggable>
           </div>
         </HeaderCell>
       </div>
@@ -4607,11 +4607,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -4746,9 +4746,9 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="0empty"
           role="gridcell"
         >
-          <Component>
+          <EmptyCell>
             –
-          </Component>
+          </EmptyCell>
         </div>
         <div
           aria-describedby="muted"
@@ -4756,7 +4756,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="0muted"
           role="gridcell"
         >
-          <Component>
+          <MutedCell>
             <Text
               align="inherit"
               color="var(--themeTextColorSecondary, #76797E)"
@@ -4774,7 +4774,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 No data is available.
               </div>
             </Text>
-          </Component>
+          </MutedCell>
         </div>
         <div
           aria-describedby="dropdown"
@@ -4782,7 +4782,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="0dropdown"
           role="gridcell"
         >
-          <Component>
+          <DropdownMenuCell>
             <div
               className="css-1diyz6t"
             >
@@ -4982,7 +4982,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 </Downshift>
               </DropdownMenu>
             </div>
-          </Component>
+          </DropdownMenuCell>
         </div>
       </div>
     </Memo(Row)>
@@ -5001,11 +5001,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -5140,9 +5140,9 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="1empty"
           role="gridcell"
         >
-          <Component>
+          <EmptyCell>
             –
-          </Component>
+          </EmptyCell>
         </div>
         <div
           aria-describedby="muted"
@@ -5150,7 +5150,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="1muted"
           role="gridcell"
         >
-          <Component>
+          <MutedCell>
             <Text
               align="inherit"
               color="var(--themeTextColorSecondary, #76797E)"
@@ -5168,7 +5168,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 No data is available.
               </div>
             </Text>
-          </Component>
+          </MutedCell>
         </div>
         <div
           aria-describedby="dropdown"
@@ -5176,7 +5176,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="1dropdown"
           role="gridcell"
         >
-          <Component>
+          <DropdownMenuCell>
             <div
               className="css-1diyz6t"
             >
@@ -5376,7 +5376,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 </Downshift>
               </DropdownMenu>
             </div>
-          </Component>
+          </DropdownMenuCell>
         </div>
       </div>
     </Memo(Row)>
@@ -5395,11 +5395,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -5534,9 +5534,9 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="2empty"
           role="gridcell"
         >
-          <Component>
+          <EmptyCell>
             –
-          </Component>
+          </EmptyCell>
         </div>
         <div
           aria-describedby="muted"
@@ -5544,7 +5544,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="2muted"
           role="gridcell"
         >
-          <Component>
+          <MutedCell>
             <Text
               align="inherit"
               color="var(--themeTextColorSecondary, #76797E)"
@@ -5562,7 +5562,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 No data is available.
               </div>
             </Text>
-          </Component>
+          </MutedCell>
         </div>
         <div
           aria-describedby="dropdown"
@@ -5570,7 +5570,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="2dropdown"
           role="gridcell"
         >
-          <Component>
+          <DropdownMenuCell>
             <div
               className="css-1diyz6t"
             >
@@ -5770,7 +5770,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 </Downshift>
               </DropdownMenu>
             </div>
-          </Component>
+          </DropdownMenuCell>
         </div>
       </div>
     </Memo(Row)>
@@ -5789,11 +5789,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -5928,9 +5928,9 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="3empty"
           role="gridcell"
         >
-          <Component>
+          <EmptyCell>
             –
-          </Component>
+          </EmptyCell>
         </div>
         <div
           aria-describedby="muted"
@@ -5938,7 +5938,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="3muted"
           role="gridcell"
         >
-          <Component>
+          <MutedCell>
             <Text
               align="inherit"
               color="var(--themeTextColorSecondary, #76797E)"
@@ -5956,7 +5956,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 No data is available.
               </div>
             </Text>
-          </Component>
+          </MutedCell>
         </div>
         <div
           aria-describedby="dropdown"
@@ -5964,7 +5964,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="3dropdown"
           role="gridcell"
         >
-          <Component>
+          <DropdownMenuCell>
             <div
               className="css-1diyz6t"
             >
@@ -6164,7 +6164,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 </Downshift>
               </DropdownMenu>
             </div>
-          </Component>
+          </DropdownMenuCell>
         </div>
       </div>
     </Memo(Row)>
@@ -6183,11 +6183,11 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             "width": "300px",
           },
           Object {
-            "header": <Unknown
+            "header": <TooltipHeaderCell
               tooltipContent="test"
             >
               Username
-            </Unknown>,
+            </TooltipHeaderCell>,
             "id": "username",
             "initialWidth": "minmax(300px, 1fr)",
             "render": [Function],
@@ -6322,9 +6322,9 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="4empty"
           role="gridcell"
         >
-          <Component>
+          <EmptyCell>
             –
-          </Component>
+          </EmptyCell>
         </div>
         <div
           aria-describedby="muted"
@@ -6332,7 +6332,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="4muted"
           role="gridcell"
         >
-          <Component>
+          <MutedCell>
             <Text
               align="inherit"
               color="var(--themeTextColorSecondary, #76797E)"
@@ -6350,7 +6350,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 No data is available.
               </div>
             </Text>
-          </Component>
+          </MutedCell>
         </div>
         <div
           aria-describedby="dropdown"
@@ -6358,7 +6358,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
           key="4dropdown"
           role="gridcell"
         >
-          <Component>
+          <DropdownMenuCell>
             <div
               className="css-1diyz6t"
             >
@@ -6558,7 +6558,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 </Downshift>
               </DropdownMenu>
             </div>
-          </Component>
+          </DropdownMenuCell>
         </div>
       </div>
     </Memo(Row)>

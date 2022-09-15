@@ -319,7 +319,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
           className="emotion-2"
           key="badge-one-badgeWrapper"
         >
-          <Memo()
+          <Memo(Badge)
             appearance="primary"
           >
             <span
@@ -392,13 +392,13 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                 </div>
               </Flex>
             </span>
-          </Memo()>
+          </Memo(Badge)>
         </span>
         <span
           className="emotion-2"
           key="badge-two-badgeWrapper"
         >
-          <Memo()
+          <Memo(Badge)
             appearance="primary"
           >
             <span
@@ -471,13 +471,13 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                 </div>
               </Flex>
             </span>
-          </Memo()>
+          </Memo(Badge)>
         </span>
         <span
           className="emotion-2"
           key="badge-three-badgeWrapper"
         >
-          <Memo()
+          <Memo(Badge)
             appearance="primary"
           >
             <span
@@ -550,7 +550,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                 </div>
               </Flex>
             </span>
-          </Memo()>
+          </Memo(Badge)>
         </span>
         <input
           aria-describedby=""
@@ -1068,7 +1068,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
           className="emotion-2"
           key="badge-one-badgeWrapper"
         >
-          <Memo()
+          <Memo(Badge)
             appearance="primary"
           >
             <span
@@ -1141,13 +1141,13 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                 </div>
               </Flex>
             </span>
-          </Memo()>
+          </Memo(Badge)>
         </span>
         <span
           className="emotion-2"
           key="badge-two-badgeWrapper"
         >
-          <Memo()
+          <Memo(Badge)
             appearance="primary"
           >
             <span
@@ -1220,13 +1220,13 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                 </div>
               </Flex>
             </span>
-          </Memo()>
+          </Memo(Badge)>
         </span>
         <span
           className="emotion-2"
           key="badge-three-badgeWrapper"
         >
-          <Memo()
+          <Memo(Badge)
             appearance="primary"
           >
             <span
@@ -1299,7 +1299,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                 </div>
               </Flex>
             </span>
-          </Memo()>
+          </Memo(Badge)>
         </span>
         <input
           aria-describedby=""

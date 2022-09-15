@@ -2,7 +2,7 @@
 
 exports[`Accordion rendering renders an item with interactive content 1`] = `
 <Accordion>
-  <Component
+  <Provider
     allowMultipleExpanded={false}
   >
     <Stack
@@ -17,7 +17,7 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
         <AccordionItem
           id="customId"
         >
-          <Component
+          <Provider
             expandedItems={Array []}
             id="customId"
           >
@@ -122,10 +122,10 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                 </div>
               </AccordionItemContent>
             </div>
-          </Component>
+          </Provider>
         </AccordionItem>
         <AccordionItem>
-          <Component
+          <Provider
             expandedItems={Array []}
             id="accordionItem-3"
           >
@@ -236,10 +236,10 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                 </div>
               </AccordionItemContent>
             </div>
-          </Component>
+          </Provider>
         </AccordionItem>
         <AccordionItem>
-          <Component
+          <Provider
             expandedItems={Array []}
             id="accordionItem-4"
           >
@@ -346,11 +346,11 @@ exports[`Accordion rendering renders an item with interactive content 1`] = `
                 </div>
               </AccordionItemContent>
             </div>
-          </Component>
+          </Provider>
         </AccordionItem>
       </div>
     </Stack>
-  </Component>
+  </Provider>
 </Accordion>
 `;
 
@@ -364,7 +364,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
     ]
   }
 >
-  <Component
+  <Provider
     allowMultipleExpanded={false}
     initialExpandedItems={
       Array [
@@ -386,7 +386,7 @@ exports[`Accordion rendering renders with expanded items 1`] = `
         <AccordionItem
           id="panel1"
         >
-          <Component
+          <Provider
             expandedItems={
               Array [
                 "panel1",
@@ -487,12 +487,12 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                 </div>
               </AccordionItemContent>
             </div>
-          </Component>
+          </Provider>
         </AccordionItem>
         <AccordionItem
           id="panel2"
         >
-          <Component
+          <Provider
             expandedItems={
               Array [
                 "panel1",
@@ -593,12 +593,12 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                 </div>
               </AccordionItemContent>
             </div>
-          </Component>
+          </Provider>
         </AccordionItem>
         <AccordionItem
           id="panel3"
         >
-          <Component
+          <Provider
             expandedItems={
               Array [
                 "panel1",
@@ -699,17 +699,17 @@ exports[`Accordion rendering renders with expanded items 1`] = `
                 </div>
               </AccordionItemContent>
             </div>
-          </Component>
+          </Provider>
         </AccordionItem>
       </div>
     </Stack>
-  </Component>
+  </Provider>
 </Accordion>
 `;
 
 exports[`Accordion rendering renders with no expanded items 1`] = `
 <Accordion>
-  <Component
+  <Provider
     allowMultipleExpanded={false}
   >
     <Stack
@@ -724,7 +724,7 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
         <AccordionItem
           id="customId"
         >
-          <Component
+          <Provider
             expandedItems={Array []}
             id="customId"
           >
@@ -822,10 +822,10 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                 </div>
               </AccordionItemContent>
             </div>
-          </Component>
+          </Provider>
         </AccordionItem>
         <AccordionItem>
-          <Component
+          <Provider
             expandedItems={Array []}
             id="accordionItem-1"
           >
@@ -925,10 +925,10 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                 </div>
               </AccordionItemContent>
             </div>
-          </Component>
+          </Provider>
         </AccordionItem>
         <AccordionItem>
-          <Component
+          <Provider
             expandedItems={Array []}
             id="accordionItem-2"
           >
@@ -1025,10 +1025,10 @@ exports[`Accordion rendering renders with no expanded items 1`] = `
                 </div>
               </AccordionItemContent>
             </div>
-          </Component>
+          </Provider>
         </AccordionItem>
       </div>
     </Stack>
-  </Component>
+  </Provider>
 </Accordion>
 `;

@@ -6,7 +6,7 @@ exports[`ColorCodedBadge renders with a color 1`] = `
   fill: #f00f00;
 }
 
-<Memo()
+<Memo(Badge)
   appearance="outline"
 >
   <svg
@@ -30,11 +30,11 @@ exports[`ColorCodedBadge renders with a color 1`] = `
   >
     Color Coded Badge
   </SpacingBox>
-</Memo()>
+</Memo(Badge)>
 `;
 
 exports[`ColorCodedBadge renders with an icon and color 1`] = `
-<Memo()
+<Memo(Badge)
   appearance="outline"
 >
   <Icon
@@ -50,7 +50,7 @@ exports[`ColorCodedBadge renders with an icon and color 1`] = `
   >
     Color Coded Badge with icon
   </SpacingBox>
-</Memo()>
+</Memo(Badge)>
 `;
 
 exports[`ColorCodedBadge renders without children 1`] = `
@@ -59,7 +59,7 @@ exports[`ColorCodedBadge renders without children 1`] = `
   fill: #f00f00;
 }
 
-<Memo()
+<Memo(Badge)
   appearance="outline"
 >
   <svg
@@ -81,5 +81,5 @@ exports[`ColorCodedBadge renders without children 1`] = `
     spacingSize="xxs"
     tag="div"
   />
-</Memo()>
+</Memo(Badge)>
 `;
