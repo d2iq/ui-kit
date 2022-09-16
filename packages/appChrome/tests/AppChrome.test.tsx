@@ -1,7 +1,6 @@
 import * as React from "react";
-import { shallow } from "enzyme";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
+import { create } from "react-test-renderer";
 
 import { AppChrome } from "../";
 
@@ -9,13 +8,13 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("AppChrome", () => {
   it("renders with the app chrome regions", () => {
-    const component = shallow(
+    const component = create(
       <AppChrome
         sidebar={<div>Sidebar content</div>}
         headerBar={<div>Header content goes here</div>}
         mainContent={<div>Main app content goes here</div>}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

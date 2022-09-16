@@ -84,48 +84,36 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
   overflow: auto;
 }
 
-<ThemeProvider
-  theme={
-    {
-      "headerBackgroundColor": "#FFFFFF",
-      "headerPaddingHor": "none",
-      "headerPaddingVert": "none",
-      "sidebarItemPaddingHor": "l",
-      "sidebarItemPaddingVert": "none",
-    }
-  }
+<div
+  className="emotion-0"
+  data-cy="appChrome"
 >
   <div
-    className="emotion-0"
-    data-cy="appChrome"
+    data-cy="headerBar"
   >
-    <div
-      data-cy="headerBar"
-    >
-      <div>
-        Header content goes here
-      </div>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-2"
-        data-cy="sidebar"
-      >
-        <div>
-          Sidebar content
-        </div>
-      </div>
-      <main
-        className="emotion-3"
-        data-cy="main"
-      >
-        <div>
-          Main app content goes here
-        </div>
-      </main>
+    <div>
+      Header content goes here
     </div>
   </div>
-</ThemeProvider>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+      data-cy="sidebar"
+    >
+      <div>
+        Sidebar content
+      </div>
+    </div>
+    <main
+      className="emotion-3"
+      data-cy="main"
+    >
+      <div>
+        Main app content goes here
+      </div>
+    </main>
+  </div>
+</div>
 `;

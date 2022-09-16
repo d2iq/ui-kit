@@ -1,7 +1,7 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
+import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 import {
   Sidebar,
@@ -20,47 +20,56 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("Sidebar", () => {
   it("renders", () => {
-    const component = shallow(<Sidebar isOpen={true}>Sidebar content</Sidebar>);
-    expect(toJson(component)).toMatchSnapshot();
+    const component = create(<Sidebar isOpen={true}>Sidebar content</Sidebar>);
+    expect(component.toJSON()).toMatchSnapshot();
   });
   it("calls onOpen callback", () => {
     const onOpenFn = jest.fn();
-    const component = mount(
+    const { rerender } = render(
       <Sidebar isOpen={false} onOpen={onOpenFn}>
         Sidebar content
       </Sidebar>
     );
     expect(onOpenFn).not.toHaveBeenCalled();
-    component.setProps({ isOpen: true });
+    rerender(
+      <Sidebar isOpen={true} onOpen={onOpenFn}>
+        Sidebar content
+      </Sidebar>
+    );
     expect(onOpenFn).toHaveBeenCalled();
   });
+
   it("calls onClose callback", () => {
     const onCloseFn = jest.fn();
-    const component = mount(
-      <Sidebar isOpen={true} onClose={onCloseFn}>
+    const { rerender } = render(
+      <Sidebar isOpen={true} onClose={console.log}>
         Sidebar content
       </Sidebar>
     );
     expect(onCloseFn).not.toHaveBeenCalled();
-    component.setProps({ isOpen: false });
+    rerender(
+      <Sidebar isOpen={false} onClose={onCloseFn}>
+        Sidebar content
+      </Sidebar>
+    );
     expect(onCloseFn).toHaveBeenCalled();
   });
 
   describe("SidebarSection", () => {
     it("renders", () => {
-      const component = shallow(
+      const component = create(
         <SidebarSection label="Label">
           <div>Sidebar section content</div>
         </SidebarSection>
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(component.toJSON()).toMatchSnapshot();
     });
   });
 
   describe("SidebarItem", () => {
     it("renders", () => {
       const onClickFn = jest.fn();
-      const component = shallow(
+      const component = create(
         <Sidebar isOpen={true}>
           <SidebarItem
             icon={ProductIcons.ComponentsInverse}
@@ -72,18 +81,18 @@ describe("Sidebar", () => {
           </SidebarItem>
         </Sidebar>
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(component.toJSON()).toMatchSnapshot();
     });
   });
 
   describe("SidebarItemLabel", () => {
     it("renders", () => {
-      const component = shallow(
+      const component = create(
         <SidebarItemLabel icon={ProductIcons.ComponentsInverse}>
           Item label
         </SidebarItemLabel>
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(component.toJSON()).toMatchSnapshot();
     });
   });
 
@@ -109,7 +118,7 @@ describe("Sidebar", () => {
       </SidebarSubMenuItem>
     ];
     /* eslint-enable react/jsx-wrap-multilines */
-    const component = shallow(
+    const component = create(
       <SidebarSubMenuComponent
         label={
           <SidebarItemLabel icon={ProductIcons.ComponentsInverse}>
@@ -121,7 +130,7 @@ describe("Sidebar", () => {
       </SidebarSubMenuComponent>
     );
     it("renders", () => {
-      expect(toJson(component)).toMatchSnapshot();
+      expect(component.toJSON()).toMatchSnapshot();
     });
     it("makes a list of submenu items", () => {
       const subItemResult = getSubItemList(subMenuItems);
@@ -131,12 +140,12 @@ describe("Sidebar", () => {
 
   describe("SidebarSubMenuItem", () => {
     it("renders", () => {
-      const component = shallow(
+      const component = create(
         <SidebarItemLabel icon={ProductIcons.ComponentsInverse}>
           Item label
         </SidebarItemLabel>
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(component.toJSON()).toMatchSnapshot();
     });
   });
 });
