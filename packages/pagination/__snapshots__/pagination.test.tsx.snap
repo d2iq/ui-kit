@@ -243,20 +243,20 @@ exports[`Pagination rendering renders w/ page length menu 1`] = `
         inputLabel="Items per page"
         onChange={[Function]}
         options={
-          Array [
-            Object {
+          [
+            {
               "label": "10",
               "value": "10",
             },
-            Object {
+            {
               "label": "30",
               "value": "30",
             },
-            Object {
+            {
               "label": "50",
               "value": "50",
             },
-            Object {
+            {
               "label": "100",
               "value": "100",
             },

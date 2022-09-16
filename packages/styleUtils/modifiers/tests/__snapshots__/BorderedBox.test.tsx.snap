@@ -10,7 +10,7 @@ exports[`BorderedBox renders default 1`] = `
 
 <Box
   bgImageOptions={
-    Object {
+    {
       "position": undefined,
       "repeat": undefined,
       "size": undefined,
@@ -34,7 +34,7 @@ exports[`BorderedBox renders with all props 1`] = `
 
 <Box
   bgImageOptions={
-    Object {
+    {
       "position": undefined,
       "repeat": undefined,
       "size": undefined,

@@ -121,18 +121,18 @@ exports[`ToggleInputList renders as a radio group 1`] = `
   id="radio"
   isRadioGroup={true}
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "id.1",
         "inputLabel": "Sample label",
         "value": "value.1",
       },
-      Object {
+      {
         "id": "id.2",
         "inputLabel": "Sample label",
         "value": "value.2",
       },
-      Object {
+      {
         "id": "id.3",
         "inputLabel": "Sample label",
         "value": "value.3",
@@ -141,7 +141,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
   }
   labelAppearance="standard"
   listLabel="Sample legend"
-  selectedItems={Array []}
+  selectedItems={[]}
   showListLabel={true}
   vertAlign="center"
 >
@@ -495,18 +495,18 @@ exports[`ToggleInputList renders default 1`] = `
 <ToggleInputList
   id="checkbox"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "id.1",
         "inputLabel": "Sample label",
         "value": "value.1",
       },
-      Object {
+      {
         "id": "id.2",
         "inputLabel": "Sample label",
         "value": "value.2",
       },
-      Object {
+      {
         "id": "id.3",
         "inputLabel": "Sample label",
         "value": "value.3",
@@ -515,7 +515,7 @@ exports[`ToggleInputList renders default 1`] = `
   }
   labelAppearance="standard"
   listLabel="Sample legend"
-  selectedItems={Array []}
+  selectedItems={[]}
   showListLabel={true}
   vertAlign="center"
 >
@@ -884,25 +884,25 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
 
 <ToggleInputList
   errors={
-    Array [
+    [
       "error.1",
       "error.2",
     ]
   }
   id="checkbox"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "id.1",
         "inputLabel": "Sample label",
         "value": "value.1",
       },
-      Object {
+      {
         "id": "id.2",
         "inputLabel": "Sample label",
         "value": "value.2",
       },
-      Object {
+      {
         "id": "id.3",
         "inputLabel": "Sample label",
         "value": "value.3",
@@ -911,13 +911,13 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
   }
   labelAppearance="error"
   listLabel="Sample legend"
-  selectedItems={Array []}
+  selectedItems={[]}
   showListLabel={true}
   vertAlign="center"
 >
   <FormFieldWrapper
     errors={
-      Array [
+      [
         "error.1",
         "error.2",
       ]
@@ -1302,25 +1302,25 @@ exports[`ToggleInputList renders with errors 1`] = `
 
 <ToggleInputList
   errors={
-    Array [
+    [
       "error.1",
       "error.2",
     ]
   }
   id="checkbox"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "id.1",
         "inputLabel": "Sample label",
         "value": "value.1",
       },
-      Object {
+      {
         "id": "id.2",
         "inputLabel": "Sample label",
         "value": "value.2",
       },
-      Object {
+      {
         "id": "id.3",
         "inputLabel": "Sample label",
         "value": "value.3",
@@ -1329,13 +1329,13 @@ exports[`ToggleInputList renders with errors 1`] = `
   }
   labelAppearance="standard"
   listLabel="Sample legend"
-  selectedItems={Array []}
+  selectedItems={[]}
   showListLabel={true}
   vertAlign="center"
 >
   <FormFieldWrapper
     errors={
-      Array [
+      [
         "error.1",
         "error.2",
       ]
@@ -1710,18 +1710,18 @@ exports[`ToggleInputList renders with hidden label 1`] = `
 <ToggleInputList
   id="checkbox"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "id.1",
         "inputLabel": "Sample label",
         "value": "value.1",
       },
-      Object {
+      {
         "id": "id.2",
         "inputLabel": "Sample label",
         "value": "value.2",
       },
-      Object {
+      {
         "id": "id.3",
         "inputLabel": "Sample label",
         "value": "value.3",
@@ -1730,7 +1730,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
   }
   labelAppearance="standard"
   listLabel="Sample legend"
-  selectedItems={Array []}
+  selectedItems={[]}
   showListLabel={false}
   vertAlign="center"
 >
@@ -2093,18 +2093,18 @@ exports[`ToggleInputList renders with required 1`] = `
 <ToggleInputList
   id="checkbox"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "id.1",
         "inputLabel": "Sample label",
         "value": "value.1",
       },
-      Object {
+      {
         "id": "id.2",
         "inputLabel": "Sample label",
         "value": "value.2",
       },
-      Object {
+      {
         "id": "id.3",
         "inputLabel": "Sample label",
         "value": "value.3",
@@ -2114,7 +2114,7 @@ exports[`ToggleInputList renders with required 1`] = `
   labelAppearance="standard"
   listLabel="Sample legend"
   required={true}
-  selectedItems={Array []}
+  selectedItems={[]}
   showListLabel={true}
   vertAlign="center"
 >
@@ -2532,18 +2532,18 @@ exports[`ToggleInputList renders with selected items 1`] = `
 <ToggleInputList
   id="checkbox"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "id.1",
         "inputLabel": "Sample label",
         "value": "value.1",
       },
-      Object {
+      {
         "id": "id.2",
         "inputLabel": "Sample label",
         "value": "value.2",
       },
-      Object {
+      {
         "id": "id.3",
         "inputLabel": "Sample label",
         "value": "value.3",
@@ -2553,7 +2553,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
   labelAppearance="standard"
   listLabel="Sample legend"
   selectedItems={
-    Array [
+    [
       "value.1",
       "value.2",
     ]

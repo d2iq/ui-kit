@@ -12,7 +12,7 @@ exports[`DonutChart renders default 1`] = `
     r={15.915494309189533}
     strokeWidth={1.5}
     style={
-      Object {
+      {
         "stroke": "rgba(218,221,226,0.65)",
       }
     }
@@ -27,14 +27,14 @@ exports[`DonutChart renders default 1`] = `
     strokeDashoffset={125}
     strokeWidth={1.5}
     style={
-      Object {
+      {
         "stroke": "#F00",
       }
     }
   />
   <text
     style={
-      Object {
+      {
         "textAnchor": "middle",
       }
     }
@@ -73,7 +73,7 @@ exports[`DonutChart renders with text and label 1`] = `
     r={15.915494309189533}
     strokeWidth={1.5}
     style={
-      Object {
+      {
         "stroke": "rgba(218,221,226,0.65)",
       }
     }
@@ -88,14 +88,14 @@ exports[`DonutChart renders with text and label 1`] = `
     strokeDashoffset={125}
     strokeWidth={1.5}
     style={
-      Object {
+      {
         "stroke": "#F00",
       }
     }
   />
   <text
     style={
-      Object {
+      {
         "textAnchor": "middle",
       }
     }

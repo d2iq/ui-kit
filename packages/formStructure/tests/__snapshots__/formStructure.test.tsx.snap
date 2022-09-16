@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Form structure components renders top-level form structure components 1`] = `
-Array [
+[
   <div
     class="css-ut0yx1"
     data-cy="formMessage"

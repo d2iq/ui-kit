@@ -232,12 +232,12 @@ exports[`InfoBox renders with actions 1`] = `
       <span
         className="emotion-4"
       >
-        <Component />
+        <PrimaryAction />
       </span>
       <span
         className="emotion-5"
       >
-        <Component />
+        <SecondaryAction />
       </span>
     </div>
   </div>

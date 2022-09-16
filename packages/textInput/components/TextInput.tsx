@@ -151,15 +151,16 @@ export class TextInput<P extends TextInputProps> extends React.Component<P> {
         event: React.FormEvent<HTMLInputElement>
       ) => void;
     }
-
+    const additionalProps = {
+      ...{ ...inputElementProps, onChange, value, type: this.props.type }
+    };
     return (
       <input
         className={cx(inputReset, ...additionalClasses)}
-        type={this.props.type}
         aria-invalid={!isValid}
         aria-describedby={describedBy}
         data-cy={dataCy}
-        {...{ ...inputElementProps, onChange, value }}
+        {...additionalProps}
       />
     );
   }

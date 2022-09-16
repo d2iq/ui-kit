@@ -99,7 +99,7 @@ exports[`CodeSnippet renders default 1`] = `
     <Box
       bgColor="#1B2029"
       bgImageOptions={
-        Object {
+        {
           "position": undefined,
           "repeat": undefined,
           "size": undefined,
@@ -299,7 +299,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
     <Box
       bgColor="#1B2029"
       bgImageOptions={
-        Object {
+        {
           "position": undefined,
           "repeat": undefined,
           "size": undefined,
@@ -369,7 +369,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                   >
                     <Box
                       bgImageOptions={
-                        Object {
+                        {
                           "position": undefined,
                           "repeat": undefined,
                           "size": undefined,
@@ -396,7 +396,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                             >
                               <Box
                                 bgImageOptions={
-                                  Object {
+                                  {
                                     "position": undefined,
                                     "repeat": undefined,
                                     "size": undefined,
@@ -433,7 +433,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                               }
                               isOpen={false}
                               preferredDirections={
-                                Array [
+                                [
                                   "top",
                                   "top-start",
                                   "top-end",
@@ -452,7 +452,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                                 >
                                   <Box
                                     bgImageOptions={
-                                      Object {
+                                      {
                                         "position": undefined,
                                         "repeat": undefined,
                                         "size": undefined,

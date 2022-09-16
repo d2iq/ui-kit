@@ -159,7 +159,7 @@ exports[`Dropdownable is visible after opening 2`] = `
     >
       <ForwardRef
         style={
-          Object {
+          {
             "left": "0",
             "position": "absolute",
             "top": "0",
@@ -183,7 +183,7 @@ exports[`Dropdownable is visible after opening 2`] = `
             </body>
           }
           style={
-            Object {
+            {
               "left": "0",
               "position": "absolute",
               "top": "0",
@@ -206,7 +206,7 @@ exports[`Dropdownable is visible after opening 2`] = `
           >
             <div
               style={
-                Object {
+                {
                   "left": "0",
                   "position": "absolute",
                   "top": "0",

@@ -151,7 +151,7 @@ const Popover: React.StatelessComponent<PopoverProps> = ({
         overlayRoot={overlayRoot}
       >
         {React.isValidElement(trigger) ? (
-          React.cloneElement(trigger, {
+          React.cloneElement(trigger as React.ReactElement, {
             ...sharedTriggerProps,
             tabIndex: 0
           })

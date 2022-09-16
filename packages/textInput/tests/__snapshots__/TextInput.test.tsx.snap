@@ -105,7 +105,7 @@ exports[`TextInput should display validation message if set & appearance == Erro
   </label>
   <FormFieldWrapper
     errors={
-      Array [
+      [
         "This is an error message",
         "this is a second error message",
       ]
@@ -168,7 +168,7 @@ exports[`TextInput should not display validation message if set & appearance == 
   </label>
   <FormFieldWrapper
     errors={
-      Array [
+      [
         "This is an error message",
       ]
     }

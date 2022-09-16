@@ -3,7 +3,7 @@
 exports[`Dropdown renders a closed dropdown 1`] = `
 <DropdownMenu
   preferredDirections={
-    Array [
+    [
       "bottom-end",
       "bottom-start",
       "bottom",
@@ -123,7 +123,7 @@ exports[`Dropdown renders a closed dropdown 1`] = `
         }
         isOpen={false}
         preferredDirections={
-          Array [
+          [
             "bottom-end",
             "bottom-start",
             "bottom",
@@ -159,7 +159,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
 <DropdownMenu
   menuMaxHeight={50}
   preferredDirections={
-    Array [
+    [
       "bottom-end",
       "bottom-start",
       "bottom",
@@ -280,7 +280,7 @@ exports[`Dropdown renders a dropdown with a max height 1`] = `
         }
         isOpen={false}
         preferredDirections={
-          Array [
+          [
             "bottom-end",
             "bottom-start",
             "bottom",
@@ -316,7 +316,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
 <DropdownMenu
   initialIsOpen={true}
   preferredDirections={
-    Array [
+    [
       "bottom-end",
       "bottom-start",
       "bottom",
@@ -437,7 +437,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
         }
         isOpen={true}
         preferredDirections={
-          Array [
+          [
             "bottom-end",
             "bottom-start",
             "bottom",
@@ -471,7 +471,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
           >
             <ForwardRef
               style={
-                Object {
+                {
                   "left": "0",
                   "position": "absolute",
                   "top": "0",
@@ -540,7 +540,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                   </body>
                 }
                 style={
-                  Object {
+                  {
                     "left": "0",
                     "position": "absolute",
                     "top": "0",
@@ -608,7 +608,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                 >
                   <div
                     style={
-                      Object {
+                      {
                         "left": "0",
                         "position": "absolute",
                         "top": "0",
@@ -629,7 +629,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
                         id="downshift-1-menu"
                         role="listbox"
                         style={
-                          Object {
+                          {
                             "maxHeight": undefined,
                             "maxWidth": undefined,
                             "width": undefined,
@@ -759,7 +759,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
 <DropdownMenu
   initialIsOpen={true}
   preferredDirections={
-    Array [
+    [
       "bottom-end",
       "bottom-start",
       "bottom",
@@ -922,7 +922,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
         }
         isOpen={true}
         preferredDirections={
-          Array [
+          [
             "bottom-end",
             "bottom-start",
             "bottom",
@@ -956,7 +956,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
           >
             <ForwardRef
               style={
-                Object {
+                {
                   "left": "0",
                   "position": "absolute",
                   "top": "0",
@@ -1109,7 +1109,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                   </body>
                 }
                 style={
-                  Object {
+                  {
                     "left": "0",
                     "position": "absolute",
                     "top": "0",
@@ -1203,7 +1203,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                 >
                   <div
                     style={
-                      Object {
+                      {
                         "left": "0",
                         "position": "absolute",
                         "top": "0",
@@ -1224,7 +1224,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                         id="downshift-3-menu"
                         role="listbox"
                         style={
-                          Object {
+                          {
                             "maxHeight": undefined,
                             "maxWidth": undefined,
                             "width": undefined,
