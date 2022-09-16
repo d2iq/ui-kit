@@ -1,7 +1,6 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 import { CheckboxInput } from "../";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
@@ -10,7 +9,7 @@ expect.addSnapshotSerializer(createSerializer());
 describe("CheckboxInput", () => {
   it("renders all appearances", () => {
     Object.keys(InputAppearance).forEach(appearance => {
-      const component = mount(
+      const { asFragment } = render(
         <CheckboxInput
           id="defaultId"
           inputLabel="Sample label"
@@ -18,12 +17,12 @@ describe("CheckboxInput", () => {
           appearance={InputAppearance[appearance]}
         />
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   it("renders with a hidden label", () => {
-    const component = mount(
+    const { asFragment } = render(
       <CheckboxInput
         id="hiddenLabel"
         inputLabel="Sample Label"
@@ -31,11 +30,11 @@ describe("CheckboxInput", () => {
         showInputLabel={false}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders indeterminate", () => {
-    const component = mount(
+    const { asFragment } = render(
       <CheckboxInput
         id="indeterminateId"
         inputLabel="Sample Label"
@@ -43,6 +42,6 @@ describe("CheckboxInput", () => {
         indeterminate={true}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

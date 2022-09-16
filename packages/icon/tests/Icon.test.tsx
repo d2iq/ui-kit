@@ -1,15 +1,14 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 import { Icon } from "../";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
+import { create } from "react-test-renderer";
 
 expect.addSnapshotSerializer(createSerializer());
 
 describe("Icon", () => {
   it("renders", () => {
-    const component = shallow(
+    const component = create(
       <Icon
         shape={SystemIcons.ArrowDown}
         color="blue"
@@ -18,16 +17,16 @@ describe("Icon", () => {
       />
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
   it("renders with defaults", () => {
-    const component = shallow(<Icon shape={SystemIcons.ArrowDown} />);
+    const component = create(<Icon shape={SystemIcons.ArrowDown} />);
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
   it("renders display block", () => {
-    const component = shallow(<Icon shape={SystemIcons.ArrowDown} block />);
+    const component = create(<Icon shape={SystemIcons.ArrowDown} block />);
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });
