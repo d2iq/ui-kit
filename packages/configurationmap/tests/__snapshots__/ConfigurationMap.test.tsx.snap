@@ -88,55 +88,55 @@ exports[`ConfigurationMap renders default 1`] = `
   data-cy="configurationMap"
 >
   <div
-    class="emotion-0"
+    className="emotion-0"
     data-cy="configurationMapSection"
   >
     <div
-      class="emotion-1"
+      className="emotion-1"
       data-cy="configurationMapRow"
     >
       <div
-        class="emotion-2"
+        className="emotion-2"
         data-cy="configurationMapLabel"
       >
         Name
       </div>
       <div
-        class="emotion-3"
+        className="emotion-3"
         data-cy="configurationMapValue"
       >
         Jane Doe
       </div>
     </div>
     <div
-      class="emotion-1"
+      className="emotion-1"
       data-cy="configurationMapRow"
     >
       <div
-        class="emotion-2"
+        className="emotion-2"
         data-cy="configurationMapLabel"
       >
         Role
       </div>
       <div
-        class="emotion-3"
+        className="emotion-3"
         data-cy="configurationMapValue"
       >
         UX Designer
       </div>
     </div>
     <div
-      class="emotion-1"
+      className="emotion-1"
       data-cy="configurationMapRow"
     >
       <div
-        class="emotion-2"
+        className="emotion-2"
         data-cy="configurationMapLabel"
       >
         City
       </div>
       <div
-        class="emotion-3"
+        className="emotion-3"
         data-cy="configurationMapValue"
       >
         San Francisco
@@ -506,55 +506,55 @@ exports[`ConfigurationMap renders with default value 1`] = `
   data-cy="configurationMap"
 >
   <div
-    class="emotion-0"
+    className="emotion-0"
     data-cy="configurationMapSection"
   >
     <div
-      class="emotion-1"
+      className="emotion-1"
       data-cy="configurationMapRow"
     >
       <div
-        class="emotion-2"
+        className="emotion-2"
         data-cy="configurationMapLabel"
       >
         Name
       </div>
       <div
-        class="emotion-3"
+        className="emotion-3"
         data-cy="configurationMapValue"
       >
         Jane Doe
       </div>
     </div>
     <div
-      class="emotion-1"
+      className="emotion-1"
       data-cy="configurationMapRow"
     >
       <div
-        class="emotion-2"
+        className="emotion-2"
         data-cy="configurationMapLabel"
       >
         Role
       </div>
       <div
-        class="emotion-3"
+        className="emotion-3"
         data-cy="configurationMapValue"
       >
         —
       </div>
     </div>
     <div
-      class="emotion-1"
+      className="emotion-1"
       data-cy="configurationMapRow"
     >
       <div
-        class="emotion-2"
+        className="emotion-2"
         data-cy="configurationMapLabel"
       >
         City
       </div>
       <div
-        class="emotion-3"
+        className="emotion-3"
         data-cy="configurationMapValue"
       >
         —
@@ -669,66 +669,66 @@ exports[`ConfigurationMap renders with headline 1`] = `
   data-cy="configurationMap"
 >
   <div
-    class="emotion-0"
+    className="emotion-0"
     data-cy="configurationMapSection"
   >
     <div
-      class="emotion-1"
+      className="emotion-1"
       data-cy="configurationMapHeading"
     >
       <h1
-        class="rmTextMargins emotion-2"
+        className="rmTextMargins emotion-2"
         data-cy="headingText1"
       >
         Jane Doe Info
       </h1>
     </div>
     <div
-      class="emotion-3"
+      className="emotion-3"
       data-cy="configurationMapRow"
     >
       <div
-        class="emotion-4"
+        className="emotion-4"
         data-cy="configurationMapLabel"
       >
         Name
       </div>
       <div
-        class="emotion-5"
+        className="emotion-5"
         data-cy="configurationMapValue"
       >
         Jane Doe
       </div>
     </div>
     <div
-      class="emotion-3"
+      className="emotion-3"
       data-cy="configurationMapRow"
     >
       <div
-        class="emotion-4"
+        className="emotion-4"
         data-cy="configurationMapLabel"
       >
         Role
       </div>
       <div
-        class="emotion-5"
+        className="emotion-5"
         data-cy="configurationMapValue"
       >
         UX Designer
       </div>
     </div>
     <div
-      class="emotion-3"
+      className="emotion-3"
       data-cy="configurationMapRow"
     >
       <div
-        class="emotion-4"
+        className="emotion-4"
         data-cy="configurationMapLabel"
       >
         City
       </div>
       <div
-        class="emotion-5"
+        className="emotion-5"
         data-cy="configurationMapValue"
       >
         San Francisco

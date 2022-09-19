@@ -8,7 +8,7 @@ import {
   HeadingText3
 } from "../../styleUtils/typography";
 
-type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
 interface ConfigurationMapHeadingProps {
   /**
@@ -19,6 +19,7 @@ interface ConfigurationMapHeadingProps {
    * Which HTML tag to render the text in
    */
   tag?: keyof React.ReactHTML;
+  children: React.ReactNode;
 }
 
 const getHeadingTextComponent = (headingLevel: HeadingLevel) => {
@@ -32,9 +33,7 @@ const getHeadingTextComponent = (headingLevel: HeadingLevel) => {
   }
 };
 
-const ConfigurationMapHeading: React.StatelessComponent<
-  ConfigurationMapHeadingProps
-> = props => {
+const ConfigurationMapHeading = (props: ConfigurationMapHeadingProps) => {
   const { children, headingLevel = 1, tag } = props;
   const headingTag: keyof React.ReactHTML = `h${headingLevel}` as
     | "h1"
