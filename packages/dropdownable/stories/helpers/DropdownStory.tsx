@@ -1,8 +1,8 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { css } from "@emotion/css";
 import styled from "@emotion/styled";
 
-import Dropdownable from "../../components/Dropdownable";
+import Dropdownable, { Direction } from "../../components/Dropdownable";
 import { PrimaryButton } from "../../../button";
 import {
   themeBgPrimary,
@@ -16,7 +16,13 @@ export const DropdownContentContainer = styled.div`
   padding: 5px;
 `;
 
-const DropdownStory = ({ children, preferredDirections }) => {
+const DropdownStory = ({
+  children,
+  preferredDirections
+}: {
+  children: ReactNode;
+  preferredDirections?: Direction | Direction[];
+}) => {
   const [isShowing, setIsShowing] = React.useState(false);
 
   function toggle() {

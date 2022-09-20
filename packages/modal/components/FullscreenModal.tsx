@@ -2,7 +2,9 @@ import * as React from "react";
 import ModalBase from "../components/ModalBase";
 import { ModalBaseProps, ModalSizes } from "./ModalBase";
 import { ButtonProps } from "../../button/components/ButtonBase";
-import FullscreenView from "../../fullscreenView/components/FullscreenView";
+import FullscreenView, {
+  HeaderProps
+} from "../../fullscreenView/components/FullscreenView";
 
 interface FullscreenModalProps extends ModalBaseProps {
   /** The primary button */
@@ -16,23 +18,21 @@ interface FullscreenModalProps extends ModalBaseProps {
   /** Whether we automatically add padding to the body of the modal. */
   isContentFlush?: boolean;
   /** Custom header content component. ⚠️Use rarely and with caution⚠️ */
-  headerComponent?: React.ReactNode;
+  headerComponent?: React.JSXElementConstructor<HeaderProps>;
 }
 
-class FullscreenModal extends React.PureComponent<FullscreenModalProps, {}> {
-  public render() {
-    const {
-      children,
-      ctaButton,
-      closeText,
-      isContentFlush,
-      onClose,
-      title,
-      subtitle,
-      headerComponent,
-      ...other
-    } = this.props;
-
+const FullscreenModal = React.memo(
+  ({
+    children,
+    ctaButton,
+    closeText,
+    isContentFlush,
+    onClose,
+    title,
+    subtitle,
+    headerComponent,
+    ...other
+  }: FullscreenModalProps) => {
     return (
       <ModalBase
         size={ModalSizes.Fullscreen}
@@ -56,6 +56,6 @@ class FullscreenModal extends React.PureComponent<FullscreenModalProps, {}> {
       </ModalBase>
     );
   }
-}
+);
 
 export default FullscreenModal;
