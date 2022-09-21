@@ -1,4 +1,4 @@
-const webpackBase = require("./../webpack/webpack.base.cjs");
+const webpackBase = require("../webpack/webpack.base");
 const path = require("path");
 
 module.exports = ({ config }) => {

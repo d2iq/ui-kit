@@ -1,4 +1,4 @@
-const customWebpack = require("./webpack.config.cjs");
+const customWebpack = require("./webpack.config");
 
 module.exports = {
   stories: [
