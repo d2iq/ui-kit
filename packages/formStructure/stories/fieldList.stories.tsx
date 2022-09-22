@@ -8,7 +8,7 @@ import {
   FieldListAddButton
 } from "..";
 import { TextInput } from "../../textInput";
-import FieldListHelper from "./helpers/FieldListStoryHelper";
+import FieldListStoryHelper from "./helpers/FieldListStoryHelper";
 import { MonospaceText } from "../../styleUtils/typography";
 
 const mockItems = [
@@ -48,12 +48,12 @@ export default {
 } as Meta;
 
 const Template: Story = args => (
-  <FieldListHelper items={mockItems}>
-    {({ removeItemHander, onAddItem, fieldUpdateHandler, items }) => (
+  <FieldListStoryHelper items={mockItems}>
+    {({ onRemoveItem, onAddItem, onFieldUpdate, items }) => (
       <>
         <FieldList
           data={items}
-          onRemoveItem={removeItemHander}
+          onRemoveItem={onRemoveItem}
           onAddItem={() =>
             onAddItem({
               name: "",
@@ -69,7 +69,7 @@ const Template: Story = args => (
             key="name"
             header="Name"
             pathToValue="name"
-            onChange={fieldUpdateHandler}
+            onChange={onFieldUpdate}
           >
             {({ defaultProps, onChange, value }) => (
               <TextInput value={value} onChange={onChange} {...defaultProps} />
@@ -79,7 +79,7 @@ const Template: Story = args => (
             key="role"
             header="Role"
             pathToValue="role"
-            onChange={fieldUpdateHandler}
+            onChange={onFieldUpdate}
           >
             {({ defaultProps, onChange, value }) => (
               <TextInput value={value} onChange={onChange} {...defaultProps} />
@@ -89,7 +89,7 @@ const Template: Story = args => (
             key="city"
             header="City"
             pathToValue="city"
-            onChange={fieldUpdateHandler}
+            onChange={onFieldUpdate}
           >
             {({ defaultProps, onChange, value }) => (
               <TextInput value={value} onChange={onChange} {...defaultProps} />
@@ -107,7 +107,7 @@ const Template: Story = args => (
         </div>
       </>
     )}
-  </FieldListHelper>
+  </FieldListStoryHelper>
 );
 
 export const EditableFieldsControlledInputs = Template.bind({});

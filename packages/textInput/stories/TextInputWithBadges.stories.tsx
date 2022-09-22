@@ -61,13 +61,13 @@ export default {
 } as Meta;
 
 const Template: Story = args => (
-  <TextInputWithBadgesStoryHelper>
+  <TextInputWithBadgesStoryHelper badges={defaultBadges}>
     {({ badges, badgeChangeHandler }) => (
       <TextInputWithBadges
         id="default"
         inputLabel="Default Input Label"
         onBadgeChange={badgeChangeHandler}
-        badges={defaultBadges}
+        badges={badges}
         {...args}
       />
     )}

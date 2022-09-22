@@ -18,53 +18,6 @@ const fakeButtonStyles = {
   padding: 0
 };
 
-class ToasterContainer extends React.PureComponent<
-  { children: Array<React.ReactElement<ToastProps>> },
-  { toasts: Array<React.ReactElement<ToastProps>> }
-> {
-  constructor(props) {
-    super(props);
-
-    this.addToast = this.addToast.bind(this);
-    this.removeToast = this.removeToast.bind(this);
-
-    this.state = { toasts: this.props.children };
-  }
-
-  addToast(toast: Array<React.ReactElement<ToastProps>>) {
-    this.setState({ toasts: this.state.toasts.concat(toast) });
-  }
-
-  removeToast(id: string) {
-    this.setState({ toasts: this.state.toasts.filter(t => t.props.id !== id) });
-  }
-
-  render() {
-    const handleToastAdd = () => {
-      const newToastId = addedToastId++;
-      const toastId = `toast-${newToastId + 1}`;
-      const dismissToast = () => this.removeToast(toastId);
-
-      this.addToast([
-        <Toast
-          autodismiss={true}
-          id={toastId}
-          key={newToastId + 1}
-          title={`New message ${newToastId + 1}`}
-          onDismiss={dismissToast}
-        />
-      ]);
-    };
-
-    return (
-      <div>
-        <Toaster>{this.state.toasts}</Toaster>
-        <button onClick={handleToastAdd}>Make me toast</button>
-      </div>
-    );
-  }
-}
-
 export default {
   title: "Feedback/Toaster",
   component: Toaster
@@ -105,7 +58,42 @@ export const Description = () => (
   </Toaster>
 );
 
-export const AutoDismiss = () => <ToasterContainer>{[]}</ToasterContainer>;
+export const AutoDismiss = () => {
+  const [toasts, setToasts] = React.useState<
+    Array<React.ReactElement<ToastProps>>
+  >([]);
+
+  const addToast = (toastNext: Array<React.ReactElement<ToastProps>>) => {
+    setToasts(toasts.concat(toastNext));
+  };
+
+  const removeToast = (id: string) => {
+    setToasts(toasts.filter(t => t.props.id !== id));
+  };
+
+  const handleToastAdd = () => {
+    const newToastId = addedToastId++;
+    const toastId = `toast-${newToastId + 1}`;
+    const dismissToast = () => removeToast(toastId);
+
+    addToast([
+      <Toast
+        autodismiss={true}
+        id={toastId}
+        key={newToastId + 1}
+        title={`New message ${newToastId + 1}`}
+        onDismiss={dismissToast}
+      />
+    ]);
+  };
+
+  return (
+    <div>
+      <Toaster>{toasts}</Toaster>
+      <button onClick={handleToastAdd}>Make me toast</button>
+    </div>
+  );
+};
 
 export const WithDismissCallback = () => (
   <Toaster>
