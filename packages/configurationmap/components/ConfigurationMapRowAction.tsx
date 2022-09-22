@@ -16,9 +16,7 @@ interface ConfigurationMapRowActionProps {
 
 export const rowActionStaticClassname = "static_configurationMapRowAction";
 
-const ConfigurationMapRowAction: React.StatelessComponent<
-  ConfigurationMapRowActionProps
-> = props => {
+const ConfigurationMapRowAction = (props: ConfigurationMapRowActionProps) => {
   const { onClick, children } = props;
 
   return (

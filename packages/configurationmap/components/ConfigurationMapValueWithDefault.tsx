@@ -7,9 +7,9 @@ interface ConfigurationMapValueWithDefaultProps {
    */
   value?: React.ReactNode;
 }
-const ConfigurationMapValueWithDefault: React.StatelessComponent<
-  ConfigurationMapValueWithDefaultProps
-> = props => {
+const ConfigurationMapValueWithDefault = (
+  props: ConfigurationMapValueWithDefaultProps
+) => {
   const { value } = props;
 
   return <ConfigurationMapValue>{value || "—"}</ConfigurationMapValue>;

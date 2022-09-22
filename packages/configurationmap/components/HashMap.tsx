@@ -1,14 +1,16 @@
 import * as React from "react";
 
 import ConfigurationMapSection from "./ConfigurationMapSection";
-import ConfigurationMapHeading from "./ConfigurationMapHeading";
+import ConfigurationMapHeading, {
+  HeadingLevel
+} from "./ConfigurationMapHeading";
 import ConfigurationMapRow from "./ConfigurationMapRow";
 import ConfigurationMapLabel from "./ConfigurationMapLabel";
 import ConfigurationMapValue from "./ConfigurationMapValue";
 
-const METHODS_TO_BIND = ["formatValue", "isHashMap"];
-
-type headingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+type Hash = {
+  [key: string]: React.ReactNode | Hash;
+};
 
 interface HashMapProps {
   /**
@@ -18,11 +20,11 @@ interface HashMapProps {
   /**
    * The data to render. Keys are rendered as labels, values are rendered as the value
    */
-  hash: { [key: string]: React.ReactNode };
+  hash: Hash;
   /**
    * Priority of the heading that the `headline` prop renders in. Numbers map to <h1> through <h6>
    */
-  headingLevel?: headingLevel;
+  headingLevel?: HeadingLevel;
   /**
    * The heading that labels the data
    */
@@ -33,118 +35,85 @@ interface HashMapProps {
   renderKeys?: { [key: string]: string };
 }
 
-class HashMap extends React.PureComponent<HashMapProps, {}> {
-  public static defaultProps: Partial<HashMapProps> = {
-    headingLevel: 1,
-    defaultValue: "—"
-  };
+function isHashMap(value) {
+  // Check whether we are trying to render an object that is not a
+  // React component
 
-  constructor(props) {
-    super(props);
+  return (
+    typeof value === "object" &&
+    !Array.isArray(value) &&
+    value !== null &&
+    !React.isValidElement(value)
+  );
+}
 
-    METHODS_TO_BIND.forEach(method => {
-      this[method] = this[method].bind(this);
-    });
+function formatValue(value, defaultValue) {
+  if (typeof value === "boolean") {
+    value = value.toString();
   }
 
-  getHeadline() {
-    const { headline, headingLevel } = this.props;
-    if (!headline) {
-      return null;
-    }
-
-    // Wrap in headline element and classes
-    return (
-      <ConfigurationMapHeading headingLevel={headingLevel}>
-        {headline}
-      </ConfigurationMapHeading>
-    );
+  if (Array.isArray(value)) {
+    value = value.join(", ");
   }
 
-  getHashMap(headline, hashMap) {
-    // Increase the heading level for each nested description list,
-    // ensuring we don't surpass heading level <h6/>.
-    const headingLevel = this.props.headingLevel || 0;
-    const nextHeadingLevel = Math.min(headingLevel + 1, 6) as headingLevel;
-
-    return (
-      <HashMap
-        {...this.props}
-        hash={hashMap}
-        headingLevel={nextHeadingLevel}
-        key={`hash-map-${headline}`}
-        headline={headline}
-      />
-    );
+  if (!value && defaultValue) {
+    value = defaultValue;
   }
 
-  getItems() {
-    const { hash, renderKeys } = this.props;
+  return value;
+}
 
-    return Object.keys(hash).map(key => {
-      const value = hash[key];
-
-      if (this.isHashMap(value)) {
-        return this.getHashMap(key, value);
-      }
-
-      if (renderKeys && Object.prototype.hasOwnProperty.call(renderKeys, key)) {
-        key = renderKeys[key];
-      }
-
-      return (
-        <ConfigurationMapRow key={`hash-map-value-${key}`}>
-          <ConfigurationMapLabel>{key}</ConfigurationMapLabel>
-          <ConfigurationMapValue>
-            {this.formatValue(value)}
-          </ConfigurationMapValue>
-        </ConfigurationMapRow>
-      );
-    });
-  }
-
-  render() {
-    const { hash } = this.props;
-
+const HashMap = React.memo(
+  ({
+    hash,
+    headline,
+    headingLevel = 1,
+    renderKeys,
+    defaultValue = "-"
+  }: HashMapProps) => {
     if (!hash || Object.keys(hash).length === 0) {
       return null;
     }
 
     return (
       <ConfigurationMapSection>
-        {this.getHeadline()}
-        {this.getItems()}
+        {headline && (
+          <ConfigurationMapHeading headingLevel={headingLevel}>
+            {headline}
+          </ConfigurationMapHeading>
+        )}
+        {Object.entries(hash).map(([key, value]) => {
+          if (value && isHashMap(value)) {
+            return (
+              <HashMap
+                hash={value as Hash}
+                headingLevel={Math.min(headingLevel + 1, 6) as HeadingLevel}
+                key={`hash-map-${key}`}
+                headline={key}
+              />
+            );
+          }
+
+          // I think this is verifying that it is an object
+          if (
+            renderKeys &&
+            Object.prototype.hasOwnProperty.call(renderKeys, key)
+          ) {
+            key = renderKeys[key];
+          }
+
+          return (
+            <ConfigurationMapRow key={`hash-map-value-${key}`}>
+              <ConfigurationMapLabel>{key}</ConfigurationMapLabel>
+              <ConfigurationMapValue>
+                {formatValue(value, defaultValue)}
+              </ConfigurationMapValue>
+            </ConfigurationMapRow>
+          );
+        })}
       </ConfigurationMapSection>
     );
   }
-
-  formatValue(value) {
-    if (typeof value === "boolean") {
-      value = value.toString();
-    }
-
-    if (Array.isArray(value)) {
-      value = value.join(", ");
-    }
-
-    if (!value && this.props.defaultValue) {
-      value = this.props.defaultValue;
-    }
-
-    return value;
-  }
-
-  isHashMap(value) {
-    // Check whether we are trying to render an object that is not a
-    // React component
-
-    return (
-      typeof value === "object" &&
-      !Array.isArray(value) &&
-      value !== null &&
-      !React.isValidElement(value)
-    );
-  }
-}
+);
 
 export default HashMap;
