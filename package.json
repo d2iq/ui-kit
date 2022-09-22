@@ -3,7 +3,6 @@
   "version": "0.0.0-dev+semantically-released",
   "description": "D2iQ UI Kit",
   "license": "Apache-2.0",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/dcos-labs/ui-kit"
@@ -37,7 +36,7 @@
     "test-storybook": "test-storybook",
     "chromatic": "chromatic",
     "prepare": "husky install",
-    "test:types": "tsc -p tsconfig.json"
+    "test:types": "tsc -p tsconfig.types.json"
   },
   "files": [
     "dist",

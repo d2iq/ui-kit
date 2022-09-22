@@ -17,9 +17,7 @@
     "skipLibCheck": true,
     "tsBuildInfoFile": ".tsbuildinfo",
     "lib": ["es6", "dom", "es2017"],
-    "incremental": true,
-    "declaration": true,
-    "emitDeclarationOnly": true // to emit at least something until we can update Typescript to v4 then we will want to use `--noEmit`
+    "incremental": true
   },
   "include": [
     "./packages/index.ts",

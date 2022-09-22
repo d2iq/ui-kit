@@ -1,6 +1,4 @@
-import transforms from "./transforms.js";
-import formats from "./formats.js";
-import StyleDictionary from "style-dictionary";
+const transforms = require("./transforms");
 const formatCategory = process.env.FORMAT || "default";
 
 // Because we export non-Typescript files, we have three configurations to build with:
@@ -17,18 +15,20 @@ const DOCS_CONFIG = "./packages/design-tokens/config.designGuidelines.json";
 const configs =
   formatCategory === "docs" ? [DOCS_CONFIG] : [CONFIG, DIST_CONFIG];
 
-configs.forEach(path => {
-  const styleDictionary = StyleDictionary.extend(path);
+import("./formats.mjs").then(({ default: formats }) => {
+  configs.forEach(path => {
+    const StyleDictionary = require("style-dictionary").extend(path);
 
-  transforms.forEach(t => {
-    console.info(`Registering Transform: '${t.name}'`);
-    styleDictionary.registerTransform(t);
+    transforms.forEach(t => {
+      console.info(`Registering Transform: '${t.name}'`);
+      StyleDictionary.registerTransform(t);
+    });
+
+    formats.forEach(f => {
+      console.info(`Registering Format: '${f.name}'`);
+      StyleDictionary.registerFormat(f);
+    });
+
+    StyleDictionary.buildAllPlatforms();
   });
-
-  formats.forEach(f => {
-    console.info(`Registering Format: '${f.name}'`);
-    styleDictionary.registerFormat(f);
-  });
-
-  styleDictionary.buildAllPlatforms();
 });
