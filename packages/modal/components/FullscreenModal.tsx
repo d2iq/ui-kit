@@ -2,9 +2,7 @@ import * as React from "react";
 import ModalBase from "../components/ModalBase";
 import { ModalBaseProps, ModalSizes } from "./ModalBase";
 import { ButtonProps } from "../../button/components/ButtonBase";
-import FullscreenView, {
-  HeaderProps
-} from "../../fullscreenView/components/FullscreenView";
+import FullscreenView from "../../fullscreenView/components/FullscreenView";
 
 interface FullscreenModalProps extends ModalBaseProps {
   /** The primary button */
@@ -18,7 +16,7 @@ interface FullscreenModalProps extends ModalBaseProps {
   /** Whether we automatically add padding to the body of the modal. */
   isContentFlush?: boolean;
   /** Custom header content component. ⚠️Use rarely and with caution⚠️ */
-  headerComponent?: React.JSXElementConstructor<HeaderProps>;
+  headerComponent?: React.JSXElementConstructor<any>;
 }
 
 const FullscreenModal = React.memo(
