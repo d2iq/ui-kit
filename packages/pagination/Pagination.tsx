@@ -1,5 +1,4 @@
 import * as React from "react";
-import Delegate from "react-delegate-component";
 import { useId } from "react-id-generator";
 import { cx } from "@emotion/css";
 import { Flex, FlexItem } from "../styleUtils/layout";
@@ -73,41 +72,36 @@ const getItemCountClassName = (showPageLengthMenu?: boolean) => {
   return cx(border("right"), padding("right"), margin("right"));
 };
 
-const NavButton: React.FC<
-  Partial<React.ButtonHTMLAttributes<HTMLButtonElement>> &
-    Partial<ExpandedLinkProps> & { direction: "prev" | "next" }
-> = ({ direction, disabled, url, ...other }) => {
-  delete other.children;
-
+const NavButton = ({
+  direction,
+  disabled,
+  url,
+  ...other
+}: Partial<React.ButtonHTMLAttributes<HTMLButtonElement>> &
+  Partial<ExpandedLinkProps> & { direction: "prev" | "next" }) => {
   const ariaLabel = direction === "prev" ? "previous page" : "next page";
-  const children = (
-    <Icon
-      shape={
-        direction === "prev" ? SystemIcons.CaretLeft : SystemIcons.CaretRight
-      }
-      color={disabled ? themeBgDisabled : "inherit"}
-    />
-  );
+
+  const Component = url ? ResetLink : ResetButton;
 
   return (
-    <Delegate
-      to={url ? ResetLink : ResetButton}
-      props={
-        url
-          ? {
-              ["aria-label"]: ariaLabel,
-              children,
-              url: disabled ? url : undefined,
-              ...(disabled ? { ariaDisabled: "true" } : {}),
-              ...other
-            }
-          : { ["aria-label"]: ariaLabel, children, disabled, ...other }
-      }
-    />
+    <Component
+      aria-label={ariaLabel}
+      disabled={!url && disabled}
+      {...(url && !disabled ? { url } : {})}
+      {...(disabled ? { ["aria-disabled"]: "true" } : {})}
+      {...other}
+    >
+      <Icon
+        shape={
+          direction === "prev" ? SystemIcons.CaretLeft : SystemIcons.CaretRight
+        }
+        color={disabled ? themeBgDisabled : "inherit"}
+      />
+    </Component>
   );
 };
 
-const Pagination: React.FC<PaginationProps> = ({
+const Pagination = ({
   activePage: activePageProp,
   initialActivePage = 1,
   itemsLabel = DEFAULT_ITEMS_LABEL,
@@ -119,7 +113,7 @@ const Pagination: React.FC<PaginationProps> = ({
   showPageLengthMenu,
   totalItems,
   totalPages: totalPagesProp
-}) => {
+}: PaginationProps) => {
   const [pageLengthMenuId] = useId(1, "pageLengthMenu");
   const [activePageState, setActivePageState] =
     React.useState<number>(initialActivePage);
@@ -257,12 +251,6 @@ const Pagination: React.FC<PaginationProps> = ({
       </Flex>
     </Flex>
   );
-};
-
-Pagination.defaultProps = {
-  initialActivePage: 1,
-  initialPageLength: INITIAL_PAGE_LENGTH,
-  itemsLabel: DEFAULT_ITEMS_LABEL
 };
 
 export default Pagination;

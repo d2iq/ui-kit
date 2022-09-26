@@ -462,7 +462,6 @@ exports[`Pagination rendering renders wrapped in a PaginationContainer 1`] = `
     <Pagination
       initialActivePage={4}
       initialPageLength={20}
-      itemsLabel="Items"
       key=".0"
     />
   </FlexItem>

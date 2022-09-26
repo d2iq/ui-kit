@@ -1,7 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
+import { create } from "react-test-renderer";
 
 import { DonutChart } from "../";
 
@@ -9,7 +8,7 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("DonutChart", () => {
   it("renders default", () => {
-    const component = shallow(
+    const component = create(
       <DonutChart
         data={[
           {
@@ -20,10 +19,10 @@ describe("DonutChart", () => {
       />
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
   it("renders with text and label", () => {
-    const component = shallow(
+    const component = create(
       <DonutChart
         data={[
           {
@@ -36,6 +35,6 @@ describe("DonutChart", () => {
       />
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });
