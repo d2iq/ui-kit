@@ -1,7 +1,5 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
-// TODO: This component contains `willReceiveProps`
-import Delegate from "react-delegate-component";
 import { ButtonProps } from "../../button/components/ButtonBase";
 import { flex, padding, flexItem } from "../../shared/styles/styleUtils";
 import { modalContent, fullscreenModalHeader } from "../style";
@@ -19,29 +17,30 @@ export interface FullscreenViewProps {
   /** Whether we automatically add padding to the body of the modal. */
   isContentFlush?: boolean;
   /** Custom header content component. ⚠️Use rarely and with caution⚠️ */
-  headerComponent?: React.ReactNode;
+  headerComponent?: React.JSXElementConstructor<any>;
   /** Custom banner component that will appear above the header. */
   bannerComponent?: React.ReactNode;
   /** Function that gets called when the modal is closed */
   onClose: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /** The base of the `data-cy` value. This is used for writing selectors in Cypress. */
   cypressSelectorBase?: string;
+  children?: React.ReactNode;
 }
 
-class FullscreenView extends React.PureComponent<FullscreenViewProps, {}> {
-  public render() {
-    const {
-      children,
-      ctaButton,
-      closeText,
-      isContentFlush,
-      onClose,
-      title,
-      subtitle,
-      bannerComponent,
-      headerComponent,
-      cypressSelectorBase = "fullscreenView"
-    } = this.props;
+const FullscreenView = React.memo(
+  ({
+    children,
+    ctaButton,
+    closeText,
+    isContentFlush,
+    onClose,
+    title,
+    subtitle,
+    bannerComponent,
+    headerComponent,
+    cypressSelectorBase = "fullscreenView"
+  }: FullscreenViewProps) => {
+    const HeaderComponent = headerComponent ?? FullscreenViewHeader;
 
     return (
       <div className={flex({ direction: "column" })}>
@@ -55,10 +54,12 @@ class FullscreenView extends React.PureComponent<FullscreenViewProps, {}> {
             </div>
           )}
           <div className={cx(padding("all", "xl"))}>
-            <Delegate
-              to={headerComponent}
-              default={FullscreenViewHeader}
-              props={{ title, subtitle, ctaButton, closeText, onClose }}
+            <HeaderComponent
+              title={title}
+              subtitle={subtitle}
+              ctaButton={ctaButton}
+              closeText={closeText}
+              onClose={onClose}
             />
           </div>
         </div>
@@ -73,6 +74,6 @@ class FullscreenView extends React.PureComponent<FullscreenViewProps, {}> {
       </div>
     );
   }
-}
+);
 
 export default FullscreenView;

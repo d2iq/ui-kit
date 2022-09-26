@@ -5,76 +5,57 @@ import Dropdownable, { Direction } from "../../components/Dropdownable";
 import { PrimaryButton, SecondaryButton } from "../../../button";
 import { DropdownContentContainer } from "./DropdownStory";
 
-class DropdownStoryFit extends React.PureComponent<
-  {},
-  { isOpen: boolean; expanded: boolean }
-> {
-  constructor(props) {
-    super(props);
+const DropdownStoryFit = ({ children }) => {
+  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+  const [expanded, setExpanded] = React.useState<boolean>(false);
 
-    this.state = {
-      expanded: false,
-      isOpen: false
-    };
+  const containerStyle = css({
+    display: "flex",
+    ["align-items"]: "center",
+    ["justify-content"]: "flex-end",
+    ["min-height"]: expanded ? "400px" : "40px"
+  });
 
-    this.toggleExpand = this.toggleExpand.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.handleOpen = this.handleOpen.bind(this);
+  function toggleExpand() {
+    setExpanded(!expanded);
   }
 
-  toggleExpand() {
-    this.setState({ expanded: !this.state.expanded });
+  function handleClose() {
+    setIsOpen(false);
   }
 
-  handleClose() {
-    this.setState({
-      isOpen: false
-    });
+  function handleOpen() {
+    setIsOpen(true);
   }
 
-  handleOpen() {
-    this.setState({ isOpen: true });
-  }
-
-  render() {
-    const { children } = this.props;
-
-    const containerStyle = css({
-      display: "flex",
-      ["align-items"]: "center",
-      ["justify-content"]: "flex-end",
-      ["min-height"]: this.state.expanded ? "400px" : "40px"
-    });
-
-    return (
-      <div>
-        <div className={containerStyle}>
-          <Dropdownable
-            isOpen={this.state.isOpen}
-            onClose={this.handleClose}
-            preferredDirections={[Direction.TopRight, Direction.BottomRight]}
-            dropdown={
-              <DropdownContentContainer>
-                <p>I prefer to be positioned on the top</p>
-                <p>Click outside to dismiss</p>
-                <p>Also try resizing</p>
-                <p>Click the other button to make more vertical space</p>
-                <p>Click the other button to make more vertical space</p>
-                <p>Click the other button to make more vertical space</p>
-                <p>Click the other button to make more vertical space</p>
-                <p>Click the other button to make more vertical space</p>
-              </DropdownContentContainer>
-            }
-          >
-            <PrimaryButton onClick={this.handleOpen}>{children}</PrimaryButton>
-          </Dropdownable>
-        </div>
-        <SecondaryButton onClick={this.toggleExpand}>
-          {this.state.expanded ? "Collapse" : "Expand"}
-        </SecondaryButton>
+  return (
+    <div>
+      <div className={containerStyle}>
+        <Dropdownable
+          isOpen={isOpen}
+          onClose={handleClose}
+          preferredDirections={[Direction.TopRight, Direction.BottomRight]}
+          dropdown={
+            <DropdownContentContainer>
+              <p>I prefer to be positioned on the top</p>
+              <p>Click outside to dismiss</p>
+              <p>Also try resizing</p>
+              <p>Click the other button to make more vertical space</p>
+              <p>Click the other button to make more vertical space</p>
+              <p>Click the other button to make more vertical space</p>
+              <p>Click the other button to make more vertical space</p>
+              <p>Click the other button to make more vertical space</p>
+            </DropdownContentContainer>
+          }
+        >
+          <PrimaryButton onClick={handleOpen}>{children}</PrimaryButton>
+        </Dropdownable>
       </div>
-    );
-  }
-}
+      <SecondaryButton onClick={toggleExpand}>
+        {expanded ? "Collapse" : "Expand"}
+      </SecondaryButton>
+    </div>
+  );
+};
 
 export default DropdownStoryFit;

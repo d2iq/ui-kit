@@ -3106,7 +3106,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 32px;
 }
 
-<FullscreenModal
+<Memo()
   closeText="Close"
   ctaButton={
     <PrimaryButton>
@@ -5589,7 +5589,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                             className="emotion-3"
                             data-cy="fullscreenModal"
                           >
-                            <FullscreenView
+                            <Memo()
                               closeText="Close"
                               ctaButton={
                                 <PrimaryButton>
@@ -5610,104 +5610,88 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                   <div
                                     className="emotion-6"
                                   >
-                                    <Delegate
-                                      default={[Function]}
-                                      passDefault={true}
-                                      props={
-                                        {
-                                          "closeText": "Close",
-                                          "ctaButton": <PrimaryButton>
-                                            CTA
-                                          </PrimaryButton>,
-                                          "onClose": [MockFunction],
-                                          "subtitle": undefined,
-                                          "title": "Title",
-                                        }
+                                    <FullscreenModalHeader
+                                      closeText="Close"
+                                      ctaButton={
+                                        <PrimaryButton>
+                                          CTA
+                                        </PrimaryButton>
                                       }
+                                      onClose={[MockFunction]}
+                                      title="Title"
                                     >
-                                      <FullscreenModalHeader
-                                        closeText="Close"
-                                        ctaButton={
-                                          <PrimaryButton>
-                                            CTA
-                                          </PrimaryButton>
-                                        }
-                                        onClose={[MockFunction]}
-                                        title="Title"
+                                      <div
+                                        className="emotion-7"
                                       >
                                         <div
-                                          className="emotion-7"
+                                          className="emotion-8"
                                         >
-                                          <div
-                                            className="emotion-8"
+                                          <SecondaryButton
+                                            onClick={[MockFunction]}
                                           >
-                                            <SecondaryButton
+                                            <ButtonBase
+                                              appearance="secondary"
+                                              data-cy="secondaryButton"
                                               onClick={[MockFunction]}
                                             >
-                                              <ButtonBase
-                                                appearance="secondary"
-                                                data-cy="secondaryButton"
-                                                onClick={[MockFunction]}
+                                              <FocusStyleManager
+                                                focusEnabledClass="css-1h85cd2"
                                               >
-                                                <FocusStyleManager
-                                                  focusEnabledClass="css-1h85cd2"
+                                                <button
+                                                  className="emotion-9"
+                                                  data-cy="secondaryButton"
+                                                  onClick={[Function]}
+                                                  tabIndex={0}
+                                                  type="button"
                                                 >
-                                                  <button
-                                                    className="emotion-9"
-                                                    data-cy="secondaryButton"
-                                                    onClick={[Function]}
-                                                    tabIndex={0}
-                                                    type="button"
-                                                  >
-                                                    <span>
-                                                      Close
-                                                    </span>
-                                                  </button>
-                                                </FocusStyleManager>
-                                              </ButtonBase>
-                                            </SecondaryButton>
-                                          </div>
-                                          <div
-                                            className="emotion-10"
-                                          >
-                                            <h2
-                                              className="emotion-11"
-                                            >
-                                              Title
-                                            </h2>
-                                            <h3
-                                              className="emotion-12"
-                                            />
-                                          </div>
-                                          <div
-                                            className="emotion-13"
-                                          >
-                                            <PrimaryButton>
-                                              <ButtonBase
-                                                appearance="primary"
-                                                data-cy="primaryButton"
-                                              >
-                                                <FocusStyleManager
-                                                  focusEnabledClass="css-xcotv6"
-                                                >
-                                                  <button
-                                                    className="emotion-14"
-                                                    data-cy="primaryButton"
-                                                    onClick={[Function]}
-                                                    tabIndex={0}
-                                                    type="button"
-                                                  >
-                                                    <span>
-                                                      CTA
-                                                    </span>
-                                                  </button>
-                                                </FocusStyleManager>
-                                              </ButtonBase>
-                                            </PrimaryButton>
-                                          </div>
+                                                  <span>
+                                                    Close
+                                                  </span>
+                                                </button>
+                                              </FocusStyleManager>
+                                            </ButtonBase>
+                                          </SecondaryButton>
                                         </div>
-                                      </FullscreenModalHeader>
-                                    </Delegate>
+                                        <div
+                                          className="emotion-10"
+                                        >
+                                          <h2
+                                            className="emotion-11"
+                                          >
+                                            Title
+                                          </h2>
+                                          <h3
+                                            className="emotion-12"
+                                          />
+                                        </div>
+                                        <div
+                                          className="emotion-13"
+                                        >
+                                          <PrimaryButton>
+                                            <ButtonBase
+                                              appearance="primary"
+                                              data-cy="primaryButton"
+                                            >
+                                              <FocusStyleManager
+                                                focusEnabledClass="css-xcotv6"
+                                              >
+                                                <button
+                                                  className="emotion-14"
+                                                  data-cy="primaryButton"
+                                                  onClick={[Function]}
+                                                  tabIndex={0}
+                                                  type="button"
+                                                >
+                                                  <span>
+                                                    CTA
+                                                  </span>
+                                                </button>
+                                              </FocusStyleManager>
+                                            </ButtonBase>
+                                          </PrimaryButton>
+                                        </div>
+                                      </div>
+                                    </FullscreenModalHeader>
                                   </div>
                                 </div>
                                 <div
@@ -5721,7 +5705,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                   </div>
                                 </div>
                               </div>
-                            </FullscreenView>
+                            </Memo()>
                           </div>
                         </ModalContents>
                       </div>
@@ -5750,7 +5734,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
       </ForwardRef>
     </Transition>
   </ModalBase>
-</FullscreenModal>
+</Memo()>
 `;
 
 exports[`Modal ModalBase renders ModalBase 1`] = `

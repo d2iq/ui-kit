@@ -1,6 +1,6 @@
 import * as React from "react";
 import { DonutChart } from "../index";
-import { Story, Meta } from "@storybook/react";
+import { Meta } from "@storybook/react";
 import { purple, pink, blue } from "../../design-tokens/build/js/designTokens";
 import { css } from "@emotion/css";
 
