@@ -1,44 +1,29 @@
 import * as React from "react";
 
-interface SegmentedControlStoryHelperState {
-  selectedSegment: string;
-}
-
 interface RenderProps {
   changeHandler: (selectedSegment: string) => void;
   selectedSegment: string;
 }
 interface SegmentedControlStoryHelperProps {
-  children: (renderProps: RenderProps) => React.ReactNode;
+  children: (renderProps: RenderProps) => React.ReactElement;
   selectedSegment?: string;
 }
 
-class SegmentedControlStoryHelper extends React.PureComponent<
-  SegmentedControlStoryHelperProps,
-  SegmentedControlStoryHelperState
-> {
-  constructor(props) {
-    super(props);
+const SegmentedControlStoryHelper = React.memo(
+  (props: SegmentedControlStoryHelperProps) => {
+    const [selectedSegment, setSelectedSegment] = React.useState<string>(
+      props.selectedSegment || ""
+    );
 
-    this.handleChange = this.handleChange.bind(this);
-
-    this.state = {
-      selectedSegment: props.selectedSegment || []
+    const handleChange = value => {
+      setSelectedSegment(value);
     };
-  }
 
-  public render() {
-    return this.props.children({
-      changeHandler: this.handleChange,
-      selectedSegment: this.state.selectedSegment
+    return props.children({
+      changeHandler: handleChange,
+      selectedSegment
     });
   }
-
-  private handleChange(value) {
-    this.setState({
-      selectedSegment: value
-    });
-  }
-}
+);
 
 export default SegmentedControlStoryHelper;

@@ -8,37 +8,23 @@ interface RenderProps {
 
 interface TextInputWithBadgesStoryHelperProps {
   badges?: BadgeDatum[];
-  children: (renderProps: RenderProps) => React.ReactNode;
+  children: (renderProps: RenderProps) => React.ReactElement;
 }
 
-interface TextInputWithBadgesStoryHelperState {
-  badges: BadgeDatum[];
-}
+const TextInputWithBadgesStoryHelper = React.memo(
+  (props: TextInputWithBadgesStoryHelperProps) => {
+    const [badges, setBadges] = React.useState<BadgeDatum[]>(
+      props.badges || []
+    );
 
-class TextInputWithBadgesStoryHelper extends React.PureComponent<
-  TextInputWithBadgesStoryHelperProps,
-  TextInputWithBadgesStoryHelperState
-> {
-  constructor(props) {
-    super(props);
-
-    this.badgeChangeHandler = this.badgeChangeHandler.bind(this);
-
-    this.state = {
-      badges: props.badges || []
+    const handleBadgeChange = badgesNext => {
+      setBadges(badgesNext);
     };
-  }
 
-  badgeChangeHandler(badges) {
-    this.setState({ badges });
-  }
-
-  render() {
-    return this.props.children({
-      badges: this.state.badges,
-      badgeChangeHandler: this.badgeChangeHandler
+    return props.children({
+      badges,
+      badgeChangeHandler: handleBadgeChange
     });
   }
-}
-
+);
 export default TextInputWithBadgesStoryHelper;
