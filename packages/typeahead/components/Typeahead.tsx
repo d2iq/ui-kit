@@ -60,50 +60,139 @@ export interface TypeaheadProps {
   disablePortal?: boolean;
 }
 
-interface TypeaheadState {
-  menuWidth: number | null;
-}
+const defaultItemToString = item => (item ? item.value : "");
 
-class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
-  public static defaultProps: Partial<TypeaheadProps> = {
-    menuMaxHeight: 300
-  };
-  private readonly containerRef = React.createRef<HTMLDivElement>();
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      menuWidth: null
-    };
-
-    this.getSelectedItems = this.getSelectedItems.bind(this);
-    this.handleSelection = this.handleSelection.bind(this);
-    this.setContainerWidth = this.setContainerWidth.bind(this);
-    this.stateReducer = this.stateReducer.bind(this);
+const getSelectedItems = (value, checked, selectedItems) => {
+  if (checked) {
+    return [...selectedItems, value];
   }
 
-  public render() {
-    const {
-      disablePortal,
-      items,
-      menuEmptyState,
-      menuMaxHeight,
-      overlayRoot,
-      textField,
-      selectedItems
-    } = this.props;
-    const defaultItemToString = item => (item ? item.value : "");
+  return selectedItems.filter(selectedItem => selectedItem !== value);
+};
+
+const Typeahead = React.memo(
+  ({
+    disablePortal,
+    items,
+    menuEmptyState,
+    menuMaxHeight = 300,
+    overlayRoot,
+    textField,
+    selectedItems,
+    multiSelect,
+    keepOpenOnSelect,
+    resetInputOnSelect,
+    onSelect
+  }: TypeaheadProps) => {
     const { value, ...textFieldProps } = textField.props;
     delete textFieldProps.onFocus;
     delete textFieldProps.onClick;
 
+    const [menuWidth, setMenuWidth] = React.useState<number | null>(null);
+
+    const containerRef = React.createRef<HTMLDivElement>();
+
+    const setContainerWidth = () => {
+      const container = containerRef.current;
+
+      if (container && container.getBoundingClientRect().width) {
+        setMenuWidth(container.getBoundingClientRect().width);
+      }
+    };
+
+    React.useEffect(() => {
+      resizeEventManager.add(setContainerWidth);
+
+      return () => {
+        resizeEventManager.remove(setContainerWidth);
+      };
+    }, []);
+
+    function handleSelection(selectedItem) {
+      const isItemSelected =
+        selectedItems && selectedItems.includes(selectedItem.value);
+
+      if (onSelect) {
+        onSelect(
+          getSelectedItems(
+            selectedItem.value,
+            !isItemSelected,
+            selectedItems ?? []
+          ),
+          selectedItem.value
+        );
+      }
+    }
+
+    function stateReducer(state, changes) {
+      switch (changes.type) {
+        case Downshift.stateChangeTypes.keyDownEnter:
+        case Downshift.stateChangeTypes.clickItem:
+          handleSelection(changes.selectedItem);
+
+          return {
+            ...changes,
+            selectedItem: [changes.selectedItem.value],
+            isOpen: multiSelect && !(keepOpenOnSelect === false),
+            inputValue:
+              multiSelect || resetInputOnSelect ? "" : changes.inputValue
+          };
+
+        case Downshift.stateChangeTypes.changeInput:
+          return {
+            ...changes,
+            // Manually setting `isOpen` to make sure the menu closes after the user has made a selection
+            //
+            // By default, Downshift changes it's internal `isOpen` state to `false` when an input changes,
+            // but there are cases where we need the <input> to dispatch an `onChange` event on item selection
+            // so that `onChange` bubbles up to the parent <form> element's `onChange` event
+            isOpen:
+              multiSelect ||
+              ((state.inputValue || changes.inputValue) &&
+                changes.inputValue !== state.inputValue),
+            selectedItem:
+              changes.inputValue === state.inputValue ? state.selectedItem : ""
+          };
+
+        case Downshift.stateChangeTypes.blurInput:
+        case Downshift.stateChangeTypes.mouseUp:
+          return {
+            ...changes,
+            inputValue: state.inputValue
+          };
+
+        default:
+          return changes;
+      }
+    }
+
+    function handleInputActivation(
+      stateAndHelpers: {
+        openMenu: (cb?: () => void) => void;
+        isOpen: boolean;
+      },
+      e
+    ) {
+      const { openMenu, isOpen } = stateAndHelpers;
+
+      if (textField.props.onFocus && e.nativeEvent.type === "focus") {
+        textField.props.onFocus(e);
+      } else if (textField.props.onClick && e.nativeEvent.type === "click") {
+        textField.props.onClick(e);
+      }
+
+      if (!isOpen) {
+        setContainerWidth();
+        openMenu();
+      }
+    }
+
     return (
-      <div ref={this.containerRef} data-cy="typeahead">
+      <div ref={containerRef} data-cy="typeahead">
         <Downshift
           itemToString={defaultItemToString}
           selectedItem={selectedItems}
-          stateReducer={this.stateReducer}
+          stateReducer={stateReducer}
         >
           {({
             getInputProps,
@@ -126,7 +215,7 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                       {!items.length && !menuEmptyState ? null : (
                         <div className={margin("top", "xxs")}>
                           <PopoverBox
-                            width={this.state.menuWidth}
+                            width={menuWidth}
                             maxHeight={menuMaxHeight}
                             {...getMenuProps(
                               { refKey: "menuRef" },
@@ -169,18 +258,10 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                     textField,
                     getInputProps({
                       onFocus: e => {
-                        this.handleInputActivation.call(
-                          this,
-                          { isOpen, openMenu },
-                          e
-                        );
+                        handleInputActivation({ isOpen, openMenu }, e);
                       },
                       onClick: e => {
-                        this.handleInputActivation.call(
-                          this,
-                          { isOpen, openMenu },
-                          e
-                        );
+                        handleInputActivation({ isOpen, openMenu }, e);
                       },
                       value: value ?? inputValue ?? "",
                       ...(textField.type === TextInputWithBadges && {
@@ -197,112 +278,6 @@ class Typeahead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
       </div>
     );
   }
-
-  public componentDidMount() {
-    resizeEventManager.add(this.setContainerWidth);
-  }
-
-  public componentWillUnmount() {
-    resizeEventManager.remove(this.setContainerWidth);
-  }
-
-  private setContainerWidth() {
-    const container = this.containerRef.current;
-
-    if (container && container.getBoundingClientRect().width) {
-      this.setState({ menuWidth: container.getBoundingClientRect().width });
-    }
-  }
-
-  private handleInputActivation(
-    stateAndHelpers: {
-      openMenu: (cb?: () => void) => void;
-      isOpen: boolean;
-    },
-    e
-  ) {
-    const { textField } = this.props;
-    const { openMenu, isOpen } = stateAndHelpers;
-
-    if (textField.props.onFocus && e.nativeEvent.type === "focus") {
-      textField.props.onFocus(e);
-    } else if (textField.props.onClick && e.nativeEvent.type === "click") {
-      textField.props.onClick(e);
-    }
-
-    if (!isOpen) {
-      this.setContainerWidth();
-      openMenu();
-    }
-  }
-
-  private handleSelection(selectedItem) {
-    const isItemSelected =
-      this.props.selectedItems &&
-      this.props.selectedItems.includes(selectedItem.value);
-
-    if (this.props.onSelect) {
-      this.props.onSelect(
-        this.getSelectedItems(selectedItem.value, !isItemSelected),
-        selectedItem.value
-      );
-    }
-  }
-
-  private stateReducer(state, changes) {
-    switch (changes.type) {
-      case Downshift.stateChangeTypes.keyDownEnter:
-      case Downshift.stateChangeTypes.clickItem:
-        this.handleSelection(changes.selectedItem);
-
-        return {
-          ...changes,
-          selectedItem: [changes.selectedItem.value],
-          isOpen:
-            this.props.multiSelect && !(this.props.keepOpenOnSelect === false),
-          inputValue:
-            this.props.multiSelect || this.props.resetInputOnSelect
-              ? ""
-              : changes.inputValue
-        };
-
-      case Downshift.stateChangeTypes.changeInput:
-        return {
-          ...changes,
-          // Manually setting `isOpen` to make sure the menu closes after the user has made a selection
-          //
-          // By default, Downshift changes it's internal `isOpen` state to `false` when an input changes,
-          // but there are cases where we need the <input> to dispatch an `onChange` event on item selection
-          // so that `onChange` bubbles up to the parent <form> element's `onChange` event
-          isOpen:
-            this.props.multiSelect ||
-            ((state.inputValue || changes.inputValue) &&
-              changes.inputValue !== state.inputValue),
-          selectedItem:
-            changes.inputValue === state.inputValue ? state.selectedItem : ""
-        };
-
-      case Downshift.stateChangeTypes.blurInput:
-      case Downshift.stateChangeTypes.mouseUp:
-        return {
-          ...changes,
-          inputValue: state.inputValue
-        };
-
-      default:
-        return changes;
-    }
-  }
-
-  private getSelectedItems(value, checked) {
-    const selectedItems = this.props.selectedItems || [];
-
-    if (checked) {
-      return [...selectedItems, value];
-    }
-
-    return selectedItems.filter(selectedItem => selectedItem !== value);
-  }
-}
+);
 
 export default Typeahead;

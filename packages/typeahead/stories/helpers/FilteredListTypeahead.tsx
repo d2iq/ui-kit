@@ -1,5 +1,5 @@
 import * as React from "react";
-import Typeahead, { TypeaheadProps, Item } from "../../components/Typeahead";
+import Typeahead, { Item } from "../../components/Typeahead";
 import { TextInput } from "../../../textInput";
 
 interface FilteredListProps {
@@ -7,63 +7,40 @@ interface FilteredListProps {
   menuEmptyState?: React.ReactElement<any>;
 }
 
-interface FilteredListState {
-  items: Item[];
-}
+const FilteredList = React.memo((props: FilteredListProps) => {
+  const [items, setItems] = React.useState<Item[]>(props.items || []);
 
-class FilteredList extends React.PureComponent<
-  FilteredListProps,
-  FilteredListState
-> {
-  constructor(props) {
-    super(props);
-
-    this.filterList = this.filterList.bind(this);
-
-    this.state = {
-      items: props.items || []
-    };
-  }
-
-  filterList(e) {
+  const filterList = e => {
     const val = e.target.value;
 
     if (!val) {
-      this.setState({ items: this.props.items });
+      setItems(props.items);
     } else {
-      this.setState({
-        items: this.props.items.filter(item =>
-          item.value.match(new RegExp(val, "i"))
-        )
-      });
+      setItems(
+        props.items.filter(item => item.value.match(new RegExp(val, "i")))
+      );
     }
-  }
+  };
 
-  render() {
-    return (
-      <div>
-        <Typeahead
-          items={this.state.items}
-          textField={
-            <TextInput
-              id="filter"
-              inputLabel="Filtering"
-              placeholder="Placeholder"
-              hintContent={
-                this.props.menuEmptyState
-                  ? "Type something with no matches"
-                  : ""
-              }
-              onChange={this.filterList}
-            />
-          }
-          menuEmptyState={this.props.menuEmptyState}
-        >
-          default
-        </Typeahead>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <Typeahead
+        items={items}
+        textField={
+          <TextInput
+            id="filter"
+            inputLabel="Filtering"
+            placeholder="Placeholder"
+            hintContent={
+              props.menuEmptyState ? "Type something with no matches" : ""
+            }
+            onChange={filterList}
+          />
+        }
+        menuEmptyState={props.menuEmptyState}
+      />
+    </div>
+  );
+});
 
 export default FilteredList;

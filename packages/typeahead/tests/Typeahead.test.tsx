@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
+import { create } from "react-test-renderer";
 import { Typeahead, TextInput } from "../../index";
 import DropdownContents from "../../dropdownable/components/DropdownContents";
 
@@ -15,7 +15,7 @@ const items = [
 
 describe("Typeahead", () => {
   it("renders", () => {
-    const component = mount(
+    const component = create(
       <Typeahead
         items={items}
         textField={
@@ -28,11 +28,11 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it("renders a menu with a max height", () => {
-    const component = mount(
+    const component = create(
       <Typeahead
         items={items}
         menuMaxHeight={100}
@@ -46,7 +46,7 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it("opens the menu on focus", () => {
