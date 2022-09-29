@@ -260,7 +260,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
                   data-cy="secondaryButton"
                   onClick={[MockFunction]}
                 >
-                  <FocusStyleManager
+                  <Memo(FocusStyleManager)
                     focusEnabledClass="css-1h85cd2"
                   >
                     <button
@@ -274,7 +274,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
                         Close
                       </span>
                     </button>
-                  </FocusStyleManager>
+                  </Memo(FocusStyleManager)>
                 </ButtonBase>
               </SecondaryButton>
             </div>
@@ -298,7 +298,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
                   appearance="primary"
                   data-cy="primaryButton"
                 >
-                  <FocusStyleManager
+                  <Memo(FocusStyleManager)
                     focusEnabledClass="css-xcotv6"
                   >
                     <button
@@ -312,7 +312,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
                         CTA
                       </span>
                     </button>
-                  </FocusStyleManager>
+                  </Memo(FocusStyleManager)>
                 </ButtonBase>
               </PrimaryButton>
             </div>
