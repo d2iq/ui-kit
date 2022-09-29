@@ -3,11 +3,7 @@ import ResetLink from "./ResetLink";
 import { ExpandedLinkProps } from "../types";
 import { defaultLink } from "../style";
 
-const Link: React.StatelessComponent<ExpandedLinkProps> = ({
-  children,
-  className,
-  ...other
-}) => (
+const Link = ({ children, className, ...other }: ExpandedLinkProps) => (
   <ResetLink className={defaultLink} {...other}>
     {children}
   </ResetLink>

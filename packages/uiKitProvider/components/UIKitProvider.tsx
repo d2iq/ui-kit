@@ -10,18 +10,18 @@ export interface UIKitProviderProps {
   theme?: Theme;
 }
 
-class UIKitProvider extends React.Component<UIKitProviderProps, {}> {
-  public render() {
-    const { children, theme, linkComponent } = this.props;
-
-    return (
-      <UIKitThemeProvider appTheme={theme || ({} as Theme)}>
-        <LinkComponentContext.Provider value={linkComponent}>
-          {children}
-        </LinkComponentContext.Provider>
-      </UIKitThemeProvider>
-    );
-  }
-}
+const UIKitProvider = ({
+  children,
+  theme,
+  linkComponent
+}: UIKitProviderProps) => {
+  return (
+    <UIKitThemeProvider appTheme={theme || ({} as Theme)}>
+      <LinkComponentContext.Provider value={linkComponent}>
+        {children}
+      </LinkComponentContext.Provider>
+    </UIKitThemeProvider>
+  );
+};
 
 export default UIKitProvider;

@@ -56,7 +56,7 @@ exports[`Dropdownable is visible after opening 1`] = `
         appearance="primary"
         data-cy="primaryButton"
       >
-        <FocusStyleManager
+        <Memo(FocusStyleManager)
           focusEnabledClass="css-xcotv6"
         >
           <button
@@ -70,7 +70,7 @@ exports[`Dropdownable is visible after opening 1`] = `
               Click me
             </span>
           </button>
-        </FocusStyleManager>
+        </Memo(FocusStyleManager)>
       </ButtonBase>
     </PrimaryButton>
   </div>
@@ -133,7 +133,7 @@ exports[`Dropdownable is visible after opening 2`] = `
         appearance="primary"
         data-cy="primaryButton"
       >
-        <FocusStyleManager
+        <Memo(FocusStyleManager)
           focusEnabledClass="css-xcotv6"
         >
           <button
@@ -147,7 +147,7 @@ exports[`Dropdownable is visible after opening 2`] = `
               Click me
             </span>
           </button>
-        </FocusStyleManager>
+        </Memo(FocusStyleManager)>
       </ButtonBase>
     </PrimaryButton>
   </div>

@@ -11,20 +11,22 @@ export default {
 };
 
 const Template: Story<LinkProps> = args => (
-  <Link url="http://google.com/" openInNewTab={true} {...args}>
-    Go to Google
+  <Link url="http://www.d2iq.com" openInNewTab={true} {...args}>
+    Visit D2iQ
   </Link>
 );
 export const Default = Template.bind({});
 
 export const _ResetLink = args => (
   <div>
-    The{" "}
+    <Text>
+      ResetLink will reset inherited Link styles to take on new styles.
+    </Text>
     <Text tag="span" color="red">
-      <ResetLink {...args} url="http://google.com">
-        red text
+      <ResetLink {...args} url="http://d2iq.com">
+        This red text is a link
       </ResetLink>
     </Text>{" "}
-    is a link, but it is not styled like one.
+    that is inheriting color from a Text component.
   </div>
 );
