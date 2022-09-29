@@ -423,13 +423,13 @@ exports[`CodeSnippet renders with copy button 1`] = `
                           >
                             <Dropdownable
                               dropdown={
-                                <TooltipContent
+                                <Memo
                                   id="copyTooltip1"
                                   isOpen={false}
                                   maxWidth={300}
                                 >
                                   Copied to clipboard
-                                </TooltipContent>
+                                </Memo>
                               }
                               isOpen={false}
                               preferredDirections={

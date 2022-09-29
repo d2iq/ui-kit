@@ -88,13 +88,13 @@ exports[`ClickToCopyButton renders default 1`] = `
           >
             <Dropdownable
               dropdown={
-                <TooltipContent
+                <Memo
                   id="copyTooltip1"
                   isOpen={false}
                   maxWidth={300}
                 >
                   Copied to clipboard
-                </TooltipContent>
+                </Memo>
               }
               isOpen={false}
               preferredDirections={
@@ -233,13 +233,13 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
           >
             <Dropdownable
               dropdown={
-                <TooltipContent
+                <Memo
                   id="copyTooltip2"
                   isOpen={false}
                   maxWidth={300}
                 >
                   Copied to clipboard
-                </TooltipContent>
+                </Memo>
               }
               isOpen={false}
               preferredDirections={

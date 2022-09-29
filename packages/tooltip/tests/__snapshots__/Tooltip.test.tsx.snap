@@ -14,13 +14,13 @@ exports[`Tooltip renders 1`] = `
   >
     <Dropdownable
       dropdown={
-        <TooltipContent
+        <Memo
           id="renders"
           isOpen={false}
           maxWidth={300}
         >
           content
-        </TooltipContent>
+        </Memo>
       }
       isOpen={false}
       preferredDirections={
@@ -94,13 +94,13 @@ exports[`Tooltip renders open tooltip 1`] = `
   >
     <Dropdownable
       dropdown={
-        <TooltipContent
+        <Memo
           id="opened"
           isOpen={true}
           maxWidth={300}
         >
           content
-        </TooltipContent>
+        </Memo>
       }
       isOpen={true}
       preferredDirections={
@@ -274,7 +274,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                     }
                   }
                 >
-                  <TooltipContent
+                  <Memo()
                     id="opened"
                     isOpen={true}
                     maxWidth={300}
@@ -297,7 +297,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                     <div
                       className="emotion-1"
                     />
-                  </TooltipContent>
+                  </Memo()>
                 </div>
               </Portal>
             </Overlay>
@@ -366,13 +366,13 @@ exports[`Tooltip renders with preferred directions 1`] = `
   >
     <Dropdownable
       dropdown={
-        <TooltipContent
+        <Memo
           id="customDir"
           isOpen={true}
           maxWidth={300}
         >
           content
-        </TooltipContent>
+        </Memo>
       }
       isOpen={true}
       preferredDirections={
@@ -563,7 +563,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                     }
                   }
                 >
-                  <TooltipContent
+                  <Memo()
                     id="customDir"
                     isOpen={true}
                     maxWidth={300}
@@ -586,7 +586,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                     <div
                       className="emotion-1"
                     />
-                  </TooltipContent>
+                  </Memo()>
                 </div>
               </Portal>
             </Overlay>
