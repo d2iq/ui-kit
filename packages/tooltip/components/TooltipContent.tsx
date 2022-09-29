@@ -11,17 +11,15 @@ export interface TooltipContentProps extends BaseTooltipProps {
   isOpen: boolean;
 }
 
-class TooltipContent extends React.PureComponent<TooltipContentProps, {}> {
-  public render() {
-    const {
-      direction = Direction.TopCenter,
-      children,
-      id,
-      maxWidth,
-      minWidth,
-      isOpen
-    } = this.props;
-
+const TooltipContent = React.memo(
+  ({
+    direction = Direction.TopCenter,
+    children,
+    id,
+    maxWidth,
+    minWidth,
+    isOpen
+  }: TooltipContentProps) => {
     return (
       <>
         <div
@@ -47,6 +45,6 @@ class TooltipContent extends React.PureComponent<TooltipContentProps, {}> {
       </>
     );
   }
-}
+);
 
 export default TooltipContent;

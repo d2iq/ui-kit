@@ -21,9 +21,8 @@ export interface PageHeaderProps {
 
 export const pageHeaderPaddingSize: SpaceSizes = "l";
 
-class PageHeader extends React.PureComponent<PageHeaderProps, {}> {
-  public render() {
-    const { breadcrumbElements, actions = [], children } = this.props;
+const PageHeader = React.memo(
+  ({ breadcrumbElements, actions = [], children }: PageHeaderProps) => {
     const hasTabsChild = React.Children.toArray(children).some(
       child => React.isValidElement(child) && child.type === PageHeaderTabs
     );
@@ -61,6 +60,6 @@ class PageHeader extends React.PureComponent<PageHeaderProps, {}> {
       </div>
     );
   }
-}
+);
 
 export default PageHeader;
