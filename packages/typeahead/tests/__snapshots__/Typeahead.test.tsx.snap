@@ -120,201 +120,60 @@ exports[`Typeahead renders 1`] = `
   border-color: var(--themeBrandPrimary, #7D58FF);
 }
 
-<Typeahead
-  items={
-    [
-      {
-        "label": "Exosphere",
-        "value": "Exosphere",
-      },
-      {
-        "label": "Thermosphere",
-        "value": "Thermosphere",
-      },
-      {
-        "label": "Stratosphere",
-        "value": "Stratosphere",
-      },
-    ]
-  }
-  menuMaxHeight={300}
-  textField={
-    <TextInput
-      appearance="standard"
-      id="standard.input"
-      inputLabel="Standard"
-      placeholder="Placeholder"
-      showInputLabel={true}
-      type="text"
-    />
-  }
+<div
+  data-cy="typeahead"
 >
   <div
-    data-cy="typeahead"
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-labelledby="downshift-0-label"
+    aria-owns={null}
+    role="combobox"
   >
-    <Downshift
-      defaultHighlightedIndex={null}
-      defaultIsOpen={false}
-      environment={[Window]}
-      getA11yStatusMessage={[Function]}
-      itemToString={[Function]}
-      onChange={[Function]}
-      onInputValueChange={[Function]}
-      onOuterClick={[Function]}
-      onSelect={[Function]}
-      onStateChange={[Function]}
-      onUserAction={[Function]}
-      scrollIntoView={[Function]}
-      selectedItemChanged={[Function]}
-      stateReducer={[Function]}
-      suppressRefError={false}
-    >
+    <div>
       <div
-        aria-expanded={false}
-        aria-haspopup="listbox"
-        aria-labelledby="downshift-0-label"
-        aria-owns={null}
-        role="combobox"
+        data-cy="textInput textInput.standard"
       >
-        <Dropdownable
-          dropdown={
-            <div
-              data-cy="typeahead-dropdown"
-            >
-              .emotion-0 {
-  margin-top: 4px;
-}
-
-<div
-                className="emotion-0"
-              >
-                <Popover
-                  aria-labelledby="downshift-0-label"
-                  id="downshift-0-menu"
-                  maxHeight={300}
-                  menuRef={[Function]}
-                  role="listbox"
-                  width={null}
-                >
-                  <PopoverListItem
-                    aria-selected={false}
-                    id="downshift-0-item-0"
-                    index={0}
-                    isActive={false}
-                    isSelected={null}
-                    listLength={3}
-                    onClick={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseMove={[Function]}
-                    role="option"
-                  >
-                    Exosphere
-                  </PopoverListItem>
-                  <PopoverListItem
-                    aria-selected={false}
-                    id="downshift-0-item-1"
-                    index={1}
-                    isActive={false}
-                    isSelected={null}
-                    listLength={3}
-                    onClick={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseMove={[Function]}
-                    role="option"
-                  >
-                    Thermosphere
-                  </PopoverListItem>
-                  <PopoverListItem
-                    aria-selected={false}
-                    id="downshift-0-item-2"
-                    index={2}
-                    isActive={false}
-                    isSelected={null}
-                    listLength={3}
-                    onClick={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseMove={[Function]}
-                    role="option"
-                  >
-                    Stratosphere
-                  </PopoverListItem>
-                </Popover>
-              </div>
-            </div>
-          }
-          isOpen={false}
+        <label
+          className="emotion-0"
+          data-cy="textInput-label"
+          htmlFor="standard.input"
         >
-          <div>
-            <TextInput
-              appearance="standard"
+          Standard
+        </label>
+        <div>
+          <div
+            className="emotion-1"
+          >
+            <input
               aria-activedescendant={null}
               aria-autocomplete="list"
               aria-controls={null}
+              aria-describedby=""
+              aria-invalid={false}
               aria-labelledby="downshift-0-label"
               autoComplete="off"
+              className="emotion-2"
+              data-cy="textInput-input"
               id="standard.input"
-              inputLabel="Standard"
               onBlur={[Function]}
               onChange={[Function]}
               onClick={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
               placeholder="Placeholder"
-              showInputLabel={true}
               type="text"
               value=""
-            >
-              <div
-                data-cy="textInput textInput.standard"
-              >
-                <label
-                  className="emotion-0"
-                  data-cy="textInput-label"
-                  htmlFor="standard.input"
-                >
-                  Standard
-                </label>
-                <FormFieldWrapper
-                  id="standard.input"
-                >
-                  <div>
-                    <div
-                      className="emotion-1"
-                    >
-                      <input
-                        aria-activedescendant={null}
-                        aria-autocomplete="list"
-                        aria-controls={null}
-                        aria-describedby=""
-                        aria-invalid={false}
-                        aria-labelledby="downshift-0-label"
-                        autoComplete="off"
-                        className="emotion-2"
-                        data-cy="textInput-input"
-                        id="standard.input"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Placeholder"
-                        type="text"
-                        value=""
-                      />
-                    </div>
-                    <div
-                      data-cy="textInput-hintContent"
-                    />
-                  </div>
-                </FormFieldWrapper>
-              </div>
-            </TextInput>
+            />
           </div>
-        </Dropdownable>
+          <div
+            data-cy="textInput-hintContent"
+          />
+        </div>
       </div>
-    </Downshift>
+    </div>
   </div>
-</Typeahead>
+</div>
 `;
 
 exports[`Typeahead renders a menu with a max height 1`] = `
@@ -437,199 +296,58 @@ exports[`Typeahead renders a menu with a max height 1`] = `
   border-color: var(--themeBrandPrimary, #7D58FF);
 }
 
-<Typeahead
-  items={
-    [
-      {
-        "label": "Exosphere",
-        "value": "Exosphere",
-      },
-      {
-        "label": "Thermosphere",
-        "value": "Thermosphere",
-      },
-      {
-        "label": "Stratosphere",
-        "value": "Stratosphere",
-      },
-    ]
-  }
-  menuMaxHeight={100}
-  textField={
-    <TextInput
-      appearance="standard"
-      id="standard.input"
-      inputLabel="Standard"
-      placeholder="Placeholder"
-      showInputLabel={true}
-      type="text"
-    />
-  }
+<div
+  data-cy="typeahead"
 >
   <div
-    data-cy="typeahead"
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-labelledby="downshift-1-label"
+    aria-owns={null}
+    role="combobox"
   >
-    <Downshift
-      defaultHighlightedIndex={null}
-      defaultIsOpen={false}
-      environment={[Window]}
-      getA11yStatusMessage={[Function]}
-      itemToString={[Function]}
-      onChange={[Function]}
-      onInputValueChange={[Function]}
-      onOuterClick={[Function]}
-      onSelect={[Function]}
-      onStateChange={[Function]}
-      onUserAction={[Function]}
-      scrollIntoView={[Function]}
-      selectedItemChanged={[Function]}
-      stateReducer={[Function]}
-      suppressRefError={false}
-    >
+    <div>
       <div
-        aria-expanded={false}
-        aria-haspopup="listbox"
-        aria-labelledby="downshift-1-label"
-        aria-owns={null}
-        role="combobox"
+        data-cy="textInput textInput.standard"
       >
-        <Dropdownable
-          dropdown={
-            <div
-              data-cy="typeahead-dropdown"
-            >
-              .emotion-0 {
-  margin-top: 4px;
-}
-
-<div
-                className="emotion-0"
-              >
-                <Popover
-                  aria-labelledby="downshift-1-label"
-                  id="downshift-1-menu"
-                  maxHeight={100}
-                  menuRef={[Function]}
-                  role="listbox"
-                  width={null}
-                >
-                  <PopoverListItem
-                    aria-selected={false}
-                    id="downshift-1-item-0"
-                    index={0}
-                    isActive={false}
-                    isSelected={null}
-                    listLength={3}
-                    onClick={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseMove={[Function]}
-                    role="option"
-                  >
-                    Exosphere
-                  </PopoverListItem>
-                  <PopoverListItem
-                    aria-selected={false}
-                    id="downshift-1-item-1"
-                    index={1}
-                    isActive={false}
-                    isSelected={null}
-                    listLength={3}
-                    onClick={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseMove={[Function]}
-                    role="option"
-                  >
-                    Thermosphere
-                  </PopoverListItem>
-                  <PopoverListItem
-                    aria-selected={false}
-                    id="downshift-1-item-2"
-                    index={2}
-                    isActive={false}
-                    isSelected={null}
-                    listLength={3}
-                    onClick={[Function]}
-                    onMouseDown={[Function]}
-                    onMouseMove={[Function]}
-                    role="option"
-                  >
-                    Stratosphere
-                  </PopoverListItem>
-                </Popover>
-              </div>
-            </div>
-          }
-          isOpen={false}
+        <label
+          className="emotion-0"
+          data-cy="textInput-label"
+          htmlFor="standard.input"
         >
-          <div>
-            <TextInput
-              appearance="standard"
+          Standard
+        </label>
+        <div>
+          <div
+            className="emotion-1"
+          >
+            <input
               aria-activedescendant={null}
               aria-autocomplete="list"
               aria-controls={null}
+              aria-describedby=""
+              aria-invalid={false}
               aria-labelledby="downshift-1-label"
               autoComplete="off"
+              className="emotion-2"
+              data-cy="textInput-input"
               id="standard.input"
-              inputLabel="Standard"
               onBlur={[Function]}
               onChange={[Function]}
               onClick={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
               placeholder="Placeholder"
-              showInputLabel={true}
               type="text"
               value=""
-            >
-              <div
-                data-cy="textInput textInput.standard"
-              >
-                <label
-                  className="emotion-0"
-                  data-cy="textInput-label"
-                  htmlFor="standard.input"
-                >
-                  Standard
-                </label>
-                <FormFieldWrapper
-                  id="standard.input"
-                >
-                  <div>
-                    <div
-                      className="emotion-1"
-                    >
-                      <input
-                        aria-activedescendant={null}
-                        aria-autocomplete="list"
-                        aria-controls={null}
-                        aria-describedby=""
-                        aria-invalid={false}
-                        aria-labelledby="downshift-1-label"
-                        autoComplete="off"
-                        className="emotion-2"
-                        data-cy="textInput-input"
-                        id="standard.input"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Placeholder"
-                        type="text"
-                        value=""
-                      />
-                    </div>
-                    <div
-                      data-cy="textInput-hintContent"
-                    />
-                  </div>
-                </FormFieldWrapper>
-              </div>
-            </TextInput>
+            />
           </div>
-        </Dropdownable>
+          <div
+            data-cy="textInput-hintContent"
+          />
+        </div>
       </div>
-    </Downshift>
+    </div>
   </div>
-</Typeahead>
+</div>
 `;
