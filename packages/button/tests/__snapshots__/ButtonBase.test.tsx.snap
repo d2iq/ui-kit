@@ -137,7 +137,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   padding-left: 4px;
 }
 
-<FocusStyleManager
+<Memo(FocusStyleManager)
   focusEnabledClass="css-xcotv6"
 >
   <button
@@ -176,7 +176,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
       </span>
     </span>
   </button>
-</FocusStyleManager>
+</Memo(FocusStyleManager)>
 `;
 
 exports[`ButtonBase renders all appearances with props 2`] = `
@@ -308,7 +308,7 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   padding-left: 4px;
 }
 
-<FocusStyleManager
+<Memo(FocusStyleManager)
   focusEnabledClass="css-1h85cd2"
 >
   <button
@@ -347,7 +347,7 @@ exports[`ButtonBase renders all appearances with props 2`] = `
       </span>
     </span>
   </button>
-</FocusStyleManager>
+</Memo(FocusStyleManager)>
 `;
 
 exports[`ButtonBase renders all appearances with props 3`] = `
@@ -487,7 +487,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   padding-left: 4px;
 }
 
-<FocusStyleManager
+<Memo(FocusStyleManager)
   focusEnabledClass="css-bwvukd"
 >
   <button
@@ -526,7 +526,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
       </span>
     </span>
   </button>
-</FocusStyleManager>
+</Memo(FocusStyleManager)>
 `;
 
 exports[`ButtonBase renders all appearances with props 4`] = `
@@ -666,7 +666,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   padding-left: 4px;
 }
 
-<FocusStyleManager
+<Memo(FocusStyleManager)
   focusEnabledClass="css-txv5vz"
 >
   <button
@@ -705,7 +705,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
       </span>
     </span>
   </button>
-</FocusStyleManager>
+</Memo(FocusStyleManager)>
 `;
 
 exports[`ButtonBase renders all appearances with props 5`] = `
@@ -845,7 +845,7 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   padding-left: 4px;
 }
 
-<FocusStyleManager
+<Memo(FocusStyleManager)
   focusEnabledClass="css-u3f3k6"
 >
   <button
@@ -884,5 +884,5 @@ exports[`ButtonBase renders all appearances with props 5`] = `
       </span>
     </span>
   </button>
-</FocusStyleManager>
+</Memo(FocusStyleManager)>
 `;

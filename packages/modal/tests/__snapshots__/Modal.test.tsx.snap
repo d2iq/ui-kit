@@ -2741,7 +2741,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                         data-cy="secondaryButton"
                                         onClick={[MockFunction]}
                                       >
-                                        <FocusStyleManager
+                                        <Memo(FocusStyleManager)
                                           focusEnabledClass="css-1h85cd2"
                                         >
                                           <button
@@ -2755,7 +2755,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                               Close
                                             </span>
                                           </button>
-                                        </FocusStyleManager>
+                                        </Memo(FocusStyleManager)>
                                       </ButtonBase>
                                     </SecondaryButton>
                                   </div>
@@ -2767,7 +2767,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                         appearance="primary"
                                         data-cy="primaryButton"
                                       >
-                                        <FocusStyleManager
+                                        <Memo(FocusStyleManager)
                                           focusEnabledClass="css-xcotv6"
                                         >
                                           <button
@@ -2781,7 +2781,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                               CTA
                                             </span>
                                           </button>
-                                        </FocusStyleManager>
+                                        </Memo(FocusStyleManager)>
                                       </ButtonBase>
                                     </PrimaryButton>
                                   </div>
@@ -5634,7 +5634,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                               data-cy="secondaryButton"
                                               onClick={[MockFunction]}
                                             >
-                                              <FocusStyleManager
+                                              <Memo(FocusStyleManager)
                                                 focusEnabledClass="css-1h85cd2"
                                               >
                                                 <button
@@ -5648,7 +5648,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                                     Close
                                                   </span>
                                                 </button>
-                                              </FocusStyleManager>
+                                              </Memo(FocusStyleManager)>
                                             </ButtonBase>
                                           </SecondaryButton>
                                         </div>
@@ -5672,7 +5672,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                               appearance="primary"
                                               data-cy="primaryButton"
                                             >
-                                              <FocusStyleManager
+                                              <Memo(FocusStyleManager)
                                                 focusEnabledClass="css-xcotv6"
                                               >
                                                 <button
@@ -5686,7 +5686,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                                     CTA
                                                   </span>
                                                 </button>
-                                              </FocusStyleManager>
+                                              </Memo(FocusStyleManager)>
                                             </ButtonBase>
                                           </PrimaryButton>
                                         </div>
