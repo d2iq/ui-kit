@@ -1,6 +1,6 @@
-import { mount } from "enzyme";
 import React from "react";
-import renderer from "react-test-renderer";
+import userEvent from "@testing-library/user-event";
+import { render } from "@testing-library/react";
 import { BadgeButton } from "../";
 
 const StringComponent = (): JSX.Element => {
@@ -10,99 +10,73 @@ const fn = () => null;
 
 describe("BadgeButton", () => {
   it("default", () => {
-    expect(
-      renderer.create(<BadgeButton onClick={fn}>default</BadgeButton>).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn}>default</BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("success", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn} appearance="success">
-            success
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn} appearance="success">
+        success
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("primary", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn} appearance="primary">
-            primary
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn} appearance="primary">
+        primary
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("danger", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn} appearance="danger">
-            danger
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn} appearance="danger">
+        danger
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("warning", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn} appearance="warning">
-            warning
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn} appearance="warning">
+        warning
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("outline", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn} appearance="outline">
-            outline
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn} appearance="outline">
+        outline
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("accept jsx as children", () => {
-    expect(
-      renderer
-        .create(
-          <BadgeButton onClick={fn}>
-            <StringComponent />
-          </BadgeButton>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
-  });
-
-  it("contains the right tabindex", () => {
-    const wrapper = mount(
-      <BadgeButton onClick={jest.fn()} tabIndex={-10}>
-        default
+    const { asFragment } = render(
+      <BadgeButton onClick={fn}>
+        <StringComponent />
       </BadgeButton>
     );
-    const element = wrapper.find("span").props();
-    expect(element.tabIndex).toBe(-10);
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it("triggers onClick on click", () => {
+  it("triggers onClick on click", async () => {
+    const user = userEvent.setup();
     const onBadgeButtonClick = jest.fn();
-    const wrapper = mount(
+    const { getByText } = render(
       <BadgeButton onClick={onBadgeButtonClick}>default</BadgeButton>
     );
-    wrapper.simulate("click");
+    await user.click(getByText("default"));
     expect(onBadgeButtonClick).toHaveBeenCalled();
   });
 });

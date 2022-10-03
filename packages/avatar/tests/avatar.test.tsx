@@ -1,8 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
-
+import { render } from "@testing-library/react";
 expect.addSnapshotSerializer(createSerializer());
 
 import { Avatar } from "..";
@@ -10,13 +8,13 @@ import { serviceImg } from "../stories/helpers/serviceImg";
 
 describe("Avatar", () => {
   it("renders default", () => {
-    const component = shallow(<Avatar src="" />);
-    expect(toJson(component)).toMatchSnapshot();
+    const { asFragment } = render(<Avatar src="" />);
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with a src, size, and label", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <Avatar src={serviceImg} label="Kubernetes" size="xl" />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

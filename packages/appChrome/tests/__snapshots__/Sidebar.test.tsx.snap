@@ -1,26 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar SidebarItem renders 1`] = `
-<ThemeProvider
-  theme={[Function]}
->
-  <StyledSidebar
-    isOpen={true}
+<DocumentFragment>
+  .emotion-0 {
+  background-color: #E8EAED;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  color: #1B2029;
+  fill: #1B2029;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-transition: width 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  transition: width 150ms ease-in-out,transform 150ms ease-in-out;
+}
+
+@media (min-width: 0) {
+  .emotion-0 {
+    width: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emotion-0 {
+    width: 280px;
+  }
+}
+
+.emotion-1 {
+  height: 100%;
+}
+
+@media (min-width: 0) {
+  .emotion-1 {
+    min-width: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emotion-1 {
+    min-width: 280px;
+  }
+}
+
+.emotion-2 {
+  background-color: #E8EAED;
+  cursor: pointer;
+  opacity: 1;
+  text-transform: capitalize;
+  padding: 0 24px;
+}
+
+.emotion-2 * {
+  cursor: unset;
+}
+
+.emotion-2:hover,
+.emotion-2:focus,
+.emotion-2:focus-within {
+  background-color: #DDDFE2;
+}
+
+.emotion-2:hover,
+.emotion-2:focus,
+.emotion-2:focus-within,
+.emotion-2:hover a,
+.emotion-2:focus a,
+.emotion-2:focus-within a {
+  outline: none;
+}
+
+.emotion-3 {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+}
+
+.emotion-3:visited {
+  color: inherit;
+}
+
+<div
+    class="emotion-0"
   >
-    <SidebarItemComponent
-      icon="product-components-inverse"
-      onClick={[MockFunction]}
-      openInNewTab={true}
-      url="http://google.com"
+    <nav
+      class="emotion-1"
     >
-      Item label
-    </SidebarItemComponent>
-  </StyledSidebar>
-</ThemeProvider>
+      <li
+        class="emotion-2"
+        data-cy="sidebarItem"
+      >
+        <a
+          class="emotion-3"
+          href="http://google.com"
+          rel="noopener"
+          target="_blank"
+        >
+          Item label
+        </a>
+      </li>
+    </nav>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Sidebar SidebarItemLabel renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -58,6 +146,15 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
 }
 
 .emotion-2 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -71,27 +168,38 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
 }
 
 <div
-  className="emotion-0"
->
-  <div
-    className="emotion-1"
+    class="emotion-0"
   >
-    <IconPropAdapter
-      color="inherit"
-      icon="product-components-inverse"
-      size="s"
-    />
+    <div
+      class="emotion-1"
+    >
+      <svg
+        aria-label="product-components-inverse icon"
+        class="emotion-2"
+        data-cy="icon"
+        height="24"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <use
+          xlink:href="#product-components-inverse"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-3"
+    >
+      Item label
+    </div>
   </div>
-  <div
-    className="emotion-2"
-  >
-    Item label
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Sidebar SidebarSection renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   text-transform: capitalize;
   padding-left: 24px;
   padding-right: 24px;
@@ -129,86 +237,29 @@ exports[`Sidebar SidebarSection renders 1`] = `
 }
 
 <div
-  data-cy="sidebarSection"
->
-  <h3
-    className="emotion-0"
+    data-cy="sidebarSection"
   >
-    Label
-  </h3>
-  <ul
-    className="emotion-1"
-  >
-    <div>
-      Sidebar section content
-    </div>
-  </ul>
-</div>
-`;
-
-exports[`Sidebar SidebarSubMenu renders 1`] = `
-.emotion-0 {
-  list-style: none;
-  margin-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-<ThemeProvider
-  theme={[Function]}
->
-  <li
-    data-cy="sidebarSubMenu"
-  >
-    <Expandable
-      indicatorPosition="right"
-      label={
-        <div>
-          <SidebarItemLabel
-            icon="product-components-inverse"
-          >
-            Item label
-          </SidebarItemLabel>
-        </div>
-      }
-      labelClassName="css-18glxmc"
+    <h3
+      class="emotion-0"
     >
-      <ul
-        className="emotion-0"
-      >
-        <li
-          key="0"
-        >
-          <SidebarSubMenuItem
-            key=".$0"
-            onClick={[MockFunction]}
-            openInNewTab={true}
-            url="http://google.com"
-          >
-            Item label
-          </SidebarSubMenuItem>
-        </li>
-        <li
-          key="1"
-        >
-          <SidebarSubMenuItem
-            key=".$1"
-            onClick={[MockFunction]}
-            openInNewTab={true}
-            url="http://google.com"
-          >
-            Item label
-          </SidebarSubMenuItem>
-        </li>
-      </ul>
-    </Expandable>
-  </li>
-</ThemeProvider>
+      Label
+    </h3>
+    <ul
+      class="emotion-1"
+    >
+      <div>
+        Sidebar section content
+      </div>
+    </ul>
+  </div>
+</DocumentFragment>
 `;
+
+exports[`Sidebar SidebarSubMenu renders 1`] = `<DocumentFragment />`;
 
 exports[`Sidebar SidebarSubMenuItem renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -246,6 +297,15 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
 }
 
 .emotion-2 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-2 use {
+  pointer-events: none;
+}
+
+.emotion-3 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -259,33 +319,87 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
 }
 
 <div
-  className="emotion-0"
->
-  <div
-    className="emotion-1"
+    class="emotion-0"
   >
-    <IconPropAdapter
-      color="inherit"
-      icon="product-components-inverse"
-      size="s"
-    />
+    <div
+      class="emotion-1"
+    >
+      <svg
+        aria-label="product-components-inverse icon"
+        class="emotion-2"
+        data-cy="icon"
+        height="24"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <use
+          xlink:href="#product-components-inverse"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-3"
+    >
+      Item label
+    </div>
   </div>
-  <div
-    className="emotion-2"
-  >
-    Item label
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Sidebar renders 1`] = `
-<ThemeProvider
-  theme={[Function]}
->
-  <StyledSidebar
-    isOpen={true}
+<DocumentFragment>
+  .emotion-0 {
+  background-color: #E8EAED;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  color: #1B2029;
+  fill: #1B2029;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-transition: width 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  transition: width 150ms ease-in-out,transform 150ms ease-in-out;
+}
+
+@media (min-width: 0) {
+  .emotion-0 {
+    width: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emotion-0 {
+    width: 280px;
+  }
+}
+
+.emotion-1 {
+  height: 100%;
+}
+
+@media (min-width: 0) {
+  .emotion-1 {
+    min-width: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emotion-1 {
+    min-width: 280px;
+  }
+}
+
+<div
+    class="emotion-0"
   >
-    Sidebar content
-  </StyledSidebar>
-</ThemeProvider>
+    <nav
+      class="emotion-1"
+    >
+      Sidebar content
+    </nav>
+  </div>
+</DocumentFragment>
 `;

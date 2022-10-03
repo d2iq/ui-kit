@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CheckboxInput renders all appearances 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,65 +91,44 @@ exports[`CheckboxInput renders all appearances 1`] = `
   padding-left: 12px;
 }
 
-<CheckboxInput
-  appearance="standard"
-  id="defaultId"
-  inputLabel="Sample label"
-  value="default"
->
-  <ForwardRef
-    appearance="standard"
-    id="defaultId"
-    inputLabel="Sample label"
-    inputType="checkbox"
-    showInputLabel={true}
-    value="default"
-    vertAlign="center"
+<div
+    class="emotion-0"
+    data-cy="checkboxInput"
   >
-    <FormFieldWrapper
-      id="defaultId"
+    <label
+      class="emotion-1"
+      for="defaultId"
     >
       <div
-        className="emotion-0"
-        data-cy="checkboxInput"
+        class="emotion-2"
       >
-        <label
-          className="emotion-1"
-          htmlFor="defaultId"
+        <div
+          class="emotion-3"
         >
-          <div
-            className="emotion-2"
-          >
-            <div
-              className="emotion-3"
-            >
-              <input
-                aria-describedby=""
-                aria-invalid={false}
-                className="emotion-4"
-                data-cy="checkboxInput-input"
-                id="defaultId"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                type="checkbox"
-                value="default"
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-5"
-          >
-            Sample label
-          </div>
-        </label>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="checkboxInput-input"
+            id="defaultId"
+            type="checkbox"
+            value="default"
+          />
+        </div>
       </div>
-    </FormFieldWrapper>
-  </ForwardRef>
-</CheckboxInput>
+      <div
+        class="emotion-5"
+      >
+        Sample label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`CheckboxInput renders all appearances 2`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -239,65 +219,44 @@ exports[`CheckboxInput renders all appearances 2`] = `
   fill: var(--themeError, #EB293A);
 }
 
-<CheckboxInput
-  appearance="error"
-  id="defaultId"
-  inputLabel="Sample label"
-  value="default"
->
-  <ForwardRef
-    appearance="error"
-    id="defaultId"
-    inputLabel="Sample label"
-    inputType="checkbox"
-    showInputLabel={true}
-    value="default"
-    vertAlign="center"
+<div
+    class="emotion-0"
+    data-cy="checkboxInput checkboxInput.error"
   >
-    <FormFieldWrapper
-      id="defaultId"
+    <label
+      class="emotion-1"
+      for="defaultId"
     >
       <div
-        className="emotion-0"
-        data-cy="checkboxInput checkboxInput.error"
+        class="emotion-2"
       >
-        <label
-          className="emotion-1"
-          htmlFor="defaultId"
+        <div
+          class="emotion-3"
         >
-          <div
-            className="emotion-2"
-          >
-            <div
-              className="emotion-3"
-            >
-              <input
-                aria-describedby=""
-                aria-invalid={false}
-                className="emotion-4"
-                data-cy="checkboxInput-input checkboxInput-input.error"
-                id="defaultId"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                type="checkbox"
-                value="default"
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-5"
-          >
-            Sample label
-          </div>
-        </label>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="checkboxInput-input checkboxInput-input.error"
+            id="defaultId"
+            type="checkbox"
+            value="default"
+          />
+        </div>
       </div>
-    </FormFieldWrapper>
-  </ForwardRef>
-</CheckboxInput>
+      <div
+        class="emotion-5"
+      >
+        Sample label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`CheckboxInput renders all appearances 3`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -388,65 +347,44 @@ exports[`CheckboxInput renders all appearances 3`] = `
   fill: var(--themeSuccess, #14C684);
 }
 
-<CheckboxInput
-  appearance="success"
-  id="defaultId"
-  inputLabel="Sample label"
-  value="default"
->
-  <ForwardRef
-    appearance="success"
-    id="defaultId"
-    inputLabel="Sample label"
-    inputType="checkbox"
-    showInputLabel={true}
-    value="default"
-    vertAlign="center"
+<div
+    class="emotion-0"
+    data-cy="checkboxInput checkboxInput.success"
   >
-    <FormFieldWrapper
-      id="defaultId"
+    <label
+      class="emotion-1"
+      for="defaultId"
     >
       <div
-        className="emotion-0"
-        data-cy="checkboxInput checkboxInput.success"
+        class="emotion-2"
       >
-        <label
-          className="emotion-1"
-          htmlFor="defaultId"
+        <div
+          class="emotion-3"
         >
-          <div
-            className="emotion-2"
-          >
-            <div
-              className="emotion-3"
-            >
-              <input
-                aria-describedby=""
-                aria-invalid={false}
-                className="emotion-4"
-                data-cy="checkboxInput-input checkboxInput-input.success"
-                id="defaultId"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                type="checkbox"
-                value="default"
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-5"
-          >
-            Sample label
-          </div>
-        </label>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="checkboxInput-input checkboxInput-input.success"
+            id="defaultId"
+            type="checkbox"
+            value="default"
+          />
+        </div>
       </div>
-    </FormFieldWrapper>
-  </ForwardRef>
-</CheckboxInput>
+      <div
+        class="emotion-5"
+      >
+        Sample label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`CheckboxInput renders indeterminate 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -563,90 +501,62 @@ exports[`CheckboxInput renders indeterminate 1`] = `
   padding-left: 12px;
 }
 
-<CheckboxInput
-  id="indeterminateId"
-  indeterminate={true}
-  inputLabel="Sample Label"
-  value="indeterminate"
->
-  <ForwardRef
-    appearance="standard"
-    id="indeterminateId"
-    inputLabel="Sample Label"
-    inputType="checkbox"
-    isIndeterminate={true}
-    showInputLabel={true}
-    value="indeterminate"
-    vertAlign="center"
+<div
+    class="emotion-0"
+    data-cy="checkboxInput checkboxInput.indeterminate"
   >
-    <FormFieldWrapper
-      id="indeterminateId"
+    <label
+      class="emotion-1"
+      for="indeterminateId"
     >
       <div
-        className="emotion-0"
-        data-cy="checkboxInput checkboxInput.indeterminate"
+        class="emotion-2"
       >
-        <label
-          className="emotion-1"
-          htmlFor="indeterminateId"
+        <div
+          class="emotion-3"
         >
-          <div
-            className="emotion-2"
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="checkboxInput-input checkboxInput-input.indeterminate"
+            id="indeterminateId"
+            type="checkbox"
+            value="indeterminate"
+          />
+          <span
+            class="emotion-5"
           >
-            <div
-              className="emotion-3"
+            <svg
+              aria-label="system-minus icon"
+              class="emotion-6"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
             >
-              <input
-                aria-describedby=""
-                aria-invalid={false}
-                className="emotion-4"
-                data-cy="checkboxInput-input checkboxInput-input.indeterminate"
-                id="indeterminateId"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                type="checkbox"
-                value="indeterminate"
+              <use
+                xlink:href="#system-minus"
               />
-              <span
-                className="emotion-5"
-              >
-                <Icon
-                  color="var(--themeBgPrimary, #FFFFFF)"
-                  shape="system-minus"
-                  size="xs"
-                >
-                  <svg
-                    aria-label="system-minus icon"
-                    className="emotion-6"
-                    data-cy="icon"
-                    height={16}
-                    preserveAspectRatio="xMinYMin meet"
-                    role="img"
-                    viewBox="0 0 16 16"
-                    width={16}
-                  >
-                    <use
-                      xlinkHref="#system-minus"
-                    />
-                  </svg>
-                </Icon>
-              </span>
-            </div>
-          </div>
-          <div
-            className="emotion-7"
-          >
-            Sample Label
-          </div>
-        </label>
+            </svg>
+          </span>
+        </div>
       </div>
-    </FormFieldWrapper>
-  </ForwardRef>
-</CheckboxInput>
+      <div
+        class="emotion-7"
+      >
+        Sample Label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`CheckboxInput renders with a hidden label 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -743,59 +653,37 @@ exports[`CheckboxInput renders with a hidden label 1`] = `
   height: 1px;
 }
 
-<CheckboxInput
-  id="hiddenLabel"
-  inputLabel="Sample Label"
-  showInputLabel={false}
-  value="default"
->
-  <ForwardRef
-    appearance="standard"
-    id="hiddenLabel"
-    inputLabel="Sample Label"
-    inputType="checkbox"
-    showInputLabel={false}
-    value="default"
-    vertAlign="center"
+<div
+    class="emotion-0"
+    data-cy="checkboxInput"
   >
-    <FormFieldWrapper
-      id="hiddenLabel"
+    <label
+      class="emotion-1"
+      for="hiddenLabel"
     >
       <div
-        className="emotion-0"
-        data-cy="checkboxInput"
+        class="emotion-2"
       >
-        <label
-          className="emotion-1"
-          htmlFor="hiddenLabel"
+        <div
+          class="emotion-3"
         >
-          <div
-            className="emotion-2"
-          >
-            <div
-              className="emotion-3"
-            >
-              <input
-                aria-describedby=""
-                aria-invalid={false}
-                className="emotion-4"
-                data-cy="checkboxInput-input"
-                id="hiddenLabel"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                type="checkbox"
-                value="default"
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-5"
-          >
-            Sample Label
-          </div>
-        </label>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="checkboxInput-input"
+            id="hiddenLabel"
+            type="checkbox"
+            value="default"
+          />
+        </div>
       </div>
-    </FormFieldWrapper>
-  </ForwardRef>
-</CheckboxInput>
+      <div
+        class="emotion-5"
+      >
+        Sample Label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;

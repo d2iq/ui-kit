@@ -1,7 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonBase renders all appearances with props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-0:focus {
+  background-color: #704fe5;
+}
+
+.emotion-0:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-1 {
   background: none;
   border: 0;
   color: inherit;
@@ -30,39 +51,39 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
-.emotion-0::-moz-focus-inner {
+.emotion-1::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-0[href],
-.emotion-0[href]:visited {
+.emotion-1[href],
+.emotion-1[href]:visited {
   color: #FFFFFF;
   fill: #FFFFFF;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #704fe5;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   background-color: #6446cc;
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
   color: var(--themeTextColorDisabled, #AEB0B4);
   fill: var(--themeTextColorDisabled, #AEB0B4);
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
-.emotion-1 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -80,24 +101,8 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   min-height: 0;
 }
 
-.emotion-1>div {
+.emotion-2>div {
   width: auto;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  display: inherit;
 }
 
 .emotion-3 {
@@ -113,14 +118,39 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  padding-left: 8px;
-}
-
-.emotion-3:after {
-  content: "...";
+  display: inherit;
 }
 
 .emotion-4 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 8px;
+}
+
+.emotion-5:after {
+  content: "...";
+}
+
+.emotion-6 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -137,50 +167,91 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   padding-left: 4px;
 }
 
-<Memo(FocusStyleManager)
-  focusEnabledClass="css-xcotv6"
->
-  <button
-    ariaHaspopup={true}
-    className="emotion-0"
-    disabled={true}
-    onClick={[Function]}
-    tabIndex={0}
+<button
+    class="emotion-0 emotion-1"
+    disabled=""
+    tabindex="0"
     type="submit"
   >
     <span
-      className="emotion-1"
+      class="emotion-2"
     >
       <span
-        className="emotion-2"
+        class="emotion-3"
       >
-        <IconPropAdapter
-          color="inherit"
-          icon="system-check"
-          size="xs"
-        />
+        <svg
+          aria-label="system-check icon"
+          class="emotion-4"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            xlink:href="#system-check"
+          />
+        </svg>
       </span>
       <span
-        className="emotion-3"
+        class="emotion-5"
       >
         Button
       </span>
       <span
-        className="emotion-4"
+        class="emotion-6"
       >
-        <IconPropAdapter
-          color="inherit"
-          icon="system-check"
-          size="xs"
-        />
+        <svg
+          aria-label="system-check icon"
+          class="emotion-4"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            xlink:href="#system-check"
+          />
+        </svg>
       </span>
     </span>
   </button>
-</Memo(FocusStyleManager)>
+</DocumentFragment>
 `;
 
 exports[`ButtonBase renders all appearances with props 2`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-0:focus {
+  background-color: transparent;
+}
+
+.emotion-0:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-0:focus:after {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+}
+
+.emotion-1 {
   background: none;
   border: 0;
   color: inherit;
@@ -205,35 +276,35 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   pointer-events: none;
 }
 
-.emotion-0::-moz-focus-inner {
+.emotion-1::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   color: #704fe5;
   fill: #704fe5;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   color: #6446cc;
   fill: #6446cc;
 }
 
-.emotion-0[href],
-.emotion-0[href]:visited {
+.emotion-1[href],
+.emotion-1[href]:visited {
   color: var(--themeTextColorInteractive, #7D58FF);
   fill: var(--themeTextColorInteractive, #7D58FF);
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
   color: var(--themeTextColorDisabled, #AEB0B4);
   fill: var(--themeTextColorDisabled, #AEB0B4);
 }
 
-.emotion-1 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -251,24 +322,8 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   min-height: 0;
 }
 
-.emotion-1>div {
+.emotion-2>div {
   width: auto;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  display: inherit;
 }
 
 .emotion-3 {
@@ -284,14 +339,39 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  padding-left: 8px;
-}
-
-.emotion-3:after {
-  content: "...";
+  display: inherit;
 }
 
 .emotion-4 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 8px;
+}
+
+.emotion-5:after {
+  content: "...";
+}
+
+.emotion-6 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -308,50 +388,84 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   padding-left: 4px;
 }
 
-<Memo(FocusStyleManager)
-  focusEnabledClass="css-1h85cd2"
->
-  <button
-    ariaHaspopup={true}
-    className="emotion-0"
-    disabled={true}
-    onClick={[Function]}
-    tabIndex={0}
+<button
+    class="emotion-0 emotion-1"
+    disabled=""
+    tabindex="0"
     type="submit"
   >
     <span
-      className="emotion-1"
+      class="emotion-2"
     >
       <span
-        className="emotion-2"
+        class="emotion-3"
       >
-        <IconPropAdapter
-          color="inherit"
-          icon="system-check"
-          size="xs"
-        />
+        <svg
+          aria-label="system-check icon"
+          class="emotion-4"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            xlink:href="#system-check"
+          />
+        </svg>
       </span>
       <span
-        className="emotion-3"
+        class="emotion-5"
       >
         Button
       </span>
       <span
-        className="emotion-4"
+        class="emotion-6"
       >
-        <IconPropAdapter
-          color="inherit"
-          icon="system-check"
-          size="xs"
-        />
+        <svg
+          aria-label="system-check icon"
+          class="emotion-4"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            xlink:href="#system-check"
+          />
+        </svg>
       </span>
     </span>
   </button>
-</Memo(FocusStyleManager)>
+</DocumentFragment>
 `;
 
 exports[`ButtonBase renders all appearances with props 3`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-0:focus {
+  background-color: #c4c6cb;
+}
+
+.emotion-0:focus:after {
+  border: 2px solid #c4c6cb;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-1 {
   background: none;
   border: 0;
   color: inherit;
@@ -380,39 +494,39 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
-.emotion-0::-moz-focus-inner {
+.emotion-1::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-0[href],
-.emotion-0[href]:visited {
+.emotion-1[href],
+.emotion-1[href]:visited {
   color: #1B2029;
   fill: #1B2029;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #c4c6cb;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   background-color: #aeb0b4;
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
   color: var(--themeTextColorDisabled, #AEB0B4);
   fill: var(--themeTextColorDisabled, #AEB0B4);
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
-.emotion-1 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -430,24 +544,8 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   min-height: 0;
 }
 
-.emotion-1>div {
+.emotion-2>div {
   width: auto;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  display: inherit;
 }
 
 .emotion-3 {
@@ -463,14 +561,39 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  padding-left: 8px;
-}
-
-.emotion-3:after {
-  content: "...";
+  display: inherit;
 }
 
 .emotion-4 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 8px;
+}
+
+.emotion-5:after {
+  content: "...";
+}
+
+.emotion-6 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -487,50 +610,84 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   padding-left: 4px;
 }
 
-<Memo(FocusStyleManager)
-  focusEnabledClass="css-bwvukd"
->
-  <button
-    ariaHaspopup={true}
-    className="emotion-0"
-    disabled={true}
-    onClick={[Function]}
-    tabIndex={0}
+<button
+    class="emotion-0 emotion-1"
+    disabled=""
+    tabindex="0"
     type="submit"
   >
     <span
-      className="emotion-1"
+      class="emotion-2"
     >
       <span
-        className="emotion-2"
+        class="emotion-3"
       >
-        <IconPropAdapter
-          color="inherit"
-          icon="system-check"
-          size="xs"
-        />
+        <svg
+          aria-label="system-check icon"
+          class="emotion-4"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            xlink:href="#system-check"
+          />
+        </svg>
       </span>
       <span
-        className="emotion-3"
+        class="emotion-5"
       >
         Button
       </span>
       <span
-        className="emotion-4"
+        class="emotion-6"
       >
-        <IconPropAdapter
-          color="inherit"
-          icon="system-check"
-          size="xs"
-        />
+        <svg
+          aria-label="system-check icon"
+          class="emotion-4"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            xlink:href="#system-check"
+          />
+        </svg>
       </span>
     </span>
   </button>
-</Memo(FocusStyleManager)>
+</DocumentFragment>
 `;
 
 exports[`ButtonBase renders all appearances with props 4`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-0:focus {
+  background-color: #d32434;
+}
+
+.emotion-0:focus:after {
+  border: 2px solid #d32434;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-1 {
   background: none;
   border: 0;
   color: inherit;
@@ -559,39 +716,39 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
-.emotion-0::-moz-focus-inner {
+.emotion-1::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-0[href],
-.emotion-0[href]:visited {
+.emotion-1[href],
+.emotion-1[href]:visited {
   color: #FFFFFF;
   fill: #FFFFFF;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #d32434;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   background-color: #bc202e;
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
   color: var(--themeTextColorDisabled, #AEB0B4);
   fill: var(--themeTextColorDisabled, #AEB0B4);
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
-.emotion-1 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -609,24 +766,8 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   min-height: 0;
 }
 
-.emotion-1>div {
+.emotion-2>div {
   width: auto;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  display: inherit;
 }
 
 .emotion-3 {
@@ -642,14 +783,39 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  padding-left: 8px;
-}
-
-.emotion-3:after {
-  content: "...";
+  display: inherit;
 }
 
 .emotion-4 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 8px;
+}
+
+.emotion-5:after {
+  content: "...";
+}
+
+.emotion-6 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -666,50 +832,84 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   padding-left: 4px;
 }
 
-<Memo(FocusStyleManager)
-  focusEnabledClass="css-txv5vz"
->
-  <button
-    ariaHaspopup={true}
-    className="emotion-0"
-    disabled={true}
-    onClick={[Function]}
-    tabIndex={0}
+<button
+    class="emotion-0 emotion-1"
+    disabled=""
+    tabindex="0"
     type="submit"
   >
     <span
-      className="emotion-1"
+      class="emotion-2"
     >
       <span
-        className="emotion-2"
+        class="emotion-3"
       >
-        <IconPropAdapter
-          color="inherit"
-          icon="system-check"
-          size="xs"
-        />
+        <svg
+          aria-label="system-check icon"
+          class="emotion-4"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            xlink:href="#system-check"
+          />
+        </svg>
       </span>
       <span
-        className="emotion-3"
+        class="emotion-5"
       >
         Button
       </span>
       <span
-        className="emotion-4"
+        class="emotion-6"
       >
-        <IconPropAdapter
-          color="inherit"
-          icon="system-check"
-          size="xs"
-        />
+        <svg
+          aria-label="system-check icon"
+          class="emotion-4"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            xlink:href="#system-check"
+          />
+        </svg>
       </span>
     </span>
   </button>
-</Memo(FocusStyleManager)>
+</DocumentFragment>
 `;
 
 exports[`ButtonBase renders all appearances with props 5`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-0:focus {
+  background-color: #12b276;
+}
+
+.emotion-0:focus:after {
+  border: 2px solid #12b276;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-1 {
   background: none;
   border: 0;
   color: inherit;
@@ -738,39 +938,39 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
-.emotion-0::-moz-focus-inner {
+.emotion-1::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-0[href],
-.emotion-0[href]:visited {
+.emotion-1[href],
+.emotion-1[href]:visited {
   color: #FFFFFF;
   fill: #FFFFFF;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #12b276;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   background-color: #109e69;
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
   color: var(--themeTextColorDisabled, #AEB0B4);
   fill: var(--themeTextColorDisabled, #AEB0B4);
 }
 
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
   background-color: var(--themeBgDisabled, #E8EAED);
 }
 
-.emotion-1 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -788,24 +988,8 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   min-height: 0;
 }
 
-.emotion-1>div {
+.emotion-2>div {
   width: auto;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  display: inherit;
 }
 
 .emotion-3 {
@@ -821,14 +1005,39 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: initial;
-  padding-left: 8px;
-}
-
-.emotion-3:after {
-  content: "...";
+  display: inherit;
 }
 
 .emotion-4 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 8px;
+}
+
+.emotion-5:after {
+  content: "...";
+}
+
+.emotion-6 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -845,44 +1054,57 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   padding-left: 4px;
 }
 
-<Memo(FocusStyleManager)
-  focusEnabledClass="css-u3f3k6"
->
-  <button
-    ariaHaspopup={true}
-    className="emotion-0"
-    disabled={true}
-    onClick={[Function]}
-    tabIndex={0}
+<button
+    class="emotion-0 emotion-1"
+    disabled=""
+    tabindex="0"
     type="submit"
   >
     <span
-      className="emotion-1"
+      class="emotion-2"
     >
       <span
-        className="emotion-2"
+        class="emotion-3"
       >
-        <IconPropAdapter
-          color="inherit"
-          icon="system-check"
-          size="xs"
-        />
+        <svg
+          aria-label="system-check icon"
+          class="emotion-4"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            xlink:href="#system-check"
+          />
+        </svg>
       </span>
       <span
-        className="emotion-3"
+        class="emotion-5"
       >
         Button
       </span>
       <span
-        className="emotion-4"
+        class="emotion-6"
       >
-        <IconPropAdapter
-          color="inherit"
-          icon="system-check"
-          size="xs"
-        />
+        <svg
+          aria-label="system-check icon"
+          class="emotion-4"
+          data-cy="icon"
+          height="16"
+          preserveAspectRatio="xMinYMin meet"
+          role="img"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <use
+            xlink:href="#system-check"
+          />
+        </svg>
       </span>
     </span>
   </button>
-</Memo(FocusStyleManager)>
+</DocumentFragment>
 `;

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Icon renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   vertical-align: middle;
   fill: blue;
 }
@@ -11,23 +12,25 @@ exports[`Icon renders 1`] = `
 }
 
 <svg
-  aria-label="test icon"
-  className="emotion-0"
-  data-cy="icon"
-  height={48}
-  preserveAspectRatio="xMinYMin meet"
-  role="img"
-  viewBox="0 0 48 48"
-  width={48}
->
-  <use
-    xlinkHref="#system-arrow-down"
-  />
-</svg>
+    aria-label="test icon"
+    class="emotion-0"
+    data-cy="icon"
+    height="48"
+    preserveAspectRatio="xMinYMin meet"
+    role="img"
+    viewBox="0 0 48 48"
+    width="48"
+  >
+    <use
+      xlink:href="#system-arrow-down"
+    />
+  </svg>
+</DocumentFragment>
 `;
 
 exports[`Icon renders display block 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   vertical-align: middle;
   fill: currentColor;
   display: block;
@@ -38,23 +41,25 @@ exports[`Icon renders display block 1`] = `
 }
 
 <svg
-  aria-label="system-arrow-down icon"
-  className="emotion-0"
-  data-cy="icon"
-  height={24}
-  preserveAspectRatio="xMinYMin meet"
-  role="img"
-  viewBox="0 0 24 24"
-  width={24}
->
-  <use
-    xlinkHref="#system-arrow-down"
-  />
-</svg>
+    aria-label="system-arrow-down icon"
+    class="emotion-0"
+    data-cy="icon"
+    height="24"
+    preserveAspectRatio="xMinYMin meet"
+    role="img"
+    viewBox="0 0 24 24"
+    width="24"
+  >
+    <use
+      xlink:href="#system-arrow-down"
+    />
+  </svg>
+</DocumentFragment>
 `;
 
 exports[`Icon renders with defaults 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   vertical-align: middle;
   fill: currentColor;
 }
@@ -64,17 +69,18 @@ exports[`Icon renders with defaults 1`] = `
 }
 
 <svg
-  aria-label="system-arrow-down icon"
-  className="emotion-0"
-  data-cy="icon"
-  height={24}
-  preserveAspectRatio="xMinYMin meet"
-  role="img"
-  viewBox="0 0 24 24"
-  width={24}
->
-  <use
-    xlinkHref="#system-arrow-down"
-  />
-</svg>
+    aria-label="system-arrow-down icon"
+    class="emotion-0"
+    data-cy="icon"
+    height="24"
+    preserveAspectRatio="xMinYMin meet"
+    role="img"
+    viewBox="0 0 24 24"
+    width="24"
+  >
+    <use
+      xlink:href="#system-arrow-down"
+    />
+  </svg>
+</DocumentFragment>
 `;

@@ -1,6 +1,6 @@
 import React from "react";
-import { mount } from "enzyme";
-import toJson from "enzyme-to-json";
+import userEvent from "@testing-library/user-event";
+import { render } from "@testing-library/react";
 
 import {
   Accordion,
@@ -9,11 +9,12 @@ import {
   AccordionItemContent,
   AccordionItemTitleInteractive
 } from "./";
+import { getById } from "../../testHelper/test.utilities";
 
 describe("Accordion", () => {
   describe("rendering", () => {
     it("renders with no expanded items", () => {
-      const component = mount(
+      const { asFragment } = render(
         <Accordion>
           <AccordionItem id="customId">
             <AccordionItemTitle appearance="danger">Panel 1</AccordionItemTitle>
@@ -30,10 +31,10 @@ describe("Accordion", () => {
         </Accordion>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
     it("renders an item with interactive content", () => {
-      const component = mount(
+      const { asFragment } = render(
         <Accordion>
           <AccordionItem id="customId">
             <AccordionItemTitleInteractive appearance="danger">
@@ -74,10 +75,10 @@ describe("Accordion", () => {
         </Accordion>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
     it("renders with expanded items", () => {
-      const component = mount(
+      const { asFragment } = render(
         <Accordion initialExpandedItems={["panel1", "panel2", "panel3"]}>
           <AccordionItem id="panel1">
             <AccordionItemTitle>Panel 1</AccordionItemTitle>
@@ -94,13 +95,15 @@ describe("Accordion", () => {
         </Accordion>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("interaction", () => {
-    it("expands and collapses accordion items", () => {
-      const component = mount(
+    it("expands and collapses accordion items", async () => {
+      const user = userEvent.setup();
+
+      const { getByText } = render(
         <Accordion>
           <AccordionItem id="panel1">
             <AccordionItemTitle>Panel 1</AccordionItemTitle>
@@ -117,17 +120,21 @@ describe("Accordion", () => {
         </Accordion>
       );
 
-      expect(component.find("#panel1-content").prop("hidden")).toBeTruthy();
-      component.find("#panel1-heading button").simulate("click");
-      expect(component.find("#panel1-content").prop("hidden")).toBeFalsy();
+      expect(getByText("Content 2")).toBeInTheDocument();
+      expect(getByText("Content 2")).not.toBeVisible();
+      await user.click(getByText("Panel 1"));
 
-      expect(component.find("#panel2-content").prop("hidden")).toBeTruthy();
-      component.find("#panel2-heading button").simulate("click");
-      expect(component.find("#panel1-content").prop("hidden")).toBeTruthy();
-      expect(component.find("#panel2-content").prop("hidden")).toBeFalsy();
+      expect(getByText("Content 1")).toBeVisible();
+
+      expect(getByText("Content 2")).not.toBeVisible();
+      await user.click(getByText("Panel 2"));
+      expect(getByText("Content 1")).not.toBeVisible();
+      expect(getByText("Content 2")).toBeVisible();
     });
-    it("does not expand or collapses accordion items with a disabled title", () => {
-      const component = mount(
+    it("does not expand or collapses accordion items with a disabled title", async () => {
+      const user = userEvent.setup();
+
+      const { container, getByText } = render(
         <Accordion>
           <AccordionItem id="disabled">
             <AccordionItemTitle disabled={true}>Panel 1</AccordionItemTitle>
@@ -143,12 +150,18 @@ describe("Accordion", () => {
           </AccordionItem>
         </Accordion>
       );
-      expect(component.find("#disabled-content").prop("hidden")).toBeTruthy();
-      component.find("#disabled-heading button").simulate("click");
-      expect(component.find("#disabled-content").prop("hidden")).toBeTruthy();
+      const element = getById(container, "disabled-content");
+      expect(element).toBeInTheDocument();
+      expect(getByText("Content 1")).not.toBeVisible();
+
+      await user.click(getByText("Panel 1"));
+      expect(getByText("Content 1")).not.toBeVisible();
     });
-    it("expands and collapses accordion items - allowMultipleExpanded", () => {
-      const component = mount(
+
+    it("expands and collapses accordion items - allowMultipleExpanded", async () => {
+      const user = userEvent.setup();
+
+      const { getByText } = render(
         <Accordion allowMultipleExpanded={true}>
           <AccordionItem id="panel1">
             <AccordionItemTitle>Panel 1</AccordionItemTitle>
@@ -165,16 +178,19 @@ describe("Accordion", () => {
         </Accordion>
       );
 
-      expect(component.find("#panel1-content").prop("hidden")).toBeTruthy();
-      component.find("#panel1-heading button").simulate("click");
-      expect(component.find("#panel1-content").prop("hidden")).toBeFalsy();
+      expect(getByText("Content 1")).not.toBeVisible();
+      await user.click(getByText("Panel 1"));
+      expect(getByText("Content 1")).toBeVisible();
 
-      expect(component.find("#panel2-content").prop("hidden")).toBeTruthy();
-      component.find("#panel2-heading button").simulate("click");
-      expect(component.find("#panel2-content").prop("hidden")).toBeFalsy();
+      expect(getByText("Content 2")).not.toBeVisible();
+      await user.click(getByText("Panel 2"));
+      expect(getByText("Content 2")).toBeVisible();
     });
-    it("allows interactive title children without expanding or collapsing the item", () => {
-      const component = mount(
+
+    it("allows interactive title children without expanding or collapsing the item", async () => {
+      const user = userEvent.setup();
+
+      const { getByText } = render(
         <Accordion>
           <AccordionItem id="panel1">
             <AccordionItemTitleInteractive appearance="danger">
@@ -198,13 +214,17 @@ describe("Accordion", () => {
         </Accordion>
       );
 
-      expect(component.find("#panel1-content").prop("hidden")).toBeTruthy();
-      component.find("#interaction").simulate("click");
-      expect(component.find("#panel1-content").prop("hidden")).toBeTruthy();
+      expect(getByText("Content 1")).not.toBeVisible();
+      expect(getByText("Panel 1")).toBeInTheDocument();
+      await user.click(getByText("test"));
+      expect(getByText("Content 1")).not.toBeVisible();
     });
-    it("calls onChange with array of expanded item IDs", () => {
+
+    it("calls onChange with array of expanded item IDs", async () => {
+      const user = userEvent.setup();
+
       const onChange = jest.fn();
-      const component = mount(
+      const { getByText } = render(
         <Accordion allowMultipleExpanded={true} onChange={onChange}>
           <AccordionItem id="panel1">
             <AccordionItemTitle>Panel 1</AccordionItemTitle>
@@ -221,10 +241,10 @@ describe("Accordion", () => {
         </Accordion>
       );
 
-      component.find("#panel1-heading button").simulate("click");
+      await user.click(getByText("Panel 1"));
       expect(onChange).toHaveBeenCalledWith(["panel1"]);
 
-      component.find("#panel2-heading button").simulate("click");
+      await user.click(getByText("Panel 2"));
       expect(onChange).toHaveBeenCalledWith(["panel1", "panel2"]);
     });
   });

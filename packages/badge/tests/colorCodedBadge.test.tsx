@@ -1,7 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
+import { render } from "@testing-library/react";
 
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { ColorCodedBadge } from "..";
@@ -10,21 +9,21 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("ColorCodedBadge", () => {
   it("renders without children", () => {
-    const component = shallow(<ColorCodedBadge color="#f00f00" />);
-    expect(toJson(component)).toMatchSnapshot();
+    const { asFragment } = render(<ColorCodedBadge color="#f00f00" />);
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with a color", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <ColorCodedBadge color="#f00f00">Color Coded Badge</ColorCodedBadge>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with an icon and color", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <ColorCodedBadge color="#f00f00" iconShape={SystemIcons.CircleCheck}>
         Color Coded Badge with icon
       </ColorCodedBadge>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,94 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BadgeButton accept jsx as children 1`] = `
-<span
-  className="css-1vry5xk"
-  data-cy="badgeButton"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
->
-  <span>
-    string
+<DocumentFragment>
+  <span
+    class="css-1vry5xk"
+    data-cy="badgeButton"
+    role="button"
+    tabindex="-1"
+  >
+    <span>
+      string
+    </span>
   </span>
-</span>
+</DocumentFragment>
 `;
 
 exports[`BadgeButton danger 1`] = `
-<span
-  className="css-1h0zebo"
-  data-cy="badgeButton"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
->
-  danger
-</span>
+<DocumentFragment>
+  <span
+    class="css-1h0zebo"
+    data-cy="badgeButton"
+    role="button"
+    tabindex="-1"
+  >
+    danger
+  </span>
+</DocumentFragment>
 `;
 
 exports[`BadgeButton default 1`] = `
-<span
-  className="css-1vry5xk"
-  data-cy="badgeButton"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
->
-  default
-</span>
+<DocumentFragment>
+  <span
+    class="css-1vry5xk"
+    data-cy="badgeButton"
+    role="button"
+    tabindex="-1"
+  >
+    default
+  </span>
+</DocumentFragment>
 `;
 
 exports[`BadgeButton outline 1`] = `
-<span
-  className="css-5i8v04"
-  data-cy="badgeButton"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
->
-  outline
-</span>
+<DocumentFragment>
+  <span
+    class="css-5i8v04"
+    data-cy="badgeButton"
+    role="button"
+    tabindex="-1"
+  >
+    outline
+  </span>
+</DocumentFragment>
 `;
 
 exports[`BadgeButton primary 1`] = `
-<span
-  className="css-1gfuw42"
-  data-cy="badgeButton"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
->
-  primary
-</span>
+<DocumentFragment>
+  <span
+    class="css-1gfuw42"
+    data-cy="badgeButton"
+    role="button"
+    tabindex="-1"
+  >
+    primary
+  </span>
+</DocumentFragment>
 `;
 
 exports[`BadgeButton success 1`] = `
-<span
-  className="css-92fng0"
-  data-cy="badgeButton"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
->
-  success
-</span>
+<DocumentFragment>
+  <span
+    class="css-92fng0"
+    data-cy="badgeButton"
+    role="button"
+    tabindex="-1"
+  >
+    success
+  </span>
+</DocumentFragment>
 `;
 
 exports[`BadgeButton warning 1`] = `
-<span
-  className="css-wso5n9"
-  data-cy="badgeButton"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
->
-  warning
-</span>
+<DocumentFragment>
+  <span
+    class="css-wso5n9"
+    data-cy="badgeButton"
+    role="button"
+    tabindex="-1"
+  >
+    warning
+  </span>
+</DocumentFragment>
 `;

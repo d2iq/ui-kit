@@ -3,15 +3,15 @@ import React from "react";
 import ButtonBase, { ButtonAppearances } from "../components/ButtonBase";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { createSerializer } from "@emotion/jest";
-import { shallow, mount } from "enzyme";
-import toJson from "enzyme-to-json";
+import userEvent from "@testing-library/user-event";
+import { render, screen, fireEvent } from "@testing-library/react";
 
 expect.addSnapshotSerializer(createSerializer());
 
 describe("ButtonBase", () => {
   it("renders all appearances with props", () => {
     Object.keys(ButtonAppearances).forEach(appearance => {
-      const component = shallow(
+      const { asFragment } = render(
         <ButtonBase
           appearance={ButtonAppearances[appearance]}
           isFullWidth={true}
@@ -25,33 +25,40 @@ describe("ButtonBase", () => {
           Button
         </ButtonBase>
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
-  it("calls onClick prop when clicked", () => {
+  it("calls onClick prop when clicked", async () => {
     const someFn = jest.fn();
-    const component = mount(
+    const user = userEvent.setup();
+
+    const { getByText } = render(
       <ButtonBase appearance={ButtonAppearances.Standard} onClick={someFn}>
         Button
       </ButtonBase>
     );
+
     expect(someFn).not.toHaveBeenCalled();
-    component.simulate("click");
+    await user.click(getByText("Button"));
     expect(someFn).toHaveBeenCalled();
   });
+
   it("does not call onClick prop when disabled", () => {
     const anotherFn = jest.fn();
-    const component = shallow(
+
+    render(
       <ButtonBase
         appearance={ButtonAppearances.Standard}
         disabled={true}
         onClick={anotherFn}
+        data-cy="button"
       >
         Button
       </ButtonBase>
     );
     expect(anotherFn).not.toHaveBeenCalled();
-    component.simulate("click");
+    const element = screen.getByTestId("button");
+    fireEvent.click(element);
     expect(anotherFn).not.toHaveBeenCalled();
   });
 });

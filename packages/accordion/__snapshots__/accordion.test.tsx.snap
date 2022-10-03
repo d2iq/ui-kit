@@ -1,1034 +1,627 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Accordion rendering renders an item with interactive content 1`] = `
-<Accordion>
-  <Provider
-    allowMultipleExpanded={false}
+<DocumentFragment>
+  <div
+    class="css-15twc3j"
+    data-cy="accordion"
   >
-    <Stack
-      data-cy="accordion"
-      spacingSize="m"
-      tag="div"
+    <div
+      data-cy="accordionItem"
     >
       <div
-        className="css-15twc3j"
-        data-cy="accordion"
+        class="css-1nin987"
+        data-cy="accordionItemTitle accordionItemTitle.danger"
       >
-        <AccordionItem
-          id="customId"
+        <button
+          aria-controls="customId-content"
+          aria-expanded="false"
+          class="css-odh0fh"
+          data-cy="accordionItemTitle-button"
+          type="button"
         >
-          <Provider
-            expandedItems={[]}
-            id="customId"
+          <div
+            tabindex="-1"
+          />
+        </button>
+        <span
+          class="css-1nhhn1w"
+          data-cy="accordionItemTitleInner"
+        >
+          <span
+            class="css-1321nl5"
           >
-            <div
-              data-cy="accordionItem"
+            <svg
+              aria-label="system-triangle-right icon"
+              class="css-jbdp75"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
             >
-              <AccordionItemTitleInteractive
-                appearance="danger"
-                data-cy="accordionItemTitle"
-                headingLevel={3}
-              >
-                <AccordionItemTitleOuter
-                  appearance="danger"
-                  data-cy="accordionItemTitle accordionItemTitle.danger"
-                  isExpanded={false}
-                >
-                  <div
-                    className="css-1nin987"
-                    data-cy="accordionItemTitle accordionItemTitle.danger"
-                  >
-                    <ResetButton
-                      aria-controls="customId-content"
-                      aria-expanded={false}
-                      className="css-jd8ubb"
-                      data-cy="accordionItemTitle-button"
-                      onClick={[Function]}
-                    >
-                      <button
-                        aria-controls="customId-content"
-                        aria-expanded={false}
-                        className="css-odh0fh"
-                        data-cy="accordionItemTitle-button"
-                        onClick={[Function]}
-                        type="button"
-                      >
-                        <div
-                          tabIndex={-1}
-                        />
-                      </button>
-                    </ResetButton>
-                    <AccordionItemTitleInner
-                      isExpanded={false}
-                      isInteractive={true}
-                    >
-                      <span
-                        className="css-1nhhn1w"
-                        data-cy="accordionItemTitleInner"
-                      >
-                        <span
-                          className="css-1321nl5"
-                        >
-                          <Icon
-                            shape="system-triangle-right"
-                            size="xs"
-                          >
-                            <svg
-                              aria-label="system-triangle-right icon"
-                              className="css-jbdp75"
-                              data-cy="icon"
-                              height={16}
-                              preserveAspectRatio="xMinYMin meet"
-                              role="img"
-                              viewBox="0 0 16 16"
-                              width={16}
-                            >
-                              <use
-                                xlinkHref="#system-triangle-right"
-                              />
-                            </svg>
-                          </Icon>
-                        </span>
-                        <span
-                          className="css-bleycz"
-                        >
-                          <h3
-                            className="css-fmvpil"
-                            data-cy="accordionItemTitle-heading"
-                            id="customId-heading"
-                          >
-                            Panel 1
-                          </h3>
-                          <button
-                            id="interaction"
-                          >
-                            test
-                          </button>
-                        </span>
-                      </span>
-                    </AccordionItemTitleInner>
-                  </div>
-                </AccordionItemTitleOuter>
-              </AccordionItemTitleInteractive>
-              <AccordionItemContent>
-                <div
-                  aria-labelledby="customId-heading"
-                  className="css-13hugf8"
-                  data-cy="accordionItemContent"
-                  hidden={true}
-                  id="customId-content"
-                >
-                  Content 1
-                </div>
-              </AccordionItemContent>
-            </div>
-          </Provider>
-        </AccordionItem>
-        <AccordionItem>
-          <Provider
-            expandedItems={[]}
-            id="accordionItem-3"
+              <use
+                xlink:href="#system-triangle-right"
+              />
+            </svg>
+          </span>
+          <span
+            class="css-bleycz"
           >
-            <div
-              data-cy="accordionItem"
+            <h3
+              class="css-fmvpil"
+              data-cy="accordionItemTitle-heading"
+              id="customId-heading"
             >
-              <AccordionItemTitleInteractive
-                appearance="danger"
-                data-cy="accordionItemTitle"
-                headingLevel={3}
-              >
-                <AccordionItemTitleOuter
-                  appearance="danger"
-                  data-cy="accordionItemTitle accordionItemTitle.danger"
-                  isExpanded={false}
-                >
-                  <div
-                    className="css-1nin987"
-                    data-cy="accordionItemTitle accordionItemTitle.danger"
-                  >
-                    <ResetButton
-                      aria-controls="accordionItem-3-content"
-                      aria-expanded={false}
-                      className="css-jd8ubb"
-                      data-cy="accordionItemTitle-button"
-                      onClick={[Function]}
-                    >
-                      <button
-                        aria-controls="accordionItem-3-content"
-                        aria-expanded={false}
-                        className="css-odh0fh"
-                        data-cy="accordionItemTitle-button"
-                        onClick={[Function]}
-                        type="button"
-                      >
-                        <div
-                          tabIndex={-1}
-                        />
-                      </button>
-                    </ResetButton>
-                    <AccordionItemTitleInner
-                      isExpanded={false}
-                      isInteractive={true}
-                    >
-                      <span
-                        className="css-1nhhn1w"
-                        data-cy="accordionItemTitleInner"
-                      >
-                        <span
-                          className="css-1321nl5"
-                        >
-                          <Icon
-                            shape="system-triangle-right"
-                            size="xs"
-                          >
-                            <svg
-                              aria-label="system-triangle-right icon"
-                              className="css-jbdp75"
-                              data-cy="icon"
-                              height={16}
-                              preserveAspectRatio="xMinYMin meet"
-                              role="img"
-                              viewBox="0 0 16 16"
-                              width={16}
-                            >
-                              <use
-                                xlinkHref="#system-triangle-right"
-                              />
-                            </svg>
-                          </Icon>
-                        </span>
-                        <span
-                          className="css-bleycz"
-                        >
-                          <h3
-                            id="accordionItem-3-heading"
-                          >
-                            Panel 1
-                          </h3>
-                          <button
-                            id="interaction"
-                          >
-                            test
-                          </button>
-                          <button
-                            aria-controls="accordionItem-3-content"
-                            aria-expanded={false}
-                            id="toggle"
-                            onClick={[Function]}
-                          >
-                            toggle
-                          </button>
-                        </span>
-                      </span>
-                    </AccordionItemTitleInner>
-                  </div>
-                </AccordionItemTitleOuter>
-              </AccordionItemTitleInteractive>
-              <AccordionItemContent>
-                <div
-                  aria-labelledby="accordionItem-3-heading"
-                  className="css-13hugf8"
-                  data-cy="accordionItemContent"
-                  hidden={true}
-                  id="accordionItem-3-content"
-                >
-                  Content 2
-                </div>
-              </AccordionItemContent>
-            </div>
-          </Provider>
-        </AccordionItem>
-        <AccordionItem>
-          <Provider
-            expandedItems={[]}
-            id="accordionItem-4"
-          >
-            <div
-              data-cy="accordionItem"
+              Panel 1
+            </h3>
+            <button
+              id="interaction"
+              style="pointer-events: all;"
             >
-              <AccordionItemTitleInteractive
-                data-cy="accordionItemTitle"
-                disabled={true}
-                headingLevel={3}
-              >
-                <AccordionItemTitleOuter
-                  data-cy="accordionItemTitle accordionItemTitle.disabled"
-                  disabled={true}
-                  isExpanded={false}
-                >
-                  <div
-                    className="css-cf9h7f"
-                    data-cy="accordionItemTitle accordionItemTitle.disabled"
-                  >
-                    <ResetButton
-                      aria-controls="accordionItem-4-content"
-                      aria-expanded={false}
-                      className="css-jd8ubb"
-                      data-cy="accordionItemTitle-button"
-                      disabled={true}
-                      onClick={[Function]}
-                    >
-                      <button
-                        aria-controls="accordionItem-4-content"
-                        aria-expanded={false}
-                        className="css-1tjctub"
-                        data-cy="accordionItemTitle-button"
-                        disabled={true}
-                        onClick={[Function]}
-                        type="button"
-                      >
-                        <div
-                          tabIndex={-1}
-                        />
-                      </button>
-                    </ResetButton>
-                    <AccordionItemTitleInner
-                      isExpanded={false}
-                      isInteractive={true}
-                    >
-                      <span
-                        className="css-1nhhn1w"
-                        data-cy="accordionItemTitleInner"
-                      >
-                        <span
-                          className="css-1321nl5"
-                        >
-                          <Icon
-                            shape="system-triangle-right"
-                            size="xs"
-                          >
-                            <svg
-                              aria-label="system-triangle-right icon"
-                              className="css-jbdp75"
-                              data-cy="icon"
-                              height={16}
-                              preserveAspectRatio="xMinYMin meet"
-                              role="img"
-                              viewBox="0 0 16 16"
-                              width={16}
-                            >
-                              <use
-                                xlinkHref="#system-triangle-right"
-                              />
-                            </svg>
-                          </Icon>
-                        </span>
-                        <span
-                          className="css-bleycz"
-                        >
-                          <h3
-                            className="css-fmvpil"
-                            data-cy="accordionItemTitle-heading"
-                            id="accordionItem-4-heading"
-                          >
-                            Panel 1
-                          </h3>
-                          <button
-                            id="interaction"
-                          >
-                            test
-                          </button>
-                        </span>
-                      </span>
-                    </AccordionItemTitleInner>
-                  </div>
-                </AccordionItemTitleOuter>
-              </AccordionItemTitleInteractive>
-              <AccordionItemContent>
-                <div
-                  aria-labelledby="accordionItem-4-heading"
-                  className="css-13hugf8"
-                  data-cy="accordionItemContent"
-                  hidden={true}
-                  id="accordionItem-4-content"
-                >
-                  Content 1
-                </div>
-              </AccordionItemContent>
-            </div>
-          </Provider>
-        </AccordionItem>
+              test
+            </button>
+          </span>
+        </span>
       </div>
-    </Stack>
-  </Provider>
-</Accordion>
+      <div
+        aria-labelledby="customId-heading"
+        class="css-13hugf8"
+        data-cy="accordionItemContent"
+        hidden=""
+        id="customId-content"
+      >
+        Content 1
+      </div>
+    </div>
+    <div
+      data-cy="accordionItem"
+    >
+      <div
+        class="css-1nin987"
+        data-cy="accordionItemTitle accordionItemTitle.danger"
+      >
+        <button
+          aria-controls="accordionItem-3-content"
+          aria-expanded="false"
+          class="css-odh0fh"
+          data-cy="accordionItemTitle-button"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          />
+        </button>
+        <span
+          class="css-1nhhn1w"
+          data-cy="accordionItemTitleInner"
+        >
+          <span
+            class="css-1321nl5"
+          >
+            <svg
+              aria-label="system-triangle-right icon"
+              class="css-jbdp75"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <use
+                xlink:href="#system-triangle-right"
+              />
+            </svg>
+          </span>
+          <span
+            class="css-bleycz"
+          >
+            <h3
+              id="accordionItem-3-heading"
+            >
+              Panel 1
+            </h3>
+            <button
+              id="interaction"
+              style="pointer-events: all;"
+            >
+              test
+            </button>
+            <button
+              aria-controls="accordionItem-3-content"
+              aria-expanded="false"
+              id="toggle"
+              style="pointer-events: all;"
+            >
+              toggle
+            </button>
+          </span>
+        </span>
+      </div>
+      <div
+        aria-labelledby="accordionItem-3-heading"
+        class="css-13hugf8"
+        data-cy="accordionItemContent"
+        hidden=""
+        id="accordionItem-3-content"
+      >
+        Content 2
+      </div>
+    </div>
+    <div
+      data-cy="accordionItem"
+    >
+      <div
+        class="css-cf9h7f"
+        data-cy="accordionItemTitle accordionItemTitle.disabled"
+      >
+        <button
+          aria-controls="accordionItem-4-content"
+          aria-expanded="false"
+          class="css-1tjctub"
+          data-cy="accordionItemTitle-button"
+          disabled=""
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          />
+        </button>
+        <span
+          class="css-1nhhn1w"
+          data-cy="accordionItemTitleInner"
+        >
+          <span
+            class="css-1321nl5"
+          >
+            <svg
+              aria-label="system-triangle-right icon"
+              class="css-jbdp75"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <use
+                xlink:href="#system-triangle-right"
+              />
+            </svg>
+          </span>
+          <span
+            class="css-bleycz"
+          >
+            <h3
+              class="css-fmvpil"
+              data-cy="accordionItemTitle-heading"
+              id="accordionItem-4-heading"
+            >
+              Panel 1
+            </h3>
+            <button
+              id="interaction"
+              style="pointer-events: all;"
+            >
+              test
+            </button>
+          </span>
+        </span>
+      </div>
+      <div
+        aria-labelledby="accordionItem-4-heading"
+        class="css-13hugf8"
+        data-cy="accordionItemContent"
+        hidden=""
+        id="accordionItem-4-content"
+      >
+        Content 1
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Accordion rendering renders with expanded items 1`] = `
-<Accordion
-  initialExpandedItems={
-    [
-      "panel1",
-      "panel2",
-      "panel3",
-    ]
-  }
->
-  <Provider
-    allowMultipleExpanded={false}
-    initialExpandedItems={
-      [
-        "panel1",
-        "panel2",
-        "panel3",
-      ]
-    }
+<DocumentFragment>
+  <div
+    class="css-15twc3j"
+    data-cy="accordion"
   >
-    <Stack
-      data-cy="accordion"
-      spacingSize="m"
-      tag="div"
+    <div
+      data-cy="accordionItem accordionItem.expanded"
     >
       <div
-        className="css-15twc3j"
-        data-cy="accordion"
+        class="css-duvnlo"
+        data-cy="accordionItemTitle"
       >
-        <AccordionItem
-          id="panel1"
+        <h3
+          class="css-fmvpil"
+          data-cy="accordionItemTitle-heading"
+          id="panel1-heading"
         >
-          <Provider
-            expandedItems={
-              [
-                "panel1",
-                "panel2",
-                "panel3",
-              ]
-            }
-            id="panel1"
+          <button
+            aria-controls="panel1-content"
+            aria-expanded="false"
+            class="css-1gh59q1"
+            data-cy="accordionItemTitle-button"
+            type="button"
           >
             <div
-              data-cy="accordionItem accordionItem.expanded"
+              tabindex="-1"
             >
-              <AccordionItemTitle>
-                <AccordionItemTitleOuter
-                  data-cy="accordionItemTitle"
-                  isExpanded={true}
+              <span
+                class="css-13atth2"
+                data-cy="accordionItemTitleInner"
+              >
+                <span
+                  class="css-1321nl5"
                 >
-                  <div
-                    className="css-duvnlo"
-                    data-cy="accordionItemTitle"
+                  <svg
+                    aria-label="system-triangle-down icon"
+                    class="css-jbdp75"
+                    data-cy="icon"
+                    height="16"
+                    preserveAspectRatio="xMinYMin meet"
+                    role="img"
+                    viewBox="0 0 16 16"
+                    width="16"
                   >
-                    <h3
-                      className="css-fmvpil"
-                      data-cy="accordionItemTitle-heading"
-                      id="panel1-heading"
-                    >
-                      <ResetButton
-                        aria-controls="panel1-content"
-                        aria-expanded="false"
-                        className="css-bleycz"
-                        data-cy="accordionItemTitle-button"
-                        onClick={[Function]}
-                      >
-                        <button
-                          aria-controls="panel1-content"
-                          aria-expanded="false"
-                          className="css-1gh59q1"
-                          data-cy="accordionItemTitle-button"
-                          onClick={[Function]}
-                          type="button"
-                        >
-                          <div
-                            tabIndex={-1}
-                          >
-                            <AccordionItemTitleInner
-                              isExpanded={true}
-                            >
-                              <span
-                                className="css-13atth2"
-                                data-cy="accordionItemTitleInner"
-                              >
-                                <span
-                                  className="css-1321nl5"
-                                >
-                                  <Icon
-                                    shape="system-triangle-down"
-                                    size="xs"
-                                  >
-                                    <svg
-                                      aria-label="system-triangle-down icon"
-                                      className="css-jbdp75"
-                                      data-cy="icon"
-                                      height={16}
-                                      preserveAspectRatio="xMinYMin meet"
-                                      role="img"
-                                      viewBox="0 0 16 16"
-                                      width={16}
-                                    >
-                                      <use
-                                        xlinkHref="#system-triangle-down"
-                                      />
-                                    </svg>
-                                  </Icon>
-                                </span>
-                                <span
-                                  className="css-bleycz"
-                                >
-                                  Panel 1
-                                </span>
-                              </span>
-                            </AccordionItemTitleInner>
-                          </div>
-                        </button>
-                      </ResetButton>
-                    </h3>
-                  </div>
-                </AccordionItemTitleOuter>
-              </AccordionItemTitle>
-              <AccordionItemContent>
-                <div
-                  aria-labelledby="panel1-heading"
-                  className="css-72kisv"
-                  data-cy="accordionItemContent"
-                  hidden={false}
-                  id="panel1-content"
+                    <use
+                      xlink:href="#system-triangle-down"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="css-bleycz"
                 >
-                  Content 1
-                </div>
-              </AccordionItemContent>
+                  Panel 1
+                </span>
+              </span>
             </div>
-          </Provider>
-        </AccordionItem>
-        <AccordionItem
-          id="panel2"
-        >
-          <Provider
-            expandedItems={
-              [
-                "panel1",
-                "panel2",
-                "panel3",
-              ]
-            }
-            id="panel2"
-          >
-            <div
-              data-cy="accordionItem accordionItem.expanded"
-            >
-              <AccordionItemTitle>
-                <AccordionItemTitleOuter
-                  data-cy="accordionItemTitle"
-                  isExpanded={true}
-                >
-                  <div
-                    className="css-duvnlo"
-                    data-cy="accordionItemTitle"
-                  >
-                    <h3
-                      className="css-fmvpil"
-                      data-cy="accordionItemTitle-heading"
-                      id="panel2-heading"
-                    >
-                      <ResetButton
-                        aria-controls="panel2-content"
-                        aria-expanded="false"
-                        className="css-bleycz"
-                        data-cy="accordionItemTitle-button"
-                        onClick={[Function]}
-                      >
-                        <button
-                          aria-controls="panel2-content"
-                          aria-expanded="false"
-                          className="css-1gh59q1"
-                          data-cy="accordionItemTitle-button"
-                          onClick={[Function]}
-                          type="button"
-                        >
-                          <div
-                            tabIndex={-1}
-                          >
-                            <AccordionItemTitleInner
-                              isExpanded={true}
-                            >
-                              <span
-                                className="css-13atth2"
-                                data-cy="accordionItemTitleInner"
-                              >
-                                <span
-                                  className="css-1321nl5"
-                                >
-                                  <Icon
-                                    shape="system-triangle-down"
-                                    size="xs"
-                                  >
-                                    <svg
-                                      aria-label="system-triangle-down icon"
-                                      className="css-jbdp75"
-                                      data-cy="icon"
-                                      height={16}
-                                      preserveAspectRatio="xMinYMin meet"
-                                      role="img"
-                                      viewBox="0 0 16 16"
-                                      width={16}
-                                    >
-                                      <use
-                                        xlinkHref="#system-triangle-down"
-                                      />
-                                    </svg>
-                                  </Icon>
-                                </span>
-                                <span
-                                  className="css-bleycz"
-                                >
-                                  Panel 2
-                                </span>
-                              </span>
-                            </AccordionItemTitleInner>
-                          </div>
-                        </button>
-                      </ResetButton>
-                    </h3>
-                  </div>
-                </AccordionItemTitleOuter>
-              </AccordionItemTitle>
-              <AccordionItemContent>
-                <div
-                  aria-labelledby="panel2-heading"
-                  className="css-72kisv"
-                  data-cy="accordionItemContent"
-                  hidden={false}
-                  id="panel2-content"
-                >
-                  Content 2
-                </div>
-              </AccordionItemContent>
-            </div>
-          </Provider>
-        </AccordionItem>
-        <AccordionItem
-          id="panel3"
-        >
-          <Provider
-            expandedItems={
-              [
-                "panel1",
-                "panel2",
-                "panel3",
-              ]
-            }
-            id="panel3"
-          >
-            <div
-              data-cy="accordionItem accordionItem.expanded"
-            >
-              <AccordionItemTitle>
-                <AccordionItemTitleOuter
-                  data-cy="accordionItemTitle"
-                  isExpanded={true}
-                >
-                  <div
-                    className="css-duvnlo"
-                    data-cy="accordionItemTitle"
-                  >
-                    <h3
-                      className="css-fmvpil"
-                      data-cy="accordionItemTitle-heading"
-                      id="panel3-heading"
-                    >
-                      <ResetButton
-                        aria-controls="panel3-content"
-                        aria-expanded="false"
-                        className="css-bleycz"
-                        data-cy="accordionItemTitle-button"
-                        onClick={[Function]}
-                      >
-                        <button
-                          aria-controls="panel3-content"
-                          aria-expanded="false"
-                          className="css-1gh59q1"
-                          data-cy="accordionItemTitle-button"
-                          onClick={[Function]}
-                          type="button"
-                        >
-                          <div
-                            tabIndex={-1}
-                          >
-                            <AccordionItemTitleInner
-                              isExpanded={true}
-                            >
-                              <span
-                                className="css-13atth2"
-                                data-cy="accordionItemTitleInner"
-                              >
-                                <span
-                                  className="css-1321nl5"
-                                >
-                                  <Icon
-                                    shape="system-triangle-down"
-                                    size="xs"
-                                  >
-                                    <svg
-                                      aria-label="system-triangle-down icon"
-                                      className="css-jbdp75"
-                                      data-cy="icon"
-                                      height={16}
-                                      preserveAspectRatio="xMinYMin meet"
-                                      role="img"
-                                      viewBox="0 0 16 16"
-                                      width={16}
-                                    >
-                                      <use
-                                        xlinkHref="#system-triangle-down"
-                                      />
-                                    </svg>
-                                  </Icon>
-                                </span>
-                                <span
-                                  className="css-bleycz"
-                                >
-                                  Panel 3
-                                </span>
-                              </span>
-                            </AccordionItemTitleInner>
-                          </div>
-                        </button>
-                      </ResetButton>
-                    </h3>
-                  </div>
-                </AccordionItemTitleOuter>
-              </AccordionItemTitle>
-              <AccordionItemContent>
-                <div
-                  aria-labelledby="panel3-heading"
-                  className="css-72kisv"
-                  data-cy="accordionItemContent"
-                  hidden={false}
-                  id="panel3-content"
-                >
-                  Content 3
-                </div>
-              </AccordionItemContent>
-            </div>
-          </Provider>
-        </AccordionItem>
+          </button>
+        </h3>
       </div>
-    </Stack>
-  </Provider>
-</Accordion>
+      <div
+        aria-labelledby="panel1-heading"
+        class="css-72kisv"
+        data-cy="accordionItemContent"
+        id="panel1-content"
+      >
+        Content 1
+      </div>
+    </div>
+    <div
+      data-cy="accordionItem accordionItem.expanded"
+    >
+      <div
+        class="css-duvnlo"
+        data-cy="accordionItemTitle"
+      >
+        <h3
+          class="css-fmvpil"
+          data-cy="accordionItemTitle-heading"
+          id="panel2-heading"
+        >
+          <button
+            aria-controls="panel2-content"
+            aria-expanded="false"
+            class="css-1gh59q1"
+            data-cy="accordionItemTitle-button"
+            type="button"
+          >
+            <div
+              tabindex="-1"
+            >
+              <span
+                class="css-13atth2"
+                data-cy="accordionItemTitleInner"
+              >
+                <span
+                  class="css-1321nl5"
+                >
+                  <svg
+                    aria-label="system-triangle-down icon"
+                    class="css-jbdp75"
+                    data-cy="icon"
+                    height="16"
+                    preserveAspectRatio="xMinYMin meet"
+                    role="img"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <use
+                      xlink:href="#system-triangle-down"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="css-bleycz"
+                >
+                  Panel 2
+                </span>
+              </span>
+            </div>
+          </button>
+        </h3>
+      </div>
+      <div
+        aria-labelledby="panel2-heading"
+        class="css-72kisv"
+        data-cy="accordionItemContent"
+        id="panel2-content"
+      >
+        Content 2
+      </div>
+    </div>
+    <div
+      data-cy="accordionItem accordionItem.expanded"
+    >
+      <div
+        class="css-duvnlo"
+        data-cy="accordionItemTitle"
+      >
+        <h3
+          class="css-fmvpil"
+          data-cy="accordionItemTitle-heading"
+          id="panel3-heading"
+        >
+          <button
+            aria-controls="panel3-content"
+            aria-expanded="false"
+            class="css-1gh59q1"
+            data-cy="accordionItemTitle-button"
+            type="button"
+          >
+            <div
+              tabindex="-1"
+            >
+              <span
+                class="css-13atth2"
+                data-cy="accordionItemTitleInner"
+              >
+                <span
+                  class="css-1321nl5"
+                >
+                  <svg
+                    aria-label="system-triangle-down icon"
+                    class="css-jbdp75"
+                    data-cy="icon"
+                    height="16"
+                    preserveAspectRatio="xMinYMin meet"
+                    role="img"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <use
+                      xlink:href="#system-triangle-down"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="css-bleycz"
+                >
+                  Panel 3
+                </span>
+              </span>
+            </div>
+          </button>
+        </h3>
+      </div>
+      <div
+        aria-labelledby="panel3-heading"
+        class="css-72kisv"
+        data-cy="accordionItemContent"
+        id="panel3-content"
+      >
+        Content 3
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Accordion rendering renders with no expanded items 1`] = `
-<Accordion>
-  <Provider
-    allowMultipleExpanded={false}
+<DocumentFragment>
+  <div
+    class="css-15twc3j"
+    data-cy="accordion"
   >
-    <Stack
-      data-cy="accordion"
-      spacingSize="m"
-      tag="div"
+    <div
+      data-cy="accordionItem"
     >
       <div
-        className="css-15twc3j"
-        data-cy="accordion"
+        class="css-1nin987"
+        data-cy="accordionItemTitle accordionItemTitle.danger"
       >
-        <AccordionItem
-          id="customId"
+        <h3
+          class="css-fmvpil"
+          data-cy="accordionItemTitle-heading"
+          id="customId-heading"
         >
-          <Provider
-            expandedItems={[]}
-            id="customId"
+          <button
+            aria-controls="customId-content"
+            aria-expanded="false"
+            class="css-1gh59q1"
+            data-cy="accordionItemTitle-button"
+            type="button"
           >
             <div
-              data-cy="accordionItem"
+              tabindex="-1"
             >
-              <AccordionItemTitle
-                appearance="danger"
+              <span
+                class="css-13atth2"
+                data-cy="accordionItemTitleInner"
               >
-                <AccordionItemTitleOuter
-                  appearance="danger"
-                  data-cy="accordionItemTitle accordionItemTitle.danger"
-                  isExpanded={false}
+                <span
+                  class="css-1321nl5"
                 >
-                  <div
-                    className="css-1nin987"
-                    data-cy="accordionItemTitle accordionItemTitle.danger"
+                  <svg
+                    aria-label="system-triangle-right icon"
+                    class="css-jbdp75"
+                    data-cy="icon"
+                    height="16"
+                    preserveAspectRatio="xMinYMin meet"
+                    role="img"
+                    viewBox="0 0 16 16"
+                    width="16"
                   >
-                    <h3
-                      className="css-fmvpil"
-                      data-cy="accordionItemTitle-heading"
-                      id="customId-heading"
-                    >
-                      <ResetButton
-                        aria-controls="customId-content"
-                        aria-expanded="false"
-                        className="css-bleycz"
-                        data-cy="accordionItemTitle-button"
-                        onClick={[Function]}
-                      >
-                        <button
-                          aria-controls="customId-content"
-                          aria-expanded="false"
-                          className="css-1gh59q1"
-                          data-cy="accordionItemTitle-button"
-                          onClick={[Function]}
-                          type="button"
-                        >
-                          <div
-                            tabIndex={-1}
-                          >
-                            <AccordionItemTitleInner
-                              isExpanded={false}
-                            >
-                              <span
-                                className="css-13atth2"
-                                data-cy="accordionItemTitleInner"
-                              >
-                                <span
-                                  className="css-1321nl5"
-                                >
-                                  <Icon
-                                    shape="system-triangle-right"
-                                    size="xs"
-                                  >
-                                    <svg
-                                      aria-label="system-triangle-right icon"
-                                      className="css-jbdp75"
-                                      data-cy="icon"
-                                      height={16}
-                                      preserveAspectRatio="xMinYMin meet"
-                                      role="img"
-                                      viewBox="0 0 16 16"
-                                      width={16}
-                                    >
-                                      <use
-                                        xlinkHref="#system-triangle-right"
-                                      />
-                                    </svg>
-                                  </Icon>
-                                </span>
-                                <span
-                                  className="css-bleycz"
-                                >
-                                  Panel 1
-                                </span>
-                              </span>
-                            </AccordionItemTitleInner>
-                          </div>
-                        </button>
-                      </ResetButton>
-                    </h3>
-                  </div>
-                </AccordionItemTitleOuter>
-              </AccordionItemTitle>
-              <AccordionItemContent>
-                <div
-                  aria-labelledby="customId-heading"
-                  className="css-13hugf8"
-                  data-cy="accordionItemContent"
-                  hidden={true}
-                  id="customId-content"
+                    <use
+                      xlink:href="#system-triangle-right"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="css-bleycz"
                 >
-                  Content 1
-                </div>
-              </AccordionItemContent>
+                  Panel 1
+                </span>
+              </span>
             </div>
-          </Provider>
-        </AccordionItem>
-        <AccordionItem>
-          <Provider
-            expandedItems={[]}
-            id="accordionItem-1"
-          >
-            <div
-              data-cy="accordionItem"
-            >
-              <AccordionItemTitle
-                disabled={true}
-              >
-                <AccordionItemTitleOuter
-                  data-cy="accordionItemTitle accordionItemTitle.disabled"
-                  disabled={true}
-                  isExpanded={false}
-                >
-                  <div
-                    className="css-cf9h7f"
-                    data-cy="accordionItemTitle accordionItemTitle.disabled"
-                  >
-                    <h3
-                      className="css-fmvpil"
-                      data-cy="accordionItemTitle-heading"
-                      id="accordionItem-1-heading"
-                    >
-                      <ResetButton
-                        aria-controls="accordionItem-1-content"
-                        aria-expanded="false"
-                        className="css-bleycz"
-                        data-cy="accordionItemTitle-button"
-                        disabled={true}
-                        onClick={[Function]}
-                      >
-                        <button
-                          aria-controls="accordionItem-1-content"
-                          aria-expanded="false"
-                          className="css-1l66126"
-                          data-cy="accordionItemTitle-button"
-                          disabled={true}
-                          onClick={[Function]}
-                          type="button"
-                        >
-                          <div
-                            tabIndex={-1}
-                          >
-                            <AccordionItemTitleInner
-                              isExpanded={false}
-                            >
-                              <span
-                                className="css-13atth2"
-                                data-cy="accordionItemTitleInner"
-                              >
-                                <span
-                                  className="css-1321nl5"
-                                >
-                                  <Icon
-                                    shape="system-triangle-right"
-                                    size="xs"
-                                  >
-                                    <svg
-                                      aria-label="system-triangle-right icon"
-                                      className="css-jbdp75"
-                                      data-cy="icon"
-                                      height={16}
-                                      preserveAspectRatio="xMinYMin meet"
-                                      role="img"
-                                      viewBox="0 0 16 16"
-                                      width={16}
-                                    >
-                                      <use
-                                        xlinkHref="#system-triangle-right"
-                                      />
-                                    </svg>
-                                  </Icon>
-                                </span>
-                                <span
-                                  className="css-bleycz"
-                                >
-                                  Panel 2
-                                </span>
-                              </span>
-                            </AccordionItemTitleInner>
-                          </div>
-                        </button>
-                      </ResetButton>
-                    </h3>
-                  </div>
-                </AccordionItemTitleOuter>
-              </AccordionItemTitle>
-              <AccordionItemContent>
-                <div
-                  aria-labelledby="accordionItem-1-heading"
-                  className="css-13hugf8"
-                  data-cy="accordionItemContent"
-                  hidden={true}
-                  id="accordionItem-1-content"
-                >
-                  Content 2
-                </div>
-              </AccordionItemContent>
-            </div>
-          </Provider>
-        </AccordionItem>
-        <AccordionItem>
-          <Provider
-            expandedItems={[]}
-            id="accordionItem-2"
-          >
-            <div
-              data-cy="accordionItem"
-            >
-              <AccordionItemTitle
-                headingLevel={2}
-              >
-                <AccordionItemTitleOuter
-                  data-cy="accordionItemTitle"
-                  isExpanded={false}
-                >
-                  <div
-                    className="css-1uett59"
-                    data-cy="accordionItemTitle"
-                  >
-                    <h2
-                      className="css-fmvpil"
-                      data-cy="accordionItemTitle-heading"
-                      id="accordionItem-2-heading"
-                    >
-                      <ResetButton
-                        aria-controls="accordionItem-2-content"
-                        aria-expanded="false"
-                        className="css-bleycz"
-                        data-cy="accordionItemTitle-button"
-                        onClick={[Function]}
-                      >
-                        <button
-                          aria-controls="accordionItem-2-content"
-                          aria-expanded="false"
-                          className="css-1gh59q1"
-                          data-cy="accordionItemTitle-button"
-                          onClick={[Function]}
-                          type="button"
-                        >
-                          <div
-                            tabIndex={-1}
-                          >
-                            <AccordionItemTitleInner
-                              isExpanded={false}
-                            >
-                              <span
-                                className="css-13atth2"
-                                data-cy="accordionItemTitleInner"
-                              >
-                                <span
-                                  className="css-1321nl5"
-                                >
-                                  <Icon
-                                    shape="system-triangle-right"
-                                    size="xs"
-                                  >
-                                    <svg
-                                      aria-label="system-triangle-right icon"
-                                      className="css-jbdp75"
-                                      data-cy="icon"
-                                      height={16}
-                                      preserveAspectRatio="xMinYMin meet"
-                                      role="img"
-                                      viewBox="0 0 16 16"
-                                      width={16}
-                                    >
-                                      <use
-                                        xlinkHref="#system-triangle-right"
-                                      />
-                                    </svg>
-                                  </Icon>
-                                </span>
-                                <span
-                                  className="css-bleycz"
-                                >
-                                  Panel 3
-                                </span>
-                              </span>
-                            </AccordionItemTitleInner>
-                          </div>
-                        </button>
-                      </ResetButton>
-                    </h2>
-                  </div>
-                </AccordionItemTitleOuter>
-              </AccordionItemTitle>
-              <AccordionItemContent>
-                <div
-                  aria-labelledby="accordionItem-2-heading"
-                  className="css-13hugf8"
-                  data-cy="accordionItemContent"
-                  hidden={true}
-                  id="accordionItem-2-content"
-                >
-                  Content 3
-                </div>
-              </AccordionItemContent>
-            </div>
-          </Provider>
-        </AccordionItem>
+          </button>
+        </h3>
       </div>
-    </Stack>
-  </Provider>
-</Accordion>
+      <div
+        aria-labelledby="customId-heading"
+        class="css-13hugf8"
+        data-cy="accordionItemContent"
+        hidden=""
+        id="customId-content"
+      >
+        Content 1
+      </div>
+    </div>
+    <div
+      data-cy="accordionItem"
+    >
+      <div
+        class="css-cf9h7f"
+        data-cy="accordionItemTitle accordionItemTitle.disabled"
+      >
+        <h3
+          class="css-fmvpil"
+          data-cy="accordionItemTitle-heading"
+          id="accordionItem-1-heading"
+        >
+          <button
+            aria-controls="accordionItem-1-content"
+            aria-expanded="false"
+            class="css-1l66126"
+            data-cy="accordionItemTitle-button"
+            disabled=""
+            type="button"
+          >
+            <div
+              tabindex="-1"
+            >
+              <span
+                class="css-13atth2"
+                data-cy="accordionItemTitleInner"
+              >
+                <span
+                  class="css-1321nl5"
+                >
+                  <svg
+                    aria-label="system-triangle-right icon"
+                    class="css-jbdp75"
+                    data-cy="icon"
+                    height="16"
+                    preserveAspectRatio="xMinYMin meet"
+                    role="img"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <use
+                      xlink:href="#system-triangle-right"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="css-bleycz"
+                >
+                  Panel 2
+                </span>
+              </span>
+            </div>
+          </button>
+        </h3>
+      </div>
+      <div
+        aria-labelledby="accordionItem-1-heading"
+        class="css-13hugf8"
+        data-cy="accordionItemContent"
+        hidden=""
+        id="accordionItem-1-content"
+      >
+        Content 2
+      </div>
+    </div>
+    <div
+      data-cy="accordionItem"
+    >
+      <div
+        class="css-1uett59"
+        data-cy="accordionItemTitle"
+      >
+        <h2
+          class="css-fmvpil"
+          data-cy="accordionItemTitle-heading"
+          id="accordionItem-2-heading"
+        >
+          <button
+            aria-controls="accordionItem-2-content"
+            aria-expanded="false"
+            class="css-1gh59q1"
+            data-cy="accordionItemTitle-button"
+            type="button"
+          >
+            <div
+              tabindex="-1"
+            >
+              <span
+                class="css-13atth2"
+                data-cy="accordionItemTitleInner"
+              >
+                <span
+                  class="css-1321nl5"
+                >
+                  <svg
+                    aria-label="system-triangle-right icon"
+                    class="css-jbdp75"
+                    data-cy="icon"
+                    height="16"
+                    preserveAspectRatio="xMinYMin meet"
+                    role="img"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <use
+                      xlink:href="#system-triangle-right"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="css-bleycz"
+                >
+                  Panel 3
+                </span>
+              </span>
+            </div>
+          </button>
+        </h2>
+      </div>
+      <div
+        aria-labelledby="accordionItem-2-heading"
+        class="css-13hugf8"
+        data-cy="accordionItemContent"
+        hidden=""
+        id="accordionItem-2-content"
+      >
+        Content 3
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;

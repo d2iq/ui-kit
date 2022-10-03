@@ -1,18 +1,18 @@
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { LinkCard } from "../";
 
 describe("LinkCard", () => {
   it("renders default", () => {
-    const component = create(
+    const { asFragment } = render(
       <LinkCard url="http://google.com" linkDescription="Google">
         Example Content
       </LinkCard>
     );
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with external link", () => {
-    const component = create(
+    const { asFragment } = render(
       <LinkCard
         url="http://google.com"
         linkDescription="Google"
@@ -21,6 +21,6 @@ describe("LinkCard", () => {
         Example Content
       </LinkCard>
     );
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

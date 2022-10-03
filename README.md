@@ -68,17 +68,22 @@ For more on this topic, and examples we recommend
 
 ```
 import React from "react";
-import Badge from '../badge';
-import renderer from 'react-test-renderer';
+import { render } from "@testing-library/react";
+import { BadgeButton } from "../";
 
 describe('Badge', () => {
-  it("match default badge component", () => {
-    expect(renderer
-    .create(<Badge>default</Badge>)
-    .toJSON()).toMatchSnapshot()
+  it("match default badge button component", () => {
+   const { asFragment } = render(
+      <BadgeButton onClick={fn} appearance="success">
+        success
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 ```
+
+The function `asFragment` is preferred over `create` from `react-test-renderer` as it seems to give more robust components and less failures.
 
 ## Testing with Cypress
 

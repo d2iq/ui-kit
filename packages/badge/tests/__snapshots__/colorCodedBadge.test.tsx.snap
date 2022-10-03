@@ -1,85 +1,208 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorCodedBadge renders with a color 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  background-color: #FFFFFF;
+  border-color: #DADDE2;
+  color: #1B2029;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 8px 0;
+  font-size: 80%;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
   color: #f00f00;
   fill: #f00f00;
 }
 
-<Memo(Badge)
-  appearance="outline"
->
-  <svg
-    className="emotion-0"
-    height={12}
-    viewBox="0 0 12 12"
-    width={12}
-    xmlns="http://www.w3.org/2000/svg"
+.emotion-2 {
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-left: 4px;
+}
+
+<span
+    class="emotion-0"
+    data-cy="badge"
   >
-    <circle
-      cx={6}
-      cy={6}
-      r={6}
-    />
-  </svg>
-  <SpacingBox
-    display="inline-block"
-    side="left"
-    spacingSize="xxs"
-    tag="div"
-  >
-    Color Coded Badge
-  </SpacingBox>
-</Memo(Badge)>
+    <svg
+      class="emotion-1"
+      height="12"
+      viewBox="0 0 12 12"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="6"
+        cy="6"
+        r="6"
+      />
+    </svg>
+    <div
+      class="emotion-2"
+      data-cy="spacingBox"
+    >
+      Color Coded Badge
+    </div>
+  </span>
+</DocumentFragment>
 `;
 
 exports[`ColorCodedBadge renders with an icon and color 1`] = `
-<Memo(Badge)
-  appearance="outline"
->
-  <Icon
-    color="#f00f00"
-    shape="system-circle-check"
-    size="xxs"
-  />
-  <SpacingBox
-    display="inline-block"
-    side="left"
-    spacingSize="xxs"
-    tag="div"
+<DocumentFragment>
+  .emotion-0 {
+  background-color: #FFFFFF;
+  border-color: #DADDE2;
+  color: #1B2029;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 8px 0;
+  font-size: 80%;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
+  vertical-align: middle;
+  fill: #f00f00;
+}
+
+.emotion-1 use {
+  pointer-events: none;
+}
+
+.emotion-2 {
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-left: 4px;
+}
+
+<span
+    class="emotion-0"
+    data-cy="badge"
   >
-    Color Coded Badge with icon
-  </SpacingBox>
-</Memo(Badge)>
+    <svg
+      aria-label="system-circle-check icon"
+      class="emotion-1"
+      data-cy="icon"
+      height="12"
+      preserveAspectRatio="xMinYMin meet"
+      role="img"
+      viewBox="0 0 12 12"
+      width="12"
+    >
+      <use
+        xlink:href="#system-circle-check"
+      />
+    </svg>
+    <div
+      class="emotion-2"
+      data-cy="spacingBox"
+    >
+      Color Coded Badge with icon
+    </div>
+  </span>
+</DocumentFragment>
 `;
 
 exports[`ColorCodedBadge renders without children 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  background-color: #FFFFFF;
+  border-color: #DADDE2;
+  color: #1B2029;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 8px 0;
+  font-size: 80%;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
   color: #f00f00;
   fill: #f00f00;
 }
 
-<Memo(Badge)
-  appearance="outline"
->
-  <svg
-    className="emotion-0"
-    height={12}
-    viewBox="0 0 12 12"
-    width={12}
-    xmlns="http://www.w3.org/2000/svg"
+.emotion-2 {
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-left: 4px;
+}
+
+<span
+    class="emotion-0"
+    data-cy="badge"
   >
-    <circle
-      cx={6}
-      cy={6}
-      r={6}
+    <svg
+      class="emotion-1"
+      height="12"
+      viewBox="0 0 12 12"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="6"
+        cy="6"
+        r="6"
+      />
+    </svg>
+    <div
+      class="emotion-2"
+      data-cy="spacingBox"
     />
-  </svg>
-  <SpacingBox
-    display="inline-block"
-    side="left"
-    spacingSize="xxs"
-    tag="div"
-  />
-</Memo(Badge)>
+  </span>
+</DocumentFragment>
 `;

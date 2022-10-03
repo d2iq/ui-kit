@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ToggleBox renders active 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
 }
 
@@ -55,40 +56,39 @@ exports[`ToggleBox renders active 1`] = `
 }
 
 <label
-  className="emotion-0"
-  htmlFor="active"
->
-  <input
-    aria-checked={true}
-    checked={true}
-    className="emotion-1"
-    data-cy="toggleWrapper-input"
-    disabled={false}
-    id="active"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    type="checkbox"
-    value="active"
-  />
-  <div
-    className="emotion-2"
+    class="emotion-0"
+    for="active"
   >
+    <input
+      aria-checked="true"
+      checked=""
+      class="emotion-1"
+      data-cy="toggleWrapper-input"
+      id="active"
+      type="checkbox"
+      value="active"
+    />
     <div
-      className="emotion-3"
-      data-cy="buttonCard"
+      class="emotion-2"
     >
       <div
-        className="emotion-4"
+        class="emotion-3"
+        data-cy="buttonCard"
       >
-        isActive
+        <div
+          class="emotion-4"
+        >
+          isActive
+        </div>
       </div>
     </div>
-  </div>
-</label>
+  </label>
+</DocumentFragment>
 `;
 
 exports[`ToggleBox renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
 }
 
@@ -132,38 +132,37 @@ exports[`ToggleBox renders default 1`] = `
 }
 
 <label
-  className="emotion-0"
-  htmlFor="default"
->
-  <input
-    className="emotion-1"
-    data-cy="toggleWrapper-input"
-    disabled={false}
-    id="default"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    type="checkbox"
-    value="default"
-  />
-  <div
-    className="emotion-2"
+    class="emotion-0"
+    for="default"
   >
+    <input
+      class="emotion-1"
+      data-cy="toggleWrapper-input"
+      id="default"
+      type="checkbox"
+      value="default"
+    />
     <div
-      className="emotion-3"
-      data-cy="buttonCard"
+      class="emotion-2"
     >
       <div
-        className="emotion-4"
+        class="emotion-3"
+        data-cy="buttonCard"
       >
-        default
+        <div
+          class="emotion-4"
+        >
+          default
+        </div>
       </div>
     </div>
-  </div>
-</label>
+  </label>
+</DocumentFragment>
 `;
 
 exports[`ToggleBox renders disabled 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
 }
 
@@ -216,32 +215,31 @@ exports[`ToggleBox renders disabled 1`] = `
 }
 
 <label
-  className="emotion-0"
-  htmlFor="disabled"
->
-  <input
-    className="emotion-1"
-    data-cy="toggleWrapper-input"
-    disabled={true}
-    id="disabled"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    type="checkbox"
-    value="disabled"
-  />
-  <div
-    className="emotion-2"
+    class="emotion-0"
+    for="disabled"
   >
+    <input
+      class="emotion-1"
+      data-cy="toggleWrapper-input"
+      disabled=""
+      id="disabled"
+      type="checkbox"
+      value="disabled"
+    />
     <div
-      className="emotion-3"
-      data-cy="buttonCard"
+      class="emotion-2"
     >
       <div
-        className="emotion-4"
+        class="emotion-3"
+        data-cy="buttonCard"
       >
-        disabled
+        <div
+          class="emotion-4"
+        >
+          disabled
+        </div>
       </div>
     </div>
-  </div>
-</label>
+  </label>
+</DocumentFragment>
 `;
