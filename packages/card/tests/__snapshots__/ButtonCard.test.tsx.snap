@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonCard renders as disabled 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
   border-radius: 6px;
@@ -34,23 +35,24 @@ exports[`ButtonCard renders as disabled 1`] = `
 }
 
 <div
-  aria-disabled={true}
-  className="emotion-0"
-  data-cy="buttonCard"
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={-1}
->
-  <div
-    className="emotion-1"
+    aria-disabled="true"
+    class="emotion-0"
+    data-cy="buttonCard"
+    role="button"
+    tabindex="-1"
   >
-    default
+    <div
+      class="emotion-1"
+    >
+      default
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`ButtonCard renders as hasFocus 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
   border-radius: 6px;
@@ -76,22 +78,23 @@ exports[`ButtonCard renders as hasFocus 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="buttonCard"
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={0}
->
-  <div
-    className="emotion-1"
+    class="emotion-0"
+    data-cy="buttonCard"
+    role="button"
+    tabindex="0"
   >
-    default
+    <div
+      class="emotion-1"
+    >
+      default
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`ButtonCard renders as isActive 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
   border-radius: 6px;
@@ -125,23 +128,24 @@ exports[`ButtonCard renders as isActive 1`] = `
 }
 
 <div
-  aria-pressed={true}
-  className="emotion-0"
-  data-cy="buttonCard"
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={0}
->
-  <div
-    className="emotion-1"
+    aria-pressed="true"
+    class="emotion-0"
+    data-cy="buttonCard"
+    role="button"
+    tabindex="0"
   >
-    default
+    <div
+      class="emotion-1"
+    >
+      default
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`ButtonCard renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
   border-radius: 6px;
@@ -165,16 +169,16 @@ exports[`ButtonCard renders default 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="buttonCard"
-  onKeyPress={[Function]}
-  role="button"
-  tabIndex={0}
->
-  <div
-    className="emotion-1"
+    class="emotion-0"
+    data-cy="buttonCard"
+    role="button"
+    tabindex="0"
   >
-    default
+    <div
+      class="emotion-1"
+    >
+      default
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

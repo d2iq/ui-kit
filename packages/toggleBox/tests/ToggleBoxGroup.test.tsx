@@ -1,5 +1,5 @@
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 import { mount } from "enzyme";
 import { createSerializer } from "@emotion/jest";
 
@@ -9,7 +9,7 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("ToggleBoxGroup", () => {
   it("renders default", () => {
-    const component = create(
+    const { asFragment } = render(
       <ToggleBoxGroup id="default">
         <ToggleBox id="exosphere" value="exosphere">
           Exosphere
@@ -23,11 +23,11 @@ describe("ToggleBoxGroup", () => {
       </ToggleBoxGroup>
     );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with a label", () => {
-    const component = create(
+    const { asFragment } = render(
       <ToggleBoxGroup id="default" label="Atmosphere layer">
         <ToggleBox id="exosphere" value="exosphere">
           Exosphere
@@ -41,11 +41,11 @@ describe("ToggleBoxGroup", () => {
       </ToggleBoxGroup>
     );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with a selected ToggleBox", () => {
-    const component = create(
+    const { asFragment } = render(
       <ToggleBoxGroup id="selectedItems" selectedItems={["mesosphere"]}>
         <ToggleBox id="exosphere" value="exosphere">
           Exosphere
@@ -59,11 +59,11 @@ describe("ToggleBoxGroup", () => {
       </ToggleBoxGroup>
     );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with custom direction and gutter size", () => {
-    const component = create(
+    const { asFragment } = render(
       <ToggleBoxGroup
         id="customLayoutProps"
         direction="column"
@@ -81,7 +81,7 @@ describe("ToggleBoxGroup", () => {
       </ToggleBoxGroup>
     );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("calls onChange prop with the selected values", () => {

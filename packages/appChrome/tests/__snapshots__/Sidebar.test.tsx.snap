@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar SidebarItem renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #E8EAED;
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -82,31 +83,32 @@ exports[`Sidebar SidebarItem renders 1`] = `
 }
 
 <div
-  className="emotion-0"
->
-  <nav
-    className="emotion-1"
+    class="emotion-0"
   >
-    <li
-      className="emotion-2"
-      data-cy="sidebarItem"
+    <nav
+      class="emotion-1"
     >
-      <a
-        className="emotion-3"
-        href="http://google.com"
-        onClick={[MockFunction]}
-        rel="noopener"
-        target="_blank"
+      <li
+        class="emotion-2"
+        data-cy="sidebarItem"
       >
-        Item label
-      </a>
-    </li>
-  </nav>
-</div>
+        <a
+          class="emotion-3"
+          href="http://google.com"
+          rel="noopener"
+          target="_blank"
+        >
+          Item label
+        </a>
+      </li>
+    </nav>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Sidebar SidebarItemLabel renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -166,36 +168,38 @@ exports[`Sidebar SidebarItemLabel renders 1`] = `
 }
 
 <div
-  className="emotion-0"
->
-  <div
-    className="emotion-1"
+    class="emotion-0"
   >
-    <svg
-      aria-label="product-components-inverse icon"
-      className="emotion-2"
-      data-cy="icon"
-      height={24}
-      preserveAspectRatio="xMinYMin meet"
-      role="img"
-      viewBox="0 0 24 24"
-      width={24}
+    <div
+      class="emotion-1"
     >
-      <use
-        xlinkHref="#product-components-inverse"
-      />
-    </svg>
+      <svg
+        aria-label="product-components-inverse icon"
+        class="emotion-2"
+        data-cy="icon"
+        height="24"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <use
+          xlink:href="#product-components-inverse"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-3"
+    >
+      Item label
+    </div>
   </div>
-  <div
-    className="emotion-3"
-  >
-    Item label
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Sidebar SidebarSection renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   text-transform: capitalize;
   padding-left: 24px;
   padding-right: 24px;
@@ -233,416 +237,29 @@ exports[`Sidebar SidebarSection renders 1`] = `
 }
 
 <div
-  data-cy="sidebarSection"
->
-  <h3
-    className="emotion-0"
+    data-cy="sidebarSection"
   >
-    Label
-  </h3>
-  <ul
-    className="emotion-1"
-  >
-    <div>
-      Sidebar section content
-    </div>
-  </ul>
-</div>
-`;
-
-exports[`Sidebar SidebarSubMenu renders 1`] = `
-.emotion-0 {
-  background: none;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  overflow: visible;
-  padding: 0;
-  text-align: inherit;
-  padding-left: 24px;
-  padding-right: 24px;
-  cursor: pointer;
-  opacity: 1;
-  text-transform: capitalize;
-  padding: 0 24px;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-0::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-.emotion-0 * {
-  cursor: unset;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:focus-within {
-  background-color: #32363E;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:focus-within,
-.emotion-0:hover a,
-.emotion-0:focus a,
-.emotion-0:focus-within a {
-  outline: none;
-}
-
-.emotion-0>div:focus {
-  outline: none;
-}
-
-.emotion-0:focus>div {
-  outline-color: Highlight;
-  outline-width: thin;
-}
-
-@media (-webkit-min-device-pixel-ratio: 0) {
-  .emotion-0:focus>div {
-    outline-color: -webkit-focus-ring-color;
-    outline-style: auto;
-    outline-width: unset;
-  }
-}
-
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-  -webkit-column-gap: 0;
-  column-gap: 0;
-  row-gap: 0;
-}
-
-.emotion-1>div {
-  width: auto;
-}
-
-@supports not (column-gap: 1px) {
-  .emotion-1>*:not(:last-child) {
-    padding-right: 0;
-  }
-}
-
-@supports not (row-gap: 1px) {
-  .emotion-1>*:not(:last-child) {
-    padding-bottom: 0;
-  }
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-}
-
-.emotion-3 {
-  vertical-align: middle;
-  fill: currentColor;
-}
-
-.emotion-3 use {
-  pointer-events: none;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-}
-
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.emotion-5>div {
-  width: auto;
-}
-
-.emotion-6 {
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
-  padding-right: 16px;
-  line-height: 0;
-}
-
-.emotion-7 {
-  vertical-align: middle;
-  fill: inherit;
-}
-
-.emotion-7 use {
-  pointer-events: none;
-}
-
-.emotion-8 {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-}
-
-.emotion-9 {
-  display: none;
-}
-
-.emotion-10 {
-  list-style: none;
-  margin-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.emotion-11 {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-left: 24px;
-  padding-right: 24px;
-  cursor: pointer;
-  opacity: 1;
-  text-transform: capitalize;
-  padding: 0 24px;
-  color: #AEB0B4;
-  fill: #AEB0B4;
-  font-size: 12px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-11:visited {
-  color: inherit;
-}
-
-.emotion-11 * {
-  cursor: unset;
-}
-
-.emotion-11:hover,
-.emotion-11:focus,
-.emotion-11:focus-within {
-  background-color: #32363E;
-}
-
-.emotion-11:hover,
-.emotion-11:focus,
-.emotion-11:focus-within,
-.emotion-11:hover a,
-.emotion-11:focus a,
-.emotion-11:focus-within a {
-  outline: none;
-}
-
-.emotion-11>div {
-  width: auto;
-}
-
-.emotion-12 {
-  text-transform: capitalize;
-}
-
-<li
-  data-cy="sidebarSubMenu"
->
-  <div>
-    <button
-      aria-expanded={false}
-      className="emotion-0"
-      onClick={[Function]}
-      type="button"
+    <h3
+      class="emotion-0"
     >
-      <div
-        tabIndex={-1}
-      >
-        <div
-          className="emotion-1"
-          data-cy="flex"
-        >
-          <div
-            className="emotion-2"
-            data-cy="flexItem"
-          >
-            <svg
-              aria-label="system-triangle-right icon"
-              className="emotion-3"
-              data-cy="icon"
-              height={16}
-              preserveAspectRatio="xMinYMin meet"
-              role="img"
-              viewBox="0 0 16 16"
-              width={16}
-            >
-              <use
-                xlinkHref="#system-triangle-right"
-              />
-            </svg>
-          </div>
-          <div
-            className="emotion-4"
-            data-cy="flexItem"
-          >
-            <div>
-              <div
-                className="emotion-5"
-              >
-                <div
-                  className="emotion-6"
-                >
-                  <svg
-                    aria-label="product-components-inverse icon"
-                    className="emotion-7"
-                    data-cy="icon"
-                    height={24}
-                    preserveAspectRatio="xMinYMin meet"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    width={24}
-                  >
-                    <use
-                      xlinkHref="#product-components-inverse"
-                    />
-                  </svg>
-                </div>
-                <div
-                  className="emotion-8"
-                >
-                  Item label
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      Label
+    </h3>
+    <ul
+      class="emotion-1"
+    >
+      <div>
+        Sidebar section content
       </div>
-    </button>
-    <div
-      aria-hidden={true}
-      className="emotion-9"
-    >
-      <ul
-        className="emotion-10"
-      >
-        <li>
-          <a
-            className="emotion-11"
-            data-cy="sidebarSubMenuItem"
-            href="http://google.com"
-            onClick={[MockFunction]}
-            rel="noopener"
-            target="_blank"
-          >
-            <span
-              className="emotion-12"
-            >
-              Item label
-            </span>
-          </a>
-        </li>
-        <li>
-          <a
-            className="emotion-11"
-            data-cy="sidebarSubMenuItem"
-            href="http://google.com"
-            onClick={[MockFunction]}
-            rel="noopener"
-            target="_blank"
-          >
-            <span
-              className="emotion-12"
-            >
-              Item label
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    </ul>
   </div>
-</li>
+</DocumentFragment>
 `;
+
+exports[`Sidebar SidebarSubMenu renders 1`] = `<DocumentFragment />`;
 
 exports[`Sidebar SidebarSubMenuItem renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -702,36 +319,38 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
 }
 
 <div
-  className="emotion-0"
->
-  <div
-    className="emotion-1"
+    class="emotion-0"
   >
-    <svg
-      aria-label="product-components-inverse icon"
-      className="emotion-2"
-      data-cy="icon"
-      height={24}
-      preserveAspectRatio="xMinYMin meet"
-      role="img"
-      viewBox="0 0 24 24"
-      width={24}
+    <div
+      class="emotion-1"
     >
-      <use
-        xlinkHref="#product-components-inverse"
-      />
-    </svg>
+      <svg
+        aria-label="product-components-inverse icon"
+        class="emotion-2"
+        data-cy="icon"
+        height="24"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <use
+          xlink:href="#product-components-inverse"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-3"
+    >
+      Item label
+    </div>
   </div>
-  <div
-    className="emotion-3"
-  >
-    Item label
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Sidebar renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #E8EAED;
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -774,12 +393,13 @@ exports[`Sidebar renders 1`] = `
 }
 
 <div
-  className="emotion-0"
->
-  <nav
-    className="emotion-1"
+    class="emotion-0"
   >
-    Sidebar content
-  </nav>
-</div>
+    <nav
+      class="emotion-1"
+    >
+      Sidebar content
+    </nav>
+  </div>
+</DocumentFragment>
 `;

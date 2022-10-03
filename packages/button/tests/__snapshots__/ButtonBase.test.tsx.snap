@@ -167,15 +167,10 @@ exports[`ButtonBase renders all appearances with props 1`] = `
   padding-left: 4px;
 }
 
-<Memo(FocusStyleManager)
-  focusEnabledClass="css-xcotv6"
->
-  <button
-    ariaHaspopup={true}
-    className="emotion-0"
-    disabled={true}
-    onClick={[Function]}
-    tabIndex={0}
+<button
+    class="emotion-0 emotion-1"
+    disabled=""
+    tabindex="0"
     type="submit"
   >
     <span
@@ -224,7 +219,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
       </span>
     </span>
   </button>
-</Memo(FocusStyleManager)>
+</DocumentFragment>
 `;
 
 exports[`ButtonBase renders all appearances with props 2`] = `
@@ -393,15 +388,10 @@ exports[`ButtonBase renders all appearances with props 2`] = `
   padding-left: 4px;
 }
 
-<Memo(FocusStyleManager)
-  focusEnabledClass="css-1h85cd2"
->
-  <button
-    ariaHaspopup={true}
-    className="emotion-0"
-    disabled={true}
-    onClick={[Function]}
-    tabIndex={0}
+<button
+    class="emotion-0 emotion-1"
+    disabled=""
+    tabindex="0"
     type="submit"
   >
     <span
@@ -450,7 +440,7 @@ exports[`ButtonBase renders all appearances with props 2`] = `
       </span>
     </span>
   </button>
-</Memo(FocusStyleManager)>
+</DocumentFragment>
 `;
 
 exports[`ButtonBase renders all appearances with props 3`] = `
@@ -620,15 +610,10 @@ exports[`ButtonBase renders all appearances with props 3`] = `
   padding-left: 4px;
 }
 
-<Memo(FocusStyleManager)
-  focusEnabledClass="css-bwvukd"
->
-  <button
-    ariaHaspopup={true}
-    className="emotion-0"
-    disabled={true}
-    onClick={[Function]}
-    tabIndex={0}
+<button
+    class="emotion-0 emotion-1"
+    disabled=""
+    tabindex="0"
     type="submit"
   >
     <span
@@ -677,7 +662,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
       </span>
     </span>
   </button>
-</Memo(FocusStyleManager)>
+</DocumentFragment>
 `;
 
 exports[`ButtonBase renders all appearances with props 4`] = `
@@ -847,15 +832,10 @@ exports[`ButtonBase renders all appearances with props 4`] = `
   padding-left: 4px;
 }
 
-<Memo(FocusStyleManager)
-  focusEnabledClass="css-txv5vz"
->
-  <button
-    ariaHaspopup={true}
-    className="emotion-0"
-    disabled={true}
-    onClick={[Function]}
-    tabIndex={0}
+<button
+    class="emotion-0 emotion-1"
+    disabled=""
+    tabindex="0"
     type="submit"
   >
     <span
@@ -904,7 +884,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
       </span>
     </span>
   </button>
-</Memo(FocusStyleManager)>
+</DocumentFragment>
 `;
 
 exports[`ButtonBase renders all appearances with props 5`] = `
@@ -1074,15 +1054,10 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   padding-left: 4px;
 }
 
-<Memo(FocusStyleManager)
-  focusEnabledClass="css-u3f3k6"
->
-  <button
-    ariaHaspopup={true}
-    className="emotion-0"
-    disabled={true}
-    onClick={[Function]}
-    tabIndex={0}
+<button
+    class="emotion-0 emotion-1"
+    disabled=""
+    tabindex="0"
     type="submit"
   >
     <span
@@ -1131,5 +1106,5 @@ exports[`ButtonBase renders all appearances with props 5`] = `
       </span>
     </span>
   </button>
-</Memo(FocusStyleManager)>
+</DocumentFragment>
 `;

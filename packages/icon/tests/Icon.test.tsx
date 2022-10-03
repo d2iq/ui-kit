@@ -2,13 +2,13 @@ import React from "react";
 import { createSerializer } from "@emotion/jest";
 import { Icon } from "../";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 expect.addSnapshotSerializer(createSerializer());
 
 describe("Icon", () => {
   it("renders", () => {
-    const component = create(
+    const { asFragment } = render(
       <Icon
         shape={SystemIcons.ArrowDown}
         color="blue"
@@ -17,16 +17,16 @@ describe("Icon", () => {
       />
     );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with defaults", () => {
-    const component = create(<Icon shape={SystemIcons.ArrowDown} />);
+    const { asFragment } = render(<Icon shape={SystemIcons.ArrowDown} />);
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders display block", () => {
-    const component = create(<Icon shape={SystemIcons.ArrowDown} block />);
+    const { asFragment } = render(<Icon shape={SystemIcons.ArrowDown} block />);
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

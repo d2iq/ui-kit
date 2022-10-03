@@ -1,5 +1,6 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
+import { render } from "@testing-library/react";
 import { create } from "react-test-renderer";
 import { ButtonCard } from "../";
 
@@ -7,24 +8,30 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("ButtonCard", () => {
   it("renders default", () => {
-    const component = create(<ButtonCard>default</ButtonCard>);
+    const { asFragment } = render(<ButtonCard>default</ButtonCard>);
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders as isActive", () => {
-    const component = create(<ButtonCard isActive={true}>default</ButtonCard>);
+    const { asFragment } = render(
+      <ButtonCard isActive={true}>default</ButtonCard>
+    );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders as disabled", () => {
-    const component = create(<ButtonCard disabled={true}>default</ButtonCard>);
+    const { asFragment } = render(
+      <ButtonCard disabled={true}>default</ButtonCard>
+    );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders as hasFocus", () => {
-    const component = create(<ButtonCard hasFocus={true}>default</ButtonCard>);
+    const { asFragment } = render(
+      <ButtonCard hasFocus={true}>default</ButtonCard>
+    );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   const accessibilityProps = [

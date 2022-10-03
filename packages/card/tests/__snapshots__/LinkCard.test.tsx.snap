@@ -1,51 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LinkCard renders default 1`] = `
-<div
-  className="css-e82819"
-  data-cy="linkCard"
->
+<DocumentFragment>
   <div
-    className="css-ysit7j"
+    class="css-e82819"
+    data-cy="linkCard"
   >
-    <a
-      className="css-gsqxnx"
-      href="http://google.com"
+    <div
+      class="css-ysit7j"
     >
-      <span
-        className="css-1uecx0y"
-        data-cy="box"
+      <a
+        class="css-gsqxnx"
+        href="http://google.com"
       >
-        Google
-      </span>
-    </a>
-    Example Content
+        <span
+          class="css-1uecx0y"
+          data-cy="box"
+        >
+          Google
+        </span>
+      </a>
+      Example Content
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`LinkCard renders with external link 1`] = `
-<div
-  className="css-e82819"
-  data-cy="linkCard"
->
+<DocumentFragment>
   <div
-    className="css-ysit7j"
+    class="css-e82819"
+    data-cy="linkCard"
   >
-    <a
-      className="css-gsqxnx"
-      href="http://google.com"
-      rel="noopener"
-      target="_blank"
+    <div
+      class="css-ysit7j"
     >
-      <span
-        className="css-1uecx0y"
-        data-cy="box"
+      <a
+        class="css-gsqxnx"
+        href="http://google.com"
+        rel="noopener"
+        target="_blank"
       >
-        Google
-      </span>
-    </a>
-    Example Content
+        <span
+          class="css-1uecx0y"
+          data-cy="box"
+        >
+          Google
+        </span>
+      </a>
+      Example Content
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

@@ -1,6 +1,5 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
-import { create } from "react-test-renderer";
 import { render } from "@testing-library/react";
 
 import {
@@ -20,8 +19,10 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("Sidebar", () => {
   it("renders", () => {
-    const component = create(<Sidebar isOpen={true}>Sidebar content</Sidebar>);
-    expect(component.toJSON()).toMatchSnapshot();
+    const { asFragment } = render(
+      <Sidebar isOpen={true}>Sidebar content</Sidebar>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
   it("calls onOpen callback", () => {
     const onOpenFn = jest.fn();
@@ -57,19 +58,19 @@ describe("Sidebar", () => {
 
   describe("SidebarSection", () => {
     it("renders", () => {
-      const component = create(
+      const { asFragment } = render(
         <SidebarSection label="Label">
           <div>Sidebar section content</div>
         </SidebarSection>
       );
-      expect(component.toJSON()).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("SidebarItem", () => {
     it("renders", () => {
       const onClickFn = jest.fn();
-      const component = create(
+      const { asFragment } = render(
         <Sidebar isOpen={true}>
           <SidebarItem
             icon={ProductIcons.ComponentsInverse}
@@ -81,18 +82,18 @@ describe("Sidebar", () => {
           </SidebarItem>
         </Sidebar>
       );
-      expect(component.toJSON()).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("SidebarItemLabel", () => {
     it("renders", () => {
-      const component = create(
+      const { asFragment } = render(
         <SidebarItemLabel icon={ProductIcons.ComponentsInverse}>
           Item label
         </SidebarItemLabel>
       );
-      expect(component.toJSON()).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
@@ -118,7 +119,7 @@ describe("Sidebar", () => {
       </SidebarSubMenuItem>
     ];
     /* eslint-enable react/jsx-wrap-multilines */
-    const component = create(
+    const { asFragment } = render(
       <SidebarSubMenuComponent
         label={
           <SidebarItemLabel icon={ProductIcons.ComponentsInverse}>
@@ -130,7 +131,7 @@ describe("Sidebar", () => {
       </SidebarSubMenuComponent>
     );
     it("renders", () => {
-      expect(component.toJSON()).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
     it("makes a list of submenu items", () => {
       const subItemResult = getSubItemList(subMenuItems);
@@ -140,12 +141,12 @@ describe("Sidebar", () => {
 
   describe("SidebarSubMenuItem", () => {
     it("renders", () => {
-      const component = create(
+      const { asFragment } = render(
         <SidebarItemLabel icon={ProductIcons.ComponentsInverse}>
           Item label
         </SidebarItemLabel>
       );
-      expect(component.toJSON()).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 });

@@ -1,5 +1,4 @@
 import React from "react";
-import { create } from "react-test-renderer";
 import userEvent from "@testing-library/user-event";
 import { render } from "@testing-library/react";
 import { BadgeButton } from "../";
@@ -11,69 +10,64 @@ const fn = () => null;
 
 describe("BadgeButton", () => {
   it("default", () => {
-    expect(
-      create(<BadgeButton onClick={fn}>default</BadgeButton>).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn}>default</BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("success", () => {
-    expect(
-      create(
-        <BadgeButton onClick={fn} appearance="success">
-          success
-        </BadgeButton>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn} appearance="success">
+        success
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("primary", () => {
-    expect(
-      create(
-        <BadgeButton onClick={fn} appearance="primary">
-          primary
-        </BadgeButton>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn} appearance="primary">
+        primary
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("danger", () => {
-    expect(
-      create(
-        <BadgeButton onClick={fn} appearance="danger">
-          danger
-        </BadgeButton>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn} appearance="danger">
+        danger
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("warning", () => {
-    expect(
-      create(
-        <BadgeButton onClick={fn} appearance="warning">
-          warning
-        </BadgeButton>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn} appearance="warning">
+        warning
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("outline", () => {
-    expect(
-      create(
-        <BadgeButton onClick={fn} appearance="outline">
-          outline
-        </BadgeButton>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn} appearance="outline">
+        outline
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("accept jsx as children", () => {
-    expect(
-      create(
-        <BadgeButton onClick={fn}>
-          <StringComponent />
-        </BadgeButton>
-      ).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <BadgeButton onClick={fn}>
+        <StringComponent />
+      </BadgeButton>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("triggers onClick on click", async () => {

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppChrome renders with the app chrome regions 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   height: 100%;
   overflow: hidden;
   font-size: 14px;
@@ -85,35 +86,36 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="appChrome"
->
-  <div
-    data-cy="headerBar"
-  >
-    <div>
-      Header content goes here
-    </div>
-  </div>
-  <div
-    className="emotion-1"
+    class="emotion-0"
+    data-cy="appChrome"
   >
     <div
-      className="emotion-2"
-      data-cy="sidebar"
+      data-cy="headerBar"
     >
       <div>
-        Sidebar content
+        Header content goes here
       </div>
     </div>
-    <main
-      className="emotion-3"
-      data-cy="main"
+    <div
+      class="emotion-1"
     >
-      <div>
-        Main app content goes here
+      <div
+        class="emotion-2"
+        data-cy="sidebar"
+      >
+        <div>
+          Sidebar content
+        </div>
       </div>
-    </main>
+      <main
+        class="emotion-3"
+        data-cy="main"
+      >
+        <div>
+          Main app content goes here
+        </div>
+      </main>
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorCodedBadge renders with a color 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #FFFFFF;
   border-color: #DADDE2;
   color: #1B2029;
@@ -41,33 +42,35 @@ exports[`ColorCodedBadge renders with a color 1`] = `
 }
 
 <span
-  className="emotion-0"
-  data-cy="badge"
->
-  <svg
-    className="emotion-1"
-    height={12}
-    viewBox="0 0 12 12"
-    width={12}
-    xmlns="http://www.w3.org/2000/svg"
+    class="emotion-0"
+    data-cy="badge"
   >
-    <circle
-      cx={6}
-      cy={6}
-      r={6}
-    />
-  </svg>
-  <div
-    className="emotion-2"
-    data-cy="spacingBox"
-  >
-    Color Coded Badge
-  </div>
-</span>
+    <svg
+      class="emotion-1"
+      height="12"
+      viewBox="0 0 12 12"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="6"
+        cy="6"
+        r="6"
+      />
+    </svg>
+    <div
+      class="emotion-2"
+      data-cy="spacingBox"
+    >
+      Color Coded Badge
+    </div>
+  </span>
+</DocumentFragment>
 `;
 
 exports[`ColorCodedBadge renders with an icon and color 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #FFFFFF;
   border-color: #DADDE2;
   color: #1B2029;
@@ -111,34 +114,36 @@ exports[`ColorCodedBadge renders with an icon and color 1`] = `
 }
 
 <span
-  className="emotion-0"
-  data-cy="badge"
->
-  <svg
-    aria-label="system-circle-check icon"
-    className="emotion-1"
-    data-cy="icon"
-    height={12}
-    preserveAspectRatio="xMinYMin meet"
-    role="img"
-    viewBox="0 0 12 12"
-    width={12}
+    class="emotion-0"
+    data-cy="badge"
   >
-    <use
-      xlinkHref="#system-circle-check"
-    />
-  </svg>
-  <div
-    className="emotion-2"
-    data-cy="spacingBox"
-  >
-    Color Coded Badge with icon
-  </div>
-</span>
+    <svg
+      aria-label="system-circle-check icon"
+      class="emotion-1"
+      data-cy="icon"
+      height="12"
+      preserveAspectRatio="xMinYMin meet"
+      role="img"
+      viewBox="0 0 12 12"
+      width="12"
+    >
+      <use
+        xlink:href="#system-circle-check"
+      />
+    </svg>
+    <div
+      class="emotion-2"
+      data-cy="spacingBox"
+    >
+      Color Coded Badge with icon
+    </div>
+  </span>
+</DocumentFragment>
 `;
 
 exports[`ColorCodedBadge renders without children 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #FFFFFF;
   border-color: #DADDE2;
   color: #1B2029;
@@ -178,25 +183,26 @@ exports[`ColorCodedBadge renders without children 1`] = `
 }
 
 <span
-  className="emotion-0"
-  data-cy="badge"
->
-  <svg
-    className="emotion-1"
-    height={12}
-    viewBox="0 0 12 12"
-    width={12}
-    xmlns="http://www.w3.org/2000/svg"
+    class="emotion-0"
+    data-cy="badge"
   >
-    <circle
-      cx={6}
-      cy={6}
-      r={6}
+    <svg
+      class="emotion-1"
+      height="12"
+      viewBox="0 0 12 12"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="6"
+        cy="6"
+        r="6"
+      />
+    </svg>
+    <div
+      class="emotion-2"
+      data-cy="spacingBox"
     />
-  </svg>
-  <div
-    className="emotion-2"
-    data-cy="spacingBox"
-  />
-</span>
+  </span>
+</DocumentFragment>
 `;

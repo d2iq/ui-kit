@@ -1,16 +1,16 @@
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 import { Breadcrumb } from "../";
 
 describe("Breadcrumb", () => {
   it("default", () => {
-    const component = create(
+    const { asFragment } = render(
       <Breadcrumb>
         <span>One</span>
         <span>Two</span>
       </Breadcrumb>
     );
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

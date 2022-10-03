@@ -1,5 +1,4 @@
 import React from "react";
-import { create } from "react-test-renderer";
 import userEvent from "@testing-library/user-event";
 import { render } from "@testing-library/react";
 
@@ -15,7 +14,7 @@ import { getById } from "../../testHelper/test.utilities";
 describe("Accordion", () => {
   describe("rendering", () => {
     it("renders with no expanded items", () => {
-      const component = create(
+      const { asFragment } = render(
         <Accordion>
           <AccordionItem id="customId">
             <AccordionItemTitle appearance="danger">Panel 1</AccordionItemTitle>
@@ -32,10 +31,10 @@ describe("Accordion", () => {
         </Accordion>
       );
 
-      expect(component.toJSON()).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
     it("renders an item with interactive content", () => {
-      const component = create(
+      const { asFragment } = render(
         <Accordion>
           <AccordionItem id="customId">
             <AccordionItemTitleInteractive appearance="danger">
@@ -76,10 +75,10 @@ describe("Accordion", () => {
         </Accordion>
       );
 
-      expect(component.toJSON()).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
     it("renders with expanded items", () => {
-      const component = create(
+      const { asFragment } = render(
         <Accordion initialExpandedItems={["panel1", "panel2", "panel3"]}>
           <AccordionItem id="panel1">
             <AccordionItemTitle>Panel 1</AccordionItemTitle>
@@ -96,7 +95,7 @@ describe("Accordion", () => {
         </Accordion>
       );
 
-      expect(component.toJSON()).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
