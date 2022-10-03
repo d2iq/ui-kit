@@ -43,7 +43,7 @@ describe("ButtonBase", () => {
     expect(someFn).toHaveBeenCalled();
   });
 
-  it("does not call onClick prop when disabled", async () => {
+  it("does not call onClick prop when disabled", () => {
     const anotherFn = jest.fn();
 
     render(
