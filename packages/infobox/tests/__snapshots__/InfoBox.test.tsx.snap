@@ -5,8 +5,7 @@ exports[` 1`] = `
   border-radius: 6px;
 }
 
-<InfoBox
-  appearance="default"
+<Memo(InfoBox)
   className="emotion-0"
   message="message"
   onDismiss={[MockFunction]}
@@ -19,8 +18,7 @@ exports[`InfoBox InfoBoxBanner renders default 1`] = `
   border-bottom-style: solid;
 }
 
-<InfoBox
-  appearance="default"
+<Memo(InfoBox)
   className="emotion-0"
   message="message"
   onDismiss={[MockFunction]}
