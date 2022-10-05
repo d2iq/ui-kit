@@ -45,26 +45,15 @@ export interface InfoBoxProps {
   secondaryAction?: React.ReactElement<HTMLElement>;
 }
 
-export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
-  public static defaultProps: Partial<InfoBoxProps> = {
-    appearance: "default"
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.handleDismiss = this.handleDismiss.bind(this);
-  }
-
-  public render() {
-    const {
-      appearance,
-      message,
-      primaryAction,
-      secondaryAction,
-      onDismiss,
-      className
-    } = this.props;
+const InfoBox = React.memo(
+  ({
+    appearance = "default",
+    message,
+    primaryAction,
+    secondaryAction,
+    onDismiss,
+    className
+  }: InfoBoxProps) => {
     const hasActions = primaryAction || secondaryAction;
     const isUrgentMessage = appearance === "danger" || appearance === "warning";
     const dataCy = [
@@ -73,6 +62,13 @@ export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
         ? [`infoBox.${appearance}`]
         : [])
     ].join(" ");
+
+    const handleDismiss = (e): void => {
+      if (!onDismiss) {
+        return;
+      }
+      onDismiss(e);
+    };
 
     return (
       <div
@@ -111,7 +107,7 @@ export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
         )}
 
         {onDismiss && (
-          <Clickable action={this.handleDismiss} tabIndex={0}>
+          <Clickable action={handleDismiss} tabIndex={0}>
             <span className={dismissBtn}>
               <Icon shape={SystemIcons.Close} size="xs" color={greyDark} />
             </span>
@@ -120,13 +116,6 @@ export class InfoBox extends React.PureComponent<InfoBoxProps, {}> {
       </div>
     );
   }
-
-  private handleDismiss(e): void {
-    if (!this.props.onDismiss) {
-      return;
-    }
-    this.props.onDismiss(e);
-  }
-}
+);
 
 export default InfoBox;
