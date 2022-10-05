@@ -1,53 +1,34 @@
-# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: UI Kit Actions
-
+name: UI Kit Code Checks
 on:
+  pull_request:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
-
 jobs:
   ci:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-
+          node-version: "16"
       - name: Install Dependencies 🔧
         run: npm install
-
       - name: Lint 🧹
         run: npm run lint
-
       - name: Build 🔨
         run: npm run dist
-
       - name: Type Checking ⚡
         run: npm run test:types
-
       - name: Unit Tests 🧪
         run: npm test
-
       - name: Semantic Release ⬆️
         if: github.ref == 'refs/heads/main'
-        uses: cycjimmy/semantic-release-action@v2.6.0
+        uses: cycjimmy/semantic-release-action@v3
         with:
-          semantic_version: 18
+          semantic_version: 19
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Build Storybook and Deploy 🚀
         if: github.ref == 'refs/heads/main'
         run: |
