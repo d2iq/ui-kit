@@ -43,6 +43,7 @@ export interface InfoBoxProps {
    * an alternate action the user could take
    */
   secondaryAction?: React.ReactElement<HTMLElement>;
+  children?: React.ReactNode | React.ReactNode[];
 }
 
 const InfoBox = ({

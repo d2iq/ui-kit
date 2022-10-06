@@ -10,7 +10,7 @@ export interface RadioInputProps extends ToggleInputProps {
   name: string;
 }
 
-const RadioInput: React.FC<React.PropsWithRef<RadioInputProps>> = props => (
+const RadioInput = (props: React.PropsWithRef<RadioInputProps>) => (
   <ToggleInput inputType="radio" {...props} />
 );
 

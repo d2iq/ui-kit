@@ -28,12 +28,12 @@ export interface CodeSnippetProps {
   copyTooltipContent?: React.ReactNode;
 }
 
-const CodeSnippet: React.FC<CodeSnippetProps> = ({
+const CodeSnippet = ({
   children,
   copyTooltipContent,
   textToCopy,
   onCopy
-}) => (
+}: CodeSnippetProps) => (
   <SpacingBox bgColor={greyDark} className={codeSnippet}>
     <Flex>
       <FlexItem>

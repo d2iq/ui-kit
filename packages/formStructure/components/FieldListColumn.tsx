@@ -26,6 +26,7 @@ export interface FieldListColumnWidthProps {
   /** The maximum width a column of fields can be. Accepts a number or any value that can be passed to CSS's `grid-template-columns` */
   maxWidth?: number | string;
   key: React.Key;
+  children?: React.ReactNode;
 }
 export interface FieldListColumnProps<
   T = string,
@@ -50,6 +51,11 @@ export const FieldListColumn: <
   FieldListColumnProps<T, E> & FieldListColumnWidthProps
 > = () => <React.Fragment />;
 
-export const FieldListColumnSeparator: React.FC<
-  FieldListColumnWidthProps
-> = () => <React.Fragment />;
+type FieldListColumnSeparatorProps = {
+  key?: string;
+  children?: React.ReactNode;
+};
+
+export const FieldListColumnSeparator = ({
+  children
+}: FieldListColumnSeparatorProps) => <>{children}</>;

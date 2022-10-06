@@ -27,6 +27,7 @@ export interface DropdownableProps {
   overlayRoot?: HTMLElement;
   /** Whether the Dropdownable overlay should open in it's parent element instead of `overlayRoot` */
   disablePortal?: boolean;
+  children?: React.ReactNode | React.ReactNode[];
 }
 
 const getPreferredDirection = (
@@ -57,7 +58,7 @@ const getFlipModifier = (preferredDirections?: Direction | Direction[]) => {
   return null;
 };
 
-const Dropdownable: React.FC<DropdownableProps> = ({
+const Dropdownable = ({
   isOpen,
   dropdown,
   preferredDirections,
@@ -65,7 +66,7 @@ const Dropdownable: React.FC<DropdownableProps> = ({
   overlayRoot,
   disablePortal,
   children
-}) => {
+}: DropdownableProps) => {
   const [referenceElement, setReferenceElement] =
     React.useState<HTMLDivElement | null>(null);
   const [popperElement, setPopperElement] =

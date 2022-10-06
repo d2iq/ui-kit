@@ -25,14 +25,16 @@ interface ClickToCopyButtonProps extends ClickToCopyBaseProps {
    * Custom ID used for tooltip's id and aria attributes
    */
   tooltipId?: string;
+  children?: React.ReactNode | React.ReactNode[];
 }
 
-const ClickToCopyButton: React.FC<ClickToCopyButtonProps> = ({
+const ClickToCopyButton = ({
   children,
   color,
   iconSize,
+  tooltipContent = "Copied to clipboard",
   ...other
-}) => {
+}: ClickToCopyButtonProps) => {
   return (
     <ClickToCopy {...other}>
       {({ onClick }) => (
@@ -52,10 +54,6 @@ const ClickToCopyButton: React.FC<ClickToCopyButtonProps> = ({
       )}
     </ClickToCopy>
   );
-};
-
-ClickToCopyButton.defaultProps = {
-  tooltipContent: "Copied to clipboard"
 };
 
 export default ClickToCopyButton;

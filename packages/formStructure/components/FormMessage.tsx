@@ -5,7 +5,7 @@ import { SpacingBox } from "../../styleUtils/modifiers";
 
 type FormMessageProps = Omit<InfoBoxProps, "message">;
 
-const FormMessage: React.FC<FormMessageProps> = ({ children, ...other }) => (
+const FormMessage = ({ children, ...other }: FormMessageProps) => (
   <SpacingBox side="bottom" spacingSize="l" data-cy="formMessage">
     <InfoBoxInline message={children} {...other} />
   </SpacingBox>

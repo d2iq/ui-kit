@@ -5,13 +5,11 @@ import { flex } from "../../shared/styles/styleUtils";
 export interface ModalContentsProps {
   isOpen: boolean;
   onClose: () => void;
-  ["data-cy"]?: string;
+  "data-cy"?: string;
+  children?: React.ReactNode | React.ReactNode[];
 }
 
-const ModalContents: React.FC<ModalContentsProps> = ({
-  children,
-  "data-cy": dataCy
-}) => (
+const ModalContents = ({ children, "data-cy": dataCy }: ModalContentsProps) => (
   <div
     className={cx(modalWrapper, flex({ direction: "column" }))}
     data-cy={dataCy}

@@ -361,11 +361,9 @@ exports[`CodeSnippet renders with copy button 1`] = `
                 <ClickToCopyButton
                   color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
                   textToCopy="snippet content"
-                  tooltipContent="Copied to clipboard"
                 >
                   <ClickToCopy
                     textToCopy="snippet content"
-                    tooltipContent="Copied to clipboard"
                   >
                     <Box
                       bgImageOptions={

@@ -49,6 +49,7 @@ export interface FieldListProps {
    * problems when the field value is changed
    */
   pathToUniqueKey?: string;
+  children?: React.ReactNode | React.ReactNode[];
 }
 
 type FieldListColumn = React.ReactElement<
@@ -71,7 +72,7 @@ interface FieldListRowProps
 const isRowDisabled = (rowIndex, disabledRows) =>
   disabledRows && disabledRows.includes(rowIndex);
 
-const FieldListRow: React.FC<FieldListRowProps> = React.memo(
+const FieldListRow = React.memo(
   ({
     columns,
     data,
@@ -80,7 +81,7 @@ const FieldListRow: React.FC<FieldListRowProps> = React.memo(
     isLastRow,
     pathToUniqueKey,
     rowId
-  }) => {
+  }: FieldListRowProps) => {
     const fieldListContext = React.useContext(FieldListContext);
     const addEmptyRow = (e: React.KeyboardEvent) => {
       const rowHasData = Object.keys(data || {}).filter(
@@ -151,7 +152,7 @@ const FieldListRow: React.FC<FieldListRowProps> = React.memo(
   }
 );
 
-const FieldListHeader: React.FC<FieldListHeaderProps> = ({ columns }) => (
+const FieldListHeader = ({ columns }: FieldListHeaderProps) => (
   <SpacingBox
     side="bottom"
     spacingSize="xxs"
@@ -174,14 +175,14 @@ const FieldListHeader: React.FC<FieldListHeaderProps> = ({ columns }) => (
   </SpacingBox>
 );
 
-const FieldList: React.FC<FieldListProps> = ({
+const FieldList = ({
   children,
   data,
   disabledRows,
   onAddItem,
   onRemoveItem,
-  pathToUniqueKey
-}) => {
+  pathToUniqueKey = "id"
+}: FieldListProps) => {
   const columns = (
     React.Children.toArray(children) as Array<
       React.ReactElement<FieldListColumnProps & FieldListColumnWidthProps>
@@ -255,10 +256,6 @@ const FieldList: React.FC<FieldListProps> = ({
       </div>
     </FieldListProvider>
   );
-};
-
-FieldList.defaultProps = {
-  pathToUniqueKey: "id"
 };
 
 export default FieldList;
