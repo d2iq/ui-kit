@@ -43,67 +43,59 @@ export interface ToggleBoxGroupProps {
   label?: React.ReactNode;
 }
 
-class ToggleBoxGroup extends React.PureComponent<ToggleBoxGroupProps> {
-  render() {
-    const {
-      children,
-      direction = "row" as FlexDirection,
-      gutterSize = "m" as SpaceSize,
-      id = nextId("toggleBoxGroup-"),
-      label,
-      multiSelect,
-      onChange,
-      selectedItems = []
-    } = this.props;
+const ToggleBoxGroup = ({
+  children,
+  direction = "row",
+  gutterSize = "m",
+  id = nextId("toggleBoxGroup-"),
+  label,
+  multiSelect,
+  onChange,
+  selectedItems = []
+}: ToggleBoxGroupProps) => {
+  const getSelectedItems = (value: string, checked: boolean) => {
+    if (checked) {
+      return multiSelect ? [...selectedItems, value] : [value];
+    }
+    return selectedItems.filter(selectedChoice => selectedChoice !== value);
+  };
 
-    const getSelectedItems = (value, checked) => {
-      if (checked) {
-        return multiSelect ? [...selectedItems, value] : [value];
-      }
+  const ToggleBoxes = () => (
+    <Flex direction={direction} gutterSize={gutterSize} align="stretch">
+      {React.Children.toArray(children).map(toggleBox => {
+        const { name, value, ...childProps } = toggleBox.props;
+        const handleChange = e => {
+          onChange?.(getSelectedItems(value, e.target.checked));
+        };
 
-      return selectedItems.filter(selectedChoice => selectedChoice !== value);
-    };
+        return (
+          <FlexItem
+            key={`buttonWrapper-${childProps.id}`}
+            className={toggleBoxGroupItem}
+          >
+            {React.cloneElement(toggleBox, {
+              name: multiSelect ? name : name || id,
+              type: multiSelect ? "checkbox" : "radio",
+              onChange: handleChange,
+              isActive: selectedItems.includes(value),
+              id: childProps.id,
+              value,
+              ...childProps
+            })}
+          </FlexItem>
+        );
+      })}
+    </Flex>
+  );
 
-    const toggleBoxes = () => (
-      <Flex direction={direction} gutterSize={gutterSize} align="stretch">
-        {React.Children.toArray(children).map(toggleBox => {
-          const { name, value, ...childOther } = toggleBox.props;
-          const handleChange = e => {
-            if (onChange) {
-              onChange(getSelectedItems(value, e.target.checked));
-            }
-          };
+  return label ? (
+    <fieldset className={fieldsetReset}>
+      <legend className={cx(legendReset, getLabelStyle())}>{label}</legend>
+      <ToggleBoxes />
+    </fieldset>
+  ) : (
+    <ToggleBoxes />
+  );
+};
 
-          delete childOther.onChange;
-
-          return (
-            <FlexItem
-              key={`buttonWrapper-${childOther.id}`}
-              className={toggleBoxGroupItem}
-            >
-              {React.cloneElement(toggleBox, {
-                name: !multiSelect ? name || id : name,
-                type: multiSelect ? "checkbox" : "radio",
-                onChange: handleChange,
-                isActive: selectedItems.includes(value),
-                id: childOther.id,
-                value,
-                ...childOther
-              })}
-            </FlexItem>
-          );
-        })}
-      </Flex>
-    );
-    return label ? (
-      <fieldset className={fieldsetReset}>
-        <legend className={cx(legendReset, getLabelStyle())}>{label}</legend>
-        {toggleBoxes()}
-      </fieldset>
-    ) : (
-      toggleBoxes()
-    );
-  }
-}
-
-export default ToggleBoxGroup;
+export default React.memo(ToggleBoxGroup);

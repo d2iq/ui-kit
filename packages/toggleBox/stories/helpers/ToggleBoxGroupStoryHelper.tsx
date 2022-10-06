@@ -1,42 +1,29 @@
 import * as React from "react";
-
-interface ToggleBoxGroupStoryHelperState {
-  selectedItems: string[];
-}
+import { useState } from "react";
 
 interface RenderProps {
   changeHandler: (selectedItems: string[]) => void;
   selectedItems: string[];
 }
+
 interface ToggleBoxGroupStoryHelperProps {
-  children: (renderProps: RenderProps) => React.ReactNode;
+  children: (renderProps: RenderProps) => React.ReactElement;
   selectedItems?: string[];
 }
 
-class ToggleBoxGroupStoryHelper extends React.PureComponent<
-  ToggleBoxGroupStoryHelperProps,
-  ToggleBoxGroupStoryHelperState
-> {
-  constructor(props) {
-    super(props);
+const ToggleBoxGroupStoryHelper = ({
+  children
+}: ToggleBoxGroupStoryHelperProps) => {
+  const [selectedItems, setSelectedItems] = useState<string[]>([]);
 
-    this.handleChange = this.handleChange.bind(this);
-
-    this.state = {
-      selectedItems: props.selectedItems || []
-    };
+  function handleChange(value) {
+    setSelectedItems(value);
   }
 
-  public render() {
-    return this.props.children({
-      changeHandler: this.handleChange,
-      selectedItems: this.state.selectedItems
-    });
-  }
-
-  private handleChange(value) {
-    this.setState({ selectedItems: value });
-  }
-}
+  return children({
+    changeHandler: handleChange,
+    selectedItems
+  });
+};
 
 export default ToggleBoxGroupStoryHelper;
