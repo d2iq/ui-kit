@@ -43,7 +43,7 @@ export interface ToggleBoxGroupProps {
   label?: React.ReactNode;
 }
 
-const ToggleBoxGroup: React.FunctionComponent<ToggleBoxGroupProps> = ({
+const ToggleBoxGroup: React.FC<ToggleBoxGroupProps> = ({
   children,
   direction = "row",
   gutterSize = "m",
