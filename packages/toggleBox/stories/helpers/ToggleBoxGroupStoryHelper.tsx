@@ -11,9 +11,9 @@ interface ToggleBoxGroupStoryHelperProps {
   selectedItems?: string[];
 }
 
-const ToggleBoxGroupStoryHelper: React.FC<ToggleBoxGroupStoryHelperProps> = ({
+const ToggleBoxGroupStoryHelper = ({
   children
-}) => {
+}: ToggleBoxGroupStoryHelperProps) => {
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
 
   function handleChange(value) {

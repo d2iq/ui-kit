@@ -43,7 +43,7 @@ export interface ToggleBoxGroupProps {
   label?: React.ReactNode;
 }
 
-const ToggleBoxGroup: React.FC<ToggleBoxGroupProps> = ({
+const ToggleBoxGroup = ({
   children,
   direction = "row",
   gutterSize = "m",
@@ -52,7 +52,7 @@ const ToggleBoxGroup: React.FC<ToggleBoxGroupProps> = ({
   multiSelect,
   onChange,
   selectedItems = []
-}) => {
+}: ToggleBoxGroupProps) => {
   const getSelectedItems = (value: string, checked: boolean) => {
     if (checked) {
       return multiSelect ? [...selectedItems, value] : [value];
