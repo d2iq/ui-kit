@@ -98,4 +98,4 @@ const ToggleBoxGroup = ({
   );
 };
 
-export default ToggleBoxGroup;
+export default React.memo(ToggleBoxGroup);
