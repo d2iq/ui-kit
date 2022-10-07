@@ -3,9 +3,15 @@ import { FlexboxProperties } from "../shared/styles/styleUtils/layout/flexbox";
 import { Flex, FlexItem } from "../styleUtils/layout";
 import Pagination from "./Pagination";
 
-const PaginationContainer: React.FC<{
+export interface PaginationContainerProps {
+  children?: React.ReactNode | React.ReactNode[];
   vertAlignChildren?: FlexboxProperties["align"];
-}> = ({ children, vertAlignChildren }) => {
+}
+
+const PaginationContainer = ({
+  children,
+  vertAlignChildren = "center"
+}: PaginationContainerProps) => {
   const paginationComponent = React.Children.toArray(children).find(
     child => React.isValidElement(child) && child.type === Pagination
   );
@@ -21,10 +27,6 @@ const PaginationContainer: React.FC<{
       <FlexItem flex="shrink">{paginationComponent}</FlexItem>
     </Flex>
   );
-};
-
-PaginationContainer.defaultProps = {
-  vertAlignChildren: "center"
 };
 
 export default PaginationContainer;

@@ -6,6 +6,16 @@ import { BorderedList } from "../list";
 import usePageChange from "./usePageChange";
 import { mockPaginationData as initialData } from "./mockPaginationData.json";
 
+type ControlledPaginationWrapperProps = {
+  children: (renderProps: {
+    activePage: number;
+    pageLength: number;
+    itemEndIndex: number;
+    itemStartIndex: number;
+    onChange: (newPage, newPageLength) => void;
+  }) => React.ReactElement;
+};
+
 export default {
   title: "Navigation/Pagination",
   component: Pagination
@@ -20,17 +30,12 @@ const Template: Story<PaginationProps> = args => (
 export const Default = Template.bind({});
 
 export const ExampleWPagedListControlledComponent = args => {
-  const ControlledPaginationWrapper: React.FC<{
-    children: (renderProps: {
-      activePage: number;
-      pageLength: number;
-      itemEndIndex: number;
-      itemStartIndex: number;
-      onChange: (newPage, newPageLength) => void;
-    }) => React.ReactElement;
-  }> = ({ children }) => {
+  const ControlledPaginationWrapper = ({
+    children
+  }: ControlledPaginationWrapperProps) => {
     return children(usePageChange());
   };
+
   return (
     <ControlledPaginationWrapper>
       {({ activePage, itemEndIndex, itemStartIndex, pageLength, onChange }) => (

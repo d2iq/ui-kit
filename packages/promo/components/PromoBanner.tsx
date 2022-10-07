@@ -12,12 +12,12 @@ interface PromoBannerProps extends PromoProps {
 
 const darkGradientStyles: GradientStyle[] = ["purple"];
 
-const PromoBanner: React.FunctionComponent<PromoBannerProps> = ({
-  bgColor = "",
+const PromoBanner = ({
+  bgColor = "themeBgSecondary",
   gradientStyle,
   isDarkBackground,
   ...other
-}) => (
+}: PromoBannerProps) => (
   <SpacingBox
     bgColor={gradientStyle ? gradientStyles[gradientStyle][0] : dt[bgColor]}
     className={cx({
@@ -35,9 +35,5 @@ const PromoBanner: React.FunctionComponent<PromoBannerProps> = ({
     />
   </SpacingBox>
 );
-
-PromoBanner.defaultProps = {
-  bgColor: "themeBgSecondary"
-};
 
 export default PromoBanner;

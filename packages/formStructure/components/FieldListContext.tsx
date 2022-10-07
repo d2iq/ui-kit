@@ -15,14 +15,14 @@ type FieldListContext = {
 
 export const Context = React.createContext<FieldListContext | null>(null);
 
-export const FieldListProvider: React.FC<FieldListProviderProps> = ({
+export const FieldListProvider = ({
   onAddItem,
   children,
   data,
   pathToUniqueKey,
   onRemoveItem,
   setData
-}) => {
+}: FieldListProviderProps) => {
   const addListItem = (
     rowId?: string | number,
     itemToAdd?: Record<string, any>

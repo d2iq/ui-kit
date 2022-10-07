@@ -17,15 +17,15 @@ export interface ExpandableProps {
   onChange?: (open: boolean) => void;
 }
 
-const Expandable: React.FC<ExpandableProps> = ({
+const Expandable = ({
   labelClassName,
   children,
   label,
   isOpen,
   controlledIsOpen,
   onChange,
-  indicatorPosition
-}) => {
+  indicatorPosition = "left"
+}: ExpandableProps) => {
   const [open, setOpen] = React.useState(Boolean(isOpen));
 
   React.useEffect(() => {
@@ -77,10 +77,6 @@ const Expandable: React.FC<ExpandableProps> = ({
       </div>
     </div>
   );
-};
-
-Expandable.defaultProps = {
-  indicatorPosition: "left"
 };
 
 export default Expandable;

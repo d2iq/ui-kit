@@ -145,7 +145,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
   showListLabel={true}
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="radio"
   >
     <fieldset
@@ -187,7 +187,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
               value="value.1"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.1"
               >
                 <div
@@ -227,7 +227,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </RadioInput>
         </li>
@@ -256,7 +256,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
               value="value.2"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.2"
               >
                 <div
@@ -296,7 +296,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </RadioInput>
         </li>
@@ -325,7 +325,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
               value="value.3"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.3"
               >
                 <div
@@ -365,13 +365,13 @@ exports[`ToggleInputList renders as a radio group 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </RadioInput>
         </li>
       </ul>
     </fieldset>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ToggleInputList>
 `;
 
@@ -519,7 +519,7 @@ exports[`ToggleInputList renders default 1`] = `
   showListLabel={true}
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="checkbox"
   >
     <fieldset
@@ -561,7 +561,7 @@ exports[`ToggleInputList renders default 1`] = `
               value="value.1"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.1"
               >
                 <div
@@ -601,7 +601,7 @@ exports[`ToggleInputList renders default 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -630,7 +630,7 @@ exports[`ToggleInputList renders default 1`] = `
               value="value.2"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.2"
               >
                 <div
@@ -670,7 +670,7 @@ exports[`ToggleInputList renders default 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -699,7 +699,7 @@ exports[`ToggleInputList renders default 1`] = `
               value="value.3"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.3"
               >
                 <div
@@ -739,13 +739,13 @@ exports[`ToggleInputList renders default 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
       </ul>
     </fieldset>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ToggleInputList>
 `;
 
@@ -915,7 +915,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
   showListLabel={true}
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     errors={
       [
         "error.1",
@@ -963,7 +963,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
               value="value.1"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.1"
               >
                 <div
@@ -1003,7 +1003,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -1032,7 +1032,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
               value="value.2"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.2"
               >
                 <div
@@ -1072,7 +1072,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -1101,7 +1101,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
               value="value.3"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.3"
               >
                 <div
@@ -1141,7 +1141,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -1165,7 +1165,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
         </li>
       </ul>
     </fieldset>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ToggleInputList>
 `;
 
@@ -1333,7 +1333,7 @@ exports[`ToggleInputList renders with errors 1`] = `
   showListLabel={true}
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     errors={
       [
         "error.1",
@@ -1381,7 +1381,7 @@ exports[`ToggleInputList renders with errors 1`] = `
               value="value.1"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.1"
               >
                 <div
@@ -1421,7 +1421,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -1450,7 +1450,7 @@ exports[`ToggleInputList renders with errors 1`] = `
               value="value.2"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.2"
               >
                 <div
@@ -1490,7 +1490,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -1519,7 +1519,7 @@ exports[`ToggleInputList renders with errors 1`] = `
               value="value.3"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.3"
               >
                 <div
@@ -1559,7 +1559,7 @@ exports[`ToggleInputList renders with errors 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -1583,7 +1583,7 @@ exports[`ToggleInputList renders with errors 1`] = `
         </li>
       </ul>
     </fieldset>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ToggleInputList>
 `;
 
@@ -1734,7 +1734,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
   showListLabel={false}
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="checkbox"
   >
     <fieldset
@@ -1776,7 +1776,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
               value="value.1"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.1"
               >
                 <div
@@ -1816,7 +1816,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -1845,7 +1845,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
               value="value.2"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.2"
               >
                 <div
@@ -1885,7 +1885,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -1914,7 +1914,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
               value="value.3"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.3"
               >
                 <div
@@ -1954,13 +1954,13 @@ exports[`ToggleInputList renders with hidden label 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
       </ul>
     </fieldset>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ToggleInputList>
 `;
 
@@ -2118,7 +2118,7 @@ exports[`ToggleInputList renders with required 1`] = `
   showListLabel={true}
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="checkbox"
   >
     <fieldset
@@ -2185,7 +2185,7 @@ exports[`ToggleInputList renders with required 1`] = `
               value="value.1"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.1"
               >
                 <div
@@ -2225,7 +2225,7 @@ exports[`ToggleInputList renders with required 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -2254,7 +2254,7 @@ exports[`ToggleInputList renders with required 1`] = `
               value="value.2"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.2"
               >
                 <div
@@ -2294,7 +2294,7 @@ exports[`ToggleInputList renders with required 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -2323,7 +2323,7 @@ exports[`ToggleInputList renders with required 1`] = `
               value="value.3"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.3"
               >
                 <div
@@ -2363,13 +2363,13 @@ exports[`ToggleInputList renders with required 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
       </ul>
     </fieldset>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ToggleInputList>
 `;
 
@@ -2561,7 +2561,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
   showListLabel={true}
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="checkbox"
   >
     <fieldset
@@ -2603,7 +2603,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
               value="value.1"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.1"
               >
                 <div
@@ -2667,7 +2667,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -2696,7 +2696,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
               value="value.2"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.2"
               >
                 <div
@@ -2760,7 +2760,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
@@ -2789,7 +2789,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
               value="value.3"
               vertAlign="center"
             >
-              <FormFieldWrapper
+              <Memo(FormFieldWrapper)
                 id="id.3"
               >
                 <div
@@ -2829,12 +2829,12 @@ exports[`ToggleInputList renders with selected items 1`] = `
                     </div>
                   </label>
                 </div>
-              </FormFieldWrapper>
+              </Memo(FormFieldWrapper)>
             </ForwardRef>
           </CheckboxInput>
         </li>
       </ul>
     </fieldset>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ToggleInputList>
 `;

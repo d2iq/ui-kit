@@ -22,21 +22,23 @@ const trigger = (
 );
 const reqStar = <span className={cx(tintText(themeError))}> *</span>;
 
-export const renderLabel: React.FC<{
+export interface RenderLabelProps {
   appearance?: string;
   hidden?: boolean;
   id?: string;
   label?: React.ReactNode;
   required?: boolean;
   tooltipContent?: React.ReactNode;
-}> = ({
+}
+
+export const renderLabel = ({
   appearance,
   hidden,
   label,
   id = nextId(),
   required,
   tooltipContent
-}) => {
+}: RenderLabelProps) => {
   const hasError = appearance === InputAppearance.Error;
   const labelClassName = hidden ? cx(visuallyHidden) : getLabelStyle(hasError);
   const labelNode = (

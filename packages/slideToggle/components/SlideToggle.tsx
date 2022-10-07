@@ -69,16 +69,16 @@ export interface SlideToggleProps extends React.HTMLProps<HTMLInputElement> {
   errors?: React.ReactNode[];
 }
 
-const SlideToggle: React.FC<React.PropsWithRef<SlideToggleProps>> = props => {
+const SlideToggle = (props: React.PropsWithRef<SlideToggleProps>) => {
   const {
-    appearance,
+    appearance = InputAppearance.Standard,
     children,
     disabled,
     hintContent,
     id = nextId("slideToggle-"),
     inputLabel,
-    showInputLabel,
-    vertAlign,
+    showInputLabel = "true",
+    vertAlign = "center",
     checked,
     value,
     errors,
@@ -191,12 +191,6 @@ const SlideToggle: React.FC<React.PropsWithRef<SlideToggleProps>> = props => {
       )}
     </FormFieldWrapper>
   );
-};
-
-SlideToggle.defaultProps = {
-  appearance: InputAppearance.Standard,
-  showInputLabel: true,
-  vertAlign: "center"
 };
 
 export default SlideToggle;

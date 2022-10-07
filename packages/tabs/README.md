@@ -5,26 +5,26 @@ State of the Tabs is controlled with in the component.
 Example Component:
 
 ```JS
-class Example extends React.Component<{}, Partial<{ selectedIndex: number }>> {
-  state = { selectedIndex: 0 };
-  handleSelect = selectedIndex => {
-    this.setState({ selectedIndex });
+const ExampleTabsComponent = ({selectedIndex}) => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const handleSelect = selectedIndex => {
+    setSelectedIndex({ selectedIndex });
   };
-  render() {
-    const { selectedIndex } = this.state;
-    return (
-      <Tabs selectedIndex={selectedIndex} onSelect={this.handleSelect}>
+
+  return (
+      <Tabs selectedIndex={selectedIndex} onSelect={handleSelect}>
         <TabItem>
-          <TabTitle>Tab 1 Name</TabTitle>
-          First tab Content
+          <TabTitle>Tab 1 Title</TabTitle>
+          First Tab Content
         </TabItem>
         <TabItem>
-          <TabTitle>Tab 2 Name</TabTitle>
+          <TabTitle>Tab 2 Title</TabTitle>
           Second Tab Content
         </TabItem>
       </Tabs>
-    );
-  }
+  )
+
 }
 ```
 

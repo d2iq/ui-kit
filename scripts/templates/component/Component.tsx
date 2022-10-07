@@ -5,7 +5,7 @@ export interface ${Component}Props {
   children?: React.ReactNode | string;
 }
 
-const ${Component}: React.FC<${Component}Props> = ({children}) => {
+const ${Component} = ({children}: ${Component}Props) => {
   return <span className={style}>{children}</span>;
 }
 

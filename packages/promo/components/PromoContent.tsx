@@ -21,24 +21,21 @@ import {
   heroImg
 } from "../style";
 
-const PromoContent: React.FC<PromoProps> = props => {
-  const {
-    bodyContent,
-    dismissHandler,
-    headingText,
-    isDarkBackground,
-    graphicSrc,
-    optOutBanner,
-    optOutHandler,
-    primaryAction,
-    secondaryAction
-  } = props;
+const PromoContent = ({
+  bodyContent,
+  dismissHandler,
+  headingText,
+  isDarkBackground,
+  graphicSrc,
+  optOutBanner,
+  optOutHandler,
+  primaryAction,
+  secondaryAction,
+  "data-cy": dataCy = "promoContent"
+}: PromoProps) => {
   const [dismissCheckboxId] = useId(1, "dismissPromoCheckbox");
   return (
-    <div
-      className={bannerContainer(isDarkBackground)}
-      data-cy={props["data-cy"]}
-    >
+    <div className={bannerContainer(isDarkBackground)} data-cy={dataCy}>
       {dismissHandler && (
         <ResetButton className={dismissButton} onClick={dismissHandler}>
           <Icon shape={SystemIcons.Close} size="xs" />
@@ -105,10 +102,6 @@ const PromoContent: React.FC<PromoProps> = props => {
       </Flex>
     </div>
   );
-};
-
-PromoContent.defaultProps = {
-  ["data-cy"]: "promoContent"
 };
 
 export default PromoContent;

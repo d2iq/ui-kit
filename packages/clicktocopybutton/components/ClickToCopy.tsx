@@ -42,13 +42,13 @@ interface ClickToCopyProps extends ClickToCopyBaseProps {
  * that takes a function parameter and returns a component that executes that function using
  * a trigger element such as a button with an onClick handler.
  */
-const ClickToCopy: React.FC<ClickToCopyProps> = ({
+const ClickToCopy = ({
   textToCopy,
   onCopy,
   children,
   tooltipId,
-  tooltipContent
-}) => {
+  tooltipContent = "Copied to clipboard"
+}: ClickToCopyProps) => {
   const [generatedTooltipId] = useId(1, "copyTooltip");
   const [isTooltipShown, setIsTooltipShown] = React.useState<boolean>(false);
   const onClick = () => {
@@ -74,10 +74,6 @@ const ClickToCopy: React.FC<ClickToCopyProps> = ({
       </Tooltip>
     </Box>
   );
-};
-
-ClickToCopy.defaultProps = {
-  tooltipContent: "Copied to clipboard"
 };
 
 export default ClickToCopy;

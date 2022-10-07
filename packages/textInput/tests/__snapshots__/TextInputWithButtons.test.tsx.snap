@@ -260,7 +260,7 @@ exports[`TextInputWithIcon renders 1`] = `
     >
       Label
     </label>
-    <FormFieldWrapper
+    <Memo(FormFieldWrapper)
       id="renders"
     >
       <div
@@ -357,7 +357,7 @@ exports[`TextInputWithIcon renders 1`] = `
           </TextInputButton>
         </span>
       </div>
-    </FormFieldWrapper>
+    </Memo(FormFieldWrapper)>
   </div>
 </TextInputWithButtons>
 `;
@@ -585,7 +585,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
     >
       Label
     </label>
-    <FormFieldWrapper
+    <Memo(FormFieldWrapper)
       id="renders.coloredBtn"
     >
       <div
@@ -644,7 +644,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
           </TextInputButton>
         </span>
       </div>
-    </FormFieldWrapper>
+    </Memo(FormFieldWrapper)>
   </div>
 </TextInputWithButtons>
 `;
