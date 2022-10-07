@@ -107,7 +107,7 @@ exports[`RadioInput renders all appearances 1`] = `
     value="default"
     vertAlign="center"
   >
-    <FormFieldWrapper
+    <Memo(FormFieldWrapper)
       id="defaultId"
     >
       <div
@@ -145,7 +145,7 @@ exports[`RadioInput renders all appearances 1`] = `
           </div>
         </label>
       </div>
-    </FormFieldWrapper>
+    </Memo(FormFieldWrapper)>
   </ForwardRef>
 </RadioInput>
 `;
@@ -259,7 +259,7 @@ exports[`RadioInput renders all appearances 2`] = `
     value="default"
     vertAlign="center"
   >
-    <FormFieldWrapper
+    <Memo(FormFieldWrapper)
       id="defaultId"
     >
       <div
@@ -297,7 +297,7 @@ exports[`RadioInput renders all appearances 2`] = `
           </div>
         </label>
       </div>
-    </FormFieldWrapper>
+    </Memo(FormFieldWrapper)>
   </ForwardRef>
 </RadioInput>
 `;
@@ -411,7 +411,7 @@ exports[`RadioInput renders all appearances 3`] = `
     value="default"
     vertAlign="center"
   >
-    <FormFieldWrapper
+    <Memo(FormFieldWrapper)
       id="defaultId"
     >
       <div
@@ -449,7 +449,7 @@ exports[`RadioInput renders all appearances 3`] = `
           </div>
         </label>
       </div>
-    </FormFieldWrapper>
+    </Memo(FormFieldWrapper)>
   </ForwardRef>
 </RadioInput>
 `;

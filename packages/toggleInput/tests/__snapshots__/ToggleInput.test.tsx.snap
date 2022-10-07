@@ -99,7 +99,7 @@ exports[`ToggleInput renders a checkbox input type 1`] = `
   value="default"
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="defaultId"
   >
     <div
@@ -136,7 +136,7 @@ exports[`ToggleInput renders a checkbox input type 1`] = `
         </div>
       </label>
     </div>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ForwardRef>
 `;
 
@@ -239,7 +239,7 @@ exports[`ToggleInput renders a radio input type 1`] = `
   value="default"
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="defaultId"
   >
     <div
@@ -276,7 +276,7 @@ exports[`ToggleInput renders a radio input type 1`] = `
         </div>
       </label>
     </div>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ForwardRef>
 `;
 
@@ -379,7 +379,7 @@ exports[`ToggleInput renders all appearances 1`] = `
   value="default"
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="defaultId"
   >
     <div
@@ -416,7 +416,7 @@ exports[`ToggleInput renders all appearances 1`] = `
         </div>
       </label>
     </div>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ForwardRef>
 `;
 
@@ -521,7 +521,7 @@ exports[`ToggleInput renders all appearances 2`] = `
   value="default"
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="defaultId"
   >
     <div
@@ -558,7 +558,7 @@ exports[`ToggleInput renders all appearances 2`] = `
         </div>
       </label>
     </div>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ForwardRef>
 `;
 
@@ -663,7 +663,7 @@ exports[`ToggleInput renders all appearances 3`] = `
   value="default"
   vertAlign="center"
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="defaultId"
   >
     <div
@@ -700,6 +700,6 @@ exports[`ToggleInput renders all appearances 3`] = `
         </div>
       </label>
     </div>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </ForwardRef>
 `;

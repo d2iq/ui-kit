@@ -1,39 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SelectInput renders all appearances 1`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   id="layers"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`SelectInput renders all appearances 2`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   id="layers"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`SelectInput renders all appearances 3`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   id="layers"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`SelectInput renders disabled 1`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   id="layers"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`SelectInput renders with errors 1`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   errors={
     [
       "error1",
@@ -43,15 +43,15 @@ exports[`SelectInput renders with errors 1`] = `
   id="layers"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`SelectInput renders with hidden label 1`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   id="layers"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`SelectInput should render all appearances focus 1`] = `
@@ -215,7 +215,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
     ]
   }
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="layers"
   >
     <div
@@ -304,7 +304,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
         </span>
       </span>
     </div>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </Memo()>
 `;
 
@@ -471,7 +471,7 @@ exports[`SelectInput should render all appearances focus 2`] = `
     ]
   }
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="layers"
   >
     <div
@@ -563,7 +563,7 @@ exports[`SelectInput should render all appearances focus 2`] = `
         data-cy="selectInput-hintContent"
       />
     </div>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </Memo()>
 `;
 
@@ -728,7 +728,7 @@ exports[`SelectInput should render all appearances focus 3`] = `
     ]
   }
 >
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="layers"
   >
     <div
@@ -817,6 +817,6 @@ exports[`SelectInput should render all appearances focus 3`] = `
         </span>
       </span>
     </div>
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </Memo()>
 `;

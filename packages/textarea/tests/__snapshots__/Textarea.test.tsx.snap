@@ -1,31 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Textarea should render all appearances 1`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   id="standard"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`Textarea should render all appearances 2`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   id="error"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`Textarea should render all appearances 3`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   id="success"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`Textarea should render error messages if appearance set to InputAppearance.Error 1`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   errors={
     [
       "This is an error message",
@@ -35,11 +35,11 @@ exports[`Textarea should render error messages if appearance set to InputAppeara
   id="textarea"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`Textarea should render no error messages if appearance set to InputAppearance.Success 1`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   errors={
     [
       "I'm not displayed",
@@ -48,29 +48,29 @@ exports[`Textarea should render no error messages if appearance set to InputAppe
   id="textarea"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`Textarea should render node as inputLabel 1`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   id="textarea"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`Textarea should render string inputLabel 1`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   id="textarea"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;
 
 exports[`Textarea should render with hidden label if \`showInputLabel\` is set to false 1`] = `
-<FormFieldWrapper
+<Memo(FormFieldWrapper)
   id="textarea"
 >
   <Component />
-</FormFieldWrapper>
+</Memo(FormFieldWrapper)>
 `;

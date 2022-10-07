@@ -101,4 +101,4 @@ const FormFieldWrapper = ({
   );
 };
 
-export default FormFieldWrapper;
+export default React.memo(FormFieldWrapper);
