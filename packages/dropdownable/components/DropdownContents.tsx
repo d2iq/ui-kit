@@ -9,8 +9,8 @@ export interface DropdownContentsProps {
 
 const DropdownContents = React.forwardRef<
   HTMLDivElement | null,
-  DropdownContentsProps>(({ children, isOpen, onClose }: DropdownContentsProps, ref) => {
-
+  DropdownContentsProps
+>(({ children, isOpen, onClose }: DropdownContentsProps, ref) => {
   React.useEffect(() => {
     const handleClickOutside = () => {
       if (isOpen && onClose) {
@@ -25,7 +25,7 @@ const DropdownContents = React.forwardRef<
     };
   }, [onClose]);
 
-  return (<div ref={ref}>{children}</div>);
+  return <div ref={ref}>{children}</div>;
 });
 
 export default wrapWithClickOutside(DropdownContents);
