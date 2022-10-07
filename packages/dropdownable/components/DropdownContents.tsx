@@ -7,13 +7,10 @@ export interface DropdownContentsProps {
   onClose?: () => void;
 }
 
-const DropdownContents = React.forwardRef<HTMLDivElement | null, DropdownContentsProps>((
-  {
-    children,
-    isOpen,
-    onClose
-  }: DropdownContentsProps,
-ref) => {
+const DropdownContents = React.forwardRef<
+  HTMLDivElement | null,
+  DropdownContentsProps
+  >(({ children, isOpen, onClose }: DropdownContentsProps, ref) => {
 
   React.useEffect(() => {
     const handleClickOutside = () => {
@@ -22,17 +19,15 @@ ref) => {
       }
     };
 
-    document.addEventListener('click', handleClickOutside, true);
+    document.addEventListener("click", handleClickOutside, true);
 
     return () => {
-      document.removeEventListener('click', handleClickOutside, true);
+      document.removeEventListener("click", handleClickOutside, true);
     };
   }, [onClose]);
 
   return (
-    <div ref={ref}>
-      {children}
-    </div>
+    <div ref={ref}>{children}</div>
   );
 });
 
