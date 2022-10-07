@@ -1,13 +1,11 @@
 import * as React from "react";
 
 export interface TabItemProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode | React.ReactNode[];
 }
 
-class TabItem extends React.PureComponent<TabItemProps, {}> {
-  public render() {
-    return this.props.children;
-  }
-}
+const TabItem = ({ children }: TabItemProps): JSX.Element => {
+  return <>{children}</>;
+};
 
-export default TabItem;
+export default React.memo(TabItem);
