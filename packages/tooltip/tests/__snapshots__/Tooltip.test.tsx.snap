@@ -117,84 +117,14 @@ exports[`Tooltip renders open tooltip 1`] = `
       <div>
         trigger
       </div>
-      <clickOutside(DropdownContents)
+      <clickOutside(undefined)
         isOpen={true}
       >
-        <DropdownContents
+        <ForwardRef
           isOpen={true}
         >
-          <ForwardRef
-            style={
-              {
-                "left": "0",
-                "position": "absolute",
-                "top": "0",
-                "zIndex": 2,
-              }
-            }
-          >
-            <Overlay
-              innerRef={[Function]}
-              overlayRoot={
-                .emotion-0 {
-  background-color: var(--themeBgPrimaryInverted, #1B2029);
-  border-radius: 2px;
-  box-sizing: border-box;
-  font-size: 12px;
-  -webkit-transform: translateY(
-      -9px
-    );
-  -moz-transform: translateY(
-      -9px
-    );
-  -ms-transform: translateY(
-      -9px
-    );
-  transform: translateY(
-      -9px
-    );
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-1 {
-  position: absolute;
-  bottom: 4px;
-  left: calc(50% - 5px);
-  background-color: var(--themeBgPrimaryInverted, #1B2029);
-  box-sizing: border-box;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  height: 10px;
-  width: 10px;
-}
-
-<body>
-                  <div>
-                    <div
-                      style="z-index: 2; position: absolute; left: 0px; top: 0px;"
-                    >
-                      <div
-                        aria-hidden="false"
-                        class="inverseColorMode emotion-0"
-                        data-cy="tooltipContent"
-                        id="opened"
-                        role="tooltip"
-                        style="max-width: 300px;"
-                      >
-                        content
-                      </div>
-                      <div
-                        class="emotion-1"
-                      />
-                    </div>
-                  </div>
-                </body>
-              }
+          <div>
+            <ForwardRef
               style={
                 {
                   "left": "0",
@@ -204,8 +134,9 @@ exports[`Tooltip renders open tooltip 1`] = `
                 }
               }
             >
-              <Portal
-                containerInfo={
+              <Overlay
+                innerRef={[Function]}
+                overlayRoot={
                   .emotion-0 {
   background-color: var(--themeBgPrimaryInverted, #1B2029);
   border-radius: 2px;
@@ -243,67 +174,138 @@ exports[`Tooltip renders open tooltip 1`] = `
   width: 10px;
 }
 
+<body>
+                    <div>
+                      <div
+                        style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+                      >
+                        <div
+                          aria-hidden="false"
+                          class="inverseColorMode emotion-0"
+                          data-cy="tooltipContent"
+                          id="opened"
+                          role="tooltip"
+                          style="max-width: 300px;"
+                        >
+                          content
+                        </div>
+                        <div
+                          class="emotion-1"
+                        />
+                      </div>
+                    </div>
+                  </body>
+                }
+                style={
+                  {
+                    "left": "0",
+                    "position": "absolute",
+                    "top": "0",
+                    "zIndex": 2,
+                  }
+                }
+              >
+                <Portal
+                  containerInfo={
+                    .emotion-0 {
+  background-color: var(--themeBgPrimaryInverted, #1B2029);
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 12px;
+  -webkit-transform: translateY(
+      -9px
+    );
+  -moz-transform: translateY(
+      -9px
+    );
+  -ms-transform: translateY(
+      -9px
+    );
+  transform: translateY(
+      -9px
+    );
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-1 {
+  position: absolute;
+  bottom: 4px;
+  left: calc(50% - 5px);
+  background-color: var(--themeBgPrimaryInverted, #1B2029);
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 10px;
+  width: 10px;
+}
+
 <div>
-                    <div
-                      style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+                      <div
+                        style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+                      >
+                        <div
+                          aria-hidden="false"
+                          class="inverseColorMode emotion-0"
+                          data-cy="tooltipContent"
+                          id="opened"
+                          role="tooltip"
+                          style="max-width: 300px;"
+                        >
+                          content
+                        </div>
+                        <div
+                          class="emotion-1"
+                        />
+                      </div>
+                    </div>
+                  }
+                >
+                  <div
+                    style={
+                      {
+                        "left": "0",
+                        "position": "absolute",
+                        "top": "0",
+                        "zIndex": 2,
+                      }
+                    }
+                  >
+                    <Memo()
+                      id="opened"
+                      isOpen={true}
+                      maxWidth={300}
                     >
                       <div
-                        aria-hidden="false"
-                        class="inverseColorMode emotion-0"
+                        aria-hidden={false}
+                        className="inverseColorMode emotion-0"
                         data-cy="tooltipContent"
                         id="opened"
                         role="tooltip"
-                        style="max-width: 300px;"
+                        style={
+                          {
+                            "maxWidth": 300,
+                            "minWidth": undefined,
+                          }
+                        }
                       >
                         content
                       </div>
                       <div
-                        class="emotion-1"
+                        className="emotion-1"
                       />
-                    </div>
+                    </Memo()>
                   </div>
-                }
-              >
-                <div
-                  style={
-                    {
-                      "left": "0",
-                      "position": "absolute",
-                      "top": "0",
-                      "zIndex": 2,
-                    }
-                  }
-                >
-                  <Memo()
-                    id="opened"
-                    isOpen={true}
-                    maxWidth={300}
-                  >
-                    <div
-                      aria-hidden={false}
-                      className="inverseColorMode emotion-0"
-                      data-cy="tooltipContent"
-                      id="opened"
-                      role="tooltip"
-                      style={
-                        {
-                          "maxWidth": 300,
-                          "minWidth": undefined,
-                        }
-                      }
-                    >
-                      content
-                    </div>
-                    <div
-                      className="emotion-1"
-                    />
-                  </Memo()>
-                </div>
-              </Portal>
-            </Overlay>
-          </ForwardRef>
-        </DropdownContents>
-      </clickOutside(DropdownContents)>
+                </Portal>
+              </Overlay>
+            </ForwardRef>
+          </div>
+        </ForwardRef>
+      </clickOutside(undefined)>
     </Dropdownable>
   </span>
 </Tooltip>
@@ -384,106 +386,14 @@ exports[`Tooltip renders with preferred directions 1`] = `
       <div>
         trigger
       </div>
-      <clickOutside(DropdownContents)
+      <clickOutside(undefined)
         isOpen={true}
       >
-        <DropdownContents
+        <ForwardRef
           isOpen={true}
         >
-          <ForwardRef
-            style={
-              {
-                "left": "0",
-                "position": "absolute",
-                "top": "0",
-                "zIndex": 2,
-              }
-            }
-          >
-            <Overlay
-              innerRef={[Function]}
-              overlayRoot={
-                .emotion-0 {
-  background-color: var(--themeBgPrimaryInverted, #1B2029);
-  border-radius: 2px;
-  box-sizing: border-box;
-  font-size: 12px;
-  -webkit-transform: translateY(
-      -9px
-    );
-  -moz-transform: translateY(
-      -9px
-    );
-  -ms-transform: translateY(
-      -9px
-    );
-  transform: translateY(
-      -9px
-    );
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-1 {
-  position: absolute;
-  bottom: 4px;
-  left: calc(50% - 5px);
-  background-color: var(--themeBgPrimaryInverted, #1B2029);
-  box-sizing: border-box;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  height: 10px;
-  width: 10px;
-}
-
-<body>
-                  <div>
-                    <div
-                      data-popper-escaped="true"
-                      data-popper-placement="top"
-                      data-popper-reference-hidden="true"
-                      style="z-index: 2; position: absolute; left: 0px; top: 0px; visibility: hidden; pointer-events: none; bottom: 0px; transform: translate(0px, 0px);"
-                    >
-                      <div
-                        aria-hidden="false"
-                        class="inverseColorMode emotion-0"
-                        data-cy="tooltipContent"
-                        id="opened"
-                        role="tooltip"
-                        style="max-width: 300px;"
-                      >
-                        content
-                      </div>
-                      <div
-                        class="emotion-1"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <div
-                      style="z-index: 2; position: absolute; left: 0px; top: 0px;"
-                    >
-                      <div
-                        aria-hidden="false"
-                        class="inverseColorMode emotion-0"
-                        data-cy="tooltipContent"
-                        id="customDir"
-                        role="tooltip"
-                        style="max-width: 300px;"
-                      >
-                        content
-                      </div>
-                      <div
-                        class="emotion-1"
-                      />
-                    </div>
-                  </div>
-                </body>
-              }
+          <div>
+            <ForwardRef
               style={
                 {
                   "left": "0",
@@ -493,8 +403,9 @@ exports[`Tooltip renders with preferred directions 1`] = `
                 }
               }
             >
-              <Portal
-                containerInfo={
+              <Overlay
+                innerRef={[Function]}
+                overlayRoot={
                   .emotion-0 {
   background-color: var(--themeBgPrimaryInverted, #1B2029);
   border-radius: 2px;
@@ -532,67 +443,160 @@ exports[`Tooltip renders with preferred directions 1`] = `
   width: 10px;
 }
 
+<body>
+                    <div>
+                      <div
+                        data-popper-escaped="true"
+                        data-popper-placement="top"
+                        data-popper-reference-hidden="true"
+                        style="z-index: 2; position: absolute; left: 0px; top: 0px; visibility: hidden; pointer-events: none; bottom: 0px; transform: translate(0px, 0px);"
+                      >
+                        <div
+                          aria-hidden="false"
+                          class="inverseColorMode emotion-0"
+                          data-cy="tooltipContent"
+                          id="opened"
+                          role="tooltip"
+                          style="max-width: 300px;"
+                        >
+                          content
+                        </div>
+                        <div
+                          class="emotion-1"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+                      >
+                        <div
+                          aria-hidden="false"
+                          class="inverseColorMode emotion-0"
+                          data-cy="tooltipContent"
+                          id="customDir"
+                          role="tooltip"
+                          style="max-width: 300px;"
+                        >
+                          content
+                        </div>
+                        <div
+                          class="emotion-1"
+                        />
+                      </div>
+                    </div>
+                  </body>
+                }
+                style={
+                  {
+                    "left": "0",
+                    "position": "absolute",
+                    "top": "0",
+                    "zIndex": 2,
+                  }
+                }
+              >
+                <Portal
+                  containerInfo={
+                    .emotion-0 {
+  background-color: var(--themeBgPrimaryInverted, #1B2029);
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 12px;
+  -webkit-transform: translateY(
+      -9px
+    );
+  -moz-transform: translateY(
+      -9px
+    );
+  -ms-transform: translateY(
+      -9px
+    );
+  transform: translateY(
+      -9px
+    );
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-1 {
+  position: absolute;
+  bottom: 4px;
+  left: calc(50% - 5px);
+  background-color: var(--themeBgPrimaryInverted, #1B2029);
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  height: 10px;
+  width: 10px;
+}
+
 <div>
-                    <div
-                      style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+                      <div
+                        style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+                      >
+                        <div
+                          aria-hidden="false"
+                          class="inverseColorMode emotion-0"
+                          data-cy="tooltipContent"
+                          id="customDir"
+                          role="tooltip"
+                          style="max-width: 300px;"
+                        >
+                          content
+                        </div>
+                        <div
+                          class="emotion-1"
+                        />
+                      </div>
+                    </div>
+                  }
+                >
+                  <div
+                    style={
+                      {
+                        "left": "0",
+                        "position": "absolute",
+                        "top": "0",
+                        "zIndex": 2,
+                      }
+                    }
+                  >
+                    <Memo()
+                      id="customDir"
+                      isOpen={true}
+                      maxWidth={300}
                     >
                       <div
-                        aria-hidden="false"
-                        class="inverseColorMode emotion-0"
+                        aria-hidden={false}
+                        className="inverseColorMode emotion-0"
                         data-cy="tooltipContent"
                         id="customDir"
                         role="tooltip"
-                        style="max-width: 300px;"
+                        style={
+                          {
+                            "maxWidth": 300,
+                            "minWidth": undefined,
+                          }
+                        }
                       >
                         content
                       </div>
                       <div
-                        class="emotion-1"
+                        className="emotion-1"
                       />
-                    </div>
+                    </Memo()>
                   </div>
-                }
-              >
-                <div
-                  style={
-                    {
-                      "left": "0",
-                      "position": "absolute",
-                      "top": "0",
-                      "zIndex": 2,
-                    }
-                  }
-                >
-                  <Memo()
-                    id="customDir"
-                    isOpen={true}
-                    maxWidth={300}
-                  >
-                    <div
-                      aria-hidden={false}
-                      className="inverseColorMode emotion-0"
-                      data-cy="tooltipContent"
-                      id="customDir"
-                      role="tooltip"
-                      style={
-                        {
-                          "maxWidth": 300,
-                          "minWidth": undefined,
-                        }
-                      }
-                    >
-                      content
-                    </div>
-                    <div
-                      className="emotion-1"
-                    />
-                  </Memo()>
-                </div>
-              </Portal>
-            </Overlay>
-          </ForwardRef>
-        </DropdownContents>
-      </clickOutside(DropdownContents)>
+                </Portal>
+              </Overlay>
+            </ForwardRef>
+          </div>
+        </ForwardRef>
+      </clickOutside(undefined)>
     </Dropdownable>
   </span>
 </Tooltip>
