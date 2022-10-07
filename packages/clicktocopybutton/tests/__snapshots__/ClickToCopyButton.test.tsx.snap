@@ -27,11 +27,9 @@ exports[`ClickToCopyButton renders default 1`] = `
 
 <ClickToCopyButton
   textToCopy="text to copy"
-  tooltipContent="Copied to clipboard"
 >
   <ClickToCopy
     textToCopy="text to copy"
-    tooltipContent="Copied to clipboard"
   >
     <Box
       bgImageOptions={
@@ -183,11 +181,9 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
 
 <ClickToCopyButton
   textToCopy="text to copy"
-  tooltipContent="Copied to clipboard"
 >
   <ClickToCopy
     textToCopy="text to copy"
-    tooltipContent="Copied to clipboard"
   >
     <Box
       bgImageOptions={
