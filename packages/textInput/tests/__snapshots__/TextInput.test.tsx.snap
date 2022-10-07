@@ -74,11 +74,11 @@ exports[`TextInput should display icon with tooltip if tooltipText is set 1`] = 
       </Tooltip>
     </span>
   </div>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="input.with.tooltip"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -103,7 +103,7 @@ exports[`TextInput should display validation message if set & appearance == Erro
   >
     Error Message Test
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     errors={
       [
         "This is an error message",
@@ -113,7 +113,7 @@ exports[`TextInput should display validation message if set & appearance == Erro
     id="input.error.with.message"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -139,11 +139,11 @@ exports[`TextInput should hide label if \`showInputLabel\` set to false 1`] = `
   >
     I'm not displayed
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="input.with.hidden.label"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -166,7 +166,7 @@ exports[`TextInput should not display validation message if set & appearance == 
   >
     No Error Message Test
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     errors={
       [
         "This is an error message",
@@ -175,7 +175,7 @@ exports[`TextInput should not display validation message if set & appearance == 
     id="input.success.without.message"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -313,7 +313,7 @@ exports[`TextInput should render all appearances focus 1`] = `
       data-cy="textInput-label"
       htmlFor="test.input"
     />
-    <FormFieldWrapper
+    <Memo(FormFieldWrapper)
       id="test.input"
     >
       <div>
@@ -333,7 +333,7 @@ exports[`TextInput should render all appearances focus 1`] = `
           data-cy="textInput-hintContent"
         />
       </div>
-    </FormFieldWrapper>
+    </Memo(FormFieldWrapper)>
   </div>
 </TextInput>
 `;
@@ -473,7 +473,7 @@ exports[`TextInput should render all appearances focus 2`] = `
       data-cy="textInput-label"
       htmlFor="test.input"
     />
-    <FormFieldWrapper
+    <Memo(FormFieldWrapper)
       id="test.input"
     >
       <div>
@@ -493,7 +493,7 @@ exports[`TextInput should render all appearances focus 2`] = `
           data-cy="textInput-hintContent"
         />
       </div>
-    </FormFieldWrapper>
+    </Memo(FormFieldWrapper)>
   </div>
 </TextInput>
 `;
@@ -631,7 +631,7 @@ exports[`TextInput should render all appearances focus 3`] = `
       data-cy="textInput-label"
       htmlFor="test.input"
     />
-    <FormFieldWrapper
+    <Memo(FormFieldWrapper)
       id="test.input"
     >
       <div>
@@ -651,7 +651,7 @@ exports[`TextInput should render all appearances focus 3`] = `
           data-cy="textInput-hintContent"
         />
       </div>
-    </FormFieldWrapper>
+    </Memo(FormFieldWrapper)>
   </div>
 </TextInput>
 `;
@@ -675,11 +675,11 @@ exports[`TextInput should render all appearances with props 1`] = `
   >
     standard
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.input.standard"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -704,11 +704,11 @@ exports[`TextInput should render all appearances with props 2`] = `
   >
     error
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.input.error"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -731,11 +731,11 @@ exports[`TextInput should render all appearances with props 3`] = `
   >
     success
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.input.success"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -760,11 +760,11 @@ exports[`TextInput should render node as inputLabel 1`] = `
       My Test Node
     </span>
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.input"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -787,10 +787,10 @@ exports[`TextInput should render string inputLabel 1`] = `
   >
     Test Input
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.input"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;

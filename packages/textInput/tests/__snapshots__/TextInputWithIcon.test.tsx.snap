@@ -19,11 +19,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   >
     standard
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.icon_end_input.standard"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -48,11 +48,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   >
     error
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.icon_end_input.error"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -75,11 +75,11 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   >
     success
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.icon_end_input.success"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -102,11 +102,11 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   >
     standard
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.icon_start_input.standard"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -131,11 +131,11 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   >
     error
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.icon_start_input.error"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -158,11 +158,11 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   >
     success
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.icon_start_input.success"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -185,11 +185,11 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   >
     standard
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.two_icon_input.standard"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -214,11 +214,11 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   >
     error
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.two_icon_input.error"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;
 
@@ -241,10 +241,10 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   >
     success
   </label>
-  <FormFieldWrapper
+  <Memo(FormFieldWrapper)
     id="test.two_icon_input.success"
   >
     <Component />
-  </FormFieldWrapper>
+  </Memo(FormFieldWrapper)>
 </div>
 `;

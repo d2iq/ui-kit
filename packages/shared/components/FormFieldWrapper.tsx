@@ -27,49 +27,29 @@ interface FormFieldWrapperProps {
   id?: string;
 }
 
-class FormFieldWrapper extends React.PureComponent<FormFieldWrapperProps, {}> {
-  public render() {
-    const {
-      children,
-      errors,
-      hintContent,
-      id = nextId("formFieldWrapper-")
-    } = this.props;
+const FormFieldWrapper = ({
+  children,
+  errors,
+  hintContent,
+  id = nextId("formFieldWrapper-")
+}: FormFieldWrapperProps) => {
+  const getHintContentId = () => {
+    return hintContent ? `${id}-hintContent` : "";
+  };
 
-    return children({
-      getValidationErrors: this.getValidationErrors(errors, id),
-      getHintContent: this.getHintContent(hintContent),
-      describedByIds: this.getDescribedBy(
-        this.getHintContentId(),
-        this.getErrorIds()
-      ),
-      isValid: !errors || (errors && errors.length === 0)
-    });
-  }
-
-  private getHintContentId() {
-    return this.props.hintContent ? `${this.props.id}-hintContent` : "";
-  }
-
-  private getErrorId(error, id) {
-    const errorIndex = this.props.errors
-      ? this.props.errors.indexOf(error)
-      : -1;
+  const getErrorId = (error, id) => {
+    const errorIndex = errors ? errors.indexOf(error) : -1;
     return `${id}-errorMsg${errorIndex}`;
-  }
+  };
 
-  private getErrorIds() {
-    return this.props.errors
-      ? this.props.errors
-          .map(error => this.getErrorId(error, this.props.id))
-          .join(" ")
-      : "";
-  }
+  const getErrorIds = () => {
+    return errors ? errors.map(error => getErrorId(error, id)).join(" ") : "";
+  };
 
-  private getHintContent(hintContent) {
+  const getHintContent = hintContent => {
     return hintContent ? (
       <span
-        id={this.getHintContentId()}
+        id={getHintContentId()}
         className={cx(
           tintContentSecondary,
           display("block"),
@@ -80,9 +60,9 @@ class FormFieldWrapper extends React.PureComponent<FormFieldWrapperProps, {}> {
         {hintContent}
       </span>
     ) : null;
-  }
+  };
 
-  private getValidationErrors(errors, id) {
+  const getValidationErrors = (errors, id) => {
     if (!errors || (errors && errors.length === 0)) {
       return null;
     }
@@ -92,7 +72,7 @@ class FormFieldWrapper extends React.PureComponent<FormFieldWrapperProps, {}> {
         {errors.map((error, index) => (
           <li
             key={index}
-            id={this.getErrorId(error, id)}
+            id={getErrorId(error, id)}
             className={cx(liReset, padding("top", "xxs"))}
           >
             {error}
@@ -100,14 +80,25 @@ class FormFieldWrapper extends React.PureComponent<FormFieldWrapperProps, {}> {
         ))}
       </ul>
     );
-  }
+  };
 
-  private getDescribedBy(hintContent, errors) {
+  const getDescribedBy = (hintContent, errors) => {
     if (hintContent && errors) {
       return `${hintContent} ${errors}`;
     }
     return errors || hintContent;
-  }
-}
+  };
 
-export default FormFieldWrapper;
+  return (
+    <>
+      {children({
+        getValidationErrors: getValidationErrors(errors, id),
+        getHintContent: getHintContent(hintContent),
+        describedByIds: getDescribedBy(getHintContentId(), getErrorIds()),
+        isValid: !errors || (errors && errors.length === 0)
+      })}
+    </>
+  );
+};
+
+export default React.memo(FormFieldWrapper);

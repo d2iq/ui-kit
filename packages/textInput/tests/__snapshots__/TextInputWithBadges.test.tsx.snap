@@ -309,7 +309,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
     >
       Appearance
     </label>
-    <FormFieldWrapper
+    <Memo(FormFieldWrapper)
       id="appearance"
     >
       <div
@@ -566,7 +566,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
           type="text"
         />
       </div>
-    </FormFieldWrapper>
+    </Memo(FormFieldWrapper)>
   </div>
 </TextInputWithBadges>
 `;
@@ -724,7 +724,7 @@ exports[`TextInputWithBadges renders empty 1`] = `
     >
       empty
     </label>
-    <FormFieldWrapper
+    <Memo(FormFieldWrapper)
       id="empty"
     >
       <div
@@ -744,7 +744,7 @@ exports[`TextInputWithBadges renders empty 1`] = `
           type="text"
         />
       </div>
-    </FormFieldWrapper>
+    </Memo(FormFieldWrapper)>
   </div>
 </TextInputWithBadges>
 `;
@@ -1058,7 +1058,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
     >
       With badges
     </label>
-    <FormFieldWrapper
+    <Memo(FormFieldWrapper)
       id="withBadges"
     >
       <div
@@ -1315,7 +1315,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
           type="text"
         />
       </div>
-    </FormFieldWrapper>
+    </Memo(FormFieldWrapper)>
   </div>
 </TextInputWithBadges>
 `;
