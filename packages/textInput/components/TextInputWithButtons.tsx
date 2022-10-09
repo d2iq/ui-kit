@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
-import TextInputWithIcon, { TextInputWithIconProps } from "./TextInputWithIcon";
+import { TextInputWithIconProps } from "./TextInputWithIcon";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { flex, padding, flexItem } from "../../shared/styles/styleUtils";
 import {
@@ -8,6 +8,14 @@ import {
   getInputAppearanceStyle
 } from "../../shared/styles/formStyles";
 import { TextInputButtonProps } from "../../textInputButton/components/TextInputButton";
+import {
+  getIconStartContent,
+  getId,
+  getInputElement,
+  getInputElementProps as getBaseInputElementProps
+} from "./utils";
+import { renderLabel } from "../../utilities/label";
+import { InputAppearance } from "../../shared/types/inputAppearance";
 
 export interface TextInputWithButtonsProps
   extends Omit<TextInputWithIconProps, "iconEnd"> {
@@ -17,25 +25,54 @@ export interface TextInputWithButtonsProps
   buttons: Array<React.ReactElement<TextInputButtonProps>>;
 }
 
-class TextInputWithButtons extends TextInputWithIcon<TextInputWithButtonsProps> {
-  protected getInputElementProps() {
-    const baseProps = super.getInputElementProps();
+const TextInputWithButtons = (props: TextInputWithButtonsProps) => {
+  const [hasFocus, setHasFocus] = React.useState(false);
+
+  const inputOnFocus = e => {
+    setHasFocus(true);
+
+    if (props.onFocus) {
+      props.onFocus(e);
+    }
+  };
+
+  const inputOnBlur = e => {
+    setHasFocus(false);
+
+    if (props.onBlur) {
+      props.onBlur(e);
+    }
+  };
+
+  const getInputAppearance = (): string => {
+    if (props.disabled) {
+      return "disabled";
+    }
+    if (hasFocus) {
+      return `${props.appearance}-focus`;
+    }
+    return props.appearance;
+  };
+  const getInputElementProps = () => {
+    const baseProps = getBaseInputElementProps(props);
     const { buttons, ...inputProps } = baseProps as TextInputWithButtonsProps;
+    inputProps.onFocus = inputOnFocus;
+    inputProps.onBlur = inputOnBlur;
 
     return inputProps;
-  }
+  };
 
-  protected getInputContent() {
-    const inputAppearance = this.getInputAppearance();
+  const getInputContent = () => {
+    const inputAppearance = getInputAppearance();
 
     return (
       <FormFieldWrapper
         // TODO: figure out how to get rid of this non-null assertion
         // If we stop generating an `id` prop in the TextInput component,
         // it would be possible for `this.props.id` to be undefined
-        id={this.props.id!}
-        errors={this.props.errors}
-        hintContent={this.props.hintContent}
+        id={props.id!}
+        errors={props.errors}
+        hintContent={props.hintContent}
       >
         {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
           <React.Fragment>
@@ -47,13 +84,16 @@ class TextInputWithButtons extends TextInputWithIcon<TextInputWithButtonsProps> 
                 getInputAppearanceStyle(inputAppearance)
               )}
             >
-              {this.getIconStartContent()}
-              {this.getInputElement(
+              {getIconStartContent(props, getInputAppearance())}
+              {getInputElement(
                 [flexItem("grow"), padding("all", "none")],
                 isValid,
-                describedByIds
+                describedByIds,
+                props,
+                getInputAppearance,
+                getInputElementProps
               )}
-              {this.getButtons()}
+              {getButtons()}
             </div>
             {getHintContent}
             {getValidationErrors}
@@ -61,14 +101,14 @@ class TextInputWithButtons extends TextInputWithIcon<TextInputWithButtonsProps> 
         )}
       </FormFieldWrapper>
     );
-  }
+  };
 
-  private getButtons() {
-    if (!this.props.buttons.filter(Boolean)) {
+  const getButtons = () => {
+    if (!props.buttons.filter(Boolean)) {
       return;
     }
 
-    return this.props.buttons.map((button, i) => (
+    return props.buttons.map((button, i) => (
       // TODO: consider making a component for this wrapper span
       <span
         className={cx(
@@ -81,7 +121,33 @@ class TextInputWithButtons extends TextInputWithIcon<TextInputWithButtonsProps> 
         {button}
       </span>
     ));
+  };
+
+  const containerProps: { className?: string } = {};
+  const appearance = getInputAppearance();
+  const dataCy = `textInput textInput.${appearance}`;
+
+  if (props.className) {
+    containerProps.className = props.className;
   }
-}
+  return (
+    <div {...containerProps} data-cy={dataCy}>
+      {renderLabel({
+        appearance,
+        hidden: !props.showInputLabel,
+        id: getId(props),
+        label: props.inputLabel,
+        required: props.required,
+        tooltipContent: props.tooltipContent
+      })}
+      {getInputContent()}
+    </div>
+  );
+};
+TextInputWithButtons.defaultProps = {
+  type: "text",
+  appearance: InputAppearance.Standard,
+  showInputLabel: true
+};
 
 export default TextInputWithButtons;
