@@ -1,4 +1,3 @@
-import { cx } from "@emotion/css";
 import * as React from "react";
 import nextId from "react-id-generator";
 
@@ -7,10 +6,15 @@ import {
   getInputAppearanceStyle,
   inputContainer
 } from "../../shared/styles/formStyles";
-import { inputReset, padding } from "../../shared/styles/styleUtils";
+import { padding } from "../../shared/styles/styleUtils";
 import { flex, flexItem } from "../../shared/styles/styleUtils/layout/flexbox";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import { renderLabel } from "../../utilities/label";
+import {
+  getInputAppearance,
+  getInputElement,
+  getInputElementProps
+} from "./utils";
 
 export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
@@ -43,62 +47,33 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   tooltipContent?: React.ReactNode;
 }
 
-export class TextInput<P extends TextInputProps> extends React.Component<P> {
-  public static defaultProps = {
-    type: "text",
-    appearance: InputAppearance.Standard,
-    showInputLabel: true
-  };
-  placeholderId = nextId("textInput-");
+const TextInput = (props: TextInputProps) => {
+  const placeholderId = nextId("textInput-");
 
-  public render() {
-    const containerProps: { className?: string } = {};
-    const appearance = this.getInputAppearance();
-    const dataCy = `textInput textInput.${appearance}`;
-
-    if (this.props.className) {
-      containerProps.className = this.props.className;
-    }
-    return (
-      <div {...containerProps} data-cy={dataCy}>
-        {renderLabel({
-          appearance,
-          hidden: !this.props.showInputLabel,
-          id: this.getId(),
-          label: this.props.inputLabel,
-          required: this.props.required,
-          tooltipContent: this.props.tooltipContent
-        })}
-        {this.getInputContent()}
-      </div>
-    );
-  }
-
-  protected getInputAppearance(): string {
-    return this.props.disabled ? "disabled" : this.props.appearance;
-  }
-
-  protected getInputContent(): React.ReactNode {
-    const appearance = this.getInputAppearance();
+  const getInputContent = (): React.ReactNode => {
+    const appearance = getInputAppearance(props);
 
     return (
       <FormFieldWrapper
-        id={this.getId()}
-        errors={this.props.errors}
-        hintContent={this.props.hintContent}
+        id={getId()}
+        errors={props.errors}
+        hintContent={props.hintContent}
       >
         {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
           <div>
             <div className={flex()}>
-              {this.getInputElement(
+              {getInputElement(
                 [
                   padding("horiz", "m"),
                   flexItem("grow"),
                   inputContainer,
-                  getInputAppearanceStyle(this.getInputAppearance())
+                  getInputAppearanceStyle(getInputAppearance(props))
                 ],
                 isValid,
-                describedByIds
+                describedByIds,
+                props,
+                getInputAppearance,
+                getInputElementProps
               )}
             </div>
             <div data-cy="textInput-hintContent">
@@ -109,69 +84,42 @@ export class TextInput<P extends TextInputProps> extends React.Component<P> {
         )}
       </FormFieldWrapper>
     );
-  }
-  protected getInputElementProps(): TextInputProps {
-    // omit props for container and that we override, otherwise pass through
-    // TextInput props to input element
-    const {
-      className,
-      hintContent,
-      inputLabel,
-      errors,
-      id = this.placeholderId,
-      ...inputElementProps
-    } = this.props;
+  };
 
-    return { ...inputElementProps, id };
-  }
-
-  protected getInputElement(
-    additionalClasses: string[] = [],
-    isValid: boolean,
-    describedBy: string
-  ) {
-    const {
-      value,
-      showInputLabel,
-      appearance,
-      tooltipContent,
-      ...inputElementProps
-    } = this.getInputElementProps();
-    const textInputAppearance = this.getInputAppearance();
-    const dataCy = [
-      "textInput-input",
-      ...(textInputAppearance &&
-      textInputAppearance !== InputAppearance.Standard
-        ? [`textInput-input.${textInputAppearance}`]
-        : [])
-    ].join(" ");
-    let { onChange } = inputElementProps;
-    if (onChange == null && value != null) {
-      onChange = Function.prototype as (
-        event: React.FormEvent<HTMLInputElement>
-      ) => void;
-    }
-    const additionalProps = {
-      ...{ ...inputElementProps, onChange, value, type: this.props.type }
-    };
-    return (
-      <input
-        className={cx(inputReset, ...additionalClasses)}
-        aria-invalid={!isValid}
-        aria-describedby={describedBy}
-        data-cy={dataCy}
-        {...additionalProps}
-      />
-    );
-  }
-
-  private getId(): string {
-    if (typeof this.props.id === "string") {
-      return this.props.id;
+  const getId = (): string => {
+    if (typeof props.id === "string") {
+      return props.id;
     }
 
-    return this.placeholderId;
+    return placeholderId;
+  };
+
+  const containerProps: { className?: string } = {};
+  const appearance = getInputAppearance(props);
+  const dataCy = `textInput textInput.${appearance}`;
+
+  if (props.className) {
+    containerProps.className = props.className;
   }
-}
+  return (
+    <div {...containerProps} data-cy={dataCy}>
+      {renderLabel({
+        appearance,
+        hidden: !props.showInputLabel,
+        id: getId(),
+        label: props.inputLabel,
+        required: props.required,
+        tooltipContent: props.tooltipContent
+      })}
+      {getInputContent()}
+    </div>
+  );
+};
+
+TextInput.defaultProps = {
+  type: "text",
+  appearance: InputAppearance.Standard,
+  showInputLabel: true
+};
 
 export default TextInput;
