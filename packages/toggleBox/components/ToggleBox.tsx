@@ -8,8 +8,14 @@ export interface ToggleBoxProps extends ToggleWrapperProps {
   children: React.ReactNode;
 }
 
-const ToggleBox = ({ children, id, disabled = false, ...other }) => (
-  <ToggleWrapper disabled={disabled} id={id} {...other}>
+const ToggleBox = ({
+  children,
+  id,
+  disabled = false,
+  value,
+  ...other
+}: ToggleBoxProps) => (
+  <ToggleWrapper value={value} disabled={disabled} id={id} {...other}>
     {({ isActive, hasFocus }) => (
       <div className={toggleBoxWrapper}>
         <ButtonCard
