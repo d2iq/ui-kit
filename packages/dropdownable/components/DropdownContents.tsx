@@ -8,7 +8,13 @@ export interface DropdownContentsProps {
 }
 
 const DropdownContents = ({ children, onClose }: DropdownContentsProps) => {
-  const ref = useDetectClickOutside({ onTriggered: onClose ?? (() => { return null }) });
+  const ref = useDetectClickOutside({
+    onTriggered:
+      onClose ??
+      (() => {
+        return null;
+      })
+  });
 
   return <div ref={ref}>{children}</div>;
 };
