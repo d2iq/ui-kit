@@ -55,4 +55,4 @@ export const Clickable: React.FC<ClickableProps> = ({
   });
 };
 
-export default Clickable;
+export default React.memo(Clickable);
