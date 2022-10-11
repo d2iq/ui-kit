@@ -54,8 +54,6 @@ exports[`ClickToCopyButton renders default 1`] = `
           trigger={
             <Clickable
               action={[Function]}
-              disableFocusOutline={false}
-              role="button"
               tabIndex={0}
             >
               <Box
@@ -109,8 +107,6 @@ exports[`ClickToCopyButton renders default 1`] = `
               <div>
                 <Clickable
                   action={[Function]}
-                  disableFocusOutline={false}
-                  role="button"
                   tabIndex={0}
                 >
                   <Box
@@ -208,8 +204,6 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
           trigger={
             <Clickable
               action={[Function]}
-              disableFocusOutline={false}
-              role="button"
               tabIndex={0}
             >
               <div
@@ -252,8 +246,6 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
               <div>
                 <Clickable
                   action={[Function]}
-                  disableFocusOutline={false}
-                  role="button"
                   tabIndex={0}
                 >
                   <div

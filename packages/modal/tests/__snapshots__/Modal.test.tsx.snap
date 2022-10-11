@@ -2678,8 +2678,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                   >
                                     <Clickable
                                       action={[MockFunction]}
-                                      disableFocusOutline={false}
-                                      role="button"
                                       tabIndex={0}
                                     >
                                       <span

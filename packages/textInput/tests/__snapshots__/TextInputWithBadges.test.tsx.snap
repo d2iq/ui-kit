@@ -355,9 +355,6 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                     >
                       <Clickable
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"
@@ -434,9 +431,6 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                     >
                       <Clickable
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"
@@ -513,9 +507,6 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                     >
                       <Clickable
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"
@@ -1104,9 +1095,6 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                     >
                       <Clickable
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"
@@ -1183,9 +1171,6 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                     >
                       <Clickable
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"
@@ -1262,9 +1247,6 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                     >
                       <Clickable
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"

@@ -388,8 +388,6 @@ exports[`CodeSnippet renders with copy button 1`] = `
                           trigger={
                             <Clickable
                               action={[Function]}
-                              disableFocusOutline={false}
-                              role="button"
                               tabIndex={0}
                             >
                               <Box
@@ -444,8 +442,6 @@ exports[`CodeSnippet renders with copy button 1`] = `
                               <div>
                                 <Clickable
                                   action={[Function]}
-                                  disableFocusOutline={false}
-                                  role="button"
                                   tabIndex={0}
                                 >
                                   <Box
