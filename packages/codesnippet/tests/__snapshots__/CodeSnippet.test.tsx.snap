@@ -386,7 +386,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                           isOpen={false}
                           suppress={true}
                           trigger={
-                            <Clickable
+                            <Memo(Clickable)
                               action={[Function]}
                               tabIndex={0}
                             >
@@ -407,7 +407,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                                   shape="system-clipboard"
                                 />
                               </Box>
-                            </Clickable>
+                            </Memo(Clickable)>
                           }
                         >
                           <span
@@ -440,7 +440,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                               }
                             >
                               <div>
-                                <Clickable
+                                <Memo(Clickable)
                                   action={[Function]}
                                   tabIndex={0}
                                 >
@@ -490,7 +490,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
                                       </Icon>
                                     </span>
                                   </Box>
-                                </Clickable>
+                                </Memo(Clickable)>
                               </div>
                             </Dropdownable>
                           </span>

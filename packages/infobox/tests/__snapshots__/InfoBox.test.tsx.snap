@@ -67,7 +67,7 @@ exports[`InfoBox renders default 1`] = `
   >
     message
   </div>
-  <Clickable
+  <Memo(Clickable)
     action={[Function]}
     tabIndex={0}
   >
@@ -80,7 +80,7 @@ exports[`InfoBox renders default 1`] = `
         size="xs"
       />
     </span>
-  </Clickable>
+  </Memo(Clickable)>
 </div>
 `;
 
@@ -126,7 +126,7 @@ exports[`InfoBox renders with JSX message 1`] = `
   >
     <MessageComponent />
   </div>
-  <Clickable
+  <Memo(Clickable)
     action={[Function]}
     tabIndex={0}
   >
@@ -139,7 +139,7 @@ exports[`InfoBox renders with JSX message 1`] = `
         size="xs"
       />
     </span>
-  </Clickable>
+  </Memo(Clickable)>
 </div>
 `;
 
@@ -235,7 +235,7 @@ exports[`InfoBox renders with actions 1`] = `
       </span>
     </div>
   </div>
-  <Clickable
+  <Memo(Clickable)
     action={[Function]}
     tabIndex={0}
   >
@@ -248,7 +248,7 @@ exports[`InfoBox renders with actions 1`] = `
         size="xs"
       />
     </span>
-  </Clickable>
+  </Memo(Clickable)>
 </div>
 `;
 
