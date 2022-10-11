@@ -25,7 +25,9 @@ const DropdownStory = ({
 }) => {
   const [isShowing, setIsShowing] = React.useState(false);
 
-  function toggle(event?: React.SyntheticEvent<HTMLElement, Event> | undefined) {
+  function toggle(
+    event?: React.SyntheticEvent<HTMLElement, Event> | undefined
+  ) {
     event?.preventDefault();
     setIsShowing(!isShowing);
     event?.stopPropagation();
@@ -51,7 +53,9 @@ const DropdownStory = ({
           </DropdownContentContainer>
         }
       >
-        <PrimaryButton onClick={event=>toggle(event)}>{children}</PrimaryButton>
+        <PrimaryButton onClick={event => toggle(event)}>
+          {children}
+        </PrimaryButton>
       </Dropdownable>
     </div>
   );
