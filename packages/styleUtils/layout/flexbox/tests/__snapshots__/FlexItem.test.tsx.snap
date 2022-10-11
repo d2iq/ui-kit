@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FlexItem renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -15,15 +16,17 @@ exports[`FlexItem renders default 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="flexItem"
->
-  content
-</div>
+    class="emotion-0"
+    data-cy="flexItem"
+  >
+    content
+  </div>
+</DocumentFragment>
 `;
 
 exports[`FlexItem renders with all props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -44,15 +47,17 @@ exports[`FlexItem renders with all props 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="flexItem"
->
-  content
-</div>
+    class="emotion-0"
+    data-cy="flexItem"
+  >
+    content
+  </div>
+</DocumentFragment>
 `;
 
 exports[`FlexItem renders with responsive props 1`] = `
-@media (min-width: 0) {
+<DocumentFragment>
+  @media (min-width: 0) {
   .emotion-0 {
     box-sizing: border-box;
     -webkit-flex-basis: auto;
@@ -119,9 +124,10 @@ exports[`FlexItem renders with responsive props 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="flexItem"
->
-  content
-</div>
+    class="emotion-0"
+    data-cy="flexItem"
+  >
+    content
+  </div>
+</DocumentFragment>
 `;

@@ -1,76 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PageHeader default 1`] = `
-<div
-  class="css-fon3qn"
->
+<DocumentFragment>
   <div
-    class="css-f1o908"
-    data-cy="pageHeader"
+    class="css-fon3qn"
   >
     <div
-      class="css-qi8t7c"
+      class="css-f1o908"
+      data-cy="pageHeader"
     >
-      <nav
-        class="css-cldwuj"
+      <div
+        class="css-qi8t7c"
       >
-        <div
-          class="css-zsjup2"
-          data-cy="breadcrumb"
-        >
-          <span>
-            One
-          </span>
-        </div>
-        <div
-          class="css-10fubqe"
-          data-cy="breadcrumb"
-        >
-          <svg
-            aria-label="system-caret-right icon"
-            class="css-jbdp75"
-            data-cy="icon"
-            height="16"
-            preserveAspectRatio="xMinYMin meet"
-            role="img"
-            viewBox="0 0 16 16"
-            width="16"
-          >
-            <use
-              href="#system-caret-right"
-            />
-          </svg>
-        </div>
-        <div
-          class="css-10fubqe"
-          data-cy="breadcrumb"
-        >
-          <span>
-            Two
-          </span>
-        </div>
-      </nav>
-    </div>
-    <div
-      class="css-48ylac"
-    >
-      <ul
-        class="css-eozmc"
-        data-cy="pageHeader-actions"
-      >
-        <li
-          class="css-2h2dvf"
+        <nav
+          class="css-cldwuj"
         >
           <div
-            class="css-1h5x3dy"
-            role="button"
-            tabindex="-1"
+            class="css-zsjup2"
+            data-cy="breadcrumb"
           >
-            Action 1
+            <span>
+              One
+            </span>
           </div>
-        </li>
-      </ul>
+          <div
+            class="css-10fubqe"
+            data-cy="breadcrumb"
+          >
+            <svg
+              aria-label="system-caret-right icon"
+              class="css-jbdp75"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <use
+                xlink:href="#system-caret-right"
+              />
+            </svg>
+          </div>
+          <div
+            class="css-10fubqe"
+            data-cy="breadcrumb"
+          >
+            <span>
+              Two
+            </span>
+          </div>
+        </nav>
+      </div>
+      <div
+        class="css-48ylac"
+      >
+        <ul
+          class="css-eozmc"
+          data-cy="pageHeader-actions"
+        >
+          <li
+            class="css-2h2dvf"
+          >
+            <div
+              class="css-1h5x3dy"
+              role="button"
+              tabindex="-1"
+            >
+              Action 1
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Flex renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -42,21 +43,42 @@ exports[`Flex renders default 1`] = `
   }
 }
 
+.emotion-1 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
 <div
-  className="emotion-0"
-  data-cy="flex"
->
-  <FlexItem>
-    content
-  </FlexItem>
-  <FlexItem>
-    content
-  </FlexItem>
-</div>
+    class="emotion-0"
+    data-cy="flex"
+  >
+    <div
+      class="emotion-1"
+      data-cy="flexItem"
+    >
+      content
+    </div>
+    <div
+      class="emotion-1"
+      data-cy="flexItem"
+    >
+      content
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Flex renders with all props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -100,21 +122,42 @@ exports[`Flex renders with all props 1`] = `
   }
 }
 
+.emotion-1 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
 <div
-  className="emotion-0"
-  data-cy="flex"
->
-  <FlexItem>
-    content
-  </FlexItem>
-  <FlexItem>
-    content
-  </FlexItem>
-</div>
+    class="emotion-0"
+    data-cy="flex"
+  >
+    <div
+      class="emotion-1"
+      data-cy="flexItem"
+    >
+      content
+    </div>
+    <div
+      class="emotion-1"
+      data-cy="flexItem"
+    >
+      content
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Flex renders with responsive props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -271,15 +314,35 @@ exports[`Flex renders with responsive props 1`] = `
   }
 }
 
+.emotion-1 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
 <div
-  className="emotion-0"
-  data-cy="flex"
->
-  <FlexItem>
-    content
-  </FlexItem>
-  <FlexItem>
-    content
-  </FlexItem>
-</div>
+    class="emotion-0"
+    data-cy="flex"
+  >
+    <div
+      class="emotion-1"
+      data-cy="flexItem"
+    >
+      content
+    </div>
+    <div
+      class="emotion-1"
+      data-cy="flexItem"
+    >
+      content
+    </div>
+  </div>
+</DocumentFragment>
 `;

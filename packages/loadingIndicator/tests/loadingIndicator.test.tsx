@@ -1,13 +1,16 @@
 import React from "react";
-import { render } from "enzyme";
-import toJSON from "enzyme-to-json";
+import { render } from "@testing-library/react";
 import { InlineLoadingIndicator, SectionLoadingIndicator } from "../";
 
 describe("Loading indicators", () => {
   it("renders SectionLoadingIndicator", () => {
-    expect(toJSON(render(<InlineLoadingIndicator />))).toMatchSnapshot();
+    const { asFragment } = render(<InlineLoadingIndicator />);
+
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders InlineLoadingIndicator", () => {
-    expect(toJSON(render(<SectionLoadingIndicator />))).toMatchSnapshot();
+    const { asFragment } = render(<SectionLoadingIndicator />);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });

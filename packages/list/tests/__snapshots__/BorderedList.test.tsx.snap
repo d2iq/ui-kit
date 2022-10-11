@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BorderedList renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   list-style: none;
   margin-left: 0;
   margin-top: 0;
@@ -24,14 +25,15 @@ exports[`BorderedList renders default 1`] = `
 }
 
 <ul
-  className="emotion-0"
-  data-cy="borderedList"
->
-  <li>
-    list item
-  </li>
-  <li>
-    list item
-  </li>
-</ul>
+    class="emotion-0"
+    data-cy="borderedList"
+  >
+    <li>
+      list item
+    </li>
+    <li>
+      list item
+    </li>
+  </ul>
+</DocumentFragment>
 `;

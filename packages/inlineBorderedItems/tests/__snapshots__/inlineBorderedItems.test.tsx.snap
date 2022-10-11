@@ -1,21 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card renders default 1`] = `
-<div
-  class="css-4z0fcg"
->
-  <span>
-    Example Content
-  </span>
-</div>
+<DocumentFragment>
+  <div
+    class="css-4z0fcg"
+  >
+    <span>
+      Example Content
+    </span>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Card renders with gutterSize set 1`] = `
-<div
-  class="css-1vxpdor"
->
-  <span>
-    Example Content
-  </span>
-</div>
+<DocumentFragment>
+  <div
+    class="css-1vxpdor"
+  >
+    <span>
+      Example Content
+    </span>
+  </div>
+</DocumentFragment>
 `;
