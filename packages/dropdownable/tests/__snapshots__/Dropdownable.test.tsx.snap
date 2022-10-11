@@ -151,14 +151,35 @@ exports[`Dropdownable is visible after opening 2`] = `
       </ButtonBase>
     </PrimaryButton>
   </div>
-  <clickOutside(undefined)
+  <DropdownContents
     isOpen={true}
   >
-    <ForwardRef
-      isOpen={true}
-    >
-      <div>
-        <ForwardRef
+    <div>
+      <ForwardRef
+        style={
+          {
+            "left": "0",
+            "position": "absolute",
+            "top": "0",
+            "zIndex": 2,
+          }
+        }
+      >
+        <Overlay
+          innerRef={[Function]}
+          overlayRoot={
+            <body>
+              <div>
+                <div
+                  style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+                >
+                  <p>
+                    I am a touchdown
+                  </p>
+                </div>
+              </div>
+            </body>
+          }
           style={
             {
               "left": "0",
@@ -168,62 +189,37 @@ exports[`Dropdownable is visible after opening 2`] = `
             }
           }
         >
-          <Overlay
-            innerRef={[Function]}
-            overlayRoot={
-              <body>
-                <div>
-                  <div
-                    style="z-index: 2; position: absolute; left: 0px; top: 0px;"
-                  >
-                    <p>
-                      I am a touchdown
-                    </p>
-                  </div>
+          <Portal
+            containerInfo={
+              <div>
+                <div
+                  style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+                >
+                  <p>
+                    I am a touchdown
+                  </p>
                 </div>
-              </body>
-            }
-            style={
-              {
-                "left": "0",
-                "position": "absolute",
-                "top": "0",
-                "zIndex": 2,
-              }
+              </div>
             }
           >
-            <Portal
-              containerInfo={
-                <div>
-                  <div
-                    style="z-index: 2; position: absolute; left: 0px; top: 0px;"
-                  >
-                    <p>
-                      I am a touchdown
-                    </p>
-                  </div>
-                </div>
+            <div
+              style={
+                {
+                  "left": "0",
+                  "position": "absolute",
+                  "top": "0",
+                  "zIndex": 2,
+                }
               }
             >
-              <div
-                style={
-                  {
-                    "left": "0",
-                    "position": "absolute",
-                    "top": "0",
-                    "zIndex": 2,
-                  }
-                }
-              >
-                <p>
-                  I am a touchdown
-                </p>
-              </div>
-            </Portal>
-          </Overlay>
-        </ForwardRef>
-      </div>
-    </ForwardRef>
-  </clickOutside(undefined)>
+              <p>
+                I am a touchdown
+              </p>
+            </div>
+          </Portal>
+        </Overlay>
+      </ForwardRef>
+    </div>
+  </DropdownContents>
 </Dropdownable>
 `;

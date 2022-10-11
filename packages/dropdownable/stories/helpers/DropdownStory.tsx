@@ -25,8 +25,10 @@ const DropdownStory = ({
 }) => {
   const [isShowing, setIsShowing] = React.useState(false);
 
-  function toggle() {
+  function toggle(event?: React.SyntheticEvent<HTMLElement, Event> | undefined) {
+    event?.preventDefault();
     setIsShowing(!isShowing);
+    event?.stopPropagation();
   }
 
   const containerStyle = css`
@@ -49,7 +51,7 @@ const DropdownStory = ({
           </DropdownContentContainer>
         }
       >
-        <PrimaryButton onClick={toggle}>{children}</PrimaryButton>
+        <PrimaryButton onClick={event=>toggle(event)}>{children}</PrimaryButton>
       </Dropdownable>
     </div>
   );

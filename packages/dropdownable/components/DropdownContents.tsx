@@ -1,31 +1,16 @@
 import React from "react";
-import wrapWithClickOutside from "react-click-outside";
+import { useDetectClickOutside } from "react-detect-click-outside";
 
 export interface DropdownContentsProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode | React.ReactNode[];
   isOpen?: boolean;
   onClose?: () => void;
 }
 
-const DropdownContents = React.forwardRef<
-  HTMLDivElement | null,
-  DropdownContentsProps
->(({ children, isOpen, onClose }: DropdownContentsProps, ref) => {
-  React.useEffect(() => {
-    const handleClickOutside = () => {
-      if (isOpen && onClose) {
-        onClose();
-      }
-    };
-
-    document.addEventListener("click", handleClickOutside, true);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside, true);
-    };
-  }, [onClose]);
+const DropdownContents = ({ children, onClose }: DropdownContentsProps) => {
+  const ref = onClose ? useDetectClickOutside({onTriggered: onClose}) : null;
 
   return <div ref={ref}>{children}</div>;
-});
+};
 
-export default wrapWithClickOutside(DropdownContents);
+export default DropdownContents;
