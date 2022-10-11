@@ -34,80 +34,65 @@ interface LocalToggleWrapperProps extends ToggleWrapperProps {
   children: (renderProps: RenderProps) => React.ReactNode;
 }
 
-interface ToggleWrapperState {
-  hasFocus: boolean;
-}
+const ToggleWrapper = ({
+  id = nextId("toggleWrapper-"),
+  children,
+  "data-cy": dataCy = "toggleWrapper-input",
+  isActive,
+  onFocus,
+  onBlur,
+  type = "checkbox",
+  value = "",
+  ...other
+}: LocalToggleWrapperProps) => {
+  const [hasFocus, setHasFocus] = React.useState<boolean>(false);
 
-class ToggleWrapper extends React.PureComponent<
-  LocalToggleWrapperProps,
-  ToggleWrapperState
-> {
-  public static defaultProps: Partial<ToggleWrapperProps> = {
-    type: "checkbox"
+  const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+    setHasFocus(true);
+
+    if (onFocus) {
+      onFocus(e);
+    }
   };
 
-  constructor(props: LocalToggleWrapperProps) {
-    super(props);
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    setHasFocus(false);
 
-    this.state = {
-      hasFocus: false
-    };
-
-    this.handleFocus = this.handleFocus.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
-  }
-
-  public render() {
-    const {
-      children,
-      id = nextId("toggleWrapper-"),
-      "data-cy": dataCy = "toggleWrapper-input",
-      isActive,
-      ...other
-    } = this.props;
-    const { hasFocus } = this.state;
-    delete other.checked;
-    delete other.className;
-    delete other.onFocus;
-    delete other.onBlur;
-
-    return (
-      // eslint is giving an error because it can't tell that the value of `type`
-      // will be "radio" or "checkbox".
-      // Passing either string directly makes the error go away
-      /* eslint-disable jsx-a11y/role-supports-aria-props */
-      <label htmlFor={id} className={display("block")}>
-        <input
-          id={id}
-          className={visuallyHidden}
-          checked={isActive}
-          aria-checked={isActive}
-          data-cy={dataCy}
-          onFocus={this.handleFocus}
-          onBlur={this.handleBlur}
-          {...other}
-        />
-        {children({ isActive, hasFocus })}
-      </label>
-      /* eslint-enable jsx-a11y/role-supports-aria-props */
-    );
-  }
-
-  private handleFocus(e) {
-    this.setState({ hasFocus: true });
-
-    if (this.props.onFocus) {
-      this.props.onFocus(e);
+    if (onBlur) {
+      onBlur(e);
     }
-  }
+  };
 
-  private handleBlur(e) {
-    this.setState({ hasFocus: false });
+  delete other.checked;
+  delete other.className;
 
-    if (this.props.onBlur) {
-      this.props.onBlur(e);
-    }
-  }
-}
+  return (
+    // eslint is giving an error because it can't tell that the value of `type`
+    // will be "radio" or "checkbox".
+    // Passing either string directly makes the error go away
+    /* eslint-disable jsx-a11y/role-supports-aria-props */
+    <label htmlFor={id} className={display("block")}>
+      <input
+        id={id}
+        className={visuallyHidden}
+        checked={isActive}
+        aria-checked={isActive}
+        data-cy={dataCy}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        type={type}
+        value={value}
+        {...other}
+      />
+      {children({ isActive, hasFocus })}
+    </label>
+    /* eslint-enable jsx-a11y/role-supports-aria-props */
+  );
+};
 
-export default ToggleWrapper;
+ToggleWrapper.defaultProps = {
+  type: "checkbox",
+  value: ""
+};
+
+export default React.memo(ToggleWrapper);
