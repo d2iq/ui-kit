@@ -1,15 +1,12 @@
 import React from "react";
-import { mount } from "enzyme";
-import toJson from "enzyme-to-json";
-import DropdownContents from "../../dropdownable/components/DropdownContents";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import { DropdownMenu, DropdownSection, DropdownMenuItem } from "..";
 
-const triggerId = "trigger";
-
 describe("Dropdown", () => {
   it("renders a closed dropdown", () => {
-    const component = mount(
+    const { baseElement } = render(
       <DropdownMenu trigger="Dropdown trigger">
         <DropdownSection>
           <DropdownMenuItem key="edit" value="edit">
@@ -28,10 +25,10 @@ describe("Dropdown", () => {
       </DropdownMenu>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(baseElement).toMatchSnapshot();
   });
   it("renders an open dropdown", () => {
-    const component = mount(
+    const { baseElement } = render(
       <DropdownMenu initialIsOpen={true} trigger="Dropdown trigger">
         <DropdownSection>
           <DropdownMenuItem key="edit" value="edit">
@@ -50,10 +47,10 @@ describe("Dropdown", () => {
       </DropdownMenu>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(baseElement).toMatchSnapshot();
   });
   it("renders a dropdown with a max height", () => {
-    const component = mount(
+    const { baseElement } = render(
       <DropdownMenu trigger="Dropdown trigger" menuMaxHeight={50}>
         <DropdownSection>
           <DropdownMenuItem key="edit" value="edit">
@@ -72,10 +69,10 @@ describe("Dropdown", () => {
       </DropdownMenu>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(baseElement).toMatchSnapshot();
   });
   it("renders an open dropdown with multiple sections", () => {
-    const component = mount(
+    const { baseElement } = render(
       <DropdownMenu initialIsOpen={true} trigger="Dropdown trigger">
         <DropdownSection>
           <DropdownMenuItem key="edit" value="edit">
@@ -106,11 +103,11 @@ describe("Dropdown", () => {
       </DropdownMenu>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(baseElement).toMatchSnapshot();
   });
   it("renders an element passed as to the trigger prop", () => {
-    const component = mount(
-      <DropdownMenu trigger={<div id={triggerId}>Dropdown trigger</div>}>
+    render(
+      <DropdownMenu trigger={<div>Dropdown trigger</div>}>
         <DropdownSection>
           <DropdownMenuItem key="edit" value="edit">
             Edit
@@ -128,11 +125,15 @@ describe("Dropdown", () => {
       </DropdownMenu>
     );
 
-    expect(component.find(`#${triggerId}`).exists()).toBe(true);
+    const trigger = screen.queryByText(/dropdown trigger/i);
+
+    expect(trigger).toBeTruthy();
   });
-  it("toggles the dropdown menu by clicking twice", () => {
-    const component = mount(
-      <DropdownMenu trigger={<div id={triggerId}>Dropdown trigger</div>}>
+  it("toggles the dropdown menu by clicking twice", async () => {
+    const user = userEvent.setup();
+
+    render(
+      <DropdownMenu trigger={<div>Dropdown trigger</div>}>
         <DropdownSection>
           <DropdownMenuItem key="edit" value="edit">
             Edit
@@ -150,16 +151,19 @@ describe("Dropdown", () => {
       </DropdownMenu>
     );
 
-    const trigger = component.find(`#${triggerId}`);
-    expect(component.find(DropdownContents).length).toBe(0);
-    trigger.simulate("click");
-    expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
-    trigger.simulate("click");
-    expect(component.find(DropdownContents).length).toBe(0);
+    const trigger = screen.getByText(/dropdown trigger/i);
+
+    expect(screen.queryByText(/edit/i)).toBeFalsy();
+    await user.click(trigger);
+    expect(screen.queryByText(/edit/i)).toBeTruthy();
+    await user.click(trigger);
+    expect(screen.queryByText(/edit/i)).toBeFalsy();
   });
-  it("toggles the dropdown menu by pressing the spacebar twice", () => {
-    const component = mount(
-      <DropdownMenu trigger={<div id={triggerId}>Dropdown trigger</div>}>
+  it("toggles the dropdown menu by pressing the spacebar twice", async () => {
+    const user = userEvent.setup();
+
+    render(
+      <DropdownMenu trigger={<div>Dropdown trigger</div>}>
         <DropdownSection>
           <DropdownMenuItem key="edit" value="edit">
             Edit
@@ -176,29 +180,26 @@ describe("Dropdown", () => {
         </DropdownSection>
       </DropdownMenu>
     );
-    const trigger = component.find(`#${triggerId}`);
+    const trigger = screen.getByText(/dropdown trigger/i);
 
-    expect(component.find(DropdownContents).length).toBe(0);
+    expect(screen.queryByText(/edit/i)).toBeFalsy();
 
-    trigger.simulate("keyDown", {
-      key: " " // space bar
-    });
+    // click to focus, then space to close menu
+    await user.click(trigger);
+    await user.keyboard(" ");
 
-    expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
+    await user.keyboard(" ");
+    expect(screen.queryByText(/edit/i)).toBeTruthy();
 
-    trigger.simulate("keyDown", {
-      key: " " // space bar
-    });
-
-    expect(component.find(DropdownContents).length).toBe(0);
+    await user.keyboard(" ");
+    expect(screen.queryByText(/edit/i)).toBeFalsy();
   });
-  it("selects first item and passes it's value to onSelect", () => {
+  it("selects first item and passes it's vawue to onSelect", async () => {
+    const user = userEvent.setup();
     const onSelectFn = jest.fn();
-    const component = mount(
-      <DropdownMenu
-        onSelect={onSelectFn}
-        trigger={<div id={triggerId}>Dropdown trigger</div>}
-      >
+
+    render(
+      <DropdownMenu onSelect={onSelectFn} trigger={<div>Dropdown trigger</div>}>
         <DropdownSection>
           <DropdownMenuItem key="edit" value="edit">
             Edit
@@ -215,28 +216,25 @@ describe("Dropdown", () => {
         </DropdownSection>
       </DropdownMenu>
     );
-    const trigger = component.find(`#${triggerId}`);
+    const trigger = screen.getByText(/dropdown trigger/i);
 
     expect(onSelectFn).not.toHaveBeenCalled();
-    trigger.simulate("keyDown", {
-      key: "ArrowDown"
-    });
-    trigger.simulate("keyDown", {
-      key: "Enter"
-    });
+
+    await user.click(trigger);
+    await user.keyboard("{ArrowDown}");
+    await user.keyboard("{Enter}");
 
     // using `expect.anything()` because the second parameter is an object
     // that comes from Downshift, and there's no good way to know exactly
     // what to expect
     expect(onSelectFn).toHaveBeenCalledWith("edit", expect.anything());
   });
-  it("calls onSelect prop with the selected value", () => {
+  it("calls onSelect prop with the selected value", async () => {
+    const user = userEvent.setup();
     const onSelectFn = jest.fn();
-    const component = mount(
-      <DropdownMenu
-        onSelect={onSelectFn}
-        trigger={<div id={triggerId}>Dropdown trigger</div>}
-      >
+
+    render(
+      <DropdownMenu onSelect={onSelectFn} trigger={<div>Dropdown trigger</div>}>
         <DropdownSection>
           <DropdownMenuItem disabled={true} key="edit" value="edit">
             Edit
@@ -253,15 +251,13 @@ describe("Dropdown", () => {
         </DropdownSection>
       </DropdownMenu>
     );
-    const trigger = component.find(`#${triggerId}`);
+    const trigger = screen.getByText(/dropdown trigger/i);
 
     expect(onSelectFn).not.toHaveBeenCalled();
-    trigger.simulate("keyDown", {
-      key: "ArrowDown"
-    });
-    trigger.simulate("keyDown", {
-      key: "Enter"
-    });
+
+    await user.click(trigger);
+    await user.keyboard("{ArrowDown}");
+    await user.keyboard("{Enter}");
 
     // using `expect.anything()` because the second parameter is an object
     // that comes from Downshift, and there's no good way to know exactly
