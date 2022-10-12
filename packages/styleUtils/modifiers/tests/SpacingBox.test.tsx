@@ -1,7 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 
 import SpacingBox from "../components/SpacingBox";
 
@@ -9,21 +8,21 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("SpacingBox", () => {
   it("renders default", () => {
-    const component = shallow(<SpacingBox tag="div">content</SpacingBox>);
+    const { asFragment } = render(<SpacingBox tag="div">content</SpacingBox>);
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with all props", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <SpacingBox tag="div" side="top" spacingSize="l">
         content
       </SpacingBox>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with responsive spacingSize", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <SpacingBox
         tag="div"
         side="top"
@@ -33,11 +32,11 @@ describe("SpacingBox", () => {
       </SpacingBox>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with different spacing on each side", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <SpacingBox
         tag="div"
         spacingSizePerSide={{
@@ -51,11 +50,11 @@ describe("SpacingBox", () => {
       </SpacingBox>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with responsive spacing on each side", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <SpacingBox
         tag="div"
         spacingSizePerSide={{
@@ -81,6 +80,6 @@ describe("SpacingBox", () => {
       </SpacingBox>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

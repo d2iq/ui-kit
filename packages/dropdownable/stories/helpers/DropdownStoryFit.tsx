@@ -24,8 +24,12 @@ const DropdownStoryFit = ({ children }) => {
     setIsOpen(false);
   }
 
-  function handleOpen() {
+  function handleOpen(
+    event?: React.SyntheticEvent<HTMLElement, Event> | undefined
+  ) {
+    event?.preventDefault();
     setIsOpen(true);
+    event?.stopPropagation();
   }
 
   return (
@@ -48,7 +52,9 @@ const DropdownStoryFit = ({ children }) => {
             </DropdownContentContainer>
           }
         >
-          <PrimaryButton onClick={handleOpen}>{children}</PrimaryButton>
+          <PrimaryButton onClick={event => handleOpen(event)}>
+            {children}
+          </PrimaryButton>
         </Dropdownable>
       </div>
       <SecondaryButton onClick={toggleExpand}>

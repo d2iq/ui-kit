@@ -1,23 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Link renders ResetLink 1`] = `
-<a
-  class="css-1nomj1t"
-  href="http://google.com"
-  rel="noopener"
-  target="_blank"
->
-  Link
-</a>
+<DocumentFragment>
+  <a
+    class="css-1nomj1t"
+    href="http://google.com"
+    rel="noopener"
+    target="_blank"
+  >
+    Link
+  </a>
+</DocumentFragment>
 `;
 
 exports[`Link renders default 1`] = `
-<a
-  class="css-1ygm8ii"
-  href="http://google.com"
-  rel="noopener"
-  target="_blank"
->
-  Link
-</a>
+<DocumentFragment>
+  <a
+    class="css-1ygm8ii"
+    href="http://google.com"
+    rel="noopener"
+    target="_blank"
+  >
+    Link
+  </a>
+</DocumentFragment>
 `;

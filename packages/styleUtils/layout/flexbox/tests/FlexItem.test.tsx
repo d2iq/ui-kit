@@ -1,29 +1,27 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
-
 import FlexItem from "../components/FlexItem";
 
 expect.addSnapshotSerializer(createSerializer());
 
 describe("FlexItem", () => {
   it("renders default", () => {
-    const component = shallow(<FlexItem>content</FlexItem>);
+    const { asFragment } = render(<FlexItem>content</FlexItem>);
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with all props", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <FlexItem flex="grow" growFactor={2} order={2}>
         content
       </FlexItem>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with responsive props", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <FlexItem
         flex={{ default: "shrink", medium: "grow" }}
         growFactor={{ default: 1, medium: 2 }}
@@ -33,6 +31,6 @@ describe("FlexItem", () => {
       </FlexItem>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

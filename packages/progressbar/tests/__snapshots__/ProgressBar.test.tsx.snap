@@ -1,7 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProgressBar renders all sizes 1`] = `
-@keyframes animation-0 {
+<DocumentFragment>
+  .emotion-0 {
+  background-repeat: no-repeat;
+  padding-bottom: 4px;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+<div
+    class="emotion-0"
+    data-cy="spacingBox"
+  >
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    />
+  </div>
+  @keyframes animation-0 {
   0% {
     -webkit-background-position: 0 0;
     background-position: 0 0;
@@ -39,36 +95,79 @@ exports[`ProgressBar renders all sizes 1`] = `
   fill: var(--themeBrandPrimary, #7D58FF);
 }
 
-<Fragment>
-  <SpacingBox
-    side="bottom"
-    spacingSize="xxs"
-    tag="div"
-  >
-    <Flex
-      align="center"
-      gutterSize="s"
-      justify="flex-end"
-    />
-  </SpacingBox>
-  <svg
-    className="emotion-0"
+<svg
+    class="emotion-0"
     data-cy="progressBar-chart"
     role="presentation"
   >
     <rect
-      className="emotion-1"
+      class="emotion-1"
       height="100%"
-      key="pbSegment-0"
       width="40%"
       x="0%"
     />
   </svg>
-</Fragment>
+</DocumentFragment>
 `;
 
 exports[`ProgressBar renders all sizes 2`] = `
-@keyframes animation-0 {
+<DocumentFragment>
+  .emotion-0 {
+  background-repeat: no-repeat;
+  padding-bottom: 4px;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+<div
+    class="emotion-0"
+    data-cy="spacingBox"
+  >
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    />
+  </div>
+  @keyframes animation-0 {
   0% {
     -webkit-background-position: 0 0;
     background-position: 0 0;
@@ -106,36 +205,79 @@ exports[`ProgressBar renders all sizes 2`] = `
   fill: var(--themeBrandPrimary, #7D58FF);
 }
 
-<Fragment>
-  <SpacingBox
-    side="bottom"
-    spacingSize="xxs"
-    tag="div"
-  >
-    <Flex
-      align="center"
-      gutterSize="s"
-      justify="flex-end"
-    />
-  </SpacingBox>
-  <svg
-    className="emotion-0"
+<svg
+    class="emotion-0"
     data-cy="progressBar-chart"
     role="presentation"
   >
     <rect
-      className="emotion-1"
+      class="emotion-1"
       height="100%"
-      key="pbSegment-0"
       width="40%"
       x="0%"
     />
   </svg>
-</Fragment>
+</DocumentFragment>
 `;
 
 exports[`ProgressBar renders isProcessing 1`] = `
-@keyframes animation-0 {
+<DocumentFragment>
+  .emotion-0 {
+  background-repeat: no-repeat;
+  padding-bottom: 4px;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+<div
+    class="emotion-0"
+    data-cy="spacingBox"
+  >
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    />
+  </div>
+  @keyframes animation-0 {
   0% {
     -webkit-background-position: 0 0;
     background-position: 0 0;
@@ -173,36 +315,153 @@ exports[`ProgressBar renders isProcessing 1`] = `
   fill: var(--themeBrandPrimary, #7D58FF);
 }
 
-<Fragment>
-  <SpacingBox
-    side="bottom"
-    spacingSize="xxs"
-    tag="div"
-  >
-    <Flex
-      align="center"
-      gutterSize="s"
-      justify="flex-end"
-    />
-  </SpacingBox>
-  <svg
-    className="emotion-0"
+<svg
+    class="emotion-0"
     data-cy="progressBar-chart"
     role="presentation"
   >
     <rect
-      className="emotion-1"
+      class="emotion-1"
       height="100%"
-      key="pbSegment-0"
       width="40%"
       x="0%"
     />
   </svg>
-</Fragment>
+</DocumentFragment>
 `;
 
 exports[`ProgressBar renders with caption text and value text 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  background-repeat: no-repeat;
+  padding-bottom: 4px;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-3 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--themeTextColorSecondary, #76797E);
+  fill: var(--themeTextColorSecondary, #76797E);
+  text-align: inherit;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-5 {
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--themeTextColorPrimary, #1B2029);
+  fill: var(--themeTextColorPrimary, #1B2029);
+  text-align: inherit;
+}
+
+<div
+    class="emotion-0"
+    data-cy="spacingBox"
+  >
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    >
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      >
+        <div
+          class="rmTextMargins emotion-3"
+          data-cy="captionText"
+          title="Caption"
+        >
+          Caption
+        </div>
+      </div>
+      <div
+        class="emotion-4"
+        data-cy="flexItem"
+      >
+        <div
+          class="rmTextMargins emotion-5"
+          data-cy="text"
+        >
+          40%
+        </div>
+      </div>
+    </div>
+  </div>
+  .emotion-0 {
   background-color: rgba(218,221,226,0.65);
   border-radius: 999px;
   display: block;
@@ -214,61 +473,79 @@ exports[`ProgressBar renders with caption text and value text 1`] = `
   fill: var(--themeBrandPrimary, #7D58FF);
 }
 
-<Fragment>
-  <SpacingBox
-    side="bottom"
-    spacingSize="xxs"
-    tag="div"
-  >
-    <Flex
-      align="center"
-      gutterSize="s"
-      justify="flex-end"
-    >
-      <FlexItem>
-        <CaptionText
-          align="inherit"
-          tag="div"
-          wrap="truncate"
-        >
-          Caption
-        </CaptionText>
-      </FlexItem>
-      <FlexItem
-        flex="shrink"
-      >
-        <Text
-          align="inherit"
-          color="var(--themeTextColorPrimary, #1B2029)"
-          data-cy="text"
-          size="m"
-          tag="div"
-          weight="medium"
-          wrap="wrap"
-        >
-          40%
-        </Text>
-      </FlexItem>
-    </Flex>
-  </SpacingBox>
-  <svg
-    className="emotion-0"
+<svg
+    class="emotion-0"
     data-cy="progressBar-chart"
     role="presentation"
   >
     <rect
-      className="emotion-1"
+      class="emotion-1"
       height="100%"
-      key="pbSegment-0"
       width="40%"
       x="0%"
     />
   </svg>
-</Fragment>
+</DocumentFragment>
 `;
 
 exports[`ProgressBar renders with multiple segments of data 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  background-repeat: no-repeat;
+  padding-bottom: 4px;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+<div
+    class="emotion-0"
+    data-cy="spacingBox"
+  >
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    />
+  </div>
+  .emotion-0 {
   background-color: rgba(218,221,226,0.65);
   border-radius: 999px;
   display: block;
@@ -284,43 +561,85 @@ exports[`ProgressBar renders with multiple segments of data 1`] = `
   fill: yellow;
 }
 
-<Fragment>
-  <SpacingBox
-    side="bottom"
-    spacingSize="xxs"
-    tag="div"
-  >
-    <Flex
-      align="center"
-      gutterSize="s"
-      justify="flex-end"
-    />
-  </SpacingBox>
-  <svg
-    className="emotion-0"
+<svg
+    class="emotion-0"
     data-cy="progressBar-chart"
     role="presentation"
   >
     <rect
-      className="emotion-1"
+      class="emotion-1"
       height="100%"
-      key="pbSegment-0"
       width="40%"
       x="0%"
     />
     <rect
-      className="emotion-2"
+      class="emotion-2"
       height="100%"
-      key="pbSegment-1"
       width="20%"
       x="40%"
     />
   </svg>
-</Fragment>
+</DocumentFragment>
 `;
 
 exports[`ProgressBar renders with one segment of data 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  background-repeat: no-repeat;
+  padding-bottom: 4px;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+<div
+    class="emotion-0"
+    data-cy="spacingBox"
+  >
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    />
+  </div>
+  .emotion-0 {
   background-color: rgba(218,221,226,0.65);
   border-radius: 999px;
   display: block;
@@ -332,30 +651,17 @@ exports[`ProgressBar renders with one segment of data 1`] = `
   fill: var(--themeBrandPrimary, #7D58FF);
 }
 
-<Fragment>
-  <SpacingBox
-    side="bottom"
-    spacingSize="xxs"
-    tag="div"
-  >
-    <Flex
-      align="center"
-      gutterSize="s"
-      justify="flex-end"
-    />
-  </SpacingBox>
-  <svg
-    className="emotion-0"
+<svg
+    class="emotion-0"
     data-cy="progressBar-chart"
     role="presentation"
   >
     <rect
-      className="emotion-1"
+      class="emotion-1"
       height="100%"
-      key="pbSegment-0"
       width="40%"
       x="0%"
     />
   </svg>
-</Fragment>
+</DocumentFragment>
 `;

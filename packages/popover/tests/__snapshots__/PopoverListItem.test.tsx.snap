@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PopoverListItem renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -14,29 +15,105 @@ exports[`PopoverListItem renders 1`] = `
   margin-bottom: 8px;
 }
 
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 8px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
 <div
-  className="emotion-0"
-  data-cy="PopoverListItem"
->
-  <Flex
-    align="center"
-    gutterSize="xs"
+    class="emotion-0"
+    data-cy="PopoverListItem"
   >
-    <FlexItem
-      flex="shrink"
-    />
-    <FlexItem>
-      item content content
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    />
-  </Flex>
-</div>
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    >
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        item content content
+      </div>
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`PopoverListItem renders active 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -50,29 +127,105 @@ exports[`PopoverListItem renders active 1`] = `
   margin-bottom: 8px;
 }
 
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 8px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
 <div
-  className="emotion-0"
-  data-cy="PopoverListItem"
->
-  <Flex
-    align="center"
-    gutterSize="xs"
+    class="emotion-0"
+    data-cy="PopoverListItem"
   >
-    <FlexItem
-      flex="shrink"
-    />
-    <FlexItem>
-      item content content
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    />
-  </Flex>
-</div>
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    >
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        item content content
+      </div>
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`PopoverListItem renders active and selected 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -89,29 +242,105 @@ exports[`PopoverListItem renders active and selected 1`] = `
   margin-bottom: 8px;
 }
 
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 8px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
 <div
-  className="emotion-0"
-  data-cy="PopoverListItem"
->
-  <Flex
-    align="center"
-    gutterSize="xs"
+    class="emotion-0"
+    data-cy="PopoverListItem"
   >
-    <FlexItem
-      flex="shrink"
-    />
-    <FlexItem>
-      item content content
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    />
-  </Flex>
-</div>
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    >
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        item content content
+      </div>
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`PopoverListItem renders all appearances 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -128,29 +357,105 @@ exports[`PopoverListItem renders all appearances 1`] = `
   fill: var(--themeError, #EB293A);
 }
 
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 8px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
 <div
-  className="emotion-0"
-  data-cy="PopoverListItem"
->
-  <Flex
-    align="center"
-    gutterSize="xs"
+    class="emotion-0"
+    data-cy="PopoverListItem"
   >
-    <FlexItem
-      flex="shrink"
-    />
-    <FlexItem>
-      item content content
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    />
-  </Flex>
-</div>
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    >
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        item content content
+      </div>
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`PopoverListItem renders disabled 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -165,30 +470,106 @@ exports[`PopoverListItem renders disabled 1`] = `
   margin-bottom: 8px;
 }
 
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 8px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
 <div
-  className="emotion-0"
-  data-cy="PopoverListItem"
-  disabled={true}
->
-  <Flex
-    align="center"
-    gutterSize="xs"
+    class="emotion-0"
+    data-cy="PopoverListItem"
+    disabled=""
   >
-    <FlexItem
-      flex="shrink"
-    />
-    <FlexItem>
-      item content content
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    />
-  </Flex>
-</div>
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    >
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        item content content
+      </div>
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`PopoverListItem renders selected 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -203,29 +584,105 @@ exports[`PopoverListItem renders selected 1`] = `
   margin-bottom: 8px;
 }
 
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 8px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
 <div
-  className="emotion-0"
-  data-cy="PopoverListItem"
->
-  <Flex
-    align="center"
-    gutterSize="xs"
+    class="emotion-0"
+    data-cy="PopoverListItem"
   >
-    <FlexItem
-      flex="shrink"
-    />
-    <FlexItem>
-      item content content
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    />
-  </Flex>
-</div>
+    <div
+      class="emotion-1"
+      data-cy="flex"
+    >
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        item content content
+      </div>
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      />
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`PopoverListItem renders with icon and avatar 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   box-sizing: border-box;
   cursor: pointer;
   min-width: 100%;
@@ -239,7 +696,8 @@ exports[`PopoverListItem renders with icon and avatar 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="PopoverListItem"
-/>
+    class="emotion-0"
+    data-cy="PopoverListItem"
+  />
+</DocumentFragment>
 `;

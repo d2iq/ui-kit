@@ -1,7 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 
 import Flex from "../components/Flex";
 import FlexItem from "../components/FlexItem";
@@ -10,17 +9,17 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("Flex", () => {
   it("renders default", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <Flex>
         <FlexItem>content</FlexItem>
         <FlexItem>content</FlexItem>
       </Flex>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with all props", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <Flex
         align="center"
         justify="center"
@@ -33,10 +32,10 @@ describe("Flex", () => {
       </Flex>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with responsive props", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <Flex
         align={{ default: "flex-start", medium: "center" }}
         justify={{ default: "flex-start", medium: "center" }}
@@ -49,6 +48,6 @@ describe("Flex", () => {
       </Flex>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

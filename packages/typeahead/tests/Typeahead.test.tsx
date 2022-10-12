@@ -1,9 +1,8 @@
 import React from "react";
-import { mount } from "enzyme";
 import { createSerializer } from "@emotion/jest";
 import { create } from "react-test-renderer";
 import { Typeahead, TextInput } from "../../index";
-import DropdownContents from "../../dropdownable/components/DropdownContents";
+import { render, fireEvent } from "@testing-library/react";
 
 expect.addSnapshotSerializer(createSerializer());
 
@@ -50,7 +49,7 @@ describe("Typeahead", () => {
   });
 
   it("opens the menu on focus", () => {
-    const component = mount(
+    const { getByTestId } = render(
       <Typeahead
         items={[]}
         textField={
@@ -63,13 +62,16 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find(DropdownContents).length).toBe(0);
-    component.find("input").simulate("focus");
-    expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
+    const textInputElement = getByTestId("textInput-input");
+
+    textInputElement.focus();
+
+    expect(textInputElement.children.length).toBe(0);
+    expect(textInputElement).toBeTruthy();
   });
 
   it("opens the menu on click even if it's focused", () => {
-    const component = mount(
+    const { getByTestId, queryByTestId } = render(
       <Typeahead
         items={items}
         textField={
@@ -82,24 +84,32 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find(DropdownContents).length).toBe(0);
-    component.find("input").simulate("focus");
-    component.find("input").simulate("keyDown", {
+    const textInputElement = getByTestId("textInput-input");
+
+    expect(queryByTestId("typeahead-dropdown")).toBeNull();
+
+    textInputElement.focus();
+
+    fireEvent.keyDown(textInputElement, {
       key: "ArrowDown"
     });
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "Enter"
     });
-    expect(component.find(DropdownContents).length).toBe(0);
-    component.find("input").simulate("click");
-    expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
+
+    expect(queryByTestId("typeahead-dropdown")).toBeNull();
+
+    textInputElement.click();
+
+    expect(queryByTestId("typeahead-dropdown")).toBeTruthy();
   });
 
   it("renders an empty state if no items are passed", () => {
-    const component = mount(
+    const { getByTestId } = render(
       <Typeahead
         items={[]}
-        menuEmptyState={<div id="emptyState">Empty</div>}
+        menuEmptyState={<div data-cy="emptyState">Empty</div>}
         textField={
           <TextInput
             id="standard.input"
@@ -110,15 +120,16 @@ describe("Typeahead", () => {
       />
     );
 
-    component.find("input").simulate("focus");
-    expect(component.find("#emptyState").exists()).toBe(true);
+    getByTestId("textInput-input").click();
+
+    expect(getByTestId("emptyState")).toBeTruthy();
   });
 
   it("does not render an empty state if items are passed", () => {
-    const component = mount(
+    const { getByTestId, queryByTestId } = render(
       <Typeahead
         items={items}
-        menuEmptyState={<div id="emptyState">Empty</div>}
+        menuEmptyState={<div data-cy="emptyState">Empty</div>}
         textField={
           <TextInput
             id="standard.input"
@@ -129,21 +140,22 @@ describe("Typeahead", () => {
       />
     );
 
-    component.find("input").simulate("focus");
-    expect(component.find("#emptyState").exists()).toBe(false);
+    getByTestId("textInput-input").click();
+
+    expect(queryByTestId("emptyState")).toBeFalsy();
   });
 
   it("renders whatever text input field that is passed", () => {
-    const component = mount(
-      <Typeahead items={items} textField={<input id="randomInput" />} />
+    const { getByTestId } = render(
+      <Typeahead items={items} textField={<input data-cy="randomInput" />} />
     );
 
-    expect(component.find("#randomInput").exists()).toBe(true);
+    expect(getByTestId("randomInput")).toBeTruthy();
   });
 
   it("calls onSelect prop with the selected values", () => {
     const onSelectFn = jest.fn();
-    const component = mount(
+    const { getByTestId } = render(
       <Typeahead
         items={items}
         onSelect={onSelectFn}
@@ -156,22 +168,27 @@ describe("Typeahead", () => {
         }
       />
     );
-    const input = component.find("input");
 
-    input.simulate("focus");
+    const textInputElement = getByTestId("textInput-input");
+
+    textInputElement.focus();
+
     expect(onSelectFn).not.toHaveBeenCalled();
-    input.simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "ArrowDown"
     });
-    input.simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "Enter"
     });
+
     expect(onSelectFn).toHaveBeenCalledWith([items[0].value], items[0].value);
   });
 
   it("sets the input value to the selected item's value on select", () => {
     const onSelectFn = jest.fn();
-    const component = mount(
+    const { getByTestId } = render(
       <Typeahead
         items={items}
         onSelect={onSelectFn}
@@ -184,16 +201,24 @@ describe("Typeahead", () => {
         }
       />
     );
-    expect(component.find("input").prop("value")).toBe("");
-    component.find("input").simulate("focus");
+
+    const textInputElement = getByTestId("textInput-input");
+
+    expect(textInputElement).toHaveValue("");
+
+    textInputElement.focus();
+
     expect(onSelectFn).not.toHaveBeenCalled();
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "ArrowDown"
     });
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "Enter"
     });
-    expect(component.find("input").prop("value")).toBe(items[0].value);
+
+    expect(textInputElement).toHaveValue(items[0].value);
   });
 
   it("skips disabled option on arrow down and select", () => {
@@ -202,7 +227,7 @@ describe("Typeahead", () => {
       { label: "K8sphere", value: "K8sphere", disabled: true },
       ...items
     ];
-    const component = mount(
+    const { getByTestId } = render(
       <Typeahead
         items={itemsWithDisabledOption}
         onSelect={onSelectFn}
@@ -215,25 +240,30 @@ describe("Typeahead", () => {
         }
       />
     );
-    expect(component.find("input").prop("value")).toBe("");
-    component.find("input").simulate("focus");
+
+    const textInputElement = getByTestId("textInput-input");
+
+    expect(textInputElement).toHaveValue("");
+
+    textInputElement.focus();
+
     expect(onSelectFn).not.toHaveBeenCalled();
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "ArrowDown"
     });
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "Enter"
     });
 
     // skips over index 0 because it's disabled
-    expect(component.find("input").prop("value")).toBe(
-      itemsWithDisabledOption[1].value
-    );
+    expect(textInputElement).toHaveValue(itemsWithDisabledOption[1].value);
   });
 
   it("does not hide the dropdown when selecting an item if multiSelect is true", () => {
     const onSelectFn = jest.fn();
-    const component = mount(
+    const { getByTestId, queryByTestId } = render(
       <Typeahead
         multiSelect={true}
         items={items}
@@ -248,21 +278,28 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find(DropdownContents).length).toBe(0);
-    component.find("input").simulate("focus");
+    const textInputElement = getByTestId("textInput-input");
+
+    expect(queryByTestId("typeahead-dropdown")).toBeNull();
+
+    textInputElement.focus();
+
     expect(onSelectFn).not.toHaveBeenCalled();
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "ArrowDown"
     });
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "Enter"
     });
-    expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
+
+    expect(queryByTestId("typeahead-dropdown")).toBeTruthy();
   });
 
   it("hides the dropdown when selecting an item if keepOpenOnSelect is false", () => {
     const onSelectFn = jest.fn();
-    const component = mount(
+    const { getByTestId, queryByTestId } = render(
       <Typeahead
         multiSelect={true}
         keepOpenOnSelect={false}
@@ -278,21 +315,28 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find(DropdownContents).length).toBe(0);
-    component.find("input").simulate("focus");
+    const textInputElement = getByTestId("textInput-input");
+
+    expect(queryByTestId("typeahead-dropdown")).toBeNull();
+
+    textInputElement.focus();
+
     expect(onSelectFn).not.toHaveBeenCalled();
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "ArrowDown"
     });
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "Enter"
     });
-    expect(component.find(DropdownContents).length).toBe(0);
+
+    expect(queryByTestId("typeahead-dropdown")).toBeNull();
   });
 
   it("does not set the input value if multiSelect is true", () => {
     const onSelectFn = jest.fn();
-    const component = mount(
+    const { getByTestId } = render(
       <Typeahead
         multiSelect={true}
         items={items}
@@ -307,21 +351,28 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find("input").prop("value")).toBe("");
-    component.find("input").simulate("focus");
+    const textInputElement = getByTestId("textInput-input");
+
+    expect(textInputElement).toHaveValue("");
+
+    textInputElement.focus();
+
     expect(onSelectFn).not.toHaveBeenCalled();
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "ArrowDown"
     });
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "Enter"
     });
-    expect(component.find("input").prop("value")).toBe("");
+
+    expect(textInputElement).toHaveValue("");
   });
 
   it("does not set the input value if resetInputOnSelect is true", () => {
     const onSelectFn = jest.fn();
-    const component = mount(
+    const { getByTestId } = render(
       <Typeahead
         resetInputOnSelect={true}
         items={items}
@@ -336,21 +387,28 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find("input").prop("value")).toBe("");
-    component.find("input").simulate("focus");
+    const textInputElement = getByTestId("textInput-input");
+
+    expect(textInputElement).toHaveValue("");
+
+    textInputElement.focus();
+
     expect(onSelectFn).not.toHaveBeenCalled();
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "ArrowDown"
     });
-    component.find("input").simulate("keyDown", {
+
+    fireEvent.keyDown(textInputElement, {
       key: "Enter"
     });
-    expect(component.find("input").prop("value")).toBe("");
+
+    expect(textInputElement).toHaveValue("");
   });
 
   it("calls the input's onClick prop", () => {
     const onClickFn = jest.fn();
-    const component = mount(
+    const { getByTestId } = render(
       <Typeahead
         items={items}
         textField={
@@ -364,15 +422,20 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find("input").prop("value")).toBe("");
+    const textInputElement = getByTestId("textInput-input");
+
+    expect(textInputElement).toHaveValue("");
+
     expect(onClickFn).not.toHaveBeenCalled();
-    component.find("input").simulate("click");
+
+    textInputElement.click();
+
     expect(onClickFn).toHaveBeenCalled();
   });
 
   it("calls the input's onFocus prop", () => {
     const onFocusFn = jest.fn();
-    const component = mount(
+    const { getByTestId } = render(
       <Typeahead
         items={items}
         textField={
@@ -386,9 +449,15 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.find("input").prop("value")).toBe("");
+    const textInputElement = getByTestId("textInput-input");
+
+    expect(textInputElement).toHaveValue("");
     expect(onFocusFn).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
+
+    textInputElement.addEventListener("focus", onFocusFn);
+
+    textInputElement.focus();
+
     expect(onFocusFn).toHaveBeenCalled();
   });
 });

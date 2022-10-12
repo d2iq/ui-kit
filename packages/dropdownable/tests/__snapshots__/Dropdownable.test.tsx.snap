@@ -151,12 +151,10 @@ exports[`Dropdownable is visible after opening 2`] = `
       </ButtonBase>
     </PrimaryButton>
   </div>
-  <clickOutside(DropdownContents)
+  <DropdownContents
     isOpen={true}
   >
-    <DropdownContents
-      isOpen={true}
-    >
+    <div>
       <ForwardRef
         style={
           {
@@ -221,7 +219,7 @@ exports[`Dropdownable is visible after opening 2`] = `
           </Portal>
         </Overlay>
       </ForwardRef>
-    </DropdownContents>
-  </clickOutside(DropdownContents)>
+    </div>
+  </DropdownContents>
 </Dropdownable>
 `;

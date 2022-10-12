@@ -1,30 +1,23 @@
+import { render } from "@testing-library/react";
 import React from "react";
-
-import { render } from "enzyme";
-import toJSON from "enzyme-to-json";
 import { Link, ResetLink } from "../";
 
 describe("Link", () => {
   it("renders default", () => {
-    expect(
-      toJSON(
-        render(
-          <Link url="http://google.com" openInNewTab={true}>
-            Link
-          </Link>
-        )
-      )
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <Link url="http://google.com" openInNewTab={true}>
+        Link
+      </Link>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders ResetLink", () => {
-    expect(
-      toJSON(
-        render(
-          <ResetLink url="http://google.com" openInNewTab={true}>
-            Link
-          </ResetLink>
-        )
-      )
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <ResetLink url="http://google.com" openInNewTab={true}>
+        Link
+      </ResetLink>
+    );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,19 +1,18 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 import { Box } from "../";
 
 expect.addSnapshotSerializer(createSerializer());
 
 describe("Box", () => {
   it("renders default", () => {
-    const component = shallow(<Box tag="div">Content</Box>);
-    expect(toJson(component)).toMatchSnapshot();
+    const { asFragment } = render(<Box tag="div">Content</Box>);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with all props", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <Box
         bgColor="#000000"
         bgImageUrl="https://via.placeholder.com/150"
@@ -32,6 +31,6 @@ describe("Box", () => {
         Content
       </Box>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
