@@ -6,7 +6,7 @@ export interface ClickableProps {
   /**
    * Children should be a HTML element.
    */
-  children: React.ReactElement<HTMLElement>;
+  children: React.ReactElement<HTMLElement> & React.ReactNode;
   /**
    * Action is a event handler for the onClick and onKeypress events
    */
@@ -29,13 +29,14 @@ export interface ClickableProps {
   ["data-cy"]?: string;
 }
 
-export const Clickable: React.FC<ClickableProps> = ({
+export const Clickable = ({
   tabIndex = -1,
   role = "button",
   disableFocusOutline = false,
-  ...props
-}) => {
-  const { children, action, "data-cy": dataCy } = props;
+  children,
+  action,
+  "data-cy": dataCy
+}: ClickableProps) => {
   const { className = "" } = children.props;
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLElement>): void => {
