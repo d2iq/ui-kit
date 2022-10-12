@@ -157,7 +157,7 @@ describe("Dropdown", () => {
     trigger.simulate("click");
     expect(component.find(DropdownContents).length).toBe(0);
   });
-  it("toggles the dropdown menu when focusing and pressing the spacebar", () => {
+  it("toggles the dropdown menu by pressing the spacebar twice", () => {
     const component = mount(
       <DropdownMenu trigger={<div id={triggerId}>Dropdown trigger</div>}>
         <DropdownSection>
@@ -180,19 +180,15 @@ describe("Dropdown", () => {
 
     expect(component.find(DropdownContents).length).toBe(0);
 
-    trigger.simulate("focus");
     trigger.simulate("keyDown", {
       key: " " // space bar
     });
-    trigger.simulate("blur");
 
     expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
 
-    trigger.simulate("focus");
     trigger.simulate("keyDown", {
       key: " " // space bar
     });
-    trigger.simulate("blur");
 
     expect(component.find(DropdownContents).length).toBe(0);
   });
