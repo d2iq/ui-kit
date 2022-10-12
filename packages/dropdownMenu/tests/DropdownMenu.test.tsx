@@ -192,7 +192,7 @@ describe("Dropdown", () => {
 
     expect(component.find(DropdownContents).length).toBe(0);
   });
-  it("calls onSelect prop with the selected value", () => {
+  it("selects first item and passes it's value to onSelect", () => {
     const onSelectFn = jest.fn();
     const component = mount(
       <DropdownMenu
@@ -217,10 +217,6 @@ describe("Dropdown", () => {
     );
     const trigger = component.find(`#${triggerId}`);
 
-    trigger.simulate("focus");
-    trigger.simulate("keyDown", {
-      key: " " // space bar
-    });
     expect(onSelectFn).not.toHaveBeenCalled();
     trigger.simulate("keyDown", {
       key: "ArrowDown"
@@ -228,7 +224,6 @@ describe("Dropdown", () => {
     trigger.simulate("keyDown", {
       key: "Enter"
     });
-    trigger.simulate("blur");
 
     // using `expect.anything()` because the second parameter is an object
     // that comes from Downshift, and there's no good way to know exactly
