@@ -2676,10 +2676,8 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                   <div
                                     className="emotion-7"
                                   >
-                                    <Clickable
+                                    <Memo(Clickable)
                                       action={[MockFunction]}
-                                      disableFocusOutline={false}
-                                      role="button"
                                       tabIndex={0}
                                     >
                                       <span
@@ -2709,7 +2707,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                           </svg>
                                         </Icon>
                                       </span>
-                                    </Clickable>
+                                    </Memo(Clickable)>
                                   </div>
                                 </div>
                               </div>

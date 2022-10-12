@@ -6,11 +6,11 @@ export interface ClickableProps {
   /**
    * Children should be a HTML element.
    */
-  children: React.ReactElement<HTMLElement>;
+  children: React.ReactElement<HTMLElement> & React.ReactNode;
   /**
    * Action is a event handler for the onClick and onKeypress events
    */
-  action: (event?: React.SyntheticEvent<HTMLElement>) => void;
+  action?: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /**
    * The tabIndex is passed down and is the same as the native tabIndex
    */
@@ -29,44 +29,31 @@ export interface ClickableProps {
   ["data-cy"]?: string;
 }
 
-export class Clickable extends React.PureComponent<ClickableProps, {}> {
-  public static defaultProps: Partial<ClickableProps> = {
-    tabIndex: -1,
-    role: "button",
-    disableFocusOutline: false
+export const Clickable = ({
+  tabIndex = -1,
+  role = "button",
+  disableFocusOutline = false,
+  children,
+  action,
+  "data-cy": dataCy
+}: ClickableProps) => {
+  const { className = "" } = children.props;
+
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLElement>): void => {
+    // action can be undefined from components SidebarItem and SidebarSubMenuItem
+    if (action && (event.key === " " || event.key === "Enter")) {
+      action(event);
+    }
   };
 
-  constructor(props: ClickableProps) {
-    super(props);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-  }
+  return React.cloneElement(React.Children.only(children), {
+    onClick: action,
+    className: cx(className, pointer, { [outline]: disableFocusOutline }),
+    role,
+    tabIndex,
+    onKeyPress: handleKeyPress,
+    ["data-cy"]: dataCy
+  });
+};
 
-  public render() {
-    const {
-      children,
-      action,
-      tabIndex,
-      role,
-      disableFocusOutline,
-      "data-cy": dataCy
-    } = this.props;
-    const { className = "" } = children.props;
-
-    return React.cloneElement(React.Children.only(children), {
-      onClick: action,
-      className: cx(className, pointer, { [outline]: disableFocusOutline }),
-      role,
-      tabIndex,
-      onKeyPress: this.handleKeyPress,
-      ["data-cy"]: dataCy
-    });
-  }
-
-  public handleKeyPress(event: React.KeyboardEvent<HTMLElement>): void {
-    if (event.key === " " || event.key === "Enter") {
-      this.props.action(event);
-    }
-  }
-}
-
-export default Clickable;
+export default React.memo(Clickable);

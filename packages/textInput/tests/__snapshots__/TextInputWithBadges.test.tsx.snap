@@ -353,11 +353,8 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                       className="emotion-7"
                       data-cy="flexItem"
                     >
-                      <Clickable
+                      <Memo(Clickable)
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"
@@ -386,7 +383,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                             </svg>
                           </Icon>
                         </span>
-                      </Clickable>
+                      </Memo(Clickable)>
                     </div>
                   </FlexItem>
                 </div>
@@ -432,11 +429,8 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                       className="emotion-7"
                       data-cy="flexItem"
                     >
-                      <Clickable
+                      <Memo(Clickable)
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"
@@ -465,7 +459,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                             </svg>
                           </Icon>
                         </span>
-                      </Clickable>
+                      </Memo(Clickable)>
                     </div>
                   </FlexItem>
                 </div>
@@ -511,11 +505,8 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                       className="emotion-7"
                       data-cy="flexItem"
                     >
-                      <Clickable
+                      <Memo(Clickable)
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"
@@ -544,7 +535,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
                             </svg>
                           </Icon>
                         </span>
-                      </Clickable>
+                      </Memo(Clickable)>
                     </div>
                   </FlexItem>
                 </div>
@@ -1102,11 +1093,8 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                       className="emotion-7"
                       data-cy="flexItem"
                     >
-                      <Clickable
+                      <Memo(Clickable)
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"
@@ -1135,7 +1123,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                             </svg>
                           </Icon>
                         </span>
-                      </Clickable>
+                      </Memo(Clickable)>
                     </div>
                   </FlexItem>
                 </div>
@@ -1181,11 +1169,8 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                       className="emotion-7"
                       data-cy="flexItem"
                     >
-                      <Clickable
+                      <Memo(Clickable)
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"
@@ -1214,7 +1199,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                             </svg>
                           </Icon>
                         </span>
-                      </Clickable>
+                      </Memo(Clickable)>
                     </div>
                   </FlexItem>
                 </div>
@@ -1260,11 +1245,8 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                       className="emotion-7"
                       data-cy="flexItem"
                     >
-                      <Clickable
+                      <Memo(Clickable)
                         action={[Function]}
-                        disableFocusOutline={false}
-                        role="button"
-                        tabIndex={-1}
                       >
                         <span
                           className="emotion-8"
@@ -1293,7 +1275,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
                             </svg>
                           </Icon>
                         </span>
-                      </Clickable>
+                      </Memo(Clickable)>
                     </div>
                   </FlexItem>
                 </div>
