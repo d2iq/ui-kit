@@ -194,7 +194,7 @@ describe("Dropdown", () => {
     await user.keyboard(" ");
     expect(screen.queryByText(/edit/i)).toBeFalsy();
   });
-  it("selects first item and passes it's vawue to onSelect", async () => {
+  it("selects first item and passes it's value to onSelect", async () => {
     const user = userEvent.setup();
     const onSelectFn = jest.fn();
 
