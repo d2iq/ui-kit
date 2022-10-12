@@ -117,12 +117,10 @@ exports[`Tooltip renders open tooltip 1`] = `
       <div>
         trigger
       </div>
-      <clickOutside(DropdownContents)
+      <DropdownContents
         isOpen={true}
       >
-        <DropdownContents
-          isOpen={true}
-        >
+        <div>
           <ForwardRef
             style={
               {
@@ -302,8 +300,8 @@ exports[`Tooltip renders open tooltip 1`] = `
               </Portal>
             </Overlay>
           </ForwardRef>
-        </DropdownContents>
-      </clickOutside(DropdownContents)>
+        </div>
+      </DropdownContents>
     </Dropdownable>
   </span>
 </Tooltip>
@@ -384,12 +382,10 @@ exports[`Tooltip renders with preferred directions 1`] = `
       <div>
         trigger
       </div>
-      <clickOutside(DropdownContents)
+      <DropdownContents
         isOpen={true}
       >
-        <DropdownContents
-          isOpen={true}
-        >
+        <div>
           <ForwardRef
             style={
               {
@@ -591,8 +587,8 @@ exports[`Tooltip renders with preferred directions 1`] = `
               </Portal>
             </Overlay>
           </ForwardRef>
-        </DropdownContents>
-      </clickOutside(DropdownContents)>
+        </div>
+      </DropdownContents>
     </Dropdownable>
   </span>
 </Tooltip>

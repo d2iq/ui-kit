@@ -463,12 +463,10 @@ exports[`Dropdown renders an open dropdown 1`] = `
             Dropdown trigger
           </button>
         </div>
-        <clickOutside(DropdownContents)
+        <DropdownContents
           isOpen={true}
         >
-          <DropdownContents
-            isOpen={true}
-          >
+          <div>
             <ForwardRef
               style={
                 {
@@ -747,8 +745,8 @@ exports[`Dropdown renders an open dropdown 1`] = `
                 </Portal>
               </Overlay>
             </ForwardRef>
-          </DropdownContents>
-        </clickOutside(DropdownContents)>
+          </div>
+        </DropdownContents>
       </Dropdownable>
     </div>
   </Downshift>
@@ -948,12 +946,10 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
             Dropdown trigger
           </button>
         </div>
-        <clickOutside(DropdownContents)
+        <DropdownContents
           isOpen={true}
         >
-          <DropdownContents
-            isOpen={true}
-          >
+          <div>
             <ForwardRef
               style={
                 {
@@ -1402,8 +1398,8 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
                 </Portal>
               </Overlay>
             </ForwardRef>
-          </DropdownContents>
-        </clickOutside(DropdownContents)>
+          </div>
+        </DropdownContents>
       </Dropdownable>
     </div>
   </Downshift>

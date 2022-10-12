@@ -413,12 +413,10 @@ exports[`Popover renders an open dropdown 1`] = `
           </button>
         </ResetButton>
       </div>
-      <clickOutside(DropdownContents)
+      <DropdownContents
         isOpen={true}
       >
-        <DropdownContents
-          isOpen={true}
-        >
+        <div>
           <ForwardRef
             style={
               {
@@ -858,8 +856,8 @@ exports[`Popover renders an open dropdown 1`] = `
               </Portal>
             </Overlay>
           </ForwardRef>
-        </DropdownContents>
-      </clickOutside(DropdownContents)>
+        </div>
+      </DropdownContents>
     </Dropdownable>
   </div>
 </Popover>
