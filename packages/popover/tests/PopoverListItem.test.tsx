@@ -1,7 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 import PopoverListItem from "../components/PopoverListItem";
 import { PopoverListItemAppearances } from "../../shared/types/popoverListItemAppearances";
 import PopoverListItemIcon from "../components/PopoverListItemIcon";
@@ -12,32 +11,32 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("PopoverListItem", () => {
   it("renders", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <PopoverListItem index={0} listLength={1}>
         item content content
       </PopoverListItem>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders disabled", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <PopoverListItem index={0} listLength={1} disabled={true}>
         item content content
       </PopoverListItem>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders active", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <PopoverListItem index={0} listLength={1} isActive={true}>
         item content content
       </PopoverListItem>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders all appearances", () => {
     Object.keys(PopoverListItemAppearances).forEach(appearance => {
-      const component = shallow(
+      const { asFragment } = render(
         <PopoverListItem
           index={0}
           listLength={1}
@@ -47,19 +46,19 @@ describe("PopoverListItem", () => {
           item content content
         </PopoverListItem>
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
   it("renders selected", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <PopoverListItem index={0} listLength={1} isSelected={true}>
         item content content
       </PopoverListItem>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders active and selected", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <PopoverListItem
         index={0}
         listLength={1}
@@ -69,16 +68,16 @@ describe("PopoverListItem", () => {
         item content content
       </PopoverListItem>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with icon and avatar", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <PopoverListItem index={0} listLength={1}>
         <PopoverListItemIcon shape={SystemIcons.ArrowDown} />
         item content content
         <PopoverListItemAvatar src="" />
       </PopoverListItem>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

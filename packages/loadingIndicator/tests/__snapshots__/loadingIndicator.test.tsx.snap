@@ -1,29 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Loading indicators renders InlineLoadingIndicator 1`] = `
-<div
-  class="css-1v9zxv1"
->
+<DocumentFragment>
   <div
-    class="css-1u93coa"
-    data-cy="sectionLoadingIndicator"
-  />
-</div>
+    class="css-1v9zxv1"
+  >
+    <div
+      class="css-1u93coa"
+      data-cy="sectionLoadingIndicator"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Loading indicators renders SectionLoadingIndicator 1`] = `
-<svg
-  aria-label="system-spinner icon"
-  class="css-jbdp75"
-  data-cy="icon inlineLoadingIndicator"
-  height="16"
-  preserveAspectRatio="xMinYMin meet"
-  role="img"
-  viewBox="0 0 16 16"
-  width="16"
->
-  <use
-    href="#system-spinner"
-  />
-</svg>
+<DocumentFragment>
+  <svg
+    aria-label="system-spinner icon"
+    class="css-jbdp75"
+    data-cy="icon inlineLoadingIndicator"
+    height="16"
+    preserveAspectRatio="xMinYMin meet"
+    role="img"
+    viewBox="0 0 16 16"
+    width="16"
+  >
+    <use
+      xlink:href="#system-spinner"
+    />
+  </svg>
+</DocumentFragment>
 `;

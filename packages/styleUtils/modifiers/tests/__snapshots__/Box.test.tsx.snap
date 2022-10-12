@@ -1,20 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Box renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-repeat: no-repeat;
 }
 
 <div
-  className="emotion-0"
-  data-cy="box"
->
-  Content
-</div>
+    class="emotion-0"
+    data-cy="box"
+  >
+    Content
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Box renders with all props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #000000;
   background-image: url(https://via.placeholder.com/150);
   -webkit-background-position: top-left;
@@ -49,9 +52,10 @@ exports[`Box renders with all props 1`] = `
 }
 
 <span
-  className="emotion-0 test"
-  data-cy="box"
->
-  Content
-</span>
+    class="emotion-0 test"
+    data-cy="box"
+  >
+    Content
+  </span>
+</DocumentFragment>
 `;

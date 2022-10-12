@@ -1,161 +1,167 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MessagePanel appearance='error' 1`] = `
-<div
-  class="css-3qkzfp"
-  data-cy="messagePanel"
->
+<DocumentFragment>
   <div
-    class="css-1dauq5a"
-    data-cy="card"
+    class="css-3qkzfp"
+    data-cy="messagePanel"
   >
     <div
-      class="css-1dmb3p1"
+      class="css-1dauq5a"
+      data-cy="card"
     >
       <div
-        class="css-rgkn38"
-        data-cy="spacingBox"
+        class="css-1dmb3p1"
       >
-        <h2
-          class="rmTextMargins css-ivxmqa"
-          data-cy="headingText2"
+        <div
+          class="css-rgkn38"
+          data-cy="spacingBox"
         >
-          <svg
-            aria-label="system-circle-close icon"
-            class="css-lfoue6"
-            data-cy="icon"
-            height="16"
-            preserveAspectRatio="xMinYMin meet"
-            role="img"
-            viewBox="0 0 16 16"
-            width="16"
+          <h2
+            class="rmTextMargins css-ivxmqa"
+            data-cy="headingText2"
           >
-            <use
-              href="#system-circle-close"
-            />
-          </svg>
-          <span
-            class="css-m1scup"
-            data-cy="spacingBox"
-          >
-            Heading
-          </span>
-        </h2>
-      </div>
-      <div
-        class="css-94vex"
-        data-cy="spacingBox"
-      >
-        Body content
+            <svg
+              aria-label="system-circle-close icon"
+              class="css-lfoue6"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <use
+                xlink:href="#system-circle-close"
+              />
+            </svg>
+            <span
+              class="css-m1scup"
+              data-cy="spacingBox"
+            >
+              Heading
+            </span>
+          </h2>
+        </div>
+        <div
+          class="css-94vex"
+          data-cy="spacingBox"
+        >
+          Body content
+        </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`MessagePanel default 1`] = `
-<div
-  class="css-3qkzfp"
-  data-cy="messagePanel"
->
+<DocumentFragment>
   <div
-    class="css-1dauq5a"
-    data-cy="card"
+    class="css-3qkzfp"
+    data-cy="messagePanel"
   >
     <div
-      class="css-1dmb3p1"
+      class="css-1dauq5a"
+      data-cy="card"
     >
       <div
-        class="css-rgkn38"
-        data-cy="spacingBox"
+        class="css-1dmb3p1"
       >
-        <h2
-          class="rmTextMargins css-ivxmqa"
-          data-cy="headingText2"
+        <div
+          class="css-rgkn38"
+          data-cy="spacingBox"
         >
-          Heading
-        </h2>
-      </div>
-      <div
-        class="css-94vex"
-        data-cy="spacingBox"
-      >
-        Body content
+          <h2
+            class="rmTextMargins css-ivxmqa"
+            data-cy="headingText2"
+          >
+            Heading
+          </h2>
+        </div>
+        <div
+          class="css-94vex"
+          data-cy="spacingBox"
+        >
+          Body content
+        </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`MessagePanel renders with primary and secondary actions 1`] = `
-<div
-  class="css-3qkzfp"
-  data-cy="messagePanel"
->
+<DocumentFragment>
   <div
-    class="css-1dauq5a"
-    data-cy="card"
+    class="css-3qkzfp"
+    data-cy="messagePanel"
   >
     <div
-      class="css-1dmb3p1"
+      class="css-1dauq5a"
+      data-cy="card"
     >
       <div
-        class="css-rgkn38"
-        data-cy="spacingBox"
-      >
-        <h2
-          class="rmTextMargins css-ivxmqa"
-          data-cy="headingText2"
-        >
-          Heading
-        </h2>
-      </div>
-      <div
-        class="css-1yjoybz"
-        data-cy="spacingBox"
-      >
-        Body content
-      </div>
-      <div
-        class="css-e35dnx"
-        data-cy="flex"
+        class="css-1dmb3p1"
       >
         <div
-          class="css-149ndna"
-          data-cy="flexItem"
+          class="css-rgkn38"
+          data-cy="spacingBox"
         >
-          <button
-            class="css-1qbr1ah"
-            data-cy="secondaryButton"
-            tabindex="0"
-            type="button"
+          <h2
+            class="rmTextMargins css-ivxmqa"
+            data-cy="headingText2"
           >
-            <span
-              class=""
-            >
-              Secondary
-            </span>
-          </button>
+            Heading
+          </h2>
         </div>
         <div
-          class="css-149ndna"
-          data-cy="flexItem"
+          class="css-1yjoybz"
+          data-cy="spacingBox"
         >
-          <button
-            class="css-tc1f66"
-            data-cy="primaryButton"
-            tabindex="0"
-            type="button"
+          Body content
+        </div>
+        <div
+          class="css-e35dnx"
+          data-cy="flex"
+        >
+          <div
+            class="css-149ndna"
+            data-cy="flexItem"
           >
-            <span
-              class=""
+            <button
+              class="css-1h85cd2 css-1qbr1ah"
+              data-cy="secondaryButton"
+              tabindex="0"
+              type="button"
             >
-              Primary
-            </span>
-          </button>
+              <span
+                class=""
+              >
+                Secondary
+              </span>
+            </button>
+          </div>
+          <div
+            class="css-149ndna"
+            data-cy="flexItem"
+          >
+            <button
+              class="css-xcotv6 css-tc1f66"
+              data-cy="primaryButton"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class=""
+              >
+                Primary
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;

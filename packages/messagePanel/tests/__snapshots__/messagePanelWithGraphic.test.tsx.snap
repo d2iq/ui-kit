@@ -1,118 +1,122 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MessagePanelWithGraphic default 1`] = `
-<div
-  data-cy="messagePanelWithGraphic"
->
+<DocumentFragment>
   <div
-    class="css-spit4o"
-    data-cy="spacingBox"
-  >
-    <img
-      alt=""
-      class="css-1jv97ae"
-      role="presentation"
-      src="http://placehold.it/350x150"
-    />
-  </div>
-  <div
-    class="css-5z0bq0"
-    data-cy="spacingBox"
+    data-cy="messagePanelWithGraphic"
   >
     <div
-      class="css-lkxn4w"
+      class="css-spit4o"
       data-cy="spacingBox"
     >
-      <h2
-        class="rmTextMargins css-ivxmqa"
-        data-cy="headingText2"
-      >
-        Heading
-      </h2>
+      <img
+        alt=""
+        class="css-1jv97ae"
+        role="presentation"
+        src="http://placehold.it/350x150"
+      />
     </div>
     <div
-      class="css-1j4gpfm"
+      class="css-5z0bq0"
+      data-cy="spacingBox"
     >
-      Body content
+      <div
+        class="css-lkxn4w"
+        data-cy="spacingBox"
+      >
+        <h2
+          class="rmTextMargins css-ivxmqa"
+          data-cy="headingText2"
+        >
+          Heading
+        </h2>
+      </div>
+      <div
+        class="css-1j4gpfm"
+      >
+        Body content
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`MessagePanelWithGraphic renders with primary and secondary actions 1`] = `
-<div
-  data-cy="messagePanelWithGraphic"
->
+<DocumentFragment>
   <div
-    class="css-spit4o"
-    data-cy="spacingBox"
-  >
-    <img
-      alt=""
-      class="css-1jv97ae"
-      role="presentation"
-      src="http://placehold.it/350x150"
-    />
-  </div>
-  <div
-    class="css-spit4o"
-    data-cy="spacingBox"
+    data-cy="messagePanelWithGraphic"
   >
     <div
-      class="css-lkxn4w"
+      class="css-spit4o"
       data-cy="spacingBox"
     >
-      <h2
-        class="rmTextMargins css-ivxmqa"
-        data-cy="headingText2"
-      >
-        Heading
-      </h2>
+      <img
+        alt=""
+        class="css-1jv97ae"
+        role="presentation"
+        src="http://placehold.it/350x150"
+      />
     </div>
     <div
-      class="css-1j4gpfm"
+      class="css-spit4o"
+      data-cy="spacingBox"
     >
-      Body content
+      <div
+        class="css-lkxn4w"
+        data-cy="spacingBox"
+      >
+        <h2
+          class="rmTextMargins css-ivxmqa"
+          data-cy="headingText2"
+        >
+          Heading
+        </h2>
+      </div>
+      <div
+        class="css-1j4gpfm"
+      >
+        Body content
+      </div>
+    </div>
+    <div
+      class="css-e35dnx"
+      data-cy="flex"
+    >
+      <div
+        class="css-149ndna"
+        data-cy="flexItem"
+      >
+        <button
+          class="css-1h85cd2 css-1qbr1ah"
+          data-cy="secondaryButton"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class=""
+          >
+            Secondary
+          </span>
+        </button>
+      </div>
+      <div
+        class="css-149ndna"
+        data-cy="flexItem"
+      >
+        <button
+          class="css-xcotv6 css-tc1f66"
+          data-cy="primaryButton"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class=""
+          >
+            Primary
+          </span>
+        </button>
+      </div>
     </div>
   </div>
-  <div
-    class="css-e35dnx"
-    data-cy="flex"
-  >
-    <div
-      class="css-149ndna"
-      data-cy="flexItem"
-    >
-      <button
-        class="css-1qbr1ah"
-        data-cy="secondaryButton"
-        tabindex="0"
-        type="button"
-      >
-        <span
-          class=""
-        >
-          Secondary
-        </span>
-      </button>
-    </div>
-    <div
-      class="css-149ndna"
-      data-cy="flexItem"
-    >
-      <button
-        class="css-tc1f66"
-        data-cy="primaryButton"
-        tabindex="0"
-        type="button"
-      >
-        <span
-          class=""
-        >
-          Primary
-        </span>
-      </button>
-    </div>
-  </div>
-</div>
+</DocumentFragment>
 `;
