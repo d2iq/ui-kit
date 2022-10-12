@@ -105,7 +105,7 @@ describe("Dropdown", () => {
 
     expect(baseElement).toMatchSnapshot();
   });
-  it("renders an element passed as to the trigger prop", () => {
+  it("renders an element passed as trigger prop", () => {
     render(
       <DropdownMenu trigger={<div>Dropdown trigger</div>}>
         <DropdownSection>
@@ -129,7 +129,7 @@ describe("Dropdown", () => {
 
     expect(trigger).toBeTruthy();
   });
-  it("toggles the dropdown menu by clicking twice", async () => {
+  it("toggles menu by clicking twice", async () => {
     const user = userEvent.setup();
 
     render(
@@ -159,7 +159,7 @@ describe("Dropdown", () => {
     await user.click(trigger);
     expect(screen.queryByText(/edit/i)).toBeFalsy();
   });
-  it("toggles the dropdown menu by pressing the spacebar twice", async () => {
+  it("toggles menu by pressing the spacebar twice", async () => {
     const user = userEvent.setup();
 
     render(
