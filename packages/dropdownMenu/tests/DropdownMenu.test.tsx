@@ -130,7 +130,7 @@ describe("Dropdown", () => {
 
     expect(component.find(`#${triggerId}`).exists()).toBe(true);
   });
-  it("toggles the dropdown menu on click", () => {
+  it("toggles the dropdown menu by clicking twice", () => {
     const component = mount(
       <DropdownMenu trigger={<div id={triggerId}>Dropdown trigger</div>}>
         <DropdownSection>
@@ -150,10 +150,11 @@ describe("Dropdown", () => {
       </DropdownMenu>
     );
 
+    const trigger = component.find(`#${triggerId}`);
     expect(component.find(DropdownContents).length).toBe(0);
-    component.find(`#${triggerId}`).simulate("click");
+    trigger.simulate("click");
     expect(component.find(DropdownContents).prop("isOpen")).toBe(true);
-    component.find(`#${triggerId}`).simulate("click");
+    trigger.simulate("click");
     expect(component.find(DropdownContents).length).toBe(0);
   });
   it("toggles the dropdown menu when focusing and pressing the spacebar", () => {
