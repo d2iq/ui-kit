@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldGroup renders 1`] = `
+<DocumentFragment>
+  <div
+    class="css-x7zrii"
+    data-cy="flex"
+  >
+    <div
+      class="css-11labrq"
+      data-cy="flexItem"
+    >
+      <div
+        data-cy="textInput textInput.standard"
+      >
+        <label
+          class="css-1lrhbps"
+          data-cy="textInput-label"
+          for="1"
+        />
+        <div>
+          <div
+            class="css-865tln"
+          >
+            <input
+              aria-describedby=""
+              aria-invalid="false"
+              class="css-1w8it3t"
+              data-cy="textInput-input"
+              id="1"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            data-cy="textInput-hintContent"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-11labrq"
+      data-cy="flexItem"
+    >
+      <div
+        data-cy="textInput textInput.standard"
+      >
+        <label
+          class="css-1lrhbps"
+          data-cy="textInput-label"
+          for="2"
+        />
+        <div>
+          <div
+            class="css-865tln"
+          >
+            <input
+              aria-describedby=""
+              aria-invalid="false"
+              class="css-1w8it3t"
+              data-cy="textInput-input"
+              id="2"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            data-cy="textInput-hintContent"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-11labrq"
+      data-cy="flexItem"
+    >
+      <div
+        data-cy="textInput textInput.standard"
+      >
+        <label
+          class="css-1lrhbps"
+          data-cy="textInput-label"
+          for="3"
+        />
+        <div>
+          <div
+            class="css-865tln"
+          >
+            <input
+              aria-describedby=""
+              aria-invalid="false"
+              class="css-1w8it3t"
+              data-cy="textInput-input"
+              id="3"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            data-cy="textInput-hintContent"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RadioInput renders all appearances 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,68 +91,45 @@ exports[`RadioInput renders all appearances 1`] = `
   padding-left: 12px;
 }
 
-<RadioInput
-  appearance="standard"
-  id="defaultId"
-  inputLabel="Sample label"
-  name="appearanceTest"
-  value="default"
->
-  <ForwardRef
-    appearance="standard"
-    id="defaultId"
-    inputLabel="Sample label"
-    inputType="radio"
-    name="appearanceTest"
-    showInputLabel={true}
-    value="default"
-    vertAlign="center"
+<div
+    class="emotion-0"
+    data-cy="radioInput"
   >
-    <Memo(FormFieldWrapper)
-      id="defaultId"
+    <label
+      class="emotion-1"
+      for="defaultId"
     >
       <div
-        className="emotion-0"
-        data-cy="radioInput"
+        class="emotion-2"
       >
-        <label
-          className="emotion-1"
-          htmlFor="defaultId"
+        <div
+          class="emotion-3"
         >
-          <div
-            className="emotion-2"
-          >
-            <div
-              className="emotion-3"
-            >
-              <input
-                aria-describedby=""
-                aria-invalid={false}
-                className="emotion-4"
-                data-cy="radioInput-input"
-                id="defaultId"
-                name="appearanceTest"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                type="radio"
-                value="default"
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-5"
-          >
-            Sample label
-          </div>
-        </label>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="radioInput-input"
+            id="defaultId"
+            name="appearanceTest"
+            type="radio"
+            value="default"
+          />
+        </div>
       </div>
-    </Memo(FormFieldWrapper)>
-  </ForwardRef>
-</RadioInput>
+      <div
+        class="emotion-5"
+      >
+        Sample label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`RadioInput renders all appearances 2`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,68 +220,45 @@ exports[`RadioInput renders all appearances 2`] = `
   fill: var(--themeError, #EB293A);
 }
 
-<RadioInput
-  appearance="error"
-  id="defaultId"
-  inputLabel="Sample label"
-  name="appearanceTest"
-  value="default"
->
-  <ForwardRef
-    appearance="error"
-    id="defaultId"
-    inputLabel="Sample label"
-    inputType="radio"
-    name="appearanceTest"
-    showInputLabel={true}
-    value="default"
-    vertAlign="center"
+<div
+    class="emotion-0"
+    data-cy="radioInput radioInput.error"
   >
-    <Memo(FormFieldWrapper)
-      id="defaultId"
+    <label
+      class="emotion-1"
+      for="defaultId"
     >
       <div
-        className="emotion-0"
-        data-cy="radioInput radioInput.error"
+        class="emotion-2"
       >
-        <label
-          className="emotion-1"
-          htmlFor="defaultId"
+        <div
+          class="emotion-3"
         >
-          <div
-            className="emotion-2"
-          >
-            <div
-              className="emotion-3"
-            >
-              <input
-                aria-describedby=""
-                aria-invalid={false}
-                className="emotion-4"
-                data-cy="radioInput-input radioInput-input.error"
-                id="defaultId"
-                name="appearanceTest"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                type="radio"
-                value="default"
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-5"
-          >
-            Sample label
-          </div>
-        </label>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="radioInput-input radioInput-input.error"
+            id="defaultId"
+            name="appearanceTest"
+            type="radio"
+            value="default"
+          />
+        </div>
       </div>
-    </Memo(FormFieldWrapper)>
-  </ForwardRef>
-</RadioInput>
+      <div
+        class="emotion-5"
+      >
+        Sample label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`RadioInput renders all appearances 3`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -394,62 +349,38 @@ exports[`RadioInput renders all appearances 3`] = `
   fill: var(--themeSuccess, #14C684);
 }
 
-<RadioInput
-  appearance="success"
-  id="defaultId"
-  inputLabel="Sample label"
-  name="appearanceTest"
-  value="default"
->
-  <ForwardRef
-    appearance="success"
-    id="defaultId"
-    inputLabel="Sample label"
-    inputType="radio"
-    name="appearanceTest"
-    showInputLabel={true}
-    value="default"
-    vertAlign="center"
+<div
+    class="emotion-0"
+    data-cy="radioInput radioInput.success"
   >
-    <Memo(FormFieldWrapper)
-      id="defaultId"
+    <label
+      class="emotion-1"
+      for="defaultId"
     >
       <div
-        className="emotion-0"
-        data-cy="radioInput radioInput.success"
+        class="emotion-2"
       >
-        <label
-          className="emotion-1"
-          htmlFor="defaultId"
+        <div
+          class="emotion-3"
         >
-          <div
-            className="emotion-2"
-          >
-            <div
-              className="emotion-3"
-            >
-              <input
-                aria-describedby=""
-                aria-invalid={false}
-                className="emotion-4"
-                data-cy="radioInput-input radioInput-input.success"
-                id="defaultId"
-                name="appearanceTest"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                type="radio"
-                value="default"
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-5"
-          >
-            Sample label
-          </div>
-        </label>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="radioInput-input radioInput-input.success"
+            id="defaultId"
+            name="appearanceTest"
+            type="radio"
+            value="default"
+          />
+        </div>
       </div>
-    </Memo(FormFieldWrapper)>
-  </ForwardRef>
-</RadioInput>
+      <div
+        class="emotion-5"
+      >
+        Sample label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;

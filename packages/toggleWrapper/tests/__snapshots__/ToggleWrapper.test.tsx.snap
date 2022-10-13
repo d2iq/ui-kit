@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ToggleWrapper renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
 }
 
@@ -16,21 +17,16 @@ exports[`ToggleWrapper renders 1`] = `
   height: 1px;
 }
 
-<ToggleWrapper
-  isActive={true}
->
-  <label
-    className="emotion-0"
-    htmlFor="toggleWrapper-1"
+<label
+    class="emotion-0"
+    for="toggleWrapper-1"
   >
     <input
-      aria-checked={true}
-      checked={true}
-      className="emotion-1"
+      aria-checked="true"
+      checked=""
+      class="emotion-1"
       data-cy="toggleWrapper-input"
       id="toggleWrapper-1"
-      onBlur={[Function]}
-      onFocus={[Function]}
       type="checkbox"
       value=""
     />
@@ -38,11 +34,12 @@ exports[`ToggleWrapper renders 1`] = `
       isActive? true
     </div>
   </label>
-</ToggleWrapper>
+</DocumentFragment>
 `;
 
 exports[`ToggleWrapper renders as a radio input 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
 }
 
@@ -57,22 +54,16 @@ exports[`ToggleWrapper renders as a radio input 1`] = `
   height: 1px;
 }
 
-<ToggleWrapper
-  isActive={true}
-  type="radio"
->
-  <label
-    className="emotion-0"
-    htmlFor="toggleWrapper-2"
+<label
+    class="emotion-0"
+    for="toggleWrapper-2"
   >
     <input
-      aria-checked={true}
-      checked={true}
-      className="emotion-1"
+      aria-checked="true"
+      checked=""
+      class="emotion-1"
       data-cy="toggleWrapper-input"
       id="toggleWrapper-2"
-      onBlur={[Function]}
-      onFocus={[Function]}
       type="radio"
       value=""
     />
@@ -80,5 +71,5 @@ exports[`ToggleWrapper renders as a radio input 1`] = `
       isActive? true
     </div>
   </label>
-</ToggleWrapper>
+</DocumentFragment>
 `;

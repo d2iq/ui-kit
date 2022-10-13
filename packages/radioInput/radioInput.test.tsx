@@ -1,7 +1,6 @@
 import React from "react";
-import { mount } from "enzyme";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
+import { render } from "@testing-library/react";
 import { RadioInput } from "./";
 import { InputAppearance } from "../shared/types/inputAppearance";
 
@@ -10,7 +9,7 @@ expect.addSnapshotSerializer(createSerializer());
 describe("RadioInput", () => {
   it("renders all appearances", () => {
     Object.keys(InputAppearance).forEach(appearance => {
-      const component = mount(
+      const { asFragment } = render(
         <RadioInput
           id="defaultId"
           inputLabel="Sample label"
@@ -19,7 +18,7 @@ describe("RadioInput", () => {
           name="appearanceTest"
         />
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 });

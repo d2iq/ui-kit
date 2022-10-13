@@ -1,7 +1,6 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
-import { mount } from "enzyme";
-import toJson from "enzyme-to-json";
+import { render, fireEvent } from "@testing-library/react";
 
 import { ClickToCopyButton } from "../";
 
@@ -13,22 +12,24 @@ jest.mock("copy-to-clipboard", () => jest.fn());
 
 describe("ClickToCopyButton", () => {
   it("renders default", () => {
-    const component = mount(<ClickToCopyButton textToCopy={textToCopy} />);
+    const { asFragment } = render(
+      <ClickToCopyButton textToCopy={textToCopy} />
+    );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with custom children", () => {
-    const component = mount(
+    const { asFragment } = render(
       <ClickToCopyButton textToCopy={textToCopy}>
         custom children
       </ClickToCopyButton>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("calls onCopy when clicked ", () => {
     const onCopyFn = jest.fn();
-    const component = mount(
+    const { getByRole } = render(
       <ClickToCopyButton
         textToCopy={textToCopy}
         onCopy={onCopyFn}
@@ -37,7 +38,7 @@ describe("ClickToCopyButton", () => {
     );
 
     expect(onCopyFn).not.toHaveBeenCalled();
-    component.find('[role="button"]').first().simulate("click");
+    fireEvent.click(getByRole("button"));
     expect(onCopyFn).toHaveBeenCalled();
   });
 });

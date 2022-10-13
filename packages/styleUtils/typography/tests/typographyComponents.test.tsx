@@ -1,7 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 
 import {
   CaptionText,
@@ -38,19 +37,19 @@ describe("Typography", () => {
   it("renders all default", () => {
     allComponents.forEach(component => {
       const TypographyComponent = component;
-      const shallowRenderComponent = shallow(
+      const { asFragment } = render(
         <TypographyComponent tag="p" wrap="wrap" align="left">
           content
         </TypographyComponent>
       );
 
-      expect(toJson(shallowRenderComponent)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("Text", () => {
     it("renders all props", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <Text
           align="center"
           tag="span"
@@ -64,13 +63,13 @@ describe("Typography", () => {
         </Text>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
     it("renders all wrap variants", () => {
       type WrapVariant = "truncate" | "nowrap" | "wrap";
 
       ["truncate", "nowrap", "wrap"].forEach(wrapVariant => {
-        const component = shallow(
+        const { asFragment } = render(
           <Text
             tag="p"
             align="left"
@@ -83,26 +82,26 @@ describe("Typography", () => {
           </Text>
         );
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(asFragment()).toMatchSnapshot();
       });
     });
   });
 
   describe("CaptionText", () => {
     it("renders all props", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <CaptionText align="center" tag="span" wrap="nowrap">
           content
         </CaptionText>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("DangerText", () => {
     it("renders all props", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <DangerText
           align="center"
           tag="span"
@@ -114,7 +113,7 @@ describe("Typography", () => {
         </DangerText>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
@@ -122,20 +121,20 @@ describe("Typography", () => {
     it("renders all props all HeadingText variants", () => {
       [HeadingText1, HeadingText2, HeadingText3].forEach(component => {
         const HeadingComponent = component;
-        const shallowRenderComponent = shallow(
+        const { asFragment } = render(
           <HeadingComponent color="black" align="center" tag="h1" wrap="nowrap">
             content
           </HeadingComponent>
         );
 
-        expect(toJson(shallowRenderComponent)).toMatchSnapshot();
+        expect(asFragment()).toMatchSnapshot();
       });
     });
   });
 
   describe("InteractiveText", () => {
     it("renders all props", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <InteractiveText
           align="center"
           tag="span"
@@ -147,13 +146,13 @@ describe("Typography", () => {
         </InteractiveText>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("MonospaceText", () => {
     it("renders all props", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <MonospaceText
           align="center"
           tag="span"
@@ -166,13 +165,13 @@ describe("Typography", () => {
         </MonospaceText>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("SmallText", () => {
     it("renders all props", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <SmallText
           color="black"
           align="center"
@@ -184,13 +183,13 @@ describe("Typography", () => {
         </SmallText>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("SuccessText", () => {
     it("renders all props", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <SuccessText
           align="center"
           tag="span"
@@ -202,13 +201,13 @@ describe("Typography", () => {
         </SuccessText>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("WarningText", () => {
     it("renders all props", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <WarningText
           align="center"
           tag="span"
@@ -220,13 +219,13 @@ describe("Typography", () => {
         </WarningText>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("TextBlock", () => {
     it("renders all props", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <TextBlock>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -259,7 +258,7 @@ describe("Typography", () => {
         </TextBlock>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 });
