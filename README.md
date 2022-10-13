@@ -85,6 +85,8 @@ describe('Badge', () => {
 
 The function `asFragment` is preferred over `create` from `react-test-renderer` as it seems to give more robust components and less failures.
 
+`baseElement` can also be useful for testing if you are dealing with testing something that renders out side of the container, such as a component that uses a portal like a DropdownMenu or Modal.
+
 ## Testing with Cypress
 
 To make it easier to select DOM nodes of our components in integration tests, DOM nodes have a `data-cy` attribute.
