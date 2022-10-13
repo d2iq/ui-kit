@@ -15,7 +15,8 @@ export default {
       control: { type: "select" }
     },
     message: {
-      control: { type: "text" }
+      control: { type: "text" },
+      defaultValue: "This is a message for the user."
     },
     primaryAction: {
       control: { disable: true }
@@ -34,11 +35,7 @@ export default {
 
 const Template: Story<InfoBoxProps> = args => (
   <InfoBoxStoryContainer>
-    <InfoBoxBanner
-      message="This is a message for the user."
-      onDismiss={action("dismissed")}
-      {...args}
-    />
+    <InfoBoxBanner onDismiss={action("dismissed")} {...args} />
   </InfoBoxStoryContainer>
 );
 

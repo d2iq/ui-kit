@@ -2,6 +2,7 @@ import * as React from "react";
 import { Story, Meta } from "@storybook/react";
 import { InfoBox } from "../index";
 import { PrimaryAction, SecondaryAction } from "./helpers/actions";
+import { InfoBoxProps } from "../components/InfoBox";
 
 export default {
   title: "Feedback/InfoBox",
@@ -15,20 +16,19 @@ export default {
     },
     className: {
       control: { disable: true }
+    },
+    message: {
+      control: { type: "text" },
+      defaultValue:
+        "This is message is an example of how we might inform the user."
     }
   },
   args: {
-    message: "This message is an example of how we might inform the user.",
     appearance: "default"
   }
 } as Meta;
 
-const Template: Story = args => (
-  <InfoBox
-    message="This is message is an example of how we might inform the user."
-    {...args}
-  />
-);
+const Template: Story<InfoBoxProps> = args => <InfoBox {...args} />;
 
 export const Default = Template.bind({});
 
