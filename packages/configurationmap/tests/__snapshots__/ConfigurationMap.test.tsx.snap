@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ConfigurationMap renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   margin-top: 0;
   margin-bottom: 0;
   margin-bottom: 24px;
@@ -85,69 +86,71 @@ exports[`ConfigurationMap renders default 1`] = `
 }
 
 <div
-  data-cy="configurationMap"
->
-  <div
-    className="emotion-0"
-    data-cy="configurationMapSection"
+    data-cy="configurationMap"
   >
     <div
-      className="emotion-1"
-      data-cy="configurationMapRow"
+      class="emotion-0"
+      data-cy="configurationMapSection"
     >
       <div
-        className="emotion-2"
-        data-cy="configurationMapLabel"
+        class="emotion-1"
+        data-cy="configurationMapRow"
       >
-        Name
+        <div
+          class="emotion-2"
+          data-cy="configurationMapLabel"
+        >
+          Name
+        </div>
+        <div
+          class="emotion-3"
+          data-cy="configurationMapValue"
+        >
+          Jane Doe
+        </div>
       </div>
       <div
-        className="emotion-3"
-        data-cy="configurationMapValue"
+        class="emotion-1"
+        data-cy="configurationMapRow"
       >
-        Jane Doe
-      </div>
-    </div>
-    <div
-      className="emotion-1"
-      data-cy="configurationMapRow"
-    >
-      <div
-        className="emotion-2"
-        data-cy="configurationMapLabel"
-      >
-        Role
-      </div>
-      <div
-        className="emotion-3"
-        data-cy="configurationMapValue"
-      >
-        UX Designer
-      </div>
-    </div>
-    <div
-      className="emotion-1"
-      data-cy="configurationMapRow"
-    >
-      <div
-        className="emotion-2"
-        data-cy="configurationMapLabel"
-      >
-        City
+        <div
+          class="emotion-2"
+          data-cy="configurationMapLabel"
+        >
+          Role
+        </div>
+        <div
+          class="emotion-3"
+          data-cy="configurationMapValue"
+        >
+          UX Designer
+        </div>
       </div>
       <div
-        className="emotion-3"
-        data-cy="configurationMapValue"
+        class="emotion-1"
+        data-cy="configurationMapRow"
       >
-        San Francisco
+        <div
+          class="emotion-2"
+          data-cy="configurationMapLabel"
+        >
+          City
+        </div>
+        <div
+          class="emotion-3"
+          data-cy="configurationMapValue"
+        >
+          San Francisco
+        </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`ConfigurationMap renders with actions 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   margin-top: 0;
   margin-bottom: 0;
   margin-bottom: 24px;
@@ -266,6 +269,33 @@ exports[`ConfigurationMap renders with actions 1`] = `
 }
 
 .emotion-5 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-5:focus {
+  background-color: transparent;
+}
+
+.emotion-5:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-5:focus:after {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+}
+
+.emotion-6 {
   background: none;
   border: 0;
   color: inherit;
@@ -284,142 +314,144 @@ exports[`ConfigurationMap renders with actions 1`] = `
   font-weight: 500;
 }
 
-.emotion-5::-moz-focus-inner {
+.emotion-6::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-5:hover {
+.emotion-6:hover {
   color: #704fe5;
   fill: #704fe5;
 }
 
-.emotion-5:active {
+.emotion-6:active {
   color: #6446cc;
   fill: #6446cc;
 }
 
-.emotion-5[href],
-.emotion-5[href]:visited {
+.emotion-6[href],
+.emotion-6[href]:visited {
   color: var(--themeTextColorInteractive, #7D58FF);
   fill: var(--themeTextColorInteractive, #7D58FF);
 }
 
 <div
-  data-cy="configurationMap"
->
-  <div
-    class="emotion-0"
-    data-cy="configurationMapSection"
+    data-cy="configurationMap"
   >
     <div
-      class="emotion-1"
-      data-cy="configurationMapRow"
+      class="emotion-0"
+      data-cy="configurationMapSection"
     >
       <div
-        class="emotion-2"
-        data-cy="configurationMapLabel"
+        class="emotion-1"
+        data-cy="configurationMapRow"
       >
-        Name
-      </div>
-      <div
-        class="emotion-3"
-        data-cy="configurationMapValue"
-      >
-        Jane Doe
-      </div>
-      <span
-        class="static_configurationMapRowAction emotion-4"
-        data-cy="configrationMapRowAction"
-      >
-        <button
-          class="emotion-5"
-          data-cy="secondaryButton"
-          tabindex="0"
-          type="button"
+        <div
+          class="emotion-2"
+          data-cy="configurationMapLabel"
         >
-          <span
-            class=""
-          >
-            Action
-          </span>
-        </button>
-      </span>
-    </div>
-    <div
-      class="emotion-1"
-      data-cy="configurationMapRow"
-    >
-      <div
-        class="emotion-2"
-        data-cy="configurationMapLabel"
-      >
-        Role
-      </div>
-      <div
-        class="emotion-3"
-        data-cy="configurationMapValue"
-      >
-        UX Designer
-      </div>
-      <span
-        class="static_configurationMapRowAction emotion-4"
-        data-cy="configrationMapRowAction"
-      >
-        <button
-          class="emotion-5"
-          data-cy="secondaryButton"
-          tabindex="0"
-          type="button"
+          Name
+        </div>
+        <div
+          class="emotion-3"
+          data-cy="configurationMapValue"
         >
-          <span
-            class=""
-          >
-            Action
-          </span>
-        </button>
-      </span>
-    </div>
-    <div
-      class="emotion-1"
-      data-cy="configurationMapRow"
-    >
-      <div
-        class="emotion-2"
-        data-cy="configurationMapLabel"
-      >
-        City
-      </div>
-      <div
-        class="emotion-3"
-        data-cy="configurationMapValue"
-      >
-        San Francisco
-      </div>
-      <span
-        class="static_configurationMapRowAction emotion-4"
-        data-cy="configrationMapRowAction"
-      >
-        <button
-          class="emotion-5"
-          data-cy="secondaryButton"
-          tabindex="0"
-          type="button"
+          Jane Doe
+        </div>
+        <span
+          class="static_configurationMapRowAction emotion-4"
+          data-cy="configrationMapRowAction"
         >
-          <span
-            class=""
+          <button
+            class="emotion-5 emotion-6"
+            data-cy="secondaryButton"
+            tabindex="0"
+            type="button"
           >
-            Action
-          </span>
-        </button>
-      </span>
+            <span
+              class=""
+            >
+              Action
+            </span>
+          </button>
+        </span>
+      </div>
+      <div
+        class="emotion-1"
+        data-cy="configurationMapRow"
+      >
+        <div
+          class="emotion-2"
+          data-cy="configurationMapLabel"
+        >
+          Role
+        </div>
+        <div
+          class="emotion-3"
+          data-cy="configurationMapValue"
+        >
+          UX Designer
+        </div>
+        <span
+          class="static_configurationMapRowAction emotion-4"
+          data-cy="configrationMapRowAction"
+        >
+          <button
+            class="emotion-5 emotion-6"
+            data-cy="secondaryButton"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class=""
+            >
+              Action
+            </span>
+          </button>
+        </span>
+      </div>
+      <div
+        class="emotion-1"
+        data-cy="configurationMapRow"
+      >
+        <div
+          class="emotion-2"
+          data-cy="configurationMapLabel"
+        >
+          City
+        </div>
+        <div
+          class="emotion-3"
+          data-cy="configurationMapValue"
+        >
+          San Francisco
+        </div>
+        <span
+          class="static_configurationMapRowAction emotion-4"
+          data-cy="configrationMapRowAction"
+        >
+          <button
+            class="emotion-5 emotion-6"
+            data-cy="secondaryButton"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class=""
+            >
+              Action
+            </span>
+          </button>
+        </span>
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`ConfigurationMap renders with default value 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   margin-top: 0;
   margin-bottom: 0;
   margin-bottom: 24px;
@@ -503,69 +535,71 @@ exports[`ConfigurationMap renders with default value 1`] = `
 }
 
 <div
-  data-cy="configurationMap"
->
-  <div
-    className="emotion-0"
-    data-cy="configurationMapSection"
+    data-cy="configurationMap"
   >
     <div
-      className="emotion-1"
-      data-cy="configurationMapRow"
+      class="emotion-0"
+      data-cy="configurationMapSection"
     >
       <div
-        className="emotion-2"
-        data-cy="configurationMapLabel"
+        class="emotion-1"
+        data-cy="configurationMapRow"
       >
-        Name
+        <div
+          class="emotion-2"
+          data-cy="configurationMapLabel"
+        >
+          Name
+        </div>
+        <div
+          class="emotion-3"
+          data-cy="configurationMapValue"
+        >
+          Jane Doe
+        </div>
       </div>
       <div
-        className="emotion-3"
-        data-cy="configurationMapValue"
+        class="emotion-1"
+        data-cy="configurationMapRow"
       >
-        Jane Doe
-      </div>
-    </div>
-    <div
-      className="emotion-1"
-      data-cy="configurationMapRow"
-    >
-      <div
-        className="emotion-2"
-        data-cy="configurationMapLabel"
-      >
-        Role
-      </div>
-      <div
-        className="emotion-3"
-        data-cy="configurationMapValue"
-      >
-        —
-      </div>
-    </div>
-    <div
-      className="emotion-1"
-      data-cy="configurationMapRow"
-    >
-      <div
-        className="emotion-2"
-        data-cy="configurationMapLabel"
-      >
-        City
+        <div
+          class="emotion-2"
+          data-cy="configurationMapLabel"
+        >
+          Role
+        </div>
+        <div
+          class="emotion-3"
+          data-cy="configurationMapValue"
+        >
+          —
+        </div>
       </div>
       <div
-        className="emotion-3"
-        data-cy="configurationMapValue"
+        class="emotion-1"
+        data-cy="configurationMapRow"
       >
-        —
+        <div
+          class="emotion-2"
+          data-cy="configurationMapLabel"
+        >
+          City
+        </div>
+        <div
+          class="emotion-3"
+          data-cy="configurationMapValue"
+        >
+          —
+        </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`ConfigurationMap renders with headline 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   margin-top: 0;
   margin-bottom: 0;
   margin-bottom: 24px;
@@ -666,74 +700,75 @@ exports[`ConfigurationMap renders with headline 1`] = `
 }
 
 <div
-  data-cy="configurationMap"
->
-  <div
-    className="emotion-0"
-    data-cy="configurationMapSection"
+    data-cy="configurationMap"
   >
     <div
-      className="emotion-1"
-      data-cy="configurationMapHeading"
-    >
-      <h1
-        className="rmTextMargins emotion-2"
-        data-cy="headingText1"
-      >
-        Jane Doe Info
-      </h1>
-    </div>
-    <div
-      className="emotion-3"
-      data-cy="configurationMapRow"
+      class="emotion-0"
+      data-cy="configurationMapSection"
     >
       <div
-        className="emotion-4"
-        data-cy="configurationMapLabel"
+        class="emotion-1"
+        data-cy="configurationMapHeading"
       >
-        Name
+        <h1
+          class="rmTextMargins emotion-2"
+          data-cy="headingText1"
+        >
+          Jane Doe Info
+        </h1>
       </div>
       <div
-        className="emotion-5"
-        data-cy="configurationMapValue"
+        class="emotion-3"
+        data-cy="configurationMapRow"
       >
-        Jane Doe
-      </div>
-    </div>
-    <div
-      className="emotion-3"
-      data-cy="configurationMapRow"
-    >
-      <div
-        className="emotion-4"
-        data-cy="configurationMapLabel"
-      >
-        Role
-      </div>
-      <div
-        className="emotion-5"
-        data-cy="configurationMapValue"
-      >
-        UX Designer
-      </div>
-    </div>
-    <div
-      className="emotion-3"
-      data-cy="configurationMapRow"
-    >
-      <div
-        className="emotion-4"
-        data-cy="configurationMapLabel"
-      >
-        City
+        <div
+          class="emotion-4"
+          data-cy="configurationMapLabel"
+        >
+          Name
+        </div>
+        <div
+          class="emotion-5"
+          data-cy="configurationMapValue"
+        >
+          Jane Doe
+        </div>
       </div>
       <div
-        className="emotion-5"
-        data-cy="configurationMapValue"
+        class="emotion-3"
+        data-cy="configurationMapRow"
       >
-        San Francisco
+        <div
+          class="emotion-4"
+          data-cy="configurationMapLabel"
+        >
+          Role
+        </div>
+        <div
+          class="emotion-5"
+          data-cy="configurationMapValue"
+        >
+          UX Designer
+        </div>
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="configurationMapRow"
+      >
+        <div
+          class="emotion-4"
+          data-cy="configurationMapLabel"
+        >
+          City
+        </div>
+        <div
+          class="emotion-5"
+          data-cy="configurationMapValue"
+        >
+          San Francisco
+        </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
