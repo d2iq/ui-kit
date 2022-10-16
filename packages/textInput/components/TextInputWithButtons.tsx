@@ -53,9 +53,11 @@ const TextInputWithButtons = (props: TextInputWithButtonsProps) => {
     }
     return props.appearance;
   };
+
   const getInputElementProps = () => {
     const baseProps = getBaseInputElementProps(props);
-    const { buttons, ...inputProps } = baseProps as TextInputWithButtonsProps;
+    const { buttons, iconStart, ...inputProps } =
+      baseProps as TextInputWithButtonsProps;
     inputProps.onFocus = inputOnFocus;
     inputProps.onBlur = inputOnBlur;
 
