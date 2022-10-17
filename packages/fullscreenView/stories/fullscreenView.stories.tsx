@@ -8,6 +8,7 @@ import {
   tintContentSecondary,
   padding
 } from "../../shared/styles/styleUtils";
+import { containerWidthDefault } from "../../design-tokens/build/js/designTokens";
 import { cx } from "@emotion/css";
 import { fullscreenModalTitle } from "../style";
 import { SecondaryButton, PrimaryButton } from "../../button";
@@ -29,14 +30,7 @@ export default {
 
 export const Default = () => (
   <div style={{ height: "500px" }}>
-    <FullscreenView
-      closeText="Close"
-      title="Title"
-      onClose={onClose}
-      bannerComponent={
-        <InfoBoxBanner message="This is a message for the user." />
-      }
-    >
+    <FullscreenView closeText="Close" title="Title" onClose={onClose}>
       <ModalContent />
     </FullscreenView>
   </div>
@@ -73,7 +67,7 @@ export const WithAdditionalHeaderContent = () => {
         title="Title"
         closeText="Close"
         ctaButton={
-          <PrimaryButton onClick={action("handling CTA")} aria-haspopup={true}>
+          <PrimaryButton onClick={action("handling CTA")} aria-haspopup>
             Continue
           </PrimaryButton>
         }
@@ -91,9 +85,9 @@ export const WithFlushedContent = () => (
       onClose={onClose}
       title="Title"
       closeText="Close"
-      isContentFlush={true}
+      isContentFlush
       ctaButton={
-        <PrimaryButton onClick={action("handling CTA")} aria-haspopup={true}>
+        <PrimaryButton onClick={action("handling CTA")} aria-haspopup>
           Continue
         </PrimaryButton>
       }
@@ -132,6 +126,20 @@ export const WithBanner = () => (
       <BorderedModalContent horizPadding="32px" />
       <BorderedModalContent horizPadding="32px" />
       <BorderedModalContent horizPadding="32px" />
+    </FullscreenView>
+  </div>
+);
+
+export const WithContainer = () => (
+  <div style={{ height: "500px" }}>
+    <FullscreenView
+      closeText="Close"
+      title="Title"
+      onClose={onClose}
+      ctaButton={<PrimaryButton type="button">Click</PrimaryButton>}
+      containerMaxWidth={containerWidthDefault}
+    >
+      <ModalContent />
     </FullscreenView>
   </div>
 );

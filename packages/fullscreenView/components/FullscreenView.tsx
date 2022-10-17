@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "@emotion/css";
+import { cx, css } from "@emotion/css";
 import { ButtonProps } from "../../button/components/ButtonBase";
 import { flex, padding, flexItem } from "../../shared/styles/styleUtils";
 import { modalContent, fullscreenModalHeader } from "../style";
@@ -24,56 +24,66 @@ export interface FullscreenViewProps {
   onClose: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /** The base of the `data-cy` value. This is used for writing selectors in Cypress. */
   cypressSelectorBase?: string;
+  /** The css max width around the header contents  */
+  containerMaxWidth?: string;
   children?: React.ReactNode;
 }
 
-const FullscreenView = React.memo(
-  ({
-    children,
-    ctaButton,
-    closeText,
-    isContentFlush,
-    onClose,
-    title,
-    subtitle,
-    bannerComponent,
-    headerComponent,
-    cypressSelectorBase = "fullscreenView"
-  }: FullscreenViewProps) => {
-    const HeaderComponent = headerComponent ?? FullscreenViewHeader;
+const FullscreenView = ({
+  children,
+  ctaButton,
+  closeText,
+  isContentFlush,
+  onClose,
+  title,
+  subtitle,
+  bannerComponent,
+  headerComponent,
+  cypressSelectorBase = "fullscreenView",
+  containerMaxWidth
+}: FullscreenViewProps) => {
+  const HeaderComponent = headerComponent ?? FullscreenViewHeader;
 
-    return (
-      <div className={flex({ direction: "column" })}>
-        <div
-          className={cx(fullscreenModalHeader)}
-          data-cy={`${cypressSelectorBase}-header`}
-        >
-          {bannerComponent && (
-            <div data-cy={`${cypressSelectorBase}-banner`}>
-              {bannerComponent}
-            </div>
-          )}
-          <div className={cx(padding("all", "xl"))}>
-            <HeaderComponent
-              title={title}
-              subtitle={subtitle}
-              ctaButton={ctaButton}
-              closeText={closeText}
-              onClose={onClose}
-            />
-          </div>
-        </div>
-        <div
-          className={cx(modalContent, flexItem("grow"), {
-            [padding("all", "xl")]: !isContentFlush
-          })}
-          data-cy={`${cypressSelectorBase}-content`}
-        >
-          {children}
+  let container: string = "";
+  if (containerMaxWidth) {
+    // add border-box to account for any left and right padding
+    container = css`
+      margin-left: auto;
+      margin-right: auto;
+      max-width: ${containerMaxWidth};
+      box-sizing: border-box;
+    `;
+  }
+
+  return (
+    <div className={flex({ direction: "column" })}>
+      <div
+        className={cx(fullscreenModalHeader)}
+        data-cy={`${cypressSelectorBase}-header`}
+      >
+        {bannerComponent && (
+          <div data-cy={`${cypressSelectorBase}-banner`}>{bannerComponent}</div>
+        )}
+        <div className={cx(padding("all", "xl"), container)}>
+          <HeaderComponent
+            title={title}
+            subtitle={subtitle}
+            ctaButton={ctaButton}
+            closeText={closeText}
+            onClose={onClose}
+          />
         </div>
       </div>
-    );
-  }
-);
+      <div
+        className={cx(modalContent, flexItem("grow"), {
+          [padding("all", "xl")]: !isContentFlush
+        })}
+        data-cy={`${cypressSelectorBase}-content`}
+      >
+        {children}
+      </div>
+    </div>
+  );
+};
 
-export default FullscreenView;
+export default React.memo(FullscreenView);
