@@ -9,21 +9,21 @@ interface SegmentedControlStoryHelperProps {
   selectedSegment?: string;
 }
 
-const SegmentedControlStoryHelper = React.memo(
-  (props: SegmentedControlStoryHelperProps) => {
-    const [selectedSegment, setSelectedSegment] = React.useState<string>(
-      props.selectedSegment || ""
-    );
+const SegmentedControlStoryHelper = (
+  props: SegmentedControlStoryHelperProps
+) => {
+  const [selectedSegment, setSelectedSegment] = React.useState<string>(
+    props.selectedSegment || ""
+  );
 
-    const handleChange = value => {
-      setSelectedSegment(value);
-    };
+  const handleChange = value => {
+    setSelectedSegment(value);
+  };
 
-    return props.children({
-      changeHandler: handleChange,
-      selectedSegment
-    });
-  }
-);
+  return props.children({
+    changeHandler: handleChange,
+    selectedSegment
+  });
+};
 
-export default SegmentedControlStoryHelper;
+export default React.memo(SegmentedControlStoryHelper);

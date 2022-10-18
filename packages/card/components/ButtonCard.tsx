@@ -29,55 +29,53 @@ export interface ButtonCardProps extends CardProps {
   hasFocus?: boolean;
 }
 
-const ButtonCard = React.memo(
-  ({
-    isActive,
-    isInput,
-    disabled,
-    hasFocus,
-    onClick,
-    onKeyPress,
-    ...other
-  }: ButtonCardProps) => {
-    const tabIndex = disabled ? -1 : 0;
-    // mimic native <button> keyboard behavior without using a <button>
-    const keyPressClick = e => {
-      if (onClick && (e.key === " " || e.key === "Enter")) {
-        onClick(e);
+const ButtonCard = ({
+  isActive,
+  isInput,
+  disabled,
+  hasFocus,
+  onClick,
+  onKeyPress,
+  ...other
+}: ButtonCardProps) => {
+  const tabIndex = disabled ? -1 : 0;
+  // mimic native <button> keyboard behavior without using a <button>
+  const keyPressClick = e => {
+    if (onClick && (e.key === " " || e.key === "Enter")) {
+      onClick(e);
+    }
+  };
+  const handleKeyPress = e => {
+    keyPressClick(e);
+    if (onKeyPress) {
+      onKeyPress(e);
+    }
+  };
+  const buttonProps = !isInput
+    ? {
+        tabIndex,
+        onKeyPress: handleKeyPress,
+        onClick,
+        role: "button",
+        "aria-disabled": disabled,
+        "aria-pressed": isActive
       }
-    };
-    const handleKeyPress = e => {
-      keyPressClick(e);
-      if (onKeyPress) {
-        onKeyPress(e);
-      }
-    };
-    const buttonProps = !isInput
-      ? {
-          tabIndex,
-          onKeyPress: handleKeyPress,
-          onClick,
-          role: "button",
-          "aria-disabled": disabled,
-          "aria-pressed": isActive
-        }
-      : {};
+    : {};
 
-    return (
-      <Card
-        className={cx(buttonCard, {
-          [buttonCardActive]: isActive,
-          [buttonCardDisabled]: disabled,
-          [buttonCardDisabledActive]: disabled && isActive,
-          [buttonCardFocused]: hasFocus,
-          [buttonCardFocusedActive]: hasFocus && isActive
-        })}
-        {...buttonProps}
-        data-cy="buttonCard"
-        {...other}
-      />
-    );
-  }
-);
+  return (
+    <Card
+      className={cx(buttonCard, {
+        [buttonCardActive]: isActive,
+        [buttonCardDisabled]: disabled,
+        [buttonCardDisabledActive]: disabled && isActive,
+        [buttonCardFocused]: hasFocus,
+        [buttonCardFocusedActive]: hasFocus && isActive
+      })}
+      {...buttonProps}
+      data-cy="buttonCard"
+      {...other}
+    />
+  );
+};
 
-export default ButtonCard;
+export default React.memo(ButtonCard);

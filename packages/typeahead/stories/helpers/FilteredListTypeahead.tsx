@@ -7,7 +7,7 @@ interface FilteredListProps {
   menuEmptyState?: React.ReactElement<any>;
 }
 
-const FilteredList = React.memo((props: FilteredListProps) => {
+const FilteredList = (props: FilteredListProps) => {
   const [items, setItems] = React.useState<Item[]>(props.items || []);
 
   const filterList = e => {
@@ -41,6 +41,6 @@ const FilteredList = React.memo((props: FilteredListProps) => {
       />
     </div>
   );
-});
+};
 
-export default FilteredList;
+export default React.memo(FilteredList);

@@ -14,7 +14,7 @@ interface FieldListHelperProps {
 const updateIndex = (ts, i, obj) =>
   ts.map((t, j) => (i === j ? { ...t, ...obj } : t));
 
-const FieldListHelper = React.memo((props: FieldListHelperProps) => {
+const FieldListHelper = (props: FieldListHelperProps) => {
   const [items, setItems] = React.useState<any[]>(props.items);
 
   const handleFieldUpdate = (rowIndex, valueKey) => {
@@ -43,6 +43,6 @@ const FieldListHelper = React.memo((props: FieldListHelperProps) => {
     onRemoveItem: handleRemoveItem,
     onAddItem: handleAddItem
   });
-});
+};
 
-export default FieldListHelper;
+export default React.memo(FieldListHelper);

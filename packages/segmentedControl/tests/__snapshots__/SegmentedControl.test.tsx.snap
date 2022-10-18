@@ -14,7 +14,7 @@ exports[`SegmentedControl renders default 1`] = `
   className="emotion-0"
   data-cy="segmentedControl"
 >
-  <Memo()
+  <Memo(SegmentedControlButton)
     isActive={false}
     key="0"
     name="controlId"
@@ -22,8 +22,8 @@ exports[`SegmentedControl renders default 1`] = `
     value="one"
   >
     One
-  </Memo()>
-  <Memo()
+  </Memo(SegmentedControlButton)>
+  <Memo(SegmentedControlButton)
     isActive={false}
     key="1"
     name="controlId"
@@ -31,8 +31,8 @@ exports[`SegmentedControl renders default 1`] = `
     value="two"
   >
     Two
-  </Memo()>
-  <Memo()
+  </Memo(SegmentedControlButton)>
+  <Memo(SegmentedControlButton)
     isActive={false}
     key="2"
     name="controlId"
@@ -40,7 +40,7 @@ exports[`SegmentedControl renders default 1`] = `
     value="three"
   >
     Three
-  </Memo()>
+  </Memo(SegmentedControlButton)>
 </div>
 `;
 
@@ -58,7 +58,7 @@ exports[`SegmentedControl renders with selected 1`] = `
   className="emotion-0"
   data-cy="segmentedControl"
 >
-  <Memo()
+  <Memo(SegmentedControlButton)
     isActive={true}
     key="0"
     name="controlId"
@@ -66,8 +66,8 @@ exports[`SegmentedControl renders with selected 1`] = `
     value="one"
   >
     One
-  </Memo()>
-  <Memo()
+  </Memo(SegmentedControlButton)>
+  <Memo(SegmentedControlButton)
     isActive={false}
     key="1"
     name="controlId"
@@ -75,8 +75,8 @@ exports[`SegmentedControl renders with selected 1`] = `
     value="two"
   >
     Two
-  </Memo()>
-  <Memo()
+  </Memo(SegmentedControlButton)>
+  <Memo(SegmentedControlButton)
     isActive={false}
     key="2"
     name="controlId"
@@ -84,6 +84,6 @@ exports[`SegmentedControl renders with selected 1`] = `
     value="three"
   >
     Three
-  </Memo()>
+  </Memo(SegmentedControlButton)>
 </div>
 `;

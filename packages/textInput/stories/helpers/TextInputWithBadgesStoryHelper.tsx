@@ -11,20 +11,19 @@ interface TextInputWithBadgesStoryHelperProps {
   children: (renderProps: RenderProps) => React.ReactElement;
 }
 
-const TextInputWithBadgesStoryHelper = React.memo(
-  (props: TextInputWithBadgesStoryHelperProps) => {
-    const [badges, setBadges] = React.useState<BadgeDatum[]>(
-      props.badges || []
-    );
+const TextInputWithBadgesStoryHelper = (
+  props: TextInputWithBadgesStoryHelperProps
+) => {
+  const [badges, setBadges] = React.useState<BadgeDatum[]>(props.badges || []);
 
-    const handleBadgeChange = badgesNext => {
-      setBadges(badgesNext);
-    };
+  const handleBadgeChange = badgesNext => {
+    setBadges(badgesNext);
+  };
 
-    return props.children({
-      badges,
-      badgeChangeHandler: handleBadgeChange
-    });
-  }
-);
-export default TextInputWithBadgesStoryHelper;
+  return props.children({
+    badges,
+    badgeChangeHandler: handleBadgeChange
+  });
+};
+
+export default React.memo(TextInputWithBadgesStoryHelper);

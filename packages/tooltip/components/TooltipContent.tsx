@@ -11,40 +11,38 @@ export interface TooltipContentProps extends BaseTooltipProps {
   isOpen: boolean;
 }
 
-const TooltipContent = React.memo(
-  ({
-    direction = Direction.TopCenter,
-    children,
-    id,
-    maxWidth,
-    minWidth,
-    isOpen
-  }: TooltipContentProps) => {
-    return (
-      <>
-        <div
-          aria-hidden={!isOpen}
-          id={id}
-          className={cx(
-            tooltip,
-            alignContainerWithCaretStyles(direction),
-            inverseColorMode,
-            padding("horiz", "s"),
-            padding("vert", "xs")
-          )}
-          role="tooltip"
-          style={{
-            minWidth,
-            maxWidth: maxWidth || undefined
-          }}
-          data-cy="tooltipContent"
-        >
-          {children}
-        </div>
-        <div className={getTooltipArrow(direction)} />
-      </>
-    );
-  }
-);
+const TooltipContent = ({
+  direction = Direction.TopCenter,
+  children,
+  id,
+  maxWidth,
+  minWidth,
+  isOpen
+}: TooltipContentProps) => {
+  return (
+    <>
+      <div
+        aria-hidden={!isOpen}
+        id={id}
+        className={cx(
+          tooltip,
+          alignContainerWithCaretStyles(direction),
+          inverseColorMode,
+          padding("horiz", "s"),
+          padding("vert", "xs")
+        )}
+        role="tooltip"
+        style={{
+          minWidth,
+          maxWidth: maxWidth || undefined
+        }}
+        data-cy="tooltipContent"
+      >
+        {children}
+      </div>
+      <div className={getTooltipArrow(direction)} />
+    </>
+  );
+};
 
-export default TooltipContent;
+export default React.memo(TooltipContent);

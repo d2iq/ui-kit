@@ -13,35 +13,33 @@ export interface ButtonCardProps extends CardProps {
   linkDescription: string;
 }
 
-const LinkCard = React.memo(
-  ({
-    openInNewTab,
-    linkDescription,
-    url,
-    children,
-    ...other
-  }: ButtonCardProps & LinkProps) => {
-    return (
-      <Card
-        className={cx(buttonCard, cardWithLink)}
-        data-cy="linkCard"
-        {...other}
-      >
-        <>
-          <UnstyledLink
-            url={url}
-            className={cardLink}
-            openInNewTab={openInNewTab}
-          >
-            <Box tag="span" isVisuallyHidden={true}>
-              {linkDescription}
-            </Box>
-          </UnstyledLink>
-          {children}
-        </>
-      </Card>
-    );
-  }
-);
+const LinkCard = ({
+  openInNewTab,
+  linkDescription,
+  url,
+  children,
+  ...other
+}: ButtonCardProps & LinkProps) => {
+  return (
+    <Card
+      className={cx(buttonCard, cardWithLink)}
+      data-cy="linkCard"
+      {...other}
+    >
+      <>
+        <UnstyledLink
+          url={url}
+          className={cardLink}
+          openInNewTab={openInNewTab}
+        >
+          <Box tag="span" isVisuallyHidden={true}>
+            {linkDescription}
+          </Box>
+        </UnstyledLink>
+        {children}
+      </>
+    </Card>
+  );
+};
 
-export default LinkCard;
+export default React.memo(LinkCard);

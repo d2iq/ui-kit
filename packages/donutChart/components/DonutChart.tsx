@@ -27,7 +27,7 @@ export interface DonutChartProps {
   text?: string;
 }
 
-const DonutChart = React.memo(({ data, label, text }: DonutChartProps) => {
+const DonutChart = ({ data, label, text }: DonutChartProps) => {
   const strokeWidth = 1.5;
   const radius = 100 / (Math.PI * 2);
   const diameter = radius * 2 + strokeWidth;
@@ -88,6 +88,6 @@ const DonutChart = React.memo(({ data, label, text }: DonutChartProps) => {
       </text>
     </svg>
   );
-});
+};
 
-export default DonutChart;
+export default React.memo(DonutChart);
