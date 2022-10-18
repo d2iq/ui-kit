@@ -1,6 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
 
 import { ToggleBox } from "..";
@@ -40,16 +39,15 @@ describe("ToggleBox", () => {
 
   it("calls onChange prop when the input is changed", () => {
     const onChangeFn = jest.fn();
-    const component = mount(
+    const inputContainer = render(
       <ToggleBox value="default" id="default" onChange={onChangeFn}>
         default
       </ToggleBox>
     );
-
-    const toggleBoxInput = component.find("input");
+    const input = inputContainer.getByText("default");
 
     expect(onChangeFn).not.toHaveBeenCalled();
-    toggleBoxInput.simulate("change", { target: { checked: true } });
+    fireEvent.click(input);
     expect(onChangeFn).toHaveBeenCalled();
   });
 });

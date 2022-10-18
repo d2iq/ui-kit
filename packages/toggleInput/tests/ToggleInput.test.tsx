@@ -1,7 +1,6 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render, fireEvent } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 import { ToggleInput } from "../";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
@@ -10,7 +9,7 @@ expect.addSnapshotSerializer(createSerializer());
 describe("ToggleInput", () => {
   it("renders all appearances", () => {
     Object.keys(InputAppearance).forEach(appearance => {
-      const component = mount(
+      const { asFragment } = render(
         <ToggleInput
           id="defaultId"
           inputLabel="Sample label"
@@ -18,11 +17,11 @@ describe("ToggleInput", () => {
           appearance={InputAppearance[appearance]}
         />
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
   it("renders a checkbox input type", () => {
-    const component = mount(
+    const { asFragment } = render(
       <ToggleInput
         id="defaultId"
         inputLabel="Sample label"
@@ -30,10 +29,10 @@ describe("ToggleInput", () => {
         inputType="checkbox"
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders a radio input type", () => {
-    const component = mount(
+    const { asFragment } = render(
       <ToggleInput
         id="defaultId"
         inputLabel="Sample label"
@@ -41,11 +40,11 @@ describe("ToggleInput", () => {
         inputType="radio"
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("calls onFocus if its passed in as a prop", () => {
     const focusFn = jest.fn();
-    const component = mount(
+    const { getByTestId } = render(
       <ToggleInput
         id="defaultId"
         inputLabel="Sample label"
@@ -54,13 +53,13 @@ describe("ToggleInput", () => {
       />
     );
     expect(focusFn).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
+    fireEvent.focus(getByTestId("checkboxInput-input"));
     expect(focusFn).toHaveBeenCalled();
   });
 
   it("calls onBlur if its passed in as a prop", () => {
     const blurFn = jest.fn();
-    const component = mount(
+    const { getByTestId } = render(
       <ToggleInput
         id="defaultId"
         inputLabel="Sample label"
@@ -69,9 +68,9 @@ describe("ToggleInput", () => {
       />
     );
     expect(blurFn).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
+    fireEvent.focus(getByTestId("checkboxInput-input"));
     expect(blurFn).not.toHaveBeenCalled();
-    component.find("input").simulate("blur");
+    fireEvent.blur(getByTestId("checkboxInput-input"));
     expect(blurFn).toHaveBeenCalled();
   });
 });

@@ -1,7 +1,6 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
+import { render, fireEvent } from "@testing-library/react";
 import { PrimaryAction, SecondaryAction } from "../stories/helpers/actions";
 import { InfoBox, InfoBoxBanner, InfoBoxInline } from "../";
 
@@ -14,23 +13,23 @@ const MessageComponent = (): JSX.Element => {
 describe("InfoBox", () => {
   it("renders default", () => {
     const dismissFn = jest.fn();
-    const component = shallow(
+    const { asFragment } = render(
       <InfoBox message="message" onDismiss={dismissFn} />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with JSX message", () => {
     const dismissFn = jest.fn();
-    const component = shallow(
+    const { asFragment } = render(
       <InfoBox message={<MessageComponent />} onDismiss={dismissFn} />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with actions", () => {
     const dismissFn = jest.fn();
-    const component = shallow(
+    const { asFragment } = render(
       <InfoBox
         message="message"
         primaryAction={<PrimaryAction />}
@@ -38,41 +37,38 @@ describe("InfoBox", () => {
         onDismiss={dismissFn}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders without dismiss button", () => {
-    const component = shallow(<InfoBox message="message" />);
-    expect(toJson(component)).toMatchSnapshot();
+    const { asFragment } = render(<InfoBox message="message" />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("calls onDismiss when clicking dismiss node", () => {
     const dismissFn = jest.fn();
-    const component = mount(
+    const { getByRole } = render(
       <InfoBox message="message" onDismiss={dismissFn} />
     );
-    const dismissBtn = component.find("span[role='button']");
-
-    expect(dismissFn).not.toHaveBeenCalled();
-    dismissBtn.simulate("click");
+    fireEvent.click(getByRole("button"));
     expect(dismissFn).toHaveBeenCalled();
   });
 
   describe("InfoBoxBanner", () => {
     it("renders default", () => {
       const dismissFn = jest.fn();
-      const component = shallow(
+      const { asFragment } = render(
         <InfoBoxBanner message="message" onDismiss={dismissFn} />
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("InfoBoxInline", () => {
     const dismissFn = jest.fn();
-    const component = shallow(
+    const { asFragment } = render(
       <InfoBoxInline message="message" onDismiss={dismissFn} />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

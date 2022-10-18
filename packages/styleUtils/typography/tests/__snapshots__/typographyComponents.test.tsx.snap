@@ -1,147 +1,158 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Typography CaptionText renders all props 1`] = `
-<SmallText
-  align="center"
-  color="var(--themeTextColorSecondary, #76797E)"
-  data-cy="captionText"
-  tag="span"
-  weight="normal"
-  wrap="nowrap"
->
-  content
-</SmallText>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--themeTextColorSecondary, #76797E);
+  fill: var(--themeTextColorSecondary, #76797E);
+  text-align: center;
+  white-space: nowrap;
+}
+
+<span
+    class="rmTextMargins emotion-0"
+    data-cy="captionText"
+  >
+    content
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Typography DangerText renders all props 1`] = `
-<Text
-  align="center"
-  color="var(--themeError, #EB293A)"
-  data-cy="dangerText"
-  size="l"
-  tag="span"
-  weight="medium"
-  wrap="nowrap"
->
-  content
-</Text>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--themeError, #EB293A);
+  fill: var(--themeError, #EB293A);
+  text-align: center;
+  white-space: nowrap;
+}
+
+<span
+    class="rmTextMargins emotion-0"
+    data-cy="dangerText"
+  >
+    content
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Typography HeadingText renders all props all HeadingText variants 1`] = `
-<Text
-  align="center"
-  color="black"
-  data-cy="headingText1"
-  size="xl"
-  tag="h1"
-  weight="medium"
-  wrap="nowrap"
->
-  content
-</Text>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 24px;
+  color: black;
+  fill: black;
+  text-align: center;
+  white-space: nowrap;
+}
+
+<h1
+    class="rmTextMargins emotion-0"
+    data-cy="headingText1"
+  >
+    content
+  </h1>
+</DocumentFragment>
 `;
 
 exports[`Typography HeadingText renders all props all HeadingText variants 2`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   line-height: 1.33;
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+  fill: black;
+  text-align: center;
+  white-space: nowrap;
 }
 
-<Text
-  align="center"
-  className="emotion-0"
-  color="black"
-  data-cy="headingText2"
-  size="l"
-  tag="h1"
-  weight="medium"
-  wrap="nowrap"
->
-  content
-</Text>
+<h1
+    class="rmTextMargins emotion-0"
+    data-cy="headingText2"
+  >
+    content
+  </h1>
+</DocumentFragment>
 `;
 
 exports[`Typography HeadingText renders all props all HeadingText variants 3`] = `
-<Text
-  align="center"
-  color="black"
-  data-cy="headingText3"
-  size="m"
-  tag="h1"
-  weight="medium"
-  wrap="nowrap"
->
-  content
-</Text>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 14px;
+  color: black;
+  fill: black;
+  text-align: center;
+  white-space: nowrap;
+}
+
+<h1
+    class="rmTextMargins emotion-0"
+    data-cy="headingText3"
+  >
+    content
+  </h1>
+</DocumentFragment>
 `;
 
 exports[`Typography InteractiveText renders all props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   cursor: pointer;
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--themeTextColorInteractive, #7D58FF);
+  fill: var(--themeTextColorInteractive, #7D58FF);
+  text-align: center;
+  white-space: nowrap;
 }
 
-<Text
-  align="center"
-  className="emotion-0"
-  color="var(--themeTextColorInteractive, #7D58FF)"
-  data-cy="interactiveText"
-  size="l"
-  tag="span"
-  weight="medium"
-  wrap="nowrap"
->
-  content
-</Text>
+<span
+    class="rmTextMargins emotion-0"
+    data-cy="interactiveText"
+  >
+    content
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Typography MonospaceText renders all props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+  fill: black;
+  text-align: center;
+  white-space: nowrap;
 }
 
-<Text
-  align="center"
-  className="emotion-0"
-  color="black"
-  data-cy="monospaceText"
-  size="l"
-  tag="span"
-  weight="medium"
-  wrap="nowrap"
->
-  content
-</Text>
+<span
+    class="rmTextMargins emotion-0"
+    data-cy="monospaceText"
+  >
+    content
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Typography SmallText renders all props 1`] = `
-<Text
-  align="center"
-  color="black"
-  data-cy="smallText"
-  size="s"
-  tag="span"
-  weight="medium"
-  wrap="nowrap"
->
-  content
-</Text>
-`;
-
-exports[`Typography SuccessText renders all props 1`] = `
-<Text
-  align="center"
-  color="var(--themeSuccess, #14C684)"
-  data-cy="successText"
-  size="l"
-  tag="span"
-  weight="medium"
-  wrap="nowrap"
->
-  content
-</Text>
-`;
-
-exports[`Typography Text renders all props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   line-height: 1.4;
   font-weight: 500;
   font-size: 12px;
@@ -152,15 +163,59 @@ exports[`Typography Text renders all props 1`] = `
 }
 
 <span
-  className="rmTextMargins test emotion-0"
-  data-cy="text"
->
-  content
-</span>
+    class="rmTextMargins emotion-0"
+    data-cy="smallText"
+  >
+    content
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Typography SuccessText renders all props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--themeSuccess, #14C684);
+  fill: var(--themeSuccess, #14C684);
+  text-align: center;
+  white-space: nowrap;
+}
+
+<span
+    class="rmTextMargins emotion-0"
+    data-cy="successText"
+  >
+    content
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Typography Text renders all props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 12px;
+  color: black;
+  fill: black;
+  text-align: center;
+  white-space: nowrap;
+}
+
+<span
+    class="rmTextMargins test emotion-0"
+    data-cy="text"
+  >
+    content
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Typography Text renders all wrap variants 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   line-height: 1.4;
   font-weight: 400;
   font-size: 14px;
@@ -174,16 +229,18 @@ exports[`Typography Text renders all wrap variants 1`] = `
 }
 
 <p
-  className="rmTextMargins emotion-0"
-  data-cy="text"
-  title="content"
->
-  content
-</p>
+    class="rmTextMargins emotion-0"
+    data-cy="text"
+    title="content"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography Text renders all wrap variants 2`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   line-height: 1.4;
   font-weight: 400;
   font-size: 14px;
@@ -194,15 +251,17 @@ exports[`Typography Text renders all wrap variants 2`] = `
 }
 
 <p
-  className="rmTextMargins emotion-0"
-  data-cy="text"
->
-  content
-</p>
+    class="rmTextMargins emotion-0"
+    data-cy="text"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography Text renders all wrap variants 3`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   line-height: 1.4;
   font-weight: 400;
   font-size: 14px;
@@ -212,19 +271,43 @@ exports[`Typography Text renders all wrap variants 3`] = `
 }
 
 <p
-  className="rmTextMargins emotion-0"
-  data-cy="text"
->
-  content
-</p>
+    class="rmTextMargins emotion-0"
+    data-cy="text"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography TextBlock renders all props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+
+.emotion-0>* {
+  margin-bottom: 0;
+}
+
+.emotion-0>*+* {
+  margin-top: 24px;
+}
+
+.emotion-0>div {
+  width: 100%;
 }
 
 .emotion-0 p {
@@ -246,43 +329,50 @@ exports[`Typography TextBlock renders all props 1`] = `
   list-style-position: outside;
 }
 
-<Stack
-  className="emotion-0"
-  data-cy="stack"
-  spacingSize="l"
-  tag="div"
->
-  <p>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-  </p>
-  <p>
-    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-  </p>
-  <p>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-  </p>
-  <p>
-    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-  </p>
-</Stack>
+<div
+    class="emotion-0"
+    data-cy="stack"
+  >
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+    <p>
+      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+    <p>
+      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Typography WarningText renders all props 1`] = `
-<Text
-  align="center"
-  color="var(--themeWarning, #F9A328)"
-  data-cy="warningText"
-  size="l"
-  tag="span"
-  weight="medium"
-  wrap="nowrap"
->
-  content
-</Text>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--themeWarning, #F9A328);
+  fill: var(--themeWarning, #F9A328);
+  text-align: center;
+  white-space: nowrap;
+}
+
+<span
+    class="rmTextMargins emotion-0"
+    data-cy="warningText"
+  >
+    content
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Typography renders all default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   line-height: 1.4;
   font-weight: 400;
   font-size: 14px;
@@ -292,163 +382,213 @@ exports[`Typography renders all default 1`] = `
 }
 
 <p
-  className="rmTextMargins emotion-0"
-  data-cy="text"
->
-  content
-</p>
+    class="rmTextMargins emotion-0"
+    data-cy="text"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography renders all default 2`] = `
-<SmallText
-  align="left"
-  color="var(--themeTextColorSecondary, #76797E)"
-  data-cy="captionText"
-  tag="p"
-  weight="normal"
-  wrap="wrap"
->
-  content
-</SmallText>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--themeTextColorSecondary, #76797E);
+  fill: var(--themeTextColorSecondary, #76797E);
+  text-align: left;
+}
+
+<p
+    class="rmTextMargins emotion-0"
+    data-cy="captionText"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography renders all default 3`] = `
-<Text
-  align="left"
-  color="var(--themeError, #EB293A)"
-  data-cy="dangerText"
-  size="m"
-  tag="p"
-  weight="normal"
-  wrap="wrap"
->
-  content
-</Text>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--themeError, #EB293A);
+  fill: var(--themeError, #EB293A);
+  text-align: left;
+}
+
+<p
+    class="rmTextMargins emotion-0"
+    data-cy="dangerText"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography renders all default 4`] = `
-<Text
-  align="left"
-  color="var(--themeTextColorPrimary, #1B2029)"
-  data-cy="headingText1"
-  size="xl"
-  tag="p"
-  weight="medium"
-  wrap="wrap"
->
-  content
-</Text>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--themeTextColorPrimary, #1B2029);
+  fill: var(--themeTextColorPrimary, #1B2029);
+  text-align: left;
+}
+
+<p
+    class="rmTextMargins emotion-0"
+    data-cy="headingText1"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography renders all default 5`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   line-height: 1.33;
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--themeTextColorPrimary, #1B2029);
+  fill: var(--themeTextColorPrimary, #1B2029);
+  text-align: left;
 }
 
-<Text
-  align="left"
-  className="emotion-0"
-  color="var(--themeTextColorPrimary, #1B2029)"
-  data-cy="headingText2"
-  size="l"
-  tag="p"
-  weight="medium"
-  wrap="wrap"
->
-  content
-</Text>
+<p
+    class="rmTextMargins emotion-0"
+    data-cy="headingText2"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography renders all default 6`] = `
-<Text
-  align="left"
-  color="var(--themeTextColorPrimary, #1B2029)"
-  data-cy="headingText3"
-  size="m"
-  tag="p"
-  weight="medium"
-  wrap="wrap"
->
-  content
-</Text>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--themeTextColorPrimary, #1B2029);
+  fill: var(--themeTextColorPrimary, #1B2029);
+  text-align: left;
+}
+
+<p
+    class="rmTextMargins emotion-0"
+    data-cy="headingText3"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography renders all default 7`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   cursor: pointer;
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--themeTextColorInteractive, #7D58FF);
+  fill: var(--themeTextColorInteractive, #7D58FF);
+  text-align: left;
 }
 
-<Text
-  align="left"
-  className="emotion-0"
-  color="var(--themeTextColorInteractive, #7D58FF)"
-  data-cy="interactiveText"
-  size="m"
-  tag="p"
-  weight="normal"
-  wrap="wrap"
->
-  content
-</Text>
+<p
+    class="rmTextMargins emotion-0"
+    data-cy="interactiveText"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography renders all default 8`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--themeTextColorPrimary, #1B2029);
+  fill: var(--themeTextColorPrimary, #1B2029);
+  text-align: left;
 }
 
-<Text
-  align="left"
-  className="emotion-0"
-  color="var(--themeTextColorPrimary, #1B2029)"
-  data-cy="monospaceText"
-  size="m"
-  tag="p"
-  weight="medium"
-  wrap="wrap"
->
-  content
-</Text>
+<p
+    class="rmTextMargins emotion-0"
+    data-cy="monospaceText"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography renders all default 9`] = `
-<Text
-  align="left"
-  color="var(--themeTextColorPrimary, #1B2029)"
-  data-cy="smallText"
-  size="s"
-  tag="p"
-  weight="normal"
-  wrap="wrap"
->
-  content
-</Text>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--themeTextColorPrimary, #1B2029);
+  fill: var(--themeTextColorPrimary, #1B2029);
+  text-align: left;
+}
+
+<p
+    class="rmTextMargins emotion-0"
+    data-cy="smallText"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography renders all default 10`] = `
-<Text
-  align="left"
-  color="var(--themeSuccess, #14C684)"
-  data-cy="successText"
-  size="m"
-  tag="p"
-  weight="normal"
-  wrap="wrap"
->
-  content
-</Text>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--themeSuccess, #14C684);
+  fill: var(--themeSuccess, #14C684);
+  text-align: left;
+}
+
+<p
+    class="rmTextMargins emotion-0"
+    data-cy="successText"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Typography renders all default 11`] = `
-<Text
-  align="left"
-  color="var(--themeWarning, #F9A328)"
-  data-cy="warningText"
-  size="m"
-  tag="p"
-  weight="normal"
-  wrap="wrap"
->
-  content
-</Text>
+<DocumentFragment>
+  .emotion-0 {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--themeWarning, #F9A328);
+  fill: var(--themeWarning, #F9A328);
+  text-align: left;
+}
+
+<p
+    class="rmTextMargins emotion-0"
+    data-cy="warningText"
+  >
+    content
+  </p>
+</DocumentFragment>
 `;

@@ -1,32 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[` 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  background-color: #DADDE2;
+  border-bottom-color: #828487;
+  color: #1B2029;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  overflow: auto;
+  word-break: break-word;
+  padding: 16px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 500;
   border-radius: 6px;
 }
 
-<Memo(InfoBox)
-  className="emotion-0"
-  message="message"
-  onDismiss={[MockFunction]}
-/>
+.emotion-1 {
+  padding-bottom: 16px;
+}
+
+.emotion-2 {
+  cursor: pointer;
+  line-height: 0;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: #1B2029;
+}
+
+.emotion-3 use {
+  pointer-events: none;
+}
+
+<div
+    aria-live="polite"
+    class="emotion-0"
+    data-cy="infoBox"
+    role="log"
+  >
+    <div
+      class="emotion-1"
+    >
+      message
+    </div>
+    <span
+      class="emotion-2"
+      role="button"
+      tabindex="0"
+    >
+      <svg
+        aria-label="system-close icon"
+        class="emotion-3"
+        data-cy="icon"
+        height="16"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <use
+          xlink:href="#system-close"
+        />
+      </svg>
+    </span>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`InfoBox InfoBoxBanner renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  background-color: #DADDE2;
+  border-bottom-color: #828487;
+  color: #1B2029;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  overflow: auto;
+  word-break: break-word;
+  padding: 16px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 500;
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
 
-<Memo(InfoBox)
-  className="emotion-0"
-  message="message"
-  onDismiss={[MockFunction]}
-/>
+.emotion-1 {
+  padding-bottom: 16px;
+}
+
+.emotion-2 {
+  cursor: pointer;
+  line-height: 0;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: #1B2029;
+}
+
+.emotion-3 use {
+  pointer-events: none;
+}
+
+<div
+    aria-live="polite"
+    class="emotion-0"
+    data-cy="infoBox"
+    role="log"
+  >
+    <div
+      class="emotion-1"
+    >
+      message
+    </div>
+    <span
+      class="emotion-2"
+      role="button"
+      tabindex="0"
+    >
+      <svg
+        aria-label="system-close icon"
+        class="emotion-3"
+        data-cy="icon"
+        height="16"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <use
+          xlink:href="#system-close"
+        />
+      </svg>
+    </span>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`InfoBox renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #DADDE2;
   border-bottom-color: #828487;
   color: #1B2029;
@@ -54,38 +187,56 @@ exports[`InfoBox renders default 1`] = `
   cursor: pointer;
   line-height: 0;
   opacity: 0.5;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: #1B2029;
+}
+
+.emotion-3 use {
+  pointer-events: none;
 }
 
 <div
-  aria-live="polite"
-  className="emotion-0"
-  data-cy="infoBox"
-  role="log"
->
-  <div
-    className="emotion-1"
+    aria-live="polite"
+    class="emotion-0"
+    data-cy="infoBox"
+    role="log"
   >
-    message
-  </div>
-  <Memo(Clickable)
-    action={[Function]}
-    tabIndex={0}
-  >
-    <span
-      className="emotion-2"
+    <div
+      class="emotion-1"
     >
-      <Icon
-        color="#1B2029"
-        shape="system-close"
-        size="xs"
-      />
+      message
+    </div>
+    <span
+      class="emotion-2"
+      role="button"
+      tabindex="0"
+    >
+      <svg
+        aria-label="system-close icon"
+        class="emotion-3"
+        data-cy="icon"
+        height="16"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <use
+          xlink:href="#system-close"
+        />
+      </svg>
     </span>
-  </Memo(Clickable)>
-</div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`InfoBox renders with JSX message 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #DADDE2;
   border-bottom-color: #828487;
   color: #1B2029;
@@ -113,38 +264,58 @@ exports[`InfoBox renders with JSX message 1`] = `
   cursor: pointer;
   line-height: 0;
   opacity: 0.5;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: #1B2029;
+}
+
+.emotion-3 use {
+  pointer-events: none;
 }
 
 <div
-  aria-live="polite"
-  className="emotion-0"
-  data-cy="infoBox"
-  role="log"
->
-  <div
-    className="emotion-1"
+    aria-live="polite"
+    class="emotion-0"
+    data-cy="infoBox"
+    role="log"
   >
-    <MessageComponent />
-  </div>
-  <Memo(Clickable)
-    action={[Function]}
-    tabIndex={0}
-  >
-    <span
-      className="emotion-2"
+    <div
+      class="emotion-1"
     >
-      <Icon
-        color="#1B2029"
-        shape="system-close"
-        size="xs"
-      />
+      <span>
+        message
+      </span>
+    </div>
+    <span
+      class="emotion-2"
+      role="button"
+      tabindex="0"
+    >
+      <svg
+        aria-label="system-close icon"
+        class="emotion-3"
+        data-cy="icon"
+        height="16"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <use
+          xlink:href="#system-close"
+        />
+      </svg>
     </span>
-  </Memo(Clickable)>
-</div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`InfoBox renders with actions 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #DADDE2;
   border-bottom-color: #828487;
   color: #1B2029;
@@ -196,64 +367,100 @@ exports[`InfoBox renders with actions 1`] = `
 }
 
 .emotion-5 {
-  padding-left: 16px;
+  cursor: pointer;
 }
 
 .emotion-6 {
+  padding-left: 16px;
+}
+
+.emotion-8 {
   cursor: pointer;
   line-height: 0;
   opacity: 0.5;
+  cursor: pointer;
+}
+
+.emotion-9 {
+  vertical-align: middle;
+  fill: #1B2029;
+}
+
+.emotion-9 use {
+  pointer-events: none;
 }
 
 <div
-  aria-live="polite"
-  className="emotion-0"
-  data-cy="infoBox"
-  role="log"
->
-  <div
-    className="emotion-1"
+    aria-live="polite"
+    class="emotion-0"
+    data-cy="infoBox"
+    role="log"
   >
     <div
-      className="emotion-2"
+      class="emotion-1"
     >
-      message
-    </div>
-    <div
-      className="emotion-3"
-      data-cy="infoBox-actions"
-    >
-      <span
-        className="emotion-4"
+      <div
+        class="emotion-2"
       >
-        <PrimaryAction />
-      </span>
-      <span
-        className="emotion-5"
+        message
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="infoBox-actions"
       >
-        <SecondaryAction />
-      </span>
+        <span
+          class="emotion-4"
+        >
+          <span
+            class="emotion-5"
+            role="button"
+            style="cursor: pointer; color: rgb(125, 88, 255);"
+            tabindex="0"
+          >
+            Primary Action
+          </span>
+        </span>
+        <span
+          class="emotion-6"
+        >
+          <span
+            class="emotion-5"
+            role="button"
+            style="cursor: pointer; color: rgb(125, 88, 255);"
+            tabindex="0"
+          >
+            Secondary Action
+          </span>
+        </span>
+      </div>
     </div>
-  </div>
-  <Memo(Clickable)
-    action={[Function]}
-    tabIndex={0}
-  >
     <span
-      className="emotion-6"
+      class="emotion-8"
+      role="button"
+      tabindex="0"
     >
-      <Icon
-        color="#1B2029"
-        shape="system-close"
-        size="xs"
-      />
+      <svg
+        aria-label="system-close icon"
+        class="emotion-9"
+        data-cy="icon"
+        height="16"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <use
+          xlink:href="#system-close"
+        />
+      </svg>
     </span>
-  </Memo(Clickable)>
-</div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`InfoBox renders without dismiss button 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #DADDE2;
   border-bottom-color: #828487;
   color: #1B2029;
@@ -278,15 +485,16 @@ exports[`InfoBox renders without dismiss button 1`] = `
 }
 
 <div
-  aria-live="polite"
-  className="emotion-0"
-  data-cy="infoBox"
-  role="log"
->
-  <div
-    className="emotion-1"
+    aria-live="polite"
+    class="emotion-0"
+    data-cy="infoBox"
+    role="log"
   >
-    message
+    <div
+      class="emotion-1"
+    >
+      message
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

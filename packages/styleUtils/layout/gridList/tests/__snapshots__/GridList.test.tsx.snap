@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GridList renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: grid;
   grid-gap: 16px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -14,20 +15,22 @@ exports[`GridList renders default 1`] = `
 }
 
 <ul
-  className="emotion-0"
-  data-cy="gridList"
->
-  <li>
-    list item
-  </li>
-  <li>
-    list item
-  </li>
-</ul>
+    class="emotion-0"
+    data-cy="gridList"
+  >
+    <li>
+      list item
+    </li>
+    <li>
+      list item
+    </li>
+  </ul>
+</DocumentFragment>
 `;
 
 exports[`GridList renders with all props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: grid;
   grid-gap: 24px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -40,20 +43,22 @@ exports[`GridList renders with all props 1`] = `
 }
 
 <ol
-  className="emotion-0"
-  data-cy="gridList"
->
-  <li>
-    list item
-  </li>
-  <li>
-    list item
-  </li>
-</ol>
+    class="emotion-0"
+    data-cy="gridList"
+  >
+    <li>
+      list item
+    </li>
+    <li>
+      list item
+    </li>
+  </ol>
+</DocumentFragment>
 `;
 
 exports[`GridList renders with responsive props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: grid;
   list-style: none;
   margin-left: 0;
@@ -88,14 +93,15 @@ exports[`GridList renders with responsive props 1`] = `
 }
 
 <ul
-  className="emotion-0"
-  data-cy="gridList"
->
-  <li>
-    list item
-  </li>
-  <li>
-    list item
-  </li>
-</ul>
+    class="emotion-0"
+    data-cy="gridList"
+  >
+    <li>
+      list item
+    </li>
+    <li>
+      list item
+    </li>
+  </ul>
+</DocumentFragment>
 `;

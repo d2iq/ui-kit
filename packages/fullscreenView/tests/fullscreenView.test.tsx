@@ -1,7 +1,6 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 import FullscreenView from "../components/FullscreenView";
 import { PrimaryButton } from "../../button";
 
@@ -10,7 +9,7 @@ expect.addSnapshotSerializer(createSerializer());
 describe("FullscreenView", () => {
   it("renders FullscreenView", () => {
     const closeAction = jest.fn();
-    const component = mount(
+    const { asFragment } = render(
       <FullscreenView
         onClose={closeAction}
         ctaButton={<PrimaryButton>CTA</PrimaryButton>}
@@ -20,6 +19,6 @@ describe("FullscreenView", () => {
         <div tabIndex={0}>I am modal content</div>
       </FullscreenView>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

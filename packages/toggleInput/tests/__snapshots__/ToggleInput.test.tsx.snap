@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ToggleInput renders a checkbox input type 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,58 +91,44 @@ exports[`ToggleInput renders a checkbox input type 1`] = `
   padding-left: 12px;
 }
 
-<ForwardRef
-  appearance="standard"
-  id="defaultId"
-  inputLabel="Sample label"
-  inputType="checkbox"
-  showInputLabel={true}
-  value="default"
-  vertAlign="center"
->
-  <Memo(FormFieldWrapper)
-    id="defaultId"
+<div
+    class="emotion-0"
+    data-cy="checkboxInput"
   >
-    <div
-      className="emotion-0"
-      data-cy="checkboxInput"
+    <label
+      class="emotion-1"
+      for="defaultId"
     >
-      <label
-        className="emotion-1"
-        htmlFor="defaultId"
+      <div
+        class="emotion-2"
       >
         <div
-          className="emotion-2"
+          class="emotion-3"
         >
-          <div
-            className="emotion-3"
-          >
-            <input
-              aria-describedby=""
-              aria-invalid={false}
-              className="emotion-4"
-              data-cy="checkboxInput-input"
-              id="defaultId"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              type="checkbox"
-              value="default"
-            />
-          </div>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="checkboxInput-input"
+            id="defaultId"
+            type="checkbox"
+            value="default"
+          />
         </div>
-        <div
-          className="emotion-5"
-        >
-          Sample label
-        </div>
-      </label>
-    </div>
-  </Memo(FormFieldWrapper)>
-</ForwardRef>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        Sample label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ToggleInput renders a radio input type 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -230,58 +217,44 @@ exports[`ToggleInput renders a radio input type 1`] = `
   padding-left: 12px;
 }
 
-<ForwardRef
-  appearance="standard"
-  id="defaultId"
-  inputLabel="Sample label"
-  inputType="radio"
-  showInputLabel={true}
-  value="default"
-  vertAlign="center"
->
-  <Memo(FormFieldWrapper)
-    id="defaultId"
+<div
+    class="emotion-0"
+    data-cy="radioInput"
   >
-    <div
-      className="emotion-0"
-      data-cy="radioInput"
+    <label
+      class="emotion-1"
+      for="defaultId"
     >
-      <label
-        className="emotion-1"
-        htmlFor="defaultId"
+      <div
+        class="emotion-2"
       >
         <div
-          className="emotion-2"
+          class="emotion-3"
         >
-          <div
-            className="emotion-3"
-          >
-            <input
-              aria-describedby=""
-              aria-invalid={false}
-              className="emotion-4"
-              data-cy="radioInput-input"
-              id="defaultId"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              type="radio"
-              value="default"
-            />
-          </div>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="radioInput-input"
+            id="defaultId"
+            type="radio"
+            value="default"
+          />
         </div>
-        <div
-          className="emotion-5"
-        >
-          Sample label
-        </div>
-      </label>
-    </div>
-  </Memo(FormFieldWrapper)>
-</ForwardRef>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        Sample label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ToggleInput renders all appearances 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -370,58 +343,44 @@ exports[`ToggleInput renders all appearances 1`] = `
   padding-left: 12px;
 }
 
-<ForwardRef
-  appearance="standard"
-  id="defaultId"
-  inputLabel="Sample label"
-  inputType="checkbox"
-  showInputLabel={true}
-  value="default"
-  vertAlign="center"
->
-  <Memo(FormFieldWrapper)
-    id="defaultId"
+<div
+    class="emotion-0"
+    data-cy="checkboxInput"
   >
-    <div
-      className="emotion-0"
-      data-cy="checkboxInput"
+    <label
+      class="emotion-1"
+      for="defaultId"
     >
-      <label
-        className="emotion-1"
-        htmlFor="defaultId"
+      <div
+        class="emotion-2"
       >
         <div
-          className="emotion-2"
+          class="emotion-3"
         >
-          <div
-            className="emotion-3"
-          >
-            <input
-              aria-describedby=""
-              aria-invalid={false}
-              className="emotion-4"
-              data-cy="checkboxInput-input"
-              id="defaultId"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              type="checkbox"
-              value="default"
-            />
-          </div>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="checkboxInput-input"
+            id="defaultId"
+            type="checkbox"
+            value="default"
+          />
         </div>
-        <div
-          className="emotion-5"
-        >
-          Sample label
-        </div>
-      </label>
-    </div>
-  </Memo(FormFieldWrapper)>
-</ForwardRef>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        Sample label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ToggleInput renders all appearances 2`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -512,58 +471,44 @@ exports[`ToggleInput renders all appearances 2`] = `
   fill: var(--themeError, #EB293A);
 }
 
-<ForwardRef
-  appearance="error"
-  id="defaultId"
-  inputLabel="Sample label"
-  inputType="checkbox"
-  showInputLabel={true}
-  value="default"
-  vertAlign="center"
->
-  <Memo(FormFieldWrapper)
-    id="defaultId"
+<div
+    class="emotion-0"
+    data-cy="checkboxInput checkboxInput.error"
   >
-    <div
-      className="emotion-0"
-      data-cy="checkboxInput checkboxInput.error"
+    <label
+      class="emotion-1"
+      for="defaultId"
     >
-      <label
-        className="emotion-1"
-        htmlFor="defaultId"
+      <div
+        class="emotion-2"
       >
         <div
-          className="emotion-2"
+          class="emotion-3"
         >
-          <div
-            className="emotion-3"
-          >
-            <input
-              aria-describedby=""
-              aria-invalid={false}
-              className="emotion-4"
-              data-cy="checkboxInput-input checkboxInput-input.error"
-              id="defaultId"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              type="checkbox"
-              value="default"
-            />
-          </div>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="checkboxInput-input checkboxInput-input.error"
+            id="defaultId"
+            type="checkbox"
+            value="default"
+          />
         </div>
-        <div
-          className="emotion-5"
-        >
-          Sample label
-        </div>
-      </label>
-    </div>
-  </Memo(FormFieldWrapper)>
-</ForwardRef>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        Sample label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ToggleInput renders all appearances 3`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -654,52 +599,37 @@ exports[`ToggleInput renders all appearances 3`] = `
   fill: var(--themeSuccess, #14C684);
 }
 
-<ForwardRef
-  appearance="success"
-  id="defaultId"
-  inputLabel="Sample label"
-  inputType="checkbox"
-  showInputLabel={true}
-  value="default"
-  vertAlign="center"
->
-  <Memo(FormFieldWrapper)
-    id="defaultId"
+<div
+    class="emotion-0"
+    data-cy="checkboxInput checkboxInput.success"
   >
-    <div
-      className="emotion-0"
-      data-cy="checkboxInput checkboxInput.success"
+    <label
+      class="emotion-1"
+      for="defaultId"
     >
-      <label
-        className="emotion-1"
-        htmlFor="defaultId"
+      <div
+        class="emotion-2"
       >
         <div
-          className="emotion-2"
+          class="emotion-3"
         >
-          <div
-            className="emotion-3"
-          >
-            <input
-              aria-describedby=""
-              aria-invalid={false}
-              className="emotion-4"
-              data-cy="checkboxInput-input checkboxInput-input.success"
-              id="defaultId"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              type="checkbox"
-              value="default"
-            />
-          </div>
+          <input
+            aria-describedby=""
+            aria-invalid="false"
+            class="emotion-4"
+            data-cy="checkboxInput-input checkboxInput-input.success"
+            id="defaultId"
+            type="checkbox"
+            value="default"
+          />
         </div>
-        <div
-          className="emotion-5"
-        >
-          Sample label
-        </div>
-      </label>
-    </div>
-  </Memo(FormFieldWrapper)>
-</ForwardRef>
+      </div>
+      <div
+        class="emotion-5"
+      >
+        Sample label
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;

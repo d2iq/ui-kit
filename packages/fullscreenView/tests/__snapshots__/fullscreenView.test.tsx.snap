@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FullscreenView renders FullscreenView 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   height: 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -73,6 +74,33 @@ exports[`FullscreenView renders FullscreenView 1`] = `
 }
 
 .emotion-5 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-5:focus {
+  background-color: transparent;
+}
+
+.emotion-5:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-5:focus:after {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+}
+
+.emotion-6 {
   background: none;
   border: 0;
   color: inherit;
@@ -91,28 +119,28 @@ exports[`FullscreenView renders FullscreenView 1`] = `
   font-weight: 500;
 }
 
-.emotion-5::-moz-focus-inner {
+.emotion-6::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-5:hover {
+.emotion-6:hover {
   color: #704fe5;
   fill: #704fe5;
 }
 
-.emotion-5:active {
+.emotion-6:active {
   color: #6446cc;
   fill: #6446cc;
 }
 
-.emotion-5[href],
-.emotion-5[href]:visited {
+.emotion-6[href],
+.emotion-6[href]:visited {
   color: var(--themeTextColorInteractive, #7D58FF);
   fill: var(--themeTextColorInteractive, #7D58FF);
 }
 
-.emotion-6 {
+.emotion-7 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -125,7 +153,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
   width: auto;
 }
 
-.emotion-7 {
+.emotion-8 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
@@ -134,7 +162,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
   font-weight: 400;
 }
 
-.emotion-8 {
+.emotion-9 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
@@ -144,7 +172,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
   fill: #76797E;
 }
 
-.emotion-9 {
+.emotion-10 {
   text-align: right;
   box-sizing: border-box;
   -webkit-flex-basis: 0;
@@ -158,7 +186,27 @@ exports[`FullscreenView renders FullscreenView 1`] = `
   width: auto;
 }
 
-.emotion-10 {
+.emotion-11 {
+  outline: none;
+  position: relative;
+}
+
+.emotion-11:focus {
+  background-color: #704fe5;
+}
+
+.emotion-11:focus:after {
+  border: 2px solid #704fe5;
+  border-radius: 6px;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+}
+
+.emotion-12 {
   background: none;
   border: 0;
   color: inherit;
@@ -180,26 +228,26 @@ exports[`FullscreenView renders FullscreenView 1`] = `
   font-weight: 500;
 }
 
-.emotion-10::-moz-focus-inner {
+.emotion-12::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-10[href],
-.emotion-10[href]:visited {
+.emotion-12[href],
+.emotion-12[href]:visited {
   color: #FFFFFF;
   fill: #FFFFFF;
 }
 
-.emotion-10:hover {
+.emotion-12:hover {
   background-color: #704fe5;
 }
 
-.emotion-10:active {
+.emotion-12:active {
   background-color: #6446cc;
 }
 
-.emotion-11 {
+.emotion-13 {
   box-sizing: border-box;
   position: relative;
   overflow: auto;
@@ -216,120 +264,76 @@ exports[`FullscreenView renders FullscreenView 1`] = `
   padding: 32px;
 }
 
-<Memo()
-  closeText="Close"
-  ctaButton={
-    <PrimaryButton>
-      CTA
-    </PrimaryButton>
-  }
-  onClose={[MockFunction]}
-  title="Title"
->
-  <div
-    className="emotion-0"
+<div
+    class="emotion-0"
   >
     <div
-      className="emotion-1"
+      class="emotion-1"
       data-cy="fullscreenView-header"
     >
       <div
-        className="emotion-2"
+        class="emotion-2"
       >
-        <FullscreenModalHeader
-          closeText="Close"
-          ctaButton={
-            <PrimaryButton>
-              CTA
-            </PrimaryButton>
-          }
-          onClose={[MockFunction]}
-          title="Title"
+        <div
+          class="emotion-3"
         >
           <div
-            className="emotion-3"
+            class="emotion-4"
           >
-            <div
-              className="emotion-4"
+            <button
+              class="emotion-5 emotion-6"
+              data-cy="secondaryButton"
+              tabindex="0"
+              type="button"
             >
-              <SecondaryButton
-                onClick={[MockFunction]}
+              <span
+                class=""
               >
-                <ButtonBase
-                  appearance="secondary"
-                  data-cy="secondaryButton"
-                  onClick={[MockFunction]}
-                >
-                  <Memo(FocusStyleManager)
-                    focusEnabledClass="css-1h85cd2"
-                  >
-                    <button
-                      className="emotion-5"
-                      data-cy="secondaryButton"
-                      onClick={[Function]}
-                      tabIndex={0}
-                      type="button"
-                    >
-                      <span>
-                        Close
-                      </span>
-                    </button>
-                  </Memo(FocusStyleManager)>
-                </ButtonBase>
-              </SecondaryButton>
-            </div>
-            <div
-              className="emotion-6"
-            >
-              <h2
-                className="emotion-7"
-              >
-                Title
-              </h2>
-              <h3
-                className="emotion-8"
-              />
-            </div>
-            <div
-              className="emotion-9"
-            >
-              <PrimaryButton>
-                <ButtonBase
-                  appearance="primary"
-                  data-cy="primaryButton"
-                >
-                  <Memo(FocusStyleManager)
-                    focusEnabledClass="css-xcotv6"
-                  >
-                    <button
-                      className="emotion-10"
-                      data-cy="primaryButton"
-                      onClick={[Function]}
-                      tabIndex={0}
-                      type="button"
-                    >
-                      <span>
-                        CTA
-                      </span>
-                    </button>
-                  </Memo(FocusStyleManager)>
-                </ButtonBase>
-              </PrimaryButton>
-            </div>
+                Close
+              </span>
+            </button>
           </div>
-        </FullscreenModalHeader>
+          <div
+            class="emotion-7"
+          >
+            <h2
+              class="emotion-8"
+            >
+              Title
+            </h2>
+            <h3
+              class="emotion-9"
+            />
+          </div>
+          <div
+            class="emotion-10"
+          >
+            <button
+              class="emotion-11 emotion-12"
+              data-cy="primaryButton"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class=""
+              >
+                CTA
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <div
-      className="emotion-11"
+      class="emotion-13"
       data-cy="fullscreenView-content"
     >
       <div
-        tabIndex={0}
+        tabindex="0"
       >
         I am modal content
       </div>
     </div>
   </div>
-</Memo()>
+</DocumentFragment>
 `;

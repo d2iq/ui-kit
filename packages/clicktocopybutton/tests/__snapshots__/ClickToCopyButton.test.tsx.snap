@@ -1,172 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClickToCopyButton renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-repeat: no-repeat;
   display: inline-block;
 }
 
 .emotion-1 {
+  background-repeat: no-repeat;
+  display: inline-block;
   cursor: pointer;
 }
 
 .emotion-2 {
-  background-repeat: no-repeat;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.emotion-3 {
   vertical-align: middle;
   fill: currentColor;
 }
 
-.emotion-3 use {
+.emotion-2 use {
   pointer-events: none;
 }
 
-<ClickToCopyButton
-  textToCopy="text to copy"
->
-  <ClickToCopy
-    textToCopy="text to copy"
+<div
+    class="emotion-0"
+    data-cy="box"
   >
-    <Box
-      bgImageOptions={
-        {
-          "position": undefined,
-          "repeat": undefined,
-          "size": undefined,
-        }
-      }
-      data-cy="box"
-      display="inline-block"
-      tag="div"
+    <span
+      data-cy="tooltip"
     >
-      <div
-        className="emotion-0"
-        data-cy="box"
-      >
-        <Tooltip
-          id="copyTooltip1"
-          isOpen={false}
-          suppress={true}
-          trigger={
-            <Memo(Clickable)
-              action={[Function]}
-              tabIndex={0}
-            >
-              <Box
-                bgImageOptions={
-                  {
-                    "position": undefined,
-                    "repeat": undefined,
-                    "size": undefined,
-                  }
-                }
-                data-cy="box"
-                display="inline-block"
-                tag="span"
-              >
-                <Icon
-                  shape="system-clipboard"
-                />
-              </Box>
-            </Memo(Clickable)>
-          }
+      <div>
+        <span
+          aria-describedby="copyTooltip1"
+          class="emotion-1"
+          data-cy="box"
+          role="button"
+          tabindex="0"
         >
-          <span
-            data-cy="tooltip"
-            onBlur={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
+          <svg
+            aria-label="system-clipboard icon"
+            class="emotion-2"
+            data-cy="icon"
+            height="24"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 24 24"
+            width="24"
           >
-            <Dropdownable
-              dropdown={
-                <Memo
-                  id="copyTooltip1"
-                  isOpen={false}
-                  maxWidth={300}
-                >
-                  Copied to clipboard
-                </Memo>
-              }
-              isOpen={false}
-              preferredDirections={
-                [
-                  "top",
-                  "top-start",
-                  "top-end",
-                  "bottom",
-                  "bottom-start",
-                  "bottom-end",
-                ]
-              }
-            >
-              <div>
-                <Memo(Clickable)
-                  action={[Function]}
-                  tabIndex={0}
-                >
-                  <Box
-                    bgImageOptions={
-                      {
-                        "position": undefined,
-                        "repeat": undefined,
-                        "size": undefined,
-                      }
-                    }
-                    className="emotion-1"
-                    data-cy="box"
-                    display="inline-block"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                    tag="span"
-                  >
-                    <span
-                      className="emotion-2"
-                      data-cy="box"
-                      onClick={[Function]}
-                      onKeyPress={[Function]}
-                      role="button"
-                      tabIndex={0}
-                    >
-                      <Icon
-                        shape="system-clipboard"
-                      >
-                        <svg
-                          aria-label="system-clipboard icon"
-                          className="emotion-3"
-                          data-cy="icon"
-                          height={24}
-                          preserveAspectRatio="xMinYMin meet"
-                          role="img"
-                          viewBox="0 0 24 24"
-                          width={24}
-                        >
-                          <use
-                            xlinkHref="#system-clipboard"
-                          />
-                        </svg>
-                      </Icon>
-                    </span>
-                  </Box>
-                </Memo(Clickable)>
-              </div>
-            </Dropdownable>
-          </span>
-        </Tooltip>
+            <use
+              xlink:href="#system-clipboard"
+            />
+          </svg>
+        </span>
       </div>
-    </Box>
-  </ClickToCopy>
-</ClickToCopyButton>
+    </span>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ClickToCopyButton renders with custom children 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background-repeat: no-repeat;
   display: inline-block;
 }
@@ -175,95 +69,24 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
   cursor: pointer;
 }
 
-<ClickToCopyButton
-  textToCopy="text to copy"
->
-  <ClickToCopy
-    textToCopy="text to copy"
+<div
+    class="emotion-0"
+    data-cy="box"
   >
-    <Box
-      bgImageOptions={
-        {
-          "position": undefined,
-          "repeat": undefined,
-          "size": undefined,
-        }
-      }
-      data-cy="box"
-      display="inline-block"
-      tag="div"
+    <span
+      data-cy="tooltip"
     >
-      <div
-        className="emotion-0"
-        data-cy="box"
-      >
-        <Tooltip
-          id="copyTooltip2"
-          isOpen={false}
-          suppress={true}
-          trigger={
-            <Memo(Clickable)
-              action={[Function]}
-              tabIndex={0}
-            >
-              <div
-                className="emotion-0"
-              >
-                custom children
-              </div>
-            </Memo(Clickable)>
-          }
+      <div>
+        <div
+          aria-describedby="copyTooltip2"
+          class="emotion-1"
+          role="button"
+          tabindex="0"
         >
-          <span
-            data-cy="tooltip"
-            onBlur={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-          >
-            <Dropdownable
-              dropdown={
-                <Memo
-                  id="copyTooltip2"
-                  isOpen={false}
-                  maxWidth={300}
-                >
-                  Copied to clipboard
-                </Memo>
-              }
-              isOpen={false}
-              preferredDirections={
-                [
-                  "top",
-                  "top-start",
-                  "top-end",
-                  "bottom",
-                  "bottom-start",
-                  "bottom-end",
-                ]
-              }
-            >
-              <div>
-                <Memo(Clickable)
-                  action={[Function]}
-                  tabIndex={0}
-                >
-                  <div
-                    className="emotion-1"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    custom children
-                  </div>
-                </Memo(Clickable)>
-              </div>
-            </Dropdownable>
-          </span>
-        </Tooltip>
+          custom children
+        </div>
       </div>
-    </Box>
-  </ClickToCopy>
-</ClickToCopyButton>
+    </span>
+  </div>
+</DocumentFragment>
 `;

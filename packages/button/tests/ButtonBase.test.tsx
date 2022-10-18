@@ -4,7 +4,7 @@ import ButtonBase, { ButtonAppearances } from "../components/ButtonBase";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { createSerializer } from "@emotion/jest";
 import userEvent from "@testing-library/user-event";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 
 expect.addSnapshotSerializer(createSerializer());
 
@@ -46,7 +46,7 @@ describe("ButtonBase", () => {
   it("does not call onClick prop when disabled", () => {
     const anotherFn = jest.fn();
 
-    render(
+    const { getByTestId } = render(
       <ButtonBase
         appearance={ButtonAppearances.Standard}
         disabled={true}
@@ -57,8 +57,7 @@ describe("ButtonBase", () => {
       </ButtonBase>
     );
     expect(anotherFn).not.toHaveBeenCalled();
-    const element = screen.getByTestId("button");
-    fireEvent.click(element);
+    fireEvent.click(getByTestId("button"));
     expect(anotherFn).not.toHaveBeenCalled();
   });
 });
