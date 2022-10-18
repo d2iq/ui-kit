@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ToggleContent renders a div wrapping the content passed as props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   border-bottom: 1px dashed;
   cursor: pointer;
   padding-bottom: 1px;
@@ -9,10 +10,12 @@ exports[`ToggleContent renders a div wrapping the content passed as props 1`] = 
 }
 
 <span
-  class="emotion-0"
-  role="button"
-  tabindex="0"
->
-  Hello
-</span>
+    class="emotion-0"
+    data-cy="toggleContent"
+    role="button"
+    tabindex="0"
+  >
+    Hello
+  </span>
+</DocumentFragment>
 `;

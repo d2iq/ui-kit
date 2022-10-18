@@ -1,9 +1,8 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
-import { mount, render } from "enzyme";
-import toJson from "enzyme-to-json";
+import { render } from "@testing-library/react";
 
-import { ToggleContent } from "../";
+import { ToggleContent } from "..";
 
 expect.addSnapshotSerializer(createSerializer());
 
@@ -20,34 +19,31 @@ describe("ToggleContent", () => {
   });
 
   it("renders a div wrapping the content passed as props", () => {
-    expect(
-      toJson(
-        render(
-          <ToggleContent tabIndex="0" contentOn="Hello" contentOff="Bye" />
-        )
-      )
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <ToggleContent tabIndex="0" contentOn="Hello" contentOff="Bye" />
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("string content", () => {
-    const wrapper = mount(<ToggleContent contentOn="Hello" contentOff="Bye" />);
+    const { getByTestId } = render(
+      <ToggleContent contentOn="Hello" contentOff="Bye" />
+    );
+    const toggleElement = getByTestId("toggleContent");
 
-    expect(wrapper.last().children().last().text()).toEqual("Hello");
-
-    wrapper.simulate("click");
-
-    expect(wrapper.last().children().last().text()).toEqual("Bye");
+    expect(toggleElement).toHaveTextContent("Hello");
+    toggleElement.click();
+    expect(toggleElement).toHaveTextContent("Bye");
   });
 
   it("component content", () => {
-    const wrapper = mount(
+    const { getByTestId } = render(
       <ToggleContent contentOn={primary()} contentOff={secondary()} />
     );
+    const toggleElement = getByTestId("toggleContent");
 
-    expect(wrapper.last().children().last().text()).toEqual("primary");
-
-    wrapper.simulate("click");
-
-    expect(wrapper.last().children().last().text()).toEqual("secondary");
+    expect(toggleElement).toHaveTextContent("primary");
+    toggleElement.click();
+    expect(toggleElement).toHaveTextContent("secondary");
   });
 });

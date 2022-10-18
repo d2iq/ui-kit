@@ -7,51 +7,45 @@ export interface ToggleContentState {
 }
 
 export interface ToggleContentProps {
+  /**
+   * Content to be rendered when isOn is true.
+   */
   contentOn: JSX.Element | string;
+  /**
+   * Content to be rendered when isOn is false.
+   */
   contentOff: JSX.Element | string;
+  /**
+   * The tabIndex is passed down and is the same as the native tabIndex.
+   */
   tabIndex?: string | number;
+  /**
+   * Human-readable selector used for writing tests.
+   */
+  "data-cy"?: string;
 }
 
-export class ToggleContent extends React.PureComponent<
-  ToggleContentProps,
-  ToggleContentState
-> {
-  static defaultProps = {
-    tabIndex: -1
-  };
+const ToggleContent = ({
+  tabIndex = "-1",
+  contentOn,
+  contentOff,
+  "data-cy": dataCy = "toggleContent"
+}: ToggleContentProps) => {
+  const [isOn, setIsOn] = React.useState(true);
+  const content = isOn ? contentOn : contentOff;
 
-  constructor(props) {
-    super(props);
-
-    this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      isOn: true
-    };
-  }
-
-  public handleClick(): void {
+  const handleClick = () => {
     const windowSelection = window.getSelection() as Selection;
     if (!windowSelection.toString()) {
-      this.setState({
-        isOn: !this.state.isOn
-      });
+      setIsOn(!isOn);
     }
-  }
+  };
 
-  public render() {
-    const { tabIndex, contentOn, contentOff } = this.props;
-    let content = contentOn;
+  return (
+    <Clickable tabIndex={tabIndex} action={handleClick} data-cy={dataCy}>
+      <span className={style}>{content}</span>
+    </Clickable>
+  );
+};
 
-    if (!this.state.isOn) {
-      content = contentOff;
-    }
-
-    return (
-      <Clickable tabIndex={tabIndex} action={this.handleClick}>
-        <span className={style}>{content}</span>
-      </Clickable>
-    );
-  }
-}
-
-export default ToggleContent;
+export default React.memo(ToggleContent);

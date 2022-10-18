@@ -1,33 +1,33 @@
 import * as React from "react";
-import { ToggleContent } from "../../index";
+import { Card, ToggleContent } from "../../index";
 import { Story, Meta } from "@storybook/react";
 import { ToggleContentProps } from "../components/toggleContent";
 
-const primary = () => <div>Primary Component</div>;
-const secondary = () => <div>Secondary Component</div>;
+const ToggleComponent = ({ componentName }): JSX.Element => {
+  return (
+    <div
+      style={{
+        maxWidth: "25rem",
+        textAlign: "center"
+      }}
+    >
+      <Card>{componentName}</Card>
+    </div>
+  );
+};
 
 export default {
-  title: "Utils/Toggle",
-  component: ToggleContent,
-  argTypes: {
-    // Turning off these controls until storybook/controls object error is resolved.
-    contentOn: {
-      control: { disable: true }
-    },
-    contentOff: {
-      control: { disable: true }
-    }
-  }
+  title: "Utils/ToggleContent",
+  component: ToggleContent
 } as Meta;
 
-const Template: Story<ToggleContentProps> = args => (
-  <ToggleContent contentOn="Hi" contentOff="Bye" {...args} />
-);
+const Template: Story<ToggleContentProps> = args => <ToggleContent {...args} />;
 
 export const Default = Template.bind({});
+Default.args = { contentOn: "On", contentOff: "Off" };
 
-export const ToggleComponent = Template.bind({});
-ToggleComponent.args = {
-  contentOn: primary(),
-  contentOff: secondary()
+export const ToggleComponents = Template.bind({});
+ToggleComponents.args = {
+  contentOn: <ToggleComponent componentName="Primary Component" />,
+  contentOff: <ToggleComponent componentName="Secondary Component" />
 };
