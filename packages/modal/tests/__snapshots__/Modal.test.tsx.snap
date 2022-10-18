@@ -5587,7 +5587,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                             className="emotion-3"
                             data-cy="fullscreenModal"
                           >
-                            <Memo()
+                            <Memo(FullscreenView)
                               closeText="Close"
                               ctaButton={
                                 <PrimaryButton>
@@ -5703,7 +5703,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                   </div>
                                 </div>
                               </div>
-                            </Memo()>
+                            </Memo(FullscreenView)>
                           </div>
                         </ModalContents>
                       </div>
