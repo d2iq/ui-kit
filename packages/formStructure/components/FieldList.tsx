@@ -72,85 +72,80 @@ interface FieldListRowProps
 const isRowDisabled = (rowIndex, disabledRows) =>
   disabledRows && disabledRows.includes(rowIndex);
 
-const FieldListRow = React.memo(
-  ({
-    columns,
-    data,
-    rowIndex,
-    disabledRows,
-    isLastRow,
-    pathToUniqueKey,
-    rowId
-  }: FieldListRowProps) => {
-    const fieldListContext = React.useContext(FieldListContext);
-    const addEmptyRow = (e: React.KeyboardEvent) => {
-      const rowHasData = Object.keys(data || {}).filter(
-        dataKey => Boolean(data[dataKey]) && dataKey !== pathToUniqueKey
-      ).length;
-      if (e.key === "Tab" && isLastRow && rowHasData) {
-        fieldListContext?.addListItem(rowId);
-      }
-    };
+const FieldListRow = ({
+  columns,
+  data,
+  rowIndex,
+  disabledRows,
+  isLastRow,
+  pathToUniqueKey,
+  rowId
+}: FieldListRowProps) => {
+  const fieldListContext = React.useContext(FieldListContext);
+  const addEmptyRow = (e: React.KeyboardEvent) => {
+    const rowHasData = Object.keys(data || {}).filter(
+      dataKey => Boolean(data[dataKey]) && dataKey !== pathToUniqueKey
+    ).length;
+    if (e.key === "Tab" && isLastRow && rowHasData) {
+      fieldListContext?.addListItem(rowId);
+    }
+  };
 
-    const handleRowClick = () => {
-      fieldListContext?.removeListItem(rowIndex);
-    };
+  const handleRowClick = () => {
+    fieldListContext?.removeListItem(rowIndex);
+  };
 
-    return (
-      <div className={getFieldRowGrid(columns, iconSizes[REMOVE_ICON_SIZE])}>
-        {columns.map((col, i) => {
-          return (
-            <div data-cy="fieldList-cell" key={i} className={fieldWrapper}>
-              {col.type === FieldListColumn &&
-                col.props.children({
-                  ...(col.props.onChange && col.props.pathToValue
-                    ? {
-                        onChange: col.props.onChange(
-                          rowIndex,
-                          col.props.pathToValue
-                        )
-                      }
-                    : {}),
-                  fieldData: data,
-                  rowIndex,
-                  value: findNestedPropertyInObject(
-                    data,
-                    col.props.pathToValue
-                  ),
-                  disabled: isRowDisabled(rowIndex, disabledRows),
-                  defaultProps: {
-                    key: `${col.props.pathToValue}-${rowIndex}`,
-                    id: `${col.props.pathToValue}-${rowIndex}`,
-                    inputLabel: `${col.props.header} ${rowIndex}`
-                  }
-                })}
-              {col.type === FieldListColumnSeparator && col.props.children}
-            </div>
-          );
-        })}
-        {/* this wrapper div is needed to fix a vertical centering bug in Firefox with <button> elements that are children of display: grid */}
-        <div>
-          <ResetButton
-            onClick={handleRowClick}
-            disabled={isRowDisabled(rowIndex, disabledRows)}
-            onKeyUp={addEmptyRow}
-            data-cy="fieldList-removeButton"
-          >
-            <Icon
-              shape={SystemIcons.Close}
-              size={REMOVE_ICON_SIZE}
-              color={
-                isRowDisabled(rowIndex, disabledRows)
-                  ? themeTextColorDisabled
-                  : themeTextColorPrimary
-              }
-            />
-          </ResetButton>
-        </div>
+  return (
+    <div className={getFieldRowGrid(columns, iconSizes[REMOVE_ICON_SIZE])}>
+      {columns.map((col, i) => {
+        return (
+          <div data-cy="fieldList-cell" key={i} className={fieldWrapper}>
+            {col.type === FieldListColumn &&
+              col.props.children({
+                ...(col.props.onChange && col.props.pathToValue
+                  ? {
+                      onChange: col.props.onChange(
+                        rowIndex,
+                        col.props.pathToValue
+                      )
+                    }
+                  : {}),
+                fieldData: data,
+                rowIndex,
+                value: findNestedPropertyInObject(data, col.props.pathToValue),
+                disabled: isRowDisabled(rowIndex, disabledRows),
+                defaultProps: {
+                  key: `${col.props.pathToValue}-${rowIndex}`,
+                  id: `${col.props.pathToValue}-${rowIndex}`,
+                  inputLabel: `${col.props.header} ${rowIndex}`
+                }
+              })}
+            {col.type === FieldListColumnSeparator && col.props.children}
+          </div>
+        );
+      })}
+      {/* this wrapper div is needed to fix a vertical centering bug in Firefox with <button> elements that are children of display: grid */}
+      <div>
+        <ResetButton
+          onClick={handleRowClick}
+          disabled={isRowDisabled(rowIndex, disabledRows)}
+          onKeyUp={addEmptyRow}
+          data-cy="fieldList-removeButton"
+        >
+          <Icon
+            shape={SystemIcons.Close}
+            size={REMOVE_ICON_SIZE}
+            color={
+              isRowDisabled(rowIndex, disabledRows)
+                ? themeTextColorDisabled
+                : themeTextColorPrimary
+            }
+          />
+        </ResetButton>
       </div>
-    );
-  }
-);
+    </div>
+  );
+};
 
 const FieldListHeader = ({ columns }: FieldListHeaderProps) => (
   <SpacingBox
@@ -258,4 +253,4 @@ const FieldList = ({
   );
 };
 
-export default FieldList;
+export default React.memo(FieldList);

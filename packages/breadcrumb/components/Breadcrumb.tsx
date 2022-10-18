@@ -18,7 +18,7 @@ function intersperse<A>(list: A[], sep: JSX.Element) {
   return Array.prototype.concat(...list.map(e => [sep, e])).slice(1);
 }
 
-const Breadcrumb = React.memo(({ children }: BreadcrumbProps) => {
+const Breadcrumb = ({ children }: BreadcrumbProps) => {
   const breadcrumbSeparator = <Icon shape={SystemIcons.CaretRight} size="xs" />;
   const crumbsArr = intersperse(
     React.Children.toArray(children),
@@ -40,6 +40,6 @@ const Breadcrumb = React.memo(({ children }: BreadcrumbProps) => {
       ))}
     </nav>
   );
-});
+};
 
-export default Breadcrumb;
+export default React.memo(Breadcrumb);

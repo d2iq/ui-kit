@@ -39,50 +39,48 @@ export interface SegmentedControlButtonProps {
   children?: React.ReactNode;
 }
 
-const SegmentedControlButton = React.memo(
-  ({
-    id = nextId("segmentedControlButton-"),
-    isActive,
-    onChange,
-    name,
-    value,
-    tooltipContent,
-    children
-  }: SegmentedControlButtonProps) => {
-    return (
-      <FocusStyleManager focusEnabledClass={staticKeyboardFocusClassname}>
-        <label
-          className={cx(segmentedControlButton, {
-            [segmentedControlButtonActive]: isActive
-          })}
-          data-cy="segmentedControlButton"
-          htmlFor={id}
-        >
-          <input
-            className={visuallyHidden}
-            id={id}
-            type="radio"
-            name={name}
-            value={value}
-            checked={isActive}
-            onChange={onChange}
-          />
-          {tooltipContent ? (
-            <Tooltip
-              id={`${id}-tooltip`}
-              trigger={
-                <div className={segmentedControlButtonInner}>{children}</div>
-              }
-            >
-              {tooltipContent}
-            </Tooltip>
-          ) : (
-            <div className={segmentedControlButtonInner}>{children}</div>
-          )}
-        </label>
-      </FocusStyleManager>
-    );
-  }
-);
+const SegmentedControlButton = ({
+  id = nextId("segmentedControlButton-"),
+  isActive,
+  onChange,
+  name,
+  value,
+  tooltipContent,
+  children
+}: SegmentedControlButtonProps) => {
+  return (
+    <FocusStyleManager focusEnabledClass={staticKeyboardFocusClassname}>
+      <label
+        className={cx(segmentedControlButton, {
+          [segmentedControlButtonActive]: isActive
+        })}
+        data-cy="segmentedControlButton"
+        htmlFor={id}
+      >
+        <input
+          className={visuallyHidden}
+          id={id}
+          type="radio"
+          name={name}
+          value={value}
+          checked={isActive}
+          onChange={onChange}
+        />
+        {tooltipContent ? (
+          <Tooltip
+            id={`${id}-tooltip`}
+            trigger={
+              <div className={segmentedControlButtonInner}>{children}</div>
+            }
+          >
+            {tooltipContent}
+          </Tooltip>
+        ) : (
+          <div className={segmentedControlButtonInner}>{children}</div>
+        )}
+      </label>
+    </FocusStyleManager>
+  );
+};
 
-export default SegmentedControlButton;
+export default React.memo(SegmentedControlButton);

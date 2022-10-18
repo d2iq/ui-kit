@@ -3104,7 +3104,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   padding: 32px;
 }
 
-<Memo()
+<Memo(FullscreenModal)
   closeText="Close"
   ctaButton={
     <PrimaryButton>
@@ -5732,7 +5732,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
       </ForwardRef>
     </Transition>
   </ModalBase>
-</Memo()>
+</Memo(FullscreenModal)>
 `;
 
 exports[`Modal ModalBase renders ModalBase 1`] = `

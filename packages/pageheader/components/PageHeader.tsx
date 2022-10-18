@@ -21,45 +21,47 @@ export interface PageHeaderProps {
 
 export const pageHeaderPaddingSize: SpaceSizes = "l";
 
-const PageHeader = React.memo(
-  ({ breadcrumbElements, actions = [], children }: PageHeaderProps) => {
-    const hasTabsChild = React.Children.toArray(children).some(
-      child => React.isValidElement(child) && child.type === PageHeaderTabs
-    );
+const PageHeader = ({
+  breadcrumbElements,
+  actions = [],
+  children
+}: PageHeaderProps) => {
+  const hasTabsChild = React.Children.toArray(children).some(
+    child => React.isValidElement(child) && child.type === PageHeaderTabs
+  );
 
-    return (
-      <div
-        className={cx(padding("all", pageHeaderPaddingSize), {
-          [border("bottom")]: !hasTabsChild,
-          [fillHeight]: hasTabsChild
-        })}
-      >
-        <div className={cx(flex({ align: "center" }))} data-cy="pageHeader">
-          <div className={flexItem("grow")}>
-            <Breadcrumb>{breadcrumbElements}</Breadcrumb>
-          </div>
-          <div className={flexItem("shrink")}>
-            <ul
-              className={cx(listReset, flex({ align: "center" }))}
-              data-cy="pageHeader-actions"
-            >
-              {actions.map((action, i) => {
-                return (
-                  <li
-                    key={action.key ? `${action.key}` : `action-${i}`}
-                    className={cx(padding("left", "s"), display("inherit"))}
-                  >
-                    {action}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+  return (
+    <div
+      className={cx(padding("all", pageHeaderPaddingSize), {
+        [border("bottom")]: !hasTabsChild,
+        [fillHeight]: hasTabsChild
+      })}
+    >
+      <div className={cx(flex({ align: "center" }))} data-cy="pageHeader">
+        <div className={flexItem("grow")}>
+          <Breadcrumb>{breadcrumbElements}</Breadcrumb>
         </div>
-        {children}
+        <div className={flexItem("shrink")}>
+          <ul
+            className={cx(listReset, flex({ align: "center" }))}
+            data-cy="pageHeader-actions"
+          >
+            {actions.map((action, i) => {
+              return (
+                <li
+                  key={action.key ? `${action.key}` : `action-${i}`}
+                  className={cx(padding("left", "s"), display("inherit"))}
+                >
+                  {action}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
-    );
-  }
-);
+      {children}
+    </div>
+  );
+};
 
-export default PageHeader;
+export default React.memo(PageHeader);

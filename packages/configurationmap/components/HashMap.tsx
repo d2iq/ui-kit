@@ -63,57 +63,55 @@ function formatValue(value, defaultValue) {
   return value;
 }
 
-const HashMap = React.memo(
-  ({
-    hash,
-    headline,
-    headingLevel = 1,
-    renderKeys,
-    defaultValue = "-"
-  }: HashMapProps) => {
-    if (!hash || Object.keys(hash).length === 0) {
-      return null;
-    }
-
-    return (
-      <ConfigurationMapSection>
-        {headline && (
-          <ConfigurationMapHeading headingLevel={headingLevel}>
-            {headline}
-          </ConfigurationMapHeading>
-        )}
-        {Object.entries(hash).map(([key, value]) => {
-          if (value && isHashMap(value)) {
-            return (
-              <HashMap
-                hash={value as Hash}
-                headingLevel={Math.min(headingLevel + 1, 6) as HeadingLevel}
-                key={`hash-map-${key}`}
-                headline={key}
-              />
-            );
-          }
-
-          // I think this is verifying that it is an object
-          if (
-            renderKeys &&
-            Object.prototype.hasOwnProperty.call(renderKeys, key)
-          ) {
-            key = renderKeys[key];
-          }
-
-          return (
-            <ConfigurationMapRow key={`hash-map-value-${key}`}>
-              <ConfigurationMapLabel>{key}</ConfigurationMapLabel>
-              <ConfigurationMapValue>
-                {formatValue(value, defaultValue)}
-              </ConfigurationMapValue>
-            </ConfigurationMapRow>
-          );
-        })}
-      </ConfigurationMapSection>
-    );
+const HashMap = ({
+  hash,
+  headline,
+  headingLevel = 1,
+  renderKeys,
+  defaultValue = "-"
+}: HashMapProps) => {
+  if (!hash || Object.keys(hash).length === 0) {
+    return null;
   }
-);
 
-export default HashMap;
+  return (
+    <ConfigurationMapSection>
+      {headline && (
+        <ConfigurationMapHeading headingLevel={headingLevel}>
+          {headline}
+        </ConfigurationMapHeading>
+      )}
+      {Object.entries(hash).map(([key, value]) => {
+        if (value && isHashMap(value)) {
+          return (
+            <HashMap
+              hash={value as Hash}
+              headingLevel={Math.min(headingLevel + 1, 6) as HeadingLevel}
+              key={`hash-map-${key}`}
+              headline={key}
+            />
+          );
+        }
+
+        // I think this is verifying that it is an object
+        if (
+          renderKeys &&
+          Object.prototype.hasOwnProperty.call(renderKeys, key)
+        ) {
+          key = renderKeys[key];
+        }
+
+        return (
+          <ConfigurationMapRow key={`hash-map-value-${key}`}>
+            <ConfigurationMapLabel>{key}</ConfigurationMapLabel>
+            <ConfigurationMapValue>
+              {formatValue(value, defaultValue)}
+            </ConfigurationMapValue>
+          </ConfigurationMapRow>
+        );
+      })}
+    </ConfigurationMapSection>
+  );
+};
+
+export default React.memo(HashMap);

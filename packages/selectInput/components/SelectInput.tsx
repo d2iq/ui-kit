@@ -76,124 +76,122 @@ function getInputAppearance(disabled, hasFocus, appearance) {
   return appearance;
 }
 
-const SelectInput = React.memo(
-  ({
-    appearance = InputAppearance.Standard,
-    errors,
-    iconStart,
-    id = nextId("selectInput-"),
-    options,
-    showInputLabel = true,
-    inputLabel = "",
-    tooltipContent,
-    hintContent,
-    disabled,
-    required,
-    onFocus,
-    onBlur,
-    ...other
-  }: SelectInputProps) => {
-    const [hasFocus, setHasFocus] = React.useState<boolean>(false);
-    const hasError = appearance === InputAppearance.Error;
-    const parentDataCy = `selectInput selectInput.${appearance}`;
-    const selectDataCy = `selectInput-select selectInput-select.${appearance}`;
+const SelectInput = ({
+  appearance = InputAppearance.Standard,
+  errors,
+  iconStart,
+  id = nextId("selectInput-"),
+  options,
+  showInputLabel = true,
+  inputLabel = "",
+  tooltipContent,
+  hintContent,
+  disabled,
+  required,
+  onFocus,
+  onBlur,
+  ...other
+}: SelectInputProps) => {
+  const [hasFocus, setHasFocus] = React.useState<boolean>(false);
+  const hasError = appearance === InputAppearance.Error;
+  const parentDataCy = `selectInput selectInput.${appearance}`;
+  const selectDataCy = `selectInput-select selectInput-select.${appearance}`;
 
-    const handleFocus = e => {
-      setHasFocus(true);
+  const handleFocus = e => {
+    setHasFocus(true);
 
-      if (onFocus) {
-        onFocus(e);
-      }
-    };
+    if (onFocus) {
+      onFocus(e);
+    }
+  };
 
-    const handleBlur = e => {
-      setHasFocus(false);
+  const handleBlur = e => {
+    setHasFocus(false);
 
-      if (onBlur) {
-        onBlur(e);
-      }
-    };
+    if (onBlur) {
+      onBlur(e);
+    }
+  };
 
-    const inputAppearance = getInputAppearance(disabled, hasFocus, appearance);
+  const inputAppearance = getInputAppearance(disabled, hasFocus, appearance);
 
-    return (
-      <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
-        {({ getValidationErrors, isValid, getHintContent, describedByIds }) => (
-          <div data-cy={parentDataCy}>
-            {renderLabel({
-              appearance,
-              hidden: !showInputLabel,
-              id,
-              label: inputLabel,
-              required,
-              tooltipContent
-            })}
+  return (
+    <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
+      {({ getValidationErrors, isValid, getHintContent, describedByIds }) => (
+        <div data-cy={parentDataCy}>
+          {renderLabel({
+            appearance,
+            hidden: !showInputLabel,
+            id,
+            label: inputLabel,
+            required,
+            tooltipContent
+          })}
 
-            <span
-              className={cx(
-                selectContainer,
-                inputContainer,
-                getInputAppearanceStyle(inputAppearance),
-                display("flex")
-              )}
-            >
-              {iconStart ? (
-                <span className={cx(optionalIcon)}>
-                  <IconPropAdapter
-                    icon={iconStart}
-                    size={DROPDOWN_ARROW_ICON_SIZE}
-                    color="inherit"
-                  />
-                </span>
-              ) : null}
-              <select
-                className={cx(inputReset, select, display("block"))}
-                aria-invalid={!isValid}
-                aria-describedby={describedByIds}
-                id={id}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                data-cy={selectDataCy}
-                {...other}
-              >
-                {options.map((option, key) => (
-                  /* eslint-disable jsx-a11y/role-has-required-aria-props */
-                  /* <option> tag doesn't need additional aria markup */
-                  <option
-                    key={key}
-                    value={option.value}
-                    disabled={option.disabled}
-                  >
-                    {option.label}
-                  </option>
-                  /* eslint-enable jsx-a11y/role-has-required-aria-props */
-                ))}
-              </select>
-              <span
-                className={cx(
-                  selectIcon,
-                  padding("horiz", "m"),
-                  getIconAppearanceStyle(inputAppearance)
-                )}
-              >
-                <Icon
-                  shape={SystemIcons.TriangleDown}
+          <span
+            className={cx(
+              selectContainer,
+              inputContainer,
+              getInputAppearanceStyle(inputAppearance),
+              display("flex")
+            )}
+          >
+            {iconStart ? (
+              <span className={cx(optionalIcon)}>
+                <IconPropAdapter
+                  icon={iconStart}
                   size={DROPDOWN_ARROW_ICON_SIZE}
                   color="inherit"
                 />
               </span>
-            </span>
-            {Boolean(getHintContent) || hasError ? (
-              <div data-cy="selectInput-hintContent">
-                {getHintContent}
-                {hasError && getValidationErrors}
-              </div>
             ) : null}
-          </div>
-        )}
-      </FormFieldWrapper>
-    );
-  }
-);
+            <select
+              className={cx(inputReset, select, display("block"))}
+              aria-invalid={!isValid}
+              aria-describedby={describedByIds}
+              id={id}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              data-cy={selectDataCy}
+              {...other}
+            >
+              {options.map((option, key) => (
+                /* eslint-disable jsx-a11y/role-has-required-aria-props */
+                /* <option> tag doesn't need additional aria markup */
+                <option
+                  key={key}
+                  value={option.value}
+                  disabled={option.disabled}
+                >
+                  {option.label}
+                </option>
+                /* eslint-enable jsx-a11y/role-has-required-aria-props */
+              ))}
+            </select>
+            <span
+              className={cx(
+                selectIcon,
+                padding("horiz", "m"),
+                getIconAppearanceStyle(inputAppearance)
+              )}
+            >
+              <Icon
+                shape={SystemIcons.TriangleDown}
+                size={DROPDOWN_ARROW_ICON_SIZE}
+                color="inherit"
+              />
+            </span>
+          </span>
+          {Boolean(getHintContent) || hasError ? (
+            <div data-cy="selectInput-hintContent">
+              {getHintContent}
+              {hasError && getValidationErrors}
+            </div>
+          ) : null}
+        </div>
+      )}
+    </FormFieldWrapper>
+  );
+};
 
-export default SelectInput;
+export default React.memo(SelectInput);

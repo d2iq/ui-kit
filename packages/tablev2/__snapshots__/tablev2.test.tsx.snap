@@ -484,13 +484,13 @@ exports[`Table v2 rendering renders default 1`] = `
                         >
                           <Dropdownable
                             dropdown={
-                              <Memo
+                              <Memo(TooltipContent)
                                 id="colTooltip1-tooltip"
                                 isOpen={false}
                                 maxWidth={300}
                               >
                                 test
-                              </Memo>
+                              </Memo(TooltipContent)>
                             }
                             isOpen={false}
                             preferredDirections={
@@ -3769,13 +3769,13 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                         >
                           <Dropdownable
                             dropdown={
-                              <Memo
+                              <Memo(TooltipContent)
                                 id="colTooltip2-tooltip"
                                 isOpen={false}
                                 maxWidth={300}
                               >
                                 test
-                              </Memo>
+                              </Memo(TooltipContent)>
                             }
                             isOpen={false}
                             preferredDirections={

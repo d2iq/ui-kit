@@ -181,7 +181,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
   pointer-events: none;
 }
 
-<Memo()
+<Memo(SelectInput)
   appearance="standard"
   id="layers"
   inputLabel="Atmosphere layer"
@@ -305,7 +305,7 @@ exports[`SelectInput should render all appearances focus 1`] = `
       </span>
     </div>
   </Memo(FormFieldWrapper)>
-</Memo()>
+</Memo(SelectInput)>
 `;
 
 exports[`SelectInput should render all appearances focus 2`] = `
@@ -437,7 +437,7 @@ exports[`SelectInput should render all appearances focus 2`] = `
   pointer-events: none;
 }
 
-<Memo()
+<Memo(SelectInput)
   appearance="error"
   id="layers"
   inputLabel="Atmosphere layer"
@@ -564,7 +564,7 @@ exports[`SelectInput should render all appearances focus 2`] = `
       />
     </div>
   </Memo(FormFieldWrapper)>
-</Memo()>
+</Memo(SelectInput)>
 `;
 
 exports[`SelectInput should render all appearances focus 3`] = `
@@ -694,7 +694,7 @@ exports[`SelectInput should render all appearances focus 3`] = `
   pointer-events: none;
 }
 
-<Memo()
+<Memo(SelectInput)
   appearance="success"
   id="layers"
   inputLabel="Atmosphere layer"
@@ -818,5 +818,5 @@ exports[`SelectInput should render all appearances focus 3`] = `
       </span>
     </div>
   </Memo(FormFieldWrapper)>
-</Memo()>
+</Memo(SelectInput)>
 `;

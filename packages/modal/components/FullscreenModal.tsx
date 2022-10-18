@@ -19,41 +19,39 @@ interface FullscreenModalProps extends ModalBaseProps {
   headerComponent?: React.JSXElementConstructor<any>;
 }
 
-const FullscreenModal = React.memo(
-  ({
-    children,
-    ctaButton,
-    closeText,
-    isContentFlush,
-    onClose,
-    title,
-    subtitle,
-    headerComponent,
-    ...other
-  }: FullscreenModalProps) => {
-    return (
-      <ModalBase
-        size={ModalSizes.Fullscreen}
+const FullscreenModal = ({
+  children,
+  ctaButton,
+  closeText,
+  isContentFlush,
+  onClose,
+  title,
+  subtitle,
+  headerComponent,
+  ...other
+}: FullscreenModalProps) => {
+  return (
+    <ModalBase
+      size={ModalSizes.Fullscreen}
+      onClose={onClose}
+      isAnimated={false}
+      data-cy="fullscreenModal"
+      {...other}
+    >
+      <FullscreenView
+        ctaButton={ctaButton}
+        closeText={closeText}
+        isContentFlush={isContentFlush}
         onClose={onClose}
-        isAnimated={false}
-        data-cy="fullscreenModal"
-        {...other}
+        title={title}
+        subtitle={subtitle}
+        headerComponent={headerComponent}
+        cypressSelectorBase="fullscreenModal"
       >
-        <FullscreenView
-          ctaButton={ctaButton}
-          closeText={closeText}
-          isContentFlush={isContentFlush}
-          onClose={onClose}
-          title={title}
-          subtitle={subtitle}
-          headerComponent={headerComponent}
-          cypressSelectorBase="fullscreenModal"
-        >
-          {children}
-        </FullscreenView>
-      </ModalBase>
-    );
-  }
-);
+        {children}
+      </FullscreenView>
+    </ModalBase>
+  );
+};
 
-export default FullscreenModal;
+export default React.memo(FullscreenModal);

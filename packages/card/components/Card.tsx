@@ -41,38 +41,36 @@ export interface CardProps extends React.HTMLProps<HTMLDivElement> {
   className?: string;
 }
 
-const Card = React.memo(
-  ({
-    className,
-    children,
-    aspectRatio,
-    paddingSize = "m",
-    header,
-    ...other
-  }: CardProps) => {
-    const headerSize = header?.size || HeaderSizes.M;
+const Card = ({
+  className,
+  children,
+  aspectRatio,
+  paddingSize = "m",
+  header,
+  ...other
+}: CardProps) => {
+  const headerSize = header?.size || HeaderSizes.M;
 
-    const aspectRatioStyle = aspectRatio
-      ? preserveAspectRatio(aspectRatio[0], aspectRatio[1])
-      : null;
+  const aspectRatioStyle = aspectRatio
+    ? preserveAspectRatio(aspectRatio[0], aspectRatio[1])
+    : null;
 
-    return (
-      <div
-        className={cx(cardBase, aspectRatioStyle, className)}
-        data-cy="card"
-        {...other}
-      >
-        {header?.headerImg && (
-          <div className={cx(cardHeaderImage, headerHeight[headerSize])}>
-            <img src={header.headerImg} alt={header.headerImgAltText ?? ""} />
-          </div>
-        )}
-        <div className={cx(padding("all", paddingSize), cardContent)}>
-          {children}
+  return (
+    <div
+      className={cx(cardBase, aspectRatioStyle, className)}
+      data-cy="card"
+      {...other}
+    >
+      {header?.headerImg && (
+        <div className={cx(cardHeaderImage, headerHeight[headerSize])}>
+          <img src={header.headerImg} alt={header.headerImgAltText ?? ""} />
         </div>
+      )}
+      <div className={cx(padding("all", paddingSize), cardContent)}>
+        {children}
       </div>
-    );
-  }
-);
+    </div>
+  );
+};
 
-export default Card;
+export default React.memo(Card);

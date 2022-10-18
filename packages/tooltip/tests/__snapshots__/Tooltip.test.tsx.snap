@@ -14,13 +14,13 @@ exports[`Tooltip renders 1`] = `
   >
     <Dropdownable
       dropdown={
-        <Memo
+        <Memo(TooltipContent)
           id="renders"
           isOpen={false}
           maxWidth={300}
         >
           content
-        </Memo>
+        </Memo(TooltipContent)>
       }
       isOpen={false}
       preferredDirections={
@@ -94,13 +94,13 @@ exports[`Tooltip renders open tooltip 1`] = `
   >
     <Dropdownable
       dropdown={
-        <Memo
+        <Memo(TooltipContent)
           id="opened"
           isOpen={true}
           maxWidth={300}
         >
           content
-        </Memo>
+        </Memo(TooltipContent)>
       }
       isOpen={true}
       preferredDirections={
@@ -272,7 +272,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                     }
                   }
                 >
-                  <Memo()
+                  <Memo(TooltipContent)
                     id="opened"
                     isOpen={true}
                     maxWidth={300}
@@ -295,7 +295,7 @@ exports[`Tooltip renders open tooltip 1`] = `
                     <div
                       className="emotion-1"
                     />
-                  </Memo()>
+                  </Memo(TooltipContent)>
                 </div>
               </Portal>
             </Overlay>
@@ -364,13 +364,13 @@ exports[`Tooltip renders with preferred directions 1`] = `
   >
     <Dropdownable
       dropdown={
-        <Memo
+        <Memo(TooltipContent)
           id="customDir"
           isOpen={true}
           maxWidth={300}
         >
           content
-        </Memo>
+        </Memo(TooltipContent)>
       }
       isOpen={true}
       preferredDirections={
@@ -559,7 +559,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                     }
                   }
                 >
-                  <Memo()
+                  <Memo(TooltipContent)
                     id="customDir"
                     isOpen={true}
                     maxWidth={300}
@@ -582,7 +582,7 @@ exports[`Tooltip renders with preferred directions 1`] = `
                     <div
                       className="emotion-1"
                     />
-                  </Memo()>
+                  </Memo(TooltipContent)>
                 </div>
               </Portal>
             </Overlay>
