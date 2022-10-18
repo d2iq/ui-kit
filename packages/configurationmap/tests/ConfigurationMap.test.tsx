@@ -1,8 +1,6 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
-import { render, mount } from "enzyme";
-import { create } from "react-test-renderer";
-import toJson from "enzyme-to-json";
+import { render, fireEvent, screen } from "@testing-library/react";
 
 import {
   ConfigurationMap,
@@ -19,7 +17,7 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("ConfigurationMap", () => {
   it("renders default", () => {
-    const component = create(
+    const { asFragment } = render(
       <ConfigurationMap>
         <ConfigurationMapSection>
           <ConfigurationMapRow>
@@ -37,10 +35,10 @@ describe("ConfigurationMap", () => {
         </ConfigurationMapSection>
       </ConfigurationMap>
     );
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with headline", () => {
-    const component = create(
+    const { asFragment } = render(
       <ConfigurationMap>
         <ConfigurationMapSection>
           <ConfigurationMapHeading>Jane Doe Info</ConfigurationMapHeading>
@@ -59,11 +57,11 @@ describe("ConfigurationMap", () => {
         </ConfigurationMapSection>
       </ConfigurationMap>
     );
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with actions", () => {
     const rowActionCallback = jest.fn();
-    const component = render(
+    const { asFragment } = render(
       <ConfigurationMap>
         <ConfigurationMapSection>
           <ConfigurationMapRow onlyShowActionOnHover={true}>
@@ -91,10 +89,10 @@ describe("ConfigurationMap", () => {
       </ConfigurationMap>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with default value", () => {
-    const component = create(
+    const { asFragment } = render(
       <ConfigurationMap>
         <ConfigurationMapSection>
           <ConfigurationMapRow>
@@ -112,11 +110,11 @@ describe("ConfigurationMap", () => {
         </ConfigurationMapSection>
       </ConfigurationMap>
     );
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("calls onClick when action is clicked", () => {
     const rowActionCallback = jest.fn();
-    const component = mount(
+    render(
       <ConfigurationMap>
         <ConfigurationMapSection>
           <ConfigurationMapRow onlyShowActionOnHover={true}>
@@ -143,10 +141,10 @@ describe("ConfigurationMap", () => {
         </ConfigurationMapSection>
       </ConfigurationMap>
     );
-    const button = component.find("button").first();
+    const button = screen.getAllByRole("button")[0];
 
     expect(rowActionCallback).not.toHaveBeenCalled();
-    button.simulate("click");
+    fireEvent.click(button);
     expect(rowActionCallback).toHaveBeenCalled();
   });
 });
