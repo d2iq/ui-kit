@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx, css } from "@emotion/css";
+import { cx } from "@emotion/css";
 import { ButtonProps } from "../../button/components/ButtonBase";
 import { flex, padding, flexItem } from "../../shared/styles/styleUtils";
 import { modalContent, fullscreenModalHeader } from "../style";
@@ -24,8 +24,8 @@ export interface FullscreenViewProps {
   onClose: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /** The base of the `data-cy` value. This is used for writing selectors in Cypress. */
   cypressSelectorBase?: string;
-  /** The css max width around the header contents  */
-  containerMaxWidth?: string;
+  /** Optional classname around header contents  */
+  headerClassName?: string;
   children?: React.ReactNode;
 }
 
@@ -40,20 +40,9 @@ const FullscreenView = ({
   bannerComponent,
   headerComponent,
   cypressSelectorBase = "fullscreenView",
-  containerMaxWidth
+  headerClassName = ""
 }: FullscreenViewProps) => {
   const HeaderComponent = headerComponent ?? FullscreenViewHeader;
-
-  let container: string = "";
-  if (containerMaxWidth) {
-    // add border-box to account for any left and right padding
-    container = css`
-      margin-left: auto;
-      margin-right: auto;
-      max-width: ${containerMaxWidth};
-      box-sizing: border-box;
-    `;
-  }
 
   return (
     <div className={flex({ direction: "column" })}>
@@ -64,7 +53,7 @@ const FullscreenView = ({
         {bannerComponent && (
           <div data-cy={`${cypressSelectorBase}-banner`}>{bannerComponent}</div>
         )}
-        <div className={cx(padding("all", "xl"), container)}>
+        <div className={cx(padding("all", "xl"), headerClassName)}>
           <HeaderComponent
             title={title}
             subtitle={subtitle}
