@@ -68,54 +68,28 @@ export interface ToggleInputListProps {
   /**
    * Sets the current appearance of the label component. This defaults to InputAppearance.Standard, but supports `InputAppearance.Error` & `InputAppearance.Success` appearances as well.
    */
-  labelAppearance: InputAppearance;
+  labelAppearance?: InputAppearance;
   /**
    * Whether the inputs are radio buttons
    */
   isRadioGroup?: boolean;
 }
 
-class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
-  public static defaultProps: Partial<ToggleInputListProps> = {
-    showListLabel: true,
-    vertAlign: "center",
-    selectedItems: [],
-    labelAppearance: InputAppearance.Standard
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.getSelectedItems = this.getSelectedItems.bind(this);
-    this.listLegendContent = this.listLegendContent.bind(this);
-    this.inputListItems = this.inputListItems.bind(this);
-  }
-
-  public render() {
-    const { errors, hintContent, id, required } = this.props;
-
-    return (
-      <FormFieldWrapper errors={errors} hintContent={hintContent} id={id}>
-        {({ describedByIds, getValidationErrors, isValid, getHintContent }) => (
-          <fieldset
-            className={fieldsetReset}
-            aria-invalid={!isValid}
-            aria-describedby={describedByIds}
-            aria-required={required}
-            role="listbox"
-          >
-            {this.listLegendContent()}
-            <ul className={listReset}>{this.inputListItems()}</ul>
-            {getHintContent}
-            {getValidationErrors}
-          </fieldset>
-        )}
-      </FormFieldWrapper>
-    );
-  }
-
-  private listLegendContent() {
-    const { labelAppearance, showListLabel, listLabel, required } = this.props;
+const ToggleInputList = ({
+  id,
+  showListLabel = true,
+  vertAlign = "center",
+  selectedItems = [],
+  labelAppearance = InputAppearance.Standard,
+  errors,
+  hintContent,
+  required,
+  isRadioGroup,
+  items,
+  onChange,
+  listLabel
+}: ToggleInputListProps) => {
+  const listLegendContent = () => {
     const requiredContent = required ? (
       <DangerText tag="span"> *</DangerText>
     ) : null;
@@ -129,14 +103,12 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
         {requiredContent}
       </legend>
     );
-  }
+  };
 
-  private inputListItems() {
-    const { items } = this.props;
-
+  const inputListItems = () => {
     return items.map(item => {
       const {
-        id,
+        id: itemId,
         value,
         inputLabel,
         appearance,
@@ -144,17 +116,10 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
         errors,
         hintContent
       } = item;
-      const {
-        vertAlign,
-        onChange,
-        isRadioGroup,
-        selectedItems = [],
-        id: inputListId
-      } = this.props;
 
-      const handleChange = e => {
+      const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (onChange) {
-          onChange(this.getSelectedItems(value, e.target.checked), value);
+          onChange(getSelectedItems(value, e.target.checked), value);
         }
       };
 
@@ -166,9 +131,9 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
         disabled,
         errors,
         hintContent,
-        id,
+        id: itemId,
         inputLabel,
-        name: inputListId,
+        name: id,
         onChange: handleChange,
         value,
         vertAlign
@@ -180,17 +145,34 @@ class ToggleInputList extends React.PureComponent<ToggleInputListProps, {}> {
         </li>
       );
     });
-  }
+  };
 
-  private getSelectedItems(value, checked) {
-    const { selectedItems = [], isRadioGroup } = this.props;
-
+  const getSelectedItems = (value: string, checked: boolean) => {
     if (checked) {
       return isRadioGroup ? [value] : [...selectedItems, value];
     }
 
     return selectedItems.filter(selectedItem => selectedItem !== value);
-  }
-}
+  };
 
-export default ToggleInputList;
+  return (
+    <FormFieldWrapper errors={errors} hintContent={hintContent} id={id}>
+      {({ describedByIds, getValidationErrors, isValid, getHintContent }) => (
+        <fieldset
+          className={fieldsetReset}
+          aria-invalid={!isValid}
+          aria-describedby={describedByIds}
+          aria-required={required}
+          role="listbox"
+        >
+          {listLegendContent()}
+          <ul className={listReset}>{inputListItems()}</ul>
+          {getHintContent}
+          {getValidationErrors}
+        </fieldset>
+      )}
+    </FormFieldWrapper>
+  );
+};
+
+export default React.memo(ToggleInputList);
