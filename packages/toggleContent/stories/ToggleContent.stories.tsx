@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Card, ToggleContent } from "../../index";
 import { Story, Meta } from "@storybook/react";
-import { ToggleContentProps } from "../components/toggleContent";
+import { ToggleContentProps } from "../components/ToggleContent";
 
 const ToggleComponent = ({ componentName }): JSX.Element => {
   return (
