@@ -28,3 +28,8 @@ export const modalContent = css`
   position: relative;
   overflow: auto;
 `;
+
+export const fullscreenModalTitleContainer = css`
+  // allot more space for the title and subtitle section
+  flex-grow: 2;
+`;

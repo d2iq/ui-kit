@@ -151,6 +151,10 @@ exports[`FullscreenView renders FullscreenView 1`] = `
   flex-grow: 1;
   min-width: 0;
   width: auto;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
 }
 
 .emotion-8 {

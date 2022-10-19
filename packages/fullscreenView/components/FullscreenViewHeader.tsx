@@ -1,6 +1,10 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
-import { fullscreenModalAction, fullscreenModalTitle } from "../style";
+import {
+  fullscreenModalAction,
+  fullscreenModalTitleContainer,
+  fullscreenModalTitle
+} from "../style";
 import {
   flex,
   flexItem,
@@ -24,7 +28,7 @@ const FullscreenModalHeader = ({
     <div className={cx(fullscreenModalAction.dismiss, flexItem("grow"))}>
       <SecondaryButton onClick={onClose}>{closeText}</SecondaryButton>
     </div>
-    <div className={flexItem("grow")}>
+    <div className={cx(flexItem("grow"), fullscreenModalTitleContainer)}>
       <h2
         className={cx(
           fullscreenModalTitle,
