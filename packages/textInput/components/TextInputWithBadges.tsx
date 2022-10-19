@@ -18,10 +18,17 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { Icon } from "../../icon";
 import Clickable from "../../clickable/components/clickable";
 import { TextInputWithIconProps } from "./TextInputWithIcon";
-import { TextInputWithIcon } from "..";
 import { BadgeAppearance } from "../../badge/components/badge";
 import { StateChangeOptions } from "downshift";
 import { InputAppearance } from "../../shared/types/inputAppearance";
+import {
+  getIconEndContent,
+  getIconStartContent,
+  getId,
+  getInputElement,
+  getInputElementProps as getBaseInputElementProps
+} from "./utils";
+import { renderLabel } from "../../utilities/label";
 
 export interface BadgeDatum {
   value: string;
@@ -49,27 +56,33 @@ export const getStringAsBadgeDatum = (
   value: badgeLabelString
 });
 
-export class TextInputWithBadges extends TextInputWithIcon<TextInputWithBadgesProps> {
-  public static defaultProps = {
-    type: "text",
-    appearance: InputAppearance.Standard,
-    showInputLabel: true,
-    addBadgeOnBlur: true
+const TextInputWithBadges = (props: TextInputWithBadgesProps) => {
+  const inputRef = React.createRef<HTMLInputElement>();
+  const [hasFocus, setHasFocus] = React.useState(false);
+
+  const inputOnFocus = e => {
+    setHasFocus(true);
+
+    if (props.onFocus) {
+      props.onFocus(e);
+    }
   };
-  private readonly inputRef = React.createRef<HTMLInputElement>();
 
-  constructor(props) {
-    super(props);
+  const inputOnBlur = e => {
+    setHasFocus(false);
 
-    this.handleKeyUp = this.handleKeyUp.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
-    this.handleTagAdd = this.handleTagAdd.bind(this);
-    this.handleTagDelete = this.handleTagDelete.bind(this);
-  }
+    if (props.onBlur) {
+      props.onBlur(e);
+    }
+  };
 
-  protected getInputElementProps() {
-    const baseProps = super.getInputElementProps();
+  const getInputElementProps = () => {
+    const baseProps = getBaseInputElementProps(props);
+    const { iconStart, iconEnd, ...baseInputProps } =
+      baseProps as TextInputWithIconProps;
+    baseInputProps.onFocus = inputOnFocus;
+    baseInputProps.onBlur = inputOnBlur;
+
     const {
       badges,
       onBadgeChange,
@@ -78,33 +91,44 @@ export class TextInputWithBadges extends TextInputWithIcon<TextInputWithBadgesPr
       badgeAppearance,
       ...inputProps
     } = baseProps as TextInputWithBadgesProps;
-    inputProps.onKeyDown = this.handleKeyDown;
-    inputProps.onKeyUp = this.handleKeyUp;
+    inputProps.onKeyDown = handleKeyDown;
+    inputProps.onKeyUp = handleKeyUp;
+    inputProps.onFocus = inputOnFocus;
     inputProps.onKeyPress = e => {
-      if (this.props.onKeyPress) {
-        this.props.onKeyPress(e);
+      if (props.onKeyPress) {
+        props.onKeyPress(e);
       }
       if (e.key === "Enter") {
         e.preventDefault();
       }
     };
-    inputProps.onBlur = this.handleBlur.bind(this, inputProps.onBlur);
+    inputProps.onBlur = handleBlur;
     inputProps.type = "text";
-    inputProps.ref = this.inputRef;
+    inputProps.ref = inputRef;
     return inputProps;
-  }
+  };
 
-  protected getInputContent() {
-    const inputAppearance = this.getInputAppearance();
-    const { hintContent, badgeAppearance = "primary" } = this.props;
+  const getInputAppearance = () => {
+    if (props.disabled) {
+      return "disabled";
+    }
+    if (hasFocus) {
+      return `${props.appearance}-focus`;
+    }
+    return props.appearance;
+  };
+
+  const getInputContent = () => {
+    const inputAppearance = getInputAppearance();
+    const { hintContent, badgeAppearance = "primary" } = props;
 
     return (
       <FormFieldWrapper
         // TODO: figure out how to get rid of this non-null assertion
         // If we stop generating an `id` prop in the TextInput component,
         // it would be possible for `this.props.id` to be undefined
-        id={this.props.id!}
-        errors={this.props.errors}
+        id={props.id!}
+        errors={props.errors}
         hintContent={hintContent}
       >
         {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
@@ -117,9 +141,9 @@ export class TextInputWithBadges extends TextInputWithIcon<TextInputWithBadgesPr
                 getInputAppearanceStyle(inputAppearance)
               )}
             >
-              {this.getIconStartContent()}
-              {this.props.badges &&
-                this.props.badges.map(badge => {
+              {getIconStartContent(props, getInputAppearance())}
+              {props.badges &&
+                props.badges.map(badge => {
                   return (
                     <span
                       className={badgeInputContents}
@@ -135,9 +159,7 @@ export class TextInputWithBadges extends TextInputWithIcon<TextInputWithBadgesPr
                             </div>
                           </FlexItem>
                           <FlexItem flex="shrink">
-                            <Clickable
-                              action={this.onBadgeClose.bind(this, badge)}
-                            >
+                            <Clickable action={onBadgeClose.bind(this, badge)}>
                               <span>
                                 <Icon shape={SystemIcons.Close} size="xxs" />
                               </span>
@@ -148,12 +170,15 @@ export class TextInputWithBadges extends TextInputWithIcon<TextInputWithBadgesPr
                     </span>
                   );
                 })}
-              {this.getInputElement(
+              {getInputElement(
                 [badgeInput, badgeInputContents, flexItem("grow")],
                 isValid,
-                describedByIds
+                describedByIds,
+                props,
+                getInputAppearance,
+                getInputElementProps
               )}
-              {this.getIconEndContent()}
+              {getIconEndContent(props, getInputAppearance())}
             </div>
             {getHintContent}
             {getValidationErrors}
@@ -161,10 +186,10 @@ export class TextInputWithBadges extends TextInputWithIcon<TextInputWithBadgesPr
         )}
       </FormFieldWrapper>
     );
-  }
+  };
 
-  private handleTagDelete(tagToDelete: BadgeDatum) {
-    const { onBadgeChange, badges = [] } = this.props;
+  const handleTagDelete = (tagToDelete: BadgeDatum) => {
+    const { onBadgeChange, badges = [] } = props;
 
     if (onBadgeChange) {
       onBadgeChange(
@@ -172,10 +197,10 @@ export class TextInputWithBadges extends TextInputWithIcon<TextInputWithBadgesPr
         tagToDelete
       );
     }
-  }
+  };
 
-  private handleTagAdd(tagToAdd: BadgeDatum) {
-    const { onBadgeChange, badges = [], downshiftReset } = this.props;
+  const handleTagAdd = (tagToAdd: BadgeDatum) => {
+    const { onBadgeChange, badges = [], downshiftReset } = props;
     const badgeValues = badges.map(badge => badge.value);
 
     if (downshiftReset) {
@@ -188,44 +213,71 @@ export class TextInputWithBadges extends TextInputWithIcon<TextInputWithBadgesPr
       !badgeValues.includes(tagToAdd.value)
     ) {
       onBadgeChange([...badges, tagToAdd], tagToAdd);
-      if (this.inputRef && this.inputRef.current) {
-        this.inputRef.current.value = "";
+      if (inputRef && inputRef.current) {
+        inputRef.current.value = "";
       }
     }
-  }
+  };
 
-  private handleKeyDown(e) {
-    if (!e.target.value && e.key === "Backspace" && this.props.badges) {
-      this.handleTagDelete(this.props.badges[this.props.badges.length - 1]);
+  const handleKeyDown = e => {
+    if (!e.target.value && e.key === "Backspace" && props.badges) {
+      handleTagDelete(props.badges[props.badges.length - 1]);
     }
 
-    if (this.props.onKeyDown) {
-      this.props.onKeyDown(e);
+    if (props.onKeyDown) {
+      props.onKeyDown(e);
     }
-  }
+  };
 
-  private handleKeyUp(e) {
+  const handleKeyUp = e => {
     if (e.key === "Enter") {
       e.preventDefault();
-      this.handleTagAdd(getStringAsBadgeDatum(e.target.value));
+      handleTagAdd(getStringAsBadgeDatum(e.target.value));
     }
 
-    if (this.props.onKeyUp) {
-      this.props.onKeyUp(e);
+    if (props.onKeyUp) {
+      props.onKeyUp(e);
     }
-  }
+  };
 
-  private handleBlur(cb, e) {
-    cb(e); // calls the onBlur handler from the component this extends
-
-    if (this.props.addBadgeOnBlur) {
-      this.handleTagAdd(getStringAsBadgeDatum(e.target.value));
+  const handleBlur = e => {
+    inputOnBlur(e);
+    if (props.addBadgeOnBlur) {
+      handleTagAdd(getStringAsBadgeDatum(e.target.value));
     }
-  }
+  };
 
-  private onBadgeClose(clickedTag) {
-    this.handleTagDelete(clickedTag);
+  const onBadgeClose = clickedTag => {
+    handleTagDelete(clickedTag);
+  };
+
+  const containerProps: { className?: string } = {};
+  const appearance = getInputAppearance();
+  const dataCy = `textInput textInput.${appearance}`;
+
+  if (props.className) {
+    containerProps.className = props.className;
   }
-}
+  return (
+    <div {...containerProps} data-cy={dataCy}>
+      {renderLabel({
+        appearance,
+        hidden: !props.showInputLabel,
+        id: getId(props),
+        label: props.inputLabel,
+        required: props.required,
+        tooltipContent: props.tooltipContent
+      })}
+      {getInputContent()}
+    </div>
+  );
+};
+
+TextInputWithBadges.defaultProps = {
+  type: "text",
+  appearance: InputAppearance.Standard,
+  showInputLabel: true,
+  addBadgeOnBlur: true
+};
 
 export default TextInputWithBadges;

@@ -1,19 +1,22 @@
-import { cx } from "@emotion/css";
 import * as React from "react";
-
-import { TextInput, TextInputProps } from "./TextInput";
-
+import { TextInputProps } from "./TextInput";
 import {
   getInputAppearanceStyle,
-  inputContainer,
-  getIconAppearanceStyle,
-  inputIconWrapper
+  inputContainer
 } from "../../shared/styles/formStyles";
-import { flex, flexItem, flush, padding } from "../../shared/styles/styleUtils";
+import { flex, flexItem, padding } from "../../shared/styles/styleUtils";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import { IconShapes } from "../../icon/components/Icon";
-import IconPropAdapter from "../../icon/components/IconPropAdapter";
+import {
+  getIconEndContent,
+  getIconStartContent,
+  getId,
+  getInputElement,
+  getInputElementProps as getBaseInputElementProps
+} from "./utils";
+import { renderLabel } from "../../utilities/label";
+import { cx } from "@emotion/css";
 
 export interface TextInputWithIconProps extends TextInputProps {
   /**
@@ -30,90 +33,38 @@ export interface TextInputWithIconState {
   hasFocus?: boolean;
 }
 
-export class TextInputWithIcon<
-  P extends TextInputWithIconProps
-> extends TextInput<P> {
-  public static defaultProps = {
-    type: "text",
-    appearance: InputAppearance.Standard,
-    showInputLabel: true
-  };
+const TextInputWithIcon = (props: TextInputWithIconProps) => {
+  const [hasFocus, setHasFocus] = React.useState(false);
 
-  state = {
-    hasFocus: false
-  };
-
-  protected getInputAppearance(): string {
-    if (this.props.disabled) {
+  const getInputAppearance = (): string => {
+    if (props.disabled) {
       return "disabled";
     }
-    if (this.state.hasFocus) {
-      return `${this.props.appearance}-focus`;
+    if (hasFocus) {
+      return `${props.appearance}-focus`;
     }
-    return this.props.appearance;
-  }
+    return props.appearance;
+  };
 
-  protected getInputElementProps() {
-    const baseProps = super.getInputElementProps();
+  const getInputElementProps = () => {
+    const baseProps = getBaseInputElementProps(props);
     const { iconStart, iconEnd, ...inputProps } =
       baseProps as TextInputWithIconProps;
-    inputProps.onFocus = this.inputOnFocus;
-    inputProps.onBlur = this.inputOnBlur;
+    inputProps.onFocus = inputOnFocus;
+    inputProps.onBlur = inputOnBlur;
     return inputProps;
-  }
+  };
 
-  protected getIconStartContent() {
-    if (!this.props.iconStart) {
-      return null;
-    }
-    return (
-      <span
-        className={cx(
-          padding("right", "xs"),
-          flex({ align: "center", justify: "center" }),
-          flexItem("shrink"),
-          getIconAppearanceStyle(this.getInputAppearance()),
-          inputIconWrapper
-        )}
-      >
-        <IconPropAdapter
-          icon={this.props.iconStart!}
-          size="xs"
-          color="inherit"
-        />
-      </span>
-    );
-  }
-
-  protected getIconEndContent() {
-    if (!this.props.iconEnd) {
-      return null;
-    }
-    return (
-      <span
-        className={cx(
-          flex({ align: "center", justify: "center" }),
-          flexItem("shrink"),
-          flush("left"),
-          getIconAppearanceStyle(this.getInputAppearance()),
-          inputIconWrapper
-        )}
-      >
-        <IconPropAdapter icon={this.props.iconEnd!} size="xs" color="inherit" />
-      </span>
-    );
-  }
-
-  protected getInputContent() {
-    const inputAppearance = this.getInputAppearance();
+  const getInputContent = () => {
+    const inputAppearance = getInputAppearance();
     return (
       <FormFieldWrapper
         // TODO: figure out how to get rid of this non-null assertion
         // If we stop generating an `id` prop in the TextInput component,
         // it would be possible for `this.props.id` to be undefined
-        id={this.props.id!}
-        errors={this.props.errors}
-        hintContent={this.props.hintContent}
+        id={props.id!}
+        errors={props.errors}
+        hintContent={props.hintContent}
       >
         {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
           <div>
@@ -126,13 +77,16 @@ export class TextInputWithIcon<
                 getInputAppearanceStyle(inputAppearance)
               )}
             >
-              {this.getIconStartContent()}
-              {this.getInputElement(
+              {getIconStartContent(props, getInputAppearance())}
+              {getInputElement(
                 [flexItem("grow"), padding("all", "none")],
                 isValid,
-                describedByIds
+                describedByIds,
+                props,
+                getInputAppearance,
+                getInputElementProps
               )}
-              {this.getIconEndContent()}
+              {getIconEndContent(props, getInputAppearance())}
             </div>
             {getHintContent}
             {getValidationErrors}
@@ -140,23 +94,50 @@ export class TextInputWithIcon<
         )}
       </FormFieldWrapper>
     );
+  };
+
+  const inputOnFocus = e => {
+    setHasFocus(true);
+
+    if (props.onFocus) {
+      props.onFocus(e);
+    }
+  };
+
+  const inputOnBlur = e => {
+    setHasFocus(false);
+
+    if (props.onBlur) {
+      props.onBlur(e);
+    }
+  };
+
+  const containerProps: { className?: string } = {};
+  const appearance = getInputAppearance();
+  const dataCy = `textInput textInput.${appearance}`;
+
+  if (props.className) {
+    containerProps.className = props.className;
   }
+  return (
+    <div {...containerProps} data-cy={dataCy}>
+      {renderLabel({
+        appearance,
+        hidden: !props.showInputLabel,
+        id: getId(props),
+        label: props.inputLabel,
+        required: props.required,
+        tooltipContent: props.tooltipContent
+      })}
+      {getInputContent()}
+    </div>
+  );
+};
 
-  protected inputOnFocus = e => {
-    this.setState({ hasFocus: true });
-
-    if (this.props.onFocus) {
-      this.props.onFocus(e);
-    }
-  };
-
-  protected inputOnBlur = e => {
-    this.setState({ hasFocus: false });
-
-    if (this.props.onBlur) {
-      this.props.onBlur(e);
-    }
-  };
-}
+TextInputWithIcon.defaultProps = {
+  type: "text",
+  appearance: InputAppearance.Standard,
+  showInputLabel: true
+};
 
 export default TextInputWithIcon;
