@@ -1,6 +1,8 @@
 import * as React from "react";
 import FullscreenView from "../components/FullscreenView";
 import { Meta } from "@storybook/react";
+import { cx } from "@emotion/css";
+
 import {
   flex,
   flexItem,
@@ -8,8 +10,7 @@ import {
   tintContentSecondary,
   padding
 } from "../../shared/styles/styleUtils";
-import { containerWidthDefault } from "../../design-tokens/build/js/designTokens";
-import { cx } from "@emotion/css";
+import { Container } from "../../styleUtils/layout";
 import { fullscreenModalTitle } from "../style";
 import { SecondaryButton, PrimaryButton } from "../../button";
 import { action } from "@storybook/addon-actions";
@@ -18,6 +19,7 @@ import {
   BorderedModalContent
 } from "../../modal/stories/helpers/modalContents";
 import { InfoBoxBanner } from "../../infobox/index";
+import { container } from "../../styleUtils/layout/container/style";
 
 const onClose = () => {
   alert("calling onClose");
@@ -130,16 +132,18 @@ export const WithBanner = () => (
   </div>
 );
 
-export const WithContainer = () => (
+export const WithHeaderClassName = () => (
   <div style={{ height: "500px" }}>
     <FullscreenView
       closeText="Close"
       title="Title"
       onClose={onClose}
       ctaButton={<PrimaryButton type="button">Click</PrimaryButton>}
-      containerMaxWidth={containerWidthDefault}
+      headerClassName={container}
     >
-      <ModalContent />
+      <Container>
+        <ModalContent />
+      </Container>
     </FullscreenView>
   </div>
 );
