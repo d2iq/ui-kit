@@ -25,73 +25,71 @@ export interface DialogModalProps extends ModalBaseProps {
   icon?: IconProps;
 }
 
-class DialogModal extends React.PureComponent<DialogModalProps, {}> {
-  public render() {
-    const { children, footerContent, isContentFlush, title, icon, ...other } =
-      this.props;
+const DialogModal = (props: DialogModalProps) => {
+  const { children, footerContent, isContentFlush, title, icon, ...other } =
+    props;
 
-    return (
-      <ModalBase data-cy="dialogModal" {...other}>
+  return (
+    <ModalBase data-cy="dialogModal" {...other}>
+      <div
+        className={cx(modalHeader, flexItem("shrink"))}
+        data-cy="dialogModal-header"
+      >
         <div
-          className={cx(modalHeader, flexItem("shrink"))}
-          data-cy="dialogModal-header"
+          className={cx(
+            flex({ align: "center", justify: "center" }),
+            padding("all", "l")
+          )}
         >
+          <div className={cx(flexItem("grow"), textSize("l"))}>
+            {icon ? (
+              <Flex gutterSize="xxs" justify="center" align="center">
+                <FlexItem flex="shrink">
+                  <Icon
+                    shape={icon.shape}
+                    size={icon.size ? icon.size : "xs"}
+                    color={icon.color ? icon.color : "inherit"}
+                  />
+                </FlexItem>
+                <FlexItem flex="grow">{title}</FlexItem>
+              </Flex>
+            ) : (
+              <>{title}</>
+            )}
+          </div>
           <div
             className={cx(
-              flex({ align: "center", justify: "center" }),
-              padding("all", "l")
+              modalCloseWrapper,
+              display("inherit"),
+              flexItem("shrink")
             )}
           >
-            <div className={cx(flexItem("grow"), textSize("l"))}>
-              {icon ? (
-                <Flex gutterSize="xxs" justify="center" align="center">
-                  <FlexItem flex="shrink">
-                    <Icon
-                      shape={icon.shape}
-                      size={icon.size ? icon.size : "xs"}
-                      color={icon.color ? icon.color : "inherit"}
-                    />
-                  </FlexItem>
-                  <FlexItem flex="grow">{title}</FlexItem>
-                </Flex>
-              ) : (
-                <>{title}</>
-              )}
-            </div>
-            <div
-              className={cx(
-                modalCloseWrapper,
-                display("inherit"),
-                flexItem("shrink")
-              )}
-            >
-              <Clickable tabIndex={0} action={this.props.onClose}>
-                <span className={display("inherit")}>
-                  <Icon shape={SystemIcons.Close} size="xs" />
-                </span>
-              </Clickable>
-            </div>
+            <Clickable tabIndex={0} action={props.onClose}>
+              <span className={display("inherit")}>
+                <Icon shape={SystemIcons.Close} size="xs" />
+              </span>
+            </Clickable>
           </div>
         </div>
+      </div>
+      <div
+        className={cx(modalContent, {
+          [padding("all", "l")]: !isContentFlush
+        })}
+        data-cy="dialogModal-content"
+      >
+        {children}
+      </div>
+      {footerContent && (
         <div
-          className={cx(modalContent, {
-            [padding("all", "l")]: !isContentFlush
-          })}
-          data-cy="dialogModal-content"
+          className={cx(flexItem("shrink"), padding("all", "l"))}
+          data-cy="dialogModal-footer"
         >
-          {children}
+          {footerContent}
         </div>
-        {footerContent && (
-          <div
-            className={cx(flexItem("shrink"), padding("all", "l"))}
-            data-cy="dialogModal-footer"
-          >
-            {footerContent}
-          </div>
-        )}
-      </ModalBase>
-    );
-  }
-}
+      )}
+    </ModalBase>
+  );
+};
 
 export default DialogModal;
