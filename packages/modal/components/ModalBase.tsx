@@ -75,7 +75,7 @@ const ModalBase = ({ isAnimated = true, ...props }: ModalBaseProps) => {
     if (props.initialFocus && props.isOpen) {
       setInitialFocus(props.initialFocus);
     }
-  }, []);
+  }, [props.isOpen]);
 
   return (
     <Transition
