@@ -13,12 +13,18 @@ export const iconAlign = css`
   margin-bottom: 1px;
 `;
 
-export const TooltipHeaderCell: React.StatelessComponent<{
+export interface TooltipHeaderCellProps {
   /**
    * Helper content that explains the content in the column.
    */
   tooltipContent?: React.ReactNode;
-}> = ({ children, tooltipContent }) => {
+  children?: React.ReactNode;
+}
+
+export const TooltipHeaderCell = ({
+  children,
+  tooltipContent
+}: TooltipHeaderCellProps) => {
   const [generatedId] = useId(1, "colTooltip");
   return (
     <Flex gutterSize="xxs" className={style.cellFlexWrapper}>

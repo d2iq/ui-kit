@@ -36,7 +36,7 @@ export interface PopoverProps
   ["data-cy"]?: string;
 }
 
-const Popover: React.StatelessComponent<PopoverProps> = ({
+const Popover = ({
   children,
   "data-cy": dataCy,
   id,
@@ -46,7 +46,7 @@ const Popover: React.StatelessComponent<PopoverProps> = ({
   overlayRoot,
   preferredDirections,
   trigger
-}) => {
+}: PopoverProps) => {
   const [generatedDropdownId] = useId(1, "dropdown");
   const containerRef = React.useRef<HTMLDivElement>(null);
   const triggerRef = React.useRef<HTMLDivElement>(null);

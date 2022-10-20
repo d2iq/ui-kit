@@ -18,9 +18,9 @@ const trigger = (
   </ResetButton>
 );
 
-export const DropdownMenuCell: React.StatelessComponent<
-  Omit<DropdownMenuProps, "trigger">
-> = props => (
+type PopoverProps = Omit<DropdownMenuProps, "trigger">;
+
+export const DropdownMenuCell = (props: PopoverProps) => (
   <div className={style}>
     <DropdownMenu trigger={trigger} {...props} />
   </div>
