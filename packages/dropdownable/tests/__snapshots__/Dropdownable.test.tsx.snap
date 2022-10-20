@@ -52,7 +52,7 @@ exports[`Dropdownable is visible after opening 1`] = `
 >
   <div>
     <PrimaryButton>
-      <ButtonBase
+      <Memo(ButtonBase)
         appearance="primary"
         data-cy="primaryButton"
       >
@@ -71,7 +71,7 @@ exports[`Dropdownable is visible after opening 1`] = `
             </span>
           </button>
         </Memo(FocusStyleManager)>
-      </ButtonBase>
+      </Memo(ButtonBase)>
     </PrimaryButton>
   </div>
 </Dropdownable>
@@ -129,7 +129,7 @@ exports[`Dropdownable is visible after opening 2`] = `
 >
   <div>
     <PrimaryButton>
-      <ButtonBase
+      <Memo(ButtonBase)
         appearance="primary"
         data-cy="primaryButton"
       >
@@ -148,7 +148,7 @@ exports[`Dropdownable is visible after opening 2`] = `
             </span>
           </button>
         </Memo(FocusStyleManager)>
-      </ButtonBase>
+      </Memo(ButtonBase)>
     </PrimaryButton>
   </div>
   <DropdownContents
