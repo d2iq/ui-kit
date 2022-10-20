@@ -33,4 +33,4 @@ const DialogModalWithFooter = (props: DialogModalWithFooterProps) => {
   );
 };
 
-export default DialogModalWithFooter;
+export default React.memo(DialogModalWithFooter);

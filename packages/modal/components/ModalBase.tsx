@@ -124,4 +124,4 @@ const ModalBase = ({ isAnimated = true, ...props }: ModalBaseProps) => {
   );
 };
 
-export default ModalBase;
+export default React.memo(ModalBase);
