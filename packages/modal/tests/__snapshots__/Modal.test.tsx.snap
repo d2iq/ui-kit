@@ -418,7 +418,6 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   >
     <ModalBase
       data-cy="dialogModal"
-      isAnimated={true}
       isOpen={true}
       onClose={[MockFunction]}
     >
@@ -5839,7 +5838,6 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
 }
 
 <ModalBase
-  isAnimated={true}
   isOpen={true}
   onClose={[MockFunction]}
 >
