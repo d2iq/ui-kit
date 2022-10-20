@@ -9,34 +9,20 @@ interface RenderProps {
   isActive?: boolean;
 }
 interface ToggleBoxStoryHelperProps {
-  children: (renderProps: RenderProps) => React.ReactNode;
-  isActive?: boolean;
+  children: (renderProps: RenderProps) => JSX.Element;
 }
 
-class ToggleBoxStoryHelper extends React.PureComponent<
-  ToggleBoxStoryHelperProps,
-  ToggleBoxStoryHelperState
-> {
-  constructor(props) {
-    super(props);
+const ToggleBoxStoryHelper = ({ children }: ToggleBoxStoryHelperProps) => {
+  const [isActive, setIsActive] = React.useState<boolean>(false);
 
-    this.handleChange = this.handleChange.bind(this);
+  const handleChange = e => {
+    setIsActive(e.target.checked);
+  };
 
-    this.state = {
-      isActive: props.isActive
-    };
-  }
-
-  public render() {
-    return this.props.children({
-      changeHandler: this.handleChange,
-      isActive: this.state.isActive
-    });
-  }
-
-  private handleChange(e) {
-    this.setState({ isActive: e.target.checked });
-  }
-}
+  return children({
+    changeHandler: handleChange,
+    isActive
+  });
+};
 
 export default ToggleBoxStoryHelper;
