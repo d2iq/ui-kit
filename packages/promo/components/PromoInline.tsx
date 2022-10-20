@@ -3,7 +3,7 @@ import { Card, SpacingBox } from "../../";
 import { PromoProps } from "../types";
 import PromoContent from "./PromoContent";
 
-const PromoInline: React.StatelessComponent<PromoProps> = props => (
+const PromoInline = (props: PromoProps) => (
   <Card paddingSize="none">
     <SpacingBox side="horiz" spacingSize="m">
       <PromoContent {...props} />

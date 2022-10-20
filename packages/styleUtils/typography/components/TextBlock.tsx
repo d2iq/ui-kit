@@ -5,10 +5,12 @@ import { Stack } from "../../layout";
 
 const SPACE_BETWEEN_ELS = "l";
 
-const TextBlock: React.StatelessComponent<{ className?: string }> = ({
-  children,
-  className
-}) => {
+export interface TextBlockProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const TextBlock = ({ children, className }: TextBlockProps) => {
   return (
     <Stack spacingSize={SPACE_BETWEEN_ELS} className={cx(textBlock, className)}>
       {children}

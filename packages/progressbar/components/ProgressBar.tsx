@@ -43,14 +43,14 @@ export interface ProgressBarProps {
   size?: ProgressBarSizes;
 }
 
-const ProgressBar: React.StatelessComponent<ProgressBarProps> = ({
+const ProgressBar = ({
   caption,
   data,
   value,
   size,
   isProcessing,
   isCondensedLayout
-}) => {
+}: ProgressBarProps) => {
   const renderProgressBar = () => (
     <svg
       className={cx(progressBar(size), {

@@ -19,15 +19,16 @@ export interface StackProps {
    * Which HTML tag to render the component with
    */
   tag?: keyof React.ReactHTML;
+  children?: React.ReactNode;
 }
 
-const Stack: React.StatelessComponent<StackProps> = ({
+const Stack = ({
   children,
   className,
-  "data-cy": dataCy,
-  spacingSize,
+  "data-cy": dataCy = "stack",
+  spacingSize = "m",
   tag: Tag = "div"
-}) => (
+}: StackProps) => (
   <Tag
     className={cx(
       { [listReset]: Tag === "ul" || Tag === "ol" },
@@ -40,11 +41,5 @@ const Stack: React.StatelessComponent<StackProps> = ({
     {children}
   </Tag>
 );
-
-Stack.defaultProps = {
-  spacingSize: "m",
-  tag: "div",
-  ["data-cy"]: "stack"
-};
 
 export default Stack;
