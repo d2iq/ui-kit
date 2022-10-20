@@ -117,7 +117,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
   padding-left: 12px;
 }
 
-<ToggleInputList
+<Memo(ToggleInputList)
   id="radio"
   isRadioGroup={true}
   items={
@@ -139,11 +139,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
       },
     ]
   }
-  labelAppearance="standard"
   listLabel="Sample legend"
-  selectedItems={[]}
-  showListLabel={true}
-  vertAlign="center"
 >
   <Memo(FormFieldWrapper)
     id="radio"
@@ -164,7 +160,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
       >
         <li
           className="emotion-3"
-          key="id.1"
+          key="radio"
         >
           <RadioInput
             checked={false}
@@ -233,7 +229,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.2"
+          key="radio"
         >
           <RadioInput
             checked={false}
@@ -302,7 +298,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.3"
+          key="radio"
         >
           <RadioInput
             checked={false}
@@ -372,7 +368,7 @@ exports[`ToggleInputList renders as a radio group 1`] = `
       </ul>
     </fieldset>
   </Memo(FormFieldWrapper)>
-</ToggleInputList>
+</Memo(ToggleInputList)>
 `;
 
 exports[`ToggleInputList renders default 1`] = `
@@ -492,7 +488,7 @@ exports[`ToggleInputList renders default 1`] = `
   padding-left: 12px;
 }
 
-<ToggleInputList
+<Memo(ToggleInputList)
   id="checkbox"
   items={
     [
@@ -513,11 +509,7 @@ exports[`ToggleInputList renders default 1`] = `
       },
     ]
   }
-  labelAppearance="standard"
   listLabel="Sample legend"
-  selectedItems={[]}
-  showListLabel={true}
-  vertAlign="center"
 >
   <Memo(FormFieldWrapper)
     id="checkbox"
@@ -538,7 +530,7 @@ exports[`ToggleInputList renders default 1`] = `
       >
         <li
           className="emotion-3"
-          key="id.1"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -607,7 +599,7 @@ exports[`ToggleInputList renders default 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.2"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -676,7 +668,7 @@ exports[`ToggleInputList renders default 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.3"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -746,7 +738,7 @@ exports[`ToggleInputList renders default 1`] = `
       </ul>
     </fieldset>
   </Memo(FormFieldWrapper)>
-</ToggleInputList>
+</Memo(ToggleInputList)>
 `;
 
 exports[`ToggleInputList renders with error label appearance 1`] = `
@@ -882,7 +874,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
   padding-top: 4px;
 }
 
-<ToggleInputList
+<Memo(ToggleInputList)
   errors={
     [
       "error.1",
@@ -911,9 +903,6 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
   }
   labelAppearance="error"
   listLabel="Sample legend"
-  selectedItems={[]}
-  showListLabel={true}
-  vertAlign="center"
 >
   <Memo(FormFieldWrapper)
     errors={
@@ -940,7 +929,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
       >
         <li
           className="emotion-3"
-          key="id.1"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -1009,7 +998,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.2"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -1078,7 +1067,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.3"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -1166,7 +1155,7 @@ exports[`ToggleInputList renders with error label appearance 1`] = `
       </ul>
     </fieldset>
   </Memo(FormFieldWrapper)>
-</ToggleInputList>
+</Memo(ToggleInputList)>
 `;
 
 exports[`ToggleInputList renders with errors 1`] = `
@@ -1300,7 +1289,7 @@ exports[`ToggleInputList renders with errors 1`] = `
   padding-top: 4px;
 }
 
-<ToggleInputList
+<Memo(ToggleInputList)
   errors={
     [
       "error.1",
@@ -1327,11 +1316,7 @@ exports[`ToggleInputList renders with errors 1`] = `
       },
     ]
   }
-  labelAppearance="standard"
   listLabel="Sample legend"
-  selectedItems={[]}
-  showListLabel={true}
-  vertAlign="center"
 >
   <Memo(FormFieldWrapper)
     errors={
@@ -1358,7 +1343,7 @@ exports[`ToggleInputList renders with errors 1`] = `
       >
         <li
           className="emotion-3"
-          key="id.1"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -1427,7 +1412,7 @@ exports[`ToggleInputList renders with errors 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.2"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -1496,7 +1481,7 @@ exports[`ToggleInputList renders with errors 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.3"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -1584,7 +1569,7 @@ exports[`ToggleInputList renders with errors 1`] = `
       </ul>
     </fieldset>
   </Memo(FormFieldWrapper)>
-</ToggleInputList>
+</Memo(ToggleInputList)>
 `;
 
 exports[`ToggleInputList renders with hidden label 1`] = `
@@ -1707,7 +1692,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
   padding-left: 12px;
 }
 
-<ToggleInputList
+<Memo(ToggleInputList)
   id="checkbox"
   items={
     [
@@ -1728,11 +1713,8 @@ exports[`ToggleInputList renders with hidden label 1`] = `
       },
     ]
   }
-  labelAppearance="standard"
   listLabel="Sample legend"
-  selectedItems={[]}
   showListLabel={false}
-  vertAlign="center"
 >
   <Memo(FormFieldWrapper)
     id="checkbox"
@@ -1753,7 +1735,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
       >
         <li
           className="emotion-3"
-          key="id.1"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -1822,7 +1804,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.2"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -1891,7 +1873,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.3"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -1961,7 +1943,7 @@ exports[`ToggleInputList renders with hidden label 1`] = `
       </ul>
     </fieldset>
   </Memo(FormFieldWrapper)>
-</ToggleInputList>
+</Memo(ToggleInputList)>
 `;
 
 exports[`ToggleInputList renders with required 1`] = `
@@ -2090,7 +2072,7 @@ exports[`ToggleInputList renders with required 1`] = `
   padding-left: 12px;
 }
 
-<ToggleInputList
+<Memo(ToggleInputList)
   id="checkbox"
   items={
     [
@@ -2111,12 +2093,8 @@ exports[`ToggleInputList renders with required 1`] = `
       },
     ]
   }
-  labelAppearance="standard"
   listLabel="Sample legend"
   required={true}
-  selectedItems={[]}
-  showListLabel={true}
-  vertAlign="center"
 >
   <Memo(FormFieldWrapper)
     id="checkbox"
@@ -2162,7 +2140,7 @@ exports[`ToggleInputList renders with required 1`] = `
       >
         <li
           className="emotion-4"
-          key="id.1"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -2231,7 +2209,7 @@ exports[`ToggleInputList renders with required 1`] = `
         </li>
         <li
           className="emotion-4"
-          key="id.2"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -2300,7 +2278,7 @@ exports[`ToggleInputList renders with required 1`] = `
         </li>
         <li
           className="emotion-4"
-          key="id.3"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -2370,7 +2348,7 @@ exports[`ToggleInputList renders with required 1`] = `
       </ul>
     </fieldset>
   </Memo(FormFieldWrapper)>
-</ToggleInputList>
+</Memo(ToggleInputList)>
 `;
 
 exports[`ToggleInputList renders with selected items 1`] = `
@@ -2529,7 +2507,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
   position: relative;
 }
 
-<ToggleInputList
+<Memo(ToggleInputList)
   id="checkbox"
   items={
     [
@@ -2550,7 +2528,6 @@ exports[`ToggleInputList renders with selected items 1`] = `
       },
     ]
   }
-  labelAppearance="standard"
   listLabel="Sample legend"
   selectedItems={
     [
@@ -2558,8 +2535,6 @@ exports[`ToggleInputList renders with selected items 1`] = `
       "value.2",
     ]
   }
-  showListLabel={true}
-  vertAlign="center"
 >
   <Memo(FormFieldWrapper)
     id="checkbox"
@@ -2580,7 +2555,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
       >
         <li
           className="emotion-3"
-          key="id.1"
+          key="checkbox"
         >
           <CheckboxInput
             checked={true}
@@ -2673,7 +2648,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.2"
+          key="checkbox"
         >
           <CheckboxInput
             checked={true}
@@ -2766,7 +2741,7 @@ exports[`ToggleInputList renders with selected items 1`] = `
         </li>
         <li
           className="emotion-3"
-          key="id.3"
+          key="checkbox"
         >
           <CheckboxInput
             checked={false}
@@ -2836,5 +2811,5 @@ exports[`ToggleInputList renders with selected items 1`] = `
       </ul>
     </fieldset>
   </Memo(FormFieldWrapper)>
-</ToggleInputList>
+</Memo(ToggleInputList)>
 `;
