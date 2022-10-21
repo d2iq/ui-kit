@@ -168,6 +168,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
 }
 
 <button
+    aria-haspopup="true"
     class="emotion-0 emotion-1"
     disabled=""
     tabindex="0"
@@ -389,6 +390,7 @@ exports[`ButtonBase renders all appearances with props 2`] = `
 }
 
 <button
+    aria-haspopup="true"
     class="emotion-0 emotion-1"
     disabled=""
     tabindex="0"
@@ -611,6 +613,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
 }
 
 <button
+    aria-haspopup="true"
     class="emotion-0 emotion-1"
     disabled=""
     tabindex="0"
@@ -833,6 +836,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
 }
 
 <button
+    aria-haspopup="true"
     class="emotion-0 emotion-1"
     disabled=""
     tabindex="0"
@@ -1055,6 +1059,7 @@ exports[`ButtonBase renders all appearances with props 5`] = `
 }
 
 <button
+    aria-haspopup="true"
     class="emotion-0 emotion-1"
     disabled=""
     tabindex="0"

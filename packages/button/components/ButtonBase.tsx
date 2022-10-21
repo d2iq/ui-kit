@@ -91,56 +91,24 @@ export interface ButtonBaseProps extends ButtonProps {
   className?: string;
 }
 
-const ButtonBase = (props: ButtonBaseProps) => {
-  const {
-    appearance,
-    children,
-    className,
-    disabled,
-    iconStart,
-    iconEnd,
-    isInverse,
-    isProcessing,
-    isFullWidth,
-    onClick,
-    type = "button",
-    url,
-    openInNewTab,
-    ...other
-  } = props;
-
-  const buttonClassName = cx(
-    buttonReset,
-    button(appearance),
-    buttonBase,
-    textWeight("medium"),
-    className,
-    {
-      [fullWidthButton]: isFullWidth,
-      [buttonInverse(appearance)]: isInverse,
-      [getMutedButtonStyles(appearance)]: disabled || isProcessing,
-      [getInverseMutedButtonStyles(appearance)]:
-        (disabled || isProcessing) && isInverse
-    }
-  );
-
-  const handleClick = (e: React.SyntheticEvent<HTMLElement>) => {
-    if (!disabled && onClick) {
-      onClick(e);
-    }
-  };
-
-  const getIconStart = icon => {
-    return (
-      <span className={cx(flexItem("shrink"), display("inherit"))}>
-        <IconPropAdapter icon={icon} size="xs" color="inherit" />
-      </span>
-    );
-  };
-
-  const getIconEnd = icon => {
-    return (
-      Boolean(icon) && (
+const ButtonContent = ({ iconStart, iconEnd, isProcessing, children }) => {
+  return iconStart || iconEnd ? (
+    <span className={flex({ align: "center", justify: "center" })}>
+      {iconStart && (
+        <span className={cx(flexItem("shrink"), display("inherit"))}>
+          <IconPropAdapter icon={iconStart} size="xs" color="inherit" />
+        </span>
+      )}
+      {children && (
+        <span
+          className={cx(flexItem("shrink"), padding("left", "xs"), {
+            [processingTextStyle]: isProcessing
+          })}
+        >
+          {children}
+        </span>
+      )}
+      {iconEnd && (
         <span
           className={cx(
             flexItem("shrink"),
@@ -148,58 +116,78 @@ const ButtonBase = (props: ButtonBaseProps) => {
             padding("left", "xxs")
           )}
         >
-          <IconPropAdapter icon={icon} size="xs" color="inherit" />
+          <IconPropAdapter icon={iconEnd} size="xs" color="inherit" />
         </span>
-      )
+      )}
+    </span>
+  ) : (
+    <span className={isProcessing ? processingTextStyle : ""}>{children}</span>
+  );
+};
+
+const ButtonNode = React.forwardRef(
+  (
+    {
+      appearance,
+      children,
+      className,
+      disabled,
+      iconStart,
+      iconEnd,
+      isInverse,
+      isProcessing,
+      isFullWidth,
+      onClick,
+      type = "button",
+      url,
+      openInNewTab,
+      ariaHaspopup,
+      ariaLabel,
+      ...other
+    }: ButtonBaseProps,
+    ref
+  ) => {
+    const buttonClassName = cx(
+      buttonReset,
+      button(appearance),
+      buttonBase,
+      textWeight("medium"),
+      className,
+      {
+        [fullWidthButton]: isFullWidth,
+        [buttonInverse(appearance)]: isInverse,
+        [getMutedButtonStyles(appearance)]: disabled || isProcessing,
+        [getInverseMutedButtonStyles(appearance)]:
+          (disabled || isProcessing) && isInverse
+      }
     );
-  };
 
-  const getButtonContent = () => {
-    const { iconStart, iconEnd, isProcessing, children } = props;
+    const handleClick = (e: React.SyntheticEvent<HTMLElement>) => {
+      if (!disabled && onClick) {
+        onClick(e);
+      }
+    };
 
-    return iconStart || iconEnd ? (
-      <span className={flex({ align: "center", justify: "center" })}>
-        {iconStart && getIconStart(iconStart)}
-        {children && (
-          <span
-            className={cx(flexItem("shrink"), padding("left", "xs"), {
-              [processingTextStyle]: isProcessing
-            })}
-          >
-            {children}
-          </span>
-        )}
-        {iconEnd && getIconEnd(iconEnd)}
-      </span>
-    ) : (
-      <span className={isProcessing ? processingTextStyle : ""}>
-        {children}
-      </span>
-    );
-  };
-
-  const getButtonNode = () => {
     if (url) {
-      return !disabled && !isProcessing ? (
+      const enabled = !disabled && !isProcessing;
+      return (
         <UnstyledLink
-          href={url}
+          href={enabled ? url : undefined}
+          aria-disabled={!enabled}
           className={buttonClassName}
           onClick={handleClick}
-          tabIndex={0}
+          tabIndex={enabled ? 0 : -1}
           openInNewTab={openInNewTab}
+          ref={ref}
           {...other}
         >
-          {getButtonContent()}
-        </UnstyledLink>
-      ) : (
-        <UnstyledLink
-          className={buttonClassName}
-          aria-disabled="true"
-          tabIndex={-1}
-          openInNewTab={openInNewTab}
-          {...other}
-        >
-          {getButtonContent()}
+          <ButtonContent
+            iconStart={iconStart}
+            iconEnd={iconEnd}
+            isProcessing={isProcessing}
+          >
+            {children}
+          </ButtonContent>
         </UnstyledLink>
       );
     }
@@ -211,18 +199,32 @@ const ButtonBase = (props: ButtonBaseProps) => {
         onClick={handleClick}
         tabIndex={0}
         type={type}
+        ref={ref as React.ForwardedRef<HTMLButtonElement>}
+        aria-haspopup={ariaHaspopup}
+        aria-label={ariaLabel}
         {...other}
       >
-        {getButtonContent()}
+        <ButtonContent
+          iconStart={iconStart}
+          iconEnd={iconEnd}
+          isProcessing={isProcessing}
+        >
+          {children}
+        </ButtonContent>
       </button>
     );
-  };
+  }
+);
 
+const ButtonBase = (props: ButtonBaseProps) => {
   return (
     <FocusStyleManager
-      focusEnabledClass={focusStyleByAppearance(appearance, isInverse)}
+      focusEnabledClass={focusStyleByAppearance(
+        props.appearance,
+        props.isInverse
+      )}
     >
-      {getButtonNode()}
+      <ButtonNode {...props} />
     </FocusStyleManager>
   );
 };

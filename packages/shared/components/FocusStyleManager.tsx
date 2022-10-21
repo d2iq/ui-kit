@@ -11,7 +11,7 @@ const FocusStyleManager = ({
   focusEnabledClass,
   children
 }: FocusStyleManagerProps) => {
-  const focusWrapperRef = React.useRef<HTMLDivElement>();
+  const focusWrapperRef = React.useRef();
 
   React.useEffect(() => {
     if (focusWrapperRef.current) {
