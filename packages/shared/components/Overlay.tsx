@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { HTMLAttributes, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
 interface OverlayProps {
@@ -8,44 +8,36 @@ interface OverlayProps {
 
 type AllOverlayProps = OverlayProps & HTMLAttributes<HTMLDivElement>;
 
-class Overlay extends React.Component<AllOverlayProps> {
-  public static defaultProps: Partial<AllOverlayProps> = {
-    overlayRoot: document.body
-  };
+const Overlay = ({
+  overlayRoot = document?.body,
+  ...props
+}: AllOverlayProps) => {
+  const [el] = useState<HTMLDivElement>(() => document.createElement("div"));
 
-  private readonly el: HTMLElement;
-
-  constructor(props) {
-    super(props);
-    this.el = document.createElement("div");
-  }
-
-  componentDidMount() {
-    if (this.props.overlayRoot) {
-      this.props.overlayRoot.appendChild(this.el);
+  useEffect(() => {
+    if (overlayRoot) {
+      overlayRoot.appendChild(el);
     }
-  }
 
-  componentWillUnmount() {
-    if (this.props.overlayRoot) {
-      this.props.overlayRoot.removeChild(this.el);
-    }
-  }
+    return () => {
+      if (el && overlayRoot) {
+        overlayRoot.removeChild(el);
+      }
+    };
+  }, []);
 
-  getContents() {
-    const { children, overlayRoot, innerRef, ...other } = this.props;
+  const getContents = () => {
+    const { children, innerRef, ...other } = props;
 
     return (
       <div ref={innerRef} {...other}>
         {children}
       </div>
     );
-  }
+  };
 
-  render() {
-    return ReactDOM.createPortal(this.getContents(), this.el);
-  }
-}
+  return ReactDOM.createPortal(getContents(), el);
+};
 
 export default React.forwardRef<HTMLDivElement, AllOverlayProps>(
   (props, ref) => <Overlay innerRef={ref} {...props} />
