@@ -91,110 +91,54 @@ export interface ButtonBaseProps extends ButtonProps {
   className?: string;
 }
 
-class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
-  constructor(props) {
-    super(props);
-    this.onClick = this.onClick.bind(this);
-    this.getButtonContent = this.getButtonContent.bind(this);
-  }
+const ButtonBase = (props: ButtonBaseProps) => {
+  const {
+    appearance,
+    children,
+    className,
+    disabled,
+    iconStart,
+    iconEnd,
+    isInverse,
+    isProcessing,
+    isFullWidth,
+    onClick,
+    type = "button",
+    url,
+    openInNewTab,
+    ...other
+  } = props;
 
-  public render() {
-    const {
-      appearance,
-      children,
-      className,
-      disabled,
-      iconStart,
-      iconEnd,
-      isInverse,
-      isProcessing,
-      isFullWidth,
-      onClick,
-      type = "button",
-      url,
-      openInNewTab,
-      ...other
-    } = this.props;
-
-    const buttonClassName = cx(
-      buttonReset,
-      button(appearance),
-      buttonBase,
-      textWeight("medium"),
-      className,
-      {
-        [fullWidthButton]: isFullWidth,
-        [buttonInverse(appearance)]: isInverse,
-        [getMutedButtonStyles(appearance)]: disabled || isProcessing,
-        [getInverseMutedButtonStyles(appearance)]:
-          (disabled || isProcessing) && isInverse
-      }
-    );
-
-    const getButtonNode = () => {
-      if (url) {
-        return !disabled && !isProcessing ? (
-          <UnstyledLink
-            href={url}
-            className={buttonClassName}
-            onClick={this.onClick}
-            tabIndex={0}
-            openInNewTab={openInNewTab}
-            {...other}
-          >
-            {this.getButtonContent()}
-          </UnstyledLink>
-        ) : (
-          <UnstyledLink
-            className={buttonClassName}
-            aria-disabled="true"
-            tabIndex={-1}
-            openInNewTab={openInNewTab}
-            {...other}
-          >
-            {this.getButtonContent()}
-          </UnstyledLink>
-        );
-      }
-
-      return (
-        <button
-          className={buttonClassName}
-          disabled={disabled || isProcessing}
-          onClick={this.onClick}
-          tabIndex={0}
-          type={type}
-          {...other}
-        >
-          {this.getButtonContent()}
-        </button>
-      );
-    };
-
-    return (
-      <FocusStyleManager
-        focusEnabledClass={focusStyleByAppearance(appearance, isInverse)}
-      >
-        {getButtonNode()}
-      </FocusStyleManager>
-    );
-  }
-
-  private onClick(e: React.SyntheticEvent<HTMLElement>) {
-    if (!this.props.disabled && this.props.onClick) {
-      this.props.onClick(e);
+  const buttonClassName = cx(
+    buttonReset,
+    button(appearance),
+    buttonBase,
+    textWeight("medium"),
+    className,
+    {
+      [fullWidthButton]: isFullWidth,
+      [buttonInverse(appearance)]: isInverse,
+      [getMutedButtonStyles(appearance)]: disabled || isProcessing,
+      [getInverseMutedButtonStyles(appearance)]:
+        (disabled || isProcessing) && isInverse
     }
-  }
+  );
 
-  private getIconStart(icon) {
+  const handleClick = (e: React.SyntheticEvent<HTMLElement>) => {
+    if (!disabled && onClick) {
+      onClick(e);
+    }
+  };
+
+  const getIconStart = icon => {
     return (
       <span className={cx(flexItem("shrink"), display("inherit"))}>
         <IconPropAdapter icon={icon} size="xs" color="inherit" />
       </span>
     );
-  }
+  };
 
-  private getIconEnd(icon) {
+  const getIconEnd = icon => {
     return (
       Boolean(icon) && (
         <span
@@ -208,14 +152,14 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
         </span>
       )
     );
-  }
+  };
 
-  private getButtonContent() {
-    const { iconStart, iconEnd, isProcessing, children } = this.props;
+  const getButtonContent = () => {
+    const { iconStart, iconEnd, isProcessing, children } = props;
 
     return iconStart || iconEnd ? (
       <span className={flex({ align: "center", justify: "center" })}>
-        {iconStart && this.getIconStart(iconStart)}
+        {iconStart && getIconStart(iconStart)}
         {children && (
           <span
             className={cx(flexItem("shrink"), padding("left", "xs"), {
@@ -225,14 +169,62 @@ class ButtonBase extends React.PureComponent<ButtonBaseProps, {}> {
             {children}
           </span>
         )}
-        {iconEnd && this.getIconEnd(iconEnd)}
+        {iconEnd && getIconEnd(iconEnd)}
       </span>
     ) : (
       <span className={isProcessing ? processingTextStyle : ""}>
         {children}
       </span>
     );
-  }
-}
+  };
 
-export default ButtonBase;
+  const getButtonNode = () => {
+    if (url) {
+      return !disabled && !isProcessing ? (
+        <UnstyledLink
+          href={url}
+          className={buttonClassName}
+          onClick={handleClick}
+          tabIndex={0}
+          openInNewTab={openInNewTab}
+          {...other}
+        >
+          {getButtonContent()}
+        </UnstyledLink>
+      ) : (
+        <UnstyledLink
+          className={buttonClassName}
+          aria-disabled="true"
+          tabIndex={-1}
+          openInNewTab={openInNewTab}
+          {...other}
+        >
+          {getButtonContent()}
+        </UnstyledLink>
+      );
+    }
+
+    return (
+      <button
+        className={buttonClassName}
+        disabled={disabled || isProcessing}
+        onClick={handleClick}
+        tabIndex={0}
+        type={type}
+        {...other}
+      >
+        {getButtonContent()}
+      </button>
+    );
+  };
+
+  return (
+    <FocusStyleManager
+      focusEnabledClass={focusStyleByAppearance(appearance, isInverse)}
+    >
+      {getButtonNode()}
+    </FocusStyleManager>
+  );
+};
+
+export default React.memo(ButtonBase);

@@ -2733,7 +2733,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                     <SecondaryButton
                                       onClick={[MockFunction]}
                                     >
-                                      <ButtonBase
+                                      <Memo(ButtonBase)
                                         appearance="secondary"
                                         data-cy="secondaryButton"
                                         onClick={[MockFunction]}
@@ -2753,14 +2753,14 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                             </span>
                                           </button>
                                         </Memo(FocusStyleManager)>
-                                      </ButtonBase>
+                                      </Memo(ButtonBase)>
                                     </SecondaryButton>
                                   </div>
                                   <div
                                     className="emotion-13"
                                   >
                                     <PrimaryButton>
-                                      <ButtonBase
+                                      <Memo(ButtonBase)
                                         appearance="primary"
                                         data-cy="primaryButton"
                                       >
@@ -2779,7 +2779,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
                                             </span>
                                           </button>
                                         </Memo(FocusStyleManager)>
-                                      </ButtonBase>
+                                      </Memo(ButtonBase)>
                                     </PrimaryButton>
                                   </div>
                                 </div>
@@ -5626,7 +5626,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                           <SecondaryButton
                                             onClick={[MockFunction]}
                                           >
-                                            <ButtonBase
+                                            <Memo(ButtonBase)
                                               appearance="secondary"
                                               data-cy="secondaryButton"
                                               onClick={[MockFunction]}
@@ -5646,7 +5646,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                                   </span>
                                                 </button>
                                               </Memo(FocusStyleManager)>
-                                            </ButtonBase>
+                                            </Memo(ButtonBase)>
                                           </SecondaryButton>
                                         </div>
                                         <div
@@ -5665,7 +5665,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                           className="emotion-13"
                                         >
                                           <PrimaryButton>
-                                            <ButtonBase
+                                            <Memo(ButtonBase)
                                               appearance="primary"
                                               data-cy="primaryButton"
                                             >
@@ -5684,7 +5684,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
                                                   </span>
                                                 </button>
                                               </Memo(FocusStyleManager)>
-                                            </ButtonBase>
+                                            </Memo(ButtonBase)>
                                           </PrimaryButton>
                                         </div>
                                       </div>
