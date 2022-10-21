@@ -51,98 +51,77 @@ export interface ModalBaseProps {
 
 const animationDuration = 250;
 
-class ModalBase extends React.PureComponent<ModalBaseProps, {}> {
-  public static defaultProps: Partial<ModalBaseProps> = {
-    isAnimated: true
-  };
+const ModalBase = ({ isAnimated = true, ...props }: ModalBaseProps) => {
+  const { children, size, isOpen, "data-cy": dataCy, overlayRoot, id } = props;
+  const modalSize = size || ModalSizes.M;
 
-  constructor(props) {
-    super(props);
-
-    this.onKeyDown = this.onKeyDown.bind(this);
-    this.setInitialFocus = this.setInitialFocus.bind(this);
-  }
-
-  public componentDidUpdate() {
-    if (this.props.initialFocus && this.props.isOpen) {
-      this.setInitialFocus(this.props.initialFocus);
-    }
-  }
-
-  public onKeyDown(e) {
+  const onKeyDown = e => {
     if (e.key === "Escape") {
-      this.props.onClose(e);
+      props.onClose(e);
       e.stopPropagation();
     }
-  }
+  };
 
-  public render() {
-    const {
-      children,
-      isAnimated,
-      size,
-      isOpen,
-      "data-cy": dataCy,
-      overlayRoot,
-      id
-    } = this.props;
-    const modalSize = size || ModalSizes.M;
-
-    return (
-      <Transition
-        timeout={{ enter: 0, exit: animationDuration }}
-        in={isOpen}
-        unmountOnExit={true}
-      >
-        {state => {
-          return (
-            <Overlay overlayRoot={overlayRoot}>
-              <FocusLock>
-                <div
-                  role="button"
-                  tabIndex={-1}
-                  className={cx(scrim, {
-                    [scrimPreTransitionStyle(animationDuration)]: isAnimated,
-                    [scrimTransitionStyles[state]]: isAnimated
-                  })}
-                  onClick={this.props.onClose}
-                />
-                <div className={centerDialogWrapper}>
-                  <div
-                    className={cx(modal, modalWidth[modalSize], {
-                      [modalPreTransitionStyle(animationDuration)]: isAnimated,
-                      [modalTransitionStyles[state]]: isAnimated
-                    })}
-                    role="dialog"
-                    onKeyDown={this.onKeyDown}
-                    tabIndex={-1}
-                    id={id}
-                  >
-                    <ModalContents
-                      isOpen={isOpen}
-                      onClose={this.props.onClose}
-                      data-cy={dataCy}
-                    >
-                      {children}
-                    </ModalContents>
-                  </div>
-                </div>
-              </FocusLock>
-            </Overlay>
-          );
-        }}
-      </Transition>
-    );
-  }
-
-  private setInitialFocus(initialFocus) {
+  const setInitialFocus = initialFocus => {
     const domNodeToFind = document.querySelector(initialFocus);
 
     if (domNodeToFind) {
       const node = ReactDOM.findDOMNode(domNodeToFind) as Element;
       node.setAttribute("data-autofocus", "true");
     }
-  }
-}
+  };
 
-export default ModalBase;
+  React.useEffect(() => {
+    if (props.initialFocus && props.isOpen) {
+      setInitialFocus(props.initialFocus);
+    }
+  }, [props.isOpen]);
+
+  return (
+    <Transition
+      timeout={{ enter: 0, exit: animationDuration }}
+      in={isOpen}
+      unmountOnExit={true}
+    >
+      {state => {
+        return (
+          <Overlay overlayRoot={overlayRoot}>
+            <FocusLock>
+              <div
+                role="button"
+                tabIndex={-1}
+                className={cx(scrim, {
+                  [scrimPreTransitionStyle(animationDuration)]: isAnimated,
+                  [scrimTransitionStyles[state]]: isAnimated
+                })}
+                onClick={props.onClose}
+              />
+              <div className={centerDialogWrapper}>
+                <div
+                  className={cx(modal, modalWidth[modalSize], {
+                    [modalPreTransitionStyle(animationDuration)]: isAnimated,
+                    [modalTransitionStyles[state]]: isAnimated
+                  })}
+                  role="dialog"
+                  onKeyDown={onKeyDown}
+                  tabIndex={-1}
+                  id={id}
+                >
+                  <ModalContents
+                    isOpen={isOpen}
+                    onClose={props.onClose}
+                    data-cy={dataCy}
+                  >
+                    {children}
+                  </ModalContents>
+                </div>
+              </div>
+            </FocusLock>
+          </Overlay>
+        );
+      }}
+    </Transition>
+  );
+};
+
+export default React.memo(ModalBase);

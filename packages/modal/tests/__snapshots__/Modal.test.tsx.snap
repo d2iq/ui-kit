@@ -327,7 +327,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   background-color: #6446cc;
 }
 
-<DialogModalWithFooter
+<Memo(DialogModalWithFooter)
   closeText="Close"
   ctaButton={
     <PrimaryButton>
@@ -338,7 +338,7 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
   onClose={[MockFunction]}
   title="Title"
 >
-  <DialogModal
+  <Memo(DialogModal)
     footerContent={
       .emotion-0 {
   -webkit-align-items: center;
@@ -416,9 +416,8 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
     onClose={[MockFunction]}
     title="Title"
   >
-    <ModalBase
+    <Memo(ModalBase)
       data-cy="dialogModal"
-      isAnimated={true}
       isOpen={true}
       onClose={[MockFunction]}
     >
@@ -2812,9 +2811,9 @@ exports[`Modal DialogModal renders DialogModal 1`] = `
           </Overlay>
         </ForwardRef>
       </Transition>
-    </ModalBase>
-  </DialogModal>
-</DialogModalWithFooter>
+    </Memo(ModalBase)>
+  </Memo(DialogModal)>
+</Memo(DialogModalWithFooter)>
 `;
 
 exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
@@ -3115,7 +3114,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
   onClose={[MockFunction]}
   title="Title"
 >
-  <ModalBase
+  <Memo(ModalBase)
     data-cy="fullscreenModal"
     isAnimated={false}
     isOpen={true}
@@ -5731,7 +5730,7 @@ exports[`Modal FullscreenModal renders FullscreenModal 1`] = `
         </Overlay>
       </ForwardRef>
     </Transition>
-  </ModalBase>
+  </Memo(ModalBase)>
 </Memo(FullscreenModal)>
 `;
 
@@ -5838,8 +5837,7 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
   width: 100%;
 }
 
-<ModalBase
-  isAnimated={true}
+<Memo(ModalBase)
   isOpen={true}
   onClose={[MockFunction]}
 >
@@ -6562,5 +6560,5 @@ exports[`Modal ModalBase renders ModalBase 1`] = `
       </Overlay>
     </ForwardRef>
   </Transition>
-</ModalBase>
+</Memo(ModalBase)>
 `;

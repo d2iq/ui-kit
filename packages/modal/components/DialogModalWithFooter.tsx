@@ -12,30 +12,25 @@ export interface DialogModalWithFooterProps extends DialogModalProps {
   closeText?: React.ReactNode;
 }
 
-class DialogModalWithFooter extends React.PureComponent<
-  DialogModalWithFooterProps,
-  {}
-> {
-  public render() {
-    const { ctaButton, closeText, onClose, ...other } = this.props;
+const DialogModalWithFooter = (props: DialogModalWithFooterProps) => {
+  const { ctaButton, closeText, onClose, ...other } = props;
 
-    return (
-      <DialogModal
-        footerContent={
-          <div className={flex({ align: "center", justify: "space-between" })}>
-            {closeText !== "" || closeText != null ? (
-              <div className={flexItem("shrink")}>
-                <SecondaryButton onClick={onClose}>{closeText}</SecondaryButton>
-              </div>
-            ) : null}
-            <div className={flexItem("shrink")}>{ctaButton}</div>
-          </div>
-        }
-        onClose={onClose}
-        {...other}
-      />
-    );
-  }
-}
+  return (
+    <DialogModal
+      footerContent={
+        <div className={flex({ align: "center", justify: "space-between" })}>
+          {closeText !== "" || closeText != null ? (
+            <div className={flexItem("shrink")}>
+              <SecondaryButton onClick={onClose}>{closeText}</SecondaryButton>
+            </div>
+          ) : null}
+          <div className={flexItem("shrink")}>{ctaButton}</div>
+        </div>
+      }
+      onClose={onClose}
+      {...other}
+    />
+  );
+};
 
-export default DialogModalWithFooter;
+export default React.memo(DialogModalWithFooter);
