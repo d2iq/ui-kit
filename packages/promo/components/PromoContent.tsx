@@ -37,7 +37,11 @@ const PromoContent = ({
   return (
     <div className={bannerContainer(isDarkBackground)} data-cy={dataCy}>
       {dismissHandler && (
-        <ResetButton className={dismissButton} onClick={dismissHandler}>
+        <ResetButton
+          className={dismissButton}
+          onClick={dismissHandler}
+          data-cy="dismissButton"
+        >
           <Icon shape={SystemIcons.Close} size="xs" />
         </ResetButton>
       )}
