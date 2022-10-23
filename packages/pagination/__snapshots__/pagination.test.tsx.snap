@@ -1,7 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pagination rendering renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.emotion-0>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-1 {
   border-width: 1px;
   border-color: var(--themeBorder, #DADDE2);
   border-right-style: solid;
@@ -9,65 +51,393 @@ exports[`Pagination rendering renders default 1`] = `
   margin-right: 16px;
 }
 
-.emotion-1 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-4 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.emotion-4::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-4>div:focus {
+  outline: none;
+}
+
+.emotion-4:focus>div {
+  outline-color: Highlight;
+  outline-width: thin;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .emotion-4:focus>div {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: unset;
+  }
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-5 use {
+  pointer-events: none;
+}
+
+.emotion-7 {
   display: inline-block;
   max-width: 80px;
 }
 
-<Flex
-  align="center"
->
-  <div
-    className="emotion-0"
+.emotion-8 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-9 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-9>div {
+  width: auto;
+}
+
+.emotion-10 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+}
+
+.emotion-10:focus {
+  outline: 0;
+}
+
+.emotion-10::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-10 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+<div
+    class="emotion-0"
+    data-cy="flex"
   >
-    61–80
-  </div>
-  <Flex
-    align="center"
-    gutterSize="s"
-  >
-    <FlexItem
-      flex="shrink"
+    <div
+      class="emotion-1"
     >
-      <NavButton
-        direction="prev"
-        disabled={false}
-        onClick={[Function]}
-      />
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
+      61–80
+    </div>
+    <div
+      class="emotion-2"
+      data-cy="flex"
     >
-      <form
-        className="emotion-1"
-        onSubmit={[Function]}
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
       >
-        <TextInput
-          appearance="standard"
-          label="Page number"
-          min={1}
-          onChange={[Function]}
-          showInputLabel={false}
-          type="number"
-          value={4}
-        />
-      </form>
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    >
-      <NavButton
-        direction="next"
-        disabled={false}
-        onClick={[Function]}
-      />
-    </FlexItem>
-  </Flex>
-</Flex>
+        <button
+          aria-label="previous page"
+          class="emotion-4"
+          data-cy="previous page"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          >
+            <svg
+              aria-label="system-caret-left icon"
+              class="emotion-5"
+              data-cy="icon"
+              height="24"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <use
+                xlink:href="#system-caret-left"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        <form
+          aria-label="form"
+          class="emotion-7"
+        >
+          <div
+            data-cy="textInput textInput.standard"
+          >
+            <label
+              class="emotion-8"
+              data-cy="textInput-label"
+              for="textInput-2"
+            />
+            <div>
+              <div
+                class="emotion-9"
+              >
+                <input
+                  aria-describedby=""
+                  aria-invalid="false"
+                  class="emotion-10"
+                  data-cy="textInput-input"
+                  id="textInput-3"
+                  label="Page number"
+                  min="1"
+                  type="number"
+                  value="4"
+                />
+              </div>
+              <div
+                data-cy="textInput-hintContent"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        <button
+          aria-label="next page"
+          class="emotion-4"
+          data-cy="next page"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          >
+            <svg
+              aria-label="system-caret-right icon"
+              class="emotion-5"
+              data-cy="icon"
+              height="24"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <use
+                xlink:href="#system-caret-right"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Pagination rendering renders prev and next buttons as links 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.emotion-0>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-1 {
   border-width: 1px;
   border-color: var(--themeBorder, #DADDE2);
   border-right-style: solid;
@@ -75,67 +445,361 @@ exports[`Pagination rendering renders prev and next buttons as links 1`] = `
   margin-right: 16px;
 }
 
-.emotion-1 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-4 {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4:visited {
+  color: inherit;
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-5 use {
+  pointer-events: none;
+}
+
+.emotion-7 {
   display: inline-block;
   max-width: 80px;
 }
 
-<Flex
-  align="center"
->
-  <div
-    className="emotion-0"
+.emotion-8 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-9 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-9>div {
+  width: auto;
+}
+
+.emotion-10 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+}
+
+.emotion-10:focus {
+  outline: 0;
+}
+
+.emotion-10::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-10 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+<div
+    class="emotion-0"
+    data-cy="flex"
   >
-    61–80
-  </div>
-  <Flex
-    align="center"
-    gutterSize="s"
-  >
-    <FlexItem
-      flex="shrink"
+    <div
+      class="emotion-1"
     >
-      <NavButton
-        direction="prev"
-        disabled={false}
-        onClick={[Function]}
-        url="prev"
-      />
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
+      61–80
+    </div>
+    <div
+      class="emotion-2"
+      data-cy="flex"
     >
-      <form
-        className="emotion-1"
-        onSubmit={[Function]}
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
       >
-        <TextInput
-          appearance="standard"
-          label="Page number"
-          min={1}
-          onChange={[Function]}
-          showInputLabel={false}
-          type="number"
-          value={4}
-        />
-      </form>
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    >
-      <NavButton
-        direction="next"
-        disabled={false}
-        onClick={[Function]}
-        url="next"
-      />
-    </FlexItem>
-  </Flex>
-</Flex>
+        <a
+          aria-label="previous page"
+          class="emotion-4"
+          data-cy="previous page"
+          href="prev"
+        >
+          <svg
+            aria-label="system-caret-left icon"
+            class="emotion-5"
+            data-cy="icon"
+            height="24"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <use
+              xlink:href="#system-caret-left"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        <form
+          aria-label="form"
+          class="emotion-7"
+        >
+          <div
+            data-cy="textInput textInput.standard"
+          >
+            <label
+              class="emotion-8"
+              data-cy="textInput-label"
+              for="textInput-17"
+            />
+            <div>
+              <div
+                class="emotion-9"
+              >
+                <input
+                  aria-describedby=""
+                  aria-invalid="false"
+                  class="emotion-10"
+                  data-cy="textInput-input"
+                  id="textInput-18"
+                  label="Page number"
+                  min="1"
+                  type="number"
+                  value="4"
+                />
+              </div>
+              <div
+                data-cy="textInput-hintContent"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        <a
+          aria-label="next page"
+          class="emotion-4"
+          data-cy="next page"
+          href="next"
+        >
+          <svg
+            aria-label="system-caret-right icon"
+            class="emotion-5"
+            data-cy="icon"
+            height="24"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <use
+              xlink:href="#system-caret-right"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Pagination rendering renders w/ custom item label 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.emotion-0>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-1 {
   border-width: 1px;
   border-color: var(--themeBorder, #DADDE2);
   border-right-style: solid;
@@ -143,65 +807,583 @@ exports[`Pagination rendering renders w/ custom item label 1`] = `
   margin-right: 16px;
 }
 
-.emotion-1 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-4 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.emotion-4::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-4>div:focus {
+  outline: none;
+}
+
+.emotion-4:focus>div {
+  outline-color: Highlight;
+  outline-width: thin;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .emotion-4:focus>div {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: unset;
+  }
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-5 use {
+  pointer-events: none;
+}
+
+.emotion-7 {
   display: inline-block;
   max-width: 80px;
 }
 
-<Flex
-  align="center"
->
-  <div
-    className="emotion-0"
+.emotion-8 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-9 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-9>div {
+  width: auto;
+}
+
+.emotion-10 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+}
+
+.emotion-10:focus {
+  outline: 0;
+}
+
+.emotion-10::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-10 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+<div
+    class="emotion-0"
+    data-cy="flex"
   >
-    61–80
-  </div>
-  <Flex
-    align="center"
-    gutterSize="s"
-  >
-    <FlexItem
-      flex="shrink"
+    <div
+      class="emotion-1"
     >
-      <NavButton
-        direction="prev"
-        disabled={false}
-        onClick={[Function]}
-      />
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
+      61–80
+    </div>
+    <div
+      class="emotion-2"
+      data-cy="flex"
     >
-      <form
-        className="emotion-1"
-        onSubmit={[Function]}
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
       >
-        <TextInput
-          appearance="standard"
-          label="Page number"
-          min={1}
-          onChange={[Function]}
-          showInputLabel={false}
-          type="number"
-          value={4}
-        />
-      </form>
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    >
-      <NavButton
-        direction="next"
-        disabled={false}
-        onClick={[Function]}
-      />
-    </FlexItem>
-  </Flex>
-</Flex>
+        <button
+          aria-label="previous page"
+          class="emotion-4"
+          data-cy="previous page"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          >
+            <svg
+              aria-label="system-caret-left icon"
+              class="emotion-5"
+              data-cy="icon"
+              height="24"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <use
+                xlink:href="#system-caret-left"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        <form
+          aria-label="form"
+          class="emotion-7"
+        >
+          <div
+            data-cy="textInput textInput.standard"
+          >
+            <label
+              class="emotion-8"
+              data-cy="textInput-label"
+              for="textInput-8"
+            />
+            <div>
+              <div
+                class="emotion-9"
+              >
+                <input
+                  aria-describedby=""
+                  aria-invalid="false"
+                  class="emotion-10"
+                  data-cy="textInput-input"
+                  id="textInput-9"
+                  label="Page number"
+                  min="1"
+                  type="number"
+                  value="4"
+                />
+              </div>
+              <div
+                data-cy="textInput-hintContent"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        <button
+          aria-label="next page"
+          class="emotion-4"
+          data-cy="next page"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          >
+            <svg
+              aria-label="system-caret-right icon"
+              class="emotion-5"
+              data-cy="icon"
+              height="24"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <use
+                xlink:href="#system-caret-right"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Pagination rendering renders w/ page length menu 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.emotion-0>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+  row-gap: 0;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-right: 8px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-1>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-4 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-5 {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-5::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-5:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-5::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-5 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-5 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-5 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-5 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-5 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-5:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+.emotion-6 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  color: inherit;
+  font-size: inherit;
+  padding-right: 32px;
+  width: 100%;
+  display: block;
+}
+
+.emotion-6:focus {
+  outline: 0;
+}
+
+.emotion-6:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 var(--themeTextColorPrimary, #1B2029);
+}
+
+.emotion-6::-ms-expand {
+  display: none;
+}
+
+.emotion-7 {
+  font-size: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.emotion-7 svg {
+  fill: var(--themeTextColorPrimary, #1B2029);
+}
+
+.emotion-8 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-8 use {
+  pointer-events: none;
+}
+
+.emotion-9 {
   border-width: 1px;
   border-color: var(--themeBorder, #DADDE2);
   border-left-style: solid;
@@ -212,112 +1394,440 @@ exports[`Pagination rendering renders w/ page length menu 1`] = `
   margin-right: 16px;
 }
 
-.emotion-1 {
+.emotion-10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-10>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-10>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-10>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-12 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.emotion-12::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-12>div:focus {
+  outline: none;
+}
+
+.emotion-12:focus>div {
+  outline-color: Highlight;
+  outline-width: thin;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .emotion-12:focus>div {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: unset;
+  }
+}
+
+.emotion-15 {
   display: inline-block;
   max-width: 80px;
 }
 
-<Flex
-  align="center"
->
-  <Flex
-    align="center"
-    gutterSize="xs"
+.emotion-17 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-17>div {
+  width: auto;
+}
+
+.emotion-18 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+}
+
+.emotion-18:focus {
+  outline: 0;
+}
+
+.emotion-18::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-18::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-18:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-18::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-18 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-18 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-18 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-18 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-18 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-18:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+<div
+    class="emotion-0"
+    data-cy="flex"
   >
-    <FlexItem
-      flex="shrink"
+    <div
+      class="emotion-1"
+      data-cy="flex"
     >
-      <span
-        aria-hidden="true"
-        tabIndex={-1}
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
       >
-        Items
-         per page
-      </span>
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
+        <span
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          Items per page
+        </span>
+      </div>
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      >
+        <div
+          data-cy="selectInput selectInput.standard"
+        >
+          <label
+            class="emotion-4"
+            data-cy="textInput-label"
+            for="pageLengthMenu19"
+          >
+            Items per page
+          </label>
+          <span
+            class="emotion-5"
+          >
+            <select
+              aria-describedby=""
+              aria-invalid="false"
+              class="emotion-6"
+              data-cy="selectInput-select selectInput-select.standard"
+              id="pageLengthMenu19"
+            >
+              <option
+                value="10"
+              >
+                10
+              </option>
+              <option
+                value="30"
+              >
+                30
+              </option>
+              <option
+                value="50"
+              >
+                50
+              </option>
+              <option
+                value="100"
+              >
+                100
+              </option>
+            </select>
+            <span
+              class="emotion-7"
+            >
+              <svg
+                aria-label="system-triangle-down icon"
+                class="emotion-8"
+                data-cy="icon"
+                height="16"
+                preserveAspectRatio="xMinYMin meet"
+                role="img"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <use
+                  xlink:href="#system-triangle-down"
+                />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-9"
     >
-      <Memo(SelectInput)
-        id="pageLengthMenu6"
-        inputLabel="Items per page"
-        onChange={[Function]}
-        options={
-          [
-            {
-              "label": "10",
-              "value": "10",
-            },
-            {
-              "label": "30",
-              "value": "30",
-            },
-            {
-              "label": "50",
-              "value": "50",
-            },
-            {
-              "label": "100",
-              "value": "100",
-            },
-          ]
-        }
-        showInputLabel={false}
-        value={100}
-      />
-    </FlexItem>
-  </Flex>
-  <div
-    className="emotion-0"
-  >
-    301–400
+      301–400
+    </div>
+    <div
+      class="emotion-10"
+      data-cy="flex"
+    >
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      >
+        <button
+          aria-label="previous page"
+          class="emotion-12"
+          data-cy="previous page"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          >
+            <svg
+              aria-label="system-caret-left icon"
+              class="emotion-8"
+              data-cy="icon"
+              height="24"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <use
+                xlink:href="#system-caret-left"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      >
+        <form
+          aria-label="form"
+          class="emotion-15"
+        >
+          <div
+            data-cy="textInput textInput.standard"
+          >
+            <label
+              class="emotion-4"
+              data-cy="textInput-label"
+              for="textInput-20"
+            />
+            <div>
+              <div
+                class="emotion-17"
+              >
+                <input
+                  aria-describedby=""
+                  aria-invalid="false"
+                  class="emotion-18"
+                  data-cy="textInput-input"
+                  id="textInput-21"
+                  label="Page number"
+                  min="1"
+                  type="number"
+                  value="4"
+                />
+              </div>
+              <div
+                data-cy="textInput-hintContent"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div
+        class="emotion-2"
+        data-cy="flexItem"
+      >
+        <button
+          aria-label="next page"
+          class="emotion-12"
+          data-cy="next page"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          >
+            <svg
+              aria-label="system-caret-right icon"
+              class="emotion-8"
+              data-cy="icon"
+              height="24"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <use
+                xlink:href="#system-caret-right"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
   </div>
-  <Flex
-    align="center"
-    gutterSize="s"
-  >
-    <FlexItem
-      flex="shrink"
-    >
-      <NavButton
-        direction="prev"
-        disabled={false}
-        onClick={[Function]}
-      />
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    >
-      <form
-        className="emotion-1"
-        onSubmit={[Function]}
-      >
-        <TextInput
-          appearance="standard"
-          label="Page number"
-          min={1}
-          onChange={[Function]}
-          showInputLabel={false}
-          type="number"
-          value={4}
-        />
-      </form>
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    >
-      <NavButton
-        direction="next"
-        disabled={false}
-        onClick={[Function]}
-      />
-    </FlexItem>
-  </Flex>
-</Flex>
+</DocumentFragment>
 `;
 
 exports[`Pagination rendering renders w/ totalItems set 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.emotion-0>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-1 {
   border-width: 1px;
   border-color: var(--themeBorder, #DADDE2);
   border-right-style: solid;
@@ -325,66 +1835,394 @@ exports[`Pagination rendering renders w/ totalItems set 1`] = `
   margin-right: 16px;
 }
 
-.emotion-1 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-4 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.emotion-4::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-4>div:focus {
+  outline: none;
+}
+
+.emotion-4:focus>div {
+  outline-color: Highlight;
+  outline-width: thin;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .emotion-4:focus>div {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: unset;
+  }
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-5 use {
+  pointer-events: none;
+}
+
+.emotion-7 {
   display: inline-block;
 }
 
-<Flex
-  align="center"
->
-  <div
-    className="emotion-0"
+.emotion-8 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-9 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-9>div {
+  width: auto;
+}
+
+.emotion-10 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+}
+
+.emotion-10:focus {
+  outline: 0;
+}
+
+.emotion-10::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-10 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+<div
+    class="emotion-0"
+    data-cy="flex"
   >
-    61–80 of 200 Items
-  </div>
-  <Flex
-    align="center"
-    gutterSize="s"
-  >
-    <FlexItem
-      flex="shrink"
+    <div
+      class="emotion-1"
     >
-      <NavButton
-        direction="prev"
-        disabled={false}
-        onClick={[Function]}
-      />
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
+      61–80 of 200 Items
+    </div>
+    <div
+      class="emotion-2"
+      data-cy="flex"
     >
-      <form
-        className="emotion-1"
-        onSubmit={[Function]}
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
       >
-        <TextInput
-          appearance="standard"
-          label="Page number"
-          max={10}
-          min={1}
-          onChange={[Function]}
-          showInputLabel={false}
-          type="number"
-          value={4}
-        />
-      </form>
-       / 10
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    >
-      <NavButton
-        direction="next"
-        disabled={false}
-        onClick={[Function]}
-      />
-    </FlexItem>
-  </Flex>
-</Flex>
+        <button
+          aria-label="previous page"
+          class="emotion-4"
+          data-cy="previous page"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          >
+            <svg
+              aria-label="system-caret-left icon"
+              class="emotion-5"
+              data-cy="icon"
+              height="24"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <use
+                xlink:href="#system-caret-left"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        <form
+          aria-label="form"
+          class="emotion-7"
+        >
+          <div
+            data-cy="textInput textInput.standard"
+          >
+            <label
+              class="emotion-8"
+              data-cy="textInput-label"
+              for="textInput-11"
+            />
+            <div>
+              <div
+                class="emotion-9"
+              >
+                <input
+                  aria-describedby=""
+                  aria-invalid="false"
+                  class="emotion-10"
+                  data-cy="textInput-input"
+                  id="textInput-12"
+                  label="Page number"
+                  max="10"
+                  min="1"
+                  type="number"
+                  value="4"
+                />
+              </div>
+              <div
+                data-cy="textInput-hintContent"
+              />
+            </div>
+          </div>
+        </form>
+         / 10
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        <button
+          aria-label="next page"
+          class="emotion-4"
+          data-cy="next page"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          >
+            <svg
+              aria-label="system-caret-right icon"
+              class="emotion-5"
+              data-cy="icon"
+              height="24"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <use
+                xlink:href="#system-caret-right"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Pagination rendering renders w/ totalPages, pageLength, and totalItems set 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.emotion-0>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-1 {
   border-width: 1px;
   border-color: var(--themeBorder, #DADDE2);
   border-right-style: solid;
@@ -392,78 +2230,791 @@ exports[`Pagination rendering renders w/ totalPages, pageLength, and totalItems 
   margin-right: 16px;
 }
 
-.emotion-1 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-4 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.emotion-4::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-4>div:focus {
+  outline: none;
+}
+
+.emotion-4:focus>div {
+  outline-color: Highlight;
+  outline-width: thin;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .emotion-4:focus>div {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: unset;
+  }
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-5 use {
+  pointer-events: none;
+}
+
+.emotion-7 {
   display: inline-block;
 }
 
-<Flex
-  align="center"
->
-  <div
-    className="emotion-0"
+.emotion-8 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-9 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-9>div {
+  width: auto;
+}
+
+.emotion-10 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+}
+
+.emotion-10:focus {
+  outline: 0;
+}
+
+.emotion-10::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-10 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-10:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+<div
+    class="emotion-0"
+    data-cy="flex"
   >
-    31–40 of 200 Items
-  </div>
-  <Flex
-    align="center"
-    gutterSize="s"
-  >
-    <FlexItem
-      flex="shrink"
+    <div
+      class="emotion-1"
     >
-      <NavButton
-        direction="prev"
-        disabled={false}
-        onClick={[Function]}
-      />
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
+      31–40 of 200 Items
+    </div>
+    <div
+      class="emotion-2"
+      data-cy="flex"
     >
-      <form
-        className="emotion-1"
-        onSubmit={[Function]}
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
       >
-        <TextInput
-          appearance="standard"
-          label="Page number"
-          max={20}
-          min={1}
-          onChange={[Function]}
-          showInputLabel={false}
-          type="number"
-          value={4}
-        />
-      </form>
-       / 20
-    </FlexItem>
-    <FlexItem
-      flex="shrink"
-    >
-      <NavButton
-        direction="next"
-        disabled={false}
-        onClick={[Function]}
-      />
-    </FlexItem>
-  </Flex>
-</Flex>
+        <button
+          aria-label="previous page"
+          class="emotion-4"
+          data-cy="previous page"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          >
+            <svg
+              aria-label="system-caret-left icon"
+              class="emotion-5"
+              data-cy="icon"
+              height="24"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <use
+                xlink:href="#system-caret-left"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        <form
+          aria-label="form"
+          class="emotion-7"
+        >
+          <div
+            data-cy="textInput textInput.standard"
+          >
+            <label
+              class="emotion-8"
+              data-cy="textInput-label"
+              for="textInput-14"
+            />
+            <div>
+              <div
+                class="emotion-9"
+              >
+                <input
+                  aria-describedby=""
+                  aria-invalid="false"
+                  class="emotion-10"
+                  data-cy="textInput-input"
+                  id="textInput-15"
+                  label="Page number"
+                  max="20"
+                  min="1"
+                  type="number"
+                  value="4"
+                />
+              </div>
+              <div
+                data-cy="textInput-hintContent"
+              />
+            </div>
+          </div>
+        </form>
+         / 20
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="flexItem"
+      >
+        <button
+          aria-label="next page"
+          class="emotion-4"
+          data-cy="next page"
+          type="button"
+        >
+          <div
+            tabindex="-1"
+          >
+            <svg
+              aria-label="system-caret-right icon"
+              class="emotion-5"
+              data-cy="icon"
+              height="24"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <use
+                xlink:href="#system-caret-right"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Pagination rendering renders wrapped in a PaginationContainer 1`] = `
-<Flex
-  align="flex-end"
-  justify="flex-end"
-  wrap="wrap"
->
-  <FlexItem
-    flex="shrink"
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  height: auto;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.emotion-0>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-0>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-right: 0;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-2>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-3 {
+  border-width: 1px;
+  border-color: var(--themeBorder, #DADDE2);
+  border-right-style: solid;
+  padding-right: 16px;
+  margin-right: 16px;
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.emotion-4>div {
+  width: auto;
+}
+
+@supports not (column-gap: 1px) {
+  .emotion-4>*:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+@supports not (row-gap: 1px) {
+  .emotion-4>*:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.emotion-6 {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.emotion-6::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.emotion-6>div:focus {
+  outline: none;
+}
+
+.emotion-6:focus>div {
+  outline-color: Highlight;
+  outline-width: thin;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .emotion-6:focus>div {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: unset;
+  }
+}
+
+.emotion-7 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-7 use {
+  pointer-events: none;
+}
+
+.emotion-9 {
+  display: inline-block;
+  max-width: 80px;
+}
+
+.emotion-10 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-11 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.emotion-11>div {
+  width: auto;
+}
+
+.emotion-12 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+}
+
+.emotion-12:focus {
+  outline: 0;
+}
+
+.emotion-12::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-12::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-12:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-12::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-12 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-12 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-12 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-12 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-12 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-12:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+<div
+    class="emotion-0"
+    data-cy="flex"
   >
-    <Pagination
-      initialActivePage={4}
-      initialPageLength={20}
-      key=".0"
-    />
-  </FlexItem>
-</Flex>
+    <div
+      class="emotion-1"
+      data-cy="flexItem"
+    >
+      <div
+        class="emotion-2"
+        data-cy="flex"
+      >
+        <div
+          class="emotion-3"
+        >
+          61–80
+        </div>
+        <div
+          class="emotion-4"
+          data-cy="flex"
+        >
+          <div
+            class="emotion-1"
+            data-cy="flexItem"
+          >
+            <button
+              aria-label="previous page"
+              class="emotion-6"
+              data-cy="previous page"
+              type="button"
+            >
+              <div
+                tabindex="-1"
+              >
+                <svg
+                  aria-label="system-caret-left icon"
+                  class="emotion-7"
+                  data-cy="icon"
+                  height="24"
+                  preserveAspectRatio="xMinYMin meet"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <use
+                    xlink:href="#system-caret-left"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div
+            class="emotion-1"
+            data-cy="flexItem"
+          >
+            <form
+              aria-label="form"
+              class="emotion-9"
+            >
+              <div
+                data-cy="textInput textInput.standard"
+              >
+                <label
+                  class="emotion-10"
+                  data-cy="textInput-label"
+                  for="textInput-5"
+                />
+                <div>
+                  <div
+                    class="emotion-11"
+                  >
+                    <input
+                      aria-describedby=""
+                      aria-invalid="false"
+                      class="emotion-12"
+                      data-cy="textInput-input"
+                      id="textInput-6"
+                      label="Page number"
+                      min="1"
+                      type="number"
+                      value="4"
+                    />
+                  </div>
+                  <div
+                    data-cy="textInput-hintContent"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            class="emotion-1"
+            data-cy="flexItem"
+          >
+            <button
+              aria-label="next page"
+              class="emotion-6"
+              data-cy="next page"
+              type="button"
+            >
+              <div
+                tabindex="-1"
+              >
+                <svg
+                  aria-label="system-caret-right icon"
+                  class="emotion-7"
+                  data-cy="icon"
+                  height="24"
+                  preserveAspectRatio="xMinYMin meet"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <use
+                    xlink:href="#system-caret-right"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
