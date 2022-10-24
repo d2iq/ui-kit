@@ -1,0 +1,17 @@
+version: '3'
+
+x-uffizzi:
+  ingress:
+    service: application
+    port: 6006
+
+services:
+  application:
+    image: "${APP_IMAGE}"
+    ports:
+      - "6006:6006"
+    deploy:
+      resources:
+        limits:
+          memory: 2000M
+
