@@ -1,7 +1,7 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
+import { render, fireEvent, within } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
+
 import { SelectInput } from "../";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
@@ -19,7 +19,7 @@ const defaultOptions = [
 describe("SelectInput", () => {
   it("renders all appearances", () => {
     Object.keys(InputAppearance).forEach(appearance => {
-      const component = shallow(
+      const { asFragment, unmount } = render(
         <SelectInput
           appearance={InputAppearance[appearance]}
           options={defaultOptions}
@@ -27,13 +27,14 @@ describe("SelectInput", () => {
           inputLabel="Atmosphere layer"
         />
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
+      unmount();
     });
   });
 
   it("should render all appearances focus", () => {
     Object.keys(InputAppearance).forEach(appearance => {
-      const component = mount(
+      const { asFragment, getByRole, unmount } = render(
         <SelectInput
           appearance={InputAppearance[appearance]}
           options={defaultOptions}
@@ -41,13 +42,14 @@ describe("SelectInput", () => {
           inputLabel="Atmosphere layer"
         />
       );
-      component.find("select").simulate("focus");
-      expect(toJson(component)).toMatchSnapshot();
+      getByRole("combobox").focus();
+      expect(asFragment()).toMatchSnapshot();
+      unmount();
     });
   });
 
   it("renders with errors", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <SelectInput
         options={defaultOptions}
         id="layers"
@@ -56,11 +58,11 @@ describe("SelectInput", () => {
         errors={["error1", "error2"]}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders disabled", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <SelectInput
         options={defaultOptions}
         id="layers"
@@ -68,11 +70,11 @@ describe("SelectInput", () => {
         disabled={true}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with hidden label", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <SelectInput
         options={defaultOptions}
         id="layers"
@@ -80,12 +82,12 @@ describe("SelectInput", () => {
         showInputLabel={false}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("calls onFocus if its passed in as a prop", () => {
     const focusFn = jest.fn();
-    const component = mount(
+    const { getByRole } = render(
       <SelectInput
         options={defaultOptions}
         id="layers"
@@ -94,13 +96,13 @@ describe("SelectInput", () => {
       />
     );
     expect(focusFn).not.toHaveBeenCalled();
-    component.find("select").simulate("focus");
+    getByRole("combobox").focus();
     expect(focusFn).toHaveBeenCalled();
   });
 
   it("calls onBlur if its passed in as a prop", () => {
     const blurFn = jest.fn();
-    const component = mount(
+    const { getByRole } = render(
       <SelectInput
         options={defaultOptions}
         id="layers"
@@ -108,16 +110,18 @@ describe("SelectInput", () => {
         onBlur={blurFn}
       />
     );
+    const selectElement = getByRole("combobox") as HTMLSelectElement;
+
     expect(blurFn).not.toHaveBeenCalled();
-    component.find("select").simulate("focus");
+    selectElement.focus();
     expect(blurFn).not.toHaveBeenCalled();
-    component.find("select").simulate("blur");
+    fireEvent.blur(selectElement);
     expect(blurFn).toHaveBeenCalled();
   });
 
   it("renders errors passed in when appearance === Error", () => {
     const errorList = ["error1", "error2"];
-    const component = mount(
+    const { getByTestId } = render(
       <SelectInput
         options={defaultOptions}
         id="layers"
@@ -126,11 +130,14 @@ describe("SelectInput", () => {
         errors={errorList}
       />
     );
-    expect(component.find("li").length).toBe(errorList.length);
+    expect(
+      within(getByTestId("selectInput-hintContent")).getAllByRole("listitem")
+        .length
+    ).toBe(errorList.length);
   });
 
   it("does not render errors passed in when appearance !== Error", () => {
-    const component = mount(
+    const { queryByTestId } = render(
       <SelectInput
         options={defaultOptions}
         id="layers"
@@ -139,6 +146,6 @@ describe("SelectInput", () => {
         errors={["error1", "error2"]}
       />
     );
-    expect(component.find("li").length).toBe(0);
+    expect(queryByTestId("selectInput-hintContent")).not.toBeInTheDocument();
   });
 });
