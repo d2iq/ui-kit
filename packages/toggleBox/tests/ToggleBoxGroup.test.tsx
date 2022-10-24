@@ -1,65 +1,77 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { mount } from "enzyme";
+import userEvent from "@testing-library/user-event";
 import { createSerializer } from "@emotion/jest";
 
 import { ToggleBox, ToggleBoxGroup } from "..";
 
 expect.addSnapshotSerializer(createSerializer());
 
+const children = [
+  <ToggleBox
+    id="exosphere"
+    value="exosphere"
+    key="exosphere"
+    data-cy="exosphere"
+  >
+    Exosphere
+  </ToggleBox>,
+  <ToggleBox
+    id="thermosphere"
+    value="thermosphere"
+    data-cy="thermosphere"
+    key="thermosphere"
+  >
+    Thermosphere
+  </ToggleBox>,
+  <ToggleBox
+    id="mesosphere"
+    value="mesosphere"
+    data-cy="mesosphere"
+    key="mesosphere"
+  >
+    Mesosphere
+  </ToggleBox>
+];
+
 describe("ToggleBoxGroup", () => {
   it("renders default", () => {
-    const { asFragment } = render(
-      <ToggleBoxGroup id="default">
-        <ToggleBox id="exosphere" value="exosphere">
-          Exosphere
-        </ToggleBox>
-        <ToggleBox id="thermosphere" value="thermosphere">
-          Thermosphere
-        </ToggleBox>
-        <ToggleBox id="mesosphere" value="mesosphere">
-          Mesosphere
-        </ToggleBox>
-      </ToggleBoxGroup>
+    const { asFragment, getByText } = render(
+      <ToggleBoxGroup id="default">{children}</ToggleBoxGroup>
     );
+    getByText("Exosphere");
+    getByText("Thermosphere");
+    getByText("Mesosphere");
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with a label", () => {
-    const { asFragment } = render(
+    const { getByText } = render(
       <ToggleBoxGroup id="default" label="Atmosphere layer">
-        <ToggleBox id="exosphere" value="exosphere">
-          Exosphere
-        </ToggleBox>
-        <ToggleBox id="thermosphere" value="thermosphere">
-          Thermosphere
-        </ToggleBox>
-        <ToggleBox id="mesosphere" value="mesosphere">
-          Mesosphere
-        </ToggleBox>
+        {children}
       </ToggleBoxGroup>
     );
 
-    expect(asFragment()).toMatchSnapshot();
+    getByText("Atmosphere layer");
   });
 
   it("renders with a selected ToggleBox", () => {
-    const { asFragment } = render(
+    const { getByTestId } = render(
       <ToggleBoxGroup id="selectedItems" selectedItems={["mesosphere"]}>
-        <ToggleBox id="exosphere" value="exosphere">
-          Exosphere
-        </ToggleBox>
-        <ToggleBox id="thermosphere" value="thermosphere">
-          Thermosphere
-        </ToggleBox>
-        <ToggleBox id="mesosphere" value="mesosphere">
-          Mesosphere
-        </ToggleBox>
+        {children}
       </ToggleBoxGroup>
     );
 
-    expect(asFragment()).toMatchSnapshot();
+    const radioOptionMesosphere = getByTestId("mesosphere") as HTMLInputElement;
+    const radioOptionExosphere = getByTestId("exosphere") as HTMLInputElement;
+    const radioOptionThermosphere = getByTestId(
+      "thermosphere"
+    ) as HTMLInputElement;
+
+    expect(radioOptionMesosphere.checked).toBeTruthy();
+    expect(radioOptionExosphere.checked).toBeFalsy();
+    expect(radioOptionThermosphere.checked).toBeFalsy();
   });
 
   it("renders with custom direction and gutter size", () => {
@@ -69,43 +81,83 @@ describe("ToggleBoxGroup", () => {
         direction="column"
         gutterSize="xxl"
       >
-        <ToggleBox id="exosphere" value="exosphere">
-          Exosphere
-        </ToggleBox>
-        <ToggleBox id="thermosphere" value="thermosphere">
-          Thermosphere
-        </ToggleBox>
-        <ToggleBox id="mesosphere" value="mesosphere">
-          Mesosphere
-        </ToggleBox>
+        {children}
       </ToggleBoxGroup>
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("calls onChange prop with the selected values", () => {
+  it("calls onChange prop with the selected values", async () => {
     const onChangeFn = jest.fn();
-    const component = mount(
-      <ToggleBoxGroup id="onChange" onChange={onChangeFn}>
-        <ToggleBox id="exosphere" value="exosphere">
-          Exosphere
-        </ToggleBox>
-        <ToggleBox id="thermosphere" value="thermosphere">
-          Thermosphere
-        </ToggleBox>
-        <ToggleBox id="mesosphere" value="mesosphere">
-          Mesosphere
-        </ToggleBox>
-      </ToggleBoxGroup>
-    );
 
-    const toggleBoxInput = component.find("input").first();
+    const toggleBoxGroupBaseProps = {
+      id: "onChange",
+      onChange: onChangeFn
+    };
+    const { getByText, rerender } = render(
+      <ToggleBoxGroup {...toggleBoxGroupBaseProps}>{children}</ToggleBoxGroup>
+    );
+    let exosphereOption = getByText("Exosphere");
 
     expect(onChangeFn).not.toHaveBeenCalled();
-    toggleBoxInput.simulate("change", { target: { checked: true } });
-    expect(onChangeFn).toHaveBeenCalledWith([toggleBoxInput.prop("value")]);
-    toggleBoxInput.simulate("change", { target: { checked: false } });
+    await userEvent.click(exosphereOption);
+    expect(onChangeFn).toHaveBeenCalledWith(["exosphere"]);
+
+    onChangeFn.mockClear();
+    rerender(
+      <ToggleBoxGroup
+        {...toggleBoxGroupBaseProps}
+        selectedItems={["exosphere"]}
+      >
+        {children}
+      </ToggleBoxGroup>
+    );
+    exosphereOption = getByText("Exosphere");
+    const thermosphereOption = getByText("Thermosphere");
+    //Since it is not multiselect, clicked option will get selected.
+    await userEvent.click(exosphereOption);
+    expect(onChangeFn).not.toHaveBeenCalled();
+
+    await userEvent.click(thermosphereOption);
+    expect(onChangeFn).toHaveBeenCalledWith(["thermosphere"]);
+  });
+
+  it("calls onChange prop with the selected values with multiselect", async () => {
+    const onChangeFn = jest.fn();
+
+    const toggleBoxGroupBaseProps = {
+      id: "onChange",
+      onChange: onChangeFn,
+      multiSelect: true
+    };
+    const { getByText, rerender } = render(
+      <ToggleBoxGroup {...toggleBoxGroupBaseProps}>{children}</ToggleBoxGroup>
+    );
+    let exosphereOption = getByText("Exosphere");
+
+    expect(onChangeFn).not.toHaveBeenCalled();
+    await userEvent.click(exosphereOption);
+    expect(onChangeFn).toHaveBeenCalledWith(["exosphere"]);
+
+    onChangeFn.mockClear();
+    rerender(
+      <ToggleBoxGroup
+        {...toggleBoxGroupBaseProps}
+        selectedItems={["exosphere"]}
+      >
+        {children}
+      </ToggleBoxGroup>
+    );
+    exosphereOption = getByText("Exosphere");
+    const thermosphereOption = getByText("Thermosphere");
+
+    //clicking on selected exosphere option deselects it
+    await userEvent.click(exosphereOption);
     expect(onChangeFn).toHaveBeenCalledWith([]);
+
+    //clicking on thermosphere option when exospher option is selected
+    await userEvent.click(thermosphereOption);
+    expect(onChangeFn).toHaveBeenCalledWith(["exosphere", "thermosphere"]);
   });
 });

@@ -121,7 +121,7 @@ exports[`ToggleBoxGroup renders default 1`] = `
         <input
           aria-checked="false"
           class="emotion-3"
-          data-cy="toggleWrapper-input"
+          data-cy="exosphere"
           id="exosphere"
           name="default"
           type="radio"
@@ -154,7 +154,7 @@ exports[`ToggleBoxGroup renders default 1`] = `
         <input
           aria-checked="false"
           class="emotion-3"
-          data-cy="toggleWrapper-input"
+          data-cy="thermosphere"
           id="thermosphere"
           name="default"
           type="radio"
@@ -187,7 +187,7 @@ exports[`ToggleBoxGroup renders default 1`] = `
         <input
           aria-checked="false"
           class="emotion-3"
-          data-cy="toggleWrapper-input"
+          data-cy="mesosphere"
           id="mesosphere"
           name="default"
           type="radio"
@@ -198,485 +198,6 @@ exports[`ToggleBoxGroup renders default 1`] = `
         >
           <div
             class="emotion-5"
-            data-cy="buttonCard"
-          >
-            <div
-              class="emotion-6"
-            >
-              Mesosphere
-            </div>
-          </div>
-        </div>
-      </label>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`ToggleBoxGroup renders with a label 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-1 {
-  padding: 0;
-  display: block;
-  padding-top: 0;
-  margin-top: 0;
-  margin-bottom: 4px;
-  font-weight: 500;
-}
-
-.emotion-2 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  height: auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-  -webkit-column-gap: 16px;
-  column-gap: 16px;
-  row-gap: 0;
-}
-
-.emotion-2>div {
-  width: auto;
-}
-
-@supports not (column-gap: 1px) {
-  .emotion-2>*:not(:last-child) {
-    padding-right: 16px;
-  }
-}
-
-@supports not (row-gap: 1px) {
-  .emotion-2>*:not(:last-child) {
-    padding-bottom: 0;
-  }
-}
-
-.emotion-3 {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-}
-
-.emotion-3>* {
-  height: 100%;
-}
-
-.emotion-4 {
-  display: block;
-}
-
-.emotion-5 {
-  border: 0;
-  clip: rect(0 0 0 0);
-  position: absolute;
-  overflow: hidden;
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-}
-
-.emotion-6,
-.emotion-6>* {
-  height: 100%;
-}
-
-.emotion-7 {
-  background-color: var(--themeBgPrimary, #FFFFFF);
-  box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.emotion-7:hover,
-.emotion-7:focus,
-.emotion-7:focus-within {
-  box-shadow: 0 0 0 1px var(--themeBrandPrimary, #7D58FF);
-  outline: 0;
-}
-
-.emotion-7:active {
-  box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
-}
-
-.emotion-8 {
-  padding: 16px;
-  height: 100%;
-}
-
-<fieldset
-    class="emotion-0"
-  >
-    <legend
-      class="emotion-1"
-    >
-      Atmosphere layer
-    </legend>
-    <div
-      class="emotion-2"
-      data-cy="flex"
-    >
-      <div
-        class="emotion-3"
-        data-cy="flexItem"
-      >
-        <label
-          class="emotion-4"
-          for="exosphere"
-        >
-          <input
-            aria-checked="false"
-            class="emotion-5"
-            data-cy="toggleWrapper-input"
-            id="exosphere"
-            name="default"
-            type="radio"
-            value="exosphere"
-          />
-          <div
-            class="emotion-6"
-          >
-            <div
-              class="emotion-7"
-              data-cy="buttonCard"
-            >
-              <div
-                class="emotion-8"
-              >
-                Exosphere
-              </div>
-            </div>
-          </div>
-        </label>
-      </div>
-      <div
-        class="emotion-3"
-        data-cy="flexItem"
-      >
-        <label
-          class="emotion-4"
-          for="thermosphere"
-        >
-          <input
-            aria-checked="false"
-            class="emotion-5"
-            data-cy="toggleWrapper-input"
-            id="thermosphere"
-            name="default"
-            type="radio"
-            value="thermosphere"
-          />
-          <div
-            class="emotion-6"
-          >
-            <div
-              class="emotion-7"
-              data-cy="buttonCard"
-            >
-              <div
-                class="emotion-8"
-              >
-                Thermosphere
-              </div>
-            </div>
-          </div>
-        </label>
-      </div>
-      <div
-        class="emotion-3"
-        data-cy="flexItem"
-      >
-        <label
-          class="emotion-4"
-          for="mesosphere"
-        >
-          <input
-            aria-checked="false"
-            class="emotion-5"
-            data-cy="toggleWrapper-input"
-            id="mesosphere"
-            name="default"
-            type="radio"
-            value="mesosphere"
-          />
-          <div
-            class="emotion-6"
-          >
-            <div
-              class="emotion-7"
-              data-cy="buttonCard"
-            >
-              <div
-                class="emotion-8"
-              >
-                Mesosphere
-              </div>
-            </div>
-          </div>
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</DocumentFragment>
-`;
-
-exports[`ToggleBoxGroup renders with a selected ToggleBox 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  height: auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-  -webkit-column-gap: 16px;
-  column-gap: 16px;
-  row-gap: 0;
-}
-
-.emotion-0>div {
-  width: auto;
-}
-
-@supports not (column-gap: 1px) {
-  .emotion-0>*:not(:last-child) {
-    padding-right: 16px;
-  }
-}
-
-@supports not (row-gap: 1px) {
-  .emotion-0>*:not(:last-child) {
-    padding-bottom: 0;
-  }
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  min-width: 0;
-  width: auto;
-}
-
-.emotion-1>* {
-  height: 100%;
-}
-
-.emotion-2 {
-  display: block;
-}
-
-.emotion-3 {
-  border: 0;
-  clip: rect(0 0 0 0);
-  position: absolute;
-  overflow: hidden;
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-}
-
-.emotion-4,
-.emotion-4>* {
-  height: 100%;
-}
-
-.emotion-5 {
-  background-color: var(--themeBgPrimary, #FFFFFF);
-  box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.emotion-5:hover,
-.emotion-5:focus,
-.emotion-5:focus-within {
-  box-shadow: 0 0 0 1px var(--themeBrandPrimary, #7D58FF);
-  outline: 0;
-}
-
-.emotion-5:active {
-  box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
-}
-
-.emotion-6 {
-  padding: 16px;
-  height: 100%;
-}
-
-.emotion-17 {
-  background-color: var(--themeBgPrimary, #FFFFFF);
-  box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.emotion-17:hover,
-.emotion-17:focus,
-.emotion-17:focus-within {
-  box-shadow: 0 0 0 1px var(--themeBrandPrimary, #7D58FF);
-  outline: 0;
-}
-
-.emotion-17:active {
-  box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
-}
-
-.emotion-17,
-.emotion-17:hover,
-.emotion-17:focus {
-  box-shadow: 0 0 0 2px var(--themeBrandPrimary, #7D58FF);
-}
-
-.emotion-17:focus {
-  background-color: var(--themeBgHover, #F7F8F9);
-}
-
-<div
-    class="emotion-0"
-    data-cy="flex"
-  >
-    <div
-      class="emotion-1"
-      data-cy="flexItem"
-    >
-      <label
-        class="emotion-2"
-        for="exosphere"
-      >
-        <input
-          aria-checked="false"
-          class="emotion-3"
-          data-cy="toggleWrapper-input"
-          id="exosphere"
-          name="selectedItems"
-          type="radio"
-          value="exosphere"
-        />
-        <div
-          class="emotion-4"
-        >
-          <div
-            class="emotion-5"
-            data-cy="buttonCard"
-          >
-            <div
-              class="emotion-6"
-            >
-              Exosphere
-            </div>
-          </div>
-        </div>
-      </label>
-    </div>
-    <div
-      class="emotion-1"
-      data-cy="flexItem"
-    >
-      <label
-        class="emotion-2"
-        for="thermosphere"
-      >
-        <input
-          aria-checked="false"
-          class="emotion-3"
-          data-cy="toggleWrapper-input"
-          id="thermosphere"
-          name="selectedItems"
-          type="radio"
-          value="thermosphere"
-        />
-        <div
-          class="emotion-4"
-        >
-          <div
-            class="emotion-5"
-            data-cy="buttonCard"
-          >
-            <div
-              class="emotion-6"
-            >
-              Thermosphere
-            </div>
-          </div>
-        </div>
-      </label>
-    </div>
-    <div
-      class="emotion-1"
-      data-cy="flexItem"
-    >
-      <label
-        class="emotion-2"
-        for="mesosphere"
-      >
-        <input
-          aria-checked="true"
-          checked=""
-          class="emotion-3"
-          data-cy="toggleWrapper-input"
-          id="mesosphere"
-          name="selectedItems"
-          type="radio"
-          value="mesosphere"
-        />
-        <div
-          class="emotion-4"
-        >
-          <div
-            class="emotion-17"
             data-cy="buttonCard"
           >
             <div
@@ -813,7 +334,7 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
         <input
           aria-checked="false"
           class="emotion-3"
-          data-cy="toggleWrapper-input"
+          data-cy="exosphere"
           id="exosphere"
           name="customLayoutProps"
           type="radio"
@@ -846,7 +367,7 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
         <input
           aria-checked="false"
           class="emotion-3"
-          data-cy="toggleWrapper-input"
+          data-cy="thermosphere"
           id="thermosphere"
           name="customLayoutProps"
           type="radio"
@@ -879,7 +400,7 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
         <input
           aria-checked="false"
           class="emotion-3"
-          data-cy="toggleWrapper-input"
+          data-cy="mesosphere"
           id="mesosphere"
           name="customLayoutProps"
           type="radio"
