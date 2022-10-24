@@ -1,18 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CodeSnippet renders default 1`] = `
-.emotion-0 {
-  overflow: auto;
-  white-space: pre;
-}
-
-.emotion-1 {
-  overflow: auto;
-  white-space: pre;
-  padding: 16px;
-}
-
-.emotion-2 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #1B2029;
   background-repeat: no-repeat;
   overflow: auto;
@@ -20,7 +10,7 @@ exports[`CodeSnippet renders default 1`] = `
   padding: 16px;
 }
 
-.emotion-3 {
+.emotion-1 {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -45,23 +35,23 @@ exports[`CodeSnippet renders default 1`] = `
   row-gap: 0;
 }
 
-.emotion-3>div {
+.emotion-1>div {
   width: auto;
 }
 
 @supports not (column-gap: 1px) {
-  .emotion-3>*:not(:last-child) {
+  .emotion-1>*:not(:last-child) {
     padding-right: 0;
   }
 }
 
 @supports not (row-gap: 1px) {
-  .emotion-3>*:not(:last-child) {
+  .emotion-1>*:not(:last-child) {
     padding-bottom: 0;
   }
 }
 
-.emotion-4 {
+.emotion-2 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -74,11 +64,7 @@ exports[`CodeSnippet renders default 1`] = `
   width: auto;
 }
 
-.emotion-5 {
-  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
-}
-
-.emotion-6 {
+.emotion-3 {
   font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
   line-height: 1.4;
   font-weight: 500;
@@ -88,90 +74,33 @@ exports[`CodeSnippet renders default 1`] = `
   text-align: inherit;
 }
 
-<CodeSnippet>
-  <SpacingBox
-    bgColor="#1B2029"
-    className="emotion-0"
-    side="all"
-    spacingSize="m"
-    tag="div"
+<div
+    class="emotion-0"
+    data-cy="spacingBox"
   >
-    <Box
-      bgColor="#1B2029"
-      bgImageOptions={
-        {
-          "position": undefined,
-          "repeat": undefined,
-          "size": undefined,
-        }
-      }
-      className="emotion-1"
-      data-cy="spacingBox"
-      tag="div"
+    <div
+      class="emotion-1"
+      data-cy="flex"
     >
       <div
-        className="emotion-2"
-        data-cy="spacingBox"
+        class="emotion-2"
+        data-cy="flexItem"
       >
-        <Flex>
-          <div
-            className="emotion-3"
-            data-cy="flex"
-          >
-            <FlexItem>
-              <div
-                className="emotion-4"
-                data-cy="flexItem"
-              >
-                <MonospaceText
-                  align="inherit"
-                  color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
-                  size="m"
-                  tag="code"
-                  weight="medium"
-                  wrap="wrap"
-                >
-                  <Text
-                    align="inherit"
-                    className="emotion-5"
-                    color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
-                    data-cy="monospaceText"
-                    size="m"
-                    tag="code"
-                    weight="medium"
-                    wrap="wrap"
-                  >
-                    <code
-                      className="rmTextMargins emotion-6"
-                      data-cy="monospaceText"
-                    >
-                      snippet content
-                    </code>
-                  </Text>
-                </MonospaceText>
-              </div>
-            </FlexItem>
-          </div>
-        </Flex>
+        <code
+          class="rmTextMargins emotion-3"
+          data-cy="monospaceText"
+        >
+          snippet content
+        </code>
       </div>
-    </Box>
-  </SpacingBox>
-</CodeSnippet>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`CodeSnippet renders with copy button 1`] = `
-.emotion-0 {
-  overflow: auto;
-  white-space: pre;
-}
-
-.emotion-1 {
-  overflow: auto;
-  white-space: pre;
-  padding: 16px;
-}
-
-.emotion-2 {
+<DocumentFragment>
+  .emotion-0 {
   background-color: #1B2029;
   background-repeat: no-repeat;
   overflow: auto;
@@ -179,7 +108,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
   padding: 16px;
 }
 
-.emotion-3 {
+.emotion-1 {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -204,23 +133,23 @@ exports[`CodeSnippet renders with copy button 1`] = `
   row-gap: 0;
 }
 
-.emotion-3>div {
+.emotion-1>div {
   width: auto;
 }
 
 @supports not (column-gap: 1px) {
-  .emotion-3>*:not(:last-child) {
+  .emotion-1>*:not(:last-child) {
     padding-right: 0;
   }
 }
 
 @supports not (row-gap: 1px) {
-  .emotion-3>*:not(:last-child) {
+  .emotion-1>*:not(:last-child) {
     padding-bottom: 0;
   }
 }
 
-.emotion-4 {
+.emotion-2 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -233,11 +162,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
   width: auto;
 }
 
-.emotion-5 {
-  font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
-}
-
-.emotion-6 {
+.emotion-3 {
   font-family: 'Menlo','Bitstream Vera Sans Mono','DejaVu Sans Mono','Monaco','Consolas',monospace;
   line-height: 1.4;
   font-weight: 500;
@@ -247,7 +172,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
   text-align: inherit;
 }
 
-.emotion-7 {
+.emotion-4 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -262,249 +187,84 @@ exports[`CodeSnippet renders with copy button 1`] = `
   width: initial;
 }
 
-.emotion-8 {
+.emotion-5 {
   background-repeat: no-repeat;
   display: inline-block;
 }
 
-.emotion-9 {
-  cursor: pointer;
-}
-
-.emotion-10 {
+.emotion-6 {
   background-repeat: no-repeat;
   display: inline-block;
   cursor: pointer;
 }
 
-.emotion-11 {
+.emotion-7 {
   vertical-align: middle;
   fill: var(--themeTextColorPrimaryInverted, #FFFFFF);
 }
 
-.emotion-11 use {
+.emotion-7 use {
   pointer-events: none;
 }
 
-<CodeSnippet
-  textToCopy="snippet content"
->
-  <SpacingBox
-    bgColor="#1B2029"
-    className="emotion-0"
-    side="all"
-    spacingSize="m"
-    tag="div"
+<div
+    class="emotion-0"
+    data-cy="spacingBox"
   >
-    <Box
-      bgColor="#1B2029"
-      bgImageOptions={
-        {
-          "position": undefined,
-          "repeat": undefined,
-          "size": undefined,
-        }
-      }
-      className="emotion-1"
-      data-cy="spacingBox"
-      tag="div"
+    <div
+      class="emotion-1"
+      data-cy="flex"
     >
       <div
-        className="emotion-2"
-        data-cy="spacingBox"
+        class="emotion-2"
+        data-cy="flexItem"
       >
-        <Flex>
-          <div
-            className="emotion-3"
-            data-cy="flex"
-          >
-            <FlexItem>
-              <div
-                className="emotion-4"
-                data-cy="flexItem"
-              >
-                <MonospaceText
-                  align="inherit"
-                  color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
-                  size="m"
-                  tag="code"
-                  weight="medium"
-                  wrap="wrap"
-                >
-                  <Text
-                    align="inherit"
-                    className="emotion-5"
-                    color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
-                    data-cy="monospaceText"
-                    size="m"
-                    tag="code"
-                    weight="medium"
-                    wrap="wrap"
-                  >
-                    <code
-                      className="rmTextMargins emotion-6"
-                      data-cy="monospaceText"
-                    >
-                      snippet content
-                    </code>
-                  </Text>
-                </MonospaceText>
-              </div>
-            </FlexItem>
-            <FlexItem
-              flex="shrink"
-            >
-              <div
-                className="emotion-7"
-                data-cy="flexItem"
-              >
-                <ClickToCopyButton
-                  color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
-                  textToCopy="snippet content"
-                >
-                  <ClickToCopy
-                    textToCopy="snippet content"
-                  >
-                    <Box
-                      bgImageOptions={
-                        {
-                          "position": undefined,
-                          "repeat": undefined,
-                          "size": undefined,
-                        }
-                      }
-                      data-cy="box"
-                      display="inline-block"
-                      tag="div"
-                    >
-                      <div
-                        className="emotion-8"
-                        data-cy="box"
-                      >
-                        <Tooltip
-                          id="copyTooltip1"
-                          isOpen={false}
-                          suppress={true}
-                          trigger={
-                            <Memo(Clickable)
-                              action={[Function]}
-                              tabIndex={0}
-                            >
-                              <Box
-                                bgImageOptions={
-                                  {
-                                    "position": undefined,
-                                    "repeat": undefined,
-                                    "size": undefined,
-                                  }
-                                }
-                                data-cy="box"
-                                display="inline-block"
-                                tag="span"
-                              >
-                                <Icon
-                                  color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
-                                  shape="system-clipboard"
-                                />
-                              </Box>
-                            </Memo(Clickable)>
-                          }
-                        >
-                          <span
-                            data-cy="tooltip"
-                            onBlur={[Function]}
-                            onFocus={[Function]}
-                            onMouseLeave={[Function]}
-                            onMouseOver={[Function]}
-                          >
-                            <Dropdownable
-                              dropdown={
-                                <Memo(TooltipContent)
-                                  id="copyTooltip1"
-                                  isOpen={false}
-                                  maxWidth={300}
-                                >
-                                  Copied to clipboard
-                                </Memo(TooltipContent)>
-                              }
-                              isOpen={false}
-                              preferredDirections={
-                                [
-                                  "top",
-                                  "top-start",
-                                  "top-end",
-                                  "bottom",
-                                  "bottom-start",
-                                  "bottom-end",
-                                ]
-                              }
-                            >
-                              <div>
-                                <Memo(Clickable)
-                                  action={[Function]}
-                                  tabIndex={0}
-                                >
-                                  <Box
-                                    bgImageOptions={
-                                      {
-                                        "position": undefined,
-                                        "repeat": undefined,
-                                        "size": undefined,
-                                      }
-                                    }
-                                    className="emotion-9"
-                                    data-cy="box"
-                                    display="inline-block"
-                                    onClick={[Function]}
-                                    onKeyPress={[Function]}
-                                    role="button"
-                                    tabIndex={0}
-                                    tag="span"
-                                  >
-                                    <span
-                                      className="emotion-10"
-                                      data-cy="box"
-                                      onClick={[Function]}
-                                      onKeyPress={[Function]}
-                                      role="button"
-                                      tabIndex={0}
-                                    >
-                                      <Icon
-                                        color="var(--themeTextColorPrimaryInverted, #FFFFFF)"
-                                        shape="system-clipboard"
-                                      >
-                                        <svg
-                                          aria-label="system-clipboard icon"
-                                          className="emotion-11"
-                                          data-cy="icon"
-                                          height={24}
-                                          preserveAspectRatio="xMinYMin meet"
-                                          role="img"
-                                          viewBox="0 0 24 24"
-                                          width={24}
-                                        >
-                                          <use
-                                            xlinkHref="#system-clipboard"
-                                          />
-                                        </svg>
-                                      </Icon>
-                                    </span>
-                                  </Box>
-                                </Memo(Clickable)>
-                              </div>
-                            </Dropdownable>
-                          </span>
-                        </Tooltip>
-                      </div>
-                    </Box>
-                  </ClickToCopy>
-                </ClickToCopyButton>
-              </div>
-            </FlexItem>
-          </div>
-        </Flex>
+        <code
+          class="rmTextMargins emotion-3"
+          data-cy="monospaceText"
+        >
+          snippet content
+        </code>
       </div>
-    </Box>
-  </SpacingBox>
-</CodeSnippet>
+      <div
+        class="emotion-4"
+        data-cy="flexItem"
+      >
+        <div
+          class="emotion-5"
+          data-cy="box"
+        >
+          <span
+            data-cy="tooltip"
+          >
+            <div>
+              <span
+                aria-describedby="copyTooltip1"
+                class="emotion-6"
+                data-cy="box"
+                role="button"
+                tabindex="0"
+              >
+                <svg
+                  aria-label="system-clipboard icon"
+                  class="emotion-7"
+                  data-cy="icon"
+                  height="24"
+                  preserveAspectRatio="xMinYMin meet"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <use
+                    xlink:href="#system-clipboard"
+                  />
+                </svg>
+              </span>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
