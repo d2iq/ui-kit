@@ -167,19 +167,6 @@ exports[`Dropdownable is visible after opening 2`] = `
       >
         <Overlay
           innerRef={[Function]}
-          overlayRoot={
-            <body>
-              <div>
-                <div
-                  style="z-index: 2; position: absolute; left: 0px; top: 0px;"
-                >
-                  <p>
-                    I am a touchdown
-                  </p>
-                </div>
-              </div>
-            </body>
-          }
           style={
             {
               "left": "0",
