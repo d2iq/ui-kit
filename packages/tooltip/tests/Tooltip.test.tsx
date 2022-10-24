@@ -1,92 +1,77 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
+
 import { Tooltip } from "../";
-import Dropdownable, {
-  Direction
-} from "../../dropdownable/components/Dropdownable";
 
 expect.addSnapshotSerializer(createSerializer());
 
 describe("Tooltip", () => {
-  it("renders", () => {
-    const component = mount(
+  it("renders trigger element", () => {
+    const { getByText } = render(
       <Tooltip id="renders" trigger="trigger">
         content
       </Tooltip>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    getByText("trigger");
   });
 
   it("renders open tooltip", () => {
-    const component = mount(
+    const { getByText } = render(
       <Tooltip id="opened" trigger="trigger" isOpen={true}>
         content
       </Tooltip>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    getByText("trigger");
+    getByText("content");
   });
 
-  it("renders with preferred directions", () => {
-    const component = mount(
-      <Tooltip
-        id="customDir"
-        trigger="trigger"
-        isOpen={true}
-        preferredDirections={[Direction.BottomLeft]}
-      >
-        content
-      </Tooltip>
-    );
-    expect(toJson(component)).toMatchSnapshot();
-  });
-
-  it("passes isOpen={true} to Dropdownable on mouseOver", () => {
-    const component = mount(
+  it("show tooltip content on mouseOver", async () => {
+    const { getByText, queryByText } = render(
       <Tooltip id="hoverOpen" trigger="trigger">
         content
       </Tooltip>
     );
-
-    expect(component.find(Dropdownable).prop("isOpen")).toBe(false);
-    component.simulate("mouseOver");
-    expect(component.find(Dropdownable).prop("isOpen")).toBe(true);
+    expect(queryByText("content")).not.toBeInTheDocument();
+    await userEvent.hover(getByText("trigger"));
+    getByText("content");
   });
 
-  it("passes isOpen={false} to Dropdownable on mouseLeave", () => {
-    const component = mount(
+  it("removes tooltip content on mouseLeave", async () => {
+    const { getByText, queryByText } = render(
       <Tooltip id="hoverOpen" trigger="trigger" isOpen={true}>
         content
       </Tooltip>
     );
-    expect(component.find(Dropdownable).prop("isOpen")).toBe(true);
-    component.simulate("mouseLeave");
-    expect(component.find(Dropdownable).prop("isOpen")).toBe(false);
+    getByText("content");
+    await userEvent.unhover(getByText("trigger"));
+    expect(queryByText("content")).not.toBeInTheDocument();
   });
 
-  it("does not pass a different value to Dropdownable's 'isOpen' prop on mouseEnter if suppress is true", () => {
-    const component = mount(
+  it("does not show tooltip content even on hover if suppress is true", async () => {
+    const { queryByText, getByText } = render(
       <Tooltip id="hoverOpen" trigger="trigger" suppress={true}>
         content
       </Tooltip>
     );
-    expect(component.find(Dropdownable).prop("isOpen")).toBeFalsy();
-    component.simulate("mouseEnter");
-    expect(component.find(Dropdownable).prop("isOpen")).toBeFalsy();
+    expect(queryByText("content")).not.toBeInTheDocument();
+    await userEvent.hover(getByText("trigger"));
+    expect(queryByText("content")).not.toBeInTheDocument();
   });
 
-  it("calls onClose prop when closed", () => {
+  it("calls onClose prop when closed", async () => {
     const handleClose = jest.fn();
 
-    const component = mount(
+    const { getByText } = render(
       <Tooltip id="hoverOpen" trigger="trigger" onClose={handleClose}>
         content
       </Tooltip>
     );
 
-    component.simulate("mouseEnter");
-    component.simulate("mouseLeave");
+    await userEvent.hover(getByText("trigger"));
+    expect(handleClose).toHaveBeenCalledTimes(0);
+    await userEvent.unhover(getByText("trigger"));
     expect(handleClose).toHaveBeenCalledTimes(1);
   });
 });
