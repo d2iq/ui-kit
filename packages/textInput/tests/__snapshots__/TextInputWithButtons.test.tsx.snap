@@ -256,6 +256,7 @@ exports[`TextInputWithIcon renders 1`] = `
     <label
       className="emotion-0"
       data-cy="textInput-label"
+      hidden={false}
       htmlFor="renders"
     >
       Label
@@ -581,6 +582,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
     <label
       className="emotion-0"
       data-cy="textInput-label"
+      hidden={false}
       htmlFor="renders.coloredBtn"
     >
       Label

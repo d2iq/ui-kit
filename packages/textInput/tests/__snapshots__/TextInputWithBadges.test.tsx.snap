@@ -305,6 +305,7 @@ exports[`TextInputWithBadges renders badges with custom BadgeAppearance 1`] = `
     <label
       className="emotion-0"
       data-cy="textInput-label"
+      hidden={false}
       htmlFor="appearance"
     >
       Appearance
@@ -711,6 +712,7 @@ exports[`TextInputWithBadges renders empty 1`] = `
     <label
       className="emotion-0"
       data-cy="textInput-label"
+      hidden={false}
       htmlFor="empty"
     >
       empty
@@ -1045,6 +1047,7 @@ exports[`TextInputWithBadges renders with badges 1`] = `
     <label
       className="emotion-0"
       data-cy="textInput-label"
+      hidden={false}
       htmlFor="withBadges"
     >
       With badges

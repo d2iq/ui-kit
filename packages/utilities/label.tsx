@@ -42,7 +42,12 @@ export const renderLabel = ({
   const hasError = appearance === InputAppearance.Error;
   const labelClassName = hidden ? cx(visuallyHidden) : getLabelStyle(hasError);
   const labelNode = (
-    <label className={labelClassName} htmlFor={id} data-cy="textInput-label">
+    <label
+      className={labelClassName}
+      htmlFor={id}
+      data-cy="textInput-label"
+      hidden={hidden}
+    >
       {label}
       {required ? reqStar : null}
     </label>

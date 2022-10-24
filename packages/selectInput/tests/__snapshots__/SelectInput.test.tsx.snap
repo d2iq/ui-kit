@@ -1253,6 +1253,7 @@ exports[`SelectInput renders with hidden label 1`] = `
       class="emotion-0"
       data-cy="textInput-label"
       for="layers"
+      hidden=""
     >
       Atmosphere layer
     </label>

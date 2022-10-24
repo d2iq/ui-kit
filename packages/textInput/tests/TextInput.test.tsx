@@ -1,7 +1,7 @@
 import * as React from "react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { createSerializer } from "@emotion/jest";
-import { shallow, mount, render } from "enzyme";
-import toJson from "enzyme-to-json";
 import { css, cx } from "@emotion/css";
 
 import TextInput from "../components/TextInput";
@@ -12,107 +12,131 @@ expect.addSnapshotSerializer(createSerializer());
 describe("TextInput", () => {
   it("should render all appearances with props", () => {
     Object.keys(InputAppearance).forEach(appearance => {
-      const component = shallow(
+      const { asFragment } = render(
         <TextInput
           id={`test.input.${InputAppearance[appearance]}`}
           inputLabel={InputAppearance[appearance]}
           appearance={InputAppearance[appearance]}
         />
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   it("should render all appearances focus", () => {
     Object.keys(InputAppearance).forEach(appearance => {
-      const component = mount(
+      const { getByRole, asFragment, unmount } = render(
         <TextInput id="test.input" appearance={InputAppearance[appearance]} />
       );
-      component.find("input").simulate("focus");
-      expect(toJson(component)).toMatchSnapshot();
+      const inputEl = getByRole("textbox");
+      inputEl.focus();
+      expect(asFragment()).toMatchSnapshot();
+      unmount();
     });
   });
 
   it("should render string inputLabel", () => {
-    const component = shallow(
+    const { getByText } = render(
       <TextInput id="test.input" inputLabel="Test Input" />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    getByText("Test Input");
   });
 
   it("should render node as inputLabel", () => {
-    const component = shallow(
+    const { getByText } = render(
       <TextInput id="test.input" inputLabel={<span>My Test Node</span>} />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    getByText("My Test Node");
   });
 
   it("should id attribute to input element", () => {
     const inputId = "test.input.0";
-    const component = mount(<TextInput id={inputId} />);
-    expect(component.find("input").prop("id")).toEqual(inputId);
+    const { getByRole } = render(<TextInput id={inputId} />);
+    const inputEl = getByRole("textbox") as HTMLInputElement;
+    expect(inputEl.id).toEqual(inputId);
   });
 
   it("should set label `for` attribute if input id set", () => {
     const inputId = "test.input.0";
-    const component = shallow(
+    const { getByText } = render(
       <TextInput id={inputId} inputLabel="Test Input" />
     );
-    expect(component.find("label").prop("htmlFor")).toEqual(inputId);
+    const labelEl = getByText("Test Input") as HTMLLabelElement;
+    expect(labelEl.htmlFor).toEqual(inputId);
   });
 
-  it("should set tabIndex on input element", () => {
-    const component = mount(<TextInput id="test.input" tabIndex={-2} />);
-    expect(component.find("input").prop("tabIndex")).toEqual(-2);
+  it("should set tabIndex on input element", async () => {
+    const { getByRole } = render(<TextInput id="test.input" tabIndex={-2} />);
+
+    const inputEl = getByRole("textbox");
+    await userEvent.tab();
+    expect(inputEl).not.toHaveFocus();
   });
 
   it("should call onFocus when input gains focus", () => {
     const focusFn = jest.fn();
-    const component = mount(<TextInput id="test.input" onFocus={focusFn} />);
+    const { getByRole } = render(
+      <TextInput id="test.input" onFocus={focusFn} />
+    );
+    const inputEl = getByRole("textbox");
+
     expect(focusFn).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
+    inputEl.focus();
     expect(focusFn).toHaveBeenCalled();
   });
 
-  it("should call onBlur when input loses focus", () => {
+  it("should call onBlur when input loses focus", async () => {
     const blurFn = jest.fn();
-    const component = mount(<TextInput id="test.input" onBlur={blurFn} />);
+    const { getByRole } = render(<TextInput id="test.input" onBlur={blurFn} />);
+
+    const inputEl = getByRole("textbox");
     expect(blurFn).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
+    inputEl.focus();
     expect(blurFn).not.toHaveBeenCalled();
-    component.find("input").simulate("blur");
+    await userEvent.tab();
     expect(blurFn).toHaveBeenCalled();
   });
 
-  it("should call onChange when input changes", () => {
+  it("should call onChange when input changes", async () => {
     const changeFn = jest.fn();
-    const component = mount(<TextInput id="test.input" onChange={changeFn} />);
+    const { getByRole } = render(
+      <TextInput id="test.input" onChange={changeFn} />
+    );
+
+    const inputEl = getByRole("textbox");
     expect(changeFn).not.toHaveBeenCalled();
-    component.find("input").simulate("change");
-    expect(changeFn).toHaveBeenCalled();
+
+    const userInputText = "hello";
+    await userEvent.type(inputEl, userInputText);
+
+    expect(changeFn).toHaveBeenCalledTimes(userInputText.length);
   });
 
   it("should pass className to container div", () => {
     const widthTest = css`
       width: 200px;
     `;
-    const component = shallow(<TextInput id="1" className={cx(widthTest)} />);
-    expect(component.find("div").first().props().className).toEqual(widthTest);
+    const { getByTestId } = render(
+      <TextInput id="1" className={cx(widthTest)} />
+    );
+
+    const containerEl = getByTestId("textInput textInput.standard");
+    expect(containerEl.className).toEqual(widthTest);
   });
 
   it("should hide label if `showInputLabel` set to false", () => {
-    const component = shallow(
+    render(
       <TextInput
         id="input.with.hidden.label"
         inputLabel="I'm not displayed"
         showInputLabel={false}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(screen.queryByText(`I'm not displayed`)).not.toBeVisible();
   });
 
   it("should display validation message if set & appearance == Error", () => {
-    const component = shallow(
+    const { getByText } = render(
       <TextInput
         id="input.error.with.message"
         inputLabel="Error Message Test"
@@ -120,11 +144,13 @@ describe("TextInput", () => {
         errors={["This is an error message", "this is a second error message"]}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+
+    getByText("This is an error message");
+    getByText("this is a second error message");
   });
 
   it("should not display validation message if set & appearance == Success", () => {
-    const component = shallow(
+    const { queryByText } = render(
       <TextInput
         id="input.success.without.message"
         inputLabel="No Error Message Test"
@@ -132,24 +158,26 @@ describe("TextInput", () => {
         errors={["This is an error message"]}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(queryByText("This is an error message")).not.toBeInTheDocument();
   });
 
-  it("should display icon with tooltip if tooltipText is set", () => {
-    const component = shallow(
+  it("should display icon with tooltip if tooltipText is set", async () => {
+    const { getByTestId, getByText } = render(
       <TextInput
         id="input.with.tooltip"
         inputLabel="Tooltip Message Test"
         tooltipContent="Example Tooltip"
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+
+    const questionIcon = getByTestId("icon");
+    await userEvent.hover(questionIcon);
+
+    getByText("Example Tooltip");
   });
 
   it("should generate an ID if one is not passed", () => {
-    const component = render(<TextInput inputLabel="Test Input" />);
-    // const textInputId = component.find("input").prop("id");
-    // console.log(`textInputId: ${textInputId}`);
-    expect(component.find("input").prop("id")).toBeDefined();
+    const { getByRole } = render(<TextInput inputLabel="Test Input" />);
+    expect((getByRole("textbox") as HTMLInputElement).id).toBeDefined();
   });
 });
