@@ -1,76 +1,328 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Textarea should render all appearances 1`] = `
-<Memo(FormFieldWrapper)
-  id="standard"
->
-  <Component />
-</Memo(FormFieldWrapper)>
+<DocumentFragment>
+  .emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+  box-sizing: border-box;
+  height: unset;
+  padding: 16px;
+  width: 100%;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+<div
+    data-cy="textarea textarea.standard"
+  >
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="standard"
+    >
+      standard
+    </label>
+    <textarea
+      aria-describedby=""
+      aria-invalid="false"
+      class="emotion-1"
+      data-cy="textarea-textarea"
+      id="standard"
+      rows="3"
+    />
+    <div
+      data-cy="textarea-textarea textarea-textarea.standard"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Textarea should render all appearances 2`] = `
-<Memo(FormFieldWrapper)
-  id="error"
->
-  <Component />
-</Memo(FormFieldWrapper)>
+<DocumentFragment>
+  .emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: var(--themeError, #EB293A);
+  fill: var(--themeError, #EB293A);
+}
+
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeError, #EB293A);
+  box-sizing: border-box;
+  height: unset;
+  padding: 16px;
+  width: 100%;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(235,41,58,0.05);
+}
+
+<div
+    data-cy="textarea textarea.error"
+  >
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="error"
+    >
+      error
+    </label>
+    <textarea
+      aria-describedby=""
+      aria-invalid="false"
+      class="emotion-1"
+      data-cy="textarea-textarea"
+      id="error"
+      rows="3"
+    />
+    <div
+      data-cy="textarea-textarea textarea-textarea.error"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Textarea should render all appearances 3`] = `
-<Memo(FormFieldWrapper)
-  id="success"
->
-  <Component />
-</Memo(FormFieldWrapper)>
-`;
+<DocumentFragment>
+  .emotion-0 {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
 
-exports[`Textarea should render error messages if appearance set to InputAppearance.Error 1`] = `
-<Memo(FormFieldWrapper)
-  errors={
-    [
-      "This is an error message",
-      "this is a second error message",
-    ]
-  }
-  id="textarea"
->
-  <Component />
-</Memo(FormFieldWrapper)>
-`;
+.emotion-1 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeSuccess, #14C684);
+  box-sizing: border-box;
+  height: unset;
+  padding: 16px;
+  width: 100%;
+}
 
-exports[`Textarea should render no error messages if appearance set to InputAppearance.Success 1`] = `
-<Memo(FormFieldWrapper)
-  errors={
-    [
-      "I'm not displayed",
-    ]
-  }
-  id="textarea"
->
-  <Component />
-</Memo(FormFieldWrapper)>
-`;
+.emotion-1:focus {
+  outline: 0;
+}
 
-exports[`Textarea should render node as inputLabel 1`] = `
-<Memo(FormFieldWrapper)
-  id="textarea"
->
-  <Component />
-</Memo(FormFieldWrapper)>
-`;
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
 
-exports[`Textarea should render string inputLabel 1`] = `
-<Memo(FormFieldWrapper)
-  id="textarea"
->
-  <Component />
-</Memo(FormFieldWrapper)>
-`;
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
 
-exports[`Textarea should render with hidden label if \`showInputLabel\` is set to false 1`] = `
-<Memo(FormFieldWrapper)
-  id="textarea"
->
-  <Component />
-</Memo(FormFieldWrapper)>
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(20,198,132,0.05);
+}
+
+<div
+    data-cy="textarea textarea.success"
+  >
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="success"
+    >
+      success
+    </label>
+    <textarea
+      aria-describedby=""
+      aria-invalid="false"
+      class="emotion-1"
+      data-cy="textarea-textarea"
+      id="success"
+      rows="3"
+    />
+    <div
+      data-cy="textarea-textarea textarea-textarea.success"
+    />
+  </div>
+</DocumentFragment>
 `;
