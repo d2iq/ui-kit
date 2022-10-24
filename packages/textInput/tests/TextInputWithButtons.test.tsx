@@ -1,7 +1,6 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
-import { mount } from "enzyme";
-import toJson from "enzyme-to-json";
+import { render } from "@testing-library/react";
 
 import TextInputWithButtons from "../components/TextInputWithButtons";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
@@ -11,20 +10,32 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("TextInputWithIcon", () => {
   it("renders", () => {
-    const component = mount(
+    const { asFragment, getByText, getByRole, getByTestId } = render(
       <TextInputWithButtons
         id="renders"
         inputLabel="Label"
         buttons={[
-          <TextInputButton key={0} shape={SystemIcons.Close} />,
-          <TextInputButton key={1} shape={SystemIcons.Funnel} />
+          <TextInputButton
+            key={0}
+            shape={SystemIcons.Close}
+            data-cy="closeButton"
+          />,
+          <TextInputButton
+            key={1}
+            shape={SystemIcons.Funnel}
+            data-cy="funnelButton"
+          />
         ]}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    getByText("Label");
+    getByRole("textbox");
+    getByTestId("closeButton");
+    getByTestId("funnelButton");
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with colored button", () => {
-    const component = mount(
+    const { asFragment } = render(
       <TextInputWithButtons
         id="renders.coloredBtn"
         inputLabel="Label"
@@ -33,12 +44,12 @@ describe("TextInputWithIcon", () => {
         ]}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("calls function passed to button", () => {
     const buttonFn = jest.fn();
-    const component = mount(
+    const { getByTestId } = render(
       <TextInputWithButtons
         id="callsFn"
         inputLabel="Label"
@@ -47,13 +58,15 @@ describe("TextInputWithIcon", () => {
             key={0}
             shape={SystemIcons.Close}
             onClick={buttonFn}
+            data-cy="closeButton"
           />
         ]}
       />
     );
 
     expect(buttonFn).not.toHaveBeenCalled();
-    component.find("button").simulate("click");
+    const closeBtnEl = getByTestId("closeButton");
+    closeBtnEl.click();
     expect(buttonFn).toHaveBeenCalled();
   });
 });

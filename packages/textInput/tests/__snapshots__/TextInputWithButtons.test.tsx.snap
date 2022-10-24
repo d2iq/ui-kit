@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInputWithIcon renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -233,138 +234,92 @@ exports[`TextInputWithIcon renders 1`] = `
   width: auto;
 }
 
-<TextInputWithButtons
-  appearance="standard"
-  buttons={
-    [
-      <TextInputButton
-        shape="system-close"
-      />,
-      <TextInputButton
-        shape="system-funnel"
-      />,
-    ]
-  }
-  id="renders"
-  inputLabel="Label"
-  showInputLabel={true}
-  type="text"
->
-  <div
+<div
     data-cy="textInput textInput.standard"
   >
     <label
-      className="emotion-0"
+      class="emotion-0"
       data-cy="textInput-label"
-      hidden={false}
-      htmlFor="renders"
+      for="renders"
     >
       Label
     </label>
-    <Memo(FormFieldWrapper)
-      id="renders"
+    <div
+      class="emotion-1"
     >
-      <div
-        className="emotion-1"
+      <input
+        aria-describedby=""
+        aria-invalid="false"
+        class="emotion-2"
+        data-cy="textInput-input"
+        id="renders"
+        type="text"
+        value=""
+      />
+      <span
+        class="emotion-3"
       >
-        <input
-          aria-describedby=""
-          aria-invalid={false}
-          className="emotion-2"
-          data-cy="textInput-input"
-          id="renders"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          type="text"
-        />
-        <span
-          className="emotion-3"
-          key="0"
+        <button
+          class="emotion-4"
+          data-cy="closeButton"
+          type="button"
         >
-          <TextInputButton
-            key="0"
-            shape="system-close"
+          <div
+            tabindex="-1"
           >
-            <ResetButton>
-              <button
-                className="emotion-4"
-                type="button"
-              >
-                <div
-                  tabIndex={-1}
-                >
-                  <Icon
-                    shape="system-close"
-                    size="xs"
-                  >
-                    <svg
-                      aria-label="system-close icon"
-                      className="emotion-5"
-                      data-cy="icon"
-                      height={16}
-                      preserveAspectRatio="xMinYMin meet"
-                      role="img"
-                      viewBox="0 0 16 16"
-                      width={16}
-                    >
-                      <use
-                        xlinkHref="#system-close"
-                      />
-                    </svg>
-                  </Icon>
-                </div>
-              </button>
-            </ResetButton>
-          </TextInputButton>
-        </span>
-        <span
-          className="emotion-6"
-          key="1"
+            <svg
+              aria-label="system-close icon"
+              class="emotion-5"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <use
+                xlink:href="#system-close"
+              />
+            </svg>
+          </div>
+        </button>
+      </span>
+      <span
+        class="emotion-6"
+      >
+        <button
+          class="emotion-4"
+          data-cy="funnelButton"
+          type="button"
         >
-          <TextInputButton
-            key="1"
-            shape="system-funnel"
+          <div
+            tabindex="-1"
           >
-            <ResetButton>
-              <button
-                className="emotion-4"
-                type="button"
-              >
-                <div
-                  tabIndex={-1}
-                >
-                  <Icon
-                    shape="system-funnel"
-                    size="xs"
-                  >
-                    <svg
-                      aria-label="system-funnel icon"
-                      className="emotion-5"
-                      data-cy="icon"
-                      height={16}
-                      preserveAspectRatio="xMinYMin meet"
-                      role="img"
-                      viewBox="0 0 16 16"
-                      width={16}
-                    >
-                      <use
-                        xlinkHref="#system-funnel"
-                      />
-                    </svg>
-                  </Icon>
-                </div>
-              </button>
-            </ResetButton>
-          </TextInputButton>
-        </span>
-      </div>
-    </Memo(FormFieldWrapper)>
+            <svg
+              aria-label="system-funnel icon"
+              class="emotion-5"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <use
+                xlink:href="#system-funnel"
+              />
+            </svg>
+          </div>
+        </button>
+      </span>
+    </div>
   </div>
-</TextInputWithButtons>
+</DocumentFragment>
 `;
 
 exports[`TextInputWithIcon renders with colored button 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -561,92 +516,56 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
   pointer-events: none;
 }
 
-<TextInputWithButtons
-  appearance="standard"
-  buttons={
-    [
-      <TextInputButton
-        color="red"
-        shape="system-close"
-      />,
-    ]
-  }
-  id="renders.coloredBtn"
-  inputLabel="Label"
-  showInputLabel={true}
-  type="text"
->
-  <div
+<div
     data-cy="textInput textInput.standard"
   >
     <label
-      className="emotion-0"
+      class="emotion-0"
       data-cy="textInput-label"
-      hidden={false}
-      htmlFor="renders.coloredBtn"
+      for="renders.coloredBtn"
     >
       Label
     </label>
-    <Memo(FormFieldWrapper)
-      id="renders.coloredBtn"
+    <div
+      class="emotion-1"
     >
-      <div
-        className="emotion-1"
+      <input
+        aria-describedby=""
+        aria-invalid="false"
+        class="emotion-2"
+        data-cy="textInput-input"
+        id="renders.coloredBtn"
+        type="text"
+        value=""
+      />
+      <span
+        class="emotion-3"
       >
-        <input
-          aria-describedby=""
-          aria-invalid={false}
-          className="emotion-2"
-          data-cy="textInput-input"
-          id="renders.coloredBtn"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          type="text"
-        />
-        <span
-          className="emotion-3"
-          key="0"
+        <button
+          class="emotion-4"
+          type="button"
         >
-          <TextInputButton
-            color="red"
-            key="0"
-            shape="system-close"
+          <div
+            tabindex="-1"
           >
-            <ResetButton>
-              <button
-                className="emotion-4"
-                type="button"
-              >
-                <div
-                  tabIndex={-1}
-                >
-                  <Icon
-                    color="red"
-                    shape="system-close"
-                    size="xs"
-                  >
-                    <svg
-                      aria-label="system-close icon"
-                      className="emotion-5"
-                      data-cy="icon"
-                      height={16}
-                      preserveAspectRatio="xMinYMin meet"
-                      role="img"
-                      viewBox="0 0 16 16"
-                      width={16}
-                    >
-                      <use
-                        xlinkHref="#system-close"
-                      />
-                    </svg>
-                  </Icon>
-                </div>
-              </button>
-            </ResetButton>
-          </TextInputButton>
-        </span>
-      </div>
-    </Memo(FormFieldWrapper)>
+            <svg
+              aria-label="system-close icon"
+              class="emotion-5"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <use
+                xlink:href="#system-close"
+              />
+            </svg>
+          </div>
+        </button>
+      </span>
+    </div>
   </div>
-</TextInputWithButtons>
+</DocumentFragment>
 `;
