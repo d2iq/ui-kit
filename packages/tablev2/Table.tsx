@@ -146,6 +146,13 @@ function HeaderCell<Entry>({
       className={style.sortableButton}
     >
       {column.header}
+      {Boolean(column.sorter) && (
+        <span
+          id="sortIcon"
+          data-cy="sortIcon"
+          className={style.sortable(order)}
+        />
+      )}
     </ResetButton>
   ) : (
     column.header
@@ -155,7 +162,7 @@ function HeaderCell<Entry>({
     <div
       className={cx(style.headerCell(column.textAlign), {
         [style.makeSpaceForSortIndicator]: Boolean(column.sorter),
-        [style.sortable(order)]: Boolean(column.sorter),
+        [style.headerHover]: Boolean(column.sorter),
         [style.rowScrollShadow]: showScrollShadow
       })}
       id={id}

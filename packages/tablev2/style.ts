@@ -66,7 +66,7 @@ export const sortable = (dir: "asc" | "desc" | null) => css`
   position: relative;
 
   &:after {
-    content: "";
+    content: " ";
     display: ${dir ? "inline-block" : "none"};
     line-height: 0;
     margin-left: ${sortTriangleMarginPx}px;
@@ -79,8 +79,11 @@ export const sortable = (dir: "asc" | "desc" | null) => css`
       "currentColor"
     )};
   }
+`;
+
+export const headerHover = css`
   &:hover {
-    &:after {
+    #sortIcon: after {
       display: inline-block;
     }
   }

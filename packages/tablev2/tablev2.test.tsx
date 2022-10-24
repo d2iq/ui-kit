@@ -265,6 +265,35 @@ describe("Table v2", () => {
 
       expect(sorterFn).toHaveBeenCalledWith("desc", -1);
     });
+    it("calls the function passed to the 'sorter' prop when clicking the arrow besides heading", () => {
+      const sorterFn = jest.fn();
+      const { getByTestId } = render(
+        <Table
+          data={mockData}
+          toId={el => el.id.toString()}
+          columns={[
+            {
+              id: "name",
+              header: <div>Name</div>,
+              textAlign: "left",
+              render: x => (
+                <a href={`http://google.com/?q=${encodeURIComponent(x.name)}`}>
+                  {x.name}
+                </a>
+              ),
+              initialWidth: "300px",
+              sorter: sorterFn
+            }
+          ]}
+          initialSorter={{ by: "name", order: "asc" }}
+        />
+      );
+
+      expect(sorterFn).toHaveBeenCalledWith("asc", 1);
+      const sortIcon = getByTestId("sortIcon");
+      sortIcon.click();
+      expect(sorterFn).toHaveBeenLastCalledWith("desc", -1);
+    });
     it("sorts strings with Sorter.string", () => {
       const nameSort = Sorter.string("name");
       const ascSort = nameSort("asc", -1);
