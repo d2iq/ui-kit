@@ -1,7 +1,8 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
+
 import { ToggleInputList } from "../";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 
@@ -15,18 +16,20 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("ToggleInputList", () => {
   it("renders default", () => {
-    const component = mount(
+    const { getByText, getAllByRole, asFragment } = render(
       <ToggleInputList
         id="checkbox"
         items={options}
         listLabel="Sample legend"
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    getByText("Sample legend");
+    expect(getAllByRole("checkbox").length).toBe(3);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders as a radio group", () => {
-    const component = mount(
+    const { asFragment } = render(
       <ToggleInputList
         id="radio"
         items={options}
@@ -34,11 +37,11 @@ describe("ToggleInputList", () => {
         isRadioGroup={true}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with selected items", () => {
-    const component = mount(
+    const { getAllByRole } = render(
       <ToggleInputList
         id="checkbox"
         items={options}
@@ -46,11 +49,17 @@ describe("ToggleInputList", () => {
         selectedItems={["value.1", "value.2"]}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    const checkboxes = getAllByRole("checkbox") as HTMLInputElement[];
+    const option1 = checkboxes[0];
+    const option2 = checkboxes[1];
+    const option3 = checkboxes[2];
+    expect(option1.checked).toBeTruthy();
+    expect(option2.checked).toBeTruthy();
+    expect(option3.checked).toBeFalsy();
   });
 
   it("renders with errors", () => {
-    const component = mount(
+    const { getByText } = render(
       <ToggleInputList
         id="checkbox"
         items={options}
@@ -58,11 +67,12 @@ describe("ToggleInputList", () => {
         errors={["error.1", "error.2"]}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    getByText("error.1");
+    getByText("error.2");
   });
 
   it("renders with hidden label", () => {
-    const component = mount(
+    const { queryByText } = render(
       <ToggleInputList
         id="checkbox"
         items={options}
@@ -70,11 +80,11 @@ describe("ToggleInputList", () => {
         showListLabel={false}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(queryByText("Sample legend")).not.toBeVisible();
   });
 
   it("renders with required", () => {
-    const component = mount(
+    const { getByTestId } = render(
       <ToggleInputList
         id="checkbox"
         items={options}
@@ -82,11 +92,11 @@ describe("ToggleInputList", () => {
         required={true}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    getByTestId("dangerText");
   });
 
   it("renders with error label appearance", () => {
-    const component = mount(
+    const { getByText } = render(
       <ToggleInputList
         id="checkbox"
         items={options}
@@ -95,28 +105,39 @@ describe("ToggleInputList", () => {
         errors={["error.1", "error.2"]}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    const legentLabel = getByText("Sample legend");
+    getByText("error.1");
+    getByText("error.2");
+
+    expect(legentLabel).toHaveStyle("fill: var(--themeError, #EB293A)");
+    expect(legentLabel).toHaveStyle("color: var(--themeError, #EB293A)");
   });
 
-  it("calls onChange prop with all selected values and the last selected value", () => {
+  it("calls onChange prop with all selected values and the last selected value", async () => {
     const onChangeFn = jest.fn();
-    const component = mount(
-      <ToggleInputList
-        id="checkbox"
-        items={options}
-        listLabel="Sample legend"
-        onChange={onChangeFn}
-      />
+    const toggleInputListBaseProps = {
+      id: "checkbox",
+      items: options,
+      listLabel: "Sample legend",
+      onChange: onChangeFn
+    };
+    const { rerender, getAllByRole } = render(
+      <ToggleInputList {...toggleInputListBaseProps} />
     );
-    const checkbox = component.find("input").first();
+    const allCheckboxes = getAllByRole("checkbox") as HTMLInputElement[];
+    const firstCheckboxEl = allCheckboxes[0];
 
     expect(onChangeFn).not.toHaveBeenCalled();
-    checkbox.simulate("change", { target: { checked: true } });
-    expect(onChangeFn).toHaveBeenCalledWith(
-      [checkbox.prop("value")],
-      checkbox.prop("value")
+    await userEvent.click(firstCheckboxEl);
+    expect(onChangeFn).toHaveBeenCalledWith(["value.1"], "value.1");
+
+    rerender(
+      <ToggleInputList
+        {...toggleInputListBaseProps}
+        selectedItems={["value.1"]}
+      />
     );
-    checkbox.simulate("change", { target: { checked: false } });
-    expect(onChangeFn).toHaveBeenCalledWith([], checkbox.prop("value"));
+    await userEvent.click(firstCheckboxEl);
+    expect(onChangeFn).toHaveBeenLastCalledWith([], "value.1");
   });
 });

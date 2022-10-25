@@ -98,7 +98,10 @@ const ToggleInputList = ({
       ? getLabelStyle(hasError)
       : cx(visuallyHidden);
     return (
-      <legend className={cx(legendReset, legendClassName)}>
+      <legend
+        className={cx(legendReset, legendClassName)}
+        hidden={!showListLabel}
+      >
         {listLabel}
         {requiredContent}
       </legend>
@@ -140,7 +143,7 @@ const ToggleInputList = ({
       };
 
       return (
-        <li className={padding("top", "xs")} key={id}>
+        <li className={padding("top", "xs")} key={itemId}>
           <InputComponent {...inputProps} />
         </li>
       );
