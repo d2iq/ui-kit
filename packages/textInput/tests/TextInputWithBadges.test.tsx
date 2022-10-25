@@ -1,7 +1,7 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
-import { mount } from "enzyme";
-import toJson from "enzyme-to-json";
+import { render, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import TextInputWithBadges, {
   getStringAsBadgeDatum
@@ -26,27 +26,28 @@ const defaultBadges = [
 
 describe("TextInputWithBadges", () => {
   it("renders empty", () => {
-    const component = mount(
+    const { getByText, queryAllByTestId } = render(
       <TextInputWithBadges id="empty" inputLabel="empty" />
     );
-
-    expect(toJson(component)).toMatchSnapshot();
+    getByText("empty");
+    expect(queryAllByTestId("badge").length).toBe(0);
   });
 
   it("renders with badges", () => {
-    const component = mount(
+    const { getByText, asFragment, getAllByTestId } = render(
       <TextInputWithBadges
         id="withBadges"
         inputLabel="With badges"
         badges={defaultBadges}
       />
     );
-
-    expect(toJson(component)).toMatchSnapshot();
+    getByText("With badges");
+    expect(getAllByTestId("badge").length).toBe(3);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders badges with custom BadgeAppearance", () => {
-    const component = mount(
+    const { asFragment } = render(
       <TextInputWithBadges
         id="appearance"
         inputLabel="Appearance"
@@ -54,13 +55,13 @@ describe("TextInputWithBadges", () => {
       />
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it("calls onBadgeChange with the badge data and input value when keying enter", () => {
+  it("calls onBadgeChange with the badge data and input value when keying enter", async () => {
     const badgeChangeHandler = jest.fn();
     const inputValue = "some value";
-    const component = mount(
+    const { getByRole } = render(
       <TextInputWithBadges
         id="appearance"
         inputLabel="Appearance"
@@ -68,12 +69,10 @@ describe("TextInputWithBadges", () => {
         onBadgeChange={badgeChangeHandler}
       />
     );
+    const inputEl = getByRole("textbox");
 
     expect(badgeChangeHandler).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
-    component.find("input").simulate("keyUp", {
-      key: "Enter"
-    });
+    await userEvent.type(inputEl, "[Enter]");
 
     expect(badgeChangeHandler).toHaveBeenCalledWith(
       [getStringAsBadgeDatum(inputValue)],
@@ -81,10 +80,10 @@ describe("TextInputWithBadges", () => {
     );
   });
 
-  it("calls onBadgeChange with the badge data and input value when the input blurs", () => {
+  it("calls onBadgeChange with the badge data and input value when the input blurs", async () => {
     const badgeChangeHandler = jest.fn();
     const inputValue = "some value";
-    const component = mount(
+    const { getByRole } = render(
       <TextInputWithBadges
         id="appearance"
         inputLabel="Appearance"
@@ -92,10 +91,11 @@ describe("TextInputWithBadges", () => {
         onBadgeChange={badgeChangeHandler}
       />
     );
+    const inputEl = getByRole("textbox");
 
     expect(badgeChangeHandler).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
-    component.find("input").simulate("blur");
+    inputEl.focus();
+    await userEvent.tab();
 
     expect(badgeChangeHandler).toHaveBeenCalledWith(
       [getStringAsBadgeDatum(inputValue)],
@@ -103,10 +103,10 @@ describe("TextInputWithBadges", () => {
     );
   });
 
-  it("does not call onBadgeChange with the badge data and input value when the input blurs if addBadgeOnBlur=false", () => {
+  it("does not call onBadgeChange with the badge data and input value when the input blurs if addBadgeOnBlur=false", async () => {
     const badgeChangeHandler = jest.fn();
     const inputValue = "some value";
-    const component = mount(
+    const { getByRole } = render(
       <TextInputWithBadges
         id="appearance"
         inputLabel="Appearance"
@@ -115,10 +115,11 @@ describe("TextInputWithBadges", () => {
         addBadgeOnBlur={false}
       />
     );
+    const inputEl = getByRole("textbox");
 
     expect(badgeChangeHandler).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
-    component.find("input").simulate("blur");
+    inputEl.focus();
+    await userEvent.tab();
 
     expect(badgeChangeHandler).not.toHaveBeenCalledWith(
       [getStringAsBadgeDatum(inputValue)],
@@ -126,27 +127,25 @@ describe("TextInputWithBadges", () => {
     );
   });
 
-  it("does not call onBadgeChange when keying enter if the input value is undefined", () => {
+  it("does not call onBadgeChange when keying enter if the input value is undefined", async () => {
     const badgeChangeHandler = jest.fn();
-    const component = mount(
+    const { getByRole } = render(
       <TextInputWithBadges
         id="appearance"
         inputLabel="Appearance"
         onBadgeChange={badgeChangeHandler}
       />
     );
+    const inputEl = getByRole("textbox");
 
     expect(badgeChangeHandler).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
-    component.find("input").simulate("keyDown", {
-      key: "Enter"
-    });
+    await userEvent.type(inputEl, "[Enter]");
     expect(badgeChangeHandler).not.toHaveBeenCalled();
   });
 
-  it("does not call onBadgeChange when keying enter if the input value is whitespace chars", () => {
+  it("does not call onBadgeChange when keying enter if the input value is whitespace chars", async () => {
     const badgeChangeHandler = jest.fn();
-    const component = mount(
+    const { getByRole } = render(
       <TextInputWithBadges
         id="appearance"
         inputLabel="Appearance"
@@ -154,19 +153,17 @@ describe("TextInputWithBadges", () => {
         onBadgeChange={badgeChangeHandler}
       />
     );
+    const inputEl = getByRole("textbox");
 
     expect(badgeChangeHandler).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
-    component.find("input").simulate("keyDown", {
-      key: "Enter"
-    });
+    await userEvent.type(inputEl, "[Enter]");
     expect(badgeChangeHandler).not.toHaveBeenCalled();
   });
 
-  it("calls onBadgeChange with the badge data when clicking the close icon", () => {
+  it("calls onBadgeChange with the badge data when clicking the close icon", async () => {
     const firstBadge = { value: "firstbadge", label: "First badge" };
     const badgeChangeHandler = jest.fn();
-    const component = mount(
+    const { getAllByTestId } = render(
       <TextInputWithBadges
         id="appearance"
         inputLabel="Appearance"
@@ -174,20 +171,19 @@ describe("TextInputWithBadges", () => {
         onBadgeChange={badgeChangeHandler}
       />
     );
+    const allBadgesEl = getAllByTestId("badge");
+    const firstBadgeEl = allBadgesEl[0];
+    const firstBadgeCloseIcon = await within(firstBadgeEl).findByRole("button");
 
     expect(badgeChangeHandler).not.toHaveBeenCalled();
-    component
-      .find('[data-cy="badge"]')
-      .first()
-      .find('[aria-label="system-close icon"]')
-      .simulate("click");
+    firstBadgeCloseIcon.click();
     expect(badgeChangeHandler).toHaveBeenCalledWith(defaultBadges, firstBadge);
   });
 
-  it("calls onBadgeChange with the last badge's data when keying backspace", () => {
+  it("calls onBadgeChange with the last badge's data when keying backspace", async () => {
     const lastBadge = { value: "lastbadge", label: "Last badge" };
     const badgeChangeHandler = jest.fn();
-    const component = mount(
+    const { getByRole } = render(
       <TextInputWithBadges
         id="appearance"
         inputLabel="Appearance"
@@ -195,46 +191,43 @@ describe("TextInputWithBadges", () => {
         onBadgeChange={badgeChangeHandler}
       />
     );
+    const inputEl = getByRole("textbox");
 
     expect(badgeChangeHandler).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
-    component.find("input").simulate("keyDown", {
-      key: "Backspace"
-    });
+    await userEvent.type(inputEl, "[Backspace]");
+
     expect(badgeChangeHandler).toHaveBeenCalledWith(defaultBadges, lastBadge);
   });
 
-  it("calls the input's onKeyDown prop", () => {
+  it("calls the input's onKeyDown prop", async () => {
     const onKeyDownFn = jest.fn();
-    const component = mount(
+    const { getByRole } = render(
       <TextInputWithBadges
         id="appearance"
         inputLabel="Appearance"
         onKeyDown={onKeyDownFn}
       />
     );
+    const inputEl = getByRole("textbox");
 
     expect(onKeyDownFn).not.toHaveBeenCalled();
-    component.find("input").simulate("keyDown", {
-      key: "Space"
-    });
+    await userEvent.type(inputEl, "[Space]");
     expect(onKeyDownFn).toHaveBeenCalled();
   });
 
-  it("calls the input's onKeyUp prop", () => {
+  it("calls the input's onKeyUp prop", async () => {
     const onKeyUpFn = jest.fn();
-    const component = mount(
+    const { getByRole } = render(
       <TextInputWithBadges
         id="appearance"
         inputLabel="Appearance"
         onKeyUp={onKeyUpFn}
       />
     );
+    const inputEl = getByRole("textbox");
 
     expect(onKeyUpFn).not.toHaveBeenCalled();
-    component.find("input").simulate("keyUp", {
-      key: "Space"
-    });
+    await userEvent.type(inputEl, "[Space]");
     expect(onKeyUpFn).toHaveBeenCalled();
   });
 });

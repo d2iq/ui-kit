@@ -15,6 +15,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   <label
     className="emotion-0"
     data-cy="textInput-label"
+    hidden={false}
     htmlFor="test.icon_end_input.standard"
   >
     standard
@@ -44,6 +45,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   <label
     className="emotion-0"
     data-cy="textInput-label"
+    hidden={false}
     htmlFor="test.icon_end_input.error"
   >
     error
@@ -71,6 +73,7 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   <label
     className="emotion-0"
     data-cy="textInput-label"
+    hidden={false}
     htmlFor="test.icon_end_input.success"
   >
     success
@@ -98,6 +101,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   <label
     className="emotion-0"
     data-cy="textInput-label"
+    hidden={false}
     htmlFor="test.icon_start_input.standard"
   >
     standard
@@ -127,6 +131,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   <label
     className="emotion-0"
     data-cy="textInput-label"
+    hidden={false}
     htmlFor="test.icon_start_input.error"
   >
     error
@@ -154,6 +159,7 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   <label
     className="emotion-0"
     data-cy="textInput-label"
+    hidden={false}
     htmlFor="test.icon_start_input.success"
   >
     success
@@ -181,6 +187,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   <label
     className="emotion-0"
     data-cy="textInput-label"
+    hidden={false}
     htmlFor="test.two_icon_input.standard"
   >
     standard
@@ -210,6 +217,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   <label
     className="emotion-0"
     data-cy="textInput-label"
+    hidden={false}
     htmlFor="test.two_icon_input.error"
   >
     error
@@ -237,6 +245,7 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   <label
     className="emotion-0"
     data-cy="textInput-label"
+    hidden={false}
     htmlFor="test.two_icon_input.success"
   >
     success

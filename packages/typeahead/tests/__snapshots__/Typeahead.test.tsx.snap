@@ -137,6 +137,7 @@ exports[`Typeahead renders 1`] = `
         <label
           className="emotion-0"
           data-cy="textInput-label"
+          hidden={false}
           htmlFor="standard.input"
         >
           Standard
@@ -313,6 +314,7 @@ exports[`Typeahead renders a menu with a max height 1`] = `
         <label
           className="emotion-0"
           data-cy="textInput-label"
+          hidden={false}
           htmlFor="standard.input"
         >
           Standard
