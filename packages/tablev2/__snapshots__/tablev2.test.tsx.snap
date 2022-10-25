@@ -12,7 +12,7 @@ exports[`Table v2 rendering renders default 1`] = `
     >
       <div
         aria-sort="none"
-        class="css-1ve9jwd"
+        class="css-1il2bhb"
         id="name"
         role="columnheader"
       >
@@ -28,9 +28,8 @@ exports[`Table v2 rendering renders default 1`] = `
               Name
             </div>
             <span
-              class="css-123nj8f"
+              class="css-123nj8f sortIcon"
               data-cy="sortIcon"
-              id="sortIcon"
             />
           </div>
         </button>
@@ -971,7 +970,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
     >
       <div
         aria-sort="none"
-        class="css-1t7neu5"
+        class="css-1me0nmx"
         id="name"
         role="columnheader"
       >
@@ -987,9 +986,8 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
               Name
             </div>
             <span
-              class="css-123nj8f"
+              class="css-123nj8f sortIcon"
               data-cy="sortIcon"
-              id="sortIcon"
             />
           </div>
         </button>
