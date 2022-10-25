@@ -39,23 +39,27 @@ export interface SegmentedControlButtonProps {
   children?: React.ReactNode;
 }
 
-const SegmentedControlButton = ({
-  id = nextId("segmentedControlButton-"),
-  isActive,
-  onChange,
-  name,
-  value,
-  tooltipContent,
-  children
-}: SegmentedControlButtonProps) => {
-  return (
-    <FocusStyleManager focusEnabledClass={staticKeyboardFocusClassname}>
+const SegmentedControlLabel = React.forwardRef(
+  (
+    {
+      id = nextId("segmentedControlButton-"),
+      isActive,
+      onChange,
+      name,
+      value,
+      tooltipContent,
+      children
+    }: SegmentedControlButtonProps,
+    ref
+  ) => {
+    return (
       <label
         className={cx(segmentedControlButton, {
           [segmentedControlButtonActive]: isActive
         })}
         data-cy="segmentedControlButton"
         htmlFor={id}
+        ref={ref as React.ForwardedRef<HTMLLabelElement>}
       >
         <input
           className={visuallyHidden}
@@ -79,6 +83,14 @@ const SegmentedControlButton = ({
           <div className={segmentedControlButtonInner}>{children}</div>
         )}
       </label>
+    );
+  }
+);
+
+const SegmentedControlButton = (props: SegmentedControlButtonProps) => {
+  return (
+    <FocusStyleManager focusEnabledClass={staticKeyboardFocusClassname}>
+      <SegmentedControlLabel {...props}>{props.children}</SegmentedControlLabel>
     </FocusStyleManager>
   );
 };
