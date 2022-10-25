@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, screen } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 
 import { Table } from "./";
 import { DropdownMenuCell } from "./DropdownMenuCell";
@@ -213,7 +213,7 @@ describe("Table v2", () => {
     it("calls onStateChange when a column is sorted", () => {
       const onStateChange = jest.fn();
 
-      render(
+      const { getByTestId } = render(
         <Table
           data={mockData}
           toId={el => el.id.toString()}
@@ -223,7 +223,7 @@ describe("Table v2", () => {
         />
       );
 
-      fireEvent.click(screen.getByTestId("table-headercell-name-button"));
+      fireEvent.click(getByTestId("table-headercell-name-button"));
 
       expect(onStateChange).toHaveBeenCalledWith(
         expect.objectContaining({ sortBy: "name", order: "desc" })
@@ -237,7 +237,7 @@ describe("Table v2", () => {
   describe("Sorting", () => {
     it("calls the function passed to the 'sorter' prop when clicking the table headings", () => {
       const sorterFn = jest.fn();
-      render(
+      const { getByTestId } = render(
         <Table
           data={mockData}
           toId={el => el.id.toString()}
@@ -261,7 +261,7 @@ describe("Table v2", () => {
 
       expect(sorterFn).toHaveBeenCalledWith("asc", 1);
 
-      fireEvent.click(screen.getByTestId("table-headercell-name-button"));
+      fireEvent.click(getByTestId("table-headercell-name-button"));
 
       expect(sorterFn).toHaveBeenCalledWith("desc", -1);
     });
