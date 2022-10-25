@@ -335,6 +335,7 @@ exports[`Pagination rendering renders default 1`] = `
               class="emotion-8"
               data-cy="textInput-label"
               for="textInput-2"
+              hidden=""
             />
             <div>
               <div
@@ -701,6 +702,7 @@ exports[`Pagination rendering renders prev and next buttons as links 1`] = `
               class="emotion-8"
               data-cy="textInput-label"
               for="textInput-17"
+              hidden=""
             />
             <div>
               <div
@@ -1091,6 +1093,7 @@ exports[`Pagination rendering renders w/ custom item label 1`] = `
               class="emotion-8"
               data-cy="textInput-label"
               for="textInput-8"
+              hidden=""
             />
             <div>
               <div
@@ -1615,6 +1618,7 @@ exports[`Pagination rendering renders w/ page length menu 1`] = `
             class="emotion-4"
             data-cy="textInput-label"
             for="pageLengthMenu19"
+            hidden=""
           >
             Items per page
           </label>
@@ -1725,6 +1729,7 @@ exports[`Pagination rendering renders w/ page length menu 1`] = `
               class="emotion-4"
               data-cy="textInput-label"
               for="textInput-20"
+              hidden=""
             />
             <div>
               <div
@@ -2118,6 +2123,7 @@ exports[`Pagination rendering renders w/ totalItems set 1`] = `
               class="emotion-8"
               data-cy="textInput-label"
               for="textInput-11"
+              hidden=""
             />
             <div>
               <div
@@ -2513,6 +2519,7 @@ exports[`Pagination rendering renders w/ totalPages, pageLength, and totalItems 
               class="emotion-8"
               data-cy="textInput-label"
               for="textInput-14"
+              hidden=""
             />
             <div>
               <div
@@ -2958,6 +2965,7 @@ exports[`Pagination rendering renders wrapped in a PaginationContainer 1`] = `
                   class="emotion-10"
                   data-cy="textInput-label"
                   for="textInput-5"
+                  hidden=""
                 />
                 <div>
                   <div
