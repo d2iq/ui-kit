@@ -213,7 +213,7 @@ describe("Table v2", () => {
     it("calls onStateChange when a column is sorted", () => {
       const onStateChange = jest.fn();
 
-      const { container } = render(
+      render(
         <Table
           data={mockData}
           toId={el => el.id.toString()}
@@ -223,7 +223,7 @@ describe("Table v2", () => {
         />
       );
 
-      fireEvent.click(container.querySelector("div#name button")!);
+      fireEvent.click(screen.getByTestId("table-headercell-name-button"));
 
       expect(onStateChange).toHaveBeenCalledWith(
         expect.objectContaining({ sortBy: "name", order: "desc" })
