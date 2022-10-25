@@ -1,12 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar renders 1`] = `
-.emotion-0 {
-  display: block;
-  width: 100%;
-}
-
-.emotion-1 {
+<DocumentFragment>
+  .emotion-0 {
   background: none;
   border: 0;
   color: inherit;
@@ -20,29 +16,29 @@ exports[`Sidebar renders 1`] = `
   cursor: pointer;
 }
 
-.emotion-1::-moz-focus-inner {
+.emotion-0::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-1>div:focus {
+.emotion-0>div:focus {
   outline: none;
 }
 
-.emotion-1:focus>div {
+.emotion-0:focus>div {
   outline-color: Highlight;
   outline-width: thin;
 }
 
 @media (-webkit-min-device-pixel-ratio: 0) {
-  .emotion-1:focus>div {
+  .emotion-0:focus>div {
     outline-color: -webkit-focus-ring-color;
     outline-style: auto;
     outline-width: unset;
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -70,23 +66,23 @@ exports[`Sidebar renders 1`] = `
   row-gap: 0;
 }
 
-.emotion-2>div {
+.emotion-1>div {
   width: auto;
 }
 
 @supports not (column-gap: 1px) {
-  .emotion-2>*:not(:last-child) {
+  .emotion-1>*:not(:last-child) {
     padding-right: 0;
   }
 }
 
 @supports not (row-gap: 1px) {
-  .emotion-2>*:not(:last-child) {
+  .emotion-1>*:not(:last-child) {
     padding-bottom: 0;
   }
 }
 
-.emotion-3 {
+.emotion-2 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -101,16 +97,16 @@ exports[`Sidebar renders 1`] = `
   width: initial;
 }
 
-.emotion-4 {
+.emotion-3 {
   vertical-align: middle;
   fill: currentColor;
 }
 
-.emotion-4 use {
+.emotion-3 use {
   pointer-events: none;
 }
 
-.emotion-5 {
+.emotion-4 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -123,79 +119,53 @@ exports[`Sidebar renders 1`] = `
   width: auto;
 }
 
-<Expandable
-  isOpen={true}
-  label="Label"
->
-  <div>
-    <ResetButton
-      aria-expanded={true}
-      className="emotion-0"
-      onClick={[Function]}
+<div>
+    <button
+      aria-expanded="true"
+      class="emotion-0"
+      type="button"
     >
-      <button
-        aria-expanded={true}
-        className="emotion-1"
-        onClick={[Function]}
-        type="button"
+      <div
+        tabindex="-1"
       >
         <div
-          tabIndex={-1}
+          class="emotion-1"
+          data-cy="flex"
         >
-          <Flex
-            align="center"
-            direction="row"
+          <div
+            class="emotion-2"
+            data-cy="flexItem"
           >
-            <div
-              className="emotion-2"
-              data-cy="flex"
+            <svg
+              aria-label="system-triangle-down icon"
+              class="emotion-3"
+              data-cy="icon"
+              height="16"
+              preserveAspectRatio="xMinYMin meet"
+              role="img"
+              viewBox="0 0 16 16"
+              width="16"
             >
-              <FlexItem
-                flex="shrink"
-              >
-                <div
-                  className="emotion-3"
-                  data-cy="flexItem"
-                >
-                  <Icon
-                    shape="system-triangle-down"
-                    size="xs"
-                  >
-                    <svg
-                      aria-label="system-triangle-down icon"
-                      className="emotion-4"
-                      data-cy="icon"
-                      height={16}
-                      preserveAspectRatio="xMinYMin meet"
-                      role="img"
-                      viewBox="0 0 16 16"
-                      width={16}
-                    >
-                      <use
-                        xlinkHref="#system-triangle-down"
-                      />
-                    </svg>
-                  </Icon>
-                </div>
-              </FlexItem>
-              <FlexItem>
-                <div
-                  className="emotion-5"
-                  data-cy="flexItem"
-                >
-                  Label
-                </div>
-              </FlexItem>
-            </div>
-          </Flex>
+              <use
+                xlink:href="#system-triangle-down"
+              />
+            </svg>
+          </div>
+          <div
+            class="emotion-4"
+            data-cy="flexItem"
+          >
+            Label
+          </div>
         </div>
-      </button>
-    </ResetButton>
+      </div>
+    </button>
     <div
-      aria-hidden={false}
+      aria-hidden="false"
+      class=""
     >
       Content
     </div>
   </div>
-</Expandable>
+</DocumentFragment>
 `;

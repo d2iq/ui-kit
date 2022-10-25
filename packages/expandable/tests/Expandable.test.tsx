@@ -1,7 +1,7 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 
 import { Expandable } from "../";
 
@@ -9,58 +9,61 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("Sidebar", () => {
   it("renders", () => {
-    const component = mount(
+    const { asFragment } = render(
       <Expandable label="Label" isOpen={true}>
         Content
       </Expandable>
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
-  it("toggles open and closed", () => {
-    const component = mount(
-      <Expandable label="Label" isOpen={true}>
-        Content
-      </Expandable>
+  it("toggles open and closed", async () => {
+    const { getByText, queryByText, getByTestId } = render(
+      <Expandable label="Label">Content</Expandable>
     );
 
-    expect(component.find("button").props()["aria-expanded"]).toBe(true);
-    component.find("button").simulate("click");
-    expect(component.find("button").props()["aria-expanded"]).toBe(false);
+    expect(queryByText("Content")).not.toBeVisible();
+    const labelEl = getByText("Label");
+    labelEl.click();
+    getByText("Content");
+    labelEl.click();
+    expect(queryByText("Content")).not.toBeVisible();
+
+    const chevronIcon = getByTestId("icon");
+    await userEvent.click(chevronIcon);
+    getByText("Content");
+    await userEvent.click(chevronIcon);
+    expect(queryByText("Content")).not.toBeVisible();
   });
 
   it("fires onChange when button is clicked", () => {
     const onChange = jest.fn();
-    const component = mount(
+    const { getByText } = render(
       <Expandable label="Label" isOpen={true} onChange={onChange}>
         Content
       </Expandable>
     );
-
     expect(onChange).not.toHaveBeenCalled();
 
-    component.find("button").simulate("click");
+    const labelEl = getByText("Label");
+    labelEl.click();
 
-    expect(onChange).toHaveBeenCalledTimes(1);
-    const openArgument = onChange.mock.calls[0][0];
-    expect(openArgument).toBe(false);
+    expect(onChange).toHaveBeenCalledWith(false);
+
+    labelEl.click();
+
+    expect(onChange).toHaveBeenLastCalledWith(true);
   });
 
   it("toggles open and closed based on controlledIsOpen prop when passed", () => {
-    const component = mount(
+    const { getByText } = render(
       <Expandable label="Label" controlledIsOpen>
         Content
       </Expandable>
     );
 
-    expect(component.find("button").props()["aria-expanded"]).toBe(true);
-    component.find("button").simulate("click");
-    expect(component.find("button").props()["aria-expanded"]).toBe(true);
-
-    component.setProps({
-      controlledIsOpen: false
-    });
-    component.update();
-
-    expect(component.find("button").props()["aria-expanded"]).toBe(false);
+    getByText("Content");
+    const labelEl = getByText("Label");
+    labelEl.click();
+    getByText("Content");
   });
 });
