@@ -85,6 +85,7 @@ const NavButton = ({
 
   return (
     <Component
+      data-cy={ariaLabel}
       aria-label={ariaLabel}
       disabled={!url && disabled}
       {...(url && !disabled ? { url } : {})}
@@ -227,6 +228,7 @@ const Pagination = ({
             className={cx(display("inline-block"), {
               [defaultInputWidth]: !totalPages
             })}
+            aria-label="form"
           >
             <TextInput
               type="number"

@@ -1,7 +1,7 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
+import { fireEvent, render, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
 
 import Pagination, { getItemCountString } from "./Pagination";
 import PaginationContainer from "./PaginationContainer";
@@ -11,25 +11,25 @@ expect.addSnapshotSerializer(createSerializer());
 describe("Pagination", () => {
   describe("rendering", () => {
     it("renders default", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <Pagination initialActivePage={4} initialPageLength={20} />
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it("renders wrapped in a PaginationContainer", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <PaginationContainer vertAlignChildren="flex-end">
           <Pagination initialActivePage={4} initialPageLength={20} />
         </PaginationContainer>
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it("renders w/ custom item label", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <Pagination
           itemsLabel="things"
           initialActivePage={4}
@@ -37,11 +37,11 @@ describe("Pagination", () => {
         />
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it("renders w/ totalItems set", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <Pagination
           totalItems={200}
           initialActivePage={4}
@@ -49,11 +49,11 @@ describe("Pagination", () => {
         />
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it("renders w/ totalPages, pageLength, and totalItems set", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <Pagination
           totalPages={20}
           pageLength={10}
@@ -63,11 +63,11 @@ describe("Pagination", () => {
         />
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it("renders prev and next buttons as links", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <Pagination
           prevUrl="prev"
           nextUrl="next"
@@ -76,11 +76,11 @@ describe("Pagination", () => {
         />
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it("renders w/ page length menu", () => {
-      const component = shallow(
+      const { asFragment } = render(
         <Pagination
           showPageLengthMenu={true}
           initialPageLength={100}
@@ -88,7 +88,7 @@ describe("Pagination", () => {
         />
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
@@ -105,8 +105,8 @@ describe("Pagination", () => {
   });
 
   describe("page navigation functionality", () => {
-    it("increments number input value when 'next' button is clicked", () => {
-      const component = mount(
+    it("increments number input value when 'next' button is clicked", async () => {
+      const { getByTestId } = render(
         <Pagination
           showPageLengthMenu={true}
           initialPageLength={100}
@@ -114,40 +114,46 @@ describe("Pagination", () => {
         />
       );
 
-      expect(component.find("input").prop("value")).toEqual(4);
-      component.find("button[aria-label='next page']").simulate("click");
-      expect(component.find("input").prop("value")).toEqual(5);
+      const inputElement = getByTestId("textInput-input") as HTMLInputElement;
+      expect(inputElement.value).toEqual("4");
+
+      const nextButton = getByTestId("next page") as HTMLButtonElement;
+      nextButton.click();
+
+      await waitFor(() => expect(inputElement.value).toEqual("5"));
     });
 
-    it("decrements number input value when 'prev' button is clicked", () => {
-      const component = mount(<Pagination initialActivePage={4} />);
+    it("decrements number input value when 'prev' button is clicked", async () => {
+      const { getByTestId } = render(<Pagination initialActivePage={4} />);
 
-      expect(component.find("input").prop("value")).toEqual(4);
-      component.find("button[aria-label='previous page']").simulate("click");
-      expect(component.find("input").prop("value")).toEqual(3);
+      const inputElement = getByTestId("textInput-input") as HTMLInputElement;
+      expect(inputElement.value).toEqual("4");
+
+      const previousButton = getByTestId("previous page") as HTMLButtonElement;
+      previousButton.click();
+
+      await waitFor(() => expect(inputElement.value).toEqual("3"));
     });
 
     it("disables the next button when the user is on the last page", () => {
-      const component = mount(
+      const { getByTestId } = render(
         <Pagination initialActivePage={5} totalPages={5} />
       );
 
-      expect(
-        component.find("button[aria-label='next page']").prop("disabled")
-      ).toEqual(true);
+      const nextButton = getByTestId("next page") as HTMLButtonElement;
+      expect(nextButton.disabled).toEqual(true);
     });
 
     it("disables the prev button when the user is on the first page", () => {
-      const component = mount(<Pagination initialActivePage={1} />);
+      const { getByTestId } = render(<Pagination initialActivePage={1} />);
 
-      expect(
-        component.find("button[aria-label='previous page']").prop("disabled")
-      ).toEqual(true);
+      const previousButton = getByTestId("previous page") as HTMLButtonElement;
+      expect(previousButton.disabled).toEqual(true);
     });
 
-    it("calls onChange prop when page length menu is changed", () => {
+    it("calls onChange prop when page length menu is changed", async () => {
       const onChange = jest.fn();
-      const component = mount(
+      const { getByRole, getByLabelText } = render(
         <Pagination
           showPageLengthMenu={true}
           initialActivePage={4}
@@ -156,13 +162,16 @@ describe("Pagination", () => {
       );
 
       expect(onChange).not.toHaveBeenCalled();
-      component.find("select").simulate("change");
+      await userEvent.selectOptions(
+        getByLabelText("Items per page"),
+        getByRole("option", { name: "30" })
+      );
       expect(onChange).toHaveBeenCalledWith(4, 30);
     });
 
     it("calls onChange prop when page text input is changed and submitted", () => {
       const onChange = jest.fn();
-      const component = mount(
+      const { getByRole } = render(
         <Pagination
           showPageLengthMenu={true}
           initialActivePage={4}
@@ -170,9 +179,9 @@ describe("Pagination", () => {
         />
       );
 
-      expect(onChange).not.toHaveBeenCalled();
-      component.find("input").simulate("change");
-      component.find("form").simulate("submit");
+      const formElement = getByRole("form");
+      fireEvent.submit(formElement);
+
       expect(onChange).toHaveBeenCalledWith(4, 30);
     });
   });

@@ -1,6 +1,5 @@
 import React from "react";
-import { mount, render } from "enzyme";
-import toJSON from "enzyme-to-json";
+import { render } from "@testing-library/react";
 
 import { PromoBanner, PromoInline } from "./";
 import PromoContent from "./components/PromoContent";
@@ -9,81 +8,70 @@ describe("Promos", () => {
   const dismissHandler = jest.fn();
   const optOutHandler = jest.fn();
   it("renders PromoBanner", () => {
-    expect(
-      toJSON(
-        render(
-          <PromoBanner
-            graphicSrc="http://placehold.it/350x150"
-            primaryAction={<button>Primary Action</button>}
-            secondaryAction={<button>Secondary Action</button>}
-            headingText="Promo Banner"
-            bodyContent="Some promo details"
-            dismissHandler={dismissHandler}
-            optOutHandler={optOutHandler}
-          />
-        )
-      )
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <PromoBanner
+        graphicSrc="http://placehold.it/350x150"
+        primaryAction={<button>Primary Action</button>}
+        secondaryAction={<button>Secondary Action</button>}
+        headingText="Promo Banner"
+        bodyContent="Some promo details"
+        dismissHandler={dismissHandler}
+        optOutHandler={optOutHandler}
+      />
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders PromoBanner with a gradientStyle", () => {
-    expect(
-      toJSON(
-        render(
-          <PromoBanner
-            gradientStyle="lightBlue"
-            graphicSrc="http://placehold.it/350x150"
-            primaryAction={<button>Primary Action</button>}
-            secondaryAction={<button>Secondary Action</button>}
-            headingText="Promo Banner"
-            bodyContent="Some promo details"
-            dismissHandler={dismissHandler}
-            optOutHandler={optOutHandler}
-          />
-        )
-      )
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <PromoBanner
+        gradientStyle="lightBlue"
+        graphicSrc="http://placehold.it/350x150"
+        primaryAction={<button>Primary Action</button>}
+        secondaryAction={<button>Secondary Action</button>}
+        headingText="Promo Banner"
+        bodyContent="Some promo details"
+        dismissHandler={dismissHandler}
+        optOutHandler={optOutHandler}
+      />
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders PromoBanner with a custom background color", () => {
-    expect(
-      toJSON(
-        render(
-          <PromoBanner
-            bgColor="purpleLighten5"
-            graphicSrc="http://placehold.it/350x150"
-            primaryAction={<button>Primary Action</button>}
-            secondaryAction={<button>Secondary Action</button>}
-            headingText="Promo Banner"
-            bodyContent="Some promo details"
-            dismissHandler={dismissHandler}
-            optOutHandler={optOutHandler}
-          />
-        )
-      )
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <PromoBanner
+        bgColor="purpleLighten5"
+        graphicSrc="http://placehold.it/350x150"
+        primaryAction={<button>Primary Action</button>}
+        secondaryAction={<button>Secondary Action</button>}
+        headingText="Promo Banner"
+        bodyContent="Some promo details"
+        dismissHandler={dismissHandler}
+        optOutHandler={optOutHandler}
+      />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders PromoInline", () => {
-    expect(
-      toJSON(
-        render(
-          <PromoInline
-            graphicSrc="http://placehold.it/350x150"
-            primaryAction={<button>Primary Action</button>}
-            secondaryAction={<button>Secondary Action</button>}
-            headingText="Promo Inline"
-            bodyContent="Some promo details"
-            dismissHandler={dismissHandler}
-            optOutHandler={optOutHandler}
-          />
-        )
-      )
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <PromoInline
+        graphicSrc="http://placehold.it/350x150"
+        primaryAction={<button>Primary Action</button>}
+        secondaryAction={<button>Secondary Action</button>}
+        headingText="Promo Inline"
+        bodyContent="Some promo details"
+        dismissHandler={dismissHandler}
+        optOutHandler={optOutHandler}
+      />
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("calls optOutHandler when the opt out checkbox is checked", () => {
-    const component = mount(
+    const { container } = render(
       <PromoContent
         graphicSrc="http://placehold.it/350x150"
         primaryAction={<button>Primary Action</button>}
@@ -96,12 +84,17 @@ describe("Promos", () => {
     );
 
     expect(optOutHandler).not.toHaveBeenCalled();
-    component.find("input").simulate("change", { target: { checked: true } });
+    const checkboxEl = container.querySelector(
+      "input[type=checkbox]"
+    ) as HTMLInputElement;
+    expect(checkboxEl.checked).toBeFalsy();
+    checkboxEl.click();
+    expect(checkboxEl.checked).toBeTruthy();
     expect(optOutHandler).toHaveBeenCalled();
   });
 
-  it("calls optOutHandler when the opt out checkbox is checked", () => {
-    const component = mount(
+  it("calls dismissHandler when close button is clicked", () => {
+    const { getByTestId } = render(
       <PromoContent
         graphicSrc="http://placehold.it/350x150"
         primaryAction={<button>Primary Action</button>}
@@ -114,7 +107,8 @@ describe("Promos", () => {
     );
 
     expect(dismissHandler).not.toHaveBeenCalled();
-    component.find('[aria-label*="system-close"]').simulate("click");
+    const closeButton = getByTestId("dismissButton") as HTMLButtonElement;
+    closeButton.click();
     expect(dismissHandler).toHaveBeenCalled();
   });
 });

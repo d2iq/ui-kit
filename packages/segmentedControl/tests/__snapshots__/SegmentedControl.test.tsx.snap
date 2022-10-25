@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SegmentedControl renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10,42 +11,117 @@ exports[`SegmentedControl renders default 1`] = `
   white-space: nowrap;
 }
 
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-color: var(--themeBorder, #DADDE2);
+  border-width: 1px;
+  border-style: solid;
+  border-right-width: 0;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-1:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.emotion-1:last-child {
+  border-radius: 0 6px 6px 0;
+  border-right-width: 1px;
+}
+
+.emotion-1:hover,
+.emotion-1:focus-within {
+  background-color: var(--themeBgHover, #F7F8F9);
+  color: #1B2029;
+}
+
+.emotion-2 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-3 {
+  padding: 10px 18px;
+}
+
 <div
-  className="emotion-0"
-  data-cy="segmentedControl"
->
-  <Memo(SegmentedControlButton)
-    isActive={false}
-    key="0"
-    name="controlId"
-    onChange={[Function]}
-    value="one"
+    class="emotion-0"
+    data-cy="segmentedControl"
   >
-    One
-  </Memo(SegmentedControlButton)>
-  <Memo(SegmentedControlButton)
-    isActive={false}
-    key="1"
-    name="controlId"
-    onChange={[Function]}
-    value="two"
-  >
-    Two
-  </Memo(SegmentedControlButton)>
-  <Memo(SegmentedControlButton)
-    isActive={false}
-    key="2"
-    name="controlId"
-    onChange={[Function]}
-    value="three"
-  >
-    Three
-  </Memo(SegmentedControlButton)>
-</div>
+    <label
+      class="static_segmentKeyboardFocus emotion-1"
+      data-cy="segmentedControlButton"
+      for="segmentedControlButton-1"
+    >
+      <input
+        class="emotion-2"
+        id="segmentedControlButton-1"
+        name="controlId"
+        type="radio"
+        value="one"
+      />
+      <div
+        class="emotion-3"
+      >
+        One
+      </div>
+    </label>
+    <label
+      class="static_segmentKeyboardFocus emotion-1"
+      data-cy="segmentedControlButton"
+      for="segmentedControlButton-2"
+    >
+      <input
+        class="emotion-2"
+        id="segmentedControlButton-2"
+        name="controlId"
+        type="radio"
+        value="two"
+      />
+      <div
+        class="emotion-3"
+      >
+        Two
+      </div>
+    </label>
+    <label
+      class="static_segmentKeyboardFocus emotion-1"
+      data-cy="segmentedControlButton"
+      for="segmentedControlButton-3"
+    >
+      <input
+        class="emotion-2"
+        id="segmentedControlButton-3"
+        name="controlId"
+        type="radio"
+        value="three"
+      />
+      <div
+        class="emotion-3"
+      >
+        Three
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`SegmentedControl renders with selected 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,36 +130,156 @@ exports[`SegmentedControl renders with selected 1`] = `
   white-space: nowrap;
 }
 
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-color: var(--themeBorder, #DADDE2);
+  border-width: 1px;
+  border-style: solid;
+  border-right-width: 0;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: var(--themeBorder, #DADDE2);
+  border-color: var(--themeBorder, #DADDE2);
+  color: #1B2029;
+}
+
+.emotion-1:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.emotion-1:last-child {
+  border-radius: 0 6px 6px 0;
+  border-right-width: 1px;
+}
+
+.emotion-1:hover,
+.emotion-1:focus-within {
+  background-color: var(--themeBgHover, #F7F8F9);
+  color: #1B2029;
+}
+
+.emotion-1:hover,
+.emotion-1:focus-within {
+  background-color: var(--themeBorder, #DADDE2);
+  color: #1B2029;
+}
+
+.emotion-1.static_segmentKeyboardFocus:focus-within {
+  background-color: #c4c6cb;
+  border-color: #c4c6cb;
+}
+
+.emotion-2 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.emotion-3 {
+  padding: 10px 18px;
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-color: var(--themeBorder, #DADDE2);
+  border-width: 1px;
+  border-style: solid;
+  border-right-width: 0;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-4:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.emotion-4:last-child {
+  border-radius: 0 6px 6px 0;
+  border-right-width: 1px;
+}
+
+.emotion-4:hover,
+.emotion-4:focus-within {
+  background-color: var(--themeBgHover, #F7F8F9);
+  color: #1B2029;
+}
+
 <div
-  className="emotion-0"
-  data-cy="segmentedControl"
->
-  <Memo(SegmentedControlButton)
-    isActive={true}
-    key="0"
-    name="controlId"
-    onChange={[Function]}
-    value="one"
+    class="emotion-0"
+    data-cy="segmentedControl"
   >
-    One
-  </Memo(SegmentedControlButton)>
-  <Memo(SegmentedControlButton)
-    isActive={false}
-    key="1"
-    name="controlId"
-    onChange={[Function]}
-    value="two"
-  >
-    Two
-  </Memo(SegmentedControlButton)>
-  <Memo(SegmentedControlButton)
-    isActive={false}
-    key="2"
-    name="controlId"
-    onChange={[Function]}
-    value="three"
-  >
-    Three
-  </Memo(SegmentedControlButton)>
-</div>
+    <label
+      class="static_segmentKeyboardFocus emotion-1"
+      data-cy="segmentedControlButton"
+      for="segmentedControlButton-4"
+    >
+      <input
+        checked=""
+        class="emotion-2"
+        id="segmentedControlButton-4"
+        name="controlId"
+        type="radio"
+        value="one"
+      />
+      <div
+        class="emotion-3"
+      >
+        One
+      </div>
+    </label>
+    <label
+      class="static_segmentKeyboardFocus emotion-4"
+      data-cy="segmentedControlButton"
+      for="segmentedControlButton-5"
+    >
+      <input
+        class="emotion-2"
+        id="segmentedControlButton-5"
+        name="controlId"
+        type="radio"
+        value="two"
+      />
+      <div
+        class="emotion-3"
+      >
+        Two
+      </div>
+    </label>
+    <label
+      class="static_segmentKeyboardFocus emotion-4"
+      data-cy="segmentedControlButton"
+      for="segmentedControlButton-6"
+    >
+      <input
+        class="emotion-2"
+        id="segmentedControlButton-6"
+        name="controlId"
+        type="radio"
+        value="three"
+      />
+      <div
+        class="emotion-3"
+      >
+        Three
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
 `;

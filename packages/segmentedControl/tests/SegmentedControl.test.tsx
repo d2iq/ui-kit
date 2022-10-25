@@ -1,7 +1,6 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
-import { shallow, mount } from "enzyme";
-import toJson from "enzyme-to-json";
+import { render } from "@testing-library/react";
 
 import { SegmentedControl, SegmentedControlButton } from "../";
 
@@ -9,7 +8,7 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("SegmentedControl", () => {
   it("renders default", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <SegmentedControl id="controlId">
         <SegmentedControlButton value="one">One</SegmentedControlButton>
         <SegmentedControlButton value="two">Two</SegmentedControlButton>
@@ -17,11 +16,11 @@ describe("SegmentedControl", () => {
       </SegmentedControl>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with selected", () => {
-    const component = shallow(
+    const { asFragment } = render(
       <SegmentedControl id="controlId" selectedSegment="one">
         <SegmentedControlButton value="one">One</SegmentedControlButton>
         <SegmentedControlButton value="two">Two</SegmentedControlButton>
@@ -29,11 +28,11 @@ describe("SegmentedControl", () => {
       </SegmentedControl>
     );
 
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders buttons with ID prop when it is passed", () => {
-    const component = mount(
+    const { getAllByTestId, getAllByRole } = render(
       <SegmentedControl id="controlId">
         <SegmentedControlButton id="btnOne" value="one">
           One
@@ -46,27 +45,31 @@ describe("SegmentedControl", () => {
         </SegmentedControlButton>
       </SegmentedControl>
     );
-    const labelForProp = component.find("label").first().prop("htmlFor");
-    const inputIdProp = component.find("input").first().prop("id");
+    const firstLabelElement = getAllByTestId(
+      "segmentedControlButton"
+    )[0] as HTMLLabelElement;
+    const firstRadioButton = getAllByRole("radio")[0] as HTMLInputElement;
 
-    expect(labelForProp).toBe("btnOne");
-    expect(inputIdProp).toBe("btnOne");
-    expect(inputIdProp).toBe(labelForProp);
+    expect(firstLabelElement.htmlFor).toBe("btnOne");
+    expect(firstRadioButton.id).toBe("btnOne");
+    expect(firstRadioButton.id).toBe(firstLabelElement.htmlFor);
   });
 
   it("renders buttons with generated ID prop", () => {
-    const component = mount(
+    const { getAllByTestId, getAllByRole } = render(
       <SegmentedControl id="controlId">
         <SegmentedControlButton value="one">One</SegmentedControlButton>
         <SegmentedControlButton value="two">Two</SegmentedControlButton>
         <SegmentedControlButton value="three">Three</SegmentedControlButton>
       </SegmentedControl>
     );
-    const labelForProp = component.find("label").first().prop("htmlFor");
-    const inputIdProp = component.find("input").first().prop("id");
+    const firstLabelElement = getAllByTestId(
+      "segmentedControlButton"
+    )[0] as HTMLLabelElement;
+    const firstRadioButton = getAllByRole("radio")[0] as HTMLInputElement;
 
-    expect(typeof labelForProp).toBe("string");
-    expect(typeof inputIdProp).toBe("string");
-    expect(inputIdProp).toBe(labelForProp);
+    expect(typeof firstLabelElement.htmlFor).toBe("string");
+    expect(typeof firstRadioButton.id).toBe("string");
+    expect(firstLabelElement.htmlFor).toBe(firstRadioButton.id);
   });
 });
