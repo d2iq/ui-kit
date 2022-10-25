@@ -140,7 +140,11 @@ function HeaderCell<Entry>({
     (() => update({ sortBy: id, order: order === "asc" ? "desc" : "asc" }));
 
   const header = column.sorter ? (
-    <ResetButton onClick={onClick} className={style.sortableButton}>
+    <ResetButton
+      onClick={onClick}
+      data-cy={`table-headercell-${id}-button`}
+      className={style.sortableButton}
+    >
       {column.header}
     </ResetButton>
   ) : (

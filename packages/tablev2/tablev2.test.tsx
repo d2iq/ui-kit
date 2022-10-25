@@ -1,6 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
-import toJson from "enzyme-to-json";
+import { render, fireEvent } from "@testing-library/react";
 
 import { Table } from "./";
 import { DropdownMenuCell } from "./DropdownMenuCell";
@@ -186,7 +185,7 @@ describe("Table v2", () => {
   }));
   describe("rendering", () => {
     it("renders default", () => {
-      const component = mount(
+      const { asFragment } = render(
         <Table
           data={mockData}
           toId={el => el.id.toString()}
@@ -194,10 +193,10 @@ describe("Table v2", () => {
         />
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
     it("renders without a sticky first column", () => {
-      const component = mount(
+      const { asFragment } = render(
         <Table
           data={mockData}
           toId={el => el.id.toString()}
@@ -206,14 +205,15 @@ describe("Table v2", () => {
         />
       );
 
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe("onStateChange", () => {
     it("calls onStateChange when a column is sorted", () => {
       const onStateChange = jest.fn();
-      const component = mount(
+
+      const { getByTestId } = render(
         <Table
           data={mockData}
           toId={el => el.id.toString()}
@@ -223,7 +223,7 @@ describe("Table v2", () => {
         />
       );
 
-      component.find("div#name button").simulate("click");
+      fireEvent.click(getByTestId("table-headercell-name-button"));
 
       expect(onStateChange).toHaveBeenCalledWith(
         expect.objectContaining({ sortBy: "name", order: "desc" })
@@ -237,7 +237,7 @@ describe("Table v2", () => {
   describe("Sorting", () => {
     it("calls the function passed to the 'sorter' prop when clicking the table headings", () => {
       const sorterFn = jest.fn();
-      const component = mount(
+      const { getByTestId } = render(
         <Table
           data={mockData}
           toId={el => el.id.toString()}
@@ -260,7 +260,9 @@ describe("Table v2", () => {
       );
 
       expect(sorterFn).toHaveBeenCalledWith("asc", 1);
-      component.find("#name button").simulate("click");
+
+      fireEvent.click(getByTestId("table-headercell-name-button"));
+
       expect(sorterFn).toHaveBeenCalledWith("desc", -1);
     });
     it("sorts strings with Sorter.string", () => {
