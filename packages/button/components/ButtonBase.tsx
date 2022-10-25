@@ -125,7 +125,7 @@ const ButtonContent = ({ iconStart, iconEnd, isProcessing, children }) => {
   );
 };
 
-const ButtonNode = React.forwardRef(
+const ButtonNode = React.forwardRef<HTMLButtonElement, ButtonBaseProps>(
   (
     {
       appearance,
@@ -178,7 +178,6 @@ const ButtonNode = React.forwardRef(
           onClick={handleClick}
           tabIndex={enabled ? 0 : -1}
           openInNewTab={openInNewTab}
-          ref={ref}
           {...other}
         >
           <ButtonContent
@@ -199,7 +198,7 @@ const ButtonNode = React.forwardRef(
         onClick={handleClick}
         tabIndex={0}
         type={type}
-        ref={ref as React.ForwardedRef<HTMLButtonElement>}
+        ref={ref}
         aria-haspopup={ariaHaspopup}
         aria-label={ariaLabel}
         {...other}
