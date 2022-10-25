@@ -75,7 +75,7 @@ const ToggleWrapper = ({
       <input
         id={id}
         className={visuallyHidden}
-        checked={isActive}
+        defaultChecked={isActive}
         aria-checked={isActive}
         data-cy={dataCy}
         onFocus={handleFocus}
