@@ -96,7 +96,10 @@ const FieldListRow = ({
   };
 
   return (
-    <div className={getFieldRowGrid(columns, iconSizes[REMOVE_ICON_SIZE])}>
+    <div
+      data-cy="fieldList-row"
+      className={getFieldRowGrid(columns, iconSizes[REMOVE_ICON_SIZE])}
+    >
       {columns.map((col, i) => {
         return (
           <div data-cy="fieldList-cell" key={i} className={fieldWrapper}>

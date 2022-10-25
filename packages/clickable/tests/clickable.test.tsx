@@ -1,90 +1,106 @@
-import { shallow } from "enzyme";
 import React from "react";
 import Clickable from "../components/clickable";
+import { render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 describe("Clickable", () => {
   it("has role attribute", () => {
-    const wrapper = shallow(
+    const { getByRole } = render(
       <Clickable action={jest.fn()}>
         <span>onClick</span>
       </Clickable>
     );
-    expect(wrapper.prop("role")).toBe("button");
+
+    getByRole("button");
   });
-  it("has onClick function", () => {
+  it("has onClick function", async () => {
+    const user = userEvent.setup();
+
     const action = jest.fn();
-    const wrapper = shallow(
+    const { getByRole } = render(
       <Clickable action={action}>
         <span>onClick</span>
       </Clickable>
     );
-    wrapper.simulate("click");
+
+    expect(action).not.toHaveBeenCalled();
+
+    const buttonElement = getByRole("button");
+
+    await user.click(buttonElement);
     expect(action).toHaveBeenCalled();
   });
 
-  it("has onKeyPress function and reacts on space", () => {
+  it("has onKeyPress function and reacts on space", async () => {
     const action = jest.fn();
-    const wrapper = shallow(
+    const { getByRole } = render(
       <Clickable action={action}>
         <span>onKeyPress</span>
       </Clickable>
     );
-    wrapper.simulate("keyPress", {
-      key: " ",
-      keyCode: 32,
-      which: 32
-    });
+
+    const buttonElement = getByRole("button");
+
+    buttonElement.focus();
+    await userEvent.keyboard("[Space]");
     expect(action).toHaveBeenCalled();
   });
 
-  it("has onKeyPress function and reacts on Enter", () => {
+  it("has onKeyPress function and reacts on Enter", async () => {
     const action = jest.fn();
-    const wrapper = shallow(
+    const { getByRole } = render(
       <Clickable action={action}>
         <span>onKeyPress</span>
       </Clickable>
     );
-    wrapper.simulate("keyPress", {
-      key: "Enter",
-      keyCode: 13,
-      which: 13
-    });
+
+    const buttonElement = getByRole("button");
+
+    buttonElement.focus();
+    await userEvent.keyboard("[Enter]");
     expect(action).toHaveBeenCalled();
   });
-  it("does not react on e keypress", () => {
+  it("does not react on e keypress", async () => {
     const action = jest.fn();
-    const wrapper = shallow(
+    const { getByRole } = render(
       <Clickable action={action}>
         <span>onKeyPress</span>
       </Clickable>
     );
-    wrapper.simulate("keyPress", {
-      key: "e",
-      keyCode: 69,
-      which: 69
-    });
+
+    const buttonElement = getByRole("button");
+
+    buttonElement.focus();
+    await userEvent.keyboard("[KeyE]");
     expect(action).not.toHaveBeenCalled();
   });
   describe("tabIndex", () => {
-    it("default value", () => {
+    it("default value", async () => {
       const action = jest.fn();
-      const wrapper = shallow(
+      const { getByRole } = render(
         <Clickable action={action}>
-          <span>default tabIndex</span>
+          <span>onKeyPress</span>
         </Clickable>
       );
-      const tabIndex = wrapper.find("span").props().tabIndex || "";
-      expect(tabIndex.toString()).toEqual("-1");
+
+      const spanElement = getByRole("button");
+
+      await userEvent.tab();
+      expect(spanElement).not.toHaveFocus();
     });
 
-    it("takes 10 as a value", () => {
+    it("takes 0 as a value", async () => {
       const action = jest.fn();
-      const wrapper = shallow(
-        <Clickable action={action} tabIndex="-10">
+      const { getByRole } = render(
+        <Clickable action={action} tabIndex="0">
           <span>default tabIndex</span>
         </Clickable>
       );
-      expect(wrapper.find("span").props().tabIndex || null).toEqual("-10");
+
+      const spanElement = getByRole("button");
+
+      await userEvent.tab();
+      expect(spanElement).toHaveFocus();
     });
   });
 });

@@ -6,88 +6,55 @@ interface RenderProps {
   selectedItems: string[];
   selectHandler: (selectedItems: string[], lastSelectedItem?: string) => void;
   badges: BadgeDatum[];
-  badgeChangeHandler: (
-    badges: BadgeDatum[],
-    lastAddedBadge: BadgeDatum
-  ) => void;
+  badgeChangeHandler: (badges: BadgeDatum[]) => void;
   items: Item[];
 }
 
-interface Props {
+interface TextInputWithBadgesTypeaheadStoryHelperProps {
   badges?: BadgeDatum[];
-  children: (renderProps: RenderProps) => React.ReactNode;
+  children: (renderProps: RenderProps) => React.ReactElement;
   items: Item[];
+  selectedItems?: string[];
 }
 
-interface State {
-  selectedItems: string[];
-  badges: BadgeDatum[];
-  items: Item[];
-}
+const TextInputWithBadgesTypeaheadStoryHelper = (
+  props: TextInputWithBadgesTypeaheadStoryHelperProps
+) => {
+  const [badges, setBadges] = React.useState<BadgeDatum[]>(props.badges || []);
+  const [selectedItems, setSelectedItems] = React.useState<string[]>(
+    props.selectedItems || []
+  );
 
-class TextInputWithBadgesTypeaheadStoryHelper extends React.PureComponent<
-  Props,
-  State
-> {
-  constructor(props) {
-    super(props);
-
-    this.badgeChangeHandler = this.badgeChangeHandler.bind(this);
-    this.selectHandler = this.selectHandler.bind(this);
-
-    this.state = {
-      selectedItems: props.selectedItems || [],
-      badges: props.badges || [],
-      items: props.items || []
-    };
-  }
-
-  selectHandler(selectedItems, lastSelectedItem) {
+  const selectHandler = (
+    selectedItems: string[],
+    lastSelectedItem?: string
+  ) => {
     const itemDataFromItemsArray = () => {
-      if (!this.state.badges.some(badge => badge.value === lastSelectedItem)) {
-        return this.props.items.filter(item => item.value === lastSelectedItem);
+      if (!badges.some(badge => badge.value === lastSelectedItem)) {
+        return props.items.filter(item => item.value === lastSelectedItem);
       }
       return [];
     };
 
-    this.setState({
-      selectedItems,
-      badges: [
-        ...this.state.badges.filter(item => item.value !== lastSelectedItem),
-        ...itemDataFromItemsArray()
-      ]
-    });
-  }
+    setSelectedItems(selectedItems);
+    setBadges([
+      ...badges.filter(badge => badge.value !== lastSelectedItem),
+      ...itemDataFromItemsArray()
+    ]);
+  };
 
-  badgeChangeHandler(badges) {
-    this.setState({
-      badges,
-      selectedItems: badges.map(badge => badge.value)
-    });
-  }
+  const badgeChangeHandler = (badges: BadgeDatum[]) => {
+    setSelectedItems(badges.map(badge => badge.value));
+    setBadges(badges);
+  };
 
-  getItems(value, checked) {
-    const selectedItems = this.state.items || [];
-
-    if (checked) {
-      return [...items, value];
-    }
-
-    return selectedItems.filter(selectedItem => selectedItem !== value);
-  }
-
-  render() {
-    const { children } = this.props;
-    const { selectedItems, badges, items } = this.state;
-
-    return children({
-      selectHandler: this.selectHandler,
-      badgeChangeHandler: this.badgeChangeHandler,
-      badges,
-      selectedItems,
-      items
-    });
-  }
-}
+  return props.children({
+    selectHandler,
+    badgeChangeHandler,
+    badges,
+    selectedItems,
+    items: props.items
+  });
+};
 
 export default TextInputWithBadgesTypeaheadStoryHelper;

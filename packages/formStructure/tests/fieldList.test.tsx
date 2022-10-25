@@ -1,7 +1,7 @@
 import React from "react";
+import { render, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
-import { mount, render } from "enzyme";
-import toJSON from "enzyme-to-json";
 import {
   FieldList,
   FieldListColumn,
@@ -39,51 +39,39 @@ describe("FieldList", () => {
     const testFieldUpdateHandler = jest.fn((_rowIndex, _pathToValue) => _e => {
       jest.fn();
     });
-    expect(
-      toJSON(
-        render(
-          <FieldList
-            data={mockItems}
-            onRemoveItem={testRemoveHandler}
-            disabledRows={[0]}
-            pathToUniqueKey="id"
-          >
-            <FieldListColumn
-              header="Name"
-              pathToValue="name"
-              onChange={testFieldUpdateHandler}
-              key="name"
-            >
-              {({ defaultProps, onChange, value }) => (
-                <TextInput
-                  value={value}
-                  onChange={onChange}
-                  {...defaultProps}
-                />
-              )}
-            </FieldListColumn>
-            <FieldListColumnSeparator key="separator">
-              :
-            </FieldListColumnSeparator>
-            <FieldListColumn
-              header="Role"
-              pathToValue="role"
-              onChange={testFieldUpdateHandler}
-              key="role"
-            >
-              {({ defaultProps, onChange, value }) => (
-                <TextInput
-                  value={value}
-                  onChange={onChange}
-                  {...defaultProps}
-                />
-              )}
-            </FieldListColumn>
-            <FieldListAddButton>Add row</FieldListAddButton>
-          </FieldList>
-        )
-      )
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <FieldList
+        data={mockItems}
+        onRemoveItem={testRemoveHandler}
+        disabledRows={[0]}
+        pathToUniqueKey="id"
+      >
+        <FieldListColumn
+          header="Name"
+          pathToValue="name"
+          onChange={testFieldUpdateHandler}
+          key="name"
+        >
+          {({ defaultProps, onChange, value }) => (
+            <TextInput value={value} onChange={onChange} {...defaultProps} />
+          )}
+        </FieldListColumn>
+        <FieldListColumnSeparator key="separator">:</FieldListColumnSeparator>
+        <FieldListColumn
+          header="Role"
+          pathToValue="role"
+          onChange={testFieldUpdateHandler}
+          key="role"
+        >
+          {({ defaultProps, onChange, value }) => (
+            <TextInput value={value} onChange={onChange} {...defaultProps} />
+          )}
+        </FieldListColumn>
+        <FieldListAddButton>Add row</FieldListAddButton>
+      </FieldList>
+    );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("calls onAddItem when clicking the add button", () => {
@@ -95,7 +83,7 @@ describe("FieldList", () => {
     const testFieldUpdateHandler = jest.fn((_rowIndex, _pathToValue) => _e => {
       jest.fn();
     });
-    const fieldListComponent = mount(
+    const { getByText } = render(
       <FieldList
         data={mockItems}
         onAddItem={testAddHandler(newItem)}
@@ -124,12 +112,10 @@ describe("FieldList", () => {
         <FieldListAddButton>Add Item</FieldListAddButton>
       </FieldList>
     );
-    const addButton = fieldListComponent
-      .find('button[data-cy="secondaryButton"]')
-      .first();
+    const addButton = getByText("Add Item");
 
     expect(testAddHandlerInner).not.toHaveBeenCalled();
-    addButton.simulate("click");
+    addButton.click();
     expect(testAddHandlerInner).toHaveBeenCalledWith(newItem);
   });
 
@@ -141,7 +127,7 @@ describe("FieldList", () => {
     const testFieldUpdateHandler = jest.fn((_rowIndex, _pathToValue) => _e => {
       jest.fn();
     });
-    const fieldListComponent = mount(
+    const { getAllByTestId } = render(
       <FieldList
         data={mockItems}
         onRemoveItem={testRemoveHandler}
@@ -169,12 +155,13 @@ describe("FieldList", () => {
         </FieldListColumn>
       </FieldList>
     );
-    const removeButton = fieldListComponent
-      .find('button[data-cy="fieldList-removeButton"]')
-      .first();
+    const firstRow = getAllByTestId("fieldList-row")[0] as HTMLDivElement;
+    const firsRowRemoveButton = within(firstRow).getByTestId(
+      "fieldList-removeButton"
+    );
 
     expect(testRemoveHandlerInner).not.toHaveBeenCalled();
-    removeButton.simulate("click");
+    firsRowRemoveButton.click();
     expect(testRemoveHandlerInner).toHaveBeenCalledWith(0);
   });
 
@@ -186,7 +173,7 @@ describe("FieldList", () => {
     const testFieldUpdateHandler = jest.fn((_rowIndex, _pathToValue) => _e => {
       jest.fn();
     });
-    const fieldListComponent = mount(
+    const { getAllByTestId } = render(
       <FieldList
         data={mockItems}
         onRemoveItem={testRemoveHandler}
@@ -225,25 +212,51 @@ describe("FieldList", () => {
         </FieldListColumn>
       </FieldList>
     );
-    const textInputs = fieldListComponent.find(
-      'input[data-cy*="textInput-input"]'
-    );
-    const removeButton = fieldListComponent
-      .find('button[data-cy="fieldList-removeButton"]')
-      .first();
 
-    textInputs.forEach((input, i) => {
-      if (i < 2) {
-        expect(input.prop("disabled")).toBe(true);
-      }
-      if (i > 1) {
-        expect(input.prop("disabled")).toBe(false);
+    const testDisabledRow = (disabledRow: HTMLDivElement) => {
+      const textInputsWithinDisabledRow = within(disabledRow).getAllByRole(
+        "textbox"
+      ) as HTMLInputElement[];
+      const removeButtons = within(disabledRow).getAllByTestId(
+        "fieldList-removeButton"
+      ) as HTMLButtonElement[];
+
+      textInputsWithinDisabledRow.forEach(textInputEl => {
+        expect(textInputEl.disabled).toBeTruthy();
+      });
+      removeButtons.forEach(buttonEl => {
+        expect(buttonEl.disabled).toBeTruthy();
+      });
+    };
+
+    const testEnabledRow = (row: HTMLDivElement) => {
+      const textInputsWithinDisabledRow = within(row).getAllByRole(
+        "textbox"
+      ) as HTMLInputElement[];
+      const removeButtons = within(row).getAllByTestId(
+        "fieldList-removeButton"
+      ) as HTMLButtonElement[];
+
+      textInputsWithinDisabledRow.forEach(textInputEl => {
+        expect(textInputEl.disabled).toBeFalsy();
+      });
+      removeButtons.forEach(buttonEl => {
+        expect(buttonEl.disabled).toBeFalsy();
+      });
+    };
+
+    const rows = getAllByTestId("fieldList-row") as HTMLDivElement[];
+
+    rows.forEach((row, index) => {
+      if (index === 0) {
+        testDisabledRow(row);
+      } else {
+        testEnabledRow(row);
       }
     });
-    expect(removeButton.prop("disabled")).toBe(true);
   });
 
-  it("calls FieldListColumn's `onChange` render prop", () => {
+  it("calls FieldListColumn's `onChange` render prop", async () => {
     const pathToValue = "name";
     const testFieldUpdateHandlerInner = jest.fn();
     const testRemoveHandler = jest.fn(_rowIndex => () => {
@@ -252,7 +265,7 @@ describe("FieldList", () => {
     const testFieldUpdateHandler = jest.fn((rowIndex, pathToValue) => _e => {
       testFieldUpdateHandlerInner(rowIndex, pathToValue);
     });
-    const fieldListComponent = mount(
+    const { getAllByTestId } = render(
       <FieldList
         data={mockItems}
         onRemoveItem={testRemoveHandler}
@@ -271,12 +284,13 @@ describe("FieldList", () => {
       </FieldList>
     );
 
-    const textInput = fieldListComponent
-      .find('input[data-cy*="textInput-input"]')
-      .first();
+    const firstRow = getAllByTestId("fieldList-row")[0] as HTMLDivElement;
+    const firstRowFirstColumnTextInput = within(firstRow).getAllByTestId(
+      "textInput-input"
+    )[0] as HTMLInputElement;
 
     expect(testFieldUpdateHandlerInner).not.toHaveBeenCalled();
-    textInput.simulate("change", { value: "D2iQ" });
+    await userEvent.type(firstRowFirstColumnTextInput, "D2iQ");
     expect(testFieldUpdateHandlerInner).toHaveBeenCalledWith(0, pathToValue);
   });
 });
