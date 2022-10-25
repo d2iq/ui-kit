@@ -18,6 +18,7 @@ exports[`Table v2 rendering renders default 1`] = `
       >
         <button
           class="css-3y1j5c"
+          data-cy="table-headercell-name-button"
           type="button"
         >
           <div
@@ -971,6 +972,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       >
         <button
           class="css-3y1j5c"
+          data-cy="table-headercell-name-button"
           type="button"
         >
           <div

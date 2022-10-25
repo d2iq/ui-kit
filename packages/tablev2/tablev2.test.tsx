@@ -1,5 +1,6 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
+
 import { Table } from "./";
 import { DropdownMenuCell } from "./DropdownMenuCell";
 import { TooltipHeaderCell } from "./TooltipHeaderCell";
@@ -236,7 +237,7 @@ describe("Table v2", () => {
   describe("Sorting", () => {
     it("calls the function passed to the 'sorter' prop when clicking the table headings", () => {
       const sorterFn = jest.fn();
-      const { container } = render(
+      render(
         <Table
           data={mockData}
           toId={el => el.id.toString()}
@@ -260,7 +261,7 @@ describe("Table v2", () => {
 
       expect(sorterFn).toHaveBeenCalledWith("asc", 1);
 
-      fireEvent.click(container.querySelector("#name button")!);
+      fireEvent.click(screen.getByTestId("table-headercell-name-button"));
 
       expect(sorterFn).toHaveBeenCalledWith("desc", -1);
     });
