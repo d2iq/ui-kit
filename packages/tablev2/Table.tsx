@@ -148,9 +148,8 @@ function HeaderCell<Entry>({
       {column.header}
       {Boolean(column.sorter) && (
         <span
-          id="sortIcon"
           data-cy="sortIcon"
-          className={style.sortable(order)}
+          className={cx(style.sortable(order), "sortIcon")}
         />
       )}
     </ResetButton>

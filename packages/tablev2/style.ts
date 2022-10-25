@@ -83,8 +83,10 @@ export const sortable = (dir: "asc" | "desc" | null) => css`
 
 export const headerHover = css`
   &:hover {
-    #sortIcon: after {
-      display: inline-block;
+    .sortIcon {
+      :after {
+        display: inline-block;
+      }
     }
   }
 `;
