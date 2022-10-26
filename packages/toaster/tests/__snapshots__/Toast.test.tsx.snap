@@ -1,205 +1,364 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Toast renders default 1`] = `
-.emotion-0 {
-  max-width: 100%;
-  margin: 16px;
-}
-
-@media (min-width: 900px) {
+<DocumentFragment>
   .emotion-0 {
-    max-width: 20em;
-  }
-}
-
-@media (min-width: 900px) {
-  .emotion-0 {
-    margin: 24px;
-  }
+  background-color: var(--themeBgPrimaryInverted, #1B2029);
+  box-sizing: border-box;
+  border-radius: 6px;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "title dismiss" "desc  desc" "btn   btn";
+  width: 100%;
+  margin-bottom: 4px;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  display: grid;
 }
 
 .emotion-1 {
-  list-style: none;
-  margin-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  grid-area: title;
+  text-transform: capitalize;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-bottom: 8px;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-3 {
+  grid-area: dismiss;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-4 use {
+  pointer-events: none;
 }
 
 <div
-  className="emotion-0"
-  data-cy="toaster"
->
-  <ol
-    aria-live="assertive"
-    className="emotion-1"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+    aria-atomic="true"
+    aria-relevant="all"
+    class="inverseColorMode emotion-0"
+    data-cy="toast toast.default"
+    role="log"
   >
-    <TransitionGroup
-      childFactory={[Function]}
-      component="div"
+    <div
+      class="emotion-1"
     >
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="toastWrapper-0"
-        mountOnEnter={false}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={
-          {
-            "enter": 0,
-            "exit": 300,
-          }
-        }
-        unmountOnExit={false}
+      <div
+        class="emotion-2"
       >
-        <Component />
-      </Transition>
-    </TransitionGroup>
-  </ol>
-</div>
+        I Am Toast
+      </div>
+    </div>
+    <span
+      class="emotion-3"
+      role="button"
+      tabindex="0"
+    >
+      <svg
+        aria-label="system-close icon"
+        class="emotion-4"
+        data-cy="icon"
+        height="16"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <use
+          xlink:href="#system-close"
+        />
+      </svg>
+    </span>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Toast renders with actions 1`] = `
-.emotion-0 {
-  max-width: 100%;
-  margin: 16px;
-}
-
-@media (min-width: 900px) {
+<DocumentFragment>
   .emotion-0 {
-    max-width: 20em;
-  }
-}
-
-@media (min-width: 900px) {
-  .emotion-0 {
-    margin: 24px;
-  }
+  background-color: var(--themeBgPrimaryInverted, #1B2029);
+  box-sizing: border-box;
+  border-radius: 6px;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "title dismiss" "desc  desc" "btn   btn";
+  width: 100%;
+  margin-bottom: 4px;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  display: grid;
 }
 
 .emotion-1 {
-  list-style: none;
-  margin-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  grid-area: title;
+  text-transform: capitalize;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-bottom: 8px;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-3 {
+  grid-area: btn;
+  height: auto;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-bottom: 8px;
+}
+
+.emotion-3>div {
+  width: auto;
+}
+
+.emotion-4 {
+  padding-left: 16px;
+}
+
+.emotion-5 {
+  grid-area: dismiss;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-6 use {
+  pointer-events: none;
 }
 
 <div
-  className="emotion-0"
-  data-cy="toaster"
->
-  <ol
-    aria-live="assertive"
-    className="emotion-1"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+    aria-atomic="true"
+    aria-relevant="all"
+    class="inverseColorMode emotion-0"
+    data-cy="toast toast.default"
+    role="log"
   >
-    <TransitionGroup
-      childFactory={[Function]}
-      component="div"
+    <div
+      class="emotion-1"
     >
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="toastWrapper-0"
-        mountOnEnter={false}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={
-          {
-            "enter": 0,
-            "exit": 300,
-          }
-        }
-        unmountOnExit={false}
+      <div
+        class="emotion-2"
       >
-        <Component />
-      </Transition>
-    </TransitionGroup>
-  </ol>
-</div>
+        I Am Toast
+      </div>
+    </div>
+    <div
+      class="emotion-3"
+      data-cy="toast-actions"
+    >
+      <span
+        class="emotion-4"
+      >
+        <button>
+          primaryAction
+        </button>
+      </span>
+      <span>
+        <button>
+          secondaryAction
+        </button>
+      </span>
+    </div>
+    <span
+      class="emotion-5"
+      role="button"
+      tabindex="0"
+    >
+      <svg
+        aria-label="system-close icon"
+        class="emotion-6"
+        data-cy="icon"
+        height="16"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <use
+          xlink:href="#system-close"
+        />
+      </svg>
+    </span>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Toast renders with description 1`] = `
-.emotion-0 {
-  max-width: 100%;
-  margin: 16px;
-}
-
-@media (min-width: 900px) {
+<DocumentFragment>
   .emotion-0 {
-    max-width: 20em;
-  }
-}
-
-@media (min-width: 900px) {
-  .emotion-0 {
-    margin: 24px;
-  }
+  background-color: var(--themeBgPrimaryInverted, #1B2029);
+  box-sizing: border-box;
+  border-radius: 6px;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "title dismiss" "desc  desc" "btn   btn";
+  width: 100%;
+  margin-bottom: 4px;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  display: grid;
 }
 
 .emotion-1 {
-  list-style: none;
-  margin-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  grid-area: title;
+  text-transform: capitalize;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-bottom: 8px;
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.emotion-3 {
+  grid-area: desc;
+  padding-bottom: 8px;
+}
+
+.emotion-4 {
+  grid-area: dismiss;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-5 use {
+  pointer-events: none;
 }
 
 <div
-  className="emotion-0"
-  data-cy="toaster"
->
-  <ol
-    aria-live="assertive"
-    className="emotion-1"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+    aria-atomic="true"
+    aria-relevant="all"
+    class="inverseColorMode emotion-0"
+    data-cy="toast toast.default"
+    role="log"
   >
-    <TransitionGroup
-      childFactory={[Function]}
-      component="div"
+    <div
+      class="emotion-1"
     >
-      <Transition
-        appear={false}
-        enter={true}
-        exit={true}
-        in={false}
-        key="toastWrapper-0"
-        mountOnEnter={false}
-        onEnter={[Function]}
-        onEntered={[Function]}
-        onEntering={[Function]}
-        onExit={[Function]}
-        onExited={[Function]}
-        onExiting={[Function]}
-        timeout={
-          {
-            "enter": 0,
-            "exit": 300,
-          }
-        }
-        unmountOnExit={false}
+      <div
+        class="emotion-2"
       >
-        <Component />
-      </Transition>
-    </TransitionGroup>
-  </ol>
-</div>
+        I Am Toast
+      </div>
+    </div>
+    <div
+      class="emotion-3"
+      data-cy="toast-description"
+    >
+      Description
+    </div>
+    <span
+      class="emotion-4"
+      role="button"
+      tabindex="0"
+    >
+      <svg
+        aria-label="system-close icon"
+        class="emotion-5"
+        data-cy="icon"
+        height="16"
+        preserveAspectRatio="xMinYMin meet"
+        role="img"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <use
+          xlink:href="#system-close"
+        />
+      </svg>
+    </span>
+  </div>
+</DocumentFragment>
 `;

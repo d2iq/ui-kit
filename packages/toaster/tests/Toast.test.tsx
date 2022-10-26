@@ -1,92 +1,48 @@
 import * as React from "react";
-import { shallow, mount } from "enzyme";
+import { render, screen } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
-import { Toaster, Toast } from "../";
+import { Toast } from "../";
+import userEvent from "@testing-library/user-event";
 
 expect.addSnapshotSerializer(createSerializer());
 
 describe("Toast", () => {
   it("renders default", () => {
-    const component = shallow(
-      <Toaster>
-        <Toast title="I Am Toast" key={0} id={0} />
-      </Toaster>
-    );
-    expect(toJson(component)).toMatchSnapshot();
+    const { asFragment } = render(<Toast title="I Am Toast" key={0} id={0} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with description", () => {
-    const component = shallow(
-      <Toaster>
-        <Toast title="I Am Toast" description="Description" key={0} id={0} />
-      </Toaster>
+    const { asFragment } = render(
+      <Toast title="I Am Toast" description="Description" key={0} id={0} />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders with actions", () => {
-    const component = shallow(
-      <Toaster>
-        <Toast
-          primaryAction={<button>primaryAction</button>}
-          secondaryAction={<button>secondaryAction</button>}
-          title="I Am Toast"
-          key={0}
-          id={0}
-        />
-      </Toaster>
+    const { asFragment } = render(
+      <Toast
+        primaryAction={<button>primaryAction</button>}
+        secondaryAction={<button>secondaryAction</button>}
+        title="I Am Toast"
+        key={0}
+        id={0}
+      />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it("should call the function in the action when clicked", () => {
-    const action = jest.fn();
-    const component = mount(
-      <Toaster>
-        <Toast
-          primaryAction={<button onClick={action}>primaryAction</button>}
-          title="I Am Toast"
-          key={0}
-          id={0}
-        />
-      </Toaster>
-    );
-    const primaryActionBtn = component.find(`button`);
+  it("calls dismissToast when the dismiss button is clicked", async () => {
+    const user = userEvent.setup();
 
-    expect(action).not.toHaveBeenCalled();
-    primaryActionBtn.simulate("click");
-    expect(action).toHaveBeenCalled();
-  });
-
-  it("calls dismissToast when the dismiss button is clicked", () => {
-    const dismissToastSpy = jest.spyOn(Toaster.prototype, "dismissToast");
-    const component = mount(
-      <Toaster>
-        <Toast title="I Am Toast" key={0} id={0} />
-      </Toaster>
+    const dismissToastSpy = jest.fn();
+    render(
+      <Toast dismissToast={dismissToastSpy} title="I Am Toast" key={0} id={0} />
     );
-    const dismissBtn = component.find('span[role="button"]');
     expect(dismissToastSpy).not.toHaveBeenCalled();
-    dismissBtn.simulate("click");
+
+    const dismissBtn = screen.getByRole("button");
+    await user.click(dismissBtn);
     expect(dismissToastSpy).toHaveBeenCalled();
-  });
-
-  it("should remove the Toast from the Toaster `toasts` state when the dismiss button is clicked", () => {
-    const component = mount(
-      <Toaster>
-        <Toast title="I Am Toast" key={0} id={0} />
-      </Toaster>
-    );
-    const instance = component.find(Toaster).instance() as Toaster;
-    const dismissBtn = component.find('span[role="button"]');
-    let toastsState = instance.state.toasts || [];
-
-    expect(toastsState.length).toBe(1);
-
-    dismissBtn.simulate("click");
-    toastsState = instance.state.toasts || [];
-
-    expect(toastsState.length).toBe(0);
   });
 });
