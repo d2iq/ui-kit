@@ -15,6 +15,4 @@ export interface LinkProps {
 export type ExpandedLinkProps = LinkProps &
   Omit<React.HTMLProps<HTMLAnchorElement>, "ref">;
 
-export type LinkComponent = React.ComponentType<
-  LinkProps & React.HTMLProps<HTMLAnchorElement>
->;
+export type LinkComponent = React.ComponentType<ExpandedLinkProps>;
