@@ -1,5 +1,6 @@
 import * as React from "react";
 import {
+  act,
   fireEvent,
   render,
   waitFor,
@@ -63,7 +64,9 @@ describe("Toaster", () => {
 
     expect(getByText(title)).toBeDefined();
 
-    jest.advanceTimersByTime(DELAY_TIME);
+    act(() => {
+      jest.advanceTimersByTime(DELAY_TIME);
+    });
 
     await waitFor(() => {
       expect(queryByText(title)).not.toBeInTheDocument();
@@ -83,7 +86,9 @@ describe("Toaster", () => {
     // for some reason using RTL user event and jest timers didn't work
     fireEvent.mouseEnter(toasterList);
 
-    jest.advanceTimersByTime(DELAY_TIME);
+    act(() => {
+      jest.advanceTimersByTime(DELAY_TIME);
+    });
 
     // is never removed because timeout was cleared
     await expect(
@@ -92,7 +97,9 @@ describe("Toaster", () => {
 
     fireEvent.mouseLeave(toasterList);
 
-    jest.advanceTimersByTime(DELAY_TIME);
+    act(() => {
+      jest.advanceTimersByTime(DELAY_TIME);
+    });
 
     await waitFor(() => {
       expect(queryByText(title)).not.toBeInTheDocument();
@@ -115,7 +122,9 @@ describe("Toaster", () => {
 
     expect(dismissCallback).not.toHaveBeenCalled();
 
-    jest.advanceTimersByTime(DELAY_TIME);
+    act(() => {
+      jest.advanceTimersByTime(DELAY_TIME);
+    });
 
     expect(dismissCallback).toHaveBeenCalledTimes(1);
   });

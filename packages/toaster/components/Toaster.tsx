@@ -15,125 +15,97 @@ interface ToasterProps {
   children?: Toast | Toast[];
 }
 
-class Toaster extends React.PureComponent<ToasterProps, { toasts: Toast[] }> {
-  public timeouts: number[] = [];
+const Toaster = ({ children }: ToasterProps) => {
+  const timeouts = React.useRef<number[]>([]);
 
-  constructor(props) {
-    super(props);
+  const [toasts, setToasts] = React.useState<Toast[]>(
+    React.Children.toArray(children) as Toast[]
+  );
 
-    this.cloneToast = this.cloneToast.bind(this);
-    this.dismissToast = this.dismissToast.bind(this);
-    this.clearTimeouts = this.clearTimeouts.bind(this);
-    this.restartTimeouts = this.restartTimeouts.bind(this);
-    this.setTimer = this.setTimer.bind(this);
+  const handleDismissToast = (id: ToastId = "") => {
+    const toastToDismiss = toasts.find(toast => id === toast.props.id);
+    if (toastToDismiss && toastToDismiss.props.onDismiss) {
+      toastToDismiss.props.onDismiss();
+    }
+    setToasts(toasts.filter(toast => id !== toast.props.id));
+  };
 
-    this.state = {
-      toasts: React.Children.toArray<Toast>(this.props.children).map(
-        this.cloneToast
-      )
+  const restartTimeouts = () => {
+    toasts.forEach((toast: Toast, index: number) => {
+      if (toast.props.autodismiss) {
+        timeouts.current.push(
+          window.setTimeout(() => {
+            handleDismissToast(toast.props.id);
+          }, DELAY_TIME + MARGINAL_DELAY * index)
+        );
+      }
+    });
+  };
+
+  const clearTimeouts = () => {
+    timeouts.current.forEach(clearTimeout);
+  };
+
+  React.useEffect(() => {
+    return () => {
+      clearTimeouts();
     };
-  }
+  }, []);
 
-  public componentWillUnmount() {
-    this.clearTimeouts();
-  }
-
-  public componentDidMount() {
-    this.restartTimeouts();
-  }
-
-  public UNSAFE_componentWillReceiveProps(props: ToasterProps) {
-    const children = React.Children.toArray(props.children);
-    const childIds = children.map(toast => toast.props.id);
-    const currentIds = this.state.toasts.map(toast => toast.props.id);
+  React.useEffect(() => {
+    const toastChildren = React.Children.toArray(children) as Toast[];
+    const childIds = toastChildren.map(toast => toast.props.id);
+    const currentIds = toasts.map(toast => toast.props.id);
 
     if (
       !currentIds.every(e => childIds.includes(e)) ||
       !currentIds.length ||
       childIds.length !== currentIds.length
     ) {
-      this.setState(
-        () => ({ toasts: children.map(this.cloneToast) }),
-        () => {
-          this.state.toasts
-            ?.filter(t => t.props.autodismiss)
-            .map(this.setTimer);
-        }
-      );
+      setToasts(toastChildren);
     }
-  }
+  }, [children]);
 
-  public render() {
-    return (
-      <div
-        className={cx(toaster, margin("all"), marginAt.medium("all", "l"))}
-        data-cy="toaster"
+  React.useEffect(() => {
+    restartTimeouts();
+  }, [toasts]);
+
+  return (
+    <div
+      className={cx(toaster, margin("all"), marginAt.medium("all", "l"))}
+      data-cy="toaster"
+    >
+      <ol
+        onMouseEnter={clearTimeouts}
+        onMouseLeave={restartTimeouts}
+        aria-live="assertive"
+        className={listReset}
+        data-cy="toaster-list"
       >
-        <ol
-          onMouseEnter={this.clearTimeouts}
-          onMouseLeave={this.restartTimeouts}
-          aria-live="assertive"
-          className={listReset}
-          data-cy="toaster-list"
-        >
-          <TransitionGroup>
-            {this.state.toasts.map(toast => (
-              <Transition
-                key={`toastWrapper-${toast.props.id}`}
-                timeout={{ enter: 0, exit: animationDuration }}
-              >
-                {state => (
-                  <li
-                    className={cx(
-                      preTransitionStyle(animationDuration),
-                      transitionStyles[state]
-                    )}
-                  >
-                    {toast}
-                  </li>
-                )}
-              </Transition>
-            ))}
-          </TransitionGroup>
-        </ol>
-      </div>
-    );
-  }
+        <TransitionGroup>
+          {toasts.map((toast: Toast) => (
+            <Transition
+              key={`toastWrapper-${toast.props.id}`}
+              timeout={{ enter: 0, exit: animationDuration }}
+            >
+              {state => (
+                <li
+                  className={cx(
+                    preTransitionStyle(animationDuration),
+                    transitionStyles[state]
+                  )}
+                >
+                  {React.cloneElement(toast, {
+                    dismissToast: handleDismissToast
+                  })}
+                </li>
+              )}
+            </Transition>
+          ))}
+        </TransitionGroup>
+      </ol>
+    </div>
+  );
+};
 
-  public dismissToast(id: ToastId = "") {
-    this.state.toasts.find(toast => id === toast.props.id)?.props.onDismiss?.();
-    this.setState({
-      toasts: this.state.toasts.filter(toast => id !== toast.props.id)
-    });
-  }
-
-  public cloneToast(toast: Toast, i: number): Toast {
-    return React.cloneElement(toast, {
-      key: i,
-      id: toast.props.id,
-      dismissToast: this.dismissToast,
-      autodismiss: toast.props.autodismiss
-    });
-  }
-
-  public setTimer(toast: Toast) {
-    const toastKey = toast.key as number;
-    if (toast.props.autodismiss) {
-      this.timeouts.push(
-        window.setTimeout(() => {
-          this.dismissToast(toast.props.id);
-        }, DELAY_TIME + MARGINAL_DELAY * toastKey)
-      );
-    }
-  }
-
-  public restartTimeouts() {
-    this.state.toasts.map(this.setTimer);
-  }
-
-  public clearTimeouts() {
-    this.timeouts.forEach(clearTimeout);
-  }
-}
-
-export default Toaster;
+export default React.memo(Toaster);
