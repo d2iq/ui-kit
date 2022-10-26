@@ -1,42 +1,27 @@
 import * as React from "react";
-import { render, screen, waitFor } from "@testing-library/react";
+import {
+  fireEvent,
+  render,
+  waitFor,
+  waitForElementToBeRemoved
+} from "@testing-library/react";
 import { Toaster, Toast } from "../";
 import { DELAY_TIME } from "../components/Toaster";
 import userEvent from "@testing-library/user-event";
 
 describe("Toaster", () => {
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
   it("displays toast children", () => {
     const title = "I Am Toast";
-    render(
+    const { getByText } = render(
       <Toaster>
         <Toast id={0} title={title} key={0} />
       </Toaster>
     );
-    expect(screen.getByText(title)).toBeInTheDocument();
-  });
-
-  it("clears timers on mouseEnter and sets timers on mouseLeave", async () => {
-    const user = userEvent.setup();
-
-    const clearTimeoutsSpy = jest.spyOn(Toaster.prototype, "clearTimeouts");
-    const setTimerSpy = jest.spyOn(Toaster.prototype, "setTimer");
-    render(
-      <Toaster>
-        <Toast id={0} title="I Am Toast" key={0} />
-      </Toaster>
-    );
-
-    expect(clearTimeoutsSpy).not.toHaveBeenCalled();
-    expect(setTimerSpy).toHaveBeenCalledTimes(1);
-
-    const toasterList = screen.getByTestId("toaster-list");
-    await user.hover(toasterList);
-
-    expect(clearTimeoutsSpy).toHaveBeenCalled();
-
-    await user.unhover(toasterList);
-
-    expect(setTimerSpy).toHaveBeenCalledTimes(2);
+    expect(getByText(title)).toBeInTheDocument();
   });
 
   it("dismisses toasts when child is clicked", async () => {
@@ -44,12 +29,12 @@ describe("Toaster", () => {
 
     const title = "I Am Toast";
     const testToast = [<Toast id={0} title={title} key={0} />];
-    render(<Toaster>{testToast}</Toaster>);
+    const { getByRole, queryByText } = render(<Toaster>{testToast}</Toaster>);
 
-    await user.click(screen.getByRole("button"));
+    await user.click(getByRole("button"));
 
     await waitFor(() => {
-      expect(screen.queryByText(title)).not.toBeInTheDocument();
+      expect(queryByText(title)).not.toBeInTheDocument();
     });
   });
 
@@ -60,9 +45,9 @@ describe("Toaster", () => {
     const testToast = [
       <Toast id={0} title="I Am Toast" key={0} onDismiss={dismissCallback} />
     ];
-    render(<Toaster>{testToast}</Toaster>);
+    const { getByRole } = render(<Toaster>{testToast}</Toaster>);
 
-    await user.click(screen.getByRole("button"));
+    await user.click(getByRole("button"));
 
     expect(dismissCallback).toHaveBeenCalledTimes(1);
   });
@@ -70,18 +55,47 @@ describe("Toaster", () => {
   it("dismisses autodismiss toasts after specified time", async () => {
     jest.useFakeTimers();
     const title = "I Am Toast";
-    render(
+    const { getByText, queryByText } = render(
       <Toaster>
         <Toast id={0} autodismiss title={title} key={0} />
       </Toaster>
     );
 
-    expect(screen.getByText(title)).toBeDefined();
+    expect(getByText(title)).toBeDefined();
 
     jest.advanceTimersByTime(DELAY_TIME);
 
     await waitFor(() => {
-      expect(screen.queryByText(title)).not.toBeInTheDocument();
+      expect(queryByText(title)).not.toBeInTheDocument();
+    });
+  });
+
+  it("pauses autodismiss if user hovers on item", async () => {
+    jest.useFakeTimers();
+    const title = "I Am Toast";
+    const { getByTestId, queryByText } = render(
+      <Toaster>
+        <Toast id={0} autodismiss title={title} key={0} />
+      </Toaster>
+    );
+
+    const toasterList = getByTestId("toaster-list");
+    // for some reason using RTL user event and jest timers didn't work
+    fireEvent.mouseEnter(toasterList);
+
+    jest.advanceTimersByTime(DELAY_TIME);
+
+    // is never removed because timeout was cleared
+    await expect(
+      waitForElementToBeRemoved(() => queryByText(title))
+    ).rejects.toThrow();
+
+    fireEvent.mouseLeave(toasterList);
+
+    jest.advanceTimersByTime(DELAY_TIME);
+
+    await waitFor(() => {
+      expect(queryByText(title)).not.toBeInTheDocument();
     });
   });
 
@@ -108,13 +122,13 @@ describe("Toaster", () => {
 
   it("adds new `toast` with new toast received via props", () => {
     const testToastId = "testToastId";
-    const { rerender } = render(
+    const { rerender, getByText, queryByText } = render(
       <Toaster>
         <Toast title="I Am Toast" key={1} id={testToastId} />
       </Toaster>
     );
 
-    expect(screen.getByText("I Am Toast")).toBeInTheDocument();
+    expect(getByText("I Am Toast")).toBeInTheDocument();
     const newProps = {
       children: [
         <Toast id={testToastId} key={1} title="I Am A Different Toast" />,
@@ -124,10 +138,8 @@ describe("Toaster", () => {
 
     rerender(<Toaster>{newProps.children}</Toaster>);
 
-    expect(screen.queryByText("I Am Toast")).not.toBeInTheDocument();
-    expect(screen.getByText("I Am A Different Toast")).toBeInTheDocument();
-    expect(
-      screen.getByText("I Am A Slightly Different Toast")
-    ).toBeInTheDocument();
+    expect(queryByText("I Am Toast")).not.toBeInTheDocument();
+    expect(getByText("I Am A Different Toast")).toBeInTheDocument();
+    expect(getByText("I Am A Slightly Different Toast")).toBeInTheDocument();
   });
 });
