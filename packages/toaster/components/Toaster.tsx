@@ -74,6 +74,7 @@ class Toaster extends React.PureComponent<ToasterProps, { toasts: Toast[] }> {
           onMouseLeave={this.restartTimeouts}
           aria-live="assertive"
           className={listReset}
+          data-cy="toaster-list"
         >
           <TransitionGroup>
             {this.state.toasts.map(toast => (
