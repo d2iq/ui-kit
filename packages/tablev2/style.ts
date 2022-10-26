@@ -79,9 +79,14 @@ export const sortable = (dir: "asc" | "desc" | null) => css`
       "currentColor"
     )};
   }
+`;
+
+export const headerHover = css`
   &:hover {
-    &:after {
-      display: inline-block;
+    .sortIcon {
+      :after {
+        display: inline-block;
+      }
     }
   }
 `;
