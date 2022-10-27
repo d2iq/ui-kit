@@ -1,7 +1,8 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render, fireEvent } from "@testing-library/react";
 import { createSerializer } from "@emotion/jest";
-import toJson from "enzyme-to-json";
+import userEvent from "@testing-library/user-event";
+
 import ModalBase from "../components/ModalBase";
 import DialogModalWithFooter from "../components/DialogModalWithFooter";
 import FullscreenModal from "../components/FullscreenModal";
@@ -13,44 +14,44 @@ describe("Modal", () => {
   describe("ModalBase", () => {
     it("renders ModalBase", () => {
       const action = jest.fn();
-      const component = mount(
+      const { asFragment } = render(
         <ModalBase isOpen={true} onClose={action}>
           <div tabIndex={0}>I am modal content</div>
         </ModalBase>
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
-    it("calls this.props.onClose when keying 'esc'", () => {
+    it("calls this.props.onClose when keying 'esc'", async () => {
       const action = jest.fn();
-      const component = mount(
+      const { getByRole } = render(
         <ModalBase isOpen={true} onClose={action}>
           <div tabIndex={0}>I am modal content</div>
         </ModalBase>
       );
+      const dialog = getByRole("dialog");
 
       expect(action).not.toHaveBeenCalled();
-      component.find('[role="dialog"]').simulate("keyDown", {
-        key: "Escape"
-      });
+      await userEvent.type(dialog, "[Escape]");
       expect(action).toHaveBeenCalled();
     });
     it("calls this.props.onClose when clicking dark overlay", () => {
       const action = jest.fn();
-      const component = mount(
+      const { getByRole } = render(
         <ModalBase isOpen={true} onClose={action}>
           <div tabIndex={0}>I am modal content</div>
         </ModalBase>
       );
+      const closeButton = getByRole("button");
 
       expect(action).not.toHaveBeenCalled();
-      component.find('[role="button"]').first().simulate("click");
+      fireEvent.click(closeButton);
       expect(action).toHaveBeenCalled();
     });
   });
   describe("DialogModal", () => {
     it("renders DialogModal", () => {
       const closeAction = jest.fn();
-      const component = mount(
+      const { asFragment } = render(
         <DialogModalWithFooter
           isOpen={true}
           onClose={closeAction}
@@ -61,11 +62,11 @@ describe("Modal", () => {
           <div tabIndex={0}>I am modal content</div>
         </DialogModalWithFooter>
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
     it("calls this.props.onClose when clicking the close button", () => {
       const closeAction = jest.fn();
-      const component = mount(
+      const { getByTestId } = render(
         <DialogModalWithFooter
           isOpen={true}
           onClose={closeAction}
@@ -76,16 +77,16 @@ describe("Modal", () => {
           <div tabIndex={0}>I am modal content</div>
         </DialogModalWithFooter>
       );
-      const closeButton = component.find("svg");
+      const closeButton = getByTestId("secondaryButton");
       expect(closeAction).not.toHaveBeenCalled();
-      closeButton.simulate("click");
+      fireEvent.click(closeButton);
       expect(closeAction).toHaveBeenCalled();
     });
   });
   describe("FullscreenModal", () => {
     it("renders FullscreenModal", () => {
       const closeAction = jest.fn();
-      const component = mount(
+      const { asFragment } = render(
         <FullscreenModal
           isOpen={true}
           onClose={closeAction}
@@ -96,11 +97,11 @@ describe("Modal", () => {
           <div tabIndex={0}>I am modal content</div>
         </FullscreenModal>
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
     it("calls this.props.onClose when clicking the close button", () => {
       const closeAction = jest.fn();
-      const component = mount(
+      const { getByTestId } = render(
         <DialogModalWithFooter
           isOpen={true}
           onClose={closeAction}
@@ -111,9 +112,9 @@ describe("Modal", () => {
           <div tabIndex={0}>I am modal content</div>
         </DialogModalWithFooter>
       );
-      const closeButton = component.find("svg");
+      const closeButton = getByTestId("secondaryButton");
       expect(closeAction).not.toHaveBeenCalled();
-      closeButton.simulate("click");
+      fireEvent.click(closeButton);
       expect(closeAction).toHaveBeenCalled();
     });
   });

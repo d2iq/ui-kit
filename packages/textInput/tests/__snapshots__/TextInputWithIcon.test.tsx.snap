@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -9,27 +10,222 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
   font-weight: 500;
 }
 
+.emotion-1 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 0;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.emotion-3>div {
+  width: auto;
+}
+
+.emotion-3 svg {
+  fill: var(--themeTextColorPrimary, #1B2029);
+}
+
+.emotion-3 svg {
+  max-width: 16px;
+  height: auto;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
 <div
-  data-cy="textInput textInput.standard"
->
-  <label
-    className="emotion-0"
-    data-cy="textInput-label"
-    hidden={false}
-    htmlFor="test.icon_end_input.standard"
+    data-cy="textInput textInput.standard"
   >
-    standard
-  </label>
-  <Memo(FormFieldWrapper)
-    id="test.icon_end_input.standard"
-  >
-    <Component />
-  </Memo(FormFieldWrapper)>
-</div>
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="test.icon_end_input.standard"
+    >
+      standard
+    </label>
+    <div>
+      <div
+        class="emotion-1"
+      >
+        <input
+          aria-describedby=""
+          aria-invalid="false"
+          class="emotion-2"
+          data-cy="textInput-input"
+          id="test.icon_end_input.standard"
+          type="text"
+          value=""
+        />
+        <span
+          class="emotion-3"
+        >
+          <svg
+            aria-label="system-close icon"
+            class="emotion-4"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-close"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -39,27 +235,221 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
   fill: var(--themeError, #EB293A);
 }
 
+.emotion-1 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeError, #EB293A);
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(235,41,58,0.05);
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 0;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.emotion-3>div {
+  width: auto;
+}
+
+.emotion-3 svg {
+  fill: var(--themeError, #EB293A);
+}
+
+.emotion-3 svg {
+  max-width: 16px;
+  height: auto;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
 <div
-  data-cy="textInput textInput.error"
->
-  <label
-    className="emotion-0"
-    data-cy="textInput-label"
-    hidden={false}
-    htmlFor="test.icon_end_input.error"
+    data-cy="textInput textInput.error"
   >
-    error
-  </label>
-  <Memo(FormFieldWrapper)
-    id="test.icon_end_input.error"
-  >
-    <Component />
-  </Memo(FormFieldWrapper)>
-</div>
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="test.icon_end_input.error"
+    >
+      error
+    </label>
+    <div>
+      <div
+        class="emotion-1"
+      >
+        <input
+          aria-describedby=""
+          aria-invalid="false"
+          class="emotion-2"
+          data-cy="textInput-input textInput-input.error"
+          id="test.icon_end_input.error"
+          type="text"
+          value=""
+        />
+        <span
+          class="emotion-3"
+        >
+          <svg
+            aria-label="system-close icon"
+            class="emotion-4"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-close"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -67,27 +457,221 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
   font-weight: 500;
 }
 
+.emotion-1 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeSuccess, #14C684);
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(20,198,132,0.05);
+}
+
+.emotion-2 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 0;
+}
+
+.emotion-2:focus {
+  outline: 0;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.emotion-3>div {
+  width: auto;
+}
+
+.emotion-3 svg {
+  fill: var(--themeSuccess, #14C684);
+}
+
+.emotion-3 svg {
+  max-width: 16px;
+  height: auto;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-4 use {
+  pointer-events: none;
+}
+
 <div
-  data-cy="textInput textInput.success"
->
-  <label
-    className="emotion-0"
-    data-cy="textInput-label"
-    hidden={false}
-    htmlFor="test.icon_end_input.success"
+    data-cy="textInput textInput.success"
   >
-    success
-  </label>
-  <Memo(FormFieldWrapper)
-    id="test.icon_end_input.success"
-  >
-    <Component />
-  </Memo(FormFieldWrapper)>
-</div>
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="test.icon_end_input.success"
+    >
+      success
+    </label>
+    <div>
+      <div
+        class="emotion-1"
+      >
+        <input
+          aria-describedby=""
+          aria-invalid="false"
+          class="emotion-2"
+          data-cy="textInput-input textInput-input.success"
+          id="test.icon_end_input.success"
+          type="text"
+          value=""
+        />
+        <span
+          class="emotion-3"
+        >
+          <svg
+            aria-label="system-close icon"
+            class="emotion-4"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-close"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -95,27 +679,221 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
   font-weight: 500;
 }
 
+.emotion-1 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+.emotion-2 {
+  padding-right: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+.emotion-2 svg {
+  fill: var(--themeTextColorPrimary, #1B2029);
+}
+
+.emotion-2 svg {
+  max-width: 16px;
+  height: auto;
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-3 use {
+  pointer-events: none;
+}
+
+.emotion-4 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 0;
+}
+
+.emotion-4:focus {
+  outline: 0;
+}
+
 <div
-  data-cy="textInput textInput.standard"
->
-  <label
-    className="emotion-0"
-    data-cy="textInput-label"
-    hidden={false}
-    htmlFor="test.icon_start_input.standard"
+    data-cy="textInput textInput.standard"
   >
-    standard
-  </label>
-  <Memo(FormFieldWrapper)
-    id="test.icon_start_input.standard"
-  >
-    <Component />
-  </Memo(FormFieldWrapper)>
-</div>
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="test.icon_start_input.standard"
+    >
+      standard
+    </label>
+    <div>
+      <div
+        class="emotion-1"
+      >
+        <span
+          class="emotion-2"
+        >
+          <svg
+            aria-label="system-triangle-down icon"
+            class="emotion-3"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-triangle-down"
+            />
+          </svg>
+        </span>
+        <input
+          aria-describedby=""
+          aria-invalid="false"
+          class="emotion-4"
+          data-cy="textInput-input"
+          id="test.icon_start_input.standard"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -125,27 +903,220 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
   fill: var(--themeError, #EB293A);
 }
 
+.emotion-1 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeError, #EB293A);
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(235,41,58,0.05);
+}
+
+.emotion-2 {
+  padding-right: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+.emotion-2 svg {
+  fill: var(--themeError, #EB293A);
+}
+
+.emotion-2 svg {
+  max-width: 16px;
+  height: auto;
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-3 use {
+  pointer-events: none;
+}
+
+.emotion-4 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 0;
+}
+
+.emotion-4:focus {
+  outline: 0;
+}
+
 <div
-  data-cy="textInput textInput.error"
->
-  <label
-    className="emotion-0"
-    data-cy="textInput-label"
-    hidden={false}
-    htmlFor="test.icon_start_input.error"
+    data-cy="textInput textInput.error"
   >
-    error
-  </label>
-  <Memo(FormFieldWrapper)
-    id="test.icon_start_input.error"
-  >
-    <Component />
-  </Memo(FormFieldWrapper)>
-</div>
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="test.icon_start_input.error"
+    >
+      error
+    </label>
+    <div>
+      <div
+        class="emotion-1"
+      >
+        <span
+          class="emotion-2"
+        >
+          <svg
+            aria-label="system-triangle-down icon"
+            class="emotion-3"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-triangle-down"
+            />
+          </svg>
+        </span>
+        <input
+          aria-describedby=""
+          aria-invalid="false"
+          class="emotion-4"
+          data-cy="textInput-input textInput-input.error"
+          id="test.icon_start_input.error"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -153,27 +1124,220 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
   font-weight: 500;
 }
 
+.emotion-1 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeSuccess, #14C684);
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(20,198,132,0.05);
+}
+
+.emotion-2 {
+  padding-right: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+.emotion-2 svg {
+  fill: var(--themeSuccess, #14C684);
+}
+
+.emotion-2 svg {
+  max-width: 16px;
+  height: auto;
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-3 use {
+  pointer-events: none;
+}
+
+.emotion-4 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 0;
+}
+
+.emotion-4:focus {
+  outline: 0;
+}
+
 <div
-  data-cy="textInput textInput.success"
->
-  <label
-    className="emotion-0"
-    data-cy="textInput-label"
-    hidden={false}
-    htmlFor="test.icon_start_input.success"
+    data-cy="textInput textInput.success"
   >
-    success
-  </label>
-  <Memo(FormFieldWrapper)
-    id="test.icon_start_input.success"
-  >
-    <Component />
-  </Memo(FormFieldWrapper)>
-</div>
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="test.icon_start_input.success"
+    >
+      success
+    </label>
+    <div>
+      <div
+        class="emotion-1"
+      >
+        <span
+          class="emotion-2"
+        >
+          <svg
+            aria-label="system-triangle-down icon"
+            class="emotion-3"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-triangle-down"
+            />
+          </svg>
+        </span>
+        <input
+          aria-describedby=""
+          aria-invalid="false"
+          class="emotion-4"
+          data-cy="textInput-input textInput-input.success"
+          id="test.icon_start_input.success"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -181,27 +1345,284 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
   font-weight: 500;
 }
 
+.emotion-1 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeBorder, #DADDE2);
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(125,88,255,0.05);
+  border-color: var(--themeBrandPrimary, #7D58FF);
+}
+
+.emotion-2 {
+  padding-right: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+.emotion-2 svg {
+  fill: var(--themeTextColorPrimary, #1B2029);
+}
+
+.emotion-2 svg {
+  max-width: 16px;
+  height: auto;
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-3 use {
+  pointer-events: none;
+}
+
+.emotion-4 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 0;
+}
+
+.emotion-4:focus {
+  outline: 0;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.emotion-5>div {
+  width: auto;
+}
+
+.emotion-5 svg {
+  fill: var(--themeTextColorPrimary, #1B2029);
+}
+
+.emotion-5 svg {
+  max-width: 16px;
+  height: auto;
+}
+
 <div
-  data-cy="textInput textInput.standard"
->
-  <label
-    className="emotion-0"
-    data-cy="textInput-label"
-    hidden={false}
-    htmlFor="test.two_icon_input.standard"
+    data-cy="textInput textInput.standard"
   >
-    standard
-  </label>
-  <Memo(FormFieldWrapper)
-    id="test.two_icon_input.standard"
-  >
-    <Component />
-  </Memo(FormFieldWrapper)>
-</div>
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="test.two_icon_input.standard"
+    >
+      standard
+    </label>
+    <div>
+      <div
+        class="emotion-1"
+      >
+        <span
+          class="emotion-2"
+        >
+          <svg
+            aria-label="system-triangle-down icon"
+            class="emotion-3"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-triangle-down"
+            />
+          </svg>
+        </span>
+        <input
+          aria-describedby=""
+          aria-invalid="false"
+          class="emotion-4"
+          data-cy="textInput-input"
+          id="test.two_icon_input.standard"
+          type="text"
+          value=""
+        />
+        <span
+          class="emotion-5"
+        >
+          <svg
+            aria-label="system-close icon"
+            class="emotion-3"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-close"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -211,27 +1632,283 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
   fill: var(--themeError, #EB293A);
 }
 
+.emotion-1 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeError, #EB293A);
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(235,41,58,0.05);
+}
+
+.emotion-2 {
+  padding-right: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+.emotion-2 svg {
+  fill: var(--themeError, #EB293A);
+}
+
+.emotion-2 svg {
+  max-width: 16px;
+  height: auto;
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-3 use {
+  pointer-events: none;
+}
+
+.emotion-4 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 0;
+}
+
+.emotion-4:focus {
+  outline: 0;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.emotion-5>div {
+  width: auto;
+}
+
+.emotion-5 svg {
+  fill: var(--themeError, #EB293A);
+}
+
+.emotion-5 svg {
+  max-width: 16px;
+  height: auto;
+}
+
 <div
-  data-cy="textInput textInput.error"
->
-  <label
-    className="emotion-0"
-    data-cy="textInput-label"
-    hidden={false}
-    htmlFor="test.two_icon_input.error"
+    data-cy="textInput textInput.error"
   >
-    error
-  </label>
-  <Memo(FormFieldWrapper)
-    id="test.two_icon_input.error"
-  >
-    <Component />
-  </Memo(FormFieldWrapper)>
-</div>
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="test.two_icon_input.error"
+    >
+      error
+    </label>
+    <div>
+      <div
+        class="emotion-1"
+      >
+        <span
+          class="emotion-2"
+        >
+          <svg
+            aria-label="system-triangle-down icon"
+            class="emotion-3"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-triangle-down"
+            />
+          </svg>
+        </span>
+        <input
+          aria-describedby=""
+          aria-invalid="false"
+          class="emotion-4"
+          data-cy="textInput-input textInput-input.error"
+          id="test.two_icon_input.error"
+          type="text"
+          value=""
+        />
+        <span
+          class="emotion-5"
+        >
+          <svg
+            aria-label="system-close icon"
+            class="emotion-3"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-close"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -239,21 +1916,276 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
   font-weight: 500;
 }
 
+.emotion-1 {
+  -webkit-align-items: flex;
+  -webkit-box-align: flex;
+  -ms-flex-align: flex;
+  align-items: flex;
+  height: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: inherit;
+  height: 36px;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--themeBgPrimary, #FFFFFF);
+  border-color: var(--themeSuccess, #14C684);
+}
+
+.emotion-1>div {
+  width: auto;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input {
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::-moz-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1 input::placeholder {
+  color: var(--themeTextColorPrimary, #1B2029);
+  opacity: 0.4;
+}
+
+.emotion-1:focus {
+  background-color: rgba(20,198,132,0.05);
+}
+
+.emotion-2 {
+  padding-right: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+}
+
+.emotion-2>div {
+  width: auto;
+}
+
+.emotion-2 svg {
+  fill: var(--themeSuccess, #14C684);
+}
+
+.emotion-2 svg {
+  max-width: 16px;
+  height: auto;
+}
+
+.emotion-3 {
+  vertical-align: middle;
+  fill: inherit;
+}
+
+.emotion-3 use {
+  pointer-events: none;
+}
+
+.emotion-4 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  width: auto;
+  padding: 0;
+}
+
+.emotion-4:focus {
+  outline: 0;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: initial;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.emotion-5>div {
+  width: auto;
+}
+
+.emotion-5 svg {
+  fill: var(--themeSuccess, #14C684);
+}
+
+.emotion-5 svg {
+  max-width: 16px;
+  height: auto;
+}
+
 <div
-  data-cy="textInput textInput.success"
->
-  <label
-    className="emotion-0"
-    data-cy="textInput-label"
-    hidden={false}
-    htmlFor="test.two_icon_input.success"
+    data-cy="textInput textInput.success"
   >
-    success
-  </label>
-  <Memo(FormFieldWrapper)
-    id="test.two_icon_input.success"
-  >
-    <Component />
-  </Memo(FormFieldWrapper)>
-</div>
+    <label
+      class="emotion-0"
+      data-cy="textInput-label"
+      for="test.two_icon_input.success"
+    >
+      success
+    </label>
+    <div>
+      <div
+        class="emotion-1"
+      >
+        <span
+          class="emotion-2"
+        >
+          <svg
+            aria-label="system-triangle-down icon"
+            class="emotion-3"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-triangle-down"
+            />
+          </svg>
+        </span>
+        <input
+          aria-describedby=""
+          aria-invalid="false"
+          class="emotion-4"
+          data-cy="textInput-input textInput-input.success"
+          id="test.two_icon_input.success"
+          type="text"
+          value=""
+        />
+        <span
+          class="emotion-5"
+        >
+          <svg
+            aria-label="system-close icon"
+            class="emotion-3"
+            data-cy="icon"
+            height="16"
+            preserveAspectRatio="xMinYMin meet"
+            role="img"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <use
+              xlink:href="#system-close"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;

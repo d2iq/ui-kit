@@ -1,7 +1,6 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
-import { shallow, mount } from "enzyme";
-import toJson from "enzyme-to-json";
+import { render, fireEvent } from "@testing-library/react";
 
 import TextInputWithIcon from "../components/TextInputWithIcon";
 import { InputAppearance } from "../../shared/types/inputAppearance";
@@ -12,7 +11,7 @@ expect.addSnapshotSerializer(createSerializer());
 describe("TextInputWithIcon", () => {
   it("should render all appearances with iconStart", () => {
     Object.keys(InputAppearance).forEach(appearance => {
-      const component = shallow(
+      const { asFragment } = render(
         <TextInputWithIcon
           id={`test.icon_start_input.${InputAppearance[appearance]}`}
           inputLabel={InputAppearance[appearance]}
@@ -20,13 +19,13 @@ describe("TextInputWithIcon", () => {
           iconStart={SystemIcons.TriangleDown}
         />
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   it("should render all appearances with iconEnd", () => {
     Object.keys(InputAppearance).forEach(appearance => {
-      const component = shallow(
+      const { asFragment } = render(
         <TextInputWithIcon
           id={`test.icon_end_input.${InputAppearance[appearance]}`}
           inputLabel={InputAppearance[appearance]}
@@ -34,13 +33,13 @@ describe("TextInputWithIcon", () => {
           iconEnd={SystemIcons.Close}
         />
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   it("should render all appearances with twoIcons", () => {
     Object.keys(InputAppearance).forEach(appearance => {
-      const component = shallow(
+      const { asFragment } = render(
         <TextInputWithIcon
           id={`test.two_icon_input.${InputAppearance[appearance]}`}
           inputLabel={InputAppearance[appearance]}
@@ -49,13 +48,13 @@ describe("TextInputWithIcon", () => {
           iconEnd={SystemIcons.Close}
         />
       );
-      expect(toJson(component)).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   it("should call onFocus when input gains focus", () => {
     const focusFn = jest.fn();
-    const component = mount(
+    const { getByTestId } = render(
       <TextInputWithIcon
         id="test.input"
         inputLabel="Test Focus"
@@ -64,13 +63,13 @@ describe("TextInputWithIcon", () => {
       />
     );
     expect(focusFn).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
+    fireEvent.focus(getByTestId("textInput-input"));
     expect(focusFn).toHaveBeenCalled();
   });
 
   it("should call onBlur when input loses focus", () => {
     const blurFn = jest.fn();
-    const component = mount(
+    const { getByTestId } = render(
       <TextInputWithIcon
         id="test.input"
         inputLabel="Test Blur"
@@ -78,10 +77,12 @@ describe("TextInputWithIcon", () => {
         iconStart={SystemIcons.TriangleDown}
       />
     );
+    const textInput = getByTestId("textInput-input");
+
     expect(blurFn).not.toHaveBeenCalled();
-    component.find("input").simulate("focus");
+    textInput.focus();
     expect(blurFn).not.toHaveBeenCalled();
-    component.find("input").simulate("blur");
+    textInput.blur();
     expect(blurFn).toHaveBeenCalled();
   });
 });
