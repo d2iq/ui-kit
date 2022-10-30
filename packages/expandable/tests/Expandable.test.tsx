@@ -16,21 +16,29 @@ describe("Sidebar", () => {
     );
     expect(asFragment()).toMatchSnapshot();
   });
-  it("toggles open and closed", async () => {
-    const { getByText, queryByText, getByTestId } = render(
+
+  it("toggles open and closed", () => {
+    const { getByText, queryByText } = render(
       <Expandable label="Label">Content</Expandable>
     );
 
     expect(queryByText("Content")).not.toBeVisible();
     const labelEl = getByText("Label");
     labelEl.click();
-    getByText("Content");
+    expect(getByText("Content")).toBeInTheDocument();
     labelEl.click();
     expect(queryByText("Content")).not.toBeVisible();
+  });
 
+  it("toggles open and close on chevronIcon click", async () => {
+    const { getByText, queryByText, getByTestId } = render(
+      <Expandable label="Label">Content</Expandable>
+    );
+
+    expect(queryByText("Content")).not.toBeVisible();
     const chevronIcon = getByTestId("icon");
     await userEvent.click(chevronIcon);
-    getByText("Content");
+    expect(getByText("Content")).toBeInTheDocument();
     await userEvent.click(chevronIcon);
     expect(queryByText("Content")).not.toBeVisible();
   });
@@ -61,9 +69,9 @@ describe("Sidebar", () => {
       </Expandable>
     );
 
-    getByText("Content");
+    expect(getByText("Content")).toBeInTheDocument();
     const labelEl = getByText("Label");
     labelEl.click();
-    getByText("Content");
+    expect(getByText("Content")).toBeInTheDocument();
   });
 });
