@@ -5,7 +5,7 @@ import { ToastProps } from "../components/Toast";
 import { fontSizes } from "../../shared/styles/typography";
 import { purple } from "../../design-tokens/build/js/designTokens";
 
-let addedToastId = 0;
+let addedToastId = 1;
 const toastTitle = "I have a message for you";
 const fakeButtonStyles = {
   ["-webkit-appearance"]: "none",
@@ -58,38 +58,49 @@ export const Description = () => (
   </Toaster>
 );
 
+export const MultiToast = () => (
+  <Toaster>
+    <Toast title={toastTitle} key={0} id="default" />
+    <Toast
+      title={toastTitle}
+      key={1}
+      autodismiss
+      id="danger"
+      appearance="danger"
+    />
+  </Toaster>
+);
+
 export const AutoDismiss = () => {
-  const [toasts, setToasts] = React.useState<
-    Array<React.ReactElement<ToastProps>>
-  >([]);
+  const [toasts, setToasts] = React.useState<number[]>([]);
 
-  const addToast = (toastNext: Array<React.ReactElement<ToastProps>>) => {
-    setToasts(toasts.concat(toastNext));
-  };
-
-  const removeToast = (id: string) => {
-    setToasts(toasts.filter(t => t.props.id !== id));
+  const removeToast = (id: number) => {
+    setToasts(toasts.filter(toast => toast !== id));
   };
 
   const handleToastAdd = () => {
     const newToastId = addedToastId++;
-    const toastId = `toast-${newToastId + 1}`;
-    const dismissToast = () => removeToast(toastId);
-
-    addToast([
-      <Toast
-        autodismiss={true}
-        id={toastId}
-        key={newToastId + 1}
-        title={`New message ${newToastId + 1}`}
-        onDismiss={dismissToast}
-      />
-    ]);
+    setToasts([...toasts, newToastId]);
   };
 
   return (
     <div>
-      <Toaster>{toasts}</Toaster>
+      <Toaster>
+        {toasts.map(toastId => {
+          const handleDismiss = () => {
+            removeToast(toastId);
+          };
+          return (
+            <Toast
+              autodismiss
+              id={`toast-${toastId}`}
+              key={toastId}
+              title={`New message ${toastId}`}
+              onDismiss={handleDismiss}
+            />
+          );
+        })}
+      </Toaster>
       <button onClick={handleToastAdd}>Make me toast</button>
     </div>
   );
