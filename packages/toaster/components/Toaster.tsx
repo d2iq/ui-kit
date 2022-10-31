@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
 import { TransitionGroup, Transition } from "react-transition-group";
-import { ToastProps, ToastId } from "./Toast";
+import { ToastProps } from "./Toast";
 import { toaster, preTransitionStyle, transitionStyles } from "../style";
 import { margin, marginAt, listReset } from "../../shared/styles/styleUtils";
 
@@ -18,16 +18,15 @@ interface ToasterProps {
 const Toaster = ({ children }: ToasterProps) => {
   const timeouts = React.useRef<number[]>([]);
 
-  const [toasts, setToasts] = React.useState<Toast[]>(
-    React.Children.toArray(children) as Toast[]
-  );
+  const [toasts, setToasts] = React.useState<Toast[]>([]);
 
-  const handleDismissToast = (id: ToastId = "") => {
-    const toastToDismiss = toasts.find(toast => id === toast.props.id);
+  const dismissToast = (toastToDismiss: Toast) => {
     if (toastToDismiss && toastToDismiss.props.onDismiss) {
       toastToDismiss.props.onDismiss();
     }
-    setToasts(toasts.filter(toast => id !== toast.props.id));
+    setToasts(toasts =>
+      toasts.filter(toast => toastToDismiss.props.id !== toast.props.id)
+    );
   };
 
   const restartTimeouts = () => {
@@ -35,7 +34,7 @@ const Toaster = ({ children }: ToasterProps) => {
       if (toast.props.autodismiss) {
         timeouts.current.push(
           window.setTimeout(() => {
-            handleDismissToast(toast.props.id);
+            dismissToast(toast);
           }, DELAY_TIME + MARGINAL_DELAY * index)
         );
       }
@@ -53,17 +52,21 @@ const Toaster = ({ children }: ToasterProps) => {
   }, []);
 
   React.useEffect(() => {
-    const toastChildren = React.Children.toArray(children) as Toast[];
-    const childIds = toastChildren.map(toast => toast.props.id);
-    const currentIds = toasts.map(toast => toast.props.id);
+    setToasts(toasts => {
+      const toastChildren = React.Children.toArray(children) as Toast[];
+      const childIds = toastChildren.map(toast => toast.props.id);
+      const currentIds = toasts.map(toast => toast.props.id);
 
-    if (
-      !currentIds.every(e => childIds.includes(e)) ||
-      !currentIds.length ||
-      childIds.length !== currentIds.length
-    ) {
-      setToasts(toastChildren);
-    }
+      if (
+        !currentIds.every(e => childIds.includes(e)) ||
+        !currentIds.length ||
+        childIds.length !== currentIds.length
+      ) {
+        return toastChildren;
+      }
+
+      return toasts;
+    });
   }, [children]);
 
   React.useEffect(() => {
@@ -83,25 +86,31 @@ const Toaster = ({ children }: ToasterProps) => {
         data-cy="toaster-list"
       >
         <TransitionGroup>
-          {toasts.map((toast: Toast) => (
-            <Transition
-              key={`toastWrapper-${toast.props.id}`}
-              timeout={{ enter: 0, exit: animationDuration }}
-            >
-              {state => (
-                <li
-                  className={cx(
-                    preTransitionStyle(animationDuration),
-                    transitionStyles[state]
-                  )}
-                >
-                  {React.cloneElement(toast, {
-                    dismissToast: handleDismissToast
-                  })}
-                </li>
-              )}
-            </Transition>
-          ))}
+          {toasts.map((toast: Toast) => {
+            const handleDismiss = () => {
+              dismissToast(toast);
+            };
+            return (
+              <Transition
+                key={`toastWrapper-${toast.props.id}`}
+                timeout={{ enter: 0, exit: animationDuration }}
+                mountOnEnter
+              >
+                {state => (
+                  <li
+                    className={cx(
+                      preTransitionStyle(animationDuration),
+                      transitionStyles[state]
+                    )}
+                  >
+                    {React.cloneElement(toast, {
+                      dismissToast: handleDismiss
+                    })}
+                  </li>
+                )}
+              </Transition>
+            );
+          })}
         </TransitionGroup>
       </ol>
     </div>
