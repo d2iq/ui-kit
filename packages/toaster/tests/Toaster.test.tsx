@@ -1,105 +1,154 @@
 import * as React from "react";
-import { shallow, mount } from "enzyme";
+import {
+  act,
+  fireEvent,
+  render,
+  waitFor,
+  waitForElementToBeRemoved
+} from "@testing-library/react";
 import { Toaster, Toast } from "../";
 import { DELAY_TIME } from "../components/Toaster";
+import userEvent from "@testing-library/user-event";
 
 describe("Toaster", () => {
-  it("stores toasts in state", () => {
-    const component = shallow(
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it("displays toast children", () => {
+    const title = "I Am Toast";
+    const { getByText } = render(
       <Toaster>
-        <Toast id={0} title="I Am Toast" key={0} />
+        <Toast id={0} title={title} key={0} />
       </Toaster>
     );
-    expect(Object.keys(component.state("toasts")).length).toBe(1);
+    expect(getByText(title)).toBeInTheDocument();
   });
 
-  it("clears timers on mouseEnter and sets timers on mouseLeave", () => {
-    const clearTimeoutsSpy = jest.spyOn(Toaster.prototype, "clearTimeouts");
-    const setTimerSpy = jest.spyOn(Toaster.prototype, "setTimer");
-    const component = shallow(
-      <Toaster>
-        <Toast id={0} title="I Am Toast" key={0} />
-      </Toaster>
-    );
+  it("dismisses toasts when child is clicked", async () => {
+    const user = userEvent.setup();
 
-    component.find("ol").simulate("mouseEnter");
-    expect(clearTimeoutsSpy).toHaveBeenCalled();
-    component.find("ol").simulate("mouseLeave");
-    expect(setTimerSpy).toHaveBeenCalled();
+    const title = "I Am Toast";
+    const testToast = [<Toast id={0} title={title} key={0} />];
+    const { getByRole, queryByText } = render(<Toaster>{testToast}</Toaster>);
+
+    await user.click(getByRole("button"));
+
+    await waitFor(() => {
+      expect(queryByText(title)).not.toBeInTheDocument();
+    });
   });
 
-  it("dismisses toasts", () => {
-    const testToast = [<Toast id={0} title="I Am Toast" key={0} />];
-    const component = shallow(<Toaster>{testToast}</Toaster>);
-    const instance = component.instance() as Toaster;
-    instance.dismissToast(testToast[0].props.id);
+  it("calls onDismiss callback when toast is dismissed", async () => {
+    const user = userEvent.setup();
 
-    expect(component.state("toasts")).not.toContain(testToast[0].props.id);
-  });
-
-  it("calls onDismiss callback when toast is dismissed", () => {
     const dismissCallback = jest.fn();
     const testToast = [
       <Toast id={0} title="I Am Toast" key={0} onDismiss={dismissCallback} />
     ];
-    const component = shallow(<Toaster>{testToast}</Toaster>);
-    const instance = component.instance() as Toaster;
-    instance.dismissToast(testToast[0].props.id);
+    const { getByRole } = render(<Toaster>{testToast}</Toaster>);
+
+    await user.click(getByRole("button"));
 
     expect(dismissCallback).toHaveBeenCalledTimes(1);
   });
 
-  it("dismisses autodismiss toasts after specified time", done => {
-    const testToast = [
-      <Toast id={0} autodismiss={true} title="I Am Toast" key={0} />
-    ];
-    const component = shallow(<Toaster>{testToast}</Toaster>);
+  it("dismisses autodismiss toasts after specified time", async () => {
+    jest.useFakeTimers();
+    const title = "I Am Toast";
+    const { getByText, queryByText } = render(
+      <Toaster>
+        <Toast id={0} autodismiss title={title} key={0} />
+      </Toaster>
+    );
 
-    expect(Object.keys(component.state("toasts")).length).toBe(1);
-    setTimeout(() => {
-      expect(Object.keys(component.state("toasts")).length).toBe(0);
-      done();
-    }, DELAY_TIME + 1);
+    expect(getByText(title)).toBeDefined();
+
+    act(() => {
+      jest.advanceTimersByTime(DELAY_TIME);
+    });
+
+    await waitFor(() => {
+      expect(queryByText(title)).not.toBeInTheDocument();
+    });
   });
 
-  it("calls onDismiss callback for autodismissed toasts", done => {
+  it("pauses autodismiss if user hovers on item", async () => {
+    jest.useFakeTimers();
+    const title = "I Am Toast";
+    const { getByTestId, queryByText } = render(
+      <Toaster>
+        <Toast id={0} autodismiss title={title} key={0} />
+      </Toaster>
+    );
+
+    const toasterList = getByTestId("toaster-list");
+    // for some reason using RTL user event and jest timers didn't work
+    fireEvent.mouseEnter(toasterList);
+
+    act(() => {
+      jest.advanceTimersByTime(DELAY_TIME);
+    });
+
+    // is never removed because timeout was cleared
+    await expect(
+      waitForElementToBeRemoved(() => queryByText(title))
+    ).rejects.toThrow();
+
+    fireEvent.mouseLeave(toasterList);
+
+    act(() => {
+      jest.advanceTimersByTime(DELAY_TIME);
+    });
+
+    await waitFor(() => {
+      expect(queryByText(title)).not.toBeInTheDocument();
+    });
+  });
+
+  it("calls onDismiss callback for autodismissed toasts", () => {
+    jest.useFakeTimers();
     const dismissCallback = jest.fn();
     const testToast = (
       <Toast
         id={0}
-        autodismiss={true}
+        autodismiss
         title="I Am Toast"
         key={0}
         onDismiss={dismissCallback}
       />
     );
-    const component = shallow(<Toaster>{testToast}</Toaster>);
+    render(<Toaster>{testToast}</Toaster>);
 
-    expect(Object.keys(component.state("toasts")).length).toBe(1);
-    setTimeout(() => {
-      expect(dismissCallback).toHaveBeenCalledTimes(1);
-      done();
-    }, DELAY_TIME + 1);
+    expect(dismissCallback).not.toHaveBeenCalled();
+
+    act(() => {
+      jest.advanceTimersByTime(DELAY_TIME);
+    });
+
+    expect(dismissCallback).toHaveBeenCalledTimes(1);
   });
 
   it("adds new `toast` with new toast received via props", () => {
     const testToastId = "testToastId";
-    const ToastWithProps = passedProps => (
+    const { rerender, getByText, queryByText } = render(
       <Toaster>
-        <Toast {...passedProps} title="I Am Toast" key={1} id={testToastId} />
+        <Toast title="I Am Toast" key={1} id={testToastId} />
       </Toaster>
     );
+
+    expect(getByText("I Am Toast")).toBeInTheDocument();
     const newProps = {
       children: [
-        <Toast id={testToastId} key={1} title="I Am Toast" />,
-        <Toast id={0} key={0} title="I Am Toast" />
+        <Toast id={testToastId} key={1} title="I Am A Different Toast" />,
+        <Toast id={0} key={0} title="I Am A Slightly Different Toast" />
       ]
     };
-    const component = mount(<ToastWithProps />);
-    const instance = component.find(Toaster).instance() as Toaster;
 
-    expect(instance.state.toasts.length).toEqual(1);
-    instance.UNSAFE_componentWillReceiveProps(newProps);
-    expect(instance.state.toasts.length).toEqual(2);
+    rerender(<Toaster>{newProps.children}</Toaster>);
+
+    expect(queryByText("I Am Toast")).not.toBeInTheDocument();
+    expect(getByText("I Am A Different Toast")).toBeInTheDocument();
+    expect(getByText("I Am A Slightly Different Toast")).toBeInTheDocument();
   });
 });

@@ -75,12 +75,12 @@ export const AutoDismiss = () => {
   const [toasts, setToasts] = React.useState<number[]>([]);
 
   const removeToast = (id: number) => {
-    setToasts(toasts.filter(toast => toast !== id));
+    setToasts(toasts => toasts.filter(toast => toast !== id));
   };
 
   const handleToastAdd = () => {
     const newToastId = addedToastId++;
-    setToasts([...toasts, newToastId]);
+    setToasts(toasts => [...toasts, newToastId]);
   };
 
   return (
