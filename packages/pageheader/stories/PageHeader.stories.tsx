@@ -16,121 +16,89 @@ const action = () => alert("Action triggered");
 
 export default {
   title: "Page Structure/Page Header",
-  component: PageHeader
-} as Meta;
-
-const Template: Story<PageHeaderProps> = args => (
-  <PageHeader
-    breadcrumbElements={[
+  component: PageHeader,
+  args: {
+    breadcrumbElements: [
       <div key="Universe">Universe</div>,
       <div key="MilkyWay">Milky Way</div>,
       <div key="Earth">Earth</div>
-    ]}
-    actions={[
+    ],
+    actions: [
       <SecondaryButton onClick={action} key="Action2">
         Secondary
       </SecondaryButton>,
       <PrimaryButton onClick={action} key="Action1">
         Primary
       </PrimaryButton>
-    ]}
-    {...args}
-  />
-);
+    ]
+  }
+} as Meta;
+
+const Template: Story<PageHeaderProps> = args => <PageHeader {...args} />;
 
 export const Default = Template.bind({});
 
-export const WithOverflowMenu = args => (
-  <PageHeader
-    breadcrumbElements={[
-      <div key="Universe">Universe</div>,
-      <div key="MilkyWay">Milky Way</div>,
-      <div key="Earth">Earth</div>
-    ]}
-    actions={[
-      <SecondaryButton onClick={action} key="Action2">
-        Secondary
-      </SecondaryButton>,
-      <PrimaryButton onClick={action} key="Action1">
-        Primary
-      </PrimaryButton>,
-      <DropdownMenu
-        key="OverflowMenu"
-        trigger={
-          <ResetButton>
-            <Icon shape={SystemIcons.EllipsisVertical} />
-          </ResetButton>
-        }
-        {...args}
-      >
-        <DropdownSection>
-          <DropdownMenuItem key="overflowone" value="overflowone">
-            Overflow One
-          </DropdownMenuItem>
-          <DropdownMenuItem key="overflowtwo" value="overflowtwo">
-            Overflow Two
-          </DropdownMenuItem>
-          <DropdownMenuItem key="overflowthree" value="overflowthree">
-            Overflow Three
-          </DropdownMenuItem>
-        </DropdownSection>
-      </DropdownMenu>
-    ]}
-  />
-);
+export const WithOverflowMenu = Default.bind({});
+WithOverflowMenu.args = {
+  actions: [
+    <SecondaryButton onClick={action} key="Action2">
+      Secondary
+    </SecondaryButton>,
+    <PrimaryButton onClick={action} key="Action1">
+      Primary
+    </PrimaryButton>,
+    <DropdownMenu
+      key="OverflowMenu"
+      trigger={
+        <ResetButton>
+          <Icon shape={SystemIcons.EllipsisVertical} />
+        </ResetButton>
+      }
+    >
+      <DropdownSection>
+        <DropdownMenuItem key="overflowone" value="overflowone">
+          Overflow One
+        </DropdownMenuItem>
+        <DropdownMenuItem key="overflowtwo" value="overflowtwo">
+          Overflow Two
+        </DropdownMenuItem>
+        <DropdownMenuItem key="overflowthree" value="overflowthree">
+          Overflow Three
+        </DropdownMenuItem>
+      </DropdownSection>
+    </DropdownMenu>
+  ]
+};
 
-export const WithoutActions = args => (
-  <PageHeader
-    breadcrumbElements={[
-      <div key="Universe">Universe</div>,
-      <div key="MilkyWay">Milky Way</div>,
-      <div key="Earth">Earth</div>
-    ]}
-    {...args}
-  />
-);
+export const WithoutActions = Default.bind({});
+WithoutActions.args = { actions: [] };
 
-export const WithPageHeaderBody = args => (
-  <PageHeader
-    breadcrumbElements={[
-      <div key="Universe">Universe</div>,
-      <div key="MilkyWay">Milky Way</div>,
-      <div key="Earth">Earth</div>
-    ]}
-    {...args}
-  >
+export const WithPageHeaderBody = Default.bind({});
+WithPageHeaderBody.args = {
+  children: (
     <PageHeaderBody>
       This content is rendered in the PageHeaderBody component
     </PageHeaderBody>
-  </PageHeader>
-);
+  )
+};
 
-export const WithPageHeaderTabs = args => {
-  const tabOnSelect = selectedTab => {
-    alert(`${selectedTab} clicked`);
-  };
-
-  return (
-    <PageHeader
-      {...args}
-      breadcrumbElements={[
-        <div key="Universe">Universe</div>,
-        <div key="MilkyWay">Milky Way</div>,
-        <div key="Earth">Earth</div>
-      ]}
-    >
-      <PageHeaderTabs>
-        <Tabs selectedIndex={0} onSelect={tabOnSelect}>
-          <TabItem>
-            <TabTitle>Tab 1 Name</TabTitle>
-            <div>First tab Content</div>
-          </TabItem>
-          <TabItem>
-            <TabTitle>Tab 2 Name</TabTitle>
-            Second Tab Content
-          </TabItem>
-        </Tabs>
-      </PageHeaderTabs>
-    </PageHeader>
-  );
+export const WithPageHeaderTabs = Default.bind({});
+const tabOnSelect = selectedTab => {
+  alert(`${selectedTab} clicked`);
+};
+WithPageHeaderTabs.args = {
+  children: (
+    <PageHeaderTabs>
+      <Tabs selectedIndex={0} onSelect={tabOnSelect}>
+        <TabItem>
+          <TabTitle>Tab 1 Name</TabTitle>
+          <div>First tab Content</div>
+        </TabItem>
+        <TabItem>
+          <TabTitle>Tab 2 Name</TabTitle>
+          Second Tab Content
+        </TabItem>
+      </Tabs>
+    </PageHeaderTabs>
+  )
 };
