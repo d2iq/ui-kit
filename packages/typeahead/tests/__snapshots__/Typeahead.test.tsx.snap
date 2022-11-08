@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Typeahead renders 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -121,64 +122,57 @@ exports[`Typeahead renders 1`] = `
 }
 
 <div
-  data-cy="typeahead"
->
-  <div
-    aria-expanded={false}
-    aria-haspopup="listbox"
-    aria-labelledby="downshift-0-label"
-    aria-owns={null}
-    role="combobox"
+    data-cy="typeahead"
   >
-    <div>
-      <div
-        data-cy="textInput textInput.standard"
-      >
-        <label
-          className="emotion-0"
-          data-cy="textInput-label"
-          hidden={false}
-          htmlFor="standard.input"
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      aria-labelledby="downshift-0-label"
+      role="combobox"
+    >
+      <div>
+        <div
+          data-cy="textInput textInput.standard"
         >
-          Standard
-        </label>
-        <div>
-          <div
-            className="emotion-1"
+          <label
+            class="emotion-0"
+            data-cy="textInput-label"
+            for="standard.input"
           >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-describedby=""
-              aria-invalid={false}
-              aria-labelledby="downshift-0-label"
-              autoComplete="off"
-              className="emotion-2"
-              data-cy="textInput-input"
-              id="standard.input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder="Placeholder"
-              type="text"
-              value=""
+            Standard
+          </label>
+          <div>
+            <div
+              class="emotion-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-describedby=""
+                aria-invalid="false"
+                aria-labelledby="downshift-0-label"
+                autocomplete="off"
+                class="emotion-2"
+                data-cy="textInput-input"
+                id="standard.input"
+                placeholder="Placeholder"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              data-cy="textInput-hintContent"
             />
           </div>
-          <div
-            data-cy="textInput-hintContent"
-          />
         </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Typeahead renders a menu with a max height 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: block;
   padding-top: 0;
   margin-top: 0;
@@ -298,58 +292,50 @@ exports[`Typeahead renders a menu with a max height 1`] = `
 }
 
 <div
-  data-cy="typeahead"
->
-  <div
-    aria-expanded={false}
-    aria-haspopup="listbox"
-    aria-labelledby="downshift-1-label"
-    aria-owns={null}
-    role="combobox"
+    data-cy="typeahead"
   >
-    <div>
-      <div
-        data-cy="textInput textInput.standard"
-      >
-        <label
-          className="emotion-0"
-          data-cy="textInput-label"
-          hidden={false}
-          htmlFor="standard.input"
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      aria-labelledby="downshift-1-label"
+      role="combobox"
+    >
+      <div>
+        <div
+          data-cy="textInput textInput.standard"
         >
-          Standard
-        </label>
-        <div>
-          <div
-            className="emotion-1"
+          <label
+            class="emotion-0"
+            data-cy="textInput-label"
+            for="standard.input"
           >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-describedby=""
-              aria-invalid={false}
-              aria-labelledby="downshift-1-label"
-              autoComplete="off"
-              className="emotion-2"
-              data-cy="textInput-input"
-              id="standard.input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder="Placeholder"
-              type="text"
-              value=""
+            Standard
+          </label>
+          <div>
+            <div
+              class="emotion-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-describedby=""
+                aria-invalid="false"
+                aria-labelledby="downshift-1-label"
+                autocomplete="off"
+                class="emotion-2"
+                data-cy="textInput-input"
+                id="standard.input"
+                placeholder="Placeholder"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              data-cy="textInput-hintContent"
             />
           </div>
-          <div
-            data-cy="textInput-hintContent"
-          />
         </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;

@@ -74,7 +74,11 @@ const ToggleBoxGroup = ({
   return (
     <ToggleBoxWrapper label={label}>
       <Flex direction={direction} gutterSize={gutterSize} align="stretch">
-        {React.Children.toArray(children).map(toggleBox => {
+        {(
+          React.Children.toArray(children) as Array<
+            React.ReactElement<ToggleBoxProps>
+          >
+        ).map(toggleBox => {
           const { name, value, ...childProps } = toggleBox.props;
           const handleChange = e => {
             onChange?.(getSelectedItems(value, e.target.checked));
@@ -85,15 +89,17 @@ const ToggleBoxGroup = ({
               key={`buttonWrapper-${childProps.id}`}
               className={toggleBoxGroupItem}
             >
-              {React.cloneElement(toggleBox, {
-                name: multiSelect ? name : name || id,
-                type: multiSelect ? "checkbox" : "radio",
-                onChange: handleChange,
-                isActive: selectedItems.includes(value),
-                id: childProps.id,
-                value,
-                ...childProps
-              })}
+              {React.isValidElement(toggleBox)
+                ? React.cloneElement(toggleBox, {
+                    name: multiSelect ? name : name || id,
+                    type: multiSelect ? "checkbox" : "radio",
+                    onChange: handleChange,
+                    isActive: selectedItems.includes(value),
+                    id: childProps.id,
+                    value,
+                    ...childProps
+                  })
+                : toggleBox}
             </FlexItem>
           );
         })}

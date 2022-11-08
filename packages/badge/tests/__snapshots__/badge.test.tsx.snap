@@ -1,66 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Badge accept jsx as children 1`] = `
-<span
-  className="css-iu2at0"
-  data-cy="badge"
->
-  <span>
-    string
+<DocumentFragment>
+  <span
+    class="css-iu2at0"
+    data-cy="badge"
+  >
+    <span>
+      string
+    </span>
   </span>
-</span>
+</DocumentFragment>
 `;
 
 exports[`Badge danger 1`] = `
-<span
-  className="css-1v2vcel"
-  data-cy="badge"
->
-  danger
-</span>
+<DocumentFragment>
+  <span
+    class="css-1v2vcel"
+    data-cy="badge"
+  >
+    danger
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Badge default 1`] = `
-<span
-  className="css-iu2at0"
-  data-cy="badge"
->
-  default
-</span>
+<DocumentFragment>
+  <span
+    class="css-iu2at0"
+    data-cy="badge"
+  >
+    default
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Badge outline 1`] = `
-<span
-  className="css-wrizyw"
-  data-cy="badge"
->
-  outline
-</span>
+<DocumentFragment>
+  <span
+    class="css-wrizyw"
+    data-cy="badge"
+  >
+    outline
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Badge primary 1`] = `
-<span
-  className="css-1bcogwf"
-  data-cy="badge"
->
-  primary
-</span>
+<DocumentFragment>
+  <span
+    class="css-1bcogwf"
+    data-cy="badge"
+  >
+    primary
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Badge success 1`] = `
-<span
-  className="css-1nxr7gm"
-  data-cy="badge"
->
-  success
-</span>
+<DocumentFragment>
+  <span
+    class="css-1nxr7gm"
+    data-cy="badge"
+  >
+    success
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Badge warning 1`] = `
-<span
-  className="css-dsjkko"
-  data-cy="badge"
->
-  warning
-</span>
+<DocumentFragment>
+  <span
+    class="css-dsjkko"
+    data-cy="badge"
+  >
+    warning
+  </span>
+</DocumentFragment>
 `;

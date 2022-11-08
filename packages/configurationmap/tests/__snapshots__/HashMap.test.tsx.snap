@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HashMap renders array value 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   margin-top: 0;
   margin-bottom: 0;
   margin-bottom: 24px;
@@ -85,31 +86,33 @@ exports[`HashMap renders array value 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="configurationMapSection"
->
-  <div
-    className="emotion-1"
-    data-cy="configurationMapRow"
+    class="emotion-0"
+    data-cy="configurationMapSection"
   >
     <div
-      className="emotion-2"
-      data-cy="configurationMapLabel"
+      class="emotion-1"
+      data-cy="configurationMapRow"
     >
-      foo
-    </div>
-    <div
-      className="emotion-3"
-      data-cy="configurationMapValue"
-    >
-      foo, bar, baz
+      <div
+        class="emotion-2"
+        data-cy="configurationMapLabel"
+      >
+        foo
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="configurationMapValue"
+      >
+        foo, bar, baz
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`HashMap renders boolean value 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   margin-top: 0;
   margin-bottom: 0;
   margin-bottom: 24px;
@@ -193,31 +196,33 @@ exports[`HashMap renders boolean value 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="configurationMapSection"
->
-  <div
-    className="emotion-1"
-    data-cy="configurationMapRow"
+    class="emotion-0"
+    data-cy="configurationMapSection"
   >
     <div
-      className="emotion-2"
-      data-cy="configurationMapLabel"
+      class="emotion-1"
+      data-cy="configurationMapRow"
     >
-      foo
-    </div>
-    <div
-      className="emotion-3"
-      data-cy="configurationMapValue"
-    >
-      true
+      <div
+        class="emotion-2"
+        data-cy="configurationMapLabel"
+      >
+        foo
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="configurationMapValue"
+      >
+        true
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`HashMap renders default 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   margin-top: 0;
   margin-bottom: 0;
   margin-bottom: 24px;
@@ -301,31 +306,33 @@ exports[`HashMap renders default 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="configurationMapSection"
->
-  <div
-    className="emotion-1"
-    data-cy="configurationMapRow"
+    class="emotion-0"
+    data-cy="configurationMapSection"
   >
     <div
-      className="emotion-2"
-      data-cy="configurationMapLabel"
+      class="emotion-1"
+      data-cy="configurationMapRow"
     >
-      foo
-    </div>
-    <div
-      className="emotion-3"
-      data-cy="configurationMapValue"
-    >
-      bar
+      <div
+        class="emotion-2"
+        data-cy="configurationMapLabel"
+      >
+        foo
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="configurationMapValue"
+      >
+        bar
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`HashMap renders empty value 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   margin-top: 0;
   margin-bottom: 0;
   margin-bottom: 24px;
@@ -409,31 +416,33 @@ exports[`HashMap renders empty value 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="configurationMapSection"
->
-  <div
-    className="emotion-1"
-    data-cy="configurationMapRow"
+    class="emotion-0"
+    data-cy="configurationMapSection"
   >
     <div
-      className="emotion-2"
-      data-cy="configurationMapLabel"
+      class="emotion-1"
+      data-cy="configurationMapRow"
     >
-      foo
-    </div>
-    <div
-      className="emotion-3"
-      data-cy="configurationMapValue"
-    >
-      empty
+      <div
+        class="emotion-2"
+        data-cy="configurationMapLabel"
+      >
+        foo
+      </div>
+      <div
+        class="emotion-3"
+        data-cy="configurationMapValue"
+      >
+        empty
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`HashMap renders with a headline 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   margin-top: 0;
   margin-bottom: 0;
   margin-bottom: 24px;
@@ -534,42 +543,44 @@ exports[`HashMap renders with a headline 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="configurationMapSection"
->
-  <div
-    className="emotion-1"
-    data-cy="configurationMapHeading"
-  >
-    <h1
-      className="rmTextMargins emotion-2"
-      data-cy="headingText1"
-    >
-      baz
-    </h1>
-  </div>
-  <div
-    className="emotion-3"
-    data-cy="configurationMapRow"
+    class="emotion-0"
+    data-cy="configurationMapSection"
   >
     <div
-      className="emotion-4"
-      data-cy="configurationMapLabel"
+      class="emotion-1"
+      data-cy="configurationMapHeading"
     >
-      foo
+      <h1
+        class="rmTextMargins emotion-2"
+        data-cy="headingText1"
+      >
+        baz
+      </h1>
     </div>
     <div
-      className="emotion-5"
-      data-cy="configurationMapValue"
+      class="emotion-3"
+      data-cy="configurationMapRow"
     >
-      bar
+      <div
+        class="emotion-4"
+        data-cy="configurationMapLabel"
+      >
+        foo
+      </div>
+      <div
+        class="emotion-5"
+        data-cy="configurationMapValue"
+      >
+        bar
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`HashMap renders with nested object hash 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   margin-top: 0;
   margin-bottom: 0;
   margin-bottom: 24px;
@@ -671,41 +682,42 @@ exports[`HashMap renders with nested object hash 1`] = `
 }
 
 <div
-  className="emotion-0"
-  data-cy="configurationMapSection"
->
-  <div
-    className="emotion-0"
+    class="emotion-0"
     data-cy="configurationMapSection"
   >
     <div
-      className="emotion-2"
-      data-cy="configurationMapHeading"
-    >
-      <h2
-        className="rmTextMargins emotion-3"
-        data-cy="headingText2"
-      >
-        foo
-      </h2>
-    </div>
-    <div
-      className="emotion-4"
-      data-cy="configurationMapRow"
+      class="emotion-0"
+      data-cy="configurationMapSection"
     >
       <div
-        className="emotion-5"
-        data-cy="configurationMapLabel"
+        class="emotion-2"
+        data-cy="configurationMapHeading"
       >
-        bar
+        <h2
+          class="rmTextMargins emotion-3"
+          data-cy="headingText2"
+        >
+          foo
+        </h2>
       </div>
       <div
-        className="emotion-6"
-        data-cy="configurationMapValue"
+        class="emotion-4"
+        data-cy="configurationMapRow"
       >
-        baz
+        <div
+          class="emotion-5"
+          data-cy="configurationMapLabel"
+        >
+          bar
+        </div>
+        <div
+          class="emotion-6"
+          data-cy="configurationMapValue"
+        >
+          baz
+        </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;

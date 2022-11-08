@@ -89,25 +89,28 @@ const Tabs = ({
   onSelect,
   direction = defaultTabDirection
 }: TabsProps) => {
-  const { tabs, tabsContent } = React.Children.toArray(children)
+  const { tabs, tabsContent } = (
+    React.Children.toArray(children) as Array<React.ReactElement<TabItemProps>>
+  )
     .filter(item => React.isValidElement<TabItemProps>(item))
     .reduce<{
-      tabs: React.ReactNodeArray;
-      tabsContent: React.ReactNodeArray;
+      tabs: React.ReactNode[];
+      tabsContent: React.ReactNode[];
     }>(
       (acc, item) => {
         const { tabs = [], tabsContent = [] } = acc;
         const { children } = item.props;
         const key = item.key ? item.key : undefined;
         const childrenWithKeys = React.Children.toArray(children).map(child =>
-          React.isValidElement<TabTitle>(child)
+          React.isValidElement<typeof TabTitle>(child)
             ? React.cloneElement(child, { key })
             : child
         );
 
         const title = childrenWithKeys.find(
           child =>
-            React.isValidElement<TabTitle>(child) && child.type === TabTitle
+            React.isValidElement<typeof TabTitle>(child) &&
+            child.type === TabTitle
         );
         const tabChildren = childrenWithKeys.filter(
           child => !(React.isValidElement(child) && child.type === TabTitle)

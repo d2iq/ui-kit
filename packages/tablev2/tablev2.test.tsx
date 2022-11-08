@@ -291,7 +291,7 @@ describe("Table v2", () => {
 
       expect(sorterFn).toHaveBeenCalledWith("asc", 1);
       const sortIcon = getByTestId("sortIcon");
-      sortIcon.click();
+      fireEvent.click(sortIcon);
       expect(sorterFn).toHaveBeenLastCalledWith("desc", -1);
     });
     it("sorts strings with Sorter.string", () => {

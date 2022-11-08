@@ -12,33 +12,33 @@ exports[`Tabs renders default 1`] = `
       role="tablist"
     >
       <li
-        aria-controls="react-tabs-1"
+        aria-controls="panel:r0:0"
         aria-disabled="false"
         aria-selected="true"
         class="react-tabs__tab react-tabs__tab--selected"
         data-rttab="true"
-        id="react-tabs-0"
+        id="tab:r0:0"
         role="tab"
         tabindex="0"
       >
         Tab 1 Name
       </li>
       <li
-        aria-controls="react-tabs-3"
+        aria-controls="panel:r0:1"
         aria-disabled="false"
         aria-selected="false"
         class="react-tabs__tab"
         data-rttab="true"
-        id="react-tabs-2"
+        id="tab:r0:1"
         role="tab"
       >
         Tab 2 Name
       </li>
     </ul>
     <div
-      aria-labelledby="react-tabs-0"
+      aria-labelledby="tab:r0:0"
       class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-      id="react-tabs-1"
+      id="panel:r0:0"
       role="tabpanel"
     >
       <div>
@@ -46,9 +46,9 @@ exports[`Tabs renders default 1`] = `
       </div>
     </div>
     <div
-      aria-labelledby="react-tabs-2"
+      aria-labelledby="tab:r0:1"
       class="react-tabs__tab-panel"
-      id="react-tabs-3"
+      id="panel:r0:1"
       role="tabpanel"
     />
   </div>
@@ -67,33 +67,33 @@ exports[`Tabs renders vertically 1`] = `
       role="tablist"
     >
       <li
-        aria-controls="react-tabs-5"
+        aria-controls="panel:r1:0"
         aria-disabled="false"
         aria-selected="true"
         class="react-tabs__tab react-tabs__tab--selected"
         data-rttab="true"
-        id="react-tabs-4"
+        id="tab:r1:0"
         role="tab"
         tabindex="0"
       >
         Tab 1 Name
       </li>
       <li
-        aria-controls="react-tabs-7"
+        aria-controls="panel:r1:1"
         aria-disabled="false"
         aria-selected="false"
         class="react-tabs__tab"
         data-rttab="true"
-        id="react-tabs-6"
+        id="tab:r1:1"
         role="tab"
       >
         Tab 2 Name
       </li>
     </ul>
     <div
-      aria-labelledby="react-tabs-4"
+      aria-labelledby="tab:r1:0"
       class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-      id="react-tabs-5"
+      id="panel:r1:0"
       role="tabpanel"
     >
       <div>
@@ -101,9 +101,9 @@ exports[`Tabs renders vertically 1`] = `
       </div>
     </div>
     <div
-      aria-labelledby="react-tabs-6"
+      aria-labelledby="tab:r1:1"
       class="react-tabs__tab-panel"
-      id="react-tabs-7"
+      id="panel:r1:1"
       role="tabpanel"
     />
   </div>

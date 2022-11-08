@@ -42,7 +42,8 @@ describe("SelectInput", () => {
           inputLabel="Atmosphere layer"
         />
       );
-      getByRole("combobox").focus();
+      fireEvent.focus(getByRole("combobox"));
+
       expect(asFragment()).toMatchSnapshot();
       unmount();
     });
@@ -96,7 +97,7 @@ describe("SelectInput", () => {
       />
     );
     expect(focusFn).not.toHaveBeenCalled();
-    getByRole("combobox").focus();
+    fireEvent.focus(getByRole("combobox"));
     expect(focusFn).toHaveBeenCalled();
   });
 
@@ -113,7 +114,7 @@ describe("SelectInput", () => {
     const selectElement = getByRole("combobox") as HTMLSelectElement;
 
     expect(blurFn).not.toHaveBeenCalled();
-    selectElement.focus();
+    fireEvent.focus(selectElement);
     expect(blurFn).not.toHaveBeenCalled();
     fireEvent.blur(selectElement);
     expect(blurFn).toHaveBeenCalled();

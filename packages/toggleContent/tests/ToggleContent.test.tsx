@@ -1,6 +1,6 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 
 import { ToggleContent } from "..";
 
@@ -32,7 +32,7 @@ describe("ToggleContent", () => {
     const toggleElement = getByTestId("toggleContent");
 
     expect(toggleElement).toHaveTextContent("Hello");
-    toggleElement.click();
+    fireEvent.click(toggleElement);
     expect(toggleElement).toHaveTextContent("Bye");
   });
 
@@ -43,7 +43,7 @@ describe("ToggleContent", () => {
     const toggleElement = getByTestId("toggleContent");
 
     expect(toggleElement).toHaveTextContent("primary");
-    toggleElement.click();
+    fireEvent.click(toggleElement);
     expect(toggleElement).toHaveTextContent("secondary");
   });
 });

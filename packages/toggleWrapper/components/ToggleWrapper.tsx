@@ -30,7 +30,8 @@ export interface ToggleWrapperProps extends React.HTMLProps<HTMLInputElement> {
   ["data-cy"]?: string;
 }
 
-interface LocalToggleWrapperProps extends ToggleWrapperProps {
+interface ToggleWrapperWithRenderProps
+  extends Omit<ToggleWrapperProps, "children"> {
   children: (renderProps: RenderProps) => React.ReactNode;
 }
 
@@ -44,7 +45,7 @@ const ToggleWrapper = ({
   type = "checkbox",
   value = "",
   ...other
-}: LocalToggleWrapperProps) => {
+}: ToggleWrapperWithRenderProps) => {
   const [hasFocus, setHasFocus] = React.useState<boolean>(false);
 
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
