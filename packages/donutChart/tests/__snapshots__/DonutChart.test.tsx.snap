@@ -1,56 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DonutChart renders default 1`] = `
-<svg
-  data-cy="donutChart"
-  viewBox="0 0 33.33098861837907 33.33098861837907"
->
-  <circle
-    cx={16.665494309189533}
-    cy={16.665494309189533}
-    fill="transparent"
-    r={15.915494309189533}
-    strokeWidth={1.5}
-    style={
-      {
-        "stroke": "rgba(218,221,226,0.65)",
-      }
-    }
-  />
-  <circle
-    cx={16.665494309189533}
-    cy={16.665494309189533}
-    fill="none"
-    r={15.915494309189533}
-    strokeDasharray="10 90"
-    strokeDashoffset={125}
-    strokeWidth={1.5}
-    style={
-      {
-        "stroke": "#F00",
-      }
-    }
-  />
-  <text
-    style={
-      {
-        "textAnchor": "middle",
-      }
-    }
-    x={16.665494309189533}
-    y={16.665494309189533}
+<DocumentFragment>
+  <svg
+    data-cy="donutChart"
+    viewBox="0 0 33.33098861837907 33.33098861837907"
   >
-    <tspan
-      data-cy="donutChart-label"
-      dominantBaseline="central"
-      fontSize={6}
+    <circle
+      cx="16.665494309189533"
+      cy="16.665494309189533"
+      fill="transparent"
+      r="15.915494309189533"
+      stroke-width="1.5"
+      style="stroke: rgba(218,221,226,0.65);"
     />
-  </text>
-</svg>
+    <circle
+      cx="16.665494309189533"
+      cy="16.665494309189533"
+      fill="none"
+      r="15.915494309189533"
+      stroke-dasharray="10 90"
+      stroke-dashoffset="125"
+      stroke-width="1.5"
+      style="stroke: #F00;"
+    />
+    <text
+      style="text-anchor: middle;"
+      x="16.665494309189533"
+      y="16.665494309189533"
+    >
+      <tspan
+        data-cy="donutChart-label"
+        dominant-baseline="central"
+        font-size="6"
+      />
+    </text>
+  </svg>
+</DocumentFragment>
 `;
 
 exports[`DonutChart renders with text and label 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   color: var(--themeTextColorSecondary, #76797E);
   fill: var(--themeTextColorSecondary, #76797E);
 }
@@ -62,60 +53,49 @@ exports[`DonutChart renders with text and label 1`] = `
 }
 
 <svg
-  data-cy="donutChart"
-  viewBox="0 0 33.33098861837907 33.33098861837907"
->
-  <circle
-    cx={16.665494309189533}
-    cy={16.665494309189533}
-    fill="transparent"
-    r={15.915494309189533}
-    strokeWidth={1.5}
-    style={
-      {
-        "stroke": "rgba(218,221,226,0.65)",
-      }
-    }
-  />
-  <circle
-    cx={16.665494309189533}
-    cy={16.665494309189533}
-    fill="none"
-    r={15.915494309189533}
-    strokeDasharray="10 90"
-    strokeDashoffset={125}
-    strokeWidth={1.5}
-    style={
-      {
-        "stroke": "#F00",
-      }
-    }
-  />
-  <text
-    style={
-      {
-        "textAnchor": "middle",
-      }
-    }
-    x={16.665494309189533}
-    y={16.665494309189533}
+    data-cy="donutChart"
+    viewBox="0 0 33.33098861837907 33.33098861837907"
   >
-    <tspan
-      data-cy="donutChart-label"
-      dominantBaseline="unset"
-      fontSize={6}
+    <circle
+      cx="16.665494309189533"
+      cy="16.665494309189533"
+      fill="transparent"
+      r="15.915494309189533"
+      stroke-width="1.5"
+      style="stroke: rgba(218,221,226,0.65);"
+    />
+    <circle
+      cx="16.665494309189533"
+      cy="16.665494309189533"
+      fill="none"
+      r="15.915494309189533"
+      stroke-dasharray="10 90"
+      stroke-dashoffset="125"
+      stroke-width="1.5"
+      style="stroke: #F00;"
+    />
+    <text
+      style="text-anchor: middle;"
+      x="16.665494309189533"
+      y="16.665494309189533"
     >
-      10%
-    </tspan>
-    <tspan
-      className="emotion-0"
-      data-cy="donutChart-text"
-      fontSize={3}
-      x={16.665494309189533}
-      y={20.865494309189533}
-    >
-      1 of 10
-    </tspan>
-  </text>
-</svg>
+      <tspan
+        data-cy="donutChart-label"
+        dominant-baseline="unset"
+        font-size="6"
+      >
+        10%
+      </tspan>
+      <tspan
+        class="emotion-0"
+        data-cy="donutChart-text"
+        font-size="3"
+        x="16.665494309189533"
+        y="20.865494309189533"
+      >
+        1 of 10
+      </tspan>
+    </text>
+  </svg>
+</DocumentFragment>
 `;

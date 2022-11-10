@@ -1,6 +1,5 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
-import { create } from "react-test-renderer";
 import { Typeahead, TextInput } from "../../index";
 import { render, fireEvent } from "@testing-library/react";
 
@@ -14,7 +13,7 @@ const items = [
 
 describe("Typeahead", () => {
   it("renders", () => {
-    const component = create(
+    const { asFragment } = render(
       <Typeahead
         items={items}
         textField={
@@ -27,11 +26,11 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders a menu with a max height", () => {
-    const component = create(
+    const { asFragment } = render(
       <Typeahead
         items={items}
         menuMaxHeight={100}
@@ -45,7 +44,7 @@ describe("Typeahead", () => {
       />
     );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("opens the menu on focus", () => {
@@ -99,9 +98,7 @@ describe("Typeahead", () => {
     });
 
     expect(queryByTestId("typeahead-dropdown")).toBeNull();
-
-    textInputElement.click();
-
+    fireEvent.click(textInputElement);
     expect(queryByTestId("typeahead-dropdown")).toBeTruthy();
   });
 
@@ -120,8 +117,7 @@ describe("Typeahead", () => {
       />
     );
 
-    getByTestId("textInput-input").click();
-
+    fireEvent.click(getByTestId("textInput-input"));
     expect(getByTestId("emptyState")).toBeTruthy();
   });
 
@@ -140,8 +136,7 @@ describe("Typeahead", () => {
       />
     );
 
-    getByTestId("textInput-input").click();
-
+    fireEvent.click(getByTestId("textInput-input"));
     expect(queryByTestId("emptyState")).toBeFalsy();
   });
 
@@ -244,15 +239,12 @@ describe("Typeahead", () => {
     const textInputElement = getByTestId("textInput-input");
 
     expect(textInputElement).toHaveValue("");
-
-    textInputElement.focus();
-
+    fireEvent.focus(textInputElement);
     expect(onSelectFn).not.toHaveBeenCalled();
 
     fireEvent.keyDown(textInputElement, {
       key: "ArrowDown"
     });
-
     fireEvent.keyDown(textInputElement, {
       key: "Enter"
     });
@@ -425,11 +417,8 @@ describe("Typeahead", () => {
     const textInputElement = getByTestId("textInput-input");
 
     expect(textInputElement).toHaveValue("");
-
     expect(onClickFn).not.toHaveBeenCalled();
-
-    textInputElement.click();
-
+    fireEvent.click(textInputElement);
     expect(onClickFn).toHaveBeenCalled();
   });
 

@@ -56,13 +56,9 @@ describe("Popover", () => {
     const triggerElement = getByTestId(triggerId);
 
     expect(triggerElement.getAttribute("aria-expanded")).toBe("false");
-
-    triggerElement.click();
-
+    fireEvent.click(triggerElement);
     expect(triggerElement.getAttribute("aria-expanded")).toBe("true");
-
-    triggerElement.click();
-
+    fireEvent.click(triggerElement);
     expect(triggerElement.getAttribute("aria-expanded")).toBe("false");
   });
   it("opens the dropdown menu when focusing and pressing the spacebar, and closes it on blur", () => {
@@ -117,7 +113,7 @@ describe("Popover", () => {
     const triggerElement = getByTestId(triggerId);
 
     expect(triggerElement.getAttribute("aria-expanded")).toBe("false");
-    triggerElement.click();
+    fireEvent.click(triggerElement);
     expect(triggerElement.getAttribute("aria-expanded")).toBe("true");
     fireEvent.keyDown(triggerElement, {
       key: "Escape"

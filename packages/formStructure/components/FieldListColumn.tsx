@@ -46,7 +46,7 @@ export const FieldListColumn: <
   T = string,
   E = React.FormEvent<HTMLInputElement>
 >(
-  props: FieldListColumnProps<T, E> & FieldListColumnWidthProps
+  props
 ) => React.ReactElement<
   FieldListColumnProps<T, E> & FieldListColumnWidthProps
 > = () => <React.Fragment />;

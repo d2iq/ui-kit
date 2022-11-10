@@ -27,7 +27,7 @@ const AccordionItemTitleInteractive = ({
   "data-cy": dataCy,
   disabled,
   headingLevel
-}: Exclude<AccordionItemTitleProps, "children"> & {
+}: Omit<AccordionItemTitleProps, "children"> & {
   children: (renderProps: RenderProps) => React.ReactNode;
 }) => {
   const HeadingTag: keyof React.ReactHTML = `h${headingLevel}` as

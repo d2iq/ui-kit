@@ -1,6 +1,6 @@
 import React from "react";
 import { createSerializer } from "@emotion/jest";
-import { create } from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 import { DonutChart } from "../";
 
@@ -8,7 +8,7 @@ expect.addSnapshotSerializer(createSerializer());
 
 describe("DonutChart", () => {
   it("renders default", () => {
-    const component = create(
+    const { asFragment } = render(
       <DonutChart
         data={[
           {
@@ -19,10 +19,10 @@ describe("DonutChart", () => {
       />
     );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
   it("renders with text and label", () => {
-    const component = create(
+    const { asFragment } = render(
       <DonutChart
         data={[
           {
@@ -35,6 +35,6 @@ describe("DonutChart", () => {
       />
     );
 
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

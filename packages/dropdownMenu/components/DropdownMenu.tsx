@@ -89,13 +89,15 @@ const DropdownMenu = (props: DropdownMenuProps) => {
         React.ReactElement<DropdownSectionProps>
       >
     ).reduce<{
-      sections: React.ReactNodeArray;
+      sections: React.ReactNode[];
       menuItemIndex: number;
     }>(
       (acc, item, sectionIndex) => {
         const { sections = [] } = acc;
         const { children } = item.props;
-        const menuItems = React.Children.toArray(children);
+        const menuItems = React.Children.toArray(
+          children
+        ) as React.ReactElement[];
         const childrenWithKeys = menuItems.map((child, i) => {
           acc.menuItemIndex++;
 

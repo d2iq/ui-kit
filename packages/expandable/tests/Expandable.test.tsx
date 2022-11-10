@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createSerializer } from "@emotion/jest";
 
@@ -21,12 +21,12 @@ describe("Sidebar", () => {
     const { getByText, queryByText } = render(
       <Expandable label="Label">Content</Expandable>
     );
+    const labelEl = getByText("Label");
 
     expect(queryByText("Content")).not.toBeVisible();
-    const labelEl = getByText("Label");
-    labelEl.click();
+    fireEvent.click(labelEl);
     expect(getByText("Content")).toBeInTheDocument();
-    labelEl.click();
+    fireEvent.click(labelEl);
     expect(queryByText("Content")).not.toBeVisible();
   });
 
@@ -50,15 +50,12 @@ describe("Sidebar", () => {
         Content
       </Expandable>
     );
-    expect(onChange).not.toHaveBeenCalled();
-
     const labelEl = getByText("Label");
-    labelEl.click();
 
+    expect(onChange).not.toHaveBeenCalled();
+    fireEvent.click(labelEl);
     expect(onChange).toHaveBeenCalledWith(false);
-
-    labelEl.click();
-
+    fireEvent.click(labelEl);
     expect(onChange).toHaveBeenLastCalledWith(true);
   });
 

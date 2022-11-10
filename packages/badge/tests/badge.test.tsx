@@ -1,6 +1,6 @@
 import React from "react";
+import { render } from "@testing-library/react";
 import { Badge } from "../";
-import renderer from "react-test-renderer";
 
 const StringComponent = (): JSX.Element => {
   return <span>string</span>;
@@ -8,48 +8,46 @@ const StringComponent = (): JSX.Element => {
 
 describe("Badge", () => {
   it("default", () => {
-    expect(renderer.create(<Badge>default</Badge>).toJSON()).toMatchSnapshot();
+    const { asFragment } = render(<Badge>default</Badge>);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("success", () => {
-    expect(
-      renderer.create(<Badge appearance="success">success</Badge>).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(<Badge appearance="success">success</Badge>);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("primary", () => {
-    expect(
-      renderer.create(<Badge appearance="primary">primary</Badge>).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(<Badge appearance="primary">primary</Badge>);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("danger", () => {
-    expect(
-      renderer.create(<Badge appearance="danger">danger</Badge>).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(<Badge appearance="danger">danger</Badge>);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("warning", () => {
-    expect(
-      renderer.create(<Badge appearance="warning">warning</Badge>).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(<Badge appearance="warning">warning</Badge>);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("outline", () => {
-    expect(
-      renderer.create(<Badge appearance="outline">outline</Badge>).toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(<Badge appearance="outline">outline</Badge>);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("accept jsx as children", () => {
-    expect(
-      renderer
-        .create(
-          <Badge>
-            <StringComponent />
-          </Badge>
-        )
-        .toJSON()
-    ).toMatchSnapshot();
+    const { asFragment } = render(
+      <Badge>
+        <StringComponent />
+      </Badge>
+    );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });
