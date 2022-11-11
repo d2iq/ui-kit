@@ -18,5 +18,8 @@ module.exports = {
       }
     },
     "@storybook/addon-a11y"
-  ]
+  ],
+  features: {
+    previewMdx2: true
+  }
 };
