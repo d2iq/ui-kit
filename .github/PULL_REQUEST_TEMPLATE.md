@@ -31,7 +31,7 @@ Would a visual be helpful for reviewers? e.g. "Before" and "After", visual chang
 
 ## Checklist
 
-- [ ] If any new components were added, there are exported from `packages/index.ts`
-- [ ] This PR is associated with a JIRA and mentions in the commit message footer ("Closes …")
+- [ ] This PR is associated with a JIRA and it is mentioned in the commit message footer ("Closes …")
+- [ ] Significant changes have been tested downstream to avoid breaking changes
 - [ ] This PR contains breaking changes and states in the commit message body ("BREAKING CHANGE: …")
 - [ ] I have reviewed the changes and provided detail to the sections above

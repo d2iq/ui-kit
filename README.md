@@ -125,14 +125,22 @@ After your PR is merged into `main`, `semantic-release` will automatically cut a
 
 ## Pre-release Testing in a Host Project
 
-Build:
+### Build
+
+The first step for downstream pre-release testing requires updating the `dist` directory with the changes.
+
+From ui-kit, run:
 
 `npm run dist`
 
-To copy UI Kit into an existing project, run the following:
+### Link
 
-`cp -r dist/ ./<project>/node_modules/@dcos/ui-kit/`
+Use [npm-link](https://docs.npmjs.com/cli/v8/commands/npm-link) to create a symlink.
 
-Replace `<project>` with the associated host project name and folder structure.
+Run the following in the host project:
 
-After running the copy command above, restart the host application.
+`npm link @dcos/ui-kit`
+
+After running the command above, restart the host application.
+
+Note: Do not run `npm install` again or you will override changes.
