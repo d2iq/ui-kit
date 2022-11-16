@@ -159,7 +159,7 @@ export const rowScrollShadow = css`
 `;
 
 export const cellFlexWrapper = css`
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   max-width: 100%;
