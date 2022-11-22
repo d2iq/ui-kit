@@ -12,7 +12,7 @@ module.exports = {
       setupFilesAfterEnv: ["<rootDir>/testHelper/setupTests.ts"],
       testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
       transform: {
-        "^.+\\.tsx?$": "ts-jest",
+        "^.+\\.tsx?$": ["@swc/jest"],
         "^.+\\.mdx$": "@storybook/addon-docs/jest-transform-mdx"
       },
       // Below is required for Jest + Webpack handling static assets: https://jestjs.io/docs/webpack
