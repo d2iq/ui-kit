@@ -38,7 +38,8 @@ const Template: Story<TabsProps> = ({ direction, ...args }: TabsProps) => {
     >
       <TabItem>
         <TabTitle>Tab 1</TabTitle>
-        Tab content.
+        <div>Tab content - Section 1.</div>
+        <div>Tab content - Section 2.</div>
       </TabItem>
       <TabItem>
         <TabTitle>Tab 2</TabTitle>
