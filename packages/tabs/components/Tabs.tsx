@@ -101,10 +101,11 @@ const Tabs = ({
         const { tabs = [], tabsContent = [] } = acc;
         const { children } = item.props;
         const key = item.key ? item.key : undefined;
-        const childrenWithKeys = React.Children.toArray(children).map(child =>
-          React.isValidElement<typeof TabTitle>(child)
-            ? React.cloneElement(child, { key })
-            : child
+        const childrenWithKeys = React.Children.toArray(children).map(
+          (child, index) =>
+            React.isValidElement<typeof TabTitle>(child)
+              ? React.cloneElement(child, { key: `${key}-${index}` })
+              : child
         );
 
         const title = childrenWithKeys.find(
