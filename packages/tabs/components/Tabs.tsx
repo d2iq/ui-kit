@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Tabs as ReactTabs, TabList, TabPanel } from "react-tabs";
 import { injectGlobal, cx } from "@emotion/css";
-import nextId from "react-id-generator";
+import uuid from "uuid";
 import { TabItemProps } from "./TabItem";
 import { TabTitle } from "..";
 import {
@@ -95,7 +95,7 @@ const Tabs = ({
           const childrenWithKeys = React.Children.toArray(children).map(
             child => {
               return React.isValidElement<typeof TabTitle>(child)
-                ? React.cloneElement(child, { key: nextId("tab") })
+                ? React.cloneElement(child, { key: `${key}-${uuid()}` })
                 : child;
             }
           );
