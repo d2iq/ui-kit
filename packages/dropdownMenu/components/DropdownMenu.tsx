@@ -21,13 +21,13 @@ export interface DropdownMenuProps {
    */
   initialIsOpen?: boolean;
   /**
-   * Maximum height the menu can grow to
+   * Maximum height the menu can grow to. Can accept any number value and it will add `px` or any valid maxHeight value including vh, ems, or rems.
    */
-  menuMaxHeight?: number;
+  menuMaxHeight?: React.CSSProperties["maxHeight"];
   /**
-   * Maximum width the menu can grow to
+   * Maximum width the menu can grow to. Can accept any number value and it will add `px` or any valid maxWidth value including vw, ems, or rems.
    */
-  menuMaxWidth?: number;
+  menuMaxWidth?: React.CSSProperties["maxWidth"];
   /**
    * callback for when a menu item is clicked
    */
@@ -53,6 +53,7 @@ export interface DropdownMenuProps {
    * Whether the dropdown node should be portalled to document.body, or open in it's parent DOM node
    */
   disablePortal?: boolean;
+  className?: string;
 }
 
 const defaultItemToString = (
