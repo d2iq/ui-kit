@@ -17,7 +17,7 @@ export const menuList = css`
 `;
 
 // Hides unnecessary horizontal scrollbars on Linux and Microsoft
-export const hideHoriztonalScroll = css`
+export const hideHorizontalScroll = css`
   overflow-x: hidden;
 `;
 
