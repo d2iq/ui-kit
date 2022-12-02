@@ -7,7 +7,7 @@ import {
   waitForElementToBeRemoved
 } from "@testing-library/react";
 import { Toaster, Toast } from "../";
-import { DELAY_TIME } from "../components/Toaster";
+import { DEFAULT_DELAY_TIME } from "../components/Toaster";
 import userEvent from "@testing-library/user-event";
 
 describe("Toaster", () => {
@@ -53,7 +53,7 @@ describe("Toaster", () => {
     expect(dismissCallback).toHaveBeenCalledTimes(1);
   });
 
-  it("dismisses autodismiss toasts after specified time", async () => {
+  it("dismisses autodismiss toasts after a default time", async () => {
     jest.useFakeTimers();
     const title = "I Am Toast";
     const { getByText, queryByText } = render(
@@ -64,8 +64,36 @@ describe("Toaster", () => {
 
     expect(getByText(title)).toBeDefined();
 
+    await waitFor(() => {
+      expect(queryByText(title)).toBeInTheDocument();
+    });
+
     act(() => {
-      jest.advanceTimersByTime(DELAY_TIME);
+      jest.advanceTimersByTime(DEFAULT_DELAY_TIME);
+    });
+
+    await waitFor(() => {
+      expect(queryByText(title)).not.toBeInTheDocument();
+    });
+  });
+
+  it("dismisses autodismiss toasts after specified time", async () => {
+    jest.useFakeTimers();
+    const title = "I Am Toast";
+    const { getByText, queryByText } = render(
+      <Toaster dismissTime={8000}>
+        <Toast id={0} autodismiss title={title} key={0} />
+      </Toaster>
+    );
+
+    expect(getByText(title)).toBeDefined();
+
+    await waitFor(() => {
+      expect(queryByText(title)).toBeInTheDocument();
+    });
+
+    act(() => {
+      jest.advanceTimersByTime(8000);
     });
 
     await waitFor(() => {
@@ -87,7 +115,7 @@ describe("Toaster", () => {
     fireEvent.mouseEnter(toasterList);
 
     act(() => {
-      jest.advanceTimersByTime(DELAY_TIME);
+      jest.advanceTimersByTime(DEFAULT_DELAY_TIME);
     });
 
     // is never removed because timeout was cleared
@@ -98,7 +126,7 @@ describe("Toaster", () => {
     fireEvent.mouseLeave(toasterList);
 
     act(() => {
-      jest.advanceTimersByTime(DELAY_TIME);
+      jest.advanceTimersByTime(DEFAULT_DELAY_TIME);
     });
 
     await waitFor(() => {
@@ -123,7 +151,7 @@ describe("Toaster", () => {
     expect(dismissCallback).not.toHaveBeenCalled();
 
     act(() => {
-      jest.advanceTimersByTime(DELAY_TIME);
+      jest.advanceTimersByTime(DEFAULT_DELAY_TIME);
     });
 
     expect(dismissCallback).toHaveBeenCalledTimes(1);

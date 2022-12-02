@@ -5,17 +5,21 @@ import { ToastProps } from "./Toast";
 import { toaster, preTransitionStyle, transitionStyles } from "../style";
 import { margin, marginAt, listReset } from "../../shared/styles/styleUtils";
 
-export const DELAY_TIME = 3000;
+export const DEFAULT_DELAY_TIME = 3000;
 const MARGINAL_DELAY = 1000;
 const animationDuration = 300;
 
 type Toast = React.ReactElement<ToastProps>;
 
 interface ToasterProps {
+  dismissTime?: number;
   children?: Toast | Toast[];
 }
 
-const Toaster = ({ children }: ToasterProps) => {
+const Toaster = ({
+  dismissTime = DEFAULT_DELAY_TIME,
+  children
+}: ToasterProps) => {
   const timeouts = React.useRef<number[]>([]);
 
   const [toasts, setToasts] = React.useState<Toast[]>([]);
@@ -35,7 +39,7 @@ const Toaster = ({ children }: ToasterProps) => {
         timeouts.current.push(
           window.setTimeout(() => {
             dismissToast(toast);
-          }, DELAY_TIME + MARGINAL_DELAY * index)
+          }, dismissTime + MARGINAL_DELAY * index)
         );
       }
     });

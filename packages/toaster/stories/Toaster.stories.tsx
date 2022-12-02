@@ -106,6 +106,41 @@ export const AutoDismiss = () => {
   );
 };
 
+export const CustomDismissTimeAutoDismiss = () => {
+  const [toasts, setToasts] = React.useState<number[]>([]);
+
+  const removeToast = (id: number) => {
+    setToasts(toasts => toasts.filter(toast => toast !== id));
+  };
+
+  const handleToastAdd = () => {
+    const newToastId = addedToastId++;
+    setToasts(toasts => [...toasts, newToastId]);
+  };
+
+  return (
+    <div>
+      <Toaster dismissTime={5000}>
+        {toasts.map(toastId => {
+          const handleDismiss = () => {
+            removeToast(toastId);
+          };
+          return (
+            <Toast
+              autodismiss
+              id={`toast-${toastId}`}
+              key={toastId}
+              title={`New message ${toastId} disappearing in 5 seconds`}
+              onDismiss={handleDismiss}
+            />
+          );
+        })}
+      </Toaster>
+      <button onClick={handleToastAdd}>Make me toast</button>
+    </div>
+  );
+};
+
 export const WithDismissCallback = () => (
   <Toaster>
     {[
