@@ -42,7 +42,7 @@ export const WelcomeCards = () => {
             </p>
             <Link
               openInNewTab={true}
-              url="https://dcos-labs.github.io/ui-kit/?path=/story/designtokens"
+              url="https://d2iq.github.io/ui-kit/?path=/story/designtokens"
             >
               Design Tokens
             </Link>
@@ -61,7 +61,7 @@ export const WelcomeCards = () => {
             </p>
             <Link
               openInNewTab={true}
-              url="https://github.com/dcos-labs/ui-kit/tree/main/design-guidelines"
+              url="https://github.com/d2iq/ui-kit/tree/main/design-guidelines"
             >
               UI Standards and Guidelines
             </Link>
