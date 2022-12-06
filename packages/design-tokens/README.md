@@ -88,7 +88,7 @@ The LESS distribution uses the configuration defined at: `packages/design-tokens
 
 `npm run build:design-token-docs`
 
-Uses Amazon Style Dictionary to generate markdown files in [design-guidelines/design-tokens](https://github.com/dcos-labs/ui-kit/tree/main/design-guidelines/design-tokens) to document design tokens.
+Uses Amazon Style Dictionary to generate markdown files in [design-guidelines/design-tokens](https://github.com/d2iq/ui-kit/tree/main/design-guidelines/design-tokens) to document design tokens.
 
 When design tokens are updated, this script must be run manually to update the documentation.
 

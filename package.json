@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dcos-labs/ui-kit"
+    "url": "https://github.com/d2iq/ui-kit"
   },
   "main": "dist/packages/index",
   "config": {

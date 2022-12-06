@@ -1,4 +1,4 @@
-![UI Kit Space Banner](https://raw.githubusercontent.com/dcos-labs/ui-kit/main/.storybook/static/welcome-banner.svg)
+![UI Kit Space Banner](https://raw.githubusercontent.com/d2iq/ui-kit/main/.storybook/static/welcome-banner.svg)
 
 # D2iQ UI Kit
 
