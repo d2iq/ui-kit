@@ -2,7 +2,7 @@
 
 # D2iQ UI Kit
 
-UI Kit is a collaboration between D2iQ's product design team and engineering team. UI Kit provides tools for engineers to build applications that follow the standards and guidelines of the D2DS Design System.
+UI Kit is a collaboration between D2iQ's product design team and engineering team. UI Kit provides tools for engineers to build applications that follow the standards and guidelines of the Design System.
 
 - [Components](/packages)
 - [Design Tokens](/packages/design-tokens)
