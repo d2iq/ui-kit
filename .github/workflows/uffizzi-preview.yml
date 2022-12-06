@@ -6,6 +6,8 @@ on:
       - "Build PR Image"
     types:
       - completed
+    branches-ignore:
+      - "main"
 
 
 jobs:
