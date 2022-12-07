@@ -2,8 +2,10 @@ import styled from "@emotion/styled";
 import {
   purpleDarken5,
   spaceXxl,
+  spaceXl,
   yellowLighten4,
-  yellowLighten5
+  yellowLighten5,
+  breakpointSmall
 } from "../../packages/design-tokens/build/js/designTokens";
 
 export const ImgWrapper = styled.div`
@@ -19,6 +21,11 @@ export const BannerContainer = styled.div`
 export const TextWrapper = styled.div`
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 ${spaceXxl};
+
+  @media (min-width: ${breakpointSmall}) {
+    padding: 0 ${spaceXl};
+  }
 `;
 
 export const GradientContainer = styled.div`

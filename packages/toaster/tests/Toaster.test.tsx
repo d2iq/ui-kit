@@ -68,7 +68,7 @@ describe("Toaster", () => {
       expect(queryByText(title)).toBeInTheDocument();
     });
 
-    act(() => {
+    void act(() => {
       jest.advanceTimersByTime(DEFAULT_DELAY_TIME);
     });
 
@@ -92,7 +92,7 @@ describe("Toaster", () => {
       expect(queryByText(title)).toBeInTheDocument();
     });
 
-    act(() => {
+    void act(() => {
       jest.advanceTimersByTime(8000);
     });
 
@@ -114,7 +114,7 @@ describe("Toaster", () => {
     // for some reason using RTL user event and jest timers didn't work
     fireEvent.mouseEnter(toasterList);
 
-    act(() => {
+    void act(() => {
       jest.advanceTimersByTime(DEFAULT_DELAY_TIME);
     });
 
@@ -125,7 +125,7 @@ describe("Toaster", () => {
 
     fireEvent.mouseLeave(toasterList);
 
-    act(() => {
+    void act(() => {
       jest.advanceTimersByTime(DEFAULT_DELAY_TIME);
     });
 
@@ -150,7 +150,7 @@ describe("Toaster", () => {
 
     expect(dismissCallback).not.toHaveBeenCalled();
 
-    act(() => {
+    void act(() => {
       jest.advanceTimersByTime(DEFAULT_DELAY_TIME);
     });
 

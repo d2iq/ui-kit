@@ -97,7 +97,7 @@ Forms are designed with a consistent hierarchy and structure to make it easier f
 
 Every form will have at least one section, but form sections should always be used when a complex form can be broken down into distinct sections of related fields.
 
-For more information about the parts that make up a form, see the Storybook documentation for each component under the ["Form structure" section](https://dcos-labs.github.io/ui-kit/?path=/story/forms-form-structure--kitchen-sink-example-form-layout).
+For more information about the parts that make up a form, see the Storybook documentation for each component under the ["Form structure" section](https://d2iq.github.io/ui-kit/?path=/story/forms-form-structure--kitchen-sink-example-form-layout).
 
 ### Field order
 
@@ -107,7 +107,7 @@ Order fields by their relative level of importance. The inputs that are most cri
 
 Fields that are closely related should be visually grouped together. For example: a text input for a key would be grouped with and a text input for the corresponding value.
 
-For more information on grouped fields, see the Storybook documentation for the [FieldList](https://dcos-labs.github.io/ui-kit/?path=/story/forms-form-structure-grouped-fields-fieldlist--interactive-example) and [FieldGroup](https://dcos-labs.github.io/ui-kit/?path=/story/forms-form-structure-grouped-fields-fieldgroup--default) components.
+For more information on grouped fields, see the Storybook documentation for the [FieldList](https://d2iq.github.io/ui-kit/?path=/story/forms-form-structure-grouped-fields-fieldlist--interactive-example) and [FieldGroup](https://d2iq.github.io/ui-kit/?path=/story/forms-form-structure-grouped-fields-fieldgroup--default) components.
 
 ### Form actions
 
@@ -139,7 +139,7 @@ A progressive disclosure pattern is also useful when the value of one field will
 
 Use text inputs when the field value is expected to be free-form text, and we can't provide a set of possible values for a user to choose from. For example: setting a cluster's display name.
 
-For more detailed information on text inputs, see the Storybook documentation for the [TextInput](https://dcos-labs.github.io/ui-kit/?path=/story/forms-textinput--default) and [Textarea](https://dcos-labs.github.io/ui-kit/?path=/story/forms-textarea--default) components.
+For more detailed information on text inputs, see the Storybook documentation for the [TextInput](https://d2iq.github.io/ui-kit/?path=/story/forms-textinput--default) and [Textarea](https://d2iq.github.io/ui-kit/?path=/story/forms-textarea--default) components.
 
 ### Choice inputs
 
@@ -147,7 +147,7 @@ Use a choice input when a field has a known set of possible values. For example:
 
 Some examples of choice inputs include: typeahead dropdowns, `<select>` dropdowns, checkboxes, file upload fields, and segmented controls.
 
-For more detailed information on choice inputs, see the respective Storybook documentation for the respective choice input components (e.g.: [CheckboxInput](https://dcos-labs.github.io/ui-kit/?path=/story/forms-checkboxinput--default), [SegmentedControl](https://dcos-labs.github.io/ui-kit/?path=/story/forms-segmentedcontrol--default), [SelectInput](https://dcos-labs.github.io/ui-kit/?path=/story/forms-selectinput--default), [ToggleBox](https://dcos-labs.github.io/ui-kit/?path=/story/forms-togglebox--default), etc)
+For more detailed information on choice inputs, see the respective Storybook documentation for the respective choice input components (e.g.: [CheckboxInput](https://d2iq.github.io/ui-kit/?path=/story/forms-checkboxinput--default), [SegmentedControl](https://d2iq.github.io/ui-kit/?path=/story/forms-segmentedcontrol--default), [SelectInput](https://d2iq.github.io/ui-kit/?path=/story/forms-selectinput--default), [ToggleBox](https://d2iq.github.io/ui-kit/?path=/story/forms-togglebox--default), etc)
 
 ## Field parts
 
