@@ -9,7 +9,6 @@ on:
     branches-ignore:
       - "main"
 
-
 jobs:
   cache-compose-file:
     name: Cache Compose File
@@ -18,7 +17,7 @@ jobs:
       compose-file-cache-key: ${{ env.COMPOSE_FILE_HASH }}
       pr-number: ${{ env.PR_NUMBER }}
     steps:
-      - name: 'Download artifacts'
+      - name: "Download artifacts"
         # Fetch output (zip archive) from the workflow run that triggered this workflow.
         uses: actions/github-script@v6
         with:
@@ -39,7 +38,7 @@ jobs:
             });
             let fs = require('fs');
             fs.writeFileSync(`${process.env.GITHUB_WORKSPACE}/preview-spec.zip`, Buffer.from(download.data));
-      - name: 'Unzip artifact'
+      - name: "Unzip artifact"
         run: unzip preview-spec.zip
       - name: Read Event into ENV
         run: |
@@ -72,7 +71,7 @@ jobs:
     name: Use Remote Workflow to Preview on Uffizzi
     needs:
       - cache-compose-file
-    uses: UffizziCloud/preview-action/.github/workflows/reusable.yaml@v2.6.1
+    uses: UffizziCloud/preview-action/.github/workflows/reusable.yaml@v2
     with:
       # If this workflow was triggered by a PR close event, cache-key will be an empty string
       # and this reusable workflow will delete the preview deployment.
