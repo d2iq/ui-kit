@@ -1,9 +1,11 @@
 import * as React from "react";
 import { action } from "@storybook/addon-actions";
+import { ComponentMeta, Story } from "@storybook/react";
 import { Toaster, Toast } from "..";
-import { ToastProps } from "../components/Toast";
 import { fontSizes } from "../../shared/styles/typography";
 import { purple } from "../../design-tokens/build/js/designTokens";
+import { ToastProps } from "../components/Toast";
+import { toasterAppearance } from "../../storybookHelpers/controlConstants";
 
 let addedToastId = 1;
 const toastTitle = "I have a message for you";
@@ -20,56 +22,48 @@ const fakeButtonStyles = {
 
 export default {
   title: "Feedback/Toaster",
-  component: Toaster
-};
+  component: Toast,
+  subcomponents: { Toaster },
+  argTypes: {
+    appearance: {
+      control: { type: "select" },
+      options: toasterAppearance
+    }
+  },
+  decorators: [
+    Story => (
+      <Toaster>
+        <Story />
+      </Toaster>
+    )
+  ]
+} as ComponentMeta<typeof Toast>;
 
-export const Default = () => (
-  <Toaster>{[<Toast title={toastTitle} key={0} id="default" />]}</Toaster>
+const Template: Story<ToastProps> = args => (
+  <Toast {...args} title={toastTitle} key={0} id="default" />
 );
 
-export const Danger = () => (
-  <Toaster>
-    {[<Toast title={toastTitle} key={0} id="danger" appearance="danger" />]}
-  </Toaster>
-);
+export const Default = Template.bind({});
+Default.args = { appearance: "default" };
 
-export const Success = () => (
-  <Toaster>
-    {[<Toast title={toastTitle} key={0} id="success" appearance="success" />]}
-  </Toaster>
+export const Description = args => (
+  <Toast
+    {...args}
+    title={toastTitle}
+    description="And this is a short description to provide more info about the message"
+    key={0}
+    id="description"
+  />
 );
+Description.args = { appearance: "default" };
 
-export const Warning = () => (
-  <Toaster>
-    {[<Toast title={toastTitle} key={0} id="warning" appearance="warning" />]}
-  </Toaster>
+export const MultiToast = args => (
+  <>
+    <Toast {...args} title={toastTitle} key={0} id="default" />
+    <Toast {...args} title={toastTitle} key={1} autodismiss id="danger" />
+  </>
 );
-
-export const Description = () => (
-  <Toaster>
-    {[
-      <Toast
-        title={toastTitle}
-        description="And this is a short description to provide more info about the message"
-        key={0}
-        id="description"
-      />
-    ]}
-  </Toaster>
-);
-
-export const MultiToast = () => (
-  <Toaster>
-    <Toast title={toastTitle} key={0} id="default" />
-    <Toast
-      title={toastTitle}
-      key={1}
-      autodismiss
-      id="danger"
-      appearance="danger"
-    />
-  </Toaster>
-);
+MultiToast.args = { appearance: "default" };
 
 export const AutoDismiss = () => {
   const [toasts, setToasts] = React.useState<number[]>([]);
@@ -105,6 +99,7 @@ export const AutoDismiss = () => {
     </div>
   );
 };
+AutoDismiss.argTypes = { appearance: { control: { disable: true } } };
 
 export const CustomDismissTimeAutoDismiss = () => {
   const [toasts, setToasts] = React.useState<number[]>([]);
@@ -140,6 +135,9 @@ export const CustomDismissTimeAutoDismiss = () => {
     </div>
   );
 };
+CustomDismissTimeAutoDismiss.argTypes = {
+  appearance: { control: { disable: true } }
+};
 
 export const WithDismissCallback = () => (
   <Toaster>
@@ -153,6 +151,9 @@ export const WithDismissCallback = () => (
     ]}
   </Toaster>
 );
+WithDismissCallback.argTypes = {
+  appearance: { control: { disable: true } }
+};
 
 export const With1Action = () => (
   <Toaster>
@@ -173,6 +174,9 @@ export const With1Action = () => (
     ]}
   </Toaster>
 );
+With1Action.argTypes = {
+  appearance: { control: { disable: true } }
+};
 
 export const With2Actions = () => (
   <Toaster>
@@ -201,3 +205,6 @@ export const With2Actions = () => (
     ]}
   </Toaster>
 );
+With2Actions.argTypes = {
+  appearance: { control: { disable: true } }
+};
