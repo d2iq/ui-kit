@@ -1,10 +1,5 @@
 import * as React from "react";
-import {
-  HeadingText1,
-  HeadingText2,
-  Text,
-  SpacingBox
-} from "../../../packages";
+import { HeadingText1, Text, SpacingBox } from "../../../packages";
 import { purpleLighten4 } from "../../../packages/design-tokens/build/js/designTokens";
 import { BannerContainer, ImgWrapper, TextWrapper } from "../styles";
 
@@ -19,18 +14,15 @@ export const WelcomeBanner = () => {
         </ImgWrapper>
         <SpacingBox side="bottom" spacingSize="l">
           <HeadingText1 color={purpleLighten4}>
-            <strong>D2DS</strong>
+            <strong>D2iQ Product Language</strong>
           </HeadingText1>
-          <HeadingText2 color={purpleLighten4}>
-            <strong>Day 2 Design System</strong>
-          </HeadingText2>
         </SpacingBox>
         <TextWrapper>
           <Text color={purpleLighten4} align="center">
-            D2DS is a design system to drive the design of software products for
-            Day2 operations. The system contains a series of components,
-            standards, and guidelines to use to create a unified user experience
-            at D2iQ.
+            D2iQ Product Language is a design system to drive the design of
+            software products for Day 2 operations. The system contains a series
+            of standards, and guidelines, and UI Kit components and design
+            tokens to use to create a unified user experience at D2iQ.
           </Text>
         </TextWrapper>
       </SpacingBox>

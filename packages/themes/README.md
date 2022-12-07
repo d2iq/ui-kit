@@ -73,7 +73,7 @@ For example, we want the `Toast` and the `Tooltip` component to stand out agains
 
 ### CSS Variables (preferred usage)
 
-`UIKitThemeProvider` also injects theme properties as CSS variables on the document root (`<html>`). ui-kit also generates [design tokens]() that can be used to style CSS-in-JS with fallback values built in. The fallback values adhere to the branding used in the D2DS Design System.
+`UIKitThemeProvider` also injects theme properties as CSS variables on the document root (`<html>`). ui-kit also generates [design tokens]() that can be used to style CSS-in-JS with fallback values built in. The fallback values adhere to the branding used in the Design System.
 
 The custom properties follow this naming pattern: `--theme{PropertyName}`.
 The design tokens follow a similar naming pattern: `theme{PropertyName}`.
