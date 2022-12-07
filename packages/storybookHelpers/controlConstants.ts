@@ -103,3 +103,5 @@ export const directionsValuesLabels = {
   "Direction.TopRight": Direction.TopRight,
   "Direction.TopCenter": Direction.TopCenter
 };
+
+export const toasterAppearance = ["default", "success", "warning", "danger"];
