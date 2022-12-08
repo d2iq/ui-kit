@@ -139,7 +139,7 @@ Use [npm-link](https://docs.npmjs.com/cli/v8/commands/npm-link) to create a syml
 
 Run the following in the host project:
 
-`npm link @dcos/ui-kit`
+`npm link @d2iq/ui-kit`
 
 After running the command above, restart the host application.
 

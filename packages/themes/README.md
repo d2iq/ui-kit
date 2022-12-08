@@ -92,7 +92,7 @@ You could use the CSS variable for `brandPrimary` in emotion like this:
 
 ```JS
 import { css } from "@emotion/css";
-import { themeBrandPrimary } from "@dcos/ui-kit/dist/packages/design-tokens/build/js/designTokens";
+import { themeBrandPrimary } from "@d2iq/ui-kit/dist/packages/design-tokens/build/js/designTokens";
 
 export const brandedBg = css`
     background-color: ${themeBrandPrimary};
