@@ -6,7 +6,7 @@ on:
 jobs:
   build-application:
     name: Build and Push `f-ui-kit`
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: ${{ github.event_name != 'pull_request' || github.event.action != 'closed' }}
     outputs:
       tags: ${{ steps.meta.outputs.tags }}
