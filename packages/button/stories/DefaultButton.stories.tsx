@@ -31,12 +31,12 @@ export default {
       }
     },
     iconStart: {
-      options: systemIcons,
-      mapping: systemIconLabels
+      options: Object.keys(SystemIcons),
+      mapping: SystemIcons
     },
     iconEnd: {
-      options: systemIcons,
-      mapping: systemIconLabels
+      options: Object.keys(SystemIcons),
+      mapping: SystemIcons
     }
   },
   args: {
@@ -66,15 +66,10 @@ export const _DangerButton = args => (
   <DangerButton {...args}>{args.children}</DangerButton>
 );
 
-export const WithIconBeforeButtonText = args => (
-  <StandardButton iconStart={SystemIcons.Close} {...args}>
-    Icon button
-  </StandardButton>
-);
-
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-  iconStart: SystemIcons.Close
+export const WithIcons = Template.bind({});
+WithIcons.args = {
+  iconStart: SystemIcons.Close,
+  iconEnd: SystemIcons.ArrowRight
 };
 
 export const IconOnly = Template.bind({});
