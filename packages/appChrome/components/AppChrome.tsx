@@ -19,12 +19,35 @@ import {
 } from "./HeaderBar";
 
 export interface AppChromeProps {
-  sidebar: React.ReactNode;
-  headerBar: React.ReactNode;
-  mainContent: React.ReactNode;
+  /**
+   * Optional className to apply to outermost div
+   */
+  className?: string;
+  /**
+   * JSX to render along the left side
+   */
+  sidebar?: React.ReactNode;
+  /**
+   * JSX to render as the navigation bar at the top
+   */
+  headerBar?: React.ReactNode;
+  /**
+   * @deprecated This prop should not be used, use children instead
+   */
+  mainContent?: React.ReactNode;
+  /**
+   * JSX for the main html element
+   */
+  children?: React.ReactNode;
 }
 
-const AppChrome = ({ sidebar, headerBar, mainContent }: AppChromeProps) => {
+const AppChrome = ({
+  className,
+  sidebar,
+  headerBar,
+  mainContent,
+  children
+}: AppChromeProps) => {
   return (
     <ThemeProvider
       theme={{
@@ -36,19 +59,27 @@ const AppChrome = ({ sidebar, headerBar, mainContent }: AppChromeProps) => {
       }}
     >
       <div
-        className={cx(appChrome, textSize("m"), flex({ direction: "column" }))}
+        className={cx(
+          appChrome,
+          textSize("m"),
+          flex({ direction: "column" }),
+          className
+        )}
         data-cy="appChrome"
       >
-        <div data-cy="headerBar">{headerBar}</div>
+        {headerBar && <div data-cy="headerBar">{headerBar}</div>}
         <div className={cx(flex(), appWrapper)}>
-          <div className={flexItem("shrink")} data-cy="sidebar">
-            {sidebar}
-          </div>
+          {sidebar && (
+            <div className={flexItem("shrink")} data-cy="sidebar">
+              {sidebar}
+            </div>
+          )}
           <main
             className={cx(flexItem("grow"), flush("left"), appWrapper)}
             data-cy="main"
           >
             {mainContent}
+            {children}
           </main>
         </div>
       </div>
