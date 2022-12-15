@@ -12,13 +12,15 @@ export interface AccordionItemProps {
    * A custom ID for the accordion panel
    */
   id?: string;
+  className?: string;
   children?: React.ReactNode;
 }
 
 const AccordionItem = ({
   children,
   "data-cy": dataCy = "accordionItem",
-  id = nextId("accordionItem-")
+  id = nextId("accordionItem-"),
+  className
 }: AccordionItemProps) => {
   const accordionContext = React.useContext(AccordionContext);
   const isExpanded = accordionContext?.expandedItems.includes(id);
@@ -32,6 +34,7 @@ const AccordionItem = ({
         data-cy={[dataCy, ...(isExpanded ? [`${dataCy}.expanded`] : [])].join(
           " "
         )}
+        className={className}
       >
         {children}
       </div>

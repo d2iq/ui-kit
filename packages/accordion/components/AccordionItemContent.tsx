@@ -19,13 +19,15 @@ interface AccordionItemContentProps {
    * the amount of space between the border and the content
    */
   paddingSize?: SpaceSize;
+  className?: string;
   children: React.ReactNode;
 }
 
 const AccordionItemContent = ({
   children,
   "data-cy": dataCy = "accordionItemContent",
-  paddingSize = "m"
+  paddingSize = "m",
+  className
 }: AccordionItemContentProps) => {
   const contentRef = React.useRef<HTMLDivElement>(null);
   const accordionItemContext = React.useContext(AccordionItemContext);
@@ -56,7 +58,8 @@ const AccordionItemContent = ({
         accordionItemContent,
         {
           [visuallyHidden]: !accordionItemContext?.isExpanded
-        }
+        },
+        className
       )}
       ref={contentRef}
       hidden={!accordionItemContext?.isExpanded}

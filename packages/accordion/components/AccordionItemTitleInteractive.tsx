@@ -26,7 +26,8 @@ const AccordionItemTitleInteractive = ({
   children,
   "data-cy": dataCy,
   disabled,
-  headingLevel
+  headingLevel,
+  className
 }: Omit<AccordionItemTitleProps, "children"> & {
   children: (renderProps: RenderProps) => React.ReactNode;
 }) => {
@@ -53,7 +54,7 @@ const AccordionItemTitleInteractive = ({
   const getHeading = (label: string) => (
     <HeadingTag
       id={accordionItemContext?.headingId}
-      className={cx(headingReset, textWeight("medium"))}
+      className={cx(headingReset, textWeight("medium"), className)}
       data-cy={`${dataCy}-heading`}
     >
       {label}
