@@ -27,6 +27,7 @@ export interface AccordionItemTitleProps {
    * Priority of the heading. Numbers map to <h1> through <h6>
    */
   headingLevel?: HeadingLevel;
+  className?: string;
   children: React.ReactNode;
 }
 
@@ -35,7 +36,8 @@ const AccordionItemTitle = ({
   children,
   "data-cy": dataCy = "accordionItemTitle",
   disabled,
-  headingLevel = 3
+  headingLevel = 3,
+  className
 }: AccordionItemTitleProps) => {
   const HeadingTag: keyof React.ReactHTML = `h${headingLevel}` as
     | "h2"
@@ -69,7 +71,7 @@ const AccordionItemTitle = ({
     >
       <HeadingTag
         id={accordionItemContext?.headingId || ""}
-        className={cx(headingReset, textWeight("medium"))}
+        className={cx(headingReset, textWeight("medium"), className)}
         data-cy={`${dataCy}-heading`}
       >
         <ResetButton

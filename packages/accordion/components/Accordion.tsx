@@ -8,6 +8,7 @@ interface AccordionProps extends AccordionBaseProps {
    * An array of open accordion panel IDs
    */
   initialExpandedItems?: string[];
+  className?: string;
   children: React.ReactNode | React.ReactNode[];
 }
 
@@ -16,7 +17,8 @@ const Accordion = ({
   "data-cy": dataCy = "accordion",
   children,
   initialExpandedItems,
-  onChange
+  onChange,
+  className
 }: AccordionProps) => {
   return (
     <AccordionProvider
@@ -24,7 +26,9 @@ const Accordion = ({
       initialExpandedItems={initialExpandedItems}
       onChange={onChange}
     >
-      <Stack data-cy={dataCy}>{children}</Stack>
+      <Stack className={className} data-cy={dataCy}>
+        {children}
+      </Stack>
     </AccordionProvider>
   );
 };
