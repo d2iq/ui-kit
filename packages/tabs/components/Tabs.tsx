@@ -81,12 +81,14 @@ export interface TabsProps {
   selectedIndex?: number;
   onSelect?: (tabIndex: number) => void;
   direction?: TabDirection;
+  className?: string;
 }
 
 const Tabs = ({
   children,
   selectedIndex,
   onSelect,
+  className,
   direction = defaultTabDirection
 }: TabsProps) => {
   const { tabs, tabsContent } = (
@@ -131,10 +133,14 @@ const Tabs = ({
 
   return (
     <ReactTabs
-      className={cx("react-tabs", {
-        [fullHeightTabs]: Boolean(tabsContent.length),
-        [getTabLayout(direction)]: Boolean(direction)
-      })}
+      className={cx(
+        "react-tabs",
+        {
+          [fullHeightTabs]: Boolean(tabsContent.length),
+          [getTabLayout(direction)]: Boolean(direction)
+        },
+        className
+      )}
       selectedIndex={selectedIndex}
       // react-tabs needs this function but we have a linting rule which forbids
       // empty arrow functions, so I disable this rule for this line
