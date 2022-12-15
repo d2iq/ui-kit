@@ -11,6 +11,7 @@ import {
 } from "../../shared/styles/styleUtils";
 
 export interface BreadcrumbProps {
+  className?: string;
   children?: React.ReactNode | string;
 }
 
@@ -18,7 +19,7 @@ function intersperse<A>(list: A[], sep: JSX.Element) {
   return Array.prototype.concat(...list.map(e => [sep, e])).slice(1);
 }
 
-const Breadcrumb = ({ children }: BreadcrumbProps) => {
+const Breadcrumb = ({ className, children }: BreadcrumbProps) => {
   const breadcrumbSeparator = <Icon shape={SystemIcons.CaretRight} size="xs" />;
   const crumbsArr = intersperse(
     React.Children.toArray(children),
@@ -26,7 +27,7 @@ const Breadcrumb = ({ children }: BreadcrumbProps) => {
   );
 
   return (
-    <nav className={cx(flex({ align: "center", wrap: "wrap" }))}>
+    <nav className={cx(flex({ align: "center", wrap: "wrap" }), className)}>
       {crumbsArr.map((crumb, i) => (
         <div
           key={`breadcrumb-wrapper-${i}`}
