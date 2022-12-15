@@ -18,11 +18,12 @@ const LinkCard = ({
   linkDescription,
   url,
   children,
+  className,
   ...other
 }: ButtonCardProps & LinkProps) => {
   return (
     <Card
-      className={cx(buttonCard, cardWithLink)}
+      className={cx(buttonCard, cardWithLink, className)}
       data-cy="linkCard"
       {...other}
     >
