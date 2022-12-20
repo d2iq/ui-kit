@@ -17,7 +17,7 @@ exports[`Loading indicators renders SectionLoadingIndicator 1`] = `
 <DocumentFragment>
   <svg
     aria-label="system-spinner icon"
-    class="css-jbdp75"
+    class="css-1naj4ae"
     data-cy="icon inlineLoadingIndicator"
     height="16"
     preserveAspectRatio="xMinYMin meet"
