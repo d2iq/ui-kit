@@ -43,9 +43,15 @@ injectGlobal`
   }
 }
 
-.react-tabs__tab:focus {
-  outline: none;
-  background: ${themeBgHover}
+/* Focusing on tabs with a mouse will not display an outline */
+.react-tabs__tab:focus:not(:focus-visible)   {
+  outline: 0;
+}
+
+/* Focusing tabs with a keyboard will add a light gray background color */
+.react-tabs__tab:focus-visible {
+  outline: 0;
+  background-color: ${themeBgHover}
 }
 
 .react-tabs__tab--selected {
@@ -147,6 +153,7 @@ const Tabs = ({
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       onSelect={onSelect ? onSelect : () => {}}
       data-cy="tabs"
+      focusTabOnClick={false}
     >
       <TabList>{tabs}</TabList>
       {tabsContent}
