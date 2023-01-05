@@ -36,6 +36,7 @@ export interface CardProps extends React.HTMLProps<HTMLDivElement> {
      * Size can be set to "s", "m", or "l" to increase the header height. If not specified, size will default to medium.
      */
     size?: HeaderSizes;
+    className?: string;
   };
 
   className?: string;
@@ -62,7 +63,13 @@ const Card = ({
       {...other}
     >
       {header?.headerImg && (
-        <div className={cx(cardHeaderImage, headerHeight[headerSize])}>
+        <div
+          className={cx(
+            cardHeaderImage,
+            headerHeight[headerSize],
+            header.className
+          )}
+        >
           <img src={header.headerImg} alt={header.headerImgAltText ?? ""} />
         </div>
       )}
