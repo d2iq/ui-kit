@@ -23,6 +23,7 @@ export interface IconProps {
   ["data-cy"]?: string;
   /** Sets display to block if true */
   block?: boolean;
+  className?: string;
 }
 
 const Icon = ({
@@ -31,7 +32,8 @@ const Icon = ({
   shape,
   ariaLabel,
   "data-cy": dataCy,
-  block
+  block,
+  className
 }: IconProps) => {
   const svgColor = color || "currentColor";
   const iconSize = iconSizes[size];
@@ -44,7 +46,7 @@ const Icon = ({
       viewBox={`0 0 ${parseInt(iconSize, 10)} ${parseInt(iconSize, 10)}`}
       role="img"
       aria-label={ariaLabel || `${shape} icon`}
-      className={cx(icon, tintSVG(svgColor), block ? blockIcon : "")}
+      className={cx(icon, tintSVG(svgColor), block ? blockIcon : "", className)}
       data-cy={["icon", dataCy].filter(Boolean).join(" ")}
     >
       <use xlinkHref={`#${shape}`} />

@@ -19,11 +19,17 @@ export interface AvatarProps {
    * Which icon size to use for the width and height
    */
   size?: IconSize;
+  className?: string;
 }
 
-const Avatar = ({ label, src, size = DEFAULT_AVATAR_SIZE }: AvatarProps) => (
+const Avatar = ({
+  label,
+  src,
+  className,
+  size = DEFAULT_AVATAR_SIZE
+}: AvatarProps) => (
   <div
-    className={cx(avatarContainer, avatarSize(iconSizes[size]))}
+    className={cx(avatarContainer, avatarSize(iconSizes[size]), className)}
     role="img"
     aria-label={label}
     data-cy="avatar"

@@ -27,6 +27,7 @@ export interface ButtonCardProps extends CardProps {
    * Whether the component's child input has focus
    */
   hasFocus?: boolean;
+  className?: string;
 }
 
 const ButtonCard = ({
@@ -35,6 +36,7 @@ const ButtonCard = ({
   disabled,
   hasFocus,
   onClick,
+  className,
   onKeyPress,
   ...other
 }: ButtonCardProps) => {
@@ -64,13 +66,17 @@ const ButtonCard = ({
 
   return (
     <Card
-      className={cx(buttonCard, {
-        [buttonCardActive]: isActive,
-        [buttonCardDisabled]: disabled,
-        [buttonCardDisabledActive]: disabled && isActive,
-        [buttonCardFocused]: hasFocus,
-        [buttonCardFocusedActive]: hasFocus && isActive
-      })}
+      className={cx(
+        buttonCard,
+        {
+          [buttonCardActive]: isActive,
+          [buttonCardDisabled]: disabled,
+          [buttonCardDisabledActive]: disabled && isActive,
+          [buttonCardFocused]: hasFocus,
+          [buttonCardFocusedActive]: hasFocus && isActive
+        },
+        className
+      )}
       {...buttonProps}
       data-cy="buttonCard"
       {...other}
