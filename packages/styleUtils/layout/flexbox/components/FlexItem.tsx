@@ -1,5 +1,5 @@
 import * as React from "react";
-import { css } from "@emotion/css";
+import { css, cx } from "@emotion/css";
 import {
   atMediaUp,
   BreakpointConfig
@@ -54,12 +54,14 @@ const FlexItem = ({
 
   return (
     <FlexItemEl
-      className={css`
-        ${getResponsiveFlexItemStyles(flex)};
-        ${getResponsiveStyle("flex-grow", growFactor)};
-        ${getResponsiveStyle("order", order)};
-        ${className};
-      `}
+      className={cx(
+        css`
+          ${getResponsiveFlexItemStyles(flex)};
+          ${getResponsiveStyle("flex-grow", growFactor)};
+          ${getResponsiveStyle("order", order)};
+        `,
+        className
+      )}
       data-cy={dataCy}
     >
       {children}
