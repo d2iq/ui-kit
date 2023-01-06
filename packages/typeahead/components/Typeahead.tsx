@@ -15,6 +15,10 @@ export interface Item {
 
 export interface TypeaheadProps {
   /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
    * items to render into the menu
    */
   items: Item[];
@@ -71,6 +75,7 @@ const getSelectedItems = (value, checked, selectedItems) => {
 };
 
 const Typeahead = ({
+  className,
   disablePortal,
   items,
   menuEmptyState,
@@ -187,7 +192,7 @@ const Typeahead = ({
   }
 
   return (
-    <div ref={containerRef} data-cy="typeahead">
+    <div ref={containerRef} className={className} data-cy="typeahead">
       <Downshift
         itemToString={defaultItemToString}
         selectedItem={selectedItems}

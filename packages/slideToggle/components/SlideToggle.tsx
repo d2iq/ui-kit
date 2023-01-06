@@ -73,6 +73,7 @@ const SlideToggle = (props: React.PropsWithRef<SlideToggleProps>) => {
   const {
     appearance = InputAppearance.Standard,
     children,
+    className,
     disabled,
     hintContent,
     id = nextId("slideToggle-"),
@@ -117,7 +118,7 @@ const SlideToggle = (props: React.PropsWithRef<SlideToggleProps>) => {
   return (
     <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
       {({ getValidationErrors, isValid, describedByIds, getHintContent }) => (
-        <div className={vAlignChildren} data-cy={parentDataCy}>
+        <div className={cx(vAlignChildren, className)} data-cy={parentDataCy}>
           <label
             className={cx(
               flex({
