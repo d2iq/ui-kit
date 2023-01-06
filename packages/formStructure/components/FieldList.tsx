@@ -49,7 +49,7 @@ export interface FieldListProps {
    * problems when the field value is changed
    */
   pathToUniqueKey?: string;
-  children?: React.ReactNode | React.ReactNode[];
+  children?: React.ReactNode;
   /** Allows custom styling */
   className?: string;
 }

@@ -3,7 +3,7 @@ import { SpacingBox } from "../../styleUtils/modifiers";
 
 export interface FormSectionFooterProps {
   className?: string;
-  children?: React.ReactNode | React.ReactNode[];
+  children?: React.ReactNode;
 }
 
 const FormSectionFooter = ({ children, className }: FormSectionFooterProps) => (
