@@ -63,7 +63,7 @@ exports[`Table v2 rendering renders default 1`] = `
         role="columnheader"
       >
         <div
-          class="css-130tuzu"
+          class="css-qfwb2h"
           data-cy="flex"
         >
           <div
@@ -72,7 +72,7 @@ exports[`Table v2 rendering renders default 1`] = `
             Username
           </div>
           <div
-            class="css-149ndna"
+            class="css-1rhjo5i"
             data-cy="flexItem"
           >
             <span
@@ -1021,7 +1021,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
         role="columnheader"
       >
         <div
-          class="css-130tuzu"
+          class="css-qfwb2h"
           data-cy="flex"
         >
           <div
@@ -1030,7 +1030,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             Username
           </div>
           <div
-            class="css-149ndna"
+            class="css-1rhjo5i"
             data-cy="flexItem"
           >
             <span
