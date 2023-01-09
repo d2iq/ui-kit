@@ -2,8 +2,11 @@ import * as React from "react";
 import { SpacingBox } from "../../styleUtils/modifiers";
 
 export interface FormSectionFooterProps {
-  className?: string;
   children?: React.ReactNode;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
 const FormSectionFooter = ({ children, className }: FormSectionFooterProps) => (

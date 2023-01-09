@@ -10,6 +10,9 @@ import { flexItem } from "../../../../shared/styles/styleUtils/layout/flexbox";
 type FlexStrategy = "shrink" | "grow";
 
 interface FlexItemProps {
+  /**
+   * Allows custom styling
+   */
   className?: string;
   /**
    * Whether the flex item should grow or shrinkwrap to it's children. Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints

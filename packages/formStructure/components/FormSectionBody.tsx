@@ -4,6 +4,9 @@ import { formFieldStack } from "../style";
 
 export interface FormSectionBodyProps {
   children?: React.ReactNode;
+  /**
+   * Allows custom styling
+   */
   className?: string;
 }
 

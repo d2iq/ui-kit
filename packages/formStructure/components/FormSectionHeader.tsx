@@ -3,6 +3,9 @@ import { SpacingBox } from "../../styleUtils/modifiers";
 import { HeadingText2, Text } from "../../styleUtils/typography";
 
 interface FormSectionHeaderProps {
+  /**
+   * Allows custom styling
+   */
   className?: string;
   title: string;
   subtitle?: React.ReactNode;

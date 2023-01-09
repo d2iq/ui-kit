@@ -50,7 +50,9 @@ export interface FieldListProps {
    */
   pathToUniqueKey?: string;
   children?: React.ReactNode;
-  /** Allows custom styling */
+  /**
+   * Allows custom styling
+   */
   className?: string;
 }
 

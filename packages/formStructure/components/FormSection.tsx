@@ -3,6 +3,9 @@ import { SpacingBox } from "../../styleUtils/modifiers";
 
 export interface FormSectionProps {
   children?: React.ReactNode;
+  /**
+   * Allows custom styling
+   */
   className?: string;
 }
 

@@ -8,7 +8,9 @@ interface FieldGroupProps {
    */
   direction?: BreakpointConfig<"column" | "row">;
   children: React.ReactNode;
-  /** Allows custom styling */
+  /**
+   * Allows custom styling
+   */
   className?: string;
 }
 

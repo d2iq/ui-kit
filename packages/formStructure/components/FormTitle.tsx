@@ -4,6 +4,9 @@ import { HeadingText1 } from "../../styleUtils/typography";
 
 export interface FormTitleProps {
   children?: React.ReactNode;
+  /**
+   * Allows custom styling
+   */
   className?: string;
 }
 

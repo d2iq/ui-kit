@@ -9,6 +9,9 @@ import { Flex, FlexItem } from "../../styleUtils/layout";
 interface FormSubSectionProps {
   onRemove?: (event?: React.SyntheticEvent<HTMLElement>) => void;
   children?: React.ReactNode;
+  /**
+   * Allows custom styling
+   */
   className?: string;
 }
 
