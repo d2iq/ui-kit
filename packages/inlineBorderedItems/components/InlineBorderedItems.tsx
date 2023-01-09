@@ -7,8 +7,11 @@ export interface InlineBorderedItemsProps {
   children:
     | Array<React.ReactElement<HTMLElement>>
     | React.ReactElement<HTMLElement>;
-  gutterSize?: SpaceSize;
+  /**
+   * Allows custom styling
+   */
   className?: string;
+  gutterSize?: SpaceSize;
 }
 
 const InlineBorderedItems = ({

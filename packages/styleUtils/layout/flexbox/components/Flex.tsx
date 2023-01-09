@@ -8,6 +8,9 @@ import {
 } from "../../../../shared/styles/styleUtils/layout/flexbox";
 
 export interface FlexProps extends FlexboxProperties {
+  /**
+   * Allows custom styling
+   */
   className?: string;
   /**
    * The size of the space between each `FlexItem` child. Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints

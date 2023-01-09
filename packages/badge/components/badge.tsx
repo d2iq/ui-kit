@@ -12,8 +12,11 @@ export type BadgeAppearance =
 
 export interface BadgeProps {
   appearance?: BadgeAppearance;
-  className?: string;
   children: React.ReactNode | string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
 export const Badge = ({

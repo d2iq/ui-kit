@@ -11,19 +11,34 @@ const DEFAULT_ICON_SIZE: IconSize = "s";
 
 export type IconShapes = SystemIcons | ProductIcons;
 export interface IconProps {
-  /** If an icon is more than decorative and requires further context include a description for screen readers */
+  /**
+   * If an icon is more than decorative and requires further context include a description for screen readers
+   */
   ariaLabel?: string;
-  /** The fill color of the icon */
-  color?: string;
-  /** The id of the SVG symbol we're rendering from a generated sprite */
-  shape: SystemIcons | ProductIcons;
-  /** Which icon size to use for the width and height of the icon */
-  size?: IconSize;
-  /** human-readable selector used for writing tests */
-  ["data-cy"]?: string;
-  /** Sets display to block if true */
-  block?: boolean;
+  /**
+   * Allows custom styling
+   */
   className?: string;
+  /**
+   * The fill color of the icon
+   */
+  color?: string;
+  /**
+   * The id of the SVG symbol we're rendering from a generated sprite
+   */
+  shape: SystemIcons | ProductIcons;
+  /**
+   * Which icon size to use for the width and height of the icon
+   */
+  size?: IconSize;
+  /**
+   * human-readable selector used for writing tests
+   */
+  ["data-cy"]?: string;
+  /**
+   * Sets display to block if true
+   */
+  block?: boolean;
 }
 
 const Icon = ({

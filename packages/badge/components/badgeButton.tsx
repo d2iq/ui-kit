@@ -11,6 +11,10 @@ export interface BadgeButtonProps {
     | "warning"
     | "danger"
     | "outline";
+  /**
+   * Allows custom styling
+   */
+  className?: string;
   onClick: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /**
    * Tab index indicates if an element can be focused for more information see
@@ -18,7 +22,6 @@ export interface BadgeButtonProps {
    * browser default value for this is -1
    */
   tabIndex?: number;
-  className?: string;
   children: React.ReactNode[] | React.ReactNode;
   ["data-cy"]?: string;
 }

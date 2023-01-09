@@ -27,6 +27,9 @@ export interface ButtonCardProps extends CardProps {
    * Whether the component's child input has focus
    */
   hasFocus?: boolean;
+  /**
+   * Allows custom styling
+   */
   className?: string;
 }
 

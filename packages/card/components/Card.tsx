@@ -36,9 +36,14 @@ export interface CardProps extends React.HTMLProps<HTMLDivElement> {
      * Size can be set to "s", "m", or "l" to increase the header height. If not specified, size will default to medium.
      */
     size?: HeaderSizes;
+    /**
+     * Allows custom header styling
+     */
     className?: string;
   };
-
+  /**
+   * Allows custom styling
+   */
   className?: string;
 }
 

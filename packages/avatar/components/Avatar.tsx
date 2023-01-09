@@ -19,6 +19,9 @@ export interface AvatarProps {
    * Which icon size to use for the width and height
    */
   size?: IconSize;
+  /**
+   * Allows custom styling
+   */
   className?: string;
 }
 

@@ -9,8 +9,11 @@ import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
 export interface ColorCodedBadgeProps {
   color?: React.CSSProperties["color"];
   iconShape?: SystemIcons;
-  className?: string;
   children?: JSX.Element | string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
 const ICON_SIZE = "xxs";
