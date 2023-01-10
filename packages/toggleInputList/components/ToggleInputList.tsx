@@ -26,6 +26,10 @@ export interface ToggleInputProperties {
 
 export interface ToggleInputListProps {
   /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
    * Sets the contents for validation errors. This will be displayed below the list of options.
    */
   errors?: React.ReactNode[];
@@ -77,6 +81,7 @@ export interface ToggleInputListProps {
 
 const ToggleInputList = ({
   id,
+  className,
   showListLabel = true,
   vertAlign = "center",
   selectedItems = [],
@@ -162,7 +167,7 @@ const ToggleInputList = ({
     <FormFieldWrapper errors={errors} hintContent={hintContent} id={id}>
       {({ describedByIds, getValidationErrors, isValid, getHintContent }) => (
         <fieldset
-          className={fieldsetReset}
+          className={cx(fieldsetReset, className)}
           aria-invalid={!isValid}
           aria-describedby={describedByIds}
           aria-required={required}

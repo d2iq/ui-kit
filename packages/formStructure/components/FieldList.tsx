@@ -49,7 +49,11 @@ export interface FieldListProps {
    * problems when the field value is changed
    */
   pathToUniqueKey?: string;
-  children?: React.ReactNode | React.ReactNode[];
+  children?: React.ReactNode;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
 type FieldListColumn = React.ReactElement<
@@ -175,6 +179,7 @@ const FieldListHeader = ({ columns }: FieldListHeaderProps) => (
 
 const FieldList = ({
   children,
+  className,
   data,
   disabledRows,
   onAddItem,
@@ -223,7 +228,7 @@ const FieldList = ({
       onAddItem={getAddHandler()}
       onRemoveItem={onRemoveItem}
     >
-      <div>
+      <div className={className}>
         {fieldListData && fieldListData.length ? (
           <FieldListHeader columns={columns} />
         ) : null}

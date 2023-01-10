@@ -5,8 +5,13 @@ import { SpacingBox } from "../../styleUtils/modifiers";
 
 type FormMessageProps = Omit<InfoBoxProps, "message">;
 
-const FormMessage = ({ children, ...other }: FormMessageProps) => (
-  <SpacingBox side="bottom" spacingSize="l" data-cy="formMessage">
+const FormMessage = ({ children, className, ...other }: FormMessageProps) => (
+  <SpacingBox
+    className={className}
+    side="bottom"
+    spacingSize="l"
+    data-cy="formMessage"
+  >
     <InfoBoxInline message={children} {...other} />
   </SpacingBox>
 );

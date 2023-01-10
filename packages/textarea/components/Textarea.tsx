@@ -45,6 +45,7 @@ export interface TextareaProps extends React.HTMLProps<HTMLTextAreaElement> {
 const Textarea = ({
   id = nextId("textarea-"),
   appearance = InputAppearance.Standard,
+  className,
   inputLabel,
   showInputLabel = true,
   errors,
@@ -77,7 +78,7 @@ const Textarea = ({
   return (
     <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
       {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
-        <div data-cy={parentDataCy}>
+        <div className={className} data-cy={parentDataCy}>
           {renderLabel({
             appearance,
             hidden: !showInputLabel,

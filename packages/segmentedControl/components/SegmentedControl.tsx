@@ -1,5 +1,6 @@
 import * as React from "react";
 import nextId from "react-id-generator";
+import { cx } from "@emotion/css";
 import { segmentedControlContainer } from "../style";
 import { SegmentedControlButtonProps } from "../components/SegmentedControlButton";
 
@@ -8,6 +9,10 @@ export interface SegmentedControlProps {
    * The buttons that make up the segmented control
    */
   children: Array<React.ReactElement<SegmentedControlButtonProps>>;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
   /**
    * A unique identifier for the segmented control
    */
@@ -29,6 +34,7 @@ export interface SegmentedControlProps {
 const SegmentedControl = (props: SegmentedControlProps) => {
   const {
     children,
+    className,
     id = nextId("segmentedControl-"),
     selectedSegment,
     onSelect,
@@ -44,7 +50,7 @@ const SegmentedControl = (props: SegmentedControlProps) => {
   };
 
   return (
-    <div className={segmentedControlContainer} data-cy={dataCy}>
+    <div className={cx(segmentedControlContainer, className)} data-cy={dataCy}>
       {children.map((segment, i) => {
         return React.cloneElement(segment, {
           isActive: selectedSegment === segment.props.value,

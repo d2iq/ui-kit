@@ -14,6 +14,10 @@ type FlexDirection = BreakpointConfig<React.CSSProperties["flexDirection"]>;
 export interface ToggleBoxGroupProps {
   children: Array<React.ReactElement<ToggleBoxProps>>;
   /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
    * The unique identifier for a collection of ToggleBoxes
    */
   id?: string;
@@ -56,6 +60,7 @@ const ToggleBoxWrapper = ({ label, children }) => {
 
 const ToggleBoxGroup = ({
   children,
+  className,
   direction = "row",
   gutterSize = "m",
   id = nextId("toggleBoxGroup-"),
@@ -73,7 +78,12 @@ const ToggleBoxGroup = ({
 
   return (
     <ToggleBoxWrapper label={label}>
-      <Flex direction={direction} gutterSize={gutterSize} align="stretch">
+      <Flex
+        className={className}
+        direction={direction}
+        gutterSize={gutterSize}
+        align="stretch"
+      >
         {(
           React.Children.toArray(children) as Array<
             React.ReactElement<ToggleBoxProps>

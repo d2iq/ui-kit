@@ -78,6 +78,7 @@ function getInputAppearance(disabled, hasFocus, appearance) {
 
 const SelectInput = ({
   appearance = InputAppearance.Standard,
+  className,
   errors,
   iconStart,
   id = nextId("selectInput-"),
@@ -118,7 +119,7 @@ const SelectInput = ({
   return (
     <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
       {({ getValidationErrors, isValid, getHintContent, describedByIds }) => (
-        <div data-cy={parentDataCy}>
+        <div className={className} data-cy={parentDataCy}>
           {renderLabel({
             appearance,
             hidden: !showInputLabel,

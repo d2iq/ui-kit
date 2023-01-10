@@ -1,5 +1,5 @@
 import * as React from "react";
-import { css } from "@emotion/css";
+import { css, cx } from "@emotion/css";
 import {
   atMediaUp,
   BreakpointConfig
@@ -10,6 +10,9 @@ import { flexItem } from "../../../../shared/styles/styleUtils/layout/flexbox";
 type FlexStrategy = "shrink" | "grow";
 
 interface FlexItemProps {
+  /**
+   * Allows custom styling
+   */
   className?: string;
   /**
    * Whether the flex item should grow or shrinkwrap to it's children. Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints
@@ -54,12 +57,14 @@ const FlexItem = ({
 
   return (
     <FlexItemEl
-      className={css`
-        ${getResponsiveFlexItemStyles(flex)};
-        ${getResponsiveStyle("flex-grow", growFactor)};
-        ${getResponsiveStyle("order", order)};
-        ${className};
-      `}
+      className={cx(
+        css`
+          ${getResponsiveFlexItemStyles(flex)};
+          ${getResponsiveStyle("flex-grow", growFactor)};
+          ${getResponsiveStyle("order", order)};
+        `,
+        className
+      )}
       data-cy={dataCy}
     >
       {children}

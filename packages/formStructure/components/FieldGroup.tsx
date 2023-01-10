@@ -8,10 +8,14 @@ interface FieldGroupProps {
    */
   direction?: BreakpointConfig<"column" | "row">;
   children: React.ReactNode;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
-const FieldGroup = ({ children, direction }: FieldGroupProps) => (
-  <Flex gutterSize="m" direction={direction}>
+const FieldGroup = ({ children, className, direction }: FieldGroupProps) => (
+  <Flex className={className} gutterSize="m" direction={direction}>
     {(
       React.Children.toArray(children) as Array<
         React.ReactElement<{ key: React.Key }>

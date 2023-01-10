@@ -1,5 +1,5 @@
 import * as React from "react";
-import { css } from "@emotion/css";
+import { css, cx } from "@emotion/css";
 import { SpaceSize } from "../../../../shared/styles/styleUtils/modifiers/modifierUtils";
 import {
   FlexboxProperties,
@@ -8,6 +8,9 @@ import {
 } from "../../../../shared/styles/styleUtils/layout/flexbox";
 
 export interface FlexProps extends FlexboxProperties {
+  /**
+   * Allows custom styling
+   */
   className?: string;
   /**
    * The size of the space between each `FlexItem` child. Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints
@@ -43,11 +46,13 @@ const Flex = ({
 
   return (
     <FlexEl
-      className={css`
-        ${flex({ align, wrap, justify, ...flexboxProperties })};
-        ${applyFlexItemGutters(direction, gutterSize, gap)};
-        ${className};
-      `}
+      className={cx(
+        css`
+          ${flex({ align, wrap, justify, ...flexboxProperties })};
+          ${applyFlexItemGutters(direction, gutterSize, gap)};
+        `,
+        className
+      )}
       data-cy={dataCy}
     >
       {children}

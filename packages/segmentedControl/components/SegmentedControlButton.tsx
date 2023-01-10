@@ -13,6 +13,10 @@ import { Tooltip } from "../../tooltip";
 
 export interface SegmentedControlButtonProps {
   /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
    * Unique identifier used for the input button
    */
   id?: string;
@@ -42,6 +46,7 @@ export interface SegmentedControlButtonProps {
 const SegmentedControlLabel = React.forwardRef(
   (
     {
+      className,
       id = nextId("segmentedControlButton-"),
       isActive,
       onChange,
@@ -54,9 +59,13 @@ const SegmentedControlLabel = React.forwardRef(
   ) => {
     return (
       <label
-        className={cx(segmentedControlButton, {
-          [segmentedControlButtonActive]: isActive
-        })}
+        className={cx(
+          segmentedControlButton,
+          {
+            [segmentedControlButtonActive]: isActive
+          },
+          className
+        )}
         data-cy="segmentedControlButton"
         htmlFor={id}
         ref={ref as React.ForwardedRef<HTMLLabelElement>}

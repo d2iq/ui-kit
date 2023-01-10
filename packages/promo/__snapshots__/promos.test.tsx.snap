@@ -35,11 +35,11 @@ exports[`Promos renders PromoBanner 1`] = `
         </div>
       </button>
       <div
-        class="css-6cf51q"
+        class="css-1ey3ifm"
         data-cy="flex"
       >
         <div
-          class="css-14eehpp"
+          class="css-1rkved2"
           data-cy="flexItem"
         >
           <div
@@ -64,11 +64,11 @@ exports[`Promos renders PromoBanner 1`] = `
               Some promo details
             </div>
             <div
-              class="css-u1cluu"
+              class="css-htoupg"
               data-cy="flex"
             >
               <div
-                class="css-149ndna"
+                class="css-1rhjo5i"
                 data-cy="flexItem"
               >
                 <button>
@@ -76,7 +76,7 @@ exports[`Promos renders PromoBanner 1`] = `
                 </button>
               </div>
               <div
-                class="css-149ndna"
+                class="css-1rhjo5i"
                 data-cy="flexItem"
               >
                 <button>
@@ -87,7 +87,7 @@ exports[`Promos renders PromoBanner 1`] = `
           </div>
         </div>
         <div
-          class="css-6fsnjg"
+          class="css-ywcl7b"
           data-cy="flexItem"
         >
           <div
@@ -101,7 +101,7 @@ exports[`Promos renders PromoBanner 1`] = `
           </div>
         </div>
         <div
-          class="css-1v61zfx"
+          class="css-17zhgsu"
           data-cy="flexItem"
         >
           <div
@@ -183,11 +183,11 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
         </div>
       </button>
       <div
-        class="css-6cf51q"
+        class="css-1ey3ifm"
         data-cy="flex"
       >
         <div
-          class="css-14eehpp"
+          class="css-1rkved2"
           data-cy="flexItem"
         >
           <div
@@ -212,11 +212,11 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
               Some promo details
             </div>
             <div
-              class="css-u1cluu"
+              class="css-htoupg"
               data-cy="flex"
             >
               <div
-                class="css-149ndna"
+                class="css-1rhjo5i"
                 data-cy="flexItem"
               >
                 <button>
@@ -224,7 +224,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
                 </button>
               </div>
               <div
-                class="css-149ndna"
+                class="css-1rhjo5i"
                 data-cy="flexItem"
               >
                 <button>
@@ -235,7 +235,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
           </div>
         </div>
         <div
-          class="css-6fsnjg"
+          class="css-ywcl7b"
           data-cy="flexItem"
         >
           <div
@@ -249,7 +249,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
           </div>
         </div>
         <div
-          class="css-1v61zfx"
+          class="css-17zhgsu"
           data-cy="flexItem"
         >
           <div
@@ -331,11 +331,11 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
         </div>
       </button>
       <div
-        class="css-6cf51q"
+        class="css-1ey3ifm"
         data-cy="flex"
       >
         <div
-          class="css-14eehpp"
+          class="css-1rkved2"
           data-cy="flexItem"
         >
           <div
@@ -360,11 +360,11 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
               Some promo details
             </div>
             <div
-              class="css-u1cluu"
+              class="css-htoupg"
               data-cy="flex"
             >
               <div
-                class="css-149ndna"
+                class="css-1rhjo5i"
                 data-cy="flexItem"
               >
                 <button>
@@ -372,7 +372,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
                 </button>
               </div>
               <div
-                class="css-149ndna"
+                class="css-1rhjo5i"
                 data-cy="flexItem"
               >
                 <button>
@@ -383,7 +383,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
           </div>
         </div>
         <div
-          class="css-6fsnjg"
+          class="css-ywcl7b"
           data-cy="flexItem"
         >
           <div
@@ -397,7 +397,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
           </div>
         </div>
         <div
-          class="css-1v61zfx"
+          class="css-17zhgsu"
           data-cy="flexItem"
         >
           <div
@@ -486,11 +486,11 @@ exports[`Promos renders PromoInline 1`] = `
             </div>
           </button>
           <div
-            class="css-6cf51q"
+            class="css-1ey3ifm"
             data-cy="flex"
           >
             <div
-              class="css-14eehpp"
+              class="css-1rkved2"
               data-cy="flexItem"
             >
               <div
@@ -515,11 +515,11 @@ exports[`Promos renders PromoInline 1`] = `
                   Some promo details
                 </div>
                 <div
-                  class="css-u1cluu"
+                  class="css-htoupg"
                   data-cy="flex"
                 >
                   <div
-                    class="css-149ndna"
+                    class="css-1rhjo5i"
                     data-cy="flexItem"
                   >
                     <button>
@@ -527,7 +527,7 @@ exports[`Promos renders PromoInline 1`] = `
                     </button>
                   </div>
                   <div
-                    class="css-149ndna"
+                    class="css-1rhjo5i"
                     data-cy="flexItem"
                   >
                     <button>
@@ -538,7 +538,7 @@ exports[`Promos renders PromoInline 1`] = `
               </div>
             </div>
             <div
-              class="css-6fsnjg"
+              class="css-ywcl7b"
               data-cy="flexItem"
             >
               <div
@@ -552,7 +552,7 @@ exports[`Promos renders PromoInline 1`] = `
               </div>
             </div>
             <div
-              class="css-1v61zfx"
+              class="css-17zhgsu"
               data-cy="flexItem"
             >
               <div

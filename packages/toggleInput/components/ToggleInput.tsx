@@ -39,6 +39,10 @@ export interface ToggleInputProps extends React.HTMLProps<HTMLInputElement> {
    */
   checked?: boolean;
   /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
    * Unique identifier used for the input element
    */
   id?: string;
@@ -85,6 +89,7 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
     const {
       appearance,
       children,
+      className,
       disabled,
       hintContent,
       id = nextId("toggleInput-"),
@@ -136,7 +141,7 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
     return (
       <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
         {({ getValidationErrors, isValid, describedByIds, getHintContent }) => (
-          <div className={vAlignChildren} data-cy={parentDataCy}>
+          <div className={cx(vAlignChildren, className)} data-cy={parentDataCy}>
             <label
               className={cx(
                 flex({
