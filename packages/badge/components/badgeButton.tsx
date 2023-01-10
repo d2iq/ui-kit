@@ -1,4 +1,4 @@
-import { css } from "@emotion/css";
+import { css, cx } from "@emotion/css";
 import * as React from "react";
 import Clickable from "../../clickable/components/clickable";
 import { badge as badgeButton } from "../style";
@@ -11,6 +11,10 @@ export interface BadgeButtonProps {
     | "warning"
     | "danger"
     | "outline";
+  /**
+   * Allows custom styling
+   */
+  className?: string;
   onClick: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /**
    * Tab index indicates if an element can be focused for more information see
@@ -25,11 +29,12 @@ export interface BadgeButtonProps {
 const BadgeButton = ({
   appearance = "default",
   children,
+  className,
   onClick,
   tabIndex = -1,
   "data-cy": dataCy = "badgeButton"
 }: BadgeButtonProps) => {
-  const className = css`
+  const defaultClassName = css`
     outline: none;
     cursor: pointer;
     ${badgeButton(appearance)};
@@ -37,7 +42,7 @@ const BadgeButton = ({
 
   return (
     <Clickable action={onClick} tabIndex={tabIndex} data-cy={dataCy}>
-      <span className={className}>{children}</span>
+      <span className={cx(defaultClassName, className)}>{children}</span>
     </Clickable>
   );
 };

@@ -10,6 +10,10 @@ export interface ColorCodedBadgeProps {
   color?: React.CSSProperties["color"];
   iconShape?: SystemIcons;
   children?: JSX.Element | string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
 const ICON_SIZE = "xxs";
@@ -17,12 +21,13 @@ const ICON_SIZE = "xxs";
 const ColorCodedBadge = ({
   children,
   color,
+  className,
   iconShape
 }: ColorCodedBadgeProps) => {
   const iconSize = parseInt(iconSizes[ICON_SIZE], 10);
 
   return (
-    <Badge appearance="outline">
+    <Badge appearance="outline" className={className}>
       {iconShape ? (
         <Icon shape={iconShape} size={ICON_SIZE} color={color} />
       ) : (

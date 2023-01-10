@@ -43,6 +43,10 @@ export interface ButtonProps extends LinkProps {
   ariaLabel?: string;
   children?: React.ReactNode | string;
   /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
    * whether or not the button is enabled
    */
   disabled?: boolean;
@@ -88,7 +92,6 @@ export interface ButtonProps extends LinkProps {
 
 export interface ButtonBaseProps extends ButtonProps {
   appearance: ButtonAppearances;
-  className?: string;
 }
 
 const ButtonContent = ({ iconStart, iconEnd, isProcessing, children }) => {
