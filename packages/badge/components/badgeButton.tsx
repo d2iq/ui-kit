@@ -23,7 +23,10 @@ export interface BadgeButtonProps {
    */
   tabIndex?: number;
   children: React.ReactNode[] | React.ReactNode;
-  ["data-cy"]?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const BadgeButton = ({

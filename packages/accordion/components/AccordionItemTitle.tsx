@@ -16,9 +16,9 @@ export interface AccordionItemTitleProps {
    */
   appearance?: AccordionTitleAppearances;
   /**
-   * human-readable selector used for writing tests
+   * Human-readable selector used for writing tests
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
   /**
    * Whether the accordion item can be expanded
    */
@@ -27,6 +27,9 @@ export interface AccordionItemTitleProps {
    * Priority of the heading. Numbers map to <h1> through <h6>
    */
   headingLevel?: HeadingLevel;
+  /**
+   * Allows custom styling
+   */
   className?: string;
   children: React.ReactNode;
 }

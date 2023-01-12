@@ -40,11 +40,11 @@ export interface BoxProps {
   /**
    * Which HTML tag to render the component with
    */
-  tag: keyof React.ReactHTML;
+  tag?: keyof React.ReactHTML;
   /**
-   * human-readable selector used for writing tests
+   * Human-readable selector used for writing tests
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
   children?: React.ReactNode;
   className?: string;
 }
@@ -53,14 +53,18 @@ const Box = (props: BoxProps) => {
   const {
     bgColor,
     bgImageUrl,
-    bgImageOptions,
+    bgImageOptions = {
+      size: undefined,
+      position: undefined,
+      repeat: undefined
+    },
     display,
     vertAlignChildren,
     isVisuallyHidden,
     textAlign,
-    tag,
+    tag = "div",
     className,
-    "data-cy": dataCy,
+    "data-cy": dataCy = "box",
     ...other
   } = props;
   const getBgImageOptionVal = (option: "size" | "position" | "repeat") =>
@@ -96,12 +100,6 @@ const Box = (props: BoxProps) => {
   return (
     <BoxEl className={cx(boxStyles, className)} data-cy={dataCy} {...other} />
   );
-};
-
-Box.defaultProps = {
-  bgImageOptions: { size: undefined, position: undefined, repeat: undefined },
-  tag: "div" as keyof React.ReactHTML,
-  "data-cy": "box"
 };
 
 export default Box;

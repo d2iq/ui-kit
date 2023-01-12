@@ -13,7 +13,7 @@ interface AccordionItemTitleOuterProps {
   appearance?: AccordionTitleAppearances;
   disabled?: boolean;
   isExpanded?: boolean;
-  ["data-cy"]?: string;
+  "data-cy"?: string;
   children?: React.ReactNode;
 }
 

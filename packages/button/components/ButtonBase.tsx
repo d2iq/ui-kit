@@ -34,11 +34,11 @@ export enum ButtonAppearances {
 
 export interface ButtonProps extends LinkProps {
   /**
-   * if the button triggers new content to appear (e.g.: modals and dropdowns)
+   * If the button triggers new content to appear (e.g.: modals and dropdowns)
    */
   ariaHaspopup?: boolean;
   /**
-   * should be used if the button does not contain text children. For example: a button that is just an icon
+   * Should be used if the button does not contain text children. For example: a button that is just an icon
    */
   ariaLabel?: string;
   children?: React.ReactNode | string;
@@ -47,47 +47,51 @@ export interface ButtonProps extends LinkProps {
    */
   className?: string;
   /**
-   * whether or not the button is enabled
+   * Whether or not the button is enabled
    */
   disabled?: boolean;
   /**
-   * the icon that appears before the button text
+   * The icon that appears before the button text
    */
   // TODO: only accept IconShapes when we make a big breaking change
   iconStart?: IconShapes | React.ReactElement<HTMLElement>;
   /**
-   * the icon that appears after the button text
+   * The icon that appears after the button text
    */
   // TODO: only accept IconShapes when we make a big breaking change
   iconEnd?: IconShapes | React.ReactElement<HTMLElement>;
   /**
-   * whether the action the button was meant to do has completed
+   * Whether the action the button was meant to do has completed
    */
   isProcessing?: boolean;
   /**
-   * if the button should fill the width of it's container
+   * If the button should fill the width of it's container
    */
   isFullWidth?: boolean;
   /**
-   * if the button is on a dark background
+   * If the button is on a dark background
    */
   isInverse?: boolean;
   /**
-   * the function that is called when the button loses focus
+   * The function that is called when the button loses focus
    */
   onBlur?: (e?: React.SyntheticEvent<HTMLElement>) => void;
   /**
-   * the function that is called when the button gets focus
+   * The function that is called when the button gets focus
    */
   onFocus?: (e?: React.SyntheticEvent<HTMLElement>) => void;
   /**
-   * the function that is called when the button is "clicked" via cursor, touch, or keyboard
+   * The function that is called when the button is "clicked" via cursor, touch, or keyboard
    */
   onClick?: (e?: React.SyntheticEvent<HTMLElement>) => void;
   /**
-   * the type of button - same as HTML "type" attribute on the <button> tag
+   * The type of button matching the HTML "type" attribute on the <button> tag
    */
   type?: "button" | "reset" | "submit";
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 export interface ButtonBaseProps extends ButtonProps {

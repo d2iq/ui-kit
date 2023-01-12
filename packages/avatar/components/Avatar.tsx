@@ -23,19 +23,24 @@ export interface AvatarProps {
    * Allows custom styling
    */
   className?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const Avatar = ({
   label,
   src,
   className,
-  size = DEFAULT_AVATAR_SIZE
+  size = DEFAULT_AVATAR_SIZE,
+  "data-cy": dataCy = "avatar"
 }: AvatarProps) => (
   <div
     className={cx(avatarContainer, avatarSize(iconSizes[size]), className)}
     role="img"
     aria-label={label}
-    data-cy="avatar"
+    data-cy={dataCy}
   >
     {/* Intentionally not setting "alt" so it doesn't appear in the avatar box
     when/if src is empty or a broken URL */}

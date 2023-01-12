@@ -8,10 +8,19 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { fillWidth, accordionTitleInteractive } from "../style";
 
 export interface AccordionItemTitleInnerProps {
+  /**
+   * Wether the accordion item is expanded by default
+   */
   isExpanded?: boolean;
+  /**
+   * Wether the accordion is responsive to interaction
+   */
   isInteractive?: boolean;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
   children: React.ReactNode;
-  ["data-cy"]?: string;
 }
 
 const AccordionItemTitleInner = ({

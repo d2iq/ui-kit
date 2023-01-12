@@ -5,13 +5,16 @@ import { Provider as AccordionItemProvider } from "./AccordionItemContext";
 
 export interface AccordionItemProps {
   /**
-   * human-readable selector used for writing tests
+   * Human-readable selector used for writing tests
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
   /**
    * A custom ID for the accordion panel
    */
   id?: string;
+  /**
+   * Allows custom styling
+   */
   className?: string;
   children?: React.ReactNode;
 }

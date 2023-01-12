@@ -6,9 +6,9 @@ export interface AccordionBaseProps {
    */
   allowMultipleExpanded?: boolean;
   /**
-   * human-readable selector used for writing tests
+   * Human-readable selector used for writing tests
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
   /**
    * A function that gets called when an accordion item is expanded or closed
    */

@@ -4,22 +4,22 @@ import { cx } from "@emotion/css";
 import { SharedListProps } from "./List";
 import { listReset } from "../../shared/styles/styleUtils";
 
-const BorderedList = (props: SharedListProps) => {
-  const { tag, children } = props;
+const BorderedList = ({
+  tag = "ul",
+  children,
+  className,
+  "data-cy": dataCy = "borderedList"
+}: SharedListProps) => {
   const BorderedListEl = tag;
 
   return (
     <BorderedListEl
-      className={cx(listReset, borderedListStyle)}
-      data-cy="borderedList"
+      className={cx(listReset, borderedListStyle, className)}
+      data-cy={dataCy}
     >
       {children}
     </BorderedListEl>
   );
-};
-
-BorderedList.defaultProps = {
-  tag: "ul"
 };
 
 export default BorderedList;
