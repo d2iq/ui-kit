@@ -27,7 +27,7 @@ export interface ToggleWrapperProps extends React.HTMLProps<HTMLInputElement> {
   /**
    * human-readable selector used for writing tests
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
 }
 
 interface ToggleWrapperWithRenderProps
@@ -89,11 +89,6 @@ const ToggleWrapper = ({
     </label>
     /* eslint-enable jsx-a11y/role-supports-aria-props */
   );
-};
-
-ToggleWrapper.defaultProps = {
-  type: "checkbox",
-  value: ""
 };
 
 export default React.memo(ToggleWrapper);

@@ -23,15 +23,16 @@ const defaultTag = "p";
 
 const Text = (props: TextProps) => {
   const {
-    align,
+    align = "inherit",
     children,
-    tag,
-    wrap,
-    weight,
-    color,
-    size,
+    tag = defaultTag,
+    wrap = "wrap",
+    weight = "normal",
+    color = themeTextColorPrimary,
+    size = "m",
+
     className,
-    "data-cy": dataCy
+    "data-cy": dataCy = "text"
   } = props;
   const TextTag = tag || defaultTag;
   let title: string | undefined;

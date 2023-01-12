@@ -87,7 +87,7 @@ const TextInputWithBadges = (props: TextInputWithBadgesProps) => {
       badges,
       onBadgeChange,
       downshiftReset,
-      addBadgeOnBlur,
+      addBadgeOnBlur = "true",
       badgeAppearance,
       ...inputProps
     } = baseProps as TextInputWithBadgesProps;

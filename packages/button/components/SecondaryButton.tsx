@@ -8,7 +8,7 @@ import {
 const SecondaryButton = (props: ButtonProps) => (
   <ButtonBase
     appearance={ButtonAppearances.Secondary}
-    data-cy="secondaryButton"
+    data-cy={props["data-cy"] ?? "secondaryButton"}
     {...props}
   />
 );

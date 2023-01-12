@@ -9,7 +9,7 @@ import { LinkProps } from "../../link/types";
 const StandardButton = (props: ButtonProps & LinkProps) => (
   <ButtonBase
     appearance={ButtonAppearances.Standard}
-    data-cy="standardButton"
+    data-cy={props["data-cy"] ?? "standardButton"}
     {...props}
   />
 );

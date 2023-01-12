@@ -32,6 +32,14 @@ export interface ToastProps {
   dismissToast?: (dismissedToastId: ToastId) => void;
   primaryAction?: React.ReactElement<HTMLElement>;
   secondaryAction?: React.ReactElement<HTMLElement>;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
 const SuccessIcon = (
@@ -62,10 +70,11 @@ const Toast = ({
   secondaryAction,
   dismissToast,
   onDismiss,
-  id
+  id,
+  className,
+  "data-cy": dataCy = `toast toast.${appearance}`
 }: ToastProps) => {
   const isUrgentMessage = appearance === "danger" || appearance === "warning";
-  const dataCy = `toast toast.${appearance}`;
 
   const handleDismiss = e => {
     if (dismissToast) {
@@ -84,7 +93,8 @@ const Toast = ({
         padding("top", "xs"),
         padding("right", "xs"),
         padding("left", "xs"),
-        display("grid")
+        display("grid"),
+        className
       )}
       role={isUrgentMessage ? "alert" : "log"}
       aria-relevant="all"

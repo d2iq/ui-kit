@@ -12,9 +12,4 @@ const CaptionText = (props: SharedTextProps) => (
   />
 );
 
-CaptionText.defaultProps = {
-  align: "inherit",
-  tag: "p"
-};
-
 export default CaptionText;
