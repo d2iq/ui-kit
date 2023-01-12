@@ -29,6 +29,7 @@ export interface PopoverListItemProps extends React.HTMLProps<HTMLDivElement> {
   listLength: number;
   isActive?: boolean;
   isSelected?: boolean;
+  "data-cy"?: string;
 }
 
 const PopoverListItem = (props: PopoverListItemProps) => {
@@ -39,6 +40,7 @@ const PopoverListItem = (props: PopoverListItemProps) => {
     index,
     listLength,
     children,
+    "data-cy": dataCy = "PopoverListItem",
     ...other
   } = props;
   // Importing these was causing issues with `getCSSVarValue` where it would
@@ -126,7 +128,7 @@ const PopoverListItem = (props: PopoverListItemProps) => {
           [tintContent(themeError)]: appearance === "danger"
         }
       )}
-      data-cy="PopoverListItem"
+      data-cy={dataCy}
       {...other}
     >
       {itemGraphicStart || itemGraphicEnd ? (

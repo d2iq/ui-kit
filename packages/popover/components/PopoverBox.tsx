@@ -13,6 +13,7 @@ export interface PopoverProps extends React.HTMLProps<HTMLDivElement> {
   menuRef?: React.RefObject<HTMLDivElement>;
   showPointerCaret?: boolean;
   width?: React.CSSProperties["width"];
+  "data-cy"?: string;
 }
 
 const Popover = (props: PopoverProps) => {
@@ -23,6 +24,7 @@ const Popover = (props: PopoverProps) => {
     menuRef,
     showPointerCaret,
     width,
+    "data-cy": dataCy = "popover",
     ...other
   } = props;
   return (
@@ -35,7 +37,7 @@ const Popover = (props: PopoverProps) => {
         })}
         ref={menuRef}
         style={{ width, maxHeight, maxWidth }}
-        data-cy="popover"
+        data-cy={dataCy}
         {...other}
       />
       {showPointerCaret && <div className={getPopoverBoxArrow(direction)} />}

@@ -7,15 +7,18 @@ export interface FormSectionFooterProps {
    * Allows custom styling
    */
   className?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
-const FormSectionFooter = ({ children, className }: FormSectionFooterProps) => (
-  <SpacingBox
-    className={className}
-    side="top"
-    spacingSize="m"
-    data-cy="formSectionFooter"
-  >
+const FormSectionFooter = ({
+  children,
+  className,
+  "data-cy": dataCy = "formSectionFooter"
+}: FormSectionFooterProps) => (
+  <SpacingBox className={className} side="top" spacingSize="m" data-cy={dataCy}>
     {children}
   </SpacingBox>
 );

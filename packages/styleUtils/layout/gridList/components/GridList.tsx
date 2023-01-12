@@ -27,13 +27,11 @@ export interface GridListProps {
   /**
    * Additional styles to extend the component.
    */
-
   className?: string;
-
   /**
    * Human-readable selector used for writing tests.
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
   /**
    * Centers grid children by implementing `place-items: center;` Optimal for grids that could have a state with only 1 grid child.
    */
