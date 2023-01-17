@@ -22,23 +22,27 @@ export interface PopoverProps
    * Whether the dropdown starts open
    */
   initialIsOpen?: boolean;
-  /** The maximum height of the dropdown overlay, represented by number of pixels. */
+  /**
+   * The maximum height of the dropdown overlay, represented by number of pixels.
+   */
   maxHeight?: number;
-  /** The maximum width of the dropdown overlay, represented by number of pixels. */
+  /**
+   * The maximum width of the dropdown overlay, represented by number of pixels
+   */
   maxWidth?: number;
   /**
    * The node that opens the menu when clicked
    */
   trigger: React.ReactNode;
   /**
-   * human-readable selector used for writing tests
+   * Human-readable selector used for writing tests
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
 }
 
 const Popover = ({
   children,
-  "data-cy": dataCy,
+  "data-cy": dataCy = "popover",
   id,
   initialIsOpen,
   maxHeight,
@@ -161,10 +165,6 @@ const Popover = ({
       </Dropdownable>
     </div>
   );
-};
-
-Popover.defaultProps = {
-  ["data-cy"]: "popover"
 };
 
 export default Popover;

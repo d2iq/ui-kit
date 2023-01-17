@@ -25,34 +25,58 @@ export enum ModalSizes {
 
 export interface ModalBaseProps {
   children?: React.ReactNode;
-  /** Controls whether the modal animates in and out. ⚠️Do not use this directly⚠️ */
+  /**
+   * Controls whether the modal animates in and out
+   * ⚠️ Do not use this directly
+   */
   isAnimated?: boolean;
-  /** Whether the modal is open */
+  /**
+   * Whether the modal is open or not
+   */
   isOpen: boolean;
-  /** A selector for which element gets focus when the modal opens. Uses `document.querySelector` under the hood */
+  /**
+   * A selector for which element gets focus when the modal opens. Uses `document.querySelector` under the hood
+   */
   initialFocus?: string;
-  /** Function that gets called when the modal is closed */
+  /**
+   * Function called when the modal is closed
+   */
   onClose: (event?: React.SyntheticEvent<HTMLElement>) => void;
-  /** Which size modal to render. ⚠️Do not use this directly⚠️ */
+  /**
+   * Which size modal to render
+   * ⚠️ Do not use this directly
+   */
   size?: ModalSizes;
   /**
-   * human-readable selector used for writing tests
+   * Human-readable selector used for writing tests
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
   /**
-   * which DOM node the modal will attach to
+   * Which DOM node the modal will attach to
    */
   overlayRoot?: HTMLElement;
   /**
-   * the ID attribute that is passed to the modal dialog box
+   * The ID attribute that is passed to the modal dialog box
    */
   id?: string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
 const animationDuration = 250;
 
 const ModalBase = ({ isAnimated = true, ...props }: ModalBaseProps) => {
-  const { children, size, isOpen, "data-cy": dataCy, overlayRoot, id } = props;
+  const {
+    children,
+    size,
+    isOpen,
+    "data-cy": dataCy,
+    overlayRoot,
+    id,
+    className
+  } = props;
   const modalSize = size || ModalSizes.M;
 
   const onKeyDown = e => {
@@ -98,10 +122,15 @@ const ModalBase = ({ isAnimated = true, ...props }: ModalBaseProps) => {
               />
               <div className={centerDialogWrapper}>
                 <div
-                  className={cx(modal, modalWidth[modalSize], {
-                    [modalPreTransitionStyle(animationDuration)]: isAnimated,
-                    [modalTransitionStyles[state]]: isAnimated
-                  })}
+                  className={cx(
+                    modal,
+                    modalWidth[modalSize],
+                    {
+                      [modalPreTransitionStyle(animationDuration)]: isAnimated,
+                      [modalTransitionStyles[state]]: isAnimated
+                    },
+                    className
+                  )}
                   role="dialog"
                   onKeyDown={onKeyDown}
                   tabIndex={-1}

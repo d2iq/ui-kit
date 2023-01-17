@@ -19,6 +19,10 @@ interface MessagePanelWithGraphicProps extends MessagePanelProps {
    * The expected width and/or height dimensions of the graphic
    */
   graphicDimensions?: GraphicDimensions;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const MessagePanelWithGraphic = ({
@@ -27,11 +31,12 @@ const MessagePanelWithGraphic = ({
   heading,
   children,
   primaryAction,
-  secondaryAction
+  secondaryAction,
+  "data-cy": dataCy = "messagePanelWithGraphic"
 }: MessagePanelWithGraphicProps) => {
   const hasActions = primaryAction || secondaryAction;
   return (
-    <div data-cy="messagePanelWithGraphic">
+    <div data-cy={dataCy}>
       <SpacingBox spacingSize="xl" side="bottom">
         <img
           src={graphicSrc}

@@ -7,20 +7,31 @@ interface FormSectionHeaderProps {
    * Allows custom styling
    */
   className?: string;
+  /**
+   * Title text
+   */
   title: string;
+  /**
+   * Subtitle text
+   */
   subtitle?: React.ReactNode;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const FormSectionHeader = ({
   className,
   title,
-  subtitle
+  subtitle,
+  "data-cy": dataCy = "formSectionHeader"
 }: FormSectionHeaderProps) => (
   <SpacingBox
     className={className}
     side="bottom"
     spacingSize="m"
-    data-cy="formSectionHeader"
+    data-cy={dataCy}
   >
     <HeadingText2 data-cy="formSectionHeader-title">{title}</HeadingText2>
     {subtitle && (

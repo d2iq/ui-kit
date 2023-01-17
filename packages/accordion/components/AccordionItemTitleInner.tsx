@@ -9,11 +9,11 @@ import { fillWidth, accordionTitleInteractive } from "../style";
 
 export interface AccordionItemTitleInnerProps {
   /**
-   * Wether the accordion item is expanded by default
+   * Whether the accordion item is expanded by default
    */
   isExpanded?: boolean;
   /**
-   * Wether the accordion is responsive to interaction
+   * Whether the accordion is responsive to interaction
    */
   isInteractive?: boolean;
   /**

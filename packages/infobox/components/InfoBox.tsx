@@ -20,29 +20,33 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 export interface InfoBoxProps {
   /**
-   * the tone of the message
+   * The style and tone of the message
    */
   appearance?: "danger" | "default" | "info" | "success" | "warning";
   /**
-   * additional styles to extend the component
+   * Additional styles to extend the component
    */
   className?: string;
   /**
-   * additional styles to extend the component
+   * Additional styles to extend the component
    */
   onDismiss?: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /**
-   * the main content of the message
+   * The main content of the message
    */
   message: React.ReactNode;
   /**
-   * the more prominent action presented to the user
+   * The more prominent action presented to the user
    */
   primaryAction?: React.ReactElement<HTMLElement>;
   /**
-   * an alternate action the user could take
+   * An alternate action the user could take
    */
   secondaryAction?: React.ReactElement<HTMLElement>;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
   children?: React.ReactNode | React.ReactNode[];
 }
 

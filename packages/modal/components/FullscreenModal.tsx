@@ -5,18 +5,37 @@ import { ButtonProps } from "../../button/components/ButtonBase";
 import FullscreenView from "../../fullscreenView/components/FullscreenView";
 
 interface FullscreenModalProps extends ModalBaseProps {
-  /** The primary button */
+  /**
+   * The primary button used for a call to action
+   */
   ctaButton?: React.ReactElement<ButtonProps>;
-  /** The text for the secondary button that closes the modal */
+  /**
+   * The text for the button that closes the modal
+   */
   closeText: React.ReactNode;
-  /** The title that appears in the header */
+
+  /**
+   * The title that appears in the header
+   */
   title: React.ReactNode;
-  /** The subtitle that appears in the header */
+  /**
+   * The subtitle that appears in the header
+   */
   subtitle?: React.ReactNode;
-  /** Whether we automatically add padding to the body of the modal. */
+  /**
+   * Whether we automatically add padding to the body of the modal.
+   */
   isContentFlush?: boolean;
-  /** Custom header content component. ⚠️Use rarely and with caution⚠️ */
+  /**   */
+  /**
+   * Custom header content component.
+   * ⚠️ Use rarely and with caution
+   */
   headerComponent?: React.JSXElementConstructor<any>;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const FullscreenModal = ({
@@ -28,6 +47,7 @@ const FullscreenModal = ({
   title,
   subtitle,
   headerComponent,
+  "data-cy": dataCy = "fullscreenModal",
   ...other
 }: FullscreenModalProps) => {
   return (
@@ -35,7 +55,7 @@ const FullscreenModal = ({
       size={ModalSizes.Fullscreen}
       onClose={onClose}
       isAnimated={false}
-      data-cy="fullscreenModal"
+      data-cy={dataCy}
       {...other}
     >
       <FullscreenView

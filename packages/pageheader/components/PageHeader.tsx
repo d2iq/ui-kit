@@ -27,7 +27,7 @@ export interface PageHeaderProps {
    */
   "data-cy"?: string;
   /**
-   * Pass in custom CSS properties.
+   * Allows custom styles.
    */
   className?: string;
   children?: React.ReactNode;

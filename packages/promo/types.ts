@@ -17,8 +17,8 @@ export interface PromoProps {
   primaryAction?: React.ReactNode;
   /** An additional action a user can take in response to the banner's message. This can also just be a link to more information relevant to the banner's message. */
   secondaryAction?: React.ReactNode;
-  /** The Cypress selector */
-  ["data-cy"]?: string;
+  /** Human-readable selector used for writing tests */
+  "data-cy"?: string;
 }
 
 export type GradientStyle = "lightBlue" | "purple" | "oceanBlue";

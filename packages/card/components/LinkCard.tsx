@@ -11,6 +11,10 @@ export interface ButtonCardProps extends CardProps {
    * What screenreaders read aloud for the link
    */
   linkDescription: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const LinkCard = ({
@@ -19,12 +23,13 @@ const LinkCard = ({
   url,
   children,
   className,
+  "data-cy": dataCy = "linkCard",
   ...other
 }: ButtonCardProps & LinkProps) => {
   return (
     <Card
       className={cx(buttonCard, cardWithLink, className)}
-      data-cy="linkCard"
+      data-cy={dataCy}
       {...other}
     >
       <>
