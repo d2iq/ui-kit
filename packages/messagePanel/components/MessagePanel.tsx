@@ -26,20 +26,25 @@ export interface MessagePanelProps {
    * A secondary action a user can take in the empty state
    */
   secondaryAction?: React.ReactNode;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
   children: React.ReactNode;
 }
 
 const MessagePanel = ({
-  appearance,
+  appearance = "standard",
   heading,
   children,
   primaryAction,
-  secondaryAction
+  secondaryAction,
+  "data-cy": dataCy = "messagePanel"
 }: MessagePanelProps) => {
   const hasActions = primaryAction || secondaryAction;
 
   return (
-    <div className={messagePanelContainer} data-cy="messagePanel">
+    <div className={messagePanelContainer} data-cy={dataCy}>
       <Card paddingSize="xxl">
         <SpacingBox side="bottom" spacingSize="xs">
           <HeadingText2 align="center">
@@ -83,10 +88,6 @@ const MessagePanel = ({
       </Card>
     </div>
   );
-};
-
-MessagePanel.defaultProps = {
-  appearance: "standard"
 };
 
 export default MessagePanel;

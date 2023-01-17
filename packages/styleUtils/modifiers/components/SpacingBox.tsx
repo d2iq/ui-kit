@@ -20,14 +20,20 @@ export interface SpacingBoxProps extends BoxProps {
    * Used to set different spacing values on different sides of the element
    */
   spacingSizePerSide?: { [Side in NonNullable<BoxSides>]?: SpaceSize };
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const SpacingBox = (props: SpacingBoxProps) => {
   const {
     side = "all",
-    spacingSize,
+    spacingSize = "m",
     className,
     spacingSizePerSide,
+    "data-cy": dataCy = "spacingBox",
+    tag = "div",
     ...other
   } = props;
   const paddingStyles = spacingSizePerSide
@@ -40,18 +46,8 @@ const SpacingBox = (props: SpacingBoxProps) => {
     : padding(side, spacingSize);
 
   return (
-    <Box
-      className={cx(className, paddingStyles)}
-      data-cy="spacingBox"
-      {...other}
-    />
+    <Box className={cx(className, paddingStyles)} data-cy={dataCy} {...other} />
   );
-};
-
-SpacingBox.defaultProps = {
-  side: "all",
-  spacingSize: "m",
-  tag: "div"
 };
 
 export default SpacingBox;

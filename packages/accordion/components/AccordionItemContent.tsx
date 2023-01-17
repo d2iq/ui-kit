@@ -12,13 +12,16 @@ import { SpaceSize } from "../../shared/styles/styleUtils/modifiers/modifierUtil
 
 interface AccordionItemContentProps {
   /**
-   * human-readable selector used for writing tests
+   * Human-readable selector used for writing tests
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
   /**
-   * the amount of space between the border and the content
+   * The amount of space between the border and the content
    */
   paddingSize?: SpaceSize;
+  /**
+   * Allows custom styling
+   */
   className?: string;
   children: React.ReactNode;
 }

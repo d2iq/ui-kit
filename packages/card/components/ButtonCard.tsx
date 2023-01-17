@@ -41,6 +41,7 @@ const ButtonCard = ({
   onClick,
   className,
   onKeyPress,
+  "data-cy": dataCy = "buttonCard",
   ...other
 }: ButtonCardProps) => {
   const tabIndex = disabled ? -1 : 0;
@@ -81,7 +82,7 @@ const ButtonCard = ({
         className
       )}
       {...buttonProps}
-      data-cy="buttonCard"
+      data-cy={dataCy}
       {...other}
     />
   );

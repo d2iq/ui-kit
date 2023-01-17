@@ -14,27 +14,45 @@ interface DonutChartDatum {
 
 export interface DonutChartProps {
   /**
-   * objects that define the size and color of segments in the donut chart
+   * Objects that define the size and color of segments in the donut chart
    */
   data: DonutChartDatum[];
   /**
-   * the primary piece of data in the chart - appears large
+   * The primary piece of data in the chart - appears large
    */
   label?: string;
   /**
-   * a caption for the label
+   * A caption for the label
    */
   text?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
-const DonutChart = ({ data, label, text }: DonutChartProps) => {
+const DonutChart = ({
+  data,
+  label,
+  text,
+  className,
+  "data-cy": dataCy = "donutChart"
+}: DonutChartProps) => {
   const strokeWidth = 1.5;
   const radius = 100 / (Math.PI * 2);
   const diameter = radius * 2 + strokeWidth;
   const circleCenter = diameter / 2;
 
   return (
-    <svg viewBox={`0 0 ${diameter} ${diameter}`} data-cy="donutChart">
+    <svg
+      viewBox={`0 0 ${diameter} ${diameter}`}
+      data-cy={dataCy}
+      className={className}
+    >
       <circle
         cx={circleCenter}
         cy={circleCenter}

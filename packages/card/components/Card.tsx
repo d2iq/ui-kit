@@ -45,6 +45,10 @@ export interface CardProps extends React.HTMLProps<HTMLDivElement> {
    * Allows custom styling
    */
   className?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const Card = ({
@@ -53,6 +57,7 @@ const Card = ({
   aspectRatio,
   paddingSize = "m",
   header,
+  "data-cy": dataCy = "card",
   ...other
 }: CardProps) => {
   const headerSize = header?.size || HeaderSizes.M;
@@ -64,7 +69,7 @@ const Card = ({
   return (
     <div
       className={cx(cardBase, aspectRatioStyle, className)}
-      data-cy="card"
+      data-cy={dataCy}
       {...other}
     >
       {header?.headerImg && (

@@ -11,15 +11,26 @@ import {
 } from "../../shared/styles/styleUtils";
 
 export interface BreadcrumbProps {
-  className?: string;
   children?: React.ReactNode | string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 function intersperse<A>(list: A[], sep: JSX.Element) {
   return Array.prototype.concat(...list.map(e => [sep, e])).slice(1);
 }
 
-const Breadcrumb = ({ className, children }: BreadcrumbProps) => {
+const Breadcrumb = ({
+  className,
+  children,
+  "data-cy": dataCy = "breadcrumb"
+}: BreadcrumbProps) => {
   const breadcrumbSeparator = <Icon shape={SystemIcons.CaretRight} size="xs" />;
   const crumbsArr = intersperse(
     React.Children.toArray(children),
@@ -34,7 +45,7 @@ const Breadcrumb = ({ className, children }: BreadcrumbProps) => {
           className={cx(textWeight("medium"), textSize("l"), {
             [padding("left", "xs")]: i !== 0
           })}
-          data-cy="breadcrumb"
+          data-cy={dataCy}
         >
           {crumb}
         </div>

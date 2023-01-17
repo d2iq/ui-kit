@@ -35,12 +35,12 @@ exports[`MessagePanel appearance='error' 1`] = `
                 xlink:href="#system-circle-close"
               />
             </svg>
-            <span
+            <div
               class="css-m1scup"
               data-cy="spacingBox"
             >
               Heading
-            </span>
+            </div>
           </h2>
         </div>
         <div

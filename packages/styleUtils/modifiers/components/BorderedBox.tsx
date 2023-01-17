@@ -25,20 +25,22 @@ export interface BorderedBoxProps extends BoxProps {
 }
 
 const BorderedBox = (props: BorderedBoxProps) => {
-  const { side, radius, variant, className, ...other } = props;
+  const {
+    side,
+    radius = "none",
+    variant,
+    className,
+    "data-cy": dataCy = "borderedBox",
+    ...other
+  } = props;
 
   return (
     <Box
       className={cx(className, border(side, variant), borderRadius(radius))}
-      data-cy="borderedBox"
+      data-cy={dataCy}
       {...other}
     />
   );
-};
-
-BorderedBox.defaultProps = {
-  radius: "none",
-  tag: "div"
 };
 
 export default BorderedBox;

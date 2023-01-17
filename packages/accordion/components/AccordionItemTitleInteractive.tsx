@@ -24,9 +24,9 @@ interface RenderProps {
 const AccordionItemTitleInteractive = ({
   appearance,
   children,
-  "data-cy": dataCy,
+  "data-cy": dataCy = "accordionItemTitle",
   disabled,
-  headingLevel,
+  headingLevel = 3,
   className
 }: Omit<AccordionItemTitleProps, "children"> & {
   children: (renderProps: RenderProps) => React.ReactNode;
@@ -94,11 +94,6 @@ const AccordionItemTitleInteractive = ({
       </AccordionItemTitleInner>
     </AccordionItemTitleOuter>
   );
-};
-
-AccordionItemTitleInteractive.defaultProps = {
-  headingLevel: 3,
-  "data-cy": "accordionItemTitle"
 };
 
 export default AccordionItemTitleInteractive;

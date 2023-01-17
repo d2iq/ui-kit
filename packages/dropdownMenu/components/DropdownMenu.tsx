@@ -65,7 +65,7 @@ export interface DropdownMenuProps {
    */
   menuMaxWidth?: React.CSSProperties["maxWidth"];
   /**
-   * callback for when a menu item is clicked
+   * Callback for when a menu item is clicked
    */
   onSelect?: (
     selectedItem: string,
@@ -74,7 +74,7 @@ export interface DropdownMenuProps {
     >
   ) => void;
   /**
-   * which DOM node the dropdown menu will attach to
+   * Which DOM node the dropdown menu will attach to
    */
   overlayRoot?: HTMLElement;
   /**
@@ -89,6 +89,9 @@ export interface DropdownMenuProps {
    * Whether the dropdown node should be portalled to document.body, or open in it's parent DOM node
    */
   disablePortal?: boolean;
+  /**
+   * Allows custom styling
+   */
   className?: string;
 }
 
@@ -105,7 +108,14 @@ const DropdownMenu = (props: DropdownMenuProps) => {
     menuMaxWidth,
     onSelect,
     overlayRoot,
-    preferredDirections,
+    preferredDirections = [
+      Direction.BottomRight,
+      Direction.BottomLeft,
+      Direction.BottomCenter,
+      Direction.TopRight,
+      Direction.TopCenter,
+      Direction.TopLeft
+    ],
     trigger
   } = props;
 
@@ -222,17 +232,6 @@ const DropdownMenu = (props: DropdownMenuProps) => {
       )}
     </Downshift>
   );
-};
-
-DropdownMenu.defaultProps = {
-  preferredDirections: [
-    Direction.BottomRight,
-    Direction.BottomLeft,
-    Direction.BottomCenter,
-    Direction.TopRight,
-    Direction.TopCenter,
-    Direction.TopLeft
-  ]
 };
 
 export default DropdownMenu;

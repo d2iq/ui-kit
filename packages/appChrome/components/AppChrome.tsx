@@ -20,7 +20,7 @@ import {
 
 export interface AppChromeProps {
   /**
-   * Optional className to apply to outermost div
+   * Allows custom styling
    */
   className?: string;
   /**
@@ -39,6 +39,10 @@ export interface AppChromeProps {
    * JSX for the main html element
    */
   children?: React.ReactNode;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const AppChrome = ({
@@ -46,7 +50,8 @@ const AppChrome = ({
   sidebar,
   headerBar,
   mainContent,
-  children
+  children,
+  "data-cy": dataCy = "appChrome"
 }: AppChromeProps) => {
   return (
     <ThemeProvider
@@ -65,7 +70,7 @@ const AppChrome = ({
           flex({ direction: "column" }),
           className
         )}
-        data-cy="appChrome"
+        data-cy={dataCy}
       >
         {headerBar && <div data-cy="headerBar">{headerBar}</div>}
         <div className={cx(flex(), appWrapper)}>

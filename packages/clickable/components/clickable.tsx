@@ -24,9 +24,9 @@ export interface ClickableProps {
    */
   disableFocusOutline?: boolean;
   /**
-   * human-readable selector used for writing tests
+   * Human-readable selector used for writing tests
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
 }
 
 export const Clickable = ({
@@ -52,7 +52,7 @@ export const Clickable = ({
     role,
     tabIndex,
     onKeyPress: handleKeyPress,
-    ["data-cy"]: dataCy
+    "data-cy": dataCy
   });
 };
 

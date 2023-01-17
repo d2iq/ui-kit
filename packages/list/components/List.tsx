@@ -7,7 +7,18 @@ export interface SharedListProps {
   children:
     | Array<React.ReactElement<HTMLLIElement>>
     | React.ReactElement<HTMLLIElement>;
+  /**
+   * Set to an ordered list `ol` or the defaulted unordered list `ul`
+   */
   tag: "ul" | "ol";
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
 interface ListProps extends SharedListProps {
@@ -26,20 +37,23 @@ interface ListProps extends SharedListProps {
     | "none";
 }
 
-const List = (props: ListProps) => {
-  const { children, markerStyle, tag } = props;
+const List = ({
+  children,
+  className,
+  markerStyle = "none",
+  tag = "ul",
+  "data-cy": dataCy = "list"
+}: ListProps) => {
   const ListEl = tag;
 
   return (
-    <ListEl className={cx(listReset, listMarker(markerStyle))} data-cy="list">
+    <ListEl
+      className={cx(listReset, listMarker(markerStyle), className)}
+      data-cy={dataCy}
+    >
       {children}
     </ListEl>
   );
-};
-
-List.defaultProps = {
-  markerStyle: "none",
-  tag: "ul"
 };
 
 export default List;

@@ -5,17 +5,17 @@ import { ddReset } from "../../shared/styles/styleUtils/resets/definitionListRes
 
 interface ConfigurationMapValueProps {
   children: React.ReactNode;
-  dataCy?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const ConfigurationMapValue = ({
   children,
-  dataCy
+  "data-cy": dataCy = "configurationMapValue"
 }: ConfigurationMapValueProps) => (
-  <div
-    className={cx(ddReset, flexItem("grow"), breakWord)}
-    data-cy={dataCy ?? "configurationMapValue"}
-  >
+  <div className={cx(ddReset, flexItem("grow"), breakWord)} data-cy={dataCy}>
     {children}
   </div>
 );
