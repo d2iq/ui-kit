@@ -5,21 +5,30 @@ import { configurationMapLabel } from "../style";
 
 interface ConfigurationMapLabelProps {
   children: React.ReactNode;
-  dataCy?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
 const ConfigurationMapLabel = ({
   children,
-  dataCy
+  className,
+  "data-cy": dataCy = "configurationMapLabel"
 }: ConfigurationMapLabelProps) => (
   <div
     className={cx(
       configurationMapLabel,
       padding("right", "s"),
       textWeight("medium"),
-      breakWord
+      breakWord,
+      className
     )}
-    data-cy={dataCy ?? "configurationMapLabel"}
+    data-cy={dataCy}
   >
     {children}
   </div>

@@ -16,13 +16,17 @@ const PromoBanner = ({
   bgColor = "themeBgSecondary",
   gradientStyle,
   isDarkBackground,
+  className,
   ...other
 }: PromoBannerProps) => (
   <SpacingBox
     bgColor={gradientStyle ? gradientStyles[gradientStyle][0] : dt[bgColor]}
-    className={cx({
-      [getBackgroundGradient(gradientStyle)]: Boolean(gradientStyle)
-    })}
+    className={cx(
+      {
+        [getBackgroundGradient(gradientStyle)]: Boolean(gradientStyle)
+      },
+      className
+    )}
     spacingSize="l"
     side="horiz"
   >

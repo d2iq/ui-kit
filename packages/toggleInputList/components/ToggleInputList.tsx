@@ -77,6 +77,10 @@ export interface ToggleInputListProps {
    * Whether the inputs are radio buttons
    */
   isRadioGroup?: boolean;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const ToggleInputList = ({
@@ -92,7 +96,8 @@ const ToggleInputList = ({
   isRadioGroup,
   items,
   onChange,
-  listLabel
+  listLabel,
+  "data-cy": dataCy
 }: ToggleInputListProps) => {
   const listLegendContent = () => {
     const requiredContent = required ? (
@@ -172,6 +177,7 @@ const ToggleInputList = ({
           aria-describedby={describedByIds}
           aria-required={required}
           role="listbox"
+          data-cy={dataCy}
         >
           {listLegendContent()}
           <ul className={listReset}>{inputListItems()}</ul>

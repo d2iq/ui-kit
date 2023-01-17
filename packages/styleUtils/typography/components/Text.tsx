@@ -30,7 +30,6 @@ const Text = (props: TextProps) => {
     weight = "normal",
     color = themeTextColorPrimary,
     size = "m",
-
     className,
     "data-cy": dataCy = "text"
   } = props;

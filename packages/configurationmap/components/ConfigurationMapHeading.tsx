@@ -19,6 +19,14 @@ interface ConfigurationMapHeadingProps {
    * Which HTML tag to render the text in
    */
   tag?: keyof React.ReactHTML;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
   children: React.ReactNode;
 }
 
@@ -33,8 +41,13 @@ const getHeadingTextComponent = (headingLevel: HeadingLevel) => {
   }
 };
 
-const ConfigurationMapHeading = (props: ConfigurationMapHeadingProps) => {
-  const { children, headingLevel = 1, tag } = props;
+const ConfigurationMapHeading = ({
+  children,
+  headingLevel = 1,
+  tag,
+  className,
+  "data-cy": dataCy = "configurationMapHeading"
+}: ConfigurationMapHeadingProps) => {
   const headingTag: keyof React.ReactHTML = `h${headingLevel}` as
     | "h1"
     | "h2"
@@ -50,9 +63,10 @@ const ConfigurationMapHeading = (props: ConfigurationMapHeadingProps) => {
       className={cx(
         configurationMapHeadingStyle,
         padding("bottom", "xs"),
-        border("bottom")
+        border("bottom"),
+        className
       )}
-      data-cy="configurationMapHeading"
+      data-cy={dataCy}
     >
       <HeadingTextComponent tag={tag || headingTag}>
         {children}

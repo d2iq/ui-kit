@@ -13,16 +13,21 @@ interface FormSubSectionProps {
    * Allows custom styling
    */
   className?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const FormSubSection = ({
   children,
   className,
+  "data-cy": dataCy = "formSubSection",
   onRemove
 }: FormSubSectionProps) => {
   const subSectionContent = <div className={formFieldStack}>{children}</div>;
   return (
-    <Card className={className} data-cy="formSubSection">
+    <Card className={className} data-cy={dataCy}>
       {onRemove ? (
         <Flex gutterSize="xs">
           <FlexItem>{subSectionContent}</FlexItem>

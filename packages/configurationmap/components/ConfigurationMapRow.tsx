@@ -5,22 +5,38 @@ import { flex, padding, border } from "../../shared/styles/styleUtils";
 
 interface ConfigurationMapRowProps {
   children: React.ReactNode;
+  /**
+   * If the style for the action is applied on hover
+   */
   onlyShowActionOnHover?: boolean;
-  dataCy?: string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
-const ConfigurationMapRow = (props: ConfigurationMapRowProps) => (
+const ConfigurationMapRow = ({
+  children,
+  onlyShowActionOnHover,
+  className,
+  "data-cy": dataCy = "configurationMapRow"
+}: ConfigurationMapRowProps) => (
   <div
     className={cx(
-      { [showActionOnHoverStyle]: props.onlyShowActionOnHover },
+      { [showActionOnHoverStyle]: onlyShowActionOnHover },
       configurationMapRow,
       border("bottom"),
       flex(),
-      padding("vert", "xs")
+      padding("vert", "xs"),
+      className
     )}
-    data-cy={props.dataCy ?? "configurationMapRow"}
+    data-cy={dataCy}
   >
-    {props.children}
+    {children}
   </div>
 );
 

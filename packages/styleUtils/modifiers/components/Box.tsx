@@ -42,11 +42,14 @@ export interface BoxProps {
    */
   tag?: keyof React.ReactHTML;
   /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
    * Human-readable selector used for writing tests
    */
   "data-cy"?: string;
   children?: React.ReactNode;
-  className?: string;
 }
 
 const Box = (props: BoxProps) => {

@@ -4,7 +4,13 @@ import { container } from "../style";
 
 export interface ContainerProps {
   children: React.ReactNode;
+  /**
+   * Human-readable selector used for writing tests
+   */
   "data-cy"?: string;
+  /**
+   * Allows custom styling
+   */
   className?: string;
 }
 
