@@ -8,9 +8,9 @@ import { flex } from "../../../../shared/styles/styleUtils/layout/flexbox";
 export interface StackProps {
   className?: string;
   /**
-   * human-readable selector used for writing tests
+   * Human-readable selector used for writing tests
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
   /**
    * The size of the space to apply between items. It can set 1 spacing size for all breakpoints, or it can be used to set different spacing values at different viewport width breakpoints.
    */

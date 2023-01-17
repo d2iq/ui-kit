@@ -9,7 +9,7 @@ import { LinkProps } from "../../link/types";
 const SuccessButton = (props: ButtonProps & LinkProps) => (
   <ButtonBase
     appearance={ButtonAppearances.Success}
-    data-cy="successButton"
+    data-cy={props["data-cy"] ?? "successButton"}
     {...props}
   />
 );

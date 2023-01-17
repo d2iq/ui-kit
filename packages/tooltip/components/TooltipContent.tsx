@@ -7,8 +7,18 @@ import { BaseTooltipProps } from "./Tooltip";
 import { Direction } from "../../dropdownable/components/Dropdownable";
 
 export interface TooltipContentProps extends BaseTooltipProps {
+  /**
+   * Set a direction for the tooltip to open toward
+   */
   direction?: Direction;
+  /**
+   * Controls if opened by default
+   */
   isOpen: boolean;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const TooltipContent = ({
@@ -17,7 +27,8 @@ const TooltipContent = ({
   id,
   maxWidth,
   minWidth,
-  isOpen
+  isOpen,
+  "data-cy": dataCy = "tooltipContent"
 }: TooltipContentProps) => {
   return (
     <>
@@ -36,7 +47,7 @@ const TooltipContent = ({
           minWidth,
           maxWidth: maxWidth || undefined
         }}
-        data-cy="tooltipContent"
+        data-cy={dataCy}
       >
         {children}
       </div>

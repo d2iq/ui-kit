@@ -15,9 +15,9 @@ export interface SharedTextProps {
    */
   tag?: keyof React.ReactHTML;
   /**
-   * human-readable selector used for writing tests
+   * Human-readable selector used for writing tests
    */
-  ["data-cy"]?: string;
+  "data-cy"?: string;
   children: React.ReactNode;
 }
 

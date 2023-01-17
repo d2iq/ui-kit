@@ -40,6 +40,10 @@ export interface SegmentedControlButtonProps {
    * Content that appears in a Tooltip when a users hovers the button
    */
   tooltipContent?: React.ReactNode;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
   children?: React.ReactNode;
 }
 
@@ -53,7 +57,8 @@ const SegmentedControlLabel = React.forwardRef(
       name,
       value,
       tooltipContent,
-      children
+      children,
+      "data-cy": dataCy = "segmentedControlButton"
     }: SegmentedControlButtonProps,
     ref
   ) => {
@@ -66,7 +71,7 @@ const SegmentedControlLabel = React.forwardRef(
           },
           className
         )}
-        data-cy="segmentedControlButton"
+        data-cy={dataCy}
         htmlFor={id}
         ref={ref as React.ForwardedRef<HTMLLabelElement>}
       >

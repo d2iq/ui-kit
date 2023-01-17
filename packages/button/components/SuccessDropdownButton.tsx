@@ -6,7 +6,7 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 const SuccessDropdownButton = (props: ButtonProps) => (
   <SuccessButton
     iconEnd={SystemIcons.TriangleDown}
-    data-cy="successDropdownButton"
+    data-cy={props["data-cy"] ?? "successDropdownButton"}
     {...props}
   />
 );

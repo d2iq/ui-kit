@@ -97,7 +97,7 @@ const Tooltip = ({
     onMouseLeave: handleClose,
     onFocus: handleOpen,
     onBlur: handleClose,
-    ["data-cy"]: "tooltip",
+    "data-cy": "tooltip",
     ref: setTriggerNode
   };
 

@@ -8,7 +8,7 @@ import {
 const DangerButton = (props: ButtonProps) => (
   <ButtonBase
     appearance={ButtonAppearances.Danger}
-    data-cy="dangerButton"
+    data-cy={props["data-cy"] ?? "dangerButton"}
     {...props}
   />
 );

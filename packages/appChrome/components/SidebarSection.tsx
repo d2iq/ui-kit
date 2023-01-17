@@ -15,14 +15,25 @@ import { AppChromeTheme } from "../types";
 
 export interface SidebarSectionProps {
   children: React.ReactNode | React.ReactNode[];
+  /**
+   * Will appear in the header of the sidebar section
+   */
   label?: React.ReactElement<HTMLElement> | string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
-const SidebarSection = ({ label, children }: SidebarSectionProps) => {
+const SidebarSection = ({
+  label,
+  children,
+  "data-cy": dataCy = "sidebarSection"
+}: SidebarSectionProps) => {
   const theme: AppChromeTheme = useTheme();
 
   return (
-    <div data-cy="sidebarSection">
+    <div data-cy={dataCy}>
       {label && (
         <h3
           className={cx(

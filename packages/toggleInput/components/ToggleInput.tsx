@@ -87,16 +87,16 @@ interface LocalToggleInputProps extends ToggleInputProps {
 const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
   (props, forwardedRef) => {
     const {
-      appearance,
+      appearance = InputAppearance.Standard,
       children,
       className,
       disabled,
       hintContent,
       id = nextId("toggleInput-"),
       inputLabel,
-      showInputLabel,
-      vertAlign,
-      inputType,
+      showInputLabel = true,
+      vertAlign = "center",
+      inputType = "checkbox",
       checked,
       value,
       errors,
@@ -215,12 +215,5 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
     );
   }
 );
-
-ToggleInput.defaultProps = {
-  appearance: InputAppearance.Standard,
-  showInputLabel: true,
-  vertAlign: "center",
-  inputType: "checkbox"
-};
 
 export default ToggleInput;

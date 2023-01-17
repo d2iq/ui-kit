@@ -6,7 +6,7 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 const DangerDropdownButton = (props: ButtonProps) => (
   <DangerButton
     iconEnd={SystemIcons.TriangleDown}
-    data-cy="dangerDropdownButton"
+    data-cy={props["data-cy"] ?? "dangerDropdownButton"}
     {...props}
   />
 );

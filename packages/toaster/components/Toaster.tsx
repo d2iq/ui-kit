@@ -12,13 +12,29 @@ const animationDuration = 300;
 type Toast = React.ReactElement<ToastProps>;
 
 interface ToasterProps {
+  /**
+   * Timer before toast is auto-dismissed
+   */
   dismissTime?: number;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
+   * Children should use the Toast component
+   */
   children?: Toast | Toast[];
 }
 
 const Toaster = ({
   dismissTime = DEFAULT_DELAY_TIME,
-  children
+  children,
+  className,
+  "data-cy": dataCy = "toaster"
 }: ToasterProps) => {
   const timeouts = React.useRef<number[]>([]);
 
@@ -79,8 +95,13 @@ const Toaster = ({
 
   return (
     <div
-      className={cx(toaster, margin("all"), marginAt.medium("all", "l"))}
-      data-cy="toaster"
+      className={cx(
+        toaster,
+        margin("all"),
+        marginAt.medium("all", "l"),
+        className
+      )}
+      data-cy={dataCy}
     >
       <ol
         onMouseEnter={clearTimeouts}

@@ -62,6 +62,10 @@ export interface TypeaheadProps {
    * Whether the dropdown node should be portalled to document.body, or open in it's parent DOM node
    */
   disablePortal?: boolean;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const defaultItemToString = item => (item ? item.value : "");
@@ -86,6 +90,7 @@ const Typeahead = ({
   multiSelect,
   keepOpenOnSelect,
   resetInputOnSelect,
+  "data-cy": dataCy = "typeahead",
   onSelect
 }: TypeaheadProps) => {
   const { value, ...textFieldProps } = textField.props;
@@ -192,7 +197,7 @@ const Typeahead = ({
   }
 
   return (
-    <div ref={containerRef} className={className} data-cy="typeahead">
+    <div ref={containerRef} className={className} data-cy={dataCy}>
       <Downshift
         itemToString={defaultItemToString}
         selectedItem={selectedItems}

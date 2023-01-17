@@ -81,13 +81,32 @@ export type TabDirections = "horiz" | "vert";
 export type TabDirection = BreakpointConfig<TabDirections>;
 export type TabSelected = string;
 export interface TabsProps {
+  /**
+   * Children should use the TabItem component
+   */
   children:
     | Array<React.ReactElement<TabItemProps>>
     | React.ReactElement<TabItemProps>;
+  /**
+   * The index number of the selected tab
+   */
   selectedIndex?: number;
+  /**
+   * The function called when tab items are selected
+   */
   onSelect?: (tabIndex: number) => void;
+  /**
+   * Controls the orientation
+   */
   direction?: TabDirection;
+  /**
+   * Allows custom styling
+   */
   className?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const Tabs = ({
@@ -95,7 +114,8 @@ const Tabs = ({
   selectedIndex,
   onSelect,
   className,
-  direction = defaultTabDirection
+  direction = defaultTabDirection,
+  "data-cy": dataCy = "tabs"
 }: TabsProps) => {
   const { tabs, tabsContent } = (
     React.Children.toArray(children) as Array<React.ReactElement<TabItemProps>>
@@ -152,7 +172,7 @@ const Tabs = ({
       // empty arrow functions, so I disable this rule for this line
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       onSelect={onSelect ? onSelect : () => {}}
-      data-cy="tabs"
+      data-cy={dataCy}
       focusTabOnClick={false}
     >
       <TabList>{tabs}</TabList>
