@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useId } from "react-id-generator";
 import FocusLock from "react-focus-lock";
-import { css } from "@emotion/css";
+import { css, cx } from "@emotion/css";
 import { Dropdownable } from "../../dropdownable";
 import PopoverBox from "./PopoverBox";
 import { SpacingBox } from "../../styleUtils/modifiers";
@@ -38,10 +38,15 @@ export interface PopoverProps
    * Human-readable selector used for writing tests
    */
   "data-cy"?: string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
 const Popover = ({
   children,
+  className,
   "data-cy": dataCy = "popover",
   id,
   initialIsOpen,
@@ -115,7 +120,7 @@ const Popover = ({
   }, [isOpen]);
 
   return (
-    <div className={display("inline-block")} ref={triggerRef}>
+    <div className={cx(display("inline-block"), className)} ref={triggerRef}>
       <Dropdownable
         isOpen={isOpen}
         preferredDirections={

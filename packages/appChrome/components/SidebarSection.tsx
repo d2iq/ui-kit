@@ -20,6 +20,10 @@ export interface SidebarSectionProps {
    */
   label?: React.ReactElement<HTMLElement> | string;
   /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
    * Human-readable selector used for writing tests
    */
   "data-cy"?: string;
@@ -28,6 +32,7 @@ export interface SidebarSectionProps {
 const SidebarSection = ({
   label,
   children,
+  className,
   "data-cy": dataCy = "sidebarSection"
 }: SidebarSectionProps) => {
   const theme: AppChromeTheme = useTheme();
@@ -43,7 +48,8 @@ const SidebarSection = ({
             textSize("m"),
             textWeight("medium"),
             margin("bottom", "none"),
-            margin("top", "none")
+            margin("top", "none"),
+            className
           )}
         >
           {label}

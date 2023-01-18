@@ -23,9 +23,14 @@ interface MessagePanelWithGraphicProps extends MessagePanelProps {
    * Human-readable selector used for writing tests
    */
   "data-cy"?: string;
+  /**
+   * Allows custom styling
+   */
+  className?: string;
 }
 
 const MessagePanelWithGraphic = ({
+  className,
   graphicSrc,
   graphicDimensions,
   heading,
@@ -36,7 +41,7 @@ const MessagePanelWithGraphic = ({
 }: MessagePanelWithGraphicProps) => {
   const hasActions = primaryAction || secondaryAction;
   return (
-    <div data-cy={dataCy}>
+    <div data-cy={dataCy} className={className}>
       <SpacingBox spacingSize="xl" side="bottom">
         <img
           src={graphicSrc}

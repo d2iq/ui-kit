@@ -1,4 +1,5 @@
 import * as React from "react";
+import { cx } from "@emotion/css";
 import { messagePanelContainer, vertAlignHeading } from "../style";
 import { Card } from "../../card";
 import { SpacingBox } from "../../styleUtils/modifiers";
@@ -27,6 +28,10 @@ export interface MessagePanelProps {
    */
   secondaryAction?: React.ReactNode;
   /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
    * Human-readable selector used for writing tests
    */
   "data-cy"?: string;
@@ -39,12 +44,13 @@ const MessagePanel = ({
   children,
   primaryAction,
   secondaryAction,
+  className,
   "data-cy": dataCy = "messagePanel"
 }: MessagePanelProps) => {
   const hasActions = primaryAction || secondaryAction;
 
   return (
-    <div className={messagePanelContainer} data-cy={dataCy}>
+    <div className={cx(messagePanelContainer, className)} data-cy={dataCy}>
       <Card paddingSize="xxl">
         <SpacingBox side="bottom" spacingSize="xs">
           <HeadingText2 align="center">

@@ -29,6 +29,7 @@ export interface RenderLabelProps {
   label?: React.ReactNode;
   required?: boolean;
   tooltipContent?: React.ReactNode;
+  className?: string;
   "data-cy"?: string;
 }
 
@@ -39,13 +40,14 @@ export const renderLabel = ({
   id = nextId(),
   required,
   tooltipContent,
+  className,
   "data-cy": dataCy = "textInput-label"
 }: RenderLabelProps) => {
   const hasError = appearance === InputAppearance.Error;
   const labelClassName = hidden ? cx(visuallyHidden) : getLabelStyle(hasError);
   const labelNode = (
     <label
-      className={labelClassName}
+      className={cx(labelClassName, className)}
       htmlFor={id}
       data-cy={dataCy}
       hidden={hidden}

@@ -16,6 +16,10 @@ export interface TooltipContentProps extends BaseTooltipProps {
    */
   isOpen: boolean;
   /**
+   * Allows custom styling
+   */
+  className?: string;
+  /**
    * Human-readable selector used for writing tests
    */
   "data-cy"?: string;
@@ -28,6 +32,7 @@ const TooltipContent = ({
   maxWidth,
   minWidth,
   isOpen,
+  className,
   "data-cy": dataCy = "tooltipContent"
 }: TooltipContentProps) => {
   return (
@@ -35,13 +40,16 @@ const TooltipContent = ({
       <div
         aria-hidden={!isOpen}
         id={id}
-        className={cx(
-          tooltip,
-          alignContainerWithCaretStyles(direction),
-          inverseColorMode,
-          padding("horiz", "s"),
-          padding("vert", "xs")
-        )}
+        className={
+          (cx(
+            tooltip,
+            alignContainerWithCaretStyles(direction),
+            inverseColorMode,
+            padding("horiz", "s"),
+            padding("vert", "xs")
+          ),
+          className)
+        }
         role="tooltip"
         style={{
           minWidth,

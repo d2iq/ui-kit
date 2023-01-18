@@ -1,4 +1,5 @@
 import * as React from "react";
+import { cx } from "@emotion/css";
 import { useId } from "react-id-generator";
 import {
   Box,
@@ -31,11 +32,15 @@ const PromoContent = ({
   optOutHandler,
   primaryAction,
   secondaryAction,
+  className,
   "data-cy": dataCy = "promoContent"
 }: PromoProps) => {
   const [dismissCheckboxId] = useId(1, "dismissPromoCheckbox");
   return (
-    <div className={bannerContainer(isDarkBackground)} data-cy={dataCy}>
+    <div
+      className={cx(bannerContainer(isDarkBackground), className)}
+      data-cy={dataCy}
+    >
       {dismissHandler && (
         <ResetButton
           className={dismissButton}
