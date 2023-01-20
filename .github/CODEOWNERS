@@ -1,5 +1,3 @@
 # Reference: https://help.github.com/en/articles/about-code-owners
-
 # Order is important: later rules override preceding rules
-
-- @d2iq/ui-team
+* @d2iq/ui-team
