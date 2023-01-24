@@ -40,16 +40,14 @@ const TooltipContent = ({
       <div
         aria-hidden={!isOpen}
         id={id}
-        className={
-          (cx(
-            tooltip,
-            alignContainerWithCaretStyles(direction),
-            inverseColorMode,
-            padding("horiz", "s"),
-            padding("vert", "xs")
-          ),
-          className)
-        }
+        className={cx(
+          tooltip,
+          alignContainerWithCaretStyles(direction),
+          inverseColorMode,
+          padding("horiz", "s"),
+          padding("vert", "xs"),
+          className
+        )}
         role="tooltip"
         style={{
           minWidth,
