@@ -10,7 +10,7 @@ export interface SharedListProps {
   /**
    * Set to an ordered list `ol` or the defaulted unordered list `ul`
    */
-  tag: "ul" | "ol";
+  tag?: "ul" | "ol";
   /**
    * Human-readable selector used for writing tests
    */
