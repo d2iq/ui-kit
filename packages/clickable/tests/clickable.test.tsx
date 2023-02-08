@@ -31,11 +31,11 @@ describe("Clickable", () => {
     expect(action).toHaveBeenCalled();
   });
 
-  it("has onKeyPress function and reacts on space", async () => {
+  it("has onKeyDown function and reacts on space", async () => {
     const action = jest.fn();
     const { getByRole } = render(
       <Clickable action={action}>
-        <span>onKeyPress</span>
+        <span>onKeyDown</span>
       </Clickable>
     );
 
@@ -46,11 +46,11 @@ describe("Clickable", () => {
     expect(action).toHaveBeenCalled();
   });
 
-  it("has onKeyPress function and reacts on Enter", async () => {
+  it("has onKeyDown function and reacts on Enter", async () => {
     const action = jest.fn();
     const { getByRole } = render(
       <Clickable action={action}>
-        <span>onKeyPress</span>
+        <span>onKeyDown</span>
       </Clickable>
     );
 
@@ -60,11 +60,11 @@ describe("Clickable", () => {
     await userEvent.keyboard("[Enter]");
     expect(action).toHaveBeenCalled();
   });
-  it("does not react on e keypress", async () => {
+  it("does not react on e keydown", async () => {
     const action = jest.fn();
     const { getByRole } = render(
       <Clickable action={action}>
-        <span>onKeyPress</span>
+        <span>onKeyDown</span>
       </Clickable>
     );
 
@@ -79,7 +79,7 @@ describe("Clickable", () => {
       const action = jest.fn();
       const { getByRole } = render(
         <Clickable action={action}>
-          <span>onKeyPress</span>
+          <span>onKeyDown</span>
         </Clickable>
       );
 

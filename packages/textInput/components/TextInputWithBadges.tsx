@@ -94,14 +94,6 @@ const TextInputWithBadges = (props: TextInputWithBadgesProps) => {
     inputProps.onKeyDown = handleKeyDown;
     inputProps.onKeyUp = handleKeyUp;
     inputProps.onFocus = inputOnFocus;
-    inputProps.onKeyPress = e => {
-      if (props.onKeyPress) {
-        props.onKeyPress(e);
-      }
-      if (e.key === "Enter") {
-        e.preventDefault();
-      }
-    };
     inputProps.onBlur = handleBlur;
     inputProps.type = "text";
     inputProps.ref = inputRef;
