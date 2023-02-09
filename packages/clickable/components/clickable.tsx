@@ -8,7 +8,7 @@ export interface ClickableProps {
    */
   children: React.ReactElement<HTMLElement> & React.ReactNode;
   /**
-   * Action is a event handler for the onClick and onKeypress events
+   * Action is a event handler for the onClick and onKeyDown events
    */
   action?: (event?: React.SyntheticEvent<HTMLElement>) => void;
   /**
@@ -39,7 +39,7 @@ export const Clickable = ({
 }: ClickableProps) => {
   const { className = "" } = children.props;
 
-  const handleKeyPress = (event: React.KeyboardEvent<HTMLElement>): void => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>): void => {
     // action can be undefined from components SidebarItem and SidebarSubMenuItem
     if (action && (event.key === " " || event.key === "Enter")) {
       action(event);
@@ -51,7 +51,7 @@ export const Clickable = ({
     className: cx(className, pointer, { [outline]: disableFocusOutline }),
     role,
     tabIndex,
-    onKeyPress: handleKeyPress,
+    onKeyDown: handleKeyDown,
     "data-cy": dataCy
   });
 };

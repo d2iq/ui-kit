@@ -40,27 +40,27 @@ const ButtonCard = ({
   hasFocus,
   onClick,
   className,
-  onKeyPress,
+  onKeyDown,
   "data-cy": dataCy = "buttonCard",
   ...other
 }: ButtonCardProps) => {
   const tabIndex = disabled ? -1 : 0;
   // mimic native <button> keyboard behavior without using a <button>
-  const keyPressClick = e => {
+  const keyDownClick = e => {
     if (onClick && (e.key === " " || e.key === "Enter")) {
       onClick(e);
     }
   };
-  const handleKeyPress = e => {
-    keyPressClick(e);
-    if (onKeyPress) {
-      onKeyPress(e);
+  const handleKeyDown = e => {
+    keyDownClick(e);
+    if (onKeyDown) {
+      onKeyDown(e);
     }
   };
   const buttonProps = !isInput
     ? {
         tabIndex,
-        onKeyPress: handleKeyPress,
+        onKeyDown: handleKeyDown,
         onClick,
         role: "button",
         "aria-disabled": disabled,
