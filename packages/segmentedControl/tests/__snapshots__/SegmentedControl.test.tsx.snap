@@ -55,6 +55,7 @@ exports[`SegmentedControl renders default 1`] = `
 
 .emotion-3 {
   padding: 10px 18px;
+  line-height: normal;
 }
 
 <div
@@ -188,6 +189,7 @@ exports[`SegmentedControl renders with selected 1`] = `
 
 .emotion-3 {
   padding: 10px 18px;
+  line-height: normal;
 }
 
 .emotion-4 {
