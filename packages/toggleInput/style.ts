@@ -8,8 +8,9 @@ import {
   themeError,
   themeSuccess,
   themeTextColorDisabled,
-  borderRadiusSmall,
-  spaceXxs
+  borderRadiusDefault,
+  spaceXxs,
+  borderRadiusCircle
 } from "../design-tokens/build/js/designTokens";
 
 const toggleInputHeight = 16;
@@ -69,19 +70,19 @@ export const toggleInputAppearances = {
 };
 
 export const checkboxInput = css`
-  border-radius: ${borderRadiusSmall};
+  border-radius: ${borderRadiusDefault};
   position: relative;
 `;
 
 export const radioInput = css`
-  border-radius: 999px;
+  border-radius: ${borderRadiusCircle};
   position: relative;
 `;
 
 export const radioInputChecked = css`
   &:after {
     background-color: ${themeBgPrimary};
-    border-radius: 999px;
+    border-radius: ${borderRadiusCircle};
     content: "";
     position: absolute;
     top: ${spaceXxs};

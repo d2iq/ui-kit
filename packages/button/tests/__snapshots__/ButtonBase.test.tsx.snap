@@ -13,7 +13,7 @@ exports[`ButtonBase renders all appearances with props 1`] = `
 
 .emotion-0:focus:after {
   border: 2px solid #704fe5;
-  border-radius: 6px;
+  border-radius: 4px;
   bottom: -3px;
   content: "";
   left: -3px;
@@ -236,7 +236,7 @@ exports[`ButtonBase renders all appearances with props 2`] = `
 
 .emotion-0:focus:after {
   border: 2px solid #704fe5;
-  border-radius: 6px;
+  border-radius: 4px;
   bottom: -3px;
   content: "";
   left: -3px;
@@ -458,7 +458,7 @@ exports[`ButtonBase renders all appearances with props 3`] = `
 
 .emotion-0:focus:after {
   border: 2px solid #c4c6cb;
-  border-radius: 6px;
+  border-radius: 4px;
   bottom: -3px;
   content: "";
   left: -3px;
@@ -681,7 +681,7 @@ exports[`ButtonBase renders all appearances with props 4`] = `
 
 .emotion-0:focus:after {
   border: 2px solid #d32434;
-  border-radius: 6px;
+  border-radius: 4px;
   bottom: -3px;
   content: "";
   left: -3px;
@@ -904,7 +904,7 @@ exports[`ButtonBase renders all appearances with props 5`] = `
 
 .emotion-0:focus:after {
   border: 2px solid #12b276;
-  border-radius: 6px;
+  border-radius: 4px;
   bottom: -3px;
   content: "";
   left: -3px;

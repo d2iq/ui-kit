@@ -1,6 +1,5 @@
 import { css } from "@emotion/css";
 import {
-  borderRadiusSmall,
   borderRadiusDefault,
   themeBrandPrimary,
   themeSuccess,
@@ -49,7 +48,7 @@ export const filledButton = (
   return css`
     ${tintContent(contentColor)};
     background-color: ${baseColor};
-    border-radius: ${borderRadiusSmall};
+    border-radius: ${borderRadiusDefault};
     padding: ${buttonPadding.vert} ${buttonPadding.horiz};
 
     &[href],

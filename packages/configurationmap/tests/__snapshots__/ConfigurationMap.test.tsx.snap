@@ -279,7 +279,7 @@ exports[`ConfigurationMap renders with actions 1`] = `
 
 .emotion-5:focus:after {
   border: 2px solid #704fe5;
-  border-radius: 6px;
+  border-radius: 4px;
   bottom: -3px;
   content: "";
   left: -3px;

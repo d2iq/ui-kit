@@ -87,7 +87,7 @@ exports[`MessagePanelWithGraphic renders with primary and secondary actions 1`] 
         data-cy="flexItem"
       >
         <button
-          class="css-1h85cd2 css-1qbr1ah"
+          class="css-46zwjx css-1qbr1ah"
           data-cy="secondaryButton"
           tabindex="0"
           type="button"
@@ -104,7 +104,7 @@ exports[`MessagePanelWithGraphic renders with primary and secondary actions 1`] 
         data-cy="flexItem"
       >
         <button
-          class="css-xcotv6 css-tc1f66"
+          class="css-tw2158 css-tc1f66"
           data-cy="primaryButton"
           tabindex="0"
           type="button"

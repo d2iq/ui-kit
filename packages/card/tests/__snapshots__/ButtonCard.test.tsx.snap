@@ -5,7 +5,7 @@ exports[`ButtonCard renders as disabled 1`] = `
   .emotion-0 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
   background-color: var(--themeBgDisabled, #E8EAED);
   color: var(--themeTextColorDisabled, #AEB0B4);
@@ -55,7 +55,7 @@ exports[`ButtonCard renders as hasFocus 1`] = `
   .emotion-0 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 0 0 1px var(--themeBrandPrimary, #7D58FF);
   outline: 0;
@@ -97,7 +97,7 @@ exports[`ButtonCard renders as isActive 1`] = `
   .emotion-0 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -148,7 +148,7 @@ exports[`ButtonCard renders default 1`] = `
   .emotion-0 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
 }
 

@@ -1,6 +1,9 @@
 import { css, keyframes } from "@emotion/css";
 import { padding } from "../shared/styles/styleUtils";
-import { iconSizeXl } from "../design-tokens/build/js/designTokens";
+import {
+  borderRadiusCircle,
+  iconSizeXl
+} from "../design-tokens/build/js/designTokens";
 
 export const sectionLoadingWrapper = css`
   ${padding("all", "l")};
@@ -36,7 +39,7 @@ export const sectionLoadingIndicator = css`
   animation-iteration-count: infinite;
   animation-name: ${sectionLoadingKeyframes};
   animation-timing-function: ease-in-out;
-  border-radius: 100%;
+  border-radius: ${borderRadiusCircle};
   display: inline-block;
   height: ${iconSizeXl};
   width: ${iconSizeXl};

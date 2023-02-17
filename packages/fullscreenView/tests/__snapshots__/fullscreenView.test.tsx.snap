@@ -84,7 +84,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
 
 .emotion-5:focus:after {
   border: 2px solid #704fe5;
-  border-radius: 6px;
+  border-radius: 4px;
   bottom: -3px;
   content: "";
   left: -3px;
@@ -197,7 +197,7 @@ exports[`FullscreenView renders FullscreenView 1`] = `
 
 .emotion-11:focus:after {
   border: 2px solid #704fe5;
-  border-radius: 6px;
+  border-radius: 4px;
   bottom: -3px;
   content: "";
   left: -3px;

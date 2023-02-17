@@ -3,8 +3,8 @@ import { BoxSides } from "./modifierUtils";
 import {
   themeBorder,
   themeBorderHeavy,
-  borderRadiusDefault,
-  borderRadiusSmall
+  borderRadiusSmall,
+  borderRadiusDefault
 } from "../../../../design-tokens/build/js/designTokens";
 
 export type BorderVariant = "default" | "heavy";
