@@ -49,6 +49,7 @@ export const segmentedControlButton = css`
 
 export const segmentedControlButtonInner = css`
   padding: ${buttonPadding.vert} ${buttonPadding.horiz};
+  line-height: normal;
 `;
 
 export const segmentedControlButtonActive = css`
