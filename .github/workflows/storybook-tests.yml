@@ -1,4 +1,6 @@
 name: Storybook Tests
+env:
+  NODE_VERSION: "16.16.0"
 on: push
 jobs:
   test:
@@ -6,10 +8,9 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.NODE_VERSION }}
           cache: "npm"
       - name: Install Dependencies 🔧
         run: npm ci

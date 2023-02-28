@@ -11,18 +11,18 @@ module.exports = ({ config }) => {
   config.resolve.alias["core-js"] = path.dirname(require.resolve("core-js"));
   config.module.rules[0].use[0].options.sourceType = "unambiguous";
 
-  // Taken from stackoverflow
-  // https://stackoverflow.com/a/59639736/3058839
+  // Storybook has loaders configured that conflict with what you define in our custom Webpack configuration,
+  // so if you do not override those then your custom rules will not work.
+  // Remove the rule that loads SVGs as assets for storybook
   const assetRule = config.module.rules.find(({ test }) => test.test(".svg"));
-
-  const assetLoader = {
-    loader: assetRule.loader,
-    options: assetRule.options || assetRule.query
-  };
+  assetRule.test =
+    /\.(ico|jpg|jpeg|png|apng|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/;
 
   config.module.rules.unshift({
     test: /\.svg$/,
-    use: ["@svgr/webpack", assetLoader]
+    issuer: /\.(js|jsx|ts|tsx|mdx)$/,
+    use: ["@svgr/webpack"]
   });
+
   return config;
 };
