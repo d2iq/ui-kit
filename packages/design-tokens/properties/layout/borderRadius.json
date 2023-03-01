@@ -2,10 +2,16 @@
   "layout": {
     "borderRadius": {
       "small": {
-        "value": "4px"
+        "value": "2px"
       },
       "default": {
-        "value": "6px"
+        "value": "4px"
+      },
+      "large": {
+        "value": "8px"
+      },
+      "circle": {
+        "value": "50%"
       }
     }
   }

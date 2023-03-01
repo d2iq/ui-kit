@@ -346,7 +346,7 @@ exports[`FieldList renders 1`] = `
         </div>
       </div>
       <button
-        class="css-1h85cd2 css-1qbr1ah"
+        class="css-46zwjx css-1qbr1ah"
         data-cy="secondaryButton"
         tabindex="0"
         type="button"

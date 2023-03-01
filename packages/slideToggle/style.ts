@@ -9,7 +9,8 @@ import {
   themeError,
   themeSuccess,
   themeTextColorDisabled,
-  white
+  white,
+  borderRadiusCircle
 } from "../design-tokens/build/js/designTokens";
 
 const toggleInputHeight = 14;
@@ -161,7 +162,7 @@ export const toggle = css`
 export const toggleRound = css`
   border-radius: ${spaceL};
   &:before {
-    border-radius: 50%;
+    border-radius: ${borderRadiusCircle};
   }
 `;
 

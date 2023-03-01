@@ -1,5 +1,6 @@
 import { css } from "@emotion/css";
 import {
+  borderRadiusDefault,
   fontSizeS,
   themeBgPrimaryInverted
 } from "../design-tokens/build/js/designTokens";
@@ -8,7 +9,7 @@ import { getContainerCaret } from "../shared/styles/containerWithCaret";
 
 export const tooltip = css`
   background-color: ${themeBgPrimaryInverted};
-  border-radius: 2px;
+  border-radius: ${borderRadiusDefault};
   box-sizing: border-box;
   font-size: ${fontSizeS};
 `;

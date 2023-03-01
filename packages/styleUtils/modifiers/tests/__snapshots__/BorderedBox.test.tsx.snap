@@ -26,7 +26,7 @@ exports[`BorderedBox renders with all props 1`] = `
   border-width: 1px;
   border-color: var(--themeBorderHeavy, #1B2029);
   border-top-style: solid;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 <div

@@ -6,7 +6,7 @@ exports[`Loading indicators renders InlineLoadingIndicator 1`] = `
     class="css-1v9zxv1"
   >
     <div
-      class="css-1u93coa"
+      class="css-1vb0gd"
       data-cy="sectionLoadingIndicator"
     />
   </div>

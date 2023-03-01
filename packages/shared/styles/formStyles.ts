@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 import {
-  borderRadiusSmall,
+  borderRadiusDefault,
   themeTextColorDisabled,
   themeSuccess,
   themeBorder,
@@ -153,7 +153,7 @@ export const getInputAppearanceStyle = appearance => {
 
 export const inputContainer = css`
   border: 1px solid;
-  border-radius: ${borderRadiusSmall};
+  border-radius: ${borderRadiusDefault};
   color: inherit;
   height: ${textInputHeight}px;
   font-size: inherit;
