@@ -1,6 +1,6 @@
 name: Storybook Tests
 env:
-  NODE_VERSION: "16.16.0"
+  NODE_VERSION: "18.14.2"
 on: push
 jobs:
   test:
