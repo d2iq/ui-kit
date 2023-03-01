@@ -3,14 +3,14 @@ import { HeadingText1, Text, SpacingBox } from "../../../packages";
 import { purpleLighten4 } from "../../../packages/design-tokens/build/js/designTokens";
 import { BannerContainer, ImgWrapper, TextWrapper } from "../styles";
 
-import { ReactComponent as BannerImg } from "../assets/welcome-banner.svg";
+import WelcomeImage from "../assets/welcome-banner.svg";
 
 export const WelcomeBanner = () => {
   return (
     <BannerContainer>
       <SpacingBox textAlign="center" spacingSize="xxl" side="vert">
         <ImgWrapper>
-          <BannerImg />
+          <WelcomeImage />
         </ImgWrapper>
         <SpacingBox side="bottom" spacingSize="l">
           <HeadingText1 color={purpleLighten4}>
