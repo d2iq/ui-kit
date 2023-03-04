@@ -103,7 +103,7 @@ const JS_originalFromAlias = {
   type: "attribute",
   matcher: prop => prop.isAlias,
   transformer: prop => {
-    const propAttributes = prop.value.replace(/[{}]/g, "").split(".");
+    const propAttributes = prop.original.value.replace(/[{}]/g, "").split(".");
     const originalProp = {
       attributes: {
         category: propAttributes[0],
