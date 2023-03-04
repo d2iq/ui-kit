@@ -1,5 +1,6 @@
 import { css, keyframes } from "@emotion/css";
 import {
+  borderRadiusCircle,
   themeBorder,
   themeBrandPrimary
 } from "../design-tokens/build/js/designTokens";
@@ -22,7 +23,7 @@ const stripeMotion = keyframes`
 
 export const progressBar = size => css`
   background-color: ${hexToRgbA(getCSSVarValue(themeBorder), 0.65)};
-  border-radius: 999px;
+  border-radius: ${borderRadiusCircle};
   display: block;
   height: ${size === ProgressBarSizes.LARGE ? "12px" : "6px"};
   width: 100%;
@@ -49,7 +50,7 @@ export const progressBarStaged = css`
 
 export const legendDot = (color = defaultBarColor) => css`
   background-color: ${color};
-  border-radius: 999px;
+  border-radius: ${borderRadiusCircle};
   display: block;
   height: 6px;
   width: 6px;

@@ -188,7 +188,7 @@ exports[`ToggleInput renders a radio input type 1`] = `
   border-width: 1px;
   height: 14px;
   width: 14px;
-  border-radius: 999px;
+  border-radius: 50%;
   position: relative;
 }
 

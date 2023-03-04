@@ -5,7 +5,7 @@ exports[`Toast renders default 1`] = `
   .emotion-0 {
   background-color: var(--themeBgPrimaryInverted, #1B2029);
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: 4px;
   grid-template-columns: 1fr auto;
   grid-template-areas: "title dismiss" "desc  desc" "btn   btn";
   width: 100%;
@@ -109,7 +109,7 @@ exports[`Toast renders with actions 1`] = `
   .emotion-0 {
   background-color: var(--themeBgPrimaryInverted, #1B2029);
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: 4px;
   grid-template-columns: 1fr auto;
   grid-template-areas: "title dismiss" "desc  desc" "btn   btn";
   width: 100%;
@@ -253,7 +253,7 @@ exports[`Toast renders with description 1`] = `
   .emotion-0 {
   background-color: var(--themeBgPrimaryInverted, #1B2029);
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: 4px;
   grid-template-columns: 1fr auto;
   grid-template-areas: "title dismiss" "desc  desc" "btn   btn";
   width: 100%;

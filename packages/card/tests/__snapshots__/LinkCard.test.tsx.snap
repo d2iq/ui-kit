@@ -3,7 +3,7 @@
 exports[`LinkCard renders default 1`] = `
 <DocumentFragment>
   <div
-    class="css-e82819"
+    class="css-znlwku"
     data-cy="linkCard"
   >
     <div
@@ -29,7 +29,7 @@ exports[`LinkCard renders default 1`] = `
 exports[`LinkCard renders with external link 1`] = `
 <DocumentFragment>
   <div
-    class="css-e82819"
+    class="css-znlwku"
     data-cy="linkCard"
   >
     <div

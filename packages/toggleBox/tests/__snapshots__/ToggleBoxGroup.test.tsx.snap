@@ -86,7 +86,7 @@ exports[`ToggleBoxGroup renders default 1`] = `
 .emotion-5 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -299,7 +299,7 @@ exports[`ToggleBoxGroup renders with custom direction and gutter size 1`] = `
 .emotion-5 {
   background-color: var(--themeBgPrimary, #FFFFFF);
   box-shadow: 0 0 0 1px var(--themeBorder, #DADDE2);
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
 }
 

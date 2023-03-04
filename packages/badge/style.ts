@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 import {
-  borderRadiusSmall,
+  borderRadiusDefault,
   greyLight,
   themeSuccess,
   themeWarning,
@@ -58,7 +58,7 @@ export const badge = appearance => {
     line-height: 20px;
     text-decoration: none;
     text-rendering: optimizeLegibility;
-    border-radius: ${borderRadiusSmall};
+    border-radius: ${borderRadiusDefault};
     align-items: center;
     display: inline-flex;
     justify-content: center;

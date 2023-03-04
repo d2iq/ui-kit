@@ -447,7 +447,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
 exports[`Promos renders PromoInline 1`] = `
 <DocumentFragment>
   <div
-    class="css-1dauq5a"
+    class="css-1gyyxea"
     data-cy="card"
   >
     <div

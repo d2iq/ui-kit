@@ -7,7 +7,7 @@ exports[`MessagePanel appearance='error' 1`] = `
     data-cy="messagePanel"
   >
     <div
-      class="css-1dauq5a"
+      class="css-1gyyxea"
       data-cy="card"
     >
       <div
@@ -62,7 +62,7 @@ exports[`MessagePanel default 1`] = `
     data-cy="messagePanel"
   >
     <div
-      class="css-1dauq5a"
+      class="css-1gyyxea"
       data-cy="card"
     >
       <div
@@ -98,7 +98,7 @@ exports[`MessagePanel renders with primary and secondary actions 1`] = `
     data-cy="messagePanel"
   >
     <div
-      class="css-1dauq5a"
+      class="css-1gyyxea"
       data-cy="card"
     >
       <div
@@ -130,7 +130,7 @@ exports[`MessagePanel renders with primary and secondary actions 1`] = `
             data-cy="flexItem"
           >
             <button
-              class="css-1h85cd2 css-1qbr1ah"
+              class="css-46zwjx css-1qbr1ah"
               data-cy="secondaryButton"
               tabindex="0"
               type="button"
@@ -147,7 +147,7 @@ exports[`MessagePanel renders with primary and secondary actions 1`] = `
             data-cy="flexItem"
           >
             <button
-              class="css-xcotv6 css-tc1f66"
+              class="css-tw2158 css-tc1f66"
               data-cy="primaryButton"
               tabindex="0"
               type="button"

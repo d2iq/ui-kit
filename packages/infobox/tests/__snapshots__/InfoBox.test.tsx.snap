@@ -20,7 +20,7 @@ exports[` 1`] = `
   margin-bottom: 0;
   font-size: 12px;
   font-weight: 500;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 .emotion-1 {

@@ -62,7 +62,7 @@ exports[`RadioInput renders all appearances 1`] = `
   border-width: 1px;
   height: 14px;
   width: 14px;
-  border-radius: 999px;
+  border-radius: 50%;
   position: relative;
 }
 
@@ -189,7 +189,7 @@ exports[`RadioInput renders all appearances 2`] = `
   border-width: 1px;
   height: 14px;
   width: 14px;
-  border-radius: 999px;
+  border-radius: 50%;
   position: relative;
 }
 
@@ -318,7 +318,7 @@ exports[`RadioInput renders all appearances 3`] = `
   border-width: 1px;
   height: 14px;
   width: 14px;
-  border-radius: 999px;
+  border-radius: 50%;
   position: relative;
 }
 

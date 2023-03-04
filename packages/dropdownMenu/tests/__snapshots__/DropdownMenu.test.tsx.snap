@@ -86,7 +86,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
     >
       <div
         aria-labelledby="downshift-1-label"
-        class="css-1uapjdz"
+        class="css-1slvl4g"
         data-cy="popover"
         id="downshift-1-menu"
         role="listbox"
@@ -169,7 +169,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
     >
       <div
         aria-labelledby="downshift-3-label"
-        class="css-1uapjdz"
+        class="css-1slvl4g"
         data-cy="popover"
         id="downshift-3-menu"
         role="listbox"

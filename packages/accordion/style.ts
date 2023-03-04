@@ -5,7 +5,7 @@ import {
   themeBgPrimary,
   themeBgDisabled,
   themeTextColorDisabled,
-  borderRadiusSmall
+  borderRadiusDefault
 } from "../design-tokens/build/js/designTokens";
 import { lighten } from "../shared/styles/color";
 import { getCSSVarValue } from "../utilities";
@@ -17,7 +17,7 @@ export const fillWidth = css`
 
 export const accordionTitle = css`
   background-color: ${themeBgPrimary};
-  border-radius: ${borderRadiusSmall};
+  border-radius: ${borderRadiusDefault};
   position: relative;
 
   &:hover,
@@ -27,7 +27,7 @@ export const accordionTitle = css`
 `;
 
 export const accordionTitleExpanded = css`
-  border-radius: ${borderRadiusSmall} ${borderRadiusSmall} 0 0;
+  border-radius: ${borderRadiusDefault} ${borderRadiusDefault} 0 0;
 `;
 
 export const accordionTitleDisabled = css`
@@ -70,6 +70,6 @@ export const accordionTitleInteractive = css`
 `;
 
 export const accordionItemContent = css`
-  border-radius: 0 0 ${borderRadiusSmall} ${borderRadiusSmall};
+  border-radius: 0 0 ${borderRadiusDefault} ${borderRadiusDefault};
   border-top-width: 0;
 `;

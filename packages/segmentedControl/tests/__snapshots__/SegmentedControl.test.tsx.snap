@@ -28,11 +28,11 @@ exports[`SegmentedControl renders default 1`] = `
 }
 
 .emotion-1:first-child {
-  border-radius: 6px 0 0 6px;
+  border-radius: 4px 0 0 4px;
 }
 
 .emotion-1:last-child {
-  border-radius: 0 6px 6px 0;
+  border-radius: 0 4px 4px 0;
   border-right-width: 1px;
 }
 
@@ -55,6 +55,7 @@ exports[`SegmentedControl renders default 1`] = `
 
 .emotion-3 {
   padding: 10px 18px;
+  line-height: normal;
 }
 
 <div
@@ -150,11 +151,11 @@ exports[`SegmentedControl renders with selected 1`] = `
 }
 
 .emotion-1:first-child {
-  border-radius: 6px 0 0 6px;
+  border-radius: 4px 0 0 4px;
 }
 
 .emotion-1:last-child {
-  border-radius: 0 6px 6px 0;
+  border-radius: 0 4px 4px 0;
   border-right-width: 1px;
 }
 
@@ -188,6 +189,7 @@ exports[`SegmentedControl renders with selected 1`] = `
 
 .emotion-3 {
   padding: 10px 18px;
+  line-height: normal;
 }
 
 .emotion-4 {
@@ -207,11 +209,11 @@ exports[`SegmentedControl renders with selected 1`] = `
 }
 
 .emotion-4:first-child {
-  border-radius: 6px 0 0 6px;
+  border-radius: 4px 0 0 4px;
 }
 
 .emotion-4:last-child {
-  border-radius: 0 6px 6px 0;
+  border-radius: 0 4px 4px 0;
   border-right-width: 1px;
 }
 
