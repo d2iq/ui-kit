@@ -12,26 +12,36 @@ export interface SmallTextProps extends SharedTextProps {
   /**
    * Which HTML tag to render the text in
    */
-  tag: keyof React.ReactHTML;
+  tag?: keyof React.ReactHTML;
   /**
    * The font weight of the text
    */
-  weight: FontWeights;
+  weight?: FontWeights;
   /**
    * Human-readable selector used for writing tests
    */
   "data-cy"?: string;
 }
 
-const SmallText = (props: SmallTextProps) => <Text size="s" {...props} />;
-
-SmallText.defaultProps = {
-  align: "inherit",
-  color: themeTextColorPrimary,
-  wrap: "wrap",
-  weight: "normal",
-  tag: "p",
-  "data-cy": "smallText"
-};
+const SmallText = ({
+  align = "inherit",
+  color = themeTextColorPrimary,
+  wrap = "wrap",
+  weight = "normal",
+  tag = "p",
+  "data-cy": dataCy = "smallText",
+  ...props
+}: SmallTextProps) => (
+  <Text
+    align={align}
+    color={color}
+    wrap={wrap}
+    weight={weight}
+    tag={tag}
+    size="s"
+    data-cy={dataCy}
+    {...props}
+  />
+);
 
 export default SmallText;

@@ -25,7 +25,12 @@ export interface TextInputWithButtonsProps
   buttons: Array<React.ReactElement<TextInputButtonProps>>;
 }
 
-const TextInputWithButtons = (props: TextInputWithButtonsProps) => {
+const TextInputWithButtons = ({
+  type = "text",
+  appearance = InputAppearance.Standard,
+  showInputLabel = true,
+  ...props
+}: TextInputWithButtonsProps) => {
   const [hasFocus, setHasFocus] = React.useState(false);
 
   const inputOnFocus = e => {
@@ -49,13 +54,17 @@ const TextInputWithButtons = (props: TextInputWithButtonsProps) => {
       return "disabled";
     }
     if (hasFocus) {
-      return `${props.appearance}-focus`;
+      return `${appearance}-focus`;
     }
-    return props.appearance;
+    return appearance;
   };
 
   const getInputElementProps = () => {
-    const baseProps = getBaseInputElementProps(props);
+    const baseProps = getBaseInputElementProps({
+      type,
+      appearance,
+      showInputLabel
+    });
     const { buttons, iconStart, ...inputProps } =
       baseProps as TextInputWithButtonsProps;
     inputProps.onFocus = inputOnFocus;
@@ -86,12 +95,23 @@ const TextInputWithButtons = (props: TextInputWithButtonsProps) => {
                 getInputAppearanceStyle(inputAppearance)
               )}
             >
-              {getIconStartContent(props, getInputAppearance())}
+              {getIconStartContent(
+                {
+                  type,
+                  appearance,
+                  showInputLabel
+                },
+                getInputAppearance()
+              )}
               {getInputElement(
                 [flexItem("grow"), padding("all", "none")],
                 isValid,
                 describedByIds,
-                props,
+                {
+                  type,
+                  appearance,
+                  showInputLabel
+                },
                 getInputAppearance,
                 getInputElementProps
               )}
@@ -126,8 +146,8 @@ const TextInputWithButtons = (props: TextInputWithButtonsProps) => {
   };
 
   const containerProps: { className?: string } = {};
-  const appearance = getInputAppearance();
-  const dataCy = `textInput textInput.${appearance}`;
+  const calculatedAppearance = getInputAppearance();
+  const dataCy = `textInput textInput.${calculatedAppearance}`;
 
   if (props.className) {
     containerProps.className = props.className;
@@ -135,9 +155,13 @@ const TextInputWithButtons = (props: TextInputWithButtonsProps) => {
   return (
     <div {...containerProps} data-cy={dataCy}>
       {renderLabel({
-        appearance,
-        hidden: !props.showInputLabel,
-        id: getId(props),
+        appearance: calculatedAppearance,
+        hidden: !showInputLabel,
+        id: getId({
+          type,
+          appearance,
+          showInputLabel
+        }),
         label: props.inputLabel,
         required: props.required,
         tooltipContent: props.tooltipContent
@@ -145,11 +169,6 @@ const TextInputWithButtons = (props: TextInputWithButtonsProps) => {
       {getInputContent()}
     </div>
   );
-};
-TextInputWithButtons.defaultProps = {
-  type: "text",
-  appearance: InputAppearance.Standard,
-  showInputLabel: true
 };
 
 export default TextInputWithButtons;

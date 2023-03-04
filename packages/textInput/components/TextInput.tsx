@@ -20,11 +20,11 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
    * The HTML input type for this component.
    */
-  type: "text" | "number" | "search" | "email" | "password" | "tel" | "url";
+  type?: "text" | "number" | "search" | "email" | "password" | "tel" | "url";
   /**
    * Sets the current appearance of the input component. This defaults to InputAppearance.Standard, but supports `InputAppearance.Error` & `InputAppearance.Success` appearances as well.
    */
-  appearance: InputAppearance;
+  appearance?: InputAppearance;
   /**
    * Sets the contents of the input label. This can be a `string` or any `ReactNode`.
    */
@@ -32,7 +32,7 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
    * Defaults to `true`, but can be set to `false` to visibly hide the `TextInput`'s label. The `inputLabel` should still be set even when hidden for accessibility support.
    */
-  showInputLabel: boolean;
+  showInputLabel?: boolean;
   /**
    * hintContent is text or a ReactNode that is displayed directly under the input with additional information about the expected input.
    */
@@ -47,11 +47,21 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   tooltipContent?: React.ReactNode;
 }
 
-const TextInput = (props: TextInputProps) => {
+const TextInput = ({
+  appearance = InputAppearance.Standard,
+  type = "text",
+  showInputLabel = true,
+  ...props
+}: TextInputProps) => {
   const placeholderId = nextId("textInput-");
 
   const getInputContent = (): React.ReactNode => {
-    const appearance = getInputAppearance(props);
+    const calculatedAppearance = getInputAppearance({
+      appearance,
+      type,
+      showInputLabel,
+      ...props
+    });
 
     return (
       <FormFieldWrapper
@@ -67,18 +77,26 @@ const TextInput = (props: TextInputProps) => {
                   padding("horiz", "m"),
                   flexItem("grow"),
                   inputContainer,
-                  getInputAppearanceStyle(getInputAppearance(props))
+                  getInputAppearanceStyle(
+                    getInputAppearance({
+                      appearance,
+                      type,
+                      showInputLabel,
+                      ...props
+                    })
+                  )
                 ],
                 isValid,
                 describedByIds,
-                props,
+                { appearance, type, showInputLabel, ...props },
                 getInputAppearance,
                 getInputElementProps
               )}
             </div>
             <div data-cy="textInput-hintContent">
               {getHintContent}
-              {appearance === InputAppearance.Error && getValidationErrors}
+              {calculatedAppearance === InputAppearance.Error &&
+                getValidationErrors}
             </div>
           </div>
         )}
@@ -95,8 +113,13 @@ const TextInput = (props: TextInputProps) => {
   };
 
   const containerProps: { className?: string } = {};
-  const appearance = getInputAppearance(props);
-  const dataCy = `textInput textInput.${appearance}`;
+  const calculatedAppearance = getInputAppearance({
+    appearance,
+    type,
+    showInputLabel,
+    ...props
+  });
+  const dataCy = `textInput textInput.${calculatedAppearance}`;
 
   if (props.className) {
     containerProps.className = props.className;
@@ -104,8 +127,8 @@ const TextInput = (props: TextInputProps) => {
   return (
     <div {...containerProps} data-cy={dataCy}>
       {renderLabel({
-        appearance,
-        hidden: !props.showInputLabel,
+        appearance: calculatedAppearance,
+        hidden: !showInputLabel,
         id: getId(),
         label: props.inputLabel,
         required: props.required,
@@ -114,12 +137,6 @@ const TextInput = (props: TextInputProps) => {
       {getInputContent()}
     </div>
   );
-};
-
-TextInput.defaultProps = {
-  type: "text",
-  appearance: InputAppearance.Standard,
-  showInputLabel: true
 };
 
 export default TextInput;

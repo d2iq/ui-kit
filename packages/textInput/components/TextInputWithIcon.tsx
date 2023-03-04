@@ -33,7 +33,12 @@ export interface TextInputWithIconState {
   hasFocus?: boolean;
 }
 
-const TextInputWithIcon = (props: TextInputWithIconProps) => {
+const TextInputWithIcon = ({
+  type = "text",
+  showInputLabel = true,
+  appearance = InputAppearance.Standard,
+  ...props
+}: TextInputWithIconProps) => {
   const [hasFocus, setHasFocus] = React.useState(false);
 
   const getInputAppearance = (): string => {
@@ -41,9 +46,9 @@ const TextInputWithIcon = (props: TextInputWithIconProps) => {
       return "disabled";
     }
     if (hasFocus) {
-      return `${props.appearance}-focus`;
+      return `${appearance}-focus`;
     }
-    return props.appearance;
+    return appearance;
   };
 
   const getInputElementProps = () => {
@@ -113,8 +118,8 @@ const TextInputWithIcon = (props: TextInputWithIconProps) => {
   };
 
   const containerProps: { className?: string } = {};
-  const appearance = getInputAppearance();
-  const dataCy = `textInput textInput.${appearance}`;
+  const calculatedAppearance = getInputAppearance();
+  const dataCy = `textInput textInput.${calculatedAppearance}`;
 
   if (props.className) {
     containerProps.className = props.className;
@@ -122,8 +127,8 @@ const TextInputWithIcon = (props: TextInputWithIconProps) => {
   return (
     <div {...containerProps} data-cy={dataCy}>
       {renderLabel({
-        appearance,
-        hidden: !props.showInputLabel,
+        appearance: calculatedAppearance,
+        hidden: !showInputLabel,
         id: getId(props),
         label: props.inputLabel,
         required: props.required,
@@ -132,12 +137,6 @@ const TextInputWithIcon = (props: TextInputWithIconProps) => {
       {getInputContent()}
     </div>
   );
-};
-
-TextInputWithIcon.defaultProps = {
-  type: "text",
-  appearance: InputAppearance.Standard,
-  showInputLabel: true
 };
 
 export default TextInputWithIcon;

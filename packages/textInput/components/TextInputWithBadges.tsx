@@ -56,7 +56,13 @@ export const getStringAsBadgeDatum = (
   value: badgeLabelString
 });
 
-const TextInputWithBadges = (props: TextInputWithBadgesProps) => {
+const TextInputWithBadges = ({
+  type = "text",
+  appearance = InputAppearance.Standard,
+  showInputLabel = true,
+  addBadgeOnBlur = true,
+  ...props
+}: TextInputWithBadgesProps) => {
   const inputRef = React.createRef<HTMLInputElement>();
   const [hasFocus, setHasFocus] = React.useState(false);
 
@@ -105,9 +111,9 @@ const TextInputWithBadges = (props: TextInputWithBadgesProps) => {
       return "disabled";
     }
     if (hasFocus) {
-      return `${props.appearance}-focus`;
+      return `${appearance}-focus`;
     }
-    return props.appearance;
+    return appearance;
   };
 
   const getInputContent = () => {
@@ -234,7 +240,7 @@ const TextInputWithBadges = (props: TextInputWithBadgesProps) => {
 
   const handleBlur = e => {
     inputOnBlur(e);
-    if (props.addBadgeOnBlur) {
+    if (addBadgeOnBlur) {
       handleTagAdd(getStringAsBadgeDatum(e.target.value));
     }
   };
@@ -244,8 +250,8 @@ const TextInputWithBadges = (props: TextInputWithBadgesProps) => {
   };
 
   const containerProps: { className?: string } = {};
-  const appearance = getInputAppearance();
-  const dataCy = `textInput textInput.${appearance}`;
+  const calculatedAppearance = getInputAppearance();
+  const dataCy = `textInput textInput.${calculatedAppearance}`;
 
   if (props.className) {
     containerProps.className = props.className;
@@ -253,8 +259,8 @@ const TextInputWithBadges = (props: TextInputWithBadgesProps) => {
   return (
     <div {...containerProps} data-cy={dataCy}>
       {renderLabel({
-        appearance,
-        hidden: !props.showInputLabel,
+        appearance: calculatedAppearance,
+        hidden: !showInputLabel,
         id: getId(props),
         label: props.inputLabel,
         required: props.required,
@@ -263,13 +269,6 @@ const TextInputWithBadges = (props: TextInputWithBadgesProps) => {
       {getInputContent()}
     </div>
   );
-};
-
-TextInputWithBadges.defaultProps = {
-  type: "text",
-  appearance: InputAppearance.Standard,
-  showInputLabel: true,
-  addBadgeOnBlur: true
 };
 
 export default TextInputWithBadges;

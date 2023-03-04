@@ -240,7 +240,7 @@ exports[`TextInputWithIcon renders 1`] = `
     <label
       class="emotion-0"
       data-cy="textInput-label"
-      for="renders"
+      for="textInput-1"
     >
       Label
     </label>
@@ -252,7 +252,7 @@ exports[`TextInputWithIcon renders 1`] = `
         aria-invalid="false"
         class="emotion-2"
         data-cy="textInput-input"
-        id="renders"
+        id="textInput-2"
         type="text"
         value=""
       />
@@ -522,7 +522,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
     <label
       class="emotion-0"
       data-cy="textInput-label"
-      for="renders.coloredBtn"
+      for="textInput-3"
     >
       Label
     </label>
@@ -534,7 +534,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
         aria-invalid="false"
         class="emotion-2"
         data-cy="textInput-input"
-        id="renders.coloredBtn"
+        id="textInput-4"
         type="text"
         value=""
       />

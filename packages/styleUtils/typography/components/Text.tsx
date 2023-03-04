@@ -21,18 +21,17 @@ export interface TextProps extends BasicTextProps {
 
 const defaultTag = "p";
 
-const Text = (props: TextProps) => {
-  const {
-    align = "inherit",
-    children,
-    tag = defaultTag,
-    wrap = "wrap",
-    weight = "normal",
-    color = themeTextColorPrimary,
-    size = "m",
-    className,
-    "data-cy": dataCy = "text"
-  } = props;
+const Text = ({
+  align = "inherit",
+  children,
+  tag = defaultTag,
+  wrap = "wrap",
+  weight = "normal",
+  color = themeTextColorPrimary,
+  size = "m",
+  className,
+  "data-cy": dataCy = "text"
+}: TextProps) => {
   const TextTag = tag || defaultTag;
   let title: string | undefined;
 
@@ -66,16 +65,6 @@ const Text = (props: TextProps) => {
       {children}
     </TextTag>
   );
-};
-
-Text.defaultProps = {
-  align: "inherit",
-  tag: defaultTag,
-  wrap: "wrap",
-  weight: "normal",
-  color: themeTextColorPrimary,
-  size: "m",
-  ["data-cy"]: "text"
 };
 
 export default Text;
