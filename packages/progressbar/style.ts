@@ -23,7 +23,7 @@ const stripeMotion = keyframes`
 
 export const progressBar = size => css`
   background-color: ${hexToRgbA(getCSSVarValue(themeBorder), 0.65)};
-  border-radius: ${borderRadiusCircle};
+  border-radius: 999px;
   display: block;
   height: ${size === ProgressBarSizes.LARGE ? "12px" : "6px"};
   width: 100%;
