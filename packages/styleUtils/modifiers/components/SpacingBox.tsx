@@ -46,7 +46,12 @@ const SpacingBox = (props: SpacingBoxProps) => {
     : padding(side, spacingSize);
 
   return (
-    <Box className={cx(className, paddingStyles)} data-cy={dataCy} {...other} />
+    <Box
+      className={cx(className, paddingStyles)}
+      data-cy={dataCy}
+      tag={tag}
+      {...other}
+    />
   );
 };
 
