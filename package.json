@@ -133,7 +133,7 @@
     "svgstore": "3.0.1",
     "tablemark": "3.0.0",
     "typescript": "4.9.5",
-    "wait-on": "6.0.1",
+    "wait-on": "7.0.1",
     "webpack": "5.76.0"
   },
   "engines": {
