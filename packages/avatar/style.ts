@@ -1,13 +1,10 @@
 import * as React from "react";
 import { css } from "@emotion/css";
-import {
-  borderRadiusLarge,
-  themeBgSecondary
-} from "../design-tokens/build/js/designTokens";
+import { themeBgSecondary } from "../design-tokens/build/js/designTokens";
 
 export const avatarContainer = css`
   background-color: ${themeBgSecondary};
-  border-radius: ${borderRadiusLarge};
+  border-radius: 25%;
   overflow: hidden;
   position: relative;
 

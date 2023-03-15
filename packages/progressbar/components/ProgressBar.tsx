@@ -41,6 +41,10 @@ export interface ProgressBarProps {
    * Which size variant to use
    */
   size?: ProgressBarSizes;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const ProgressBar = ({
@@ -49,14 +53,15 @@ const ProgressBar = ({
   value,
   size,
   isProcessing,
-  isCondensedLayout
+  isCondensedLayout,
+  "data-cy": dataCy = "progressBar-chart"
 }: ProgressBarProps) => {
   const renderProgressBar = () => (
     <svg
       className={cx(progressBar(size), {
         [progressBarStaged]: isProcessing
       })}
-      data-cy="progressBar-chart"
+      data-cy={dataCy}
       role="presentation"
     >
       {data.map((datum, i) => {
@@ -93,7 +98,7 @@ const ProgressBar = ({
       ) : null}
     </Flex>
   ) : (
-    <React.Fragment>
+    <>
       <SpacingBox side="bottom" spacingSize="xxs">
         <Flex align="center" justify="flex-end" gutterSize="s">
           {caption ? (
@@ -113,7 +118,7 @@ const ProgressBar = ({
         </Flex>
       </SpacingBox>
       {renderProgressBar()}
-    </React.Fragment>
+    </>
   );
 };
 
