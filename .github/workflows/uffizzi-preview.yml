@@ -44,7 +44,7 @@ jobs:
         run: |
           echo 'EVENT_JSON<<EOF' >> $GITHUB_ENV
           cat event.json >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+          echo -e '\nEOF' >> $GITHUB_ENV
       - name: Hash Rendered Compose File
         id: hash
         # If the previous workflow was triggered by a PR close event, we will not have a compose file artifact.
