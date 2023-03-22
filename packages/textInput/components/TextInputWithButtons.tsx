@@ -63,7 +63,8 @@ const TextInputWithButtons = ({
     const baseProps = getBaseInputElementProps({
       type,
       appearance,
-      showInputLabel
+      showInputLabel,
+      ...props
     });
     const { buttons, iconStart, ...inputProps } =
       baseProps as TextInputWithButtonsProps;
@@ -99,7 +100,8 @@ const TextInputWithButtons = ({
                 {
                   type,
                   appearance,
-                  showInputLabel
+                  showInputLabel,
+                  ...props
                 },
                 getInputAppearance()
               )}
@@ -110,7 +112,8 @@ const TextInputWithButtons = ({
                 {
                   type,
                   appearance,
-                  showInputLabel
+                  showInputLabel,
+                  ...props
                 },
                 getInputAppearance,
                 getInputElementProps
@@ -157,11 +160,7 @@ const TextInputWithButtons = ({
       {renderLabel({
         appearance: calculatedAppearance,
         hidden: !showInputLabel,
-        id: getId({
-          type,
-          appearance,
-          showInputLabel
-        }),
+        id: getId(props),
         label: props.inputLabel,
         required: props.required,
         tooltipContent: props.tooltipContent
