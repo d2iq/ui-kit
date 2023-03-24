@@ -20,27 +20,31 @@ import {
 
 export interface AppChromeProps {
   /**
-   * Allows custom styling
+   * Allows custom styling.
    */
   className?: string;
   /**
-   * JSX to render along the left side
+   * JSX to render along the left side.
    */
   sidebar?: React.ReactNode;
   /**
-   * JSX to render as the navigation bar at the top
+   * JSX to render as the navigation bar at the top.
    */
   headerBar?: React.ReactNode;
   /**
-   * @deprecated This prop should not be used, use children instead
+   * @deprecated This prop should not be used, use children instead.
    */
   mainContent?: React.ReactNode;
   /**
-   * JSX for the main html element
+   * JSX to render in the footer at the bottom.
+   */
+  footerBar?: React.ReactNode;
+  /**
+   * JSX for the main html element.
    */
   children?: React.ReactNode;
   /**
-   * Human-readable selector used for writing tests
+   * Human-readable selector used for writing tests.
    */
   "data-cy"?: string;
 }
@@ -50,6 +54,7 @@ const AppChrome = ({
   sidebar,
   headerBar,
   mainContent,
+  footerBar,
   children,
   "data-cy": dataCy = "appChrome"
 }: AppChromeProps) => {
@@ -72,7 +77,7 @@ const AppChrome = ({
         )}
         data-cy={dataCy}
       >
-        {headerBar && <div data-cy="headerBar">{headerBar}</div>}
+        {headerBar && <header data-cy="headerBar">{headerBar}</header>}
         <div className={cx(flex(), appWrapper)}>
           {sidebar && (
             <div className={flexItem("shrink")} data-cy="sidebar">
@@ -87,6 +92,7 @@ const AppChrome = ({
             {children}
           </main>
         </div>
+        {footerBar && <footer data-cy="footerBar">{footerBar}</footer>}
       </div>
     </ThemeProvider>
   );

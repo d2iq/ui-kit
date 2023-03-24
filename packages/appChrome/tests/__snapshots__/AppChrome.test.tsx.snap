@@ -89,13 +89,13 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
     class="emotion-0"
     data-cy="appChrome"
   >
-    <div
+    <header
       data-cy="headerBar"
     >
       <div>
         Header content goes here
       </div>
-    </div>
+    </header>
     <div
       class="emotion-1"
     >
@@ -116,6 +116,13 @@ exports[`AppChrome renders with the app chrome regions 1`] = `
         </div>
       </main>
     </div>
+    <footer
+      data-cy="footerBar"
+    >
+      <div>
+        Footer content goes here
+      </div>
+    </footer>
   </div>
 </DocumentFragment>
 `;

@@ -13,6 +13,7 @@ describe("AppChrome", () => {
         sidebar={<div>Sidebar content</div>}
         headerBar={<div>Header content goes here</div>}
         mainContent={<div>Main app content goes here</div>}
+        footerBar={<div>Footer content goes here</div>}
       />
     );
     expect(asFragment()).toMatchSnapshot();

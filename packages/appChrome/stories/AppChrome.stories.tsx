@@ -31,6 +31,7 @@ const Template: Story<AppChromeProps> = args => (
     mainContent={
       <div className={padding("all", "l")}>Main app content goes here</div>
     }
+    footerBar={<footer>Footer content goes here</footer>}
   />
 );
 
