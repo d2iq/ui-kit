@@ -78,7 +78,9 @@ const getInputElement = (
 };
 
 const getInputAppearance = (props: TextInputProps): string => {
-  return props.disabled ? "disabled" : props.appearance;
+  return props.disabled
+    ? "disabled"
+    : props.appearance ?? InputAppearance.Standard;
 };
 
 const getIconStartContent = (

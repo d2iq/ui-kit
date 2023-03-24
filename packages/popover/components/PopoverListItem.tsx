@@ -88,7 +88,9 @@ const PopoverListItem = (props: PopoverListItemProps) => {
           child.type === PopoverListItemAvatar);
 
       const itemGraphicStart = itemChildren.find(
-        child => isItemGraphic(child) && child.props.position === "start"
+        child =>
+          isItemGraphic(child) &&
+          (child.props.position === "start" || !child.props.position)
       );
       const itemGraphicEnd = itemChildren.find(
         child => isItemGraphic(child) && child.props.position === "end"

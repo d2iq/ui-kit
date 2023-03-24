@@ -25,16 +25,16 @@ export interface BasicTextProps extends SharedTextProps {
   /**
    * The font weight of the text
    */
-  weight: FontWeights;
+  weight?: FontWeights;
   /**
    * The size of the text.  Can be set for all viewport sizes, or configured to have different values at different viewport width breakpoints
    */
-  size: FontSize;
+  size?: FontSize;
 }
 
 export interface HeadingTextProps extends SharedTextProps {
   /**
    * The color of the text
    */
-  color: React.CSSProperties["color"];
+  color?: React.CSSProperties["color"];
 }

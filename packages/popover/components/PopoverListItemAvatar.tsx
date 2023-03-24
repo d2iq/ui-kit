@@ -8,13 +8,12 @@ interface PopoverListItemAvatarProps extends AvatarProps {
   position?: "start" | "end";
 }
 
-const PopoverListItemAvatar = (props: PopoverListItemAvatarProps) => (
-  <Avatar {...props} />
+const PopoverListItemAvatar = ({
+  size = "xs",
+  position = "start",
+  ...props
+}: PopoverListItemAvatarProps) => (
+  <Avatar size={size} {...{ ...props, position }} />
 );
-
-PopoverListItemAvatar.defaultProps = {
-  size: "xs",
-  position: "start"
-};
 
 export default PopoverListItemAvatar;

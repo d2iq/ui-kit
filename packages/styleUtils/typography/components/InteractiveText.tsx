@@ -4,8 +4,20 @@ import Text from "./Text";
 import { BasicTextProps } from "../textTypes";
 import { themeTextColorInteractive } from "../../../design-tokens/build/js/designTokens";
 
-const InteractiveText = (props: BasicTextProps) => (
+const InteractiveText = ({
+  align = "inherit",
+  weight = "normal",
+  size = "m",
+  wrap = "wrap",
+  tag = "p",
+  ...props
+}: BasicTextProps) => (
   <Text
+    align={align}
+    tag={tag}
+    weight={weight}
+    size={size}
+    wrap={wrap}
     className={css`
       cursor: pointer;
     `}
@@ -14,13 +26,5 @@ const InteractiveText = (props: BasicTextProps) => (
     {...props}
   />
 );
-
-InteractiveText.defaultProps = {
-  align: "inherit",
-  weight: "normal",
-  size: "m",
-  wrap: "wrap",
-  tag: "p"
-};
 
 export default InteractiveText;

@@ -8,13 +8,12 @@ interface PopoverListItemIconProps extends IconProps {
   position?: "start" | "end";
 }
 
-const PopoverListItemIcon = (props: PopoverListItemIconProps) => (
-  <Icon {...props} />
+const PopoverListItemIcon = ({
+  size = "xs",
+  position = "start",
+  ...props
+}: PopoverListItemIconProps) => (
+  <Icon size={size} {...{ ...props, position }} />
 );
-
-PopoverListItemIcon.defaultProps = {
-  size: "xs",
-  position: "start"
-};
 
 export default PopoverListItemIcon;

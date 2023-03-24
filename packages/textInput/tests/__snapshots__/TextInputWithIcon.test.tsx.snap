@@ -196,7 +196,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 1`] = `
           class="emotion-2"
           data-cy="textInput-input"
           id="test.icon_end_input.standard"
-          type="text"
           value=""
         />
         <span
@@ -420,7 +419,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 2`] = `
           class="emotion-2"
           data-cy="textInput-input textInput-input.error"
           id="test.icon_end_input.error"
-          type="text"
           value=""
         />
         <span
@@ -642,7 +640,6 @@ exports[`TextInputWithIcon should render all appearances with iconEnd 3`] = `
           class="emotion-2"
           data-cy="textInput-input textInput-input.success"
           id="test.icon_end_input.success"
-          type="text"
           value=""
         />
         <span
@@ -882,7 +879,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 1`] = `
           class="emotion-4"
           data-cy="textInput-input"
           id="test.icon_start_input.standard"
-          type="text"
           value=""
         />
       </div>
@@ -1105,7 +1101,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 2`] = `
           class="emotion-4"
           data-cy="textInput-input textInput-input.error"
           id="test.icon_start_input.error"
-          type="text"
           value=""
         />
       </div>
@@ -1326,7 +1321,6 @@ exports[`TextInputWithIcon should render all appearances with iconStart 3`] = `
           class="emotion-4"
           data-cy="textInput-input textInput-input.success"
           id="test.icon_start_input.success"
-          type="text"
           value=""
         />
       </div>
@@ -1593,7 +1587,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 1`] = `
           class="emotion-4"
           data-cy="textInput-input"
           id="test.two_icon_input.standard"
-          type="text"
           value=""
         />
         <span
@@ -1879,7 +1872,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 2`] = `
           class="emotion-4"
           data-cy="textInput-input textInput-input.error"
           id="test.two_icon_input.error"
-          type="text"
           value=""
         />
         <span
@@ -2163,7 +2155,6 @@ exports[`TextInputWithIcon should render all appearances with twoIcons 3`] = `
           class="emotion-4"
           data-cy="textInput-input textInput-input.success"
           id="test.two_icon_input.success"
-          type="text"
           value=""
         />
         <span
