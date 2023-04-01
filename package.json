@@ -85,7 +85,7 @@
     "@storybook/builder-webpack5": "6.5.16",
     "@storybook/manager-webpack5": "6.5.16",
     "@storybook/mdx2-csf": "0.0.3",
-    "@storybook/react": "6.5.16",
+    "@storybook/react": "7.0.0",
     "@storybook/source-loader": "6.5.16",
     "@storybook/storybook-deployer": "2.8.16",
     "@storybook/test-runner": "0.9.4",
