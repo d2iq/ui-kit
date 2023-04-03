@@ -810,6 +810,7 @@ exports[`SelectInput renders disabled 1`] = `
         aria-invalid="false"
         class="emotion-2"
         data-cy="selectInput-select selectInput-select.standard"
+        disabled=""
         id="layers"
       >
         <option

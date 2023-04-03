@@ -154,6 +154,7 @@ const SelectInput = ({
               onFocus={handleFocus}
               onBlur={handleBlur}
               data-cy={selectDataCy}
+              disabled={disabled}
               {...other}
             >
               {options.map((option, key) => (
