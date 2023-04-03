@@ -63,7 +63,7 @@ describe("SelectInput", () => {
   });
 
   it("renders disabled", () => {
-    const { asFragment } = render(
+    const { asFragment, getByRole } = render(
       <SelectInput
         options={defaultOptions}
         id="layers"
@@ -72,6 +72,8 @@ describe("SelectInput", () => {
       />
     );
     expect(asFragment()).toMatchSnapshot();
+    const selectElement = getByRole("combobox") as HTMLSelectElement;
+    expect(selectElement.disabled).toBe(true);
   });
 
   it("renders with hidden label", () => {
