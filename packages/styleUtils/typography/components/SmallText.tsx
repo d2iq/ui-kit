@@ -8,7 +8,7 @@ export interface SmallTextProps extends SharedTextProps {
   /**
    * The color of the text
    */
-  color: React.CSSProperties["color"];
+  color?: React.CSSProperties["color"];
   /**
    * Which HTML tag to render the text in
    */
