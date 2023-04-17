@@ -14,6 +14,8 @@ Each page will likely have one primary button. Any remaining calls-to-action are
 
 **Secondary**: Most buttons on a page are likely this style.
 
+**Warning**: Warning buttons are used to advise caution.
+
 **Danger**: Destructive buttons are used to highlight something dangerous that can't be undone e.g. "Delete".
 
 **Icon only**: Use when an icon is enough to represent the action e.g. "Create a Service". Should be accompanied by a tooltip.

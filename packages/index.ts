@@ -29,10 +29,12 @@ export {
   StandardButton,
   SuccessButton,
   DangerButton,
+  WarningButton,
   PrimaryDropdownButton,
   SecondaryDropdownButton,
   StandardDropdownButton,
   SuccessDropdownButton,
+  WarningDropdownButton,
   DangerDropdownButton,
   ResetButton
 } from "./button";

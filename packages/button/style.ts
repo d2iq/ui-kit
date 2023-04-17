@@ -16,7 +16,9 @@ import {
   themeBrandPrimaryInverted,
   themeSuccessInverted,
   themeErrorInverted,
-  themeTextColorDisabledInverted
+  themeTextColorDisabledInverted,
+  themeWarningInverted,
+  themeWarning
 } from "../design-tokens/build/js/designTokens";
 import { darken, pickReadableTextColor } from "../shared/styles/color";
 import { ButtonAppearances } from "./components/ButtonBase";
@@ -190,6 +192,10 @@ export const focusStyleByAppearance = (appearance, isInverse) => {
       return isInverse
         ? focusStyles(getHoverColor(getCSSVarValue(themeErrorInverted)))
         : focusStyles(getHoverColor(getCSSVarValue(themeError)));
+    case "warning":
+      return isInverse
+        ? focusStyles(getHoverColor(getCSSVarValue(themeWarningInverted)))
+        : focusStyles(getHoverColor(getCSSVarValue(themeWarning)));
     default:
       return "";
   }
@@ -239,6 +245,12 @@ export const button = appearance => {
         getHoverColor(getCSSVarValue(themeError)),
         getActiveColor(getCSSVarValue(themeError))
       );
+    case "warning":
+      return filledButton(
+        getCSSVarValue(themeWarning),
+        getHoverColor(getCSSVarValue(themeWarning)),
+        getActiveColor(getCSSVarValue(themeWarning))
+      );
     default:
       return "";
   }
@@ -287,6 +299,12 @@ export const buttonInverse = appearance => {
         getCSSVarValue(themeErrorInverted),
         getHoverColor(getCSSVarValue(themeErrorInverted)),
         getActiveColor(getCSSVarValue(themeErrorInverted))
+      );
+    case "warning":
+      return filledButton(
+        getCSSVarValue(themeWarningInverted),
+        getHoverColor(getCSSVarValue(themeWarningInverted)),
+        getActiveColor(getCSSVarValue(themeWarningInverted))
       );
     default:
       return "";
