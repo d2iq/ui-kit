@@ -5,15 +5,13 @@ import {
   SecondaryButton,
   StandardButton,
   SuccessButton,
-  DangerButton
-} from "../../";
+  DangerButton,
+  WarningButton
+} from "../..";
 import { action } from "@storybook/addon-actions";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { ButtonProps } from "../components/ButtonBase";
-import {
-  systemIconLabels,
-  systemIcons
-} from "../../storybookHelpers/controlConstants";
+
 export default {
   title: "Actions/Button",
   component: StandardButton,
@@ -21,7 +19,8 @@ export default {
     PrimaryButton,
     SecondaryButton,
     SuccessButton,
-    DangerButton
+    DangerButton,
+    WarningButton
   },
   decorators: [Story => <div style={{ margin: "0 3em" }}>{Story()}</div>],
   argTypes: {
@@ -60,6 +59,10 @@ export const _SecondaryButton = args => (
 
 export const _SuccessButton = args => (
   <SuccessButton {...args}>{args.children}</SuccessButton>
+);
+
+export const _WarningButton = args => (
+  <WarningButton {...args}>{args.children}</WarningButton>
 );
 
 export const _DangerButton = args => (
