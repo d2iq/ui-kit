@@ -87,7 +87,7 @@ const TextInputWithButtons = ({
         hintContent={props.hintContent}
       >
         {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
-          <React.Fragment>
+          <>
             <div
               className={cx(
                 flex(),
@@ -103,6 +103,7 @@ const TextInputWithButtons = ({
                   showInputLabel,
                   ...props
                 },
+                // the icon takes on the color of the input appearance
                 getInputAppearance()
               )}
               {getInputElement(
@@ -122,7 +123,7 @@ const TextInputWithButtons = ({
             </div>
             {getHintContent}
             {getValidationErrors}
-          </React.Fragment>
+          </>
         )}
       </FormFieldWrapper>
     );
