@@ -5,6 +5,7 @@ import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { TextInputButton } from "../../textInputButton";
 import { Icon } from "../../icon";
+import { themeBrandPrimary } from "../../design-tokens/build/js/designTokens";
 
 const btnClickFn = () => {
   alert("button one clicked");
@@ -13,10 +14,7 @@ const btnClickFn = () => {
 export default {
   title: "Forms/TextInputWithButtons",
   decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
-  component: TextInputWithButtons,
-  args: {
-    appearance: "standard"
-  }
+  component: TextInputWithButtons
 };
 
 const Template: Story = args => (
@@ -36,21 +34,19 @@ const Template: Story = args => (
 );
 
 export const Default = Template.bind({});
+Default.args = {};
 
-export const WithCustomIcons = args => (
-  <TextInputWithButtons
-    id="withIcon.colored"
-    inputLabel="With colored icon"
-    iconStart={<Icon shape={SystemIcons.Search} />}
-    buttons={[
-      <TextInputButton
-        key={0}
-        color="red"
-        shape={SystemIcons.Close}
-        onClick={btnClickFn}
-        aria-label="Clear input"
-      />
-    ]}
-    {...args}
-  />
-);
+export const WithCustomIcons = Template.bind({});
+WithCustomIcons.args = {
+  inputLabel: "With colored icon",
+  iconStart: <Icon shape={SystemIcons.Search} color={themeBrandPrimary} />,
+  buttons: [
+    <TextInputButton
+      key={0}
+      color="red"
+      shape={SystemIcons.Close}
+      onClick={btnClickFn}
+      aria-label="Clear input"
+    />
+  ]
+};
