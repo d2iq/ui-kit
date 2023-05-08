@@ -2,8 +2,10 @@ import * as React from "react";
 import { cx } from "@emotion/css";
 import { ThemeProvider, useTheme } from "@emotion/react";
 import { sidebar, sidebarAnimator, sidebarContainer } from "../style";
-import { themeBgDisabled } from "../../design-tokens/build/js/designTokens";
-import getCSSVarValue from "../../utilities/getCSSVarValue";
+import {
+  greyLightLighten1,
+  greyLightLighten4
+} from "../../design-tokens/build/js/designTokens";
 import { getResponsiveStyle } from "../../shared/styles/styleUtils";
 import { AppChromeTheme } from "../types";
 export interface SidebarProps {
@@ -85,10 +87,9 @@ const Sidebar = ({
 
   const adjustedTheme = ancestorTheme => {
     return {
-      sidebarBackgroundColor: bgColor || getCSSVarValue(themeBgDisabled),
-      // TODO update these with design tokens
-      itemActiveBackgroundColor: activeColor || "#D0D4D7",
-      itemHoverBackgroundColor: hoverColor || "#DDDFE2",
+      sidebarBackgroundColor: bgColor || greyLightLighten4,
+      itemActiveBackgroundColor: activeColor || greyLightLighten1,
+      itemHoverBackgroundColor: hoverColor || greyLightLighten1,
       sidebarWidth: defaultSidebarWidths,
       ...ancestorTheme
     };
