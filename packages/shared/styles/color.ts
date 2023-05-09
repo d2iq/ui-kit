@@ -100,6 +100,50 @@ export const pickReadableTextColor = (
     : invertedTextOption;
 };
 
+/*
+ * This function will select a WCAG-compliant text color based on the background color.
+ * Reference: https://wunnle.com/dynamic-text-color-based-on-background
+ * TODO: We should deprecate pickReadableTextColor and update components that use it.
+ */
+export const getTextColor = (
+  bgColor,
+  darkTextColor,
+  lightTextColor
+): string => {
+  // Convert color from hex to RGB.
+  const getRGB = (c: string | number): number => {
+    return parseInt(c as string, 16) || (c as number);
+  };
+
+  // Convert to sRGB and apply gamma correction.
+  const getsRGB = (c: string): number => {
+    const rgb = getRGB(c) / 255;
+    return rgb <= 0.03928 ? rgb / 12.92 : Math.pow((rgb + 0.055) / 1.055, 2.4);
+  };
+
+  // Calculate relative luminance.
+  const getLuminance = (hexColor: string): number => {
+    return (
+      0.2126 * getsRGB(hexColor.slice(1, 3)) +
+      0.7152 * getsRGB(hexColor.slice(3, 5)) +
+      0.0722 * getsRGB(hexColor.slice(5, 7))
+    );
+  };
+
+  // Use relative luminance to compare color contrast.
+  const getContrast = (f: string, b: string): number => {
+    const L1 = getLuminance(f);
+    const L2 = getLuminance(b);
+    // Ratio formula is defined by WCAG guidelines
+    return (Math.max(L1, L2) + 0.05) / (Math.min(L1, L2) + 0.05);
+  };
+
+  const LIGHT_COLOR = getContrast(bgColor, lightTextColor);
+  const DARK_COLOR = getContrast(bgColor, darkTextColor);
+  // Determine which color has the highest contrast ratio and return that color.
+  return LIGHT_COLOR > DARK_COLOR ? lightTextColor : darkTextColor;
+};
+
 // Assumes we always want our default hover colors to be lower
 // contrast between it's background color
 export const pickHoverBg = (bgColor, baseHoverBg, invertedHoverBg) => {

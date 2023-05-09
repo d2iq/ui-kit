@@ -3,13 +3,12 @@
 exports[`Sidebar SidebarItem renders 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  background-color: #E8EAED;
+  background-color: #F0F1F3;
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
   color: #1B2029;
-  fill: #1B2029;
   height: 100%;
   overflow-x: hidden;
   -webkit-transition: width 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
@@ -45,7 +44,7 @@ exports[`Sidebar SidebarItem renders 1`] = `
 }
 
 .emotion-2 {
-  background-color: #E8EAED;
+  background-color: #F0F1F3;
   cursor: pointer;
   opacity: 1;
   text-transform: capitalize;
@@ -59,7 +58,7 @@ exports[`Sidebar SidebarItem renders 1`] = `
 .emotion-2:hover,
 .emotion-2:focus,
 .emotion-2:focus-within {
-  background-color: #DDDFE2;
+  background-color: #DDE0E4;
 }
 
 .emotion-2:hover,
@@ -351,13 +350,12 @@ exports[`Sidebar SidebarSubMenuItem renders 1`] = `
 exports[`Sidebar renders 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  background-color: #E8EAED;
+  background-color: #F0F1F3;
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
   color: #1B2029;
-  fill: #1B2029;
   height: 100%;
   overflow-x: hidden;
   -webkit-transition: width 150ms ease-in-out,-webkit-transform 150ms ease-in-out;

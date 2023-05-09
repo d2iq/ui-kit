@@ -10,7 +10,7 @@ import {
   themeBgPrimary
 } from "../design-tokens/build/js/designTokens";
 import { padding, tintContent } from "../shared/styles/styleUtils";
-import { pickHoverBg, pickReadableTextColor } from "../shared/styles/color";
+import { pickHoverBg, getTextColor } from "../shared/styles/color";
 import getCSSVarValue from "../utilities/getCSSVarValue";
 import { AppChromeTheme } from "./types";
 import {
@@ -45,7 +45,7 @@ export const appWrapper = css`
 
 export const headerBar = (theme: AppChromeTheme) => {
   const bgColor = theme.headerBackgroundColor || getCSSVarValue(themeBgPrimary);
-  const textColor = pickReadableTextColor(
+  const textColor = getTextColor(
     bgColor,
     getCSSVarValue(themeTextColorPrimary),
     getCSSVarValue(themeTextColorPrimaryInverted)
@@ -75,7 +75,7 @@ export const sidebar = css`
 export const sidebarContainer = (theme: AppChromeTheme, isOpen?: boolean) => {
   const bgColor =
     theme.sidebarBackgroundColor || getCSSVarValue(themeBgDisabled);
-  const textColor = pickReadableTextColor(
+  const textColor = getTextColor(
     bgColor,
     getCSSVarValue(themeTextColorPrimary),
     getCSSVarValue(themeTextColorPrimaryInverted)
@@ -84,7 +84,7 @@ export const sidebarContainer = (theme: AppChromeTheme, isOpen?: boolean) => {
   return css`
     background-color: ${bgColor};
     transform: ${`translateX(${isOpen ? 0 : "-100%"})`};
-    ${tintContent(textColor)};
+    color: ${textColor};
   `;
 };
 
@@ -135,7 +135,7 @@ export const sidebarNavItem = (
   return css`
     background-color: ${itemBgColor};
     color: ${isActive
-      ? pickReadableTextColor(
+      ? getTextColor(
           itemBgColor,
           getCSSVarValue(themeTextColorPrimary),
           getCSSVarValue(themeTextColorPrimaryInverted)

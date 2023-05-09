@@ -4,10 +4,9 @@ import { flex } from "../../shared/styles/styleUtils";
 import { ThemeProvider, useTheme } from "@emotion/react";
 import { headerBar } from "../style";
 import { AppChromeTheme } from "../types";
-import { getCSSVarValue } from "../../utilities";
-import { themeBgPrimary } from "../../design-tokens/build/js/designTokens";
+import { greyLightLighten4 } from "../../design-tokens/build/js/designTokens";
 
-export const defaultBgColor = getCSSVarValue(themeBgPrimary);
+export const defaultBgColor = greyLightLighten4;
 export const defaultHeaderPaddingHor = "none";
 export const defaultHeaderPaddingVert = "none";
 
@@ -32,7 +31,7 @@ const StyledHeader = ({ children }: HeaderProps) => {
 const Header = ({ bgColor, children }: HeaderProps) => {
   const adjustedTheme = ancestorTheme => {
     return {
-      headerBackgroundColor: bgColor || getCSSVarValue(themeBgPrimary),
+      headerBackgroundColor: bgColor || greyLightLighten4,
       ...ancestorTheme
     };
   };
