@@ -6,27 +6,27 @@
 
 ### TextInput Appearance & States
 
-**Appearance**
+#### Appearance
 
 - **Standard**: The default `appearance` prop value is `TextInputAppearance.Standard`.
 - **Error**: The `appearance` prop can be set to `TextInputAppearance.Error` to render the `TextInput` as invalid. This should be used if the current value has been confirmed invalid.
 - **Success**: The `appearance` prop can be set to `TextInputAppearance.Success` to render the `TextInput` as validated. This should be used if the current value has confirmed valid.
 
-**States**
+#### States
 
-- **Disabled**: setting the `disabled` prop to `true` will put the `TextInput` into a disabled state. The `TextInput` will be rendered with a grey background and will not be able to take input.
+- **Disabled**: Setting the `disabled` prop to `true` will put the `TextInput` into a disabled state. The `TextInput` will be rendered with a grey background and will not be able to take in user input.
 
-### TextInput `inputLabel`
+### TextInput `label`
 
-The `inputLabel` prop can be given either a `string` or `ReactNode` to render as a label for the `TextInput` component.
+The `label` prop can be given either a `string` or `ReactNode` to render as a label for the `TextInput` component.
 
-The `showInputLabel` prop can be set to `false` to hide the input's label. This prop defaults to `true`.
+The `hideLabel` prop can be set to `true` to hide the input's label. This prop defaults to `false`.
 
-### TextInput `tooltipContent`
+### TextInput `tooltip`
 
-The `tooltipContent` prop is a non-required property that can be a `ReactNode`.
+The `tooltip` prop is a non-required property that can be a `string` or `ReactNode`.
 
-If the `tooltipContent` prop is set, an icon tooltip with the given text will be shown next to the label and above the input.
+If the `tooltip` prop is set, an icon tooltip with the given text will be shown next to the label and above the input.
 
 ## TextInputWithIcon
 
@@ -34,11 +34,11 @@ If the `tooltipContent` prop is set, an icon tooltip with the given text will be
 
 ## TextInputWithBadges
 
-`TextInputWithBadges` extends the `TextInputWithIcon` component. More info coming soon...
+`TextInputWithBadges` extends the `TextInputWithIcon` component. It allows displaying badges next to the input field, which can be useful for displaying additional information or metadata.
 
 ## TextInputWithButtons
 
-`TextInputWithButtons` extends the `TextInputWithIcon` component, does not take an `iconEnd` prop.
+`TextInputWithButtons` extends the `TextInputWithIcon` component and does not take an `iconEnd` prop.
 
 A `TextInputWithButtons` component is used when there is an action a user can take that is related to the text input. For example, clicking a button to clear the input's value.
 

@@ -1,11 +1,11 @@
 # ToggleBox
 
-## ToggleBox component
+## ToggleBox
 
-A `ToggleBox` is used to indicate whether a group of content is in an "on" or "off" state.
+A `ToggleBox` component is used to indicate whether a group of content is in an "on" or "off" state. This component renders as a clickable box that toggles between states.
 
-ToggleBoxes are typically rendered in a group with related ToggleBoxes. Engineers can use the `ToggleBoxGroup` component to render a group of ToggleBoxes, or they can manually render a group of ToggleBoxes.
+## ToggleBoxGroup
 
-## ToggleBoxGroup component
+The `ToggleBoxGroup` component is a higher-level component that provides an easier way to render a group of related `ToggleBox` components, and react to the selection of a `ToggleBox`. The `ToggleBoxGroup` component takes an array of options, each of which contains a label and a value, and renders a `ToggleBox` for each option.
 
-The `ToggleBoxGroup` component is a shortcut for rendering a group of related ToggleBoxes and reacting to the selection of a `ToggleBox`.
+The `ToggleBoxGroup` component handles the state changes of the `ToggleBox` components, and provides an `onToggle` callback that is invoked when a `ToggleBox` is selected. The `onToggle` callback receives the selected value as an argument, allowing the parent component to update its state based on the selection.
