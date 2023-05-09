@@ -1,43 +1,36 @@
 # InfoBox
 
-InfoBox notifications are a way to notify users in the UI when something has happened and they need take to take action (e.g. a service is failing and needs attention).
+InfoBox notifications are used to notify users when something has happened and they need to take action. For example, a service is failing and needs attention.
 
-## Types of InfoBox
+## InfoBox Types
 
 ### InfoBoxBanner
 
-Should be used when a persistent system wide event has occurred that is very unusual and you want to grab the user’s attention. This should be used rarely.
-
-Can be manually dismissed by the users.
-
-Should only show one at a time.
+Should be used when a persistent system-wide event has occurred that is very unusual and requires immediate attention. This should be used sparingly. It can be manually dismissed by the user. Ideally, there should only be one of these shown at a time to a user.
 
 ### InfoBoxInline
 
-Should be used when you want to inform the user of an event that has occurred within a particular part of the system.
+Use the `InfoBoxInline` component when you want to inform the user of an event that has occurred within a particular part of the system. These cannot be manually dismissed by the user.
+Ideally only one should be displayed at a time, although two should be the upper limit. If you are considering more than 3 `InfoBoxInline` notifications on the same page, consider how you can consolidate them into 2 or fewer.
 
-Cannot be manually dismissed by the user.
+## Messaging
 
-Should show at max 2 at a time though ideally you would only want to show 1. If you are considering more than 3 `InfoBoxInline` notifications on the same page, consider how you could consolidate them into 2 or less.
+**Warning:** A warning message should be used when you want to alert a user to a potential hazard that could occur. The warning message should inform the user of what the issue is and how they can remedy it.
 
-## Messaging Tone
+**Danger:** A danger message should be used when you want to alert a user of an issue that has occurred. The danger message should inform the user of what the issue is and how they can remedy it.
 
-**Warning:** A warning message should be used when you want to warn a user of a potential hazard that could occur. The warning message should inform the user of what the issue is and how they can remediate it.
+**Success:** A success message should be used when you want to inform the user that an action they have taken was successful. The success message should inform the user of the action that was taken and provide them with a way to see the object for which they took action.
 
-**Danger:** A danger message should be used when you want to alert a user of an issue that has occured. The danger message should inform the user of what the issue is and how they can remediate it.
-
-**Success:** A success message should be used when you want to inform the user that an action they have taken was successful. The success message should inform the user of the action that was taken and provide them a way to see the object for which they took action on.
-
-**Info:** An info message should be used to inform the user of prerequisite material that is needed.
+**Info:** An info message should be used to inform the user. For example, information on prerequisite material that is needed.
 
 ## Actions
 
-Can have up to two additional actions (primary action and a secondary action). For example: “Start Update” as a primary action and “Release Notes” as a secondary action
+Actions are limited to two, a primary and secondary action. For example: "Start Update" as a primary action and "Release Notes" as a secondary action. They are styled the same.
 
 ## Links
 
-The body text rendered from the content passed into the `message` prop can contain a link in the form of a hyperlink.
+The body text rendered from the content passed into the `message` prop can contain a hyperlink.
 
 ## Text
 
-Be mindful of how much text is going into the notifications. Avoid having to use “...” at the end a sentence. If the text is too long for the notification, consider how you can shorten the text. A good notification will tell the user what happened in the system and what they can do about it.
+Be mindful of how much text is going into the notifications. Avoid using "..." at the end of a sentence. If the text is too long for the notification, consider how you can shorten it. A good notification will tell the user what happened in the system and what they can do about it.

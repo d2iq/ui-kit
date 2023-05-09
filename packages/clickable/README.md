@@ -1,5 +1,5 @@
 # Clickable
 
-The Clickable is a higher order presentational component, children get the necessary a11y attributes added.
+The `Clickable` component is a higher-order presentational component that adds necessary accessibility attributes to its children. It should be used whenever you want to bind an action to an element's click event.
 
-Use this whenever you want to bind an action on click onto a HTML element. The component will add the appropriate role attribute, add a tabIndex, add a focus state and bind the action to `onClick` and `onKeyDown`. The `onKeyDown` has a wrapping function which filters out everything except the space key and enter key events. This prevents that the function gets triggered by accident.
+The component adds the appropriate role attribute, tabIndex, focus state, and binds the action to both onClick and onKeyDown events. The onKeyDown event has a wrapping function that filters out all keys except the space key and enter key events, preventing accidental triggering of the function.
