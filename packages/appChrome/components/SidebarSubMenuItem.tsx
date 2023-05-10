@@ -19,7 +19,7 @@ import {
   themeBgPrimaryInverted,
   themeBgSelected
 } from "../../design-tokens/build/js/designTokens";
-import { pickReadableTextColor } from "../../shared/styles/color";
+import { getTextColor } from "../../shared/styles/color";
 import { AppChromeTheme, SidebarNavItemProps } from "../types";
 import { IconSize } from "../../shared/types/iconSize";
 
@@ -64,7 +64,7 @@ const SidebarSubMenuItem = ({
     appChromeInsetContent(theme?.sidebarItemPaddingHor),
     sidebarNavItem(Boolean(isActive), Boolean(disabled), theme),
     tintContent(
-      pickReadableTextColor(
+      getTextColor(
         sidebarBgColor,
         getCSSVarValue(themeTextColorPrimary),
         getCSSVarValue(themeTextColorSecondaryInverted)
@@ -75,7 +75,7 @@ const SidebarSubMenuItem = ({
     subMenuItem,
     {
       [tintContent(
-        pickReadableTextColor(
+        getTextColor(
           subMenuItemBgColor,
           getCSSVarValue(themeTextColorPrimary),
           getCSSVarValue(themeTextColorPrimaryInverted)

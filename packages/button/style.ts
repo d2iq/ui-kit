@@ -20,7 +20,7 @@ import {
   themeWarningInverted,
   themeWarning
 } from "../design-tokens/build/js/designTokens";
-import { darken, pickReadableTextColor } from "../shared/styles/color";
+import { darken, getTextColor } from "../shared/styles/color";
 import { ButtonAppearances } from "./components/ButtonBase";
 import { tintContent } from "../shared/styles/styleUtils";
 import getCSSVarValue from "../utilities/getCSSVarValue";
@@ -41,7 +41,7 @@ export const filledButton = (
 ) => {
   const contentColor = isInverse
     ? themeTextColorPrimaryInverted
-    : pickReadableTextColor(
+    : getTextColor(
         baseColor,
         getCSSVarValue(themeTextColorPrimary),
         getCSSVarValue(themeTextColorPrimaryInverted)

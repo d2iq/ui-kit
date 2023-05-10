@@ -15,7 +15,7 @@ import {
   themeTextColorDisabled
 } from "../../design-tokens/build/js/designTokens";
 import getCSSVarValue from "../../utilities/getCSSVarValue";
-import { darken, pickReadableTextColor } from "../../shared/styles/color";
+import { darken, getTextColor } from "../../shared/styles/color";
 import { PopoverListItemAppearances } from "../../shared/types/popoverListItemAppearances";
 import PopoverListItemIcon from "./PopoverListItemIcon";
 import PopoverListItemAvatar from "./PopoverListItemAvatar";
@@ -48,7 +48,7 @@ const PopoverListItem = (props: PopoverListItemProps) => {
   // on the :root
   const menuListItemSelected = css`
     background-color: ${themeBgSelected};
-    color: ${pickReadableTextColor(
+    color: ${getTextColor(
       getCSSVarValue(themeBgSelected),
       getCSSVarValue(themeTextColorPrimary),
       getCSSVarValue(themeTextColorPrimaryInverted)

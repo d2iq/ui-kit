@@ -11,7 +11,7 @@ import {
   themeTextColorPrimaryInverted,
   themeBorder
 } from "../design-tokens/build/js/designTokens";
-import { pickReadableTextColor } from "../shared/styles/color";
+import { getTextColor } from "../shared/styles/color";
 import getCSSVarValue from "../utilities/getCSSVarValue";
 
 const badgeAppearanceStyle = (color, isOutlined?: boolean) => {
@@ -20,7 +20,7 @@ const badgeAppearanceStyle = (color, isOutlined?: boolean) => {
   return css`
     background-color: ${bgColor};
     border-color: ${color};
-    color: ${pickReadableTextColor(
+    color: ${getTextColor(
       bgColor,
       getCSSVarValue(themeTextColorPrimary),
       getCSSVarValue(themeTextColorPrimaryInverted)

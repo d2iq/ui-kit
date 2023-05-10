@@ -72,38 +72,9 @@ const getHexBrightness = (hex: string) => {
 
 export const isHexDark = (hex: string): boolean => getHexBrightness(hex) < 140;
 
-// Normally this function would compare the contrast
-// between the baseTextOption and invertedTextOption,
-// but that forces text to be black on our success buttons.
-//
-// Checking with brightness still returns us the most readable
-// option on the background color, but will let the success
-// button have white text.
-//
-// The design team should try a different success color
-// to improve legibility and accessibility.
-export const pickReadableTextColor = (
-  bgColor,
-  baseTextOption,
-  invertedTextOption
-) => {
-  const baseTextBrightness = getHexBrightness(baseTextOption);
-  const invertedTextBrightness = getHexBrightness(invertedTextOption);
-
-  if (!isHexDark(bgColor)) {
-    return baseTextBrightness < invertedTextBrightness
-      ? baseTextOption
-      : invertedTextOption;
-  }
-  return baseTextBrightness > invertedTextBrightness
-    ? baseTextOption
-    : invertedTextOption;
-};
-
 /*
  * This function will select a WCAG-compliant text color based on the background color.
  * Reference: https://wunnle.com/dynamic-text-color-based-on-background
- * TODO: We should deprecate pickReadableTextColor and update components that use it.
  */
 export const getTextColor = (
   bgColor,

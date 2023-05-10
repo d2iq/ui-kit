@@ -6,7 +6,7 @@ import {
   borderRadiusDefault,
   themeBorder
 } from "../design-tokens/build/js/designTokens";
-import { pickReadableTextColor, darken } from "../shared/styles/color";
+import { getTextColor, darken } from "../shared/styles/color";
 import getCSSVarValue from "../utilities/getCSSVarValue";
 import { buttonPadding } from "../button/style";
 
@@ -39,7 +39,7 @@ export const segmentedControlButton = css`
   &:hover,
   &:focus-within {
     background-color: ${themeBgHover};
-    color: ${pickReadableTextColor(
+    color: ${getTextColor(
       getCSSVarValue(themeBgHover),
       getCSSVarValue(themeTextColorPrimary),
       getCSSVarValue(themeTextColorPrimaryInverted)
@@ -55,7 +55,7 @@ export const segmentedControlButtonInner = css`
 export const segmentedControlButtonActive = css`
   background-color: ${themeBorder};
   border-color: ${themeBorder};
-  color: ${pickReadableTextColor(
+  color: ${getTextColor(
     getCSSVarValue(themeBorder),
     getCSSVarValue(themeTextColorPrimary),
     getCSSVarValue(themeTextColorPrimaryInverted)
@@ -64,7 +64,7 @@ export const segmentedControlButtonActive = css`
   &:hover,
   &:focus-within {
     background-color: ${themeBorder};
-    color: ${pickReadableTextColor(
+    color: ${getTextColor(
       getCSSVarValue(themeBorder),
       getCSSVarValue(themeTextColorPrimary),
       getCSSVarValue(themeTextColorPrimaryInverted)

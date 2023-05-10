@@ -60,7 +60,7 @@ exports[`Badge primary 1`] = `
 exports[`Badge success 1`] = `
 <DocumentFragment>
   <span
-    class="css-1nxr7gm"
+    class="css-1qzm5de"
     data-cy="badge"
   >
     success
