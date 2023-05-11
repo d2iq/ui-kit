@@ -11,7 +11,7 @@ import {
 } from "../design-tokens/build/js/designTokens";
 import { padding, tintContent } from "../shared/styles/styleUtils";
 import { pickHoverBg, getTextColor } from "../shared/styles/color";
-import getCSSVarValue from "../utilities/getCSSVarValue";
+import { getCSSVarValue } from "../shared/styles/styleUtils/typography/color";
 import { AppChromeTheme } from "./types";
 import {
   spaceSizes,

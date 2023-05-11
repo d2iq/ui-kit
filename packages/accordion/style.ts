@@ -8,7 +8,7 @@ import {
   borderRadiusDefault
 } from "../design-tokens/build/js/designTokens";
 import { lighten } from "../shared/styles/color";
-import { getCSSVarValue } from "../utilities";
+import { getCSSVarValue } from "../shared/styles/styleUtils/typography/color";
 
 export const fillWidth = css`
   display: block;

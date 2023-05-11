@@ -20,8 +20,9 @@ import {
   display,
   tintContent
 } from "./styleUtils";
-import getCSSVarValue from "../../utilities/getCSSVarValue";
+import { getCSSVarValue } from "./styleUtils/typography/color";
 import { hexToRgbA } from "./color";
+
 const getFocusFieldBg = color => hexToRgbA(color, 0.05);
 
 export const textInputHeight = 36;

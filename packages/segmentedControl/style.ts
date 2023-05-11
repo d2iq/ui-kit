@@ -7,7 +7,7 @@ import {
   themeBorder
 } from "../design-tokens/build/js/designTokens";
 import { getTextColor, darken } from "../shared/styles/color";
-import getCSSVarValue from "../utilities/getCSSVarValue";
+import { getCSSVarValue } from "../shared/styles/styleUtils/typography/color";
 import { buttonPadding } from "../button/style";
 
 export const staticKeyboardFocusClassname = "static_segmentKeyboardFocus";

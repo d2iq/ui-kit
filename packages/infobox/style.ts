@@ -12,7 +12,7 @@ import {
   themeWarning
 } from "../design-tokens/build/js/designTokens";
 import { lighten, darken } from "../shared/styles/color";
-import getCSSVarValue from "../utilities/getCSSVarValue";
+import { getCSSVarValue } from "../shared/styles/styleUtils/typography/color";
 
 const infoBoxAppearances = appearance => {
   switch (appearance) {

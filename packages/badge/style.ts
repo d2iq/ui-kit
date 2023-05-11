@@ -12,7 +12,7 @@ import {
   themeBorder
 } from "../design-tokens/build/js/designTokens";
 import { getTextColor } from "../shared/styles/color";
-import getCSSVarValue from "../utilities/getCSSVarValue";
+import { getCSSVarValue } from "../shared/styles/styleUtils/typography/color";
 
 const badgeAppearanceStyle = (color, isOutlined?: boolean) => {
   const bgColor = isOutlined ? getCSSVarValue(themeBgPrimary) : color;

@@ -23,7 +23,7 @@ import {
 import { darken, getTextColor } from "../shared/styles/color";
 import { ButtonAppearances } from "./components/ButtonBase";
 import { tintContent } from "../shared/styles/styleUtils";
-import getCSSVarValue from "../utilities/getCSSVarValue";
+import { getCSSVarValue } from "../shared/styles/styleUtils/typography/color";
 
 export const buttonPadding = {
   vert: "10px",
