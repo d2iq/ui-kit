@@ -1,33 +1,37 @@
 # Toasts
 
-Toasts should be used when you want to give the user feedback on an action that was taken or to alert the user of a status change.
+Toasts are used to provide feedback to the user on an action taken or to alert them of a status change.
 
-## Messaging Tone
+The `Toast` component is a single toast message that is displayed to the user, while the `Toaster` component is a container that holds multiple Toast components and handles their rendering and dismissal. The Toaster component manages the lifecycle of the Toast components, handling their dismissal after a certain amount of time or when the user dismisses them manually.
 
-**Warning:** A warning message should be used when you want to warn a user of a potential hazard that could occur. The warning message should inform the user of what the issue is and how they can remediate it.
+## Messaging
 
-**Danger:** A danger message should be used when you want to alert a user of an issue that has occured. The danger message should inform the user of what the issue is and how they can remediate it.
+Toasts can be categorized as follows:
 
-**Success:** A success message should be used when you want to inform the user that an action they have taken was successful. The success message should inform the user of the action that was taken and provide them a way to see the object for which they took action on.
+**Warning:** Use a warning message to alert users of a potential hazard that could occur. The message should explain the issue and provide instructions on how to remedy it.
+
+**Danger:** Use a danger message to notify users of an issue that has occurred. The message should explain the problem and provide instructions on how to remedy it.
+
+**Success:** Use a success message to inform users that an action they took was successful. The message should explain the action taken and provide users with a way to view the object on which they took action.
 
 ## Icons
 
-Icons must be used in Toast notifications as a way to distinguish between the type of message (i.e. warning, success, danger).
+Icons should be used in toast notifications to distinguish between message types (warning, success, danger).
 
 ## Displaying and Dismissing
 
-All toasts can be manually dismissed by the users. Success toast notifications should automatically be dismissed after 2 seconds. Warning and Danger toast notifications can only be manually dismissed by the user.
+All toasts can be manually dismissed by the user. Success toast notifications should automatically dismiss after 2 seconds. Warning and danger toast notifications must be dismissed manually by the user.
 
-You can show many toast notifications. However toasts cannot reach above the top header (i.e. Services header).
+Multiple toast notifications can be displayed, but they should not stack beyond the page header.
 
 ## Actions
 
-Can have up to two additional actions (primary action and a secondary action). For example: “Start Update” as a primary action and “Release Notes” as a secondary action.
+Toasts can have up to two additional actions, a primary action and a secondary action. For example, a toast might have a "Start Update" button as the primary action and a "View Documentation" button as a secondary action.
 
 ## Links
 
-The body text rendered from the content passed into the `description` prop can contain a link in the form of a hyperlink.
+The body text of the notification, rendered from the content passed into the `description` prop, can either be a string or contain elements such as a Link component.
 
 ## Text
 
-Be mindful of how much text is going into the notifications. Avoid having to use “...” at the end a sentence. If the text is too long for the notification, consider how you can shorten the text. A good notification will tell the user what happened in the system and what they can do about it.
+Be mindful of the amount of text included in the notification. Avoid using ellipses at the end of sentences. If the text is too long for the notification, consider shortening it. A good notification should inform the user what happened in the system and what they can do about it.
