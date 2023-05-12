@@ -922,8 +922,8 @@ exports[`ButtonBase renders all appearances with props 5`] = `
   overflow: visible;
   padding: 0;
   text-align: inherit;
-  color: #FFFFFF;
-  fill: #FFFFFF;
+  color: #1B2029;
+  fill: #1B2029;
   background-color: #14C684;
   border-radius: 4px;
   padding: 10px 18px;
@@ -949,8 +949,8 @@ exports[`ButtonBase renders all appearances with props 5`] = `
 
 .emotion-1[href],
 .emotion-1[href]:visited {
-  color: #FFFFFF;
-  fill: #FFFFFF;
+  color: #1B2029;
+  fill: #1B2029;
 }
 
 .emotion-1:hover {

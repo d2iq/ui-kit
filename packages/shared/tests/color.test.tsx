@@ -5,7 +5,7 @@ import {
   rgbToHex,
   getHexContrast,
   isHexDark,
-  pickReadableTextColor,
+  getTextColor,
   pickHoverBg,
   mixHex
 } from "../styles/color";
@@ -80,16 +80,16 @@ describe("color utilities", () => {
     });
   });
 
-  describe("pickReadableTextColor", () => {
+  describe("getTextColor", () => {
     it("returns inverted text color if the background and the base text color are dark", () => {
-      expect(
-        pickReadableTextColor("#000000", "#1B2029", "#FFFFFF").toUpperCase()
-      ).toBe("#FFFFFF");
+      expect(getTextColor("#000000", "#1B2029", "#FFFFFF").toUpperCase()).toBe(
+        "#FFFFFF"
+      );
     });
     it("returns base text color if the background and the inverted text color are not dark", () => {
-      expect(
-        pickReadableTextColor("#FFFFFF", "#1B2029", "#999999").toUpperCase()
-      ).toBe("#1B2029");
+      expect(getTextColor("#FFFFFF", "#1B2029", "#999999").toUpperCase()).toBe(
+        "#1B2029"
+      );
     });
   });
 

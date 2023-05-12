@@ -5,7 +5,7 @@ import {
   themeBrandPrimary
 } from "../design-tokens/build/js/designTokens";
 import { hexToRgbA } from "../shared/styles/color";
-import getCSSVarValue from "../utilities/getCSSVarValue";
+import { getCSSVarValue } from "../shared/styles/styleUtils/typography/color";
 import { ProgressBarSizes } from "./components/ProgressBar";
 
 export const defaultBarColor = themeBrandPrimary;

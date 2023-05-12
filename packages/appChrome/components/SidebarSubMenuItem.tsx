@@ -11,7 +11,7 @@ import { textSize, flex, tintContent } from "../../shared/styles/styleUtils";
 import Clickable from "../../clickable/components/clickable";
 import ResetLink from "../../link/components/ResetLink";
 import { useTheme } from "@emotion/react";
-import getCSSVarValue from "../../utilities/getCSSVarValue";
+
 import {
   themeTextColorPrimary,
   themeTextColorPrimaryInverted,
@@ -19,9 +19,10 @@ import {
   themeBgPrimaryInverted,
   themeBgSelected
 } from "../../design-tokens/build/js/designTokens";
-import { pickReadableTextColor } from "../../shared/styles/color";
+import { getTextColor } from "../../shared/styles/color";
 import { AppChromeTheme, SidebarNavItemProps } from "../types";
 import { IconSize } from "../../shared/types/iconSize";
+import { getCSSVarValue } from "../../shared/styles/styleUtils/typography/color";
 
 export interface SidebarSubMenuItemTextProps {
   menuHasIcon: boolean;
@@ -64,7 +65,7 @@ const SidebarSubMenuItem = ({
     appChromeInsetContent(theme?.sidebarItemPaddingHor),
     sidebarNavItem(Boolean(isActive), Boolean(disabled), theme),
     tintContent(
-      pickReadableTextColor(
+      getTextColor(
         sidebarBgColor,
         getCSSVarValue(themeTextColorPrimary),
         getCSSVarValue(themeTextColorSecondaryInverted)
@@ -75,7 +76,7 @@ const SidebarSubMenuItem = ({
     subMenuItem,
     {
       [tintContent(
-        pickReadableTextColor(
+        getTextColor(
           subMenuItemBgColor,
           getCSSVarValue(themeTextColorPrimary),
           getCSSVarValue(themeTextColorPrimaryInverted)
