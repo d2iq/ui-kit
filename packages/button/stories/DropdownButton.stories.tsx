@@ -8,10 +8,7 @@ import {
   WarningDropdownButton,
   DangerDropdownButton
 } from "../../index";
-import {
-  systemIconLabels,
-  systemIcons
-} from "../../storybookHelpers/controlConstants";
+import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
 export default {
   title: "Actions/Dropdown Button",
@@ -23,11 +20,8 @@ export default {
       }
     },
     iconStart: {
-      options: systemIcons,
-      control: {
-        type: "select"
-      },
-      mapping: systemIconLabels
+      options: Object.keys(SystemIcons),
+      mapping: SystemIcons
     }
   },
   args: {

@@ -4,11 +4,7 @@ import { Icon } from "../index";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { textColorPrimary } from "../../design-tokens/build/js/designTokens";
 import { IconProps } from "../components/Icon";
-import {
-  spacingSizeValues,
-  systemIconLabels,
-  systemIcons
-} from "../../storybookHelpers/controlConstants";
+import { spacingSizeValues } from "../../storybookHelpers/controlConstants";
 
 export default {
   title: "Graphic Elements/Icon",
@@ -20,11 +16,8 @@ export default {
       }
     },
     shape: {
-      options: systemIcons,
-      control: {
-        type: "select"
-      },
-      mapping: systemIconLabels
+      options: Object.keys(SystemIcons),
+      mapping: SystemIcons
     },
     size: {
       options: spacingSizeValues,
@@ -51,13 +44,7 @@ export default {
 } as Meta;
 
 const Template: Story<IconProps> = args => (
-  <Icon
-    shape={SystemIcons.ArrowRight}
-    color={textColorPrimary}
-    size="s"
-    ariaLabel="Sample icon"
-    {...args}
-  />
+  <Icon color={textColorPrimary} size="s" ariaLabel="Sample icon" {...args} />
 );
 
 export const Default = Template.bind({});

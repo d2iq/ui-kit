@@ -22,7 +22,7 @@ export default {
     }
   },
   args: {
-    apperance: "standard",
+    appearance: "standard",
     inputLabel: "Default"
   }
 };

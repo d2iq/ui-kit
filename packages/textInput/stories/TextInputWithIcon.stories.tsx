@@ -3,10 +3,6 @@ import { Story, Meta } from "@storybook/react";
 import { TextInputWithIcon } from "../index";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
-import {
-  systemIconLabels,
-  systemIcons
-} from "../../storybookHelpers/controlConstants";
 
 export default {
   title: "Forms/TextInputWithIcon",
@@ -19,12 +15,12 @@ export default {
       }
     },
     iconStart: {
-      options: systemIcons,
-      mapping: systemIconLabels
+      options: Object.keys(SystemIcons),
+      mapping: SystemIcons
     },
     iconEnd: {
-      options: systemIcons,
-      mapping: systemIconLabels
+      options: Object.keys(SystemIcons),
+      mapping: SystemIcons
     },
     hintContent: {
       control: {
