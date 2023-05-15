@@ -62,30 +62,6 @@ export const sideValues = [
   "vert"
 ];
 
-export const systemIcons = [
-  "SystemIcons.ArrowRight",
-  "SystemIcons.Check",
-  "SystemIcons.Close",
-  "SystemIcons.Folder",
-  "SystemIcons.Gear",
-  "SystemIcons.Services",
-  "SystemIcons.Users",
-  "SystemIcons.LockData",
-  "SystemIcons.CircleCheck"
-];
-
-export const systemIconLabels = {
-  "SystemIcons.ArrowRight": SystemIcons.ArrowRight,
-  "SystemIcons.Check": SystemIcons.Check,
-  "SystemIcons.Close": SystemIcons.Close,
-  "SystemIcons.Folder": SystemIcons.Folder,
-  "SystemIcons.Gear": SystemIcons.Gear,
-  "SystemIcons.Services": SystemIcons.Services,
-  "SystemIcons.Users": SystemIcons.Users,
-  "SystemIcons.LockData": SystemIcons.LockData,
-  "SystemIcons.CircleCheck": SystemIcons.CircleCheck
-};
-
 export const directionsValues = [
   Direction.BottomLeft,
   Direction.BottomRight,

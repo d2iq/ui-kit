@@ -3,11 +3,6 @@ import { Story, Meta } from "@storybook/react";
 import { SelectInput } from "../../index";
 import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import {
-  systemIconLabels,
-  systemIcons
-} from "../../storybookHelpers/controlConstants";
-
 const defaultOptions = [
   { value: "exosphere", label: "Exosphere" },
   { value: "thermosphere", label: "Thermosphere" },
@@ -27,8 +22,8 @@ export default {
   component: SelectInput,
   argTypes: {
     iconStart: {
-      options: systemIcons,
-      mapping: systemIconLabels
+      options: Object.keys(SystemIcons),
+      mapping: SystemIcons
     },
     inputLabel: {
       control: {
