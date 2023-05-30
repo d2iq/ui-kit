@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { List } from "../index";
 
 const markerStyles = {
@@ -15,7 +15,7 @@ export default {
   component: List
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <List {...args}>
     <li>List item</li>
     <li>List item</li>
@@ -23,21 +23,25 @@ const Template: Story = args => (
   </List>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
-export const NestedWithItemMarkers = args => (
-  <List markerStyle="disc">
-    <li>List item</li>
-    <li>List item</li>
-    <li>
-      Nested List
-      <List markerStyle="circle" {...args}>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-      </List>
-    </li>
-    <li>List item</li>
-    <li>List item</li>
-  </List>
-);
+export const NestedWithItemMarkers = {
+  render: args => (
+    <List markerStyle="disc">
+      <li>List item</li>
+      <li>List item</li>
+      <li>
+        Nested List
+        <List markerStyle="circle" {...args}>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+        </List>
+      </li>
+      <li>List item</li>
+      <li>List item</li>
+    </List>
+  )
+};

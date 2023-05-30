@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { MessagePanel, MessagePanelWrapper } from "..";
 import { PrimaryButton, SecondaryButton } from "../../button";
 import { PageHeader } from "../../pageheader";
@@ -21,28 +21,35 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <MessagePanel heading="No Policy Set" {...args}>
     Define policy to start allowing groups and roles access to your clusters.
   </MessagePanel>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
-export const WithMessagePanelWrapper = args => (
-  <>
-    <PageHeader breadcrumbElements={[<div key="roles">Roles</div>]} />
-    <MessagePanelWrapper>
-      <MessagePanel heading="No policy set" {...args}>
-        Define policy to start allowing groups and roles access to your
-        clusters.
-      </MessagePanel>
-    </MessagePanelWrapper>
-  </>
-);
+export const WithMessagePanelWrapper = {
+  render: args => (
+    <>
+      <PageHeader breadcrumbElements={[<div key="roles">Roles</div>]} />
+      <MessagePanelWrapper>
+        <MessagePanel heading="No policy set" {...args}>
+          Define policy to start allowing groups and roles access to your
+          clusters.
+        </MessagePanel>
+      </MessagePanelWrapper>
+    </>
+  )
+};
 
-export const WithActions = Template.bind({});
-WithActions.args = {
-  primaryAction: <PrimaryButton>Create Role</PrimaryButton>,
-  secondaryAction: <SecondaryButton>Learn More</SecondaryButton>
+export const WithActions = {
+  render: Template,
+
+  args: {
+    primaryAction: <PrimaryButton>Create Role</PrimaryButton>,
+    secondaryAction: <SecondaryButton>Learn More</SecondaryButton>
+  }
 };

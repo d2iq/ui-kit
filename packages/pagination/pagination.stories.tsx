@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import Pagination, { PaginationProps } from "./Pagination";
 import PaginationContainer from "./PaginationContainer";
 import { BorderedList } from "../list";
@@ -21,48 +21,60 @@ export default {
   component: Pagination
 } as Meta;
 
-const Template: Story<PaginationProps> = args => (
+const Template: StoryFn<PaginationProps> = args => (
   <PaginationContainer>
     <Pagination totalItems={200} {...args} />
   </PaginationContainer>
 );
 
-export const Default = Template.bind({});
-
-export const ExampleWPagedListControlledComponent = args => {
-  const ControlledPaginationWrapper = ({
-    children
-  }: ControlledPaginationWrapperProps) => {
-    return children(usePageChange());
-  };
-
-  return (
-    <ControlledPaginationWrapper>
-      {({ activePage, itemEndIndex, itemStartIndex, pageLength, onChange }) => (
-        <>
-          <BorderedList tag="ul">
-            {initialData.slice(itemStartIndex, itemEndIndex).map(name => (
-              <li key={name}>{name}</li>
-            ))}
-          </BorderedList>
-          <PaginationContainer>
-            <Pagination
-              activePage={activePage}
-              onChange={onChange}
-              pageLength={pageLength}
-              showPageLengthMenu={true}
-              totalItems={200}
-              {...args}
-            />
-          </PaginationContainer>
-        </>
-      )}
-    </ControlledPaginationWrapper>
-  );
+export const Default = {
+  render: Template
 };
 
-export const StartOnPageBeyond1 = Template.bind({});
-StartOnPageBeyond1.args = { initialActivePage: 3 };
+export const ExampleWPagedListControlledComponent = {
+  render: args => {
+    const ControlledPaginationWrapper = ({
+      children
+    }: ControlledPaginationWrapperProps) => {
+      return children(usePageChange());
+    };
+
+    return (
+      <ControlledPaginationWrapper>
+        {({
+          activePage,
+          itemEndIndex,
+          itemStartIndex,
+          pageLength,
+          onChange
+        }) => (
+          <>
+            <BorderedList tag="ul">
+              {initialData.slice(itemStartIndex, itemEndIndex).map(name => (
+                <li key={name}>{name}</li>
+              ))}
+            </BorderedList>
+            <PaginationContainer>
+              <Pagination
+                activePage={activePage}
+                onChange={onChange}
+                pageLength={pageLength}
+                showPageLengthMenu={true}
+                totalItems={200}
+                {...args}
+              />
+            </PaginationContainer>
+          </>
+        )}
+      </ControlledPaginationWrapper>
+    );
+  }
+};
+
+export const StartOnPageBeyond1 = {
+  render: Template,
+  args: { initialActivePage: 3 }
+};
 
 export const PreviousAndNextButtonsAsLinks = () => (
   <PaginationContainer>

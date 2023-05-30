@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { ToggleBox, ToggleBoxGroup } from "../index";
 import ToggleBoxGroupStoryHelper from "./helpers/ToggleBoxGroupStoryHelper";
 import { ToggleBoxGroupProps } from "../components/ToggleBoxGroup";
@@ -30,7 +30,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story<ToggleBoxGroupProps> = args => (
+const Template: StoryFn<ToggleBoxGroupProps> = args => (
   <ToggleBoxGroupStoryHelper>
     {({ changeHandler, selectedItems }) => (
       <ToggleBoxGroup
@@ -53,17 +53,25 @@ const Template: Story<ToggleBoxGroupProps> = args => (
   </ToggleBoxGroupStoryHelper>
 );
 
-export const Default = Template.bind({});
-
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-  id: "withLabel",
-  label: "Atmosphere Layer"
+export const Default = {
+  render: Template
 };
 
-export const MultiSelectWithSelectedItems = Template.bind({});
-MultiSelectWithSelectedItems.args = {
-  id: "multiselect",
-  multiSelect: true,
-  selectedItems: ["exosphere", "thermosphere"]
+export const WithLabel = {
+  render: Template,
+
+  args: {
+    id: "withLabel",
+    label: "Atmosphere Layer"
+  }
+};
+
+export const MultiSelectWithSelectedItems = {
+  render: Template,
+
+  args: {
+    id: "multiselect",
+    multiSelect: true,
+    selectedItems: ["exosphere", "thermosphere"]
+  }
 };

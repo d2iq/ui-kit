@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { Avatar } from "../index";
 import {
   iconSizeXs,
@@ -24,8 +24,11 @@ export default {
   }
 } as Meta;
 
-const Template: Story<AvatarProps> = args => (
-  <Avatar src={serviceImg} label="Kubernetes" {...args} />
+const Template: StoryFn<AvatarProps> = args => (
+  <Avatar label="Kubernetes" {...args} />
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template,
+  args: { src: serviceImg }
+};

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryObj, StoryFn, Meta } from "@storybook/react";
 
 import {
   DangerText,
@@ -72,74 +72,81 @@ const loremIpsum = `
   like Aldus PageMaker including versions of Lorem Ipsum.
 `;
 
-const Template: Story = args => <Text {...args}>{loremIpsum}</Text>;
+const Template: StoryFn = args => <Text {...args}>{loremIpsum}</Text>;
 
-export const DefaultText = Template.bind({});
+export const DefaultText = {
+  render: Template
+};
 
-export const ResponsiveSize: Story = args => (
-  <>
-    <p
-      className={css`
-        font-weight: 500;
-      `}
-    >
-      Resize your viewport width to see the text below change size responsively.
-    </p>
-    <Text {...args}>{loremIpsum}</Text>
-  </>
-);
+export const ResponsiveSize: StoryObj = {
+  render: args => (
+    <>
+      <p
+        className={css`
+          font-weight: 500;
+        `}
+      >
+        Resize your viewport width to see the text below change size
+        responsively.
+      </p>
+      <Text {...args}>{loremIpsum}</Text>
+    </>
+  ),
 
-ResponsiveSize.args = {
-  size: {
-    default: "s",
-    medium: "m",
-    large: "l",
-    jumbo: "xl"
+  args: {
+    size: {
+      default: "s",
+      medium: "m",
+      large: "l",
+      jumbo: "xl"
+    }
   }
 };
 
-export const _SuccessText = args => (
-  <SuccessText {...args}>Success Text</SuccessText>
-);
+export const _SuccessText = {
+  render: args => <SuccessText {...args}>Success Text</SuccessText>,
 
-_SuccessText.parameters = {
-  controls: {
-    exclude: ["color"]
+  parameters: {
+    controls: {
+      exclude: ["color"]
+    }
   }
 };
 
-export const _WarningText = args => (
-  <WarningText {...args}>Warning Text</WarningText>
-);
+export const _WarningText = {
+  render: args => <WarningText {...args}>Warning Text</WarningText>,
 
-_WarningText.parameters = {
-  controls: {
-    exclude: ["color"]
+  parameters: {
+    controls: {
+      exclude: ["color"]
+    }
   }
 };
 
-export const _DangerText = args => (
-  <DangerText {...args}>Danger Text</DangerText>
-);
+export const _DangerText = {
+  render: args => <DangerText {...args}>Danger Text</DangerText>,
 
-_DangerText.parameters = {
-  controls: {
-    exclude: ["color"]
+  parameters: {
+    controls: {
+      exclude: ["color"]
+    }
   }
 };
 
-export const _SmallText = args => <SmallText {...args}>Small Text</SmallText>;
+export const _SmallText = {
+  render: args => <SmallText {...args}>Small Text</SmallText>
+};
 
-export const _MonospaceText = args => (
-  <MonospaceText {...args}>Monospace Text</MonospaceText>
-);
+export const _MonospaceText = {
+  render: args => <MonospaceText {...args}>Monospace Text</MonospaceText>
+};
 
-export const _InteractiveText = args => (
-  <InteractiveText {...args}>Interactive Text</InteractiveText>
-);
+export const _InteractiveText = {
+  render: args => <InteractiveText {...args}>Interactive Text</InteractiveText>,
 
-_InteractiveText.parameters = {
-  controls: {
-    exclude: ["color"]
+  parameters: {
+    controls: {
+      exclude: ["color"]
+    }
   }
 };

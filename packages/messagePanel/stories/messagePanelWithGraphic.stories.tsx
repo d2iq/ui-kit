@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { MessagePanelWithGraphic, MessagePanelWrapper } from "..";
 import { PrimaryButton, SecondaryButton } from "../../button";
 
@@ -22,7 +22,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <MessagePanelWithGraphic
     graphicSrc="http://placehold.it/350x150"
     heading="No projects exist to view catalogs"
@@ -34,15 +34,23 @@ const Template: Story = args => (
   </MessagePanelWithGraphic>
 );
 
-export const Default = Template.bind({});
-
-export const GraphicDimensions = Template.bind({});
-GraphicDimensions.args = {
-  graphicDimensions: { height: 200 }
+export const Default = {
+  render: Template
 };
 
-export const WithActions = Template.bind({});
-WithActions.args = {
-  primaryAction: <PrimaryButton>Create Project</PrimaryButton>,
-  secondaryAction: <SecondaryButton>Go to Projects</SecondaryButton>
+export const GraphicDimensions = {
+  render: Template,
+
+  args: {
+    graphicDimensions: { height: 200 }
+  }
+};
+
+export const WithActions = {
+  render: Template,
+
+  args: {
+    primaryAction: <PrimaryButton>Create Project</PrimaryButton>,
+    secondaryAction: <SecondaryButton>Go to Projects</SecondaryButton>
+  }
 };

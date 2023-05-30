@@ -2,7 +2,7 @@ import * as React from "react";
 import ToggleInputListStoryHelper from "./helpers/ToggleInputListStoryHelper";
 import ToggleInputList from "../components/ToggleInputList";
 import { InputAppearance } from "../../shared/types/inputAppearance";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
 const options = [
   { inputLabel: "Exosphere", id: "id.1", value: "exosphere" },
@@ -36,7 +36,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <ToggleInputListStoryHelper>
     {({ changeHandler, selectedItems }) => (
       <ToggleInputList
@@ -52,11 +52,16 @@ const Template: Story = args => (
   </ToggleInputListStoryHelper>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
-export const ErrorWithMessage = Template.bind({});
-ErrorWithMessage.args = {
-  errors: ["Please select an item."],
-  required: true,
-  labelAppearance: InputAppearance.Error
+export const ErrorWithMessage = {
+  render: Template,
+
+  args: {
+    errors: ["Please select an item."],
+    required: true,
+    labelAppearance: InputAppearance.Error
+  }
 };

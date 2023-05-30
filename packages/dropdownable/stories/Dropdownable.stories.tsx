@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
 import Dropdownable from "../components/Dropdownable";
 import DropdownStory from "./helpers/DropdownStory";
@@ -30,17 +30,21 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <DropdownStory {...args}>
     Change dropdown orientation using Controls
   </DropdownStory>
 );
 
-export const Default = Template.bind({});
-export const WithMultipleDirectionPreferences = args => {
-  return (
-    <DropdownStoryFit {...args}>
-      Open the dropdown before and after expanding the height
-    </DropdownStoryFit>
-  );
+export const Default = {
+  render: Template
+};
+export const WithMultipleDirectionPreferences = {
+  render: args => {
+    return (
+      <DropdownStoryFit {...args}>
+        Open the dropdown before and after expanding the height
+      </DropdownStoryFit>
+    );
+  }
 };

@@ -1,6 +1,6 @@
 import * as React from "react";
 import Stack, { StackProps } from "../components/Stack";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { spacingSizeValues } from "../../../../storybookHelpers/controlConstants";
 
 export default {
@@ -22,7 +22,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story<StackProps> = args => (
+const Template: StoryFn<StackProps> = args => (
   <Stack {...args}>
     <div>Lorem Ipsum is simply dummy text</div>
     <div>of the printing and typesetting industry.</div>
@@ -37,14 +37,19 @@ const Template: Story<StackProps> = args => (
   </Stack>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
-export const ResponsiveSpacingSize = Template.bind({});
-ResponsiveSpacingSize.args = {
-  spacingSize: {
-    default: "none",
-    small: "m",
-    medium: "l",
-    jumbo: "xl"
+export const ResponsiveSpacingSize = {
+  render: Template,
+
+  args: {
+    spacingSize: {
+      default: "none",
+      small: "m",
+      medium: "l",
+      jumbo: "xl"
+    }
   }
 };

@@ -2,7 +2,7 @@ import * as React from "react";
 import InlineBorderedItems, {
   InlineBorderedItemsProps
 } from "../components/InlineBorderedItems";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
 export default {
   title: "Layout/InlineBorderedItems",
@@ -17,7 +17,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story<InlineBorderedItemsProps> = args => (
+const Template: StoryFn<InlineBorderedItemsProps> = args => (
   <InlineBorderedItems {...args}>
     <span>3 Clusters</span>
     <span>+2 Added</span>
@@ -25,4 +25,6 @@ const Template: Story<InlineBorderedItemsProps> = args => (
   </InlineBorderedItems>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

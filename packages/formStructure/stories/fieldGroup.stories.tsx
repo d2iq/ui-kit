@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { FieldGroup } from "..";
 import { TextInput } from "../../textInput";
 
@@ -16,7 +16,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <FieldGroup {...args}>
     <TextInput inputLabel="Name" id="name" key="name" />
     <TextInput inputLabel="Role" id="role" key="role" />
@@ -24,12 +24,17 @@ const Template: Story = args => (
   </FieldGroup>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
-export const ResponsiveLayout = Template.bind({});
-ResponsiveLayout.args = {
-  direction: {
-    default: "column",
-    small: "row"
+export const ResponsiveLayout = {
+  render: Template,
+
+  args: {
+    direction: {
+      default: "column",
+      small: "row"
+    }
   }
 };

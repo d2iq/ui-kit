@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { ToggleWrapper } from "../index";
 
 export default {
@@ -10,8 +10,8 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
-  <ToggleWrapper {...args}>
+const Template: StoryFn = args => (
+  <ToggleWrapper value={""} {...args}>
     {({ isActive }) => (
       <span>
         The isActive render prop returns:
@@ -21,4 +21,6 @@ const Template: Story = args => (
   </ToggleWrapper>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

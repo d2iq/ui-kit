@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ClickToCopyButton } from "../";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { textColorPrimary } from "../../design-tokens/build/js/designTokens";
 import { spacingSizeValues } from "../../storybookHelpers/controlConstants";
 
@@ -26,20 +26,26 @@ const onCopyFn = () => {
 
 const textToCopy = "Copy This!";
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <ClickToCopyButton textToCopy={textToCopy} onCopy={onCopyFn} {...args} />
 );
 
-export const Default = Template.bind({});
-Default.args = { color: "red", iconSize: "xs" };
-
-export const ShowCustomTooltipContentOnCopy = Default.bind({});
-ShowCustomTooltipContentOnCopy.args = {
-  tooltipContent: `"${textToCopy}" copied`
+export const Default = {
+  render: Template,
+  args: { iconSize: "xs" }
 };
 
-export const WithCustomChildren = args => (
-  <ClickToCopyButton textToCopy={textToCopy} {...args}>
-    <div>{`Click here to copy the text: "${textToCopy}"`}</div>
-  </ClickToCopyButton>
-);
+export const ShowCustomTooltipContentOnCopy = {
+  render: Template,
+
+  args: {
+    tooltipContent: `"${textToCopy}" copied`
+  }
+};
+
+export const WithCustomChildren = {
+  render: Template,
+  args: {
+    children: <div>{`Click here to copy the text: "${textToCopy}"`}</div>
+  }
+};

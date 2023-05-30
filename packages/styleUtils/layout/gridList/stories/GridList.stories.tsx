@@ -5,7 +5,7 @@ import {
   spaceL,
   themeBrandPrimary
 } from "../../../../design-tokens/build/js/designTokens";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { spacingSizeValues } from "../../../../storybookHelpers/controlConstants";
 
 const GridChild = styled.div`
@@ -47,14 +47,19 @@ export default {
   }
 } as Meta;
 
-const Template: Story<GridListProps> = args => (
+const Template: StoryFn<GridListProps> = args => (
   <GridList {...args}>{gridChildren}</GridList>
 );
 
-export const DynamicExample = Template.bind({});
+export const DynamicExample = {
+  render: Template
+};
 
-export const ResponsiveGridSizing = Template.bind({});
-ResponsiveGridSizing.args = {
-  gutterSize: { small: "m", medium: "l", large: "xl" },
-  columnCount: { small: 1, medium: 2, large: 3 }
+export const ResponsiveGridSizing = {
+  render: Template,
+
+  args: {
+    gutterSize: { small: "m", medium: "l", large: "xl" },
+    columnCount: { small: 1, medium: 2, large: 3 }
+  }
 };

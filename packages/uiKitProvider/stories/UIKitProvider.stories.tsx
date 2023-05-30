@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { UIKitProvider } from "../index";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import CustomLinkComponent from "./helpers/customLink";
 import SecondaryButton from "../../button/components/SecondaryButton";
 
@@ -13,7 +13,7 @@ export default {
   component: UIKitProvider
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <UIKitProvider
     theme={{
       colors: {
@@ -35,4 +35,6 @@ const Template: Story = args => (
   </UIKitProvider>
 );
 
-export const LinkDelegate = Template.bind({});
+export const LinkDelegate = {
+  render: Template
+};

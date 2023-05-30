@@ -1,6 +1,6 @@
 import * as React from "react";
 import { action } from "@storybook/addon-actions";
-import { ComponentMeta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { Toaster, Toast } from "..";
 import { fontSizes } from "../../shared/styles/typography";
 import { purple } from "../../design-tokens/build/js/designTokens";
@@ -29,41 +29,46 @@ export default {
       control: { type: "select" },
       options: toasterAppearance
     }
-  },
-  decorators: [
-    Story => (
-      <Toaster>
-        <Story />
-      </Toaster>
-    )
-  ]
-} as ComponentMeta<typeof Toast>;
+  }
+} as Meta<typeof Toast>;
 
-const Template: Story<ToastProps> = args => (
-  <Toast {...args} title={toastTitle} key={0} id="default" />
-);
-
-export const Default = Template.bind({});
-Default.args = { appearance: "default" };
-
-export const Description = args => (
-  <Toast
-    {...args}
-    title={toastTitle}
-    description="And this is a short description to provide more info about the message"
-    key={0}
-    id="description"
-  />
-);
-Description.args = { appearance: "default" };
-
-export const MultiToast = args => (
-  <>
+const Template: StoryFn<ToastProps> = args => (
+  <Toaster>
     <Toast {...args} title={toastTitle} key={0} id="default" />
-    <Toast {...args} title={toastTitle} key={1} autodismiss id="danger" />
-  </>
+  </Toaster>
 );
-MultiToast.args = { appearance: "default" };
+
+export const Default = {
+  render: Template,
+  args: { appearance: "default" }
+};
+
+export const Description = {
+  render: args => (
+    <Toaster>
+      <Toast
+        {...args}
+        title={toastTitle}
+        description="And this is a short description to provide more info about the message"
+        key={0}
+        id="description"
+      />
+    </Toaster>
+  ),
+
+  args: { appearance: "default" }
+};
+
+export const MultiToast = {
+  render: args => (
+    <Toaster>
+      <Toast {...args} title={toastTitle} key={0} id="default" />
+      <Toast {...args} title={toastTitle} key={1} autodismiss id="danger" />
+    </Toaster>
+  ),
+
+  args: { appearance: "default" }
+};
 
 export const AutoDismiss = () => {
   const [toasts, setToasts] = React.useState<number[]>([]);
@@ -99,7 +104,10 @@ export const AutoDismiss = () => {
     </div>
   );
 };
-AutoDismiss.argTypes = { appearance: { control: { disable: true } } };
+
+AutoDismiss.argTypes = {
+  appearance: { control: { disable: true } }
+};
 
 export const CustomDismissTimeAutoDismiss = () => {
   const [toasts, setToasts] = React.useState<number[]>([]);
@@ -135,76 +143,86 @@ export const CustomDismissTimeAutoDismiss = () => {
     </div>
   );
 };
+
 CustomDismissTimeAutoDismiss.argTypes = {
   appearance: { control: { disable: true } }
 };
 
-export const WithDismissCallback = () => (
-  <Toaster>
-    {[
-      <Toast
-        title={toastTitle}
-        key={0}
-        onDismiss={action("The toast has been dismissed")}
-        id="dismissCallback"
-      />
-    ]}
-  </Toaster>
-);
-WithDismissCallback.argTypes = {
-  appearance: { control: { disable: true } }
+export const WithDismissCallback = {
+  render: () => (
+    <Toaster>
+      {[
+        <Toast
+          title={toastTitle}
+          key={0}
+          onDismiss={action("The toast has been dismissed")}
+          id="dismissCallback"
+        />
+      ]}
+    </Toaster>
+  ),
+
+  argTypes: {
+    appearance: { control: { disable: true } }
+  }
 };
 
-export const With1Action = () => (
-  <Toaster>
-    {[
-      <Toast
-        title={toastTitle}
-        key={0}
-        primaryAction={
-          <button
-            onClick={action("primary action clicked")}
-            style={fakeButtonStyles}
-          >
-            primaryAction
-          </button>
-        }
-        id="oneAction"
-      />
-    ]}
-  </Toaster>
-);
-With1Action.argTypes = {
-  appearance: { control: { disable: true } }
+export const With1Action = {
+  render: () => (
+    <Toaster>
+      {[
+        <Toast
+          title={toastTitle}
+          key={0}
+          primaryAction={
+            <button
+              onClick={action("primary action clicked")}
+              style={fakeButtonStyles}
+            >
+              primaryAction
+            </button>
+          }
+          id="oneAction"
+        />
+      ]}
+    </Toaster>
+  ),
+
+  argTypes: {
+    appearance: { control: { disable: true } }
+  }
 };
 
-export const With2Actions = () => (
-  <Toaster>
-    {[
-      <Toast
-        title={toastTitle}
-        key={0}
-        primaryAction={
-          <button
-            onClick={action("primaryAction triggered")}
-            style={fakeButtonStyles}
-          >
-            primaryAction
-          </button>
-        }
-        secondaryAction={
-          <button
-            onClick={action("secondaryAction triggered")}
-            style={fakeButtonStyles}
-          >
-            secondaryAction
-          </button>
-        }
-        id="twoActions"
-      />
-    ]}
-  </Toaster>
-);
-With2Actions.argTypes = {
-  appearance: { control: { disable: true } }
+export const With2Actions = {
+  render: () => (
+    <Toaster>
+      {[
+        <Toast
+          title={toastTitle}
+          key={0}
+          primaryAction={
+            <button
+              onClick={action("primaryAction triggered")}
+              style={fakeButtonStyles}
+            >
+              primaryAction
+            </button>
+          }
+          secondaryAction={
+            <button
+              onClick={action("secondaryAction triggered")}
+              style={fakeButtonStyles}
+            >
+              secondaryAction
+            </button>
+          }
+          id="twoActions"
+        />
+      ]}
+    </Toaster>
+  ),
+
+  argTypes: {
+    appearance: { control: { disable: true } }
+  }
 };

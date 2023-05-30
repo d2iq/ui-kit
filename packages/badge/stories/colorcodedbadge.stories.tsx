@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { ColorCodedBadge } from "../../index";
 import { ColorCodedBadgeProps } from "../components/ColorCodedBadge";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
@@ -21,8 +21,11 @@ export default {
   }
 } as Meta;
 
-const Template: Story<ColorCodedBadgeProps> = args => (
+const Template: StoryFn<ColorCodedBadgeProps> = args => (
   <ColorCodedBadge {...args}>Color Coded Badge</ColorCodedBadge>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template,
+  args: { color: textColorPrimary }
+};

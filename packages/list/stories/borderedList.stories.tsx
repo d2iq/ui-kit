@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { BorderedList } from "../index";
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: BorderedList
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <BorderedList tag="ul" {...args}>
     <li>List Item</li>
     <li>List Item</li>
@@ -15,4 +15,6 @@ const Template: Story = args => (
   </BorderedList>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

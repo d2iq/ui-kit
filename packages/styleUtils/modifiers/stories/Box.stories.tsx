@@ -5,7 +5,7 @@ import {
 } from "../../../design-tokens/build/js/designTokens";
 import Box, { BoxProps } from "../components/Box";
 import { css } from "@emotion/css";
-import { Story, Meta } from "@storybook/react";
+import { StoryObj, StoryFn, Meta } from "@storybook/react";
 import {
   cssDisplayPropertyValues,
   textAlignValues,
@@ -66,7 +66,7 @@ const setHeight = css`
   }
 `;
 
-const Template: Story<BoxProps> = args => {
+const Template: StoryFn<BoxProps> = args => {
   const setBorder = css`
     border: 2px solid ${themeBrandPrimary};
   `;
@@ -81,72 +81,86 @@ const Template: Story<BoxProps> = args => {
   );
 };
 
-export const Default = Template.bind({});
-Default.args = { bgColor: greyLight, textAlign: "center" };
+export const Default = {
+  render: Template,
+  args: { bgColor: greyLight, textAlign: "center" }
+};
 
-export const BackgroundImage = Template.bind({});
-BackgroundImage.args = { bgImageUrl: "https://via.placeholder.com/150" };
+export const BackgroundImage = {
+  render: Template,
+  args: { bgImageUrl: "https://via.placeholder.com/150" }
+};
 
-export const BackgroundImageWithOptions: Story<BoxProps> = args => {
-  const bgOptions = `{\n\t"position": "top-left",\n\t"repeat": "repeat-x",\n\t"size": "contain"\n}`;
+export const BackgroundImageWithOptions: StoryObj<BoxProps> = {
+  render: args => {
+    const bgOptions = `{\n\t"position": "top-left",\n\t"repeat": "repeat-x",\n\t"size": "contain"\n}`;
 
-  return (
+    return (
+      <div>
+        <p>Options:</p>
+        <pre>{bgOptions}</pre>
+        <Box {...args}>
+          <div style={{ height: "300px" }} />
+        </Box>
+      </div>
+    );
+  },
+
+  args: {
+    bgImageUrl: "https://via.placeholder.com/150",
+    bgImageOptions: {
+      size: "contain",
+      repeat: "repeat-x",
+      position: "top-left"
+    }
+  },
+
+  parameters: {
+    controls: {
+      exclude: ["vertAlignChildren", "textAlign", "bgColor", "display"]
+    }
+  }
+};
+
+export const DisplayInline: StoryObj<BoxProps> = {
+  render: args => (
+    <>
+      <Box {...args}>Box 1</Box>
+      <Box {...args}>Box 2</Box>
+      <Box {...args}>Box 3</Box>
+    </>
+  ),
+
+  args: { display: "inline" },
+
+  parameters: {
+    controls: { exclude: ["vertAlignChildren", "textAlign"] }
+  }
+};
+
+export const VerticalAlignChildren: StoryObj<BoxProps> = {
+  render: args => (
     <div>
-      <p>Options:</p>
-      <pre>{bgOptions}</pre>
-      <Box {...args}>
-        <div style={{ height: "300px" }} />
-      </Box>
+      <p>Use the Control panel to try other alignments.</p>
+      <div className={setHeight}>
+        <Box bgColor={greyLight} {...args}>
+          <div>Child 1</div>
+          <div>Child 2</div>
+          <div>Child 3</div>
+        </Box>
+      </div>
     </div>
-  );
+  ),
+
+  parameters: { controls: { exclude: ["display"] } }
 };
 
-BackgroundImageWithOptions.args = {
-  bgImageUrl: "https://via.placeholder.com/150",
-  bgImageOptions: {
-    size: "contain",
-    repeat: "repeat-x",
-    position: "top-left"
-  }
-};
-BackgroundImageWithOptions.parameters = {
-  controls: {
-    exclude: ["vertAlignChildren", "textAlign", "bgColor", "display"]
-  }
-};
-
-export const DisplayInline: Story<BoxProps> = args => (
-  <>
-    <Box {...args}>Box 1</Box>
-    <Box {...args}>Box 2</Box>
-    <Box {...args}>Box 3</Box>
-  </>
-);
-
-DisplayInline.args = { display: "inline" };
-DisplayInline.parameters = {
-  controls: { exclude: ["vertAlignChildren", "textAlign"] }
-};
-
-export const VerticalAlignChildren: Story<BoxProps> = args => (
-  <div>
-    <p>Use the Control panel to try other alignments.</p>
+export const CustomTag = {
+  render: args => (
     <div className={setHeight}>
-      <Box bgColor={greyLight} {...args}>
-        <div>Child 1</div>
-        <div>Child 2</div>
-        <div>Child 3</div>
+      <Box tag="section" {...args}>
+        {`This is rendered using a <section> tag`}
       </Box>
     </div>
-  </div>
-);
-
-VerticalAlignChildren.parameters = { controls: { exclude: ["display"] } };
-
-export const CustomTag = args => (
-  <div className={setHeight}>
-    <Box tag="section" {...args}>
-      {`This is rendered using a <section> tag`}
-    </Box>
-  </div>
-);
+  )
+};

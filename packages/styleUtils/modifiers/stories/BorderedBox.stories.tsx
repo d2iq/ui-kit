@@ -1,6 +1,6 @@
 import * as React from "react";
 import BorderedBox, { BorderedBoxProps } from "../components/BorderedBox";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import {
   cssDisplayPropertyValues,
   sideValues,
@@ -53,7 +53,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story<BorderedBoxProps> = args => {
+const Template: StoryFn<BorderedBoxProps> = args => {
   const setHeight = css`
     height: 200px;
   `;
@@ -66,4 +66,6 @@ const Template: Story<BorderedBoxProps> = args => {
   );
 };
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

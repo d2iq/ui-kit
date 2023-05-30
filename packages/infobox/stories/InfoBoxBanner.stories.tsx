@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { InfoBoxBanner } from "../index";
 import { PrimaryAction, SecondaryAction } from "./helpers/actions";
@@ -15,8 +15,7 @@ export default {
       control: { type: "select" }
     },
     message: {
-      control: { type: "text" },
-      defaultValue: "This is a message for the user."
+      control: { type: "text" }
     },
     primaryAction: {
       control: { disable: true }
@@ -29,41 +28,50 @@ export default {
     }
   },
   args: {
-    appearance: "default"
+    appearance: "default",
+    message: "This message is an example of how we might inform the user."
   }
 } as Meta;
 
-const Template: Story<InfoBoxProps> = args => (
+const Template: StoryFn<InfoBoxProps> = args => (
   <InfoBoxStoryContainer>
     <InfoBoxBanner onDismiss={action("dismissed")} {...args} />
   </InfoBoxStoryContainer>
 );
 
-export const Default = Template.bind({});
-
-export const MessageAsCustomMarkup = Template.bind({});
-MessageAsCustomMarkup.args = {
-  message: (
-    <div>
-      <h3
-        style={{
-          fontSize: "1rem",
-          fontWeight: "normal",
-          margin: 0,
-          paddingBottom: ".5rem"
-        }}
-      >
-        Custom Heading Level 3
-      </h3>
-      <p style={{ fontSize: ".8rem", margin: 0 }}>
-        Detailed custom paragraph text.
-      </p>
-    </div>
-  )
+export const Default = {
+  render: Template
 };
 
-export const WithActions = Template.bind({});
-WithActions.args = {
-  primaryAction: <PrimaryAction />,
-  secondaryAction: <SecondaryAction />
+export const MessageAsCustomMarkup = {
+  render: Template,
+
+  args: {
+    message: (
+      <div>
+        <h3
+          style={{
+            fontSize: "1rem",
+            fontWeight: "normal",
+            margin: 0,
+            paddingBottom: ".5rem"
+          }}
+        >
+          Custom Heading Level 3
+        </h3>
+        <p style={{ fontSize: ".8rem", margin: 0 }}>
+          Detailed custom paragraph text.
+        </p>
+      </div>
+    )
+  }
+};
+
+export const WithActions = {
+  render: Template,
+
+  args: {
+    primaryAction: <PrimaryAction />,
+    secondaryAction: <SecondaryAction />
+  }
 };

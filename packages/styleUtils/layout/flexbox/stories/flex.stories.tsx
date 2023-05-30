@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import Flex from "../components/Flex";
 import FlexItem from "../components/FlexItem";
 import styled from "@emotion/styled";
@@ -47,7 +47,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <Flex {...args}>
     <FlexItem>
       <DemoChild>1</DemoChild>
@@ -64,47 +64,64 @@ const Template: Story = args => (
   </Flex>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
-export const ResponsiveAlign = Template.bind({});
-ResponsiveAlign.args = {
-  align: {
-    default: "flex-start",
-    medium: "center"
+export const ResponsiveAlign = {
+  render: Template,
+
+  args: {
+    align: {
+      default: "flex-start",
+      medium: "center"
+    }
   }
 };
 
-export const ResponsiveDirections = Template.bind({});
-ResponsiveDirections.args = {
-  direction: {
-    default: "column",
-    medium: "row"
+export const ResponsiveDirections = {
+  render: Template,
+
+  args: {
+    direction: {
+      default: "column",
+      medium: "row"
+    }
   }
 };
 
-export const ResponsiveGutterSize = Template.bind({});
-ResponsiveGutterSize.args = {
-  gutterSize: {
-    default: "s",
-    medium: "m",
-    large: "l",
-    jumbo: "xl"
+export const ResponsiveGutterSize = {
+  render: Template,
+
+  args: {
+    gutterSize: {
+      default: "s",
+      medium: "m",
+      large: "l",
+      jumbo: "xl"
+    }
   }
 };
 
-export const ResponsiveDirectionsAndGutterSize = Template.bind({});
-ResponsiveDirectionsAndGutterSize.args = {
-  direction: {
-    default: "column",
-    medium: "row",
-    large: "row"
+export const ResponsiveDirectionsAndGutterSize = {
+  render: Template,
+
+  args: {
+    direction: {
+      default: "column",
+      medium: "row",
+      large: "row"
+    }
   }
 };
 
-export const ResponsiveJustify = Template.bind({});
-ResponsiveJustify.args = {
-  justify: {
-    default: "flex-start",
-    medium: "center"
+export const ResponsiveJustify = {
+  render: Template,
+
+  args: {
+    justify: {
+      default: "flex-start",
+      medium: "center"
+    }
   }
 };

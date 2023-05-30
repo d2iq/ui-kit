@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import {
   FieldList,
@@ -47,7 +47,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <FieldListStoryHelper items={mockItems}>
     {({ onRemoveItem, onAddItem, onFieldUpdate, items }) => (
       <>
@@ -110,10 +110,41 @@ const Template: Story = args => (
   </FieldListStoryHelper>
 );
 
-export const EditableFieldsControlledInputs = Template.bind({});
+export const EditableFieldsControlledInputs = {
+  render: Template
+};
 
-export const DefaultUncontrolledInputs = args => {
-  return (
+export const DefaultUncontrolledInputs = {
+  render: args => {
+    return (
+      <FieldList data={mockItems} pathToUniqueKey="id" {...args}>
+        <FieldListColumn
+          key="name"
+          header="Name"
+          pathToValue="name"
+          onChange={testFieldUpdateHandler}
+        >
+          {({ defaultProps, onChange, value }) => (
+            <TextInput value={value} onChange={onChange} {...defaultProps} />
+          )}
+        </FieldListColumn>
+        <FieldListColumn key="role" header="Role" pathToValue="role">
+          {({ defaultProps, onChange, value }) => (
+            <TextInput value={value} onChange={onChange} {...defaultProps} />
+          )}
+        </FieldListColumn>
+        <FieldListColumn key="city" header="City" pathToValue="city">
+          {({ defaultProps, onChange, value }) => (
+            <TextInput value={value} onChange={onChange} {...defaultProps} />
+          )}
+        </FieldListColumn>
+      </FieldList>
+    );
+  }
+};
+
+export const VariedColumnWidths = {
+  render: args => (
     <FieldList data={mockItems} pathToUniqueKey="id" {...args}>
       <FieldListColumn
         key="name"
@@ -125,107 +156,84 @@ export const DefaultUncontrolledInputs = args => {
           <TextInput value={value} onChange={onChange} {...defaultProps} />
         )}
       </FieldListColumn>
-      <FieldListColumn key="role" header="Role" pathToValue="role">
+      <FieldListColumn
+        key="role"
+        header="Role"
+        pathToValue="role"
+        onChange={testFieldUpdateHandler}
+      >
         {({ defaultProps, onChange, value }) => (
           <TextInput value={value} onChange={onChange} {...defaultProps} />
         )}
       </FieldListColumn>
-      <FieldListColumn key="city" header="City" pathToValue="city">
+      <FieldListColumn
+        key="city"
+        header="City"
+        pathToValue="city"
+        onChange={testFieldUpdateHandler}
+        minWidth={100}
+        maxWidth={200}
+      >
         {({ defaultProps, onChange, value }) => (
           <TextInput value={value} onChange={onChange} {...defaultProps} />
         )}
       </FieldListColumn>
     </FieldList>
-  );
+  )
 };
 
-export const VariedColumnWidths = args => (
-  <FieldList data={mockItems} pathToUniqueKey="id" {...args}>
-    <FieldListColumn
-      key="name"
-      header="Name"
-      pathToValue="name"
-      onChange={testFieldUpdateHandler}
-    >
-      {({ defaultProps, onChange, value }) => (
-        <TextInput value={value} onChange={onChange} {...defaultProps} />
-      )}
-    </FieldListColumn>
-    <FieldListColumn
-      key="role"
-      header="Role"
-      pathToValue="role"
-      onChange={testFieldUpdateHandler}
-    >
-      {({ defaultProps, onChange, value }) => (
-        <TextInput value={value} onChange={onChange} {...defaultProps} />
-      )}
-    </FieldListColumn>
-    <FieldListColumn
-      key="city"
-      header="City"
-      pathToValue="city"
-      onChange={testFieldUpdateHandler}
-      minWidth={100}
-      maxWidth={200}
-    >
-      {({ defaultProps, onChange, value }) => (
-        <TextInput value={value} onChange={onChange} {...defaultProps} />
-      )}
-    </FieldListColumn>
-  </FieldList>
-);
-
-export const DisabledRows = args => (
-  <FieldList data={mockItems} disabledRows={[1]} pathToUniqueKey="id">
-    <FieldListColumn
-      key="name"
-      header="Name"
-      pathToValue="name"
-      onChange={testFieldUpdateHandler}
-      {...args}
-    >
-      {({ disabled, defaultProps, onChange, value }) => (
-        <TextInput
-          disabled={disabled}
-          value={value}
-          onChange={onChange}
-          {...defaultProps}
-        />
-      )}
-    </FieldListColumn>
-    <FieldListColumn
-      key="role"
-      header="Role"
-      pathToValue="role"
-      onChange={testFieldUpdateHandler}
-    >
-      {({ disabled, defaultProps, onChange, value }) => (
-        <TextInput
-          disabled={disabled}
-          value={value}
-          onChange={onChange}
-          {...defaultProps}
-        />
-      )}
-    </FieldListColumn>
-    <FieldListColumn
-      key="city"
-      header="City"
-      pathToValue="city"
-      onChange={testFieldUpdateHandler}
-    >
-      {({ disabled, defaultProps, onChange, value }) => (
-        <TextInput
-          disabled={disabled}
-          value={value}
-          onChange={onChange}
-          {...defaultProps}
-        />
-      )}
-    </FieldListColumn>
-  </FieldList>
-);
+export const DisabledRows = {
+  render: args => (
+    <FieldList data={mockItems} disabledRows={[1]} pathToUniqueKey="id">
+      <FieldListColumn
+        key="name"
+        header="Name"
+        pathToValue="name"
+        onChange={testFieldUpdateHandler}
+        {...args}
+      >
+        {({ disabled, defaultProps, onChange, value }) => (
+          <TextInput
+            disabled={disabled}
+            value={value}
+            onChange={onChange}
+            {...defaultProps}
+          />
+        )}
+      </FieldListColumn>
+      <FieldListColumn
+        key="role"
+        header="Role"
+        pathToValue="role"
+        onChange={testFieldUpdateHandler}
+      >
+        {({ disabled, defaultProps, onChange, value }) => (
+          <TextInput
+            disabled={disabled}
+            value={value}
+            onChange={onChange}
+            {...defaultProps}
+          />
+        )}
+      </FieldListColumn>
+      <FieldListColumn
+        key="city"
+        header="City"
+        pathToValue="city"
+        onChange={testFieldUpdateHandler}
+      >
+        {({ disabled, defaultProps, onChange, value }) => (
+          <TextInput
+            disabled={disabled}
+            value={value}
+            onChange={onChange}
+            {...defaultProps}
+          />
+        )}
+      </FieldListColumn>
+    </FieldList>
+  )
+};
 
 export const WAddButton = () => (
   <FieldList data={mockItems} pathToUniqueKey="id">
@@ -263,39 +271,41 @@ export const WAddButton = () => (
   </FieldList>
 );
 
-export const WithColumnSeparators = args => (
-  <FieldList data={mockItems} pathToUniqueKey="id" {...args}>
-    <FieldListColumn
-      key="name"
-      header="Name"
-      pathToValue="name"
-      onChange={testFieldUpdateHandler}
-    >
-      {({ defaultProps, onChange, value }) => (
-        <TextInput value={value} onChange={onChange} {...defaultProps} />
-      )}
-    </FieldListColumn>
-    <FieldListColumnSeparator key="separator1">:</FieldListColumnSeparator>
-    <FieldListColumn
-      key="role"
-      header="Role"
-      pathToValue="role"
-      onChange={testFieldUpdateHandler}
-    >
-      {({ defaultProps, onChange, value }) => (
-        <TextInput value={value} onChange={onChange} {...defaultProps} />
-      )}
-    </FieldListColumn>
-    <FieldListColumnSeparator key="separator2">👉</FieldListColumnSeparator>
-    <FieldListColumn
-      key="city"
-      header="City"
-      pathToValue="city"
-      onChange={testFieldUpdateHandler}
-    >
-      {({ defaultProps, onChange, value }) => (
-        <TextInput value={value} onChange={onChange} {...defaultProps} />
-      )}
-    </FieldListColumn>
-  </FieldList>
-);
+export const WithColumnSeparators = {
+  render: args => (
+    <FieldList data={mockItems} pathToUniqueKey="id" {...args}>
+      <FieldListColumn
+        key="name"
+        header="Name"
+        pathToValue="name"
+        onChange={testFieldUpdateHandler}
+      >
+        {({ defaultProps, onChange, value }) => (
+          <TextInput value={value} onChange={onChange} {...defaultProps} />
+        )}
+      </FieldListColumn>
+      <FieldListColumnSeparator key="separator1">:</FieldListColumnSeparator>
+      <FieldListColumn
+        key="role"
+        header="Role"
+        pathToValue="role"
+        onChange={testFieldUpdateHandler}
+      >
+        {({ defaultProps, onChange, value }) => (
+          <TextInput value={value} onChange={onChange} {...defaultProps} />
+        )}
+      </FieldListColumn>
+      <FieldListColumnSeparator key="separator2">👉</FieldListColumnSeparator>
+      <FieldListColumn
+        key="city"
+        header="City"
+        pathToValue="city"
+        onChange={testFieldUpdateHandler}
+      >
+        {({ defaultProps, onChange, value }) => (
+          <TextInput value={value} onChange={onChange} {...defaultProps} />
+        )}
+      </FieldListColumn>
+    </FieldList>
+  )
+};
