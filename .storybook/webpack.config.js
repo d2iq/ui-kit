@@ -8,9 +8,6 @@ module.exports = ({ config }) => {
   config.resolve.extensions = config.resolve.extensions.concat(
     webpackBase.getExtensions()
   );
-  config.resolve.alias["core-js"] = path.dirname(require.resolve("core-js"));
-  config.module.rules[0].use[0].options.sourceType = "unambiguous";
-
   // Storybook has loaders configured that conflict with what you define in our custom Webpack configuration,
   // so if you do not override those then your custom rules will not work.
   // Remove the rule that loads SVGs as assets for storybook
