@@ -1,6 +1,6 @@
 import * as React from "react";
 import { CodeSnippet } from "../index";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { CodeSnippetProps } from "../components/CodeSnippet";
 
 const snippet = `cd ui-kit && npm start`;
@@ -20,34 +20,48 @@ export default {
   }
 } as Meta;
 
-const Template: Story<CodeSnippetProps> = args => (
+const Template: StoryFn<CodeSnippetProps> = args => (
   <CodeSnippet {...args}>{args.children}</CodeSnippet>
 );
 
-export const Default = Template.bind({});
-Default.parameters = {
-  controls: { exclude: ["textToCopy", "onCopy", "copyTooltipContent"] }
+export const Default = {
+  render: Template,
+
+  parameters: {
+    controls: { exclude: ["textToCopy", "onCopy", "copyTooltipContent"] }
+  }
 };
 
-export const TextToCopy = Template.bind({});
-TextToCopy.args = {
-  textToCopy: snippet
-};
-TextToCopy.parameters = {
-  controls: { exclude: ["copyTooltipContent", "onCopy"] }
+export const TextToCopy = {
+  render: Template,
+
+  args: {
+    textToCopy: snippet
+  },
+
+  parameters: {
+    controls: { exclude: ["copyTooltipContent", "onCopy"] }
+  }
 };
 
-export const TextToCopyWithOnCopyCallback = Template.bind({});
-TextToCopyWithOnCopyCallback.args = {
-  textToCopy: snippet,
-  onCopy: () => alert("oncopy")
-};
-TextToCopyWithOnCopyCallback.parameters = {
-  controls: { exclude: ["copyTooltipContent"] }
+export const TextToCopyWithOnCopyCallback = {
+  render: Template,
+
+  args: {
+    textToCopy: snippet,
+    onCopy: () => alert("oncopy")
+  },
+
+  parameters: {
+    controls: { exclude: ["copyTooltipContent"] }
+  }
 };
 
-export const TextToCopyAndCustomTooltipContentOnCopy = Template.bind({});
-TextToCopyAndCustomTooltipContentOnCopy.args = {
-  textToCopy: snippet,
-  copyTooltipContent: `"${snippet}" copied`
+export const TextToCopyAndCustomTooltipContentOnCopy = {
+  render: Template,
+
+  args: {
+    textToCopy: snippet,
+    copyTooltipContent: `"${snippet}" copied`
+  }
 };

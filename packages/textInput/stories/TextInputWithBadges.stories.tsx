@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { TextInputWithBadges } from "../index";
 import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 import TextInputWithBadgesStoryHelper from "./helpers/TextInputWithBadgesStoryHelper";
@@ -60,7 +60,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <TextInputWithBadgesStoryHelper badges={defaultBadges}>
     {({ badges, badgeChangeHandler }) => (
       <TextInputWithBadges
@@ -74,51 +74,63 @@ const Template: Story = args => (
   </TextInputWithBadgesStoryHelper>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
-export const DontAddBadgeOnBlur = args => (
-  <TextInputWithBadgesStoryHelper>
-    {({ badges, badgeChangeHandler }) => (
-      <TextInputWithBadges
-        id="noAddOnBlur"
-        inputLabel="Don't add badge on blur"
-        onBadgeChange={badgeChangeHandler}
-        badges={badges}
-        addBadgeOnBlur={false}
-        {...args}
-      />
-    )}
-  </TextInputWithBadgesStoryHelper>
-);
-
-export const UsedWithTypeaheadPrefilledWBadges = args => (
-  <TextInputWithBadgesTypeaheadStoryHelper
-    items={typeaheadItems}
-    badges={[typeaheadItems[0], typeaheadItems[1], typeaheadItems[2]]}
-  >
-    {({ items, selectHandler, selectedItems, badgeChangeHandler, badges }) => {
-      return (
-        <Typeahead
-          // removes items from the Typeahead that already exist in the badge input
-          items={items.filter(
-            item => !badges.map(badge => badge.value).includes(item.value)
-          )}
-          selectedItems={selectedItems}
-          keepOpenOnSelect={false}
-          resetInputOnSelect={true}
-          textField={
-            <TextInputWithBadges
-              id="typeahead.prefilled"
-              inputLabel="Pre-filled Typeahead"
-              placeholder={badges.length ? "" : "Placeholder"}
-              badges={badges}
-              onBadgeChange={badgeChangeHandler}
-              {...args}
-            />
-          }
-          onSelect={selectHandler}
+export const DontAddBadgeOnBlur = {
+  render: args => (
+    <TextInputWithBadgesStoryHelper>
+      {({ badges, badgeChangeHandler }) => (
+        <TextInputWithBadges
+          id="noAddOnBlur"
+          inputLabel="Don't add badge on blur"
+          onBadgeChange={badgeChangeHandler}
+          badges={badges}
+          addBadgeOnBlur={false}
+          {...args}
         />
-      );
-    }}
-  </TextInputWithBadgesTypeaheadStoryHelper>
-);
+      )}
+    </TextInputWithBadgesStoryHelper>
+  )
+};
+
+export const UsedWithTypeaheadPrefilledWBadges = {
+  render: args => (
+    <TextInputWithBadgesTypeaheadStoryHelper
+      items={typeaheadItems}
+      badges={[typeaheadItems[0], typeaheadItems[1], typeaheadItems[2]]}
+    >
+      {({
+        items,
+        selectHandler,
+        selectedItems,
+        badgeChangeHandler,
+        badges
+      }) => {
+        return (
+          <Typeahead
+            // removes items from the Typeahead that already exist in the badge input
+            items={items.filter(
+              item => !badges.map(badge => badge.value).includes(item.value)
+            )}
+            selectedItems={selectedItems}
+            keepOpenOnSelect={false}
+            resetInputOnSelect={true}
+            textField={
+              <TextInputWithBadges
+                id="typeahead.prefilled"
+                inputLabel="Pre-filled Typeahead"
+                placeholder={badges.length ? "" : "Placeholder"}
+                badges={badges}
+                onBadgeChange={badgeChangeHandler}
+                {...args}
+              />
+            }
+            onSelect={selectHandler}
+          />
+        );
+      }}
+    </TextInputWithBadgesTypeaheadStoryHelper>
+  )
+};

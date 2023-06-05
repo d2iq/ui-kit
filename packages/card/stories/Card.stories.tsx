@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ButtonCard, Card, LinkCard } from "../index";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { spacingSizeValues } from "../../storybookHelpers/controlConstants";
 
 export default {
@@ -27,49 +27,46 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => <Card {...args}>{args.children}</Card>;
+const Template: StoryFn = args => <Card {...args}>{args.children}</Card>;
 
-export const Default = Template.bind({});
-Default.args = {
-  children: "Card Content"
+export const Default = {
+  render: Template,
+
+  args: {
+    children: "Card Content"
+  }
 };
 
-export const ResponsivePaddingSize = Default.bind({});
-ResponsivePaddingSize.args = {
-  paddingSize: {
-    default: "s",
-    small: "m",
-    medium: "l",
-    large: "xl",
-    jumbo: "xxl"
-  },
-  children: "Responsive Card Content"
+export const ResponsivePaddingSize = {
+  render: Template,
+
+  args: {
+    paddingSize: {
+      default: "s",
+      small: "m",
+      medium: "l",
+      large: "xl",
+      jumbo: "xxl"
+    },
+    children: "Responsive Card Content"
+  }
 };
 
-export const AspectRatio = args => (
-  <div style={{ maxWidth: "400px" }}>
-    <Card {...args}>I stay at a 2:1 aspect ratio</Card>
-  </div>
-);
+export const AspectRatio = {
+  render: Template,
 
-AspectRatio.args = { aspectRatio: "2:1" };
-
-export const DefaultLinkCard = args => (
-  <LinkCard {...args} url="http://google.com" linkDescription="Google">
-    Default Link Card
-  </LinkCard>
-);
-
-export const WithHeaderImage = Template.bind({});
-WithHeaderImage.args = {
-  header: {
-    headerImg: "https://via.placeholder.com/1000",
-    headerImgAltText: "placeholder image",
-    size: "m"
-  },
-  children: "Card Content"
+  args: { aspectRatio: "2:1" }
 };
 
-export const DefaultButtonCard = args => (
-  <ButtonCard {...args}>Default Button Card</ButtonCard>
-);
+export const WithHeaderImage = {
+  render: Template,
+
+  args: {
+    header: {
+      headerImg: "https://via.placeholder.com/1000",
+      headerImgAltText: "placeholder image",
+      size: "m"
+    },
+    children: "Card Content"
+  }
+};

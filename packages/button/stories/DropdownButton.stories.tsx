@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import {
   PrimaryDropdownButton,
   SecondaryDropdownButton,
@@ -29,28 +29,40 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <StandardDropdownButton {...args}>{args.children}</StandardDropdownButton>
 );
 
-export const _StandardDropdownButton = Template.bind({});
+export const _StandardDropdownButton = {
+  render: Template
+};
 
-export const _PrimaryDropdownButton = args => (
-  <PrimaryDropdownButton {...args}>{args.children}</PrimaryDropdownButton>
-);
+export const _PrimaryDropdownButton = {
+  render: args => (
+    <PrimaryDropdownButton {...args}>{args.children}</PrimaryDropdownButton>
+  )
+};
 
-export const _SecondaryDropdownButton = args => (
-  <SecondaryDropdownButton {...args}>{args.children}</SecondaryDropdownButton>
-);
+export const _SecondaryDropdownButton = {
+  render: args => (
+    <SecondaryDropdownButton {...args}>{args.children}</SecondaryDropdownButton>
+  )
+};
 
-export const _SuccessDropdownButton = args => (
-  <SuccessDropdownButton {...args}>{args.children}</SuccessDropdownButton>
-);
+export const _SuccessDropdownButton = {
+  render: args => (
+    <SuccessDropdownButton {...args}>{args.children}</SuccessDropdownButton>
+  )
+};
 
-export const _WarningDropdownButton = args => (
-  <WarningDropdownButton {...args}>{args.children}</WarningDropdownButton>
-);
+export const _WarningDropdownButton = {
+  render: args => (
+    <WarningDropdownButton {...args}>{args.children}</WarningDropdownButton>
+  )
+};
 
-export const _DangerDropdownButton = args => (
-  <DangerDropdownButton {...args}>{args.children}</DangerDropdownButton>
-);
+export const _DangerDropdownButton = {
+  render: args => (
+    <DangerDropdownButton {...args}>{args.children}</DangerDropdownButton>
+  )
+};

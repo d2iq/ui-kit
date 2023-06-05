@@ -1,6 +1,6 @@
 import * as React from "react";
 import LinkCard from "../components/LinkCard";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
 export default {
   title: "Navigation/LinkCard",
@@ -15,7 +15,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <LinkCard
     url="http://google.com"
     linkDescription="Google"
@@ -26,20 +26,28 @@ const Template: Story = args => (
   </LinkCard>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
-export const ResponsivePaddingSize = Template.bind({});
-ResponsivePaddingSize.args = {
-  paddingSize: {
-    default: "s",
-    small: "m",
-    medium: "l",
-    large: "xl",
-    jumbo: "xxl"
+export const ResponsivePaddingSize = {
+  render: Template,
+
+  args: {
+    paddingSize: {
+      default: "s",
+      small: "m",
+      medium: "l",
+      large: "xl",
+      jumbo: "xxl"
+    }
   }
 };
 
-export const AspectRatio = Template.bind({});
-AspectRatio.args = {
-  aspectRatio: [2, 1]
+export const AspectRatio = {
+  render: Template,
+
+  args: {
+    aspectRatio: [2, 1]
+  }
 };

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import CheckboxInput from "../components/CheckboxInput";
 import CheckboxStoryHelper from "../stories/helpers/CheckboxStoryHelper";
 import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
@@ -35,7 +35,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <CheckboxStoryHelper>
     {({ changeHandler, isChecked }) => (
       <CheckboxInput
@@ -50,4 +50,6 @@ const Template: Story = args => (
   </CheckboxStoryHelper>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

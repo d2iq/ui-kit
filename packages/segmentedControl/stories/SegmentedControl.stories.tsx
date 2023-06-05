@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { SegmentedControl } from "../index";
 import SegmentedControlButton from "../components/SegmentedControlButton";
 import SegmentedControlStoryHelper from "./helpers/SegmentedControlStoryHelper";
@@ -11,7 +11,7 @@ export default {
   component: SegmentedControl
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <SegmentedControlStoryHelper>
     {({ changeHandler, selectedSegment }) => (
       <SegmentedControl
@@ -36,7 +36,9 @@ const Template: Story = args => (
   </SegmentedControlStoryHelper>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
 export const WithASelectedSegment = () => (
   <SegmentedControlStoryHelper selectedSegment="exosphere">

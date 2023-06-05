@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Card, ToggleContent } from "../../index";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { ToggleContentProps } from "../components/ToggleContent";
 
 const ToggleComponent = ({ componentName }): JSX.Element => {
@@ -21,13 +21,13 @@ export default {
   component: ToggleContent
 } as Meta;
 
-const Template: Story<ToggleContentProps> = args => <ToggleContent {...args} />;
+export const Default = {
+  args: { contentOn: "On", contentOff: "Off" }
+};
 
-export const Default = Template.bind({});
-Default.args = { contentOn: "On", contentOff: "Off" };
-
-export const ToggleComponents = Template.bind({});
-ToggleComponents.args = {
-  contentOn: <ToggleComponent componentName="Primary Component" />,
-  contentOff: <ToggleComponent componentName="Secondary Component" />
+export const ToggleComponents = {
+  args: {
+    contentOn: <ToggleComponent componentName="Primary Component" />,
+    contentOff: <ToggleComponent componentName="Secondary Component" />
+  }
 };

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { Icon } from "../index";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import { textColorPrimary } from "../../design-tokens/build/js/designTokens";
@@ -43,8 +43,10 @@ export default {
   }
 } as Meta;
 
-const Template: Story<IconProps> = args => (
+const Template: StoryFn<IconProps> = args => (
   <Icon color={textColorPrimary} size="s" ariaLabel="Sample icon" {...args} />
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

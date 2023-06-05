@@ -1,6 +1,6 @@
 import * as React from "react";
 import Container, { ContainerProps } from "../components/Container";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import {
   themeBgPrimary,
   themeBgSecondary
@@ -20,7 +20,7 @@ export default {
   component: Container
 } as Meta;
 
-const Template: Story<ContainerProps> = args => (
+const Template: StoryFn<ContainerProps> = args => (
   <div className={baseBg}>
     <Container {...args}>
       <div className={contentBg}>
@@ -41,4 +41,6 @@ const Template: Story<ContainerProps> = args => (
   </div>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import Expandable from "../components/Expandable";
 
 export default {
@@ -7,10 +7,12 @@ export default {
   component: Expandable
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <Expandable label="Expand for content" {...args}>
     <div>Check out this exciting content</div>
   </Expandable>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

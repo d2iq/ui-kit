@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { ResetButton } from "../../";
 import { Text } from "../../styleUtils/typography";
 
@@ -8,7 +8,7 @@ export default {
   component: ResetButton
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <div>
     {`The `}
     <Text tag="span" color="red">
@@ -18,4 +18,6 @@ const Template: Story = args => (
   </div>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

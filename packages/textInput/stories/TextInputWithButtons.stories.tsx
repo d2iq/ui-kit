@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { TextInputWithButtons } from "../index";
 import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
@@ -15,9 +15,9 @@ export default {
   title: "Forms/TextInputWithButtons",
   decorators: [Story => <InputStoryWrapper>{Story()}</InputStoryWrapper>],
   component: TextInputWithButtons
-};
+} as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <TextInputWithButtons
     id="oneBtn"
     inputLabel="Input Label"
@@ -33,20 +33,25 @@ const Template: Story = args => (
   />
 );
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default = {
+  render: Template,
+  args: {}
+};
 
-export const WithCustomIcons = Template.bind({});
-WithCustomIcons.args = {
-  inputLabel: "With colored icon",
-  iconStart: <Icon shape={SystemIcons.Search} color={themeBrandPrimary} />,
-  buttons: [
-    <TextInputButton
-      key={0}
-      color="red"
-      shape={SystemIcons.Close}
-      onClick={btnClickFn}
-      aria-label="Clear input"
-    />
-  ]
+export const WithCustomIcons = {
+  render: Template,
+
+  args: {
+    inputLabel: "With colored icon",
+    iconStart: <Icon shape={SystemIcons.Search} color={themeBrandPrimary} />,
+    buttons: [
+      <TextInputButton
+        key={0}
+        color="red"
+        shape={SystemIcons.Close}
+        onClick={btnClickFn}
+        aria-label="Clear input"
+      />
+    ]
+  }
 };

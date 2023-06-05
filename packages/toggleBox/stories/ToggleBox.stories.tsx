@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { ToggleBox } from "../index";
 import ToggleBoxStoryHelper from "./helpers/ToggleBoxStoryHelper";
 import { ToggleBoxProps } from "../components/ToggleBox";
@@ -9,7 +9,7 @@ export default {
   component: ToggleBox
 } as Meta;
 
-const Template: Story<ToggleBoxProps> = args => (
+const Template: StoryFn<ToggleBoxProps> = args => (
   <ToggleBoxStoryHelper>
     {({ isActive, changeHandler }) => (
       <ToggleBox
@@ -24,4 +24,6 @@ const Template: Story<ToggleBoxProps> = args => (
   </ToggleBoxStoryHelper>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

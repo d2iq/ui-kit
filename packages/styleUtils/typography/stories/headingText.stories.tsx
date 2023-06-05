@@ -1,6 +1,6 @@
 import * as React from "react";
 import { HeadingText1, HeadingText2, HeadingText3 } from "../index";
-import { Story, Meta } from "@storybook/react";
+import { StoryObj, StoryFn, Meta } from "@storybook/react";
 import { HeadingTextProps } from "../textTypes";
 import { textAlignValues } from "../../../storybookHelpers/controlConstants";
 
@@ -29,19 +29,23 @@ export default {
   }
 } as Meta;
 
-const Template: Story<HeadingTextProps> = args => (
+const Template: StoryFn<HeadingTextProps> = args => (
   <HeadingText1 {...args}>Heading Text</HeadingText1>
 );
 
-export const DefaultHeadingText1 = Template.bind({});
+export const DefaultHeadingText1 = {
+  render: Template
+};
 
-export const DefaultHeadingText2: Story<HeadingTextProps> = args => (
-  <HeadingText2 {...args}>Heading Text</HeadingText2>
-);
+export const DefaultHeadingText2: StoryObj<HeadingTextProps> = {
+  render: args => <HeadingText2 {...args}>Heading Text</HeadingText2>
+};
 
-export const DefaultHeadingText3: Story<HeadingTextProps> = args => (
-  <HeadingText3 {...args}>Heading Text</HeadingText3>
-);
+export const DefaultHeadingText3: StoryObj<HeadingTextProps> = {
+  render: args => <HeadingText3 {...args}>Heading Text</HeadingText3>
+};
 
-export const CustomTag = Template.bind({});
-CustomTag.args = { tag: "h3" };
+export const CustomTag = {
+  render: Template,
+  args: { tag: "h3" }
+};

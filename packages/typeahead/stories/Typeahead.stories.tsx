@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { Typeahead, TextInput } from "../../index";
 import MultiselectTypeahead from "./helpers/MultiselectTypeahead";
 import FilteredListTypeahead from "./helpers/FilteredListTypeahead";
@@ -25,7 +25,7 @@ export default {
   decorators: [Story => <div className={storyWrapper}>{Story()}</div>]
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <Typeahead
     items={items}
     textField={
@@ -35,47 +35,61 @@ const Template: Story = args => (
   />
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
-export const MenuHasMaxHeight = Template.bind({});
-MenuHasMaxHeight.args = {
-  menuMaxHeight: 100,
-  textField: (
-    <TextInput
-      id="maxHeight"
-      inputLabel="Menu max height"
-      placeholder="Placeholder"
+export const MenuHasMaxHeight = {
+  render: Template,
+
+  args: {
+    menuMaxHeight: 100,
+    textField: (
+      <TextInput
+        id="maxHeight"
+        inputLabel="Menu max height"
+        placeholder="Placeholder"
+      />
+    )
+  }
+};
+
+export const PreFilledSelectedItem = {
+  render: args => (
+    <Typeahead
+      items={items}
+      selectedItems={[items[1].value]}
+      textField={
+        <TextInput
+          id="prefilled"
+          inputLabel="Pre-filled"
+          placeholder="Placeholder"
+          hintContent="This is acting as a controlled input, so the value won't change"
+          value={items[1].value}
+        />
+      }
+      {...args}
     />
   )
 };
-
-export const PreFilledSelectedItem = args => (
-  <Typeahead
-    items={items}
-    selectedItems={[items[1].value]}
-    textField={
-      <TextInput
-        id="prefilled"
-        inputLabel="Pre-filled"
-        placeholder="Placeholder"
-        hintContent="This is acting as a controlled input, so the value won't change"
-        value={items[1].value}
-      />
-    }
-    {...args}
-  />
-);
 
 const onSelectHandler = selectedItems => {
   alert(`${selectedItems[0]} selected`);
 };
 
-export const WithOnSelectCallback = Template.bind({});
-WithOnSelectCallback.args = {
-  onSelect: onSelectHandler,
-  textField: (
-    <TextInput id="onselect" inputLabel="onSelect" placeholder="Placeholder" />
-  )
+export const WithOnSelectCallback = {
+  render: Template,
+
+  args: {
+    onSelect: onSelectHandler,
+    textField: (
+      <TextInput
+        id="onselect"
+        inputLabel="onSelect"
+        placeholder="Placeholder"
+      />
+    )
+  }
 };
 
 export const Multiselect = () => (
@@ -98,16 +112,19 @@ export const Multiselect = () => (
   </MultiselectTypeahead>
 );
 
-export const WithDisabledItem = Template.bind({});
-WithDisabledItem.args = {
-  items: [...items, { label: "K8sphere", value: "K8sphere", disabled: true }],
-  textField: (
-    <TextInput
-      id="withdisabled"
-      inputLabel="With a disabled item"
-      placeholder="Placeholder"
-    />
-  )
+export const WithDisabledItem = {
+  render: Template,
+
+  args: {
+    items: [...items, { label: "K8sphere", value: "K8sphere", disabled: true }],
+    textField: (
+      <TextInput
+        id="withdisabled"
+        inputLabel="With a disabled item"
+        placeholder="Placeholder"
+      />
+    )
+  }
 };
 
 export const FilterWhileTyping = () => <FilteredListTypeahead items={items} />;

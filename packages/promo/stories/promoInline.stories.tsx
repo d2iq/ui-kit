@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { PageHeader, SpacingBox, PrimaryButton, SecondaryButton } from "../../";
 import { PromoInline } from "../";
@@ -26,7 +26,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story<PromoProps> = args => (
+const Template: StoryFn<PromoProps> = args => (
   <>
     <PageHeader breadcrumbElements={["Page Header"]} />
     <SpacingBox spacingSize="l">Some page content</SpacingBox>
@@ -41,15 +41,19 @@ const Template: Story<PromoProps> = args => (
   </>
 );
 
-export const Default = Template.bind({});
-
-export const WithGraphic = Template.bind({});
-WithGraphic.args = {
-  graphicSrc: "http://placehold.it/350x150"
+export const Default = {
+  render: Template
 };
 
-export const WithActions = Template.bind({});
-WithGraphic.args = {
-  primaryAction: <PrimaryButton>Primary Action</PrimaryButton>,
-  secondaryAction: <SecondaryButton>Secondary Action</SecondaryButton>
+export const WithGraphic = {
+  render: Template,
+
+  args: {
+    primaryAction: <PrimaryButton>Primary Action</PrimaryButton>,
+    secondaryAction: <SecondaryButton>Secondary Action</SecondaryButton>
+  }
+};
+
+export const WithActions = {
+  render: Template
 };

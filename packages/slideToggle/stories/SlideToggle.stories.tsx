@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
 import SlideToggle, { SlideToggleProps } from "../components/SlideToggle";
 
@@ -27,7 +27,7 @@ export default {
   }
 };
 
-const Template: Story = args => {
+const Template: StoryFn = args => {
   const [checked, setChecked] = React.useState(false);
   const handleClick = () => {
     setChecked(!checked);
@@ -44,4 +44,6 @@ const Template: Story = args => {
   );
 };
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

@@ -1,5 +1,5 @@
 import React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import Clickable, { ClickableProps } from "../components/clickable";
 import { action } from "@storybook/addon-actions";
 
@@ -16,10 +16,16 @@ export default {
   }
 } as Meta;
 
-const Template: Story<ClickableProps> = args => (
-  <Clickable action={action} tabIndex="0" {...args}>
+const Template: StoryFn<ClickableProps> = args => (
+  <Clickable tabIndex="0" {...args}>
     <span>Clickable Text</span>
   </Clickable>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template,
+
+  args: {
+    action
+  }
+};

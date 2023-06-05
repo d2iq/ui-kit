@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
 import { Popover } from "../";
 import { PrimaryDropdownButton } from "../button";
@@ -33,7 +33,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story<PopoverProps> = args => (
+const Template: StoryFn<PopoverProps> = args => (
   <Popover
     trigger={<PrimaryDropdownButton>Open Popover</PrimaryDropdownButton>}
     {...args}
@@ -42,45 +42,54 @@ const Template: Story<PopoverProps> = args => (
   </Popover>
 );
 
-export const Default = Template.bind({});
-
-export const InitialIsOpen = Template.bind({});
-InitialIsOpen.args = {
-  initialIsOpen: true
+export const Default = {
+  render: Template
 };
 
-export const WithMaxHeight = args => (
-  <Popover
-    maxHeight={80}
-    trigger={<PrimaryDropdownButton>open popover</PrimaryDropdownButton>}
-    {...args}
-  >
-    <div>dropdown content</div>
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book. It has survived not only five centuries, but
-      also the leap into electronic typesetting, remaining essentially
-      unchanged.
-    </p>
-  </Popover>
-);
+export const InitialIsOpen = {
+  render: Template,
 
-export const WithMaxWidth = args => (
-  <Popover
-    maxWidth={300}
-    trigger={<PrimaryDropdownButton>open popover</PrimaryDropdownButton>}
-    {...args}
-  >
-    <div>dropdown content</div>
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book. It has survived not only five centuries, but
-      also the leap into electronic typesetting, remaining essentially
-      unchanged.
-    </p>
-  </Popover>
-);
+  args: {
+    initialIsOpen: true
+  }
+};
+
+export const WithMaxHeight = {
+  render: args => (
+    <Popover
+      maxHeight={80}
+      trigger={<PrimaryDropdownButton>open popover</PrimaryDropdownButton>}
+      {...args}
+    >
+      <div>dropdown content</div>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged.
+      </p>
+    </Popover>
+  )
+};
+
+export const WithMaxWidth = {
+  render: args => (
+    <Popover
+      maxWidth={300}
+      trigger={<PrimaryDropdownButton>open popover</PrimaryDropdownButton>}
+      {...args}
+    >
+      <div>dropdown content</div>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged.
+      </p>
+    </Popover>
+  )
+};

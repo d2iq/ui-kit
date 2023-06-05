@@ -1,6 +1,6 @@
 import * as React from "react";
 import SpacingBox, { SpacingBoxProps } from "../components/SpacingBox";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import styled from "@emotion/styled";
 import { themeBrandPrimary } from "../../../design-tokens/build/js/designTokens";
 import {
@@ -51,15 +51,17 @@ export default {
   }
 } as Meta;
 
-const Template: Story<SpacingBoxProps> = args => (
+const Template: StoryFn<SpacingBoxProps> = args => (
   <StoryWrapper>
     <SpacingBox {...args}>Spacing Box Content</SpacingBox>
   </StoryWrapper>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
-const ResponsiveTemplate: Story<SpacingBoxProps> = args => (
+const ResponsiveTemplate: StoryFn<SpacingBoxProps> = args => (
   <>
     <p>Resize your viewport width to see the spacing change</p>
     <StoryWrapper>
@@ -68,30 +70,36 @@ const ResponsiveTemplate: Story<SpacingBoxProps> = args => (
   </>
 );
 
-export const ResponsiveSpacingSize = ResponsiveTemplate.bind({});
-ResponsiveSpacingSize.args = {
-  spacingSize: {
-    default: "none",
-    small: "m",
-    medium: "l",
-    jumbo: "xl"
-  }
-};
+export const ResponsiveSpacingSize = {
+  render: ResponsiveTemplate,
 
-export const ResponsiveSpacingSizePerSide = ResponsiveTemplate.bind({});
-ResponsiveSpacingSizePerSide.args = {
-  spacingSizePerSide: {
-    vert: {
+  args: {
+    spacingSize: {
       default: "none",
-      medium: "l"
-    },
-    horiz: {
-      default: "none",
-      medium: "xl"
+      small: "m",
+      medium: "l",
+      jumbo: "xl"
     }
   }
 };
 
-ResponsiveSpacingSizePerSide.parameters = {
-  controls: { exclude: ["side", "spacingSize"] }
+export const ResponsiveSpacingSizePerSide = {
+  render: ResponsiveTemplate,
+
+  args: {
+    spacingSizePerSide: {
+      vert: {
+        default: "none",
+        medium: "l"
+      },
+      horiz: {
+        default: "none",
+        medium: "xl"
+      }
+    }
+  },
+
+  parameters: {
+    controls: { exclude: ["side", "spacingSize"] }
+  }
 };

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { HashMap } from "../index";
 import { configurationMapStoryWrapper } from "./helpers/ConfigurationMapStoryWrapper";
 
@@ -22,7 +22,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <HashMap
     hash={{
       name: "Jane Doe",
@@ -35,54 +35,60 @@ const Template: Story = args => (
   />
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
 
-export const WithNestedObjects = args => (
-  <HashMap
-    hash={{
-      name: "Jane Doe",
-      role: "UX Designer",
-      city: "San Francisco",
-      state: "CA",
-      zipcode: 95125,
-      Favorites: {
-        Cuisines: {
-          Italian: {
-            appetizer: "capponata",
-            main: "spaghetti pomodoro",
-            desert: "tiramisu",
-            drink: "grappa"
-          },
-          Korean: {
-            appetizer: "kimchi",
-            main: "bibimbap",
-            desert: "yaksik",
-            drink: "soju"
+export const WithNestedObjects = {
+  render: args => (
+    <HashMap
+      hash={{
+        name: "Jane Doe",
+        role: "UX Designer",
+        city: "San Francisco",
+        state: "CA",
+        zipcode: 95125,
+        Favorites: {
+          Cuisines: {
+            Italian: {
+              appetizer: "capponata",
+              main: "spaghetti pomodoro",
+              desert: "tiramisu",
+              drink: "grappa"
+            },
+            Korean: {
+              appetizer: "kimchi",
+              main: "bibimbap",
+              desert: "yaksik",
+              drink: "soju"
+            }
           }
         }
-      }
-    }}
-    headline="Jane Doe Info"
-    {...args}
-  />
-);
+      }}
+      headline="Jane Doe Info"
+      {...args}
+    />
+  )
+};
 
-export const WithRenderKeys = args => (
-  <HashMap
-    hash={{
-      name: "Jane Doe",
-      role: "UX Designer",
-      city: "San Francisco",
-      state: "CA",
-      zipcode: 95125
-    }}
-    renderKeys={{
-      name: "Real name",
-      role: "Job",
-      city: "Home city",
-      state: "Home state",
-      zipcode: "ZIP"
-    }}
-    {...args}
-  />
-);
+export const WithRenderKeys = {
+  render: args => (
+    <HashMap
+      hash={{
+        name: "Jane Doe",
+        role: "UX Designer",
+        city: "San Francisco",
+        state: "CA",
+        zipcode: 95125
+      }}
+      renderKeys={{
+        name: "Real name",
+        role: "Job",
+        city: "Home city",
+        state: "Home state",
+        zipcode: "ZIP"
+      }}
+      {...args}
+    />
+  )
+};

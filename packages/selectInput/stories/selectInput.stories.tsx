@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { SelectInput } from "../../index";
 import { InputStoryWrapper } from "../../../decorators/inputStoryWrapper";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
@@ -45,7 +45,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = args => (
+const Template: StoryFn = args => (
   <SelectInput
     options={defaultOptions}
     id="default"
@@ -54,4 +54,6 @@ const Template: Story = args => (
   />
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};

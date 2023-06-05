@@ -1,7 +1,7 @@
 import * as React from "react";
 import { TabTitle, Tabs, TabItem } from "../index";
 import { TabsProps } from "../components/Tabs";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
 export default {
   title: "Navigation/Tabs",
@@ -26,7 +26,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story<TabsProps> = ({ direction, ...args }: TabsProps) => {
+const Template: StoryFn<TabsProps> = ({ direction, ...args }: TabsProps) => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   return (
@@ -49,10 +49,15 @@ const Template: Story<TabsProps> = ({ direction, ...args }: TabsProps) => {
   );
 };
 
-export const Default = Template.bind({});
-Default.args = { direction: "horiz" };
+export const Default = {
+  render: Template,
+  args: { direction: "horiz" }
+};
 
-export const Responsive = Template.bind({});
-Responsive.args = {
-  direction: { medium: "vert" }
+export const Responsive = {
+  render: Template,
+
+  args: {
+    direction: { medium: "vert" }
+  }
 };

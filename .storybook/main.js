@@ -1,9 +1,5 @@
 const customWebpack = require("./webpack.config");
-
 module.exports = {
-  core: {
-    builder: "webpack5"
-  },
   stories: [
     "./docs/stories/Welcome.stories.mdx",
     "./docs/stories/Colors.stories.mdx",
@@ -11,7 +7,10 @@ module.exports = {
     "../packages/**/*.stories.@(tsx|mdx)"
   ],
   webpackFinal: config => {
-    return { ...config, ...customWebpack };
+    return {
+      ...config,
+      ...customWebpack
+    };
   },
   addons: [
     {
@@ -24,5 +23,13 @@ module.exports = {
   ],
   features: {
     previewMdx2: true
+  },
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {}
+  },
+  staticDirs: ["../public/assets/images"],
+  docs: {
+    autodocs: true
   }
 };

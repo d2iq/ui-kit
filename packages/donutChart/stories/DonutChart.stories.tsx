@@ -27,28 +27,36 @@ const Template = args => (
   </div>
 );
 
-export const Default = Template.bind({});
-
-export const WithCenterLabelText = Template.bind({});
-WithCenterLabelText.args = {
-  label: "25%",
-  text: "1 of 4"
+export const Default = {
+  render: Template
 };
 
-export const MultipleSegments = Template.bind({});
-MultipleSegments.args = {
-  data: [
-    {
-      percentage: 10,
-      color: purple
-    },
-    {
-      percentage: 30,
-      color: pink
-    },
-    {
-      percentage: 20,
-      color: blue
-    }
-  ]
+export const WithCenterLabelText = {
+  render: Template,
+
+  args: {
+    label: "25%",
+    text: "1 of 4"
+  }
+};
+
+export const MultipleSegments = {
+  render: Template,
+
+  args: {
+    data: [
+      {
+        percentage: 10,
+        color: purple
+      },
+      {
+        percentage: 30,
+        color: pink
+      },
+      {
+        percentage: 20,
+        color: blue
+      }
+    ]
+  }
 };

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import {
   PrimaryButton,
   SecondaryButton,
@@ -43,52 +43,66 @@ export default {
   }
 } as Meta;
 
-const Template: Story<ButtonProps> = args => (
+const Template: StoryFn<ButtonProps> = args => (
   <StandardButton {...args}>{args.children}</StandardButton>
 );
 
-export const Standard = Template.bind({});
-
-export const _PrimaryButton = args => (
-  <PrimaryButton {...args}>{args.children}</PrimaryButton>
-);
-
-export const _SecondaryButton = args => (
-  <SecondaryButton {...args}>{args.children}</SecondaryButton>
-);
-
-export const _SuccessButton = args => (
-  <SuccessButton {...args}>{args.children}</SuccessButton>
-);
-
-export const _WarningButton = args => (
-  <WarningButton {...args}>{args.children}</WarningButton>
-);
-
-export const _DangerButton = args => (
-  <DangerButton {...args}>{args.children}</DangerButton>
-);
-
-export const WithIcons = Template.bind({});
-WithIcons.args = {
-  iconStart: SystemIcons.Close,
-  iconEnd: SystemIcons.ArrowRight
+export const Standard = {
+  render: Template
 };
 
-export const IconOnly = Template.bind({});
-IconOnly.args = {
-  iconStart: SystemIcons.Close,
-  ariaLabel: "Close",
-  children: ""
+export const _PrimaryButton = {
+  render: args => <PrimaryButton {...args}>{args.children}</PrimaryButton>
 };
 
-export const WithOnFocusAndOnBlur = Template.bind({});
-WithOnFocusAndOnBlur.args = {
-  onFocus: action("Button focused"),
-  onBlur: action("Button blurred")
+export const _SecondaryButton = {
+  render: args => <SecondaryButton {...args}>{args.children}</SecondaryButton>
 };
 
-export const UsedAsALink = Template.bind({});
-UsedAsALink.args = {
-  url: "www.d2iq.com"
+export const _SuccessButton = {
+  render: args => <SuccessButton {...args}>{args.children}</SuccessButton>
+};
+
+export const _WarningButton = {
+  render: args => <WarningButton {...args}>{args.children}</WarningButton>
+};
+
+export const _DangerButton = {
+  render: args => <DangerButton {...args}>{args.children}</DangerButton>
+};
+
+export const WithIcons = {
+  render: Template,
+
+  args: {
+    iconStart: SystemIcons.Close,
+    iconEnd: SystemIcons.ArrowRight
+  }
+};
+
+export const IconOnly = {
+  render: Template,
+
+  args: {
+    iconStart: SystemIcons.Close,
+    ariaLabel: "Close",
+    children: ""
+  }
+};
+
+export const WithOnFocusAndOnBlur = {
+  render: Template,
+
+  args: {
+    onFocus: action("Button focused"),
+    onBlur: action("Button blurred")
+  }
+};
+
+export const UsedAsALink = {
+  render: Template,
+
+  args: {
+    url: "www.d2iq.com"
+  }
 };

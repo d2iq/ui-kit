@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
 import { Badge } from "../../index";
 import { BadgeProps } from "../components/badge";
@@ -23,7 +23,9 @@ export default {
 } as Meta;
 
 Badge.displayName = "Badge";
-const Template: Story<BadgeProps> = args => <Badge {...args}>Badge</Badge>;
+const Template: StoryFn<BadgeProps> = args => <Badge {...args}>Badge</Badge>;
 
-export const Default = Template.bind({});
-Default.args = { appearance: "default" };
+export const Default = {
+  render: Template,
+  args: { appearance: "default" }
+};

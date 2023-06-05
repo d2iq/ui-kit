@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { Breadcrumb, BreadcrumbItem } from "../index";
 import { action } from "@storybook/addon-actions";
 import { ProductIcons } from "../../icons/dist/product-icons-enum";
@@ -17,7 +17,7 @@ export default {
   }
 };
 
-const Template: Story<BreadcrumbProps> = args => (
+const Template: StoryFn<BreadcrumbProps> = args => (
   <Breadcrumb>
     <BreadcrumbItem
       icon={ProductIcons.Gear}
@@ -35,4 +35,6 @@ const Template: Story<BreadcrumbProps> = args => (
   </Breadcrumb>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template
+};
