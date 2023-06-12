@@ -19,18 +19,3 @@ jobs:
         run: npm run dist
       - name: Unit Tests 🧪
         run: npm test
-      - name: Semantic Release ⬆️
-        if: github.ref == 'refs/heads/main'
-        uses: cycjimmy/semantic-release-action@v3
-        with:
-          semantic_version: 19
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Build Storybook and Deploy 🚀
-        if: github.ref == 'refs/heads/main'
-        run: |
-          npm run build:storybook
-          npm run deploy:storybook -- --ci
-        env:
-          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
