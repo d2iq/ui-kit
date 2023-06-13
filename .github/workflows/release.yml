@@ -25,6 +25,5 @@ jobs:
       - name: Deploy Storybook 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: storybook-static
+          folder: storybook_static
           token: ${{ secrets.GITHUB_TOKEN }}
-
