@@ -1,4 +1,4 @@
-FROM node:16.13.0-slim
+FROM node:18.16.0-slim
 
 # Update apt-dependencies
 RUN apt-get update -y

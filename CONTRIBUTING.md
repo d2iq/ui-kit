@@ -23,7 +23,7 @@
 
 ## Prerequisites
 
-Git, Node (version ^16.0.0), and NPM(version >=7.0.0) should be setup.
+Git, Node (version ^18.0.0), and NPM(version >=9.0.0) should be setup.
 
 UI Kit uses [React](https://reactjs.org/tutorial/tutorial.html) and [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html).
 
