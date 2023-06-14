@@ -3,7 +3,6 @@ const {
   existsSync,
   mkdirSync,
   readdirSync,
-  readFile,
   readFileSync,
   writeFileSync
 } = require("fs");
@@ -12,6 +11,25 @@ const generate = require("@babel/generator").default;
 const { optimize } = require("svgo");
 const svgstore = require("svgstore");
 const iconSpriteConfig = require("../iconSpriteConfig.js");
+
+const PLUGINS = [
+  { name: "removeDoctype", active: true },
+  { name: "removeComments", active: true },
+  { name: "cleanupAttrs", active: true },
+  { name: "mergeStyles", active: true },
+  { name: "inlineStyles", active: true },
+  { name: "minifyStyles", active: true },
+  { name: "convertStyleToAttrs", active: true },
+  { name: "removeStyleElement", active: true },
+  { name: "removeScriptElement", active: true },
+  { name: "removeTitle", active: true },
+  { name: "removeDesc", active: true },
+  { name: "removeDimensions", active: true },
+  { name: "removeUselessDefs", active: true },
+  { name: "removeUselessStrokeAndFill", active: true },
+  { name: "removeViewBox", active: false },
+  { name: "removeEmptyContainers", active: true }
+];
 
 const buildDirPath = path.join(__dirname, "../", "dist");
 const distDirPath = path.join(
@@ -28,42 +46,36 @@ const getFilePaths = dir => readdirSync(dir).map(file => `${dir}/${file}`);
 const writeSprite = (srcDir, spritePath, idPrefix) => {
   console.info(`\tgenerating sprite at:\n\t${spritePath}\n`);
 
-  writeFileSync(
-    spritePath,
-    getFilePaths(srcDir).reduce((sprites, file) => {
-      return sprites.add(
-        `${idPrefix}-${path.basename(file, ".svg")}`,
-        readFileSync(file, "utf8")
-      );
-    }, svgstore({ renameDefs: true }))
-  );
+  const store = svgstore({ renameDefs: true });
+
+  getFilePaths(srcDir).forEach(file => {
+    const iconName = `${idPrefix}-${path.basename(file, ".svg")}`;
+    const content = readFileSync(file, "utf8");
+    const optimized = optimize(content, {
+      plugins: PLUGINS
+    }).data;
+    store.add(iconName, optimized);
+  });
+
+  writeFileSync(spritePath, store);
 };
 
 const optimizeWithSVGO = spritePath => {
   console.info("\toptimizing sprite\n");
 
-  readFile(spritePath, "utf8", (err, data) => {
-    if (err) {
-      throw err;
-    }
+  try {
+    const data = readFileSync(spritePath, "utf8");
 
     const result = optimize(data, {
       path: spritePath,
       multipass: true,
-      plugins: [
-        {
-          name: "removeDoctype",
-          active: true
-        },
-        {
-          name: "cleanupIDs",
-          active: false
-        }
-      ]
+      plugins: PLUGINS
     });
 
     writeFileSync(spritePath, result.data);
-  });
+  } catch (err) {
+    throw new Error(`Error reading or optimizing sprite: ${err}`);
+  }
 };
 
 const writeEnum = (srcDir, iconSetName, idPrefix) => {
@@ -79,6 +91,7 @@ const writeEnum = (srcDir, iconSetName, idPrefix) => {
       prev[nameToPascal] = curr;
       return prev;
     }, {});
+
   const ast = t.tSEnumDeclaration(
     t.identifier(`${iconSetName.replace(/^\w/, c => c.toUpperCase())}Icons`),
     Object.keys(svgNamesObj).map(svgName =>
