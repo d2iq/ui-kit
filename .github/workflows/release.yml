@@ -12,6 +12,8 @@ jobs:
           node-version-file: ".node-version"
       - name: Install Dependencies 🔧
         run: npm install
+      - name: Build Release
+        run: npm run dist
       - name: Semantic Release ⬆️
         uses: cycjimmy/semantic-release-action@v3
         with:
