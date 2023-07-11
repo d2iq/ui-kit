@@ -36,15 +36,15 @@ export interface SlideToggleProps extends React.HTMLProps<HTMLInputElement> {
    */
   appearance?: InputAppearance;
   /**
-   * Whether or not the input is checked
+   * Whether or not the input is checked.
    */
   checked?: boolean;
   /**
-   * Unique identifier used for the input element
+   * Unique identifier used for the input element.
    */
   id?: string;
   /**
-   * The text or node content that appears next to the input
+   * The text or node content that appears next to the input.
    */
   inputLabel: React.ReactNode | string;
   /**
@@ -56,7 +56,7 @@ export interface SlideToggleProps extends React.HTMLProps<HTMLInputElement> {
    */
   value?: string;
   /**
-   * How the text content vertically aligns with the input
+   * How the text content vertically aligns with the input.
    */
   vertAlign?: "center" | "top";
   /**
@@ -87,7 +87,9 @@ const SlideToggle = (props: React.PropsWithRef<SlideToggleProps>) => {
     onFocus,
     ...other
   } = props;
+
   const inputType = "SlideToggle";
+
   const inputDataCy = [
     `${inputType}-input`,
     ...(checked ? [`${inputType}-input.checked`] : []),
@@ -95,6 +97,7 @@ const SlideToggle = (props: React.PropsWithRef<SlideToggleProps>) => {
       ? [`${inputType}-input.${appearance}`]
       : [])
   ].join(" ");
+
   const parentDataCy = [
     `${inputType}`,
     ...(checked ? [`${inputType}.checked`] : []),
@@ -102,7 +105,9 @@ const SlideToggle = (props: React.PropsWithRef<SlideToggleProps>) => {
       ? [`${inputType}.${appearance}`]
       : [])
   ].join(" ");
+
   const [hasFocus, setHasFocus] = React.useState<boolean>(false);
+
   const handleFocus = e => {
     setHasFocus(true);
 
@@ -131,14 +136,13 @@ const SlideToggle = (props: React.PropsWithRef<SlideToggleProps>) => {
             <div className={cx(flexItem("shrink"), display("inherit"))}>
               <>
                 <div className={cx(toggleContainer)}>
-                  {/* eslint-disable jsx-a11y/role-has-required-aria-props */}
                   <input
                     type={inputType}
                     id={id}
                     className={visuallyHidden}
-                    checked={checked}
+                    defaultChecked={checked}
                     disabled={disabled}
-                    value={value}
+                    defaultValue={value}
                     aria-invalid={!isValid}
                     aria-describedby={describedByIds}
                     onFocus={handleFocus}
