@@ -1,15 +1,24 @@
 {
-	"layout": {
-        "zIndex": {
-            "content": {
-                "value": "0"
-            },
-            "modal": {
-                "value": "1"
-            },
-            "dropdownable": {
-                "value": "2"
-            }
-        }
+  "layout": {
+    "zIndex": {
+      "deep": {
+        "value": "-1"
+      },
+      "content": {
+        "value": "0"
+      },
+      "sticky": {
+        "value": "100"
+      },
+      "overlay": {
+        "value": "200"
+      },
+      "modal": {
+        "value": "300"
+      },
+      "dropdownable": {
+        "value": "400"
+      }
     }
+  }
 }
