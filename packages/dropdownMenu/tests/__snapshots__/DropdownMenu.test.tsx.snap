@@ -82,7 +82,7 @@ exports[`Dropdown renders an open dropdown 1`] = `
   </div>
   <div>
     <div
-      style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+      style="z-index: 400; position: absolute; left: 0px; top: 0px;"
     >
       <div
         aria-labelledby="downshift-1-label"
@@ -165,7 +165,7 @@ exports[`Dropdown renders an open dropdown with multiple sections 1`] = `
   </div>
   <div>
     <div
-      style="z-index: 2; position: absolute; left: 0px; top: 0px;"
+      style="z-index: 400; position: absolute; left: 0px; top: 0px;"
     >
       <div
         aria-labelledby="downshift-3-label"
