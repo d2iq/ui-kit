@@ -97,6 +97,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: ${designTokens.zIndexModal};
 `,modal=emotion_css_esm.iv`
   border-radius: ${designTokens.borderRadiusDefault};
   background-color: ${designTokens.themeBgPrimary};
