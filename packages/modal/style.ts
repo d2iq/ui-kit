@@ -49,6 +49,7 @@ export const centerDialogWrapper = css`
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: ${zIndexModal};
 `;
 
 export const modal = css`
