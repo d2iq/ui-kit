@@ -19,13 +19,11 @@ const parseResponsiveStyle = (
 
     return cx(
       Object.keys(value).reduce((acc, breakpoint) => {
-        acc.push(
-          css`
-            ${atMediaUp[breakpoint](css`
-              ${property}: ${value[breakpoint]};
-            `)};
-          `
-        );
+        acc.push(css`
+          ${atMediaUp[breakpoint](css`
+            ${property}: ${value[breakpoint]};
+          `)};
+        `);
         return acc;
       }, result)
     );

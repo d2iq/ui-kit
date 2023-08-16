@@ -54,7 +54,7 @@ exports[`FieldList renders 1`] = `
                 <input
                   aria-describedby=""
                   aria-invalid="false"
-                  class="css-1w8it3t"
+                  class="css-8rdv3x"
                   data-cy="textInput-input"
                   id="name-0"
                   type="text"
@@ -94,7 +94,7 @@ exports[`FieldList renders 1`] = `
                 <input
                   aria-describedby=""
                   aria-invalid="false"
-                  class="css-1w8it3t"
+                  class="css-8rdv3x"
                   data-cy="textInput-input"
                   id="role-0"
                   type="text"
@@ -160,7 +160,7 @@ exports[`FieldList renders 1`] = `
                 <input
                   aria-describedby=""
                   aria-invalid="false"
-                  class="css-1w8it3t"
+                  class="css-8rdv3x"
                   data-cy="textInput-input"
                   id="name-1"
                   type="text"
@@ -200,7 +200,7 @@ exports[`FieldList renders 1`] = `
                 <input
                   aria-describedby=""
                   aria-invalid="false"
-                  class="css-1w8it3t"
+                  class="css-8rdv3x"
                   data-cy="textInput-input"
                   id="role-1"
                   type="text"
@@ -265,7 +265,7 @@ exports[`FieldList renders 1`] = `
                 <input
                   aria-describedby=""
                   aria-invalid="false"
-                  class="css-1w8it3t"
+                  class="css-8rdv3x"
                   data-cy="textInput-input"
                   id="name-2"
                   type="text"
@@ -305,7 +305,7 @@ exports[`FieldList renders 1`] = `
                 <input
                   aria-describedby=""
                   aria-invalid="false"
-                  class="css-1w8it3t"
+                  class="css-8rdv3x"
                   data-cy="textInput-input"
                   id="role-2"
                   type="text"
@@ -355,7 +355,7 @@ exports[`FieldList renders 1`] = `
           class="css-1hesotu"
         >
           <span
-            class="css-16x89v1"
+            class="css-16u27ir"
           >
             <svg
               aria-label="system-plus icon"
@@ -373,7 +373,7 @@ exports[`FieldList renders 1`] = `
             </svg>
           </span>
           <span
-            class="css-mzjeix"
+            class="css-1nh9z6v"
           >
             Add row
           </span>

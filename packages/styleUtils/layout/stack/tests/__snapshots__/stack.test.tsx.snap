@@ -60,7 +60,7 @@ exports[`Stack renders with different spacingSize 1`] = `
 exports[`Stack renders with responsive spacingSize 1`] = `
 <DocumentFragment>
   <div
-    class="css-i8pzeb"
+    class="css-3ekpin"
     data-cy="stack"
   >
     <div>

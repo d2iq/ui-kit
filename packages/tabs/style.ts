@@ -111,13 +111,11 @@ export const getTabLayout = (direction: TabDirection): string => {
     ? cx(
         Object.keys({ default: defaultTabDirection, ...direction }).reduce(
           (acc, breakpoint) => {
-            acc.push(
-              css`
-                ${atMediaUp[breakpoint](css`
-                  ${getHorizOrVertStyle(direction[breakpoint])};
-                `)};
-              `
-            );
+            acc.push(css`
+              ${atMediaUp[breakpoint](css`
+                ${getHorizOrVertStyle(direction[breakpoint])};
+              `)};
+            `);
             return acc;
           },
           result

@@ -120,7 +120,8 @@ export const modalCloseWrapper = css`
 `;
 
 export const modalPreTransitionStyle = duration => css`
-  transition: opacity ${duration}ms ease-in-out,
+  transition:
+    opacity ${duration}ms ease-in-out,
     transform ${duration}ms ease-in-out;
   opacity: 0;
   transform: translate(0, calc(-50px));

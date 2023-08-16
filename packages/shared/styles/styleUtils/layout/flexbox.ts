@@ -127,11 +127,10 @@ export const flex = (
   `;
 };
 
-export const flexItem = (flexStrategy: "grow" | "shrink") =>
-  css`
-    box-sizing: border-box;
-    ${flexStrategies[flexStrategy]};
-  `;
+export const flexItem = (flexStrategy: "grow" | "shrink") => css`
+  box-sizing: border-box;
+  ${flexStrategies[flexStrategy]};
+`;
 
 export const applyFlexItemGutters = (direction, gutterSize, gap) => {
   if (!gutterSize) {

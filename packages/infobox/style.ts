@@ -61,14 +61,13 @@ export const infoBoxActions = css`
   margin-left: auto;
 `;
 
-export const infoBox = appearance =>
-  css`
-    ${infoBoxAppearances(appearance)};
-    display: flex;
-    justify-content: space-between;
-    overflow: auto;
-    word-break: break-word;
-  `;
+export const infoBox = appearance => css`
+  ${infoBoxAppearances(appearance)};
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+  word-break: break-word;
+`;
 
 export const infoBoxInline = css`
   border-radius: ${borderRadiusDefault};
