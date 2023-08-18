@@ -8,7 +8,7 @@ exports[`Form structure components renders top-level form structure components 1
   >
     <div
       aria-live="assertive"
-      class="css-1pwjwaz"
+      class="css-1gcslu5"
       data-cy="infoBox infoBox.warning"
       role="alert"
     >

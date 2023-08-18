@@ -83,7 +83,7 @@ exports[`MessagePanelWithGraphic renders with primary and secondary actions 1`] 
       data-cy="flex"
     >
       <div
-        class="css-1rhjo5i"
+        class="css-1rmvaqm"
         data-cy="flexItem"
       >
         <button
@@ -100,7 +100,7 @@ exports[`MessagePanelWithGraphic renders with primary and secondary actions 1`] 
         </button>
       </div>
       <div
-        class="css-1rhjo5i"
+        class="css-1rmvaqm"
         data-cy="flexItem"
       >
         <button

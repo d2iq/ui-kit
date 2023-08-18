@@ -132,27 +132,27 @@ export const makeSpaceForSortIndicator = css`
   );
 `;
 
-export const headerCell = (textAlign: React.CSSProperties["textAlign"]) =>
-  css`
-    ${cell(textAlign)};
-    ${textWeight("medium")};
-    overflow: hidden;
-    overflow: -moz-hidden-unscrollable;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    --draggable-opacity: 0;
-    &:hover {
-      --draggable-opacity: 1;
-    }
-    &:active ~ * {
-      user-select: none;
-    }
-  `;
+export const headerCell = (textAlign: React.CSSProperties["textAlign"]) => css`
+  ${cell(textAlign)};
+  ${textWeight("medium")};
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  --draggable-opacity: 0;
+  &:hover {
+    --draggable-opacity: 1;
+  }
+  &:active ~ * {
+    user-select: none;
+  }
+`;
 
 // The clip-path ensures the box-shadow only goes horizontally
 export const rowScrollShadow = css`
   &:first-child {
-    box-shadow: 4px 0px 6px 0 rgba(0, 0, 0, 0.12),
+    box-shadow:
+      4px 0px 6px 0 rgba(0, 0, 0, 0.12),
       2px 0px 2px 0 rgba(0, 0, 0, 0.06);
     clip-path: polygon(120% 0%, 0% 0%, 0% 100%, 120% 100%);
   }

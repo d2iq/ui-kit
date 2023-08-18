@@ -93,7 +93,9 @@ export const sidebarContainer = (theme: AppChromeTheme, isOpen?: boolean) => {
 export const sidebarAnimator = css`
   height: 100%;
   overflow-x: hidden;
-  transition: width 150ms ease-in-out, transform 150ms ease-in-out;
+  transition:
+    width 150ms ease-in-out,
+    transform 150ms ease-in-out;
 `;
 
 export const sidebarItemHeight = css`

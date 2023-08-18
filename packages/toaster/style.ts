@@ -13,7 +13,8 @@ export const toaster = css`
 `;
 
 export const preTransitionStyle = duration => css`
-  transition: opacity ${duration}ms ease-in-out,
+  transition:
+    opacity ${duration}ms ease-in-out,
     transform ${duration}ms ease-in-out;
   opacity: 0;
   transform: translateY(20px);

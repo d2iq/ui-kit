@@ -53,9 +53,12 @@ const Toaster = ({
     toasts.forEach((toast: Toast, index: number) => {
       if (toast.props.autodismiss) {
         timeouts.current.push(
-          window.setTimeout(() => {
-            dismissToast(toast);
-          }, dismissTime + MARGINAL_DELAY * index)
+          window.setTimeout(
+            () => {
+              dismissToast(toast);
+            },
+            dismissTime + MARGINAL_DELAY * index
+          )
         );
       }
     });

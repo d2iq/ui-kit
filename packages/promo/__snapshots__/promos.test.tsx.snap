@@ -35,15 +35,15 @@ exports[`Promos renders PromoBanner 1`] = `
         </div>
       </button>
       <div
-        class="css-1ey3ifm"
+        class="css-1ceehqk"
         data-cy="flex"
       >
         <div
-          class="css-1rkved2"
+          class="css-1rp008r"
           data-cy="flexItem"
         >
           <div
-            class="css-1uaiqzh"
+            class="css-1p8cy3d"
             data-cy="spacingBox"
           >
             <div
@@ -68,7 +68,7 @@ exports[`Promos renders PromoBanner 1`] = `
               data-cy="flex"
             >
               <div
-                class="css-1rhjo5i"
+                class="css-1rmvaqm"
                 data-cy="flexItem"
               >
                 <button>
@@ -76,7 +76,7 @@ exports[`Promos renders PromoBanner 1`] = `
                 </button>
               </div>
               <div
-                class="css-1rhjo5i"
+                class="css-1rmvaqm"
                 data-cy="flexItem"
               >
                 <button>
@@ -87,7 +87,7 @@ exports[`Promos renders PromoBanner 1`] = `
           </div>
         </div>
         <div
-          class="css-ywcl7b"
+          class="css-ynjwt8"
           data-cy="flexItem"
         >
           <div
@@ -101,7 +101,7 @@ exports[`Promos renders PromoBanner 1`] = `
           </div>
         </div>
         <div
-          class="css-17zhgsu"
+          class="css-vy8gtc"
           data-cy="flexItem"
         >
           <div
@@ -117,7 +117,7 @@ exports[`Promos renders PromoBanner 1`] = `
                 for="dismissPromoCheckbox1"
               >
                 <div
-                  class="css-16x89v1"
+                  class="css-16u27ir"
                 >
                   <div
                     class="css-1xxu3sr"
@@ -134,7 +134,7 @@ exports[`Promos renders PromoBanner 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-8vfaan"
+                  class="css-kjka0f"
                 >
                   Do not show again
                 </div>
@@ -183,15 +183,15 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
         </div>
       </button>
       <div
-        class="css-1ey3ifm"
+        class="css-1ceehqk"
         data-cy="flex"
       >
         <div
-          class="css-1rkved2"
+          class="css-1rp008r"
           data-cy="flexItem"
         >
           <div
-            class="css-1uaiqzh"
+            class="css-1p8cy3d"
             data-cy="spacingBox"
           >
             <div
@@ -216,7 +216,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
               data-cy="flex"
             >
               <div
-                class="css-1rhjo5i"
+                class="css-1rmvaqm"
                 data-cy="flexItem"
               >
                 <button>
@@ -224,7 +224,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
                 </button>
               </div>
               <div
-                class="css-1rhjo5i"
+                class="css-1rmvaqm"
                 data-cy="flexItem"
               >
                 <button>
@@ -235,7 +235,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
           </div>
         </div>
         <div
-          class="css-ywcl7b"
+          class="css-ynjwt8"
           data-cy="flexItem"
         >
           <div
@@ -249,7 +249,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
           </div>
         </div>
         <div
-          class="css-17zhgsu"
+          class="css-vy8gtc"
           data-cy="flexItem"
         >
           <div
@@ -265,7 +265,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
                 for="dismissPromoCheckbox3"
               >
                 <div
-                  class="css-16x89v1"
+                  class="css-16u27ir"
                 >
                   <div
                     class="css-1xxu3sr"
@@ -282,7 +282,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-8vfaan"
+                  class="css-kjka0f"
                 >
                   Do not show again
                 </div>
@@ -331,15 +331,15 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
         </div>
       </button>
       <div
-        class="css-1ey3ifm"
+        class="css-1ceehqk"
         data-cy="flex"
       >
         <div
-          class="css-1rkved2"
+          class="css-1rp008r"
           data-cy="flexItem"
         >
           <div
-            class="css-1uaiqzh"
+            class="css-1p8cy3d"
             data-cy="spacingBox"
           >
             <div
@@ -364,7 +364,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
               data-cy="flex"
             >
               <div
-                class="css-1rhjo5i"
+                class="css-1rmvaqm"
                 data-cy="flexItem"
               >
                 <button>
@@ -372,7 +372,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
                 </button>
               </div>
               <div
-                class="css-1rhjo5i"
+                class="css-1rmvaqm"
                 data-cy="flexItem"
               >
                 <button>
@@ -383,7 +383,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
           </div>
         </div>
         <div
-          class="css-ywcl7b"
+          class="css-ynjwt8"
           data-cy="flexItem"
         >
           <div
@@ -397,7 +397,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
           </div>
         </div>
         <div
-          class="css-17zhgsu"
+          class="css-vy8gtc"
           data-cy="flexItem"
         >
           <div
@@ -413,7 +413,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
                 for="dismissPromoCheckbox2"
               >
                 <div
-                  class="css-16x89v1"
+                  class="css-16u27ir"
                 >
                   <div
                     class="css-1xxu3sr"
@@ -430,7 +430,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-8vfaan"
+                  class="css-kjka0f"
                 >
                   Do not show again
                 </div>
@@ -486,15 +486,15 @@ exports[`Promos renders PromoInline 1`] = `
             </div>
           </button>
           <div
-            class="css-1ey3ifm"
+            class="css-1ceehqk"
             data-cy="flex"
           >
             <div
-              class="css-1rkved2"
+              class="css-1rp008r"
               data-cy="flexItem"
             >
               <div
-                class="css-1uaiqzh"
+                class="css-1p8cy3d"
                 data-cy="spacingBox"
               >
                 <div
@@ -519,7 +519,7 @@ exports[`Promos renders PromoInline 1`] = `
                   data-cy="flex"
                 >
                   <div
-                    class="css-1rhjo5i"
+                    class="css-1rmvaqm"
                     data-cy="flexItem"
                   >
                     <button>
@@ -527,7 +527,7 @@ exports[`Promos renders PromoInline 1`] = `
                     </button>
                   </div>
                   <div
-                    class="css-1rhjo5i"
+                    class="css-1rmvaqm"
                     data-cy="flexItem"
                   >
                     <button>
@@ -538,7 +538,7 @@ exports[`Promos renders PromoInline 1`] = `
               </div>
             </div>
             <div
-              class="css-ywcl7b"
+              class="css-ynjwt8"
               data-cy="flexItem"
             >
               <div
@@ -552,7 +552,7 @@ exports[`Promos renders PromoInline 1`] = `
               </div>
             </div>
             <div
-              class="css-17zhgsu"
+              class="css-vy8gtc"
               data-cy="flexItem"
             >
               <div
@@ -568,7 +568,7 @@ exports[`Promos renders PromoInline 1`] = `
                     for="dismissPromoCheckbox4"
                   >
                     <div
-                      class="css-16x89v1"
+                      class="css-16u27ir"
                     >
                       <div
                         class="css-1xxu3sr"
@@ -585,7 +585,7 @@ exports[`Promos renders PromoInline 1`] = `
                       </div>
                     </div>
                     <div
-                      class="css-8vfaan"
+                      class="css-kjka0f"
                     >
                       Do not show again
                     </div>

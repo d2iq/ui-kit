@@ -10,7 +10,7 @@ exports[`PageHeader default 1`] = `
       data-cy="pageHeader"
     >
       <div
-        class="css-qi8t7c"
+        class="css-1xgp7r9"
       >
         <nav
           class="css-cldwuj"
@@ -53,7 +53,7 @@ exports[`PageHeader default 1`] = `
         </nav>
       </div>
       <div
-        class="css-48ylac"
+        class="css-7358jg"
       >
         <ul
           class="css-eozmc"

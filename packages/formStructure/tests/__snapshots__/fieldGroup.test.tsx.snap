@@ -3,11 +3,11 @@
 exports[`FieldGroup renders 1`] = `
 <DocumentFragment>
   <div
-    class="css-mzfoj8"
+    class="css-1wxyshp"
     data-cy="flex"
   >
     <div
-      class="css-3u8ls1"
+      class="css-1pdu2hh"
       data-cy="flexItem"
     >
       <div
@@ -25,7 +25,7 @@ exports[`FieldGroup renders 1`] = `
             <input
               aria-describedby=""
               aria-invalid="false"
-              class="css-1w8it3t"
+              class="css-8rdv3x"
               data-cy="textInput-input"
               id="1"
               type="text"
@@ -39,7 +39,7 @@ exports[`FieldGroup renders 1`] = `
       </div>
     </div>
     <div
-      class="css-3u8ls1"
+      class="css-1pdu2hh"
       data-cy="flexItem"
     >
       <div
@@ -57,7 +57,7 @@ exports[`FieldGroup renders 1`] = `
             <input
               aria-describedby=""
               aria-invalid="false"
-              class="css-1w8it3t"
+              class="css-8rdv3x"
               data-cy="textInput-input"
               id="2"
               type="text"
@@ -71,7 +71,7 @@ exports[`FieldGroup renders 1`] = `
       </div>
     </div>
     <div
-      class="css-3u8ls1"
+      class="css-1pdu2hh"
       data-cy="flexItem"
     >
       <div
@@ -89,7 +89,7 @@ exports[`FieldGroup renders 1`] = `
             <input
               aria-describedby=""
               aria-invalid="false"
-              class="css-1w8it3t"
+              class="css-8rdv3x"
               data-cy="textInput-input"
               id="3"
               type="text"

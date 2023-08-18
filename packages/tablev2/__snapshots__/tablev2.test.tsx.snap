@@ -12,7 +12,7 @@ exports[`Table v2 rendering renders default 1`] = `
     >
       <div
         aria-sort="none"
-        class="css-1il2bhb"
+        class="css-2zsitz"
         id="name"
         role="columnheader"
       >
@@ -58,7 +58,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-khlkcv"
+        class="css-bartx7"
         id="username"
         role="columnheader"
       >
@@ -72,7 +72,7 @@ exports[`Table v2 rendering renders default 1`] = `
             Username
           </div>
           <div
-            class="css-1rhjo5i"
+            class="css-1rmvaqm"
             data-cy="flexItem"
           >
             <span
@@ -128,7 +128,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-1nowc1d"
+        class="css-16zgu62"
         id="email"
         role="columnheader"
       >
@@ -158,7 +158,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-1ub6p0x"
+        class="css-oknvn5"
         id="phone"
         role="columnheader"
       >
@@ -188,7 +188,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-1ub6p0x"
+        class="css-oknvn5"
         id="company"
         role="columnheader"
       >
@@ -218,7 +218,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-1ub6p0x"
+        class="css-oknvn5"
         id="website"
         role="columnheader"
       >
@@ -248,7 +248,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-1ub6p0x"
+        class="css-oknvn5"
         id="empty"
         role="columnheader"
       >
@@ -278,7 +278,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-1ub6p0x"
+        class="css-oknvn5"
         id="muted"
         role="columnheader"
       >
@@ -308,7 +308,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-1ub6p0x"
+        class="css-oknvn5"
         id="dropdown"
         role="columnheader"
       >
@@ -342,7 +342,7 @@ exports[`Table v2 rendering renders default 1`] = `
     >
       <div
         aria-describedby="name"
-        class="css-1bgxg8t"
+        class="css-1t5waql"
         role="gridcell"
       >
         <a
@@ -353,35 +353,35 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="username"
-        class="css-1dx5v0r"
+        class="css-aa85p7"
         role="gridcell"
       >
         Edwina.Denesik
       </div>
       <div
         aria-describedby="email"
-        class="css-l2a97w"
+        class="css-1xoxl7t"
         role="gridcell"
       >
         Brook88@gmail.com
       </div>
       <div
         aria-describedby="phone"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         335-202-4870 x666
       </div>
       <div
         aria-describedby="company"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         Lemke LLC
       </div>
       <div
         aria-describedby="website"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <a
@@ -392,14 +392,14 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="empty"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         –
       </div>
       <div
         aria-describedby="muted"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <div
@@ -412,7 +412,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="dropdown"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <div
@@ -465,7 +465,7 @@ exports[`Table v2 rendering renders default 1`] = `
     >
       <div
         aria-describedby="name"
-        class="css-1bgxg8t"
+        class="css-1t5waql"
         role="gridcell"
       >
         <a
@@ -476,35 +476,35 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="username"
-        class="css-1dx5v0r"
+        class="css-aa85p7"
         role="gridcell"
       >
         Gracie.Feil23
       </div>
       <div
         aria-describedby="email"
-        class="css-l2a97w"
+        class="css-1xoxl7t"
         role="gridcell"
       >
         Guillermo.Nitzsche19@yahoo.com
       </div>
       <div
         aria-describedby="phone"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         1-446-437-5562 x3257
       </div>
       <div
         aria-describedby="company"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         Daugherty and Sons
       </div>
       <div
         aria-describedby="website"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <a
@@ -515,14 +515,14 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="empty"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         –
       </div>
       <div
         aria-describedby="muted"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <div
@@ -535,7 +535,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="dropdown"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <div
@@ -588,7 +588,7 @@ exports[`Table v2 rendering renders default 1`] = `
     >
       <div
         aria-describedby="name"
-        class="css-1bgxg8t"
+        class="css-1t5waql"
         role="gridcell"
       >
         <a
@@ -599,35 +599,35 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="username"
-        class="css-1dx5v0r"
+        class="css-aa85p7"
         role="gridcell"
       >
         Adolfo_Morissette
       </div>
       <div
         aria-describedby="email"
-        class="css-l2a97w"
+        class="css-1xoxl7t"
         role="gridcell"
       >
         Freddy.Willms21@yahoo.com
       </div>
       <div
         aria-describedby="phone"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         1-236-316-1208 x18261
       </div>
       <div
         aria-describedby="company"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         Kuhlman and Sons
       </div>
       <div
         aria-describedby="website"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <a
@@ -638,14 +638,14 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="empty"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         –
       </div>
       <div
         aria-describedby="muted"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <div
@@ -658,7 +658,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="dropdown"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <div
@@ -711,7 +711,7 @@ exports[`Table v2 rendering renders default 1`] = `
     >
       <div
         aria-describedby="name"
-        class="css-1bgxg8t"
+        class="css-1t5waql"
         role="gridcell"
       >
         <a
@@ -722,35 +722,35 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="username"
-        class="css-1dx5v0r"
+        class="css-aa85p7"
         role="gridcell"
       >
         Matt96
       </div>
       <div
         aria-describedby="email"
-        class="css-l2a97w"
+        class="css-1xoxl7t"
         role="gridcell"
       >
         Sheridan23@gmail.com
       </div>
       <div
         aria-describedby="phone"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         098.378.2656
       </div>
       <div
         aria-describedby="company"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         Romaguera, Walker and Anderson
       </div>
       <div
         aria-describedby="website"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <a
@@ -761,14 +761,14 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="empty"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         –
       </div>
       <div
         aria-describedby="muted"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <div
@@ -781,7 +781,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="dropdown"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <div
@@ -834,7 +834,7 @@ exports[`Table v2 rendering renders default 1`] = `
     >
       <div
         aria-describedby="name"
-        class="css-1bgxg8t"
+        class="css-1t5waql"
         role="gridcell"
       >
         <a
@@ -845,35 +845,35 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="username"
-        class="css-1dx5v0r"
+        class="css-aa85p7"
         role="gridcell"
       >
         Winifred.Kassulke45
       </div>
       <div
         aria-describedby="email"
-        class="css-l2a97w"
+        class="css-1xoxl7t"
         role="gridcell"
       >
         Martin_Metz24@gmail.com
       </div>
       <div
         aria-describedby="phone"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         1-126-037-4313
       </div>
       <div
         aria-describedby="company"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         Mante - McGlynn
       </div>
       <div
         aria-describedby="website"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <a
@@ -884,14 +884,14 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="empty"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         –
       </div>
       <div
         aria-describedby="muted"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <div
@@ -904,7 +904,7 @@ exports[`Table v2 rendering renders default 1`] = `
       </div>
       <div
         aria-describedby="dropdown"
-        class="css-itnoy9"
+        class="css-1lfo02p"
         role="gridcell"
       >
         <div
@@ -970,7 +970,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
     >
       <div
         aria-sort="none"
-        class="css-1me0nmx"
+        class="css-1ydje5s"
         id="name"
         role="columnheader"
       >
@@ -1016,7 +1016,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-19ojs1w"
+        class="css-v8iliy"
         id="username"
         role="columnheader"
       >
@@ -1030,7 +1030,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             Username
           </div>
           <div
-            class="css-1rhjo5i"
+            class="css-1rmvaqm"
             data-cy="flexItem"
           >
             <span
@@ -1086,7 +1086,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-4227vt"
+        class="css-1rk4m3t"
         id="email"
         role="columnheader"
       >
@@ -1116,7 +1116,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-zl346e"
+        class="css-r6mese"
         id="phone"
         role="columnheader"
       >
@@ -1146,7 +1146,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-zl346e"
+        class="css-r6mese"
         id="company"
         role="columnheader"
       >
@@ -1176,7 +1176,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-zl346e"
+        class="css-r6mese"
         id="website"
         role="columnheader"
       >
@@ -1206,7 +1206,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-zl346e"
+        class="css-r6mese"
         id="empty"
         role="columnheader"
       >
@@ -1236,7 +1236,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-zl346e"
+        class="css-r6mese"
         id="muted"
         role="columnheader"
       >
@@ -1266,7 +1266,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
       </div>
       <div
         aria-sort="none"
-        class="css-zl346e"
+        class="css-r6mese"
         id="dropdown"
         role="columnheader"
       >
