@@ -11,6 +11,7 @@ import {
   directionsValues,
   directionsValuesLabels
 } from "../../storybookHelpers/controlConstants";
+import TooltipIcon from "../components/TooltipIcon";
 
 const tooltipStoryDecorator = storyFn => (
   <div style={{ textAlign: "center" }}>
@@ -29,18 +30,6 @@ export default {
     preferredDirections: {
       options: directionsValues,
       mapping: directionsValuesLabels
-    },
-    className: {
-      control: { disable: true }
-    },
-    trigger: {
-      control: { disable: true }
-    },
-    ariaLabel: {
-      control: { disable: true }
-    },
-    "data-cy": {
-      control: { disable: true }
     }
   }
 } as Meta;
@@ -130,4 +119,9 @@ export const ContentWidth = {
       needs without having the default maxWidth
     </Tooltip>
   )
+};
+
+export const WithTooltipIcon = {
+  render: Template,
+  args: { trigger: <TooltipIcon /> }
 };
