@@ -1,10 +1,8 @@
 import * as React from "react";
 import * as style from "./style";
 import { useId } from "react-id-generator";
-import { greyLightDarken2 } from "../design-tokens/build/js/designTokens";
 import { Flex, FlexItem } from "../styleUtils/layout";
-import { Tooltip } from "../tooltip";
-import { Icon } from "../icon";
+import { Tooltip, TooltipIcon } from "../tooltip";
 import { SystemIcons } from "../icons/dist/system-icons-enum";
 import { textTruncate } from "../shared/styles/styleUtils";
 import { css } from "@emotion/css";
@@ -18,11 +16,16 @@ export interface TooltipHeaderCellProps {
    * Helper content that explains the content in the column.
    */
   tooltipContent?: React.ReactNode;
+  /**
+   * Icon to display for the tooltip.
+   */
+  tooltipIcon?: SystemIcons.CircleInformation | SystemIcons.CircleQuestion;
   children?: React.ReactNode;
 }
 
 export const TooltipHeaderCell = ({
   children,
+  tooltipIcon,
   tooltipContent
 }: TooltipHeaderCellProps) => {
   const [generatedId] = useId(1, "colTooltip");
@@ -34,11 +37,7 @@ export const TooltipHeaderCell = ({
           id={`${generatedId}-tooltip`}
           trigger={
             <div className={iconAlign}>
-              <Icon
-                shape={SystemIcons.CircleInformation}
-                size="xs"
-                color={greyLightDarken2}
-              />
+              <TooltipIcon shape={tooltipIcon} />
             </div>
           }
         >

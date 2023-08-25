@@ -19,3 +19,13 @@ Tooltips provide additional information or clarification about a UI element when
 
 - Use hint text below the field to provide information about what input is expected.
 - Use a Tooltip to provide additional explanation about the field. Usually, Tooltips are triggered in form fields by an icon in the field's label.
+
+### Using Icons with Tooltips
+
+In the UI we use two distinct icons for tooltips: ( i ) and ( ? ). We have defined the context of each icon, describing when to use them to ensure clarity and consistency in their usage:
+
+( i ) Icon:
+The ( i ) icon is utilized to provide users with a definition of a specific term. These icons are often associated with information includes additional details, explanations, or contextual information about a specific element, feature, or term. This aids in enhancing user comprehension by offering explanations directly within the context. This is the default for the `TooltipIcon` component as it is most commonly used.
+
+( ? ) Icon:
+The ( ? ) icon serves the purpose of offering supplementary information that can guide users in making informed decisions. This information goes beyond simple definitions. It can be placed next to a complex feature or help with feature discoverability, offering users the option to learn more about it.

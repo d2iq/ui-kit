@@ -86,7 +86,7 @@ exports[`Table v2 rendering renders default 1`] = `
                 >
                   <svg
                     aria-label="system-circle-information icon"
-                    class="css-qupcim"
+                    class="css-t1ofe2"
                     data-cy="icon"
                     height="16"
                     preserveAspectRatio="xMinYMin meet"
@@ -1044,7 +1044,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
                 >
                   <svg
                     aria-label="system-circle-information icon"
-                    class="css-qupcim"
+                    class="css-t1ofe2"
                     data-cy="icon"
                     height="16"
                     preserveAspectRatio="xMinYMin meet"
