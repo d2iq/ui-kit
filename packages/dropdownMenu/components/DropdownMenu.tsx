@@ -93,6 +93,10 @@ export interface DropdownMenuProps {
    * Allows custom styling
    */
   className?: string;
+  /**
+   * Human-readable selector used for writing tests
+   */
+  "data-cy"?: string;
 }
 
 const defaultItemToString = (
@@ -116,7 +120,8 @@ const DropdownMenu = (props: DropdownMenuProps) => {
       Direction.TopCenter,
       Direction.TopLeft
     ],
-    trigger
+    trigger,
+    "data-cy": dataCy = "dropdownmenu"
   } = props;
 
   const handleSelection = (
@@ -172,6 +177,7 @@ const DropdownMenu = (props: DropdownMenuProps) => {
               footer={footer}
               key={`dropdown-${sectionIndex}`}
               sectionIndex={sectionIndex}
+              data-cy={`${dataCy}-section-${sectionIndex}`}
             >
               {childrenWithKeys}
             </SectionWrapper>
@@ -204,6 +210,7 @@ const DropdownMenu = (props: DropdownMenuProps) => {
               <PopoverBox
                 maxHeight={menuMaxHeight}
                 maxWidth={menuMaxWidth}
+                data-cy={dataCy}
                 {...getMenuProps(
                   { refKey: "menuRef" },
                   // The menu is not mounted when `isOpen` is false, so Downshift's ref check fails incorrectly
@@ -223,7 +230,11 @@ const DropdownMenu = (props: DropdownMenuProps) => {
                 })
               })
             ) : (
-              <button {...getToggleButtonProps()} className={buttonReset}>
+              <button
+                {...getToggleButtonProps()}
+                className={buttonReset}
+                data-cy={`${dataCy}-button`}
+              >
                 {trigger}
               </button>
             )}
