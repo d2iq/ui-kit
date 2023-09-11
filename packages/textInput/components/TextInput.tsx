@@ -8,12 +8,9 @@ import {
 import { padding } from "../../shared/styles/styleUtils";
 import { flex, flexItem } from "../../shared/styles/styleUtils/layout/flexbox";
 import { InputAppearance } from "../../shared/types/inputAppearance";
-import {
-  getInputAppearance,
-  getInputElement,
-  getInputElementProps
-} from "./utils";
+import { getInputAppearance, getInputElementProps } from "./shared/utils";
 import InputLabel from "../../shared/components/InputLabel";
+import { Input } from "./shared/Input";
 
 export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
@@ -54,55 +51,6 @@ const TextInput = ({
 }: TextInputProps) => {
   const generatedId = `textInput-${React.useId()}`;
   const textInputId = props.id || generatedId;
-  const getInputContent = (): React.ReactNode => {
-    const calculatedAppearance = getInputAppearance({
-      appearance,
-      type,
-      showInputLabel,
-      ...props
-    });
-
-    return (
-      <FormFieldWrapper
-        id={textInputId}
-        errors={props.errors}
-        hintContent={props.hintContent}
-      >
-        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
-          <div>
-            <div className={flex()}>
-              {getInputElement(
-                [
-                  padding("horiz", "m"),
-                  flexItem("grow"),
-                  inputContainer,
-                  getInputAppearanceStyle(
-                    getInputAppearance({
-                      appearance,
-                      type,
-                      showInputLabel,
-                      ...props
-                    })
-                  )
-                ],
-                isValid,
-                describedByIds,
-                { appearance, type, showInputLabel, ...props },
-                getInputAppearance,
-                getInputElementProps
-              )}
-            </div>
-            <div data-cy="textInput-hintContent">
-              {getHintContent}
-              {calculatedAppearance === InputAppearance.Error &&
-                getValidationErrors}
-            </div>
-          </div>
-        )}
-      </FormFieldWrapper>
-    );
-  };
-
   const containerProps: { className?: string } = {};
   const calculatedAppearance = getInputAppearance({
     appearance,
@@ -126,7 +74,48 @@ const TextInput = ({
       >
         {props.inputLabel}
       </InputLabel>
-      {getInputContent()}
+      <FormFieldWrapper
+        id={textInputId}
+        errors={props.errors}
+        hintContent={props.hintContent}
+      >
+        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
+          <div>
+            <div className={flex()}>
+              <Input
+                additionalClasses={[
+                  padding("horiz", "m"),
+                  flexItem("grow"),
+                  inputContainer,
+                  getInputAppearanceStyle(
+                    getInputAppearance({
+                      appearance,
+                      type,
+                      showInputLabel,
+                      ...props
+                    })
+                  )
+                ]}
+                isValid={isValid}
+                describedBy={describedByIds}
+                textInputProps={{
+                  appearance,
+                  type,
+                  showInputLabel,
+                  ...props
+                }}
+                getInputAppearance={getInputAppearance}
+                getInputElementProps={getInputElementProps}
+              />
+            </div>
+            <div data-cy="textInput-hintContent">
+              {getHintContent}
+              {calculatedAppearance === InputAppearance.Error &&
+                getValidationErrors}
+            </div>
+          </div>
+        )}
+      </FormFieldWrapper>
     </div>
   );
 };
