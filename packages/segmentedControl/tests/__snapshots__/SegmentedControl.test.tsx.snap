@@ -65,11 +65,11 @@ exports[`SegmentedControl renders default 1`] = `
     <label
       class="static_segmentKeyboardFocus emotion-1"
       data-cy="segmentedControlButton"
-      for="segmentedControlButton-1"
+      for="segmentedControlButton-:r1:"
     >
       <input
         class="emotion-2"
-        id="segmentedControlButton-1"
+        id="segmentedControlButton-:r1:"
         name="controlId"
         type="radio"
         value="one"
@@ -83,11 +83,11 @@ exports[`SegmentedControl renders default 1`] = `
     <label
       class="static_segmentKeyboardFocus emotion-1"
       data-cy="segmentedControlButton"
-      for="segmentedControlButton-2"
+      for="segmentedControlButton-:r2:"
     >
       <input
         class="emotion-2"
-        id="segmentedControlButton-2"
+        id="segmentedControlButton-:r2:"
         name="controlId"
         type="radio"
         value="two"
@@ -101,11 +101,11 @@ exports[`SegmentedControl renders default 1`] = `
     <label
       class="static_segmentKeyboardFocus emotion-1"
       data-cy="segmentedControlButton"
-      for="segmentedControlButton-3"
+      for="segmentedControlButton-:r3:"
     >
       <input
         class="emotion-2"
-        id="segmentedControlButton-3"
+        id="segmentedControlButton-:r3:"
         name="controlId"
         type="radio"
         value="three"
@@ -230,12 +230,12 @@ exports[`SegmentedControl renders with selected 1`] = `
     <label
       class="static_segmentKeyboardFocus emotion-1"
       data-cy="segmentedControlButton"
-      for="segmentedControlButton-4"
+      for="segmentedControlButton-:r5:"
     >
       <input
         checked=""
         class="emotion-2"
-        id="segmentedControlButton-4"
+        id="segmentedControlButton-:r5:"
         name="controlId"
         type="radio"
         value="one"
@@ -249,11 +249,11 @@ exports[`SegmentedControl renders with selected 1`] = `
     <label
       class="static_segmentKeyboardFocus emotion-4"
       data-cy="segmentedControlButton"
-      for="segmentedControlButton-5"
+      for="segmentedControlButton-:r6:"
     >
       <input
         class="emotion-2"
-        id="segmentedControlButton-5"
+        id="segmentedControlButton-:r6:"
         name="controlId"
         type="radio"
         value="two"
@@ -267,11 +267,11 @@ exports[`SegmentedControl renders with selected 1`] = `
     <label
       class="static_segmentKeyboardFocus emotion-4"
       data-cy="segmentedControlButton"
-      for="segmentedControlButton-6"
+      for="segmentedControlButton-:r7:"
     >
       <input
         class="emotion-2"
-        id="segmentedControlButton-6"
+        id="segmentedControlButton-:r7:"
         name="controlId"
         type="radio"
         value="three"

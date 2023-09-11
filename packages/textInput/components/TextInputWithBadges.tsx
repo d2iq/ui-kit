@@ -24,11 +24,10 @@ import { InputAppearance } from "../../shared/types/inputAppearance";
 import {
   getIconEndContent,
   getIconStartContent,
-  getId,
   getInputElement,
   getInputElementProps as getBaseInputElementProps
 } from "./utils";
-import { renderLabel } from "../../utilities/label";
+import InputLabel from "../../shared/components/InputLabel";
 
 export interface BadgeDatum {
   value: string;
@@ -65,6 +64,8 @@ const TextInputWithBadges = ({
 }: TextInputWithBadgesProps) => {
   const inputRef = React.createRef<HTMLInputElement>();
   const [hasFocus, setHasFocus] = React.useState(false);
+  const generatedId = `textInput-${React.useId()}`;
+  const textInputWithBadgesId = props.id || generatedId;
 
   const inputOnFocus = e => {
     setHasFocus(true);
@@ -122,10 +123,7 @@ const TextInputWithBadges = ({
 
     return (
       <FormFieldWrapper
-        // TODO: figure out how to get rid of this non-null assertion
-        // If we stop generating an `id` prop in the TextInput component,
-        // it would be possible for `this.props.id` to be undefined
-        id={props.id!}
+        id={textInputWithBadgesId}
         errors={props.errors}
         hintContent={hintContent}
       >
@@ -258,14 +256,15 @@ const TextInputWithBadges = ({
   }
   return (
     <div {...containerProps} data-cy={dataCy}>
-      {renderLabel({
-        appearance: calculatedAppearance,
-        hidden: !showInputLabel,
-        id: getId(props),
-        label: props.inputLabel,
-        required: props.required,
-        tooltipContent: props.tooltipContent
-      })}
+      <InputLabel
+        appearance={calculatedAppearance}
+        hidden={!showInputLabel}
+        id={textInputWithBadgesId}
+        required={props.required}
+        tooltipContent={props.tooltipContent}
+      >
+        {props.inputLabel}
+      </InputLabel>
       {getInputContent()}
     </div>
   );

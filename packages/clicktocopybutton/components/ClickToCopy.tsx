@@ -1,6 +1,5 @@
 import * as React from "react";
 import copy from "copy-to-clipboard";
-import { useId } from "react-id-generator";
 import { Tooltip } from "../../tooltip";
 import { Box } from "../../styleUtils/modifiers";
 
@@ -49,7 +48,7 @@ const ClickToCopy = ({
   tooltipId,
   tooltipContent = "Copied to clipboard"
 }: ClickToCopyProps) => {
-  const [generatedTooltipId] = useId(1, "copyTooltip");
+  const generatedTooltipId = `copyTooltip-${React.useId()}`;
   const [isTooltipShown, setIsTooltipShown] = React.useState<boolean>(false);
   const onClick = () => {
     copy(textToCopy);

@@ -1,5 +1,4 @@
 import * as React from "react";
-import nextId from "react-id-generator";
 import { cx } from "@emotion/css";
 import { segmentedControlContainer } from "../style";
 import { SegmentedControlButtonProps } from "../components/SegmentedControlButton";
@@ -35,11 +34,12 @@ const SegmentedControl = (props: SegmentedControlProps) => {
   const {
     children,
     className,
-    id = nextId("segmentedControl-"),
+    id,
     selectedSegment,
     onSelect,
     "data-cy": dataCy = "segmentedControl"
   } = props;
+  const generatedId = `segmentedControl-${React.useId()}`;
   const handleChange = (onChangeFn, e) => {
     if (onSelect) {
       onSelect(e.target.value);
@@ -55,7 +55,7 @@ const SegmentedControl = (props: SegmentedControlProps) => {
         return React.cloneElement(segment, {
           isActive: selectedSegment === segment.props.value,
           onChange: handleChange.bind(null, segment.props.onChange),
-          name: id,
+          name: id || generatedId,
           key: segment.props.id || i
         });
       })}

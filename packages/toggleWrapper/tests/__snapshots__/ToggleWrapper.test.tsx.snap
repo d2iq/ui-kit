@@ -19,14 +19,14 @@ exports[`ToggleWrapper renders 1`] = `
 
 <label
     class="emotion-0"
-    for="toggleWrapper-1"
+    for="toggleWrapper-:r0:"
   >
     <input
       aria-checked="true"
       checked=""
       class="emotion-1"
       data-cy="toggleWrapper-input"
-      id="toggleWrapper-1"
+      id="toggleWrapper-:r0:"
       type="checkbox"
       value=""
     />
@@ -56,14 +56,14 @@ exports[`ToggleWrapper renders as a radio input 1`] = `
 
 <label
     class="emotion-0"
-    for="toggleWrapper-2"
+    for="toggleWrapper-:r1:"
   >
     <input
       aria-checked="true"
       checked=""
       class="emotion-1"
       data-cy="toggleWrapper-input"
-      id="toggleWrapper-2"
+      id="toggleWrapper-:r1:"
       type="radio"
       value=""
     />

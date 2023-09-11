@@ -1,5 +1,4 @@
 import * as React from "react";
-import nextId from "react-id-generator";
 import { visuallyHidden, display } from "../../shared/styles/styleUtils";
 
 interface RenderProps {
@@ -36,7 +35,7 @@ interface ToggleWrapperWithRenderProps
 }
 
 const ToggleWrapper = ({
-  id = nextId("toggleWrapper-"),
+  id,
   children,
   "data-cy": dataCy = "toggleWrapper-input",
   isActive,
@@ -46,6 +45,8 @@ const ToggleWrapper = ({
   value = "",
   ...other
 }: ToggleWrapperWithRenderProps) => {
+  const generatedId = `toggleWrapper-${React.useId()}`;
+  const toggleWrapperId = id || generatedId;
   const [hasFocus, setHasFocus] = React.useState<boolean>(false);
 
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -72,9 +73,9 @@ const ToggleWrapper = ({
     // will be "radio" or "checkbox".
     // Passing either string directly makes the error go away
     /* eslint-disable jsx-a11y/role-supports-aria-props */
-    <label htmlFor={id} className={display("block")}>
+    <label htmlFor={toggleWrapperId} className={display("block")}>
       <input
-        id={id}
+        id={toggleWrapperId}
         className={visuallyHidden}
         defaultChecked={isActive}
         aria-checked={isActive}

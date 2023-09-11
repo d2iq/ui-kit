@@ -31,7 +31,7 @@ exports[`ClickToCopyButton renders default 1`] = `
     >
       <div>
         <span
-          aria-describedby="copyTooltip1"
+          aria-describedby="copyTooltip-:r0:"
           class="emotion-1"
           data-cy="box"
           role="button"
@@ -78,7 +78,7 @@ exports[`ClickToCopyButton renders with custom children 1`] = `
     >
       <div>
         <div
-          aria-describedby="copyTooltip2"
+          aria-describedby="copyTooltip-:r2:"
           class="emotion-1"
           role="button"
           tabindex="0"

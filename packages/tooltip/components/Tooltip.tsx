@@ -1,5 +1,4 @@
 import * as React from "react";
-import nextId from "react-id-generator";
 import Dropdownable, {
   Direction
 } from "../../dropdownable/components/Dropdownable";
@@ -31,7 +30,7 @@ const Tooltip = ({
   ariaLabel,
   children,
   disablePortal,
-  id = nextId("tooltip-"),
+  id,
   maxWidth = 300,
   minWidth,
   onClose,
@@ -40,6 +39,8 @@ const Tooltip = ({
   suppress,
   trigger
 }: TooltipProps) => {
+  const generatedId = `tooltip-${React.useId()}`;
+  const tooltipId = id || generatedId;
   const triggerRef: React.MutableRefObject<HTMLElement | null> =
     React.useRef<HTMLElement>(null);
   const [isOpen, setIsOpen] = React.useState<boolean>(isOpenProp);
@@ -88,7 +89,7 @@ const Tooltip = ({
     }
 
     nodeToFocus.setAttribute("tabindex", "0");
-    nodeToFocus.setAttribute("aria-describedby", id);
+    nodeToFocus.setAttribute("aria-describedby", tooltipId);
   });
 
   const triggerProps = {
@@ -107,7 +108,7 @@ const Tooltip = ({
         isOpen={isOpen}
         dropdown={
           <TooltipContent
-            id={id}
+            id={tooltipId}
             isOpen={isOpen}
             minWidth={minWidth}
             maxWidth={maxWidth}

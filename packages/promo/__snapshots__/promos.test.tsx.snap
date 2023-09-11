@@ -114,7 +114,7 @@ exports[`Promos renders PromoBanner 1`] = `
             >
               <label
                 class="css-apdwp9"
-                for="dismissPromoCheckbox1"
+                for="dismissPromoCheckbox-:r0:"
               >
                 <div
                   class="css-16u27ir"
@@ -127,7 +127,7 @@ exports[`Promos renders PromoBanner 1`] = `
                       aria-invalid="false"
                       class="css-epge75"
                       data-cy="checkboxInput-input"
-                      id="dismissPromoCheckbox1"
+                      id="dismissPromoCheckbox-:r0:"
                       type="checkbox"
                       value=""
                     />
@@ -262,7 +262,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
             >
               <label
                 class="css-apdwp9"
-                for="dismissPromoCheckbox3"
+                for="dismissPromoCheckbox-:r6:"
               >
                 <div
                   class="css-16u27ir"
@@ -275,7 +275,7 @@ exports[`Promos renders PromoBanner with a custom background color 1`] = `
                       aria-invalid="false"
                       class="css-epge75"
                       data-cy="checkboxInput-input"
-                      id="dismissPromoCheckbox3"
+                      id="dismissPromoCheckbox-:r6:"
                       type="checkbox"
                       value=""
                     />
@@ -410,7 +410,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
             >
               <label
                 class="css-apdwp9"
-                for="dismissPromoCheckbox2"
+                for="dismissPromoCheckbox-:r3:"
               >
                 <div
                   class="css-16u27ir"
@@ -423,7 +423,7 @@ exports[`Promos renders PromoBanner with a gradientStyle 1`] = `
                       aria-invalid="false"
                       class="css-epge75"
                       data-cy="checkboxInput-input"
-                      id="dismissPromoCheckbox2"
+                      id="dismissPromoCheckbox-:r3:"
                       type="checkbox"
                       value=""
                     />
@@ -565,7 +565,7 @@ exports[`Promos renders PromoInline 1`] = `
                 >
                   <label
                     class="css-apdwp9"
-                    for="dismissPromoCheckbox4"
+                    for="dismissPromoCheckbox-:r9:"
                   >
                     <div
                       class="css-16u27ir"
@@ -578,7 +578,7 @@ exports[`Promos renders PromoInline 1`] = `
                           aria-invalid="false"
                           class="css-epge75"
                           data-cy="checkboxInput-input"
-                          id="dismissPromoCheckbox4"
+                          id="dismissPromoCheckbox-:r9:"
                           type="checkbox"
                           value=""
                         />

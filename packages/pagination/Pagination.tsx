@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useId } from "react-id-generator";
 import { cx } from "@emotion/css";
 import { Flex, FlexItem } from "../styleUtils/layout";
 import { Icon } from "../icon";
@@ -115,7 +114,7 @@ const Pagination = ({
   totalItems,
   totalPages: totalPagesProp
 }: PaginationProps) => {
-  const [pageLengthMenuId] = useId(1, "pageLengthMenu");
+  const pageLengthMenuId = `pageLengthMenu-${React.useId()}`;
   const [activePageState, setActivePageState] =
     React.useState<number>(initialActivePage);
   const [pageInputVal, setPageInputVal] =

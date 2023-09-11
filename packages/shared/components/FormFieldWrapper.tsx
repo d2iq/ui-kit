@@ -1,5 +1,4 @@
 import * as React from "react";
-import nextId from "react-id-generator";
 import { cx } from "@emotion/css";
 import {
   flush,
@@ -31,19 +30,23 @@ const FormFieldWrapper = ({
   children,
   errors,
   hintContent,
-  id = nextId("formFieldWrapper-")
+  id
 }: FormFieldWrapperProps) => {
+  const generatedId = `formFieldWrapper-${React.useId()}`;
+  const formFieldWrapperId = id || generatedId;
   const getHintContentId = () => {
-    return hintContent ? `${id}-hintContent` : "";
+    return hintContent ? `${formFieldWrapperId}-hintContent` : "";
   };
 
-  const getErrorId = (error, id) => {
+  const getErrorId = (error, formFieldWrapperId) => {
     const errorIndex = errors ? errors.indexOf(error) : -1;
-    return `${id}-errorMsg${errorIndex}`;
+    return `${formFieldWrapperId}-errorMsg${errorIndex}`;
   };
 
   const getErrorIds = () => {
-    return errors ? errors.map(error => getErrorId(error, id)).join(" ") : "";
+    return errors
+      ? errors.map(error => getErrorId(error, formFieldWrapperId)).join(" ")
+      : "";
   };
 
   const getHintContent = hintContent => {
@@ -62,7 +65,7 @@ const FormFieldWrapper = ({
     ) : null;
   };
 
-  const getValidationErrors = (errors, id) => {
+  const getValidationErrors = (errors, formFieldWrapperId) => {
     if (!errors || (errors && errors.length === 0)) {
       return null;
     }
@@ -72,7 +75,7 @@ const FormFieldWrapper = ({
         {errors.map((error, index) => (
           <li
             key={index}
-            id={getErrorId(error, id)}
+            id={getErrorId(error, formFieldWrapperId)}
             className={cx(liReset, padding("top", "xxs"))}
           >
             {error}
@@ -92,7 +95,7 @@ const FormFieldWrapper = ({
   return (
     <>
       {children({
-        getValidationErrors: getValidationErrors(errors, id),
+        getValidationErrors: getValidationErrors(errors, formFieldWrapperId),
         getHintContent: getHintContent(hintContent),
         describedByIds: getDescribedBy(getHintContentId(), getErrorIds()),
         isValid: !errors || (errors && errors.length === 0)

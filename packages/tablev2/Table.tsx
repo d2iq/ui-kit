@@ -1,5 +1,4 @@
 import * as React from "react";
-import nextId from "react-id-generator";
 import { cx } from "@emotion/css";
 import * as style from "./style";
 import { Draggable, Sorter } from "./Util";
@@ -118,11 +117,14 @@ const ariaSortStringMap: { asc: "ascending"; desc: "descending" } = {
 
 function HeaderCell<Entry>({
   column,
-  id = nextId("headerCell-"),
+  id,
   update,
   state,
   showScrollShadow
 }: HeaderCellProps<Entry>) {
+  const generatedId = `headerCell-${React.useId()}`;
+  const headerCellId = id || generatedId;
+
   // -- WIDTH --
   const cell = React.useRef<HTMLDivElement>(null);
   const [width, setWidth] = React.useState(0);
@@ -134,15 +136,19 @@ function HeaderCell<Entry>({
   React.useEffect(() => setWidth(cell.current?.clientWidth ?? 0));
 
   // -- SORTING --
-  const order = state.sortBy === id ? state.order : null;
+  const order = state.sortBy === headerCellId ? state.order : null;
   const onClick =
     column.sorter &&
-    (() => update({ sortBy: id, order: order === "asc" ? "desc" : "asc" }));
+    (() =>
+      update({
+        sortBy: headerCellId,
+        order: order === "asc" ? "desc" : "asc"
+      }));
 
   const header = column.sorter ? (
     <ResetButton
       onClick={onClick}
-      data-cy={`table-headercell-${id}-button`}
+      data-cy={`table-headercell-${headerCellId}-button`}
       className={style.sortableButton}
     >
       {column.header}

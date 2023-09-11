@@ -1,6 +1,5 @@
 import * as React from "react";
 import { TextInputProps } from "./TextInput";
-import nextId from "react-id-generator";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import {
   flex,
@@ -18,8 +17,6 @@ import {
 } from "../../shared/styles/formStyles";
 
 const getInputElementProps = (props: TextInputProps): TextInputProps => {
-  const placeholderId = nextId("textInput-");
-
   // omit props for container and that we override, otherwise pass through
   // TextInput props to input element
   const {
@@ -27,7 +24,7 @@ const getInputElementProps = (props: TextInputProps): TextInputProps => {
     hintContent,
     inputLabel,
     errors,
-    id = placeholderId,
+    id,
     ...inputElementProps
   } = props;
 
@@ -127,19 +124,10 @@ const getIconEndContent = (
   );
 };
 
-const getId = (props: TextInputProps): string => {
-  if (typeof props.id === "string") {
-    return props.id;
-  }
-
-  return nextId("textInput-");
-};
-
 export {
   getInputElementProps,
   getInputElement,
   getInputAppearance,
   getIconStartContent,
-  getIconEndContent,
-  getId
+  getIconEndContent
 };
