@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as style from "./style";
-import { useId } from "react-id-generator";
 import { Flex, FlexItem } from "../styleUtils/layout";
 import { Tooltip, TooltipIcon } from "../tooltip";
 import { SystemIcons } from "../icons/dist/system-icons-enum";
@@ -28,7 +27,8 @@ export const TooltipHeaderCell = ({
   tooltipIcon,
   tooltipContent
 }: TooltipHeaderCellProps) => {
-  const [generatedId] = useId(1, "colTooltip");
+  const generatedId = `colTooltip-${React.useId()}`;
+
   return (
     <Flex gutterSize="xxs" className={style.cellFlexWrapper}>
       <div className={textTruncate}>{children}</div>

@@ -76,7 +76,7 @@ exports[`Table v2 rendering renders default 1`] = `
             data-cy="flexItem"
           >
             <span
-              aria-describedby="colTooltip1-tooltip"
+              aria-describedby="colTooltip-:r2:-tooltip"
               data-cy="tooltip"
               tabindex="0"
             >
@@ -1034,7 +1034,7 @@ exports[`Table v2 rendering renders without a sticky first column 1`] = `
             data-cy="flexItem"
           >
             <span
-              aria-describedby="colTooltip2-tooltip"
+              aria-describedby="colTooltip-:rd:-tooltip"
               data-cy="tooltip"
               tabindex="0"
             >

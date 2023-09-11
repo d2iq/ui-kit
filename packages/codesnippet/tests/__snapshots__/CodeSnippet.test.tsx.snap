@@ -239,7 +239,7 @@ exports[`CodeSnippet renders with copy button 1`] = `
           >
             <div>
               <span
-                aria-describedby="copyTooltip1"
+                aria-describedby="copyTooltip-:r0:"
                 class="emotion-6"
                 data-cy="box"
                 role="button"

@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useId } from "react-id-generator";
 import FocusLock from "react-focus-lock";
 import { css, cx } from "@emotion/css";
 import { Dropdownable } from "../../dropdownable";
@@ -56,7 +55,7 @@ const Popover = ({
   preferredDirections,
   trigger
 }: PopoverProps) => {
-  const [generatedDropdownId] = useId(1, "dropdown");
+  const generatedDropdownId = `dropdown-${React.useId()}`;
   const containerRef = React.useRef<HTMLDivElement>(null);
   const triggerRef = React.useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = React.useState<boolean>(Boolean(initialIsOpen));

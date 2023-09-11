@@ -11,12 +11,11 @@ import { IconShapes } from "../../icon/components/Icon";
 import {
   getIconEndContent,
   getIconStartContent,
-  getId,
   getInputElement,
   getInputElementProps as getBaseInputElementProps
 } from "./utils";
-import { renderLabel } from "../../utilities/label";
 import { cx } from "@emotion/css";
+import InputLabel from "../../shared/components/InputLabel";
 
 export interface TextInputWithIconProps extends TextInputProps {
   /**
@@ -40,6 +39,8 @@ const TextInputWithIcon = ({
   ...props
 }: TextInputWithIconProps) => {
   const [hasFocus, setHasFocus] = React.useState(false);
+  const generatedId = `textInput-${React.useId()}`;
+  const textInputWithIconId = props.id || generatedId;
 
   const getInputAppearance = (): string => {
     if (props.disabled) {
@@ -64,10 +65,7 @@ const TextInputWithIcon = ({
     const inputAppearance = getInputAppearance();
     return (
       <FormFieldWrapper
-        // TODO: figure out how to get rid of this non-null assertion
-        // If we stop generating an `id` prop in the TextInput component,
-        // it would be possible for `this.props.id` to be undefined
-        id={props.id!}
+        id={textInputWithIconId}
         errors={props.errors}
         hintContent={props.hintContent}
       >
@@ -124,16 +122,18 @@ const TextInputWithIcon = ({
   if (props.className) {
     containerProps.className = props.className;
   }
+
   return (
     <div {...containerProps} data-cy={dataCy}>
-      {renderLabel({
-        appearance: calculatedAppearance,
-        hidden: !showInputLabel,
-        id: getId(props),
-        label: props.inputLabel,
-        required: props.required,
-        tooltipContent: props.tooltipContent
-      })}
+      <InputLabel
+        appearance={calculatedAppearance}
+        hidden={!showInputLabel}
+        id={textInputWithIconId}
+        required={props.required}
+        tooltipContent={props.tooltipContent}
+      >
+        {props.inputLabel}
+      </InputLabel>
       {getInputContent()}
     </div>
   );

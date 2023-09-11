@@ -1,6 +1,5 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
-import nextId from "react-id-generator";
 import {
   optionalIcon,
   select,
@@ -19,7 +18,7 @@ import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import IconPropAdapter from "../../icon/components/IconPropAdapter";
-import { renderLabel } from "../../utilities/label";
+import InputLabel from "../../shared/components/InputLabel";
 
 export interface SelectOption {
   disabled?: boolean;
@@ -81,7 +80,7 @@ const SelectInput = ({
   className,
   errors,
   iconStart,
-  id = nextId("selectInput-"),
+  id,
   options,
   showInputLabel = true,
   inputLabel = "",
@@ -93,6 +92,7 @@ const SelectInput = ({
   onBlur,
   ...other
 }: SelectInputProps) => {
+  const generatedId = `selectInput-${React.useId()}`;
   const [hasFocus, setHasFocus] = React.useState<boolean>(false);
   const hasError = appearance === InputAppearance.Error;
   const parentDataCy = `selectInput selectInput.${appearance}`;
@@ -117,17 +117,22 @@ const SelectInput = ({
   const inputAppearance = getInputAppearance(disabled, hasFocus, appearance);
 
   return (
-    <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
+    <FormFieldWrapper
+      id={id || generatedId}
+      errors={errors}
+      hintContent={hintContent}
+    >
       {({ getValidationErrors, isValid, getHintContent, describedByIds }) => (
         <div className={className} data-cy={parentDataCy}>
-          {renderLabel({
-            appearance,
-            hidden: !showInputLabel,
-            id,
-            label: inputLabel,
-            required,
-            tooltipContent
-          })}
+          <InputLabel
+            appearance={appearance}
+            hidden={!showInputLabel}
+            id={id}
+            required={required}
+            tooltipContent={tooltipContent}
+          >
+            {inputLabel}
+          </InputLabel>
 
           <span
             className={cx(

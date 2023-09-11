@@ -1,6 +1,5 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
-import nextId from "react-id-generator";
 
 import {
   flex,
@@ -92,7 +91,7 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
       className,
       disabled,
       hintContent,
-      id = nextId("toggleInput-"),
+      id,
       inputLabel,
       showInputLabel = true,
       vertAlign = "center",
@@ -105,6 +104,8 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
       onFocus,
       ...other
     } = props;
+    const generatedId = `toggleInput-${React.useId()}`;
+    const toggleInputId = id || generatedId;
     const inputDataCy = [
       `${inputType}Input-input`,
       ...(checked ? [`${inputType}Input-input.checked`] : []),
@@ -139,7 +140,11 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
     };
 
     return (
-      <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
+      <FormFieldWrapper
+        id={toggleInputId}
+        errors={errors}
+        hintContent={hintContent}
+      >
         {({ getValidationErrors, isValid, describedByIds, getHintContent }) => (
           <div className={cx(vAlignChildren, className)} data-cy={parentDataCy}>
             <label
@@ -150,7 +155,7 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
                 display("inline-flex"),
                 bruteForceKillLabelMargin // to override CNVS bottom margin on <label>
               )}
-              htmlFor={id}
+              htmlFor={toggleInputId}
             >
               <div className={cx(flexItem("shrink"), display("inherit"))}>
                 <>
@@ -172,7 +177,7 @@ const ToggleInput = React.forwardRef<HTMLInputElement, LocalToggleInputProps>(
                     {/* eslint-disable jsx-a11y/role-has-required-aria-props */}
                     <input
                       type={inputType}
-                      id={id}
+                      id={toggleInputId}
                       className={visuallyHidden}
                       checked={checked}
                       disabled={disabled}

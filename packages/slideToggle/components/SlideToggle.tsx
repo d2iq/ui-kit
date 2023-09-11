@@ -1,6 +1,5 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
-import nextId from "react-id-generator";
 import {
   flex,
   flexItem,
@@ -76,7 +75,7 @@ const SlideToggle = (props: React.PropsWithRef<SlideToggleProps>) => {
     className,
     disabled,
     hintContent,
-    id = nextId("slideToggle-"),
+    id,
     inputLabel,
     showInputLabel = "true",
     vertAlign = "center",
@@ -87,6 +86,8 @@ const SlideToggle = (props: React.PropsWithRef<SlideToggleProps>) => {
     onFocus,
     ...other
   } = props;
+  const generatedId = `slideToggle-${React.useId()}`;
+  const slideToggleId = id || generatedId;
 
   const inputType = "SlideToggle";
 
@@ -121,7 +122,11 @@ const SlideToggle = (props: React.PropsWithRef<SlideToggleProps>) => {
   };
 
   return (
-    <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
+    <FormFieldWrapper
+      id={slideToggleId}
+      errors={errors}
+      hintContent={hintContent}
+    >
       {({ getValidationErrors, isValid, describedByIds, getHintContent }) => (
         <div className={cx(vAlignChildren, className)} data-cy={parentDataCy}>
           <label
@@ -131,14 +136,14 @@ const SlideToggle = (props: React.PropsWithRef<SlideToggleProps>) => {
               }),
               display("inline-flex")
             )}
-            htmlFor={id}
+            htmlFor={slideToggleId}
           >
             <div className={cx(flexItem("shrink"), display("inherit"))}>
               <>
                 <div className={cx(toggleContainer)}>
                   <input
                     type={inputType}
-                    id={id}
+                    id={slideToggleId}
                     className={visuallyHidden}
                     defaultChecked={checked}
                     disabled={disabled}

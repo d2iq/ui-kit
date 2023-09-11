@@ -1,6 +1,5 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
-import { useId } from "react-id-generator";
 import {
   Box,
   CheckboxInput,
@@ -35,7 +34,7 @@ const PromoContent = ({
   className,
   "data-cy": dataCy = "promoContent"
 }: PromoProps) => {
-  const [dismissCheckboxId] = useId(1, "dismissPromoCheckbox");
+  const dismissCheckboxId = `dismissPromoCheckbox-${React.useId()}`;
   return (
     <div
       className={cx(bannerContainer(isDarkBackground), className)}

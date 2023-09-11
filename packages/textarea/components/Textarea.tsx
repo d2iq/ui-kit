@@ -8,8 +8,7 @@ import {
   inputContainer
 } from "../../shared/styles/formStyles";
 import { textarea } from "../style";
-import nextId from "react-id-generator";
-import { renderLabel } from "../../utilities/label";
+import InputLabel from "../../shared/components/InputLabel";
 
 export interface TextareaProps extends React.HTMLProps<HTMLTextAreaElement> {
   /**
@@ -43,7 +42,7 @@ export interface TextareaProps extends React.HTMLProps<HTMLTextAreaElement> {
 }
 
 const Textarea = ({
-  id = nextId("textarea-"),
+  id,
   appearance = InputAppearance.Standard,
   className,
   inputLabel,
@@ -58,6 +57,8 @@ const Textarea = ({
   ...other
 }: TextareaProps) => {
   const hasError = appearance === InputAppearance.Error;
+  const generatedId = `textarea-${React.useId()}`;
+  const textareaId = id || generatedId;
 
   const getInputAppearance = () => (disabled ? "disabled" : appearance);
 
@@ -76,23 +77,24 @@ const Textarea = ({
   const textareaDataCy = `textarea-textarea textarea-textarea.${inputAppearance}`;
 
   return (
-    <FormFieldWrapper id={id} errors={errors} hintContent={hintContent}>
+    <FormFieldWrapper id={textareaId} errors={errors} hintContent={hintContent}>
       {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
         <div className={className} data-cy={parentDataCy}>
-          {renderLabel({
-            appearance,
-            hidden: !showInputLabel,
-            id,
-            label: inputLabel,
-            required,
-            tooltipContent
-          })}
+          <InputLabel
+            appearance={appearance}
+            hidden={!showInputLabel}
+            id={id}
+            required={required}
+            tooltipContent={tooltipContent}
+          >
+            {inputLabel}
+          </InputLabel>
 
           <textarea
             aria-invalid={!isValid}
             aria-describedby={describedByIds}
             value={value}
-            id={id}
+            id={textareaId}
             className={cx(
               inputReset,
               inputContainer,
