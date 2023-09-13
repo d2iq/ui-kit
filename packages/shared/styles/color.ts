@@ -53,18 +53,12 @@ const getLuminance = (luminanceVal1: number, luminanceVal2: number) => {
   return (l1 + 0.05) / (l2 + 0.05);
 };
 
-// TODO: when/if we start using rgb/rgba colors in
-// design-tokens, write getHexContrast function that can get
-// rgb/rgba contrast as well
 export const getHexContrast = (color1: string, color2: string) =>
   getLuminance(
     relativeLuminance(hexToRgbArr(color1)),
     relativeLuminance(hexToRgbArr(color2))
   );
 
-// TODO: when/if we start using rgb/rgba colors in
-// design-tokens, write getBrightness function that can get
-// rgb/rgba brightness as well
 const getHexBrightness = (hex: string) => {
   const rgbArr = hexToRgbArr(hex);
   return (rgbArr[0] * 299 + rgbArr[1] * 587 + rgbArr[2] * 114) / 1000;

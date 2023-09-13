@@ -229,9 +229,6 @@ describe("Table v2", () => {
         expect.objectContaining({ sortBy: "name", order: "desc" })
       );
     });
-    // TODO: figure out how we could simulate resizing
-    /* eslint-disable @typescript-eslint/no-empty-function */
-    it.skip("calls onStateChange when a column is resized", () => {});
   });
 
   describe("Sorting", () => {

@@ -6,9 +6,6 @@ import {
   themeTextColorSecondaryInverted
 } from "../../../../design-tokens/build/js/designTokens";
 
-// TODO: when we do the design tokens lib,
-// generate a type for _only_ our colors
-// instead of just accepting any string
 export const tintText = (color: React.CSSProperties["color"]) => css`
   color: ${color};
 `;
