@@ -54,12 +54,10 @@ export interface ButtonProps extends LinkProps {
   /**
    * The icon that appears before the button text
    */
-  // TODO: only accept IconShapes when we make a big breaking change
   iconStart?: IconShapes | React.ReactElement<HTMLElement>;
   /**
    * The icon that appears after the button text
    */
-  // TODO: only accept IconShapes when we make a big breaking change
   iconEnd?: IconShapes | React.ReactElement<HTMLElement>;
   /**
    * Whether the action the button was meant to do has completed

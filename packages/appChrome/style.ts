@@ -88,8 +88,6 @@ export const sidebarContainer = (theme: AppChromeTheme, isOpen?: boolean) => {
   `;
 };
 
-// TODO: replace animation duration/easing with design tokens
-// once design has agreed on animation
 export const sidebarAnimator = css`
   height: 100%;
   overflow-x: hidden;

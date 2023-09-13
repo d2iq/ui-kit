@@ -1,5 +1,3 @@
-// TODO fix theme provider stories before reintroducing it. https://jira.d2iq.com/browse/D2IQ-79209
-
 import * as React from "react";
 import { StoryFn, Meta } from "@storybook/react";
 import UIKitThemeProvider from "../components/UIKitThemeProvider";
