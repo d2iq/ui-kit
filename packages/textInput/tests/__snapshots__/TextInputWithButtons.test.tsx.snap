@@ -138,6 +138,13 @@ exports[`TextInputWithIcon renders 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3>div {
+  width: auto;
+}
+
+.emotion-4 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -152,11 +159,7 @@ exports[`TextInputWithIcon renders 1`] = `
   width: initial;
 }
 
-.emotion-3>div {
-  width: auto;
-}
-
-.emotion-4 {
+.emotion-5 {
   background: none;
   border: 0;
   color: inherit;
@@ -168,70 +171,39 @@ exports[`TextInputWithIcon renders 1`] = `
   cursor: pointer;
 }
 
-.emotion-4::-moz-focus-inner {
+.emotion-5::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-4>div:focus {
+.emotion-5>div:focus {
   outline: none;
 }
 
-.emotion-4:focus>div {
+.emotion-5:focus>div {
   outline-color: Highlight;
   outline-width: thin;
 }
 
 @media (-webkit-min-device-pixel-ratio: 0) {
-  .emotion-4:focus>div {
+  .emotion-5:focus>div {
     outline-color: -webkit-focus-ring-color;
     outline-style: auto;
     outline-width: unset;
   }
 }
 
-.emotion-5 {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
 }
 
-.emotion-5 use {
+.emotion-6 use {
   pointer-events: none;
 }
 
-.emotion-6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: auto;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 0;
-  box-sizing: border-box;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: initial;
+.emotion-9 {
   padding-left: 12px;
-}
-
-.emotion-6>div {
-  width: auto;
 }
 
 <div
@@ -257,10 +229,10 @@ exports[`TextInputWithIcon renders 1`] = `
         value=""
       />
       <span
-        class="emotion-3"
+        class="emotion-3 emotion-4"
       >
         <button
-          class="emotion-4"
+          class="emotion-5"
           data-cy="closeButton"
           type="button"
         >
@@ -269,7 +241,7 @@ exports[`TextInputWithIcon renders 1`] = `
           >
             <svg
               aria-label="system-close icon"
-              class="emotion-5"
+              class="emotion-6"
               data-cy="icon"
               height="16"
               preserveAspectRatio="xMinYMin meet"
@@ -285,10 +257,10 @@ exports[`TextInputWithIcon renders 1`] = `
         </button>
       </span>
       <span
-        class="emotion-6"
+        class="emotion-3 emotion-4 emotion-9"
       >
         <button
-          class="emotion-4"
+          class="emotion-5"
           data-cy="funnelButton"
           type="button"
         >
@@ -297,7 +269,7 @@ exports[`TextInputWithIcon renders 1`] = `
           >
             <svg
               aria-label="system-funnel icon"
-              class="emotion-5"
+              class="emotion-6"
               data-cy="icon"
               height="16"
               preserveAspectRatio="xMinYMin meet"
@@ -455,6 +427,13 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 0;
+}
+
+.emotion-3>div {
+  width: auto;
+}
+
+.emotion-4 {
   box-sizing: border-box;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
@@ -469,11 +448,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
   width: initial;
 }
 
-.emotion-3>div {
-  width: auto;
-}
-
-.emotion-4 {
+.emotion-5 {
   background: none;
   border: 0;
   color: inherit;
@@ -485,34 +460,34 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
   cursor: pointer;
 }
 
-.emotion-4::-moz-focus-inner {
+.emotion-5::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-.emotion-4>div:focus {
+.emotion-5>div:focus {
   outline: none;
 }
 
-.emotion-4:focus>div {
+.emotion-5:focus>div {
   outline-color: Highlight;
   outline-width: thin;
 }
 
 @media (-webkit-min-device-pixel-ratio: 0) {
-  .emotion-4:focus>div {
+  .emotion-5:focus>div {
     outline-color: -webkit-focus-ring-color;
     outline-style: auto;
     outline-width: unset;
   }
 }
 
-.emotion-5 {
+.emotion-6 {
   vertical-align: middle;
   fill: red;
 }
 
-.emotion-5 use {
+.emotion-6 use {
   pointer-events: none;
 }
 
@@ -539,10 +514,10 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
         value=""
       />
       <span
-        class="emotion-3"
+        class="emotion-3 emotion-4"
       >
         <button
-          class="emotion-4"
+          class="emotion-5"
           type="button"
         >
           <div
@@ -550,7 +525,7 @@ exports[`TextInputWithIcon renders with colored button 1`] = `
           >
             <svg
               aria-label="system-close icon"
-              class="emotion-5"
+              class="emotion-6"
               data-cy="icon"
               height="16"
               preserveAspectRatio="xMinYMin meet"

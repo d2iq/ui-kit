@@ -8,13 +8,12 @@ import {
   getInputAppearanceStyle
 } from "../../shared/styles/formStyles";
 import { TextInputButtonProps } from "../../textInputButton/components/TextInputButton";
-import {
-  getIconStartContent,
-  getInputElement,
-  getInputElementProps as getBaseInputElementProps
-} from "./utils";
+import { getInputElementProps as getBaseInputElementProps } from "./shared/utils";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import InputLabel from "../../shared/components/InputLabel";
+import { IconStart } from "./shared/IconStart";
+import { Input } from "./shared/Input";
+import { TextInputButtons } from "./shared/TextInputButtons";
 
 export interface TextInputWithButtonsProps
   extends Omit<TextInputWithIconProps, "iconEnd"> {
@@ -75,78 +74,6 @@ const TextInputWithButtons = ({
     return inputProps;
   };
 
-  const getInputContent = () => {
-    const inputAppearance = getInputAppearance();
-
-    return (
-      <FormFieldWrapper
-        id={textInputWithButtonsId}
-        errors={props.errors}
-        hintContent={props.hintContent}
-      >
-        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
-          <>
-            <div
-              className={cx(
-                flex(),
-                padding("horiz", "s"),
-                inputContainer,
-                getInputAppearanceStyle(inputAppearance)
-              )}
-            >
-              {getIconStartContent(
-                {
-                  type,
-                  appearance,
-                  showInputLabel,
-                  ...props
-                },
-                // the icon takes on the color of the input appearance
-                getInputAppearance()
-              )}
-              {getInputElement(
-                [flexItem("grow"), padding("all", "none")],
-                isValid,
-                describedByIds,
-                {
-                  type,
-                  appearance,
-                  showInputLabel,
-                  ...props
-                },
-                getInputAppearance,
-                getInputElementProps
-              )}
-              {getButtons()}
-            </div>
-            {getHintContent}
-            {getValidationErrors}
-          </>
-        )}
-      </FormFieldWrapper>
-    );
-  };
-
-  const getButtons = () => {
-    if (!props.buttons.filter(Boolean)) {
-      return;
-    }
-
-    return props.buttons.map((button, i) => (
-      // TODO: consider making a component for this wrapper span
-      <span
-        className={cx(
-          flex({ align: "center", justify: "center" }),
-          flexItem("shrink"),
-          { [padding("left", "s")]: i !== 0 }
-        )}
-        key={(React.isValidElement(button) && button.key) || i}
-      >
-        {button}
-      </span>
-    ));
-  };
-
   const containerProps: { className?: string } = {};
   const calculatedAppearance = getInputAppearance();
   const dataCy = `textInput textInput.${calculatedAppearance}`;
@@ -166,7 +93,45 @@ const TextInputWithButtons = ({
       >
         {props.inputLabel}
       </InputLabel>
-      {getInputContent()}
+      <FormFieldWrapper
+        id={textInputWithButtonsId}
+        errors={props.errors}
+        hintContent={props.hintContent}
+      >
+        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
+          <>
+            <div
+              className={cx(
+                flex(),
+                padding("horiz", "s"),
+                inputContainer,
+                getInputAppearanceStyle(calculatedAppearance)
+              )}
+            >
+              <IconStart
+                iconStart={props.iconStart}
+                appearance={calculatedAppearance}
+              />
+              <Input
+                additionalClasses={[flexItem("grow"), padding("all", "none")]}
+                isValid={isValid}
+                describedBy={describedByIds}
+                textInputProps={{
+                  type,
+                  appearance,
+                  showInputLabel,
+                  ...props
+                }}
+                getInputAppearance={getInputAppearance}
+                getInputElementProps={getInputElementProps}
+              />
+              <TextInputButtons buttons={props.buttons} />
+            </div>
+            {getHintContent}
+            {getValidationErrors}
+          </>
+        )}
+      </FormFieldWrapper>
     </div>
   );
 };

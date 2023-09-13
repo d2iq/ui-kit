@@ -8,14 +8,12 @@ import { flex, flexItem, padding } from "../../shared/styles/styleUtils";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import { IconShapes } from "../../icon/components/Icon";
-import {
-  getIconEndContent,
-  getIconStartContent,
-  getInputElement,
-  getInputElementProps as getBaseInputElementProps
-} from "./utils";
+import { getInputElementProps as getBaseInputElementProps } from "./shared/utils";
 import { cx } from "@emotion/css";
 import InputLabel from "../../shared/components/InputLabel";
+import { Input } from "./shared/Input";
+import { IconStart } from "./shared/IconStart";
+import { IconEnd } from "./shared/IconEnd";
 
 export interface TextInputWithIconProps extends TextInputProps {
   /**
@@ -61,44 +59,6 @@ const TextInputWithIcon = ({
     return inputProps;
   };
 
-  const getInputContent = () => {
-    const inputAppearance = getInputAppearance();
-    return (
-      <FormFieldWrapper
-        id={textInputWithIconId}
-        errors={props.errors}
-        hintContent={props.hintContent}
-      >
-        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
-          <div>
-            <div
-              className={cx(
-                flex(),
-                padding("left", "s"),
-                padding("right", "s"),
-                inputContainer,
-                getInputAppearanceStyle(inputAppearance)
-              )}
-            >
-              {getIconStartContent(props, getInputAppearance())}
-              {getInputElement(
-                [flexItem("grow"), padding("all", "none")],
-                isValid,
-                describedByIds,
-                props,
-                getInputAppearance,
-                getInputElementProps
-              )}
-              {getIconEndContent(props, getInputAppearance())}
-            </div>
-            {getHintContent}
-            {getValidationErrors}
-          </div>
-        )}
-      </FormFieldWrapper>
-    );
-  };
-
   const inputOnFocus = e => {
     setHasFocus(true);
 
@@ -134,7 +94,44 @@ const TextInputWithIcon = ({
       >
         {props.inputLabel}
       </InputLabel>
-      {getInputContent()}
+      <FormFieldWrapper
+        id={textInputWithIconId}
+        errors={props.errors}
+        hintContent={props.hintContent}
+      >
+        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
+          <div>
+            <div
+              className={cx(
+                flex(),
+                padding("left", "s"),
+                padding("right", "s"),
+                inputContainer,
+                getInputAppearanceStyle(calculatedAppearance)
+              )}
+            >
+              <IconStart
+                iconStart={props.iconStart}
+                appearance={calculatedAppearance}
+              />
+              <Input
+                additionalClasses={[flexItem("grow"), padding("all", "none")]}
+                isValid={isValid}
+                describedBy={describedByIds}
+                textInputProps={props}
+                getInputAppearance={getInputAppearance}
+                getInputElementProps={getInputElementProps}
+              />
+              <IconEnd
+                iconEnd={props.iconEnd}
+                appearance={calculatedAppearance}
+              />
+            </div>
+            {getHintContent}
+            {getValidationErrors}
+          </div>
+        )}
+      </FormFieldWrapper>
     </div>
   );
 };

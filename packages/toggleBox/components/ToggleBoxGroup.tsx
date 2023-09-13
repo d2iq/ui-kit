@@ -97,7 +97,7 @@ const ToggleBoxGroup = ({
 
           return (
             <FlexItem
-              key={`buttonWrapper-${childProps.id}`}
+              key={`TextInputButtons-${childProps.id}`}
               className={toggleBoxGroupItem}
             >
               {React.isValidElement(toggleBox)
