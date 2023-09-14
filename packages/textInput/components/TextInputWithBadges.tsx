@@ -21,14 +21,11 @@ import { TextInputWithIconProps } from "./TextInputWithIcon";
 import { BadgeAppearance } from "../../badge/components/badge";
 import { StateChangeOptions } from "downshift";
 import { InputAppearance } from "../../shared/types/inputAppearance";
-import {
-  getIconEndContent,
-  getIconStartContent,
-  getId,
-  getInputElement,
-  getInputElementProps as getBaseInputElementProps
-} from "./utils";
-import { renderLabel } from "../../utilities/label";
+import { getInputElementProps as getBaseInputElementProps } from "./shared/utils";
+import InputLabel from "../../shared/components/InputLabel";
+import { IconEnd } from "./shared/IconEnd";
+import { IconStart } from "./shared/IconStart";
+import { Input } from "./shared/Input";
 
 export interface BadgeDatum {
   value: string;
@@ -65,6 +62,9 @@ const TextInputWithBadges = ({
 }: TextInputWithBadgesProps) => {
   const inputRef = React.createRef<HTMLInputElement>();
   const [hasFocus, setHasFocus] = React.useState(false);
+  const generatedId = `textInput-${React.useId()}`;
+  const textInputWithBadgesId = props.id || generatedId;
+  const { hintContent, badgeAppearance = "primary" } = props;
 
   const inputOnFocus = e => {
     setHasFocus(true);
@@ -114,76 +114,6 @@ const TextInputWithBadges = ({
       return `${appearance}-focus`;
     }
     return appearance;
-  };
-
-  const getInputContent = () => {
-    const inputAppearance = getInputAppearance();
-    const { hintContent, badgeAppearance = "primary" } = props;
-
-    return (
-      <FormFieldWrapper
-        // TODO: figure out how to get rid of this non-null assertion
-        // If we stop generating an `id` prop in the TextInput component,
-        // it would be possible for `this.props.id` to be undefined
-        id={props.id!}
-        errors={props.errors}
-        hintContent={hintContent}
-      >
-        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
-          <>
-            <div
-              className={cx(
-                flex({ wrap: "wrap" }),
-                inputContainer,
-                badgeInputContainer,
-                getInputAppearanceStyle(inputAppearance)
-              )}
-            >
-              {getIconStartContent(props, getInputAppearance())}
-              {props.badges &&
-                props.badges.map(badge => {
-                  return (
-                    <span
-                      className={badgeInputContents}
-                      key={`${badge.value}-badgeWrapper`}
-                    >
-                      <Badge appearance={badgeAppearance}>
-                        <Flex align="center" gutterSize="xxs">
-                          <FlexItem>
-                            <div className={cx(textTruncate, badgeText)}>
-                              {typeof badge.label === "string"
-                                ? badge.label.replace(/\s/g, "\u00a0")
-                                : badge.label}
-                            </div>
-                          </FlexItem>
-                          <FlexItem flex="shrink">
-                            <Clickable action={onBadgeClose.bind(this, badge)}>
-                              <span>
-                                <Icon shape={SystemIcons.Close} size="xxs" />
-                              </span>
-                            </Clickable>
-                          </FlexItem>
-                        </Flex>
-                      </Badge>
-                    </span>
-                  );
-                })}
-              {getInputElement(
-                [badgeInput, badgeInputContents, flexItem("grow")],
-                isValid,
-                describedByIds,
-                props,
-                getInputAppearance,
-                getInputElementProps
-              )}
-              {getIconEndContent(props, getInputAppearance())}
-            </div>
-            {getHintContent}
-            {getValidationErrors}
-          </>
-        )}
-      </FormFieldWrapper>
-    );
   };
 
   const handleTagDelete = (tagToDelete: BadgeDatum) => {
@@ -258,15 +188,84 @@ const TextInputWithBadges = ({
   }
   return (
     <div {...containerProps} data-cy={dataCy}>
-      {renderLabel({
-        appearance: calculatedAppearance,
-        hidden: !showInputLabel,
-        id: getId(props),
-        label: props.inputLabel,
-        required: props.required,
-        tooltipContent: props.tooltipContent
-      })}
-      {getInputContent()}
+      <InputLabel
+        appearance={calculatedAppearance}
+        hidden={!showInputLabel}
+        id={textInputWithBadgesId}
+        required={props.required}
+        tooltipContent={props.tooltipContent}
+      >
+        {props.inputLabel}
+      </InputLabel>
+      <FormFieldWrapper
+        id={textInputWithBadgesId}
+        errors={props.errors}
+        hintContent={hintContent}
+      >
+        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
+          <>
+            <div
+              className={cx(
+                flex({ wrap: "wrap" }),
+                inputContainer,
+                badgeInputContainer,
+                getInputAppearanceStyle(calculatedAppearance)
+              )}
+            >
+              <IconStart
+                iconStart={props.iconStart}
+                appearance={calculatedAppearance}
+              />
+              {props.badges &&
+                props.badges.map(badge => {
+                  return (
+                    <span
+                      className={badgeInputContents}
+                      key={`${badge.value}-badgeWrapper`}
+                    >
+                      <Badge appearance={badgeAppearance}>
+                        <Flex align="center" gutterSize="xxs">
+                          <FlexItem>
+                            <div className={cx(textTruncate, badgeText)}>
+                              {typeof badge.label === "string"
+                                ? badge.label.replace(/\s/g, "\u00a0")
+                                : badge.label}
+                            </div>
+                          </FlexItem>
+                          <FlexItem flex="shrink">
+                            <Clickable action={onBadgeClose.bind(this, badge)}>
+                              <span>
+                                <Icon shape={SystemIcons.Close} size="xxs" />
+                              </span>
+                            </Clickable>
+                          </FlexItem>
+                        </Flex>
+                      </Badge>
+                    </span>
+                  );
+                })}
+              <Input
+                additionalClasses={[
+                  badgeInput,
+                  badgeInputContents,
+                  flexItem("grow")
+                ]}
+                isValid={isValid}
+                describedBy={describedByIds}
+                textInputProps={props}
+                getInputAppearance={getInputAppearance}
+                getInputElementProps={getInputElementProps}
+              />
+              <IconEnd
+                iconEnd={props.iconEnd}
+                appearance={calculatedAppearance}
+              />
+            </div>
+            {getHintContent}
+            {getValidationErrors}
+          </>
+        )}
+      </FormFieldWrapper>
     </div>
   );
 };

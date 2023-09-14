@@ -56,7 +56,6 @@
     "downshift": "^7.6.0",
     "react-detect-click-outside": "^1.1.7",
     "react-focus-lock": "^2.9.5",
-    "react-id-generator": "^3.0.2",
     "react-popper": "^2.3.0",
     "react-tabs": "^6.0.2",
     "react-transition-group": "^4.4.5",

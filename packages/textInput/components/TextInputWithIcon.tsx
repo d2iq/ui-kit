@@ -8,15 +8,12 @@ import { flex, flexItem, padding } from "../../shared/styles/styleUtils";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import { IconShapes } from "../../icon/components/Icon";
-import {
-  getIconEndContent,
-  getIconStartContent,
-  getId,
-  getInputElement,
-  getInputElementProps as getBaseInputElementProps
-} from "./utils";
-import { renderLabel } from "../../utilities/label";
+import { getInputElementProps as getBaseInputElementProps } from "./shared/utils";
 import { cx } from "@emotion/css";
+import InputLabel from "../../shared/components/InputLabel";
+import { Input } from "./shared/Input";
+import { IconStart } from "./shared/IconStart";
+import { IconEnd } from "./shared/IconEnd";
 
 export interface TextInputWithIconProps extends TextInputProps {
   /**
@@ -40,6 +37,8 @@ const TextInputWithIcon = ({
   ...props
 }: TextInputWithIconProps) => {
   const [hasFocus, setHasFocus] = React.useState(false);
+  const generatedId = `textInput-${React.useId()}`;
+  const textInputWithIconId = props.id || generatedId;
 
   const getInputAppearance = (): string => {
     if (props.disabled) {
@@ -58,47 +57,6 @@ const TextInputWithIcon = ({
     inputProps.onFocus = inputOnFocus;
     inputProps.onBlur = inputOnBlur;
     return inputProps;
-  };
-
-  const getInputContent = () => {
-    const inputAppearance = getInputAppearance();
-    return (
-      <FormFieldWrapper
-        // TODO: figure out how to get rid of this non-null assertion
-        // If we stop generating an `id` prop in the TextInput component,
-        // it would be possible for `this.props.id` to be undefined
-        id={props.id!}
-        errors={props.errors}
-        hintContent={props.hintContent}
-      >
-        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
-          <div>
-            <div
-              className={cx(
-                flex(),
-                padding("left", "s"),
-                padding("right", "s"),
-                inputContainer,
-                getInputAppearanceStyle(inputAppearance)
-              )}
-            >
-              {getIconStartContent(props, getInputAppearance())}
-              {getInputElement(
-                [flexItem("grow"), padding("all", "none")],
-                isValid,
-                describedByIds,
-                props,
-                getInputAppearance,
-                getInputElementProps
-              )}
-              {getIconEndContent(props, getInputAppearance())}
-            </div>
-            {getHintContent}
-            {getValidationErrors}
-          </div>
-        )}
-      </FormFieldWrapper>
-    );
   };
 
   const inputOnFocus = e => {
@@ -124,17 +82,56 @@ const TextInputWithIcon = ({
   if (props.className) {
     containerProps.className = props.className;
   }
+
   return (
     <div {...containerProps} data-cy={dataCy}>
-      {renderLabel({
-        appearance: calculatedAppearance,
-        hidden: !showInputLabel,
-        id: getId(props),
-        label: props.inputLabel,
-        required: props.required,
-        tooltipContent: props.tooltipContent
-      })}
-      {getInputContent()}
+      <InputLabel
+        appearance={calculatedAppearance}
+        hidden={!showInputLabel}
+        id={textInputWithIconId}
+        required={props.required}
+        tooltipContent={props.tooltipContent}
+      >
+        {props.inputLabel}
+      </InputLabel>
+      <FormFieldWrapper
+        id={textInputWithIconId}
+        errors={props.errors}
+        hintContent={props.hintContent}
+      >
+        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
+          <div>
+            <div
+              className={cx(
+                flex(),
+                padding("left", "s"),
+                padding("right", "s"),
+                inputContainer,
+                getInputAppearanceStyle(calculatedAppearance)
+              )}
+            >
+              <IconStart
+                iconStart={props.iconStart}
+                appearance={calculatedAppearance}
+              />
+              <Input
+                additionalClasses={[flexItem("grow"), padding("all", "none")]}
+                isValid={isValid}
+                describedBy={describedByIds}
+                textInputProps={props}
+                getInputAppearance={getInputAppearance}
+                getInputElementProps={getInputElementProps}
+              />
+              <IconEnd
+                iconEnd={props.iconEnd}
+                appearance={calculatedAppearance}
+              />
+            </div>
+            {getHintContent}
+            {getValidationErrors}
+          </div>
+        )}
+      </FormFieldWrapper>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
-import nextId from "react-id-generator";
 import { ToggleBoxProps } from "./ToggleBox";
 import { Flex, FlexItem } from "../../styleUtils/layout";
 import { BreakpointConfig } from "../../shared/styles/breakpoints";
@@ -63,12 +62,14 @@ const ToggleBoxGroup = ({
   className,
   direction = "row",
   gutterSize = "m",
-  id = nextId("toggleBoxGroup-"),
+  id,
   label,
   multiSelect,
   onChange,
   selectedItems = []
 }: ToggleBoxGroupProps) => {
+  const generatedId = `toggleBoxGroup-${React.useId()}`;
+  const toggleBoxGroupId = id || generatedId;
   const getSelectedItems = (value: string, checked: boolean) => {
     if (checked) {
       return multiSelect ? [...selectedItems, value] : [value];
@@ -96,12 +97,12 @@ const ToggleBoxGroup = ({
 
           return (
             <FlexItem
-              key={`buttonWrapper-${childProps.id}`}
+              key={`TextInputButtons-${childProps.id}`}
               className={toggleBoxGroupItem}
             >
               {React.isValidElement(toggleBox)
                 ? React.cloneElement(toggleBox, {
-                    name: multiSelect ? name : name || id,
+                    name: multiSelect ? name : name || toggleBoxGroupId,
                     type: multiSelect ? "checkbox" : "radio",
                     onChange: handleChange,
                     isActive: selectedItems.includes(value),

@@ -1,5 +1,4 @@
 import * as React from "react";
-import nextId from "react-id-generator";
 
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import {
@@ -9,12 +8,9 @@ import {
 import { padding } from "../../shared/styles/styleUtils";
 import { flex, flexItem } from "../../shared/styles/styleUtils/layout/flexbox";
 import { InputAppearance } from "../../shared/types/inputAppearance";
-import { renderLabel } from "../../utilities/label";
-import {
-  getInputAppearance,
-  getInputElement,
-  getInputElementProps
-} from "./utils";
+import { getInputAppearance, getInputElementProps } from "./shared/utils";
+import InputLabel from "../../shared/components/InputLabel";
+import { Input } from "./shared/Input";
 
 export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   /**
@@ -53,65 +49,8 @@ const TextInput = ({
   showInputLabel = true,
   ...props
 }: TextInputProps) => {
-  const placeholderId = nextId("textInput-");
-
-  const getInputContent = (): React.ReactNode => {
-    const calculatedAppearance = getInputAppearance({
-      appearance,
-      type,
-      showInputLabel,
-      ...props
-    });
-
-    return (
-      <FormFieldWrapper
-        id={getId()}
-        errors={props.errors}
-        hintContent={props.hintContent}
-      >
-        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
-          <div>
-            <div className={flex()}>
-              {getInputElement(
-                [
-                  padding("horiz", "m"),
-                  flexItem("grow"),
-                  inputContainer,
-                  getInputAppearanceStyle(
-                    getInputAppearance({
-                      appearance,
-                      type,
-                      showInputLabel,
-                      ...props
-                    })
-                  )
-                ],
-                isValid,
-                describedByIds,
-                { appearance, type, showInputLabel, ...props },
-                getInputAppearance,
-                getInputElementProps
-              )}
-            </div>
-            <div data-cy="textInput-hintContent">
-              {getHintContent}
-              {calculatedAppearance === InputAppearance.Error &&
-                getValidationErrors}
-            </div>
-          </div>
-        )}
-      </FormFieldWrapper>
-    );
-  };
-
-  const getId = (): string => {
-    if (typeof props.id === "string") {
-      return props.id;
-    }
-
-    return placeholderId;
-  };
-
+  const generatedId = `textInput-${React.useId()}`;
+  const textInputId = props.id || generatedId;
   const containerProps: { className?: string } = {};
   const calculatedAppearance = getInputAppearance({
     appearance,
@@ -126,15 +65,57 @@ const TextInput = ({
   }
   return (
     <div {...containerProps} data-cy={dataCy}>
-      {renderLabel({
-        appearance: calculatedAppearance,
-        hidden: !showInputLabel,
-        id: getId(),
-        label: props.inputLabel,
-        required: props.required,
-        tooltipContent: props.tooltipContent
-      })}
-      {getInputContent()}
+      <InputLabel
+        appearance={calculatedAppearance}
+        hidden={!showInputLabel}
+        id={textInputId}
+        required={props.required}
+        tooltipContent={props.tooltipContent}
+      >
+        {props.inputLabel}
+      </InputLabel>
+      <FormFieldWrapper
+        id={textInputId}
+        errors={props.errors}
+        hintContent={props.hintContent}
+      >
+        {({ getValidationErrors, getHintContent, isValid, describedByIds }) => (
+          <div>
+            <div className={flex()}>
+              <Input
+                additionalClasses={[
+                  padding("horiz", "m"),
+                  flexItem("grow"),
+                  inputContainer,
+                  getInputAppearanceStyle(
+                    getInputAppearance({
+                      appearance,
+                      type,
+                      showInputLabel,
+                      ...props
+                    })
+                  )
+                ]}
+                isValid={isValid}
+                describedBy={describedByIds}
+                textInputProps={{
+                  appearance,
+                  type,
+                  showInputLabel,
+                  ...props
+                }}
+                getInputAppearance={getInputAppearance}
+                getInputElementProps={getInputElementProps}
+              />
+            </div>
+            <div data-cy="textInput-hintContent">
+              {getHintContent}
+              {calculatedAppearance === InputAppearance.Error &&
+                getValidationErrors}
+            </div>
+          </div>
+        )}
+      </FormFieldWrapper>
     </div>
   );
 };

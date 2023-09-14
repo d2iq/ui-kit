@@ -46,7 +46,7 @@ exports[`Popover renders a closed dropdown 1`] = `
     <div>
       <button
         aria-expanded="false"
-        aria-owns="dropdown1"
+        aria-owns="dropdown-:r0:"
         class="emotion-1"
         type="button"
       >
@@ -107,7 +107,7 @@ exports[`Popover renders a dropdown with a max width and max height 1`] = `
     <div>
       <button
         aria-expanded="false"
-        aria-owns="dropdown3"
+        aria-owns="dropdown-:r2:"
         class="emotion-1"
         type="button"
       >
@@ -168,7 +168,7 @@ exports[`Popover renders an open dropdown 1`] = `
     <div>
       <button
         aria-expanded="true"
-        aria-owns="dropdown2"
+        aria-owns="dropdown-:r1:"
         class="emotion-1"
         type="button"
       >

@@ -1,6 +1,5 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
-import nextId from "react-id-generator";
 import {
   segmentedControlButton,
   segmentedControlButtonActive,
@@ -51,7 +50,7 @@ const SegmentedControlLabel = React.forwardRef(
   (
     {
       className,
-      id = nextId("segmentedControlButton-"),
+      id,
       isActive,
       onChange,
       name,
@@ -62,6 +61,8 @@ const SegmentedControlLabel = React.forwardRef(
     }: SegmentedControlButtonProps,
     ref
   ) => {
+    const generatedId = `segmentedControlButton-${React.useId()}`;
+    const segmentedControlLabelId = id || generatedId;
     return (
       <label
         className={cx(
@@ -72,12 +73,12 @@ const SegmentedControlLabel = React.forwardRef(
           className
         )}
         data-cy={dataCy}
-        htmlFor={id}
+        htmlFor={segmentedControlLabelId}
         ref={ref as React.ForwardedRef<HTMLLabelElement>}
       >
         <input
           className={visuallyHidden}
-          id={id}
+          id={segmentedControlLabelId}
           type="radio"
           name={name}
           value={value}
@@ -86,7 +87,7 @@ const SegmentedControlLabel = React.forwardRef(
         />
         {tooltipContent ? (
           <Tooltip
-            id={`${id}-tooltip`}
+            id={`${segmentedControlLabelId}-tooltip`}
             trigger={
               <div className={segmentedControlButtonInner}>{children}</div>
             }
