@@ -2,8 +2,8 @@ import * as React from "react";
 import { StoryFn, Meta } from "@storybook/react";
 import { RadioInput } from "./";
 
-import RadioInputStoryHelper from "./RadioInputStoryHelper";
 import { InputStoryWrapper } from "../../decorators/inputStoryWrapper";
+import { RadioInputProps } from "./RadioInput";
 
 export default {
   title: "Forms/RadioInput",
@@ -30,21 +30,25 @@ export default {
   }
 } as Meta;
 
-const Template: StoryFn = args => (
-  <RadioInputStoryHelper>
-    {({ changeHandler, checkedValue }) => (
-      <RadioInput
-        id="default"
-        inputLabel="Default"
-        value="default"
-        name="defaultRadioGroup"
-        onChange={changeHandler}
-        checked={checkedValue === "default"}
-        {...args}
-      />
-    )}
-  </RadioInputStoryHelper>
-);
+const Template: StoryFn = args => {
+  const [checkedValue, setCheckedValue] = React.useState<string>();
+
+  const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCheckedValue(event.target.value);
+  };
+
+  return (
+    <RadioInput
+      id="default"
+      inputLabel="Default"
+      value="default"
+      name="defaultRadioGroup"
+      onChange={changeHandler}
+      checked={checkedValue === "default"}
+      {...args}
+    />
+  );
+};
 
 export const Default = {
   render: Template
