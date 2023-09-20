@@ -37,16 +37,14 @@ export default {
     }
   },
   args: {
-    appearance: "standard",
-    inputLabel: "Default Input Label",
-    iconStart: SystemIcons.TriangleDown
+    inputLabel: "Default Input Label"
   }
 } as Meta;
 
 const Template: StoryFn = args => (
   <TextInputWithIcon
     id="standard.input"
-    iconStart={SystemIcons.TriangleDown}
+    iconStart={SystemIcons.Search}
     {...args}
   />
 );
