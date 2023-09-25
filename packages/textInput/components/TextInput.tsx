@@ -110,7 +110,7 @@ const TextInput = ({
             </div>
             <div data-cy="textInput-hintContent">
               {getHintContent}
-              {calculatedAppearance === InputAppearance.Error &&
+              {calculatedAppearance === InputAppearance.Error.toString() &&
                 getValidationErrors}
             </div>
           </div>

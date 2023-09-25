@@ -18,15 +18,12 @@ const config: StorybookConfig = {
     "../packages/**/*.stories.@(tsx|mdx)"
   ],
   // Optional
-  addons: [
-    {
-      name: "@storybook/addon-essentials",
-      options: {
-        actions: false
-      }
-    },
-    "@storybook/addon-a11y"
-  ],
+  addons: [{
+    name: "@storybook/addon-essentials",
+    options: {
+      actions: false
+    }
+  }, "@storybook/addon-a11y", "@storybook/addon-mdx-gfm"],
   docs: {
     autodocs: true
   },
