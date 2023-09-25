@@ -1,0 +1,74 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import styled from "@emotion/styled";
+import {
+  spaceXxs,
+  spaceXs,
+  spaceS,
+  spaceM,
+  spaceL,
+  spaceXl,
+  spaceXxl,
+  themeBrandPrimary,
+  themeBorder,
+  borderRadiusDefault
+} from "../../../packages/design-tokens/build/js/designTokens";
+
+export const spacingSizes = [
+  { name: "spaceXxs", value: spaceXxs },
+  { name: "spaceXs", value: spaceXs },
+  { name: "spaceS", value: spaceS },
+  { name: "spaceM", value: spaceM },
+  { name: "spaceL", value: spaceL },
+  { name: "spaceXl", value: spaceXl },
+  { name: "spaceXxl", value: spaceXxl }
+];
+
+export const SpacingTable = styled.table`
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: ${borderRadiusDefault};
+  overflow: hidden;
+`;
+
+export const SpacingRow = styled.tr`
+  border-bottom: 1px solid ${themeBorder};
+`;
+
+export const SpacingCell = styled.td`
+  padding: ${spaceS};
+  color: ${themeBrandPrimary};
+  text-align: center;
+`;
+
+export const SizeExample = styled.div`
+  width: ${props => props.size};
+  height: ${props => props.size};
+  background-color: ${themeBrandPrimary};
+  border-radius: ${borderRadiusDefault};
+  margin: 0 auto;
+`;
+
+<Meta title="DesignTokens/Spacing" />
+
+# Spacing
+
+<SpacingTable>
+  <thead>
+    <tr>
+      <th>Design Token</th>
+      <th>Value</th>
+      <th>Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    {spacingSizes.map((item, index) => (
+      <SpacingRow key={index}>
+        <SpacingCell>{item.name}</SpacingCell>
+        <SpacingCell>{item.value}</SpacingCell>
+        <SpacingCell>
+          <SizeExample size={item.value} />
+        </SpacingCell>
+      </SpacingRow>
+    ))}
+  </tbody>
+</SpacingTable>
