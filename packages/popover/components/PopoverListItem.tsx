@@ -127,7 +127,8 @@ const PopoverListItem = (props: PopoverListItemProps) => {
           [menuListItemDisabled]: other.disabled,
           [margin("top", "xs")]: index === 0,
           [margin("bottom", "xs")]: index === listLength - 1,
-          [tintContent(themeError)]: appearance === "danger"
+          [tintContent(themeError)]:
+            appearance === PopoverListItemAppearances.DANGER
         }
       )}
       data-cy={dataCy}

@@ -34,7 +34,8 @@ export const Input = ({
 
   const dataCy = [
     "textInput-input",
-    ...(textInputAppearance && textInputAppearance !== InputAppearance.Standard
+    ...(textInputAppearance &&
+    textInputAppearance !== InputAppearance.Standard.toString()
       ? [`textInput-input.${textInputAppearance}`]
       : [])
   ].join(" ");
