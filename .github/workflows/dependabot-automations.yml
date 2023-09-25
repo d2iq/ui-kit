@@ -1,0 +1,47 @@
+name: Dependabot Automation
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+permissions:
+  pull-requests: write
+  contents: write
+  issues: write
+
+env:
+  PR_URL: ${{github.event.pull_request.html_url}}
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  auto-approve:
+    runs-on:
+      - self-hosted
+      - small
+    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install GH CLI
+        uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
+      - name: Approve a PR if not already approved
+        id: auto_approve
+        run: |
+          gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
+          if [ "$(gh pr status --json reviewDecision -q .currentBranch.reviewDecision)" != "APPROVED" ];
+          then gh pr review --approve "$PR_URL"
+          else echo "PR already approved.";
+          fi
+
+  auto-merge:
+    runs-on:
+      - self-hosted
+      - small
+    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
+    steps:
+      - name: Install GH CLI
+        uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
+      - name: Auto-merge PR
+        run: gh pr merge --auto --squash "$PR_URL"
