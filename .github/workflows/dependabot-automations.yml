@@ -4,26 +4,24 @@ on:
   pull_request_target:
     types:
       - opened
-      - reopened
       - synchronize
 
 permissions:
   pull-requests: write
   contents: write
-  issues: write
 
 env:
-  PR_URL: ${{github.event.pull_request.html_url}}
+  PR_URL: ${{ github.event.pull_request.html_url }}
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  auto-approve:
-    runs-on:
-      - self-hosted
-      - small
-    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
+  auto-approve-merge:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Install GH CLI
         uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
       - name: Approve a PR if not already approved
@@ -35,13 +33,10 @@ jobs:
           else echo "PR already approved.";
           fi
 
-  auto-merge:
-    runs-on:
-      - self-hosted
-      - small
-    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
-    steps:
-      - name: Install GH CLI
-        uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
       - name: Auto-merge PR
-        run: gh pr merge --auto --squash "$PR_URL"
+      if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
+      steps:
+        - name: Install GH CLI
+          uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
+        - name: Auto-merge PR
+          run: gh pr merge --auto --squash "$PR_URL"
