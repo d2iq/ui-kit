@@ -8,43 +8,103 @@ import {
   fontSizeL,
   fontSizeXl,
   fontWeightNormal,
-  fontWeightMedium
+  fontWeightMedium,
+  themeTextColorPrimary,
+  themeTextColorSecondary,
+  themeTextColorDisabled,
+  themeTextColorInteractive,
+  themeError,
+  themeWarning,
+  themeSuccess
 } from "../../../packages/design-tokens/build/js/designTokens";
 import {
   HeadingText1,
   HeadingText2,
-  HeadingText3
+  HeadingText3,
+  Text
 } from "../../../packages/styleUtils/typography/index";
+
+export const typography = {
+  type: {
+    primary: fontFamilySansSerif,
+    monospace: fontFamilyMonospace
+  },
+  weight: {
+    regular: "400",
+    medium: "500"
+  },
+  size: {
+    fontSizeS,
+    fontSizeM,
+    fontSizeL,
+    fontSizeXl
+  }
+};
+
+export const SampleText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
 <Meta title="DesignTokens/Typography" />
 
 # Typography
 
-<div>
-  <h2>Font Sizes</h2>
-  <Typeset
-    fontSizes={[fontSizeS, fontSizeM, fontSizeL, fontSizeXl]}
-    fontFamily={fontFamilySansSerif}
-    fontWeight={fontWeightNormal}
-    sampleText="The quick brown fox jumps over the lazy dog"
-  />
-  <h2>Medium Font Weight</h2>
-  <Typeset
-    fontSizes={[fontSizeS, fontSizeM, fontSizeL, fontSizeXl]}
-    fontFamily={fontFamilySansSerif}
-    fontWeight={fontWeightMedium}
-    sampleText="The quick brown fox jumps over the lazy dog"
-  />
-  <h2>Monospace Font</h2>
-  <Typeset
-    fontSizes={[fontSizeS, fontSizeM, fontSizeL, fontSizeXl]}
-    fontFamily={fontFamilyMonospace}
-    sampleText="The quick brown fox jumps over the lazy dog"
-  />
-  <h2>Heading Text</h2>
-  <Unstyled>
-    <HeadingText1>Heading Text 1</HeadingText1>
-    <HeadingText2>Heading Text 2</HeadingText2>
-    <HeadingText3>Heading Text 3</HeadingText3>
-  </Unstyled>
-</div>
+## Font Sizes
+
+<Typeset
+  fontSizes={[
+    typography.size.fontSizeS,
+    typography.size.fontSizeM,
+    typography.size.fontSizeL,
+    typography.size.fontSizeXl
+  ]}
+  fontWeight={typography.weight.normal}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+## Medium Font Weight
+
+<Typeset
+  fontSizes={[
+    typography.size.fontSizeS,
+    typography.size.fontSizeM,
+    typography.size.fontSizeL,
+    typography.size.fontSizeXl
+  ]}
+  fontWeight={typography.weight.medium}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+## Monospace Font Family
+
+<Typeset
+  fontSizes={[
+    typography.size.fontSizeS,
+    typography.size.fontSizeM,
+    typography.size.fontSizeL,
+    typography.size.fontSizeXl
+  ]}
+  sampleText={SampleText}
+  fontFamily={typography.type.monospace}
+/>
+
+## Heading Text Levels
+
+<Unstyled>
+  <HeadingText1>Heading Text 1</HeadingText1>
+  <HeadingText2>Heading Text 2</HeadingText2>
+  <HeadingText3>Heading Text 3</HeadingText3>
+</Unstyled>
+
+## Text Colors
+
+<Unstyled>
+  <Text color={themeTextColorPrimary}>Primary</Text>
+  <Text color={themeTextColorSecondary}>Secondary</Text>
+  <Text color={themeTextColorInteractive}>Interactive</Text>
+  <Text color={themeTextColorDisabled}>Disabled</Text>
+  <Text color={themeSuccess}>Success</Text>
+  <Text color={themeWarning}>Warning</Text>
+  <Text color={themeError}>Error</Text>
+</Unstyled>
