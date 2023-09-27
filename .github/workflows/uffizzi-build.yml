@@ -20,7 +20,7 @@ jobs:
         run: echo "UUID_TAG_APP=$(uuidgen)" >> $GITHUB_ENV
       - name: Docker metadata
         id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: registry.uffizzi.com/${{ env.UUID_TAG_APP }}
           tags: type=raw,value=60d
