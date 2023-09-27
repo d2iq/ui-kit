@@ -124,7 +124,7 @@
     "jest-runner-prettier": "^1.0.0",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.1",
-    "semantic-release": "^21.1.1",
+    "semantic-release": "^22.0.5",
     "storybook": "^7.4.5",
     "style-dictionary": "^3.8.0",
     "svg-inline-loader": "^0.8.2",
