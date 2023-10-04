@@ -11,7 +11,6 @@ import {
   LargeDialogModalWithFooter,
   FullscreenModal
 } from "../../index";
-import ModalStoryContainer from "./helpers/ModalStoryContainer";
 import { ModalContent, BorderedModalContent } from "./helpers/modalContents";
 import PrimaryButton from "../../button/components/PrimaryButton";
 import {
@@ -66,21 +65,28 @@ export default {
   }
 } as Meta;
 
-export const _DialogModal = {
-  render: args => (
-    <ModalStoryContainer>
-      {({ isOpen, onClose }) => (
-        <DialogModal
-          isOpen={isOpen}
-          onClose={onClose}
-          title="I am modal"
-          {...args}
-        >
-          <ModalContent />
-        </DialogModal>
-      )}
-    </ModalStoryContainer>
-  )
+export const _DialogModal = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
+
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <DialogModal
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        {...args}
+      >
+        <ModalContent />
+      </DialogModal>
+    </div>
+  );
 };
 
 const confirmIcon = {
@@ -88,321 +94,375 @@ const confirmIcon = {
   color: blue
 };
 
-export const DialogModalWithIcon = {
-  render: args => (
-    <ModalStoryContainer>
-      {({ isOpen, onClose }) => (
-        <DialogModal
-          isOpen={isOpen}
-          onClose={onClose}
-          title="Info: Lorem Ipsum"
-          icon={confirmIcon}
-          {...args}
-        >
-          <ModalContent />
-        </DialogModal>
-      )}
-    </ModalStoryContainer>
-  )
+export const DialogModalWithIcon = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <DialogModal
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="Info: Lorem Ipsum"
+        icon={confirmIcon}
+        {...args}
+      >
+        <ModalContent />
+      </DialogModal>
+    </div>
+  );
 };
 
-export const _SmallDialogModal = {
-  render: args => (
-    <ModalStoryContainer>
-      {({ isOpen, onClose }) => (
-        <SmallDialogModal
-          isOpen={isOpen}
-          onClose={onClose}
-          title="I am modal"
-          {...args}
-        >
-          <ModalContent />
-        </SmallDialogModal>
-      )}
-    </ModalStoryContainer>
-  )
+export const _SmallDialogModal = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
+
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <SmallDialogModal
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        {...args}
+      >
+        <ModalContent />
+      </SmallDialogModal>
+    </div>
+  );
 };
 
-export const _LargeDialogModal = {
-  render: args => (
-    <ModalStoryContainer>
-      {({ isOpen, onClose }) => (
-        <LargeDialogModal
-          isOpen={isOpen}
-          onClose={onClose}
-          title="I am modal"
-          {...args}
-        >
-          <ModalContent />
-        </LargeDialogModal>
-      )}
-    </ModalStoryContainer>
-  )
+export const _LargeDialogModal = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
+
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <LargeDialogModal
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        {...args}
+      >
+        <ModalContent />
+      </LargeDialogModal>
+    </div>
+  );
 };
 
-export const DialogModalWithFlushedContent = {
-  render: args => (
-    <ModalStoryContainer>
-      {({ isOpen, onClose }) => (
-        <DialogModal
-          isOpen={isOpen}
-          onClose={onClose}
-          title="I am modal"
-          isContentFlush={true}
-          {...args}
-        >
-          <BorderedModalContent horizPadding="24px" />
-        </DialogModal>
-      )}
-    </ModalStoryContainer>
-  )
+export const DialogModalWithFlushedContent = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <DialogModal
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        isContentFlush={true}
+        {...args}
+      >
+        <BorderedModalContent horizPadding="24px" />
+      </DialogModal>
+    </div>
+  );
 };
 
-export const _DialogModalWithFooter = {
-  render: args => (
-    <ModalStoryContainer>
-      {({ isOpen, onClose }) => (
-        <DialogModalWithFooter
-          isOpen={isOpen}
-          onClose={onClose}
-          title="I am modal"
-          ctaButton={
-            <PrimaryButton
-              onClick={action("handling CTA")}
-              aria-haspopup={true}
-            >
-              Continue
-            </PrimaryButton>
-          }
-          closeText="Dismiss"
-          {...args}
-        >
-          <ModalContent />
-        </DialogModalWithFooter>
-      )}
-    </ModalStoryContainer>
-  )
+export const _DialogModalWithFooter = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <DialogModalWithFooter
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        ctaButton={
+          <PrimaryButton onClick={action("handling CTA")} aria-haspopup={true}>
+            Continue
+          </PrimaryButton>
+        }
+        closeText="Dismiss"
+        {...args}
+      >
+        <ModalContent />
+      </DialogModalWithFooter>
+    </div>
+  );
 };
 
-export const _SmallDialogModalWithFooter = {
-  render: args => (
-    <ModalStoryContainer>
-      {({ isOpen, onClose }) => (
-        <SmallDialogModalWithFooter
-          isOpen={isOpen}
-          onClose={onClose}
-          title="I am modal"
-          ctaButton={
-            <PrimaryButton
-              onClick={action("handling CTA")}
-              aria-haspopup={true}
-            >
-              Continue
-            </PrimaryButton>
-          }
-          closeText="Dismiss"
-          {...args}
-        >
-          <ModalContent />
-        </SmallDialogModalWithFooter>
-      )}
-    </ModalStoryContainer>
-  )
+export const _SmallDialogModalWithFooter = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <SmallDialogModalWithFooter
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        ctaButton={
+          <PrimaryButton onClick={action("handling CTA")} aria-haspopup={true}>
+            Continue
+          </PrimaryButton>
+        }
+        closeText="Dismiss"
+        {...args}
+      >
+        <ModalContent />
+      </SmallDialogModalWithFooter>
+    </div>
+  );
 };
 
-export const _LargeDialogModalWithFooter = {
-  render: args => (
-    <ModalStoryContainer>
-      {({ isOpen, onClose }) => (
-        <LargeDialogModalWithFooter
-          isOpen={isOpen}
-          onClose={onClose}
-          title="I am modal"
-          ctaButton={
-            <PrimaryButton
-              onClick={action("handling CTA")}
-              aria-haspopup={true}
-            >
-              Continue
-            </PrimaryButton>
-          }
-          closeText="Dismiss"
-          {...args}
-        >
-          <ModalContent />
-        </LargeDialogModalWithFooter>
-      )}
-    </ModalStoryContainer>
-  )
+export const _LargeDialogModalWithFooter = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <LargeDialogModalWithFooter
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        ctaButton={
+          <PrimaryButton onClick={action("handling CTA")} aria-haspopup={true}>
+            Continue
+          </PrimaryButton>
+        }
+        closeText="Dismiss"
+        {...args}
+      >
+        <ModalContent />
+      </LargeDialogModalWithFooter>
+    </div>
+  );
 };
 
-export const _FullscreenModal = {
-  render: args => (
-    <ModalStoryContainer>
-      {({ isOpen, onClose }) => (
-        <FullscreenModal
-          isOpen={isOpen}
-          onClose={onClose}
-          title="I am modal"
-          subtitle="Optional subtitle"
-          closeText="Dismiss"
-          ctaButton={
-            <PrimaryButton
-              onClick={action("handling CTA")}
-              aria-haspopup={true}
-            >
-              Continue
-            </PrimaryButton>
-          }
-          {...args}
-        >
-          <ModalContent />
-        </FullscreenModal>
-      )}
-    </ModalStoryContainer>
-  )
+export const _FullscreenModal = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <FullscreenModal
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        subtitle="Optional subtitle"
+        closeText="Dismiss"
+        ctaButton={
+          <PrimaryButton onClick={action("handling CTA")} aria-haspopup={true}>
+            Continue
+          </PrimaryButton>
+        }
+        {...args}
+      >
+        <ModalContent />
+      </FullscreenModal>
+    </div>
+  );
 };
 
-export const FullscreenModalWithAdditionalHeaderContent = {
-  render: args => {
-    const HeaderContent = ({ ctaButton, closeText, title, onClose }) => (
-      <div className={cx(flex({ align: "center" }), flexItem("shrink"))}>
-        <div className={flexItem("grow")}>
-          <SecondaryButton onClick={onClose}>{closeText}</SecondaryButton>
+export const FullscreenModalWithAdditionalHeaderContent = args => {
+  const HeaderContent = ({ ctaButton, closeText, title, onClose }) => (
+    <div className={cx(flex({ align: "center" }), flexItem("shrink"))}>
+      <div className={flexItem("grow")}>
+        <SecondaryButton onClick={onClose}>{closeText}</SecondaryButton>
+      </div>
+      <div className={cx(fullscreenModalTitle, flexItem("grow"))}>
+        <div className={textSize("l")}>{title}</div>
+        <div className={cx(tintContentSecondary, textSize("s"))}>
+          Some subheader
         </div>
-        <div className={cx(fullscreenModalTitle, flexItem("grow"))}>
-          <div className={textSize("l")}>{title}</div>
-          <div className={cx(tintContentSecondary, textSize("s"))}>
-            Some subheader
+      </div>
+      <div className={flexItem("grow")}>
+        <div className={cx(flex({ align: "center", justify: "flex-end" }))}>
+          <div className={flexItem("shrink")}>
+            <input type="checkbox" id="fauxToggle" />
+            <label htmlFor="fauxToggle">Faux toggle</label>
           </div>
-        </div>
-        <div className={flexItem("grow")}>
-          <div className={cx(flex({ align: "center", justify: "flex-end" }))}>
-            <div className={flexItem("shrink")}>
-              <input type="checkbox" id="fauxToggle" />
-              <label htmlFor="fauxToggle">Faux toggle</label>
-            </div>
-            <div className={cx(flexItem("shrink"), padding("left", "s"))}>
-              {ctaButton}
-            </div>
+          <div className={cx(flexItem("shrink"), padding("left", "s"))}>
+            {ctaButton}
           </div>
         </div>
       </div>
-    );
-    return (
-      <ModalStoryContainer>
-        {({ isOpen, onClose }) => (
-          <FullscreenModal
-            isOpen={isOpen}
-            onClose={onClose}
-            title="I am modal"
-            closeText="Dismiss"
-            ctaButton={
-              <PrimaryButton
-                onClick={action("handling CTA")}
-                aria-haspopup={true}
-              >
-                Continue
-              </PrimaryButton>
-            }
-            headerComponent={HeaderContent}
-            {...args}
-          >
-            <ModalContent />
-          </FullscreenModal>
-        )}
-      </ModalStoryContainer>
-    );
+    </div>
+  );
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
   }
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <FullscreenModal
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        closeText="Dismiss"
+        ctaButton={
+          <PrimaryButton onClick={action("handling CTA")} aria-haspopup={true}>
+            Continue
+          </PrimaryButton>
+        }
+        headerComponent={HeaderContent}
+        {...args}
+      >
+        <ModalContent />
+      </FullscreenModal>
+    </div>
+  );
 };
 
-export const FullscreenModalWithFlushedContent = {
-  render: args => (
-    <ModalStoryContainer>
-      {({ isOpen, onClose }) => (
-        <FullscreenModal
-          isOpen={isOpen}
-          onClose={onClose}
-          title="I am modal"
-          closeText="Dismiss"
-          isContentFlush={true}
-          ctaButton={
-            <PrimaryButton
-              onClick={action("handling CTA")}
-              aria-haspopup={true}
-            >
-              Continue
-            </PrimaryButton>
-          }
-          {...args}
-        >
-          <BorderedModalContent horizPadding="32px" />
-        </FullscreenModal>
-      )}
-    </ModalStoryContainer>
-  )
-};
-
-export const FullscreenModalWithDialogModal = {
-  render: args => {
-    return (
-      <ModalStoryContainer>
-        {({ isOpen, onClose }) => (
-          <FullscreenModal
-            isOpen={isOpen}
-            onClose={onClose}
-            title="I am modal"
-            subtitle="Optional subtitle"
-            closeText="Dismiss"
-            ctaButton={
-              <PrimaryButton
-                onClick={action("handling CTA")}
-                aria-haspopup={true}
-              >
-                Continue
-              </PrimaryButton>
-            }
-            id="testId"
-            {...args}
-          >
-            <ModalStoryContainer>
-              {({ isOpen, onClose }) => (
-                <DialogModal
-                  isOpen={isOpen}
-                  onClose={onClose}
-                  title="I am modal"
-                  overlayRoot={document.querySelector("#testId")}
-                >
-                  <ModalContent />
-                </DialogModal>
-              )}
-            </ModalStoryContainer>
-          </FullscreenModal>
-        )}
-      </ModalStoryContainer>
-    );
+export const FullscreenModalWithFlushedContent = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  function handleChange() {
+    setIsOpen(!isOpen);
   }
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <FullscreenModal
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        closeText="Dismiss"
+        isContentFlush={true}
+        ctaButton={
+          <PrimaryButton onClick={action("handling CTA")} aria-haspopup={true}>
+            Continue
+          </PrimaryButton>
+        }
+        {...args}
+      >
+        <BorderedModalContent horizPadding="32px" />
+      </FullscreenModal>
+    </div>
+  );
 };
 
-export const CustomFocusedElement = {
-  render: args => (
-    <ModalStoryContainer>
-      {({ isOpen, onClose }) => (
-        <DialogModal
-          isOpen={isOpen}
-          onClose={onClose}
-          title="I am modal"
-          initialFocus="#focus-input"
-          {...args}
-        >
-          <div>
-            <ModalContent />
-            <div className={padding("top", "m")}>
-              <TextInput inputLabel="I get focus" id="focus-input" />
-            </div>
+export const FullscreenModalWithDialogModal = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
+
+  const [isOpen1, setIsOpen1] = React.useState(false);
+
+  function handleChange1() {
+    setIsOpen1(!isOpen1);
+  }
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <FullscreenModal
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        subtitle="Optional subtitle"
+        closeText="Dismiss"
+        ctaButton={
+          <PrimaryButton onClick={action("handling CTA")} aria-haspopup={true}>
+            Continue
+          </PrimaryButton>
+        }
+        id="testId"
+        {...args}
+      >
+        <div>
+          <div style={{ textAlign: "center" }}>
+            <PrimaryButton onClick={handleChange1}>Open Modal</PrimaryButton>
           </div>
-        </DialogModal>
-      )}
-    </ModalStoryContainer>
-  )
+          <DialogModal
+            isOpen={isOpen1}
+            onClose={handleChange1}
+            title="I am modal"
+            overlayRoot={document.querySelector("#testId")}
+          >
+            <ModalContent />
+          </DialogModal>
+        </div>
+      </FullscreenModal>
+    </div>
+  );
+};
+
+export const CustomFocusedElement = args => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function handleChange() {
+    setIsOpen(!isOpen);
+  }
+  return (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        <PrimaryButton onClick={handleChange}>Open Modal</PrimaryButton>
+      </div>
+      <DialogModal
+        isOpen={isOpen}
+        onClose={handleChange}
+        title="I am modal"
+        initialFocus="#focus-input"
+        {...args}
+      >
+        <div>
+          <ModalContent />
+          <div className={padding("top", "m")}>
+            <TextInput inputLabel="I get focus" id="focus-input" />
+          </div>
+        </div>
+      </DialogModal>
+    </div>
+  );
 };
