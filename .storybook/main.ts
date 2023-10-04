@@ -15,6 +15,7 @@ const config: StorybookConfig = {
     "./docs/stories/Welcome.stories.mdx",
     "./docs/stories/Colors.stories.mdx",
     "./docs/stories/Typography.stories.mdx",
+    "./docs/stories/Spacing.stories.mdx",
     "../packages/**/*.stories.@(tsx|mdx)"
   ],
   // Optional

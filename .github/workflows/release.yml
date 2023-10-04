@@ -15,7 +15,7 @@ jobs:
       - name: Build Release
         run: npm run dist
       - name: Semantic Release ⬆️
-        uses: cycjimmy/semantic-release-action@v3
+        uses: cycjimmy/semantic-release-action@v4
         with:
           semantic_version: 19
         env:
