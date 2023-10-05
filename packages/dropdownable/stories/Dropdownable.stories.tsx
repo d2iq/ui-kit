@@ -10,7 +10,7 @@ import {
   themeBorder
 } from "../../design-tokens/build/js/designTokens";
 
-export const DropdownContentContainer = styled.div`
+const DropdownContentContainer = styled.div`
   min-width: 250px;
   border: 1px solid ${themeBorder};
   background-color: ${themeBgPrimary};
