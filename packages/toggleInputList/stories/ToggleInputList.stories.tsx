@@ -1,5 +1,5 @@
 import * as React from "react";
-import ToggleInputListStoryHelper from "./helpers/ToggleInputListStoryHelper";
+
 import ToggleInputList from "../components/ToggleInputList";
 import { InputAppearance } from "../../shared/types/inputAppearance";
 import { StoryFn, Meta } from "@storybook/react";
@@ -36,21 +36,23 @@ export default {
   }
 } as Meta;
 
-const Template: StoryFn = args => (
-  <ToggleInputListStoryHelper>
-    {({ changeHandler, selectedItems }) => (
-      <ToggleInputList
-        id="checkbox"
-        items={options}
-        listLabel="Atmosphere layers"
-        onChange={changeHandler}
-        selectedItems={selectedItems}
-        isRadioGroup={true}
-        {...args}
-      />
-    )}
-  </ToggleInputListStoryHelper>
-);
+const Template: StoryFn = args => {
+  const [selectedItems, setSelectedItems] = React.useState<string[]>([]);
+  const changeHandler = value => {
+    setSelectedItems(value);
+  };
+  return (
+    <ToggleInputList
+      id="checkbox"
+      items={options}
+      listLabel="Atmosphere layers"
+      onChange={changeHandler}
+      selectedItems={selectedItems}
+      isRadioGroup={true}
+      {...args}
+    />
+  );
+};
 
 export const Default = {
   render: Template
