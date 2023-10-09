@@ -97,7 +97,9 @@ const Typeahead = ({
   delete textFieldProps.onFocus;
   delete textFieldProps.onClick;
 
-  const [menuWidth, setMenuWidth] = React.useState<number | null>(null);
+  const [menuWidth, setMenuWidth] = React.useState<number | undefined>(
+    undefined
+  );
 
   const containerRef = React.createRef<HTMLDivElement>();
 

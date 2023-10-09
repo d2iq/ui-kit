@@ -28,7 +28,7 @@ export interface PopoverListItemProps extends React.HTMLProps<HTMLDivElement> {
   index: number;
   listLength: number;
   isActive?: boolean;
-  isSelected?: boolean;
+  isSelected?: boolean | null;
   "data-cy"?: string;
 }
 
