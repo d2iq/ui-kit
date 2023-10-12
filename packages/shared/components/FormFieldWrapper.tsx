@@ -63,7 +63,7 @@ const FormFieldWrapper = ({
         {hintContent}
       </span>
     ) : null;
-  };
+  }
 
   const getValidationErrors = (errors, formFieldWrapperId) => {
     if (!errors || (errors && errors.length === 0)) {
