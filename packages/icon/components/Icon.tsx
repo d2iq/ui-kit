@@ -1,15 +1,13 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
 import { tintSVG } from "../../shared/styles/styleUtils";
-import { SystemIcons } from "../../icons/dist/system-icons-enum";
-import { ProductIcons } from "../../icons/dist/product-icons-enum";
 import { IconSize } from "../../shared/types/iconSize";
 import { iconSizes } from "../../shared/styles/styleUtils/layout/iconSizes";
 import { icon, blockIcon } from "../style";
 
 const DEFAULT_ICON_SIZE: IconSize = "s";
 
-export type IconShapes = SystemIcons | ProductIcons;
+export type IconShapes = string;
 export interface IconProps {
   /**
    * If an icon is more than decorative and requires further context include a description for screen readers
@@ -26,7 +24,7 @@ export interface IconProps {
   /**
    * The id of the SVG symbol we're rendering from a generated sprite
    */
-  shape: SystemIcons | ProductIcons;
+  shape: string;
   /**
    * Which icon size to use for the width and height of the icon
    */

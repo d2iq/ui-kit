@@ -1,7 +1,6 @@
 import { cx } from "@emotion/css";
 import React from "react";
 import { inputReset } from "../../../shared/styles/styleUtils";
-import { InputAppearance } from "../../../shared/types/inputAppearance";
 import { TextInputProps } from "../TextInput";
 
 interface InputProps {
@@ -34,7 +33,7 @@ export const Input = ({
 
   const dataCy = [
     "textInput-input",
-    ...(textInputAppearance && textInputAppearance !== InputAppearance.Standard
+    ...(textInputAppearance && textInputAppearance !== "standard"
       ? [`textInput-input.${textInputAppearance}`]
       : [])
   ].join(" ");

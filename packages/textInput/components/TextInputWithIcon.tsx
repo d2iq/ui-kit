@@ -7,7 +7,6 @@ import {
 import { flex, flexItem, padding } from "../../shared/styles/styleUtils";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
-import { IconShapes } from "../../icon/components/Icon";
 import { getInputElementProps as getBaseInputElementProps } from "./shared/utils";
 import { cx } from "@emotion/css";
 import InputLabel from "../../shared/components/InputLabel";
@@ -19,11 +18,11 @@ export interface TextInputWithIconProps extends TextInputProps {
   /**
    * icon to display at the start of this TextInput.
    */
-  iconStart?: IconShapes | React.ReactElement<HTMLElement>;
+  iconStart?: string;
   /**
    * icon to display at the end of this TextInput.
    */
-  iconEnd?: IconShapes | React.ReactElement<HTMLElement>;
+  iconEnd?: string;
 }
 
 export interface TextInputWithIconState {

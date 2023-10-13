@@ -13,7 +13,7 @@ import {
   getIconAppearanceStyle
 } from "../../shared/styles/formStyles";
 import { inputReset, padding, display } from "../../shared/styles/styleUtils";
-import Icon, { IconShapes } from "../../icon/components/Icon";
+import Icon from "../../icon/components/Icon";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 import FormFieldWrapper from "../../shared/components/FormFieldWrapper";
 import { InputAppearance } from "../../shared/types/inputAppearance";
@@ -42,7 +42,7 @@ export interface SelectInputProps extends React.HTMLProps<HTMLSelectElement> {
   /**
    * Optional icon to be displayed before the input value.
    */
-  iconStart?: IconShapes | React.ReactElement<HTMLElement>;
+  iconStart?: string;
   /**
    * Unique identifier used for the form input component
    */

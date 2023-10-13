@@ -1,7 +1,6 @@
 import * as React from "react";
 import { cx } from "@emotion/css";
 import FocusStyleManager from "../../shared/components/FocusStyleManager";
-import { IconShapes } from "../../icon/components/Icon";
 import IconPropAdapter from "../../icon/components/IconPropAdapter";
 import {
   buttonReset,
@@ -54,11 +53,11 @@ export interface ButtonProps extends LinkProps {
   /**
    * The icon that appears before the button text
    */
-  iconStart?: IconShapes | React.ReactElement<HTMLElement>;
+  iconStart?: string;
   /**
    * The icon that appears after the button text
    */
-  iconEnd?: IconShapes | React.ReactElement<HTMLElement>;
+  iconEnd?: string;
   /**
    * Whether the action the button was meant to do has completed
    */

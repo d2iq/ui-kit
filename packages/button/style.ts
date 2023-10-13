@@ -312,7 +312,7 @@ export const buttonInverse = appearance => {
 };
 
 export const getMutedButtonStyles = (appearance: ButtonAppearances) => {
-  return appearance !== "secondary"
+  return appearance !== ButtonAppearances.Secondary
     ? css`
         ${mutedButton};
         ${mutedFilledButton};
@@ -321,7 +321,7 @@ export const getMutedButtonStyles = (appearance: ButtonAppearances) => {
 };
 
 export const getInverseMutedButtonStyles = (appearance: ButtonAppearances) => {
-  return appearance !== "secondary"
+  return appearance !== ButtonAppearances.Secondary
     ? css`
         ${inverseMutedButton};
         ${inverseMutedFilledButton};

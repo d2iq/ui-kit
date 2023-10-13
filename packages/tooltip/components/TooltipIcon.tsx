@@ -8,7 +8,7 @@ interface TooltipIconProps extends Omit<IconProps, "shape"> {
   /**
    * Icon to display, choose either (i) or (?).
    */
-  shape?: SystemIcons.CircleInformation | SystemIcons.CircleQuestion;
+  shape?: string;
 }
 
 const TooltipIcon = ({

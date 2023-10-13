@@ -100,7 +100,7 @@ export interface DropdownMenuProps {
 }
 
 const defaultItemToString = (
-  item: React.ReactElement<DropdownMenuItemProps> | any
+  item: React.ReactElement<DropdownMenuItemProps> | null
 ) => (item ? item.props.value : "");
 
 const DropdownMenu = (props: DropdownMenuProps) => {

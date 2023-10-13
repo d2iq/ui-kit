@@ -9,12 +9,12 @@
  *
  */
 import * as React from "react";
-import Icon, { IconShapes } from "../../icon/components/Icon";
+import Icon from "../../icon/components/Icon";
 import { IconSize } from "../../shared/types/iconSize";
 
 interface IconPropAdapterProps {
   color?: string;
-  icon: IconShapes | React.ReactElement<HTMLElement>;
+  icon: string;
   size?: IconSize;
 }
 

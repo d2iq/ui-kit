@@ -2,7 +2,6 @@ import * as React from "react";
 import * as style from "./style";
 import { Flex, FlexItem } from "../styleUtils/layout";
 import { Tooltip, TooltipIcon } from "../tooltip";
-import { SystemIcons } from "../icons/dist/system-icons-enum";
 import { textTruncate } from "../shared/styles/styleUtils";
 import { css } from "@emotion/css";
 
@@ -18,7 +17,7 @@ export interface TooltipHeaderCellProps {
   /**
    * Icon to display for the tooltip.
    */
-  tooltipIcon?: SystemIcons.CircleInformation | SystemIcons.CircleQuestion;
+  tooltipIcon?: string;
   children?: React.ReactNode;
 }
 

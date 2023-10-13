@@ -1,11 +1,10 @@
 import * as React from "react";
-import { IconShapes } from "../../icon/components/Icon";
 import ResetLink from "../../link/components/ResetLink";
 import IconPropAdapter from "../../icon/components/IconPropAdapter";
 import { Flex, FlexItem } from "../../styleUtils/layout";
 
 interface BreadcrumbItemProps {
-  icon?: IconShapes | React.ReactElement<HTMLElement>;
+  icon?: string;
   url?: string;
   onClick?: () => void;
   children: React.ReactNode;

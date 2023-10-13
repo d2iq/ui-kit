@@ -1,6 +1,5 @@
 import { cx } from "@emotion/css";
 import React from "react";
-import { IconShapes } from "../../../icon/components/Icon";
 import IconPropAdapter from "../../../icon/components/IconPropAdapter";
 import {
   getIconAppearanceStyle,
@@ -9,7 +8,7 @@ import {
 import { flex, flexItem, flush } from "../../../shared/styles/styleUtils";
 
 interface IconEndProps {
-  iconEnd?: IconShapes | React.ReactElement<HTMLElement>;
+  iconEnd?: string;
   appearance: string;
 }
 

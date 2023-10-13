@@ -1,7 +1,6 @@
 import * as React from "react";
 import ResetButton from "../../button/components/ResetButton";
 import { Icon } from "../../icon";
-import { IconShapes } from "../../icon/components/Icon";
 
 export interface TextInputButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,7 +11,7 @@ export interface TextInputButtonProps
   /**
    * The id of the SVG symbol we're rendering from a generated sprite
    */
-  shape: IconShapes;
+  shape: string;
 }
 
 const TextInputButton = ({ shape, color, ...other }: TextInputButtonProps) => {
