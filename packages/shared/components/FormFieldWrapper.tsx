@@ -49,7 +49,7 @@ const FormFieldWrapper = ({
       : "";
   };
 
-  function HintContent({ hintContent }) {
+  const HintContent = ({ hintContent }) => {
     return hintContent ? (
       <span
         id={getHintContentId()}
@@ -63,7 +63,7 @@ const FormFieldWrapper = ({
         {hintContent}
       </span>
     ) : null;
-  }
+  };
 
   const getValidationErrors = (errors, formFieldWrapperId) => {
     if (!errors || (errors && errors.length === 0)) {
