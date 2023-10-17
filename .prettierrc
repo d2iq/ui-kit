@@ -1,6 +1,5 @@
 {
   "tabWidth": 2,
   "trailingComma": "none",
-  "arrowParens": "avoid",
-  "endOfLine": "auto"
+  "arrowParens": "avoid"
 }

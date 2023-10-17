@@ -4,4 +4,4 @@
 BASE=$(git rev-parse --show-toplevel)
 export PATH="$BASE/node_modules/.bin:$PATH"
 
-npx commitlint --edit $1
+commitlint --edit $1
