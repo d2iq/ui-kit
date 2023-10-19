@@ -6,7 +6,8 @@ import {
   StandardButton,
   SuccessButton,
   DangerButton,
-  WarningButton
+  WarningButton,
+  OutlineButton
 } from "../..";
 import { action } from "@storybook/addon-actions";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
@@ -17,6 +18,7 @@ export default {
   component: StandardButton,
   subComponents: {
     PrimaryButton,
+    OutlineButton,
     SecondaryButton,
     SuccessButton,
     DangerButton,
@@ -57,6 +59,10 @@ export const _PrimaryButton = {
 
 export const _SecondaryButton = {
   render: args => <SecondaryButton {...args}>{args.children}</SecondaryButton>
+};
+
+export const _OutlineButton = {
+  render: args => <OutlineButton {...args}>{args.children}</OutlineButton>
 };
 
 export const _SuccessButton = {

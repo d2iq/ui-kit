@@ -4,6 +4,7 @@ export { default as StandardButton } from "./components/StandardButton";
 export { default as SuccessButton } from "./components/SuccessButton";
 export { default as DangerButton } from "./components/DangerButton";
 export { default as WarningButton } from "./components/WarningButton";
+export { default as OutlineButton } from "./components/OutlineButton";
 
 export { default as PrimaryDropdownButton } from "./components/PrimaryDropdownButton";
 export { default as SecondaryDropdownButton } from "./components/SecondaryDropdownButton";
@@ -11,5 +12,6 @@ export { default as StandardDropdownButton } from "./components/StandardDropdown
 export { default as SuccessDropdownButton } from "./components/SuccessDropdownButton";
 export { default as WarningDropdownButton } from "./components/WarningDropdownButton";
 export { default as DangerDropdownButton } from "./components/DangerDropdownButton";
+export { default as OutlineDropdownButton } from "./components/OutlineDropdownButton";
 
 export { default as ResetButton } from "./components/ResetButton";

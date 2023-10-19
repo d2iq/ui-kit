@@ -6,7 +6,8 @@ import {
   StandardDropdownButton,
   SuccessDropdownButton,
   WarningDropdownButton,
-  DangerDropdownButton
+  DangerDropdownButton,
+  OutlineDropdownButton
 } from "../../index";
 import { SystemIcons } from "../../icons/dist/system-icons-enum";
 
@@ -46,6 +47,12 @@ export const _PrimaryDropdownButton = {
 export const _SecondaryDropdownButton = {
   render: args => (
     <SecondaryDropdownButton {...args}>{args.children}</SecondaryDropdownButton>
+  )
+};
+
+export const _OutlineDropdownButton = {
+  render: args => (
+    <OutlineDropdownButton {...args}>{args.children}</OutlineDropdownButton>
   )
 };
 

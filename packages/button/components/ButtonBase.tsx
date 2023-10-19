@@ -30,7 +30,8 @@ export enum ButtonAppearances {
   Standard = "standard",
   Danger = "danger",
   Success = "success",
-  Warning = "warning"
+  Warning = "warning",
+  Outline = "outline"
 }
 
 export interface ButtonProps extends LinkProps {
