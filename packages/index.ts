@@ -30,12 +30,14 @@ export {
   SuccessButton,
   DangerButton,
   WarningButton,
+  OutlineButton,
   PrimaryDropdownButton,
   SecondaryDropdownButton,
   StandardDropdownButton,
   SuccessDropdownButton,
   WarningDropdownButton,
   DangerDropdownButton,
+  OutlineDropdownButton,
   ResetButton
 } from "./button";
 export { ButtonCard, Card, LinkCard } from "./card";

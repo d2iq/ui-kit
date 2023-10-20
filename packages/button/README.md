@@ -10,6 +10,7 @@ There are several types of buttons to choose from based on the intended action:
 | --------------- | ------------------------------------------------------------------------------- |
 | Primary         | Used for the most important call-to-action on a page, such as Save or Deploy.   |
 | Secondary       | Used primarily for a call-to-action that is a link.                             |
+| Outline         | Used as an alternative secondary button with an outline/ghost style.            |
 | Warning         | Used to advise caution.                                                         |
 | Danger          | Used to highlight something dangerous that can't be undone, such as "Delete".   |
 | Icon only       | Use when an icon is enough to represent the action, such as "Create a Service". |

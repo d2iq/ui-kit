@@ -18,7 +18,10 @@ import {
   themeErrorInverted,
   themeTextColorDisabledInverted,
   themeWarningInverted,
-  themeWarning
+  themeWarning,
+  purpleLighten5,
+  purpleLighten4,
+  themeBgPrimary
 } from "../design-tokens/build/js/designTokens";
 import { darken, getTextColor } from "../shared/styles/color";
 import { ButtonAppearances } from "./components/ButtonBase";
@@ -70,6 +73,7 @@ export const filledButton = (
 
 const mutedButton = css`
   ${tintContent(themeTextColorDisabled)};
+  border-color: ${themeBgDisabled};
   cursor: default;
   pointer-events: none;
 
@@ -196,6 +200,26 @@ export const focusStyleByAppearance = (appearance, isInverse) => {
       return isInverse
         ? focusStyles(getHoverColor(getCSSVarValue(themeWarningInverted)))
         : focusStyles(getHoverColor(getCSSVarValue(themeWarning)));
+    case "outline":
+      return css`
+        ${(isInverse
+          ? focusStyles(
+              getCSSVarValue(themeBgPrimary),
+              getHoverColor(getCSSVarValue(themeTextColorInteractiveInverted))
+            )
+          : getCSSVarValue(themeBgPrimary),
+        focusStyles(getHoverColor(getCSSVarValue(themeTextColorInteractive))))};
+        &:focus {
+          background-color: ${purpleLighten5};
+
+          &:after {
+            bottom: -4px;
+            left: -4px;
+            right: -4px;
+            top: -4px;
+          }
+        }
+      `;
     default:
       return "";
   }
@@ -251,6 +275,32 @@ export const button = appearance => {
         getHoverColor(getCSSVarValue(themeWarning)),
         getActiveColor(getCSSVarValue(themeWarning))
       );
+    case "outline":
+      return css`
+        border: 1px solid ${getCSSVarValue(themeTextColorInteractive)};
+        border-radius: ${borderRadiusDefault};
+        padding: ${buttonPadding.vert} ${buttonPadding.horiz};
+
+        ${tintContent(themeTextColorInteractive)};
+
+        &:hover {
+          background-color: ${purpleLighten5};
+          ${tintContent(
+            getHoverColor(getCSSVarValue(themeTextColorInteractive))
+          )};
+        }
+        &:active {
+          background-color: ${purpleLighten4};
+          ${tintContent(
+            getActiveColor(getCSSVarValue(themeTextColorInteractive))
+          )};
+        }
+        &[href],
+        &[href]:visited {
+          background-color: ${purpleLighten4};
+          ${tintContent(themeTextColorInteractive)};
+        }
+      `;
     default:
       return "";
   }
@@ -306,6 +356,26 @@ export const buttonInverse = appearance => {
         getHoverColor(getCSSVarValue(themeWarningInverted)),
         getActiveColor(getCSSVarValue(themeWarningInverted))
       );
+    case "outline":
+      return css`
+        border: 1px solid ${getCSSVarValue(themeTextColorInteractiveInverted)};
+        ${tintContent(themeTextColorInteractiveInverted)};
+
+        &:hover {
+          ${tintContent(
+            getHoverColor(getCSSVarValue(themeTextColorInteractiveInverted))
+          )};
+        }
+        &:active {
+          ${tintContent(
+            getActiveColor(getCSSVarValue(themeTextColorInteractiveInverted))
+          )};
+        }
+        &[href],
+        &[href]:visited {
+          ${tintContent(themeTextColorInteractiveInverted)};
+        }
+      `;
     default:
       return "";
   }
