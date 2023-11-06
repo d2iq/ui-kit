@@ -1,4 +1,4 @@
-FROM node:18.16.0-slim
+FROM node:20.9.0-slim
 
 # Update apt-dependencies
 RUN apt-get update -y
@@ -16,4 +16,3 @@ RUN npm install --ignore-scripts
 COPY . .
 EXPOSE 6006
 CMD ["npm", "start"]
-
