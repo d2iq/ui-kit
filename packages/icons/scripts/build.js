@@ -57,7 +57,7 @@ const writeSprite = (srcDir, spritePath, idPrefix) => {
     store.add(iconName, optimized);
   });
 
-  writeFileSync(spritePath, store);
+  writeFileSync(spritePath, store.toString());
 };
 
 const optimizeWithSVGO = spritePath => {
