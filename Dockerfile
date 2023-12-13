@@ -1,4 +1,4 @@
-FROM node:20.9.0-slim
+FROM node:20.10.0-slim
 
 # Update apt-dependencies
 RUN apt-get update -y
