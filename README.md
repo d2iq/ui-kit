@@ -11,7 +11,7 @@ UI Kit is a collaboration between D2iQ's product design team and engineering tea
 
 ## Getting started
 
-Install dependencies (Node v16+, NPM 7+)
+Install dependencies.
 
 ```
 npm i
