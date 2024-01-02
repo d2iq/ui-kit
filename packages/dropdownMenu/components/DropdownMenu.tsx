@@ -99,7 +99,12 @@ export interface DropdownMenuProps {
   "data-cy"?: string;
 }
 
+// The purpose of `defaultItemToString` is to convert the selected item to a string for Downshift.
+// The `item` parameter is intentionally allowed to be of type `any` to accommodate
+// flexibility in handling different types or null values (representing deselection).
+// The function extracts the value from `item.props.value` if `item` is truthy.
 const defaultItemToString = (
+  // eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
   item: React.ReactElement<DropdownMenuItemProps> | any
 ) => (item ? item.props.value : "");
 

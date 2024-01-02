@@ -8,9 +8,9 @@ export const gridColumnTemplate = columnCount => {
           return acc;
         }, {})
       : columnCount
-      ? `repeat(${columnCount}, minmax(0, 1fr))`
-      : `repeat(auto-fill, minmax(min(320px, 100%), 1fr));`;
-  // 👆explicitly setting the min to 0 so content doesn't overflow the grid cell
+        ? `repeat(${columnCount}, minmax(0, 1fr))`
+        : `repeat(auto-fill, minmax(min(320px, 100%), 1fr));`;
+  // 👆 explicitly setting the min to 0 so content doesn't overflow the grid cell
   // see: https://github.com/rachelandrew/cssgrid-ama/issues/25
 
   return getResponsiveStyle("grid-template-columns", gridTemplateColumns);
