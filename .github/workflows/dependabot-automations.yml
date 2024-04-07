@@ -18,7 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Install GH CLI
-        uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
+        uses: dev-hanz-ops/install-gh-cli-action@v0.2.0
       - name: Approve a PR if not already approved
         id: auto_approve
         run: |
@@ -32,6 +32,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install GH CLI
-        uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
+        uses: dev-hanz-ops/install-gh-cli-action@v0.2.0
       - name: Auto-merge PR
         run: gh pr merge --auto --squash "$PR_URL"
