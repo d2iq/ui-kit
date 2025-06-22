@@ -114,7 +114,7 @@
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-storybook": "^0.10.2",
+    "eslint-plugin-storybook": "^9.0.12",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
     "fs-extra": "^11.2.0",
     "http-server": "^14.1.1",
