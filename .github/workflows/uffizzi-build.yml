@@ -12,7 +12,7 @@ jobs:
       tags: ${{ steps.meta.outputs.tags }}
     steps:
       - name: Checkout git repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Generate UUID image name
@@ -45,7 +45,7 @@ jobs:
       compose-file-cache-key: ${{ steps.hash.outputs.hash }}
     steps:
       - name: Checkout git repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Render Compose File
         run: |
           APP_IMAGE=$(echo ${{ needs.build-application.outputs.tags }})
