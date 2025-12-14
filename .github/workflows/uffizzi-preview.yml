@@ -54,7 +54,7 @@ jobs:
         run: echo "HASH=$(md5sum docker-compose.rendered.yml | awk '{ print $1 }')" >> $GITHUB_ENV
       - name: Cache Rendered Compose File
         if: ${{ fromJSON(env.EVENT_JSON).action != 'closed' }}
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: docker-compose.rendered.yml
           key: ${{ env.HASH }}
